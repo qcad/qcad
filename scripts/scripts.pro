@@ -16,7 +16,6 @@ SUBDIRS = \
     Reset \
     Select \
     Snap \
-    Tools \
     View \
     Widgets \
     Window \

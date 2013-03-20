@@ -15,6 +15,7 @@
 Makefile
 Makefile.Debug
 Makefile.Release
+*.pro.user
 
 # Mac:
 .DS_Store
