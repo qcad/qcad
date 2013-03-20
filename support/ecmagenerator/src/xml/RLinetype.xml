@@ -3,8 +3,8 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class name="RLinetype"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <baseClass name="RObject" specifier="public" />
     <constructor>

@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RFileExporterAdapter.h"
+                #include "REcmaShellFileExporterAdapter.h"
             
 
         /**
@@ -48,6 +48,9 @@
 
     // public methods:
     static  QScriptValue
+        getCorrectedFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportFile
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -69,7 +72,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RFileExporterAdapter* getSelf(const QString& fName, QScriptContext* context)
-    ;static RFileExporterAdapter* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellFileExporterAdapter* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

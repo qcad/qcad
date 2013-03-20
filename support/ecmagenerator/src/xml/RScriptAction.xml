@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RScriptAction"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
     <baseClass name="RAction" specifier="public" />
     <constructor>
       <variant>

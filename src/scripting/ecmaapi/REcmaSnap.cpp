@@ -175,8 +175,47 @@
      QScriptValue REcmaSnap::create(QScriptContext* context, QScriptEngine* engine) 
     
     {
-           return REcmaHelper::throwError("Abstract class RSnap: Cannot be constructed.",
-               context); 
+    if (context->thisObject().strictlyEquals(
+       engine->globalObject())) {
+       return REcmaHelper::throwError(
+       QString::fromLatin1("RSnap(): Did you forget to construct with 'new'?"),
+           context);
+    }
+
+    QScriptValue result;
+        
+            // generate constructor variants:
+            
+    if( context->argumentCount() ==
+        0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            REcmaShellSnap
+                    * cppResult =
+                    new
+                    REcmaShellSnap
+                    ();
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+        cppResult->__qtscript_self = result;
+    
+    } else 
+
+    {
+       return REcmaHelper::throwError(
+       QString::fromLatin1("RSnap(): no matching constructor found."),
+           context);
+    }
+    
+    return result;
     }
     
 
@@ -243,7 +282,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -253,11 +292,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSnap: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSnap: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RGraphicsView*
@@ -311,7 +352,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -321,11 +362,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSnap: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSnap: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RGraphicsView*
@@ -717,12 +760,12 @@
 
             return self;
         }
-        RSnap* REcmaSnap::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellSnap* REcmaSnap::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RSnap* selfBase = getSelf(fName, context);
-                RSnap* self = dynamic_cast<RSnap*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RSnap >(context->thisObject());
+                REcmaShellSnap* self = dynamic_cast<REcmaShellSnap*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellSnap >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RSnap.%1(): "
                     "This object is not a RSnap").arg(fName),

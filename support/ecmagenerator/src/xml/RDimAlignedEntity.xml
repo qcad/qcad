@@ -5,7 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RExporter" />
   <class name="RDimAlignedEntity"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RDimensionEntity" specifier="public" />
     <constructor>

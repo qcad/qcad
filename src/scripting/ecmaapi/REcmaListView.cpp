@@ -123,14 +123,16 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RListView
+            REcmaShellListView
                     * cppResult =
                     new
-                    RListView
+                    REcmaShellListView
                     ();
                 
                     result = engine->newQObject(context->thisObject(), cppResult);
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     if( context->argumentCount() ==
@@ -166,16 +168,18 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RListView
+            REcmaShellListView
                     * cppResult =
                     new
-                    RListView
+                    REcmaShellListView
                     (
                     a0
                     );
                 
                     result = engine->newQObject(context->thisObject(), cppResult);
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -285,12 +289,12 @@
 
             return self;
         }
-        RListView* REcmaListView::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellListView* REcmaListView::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RListView* selfBase = getSelf(fName, context);
-                RListView* self = dynamic_cast<RListView*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RListView >(context->thisObject());
+                REcmaShellListView* self = dynamic_cast<REcmaShellListView*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellListView >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RListView.%1(): "
                     "This object is not a RListView").arg(fName),

@@ -4,8 +4,8 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RBox" />
   <class_decl name="RPolyline" />
   <class name="RArc" xsi:noNamespaceSchemaLocation="../class.xsd"
-  isCopyable="false" hasShell="false" sharedPointerSupport="false"
-  isQObject="false" hasStreamOperator="false" isAbstract="false"
+  isCopyable="true" hasShell="false" sharedPointerSupport="true"
+  isQObject="false" hasStreamOperator="true" isAbstract="false"
   isScriptable="true">
     <baseClass name="RShape" specifier="public" />
     <baseClass name="RDirected" specifier="public" />

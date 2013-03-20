@@ -97,6 +97,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getCorrectedFileName, "getCorrectedFileName");
+            
             REcmaHelper::registerFunction(&engine, proto, exportFile, "exportFile");
             
             REcmaHelper::registerFunction(&engine, proto, exportPoint, "exportPoint");
@@ -162,15 +164,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RFileExporterAdapter
+            REcmaShellFileExporterAdapter
                     * cppResult =
                     new
-                    RFileExporterAdapter
+                    REcmaShellFileExporterAdapter
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     if( context->argumentCount() ==
@@ -216,10 +220,10 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RFileExporterAdapter
+            REcmaShellFileExporterAdapter
                     * cppResult =
                     new
-                    RFileExporterAdapter
+                    REcmaShellFileExporterAdapter
                     (
                     a0
                     );
@@ -227,6 +231,8 @@
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -288,6 +294,79 @@
 
     // public methods:
      QScriptValue
+        REcmaFileExporterAdapter::getCorrectedFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::getCorrectedFileName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::getCorrectedFileName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFileExporterAdapter* self = 
+                        getSelf("getCorrectedFileName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getCorrectedFileName(a0
+        ,
+    a1);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.getCorrectedFileName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::getCorrectedFileName", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaFileExporterAdapter::exportFile
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -450,7 +529,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPoint*
                     ap0 =
                     qscriptvalue_cast<
@@ -460,11 +539,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RPoint*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RPoint.",
                                context);                    
                     }
-                    RPoint& a0 = *ap0;
+                    RPoint 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -515,7 +596,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -525,11 +606,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -580,7 +663,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -590,11 +673,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -645,7 +730,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTriangle*
                     ap0 =
                     qscriptvalue_cast<
@@ -655,11 +740,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RTriangle*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RTriangle.",
                                context);                    
                     }
-                    RTriangle& a0 = *ap0;
+                    RTriangle 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -787,12 +874,12 @@
 
             return self;
         }
-        RFileExporterAdapter* REcmaFileExporterAdapter::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellFileExporterAdapter* REcmaFileExporterAdapter::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RFileExporterAdapter* selfBase = getSelf(fName, context);
-                RFileExporterAdapter* self = dynamic_cast<RFileExporterAdapter*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RFileExporterAdapter >(context->thisObject());
+                REcmaShellFileExporterAdapter* self = dynamic_cast<REcmaShellFileExporterAdapter*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellFileExporterAdapter >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RFileExporterAdapter.%1(): "
                     "This object is not a RFileExporterAdapter").arg(fName),

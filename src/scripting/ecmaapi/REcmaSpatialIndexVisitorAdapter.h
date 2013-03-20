@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RSpatialIndexVisitorAdapter.h"
+                #include "REcmaShellSpatialIndexVisitorAdapter.h"
             
 
         /**
@@ -55,7 +55,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RSpatialIndexVisitorAdapter* getSelf(const QString& fName, QScriptContext* context)
-    ;static RSpatialIndexVisitorAdapter* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellSpatialIndexVisitorAdapter* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

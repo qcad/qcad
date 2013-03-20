@@ -125,15 +125,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RFocusListenerAdapter
+            REcmaShellFocusListenerAdapter
                     * cppResult =
                     new
-                    RFocusListenerAdapter
+                    REcmaShellFocusListenerAdapter
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -305,12 +307,12 @@
 
             return self;
         }
-        RFocusListenerAdapter* REcmaFocusListenerAdapter::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellFocusListenerAdapter* REcmaFocusListenerAdapter::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RFocusListenerAdapter* selfBase = getSelf(fName, context);
-                RFocusListenerAdapter* self = dynamic_cast<RFocusListenerAdapter*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RFocusListenerAdapter >(context->thisObject());
+                REcmaShellFocusListenerAdapter* self = dynamic_cast<REcmaShellFocusListenerAdapter*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellFocusListenerAdapter >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RFocusListenerAdapter.%1(): "
                     "This object is not a RFocusListenerAdapter").arg(fName),

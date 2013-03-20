@@ -690,7 +690,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -700,11 +700,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable or pointer
                     QVariant
@@ -773,7 +775,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -783,11 +785,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -834,7 +838,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -844,11 +848,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -908,7 +914,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -918,11 +924,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool

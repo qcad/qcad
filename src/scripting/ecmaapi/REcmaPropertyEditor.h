@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RPropertyEditor.h"
+                #include "REcmaShellPropertyEditor.h"
             
 
         /**
@@ -82,7 +82,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RPropertyEditor* getSelf(const QString& fName, QScriptContext* context)
-    ;static RPropertyEditor* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellPropertyEditor* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

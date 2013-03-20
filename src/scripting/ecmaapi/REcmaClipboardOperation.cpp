@@ -100,45 +100,8 @@
      QScriptValue REcmaClipboardOperation::create(QScriptContext* context, QScriptEngine* engine) 
     
     {
-    if (context->thisObject().strictlyEquals(
-       engine->globalObject())) {
-       return REcmaHelper::throwError(
-       QString::fromLatin1("RClipboardOperation(): Did you forget to construct with 'new'?"),
-           context);
-    }
-
-    QScriptValue result;
-        
-            // generate constructor variants:
-            
-    if( context->argumentCount() ==
-        0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // non-copyable class:
-            RClipboardOperation
-                    * cppResult =
-                    new
-                    RClipboardOperation
-                    ();
-                
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
-                
-    } else 
-
-    {
-       return REcmaHelper::throwError(
-       QString::fromLatin1("RClipboardOperation(): no matching constructor found."),
-           context);
-    }
-    
-    return result;
+           return REcmaHelper::throwError("Abstract class RClipboardOperation: Cannot be constructed.",
+               context); 
     }
     
 

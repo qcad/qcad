@@ -322,7 +322,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RColor*
                     ap0 =
                     qscriptvalue_cast<
@@ -332,11 +332,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RColorCombo: Argument 0 is not of type RColor*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RColorCombo: Argument 0 is not of type RColor.",
                                context);                    
                     }
-                    RColor& a0 = *ap0;
+                    RColor 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

@@ -345,7 +345,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -355,11 +355,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -390,7 +392,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -400,11 +402,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -612,7 +616,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -622,11 +626,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -657,7 +663,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -667,11 +673,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -737,7 +745,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -747,11 +755,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -782,7 +792,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -792,11 +802,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -862,7 +874,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -872,11 +884,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -907,7 +921,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -917,11 +931,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -965,7 +981,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -975,11 +991,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -1055,7 +1073,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -1065,11 +1083,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1989,7 +2009,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -1999,11 +2019,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -2102,7 +2124,7 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -2112,11 +2134,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -2174,7 +2198,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -2184,11 +2208,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -2347,7 +2373,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RBox*
                     ap0 =
                     qscriptvalue_cast<
@@ -2357,13 +2383,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RBox*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RBox.",
                                context);                    
                     }
-                    RBox& a0 = *ap0;
+                    RBox 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -2373,11 +2401,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -2412,7 +2442,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPolyline*
                     ap0 =
                     qscriptvalue_cast<
@@ -2422,13 +2452,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RPolyline*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RPolyline.",
                                context);                    
                     }
-                    RPolyline& a0 = *ap0;
+                    RPolyline 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -2438,11 +2470,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -2546,7 +2580,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -2556,13 +2590,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap1 =
                     qscriptvalue_cast<
@@ -2572,11 +2608,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RLine*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a1 = *ap1;
+                    RLine 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -2614,7 +2652,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -2624,13 +2662,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap1 =
                     qscriptvalue_cast<
@@ -2640,11 +2680,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RLine*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a1 = *ap1;
+                    RLine 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -2695,7 +2737,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -2705,13 +2747,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap1 =
                     qscriptvalue_cast<
@@ -2721,11 +2765,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RLine*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a1 = *ap1;
+                    RLine 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -2798,7 +2844,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -2808,13 +2854,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap1 =
                     qscriptvalue_cast<
@@ -2824,11 +2872,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a1 = *ap1;
+                    RArc 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -2866,7 +2916,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -2876,13 +2926,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap1 =
                     qscriptvalue_cast<
@@ -2892,11 +2944,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a1 = *ap1;
+                    RArc 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -2947,7 +3001,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -2957,13 +3011,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap1 =
                     qscriptvalue_cast<
@@ -2973,11 +3029,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a1 = *ap1;
+                    RArc 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -3050,7 +3108,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3060,13 +3118,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap1 =
                     qscriptvalue_cast<
@@ -3076,11 +3136,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a1 = *ap1;
+                    RCircle 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -3118,7 +3180,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3128,13 +3190,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap1 =
                     qscriptvalue_cast<
@@ -3144,11 +3208,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a1 = *ap1;
+                    RCircle 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -3211,7 +3277,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3221,13 +3287,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap1 =
                     qscriptvalue_cast<
@@ -3237,11 +3305,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a1 = *ap1;
+                    REllipse 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -3279,7 +3349,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3289,13 +3359,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap1 =
                     qscriptvalue_cast<
@@ -3305,11 +3377,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a1 = *ap1;
+                    REllipse 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -3372,7 +3446,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3382,13 +3456,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTriangle*
                     ap1 =
                     qscriptvalue_cast<
@@ -3398,11 +3474,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RTriangle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RTriangle.",
                                context);                    
                     }
-                    RTriangle& a1 = *ap1;
+                    RTriangle 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -3440,7 +3518,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3450,13 +3528,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTriangle*
                     ap1 =
                     qscriptvalue_cast<
@@ -3466,11 +3546,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RTriangle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RTriangle.",
                                context);                    
                     }
-                    RTriangle& a1 = *ap1;
+                    RTriangle 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -3533,7 +3615,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3543,11 +3625,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RExplodable*
@@ -3601,7 +3685,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3611,11 +3695,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RExplodable*
@@ -3694,7 +3780,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -3704,13 +3790,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap1 =
                     qscriptvalue_cast<
@@ -3720,11 +3808,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a1 = *ap1;
+                    RArc 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -3762,7 +3852,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -3772,13 +3862,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap1 =
                     qscriptvalue_cast<
@@ -3788,11 +3880,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a1 = *ap1;
+                    RArc 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -3855,7 +3949,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -3865,13 +3959,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap1 =
                     qscriptvalue_cast<
@@ -3881,11 +3977,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a1 = *ap1;
+                    RCircle 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -3923,7 +4021,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -3933,13 +4031,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap1 =
                     qscriptvalue_cast<
@@ -3949,11 +4049,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a1 = *ap1;
+                    RCircle 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -4016,7 +4118,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -4026,13 +4128,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap1 =
                     qscriptvalue_cast<
@@ -4042,11 +4146,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a1 = *ap1;
+                    REllipse 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -4084,7 +4190,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -4094,13 +4200,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap1 =
                     qscriptvalue_cast<
@@ -4110,11 +4218,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a1 = *ap1;
+                    REllipse 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -4177,7 +4287,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -4187,13 +4297,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTriangle*
                     ap1 =
                     qscriptvalue_cast<
@@ -4203,11 +4315,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RTriangle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RTriangle.",
                                context);                    
                     }
-                    RTriangle& a1 = *ap1;
+                    RTriangle 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -4245,7 +4359,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -4255,13 +4369,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTriangle*
                     ap1 =
                     qscriptvalue_cast<
@@ -4271,11 +4387,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RTriangle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RTriangle.",
                                context);                    
                     }
-                    RTriangle& a1 = *ap1;
+                    RTriangle 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -4338,7 +4456,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -4348,11 +4466,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RExplodable*
@@ -4406,7 +4526,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArc*
                     ap0 =
                     qscriptvalue_cast<
@@ -4416,11 +4536,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
                                context);                    
                     }
-                    RArc& a0 = *ap0;
+                    RArc 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RExplodable*
@@ -4499,7 +4621,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap0 =
                     qscriptvalue_cast<
@@ -4509,13 +4631,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a0 = *ap0;
+                    RCircle 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap1 =
                     qscriptvalue_cast<
@@ -4525,11 +4649,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a1 = *ap1;
+                    RCircle 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -4582,7 +4708,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap0 =
                     qscriptvalue_cast<
@@ -4592,13 +4718,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a0 = *ap0;
+                    RCircle 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap1 =
                     qscriptvalue_cast<
@@ -4608,11 +4736,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a1 = *ap1;
+                    REllipse 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -4665,7 +4795,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap0 =
                     qscriptvalue_cast<
@@ -4675,11 +4805,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a0 = *ap0;
+                    RCircle 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RExplodable*
@@ -4733,7 +4865,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircle*
                     ap0 =
                     qscriptvalue_cast<
@@ -4743,11 +4875,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle.",
                                context);                    
                     }
-                    RCircle& a0 = *ap0;
+                    RCircle 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RExplodable*
@@ -4826,7 +4960,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap0 =
                     qscriptvalue_cast<
@@ -4836,13 +4970,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a0 = *ap0;
+                    REllipse 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap1 =
                     qscriptvalue_cast<
@@ -4852,11 +4988,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a1 = *ap1;
+                    REllipse 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -4894,7 +5032,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap0 =
                     qscriptvalue_cast<
@@ -4904,13 +5042,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a0 = *ap0;
+                    REllipse 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap1 =
                     qscriptvalue_cast<
@@ -4920,11 +5060,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a1 = *ap1;
+                    REllipse 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     bool
@@ -4987,7 +5129,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap0 =
                     qscriptvalue_cast<
@@ -4997,11 +5139,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a0 = *ap0;
+                    REllipse 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RExplodable*
@@ -5055,7 +5199,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipse*
                     ap0 =
                     qscriptvalue_cast<
@@ -5065,11 +5209,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse.",
                                context);                    
                     }
-                    REllipse& a0 = *ap0;
+                    REllipse 
+                    a0 = 
+                    *ap0;
                 
                     // argument is reference
                     RExplodable*

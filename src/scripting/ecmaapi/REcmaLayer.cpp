@@ -550,7 +550,7 @@
                     context->argument( 3 ).
                     toBool();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RColor*
                     ap4 =
                     qscriptvalue_cast<
@@ -560,11 +560,13 @@
                         4
                         )
                     );
-                    if( ap4 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 4 is not of type RColor*.",
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 4 is not of type RColor.",
                                context);                    
                     }
-                    RColor& a4 = *ap4;
+                    RColor 
+                    a4 = 
+                    *ap4;
                 
     // end of arguments
 
@@ -696,7 +698,7 @@
                     context->argument( 3 ).
                     toBool();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RColor*
                     ap4 =
                     qscriptvalue_cast<
@@ -706,11 +708,13 @@
                         4
                         )
                     );
-                    if( ap4 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 4 is not of type RColor*.",
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 4 is not of type RColor.",
                                context);                    
                     }
-                    RColor& a4 = *ap4;
+                    RColor 
+                    a4 = 
+                    *ap4;
                 
                     // argument isStandardType
                     RLinetype::Id
@@ -859,7 +863,7 @@
                     context->argument( 3 ).
                     toBool();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RColor*
                     ap4 =
                     qscriptvalue_cast<
@@ -869,11 +873,13 @@
                         4
                         )
                     );
-                    if( ap4 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 4 is not of type RColor*.",
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 4 is not of type RColor.",
                                context);                    
                     }
-                    RColor& a4 = *ap4;
+                    RColor 
+                    a4 = 
+                    *ap4;
                 
                     // argument isStandardType
                     RLinetype::Id
@@ -1444,7 +1450,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RColor*
                     ap0 =
                     qscriptvalue_cast<
@@ -1454,11 +1460,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RColor*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RColor.",
                                context);                    
                     }
-                    RColor& a0 = *ap0;
+                    RColor 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1717,7 +1725,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -1727,11 +1735,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1778,7 +1788,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -1788,11 +1798,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -1852,7 +1864,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -1862,11 +1874,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -1967,7 +1981,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -1977,11 +1991,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable or pointer
                     QVariant

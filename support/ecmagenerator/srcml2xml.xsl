@@ -47,14 +47,14 @@
           select="contains(preceding-sibling::srcml:comment[1]/text(), '\scriptable')"/>
         <class name="{$name}"
             xsi:noNamespaceSchemaLocation="../class.xsd"
-            isCopyable="{contains(preceding-sibling::srcml:comment/text(), '\copyable')}"
-            hasShell="{contains(preceding-sibling::srcml:comment/text(), '\generateScriptShell')}"
-            sharedPointerSupport="{contains(preceding-sibling::srcml:comment/text(), '\sharedPointerSupport')}"
+            isCopyable="{contains(preceding-sibling::srcml:comment[1]/text(), '\copyable')}"
+            hasShell="{contains(preceding-sibling::srcml:comment[1]/text(), '\generateScriptShell')}"
+            sharedPointerSupport="{contains(preceding-sibling::srcml:comment[1]/text(), '\sharedPointerSupport')}"
             isQObject="{srcml:block/srcml:private/srcml:macro/srcml:name/text() = 'Q_OBJECT' or
                 srcml:block/srcml:private/srcml:function_decl/srcml:type/srcml:name/text() = 'Q_OBJECT' }"
-            hasStreamOperator="{contains(preceding-sibling::srcml:comment/text(), '\hasStreamOperator') or boolean(/srcml:unit/srcml:function_decl/srcml:name[text() = 'operator&lt;&lt;'])}"
+            hasStreamOperator="{contains(preceding-sibling::srcml:comment[1]/text(), '\hasStreamOperator') or boolean(/srcml:unit/srcml:function_decl/srcml:name[text() = 'operator&lt;&lt;'])}"
             isAbstract="{boolean(.//srcml:specifier[ translate(normalize-space(text()), ' ', '') = '=0' ])
-                or contains(preceding-sibling::srcml:comment/text(), '\abstract')}"
+                or contains(preceding-sibling::srcml:comment[1]/text(), '\abstract')}"
             isScriptable="{$scriptable}"
             >
             

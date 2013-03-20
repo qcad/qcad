@@ -190,7 +190,7 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -200,11 +200,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntityPickEvent: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("REntityPickEvent: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
                     // argument is reference
                     RGraphicsScene*

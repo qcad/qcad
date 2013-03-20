@@ -129,224 +129,8 @@
      QScriptValue REcmaDimLinearData::create(QScriptContext* context, QScriptEngine* engine) 
     
     {
-    if (context->thisObject().strictlyEquals(
-       engine->globalObject())) {
-       return REcmaHelper::throwError(
-       QString::fromLatin1("RDimLinearData(): Did you forget to construct with 'new'?"),
-           context);
-    }
-
-    QScriptValue result;
-        
-            // generate constructor variants:
-            
-    if( context->argumentCount() ==
-        0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // non-copyable class:
-            RDimLinearData
-                    * cppResult =
-                    new
-                    RDimLinearData
-                    ();
-                
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
-                
-    } else 
-
-    if( context->argumentCount() ==
-        1
-                && (
-                
-                        context->argument(
-                        0
-                        ).isVariant()
-                        ||
-                    
-                        context->argument(
-                        0
-                        ).isQObject()
-                        ||
-                    
-                        context->argument(
-                        0
-                        ).isNull()
-                ) /* type: RDocument * */
-            
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    RDocument * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<RDocument >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RDocument *RDocument *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // non-copyable class:
-            RDimLinearData
-                    * cppResult =
-                    new
-                    RDimLinearData
-                    (
-                    a0
-                    );
-                
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
-                
-    } else 
-
-    if( context->argumentCount() ==
-        3
-                && (
-                
-                        context->argument(
-                        0
-                        ).isVariant()
-                        ||
-                    
-                        context->argument(
-                        0
-                        ).isQObject()
-                        ||
-                    
-                        context->argument(
-                        0
-                        ).isNull()
-                ) /* type: RDimensionData */
-            
-                && (
-                
-                        context->argument(
-                        1
-                        ).isVariant()
-                        ||
-                    
-                        context->argument(
-                        1
-                        ).isQObject()
-                        ||
-                    
-                        context->argument(
-                        1
-                        ).isNull()
-                ) /* type: RVector */
-            
-                && (
-                
-                        context->argument(
-                        2
-                        ).isVariant()
-                        ||
-                    
-                        context->argument(
-                        2
-                        ).isQObject()
-                        ||
-                    
-                        context->argument(
-                        2
-                        ).isNull()
-                ) /* type: RVector */
-            
-    ){
-    // prepare arguments:
-    
-                    // argument is reference
-                    RDimensionData*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RDimensionData*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RDimensionData*.",
-                               context);                    
-                    }
-                    RDimensionData& a0 = *ap0;
-                
-                    // argument is reference
-                    RVector*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector*.",
-                               context);                    
-                    }
-                    RVector& a1 = *ap1;
-                
-                    // argument is reference
-                    RVector*
-                    ap2 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        2
-                        )
-                    );
-                    if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 2 is not of type RVector*.",
-                               context);                    
-                    }
-                    RVector& a2 = *ap2;
-                
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // non-copyable class:
-            RDimLinearData
-                    * cppResult =
-                    new
-                    RDimLinearData
-                    (
-                    a0
-        ,
-    a1
-        ,
-    a2
-                    );
-                
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
-                
-    } else 
-
-    {
-       return REcmaHelper::throwError(
-       QString::fromLatin1("RDimLinearData(): no matching constructor found."),
-           context);
-    }
-    
-    return result;
+           return REcmaHelper::throwError("Abstract class RDimLinearData: Cannot be constructed.",
+               context); 
     }
     
 
@@ -479,7 +263,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -489,11 +273,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -593,7 +379,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -603,11 +389,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -722,7 +510,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -732,13 +520,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -748,13 +538,15 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap2 =
                     qscriptvalue_cast<
@@ -764,13 +556,15 @@
                         2
                         )
                     );
-                    if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 2 is not of type RVector*.",
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 2 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a2 = *ap2;
+                    RVector 
+                    a2 = 
+                    *ap2;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap3 =
                     qscriptvalue_cast<
@@ -780,11 +574,13 @@
                         3
                         )
                     );
-                    if( ap3 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 3 is not of type RVector*.",
+                    if (ap3 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 3 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a3 = *ap3;
+                    RVector 
+                    a3 = 
+                    *ap3;
                 
     // end of arguments
 
@@ -846,7 +642,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -856,13 +652,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -872,11 +670,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -934,7 +734,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -944,11 +744,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1015,7 +817,7 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -1025,11 +827,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -1092,7 +896,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -1102,13 +906,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -1118,11 +924,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -1180,7 +988,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -1190,11 +998,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1255,7 +1065,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPolyline*
                     ap0 =
                     qscriptvalue_cast<
@@ -1265,13 +1075,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RPolyline*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RPolyline.",
                                context);                    
                     }
-                    RPolyline& a0 = *ap0;
+                    RPolyline 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -1281,11 +1093,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 

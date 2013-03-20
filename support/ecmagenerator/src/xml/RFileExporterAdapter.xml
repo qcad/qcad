@@ -16,7 +16,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RVector" />
   <class name="RFileExporterAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RFileExporter" specifier="public" />
     <constructor>
@@ -26,6 +26,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="document" isConst="false" />
       </variant>
     </constructor>
+    <method name="getCorrectedFileName"
+    cppName="getCorrectedFileName" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" isConst="true" />
+      </variant>
+    </method>
     <method name="exportFile" cppName="exportFile"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

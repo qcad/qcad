@@ -51,6 +51,11 @@ public:
     RFileExporterAdapter(RDocument& document) : RFileExporter(document) {}
     virtual ~RFileExporterAdapter() {}
 
+    virtual QString getCorrectedFileName(const QString& fileName, const QString& nameFilter) {
+        Q_UNUSED(nameFilter);
+        return fileName;
+    }
+
     virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool setFileName = true) {
         Q_UNUSED(fileName);
         Q_UNUSED(nameFilter);

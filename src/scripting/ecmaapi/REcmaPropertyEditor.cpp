@@ -143,15 +143,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RPropertyEditor
+            REcmaShellPropertyEditor
                     * cppResult =
                     new
-                    RPropertyEditor
+                    REcmaShellPropertyEditor
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -537,7 +539,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -547,11 +549,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable or pointer
                     QVariant
@@ -599,7 +603,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -609,11 +613,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable or pointer
                     QVariant
@@ -674,7 +680,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -684,11 +690,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable or pointer
                     QVariant
@@ -784,7 +792,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -794,11 +802,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     int
@@ -859,7 +869,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -869,11 +879,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     int
@@ -1066,7 +1078,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -1076,11 +1088,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1181,7 +1195,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -1191,11 +1205,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1433,12 +1449,12 @@
 
             return self;
         }
-        RPropertyEditor* REcmaPropertyEditor::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellPropertyEditor* REcmaPropertyEditor::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RPropertyEditor* selfBase = getSelf(fName, context);
-                RPropertyEditor* self = dynamic_cast<RPropertyEditor*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RPropertyEditor >(context->thisObject());
+                REcmaShellPropertyEditor* self = dynamic_cast<REcmaShellPropertyEditor*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellPropertyEditor >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RPropertyEditor.%1(): "
                     "This object is not a RPropertyEditor").arg(fName),

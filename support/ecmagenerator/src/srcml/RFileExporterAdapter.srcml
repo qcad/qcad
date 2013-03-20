@@ -102,6 +102,45 @@ dir="./core" filename="RFileExporterAdapter.h">
   <function>
     <type>
       <name>virtual</name>
+      <name>QString</name>
+    </type>
+    <name>getCorrectedFileName</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>fileName</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>nameFilter</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>Q_UNUSED</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>nameFilter</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>
+    <return>return 
+    <expr>
+      <name>fileName</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
       <name>bool</name>
     </type>
     <name>exportFile</name>

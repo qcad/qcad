@@ -297,7 +297,7 @@
                     context->argument( 1 ).
                     toString();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap2 =
                     qscriptvalue_cast<
@@ -307,13 +307,15 @@
                         2
                         )
                     );
-                    if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 2 is not of type RVector*.",
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 2 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a2 = *ap2;
+                    RVector 
+                    a2 = 
+                    *ap2;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap3 =
                     qscriptvalue_cast<
@@ -323,13 +325,15 @@
                         3
                         )
                     );
-                    if( ap3 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 3 is not of type RVector*.",
+                    if (ap3 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 3 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a3 = *ap3;
+                    RVector 
+                    a3 = 
+                    *ap3;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap4 =
                     qscriptvalue_cast<
@@ -339,11 +343,13 @@
                         4
                         )
                     );
-                    if( ap4 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 4 is not of type RVector*.",
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 4 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a4 = *ap4;
+                    RVector 
+                    a4 = 
+                    *ap4;
                 
     // end of arguments
 
@@ -582,7 +588,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -592,11 +598,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -643,7 +651,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -653,11 +661,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -717,7 +727,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -727,11 +737,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -832,7 +844,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -842,11 +854,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable or pointer
                     QVariant
@@ -915,7 +929,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -925,11 +939,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -980,7 +996,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -990,11 +1006,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1045,7 +1063,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -1055,11 +1073,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1159,7 +1179,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -1169,11 +1189,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1229,7 +1251,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -1239,11 +1261,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RUcs: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

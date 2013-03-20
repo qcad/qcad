@@ -273,15 +273,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RGraphicsViewImage
+            REcmaShellGraphicsViewImage
                     * cppResult =
                     new
-                    RGraphicsViewImage
+                    REcmaShellGraphicsViewImage
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -649,7 +651,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RBox*
                     ap0 =
                     qscriptvalue_cast<
@@ -659,11 +661,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RBox*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RBox.",
                                context);                    
                     }
-                    RBox& a0 = *ap0;
+                    RBox 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -689,7 +693,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RBox*
                     ap0 =
                     qscriptvalue_cast<
@@ -699,11 +703,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RBox*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RBox.",
                                context);                    
                     }
-                    RBox& a0 = *ap0;
+                    RBox 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     int
@@ -767,7 +773,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -777,11 +783,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     double
@@ -842,7 +850,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RBox*
                     ap0 =
                     qscriptvalue_cast<
@@ -852,11 +860,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RBox*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RBox.",
                                context);                    
                     }
-                    RBox& a0 = *ap0;
+                    RBox 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -907,7 +917,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -917,11 +927,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1340,7 +1352,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -1350,11 +1362,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1380,7 +1394,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -1390,11 +1404,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -2073,7 +2089,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -2083,11 +2099,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -2904,7 +2922,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -2914,11 +2932,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -2949,7 +2969,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -2959,11 +2979,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     double
@@ -3029,7 +3051,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -3039,11 +3061,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -3385,7 +3409,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -3395,11 +3419,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -3450,7 +3476,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -3460,11 +3486,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RLine.",
                                context);                    
                     }
-                    RLine& a0 = *ap0;
+                    RLine 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -3796,7 +3824,7 @@
                         return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RBox*
                     ap1 =
                     qscriptvalue_cast<
@@ -3806,11 +3834,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RBox*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RBox.",
                                context);                    
                     }
-                    RBox& a1 = *ap1;
+                    RBox 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -4118,7 +4148,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTextLabel*
                     ap0 =
                     qscriptvalue_cast<
@@ -4128,11 +4158,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RTextLabel*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RTextLabel.",
                                context);                    
                     }
-                    RTextLabel& a0 = *ap0;
+                    RTextLabel 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -4351,7 +4383,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPainterPath*
                     ap0 =
                     qscriptvalue_cast<
@@ -4361,11 +4393,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RPainterPath*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RPainterPath.",
                                context);                    
                     }
-                    RPainterPath& a0 = *ap0;
+                    RPainterPath 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -4427,7 +4461,7 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -4437,11 +4471,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -4626,12 +4662,12 @@
 
             return self;
         }
-        RGraphicsViewImage* REcmaGraphicsViewImage::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellGraphicsViewImage* REcmaGraphicsViewImage::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RGraphicsViewImage* selfBase = getSelf(fName, context);
-                RGraphicsViewImage* self = dynamic_cast<RGraphicsViewImage*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RGraphicsViewImage >(context->thisObject());
+                REcmaShellGraphicsViewImage* self = dynamic_cast<REcmaShellGraphicsViewImage*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellGraphicsViewImage >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RGraphicsViewImage.%1(): "
                     "This object is not a RGraphicsViewImage").arg(fName),

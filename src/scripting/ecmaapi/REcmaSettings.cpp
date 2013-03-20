@@ -2143,7 +2143,7 @@
                     context->argument( 0 ).
                     toString();
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RColor*
                     ap1 =
                     qscriptvalue_cast<
@@ -2153,11 +2153,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSettings: Argument 1 is not of type RColor*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSettings: Argument 1 is not of type RColor.",
                                context);                    
                     }
-                    RColor& a1 = *ap1;
+                    RColor 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 

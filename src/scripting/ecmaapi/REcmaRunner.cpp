@@ -103,15 +103,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RRunner
+            REcmaShellRunner
                     * cppResult =
                     new
-                    RRunner
+                    REcmaShellRunner
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -210,12 +212,12 @@
 
             return self;
         }
-        RRunner* REcmaRunner::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellRunner* REcmaRunner::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RRunner* selfBase = getSelf(fName, context);
-                RRunner* self = dynamic_cast<RRunner*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RRunner >(context->thisObject());
+                REcmaShellRunner* self = dynamic_cast<REcmaShellRunner*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellRunner >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RRunner.%1(): "
                     "This object is not a RRunner").arg(fName),

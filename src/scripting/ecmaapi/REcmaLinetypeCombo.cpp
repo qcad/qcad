@@ -318,7 +318,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLinetype*
                     ap0 =
                     qscriptvalue_cast<
@@ -328,11 +328,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLinetypeCombo: Argument 0 is not of type RLinetype*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLinetypeCombo: Argument 0 is not of type RLinetype.",
                                context);                    
                     }
-                    RLinetype& a0 = *ap0;
+                    RLinetype 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

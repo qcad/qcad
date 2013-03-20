@@ -2168,7 +2168,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyEvent*
                     ap0 =
                     qscriptvalue_cast<
@@ -2178,11 +2178,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RPropertyEvent*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RPropertyEvent.",
                                context);                    
                     }
-                    RPropertyEvent& a0 = *ap0;
+                    RPropertyEvent 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

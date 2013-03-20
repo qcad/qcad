@@ -2,7 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RLinetypePattern"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <constructor>

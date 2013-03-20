@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RListWidget.h"
+                #include "REcmaShellListWidget.h"
             
 
         /**
@@ -49,7 +49,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RListWidget* getSelf(const QString& fName, QScriptContext* context)
-    ;static RListWidget* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellListWidget* getSelfShell(const QString& fName, QScriptContext* context)
     ;static  void fromScriptValue(const QScriptValue& value,
         RListWidget*
         &out) {

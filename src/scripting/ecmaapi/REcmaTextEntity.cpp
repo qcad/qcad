@@ -310,7 +310,7 @@
                         return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTextData*
                     ap1 =
                     qscriptvalue_cast<
@@ -320,11 +320,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTextEntity: Argument 1 is not of type RTextData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RTextEntity: Argument 1 is not of type RTextData.",
                                context);                    
                     }
-                    RTextData& a1 = *ap1;
+                    RTextData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -405,7 +407,7 @@
                         return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTextData*
                     ap1 =
                     qscriptvalue_cast<
@@ -415,11 +417,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTextEntity: Argument 1 is not of type RTextData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RTextEntity: Argument 1 is not of type RTextData.",
                                context);                    
                     }
-                    RTextData& a1 = *ap1;
+                    RTextData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -682,7 +686,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -692,11 +696,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable or pointer
                     QVariant
@@ -765,7 +771,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -775,11 +781,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -826,7 +834,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -836,11 +844,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -900,7 +910,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyTypeId*
                     ap0 =
                     qscriptvalue_cast<
@@ -910,11 +920,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RPropertyTypeId*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RPropertyTypeId.",
                                context);                    
                     }
-                    RPropertyTypeId& a0 = *ap0;
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
                     bool
@@ -1223,7 +1235,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RBox*
                     ap0 =
                     qscriptvalue_cast<
@@ -1233,11 +1245,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RBox*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RBox.",
                                context);                    
                     }
-                    RBox& a0 = *ap0;
+                    RBox 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1467,7 +1481,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTextData*
                     ap0 =
                     qscriptvalue_cast<
@@ -1477,11 +1491,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RTextData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextEntity: Argument 0 is not of type RTextData.",
                                context);                    
                     }
-                    RTextData& a0 = *ap0;
+                    RTextData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

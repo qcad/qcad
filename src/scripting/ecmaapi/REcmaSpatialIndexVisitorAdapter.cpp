@@ -125,15 +125,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RSpatialIndexVisitorAdapter
+            REcmaShellSpatialIndexVisitorAdapter
                     * cppResult =
                     new
-                    RSpatialIndexVisitorAdapter
+                    REcmaShellSpatialIndexVisitorAdapter
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -509,12 +511,12 @@
 
             return self;
         }
-        RSpatialIndexVisitorAdapter* REcmaSpatialIndexVisitorAdapter::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellSpatialIndexVisitorAdapter* REcmaSpatialIndexVisitorAdapter::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RSpatialIndexVisitorAdapter* selfBase = getSelf(fName, context);
-                RSpatialIndexVisitorAdapter* self = dynamic_cast<RSpatialIndexVisitorAdapter*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RSpatialIndexVisitorAdapter >(context->thisObject());
+                REcmaShellSpatialIndexVisitorAdapter* self = dynamic_cast<REcmaShellSpatialIndexVisitorAdapter*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellSpatialIndexVisitorAdapter >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RSpatialIndexVisitorAdapter.%1(): "
                     "This object is not a RSpatialIndexVisitorAdapter").arg(fName),

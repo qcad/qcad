@@ -130,15 +130,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RFileImporterAdapter
+            REcmaShellFileImporterAdapter
                     * cppResult =
                     new
-                    RFileImporterAdapter
+                    REcmaShellFileImporterAdapter
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     if( context->argumentCount() ==
@@ -184,10 +186,10 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RFileImporterAdapter
+            REcmaShellFileImporterAdapter
                     * cppResult =
                     new
-                    RFileImporterAdapter
+                    REcmaShellFileImporterAdapter
                     (
                     a0
                     );
@@ -195,6 +197,8 @@
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     if( context->argumentCount() ==
@@ -270,10 +274,10 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RFileImporterAdapter
+            REcmaShellFileImporterAdapter
                     * cppResult =
                     new
-                    RFileImporterAdapter
+                    REcmaShellFileImporterAdapter
                     (
                     a0
         ,
@@ -283,6 +287,8 @@
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     if( context->argumentCount() ==
@@ -388,10 +394,10 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RFileImporterAdapter
+            REcmaShellFileImporterAdapter
                     * cppResult =
                     new
-                    RFileImporterAdapter
+                    REcmaShellFileImporterAdapter
                     (
                     a0
         ,
@@ -403,6 +409,8 @@
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -656,12 +664,12 @@
 
             return self;
         }
-        RFileImporterAdapter* REcmaFileImporterAdapter::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellFileImporterAdapter* REcmaFileImporterAdapter::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RFileImporterAdapter* selfBase = getSelf(fName, context);
-                RFileImporterAdapter* self = dynamic_cast<RFileImporterAdapter*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RFileImporterAdapter >(context->thisObject());
+                REcmaShellFileImporterAdapter* self = dynamic_cast<REcmaShellFileImporterAdapter*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellFileImporterAdapter >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RFileImporterAdapter.%1(): "
                     "This object is not a RFileImporterAdapter").arg(fName),

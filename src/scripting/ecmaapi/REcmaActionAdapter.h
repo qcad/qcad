@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RActionAdapter.h"
+                #include "REcmaShellActionAdapter.h"
             
 
         /**
@@ -121,7 +121,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RActionAdapter* getSelf(const QString& fName, QScriptContext* context)
-    ;static RActionAdapter* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellActionAdapter* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

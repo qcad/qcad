@@ -134,15 +134,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RSnapDistance
+            REcmaShellSnapDistance
                     * cppResult =
                     new
-                    RSnapDistance
+                    REcmaShellSnapDistance
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -406,12 +408,12 @@
 
             return self;
         }
-        RSnapDistance* REcmaSnapDistance::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellSnapDistance* REcmaSnapDistance::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RSnapDistance* selfBase = getSelf(fName, context);
-                RSnapDistance* self = dynamic_cast<RSnapDistance*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RSnapDistance >(context->thisObject());
+                REcmaShellSnapDistance* self = dynamic_cast<REcmaShellSnapDistance*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellSnapDistance >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RSnapDistance.%1(): "
                     "This object is not a RSnapDistance").arg(fName),

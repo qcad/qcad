@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RSnap.h"
+                #include "REcmaShellSnap.h"
             
 
         /**
@@ -68,7 +68,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RSnap* getSelf(const QString& fName, QScriptContext* context)
-    ;static RSnap* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellSnap* getSelfShell(const QString& fName, QScriptContext* context)
     ;static  QScriptValue toScriptValueEnumStatus(QScriptEngine* engine, const RSnap::Status& value)
     ;static  void fromScriptValueEnumStatus(const QScriptValue& value, RSnap::Status& out)
     ;};

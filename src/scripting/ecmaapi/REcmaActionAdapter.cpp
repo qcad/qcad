@@ -193,15 +193,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RActionAdapter
+            REcmaShellActionAdapter
                     * cppResult =
                     new
-                    RActionAdapter
+                    REcmaShellActionAdapter
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     if( context->argumentCount() ==
@@ -234,10 +236,10 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RActionAdapter
+            REcmaShellActionAdapter
                     * cppResult =
                     new
-                    RActionAdapter
+                    REcmaShellActionAdapter
                     (
                     a0
                     );
@@ -245,6 +247,8 @@
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -1709,7 +1713,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPropertyEvent*
                     ap0 =
                     qscriptvalue_cast<
@@ -1719,11 +1723,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RPropertyEvent*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RPropertyEvent.",
                                context);                    
                     }
-                    RPropertyEvent& a0 = *ap0;
+                    RPropertyEvent 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -1802,12 +1808,12 @@
 
             return self;
         }
-        RActionAdapter* REcmaActionAdapter::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellActionAdapter* REcmaActionAdapter::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RActionAdapter* selfBase = getSelf(fName, context);
-                RActionAdapter* self = dynamic_cast<RActionAdapter*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RActionAdapter >(context->thisObject());
+                REcmaShellActionAdapter* self = dynamic_cast<REcmaShellActionAdapter*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellActionAdapter >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RActionAdapter.%1(): "
                     "This object is not a RActionAdapter").arg(fName),

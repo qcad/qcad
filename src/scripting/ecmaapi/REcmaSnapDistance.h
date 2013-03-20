@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RSnapDistance.h"
+                #include "REcmaShellSnapDistance.h"
             
 
         /**
@@ -60,7 +60,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RSnapDistance* getSelf(const QString& fName, QScriptContext* context)
-    ;static RSnapDistance* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellSnapDistance* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

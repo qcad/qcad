@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class name="RObject"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
   hasStreamOperator="false" isAbstract="true" isScriptable="true">
     <enum name="XYZ">
       <value name="X" />

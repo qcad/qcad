@@ -123,14 +123,16 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RListWidget
+            REcmaShellListWidget
                     * cppResult =
                     new
-                    RListWidget
+                    REcmaShellListWidget
                     ();
                 
                     result = engine->newQObject(context->thisObject(), cppResult);
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     if( context->argumentCount() ==
@@ -166,16 +168,18 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RListWidget
+            REcmaShellListWidget
                     * cppResult =
                     new
-                    RListWidget
+                    REcmaShellListWidget
                     (
                     a0
                     );
                 
                     result = engine->newQObject(context->thisObject(), cppResult);
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -285,12 +289,12 @@
 
             return self;
         }
-        RListWidget* REcmaListWidget::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellListWidget* REcmaListWidget::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RListWidget* selfBase = getSelf(fName, context);
-                RListWidget* self = dynamic_cast<RListWidget*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RListWidget >(context->thisObject());
+                REcmaShellListWidget* self = dynamic_cast<REcmaShellListWidget*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellListWidget >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RListWidget.%1(): "
                     "This object is not a RListWidget").arg(fName),

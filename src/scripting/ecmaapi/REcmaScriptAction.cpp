@@ -102,84 +102,8 @@
      QScriptValue REcmaScriptAction::create(QScriptContext* context, QScriptEngine* engine) 
     
     {
-    if (context->thisObject().strictlyEquals(
-       engine->globalObject())) {
-       return REcmaHelper::throwError(
-       QString::fromLatin1("RScriptAction(): Did you forget to construct with 'new'?"),
-           context);
-    }
-
-    QScriptValue result;
-        
-            // generate constructor variants:
-            
-    if( context->argumentCount() ==
-        2
-                && (
-                
-                        context->argument(
-                        0
-                        ).isString()
-                ) /* type: QString */
-            
-                && (
-                
-                        context->argument(
-                        1
-                        ).isQObject()
-                ) /* type: RGuiAction * */
-            
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-                    // argument is pointer
-                    RGuiAction * a1 = NULL;
-
-                    a1 = 
-                        REcmaHelper::scriptValueTo<RGuiAction >(
-                            context->argument(1)
-                        );
-                    
-                    if (a1==NULL && 
-                        !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("RScriptAction: Argument 1 is not of type RGuiAction *RGuiAction *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // non-copyable class:
-            RScriptAction
-                    * cppResult =
-                    new
-                    RScriptAction
-                    (
-                    a0
-        ,
-    a1
-                    );
-                
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
-                
-    } else 
-
-    {
-       return REcmaHelper::throwError(
-       QString::fromLatin1("RScriptAction(): no matching constructor found."),
-           context);
-    }
-    
-    return result;
+           return REcmaHelper::throwError("Abstract class RScriptAction: Cannot be constructed.",
+               context); 
     }
     
 

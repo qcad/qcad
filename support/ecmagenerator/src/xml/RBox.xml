@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RPolyline" />
   <class name="RBox" xsi:noNamespaceSchemaLocation="../class.xsd"
-  isCopyable="false" hasShell="false" sharedPointerSupport="false"
+  isCopyable="true" hasShell="false" sharedPointerSupport="true"
   isQObject="false" hasStreamOperator="true" isAbstract="false"
   isScriptable="true">
     <constructor>

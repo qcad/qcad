@@ -3160,7 +3160,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTransaction*
                     ap0 =
                     qscriptvalue_cast<
@@ -3170,11 +3170,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type RTransaction*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type RTransaction.",
                                context);                    
                     }
-                    RTransaction& a0 = *ap0;
+                    RTransaction 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RFocusListenerAdapter.h"
+                #include "REcmaShellFocusListenerAdapter.h"
             
 
         /**
@@ -52,7 +52,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RFocusListenerAdapter* getSelf(const QString& fName, QScriptContext* context)
-    ;static RFocusListenerAdapter* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellFocusListenerAdapter* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

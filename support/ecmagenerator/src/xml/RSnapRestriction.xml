@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocumentInterface" />
   <class name="RSnapRestriction"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="true" isScriptable="true">
     <constructor>
       <variant>

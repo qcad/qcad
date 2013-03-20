@@ -129,15 +129,17 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RFileExporterFactoryAdapter
+            REcmaShellFileExporterFactoryAdapter
                     * cppResult =
                     new
-                    RFileExporterFactoryAdapter
+                    REcmaShellFileExporterFactoryAdapter
                     ();
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
                     result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -471,12 +473,12 @@
 
             return self;
         }
-        RFileExporterFactoryAdapter* REcmaFileExporterFactoryAdapter::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellFileExporterFactoryAdapter* REcmaFileExporterFactoryAdapter::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RFileExporterFactoryAdapter* selfBase = getSelf(fName, context);
-                RFileExporterFactoryAdapter* self = dynamic_cast<RFileExporterFactoryAdapter*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RFileExporterFactoryAdapter >(context->thisObject());
+                REcmaShellFileExporterFactoryAdapter* self = dynamic_cast<REcmaShellFileExporterFactoryAdapter*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellFileExporterFactoryAdapter >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RFileExporterFactoryAdapter.%1(): "
                     "This object is not a RFileExporterFactoryAdapter").arg(fName),

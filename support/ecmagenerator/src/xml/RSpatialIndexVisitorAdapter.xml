@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RSpatialIndexVisitorAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RSpatialIndexVisitor" specifier="public" />
     <method name="visitData" cppName="visitData" specifier="public"

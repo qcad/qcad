@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class name="RFileImporterAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RFileImporter" specifier="public" />
     <constructor>

@@ -5,7 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RMouseEvent" />
   <class name="RSnapDistance"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RSnapEntityBase" specifier="public" />
     <constructor>

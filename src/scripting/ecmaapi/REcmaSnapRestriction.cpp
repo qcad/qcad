@@ -94,8 +94,82 @@
      QScriptValue REcmaSnapRestriction::create(QScriptContext* context, QScriptEngine* engine) 
     
     {
-           return REcmaHelper::throwError("Abstract class RSnapRestriction: Cannot be constructed.",
-               context); 
+    if (context->thisObject().strictlyEquals(
+       engine->globalObject())) {
+       return REcmaHelper::throwError(
+       QString::fromLatin1("RSnapRestriction(): Did you forget to construct with 'new'?"),
+           context);
+    }
+
+    QScriptValue result;
+        
+            // generate constructor variants:
+            
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RDocumentInterface */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RDocumentInterface*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RDocumentInterface*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RSnapRestriction: Argument 0 is not of type RDocumentInterface*.",
+                               context);                    
+                    }
+                    RDocumentInterface& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            REcmaShellSnapRestriction
+                    * cppResult =
+                    new
+                    REcmaShellSnapRestriction
+                    (
+                    a0
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+        cppResult->__qtscript_self = result;
+    
+    } else 
+
+    {
+       return REcmaHelper::throwError(
+       QString::fromLatin1("RSnapRestriction(): no matching constructor found."),
+           context);
+    }
+    
+    return result;
     }
     
 
@@ -162,7 +236,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap0 =
                     qscriptvalue_cast<
@@ -172,13 +246,15 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSnapRestriction: Argument 0 is not of type RVector*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSnapRestriction: Argument 0 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a0 = *ap0;
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
                     ap1 =
                     qscriptvalue_cast<
@@ -188,11 +264,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapRestriction: Argument 1 is not of type RVector*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSnapRestriction: Argument 1 is not of type RVector.",
                                context);                    
                     }
-                    RVector& a1 = *ap1;
+                    RVector 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -459,12 +537,12 @@
 
             return self;
         }
-        RSnapRestriction* REcmaSnapRestriction::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellSnapRestriction* REcmaSnapRestriction::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RSnapRestriction* selfBase = getSelf(fName, context);
-                RSnapRestriction* self = dynamic_cast<RSnapRestriction*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RSnapRestriction >(context->thisObject());
+                REcmaShellSnapRestriction* self = dynamic_cast<REcmaShellSnapRestriction*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellSnapRestriction >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RSnapRestriction.%1(): "
                     "This object is not a RSnapRestriction").arg(fName),

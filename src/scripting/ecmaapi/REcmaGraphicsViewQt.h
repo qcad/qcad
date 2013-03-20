@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RGraphicsViewQt.h"
+                #include "REcmaShellGraphicsViewQt.h"
             
 
         /**
@@ -283,7 +283,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RGraphicsViewQt* getSelf(const QString& fName, QScriptContext* context)
-    ;static RGraphicsViewQt* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellGraphicsViewQt* getSelfShell(const QString& fName, QScriptContext* context)
     ;static  void fromScriptValue(const QScriptValue& value,
         RGraphicsViewQt*
         &out) {

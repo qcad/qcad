@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RSnapRestriction.h"
+                #include "REcmaShellSnapRestriction.h"
             
 
         /**
@@ -62,7 +62,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RSnapRestriction* getSelf(const QString& fName, QScriptContext* context)
-    ;static RSnapRestriction* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellSnapRestriction* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

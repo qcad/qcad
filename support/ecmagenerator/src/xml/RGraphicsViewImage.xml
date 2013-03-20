@@ -10,7 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSnapRestriction" />
   <class name="RGraphicsViewImage"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RGraphicsView" specifier="public" />
     <constructor>

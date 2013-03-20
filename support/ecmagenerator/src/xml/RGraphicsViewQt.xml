@@ -11,7 +11,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSnapRestriction" />
   <class name="RGraphicsViewQt"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="QWidget" specifier="public" />
     <baseClass name="RGraphicsViewImage" specifier="public" />

@@ -13,7 +13,7 @@
         #include <QDebug>
 
         
-                #include "RRunner.h"
+                #include "REcmaShellRunner.h"
             
 
         /**
@@ -47,7 +47,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RRunner* getSelf(const QString& fName, QScriptContext* context)
-    ;static RRunner* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellRunner* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

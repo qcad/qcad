@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
