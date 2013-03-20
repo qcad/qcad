@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RDimLinearData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RDimensionData" specifier="public" />
     <constructor>
       <variant>

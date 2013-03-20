@@ -5,7 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RShape" />
   <class_decl name="RSpline" />
   <class name="RPainterPath"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <baseClass name="QPainterPath" specifier="public" />

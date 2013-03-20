@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGraphicsView" />
   <class name="RSnap" xsi:noNamespaceSchemaLocation="../class.xsd"
-  isCopyable="false" hasShell="true" sharedPointerSupport="false"
+  isCopyable="false" hasShell="false" sharedPointerSupport="false"
   isQObject="false" hasStreamOperator="false" isAbstract="true"
   isScriptable="true">
     <enum name="Status">

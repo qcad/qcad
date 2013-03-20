@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocumentInterface" />
   <class name="RFocusListenerAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RFocusListener" specifier="public" />
     <method name="updateFocus" cppName="updateFocus"

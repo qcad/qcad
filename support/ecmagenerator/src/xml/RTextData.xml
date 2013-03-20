@@ -3,8 +3,8 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="QTextDocument" />
   <class name="RTextData"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
-  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="REntityData" specifier="public" />
     <baseClass name="RPainterPathSource" specifier="public" />

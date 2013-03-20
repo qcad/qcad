@@ -11,7 +11,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSpline" />
   <class_decl name="RTriangle" />
   <class name="RShape" xsi:noNamespaceSchemaLocation="../class.xsd"
-  isCopyable="false" hasShell="false" sharedPointerSupport="true"
+  isCopyable="false" hasShell="false" sharedPointerSupport="false"
   isQObject="false" hasStreamOperator="false" isAbstract="true"
   isScriptable="true">
     <constructor>

@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RListWidget"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="QListWidget" specifier="public" />
     <constructor>

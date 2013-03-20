@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class name="RLayer" xsi:noNamespaceSchemaLocation="../class.xsd"
-  isCopyable="false" hasShell="false" sharedPointerSupport="true"
+  isCopyable="false" hasShell="false" sharedPointerSupport="false"
   isQObject="false" hasStreamOperator="true" isAbstract="false"
   isScriptable="true">
     <baseClass name="RObject" specifier="public" />

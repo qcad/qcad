@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RRunner"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <method name="run" cppName="run" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

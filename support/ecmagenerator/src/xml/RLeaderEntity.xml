@@ -5,7 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RExporter" />
   <class name="RLeaderEntity"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="REntity" specifier="public" />
     <constructor>

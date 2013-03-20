@@ -15,7 +15,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RTabletEvent" />
   <class name="RActionAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RAction" specifier="public" />
     <constructor>
