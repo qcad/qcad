@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="REntity" />
+  <class_decl name="RVector" />
+  <class_decl name="RMessageHandler" />
+  <class_decl name="RProgressHandler" />
+  <class name="RImporter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+        <arg type="RMessageHandler *" typeName="RMessageHandler *"
+        name="messageHandler" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="RProgressHandler *"
+        typeName="RProgressHandler *" name="progressHandler"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="startImport" cppName="startImport"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="endImport" cppName="endImport" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="importObject" cppName="importObject"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RObject &gt;"
+        typeName="QSharedPointer &lt; RObject &gt;" name="object"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setCurrentBlockId" cppName="setCurrentBlockId"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="id"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getCurrentBlockId" cppName="getCurrentBlockId"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RBlock::Id" isPureVirtual="false" />
+    </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setDocument" cppName="setDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *" name="d"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RPropertyListener.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RPROPERTYLISTENER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RPROPERTYLISTENER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RS.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RDocument</name>;</class_decl>
+  <class_decl>class 
+  <name>REntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RDocument</name>;</class_decl>
+  <class_decl>class 
+  <name>RObject</name>;</class_decl>
+  <comment type="block">/** * \brief Abstract base class for
+  classes that are interested in properties * of the current
+  selection or the current action. For example a * property browser
+  or editor. * * \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RPropertyListener</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RPropertyListener</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
+  <comment type="block">/** * This method is called whenever the
+  relevant combined properties of * the objects in \c document have
+  changed. * * For example this can mean that the selection in a
+  document has * changed and the combined properties of the
+  selected entities * should be displayed in a property browser or
+  editor. * * \param onlyChanges Only changes of entities, the set
+  of entities has * not changed (no deletes, no additions).
+  */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>updateFromDocument</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>*</type>
+      <name>document</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>onlyChanges</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>EntityType</name></name>
+    </type>
+    <name>entityTypeFilter</name>=
+    <init>
+      <expr>
+        <name>
+        <name>RS</name>::
+        <name>EntityAll</name></name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * This method is called if only the
+  properties of the given property owner * are currently relevant.
+  * * For example this can be the case when an entity is being
+  drawn and * only the properties of that entity should be
+  displayed, so that the user * can adjust properties before or
+  while drawing the entity. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>updateFromObject</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RObject</name>*</type>
+      <name>object</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RDocument</name>*</type>
+    <name>document</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * This method is called to signal that
+  no properties are currently * relevant. For example that no
+  entities are selected in a document * or that nothing is being
+  drawn at the moment. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>clearEditor</name>
+  <parameter_list>()</parameter_list>
+  <specifier>=
+  0</specifier>;</function_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RPropertyListener*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

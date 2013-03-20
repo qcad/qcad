@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# QCAD startup script
+#
+
+UNAME=`uname`
+KERNEL=`uname -v`
+MACHINE=`uname -m`
+OPT1=""
+OPT2=""
+
+if [[ "$UNAME" != *Darwin* ]];
+then
+    # Ubuntu and friends and 64bit Linux systems might have broken 
+    # default style or no 32bit GTK style:
+    if [[ "$KERNEL" == *Ubuntu* || "$MACHINE" == "x86_64" ]];
+    then
+        OPT1="-style"
+        OPT2="plastique"
+    fi
+fi
+
+DIR=${0%/*}
+
+# Find binary in Mac OS X application bundle:
+if [ $UNAME = "Darwin" ]
+then
+    if [ -f "$DIR/QCAD.app/Contents/MacOS/QCAD" ]
+    then
+        # development:
+        binary="$DIR/QCAD.app/Contents/MacOS/QCAD"
+    else
+        # released as app bundle:
+        binary="$DIR/../MacOS/QCAD"
+    fi
+else
+    binary="$DIR/qcad-bin"
+fi
+
+if [[ "$UNAME" != *Darwin* ]];
+then
+    LD_LIBRARY_PATH="$DIR" "$binary" $OPT1 $OPT2 "$@"
+else
+    DYLD_LIBRARY_PATH="$DIR" "$binary" $OPT1 $OPT2 "$@"
+fi

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RFont" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="false" hasShell="false" sharedPointerSupport="false"
+  isQObject="false" hasStreamOperator="false" isAbstract="false"
+  isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
+    </constructor>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getFileName" cppName="getFileName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getEncoding" cppName="getEncoding"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getNames" cppName="getNames" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="getAuthors" cppName="getAuthors"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="getLetterSpacing" cppName="getLetterSpacing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getWordSpacing" cppName="getWordSpacing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getLineSpacingFactor"
+    cppName="getLineSpacingFactor" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="load" cppName="load" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isLoaded" cppName="isLoaded" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

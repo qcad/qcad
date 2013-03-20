@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="RGraphicsViewQt" />
+  <class name="RMdiChildQt"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QMdiSubWindow" specifier="public" />
+    <baseClass name="RModifiedListener" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="setDocumentInterface"
+    cppName="setDocumentInterface" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="di"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getDocumentInterface"
+    cppName="getDocumentInterface" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RDocumentInterface *"
+      isPureVirtual="false" />
+    </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument *" isPureVirtual="false" />
+    </method>
+    <method name="getLastKnownViewWithFocus"
+    cppName="getLastKnownViewWithFocus" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RGraphicsViewQt *"
+      isPureVirtual="false" />
+    </method>
+    <method name="updateModifiedListener"
+    cppName="updateModifiedListener" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RStorage *" typeName="RStorage *" name="storage"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setCloseEventRejected"
+    cppName="setCloseEventRejected" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setCloseEventAccepted"
+    cppName="setCloseEventAccepted" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="closeEvent" cppName="closeEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QCloseEvent *" typeName="QCloseEvent *"
+        name="closeEvent" isConst="false" />
+      </variant>
+    </method>
+    <method name="sizeHint" cppName="sizeHint"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSize" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

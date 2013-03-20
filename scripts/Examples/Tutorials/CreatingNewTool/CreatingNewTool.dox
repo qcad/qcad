@@ -1,0 +1,145 @@
+/*!
+
+\page CreatingNewTool Creating a New Tool
+
+A good point to start QCAD script development is to create your own simple 
+CAD tool that adds a menu and / or tool button to the QCAD user interface
+and handles the user interaction to do something. 
+
+In this example, we create a drawing tool which creates three point entities 
+with one click. We call our tool "ExThreePoints" (Ex for example).
+
+Quite often, we can start by copying a similar tool that exists already.
+However, in this case, we start from scratch.
+
+Create a directory for our new tool. For this example, we create
+a directory with the name "ExThreePoints". We place our tool inside the
+DrawExamples directory "scripts/Examples/DrawExamples", so that the path for
+our new tool becomes: "scripts/Examples/DrawExamples/ExThreePoints" (relative
+to the QCAD installation directory).
+
+Inside this directory, create an empty text file called "ExThreePoints.js".
+You can also create an icon for the tool in SVG format and call it 
+"ExThreePoints.svg".
+
+<b>Each tool in QCAD is bundled this way inside its own directory.</b>
+
+The tool directory contains the tool implementation ("ExThreePoints.js"), 
+the tool icon ("ExThreePoints.svg"), an optional Qt project file which 
+is mainly used to handle translations ("ExThreePoints.pro") and all other
+resources that are exclusively used by this tool (user interface definitions,
+icons, script files, etc.).
+
+Inside the file "ExThreePoints.js", define a class with the same name as
+the tool: "ExThreePoints". 
+
+<b>The name of the main class of a tool always has to match the tools directory 
+name (in this case "ExThreePoints").</b>
+
+A tool class is usually derived from the class
+that is defined in its parent directory. For that reason, we have to include
+the script file of the parent directory. In this case "../DrawExamples.js":
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd include
+
+Then, we define the class constructor, which calls the base class constructor:
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd constructor
+
+Finally, we derive our class from the base class, in this case "DrawExamples":
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd inheritance
+
+When QCAD finds the tool directory "ExThreePoints", it looks inside for a file 
+called "ExThreePoints.js" and inside that script file for the definition of a
+class called "ExThreePoints". This class is instantiated when the tool is 
+started by the user.
+
+Create a static "init" method at the bottom of the file "ExThreePoints.js"
+as follows:
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd init
+
+<b>The static "init" method is called during the startup of QCAD.</b>
+
+The "init" method usually creates a menu or tool button to launch the tool or 
+performs other necessary initialization.
+
+You can now start QCAD to test if the new tool is correctly shown under
+menu "Examples - Drawing". To make sure that QCAD scans the scripts directory
+for new script tools, start QCAD with the parameter -rescan:
+
+<tt>./qcad -rescan</tt>
+
+You also might want to enable the script debugger to get a meaningful
+error message if there is a typo in your script file:
+
+<tt>./qcad -rescan -enable-script-debugger</tt>
+
+<b>Note that the script debugger should only be enabled for debugging script
+files and never during production use of QCAD. Enabling the script debugger
+can change the behavior of scripts and lead to unexpected results or even 
+crashes.</b>
+
+At this point, our new tool does not appear to do anything. It only
+waits until Escape is pressed or the right mouse button is clicked
+and then terminates.
+
+We can now add functionality by implementing some methods. We start with
+the method "beginEvent", which is called immediately when the user starts
+the tool. Some tools only use "beginEvent" and terminate themselves
+at the end of it (for example the auto zoom tool). This is the case
+if there is no user interaction required and the tool does 
+something and then terminates when it's done.
+
+We start by calling the "beginEvent" implementation of the parent class
+(good practice), then write some debugging output to the console 
+and terminate our tool:
+
+\code{.js}
+ExThreePoints.prototype.beginEvent = function() {
+    DrawExamples.prototype.beginEvent.call(this);
+
+    qDebug("ExThreePoints.prototype.beginEvent was called.");
+
+    this.terminate();
+};
+\endcode
+
+Note that you don't have to restart QCAD after editing the tool script
+file. If you start the tool again after adding the "beginEvent" method as
+described above, the tool should write the debugging output to the console 
+and then terminate itself.
+
+In the next step, we add some interaction to our tool. Our tool should
+wait for the user to click a coordinate in the drawing, draw three points
+at and beside that coordiante and then termiante.
+
+If a tool is interactive (i.e. waits for the user to do something), 
+we have to keep track of its progress. One way to do this is by adding 
+a state to it. Even if our tool can only be in one state, it's good 
+practice to define this single state:
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd State
+
+We can now implement "setState", which is called whenever the tools state
+changes:
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd setState
+
+In our "beginEvent", we set the initial state of the tool to our
+one and only state. We also remove the tool termination:
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd beginEvent
+
+Now we can implement "coordinateEvent", which is called when the user 
+clicks or enters a coordinate. Our implementation draws three points 
+beside each other.
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd coordinateEvent
+
+Here's the complete code listing of file ExThreePoints.js:
+
+\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd main
+
+*/

@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsViewImage" />
+  <class name="RGraphicsSceneQt"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RGraphicsScene" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocumentInterface &amp;"
+        typeName="RDocumentInterface" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getGraphicsView" cppName="getGraphicsView"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsViewImage *"
+      isPureVirtual="false" />
+    </method>
+    <method name="updateSelectionStatus"
+    cppName="updateSelectionStatus" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSet &lt; REntity::Id &gt; &amp;"
+        typeName="QSet &lt; REntity::Id &gt;"
+        name="affectedEntities" isConst="false" />
+        <arg type="bool" typeName="bool" name="updateViews"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="clearPreview" cppName="clearPreview"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="beginPath" cppName="beginPath" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="endPath" cppName="endPath" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="unexportEntity" cppName="unexportEntity"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportPoint" cppName="exportPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPoint &amp;" typeName="RPoint" name="point"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportLine" cppName="exportLine"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="line"
+        isConst="true" />
+        <arg type="double" typeName="double" name="offset"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportArc" cppName="exportArc" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RArc &amp;" typeName="RArc" name="arc"
+        isConst="true" />
+        <arg type="double" typeName="double" name="offset"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportEllipse" cppName="exportEllipse"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REllipse &amp;" typeName="REllipse"
+        name="ellipse" isConst="true" />
+        <arg type="double" typeName="double" name="offset"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportPolyline" cppName="exportPolyline"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPolyline &amp;" typeName="RPolyline"
+        name="polyline" isConst="true" />
+        <arg type="double" typeName="double" name="offset"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportSpline" cppName="exportSpline"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline"
+        isConst="true" />
+        <arg type="double" typeName="double" name="offset"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportArcSegment" cppName="exportArcSegment"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RArc &amp;" typeName="RArc" name="arc"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportLineSegment" cppName="exportLineSegment"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="line"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportTriangle" cppName="exportTriangle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTriangle &amp;" typeName="RTriangle"
+        name="triangle" isConst="true" />
+      </variant>
+    </method>
+    <method name="exportRectangle" cppName="exportRectangle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportPainterPathSource"
+    cppName="exportPainterPathSource" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPainterPathSource &amp;"
+        typeName="RPainterPathSource" name="pathSource"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportPainterPaths" cppName="exportPainterPaths"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RPainterPath &gt; &amp;"
+        typeName="QList &lt; RPainterPath &gt;" name="paths"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportImage" cppName="exportImage"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RImageData &amp;" typeName="RImageData"
+        name="image" isConst="true" />
+      </variant>
+    </method>
+    <method name="getPatternFactor" cppName="getPatternFactor"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="highlightEntity" cppName="highlightEntity"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="deletePainterPaths" cppName="deletePainterPaths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getPainterPaths" cppName="getPainterPaths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPainterPath &gt;"
+      isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="getPreviewPainterPaths"
+    cppName="getPreviewPainterPaths" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPainterPath &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="hasImageFor" cppName="hasImageFor"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="getImage" cppName="getImage" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RImageData" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="addPath" cppName="addPath" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="path" isConst="true" />
+        <arg type="bool" typeName="bool" name="draft"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addToPreview" cppName="addToPreview"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RPainterPath &gt; &amp;"
+        typeName="QList &lt; RPainterPath &gt;" name="painterPaths"
+        isConst="true" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="painterPath" isConst="true" />
+      </variant>
+    </method>
+    <method name="startEntity" cppName="startEntity"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="topLevelEntity"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="dump" cppName="dump" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

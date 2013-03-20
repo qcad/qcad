@@ -1,0 +1,310 @@
+/**
+ * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */
+
+include("../../EAction.js");
+
+function DefaultNavigation(widget) {
+    RActionAdapter.call(this);
+    this.lastCursor = undefined;
+    this.view = undefined;
+    this.panning = false;
+    this.savedCursor = undefined;
+    this.panOrigin = new RVector();
+    this.wheelDelta = 0;
+    this.lastIgnoredDelta = undefined;
+    if (!isNull(widget)) {
+        this.hruler = widget.findChild("HorizontalRuler");
+        this.vruler = widget.findChild("VerticalRuler");
+    }
+
+    // make sure wheel behavior / pan gesture is initialized:
+    DefaultNavigation.applyPreferences();
+}
+
+DefaultNavigation.prototype = new RActionAdapter();
+
+DefaultNavigation.getPreferencesCategory = function() {
+    return [qsTr("Graphics View"), qsTr("Navigation")];
+};
+
+DefaultNavigation.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    var wheelCombo = pageWidget.findChild("Wheel");
+    wheelCombo.addItem(qsTr("Zoom (Wheel Mouse)"), 0);
+    wheelCombo.addItem(qsTr("Scroll (Trackpad, Multi-Touch Mouse)"), 1);
+};
+
+DefaultNavigation.applyPreferences = function(doc) {
+    DefaultNavigation.wheelBehavior = RSettings.getIntValue("GraphicsViewNavigation/Wheel", 0);
+    DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
+};
+
+DefaultNavigation.prototype.beginEvent = function() {
+};
+
+DefaultNavigation.prototype.setGraphicsView = function(v) {
+    this.view = v;
+};
+
+DefaultNavigation.prototype.finishEvent = function() {
+};
+
+DefaultNavigation.prototype.keyPressEvent = function(event) {
+    var v = undefined;
+
+    if (event.key()===Qt.Key_Left.valueOf()) {
+        v = new RVector(50, 0);
+    } else if (event.key()===Qt.Key_Right.valueOf()) {
+        v = new RVector(-50, 0);
+    } else if (event.key()===Qt.Key_Up.valueOf()) {
+        v = new RVector(0, 50);
+    } else if (event.key()===Qt.Key_Down.valueOf()) {
+        v = new RVector(0, -50);
+    }
+
+    if (!isNull(v)) {
+        this.view.pan(v);
+        event.accept();
+    }
+};
+
+DefaultNavigation.prototype.mousePressEvent = function(event) {
+    if (isNull(this.view)) {
+        return;
+    }
+
+    // middle button or left button and control (command on mac) to pan:
+    if (event.button() == Qt.MidButton ||
+        (event.button() == Qt.LeftButton &&
+         event.modifiers().valueOf() === Qt.ControlModifier.valueOf())) {
+
+        this.panOrigin = event.getScreenPosition();
+        this.panning = true;
+        this.savedCursor = this.view.getCursor();
+        this.view.setCursor(new QCursor(Qt.OpenHandCursor));
+        this.view.startPan();
+    }
+};
+
+DefaultNavigation.prototype.mouseReleaseEvent = function(event) {
+    if (isNull(this.view)) {
+        return;
+    }
+
+    if (this.panning === true &&
+        (event.button() === Qt.MidButton ||
+         event.button() === Qt.LeftButton)) {
+
+        if (!isNull(this.savedCursor)) {
+            this.view.setCursor(this.savedCursor);
+        }
+        this.panning = false;
+        this.savedCursor = undefined;
+    }
+};
+
+DefaultNavigation.prototype.mouseMoveEvent = function(event) {
+    if (isNull(this.view)) {
+        return;
+    }
+
+    if (event.buttons().valueOf() & Qt.MidButton.valueOf() ||
+        (event.buttons().valueOf() & Qt.LeftButton.valueOf() &&
+         event.modifiers().valueOf() === Qt.ControlModifier.valueOf())) {
+
+        if (this.panning === true) {
+            var panTarget = event.getScreenPosition();
+            var panDelta = panTarget.operator_subtract(this.panOrigin);
+            if (Math.abs(panDelta.x) > 2 || Math.abs(panDelta.y) > 2) {
+                this.view.setCursor(
+                    new QCursor(Qt.ClosedHandCursor)
+                );
+                this.view.pan(panDelta);
+                this.panOrigin = panTarget;
+            }
+        }
+    }
+
+    if (!isNull(this.hruler)) {
+        this.hruler.update();
+    }
+    if (!isNull(this.vruler)) {
+        this.vruler.update();
+    }
+};
+
+DefaultNavigation.prototype.wheelEvent = function(event) {
+    if (isNull(this.view)) {
+        return;
+    }
+
+    this.wheelDelta = event.delta();
+
+    switch (event.modifiers().valueOf()) {
+    
+    // scroll up / down:
+    case Qt.ControlModifier.valueOf():
+        this.view.pan(new RVector(0, this.wheelDelta / 2));
+        this.view.simulateMouseMoveEvent();
+        break;
+
+    // scroll left / right:
+    case Qt.ShiftModifier.valueOf():
+        this.view.pan(new RVector(this.wheelDelta / 2, 0));
+        this.view.simulateMouseMoveEvent();
+        break;
+
+    // zoom in / out:
+    case Qt.NoModifier.valueOf():
+        // wheel behavior is "zoom":
+        if (DefaultNavigation.wheelBehavior===0) {
+            position = event.getModelPosition();
+            if (this.wheelDelta > 0) {
+                this.view.zoomIn(position);
+            } else if (this.wheelDelta < 0) {
+                this.view.zoomOut(position);
+            }
+        }
+
+        // wheel behavior is "pan":
+        else {
+            if (event.orientation()==Qt.Vertical) {
+                this.view.pan(new RVector(0, this.wheelDelta / 2));
+            }
+            else {
+                this.view.pan(new RVector(this.wheelDelta / 2, 0));
+            }
+        }
+        this.view.simulateMouseMoveEvent();
+        break;
+    }
+
+    this.wheelDelta = 0;
+};
+
+DefaultNavigation.prototype.tabletEvent = function(event) {
+    /*
+    qDebug("-----------------------------");
+    qDebug("DefaultNavigation.tabletEvent()");
+    qDebug("type: " + event.type());
+    qDebug("device: " + event.device());
+    qDebug("globalX: " + event.globalX());
+    qDebug("globalY: " + event.globalY());
+    qDebug("x: " + event.x());
+    qDebug("y: " + event.y());
+    qDebug("z: " + event.z());
+    qDebug("hiResGlobalX: " + event.hiResGlobalX());
+    qDebug("hiResGlobalY: " + event.hiResGlobalY());
+    qDebug("pointerType: " + event.pointerType());
+    qDebug("pointerType: " + event.pointerType());
+    qDebug("pressure: " + event.pressure());
+    qDebug("rotation: " + event.rotation());
+    qDebug("tangentialPressure: " + event.tangentialPressure());
+    qDebug("uniqueId: " + event.uniqueId());
+    qDebug("xTilt: " + event.xTilt());
+    qDebug("yTilt: " + event.yTilt());
+    */
+    event.ignore();
+};
+
+/**
+ * Called for pan gestures, e.g. from a track pad.
+ * Pans the current view.
+ */
+DefaultNavigation.prototype.panGestureEvent = function(gesture) {
+    if (DefaultNavigation.panGesture===false) {
+        return;
+    }
+
+    if (isNull(this.view)) {
+        return;
+    }
+
+    switch (gesture.state) {
+        case Qt.GestureStarted:
+            this.lastCursor = this.view.getCursor();
+            this.view.setCursor(new QCursor(Qt.OpenHandCursor));
+            break;
+
+        case Qt.GestureUpdated:
+            this.view.setCursor(new QCursor(Qt.ClosedHandCursor));
+            break;
+
+        default:
+            if (!isNull(this.lastCursor)) {
+                this.view.setCursor(this.lastCursor);
+            }
+            break;
+    }
+
+    var delta = gesture.delta;
+    this.view.pan(new RVector(delta.x(), delta.y()));
+    this.view.simulateMouseMoveEvent();
+};
+
+/**
+ * Called for pinch gestures, e.g. from a track pad.
+ * Zooms in / out.
+ */
+DefaultNavigation.prototype.pinchGestureEvent = function(gesture) {
+    if (isNull(this.view)) {
+        return;
+    }
+
+    var changeFlags = gesture.changeFlags;
+    var center = this.view.getLastKnownMousePosition();
+
+    if (!center.isValid()) {
+        return;
+    }
+
+    if (changeFlags & QPinchGesture.RotationAngleChanged) {
+        // rotation does nothing
+    }
+    if (changeFlags & QPinchGesture.ScaleFactorChanged) {
+        var value = gesture.property("scaleFactor");
+        if (value<=0.0) {
+            return;
+        }
+        this.view.setCurrentStepScaleFactor(value);
+        var offset = this.view.getOffset(false);
+        var newOffset = offset.operator_subtract(
+                center.operator_multiply(
+                    this.view.getCurrentStepScaleFactor()
+                ).operator_subtract(center)
+        );
+
+        newOffset = newOffset.operator_divide(this.view.getCurrentStepScaleFactor());
+
+        // avoid erratic behavior:
+        if (offset.getDistanceTo(newOffset) < 10*this.view.mapDistanceFromView(this.view.getWidth())) {
+            this.view.setCurrentStepOffset(newOffset.operator_subtract(this.view.getOffset(false)));
+        }
+    }
+
+    if (gesture.state == Qt.GestureFinished) {
+        this.view.setFactor(this.view.getFactor(true));
+        this.view.setOffset(this.view.getOffset(true));
+
+        this.view.setCurrentStepScaleFactor(1.0);
+        this.view.setCurrentStepOffset(new RVector(0,0));
+    }
+
+    this.view.simulateMouseMoveEvent();
+    this.view.regenerate(true);
+};

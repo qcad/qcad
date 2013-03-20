@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RExporter" />
+  <class name="REllipseEntity"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="REntity" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="REllipseData &amp;" typeName="REllipseData"
+        name="data" isConst="true" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" hasDefault="true"
+        default="RObject :: INVALID_ID" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="REllipseEntity *"
+      isPureVirtual="false" />
+    </method>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="setShape" cppName="setShape" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REllipse &amp;" typeName="REllipse" name="e"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setProperty" cppName="setProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportEntity" cppName="exportEntity"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RExporter &amp;" typeName="RExporter" name="e"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getData" cppName="getData" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="REllipseData &amp;"
+      isPureVirtual="false" />
+      <variant returnType="REllipseData &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getCenter" cppName="getCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getMajorPoint" cppName="getMajorPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getMajorRadius" cppName="getMajorRadius"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getMinorRadius" cppName="getMinorRadius"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getRatio" cppName="getRatio" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getAngle" cppName="getAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setRatio" cppName="setRatio" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="ratio"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getStartAngle" cppName="getStartAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getStartParam" cppName="getStartParam"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setStartParam" cppName="setStartParam"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="param"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getEndAngle" cppName="getEndAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getEndParam" cppName="getEndParam"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setEndParam" cppName="setEndParam"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="param"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAngleLength" cppName="getAngleLength"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="isReversed" cppName="isReversed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setRevered" cppName="setRevered"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="reversed"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getStartPoint" cppName="getStartPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getEndPoint" cppName="getEndPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="isFullEllipse" cppName="isFullEllipse"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="reverse" cppName="reverse" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getParamTo" cppName="getParamTo"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getTrimEnd" cppName="getTrimEnd"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RS::Ending" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="coord"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="trimPoint" isConst="true" />
+      </variant>
+    </method>
+    <method name="trimStartPoint" cppName="trimStartPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="trimEndPoint" cppName="trimEndPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="print" cppName="print" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDebug" typeName="QDebug" name="dbg"
+        isConst="false" />
+      </variant>
+    </method>
+    <property name="PropertyCustom" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyType" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyBlock" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLayer" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLinetype" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLineweight" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDrawOrder" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCenterX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCenterY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCenterZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMajorPointX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMajorPointY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMajorPointZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyRatio" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartParam" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndParam" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartAngle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndAngle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyReversed" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartPointX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartPointY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartPointZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndPointX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndPointY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndPointZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCircumference" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+  </class>
+</unit>

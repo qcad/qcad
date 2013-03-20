@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QToolBar" />
+  <class_decl name="RDocument" />
+  <class_decl name="RDocumentInterface" />
+  <class name="RGuiAction"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QAction" specifier="public" />
+    <baseClass name="RFocusListener" specifier="public" />
+    <baseClass name="RTransactionListener" specifier="public" />
+    <baseClass name="RSelectionListener" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+        <arg type="QObject *" typeName="QObject *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="initTexts" cppName="initTexts" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="formatToolTip" cppName="formatToolTip"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortcut" isConst="true" />
+      </variant>
+    </method>
+    <method name="getToolTip" cppName="getToolTip"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortcut" isConst="true" />
+      </variant>
+    </method>
+    <method name="setDocumentInterface"
+    cppName="setDocumentInterface" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="di"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getDocumentInterface"
+    cppName="getDocumentInterface" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RDocumentInterface *"
+      isPureVirtual="false" />
+    </method>
+    <method name="setShortcut" cppName="setShortcut"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeySequence &amp;" typeName="QKeySequence"
+        name="shortcut" isConst="true" />
+      </variant>
+    </method>
+    <method name="setDefaultShortcut" cppName="setDefaultShortcut"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeySequence &amp;" typeName="QKeySequence"
+        name="shortcut" isConst="true" />
+      </variant>
+    </method>
+    <method name="setShortcuts" cppName="setShortcuts"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; QKeySequence &gt; &amp;"
+        typeName="QList &lt; QKeySequence &gt;" name="shortcuts"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setDefaultShortcuts"
+    cppName="setDefaultShortcuts" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; QKeySequence &gt; &amp;"
+        typeName="QList &lt; QKeySequence &gt;" name="shortcuts"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDefaultShortcuts"
+    cppName="getDefaultShortcuts" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QKeySequence &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setShortcutText" cppName="setShortcutText"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getShortcutText" cppName="getShortcutText"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setSortOrder" cppName="setSortOrder"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="sortOrder"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getSortOrder" cppName="getSortOrder"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="addToMenu" cppName="addToMenu" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMenu *" typeName="QMenu *" name="menu"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addToToolBar" cppName="addToToolBar"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QToolBar *" typeName="QToolBar *" name="tb"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addToWidget" cppName="addToWidget"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QWidget *" typeName="QWidget *" name="w"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setIcon" cppName="setIcon" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="iconFile" isConst="true" />
+      </variant>
+    </method>
+    <method name="disableIcon" cppName="disableIcon"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="isIconDisabled" cppName="isIconDisabled"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setToolTip" cppName="setToolTip"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="tip"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setStatusTip" cppName="setStatusTip"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="tip"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setEnabled" cppName="setEnabled"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setEnabledOverride" cppName="setEnabledOverride"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+        <arg type="int" typeName="int" name="override"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setChecked" cppName="setChecked"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="triggerGroupDefault"
+    cppName="triggerGroupDefault" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="group"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="triggerGroupDefaults"
+    cppName="triggerGroupDefaults" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="isChecked" cppName="isChecked" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setRequiresDocument"
+    cppName="setRequiresDocument" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getRequiresDocument"
+    cppName="getRequiresDocument" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setRequiresSelection"
+    cppName="setRequiresSelection" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getRequiresSelection"
+    cppName="getRequiresSelection" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setRequiresUndoableTransaction"
+    cppName="setRequiresUndoableTransaction" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getRequiresUndoableTransaction"
+    cppName="getRequiresUndoableTransaction" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setRequiresRedoableTransaction"
+    cppName="setRequiresRedoableTransaction" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getRequiresRedoableTransaction"
+    cppName="getRequiresRedoableTransaction" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setOverride" cppName="setOverride"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="isOverride" cppName="isOverride"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setNoState" cppName="setNoState"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="checkable"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="hasNoState" cppName="hasNoState"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setUniqueGroup" cppName="setUniqueGroup"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="ug"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getUniqueGroup" cppName="getUniqueGroup"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getMainCommand" cppName="getMainCommand"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getCommands" cppName="getCommands"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="getDefaultCommands" cppName="getDefaultCommands"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="setDefaultCommands" cppName="setDefaultCommands"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="cmds" isConst="true" />
+      </variant>
+    </method>
+    <method name="setCommands" cppName="setCommands"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="cmds" isConst="true" />
+      </variant>
+    </method>
+    <method name="setScriptFile" cppName="setScriptFile"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="sf"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="isSecondary"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getScriptFile" cppName="getScriptFile"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setGroup" cppName="setGroup" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getGroup" cppName="getGroup" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setGroupDefault" cppName="setGroupDefault"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isGroupDefault" cppName="isGroupDefault"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getActions" cppName="getActions"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RGuiAction * &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="triggerByCommand" cppName="triggerByCommand"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="cmd"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getByScriptFile" cppName="getByScriptFile"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGuiAction *" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="scriptFile" isConst="true" />
+      </variant>
+    </method>
+    <method name="triggerByScriptFile"
+    cppName="triggerByScriptFile" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="scriptFile" isConst="true" />
+      </variant>
+    </method>
+    <method name="getAvailableCommands"
+    cppName="getAvailableCommands" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="primaryOnly"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="start"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="primaryOnly"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="clear" cppName="clear" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateTransactionListener"
+    cppName="updateTransactionListener" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="true" />
+      </variant>
+    </method>
+    <method name="updateSelectionListener"
+    cppName="updateSelectionListener" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="updateFocus" cppName="updateFocus"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addArgument" cppName="addArgument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="arg"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getArguments" cppName="getArguments"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="clearArguments" cppName="clearArguments"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="slotTrigger" cppName="slotTrigger"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="command"
+        hasDefault="true" default="QString :: null"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

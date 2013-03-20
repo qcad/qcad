@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RRunner.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RRUNNER_H_</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RRUNNER_H_</name></cpp:define>
+  <comment type="block">/** * \scriptable * \generateScriptShell
+  */</comment>
+  <class>class 
+  <name>RRunner</name>
+  <block>{
+  <private type="default">
+    <decl_stmt>
+    <decl>
+      <type>
+      <name>friend</name>class</type>
+      <name>RThread</name>
+    </decl>;</decl_stmt>
+  </private>
+  <protected>protected: 
+  <comment type="block">/** * \todo Should be pure virtual
+  */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>run</name>
+    <parameter_list>()</parameter_list>
+    <block>{ }</block>
+  </function></protected>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RRunner*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <comment type="block">/* RRUNNER_H_ */</comment>
+</unit>

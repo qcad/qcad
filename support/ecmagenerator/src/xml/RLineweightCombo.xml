@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RLineweightCombo"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QComboBox" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getLineweight" cppName="getLineweight"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLineweight::Lineweight"
+      isPureVirtual="false" />
+    </method>
+    <method name="setLineweight" cppName="setLineweight"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLineweight::Lineweight"
+        typeName="RLineweight::Lineweight" name="lw"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getOnlyFixed" cppName="getOnlyFixed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setOnlyFixed" cppName="setOnlyFixed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onlyFixed"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="lineweightChanged" cppName="lineweightChanged"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RArc" />
+  <class_decl name="RCircle" />
+  <class_decl name="RDocument" />
+  <class_decl name="REllipse" />
+  <class_decl name="RImageData" />
+  <class_decl name="RLine" />
+  <class_decl name="RLinetype" />
+  <class_decl name="RLinetypePattern" />
+  <class_decl name="RPoint" />
+  <class_decl name="RPolyline" />
+  <class_decl name="RSpline" />
+  <class_decl name="RTriangle" />
+  <class_decl name="RVector" />
+  <class name="RFileExporterAdapter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RFileExporter" specifier="public" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="exportFile" cppName="exportFile"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" isConst="true" />
+        <arg type="bool" typeName="bool" name="setFileName"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportPoint" cppName="exportPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPoint &amp;" typeName="RPoint" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportArcSegment" cppName="exportArcSegment"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RArc &amp;" typeName="RArc" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportLineSegment" cppName="exportLineSegment"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportTriangle" cppName="exportTriangle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTriangle &amp;" typeName="RTriangle" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getPatternFactor" cppName="getPatternFactor"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsView" />
+  <class_decl name="RMouseEvent" />
+  <class name="RSnapIntersection"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RSnap" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="snap" cppName="snap" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="view" isConst="false" />
+        <arg type="double" typeName="double" name="range"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="view" isConst="false" />
+        <arg type="QMap &lt; REntity::Id , QSet &lt; int &gt; &gt; &amp;"
+        typeName="QMap &lt; REntity::Id , QSet &lt; int &gt; &gt;"
+        name="candidates" isConst="true" />
+        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

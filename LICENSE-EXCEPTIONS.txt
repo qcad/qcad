@@ -1,0 +1,7 @@
+The developers of QCAD hereby grant permission for non-GPL compatible plugins and script
+add-ons to be used and distributed together with QCAD, provided that you also meet the 
+terms and conditions of the license of those plugins and script add-ons.
+This permission is above and beyond the permissions granted by the GPL license by which 
+QCAD is covered. If you modify this code, you may extend this exception to your version 
+of the code, but you are not obligated to do so. If you do not wish to do so, delete 
+this exception statement from your version. 

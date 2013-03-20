@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPropertyAttributes"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <enum name="Option">
+      <value name="NoOptions" />
+      <value name="ReadOnly" />
+      <value name="Invisible" />
+      <value name="Angle" />
+      <value name="AffectsOtherProperties" />
+      <value name="IgnoreCase" />
+      <value name="AllowMixedValue" />
+      <value name="List" />
+      <value name="Mixed" />
+      <value name="RichText" />
+      <value name="Style" />
+      <value name="DimensionLabel" />
+      <value name="Label" />
+      <value name="Pattern" />
+      <value name="Custom" />
+      <value name="Integer" />
+      <value name="Redundant" />
+    </enum>
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RPropertyAttributes::Options"
+        typeName="RPropertyAttributes::Options" name="options"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="setOption" cppName="setOption" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyAttributes::Option"
+        typeName="RPropertyAttributes::Option" name="option"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isReadOnly" cppName="isReadOnly"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setReadOnly" cppName="setReadOnly"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="readOnly"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isInvisible" cppName="isInvisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setInvisible" cppName="setInvisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="invisible"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isList" cppName="isList" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setList" cppName="setList" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isAngleType" cppName="isAngleType"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setAngleType" cppName="setAngleType"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="angle"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getIgnoreCase" cppName="getIgnoreCase"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setIgnoreCase" cppName="setIgnoreCase"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="ignoreCase"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="affectsOtherProperties"
+    cppName="affectsOtherProperties" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setAffectsOtherProperties"
+    cppName="setAffectsOtherProperties" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool"
+        name="affectsOtherProperties" isConst="false" />
+      </variant>
+    </method>
+    <method name="setAllowMixedValue" cppName="setAllowMixedValue"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="allowMixedValue"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAllowMixedValue" cppName="getAllowMixedValue"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getChoices" cppName="getChoices"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; QString &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setChoices" cppName="setChoices"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSet &lt; QString &gt;"
+        typeName="QSet &lt; QString &gt;" name="choices"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="hasChoices" cppName="hasChoices"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isRichText" cppName="isRichText"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setRichText" cppName="setRichText"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="mixWith" cppName="mixWith" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyAttributes &amp;"
+        typeName="RPropertyAttributes" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isMixed" cppName="isMixed" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setMixed" cppName="setMixed" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="mixed"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isLabel" cppName="isLabel" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isDimensionLabel" cppName="isDimensionLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isInteger" cppName="isInteger" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isRedundant" cppName="isRedundant"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getPropertyTypeId" cppName="getPropertyTypeId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPropertyTypeId"
+      isPureVirtual="false" />
+    </method>
+    <method name="setPropertyTypeId" cppName="setPropertyTypeId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="pid" isConst="false" />
+      </variant>
+    </method>
+    <method name="operator ==" cppName="operator =="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyAttributes &amp;"
+        typeName="RPropertyAttributes" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator !=" cppName="operator !="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyAttributes &amp;"
+        typeName="RPropertyAttributes" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

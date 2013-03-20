@@ -1,0 +1,72 @@
+/*!
+
+\page MenusAndToolBars Menus and Tool Bars
+
+Once you start developing your own script based QCAD tools, you might want to
+add them to a custom menu or tool bar, so they can be launched in a user friendly
+and consistent way. These instructions show how menus and tool bars are handled
+in the ECMAScript structure that comes with QCAD.
+
+If you are not planning to integrate your scripts with the ECMAScripts that come
+with the QCAD Application, you can of course also use the standard Qt mechanisms 
+(QMenu, QToolBar, QAction) to achieve the same.
+
+
+\section new_directory Creating the Folder Structure
+
+-# For your new top level menu, create a new folder inside the scripts 
+   folder of your QCAD installation. For this example, we call the folder "MyScripts".
+   The "scripts" folder is located in the QCAD application folder if you are
+   working with Windows or Linux. Under Mac OS X, it's inside the application
+   bundle, under "Contents/Resources/scripts".
+-# Inside the folder "MyScripts", create a new text file called "MyScripts.js".
+   Note that the file name has be to the same as the folder name.
+-# Inside the folder "MyScripts", create another folder for your action (tool).
+   For example "MyAction".
+-# Inside the folder "MyAction", create a new text file called "MyAction.js".
+   Again, the file name has be to the same as the folder name.
+
+The folder structure should now look as shown below:
+
+- scripts
+  - MyScripts
+    - MyScripts.js
+    - MyAction
+      - MyAction.js
+
+
+\section menu_script_skeleton Implementing the Top Menu
+
+The file "MyScripts.js" defines the base class for all scripts that will be 
+placed in this hierarchy. It also defines the top-level menu title and 
+tool bar name. All actions inside our 'MyScripts' folder are derrived from
+class 'MyScripts' and use functionality of this base class to define in
+which menu / tool bar they are shown. For this example, we want the menu to 
+be labeled "My Scripts". Here's the complete code for 'MyScripts.js':
+
+\include MyScripts.jsd
+
+\section create_new_action Creating a New Action
+
+Behind each entry in an application menu and each button in a tool bar, 
+is an action class that implements the behavior of the action.
+All actions in our example menu structure are derived from the base class 
+\c MyScripts. 
+
+In the folder "MyAction" create a new file called "MyAction.js" with the following
+contents:
+
+\include MyAction.jsd
+
+If you start QCAD, you will now see the new top level menu named 
+<em>My Scripts</em> with the entry <em>My Action</em> as well as a new
+tool bar with one tool button.
+
+\image html custom_menu/menu.png
+
+The action, when started, writes "MyAction() is running..." to the QCAD console and
+then terminates itself.
+
+<p>&nbsp;</p>
+
+*/

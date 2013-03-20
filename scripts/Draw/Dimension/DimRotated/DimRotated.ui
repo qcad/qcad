@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DimRotated</class>
+ <widget class="QWidget" name="DimRotated">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>123</width>
+    <height>46</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Angle:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Angle">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string notr="true">0</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="defaultUnit" stdset="0">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

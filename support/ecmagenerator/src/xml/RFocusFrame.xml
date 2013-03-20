@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RFocusFrame"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QFocusFrame" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="paintEvent" cppName="paintEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPaintEvent *" typeName="QPaintEvent *" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

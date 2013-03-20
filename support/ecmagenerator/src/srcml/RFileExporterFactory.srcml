@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RFileExporterFactory.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RFILEEXPORTERFACTORY_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RFILEEXPORTERFACTORY_H</name></cpp:define>
+  <class_decl>class 
+  <name>RFileExporter</name>;</class_decl>
+  <class_decl>class 
+  <name>RDocument</name>;</class_decl>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * \brief Need to be implemented for
+  every RFileExporter implementation * to check if the exporter is
+  suitable to export a file and to instantiate * the file exporter
+  if required. * * \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RFileExporterFactory</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QStringList</name>
+  </type>
+  <name>getFilterStrings</name>
+  <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>bool</name>
+  </type>
+  <name>canExport</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>fileName</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>const</name>
+    <name>QString</name>&amp;</type>
+    <name>nameFilter</name>=
+    <init>
+      <expr>""</expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+  <name>virtual</name>
+  <name>RFileExporter</name>*</type>
+  <name>instantiate</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>&amp;</type>
+      <name>document</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>=
+  0</specifier>;</function_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RFileExporterFactory*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

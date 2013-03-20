@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./operations" filename="RTranslation.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RTRANSLATION_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RTRANSLATION_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RTransformation.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RVector.h"</cpp:file></cpp:include>
+  <comment type="block">/** * Helper class for
+  RModifyObjectsOperation::transformSelection * * \ingroup
+  operations * \scriptable */</comment>
+  <class>class 
+  <name>RTranslation</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RTransformation</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor>
+    <name>RTranslation</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>offset</name>
+      </decl>
+    </param>)</parameter_list>
+    <member_list>: 
+    <call>
+      <name>offset</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>offset</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></member_list>
+    <block>{}</block>
+  </constructor>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>offset</name>
+  </decl>;</decl_stmt></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RTranslation*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

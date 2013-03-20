@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPattern"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="description" isConst="true" />
+      </variant>
+    </constructor>
+    <method name="loadAllFrom" cppName="loadAllFrom"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QPair &lt; QString , RPattern * &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getFileName" cppName="getFileName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getName" cppName="getName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="isLoaded" cppName="isLoaded" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="load" cppName="load" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getPatternLines" cppName="getPatternLines"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPatternLine &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="scale" cppName="scale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="f"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="rotate" cppName="rotate" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

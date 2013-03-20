@@ -1,0 +1,7 @@
+/*!
+
+\defgroup run QCAD Executable Module
+
+\brief Compiles into the application executable which executes ECMAScript code.
+
+*/

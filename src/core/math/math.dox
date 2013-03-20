@@ -1,0 +1,10 @@
+/*!
+
+\defgroup math Math Module
+
+\brief This module contains fundamental classes that implement basic
+mathematical concepts such as vectors or matrices as well as
+basic geometrical classes that represent points, lines, triangles and
+other basic geometrical shapes.
+
+*/

@@ -1,0 +1,1051 @@
+/**
+ * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */
+#include <QtCore>
+#include <QPainter>
+
+#include "RDebug.h"
+#include "RDocument.h"
+#include "RDocumentInterface.h"
+#include "RGuiAction.h"
+#include "RGraphicsScene.h"
+#include "RGraphicsSceneQt.h"
+#include "RGraphicsViewImage.h"
+#include "RLine.h"
+#include "RMainWindowQt.h"
+#include "RMdiChildQt.h"
+#include "RMouseEvent.h"
+#include "RSettings.h"
+#include "RSnap.h"
+#include "RSnapRestriction.h"
+#include "RTerminateEvent.h"
+#include "RUnit.h"
+#include "RWheelEvent.h"
+
+
+
+RGraphicsViewImage::RGraphicsViewImage()
+    : RGraphicsView(),
+      panOptimization(false),
+      sceneQt(NULL),
+      lastSize(0,0),
+      lastOffset(RVector::invalid),
+      lastFactor(-1.0),
+      gridPainter(NULL),
+      doPaintOrigin(true),
+      antialiasing(false),
+      isSelected(false),
+      bgColorLightness(0),
+      colorCorrectionOverride(false),
+      colorCorrection(false),
+      colorThreshold(10),
+      drawingScale(1.0) {
+
+    currentScale = 1.0;
+    saveViewport();
+    graphicsBufferNeedsUpdate = true;
+}
+
+
+
+RGraphicsViewImage::~RGraphicsViewImage() {
+}
+
+void RGraphicsViewImage::setPaintOrigin(bool val) {
+    doPaintOrigin = val;
+}
+
+void RGraphicsViewImage::setAntialiasing(bool val) {
+    antialiasing = val;
+}
+
+bool RGraphicsViewImage::getAntialiasing() {
+    return antialiasing;
+}
+
+void RGraphicsViewImage::setBackgroundColor(const QColor& col) {
+    RGraphicsView::setBackgroundColor(col);
+    bgColorLightness = backgroundColor.lightness();
+}
+
+void RGraphicsViewImage::setScene(RGraphicsSceneQt* scene, bool regen) {
+    sceneQt = scene;
+    RGraphicsView::setScene(scene, regen);
+}
+
+void RGraphicsViewImage::invalidate(bool force) {
+    graphicsBufferNeedsUpdate = true;
+    if (force) {
+        lastFactor = -1;
+    }
+}
+
+/**
+ * Regenerates the view from the underlying scene. 
+ */
+void RGraphicsViewImage::regenerate(bool force) {
+    updateTransformation();
+    invalidate(force);
+    if (force && grid!=NULL) {
+        grid->update(force);
+    }
+    repaintView();
+    viewportChangeEvent();
+}
+
+/**
+ * Triggers a paintEvent based on a buffered offscreen bitmap (very fast).
+ */
+void RGraphicsViewImage::repaintView() {
+    updateImage();
+}
+    
+void RGraphicsViewImage::saveViewport() {
+    previousView = transform;
+}
+
+void RGraphicsViewImage::restoreViewport() {
+    transform = previousView;
+}
+
+RVector RGraphicsViewImage::mapToView(const RVector& v) const {
+    RVector projected = v;
+    updateTransformation();
+    QPointF t = transform.map(QPointF(projected.x, projected.y));
+    RVector ret(t.x(), t.y());
+    ret.valid = v.valid;
+    return ret;
+}
+
+RVector RGraphicsViewImage::mapFromView(const RVector& v, double z) const {
+    updateTransformation();
+    QPointF p = transform.inverted().map(QPointF(v.x, v.y));
+    RVector ret(p.x(), p.y(), z);
+    ret.valid = v.valid;
+    return ret;
+}
+
+double RGraphicsViewImage::mapDistanceToView(double d) const {
+    return d * getFactor();
+}
+
+double RGraphicsViewImage::mapDistanceFromView(double d) const {
+    return d / getFactor();
+}
+
+/**
+ * Repaints the view. If the view has been invalidated before,
+ * the view is redrawn from scratch. Otherwise, only a cached
+ * buffer is drawn (very fast).
+ *
+ * \see invalidate
+ */
+void RGraphicsViewImage::updateImage() {
+    RDocumentInterface* di = getDocumentInterface();
+    if (di==NULL || sceneQt==NULL) {
+        return;
+    }
+
+    // update drawing scale from document setting:
+    QString scaleString = getDocument()->getVariable("PageSettings/Scale", "1:1").toString();
+    drawingScale = RMath::parseScale(scaleString);
+    if (RMath::isNaN(drawingScale) || drawingScale<1.0e-6) {
+        drawingScale = 1.0;
+    }
+
+//    RDebug::startTimer();
+
+    if (graphicsBufferNeedsUpdate) {
+
+        updateGraphicsBuffer();
+        graphicsBufferNeedsUpdate = false;
+
+        bool displayGrid = gridVisible;
+
+        // optimization for panning and scrolling:
+        if (panOptimization && lastFactor==factor) {
+            Q_ASSERT(false);
+            QImage lastBuffer = graphicsBuffer.copy();
+            RVector o = mapToView(offset) - mapToView(lastOffset);
+            int ox = RMath::mround(o.x);
+            int oy = RMath::mround(o.y);
+
+            if (ox!=0) {
+                // fill gap at the right or left side:
+                QRect rect(
+                    ox<0 ? ox+getWidth() : 0,
+                    0,
+                    abs(ox),
+                    getHeight()
+                );
+                rect.adjust(-1,-1,1,1);
+
+                paintErase(graphicsBuffer, rect);
+                if (displayGrid) {
+                    paintMetaGrid(graphicsBuffer, rect);
+                }
+                paintDocument(rect);
+                if (displayGrid) {
+                    paintGrid(graphicsBuffer, rect);
+                }
+                paintOrigin(graphicsBuffer);
+            }
+
+            if (oy!=0) {
+                // fill gap at the top or bottom:
+                QRect rect(
+                    qMax(ox, 0),
+                    oy<0 ? oy+getHeight() : 0,
+                    getWidth() - abs(ox),
+                    abs(oy)
+                );
+                rect.adjust(-1,-1,1,1);
+                paintErase(graphicsBuffer, rect);
+                if (displayGrid) {
+                    paintMetaGrid(graphicsBuffer, rect);
+                }
+                paintDocument(rect);
+                if (displayGrid) {
+                    paintGrid(graphicsBuffer, rect);
+                }
+                paintOrigin(graphicsBuffer);
+            }
+
+            QPainter gbPainter(&graphicsBuffer);
+            gbPainter.drawImage(ox, oy, lastBuffer);
+            gbPainter.end();
+        }
+        else {
+            paintErase(graphicsBuffer);
+            paintDocument();
+            if (displayGrid) {
+                paintMetaGrid(graphicsBuffer);
+                paintGrid(graphicsBuffer);
+            }
+            paintOrigin(graphicsBuffer);
+        }
+        lastOffset = offset;
+        lastFactor = factor;
+    }
+
+
+    graphicsBufferWithPreview = graphicsBuffer;
+
+    // draws the current preview on top of the buffer:
+    QList<RPainterPath> preview = sceneQt->getPreviewPainterPaths();
+    if (!preview.isEmpty()) {
+        QPainter* painter = initPainter(graphicsBufferWithPreview, false);
+        bgColorLightness = getBackgroundColor().lightness();
+        isSelected = false;
+        paintEntity(painter, -1);
+        painter->end();
+        delete painter;
+    }
+
+    // highlighting of closest reference point:
+    if (scene->getHighlightedReferencePoint().isValid()) {
+        RVector p = mapToView(scene->getHighlightedReferencePoint());
+        QPainter gbPainter(&graphicsBufferWithPreview);
+        gbPainter.setPen(RColor::getHighlighted(RSettings::getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172)), backgroundColor));
+        gbPainter.drawRect(QRect(p.x - 5, p.y - 5, 10, 10));
+        gbPainter.end();
+    }
+
+    // snap label:
+    if (hasFocus() || this == di->getLastKnownViewWithFocus()) {
+        if (di->getClickMode()==RAction::PickCoordinate) {
+            RSnap* snap = di->getSnap();
+            RSnapRestriction* snapRestriction = di->getSnapRestriction();
+            emitUpdateSnapInfo(snap, snapRestriction);
+            if (snap!=NULL) {
+                snap->reset();
+            }
+            if (snapRestriction!=NULL) {
+                snapRestriction->reset();
+            }
+        }
+    }
+
+    // informational text labels:
+    for (int i=0; i<textLabels.size(); i++) {
+        emitUpdateTextLabel(textLabels.at(i));
+    }
+    textLabels.clear();
+
+    // cursor:
+    paintCursor(graphicsBufferWithPreview);
+
+    // relative zero:
+    paintRelativeZero(graphicsBufferWithPreview);
+}
+
+void RGraphicsViewImage::paintErase(QPaintDevice& device, const QRect& rect) {
+    QRect r = rect;
+    if (rect.isNull()) {
+        r = QRect(0,0,getWidth(),getHeight());
+    }
+
+    RVector c1 = mapFromView(RVector(r.left(),r.top()));
+    RVector c2 = mapFromView(RVector(r.left() + r.width(),r.top() + r.height()));
+    QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
+
+    gridPainter = initPainter(device, false, false, rect);
+    gridPainter->setBackground(getBackgroundColor());
+    if (!rect.isNull()) {
+        gridPainter->setClipRect(rf);
+    }
+    gridPainter->eraseRect(rf);
+
+    delete gridPainter;
+    gridPainter = NULL;
+}
+
+void RGraphicsViewImage::paintGrid(QPaintDevice& device, const QRect& rect) {
+    QRect r = rect;
+    if (rect.isNull()) {
+        r = QRect(0,0,getWidth(),getHeight());
+    }
+
+    RVector c1 = mapFromView(RVector(r.left(),r.top()));
+    RVector c2 = mapFromView(RVector(r.left() + r.width(),r.top() + r.height()));
+    QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
+
+    gridPainter = initPainter(device, false, false, rect);
+    if (!rect.isNull()) {
+        gridPainter->setClipRect(rf);
+    }
+
+    if (grid!=NULL) {
+        gridPainter->setPen(
+            RSettings::getColor(
+                "GraphicsViewColors/GridColor", RColor(192,192,192,192)
+            )
+        );
+        grid->paint();
+    }
+
+    delete gridPainter;
+    gridPainter = NULL;
+}
+
+void RGraphicsViewImage::paintGridPoint(const RVector& ucsPosition) {
+    if (gridPainter==NULL) {
+        qWarning("RGraphicsViewImage::paintGridPoint: gridPainter is NULL");
+        return;
+    }
+    gridPainter->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
+}
+
+void RGraphicsViewImage::paintMetaGrid(QPaintDevice& device, const QRect& rect) {
+    QRect r = rect;
+    if (rect.isNull()) {
+        r = QRect(0,0,getWidth(),getHeight());
+    }
+
+    gridPainter = initPainter(device, false, false, rect);
+    gridPainter->setBackground(getBackgroundColor());
+
+    if (grid!=NULL) {
+        gridPainter->setPen(QPen(
+                RSettings::getColor("GraphicsViewColors/MetaGridColor", RColor(192,192,192,64)),
+                0, Qt::SolidLine));
+        grid->paintMetaGrid();
+    }
+
+    delete gridPainter;
+    gridPainter = NULL;
+}
+
+void RGraphicsViewImage::paintGridLine(const RLine& ucsPosition) {
+    if (gridPainter==NULL) {
+        qWarning("RGraphicsViewImage::paintGridLine: gridPainter is NULL");
+        return;
+    }
+    gridPainter->drawLine(
+        QPointF(ucsPosition.startPoint.x, ucsPosition.startPoint.y),
+        QPointF(ucsPosition.endPoint.x, ucsPosition.endPoint.y)
+    );
+}
+
+/**
+ * Paints the absolute zero point (origin).
+ */
+void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
+    if (!doPaintOrigin || isPrinting()) {
+        return;
+    }
+
+    gridPainter = initPainter(device, false, false);
+
+    gridPainter->setPen(
+        QPen(RSettings::getColor("GraphicsViewColors/OriginColor", RColor(255,0,0,192)))
+    );
+    double r = mapDistanceFromView(20.0);
+    gridPainter->drawLine(
+        QPointF(-r,0.0),
+        QPointF(r,0.0)
+    );
+    gridPainter->drawLine(
+        QPointF(0.0,-r),
+        QPointF(0.0,r)
+    );
+
+    delete gridPainter;
+    gridPainter = NULL;
+}
+
+void RGraphicsViewImage::paintCursor(QPaintDevice& device) {
+    RDocumentInterface* di = getDocumentInterface();
+    if (di==NULL) {
+        return;
+    }
+
+    if (di->getClickMode()!=RAction::PickCoordinate && !di->getCursorOverride()) {
+        return;
+    }
+
+    RVector pos = di->getCursorPosition();
+    if (!pos.isValid()) {
+        return;
+    }
+
+    if (!RSettings::getShowCrosshair()) {
+        return;
+    }
+
+    RColor crossHairColor;
+    if (hasFocus() || this == di->getLastKnownViewWithFocus()) {
+        crossHairColor = RSettings::getColor("GraphicsViewColors/CrosshairColor", RColor(255,194,0,192));
+    }
+    else {
+        crossHairColor = RSettings::getColor("GraphicsViewColors/CrosshairColorInactive", RColor(108,79,0,192));
+    }
+
+    gridPainter = initPainter(device, false, false);
+
+    if (grid!=NULL) {
+        gridPainter->setPen(QPen(crossHairColor, 0, Qt::DashLine));
+        grid->paintCursor(pos);
+    }
+
+    delete gridPainter;
+    gridPainter = NULL;
+}
+
+void RGraphicsViewImage::paintRelativeZero(QPaintDevice& device) {
+    if (!doPaintOrigin || isPrinting()) {
+        return;
+    }
+
+    RDocumentInterface* di = getDocumentInterface();
+    if (di==NULL) {
+        return;
+    }
+
+    RVector relativeZero = di->getRelativeZero();
+    if (!relativeZero.isValid()) {
+        return;
+    }
+
+    RVector screenPos = mapToView(relativeZero);
+    double r = 5.0;
+
+    QPainter painter(&device);
+    painter.setPen(
+        QPen(RSettings::getColor("GraphicsViewColors/RelativeZeroColor", RColor(162,36,36)), 0)
+    );
+    painter.drawLine(
+        QPointF(screenPos.x-r, screenPos.y),
+        QPointF(screenPos.x+r, screenPos.y)
+    );
+    painter.drawLine(
+        QPointF(screenPos.x, screenPos.y-r),
+        QPointF(screenPos.x, screenPos.y+r)
+    );
+    painter.drawEllipse(QPointF(screenPos.x, screenPos.y), r, r);
+    painter.end();
+}
+
+void RGraphicsViewImage::updateTransformation() const {
+    transform.reset();
+    transform.scale(1, -1);
+    transform.translate(0, -getHeight());
+    transform.scale(getFactor(), getFactor());
+    transform.translate(getOffset().x, getOffset().y);
+}
+
+/**
+ * Updates the graphics buffer from scratch. 
+ * This can be relatively slow and is only called on view
+ * port changes or document changes.
+ */
+void RGraphicsViewImage::updateGraphicsBuffer() {
+    QSize newSize(getWidth(), getHeight());
+
+    if (lastSize!=newSize && graphicsBuffer.size()!=newSize) {
+        graphicsBuffer = QImage(newSize, QImage::Format_RGB32);
+        lastFactor = -1;
+    }
+
+    lastSize = newSize;
+}
+
+void RGraphicsViewImage::paintDocument(const QRect& rect) {
+    RDocument* document = getDocument();
+    if (document == NULL) {
+        return;
+    }
+
+    QRect r = rect;
+    if (rect.isNull()) {
+        r = QRect(0,0,getWidth(),getHeight());
+    }
+    
+    // TODO: sort painter paths by Z-level:
+    //qSort(p.begin(), p.end());
+
+    bgColorLightness = getBackgroundColor().lightness();
+    selectedIds.clear();
+
+    QPainter* painter;
+    painter = initPainter(graphicsBuffer, false, false, r);
+    paintBackground(painter, r);
+    RVector c1 = mapFromView(RVector(r.left()-1,r.bottom()+1), -1e6);
+    RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e6);
+    RBox queryBox(c1, c2);
+
+    paintEntities(painter, queryBox);
+
+    // paint selected entities on top:
+    if (!selectedIds.isEmpty()) {
+        isSelected = true;
+        QList<REntity::Id> list = document->getStorage().orderBackToFront(selectedIds);
+        QListIterator<RObject::Id> i(list);
+        while (i.hasNext()) {
+            paintEntity(painter, i.next());
+        }
+    }
+
+    painter->end();
+    delete painter;
+
+    // paint reference points of selected entities:
+    QMultiMap<REntity::Id, RVector>& referencePoints =
+            scene->getReferencePoints();
+    if (!referencePoints.isEmpty() && referencePoints.count()<1000) {
+
+        QPainter gbPainter(&graphicsBuffer);
+
+        QMultiMap<REntity::Id, RVector>::iterator it;
+        for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
+            RVector p = mapToView(it.value());
+            // TODO: configurable size of reference point (app pref):
+            gbPainter.fillRect(QRect(p.x - 5, p.y - 5, 10, 10),
+                    RSettings::getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172)));
+        }
+
+        gbPainter.end();
+    }
+}
+
+void RGraphicsViewImage::clearBackground() {
+    backgroundDecoration.clear();
+}
+
+void RGraphicsViewImage::addToBackground(const RPainterPath& path) {
+    backgroundDecoration.append(path);
+}
+
+void RGraphicsViewImage::setBackgroundTransform(double bgFactor, const RVector& bgOffset) {
+    backgroundFactor = bgFactor;
+    backgroundOffset = bgOffset;
+}
+
+void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
+    Q_UNUSED(rect);
+
+    QTransform savedTransform = painter->transform();
+    painter->translate(backgroundOffset.x, backgroundOffset.y);
+    painter->scale(backgroundFactor, backgroundFactor);
+
+    for (int i=0; i<backgroundDecoration.size(); i++) {
+        RPainterPath path = backgroundDecoration.at(i);
+        painter->setPen(path.getPen());
+        painter->setBrush(path.getBrush());
+        painter->drawPath(path);
+    }
+
+    painter->setTransform(savedTransform);
+}
+
+QPainter* RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool screen, const QRect& rect) {
+    QPainter* painter = new QPainter(&device);
+    if (antialiasing) {
+        painter->setRenderHint(QPainter::Antialiasing);
+    }
+    if (erase) {
+        QRect r = rect;
+        if (rect.isNull()) {
+            r = QRect(0,0,lastSize.width(),lastSize.height());
+        }
+        // erase background to transparent:
+        painter->setCompositionMode(QPainter::CompositionMode_Clear);
+        painter->eraseRect(r);
+        painter->setCompositionMode(QPainter::CompositionMode_SourceOver);
+    }
+
+    //if (!rect.isNull()) {
+        //painter->setClipRect(rect);
+    //}
+
+    if (!screen) {
+        painter->setWorldTransform(transform);
+    }
+    return painter;
+}
+
+void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) {
+    RDocument* document = getDocument();
+    if (document==NULL) {
+        return;
+    }
+
+    colorCorrection = RSettings::getColorCorrection();
+    colorThreshold = RSettings::getColorThreshold();
+
+    updateTextHeightThreshold();
+
+    //qDebug() << "RGraphicsViewImage::paintEntities: colorCorrection: " << colorCorrection;
+
+    RBox qb(queryBox);
+    qb.growXY(
+        RUnit::convert(
+            document->getMaxLineweight()/100.0,
+            RS::Millimeter,
+            document->getUnit()
+        )
+    );
+
+    //RDebug::startTimer();
+    mutexSi.lock();
+    QSet<REntity::Id> ids;
+
+    ids = document->queryIntersectedEntitiesXY(qb, true);
+
+    //qDebug() << "RGraphicsViewImage::paintEntities: ids: " << ids.size();
+
+    mutexSi.unlock();
+    //RDebug::stopTimer("spatial index");
+
+    // draw painter paths:
+    isSelected = false;
+
+    //RDebug::startTimer();
+    QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
+    //RDebug::stopTimer("ordering");
+
+    //RDebug::startTimer();
+
+    if (isPrinting()) {
+        clipBox = RBox();
+    }
+    else {
+        clipBox = getBox();
+        clipBox.growXY(
+                    RUnit::convert(
+                        getDocument()->getMaxLineweight()/100.0,
+                        RS::Millimeter,
+                        getDocument()->getUnit()
+                        )
+                    );
+    }
+
+    QListIterator<REntity::Id> it(list);
+    while (it.hasNext()) {
+        paintEntity(painter, it.next());
+    }
+
+    //RDebug::stopTimer("painting");
+}
+
+void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
+    if (!isPrinting() && !isSelected && getDocument()->isSelected(id)) {
+        static QMutex m;
+        m.lock();
+        selectedIds.insert(id);
+        m.unlock();
+        return;
+    }
+
+    sceneQt->setDraftMode(draftMode);
+
+    QList<RPainterPath> painterPaths;
+
+    // get painter paths for vector graphics entity:
+    if (id == -1) {
+        // get painter paths of the current preview:
+        painterPaths = sceneQt->getPreviewPainterPaths();
+    } else {
+        // get painter paths of the given entity:
+        painterPaths = sceneQt->getPainterPaths(id);
+
+        // ideal pixel size for rendering arc at current zoom:
+        double ps = this->mapDistanceFromView(1.0);
+
+        bool regen = false;
+        for (int p=0; p<painterPaths.size(); p++) {
+            if (painterPaths[p].getAutoRegen()==true) {
+                if (painterPaths[p].getPixelSizeHint()>RS::PointTolerance &&
+                    (painterPaths[p].getPixelSizeHint()<ps/5 || painterPaths[p].getPixelSizeHint()>ps*5)) {
+
+                    regen = true;
+                    break;
+                }
+            }
+        }
+
+        if (regen) {
+            // if at least one arc path is too detailed or not detailed enough, regen:
+            sceneQt->exportEntity(id, true);
+            painterPaths = sceneQt->getPainterPaths(id);
+        }
+    }
+
+    // get image for raster image entity:
+    if (sceneQt->hasImageFor(id)) {
+        RImageData image = sceneQt->getImage(id);
+        paintImage(painter, image);
+    }
+
+    // paint painter paths:
+    QListIterator<RPainterPath> i(painterPaths);
+    while (i.hasNext()) {
+        RPainterPath path = i.next();
+        RBox pathBB = path.getBoundingBox();
+
+        // additional bounding box check for painter paths that are
+        // part of one block reference entity:
+        if (!isPrinting() && !clipBox.intersects(pathBB)) {
+            continue;
+        }
+
+        // for texts:
+        if (!isPathVisible(path)) {
+            continue;
+        }
+
+        QPen pen = path.getPen();
+        QBrush brush = path.getBrush();
+
+        if (pen.style() != Qt::NoPen) {
+            if (isPrinting()) {
+                // printing: always use real, scaled line weight, no matter
+                // how thin:
+                pen.setWidthF(pen.widthF() / drawingScale);
+            }
+            else {
+                if (isPrintPreview()) {
+                    // print preview: optimize thin lines to 0 (1 pixel):
+                    if (pen.widthF() * getFactor() / drawingScale < 1.5) {
+                        pen.setWidth(0);
+                    }
+                    else {
+                        pen.setWidthF(pen.widthF() / drawingScale);
+                    }
+                }
+                else {
+                    // for display, ignore drawing scale and optimize
+                    // thin lines to 0:
+                    if (pen.widthF() * getFactor() < 1.5) {
+                        pen.setWidth(0);
+                    }
+                    else {
+                        pen.setWidthF(pen.widthF());
+                    }
+                }
+            }
+        }
+
+        // prevent black on black / white on white drawing
+        if (colorCorrection || colorCorrectionOverride) {
+            if (pen.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
+                pen.setColor(Qt::white);
+            } else if (pen.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
+                pen.setColor(Qt::black);
+            }
+
+            if (brush.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
+                brush.setColor(Qt::white);
+            } else if (brush.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
+                brush.setColor(Qt::black);
+            }
+        }
+
+        // highlighted:
+        if (!isPrinting() && path.isHighlighted()) {
+            if (pen.style() != Qt::NoPen) {
+                pen.setColor(RColor::getHighlighted(pen.color(), bgColorLightness));
+            }
+            if (brush.style() != Qt::NoBrush) {
+                RColor ch = RColor::getHighlighted(brush.color(), bgColorLightness);
+                ch.setAlpha(128);
+                brush.setColor(ch);
+            }
+        }
+
+        // color modes (b/w, grayscale):
+        // TODO: move as much as possible to generation of painter paths:
+        switch (colorMode) {
+        case RGraphicsView::BlackWhite:
+            // dark background: everything white:
+            if (bgColorLightness < 64 && !isPrinting()) {
+                if (pen.style() != Qt::NoPen) {
+                    pen.setColor(Qt::white);
+                }
+                if (brush.style() != Qt::NoBrush) {
+                    brush.setColor(Qt::white);
+                }
+            }
+            // bright background: everything black:
+            else {
+                if (pen.style() != Qt::NoPen) {
+                    pen.setColor(Qt::black);
+                }
+                if (brush.style() != Qt::NoBrush) {
+                    brush.setColor(Qt::black);
+                }
+            }
+            break;
+        case RGraphicsView::GrayScale:
+            if (pen.style() != Qt::NoPen) {
+                int v = qGray(pen.color().rgb());
+                pen.setColor(QColor(v, v, v));
+            }
+            if (brush.style() != Qt::NoBrush) {
+                int v = qGray(brush.color().rgb());
+                brush.setColor(QColor(v, v, v));
+            }
+            break;
+        default:
+            break;
+        }
+
+        if (!isPrinting() && (isSelected || path.isSelected())) {
+            RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
+            if (pen.style() != Qt::NoPen) {
+                pen.setColor(selectionColor);
+            }
+            if (brush.style() != Qt::NoBrush) {
+                brush.setColor(selectionColor);
+            }
+        }
+
+        painter->setBrush(brush);
+        painter->setPen(pen);
+
+        if (isPrinting() || clipBox.contains(pathBB)) {
+            if (brush.style() != Qt::NoBrush) {
+                painter->fillPath(path, brush);
+            }
+
+            // draw outline:
+            if (pen.style() != Qt::NoPen) {
+                painter->drawPath(path);
+            }
+        }
+        else {
+            // prevent overflows for simple lines:
+            // TODO: make this an option for rendering:
+            if (path.elementCount() == 2 &&
+                path.elementAt(0).isMoveTo() &&
+                path.elementAt(1).isLineTo()) {
+
+                qreal x1 = path.elementAt(0).x;
+                qreal y1 = path.elementAt(0).y;
+                qreal x2 = path.elementAt(1).x;
+                qreal y2 = path.elementAt(1).y;
+                RLine line(RVector(x1,y1), RVector(x2,y2));
+                if (!clipBox.contains(line.getBoundingBox())) {
+                    line.clipToXY(clipBox);
+                }
+
+                if (line.isValid()) {
+                    painter->drawLine(QPointF(line.startPoint.x, line.startPoint.y),
+                                      QPointF(line.endPoint.x, line.endPoint.y));
+                }
+            }
+            else {
+                // draw fill:
+                if (brush.style() != Qt::NoBrush) {
+                    painter->fillPath(path, brush);
+                }
+
+                // draw outline:
+                if (pen.style() != Qt::NoPen) {
+                    // TODO: optional (more accurate, slower?):
+                    qreal x, y;
+                    for (int i=0; i<path.elementCount(); i++) {
+                        QPainterPath::Element el = path.elementAt(i);
+                        if (el.isMoveTo()) {
+                            x = el.x;
+                            y = el.y;
+                            continue;
+                        }
+
+                        if (el.isLineTo()) {
+                            RLine line(RVector(x,y), RVector(el.x,el.y));
+                            if (!clipBox.contains(line.getBoundingBox())) {
+                                line.clipToXY(clipBox);
+                            }
+                            if (line.isValid()) {
+                                painter->drawLine(QPointF(line.startPoint.x, line.startPoint.y),
+                                                  QPointF(line.endPoint.x, line.endPoint.y));
+                            }
+                            x = el.x;
+                            y = el.y;
+                            continue;
+                        }
+
+                        if (el.isCurveTo()) {
+                            i++;
+                            QPainterPath::Element del1 = path.elementAt(i);
+                            i++;
+                            QPainterPath::Element del2 = path.elementAt(i);
+
+                            QPainterPath cubicCurve;
+                            cubicCurve.moveTo(x, y);
+                            cubicCurve.cubicTo(el.x, el.y, del1.x, del1.y, del2.x, del2.y);
+                            painter->strokePath(cubicCurve, painter->pen());
+                            x = del2.x;
+                            y = del2.y;
+                            continue;
+                        }
+                    }
+                }
+            }
+        }
+
+        // draw points:
+        if (path.hasPoints()) {
+            // FS#481: for printing, point size does not depend on current viewing factor:
+            RVector one;
+            if (isPrinting()) {
+                //one = path.getPen().widthF();
+                one = printPointSize / 2;
+            }
+            else {
+                double oneMapped = mapDistanceFromView(1.0);
+                one = RVector(oneMapped,oneMapped);
+            }
+            QList<RVector> points = path.getPoints();
+            QList<RVector>::iterator it;
+            for (it=points.begin(); it<points.end(); it++) {
+
+                // a dot can be easily mistaken for a grid point / is often
+                // invisible, so we draw a small cross instead:
+                painter->drawLine(
+                    QPointF((*it).x-one.x, (*it).y),
+                    QPointF((*it).x+one.x, (*it).y)
+                );
+                painter->drawLine(
+                    QPointF((*it).x, (*it).y-one.y),
+                    QPointF((*it).x, (*it).y+one.y)
+                );
+            }
+        }
+    }
+}
+
+void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
+    if (!getDraftMode()) {
+        QImage qImage = image.getImage();
+        if (qImage.isNull()) {
+            return;
+        }
+        RVector scale; // = image.getScaleFactor();
+        scale.x = image.getUVector().getMagnitude();
+        scale.y = image.getVVector().getMagnitude();
+
+        if (RMath::getAngleDifference180(image.getUVector().getAngle(), image.getVVector().getAngle()) < 0.0) {
+            scale.y *= -1;
+        }
+
+        double angle = image.getUVector().getAngle();
+
+        painter->save();
+        QMatrix wm = painter->matrix();
+        wm.translate(image.getInsertionPoint().x, image.getInsertionPoint().y);
+        wm.rotate(RMath::rad2deg(angle));
+        wm.scale(scale.x, -scale.y);
+        painter->setMatrix(wm);
+        painter->drawImage(0,-qImage.height(), qImage);
+        painter->restore();
+    }
+
+    // draw image in draft mode / selected mode (border in black or white):
+    if (getDraftMode() || image.isSelected()) {
+        if (image.isSelected()) {
+            RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
+            painter->setPen(QPen(QBrush(selectionColor), 0));
+        }
+        else {
+            if (backgroundColor.value()<128) {
+                painter->setPen(QPen(QBrush(QColor(Qt::white)), 0));
+            }
+            else {
+                painter->setPen(QPen(QBrush(QColor(Qt::black)), 0));
+            }
+        }
+        QList<RLine> edges = image.getEdges();
+        for (int i=0; i<edges.count(); i++) {
+            RLine l = edges[i];
+            painter->drawLine(QPointF(l.getStartPoint().x, l.getStartPoint().y),
+                              QPointF(l.getEndPoint().x, l.getEndPoint().y));
+        }
+    }
+
+}
+
+
+int RGraphicsViewImage::getWidth() const {
+    return graphicsBuffer.width();
+}
+
+int RGraphicsViewImage::getHeight() const {
+    return graphicsBuffer.height();
+}
+
+void RGraphicsViewImage::resizeImage(int w, int h) {
+    graphicsBuffer = QImage(QSize(w,h), QImage::Format_RGB32);
+}
+
+void RGraphicsViewImage::setPanOptimization(bool on) {
+    panOptimization = on;
+}
+
+bool RGraphicsViewImage::getPanOptimization() {
+    return panOptimization;
+}
+
+QImage RGraphicsViewImage::getBuffer() const {
+    return graphicsBufferWithPreview;
+}
+
+QTransform RGraphicsViewImage::getTransform() const {
+    return transform;
+}

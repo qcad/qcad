@@ -1,0 +1,5 @@
+/*!
+\brief This module contains application wide preferences that do 
+not belong to any particular script plugin. Other preferences 
+are defined as part of the appropriate plugins.
+*/

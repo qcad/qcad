@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="REntity" />
+  <class_decl name="RDocument" />
+  <class_decl name="RObject" />
+  <class name="RPropertyListener"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <method name="updateFromDocument" cppName="updateFromDocument"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </method>
+    <method name="updateFromObject" cppName="updateFromObject"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="RObject *" typeName="RObject *" name="object"
+        isConst="false" />
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="clearEditor" cppName="clearEditor"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RLeaderData"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="REntityData" specifier="public" />
+    <baseClass name="RPolyline" specifier="protected" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RPolyline &amp;" typeName="RPolyline"
+        name="polyline" isConst="true" />
+        <arg type="bool" typeName="bool" name="arrowHead"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="castToShape" cppName="castToShape"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RShape *" isPureVirtual="false" />
+    </method>
+    <method name="getDimasz" cppName="getDimasz" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setArrowHead" cppName="setArrowHead"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="hasArrowHead" cppName="hasArrowHead"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getEndPoint" cppName="getEndPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getStartPoint" cppName="getStartPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="countVertices" cppName="countVertices"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="countSegments" cppName="countSegments"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="appendVertex" cppName="appendVertex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="vertex"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getReferencePoints" cppName="getReferencePoints"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RS::ProjectionRenderingHint"
+        typeName="RS::ProjectionRenderingHint" name="hint"
+        hasDefault="true" default="RS :: RenderTop"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="moveReferencePoint" cppName="moveReferencePoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="referencePoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="targetPoint" isConst="true" />
+      </variant>
+    </method>
+    <method name="getExploded" cppName="getExploded"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getShapes" cppName="getShapes" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
+        hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+      </variant>
+    </method>
+    <method name="getArrowShape" cppName="getArrowShape"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RTriangle" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

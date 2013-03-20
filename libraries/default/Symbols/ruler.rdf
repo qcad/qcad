@@ -1,0 +1,40 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ql="http://qcad.org/ql/elements/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dcterms:license>http://creativecommons.org/licenses/by/3.0/</dcterms:license>
+    <ql:attribute-as>The Noun Project</ql:attribute-as>
+    <dc:source>http://thenounproject.com/download/zipped/svg_488.zip</dc:source>
+    <dcterms:created>2010</dcterms:created>
+    <dc:title xml:lang="en">ruler</dc:title>
+    <dc:title xml:lang="de">Maßstab</dc:title>
+    <dc:title xml:lang="fr">échelle</dc:title>
+    <dc:publisher>The Noun Project</dc:publisher>
+    <dc:subject xml:lang="en">
+      <rdf:Bag>
+        <rdf:li>scale</rdf:li>
+        <rdf:li>geometry</rdf:li>
+        <rdf:li>triangle</rdf:li>
+        <rdf:li>angles</rdf:li>
+        <rdf:li>math</rdf:li>
+        <rdf:li>mathematics</rdf:li>
+        <rdf:li>measurement</rdf:li>
+        <rdf:li>measuring</rdf:li>
+        <rdf:li>tool</rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject xml:lang="de">
+      <rdf:Bag>
+        <rdf:li>Geometrie</rdf:li>
+        <rdf:li>Dreieck</rdf:li>
+        <rdf:li>Winkel</rdf:li>
+        <rdf:li>Mathematik</rdf:li>
+        <rdf:li>Messung</rdf:li>
+        <rdf:li>Werkzeug</rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject xml:lang="fr">
+      <rdf:Bag>
+        <rdf:li>géométrie</rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+  </rdf:Description>
+</rdf:RDF>

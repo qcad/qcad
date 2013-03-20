@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RMathLineEdit"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QLineEdit" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="isAngle" cppName="isAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setAngle" cppName="setAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isInteger" cppName="isInteger" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setInteger" cppName="setInteger"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setValue" cppName="setValue" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+        <arg type="int" typeName="int" name="precision"
+        hasDefault="true" default="6" isConst="false" />
+      </variant>
+    </method>
+    <method name="getValue" cppName="getValue" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getError" cppName="getError" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="clearError" cppName="clearError"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setToolTip" cppName="setToolTip"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="toolTip"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="keyPressEvent" cppName="keyPressEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent *" typeName="QKeyEvent *" name="event"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="keyReleaseEvent" cppName="keyReleaseEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent *" typeName="QKeyEvent *" name="event"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="slotTextChanged" cppName="slotTextChanged"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="slotTextEdited" cppName="slotTextEdited"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,36 @@
+QWidget {
+    background-color: qlineargradient(spread:pad, x1:0.123811, y1:0.142, x2:0.659568, y2:0.642, stop:0 rgba(173, 181, 197, 255), stop:1 rgba(240, 245, 255, 255));
+}
+
+QLabel, QRadioButton, QCheckBox, QToolButton, QSlider {
+    background-color: transparent;
+}
+
+QGroupBox {
+    margin-top: 2ex;
+    margin-bottom: 1ex;
+}
+
+QGroupBox::title {
+    background-color: qlineargradient(spread:pad, x1:0.123811, y1:0.142, x2:0.659568, y2:0.642, stop:0 rgba(173, 181, 197, 255), stop:1 rgba(240, 245, 255, 255));
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 4px;
+    margin-left: 1px;
+}
+
+QSlider::handle:horizontal {
+  background-color: qlineargradient(spread:pad, x1:0.123811, y1:0.142, x2:0.659568, y2:0.642, stop:0 rgba(173, 181, 197, 255), stop:1 rgba(240, 245, 255, 255));
+     border: 1px solid #5c5c5c;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+}
+
+QSlider::handle:vertical {
+  background-color: qlineargradient(spread:pad, x1:0.123811, y1:0.142, x2:0.659568, y2:0.642, stop:0 rgba(173, 181, 197, 255), stop:1 rgba(240, 245, 255, 255));
+     border: 1px solid #5c5c5c;
+     width: 18px;
+     margin: -2px 0;
+     border-radius: 3px;
+}

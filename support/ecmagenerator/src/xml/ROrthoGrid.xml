@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsView" />
+  <class_decl name="RRuler" />
+  <class name="ROrthoGrid"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RGrid" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="view" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="clearCache" cppName="clearCache"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="snapToGrid" cppName="snapToGrid"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="positionUcs" isConst="true" />
+      </variant>
+    </method>
+    <method name="update" cppName="update" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="force"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="paint" cppName="paint" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="paintMetaGrid" cppName="paintMetaGrid"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="paintCursor" cppName="paintCursor"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="paintRuler" cppName="paintRuler"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RRuler &amp;" typeName="RRuler" name="ruler"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getInfoText" cppName="getInfoText"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getIdealSpacing" cppName="getIdealSpacing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="int" typeName="int" name="minPixelSpacing"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="minSpacing" isConst="true" />
+      </variant>
+    </method>
+    <method name="isIsometric" cppName="isIsometric"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setIsometric" cppName="setIsometric"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getProjection" cppName="getProjection"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RS::IsoProjectionType"
+      isPureVirtual="false" />
+    </method>
+    <method name="setProjection" cppName="setProjection"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::IsoProjectionType"
+        typeName="RS::IsoProjectionType" name="p"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getIdealGridSpacing"
+    cppName="getIdealGridSpacing" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="view" isConst="false" />
+        <arg type="int" typeName="int" name="minPixelSpacing"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="minSpacing" isConst="true" />
+      </variant>
+    </method>
+    <method name="isFractionalFormat" cppName="isFractionalFormat"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::LinearFormat" typeName="RS::LinearFormat"
+        name="linearFormat" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

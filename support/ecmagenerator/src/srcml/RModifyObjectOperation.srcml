@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./operations" filename="RModifyObjectOperation.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RMODIFYOBJECTOPERATION_H_</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RMODIFYOBJECTOPERATION_H_</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RAddObjectOperation.h"</cpp:file></cpp:include>
+  <comment type="block">/** * Implementation of an operation that
+  adds entities. * * \ingroup operations * \scriptable */</comment>
+  <class>class 
+  <name>RModifyObjectOperation</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RAddObjectOperation</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor>
+    <name>RModifyObjectOperation</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>QSharedPointer
+          <argument_list>&lt;
+          <argument>
+            <name>RObject</name>
+          </argument>&gt;</argument_list></name>
+        </type>
+        <name>object</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>undoable</name>=
+      <init>
+        <expr>
+          <name>true</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <member_list>: 
+    <call>
+      <name>RAddObjectOperation</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>object</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>undoable</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></member_list>
+    <block>{ }</block>
+  </constructor>
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RModifyObjectOperation</name>
+    <parameter_list>()</parameter_list>
+    <block>{ }</block>
+  </destructor></public>}</block>;</class>
+  <expr_stmt>
+  <expr>
+    <call>
+      <name>Q_DECLARE_METATYPE</name>
+      <argument_list>(
+      <argument>
+        <expr>
+        <name>RModifyObjectOperation</name>*</expr>
+      </argument>)</argument_list>
+    </call>
+  </expr>;</expr_stmt>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <comment type="block">/* RMODIFYOBJECTOPERATION_H_ */</comment>
+</unit>

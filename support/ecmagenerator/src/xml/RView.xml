@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class name="RView" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="false" hasShell="false" sharedPointerSupport="true"
+  isQObject="false" hasStreamOperator="true" isAbstract="false"
+  isScriptable="true">
+    <baseClass name="RObject" specifier="public" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+        <arg type="RVector" typeName="RVector" name="centerPoint"
+        isConst="false" />
+        <arg type="double" typeName="double" name="width"
+        isConst="false" />
+        <arg type="double" typeName="double" name="height"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RView *" isPureVirtual="false" />
+    </method>
+    <method name="getName" cppName="getName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setName" cppName="setName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="n"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCenterPoint" cppName="getCenterPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setCenterPoint" cppName="setCenterPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="cPoint"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getWidth" cppName="getWidth" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setWidth" cppName="setWidth" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getHeight" cppName="getHeight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setHeight" cppName="setHeight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="h"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getBox" cppName="getBox" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RBox" isPureVirtual="false" />
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="setProperty" cppName="setProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isSelectedForPropertyEditing"
+    cppName="isSelectedForPropertyEditing" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <property name="PropertyName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCenterPoint" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyWidth" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHeight" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+  </class>
+</unit>

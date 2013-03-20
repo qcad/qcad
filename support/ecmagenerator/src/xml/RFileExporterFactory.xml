@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RFileExporter" />
+  <class_decl name="RDocument" />
+  <class name="RFileExporterFactory"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <method name="getFilterStrings" cppName="getFilterStrings"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="true" />
+    </method>
+    <method name="canExport" cppName="canExport" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" hasDefault="true" default="&quot;&quot;"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="instantiate" cppName="instantiate"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RFileExporter *" isPureVirtual="true">
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

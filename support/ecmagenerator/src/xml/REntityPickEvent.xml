@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsView" />
+  <class_decl name="RGraphicsScene" />
+  <class name="REntityPickEvent"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RInputEvent" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="RGraphicsScene &amp;" typeName="RGraphicsScene"
+        name="s" isConst="false" />
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="v" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getEntityId" cppName="getEntityId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="REntity::Id" isPureVirtual="false" />
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormWidget</class>
+ <widget class="QWidget" name="FormWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>239</width>
+    <height>67</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Width:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Height:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="RMathLineEdit" name="mleWidth">
+     <property name="text">
+      <string>100</string>
+     </property>
+     <property name="angle">
+      <bool>false</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="RMathLineEdit" name="mleHeight">
+     <property name="text">
+      <string>50</string>
+     </property>
+     <property name="angle">
+      <bool>false</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends></extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

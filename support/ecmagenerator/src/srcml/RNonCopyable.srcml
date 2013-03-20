@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RNonCopyable.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RNONCOPYABLE_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RNONCOPYABLE_H</name></cpp:define>
+  <comment type="block">/** * Instances of classes derived from
+  this base class cannot be copied. * * \ingroup core */</comment>
+  <class>class 
+  <name>RNonCopyable</name>
+  <block>{
+  <private type="default"></private>
+  <protected>protected: 
+  <constructor>
+    <name>RNonCopyable</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </constructor>
+  <destructor>
+    <name>~RNonCopyable</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor></protected>
+  <private>private: 
+  <constructor_decl>
+  <name>RNonCopyable</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RNonCopyable</name>&amp;</type>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <function_decl>
+  <type>
+  <name>const</name>
+  <name>RNonCopyable</name>&amp;</type>
+  <name>operator=</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RNonCopyable</name>&amp;</type>
+    </decl>
+  </param>)</parameter_list>;</function_decl></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RNonCopyable*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

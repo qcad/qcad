@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RCommandLine"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QLineEdit" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getLastCommand" cppName="getLastCommand"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="keyPressEvent" cppName="keyPressEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent *" typeName="QKeyEvent *" name="event"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="event" cppName="event" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QEvent *" typeName="QEvent *" name="event"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

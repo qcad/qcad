@@ -1,0 +1,240 @@
+/*!
+
+\page LibraryBrowserScripts Library Browser Scripts
+
+The new QCAD Part Library Browser can not only contain static part library items
+but also dynamic items that are created based on parameters, mathematical 
+formulas, user input, SQL data bases, XML files or other data sources. 
+A dynamic item is rendered when the item is being inserted.
+
+Script items may display a custom user interface component for the user to
+enter script parameters. For example, an item that shows the top view of a 
+dining table might allow the user to input the length and width of the table.
+
+The part library included with QCAD contains such a sample script item 
+called "DiningTable.js" located under "library/misc".
+
+
+\section new_script Creating a Dynamic Part Library Item
+
+In this tutorial we will create a new dynamic item for the library browser. 
+The item should generate a cut-out template for a cube as shown here:
+
+\image html library_browser/cube_template.png
+
+The dynamic item has two parameters which can be specified by the user when the
+script item is being inserted into the drawing:
+- The length of the cube's edge (in drawing units).
+- If the glue flaps should be generated or not (true or false).
+
+First, we create a new script file that will do the work behind our new dynamic 
+part library item:
+-# Create a new directory for your script file(s). This directory can be created
+   inside the part library directory of your QCAD installation or anywhere else
+   on your hard drive.
+-# Start you favorite text editor and create a new text file.
+-# Save the file in the newly created directory as "CubeCuttingOut.js".
+   \n Note that the extension has to be ".js" since we're about to write an
+   ECMAScript (JavaScript) file.
+-# If you have added the directory and script to the library folder of your
+   QCAD installation, you can skip the following step.
+-# Add the newly created directory to the library browser sources:
+  -# Open the QCAD Library Browser.
+  -# Open the application preferences of the Library Browser.
+  -# In section <em>Library Sources</em> click \a Add and choose the 
+     directory you have created in step 1.
+  -# Restart the QCAD Library Browser for the changes to take effect.
+  -# The library browser now has an additional source for library browser items. 
+  
+\section script_skeleton The Script Structure
+
+Copy / paste the following code into your script file 'CubeCuttingOut.js':
+
+\code
+function CubeCuttingOut() {
+}
+
+CubeCuttingOut.init = function(formWidget) {
+};
+
+CubeCuttingOut.generate = function(documentInterface, file) {
+};
+
+CubeCuttingOut.generatePreview = function(documentInterface, iconSize) {
+};
+\endcode
+
+This adds a class named \c CubeCuttingOut to the script file. Note that the
+class must have the same name as the script file (case sensitive).
+
+Besides the constructor, three functions are required to make this a 
+valid, functional script item:
+- \c init(formWidget)
+  \n The function \c init() is called whenever the preview icon (see below) 
+     is generated or when the script item is being inserted into a drawing.
+  \n The parameter \c formWidget is the widget that displays the script item's
+     parameters (if applicable).
+- \c generate(documentInterface, file)
+  \n The function \c generate() is called when the user is about to insert 
+     the script item.
+  \n The parameter \c documentInterface is a valid document interface 
+     (RDocumentInterface) that is used to create the library item.
+     This is \i not the document the user is editing. The part library script has
+     no direct access to the drawing of the user.
+  \n The parameter \c file is the name of the current script file (String).
+  \n This function is expected to return an object of type RAddObjectsOperation.
+- \c generatePreview(documentInterface, iconSize)
+  \n The function \c generatePreview() is called to create an icon for
+     the library browser preview. Note that at the moment the preview icon is
+     generated, no user input is available. Usually an icon with default parameters
+     is generated.
+  \n The parameter \c documentInterface is a valid document interface 
+     (RDocumentInterface).
+  \n The parameter \c iconSize is the user configurable size of the icon (integer).
+  \n This function is expected to return an object of type RAddObjectsOperation.
+  
+The script item is now valid. Locate your new library folder in the 'File System' 
+tab of the QCAD Library Browser. Right-click on the folder and click 
+'Regenerate Icons'. Your item should show up with an empty icon that is decorated
+with a small cog wheel to indicate that this is a dynamic library item backed by
+a script file.
+
+\section fill_skeleton Implementation
+  
+In most cases, the functions \c generate() and \c generatePreview() do almost 
+the same.
+The main difference between \c generate() and \c generatePreview() is that 
+generate() works with user input to define the script parameters, while
+generatePreview() has no user input and should generate the item with default 
+parameters to create a recognizable icon.
+
+It is usually recommendable to write a helper function that 
+creates the RAddObjectsOperation object that is returned by both functions based
+on the script parameters.
+
+For this example, we name that function \c createCuttingOut():
+
+\code
+CubeCuttingOut.createCuttingOut = function(documentInterface) {
+    CubeCuttingOut.size = 10;
+    var va = new Array(
+            new RVector(0, 0),
+            new RVector(0, CubeCuttingOut.size),
+            new RVector(CubeCuttingOut.size, CubeCuttingOut.size),
+            new RVector(CubeCuttingOut.size, 0)
+    );
+    var addOperation = new RAddObjectsOperation(false);
+    for ( var i = 0; i < va.length; ++i) {
+        var lineData = new RLineData(va[i], va[(i + 1) % va.length]);
+        var line = new RLineEntity(documentInterface.getDocument(), lineData);
+        addOperation.addObject(line);
+    }
+    return addOperation;
+};
+\endcode
+
+For now, the size of the cube is fixed to 10 drawing units 
+(variable \c CubeCuttingOut.size).
+We will later use \c CubeCuttingOut.size as an input parameter for our helper function.
+
+Based on the cube size, the helper function generates the CAD entities 
+that represent a square. These entities are added to the operation that 
+will be applied to the document that represents the item.
+
+In function \c generate(), we simply call our helper function:
+\code
+CubeCuttingOut.generate = function(documentInterface, file) {
+    return CubeCuttingOut.createCuttingOut(documentInterface);
+};
+\endcode
+
+The script is now functional but does not display an icon and only creates one
+single square with a fixed size.
+
+Save the modified script file and then drag-n-drop the script item from the
+library browser into the drawing area.
+
+When moving the mouse cursor inside the drawing area, a square with a size of
+10 drawing units is shown. Left-click to place the square somewhere in your drawing.
+Note that you may also specify a scale factor and rotation angle or flip the item
+in the options tool bar. These are standard operations available for all items
+that are being inserted, including dynamic items.
+
+\image html library_browser/lb01.png
+
+We now modify the script to create the full cut-out template for the cube:
+
+\snippet CubeCuttingOut.jsd init
+
+\snippet CubeCuttingOut.jsd createCuttingOut
+
+\snippet CubeCuttingOut.jsd createSquare
+
+\section script_parameters Providing Script Parameters
+
+For the user to enter script parameters, we need to define a user interface 
+component (widget). We use Qt Designer to design the user interface
+for this widget. Qt Designer is available for free as part of the Qt SDK
+or Qt Creator: http://qt.nokia.com/downloads
+
+The UI file must have the same name as the script file but with the extension 
+<tt>.ui</tt>. 
+-# Start the Qt Designer.
+-# Create a new file and choose \a Widget as template.
+-# Add an element of type \a QLineEdit, set its object name to "CubeSize" 
+   and its value to "10".
+-# Add an element of type \a QCheckBox, set its object name to "DrawPlates" 
+   and set its \a checked flag.
+
+You may also want to add some labels to indicate to the user what is being 
+defined where. In the end, the widget may for example look like this:
+
+\image html library_browser/widget.png
+
+Save the UI file as "CubeCuttingOut.ui". If you don't have Qt Designer, you can
+find the file source at the bottom of this page.
+
+The library browser will now display that user interface component whenever this
+script item is being inserted.
+
+All the script item implementation has to do is to get the script parameters
+from the user interface component:
+
+\snippet CubeCuttingOut.jsd include
+
+\snippet CubeCuttingOut.jsd init
+
+\snippet CubeCuttingOut.jsd generate
+
+Save the script file again, and insert the script item from the library browser into
+your drawing. The cut-out template is still drawn with a size of 10. 
+As soon as you enter a different value in the user interface component, 
+the cut-out template is drawn with that size.
+
+The script item parameter <em>Draw plates</em> can be handled in the same way:
+
+\snippet CubeCuttingOut.jsd generate
+
+\section script_preview Providing a Script Preview
+
+Finally, we provide a script preview that is shown as icon in the library browser.
+For that, we simply set some appropriate default values as script item parameters 
+and call our helper function.
+
+\snippet CubeCuttingOut.jsd generatePreview
+
+The library browser icons are updated on every start of QCAD.
+You can also right-click on a directory in the 'File System' tab and choose 
+<em>Regenerate Icons</em> to rebuild the icons in that directory.
+
+\image html library_browser/lb02.png
+
+\section cube_cutting_out_js The Complete Script and User Interface Sources
+
+\include CubeCuttingOut.jsd
+
+\include CubeCuttingOut.ui
+
+<p>&nbsp;</p>
+
+*/

@@ -1,0 +1,190 @@
+/**
+ * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */
+
+include("scripts/File/SvgImport/SvgImport.js");
+include("../Edit.js");
+
+/**
+ * \class InsertBlockItem
+ * \brief Called when a block is inserted from the part library.
+ * \ingroup ecma_edit
+ */
+function InsertBlockItem(guiAction) {
+    Edit.call(this, guiAction);
+    if (!isNull(guiAction)) {
+        this.setUiOptions("InsertBlockItem.ui");
+    }
+
+    this.diItem = undefined;
+    this.docItem = undefined;
+
+    this.blockName = undefined;
+    this.scale = 1.0;
+    this.rotation = 0.0;
+
+    this.flipHorizontal = false;
+    this.flipVertical = false;
+    this.toCurrentLayer = false;
+    this.overwriteLayers = false;
+    this.overwriteBlocks = false;
+}
+
+InsertBlockItem.State = {
+    SettingPosition : 0
+};
+
+InsertBlockItem.prototype = new Edit();
+
+InsertBlockItem.prototype.beginEvent = function() {
+    // part library item is loaded into this document:
+    var ms = new RMemoryStorage();
+    var si = new RSpatialIndexNavel();
+    this.docItem = new RDocument(ms, si);
+    this.diItem = new RDocumentInterface(this.docItem);
+
+    // TODO refactor
+    Edit.prototype.beginEvent.call(this);
+
+    var url = this.guiAction.data();
+    if (url.toString().toLowerCase().endsWith(".svg")) {
+        // SVG file
+        // TODO: register SVG importer as normal file importer known by document interface:
+        var svgImporter = new SvgImporter(this.docItem);
+        svgImporter.importFile(url.toLocalFile());
+    } else {
+        // CAD file (e.g. DXF)
+        this.diItem.importUrl(url, false);
+    }
+
+    this.blockName = new QFileInfo(url.path()).completeBaseName();
+
+    // fix block name if necessary:
+    this.blockName = fixSymbolTableName(this.blockName);
+
+    // invalid block name characters:
+    if (isNull(this.blockName)) {
+        var doc = this.getDocument();
+        var c = 1;
+        while (isNull(this.blockName) || doc.hasBlock(this.blockName)) {
+            this.blockName = 'block_' + c++;
+        }
+        EAction.handleUserMessage(qsTr("Adjusted invalid block name to '%1'").arg(this.blockName));
+    }
+
+    this.setState(InsertBlockItem.State.SettingPosition);
+};
+
+InsertBlockItem.prototype.setState = function(state) {
+    Edit.prototype.setState.call(this, state);
+
+    this.setCrosshairCursor();
+    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
+
+    var appWin = RMainWindowQt.getMainWindow();
+    var trPos = qsTr("Position");
+    this.setCommandPrompt(trPos);
+    this.setLeftMouseTip(trPos);
+    this.setRightMouseTip(EAction.trCancel);
+    EAction.showSnapTools();
+};
+
+InsertBlockItem.prototype.finishEvent = function() {
+    this.diItem.destroy();
+    Edit.prototype.finishEvent.call(this);
+};
+
+InsertBlockItem.prototype.generate = function() {
+    return;
+};
+
+InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
+    var di = this.getDocumentInterface();
+
+    this.generate();
+
+    var operation = new RPasteOperation(this.docItem);
+
+    operation.setOffset(event.getModelPosition());
+    if (!isNull(this.blockName)) {
+        operation.setBlockName(this.blockName);
+    }
+    operation.setScale(this.scale);
+    operation.setRotation(this.rotation);
+    operation.setFlipHorizontal(this.flipHorizontal);
+    operation.setFlipVertical(this.flipVertical);
+    operation.setToCurrentLayer(this.toCurrentLayer);
+    operation.setOverwriteLayers(this.overwriteLayers);
+    operation.setOverwriteBlocks(this.overwriteBlocks);
+
+    if (preview) {
+        di.previewOperation(operation);
+    }
+    else {
+        di.applyOperation(operation);
+        di.clearPreview();
+        di.repaintViews();
+    }
+};
+
+//InsertBlockItem.prototype.coordinateEventPreview = function(event) {
+//    var di = this.getDocumentInterface();
+//    this.operation.setOffset(event.getModelPosition());
+//    di.previewOperation(this.operation);
+//};
+
+InsertBlockItem.prototype.slotScaleChanged = function(value) {
+    var scale = RMath.eval(value);
+    if (RMath.getError() === "") {
+        this.scale = scale;
+    } else {
+        this.scale = 1.0;
+    }
+};
+
+InsertBlockItem.prototype.slotRotationChanged = function(value) {
+    var rotation = RMath.eval(value);
+    if (RMath.getError() === "") {
+        this.rotation = RMath.deg2rad(rotation);
+    } else {
+        this.rotation = 0.0;
+    }
+};
+
+InsertBlockItem.prototype.slotFlipHorizontalChanged = function(value) {
+    this.flipHorizontal = value;
+};
+
+InsertBlockItem.prototype.slotFlipVerticalChanged = function(value) {
+    this.flipVertical = value;
+};
+
+InsertBlockItem.prototype.slotToCurrentLayerChanged = function(value) {
+    this.toCurrentLayer = value;
+};
+
+InsertBlockItem.prototype.slotOverwriteLayersChanged = function(value) {
+    this.overwriteLayers = value;
+};
+
+InsertBlockItem.prototype.slotOverwriteBlocksChanged = function(value) {
+    this.overwriteBlocks = value;
+};
+
+/*
+*/

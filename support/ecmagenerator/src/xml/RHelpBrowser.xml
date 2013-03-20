@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RHelpBrowser"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QObject" specifier="public" />
+    <baseClass name="RSingleton" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="showDocumentation" cppName="showDocumentation"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="file"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getInstance" cppName="getInstance"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RHelpBrowser &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="error" cppName="error" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QProcess::ProcessError"
+        typeName="QProcess::ProcessError" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="readStandardOutput" cppName="readStandardOutput"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="readStandardError" cppName="readStandardError"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

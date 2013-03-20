@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPainterPathSource"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <method name="getPainterPaths" cppName="getPainterPaths"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPainterPath &gt;"
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="draft"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RLineweight.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RLINEWEIGHT_H_</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RLINEWEIGHT_H_</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QIcon&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * \scriptable * \copyable */</comment>
+  <class>class 
+  <name>RLineweight</name>
+  <block>{
+  <private type="default">
+    <constructor_decl>
+    <name>Q_DECLARE_TR_FUNCTIONS</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>RLineweight</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>
+  </private>
+  <public>public: 
+  <enum>enum 
+  <name>Lineweight</name>
+  <block>{ 
+  <expr>
+  <name>Weight000</name>= 0</expr>, 
+  <expr>
+  <name>Weight005</name>= 5</expr>, 
+  <expr>
+  <name>Weight009</name>= 9</expr>, 
+  <expr>
+  <name>Weight013</name>= 13</expr>, 
+  <expr>
+  <name>Weight015</name>= 15</expr>, 
+  <expr>
+  <name>Weight018</name>= 18</expr>, 
+  <expr>
+  <name>Weight020</name>= 20</expr>, 
+  <expr>
+  <name>Weight025</name>= 25</expr>, 
+  <expr>
+  <name>Weight030</name>= 30</expr>, 
+  <expr>
+  <name>Weight035</name>= 35</expr>, 
+  <expr>
+  <name>Weight040</name>= 40</expr>, 
+  <expr>
+  <name>Weight050</name>= 50</expr>, 
+  <expr>
+  <name>Weight053</name>= 53</expr>, 
+  <expr>
+  <name>Weight060</name>= 60</expr>, 
+  <expr>
+  <name>Weight070</name>= 70</expr>, 
+  <expr>
+  <name>Weight080</name>= 80</expr>, 
+  <expr>
+  <name>Weight090</name>= 90</expr>, 
+  <expr>
+  <name>Weight100</name>= 100</expr>, 
+  <expr>
+  <name>Weight106</name>= 106</expr>, 
+  <expr>
+  <name>Weight120</name>= 120</expr>, 
+  <expr>
+  <name>Weight140</name>= 140</expr>, 
+  <expr>
+  <name>Weight158</name>= 158</expr>, 
+  <expr>
+  <name>Weight200</name>= 200</expr>, 
+  <expr>
+  <name>Weight211</name>= 211</expr>, 
+  <expr>
+  <name>WeightByLayer</name>= -1</expr>, 
+  <expr>
+  <name>WeightByBlock</name>= -2</expr>, 
+  <expr>
+  <name>WeightByLwDefault</name>= -3</expr>, 
+  <expr>
+  <name>WeightInvalid</name>= -4</expr>}</block>;</enum></public>
+  <public>public: 
+  <constructor_decl>
+  <name>RLineweight</name>
+  <parameter_list>()</parameter_list>;</constructor_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>QPair
+      <argument_list>&lt;
+      <argument>
+        <name>QString</name>
+      </argument>, 
+      <argument>
+        <name>
+        <name>RLineweight</name>::
+        <name>Lineweight</name></name>
+      </argument>&gt;</argument_list></name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getList</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>onlyFixed</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QIcon</name>
+  </type>
+  <name>getIcon</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLineweight</name>::
+        <name>Lineweight</name></name>
+      </type>
+      <name>color</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>getName</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLineweight</name>::
+        <name>Lineweight</name></name>
+      </type>
+      <name>lineweight</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
+  <private>private: 
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>init</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>init</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>cn</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLineweight</name>::
+        <name>Lineweight</name></name>
+      </type>
+      <name>lineweight</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></private>
+  <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>bool</name>
+    </type>
+    <name>isInitialized</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>QPair
+        <argument_list>&lt;
+        <argument>
+          <name>QString</name>
+        </argument>, 
+        <argument>
+          <name>
+          <name>RLineweight</name>::
+          <name>Lineweight</name></name>
+        </argument>&gt;</argument_list></name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>list</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>
+        <name>RLineweight</name>::
+        <name>Lineweight</name></name>
+      </argument>, 
+      <argument>
+        <name>QIcon</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>iconMap</name>
+  </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RLineweight</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RLineweight*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RLineweight::Lineweight</argument>)</argument_list>
+  </macro>
+  <typedef>typedef 
+  <type>
+    <name>QPair
+    <argument_list>&lt;
+    <argument>
+      <name>QString</name>
+    </argument>, 
+    <argument>
+      <name>
+      <name>RLineweight</name>::
+      <name>Lineweight</name></name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>_RPairStringRLineweight</name>;</typedef>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>_RPairStringRLineweight</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>QList&lt; _RPairStringRLineweight
+    &gt;</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <comment type="block">/* RLINEWEIGHT_H_ */</comment>
+</unit>

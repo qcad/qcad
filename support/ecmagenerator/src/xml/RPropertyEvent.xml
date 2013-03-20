@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPropertyEvent"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getPropertyTypeId" cppName="getPropertyTypeId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPropertyTypeId"
+      isPureVirtual="false" />
+    </method>
+    <method name="getValue" cppName="getValue" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false" />
+    </method>
+    <method name="getEntityTypeFilter"
+    cppName="getEntityTypeFilter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

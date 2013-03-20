@@ -1,0 +1,27 @@
+/*!
+
+\defgroup ecma_scripts ECMA Scripts
+
+\brief This module contains classes and libraries implemented in ECMA Script (JavaScript).
+
+These scripts define the actual application (GUI, menus, widgets, actions, etc.).
+The entry point is always autostart.js.
+
+
+\section common Common used Script Files and Classes
+
+<table>
+<tr><td>\ref library.js</td><td>Common functions.</td></tr>
+<tr><td>\ref date.js</td><td>Provides date related functions.</td></tr>
+<tr><td>\ref sprintf.js</td>
+<td>Provides a C-like <a href="http://www.cplusplus.com/reference/clibrary/cstdio/sprintf" target="_blank">
+sprintf()</a> function.</td>
+</tr>
+<tr><td>\ref EAction (\ref EAction.js)</td><td>\copybrief EAction</td></tr>
+<tr><td>\ref Plugin (\ref Plugin.js)</td><td>\copybrief Plugin</td></tr>
+<tr><td>\ref Map (\ref map.js)</td><td>Provides a map class.</td></tr>
+</table>
+
+<p>&nbsp;</p>
+
+*/

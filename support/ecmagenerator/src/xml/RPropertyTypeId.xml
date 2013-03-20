@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPropertyTypeId"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant>
+        <arg type="QString &amp;" typeName="QString"
+        name="customPropertyName" isConst="true" />
+      </variant>
+      <variant>
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="other" isConst="true" />
+      </variant>
+      <variant>
+        <arg type="int" typeName="int" name="id" hasDefault="true"
+        default="INVALID_ID" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getId" cppName="getId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getCustomPropertyName"
+    cppName="getCustomPropertyName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isCustom" cppName="isCustom" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getPropertyGroupTitle"
+    cppName="getPropertyGroupTitle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getPropertyTitle" cppName="getPropertyTitle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getPropertyTypeId" cppName="getPropertyTypeId"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPropertyTypeId" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="groupTitle" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator ==" cppName="operator =="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="other" isConst="true" />
+      </variant>
+    </method>
+    <method name="operator !=" cppName="operator !="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="other" isConst="true" />
+      </variant>
+    </method>
+    <method name="operator &lt;" cppName="operator &lt;"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="other" isConst="true" />
+      </variant>
+    </method>
+    <property name="INVALID_ID" type="int" isConst="true"
+    isStatic="true" />
+  </class>
+</unit>

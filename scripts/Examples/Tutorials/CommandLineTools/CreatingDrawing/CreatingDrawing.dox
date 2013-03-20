@@ -1,0 +1,92 @@
+/*!
+
+\page CreatingDrawing Creating a Drawing
+
+With the QCAD Application Framework it is not only possible to 
+create interactive tools but also to construct entire drawings 
+based on user input (dialog, command line arguments, ...),
+mathematical formulas, data bases, files or other sources.
+
+This tutorial focuses on creating objects with the QCAD Application Framework
+and adding them to a drawing document. The example in this tutorial
+creates a drawing document from scratch, adds various objects
+to it and saves the document as a DXF file. No user interface
+is used for this example, so it can be run as a command line application
+without first starting the QCAD Application user interface.
+
+\section initialization Initialization
+
+Some initialization is required before we get started to give the
+application a name (used among other things as ID for XDATA in DXF / DWG)
+and to make DXF / DWG export available:
+
+\snippet CreatingDrawing.jsd init
+
+\section documents Creating a Document
+
+A drawing in the QCAD Application Framework is represented
+by a document (RDocument). The document is backed by a storage
+which stores the actual drawing data (RStorage) and is usually
+not accessed directly by script developers. Further, the
+document also owns a spatial index (RSpatialIndex) for fast entity 
+lookup based on location. Script developers only need to worry
+about the spatial index to create a document.
+
+This code snippet creates a new, empty drawing document (RDocument) 
+that is backed by a memory storage (RMemoryStorage) and a high performance 
+spatial index implementation (RSpatialIndexNavel):
+
+\snippet CreatingDrawing.jsd document
+
+The new document already contains some default objects like a 
+layer '0', the model space block and line type definitions.
+The document has no graphics views attached, so there is no
+visual representation of any kind. Graphics scenes and views
+could be attached to the document interface.
+
+\section operations Operations
+
+Every change to a document (including adding entities) is wrapped
+in a transaction (RTransaction) in the QCAD Application Framework. 
+Transactions are a low level concept and usually don't have to be
+used directly by script developers.
+
+To control which changes belong to one transaction, the 
+QCAD Application Framework offers a higher level concept of
+operations (ROperation). An operation essentially wraps a
+transaction with a user friendly interface. Operations can be
+applied to documents in way that the various graphics views
+and other user interface components are being updated 
+automatically.
+
+The following example code adds three line entities in the
+shape of a regular triangle to a document:
+
+\snippet CreatingDrawing.jsd operation
+
+Note that we have not indicated a layer or any attributes 
+(color, line type, line weight) for our lines. The lines are
+added to the current layer (layer '0') with the default attributes
+(color, line type and line weight inherited from layer).
+
+\section export_dxf DXF / DWG Export
+
+To store the drawing document to a DXF file, we can use the document
+interface:
+
+\snippet CreatingDrawing.jsd export
+
+\section creating_a_drawing_code Complete Code
+
+Here's the complete code of our example again:
+
+\snippet CreatingDrawing.jsd main
+
+To run the example, save it as a file (e.g. 'example.js') and launch QCAD,
+using this script as autostart script:
+
+\code
+./qcad -autostart example.js
+\endcode
+
+*/

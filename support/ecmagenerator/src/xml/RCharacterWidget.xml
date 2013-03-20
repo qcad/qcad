@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QMouseEvent" />
+  <class_decl name="QPaintEvent" />
+  <class name="RCharacterWidget"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QWidget" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="sizeHint" cppName="sizeHint" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSize" isPureVirtual="false" />
+    </method>
+    <method name="getDisplayFont" cppName="getDisplayFont"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QFont" isPureVirtual="false" />
+    </method>
+    <method name="updateFont" cppName="updateFont"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QFont &amp;" typeName="QFont" name="font"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="updateSize" cppName="updateSize"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fontSize" isConst="true" />
+      </variant>
+    </method>
+    <method name="updateStyle" cppName="updateStyle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fontStyle" isConst="true" />
+      </variant>
+    </method>
+    <method name="updateFontMerging" cppName="updateFontMerging"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="enable"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="mouseMoveEvent" cppName="mouseMoveEvent"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMouseEvent *" typeName="QMouseEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="mousePressEvent" cppName="mousePressEvent"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMouseEvent *" typeName="QMouseEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="paintEvent" cppName="paintEvent"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPaintEvent *" typeName="QPaintEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

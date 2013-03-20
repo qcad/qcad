@@ -1,0 +1,8 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ql="http://qcad.org/ql/elements/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dcterms:license>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:license>
+    <dc:source>http://thenounproject.com/download/zipped/svg_81.zip</dc:source>
+    <dcterms:created>Unknown</dcterms:created>
+    <dc:title xml:lang="en">fragile</dc:title>
+  </rdf:Description>
+</rdf:RDF>

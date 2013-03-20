@@ -1,0 +1,7 @@
+/*!
+
+\defgroup dxf DXF Import Module
+
+\brief Implements import support for the DXF CAD file format.
+
+*/

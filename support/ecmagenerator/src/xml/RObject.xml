@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class name="RObject"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <enum name="XYZ">
+      <value name="X" />
+      <value name="Y" />
+      <value name="Z" />
+    </enum>
+    <constructor>
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="Id" typeName="Id" name="id" hasDefault="true"
+        default="INVALID_ID" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RObject *" isPureVirtual="false" />
+    </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument *" isPureVirtual="false" />
+      <variant returnType="RDocument *" isPureVirtual="false" />
+    </method>
+    <method name="setDocument" cppName="setDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+      </variant>
+    </method>
+    <method name="getId" cppName="getId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RObject::Id" isPureVirtual="false" />
+    </method>
+    <method name="getHandle" cppName="getHandle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RObject::Handle"
+      isPureVirtual="false" />
+    </method>
+    <method name="isUndone" cppName="isUndone" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setUndone" cppName="setUndone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPropertyTypeIds" cppName="getPropertyTypeIds"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RPropertyTypeId &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="setProperty" cppName="setProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="hasPropertyType" cppName="hasPropertyType"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+      </variant>
+    </method>
+    <method name="isSelectedForPropertyEditing"
+    cppName="isSelectedForPropertyEditing" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="true" />
+    </method>
+    <method name="getCustomProperty" cppName="getCustomProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="QVariant &amp;" typeName="QVariant"
+        name="defaultValue" hasDefault="true"
+        default="RDEFAULT_QVARIANT" isConst="true" />
+      </variant>
+    </method>
+    <method name="setCustomProperty" cppName="setCustomProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="removeCustomProperty"
+    cppName="removeCustomProperty" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCustomProperties"
+    cppName="getCustomProperties" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QMap &lt; QString , QVariant &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getComplexity" cppName="getComplexity"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="print" cppName="print" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDebug" typeName="QDebug" name="dbg"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setId" cppName="setId" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setHandle" cppName="setHandle"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject::Handle" typeName="RObject::Handle"
+        name="h" isConst="false" />
+      </variant>
+    </method>
+    <property name="INVALID_ID" type="Id" isConst="true"
+    isStatic="true" />
+    <property name="INVALID_HANDLE" type="Handle" isConst="true"
+    isStatic="true" />
+    <property name="PropertyCustom" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+  </class>
+</unit>

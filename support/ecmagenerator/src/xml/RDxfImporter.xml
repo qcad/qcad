@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDxfImporter" />
+  <class_decl name="RImageEntity" />
+  <class_decl name="RVector" />
+  <class name="RDxfTextStyle"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false"
+  isScriptable="false" />
+  <class name="RDxfImporter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RFileImporter" specifier="public" />
+    <baseClass name="DL_CreationAdapter" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+        <arg type="RMessageHandler *" typeName="RMessageHandler *"
+        name="messageHandler" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="RProgressHandler *"
+        typeName="RProgressHandler *" name="progressHandler"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="registerFileImporter"
+    cppName="registerFileImporter" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getFilterStrings" cppName="getFilterStrings"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="importFile" cppName="importFile"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
+    </method>
+    <method name="processCodeValuePair"
+    cppName="processCodeValuePair" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="groupCode"
+        isConst="false" />
+        <arg type="char *" typeName="char *" name="groupValue"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

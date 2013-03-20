@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RObject" />
+  <class name="RAddObjectsOperation"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="ROperation" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="bool" typeName="bool" name="undoable"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="QList &lt; QSharedPointer &lt; RObject &gt; &gt; &amp;"
+        typeName="QList &lt; QSharedPointer &lt; RObject &gt; &gt;"
+        name="list" isConst="false" />
+        <arg type="bool" typeName="bool"
+        name="useCurrentAttributes" hasDefault="true"
+        default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="undoable"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="addObject" cppName="addObject" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RObject &gt; &amp;"
+        typeName="QSharedPointer &lt; RObject &gt;" name="object"
+        isConst="true" />
+        <arg type="bool" typeName="bool"
+        name="useCurrentAttributes" hasDefault="true"
+        default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="apply" cppName="apply" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RTransaction" isPureVirtual="false">
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getPreviewCounter" cppName="getPreviewCounter"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setLimitPreview" cppName="setLimitPreview"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

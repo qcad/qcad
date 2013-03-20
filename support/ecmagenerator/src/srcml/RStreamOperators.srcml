@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RStreamOperators.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RSTREAMOPERATORS_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RSTREAMOPERATORS_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QPrinter&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RMetaTypes.h"</cpp:file></cpp:include>
+  <comment type="block">/* QDataStream&amp;
+  operator&lt;&lt;(QDataStream&amp; stream, const
+  QPrinter::PaperSize&amp; ps) { stream &lt;&lt; (quint16)ps;
+  return stream; } QDataStream&amp;
+  operator&gt;&gt;(QDataStream&amp; stream,
+  QPrinter::PaperSize&amp; ps) { quint16 psi; stream &gt;&gt; psi;
+  ps = (QPrinter::PaperSize)psi; return stream; } */</comment>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

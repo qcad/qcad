@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RVersion.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RVERSION_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RVERSION_H</name></cpp:define>
+  <comment type="block">/** * Version number of the QCAD
+  Application Framework. */</comment>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>R_QCAD_VERSION_STRING</name>"3.0.9"</cpp:define>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>R_QCAD_VERSION_MAJOR</name>3</cpp:define>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>R_QCAD_VERSION_MINOR</name>0</cpp:define>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>R_QCAD_VERSION_REV</name>9</cpp:define>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>R_QCAD_VERSION_BUILD</name>0</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

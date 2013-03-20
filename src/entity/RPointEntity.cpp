@@ -1,0 +1,100 @@
+/**
+ * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */
+#include "RPointEntity.h"
+#include "RExporter.h"
+#include "RPoint.h"
+
+RPropertyTypeId RPointEntity::PropertyCustom;
+RPropertyTypeId RPointEntity::PropertyHandle;
+RPropertyTypeId RPointEntity::PropertyType;
+RPropertyTypeId RPointEntity::PropertyBlock;
+RPropertyTypeId RPointEntity::PropertyLayer;
+RPropertyTypeId RPointEntity::PropertyLinetype;
+RPropertyTypeId RPointEntity::PropertyLineweight;
+RPropertyTypeId RPointEntity::PropertyColor;
+RPropertyTypeId RPointEntity::PropertyDrawOrder;
+
+RPropertyTypeId RPointEntity::PropertyPositionX;
+RPropertyTypeId RPointEntity::PropertyPositionY;
+RPropertyTypeId RPointEntity::PropertyPositionZ;
+
+
+RPointEntity::RPointEntity(RDocument* document, const RPointData& data,
+        RObject::Id objectId) :
+    REntity(document, objectId), data(document, data) {
+}
+
+RPointEntity::~RPointEntity() {
+}
+
+void RPointEntity::init() {
+    RPointEntity::PropertyCustom.generateId(typeid(RPointEntity), RObject::PropertyCustom);
+    RPointEntity::PropertyHandle.generateId(typeid(RPointEntity), RObject::PropertyHandle);
+    RPointEntity::PropertyType.generateId(typeid(RPointEntity), REntity::PropertyType);
+    RPointEntity::PropertyBlock.generateId(typeid(RPointEntity), REntity::PropertyBlock);
+    RPointEntity::PropertyLayer.generateId(typeid(RPointEntity), REntity::PropertyLayer);
+    RPointEntity::PropertyLinetype.generateId(typeid(RPointEntity), REntity::PropertyLinetype);
+    RPointEntity::PropertyLineweight.generateId(typeid(RPointEntity), REntity::PropertyLineweight);
+    RPointEntity::PropertyColor.generateId(typeid(RPointEntity), REntity::PropertyColor);
+    RPointEntity::PropertyDrawOrder.generateId(typeid(RPointEntity), REntity::PropertyDrawOrder);
+    RPointEntity::PropertyPositionX.generateId(typeid(RPointEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RPointEntity::PropertyPositionY.generateId(typeid(RPointEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RPointEntity::PropertyPositionZ.generateId(typeid(RPointEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
+}
+
+bool RPointEntity::setProperty(RPropertyTypeId propertyTypeId,
+        const QVariant& value) {
+    bool ret = REntity::setProperty(propertyTypeId, value);
+    ret = ret || RObject::setMember(data.position.x, value, PropertyPositionX
+            == propertyTypeId);
+    ret = ret || RObject::setMember(data.position.y, value, PropertyPositionY
+            == propertyTypeId);
+    ret = ret || RObject::setMember(data.position.z, value, PropertyPositionZ
+            == propertyTypeId);
+    return ret;
+}
+
+QPair<QVariant, RPropertyAttributes> RPointEntity::getProperty(
+        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+    if (propertyTypeId == PropertyType) {
+        return qMakePair(QVariant(RS::EntityPoint), RPropertyAttributes(
+                RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyPositionX) {
+        return qMakePair(QVariant(data.position.x), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyPositionY) {
+        return qMakePair(QVariant(data.position.y), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyPositionZ) {
+        return qMakePair(QVariant(data.position.z), RPropertyAttributes());
+    }
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+}
+
+
+void RPointEntity::exportEntity(RExporter& e, bool preview) const {
+    Q_UNUSED(preview);
+
+    e.setBrush(Qt::NoBrush);
+    e.exportPoint(data);
+}
+
+void RPointEntity::print(QDebug dbg) const {
+    dbg.nospace() << "RPointEntity(";
+    REntity::print(dbg);
+    dbg.nospace() << ", position: " << getPosition() << ")";
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RTextLabel"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RPoint" specifier="public" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+        <arg type="QVariant &amp;" typeName="QVariant"
+        name="userData" hasDefault="true"
+        default="RDEFAULT_QVARIANT" isConst="true" />
+      </variant>
+    </constructor>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RTextLabel *" isPureVirtual="false" />
+    </method>
+    <method name="getText" cppName="getText" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getUserData" cppName="getUserData"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false" />
+    </method>
+    <method name="print" cppName="print" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDebug" typeName="QDebug" name="dbg"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RScriptAction"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <baseClass name="RAction" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QString &amp;" typeName="QString"
+        name="scriptFile" isConst="true" />
+        <arg type="RGuiAction *" typeName="RGuiAction *"
+        name="guiAction" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getScriptFile" cppName="getScriptFile"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

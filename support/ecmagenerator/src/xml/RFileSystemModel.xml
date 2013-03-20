@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RFileSystemModel"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QFileSystemModel" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QObject *" typeName="QObject *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="setRootPath" cppName="setRootPath"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QModelIndex" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="newPath"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="rootPath" cppName="rootPath" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="index" cppName="index" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QModelIndex" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="path"
+        isConst="true" />
+        <arg type="int" typeName="int" name="column"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+      <variant returnType="QModelIndex" isPureVirtual="false">
+        <arg type="int" typeName="int" name="row"
+        isConst="false" />
+        <arg type="int" typeName="int" name="column"
+        isConst="false" />
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="parent" hasDefault="true"
+        default="RDEFAULT_QMODELINDEX" isConst="true" />
+      </variant>
+    </method>
+    <method name="filePath" cppName="filePath" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+      </variant>
+    </method>
+    <method name="setFilter" cppName="setFilter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDir::Filters" typeName="QDir::Filters"
+        name="filters" isConst="false" />
+      </variant>
+    </method>
+    <method name="isDir" cppName="isDir" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+      </variant>
+    </method>
+    <method name="setHeaderData" cppName="setHeaderData"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="section"
+        isConst="false" />
+        <arg type="Qt::Orientation" typeName="Qt::Orientation"
+        name="orientation" isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="value"
+        isConst="true" />
+        <arg type="int" typeName="int" name="role"
+        hasDefault="true" default="Qt :: EditRole"
+        isConst="false" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="section"
+        isConst="false" />
+        <arg type="Qt::Orientation" typeName="Qt::Orientation"
+        name="orientation" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+        <arg type="int" typeName="int" name="role"
+        hasDefault="true" default="Qt :: EditRole"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="rowCount" cppName="rowCount" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="parent" hasDefault="true"
+        default="RDEFAULT_QMODELINDEX" isConst="true" />
+      </variant>
+    </method>
+    <method name="setIconProvider" cppName="setIconProvider"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QFileIconProvider *"
+        typeName="QFileIconProvider *" name="provider"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setNameFilter" cppName="setNameFilter"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="filter"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setNameFilters" cppName="setNameFilters"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="filters" isConst="true" />
+      </variant>
+    </method>
+    <method name="setNameFilterDisables"
+    cppName="setNameFilterDisables" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="enable"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setItemData" cppName="setItemData"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+        <arg type="QMap &lt; int , QVariant &gt; &amp;"
+        typeName="QMap &lt; int , QVariant &gt;" name="roles"
+        isConst="true" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+        <arg type="Qt::ItemDataRole" typeName="Qt::ItemDataRole"
+        name="role" isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="value"
+        isConst="true" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+        <arg type="Qt::ItemDataRole" typeName="Qt::ItemDataRole"
+        name="role" isConst="false" />
+        <arg type="QColor &amp;" typeName="QColor" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="itemData" cppName="itemData" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QMap &lt; int , QVariant &gt;"
+      isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+      </variant>
+    </method>
+    <method name="canFetchMore" cppName="canFetchMore"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="parent" isConst="true" />
+      </variant>
+    </method>
+    <method name="fetchMore" cppName="fetchMore" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="parent" isConst="true" />
+      </variant>
+    </method>
+    <method name="data" cppName="data" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+        <arg type="int" typeName="int" name="role"
+        hasDefault="true" default="Qt :: DisplayRole"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

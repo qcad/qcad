@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RShortcutLineEdit"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QLineEdit" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="clear" cppName="clear" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="eventFilter" cppName="eventFilter"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="obj"
+        isConst="false" />
+        <arg type="QEvent *" typeName="QEvent *" name="event"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

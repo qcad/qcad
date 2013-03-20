@@ -1,0 +1,3 @@
+NAME = $${TARGET} 
+SOURCES = Point3P.js
+OTHER_FILES = $${TARGET}.dox

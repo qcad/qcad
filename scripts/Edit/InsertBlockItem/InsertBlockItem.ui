@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InsertBlockItem</class>
+ <widget class="QWidget" name="InsertBlockItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>679</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Rotation:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="Rotation">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Rotate pasted entities&lt;br&gt;by this angle</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string notr="true">0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">30</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">45</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">60</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">90</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">120</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">135</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">150</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">180</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">210</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">225</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">240</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">270</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">300</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">315</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">330</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Scale:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="Scale">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Scale pasted entities&lt;br&gt;by this factor</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">10</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="FlipHorizontal">
+     <property name="toolTip">
+      <string>Flip pasted entities&lt;br&gt;horizontally</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>FlipHorizontal.svg</normaloff>FlipHorizontal.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="FlipVertical">
+     <property name="toolTip">
+      <string>Flip pasted entities&lt;br&gt;vertically</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>FlipVertical.svg</normaloff>FlipVertical.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="OverwriteLayers">
+     <property name="toolTip">
+      <string>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</string>
+     </property>
+     <property name="text">
+      <string>Overwrite layers</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="OverwriteBlocks">
+     <property name="toolTip">
+      <string>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</string>
+     </property>
+     <property name="text">
+      <string>Overwrite blocks</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Reset"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

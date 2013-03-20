@@ -1,0 +1,33 @@
+/*!
+
+\page ExPdfExport Exporting a Drawing to PDF
+
+To export a document to PDF, we can use the printing framework of QCAD
+which is itself implemented in ECMAScript. To do this, we simply include 
+the class Print:
+
+\snippet ExPdfExport.jsd include
+
+To print or export a drawing to PDF, we need a visual representation of
+the drawing first. This is achieved through a graphics scene with an 
+attached view:
+
+\snippet ExPdfExport.jsd view
+
+In most cases, we need to configure the page size, scale factor and
+other settings before we can produce a usable PDF output. This is done
+by setting various custom variables in our document. Not that a document
+might already have these settings, for example if it was previously 
+printed or exported in QCAD.
+
+\snippet ExPdfExport.jsd settings
+
+The actual export is done through funciton 'print':
+
+\snippet ExPdfExport.jsd export
+
+\section complete Complete code:
+
+\snippet ExPdfExport.jsd main
+
+*/

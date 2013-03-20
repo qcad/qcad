@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CadToolBar</class>
+ <widget class="QWidget" name="CadToolBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>398</width>
+    <height>298</height>
+   </rect>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Icon Size:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QComboBox" name="IconSize">
+       <property name="currentIndex">
+        <number>3</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">24</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">28</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">32</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">40</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">48</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">64</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">80</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">96</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">112</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">128</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="toolTip">
+        <string>Pixel</string>
+       </property>
+       <property name="text">
+        <string>px</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Columns:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSpinBox" name="Columns">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>5</number>
+     </property>
+     <property name="value">
+      <number>2</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

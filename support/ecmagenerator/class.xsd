@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="arg">
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required" />
+			<xs:attribute name="type" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="class">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="baseClass" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="constructor" maxOccurs="1" minOccurs="0"/>
+				<xs:element ref="method" maxOccurs="unbounded" minOccurs="0"/>
+				<xs:element ref="property" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required" />
+			<xs:attribute name="isCopyable" type="xs:boolean" use="optional" />
+			<xs:attribute name="hasStreamOperator" type="xs:boolean" use="optional" />
+			<xs:attribute name="isQObject" type="xs:boolean" use="optional" />
+			<xs:attribute name="isAbstract" type="xs:boolean" use="optional" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="constructor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="variant" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:element name="baseClass">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+	<xs:element name="method">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="variant" />
+			</xs:sequence>
+			<xs:attribute name="returnType" type="xs:string" use="required" />
+			<xs:attribute name="name" type="xs:string" use="required" />
+			<xs:attribute name="cppName" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="property">
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required" />
+			<xs:attribute name="type" type="xs:string" use="required" />
+			<xs:attribute name="cppGetter" type="xs:string" use="required" />
+			<xs:attribute name="cppSetter" type="xs:string" use="optional" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="variant">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="arg" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RClipboardOperation"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <baseClass name="ROperation" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="copy" cppName="copy" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument &amp;" typeName="RDocument" name="src"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="dest" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        isConst="true" />
+        <arg type="double" typeName="double" name="scale"
+        isConst="false" />
+        <arg type="double" typeName="double" name="rotation"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="flipHorizontal"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="flipVertical"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="toCurrentLayer"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="toCurrentBlock"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="overwriteLayers"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="overwriteBlocks"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
+        <arg type="bool" typeName="bool" name="selectionOnly"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="clear"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="toModelSpaceBlock"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="copyEntity" cppName="copyEntity"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument" name="src"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="dest" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        isConst="true" />
+        <arg type="double" typeName="double" name="scale"
+        isConst="false" />
+        <arg type="double" typeName="double" name="unitScale"
+        isConst="false" />
+        <arg type="double" typeName="double" name="rotation"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="flipHorizontal"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="flipVertical"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="toCurrentLayer"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="toCurrentBlock"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="overwriteLayers"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="overwriteBlocks"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
+        <arg type="bool" typeName="bool" name="toModelSpaceBlock"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="copyEntityLayer" cppName="copyEntityLayer"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayer &gt;"
+      isPureVirtual="false">
+        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument" name="src"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="dest" isConst="false" />
+        <arg type="bool" typeName="bool" name="overwriteLayers"
+        isConst="false" />
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class name="RLinetype"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <baseClass name="RObject" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RLinetype *" isPureVirtual="false" />
+    </method>
+    <method name="getName" cppName="getName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setName" cppName="setName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="n"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getList" cppName="getList" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QPair &lt; QString , RLinetype &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onlyFixed"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="setProperty" cppName="setProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isSelectedForPropertyEditing"
+    cppName="isSelectedForPropertyEditing" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getIcon" cppName="getIcon" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QIcon" isPureVirtual="false">
+        <arg type="RLinetype &amp;" typeName="RLinetype"
+        name="linetype" isConst="true" />
+      </variant>
+    </method>
+    <method name="getTitle" cppName="getTitle" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLinetype &amp;" typeName="RLinetype"
+        name="linetype" isConst="true" />
+      </variant>
+    </method>
+    <method name="operator==" cppName="operator=="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLinetype &amp;" typeName="RLinetype"
+        name="linetype" isConst="true" />
+      </variant>
+    </method>
+    <method name="operator!=" cppName="operator!="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLinetype &amp;" typeName="RLinetype"
+        name="linetype" isConst="true" />
+      </variant>
+    </method>
+    <method name="operator&lt;" cppName="operator&lt;"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLinetype &amp;" typeName="RLinetype"
+        name="linetype" isConst="true" />
+      </variant>
+    </method>
+    <property name="PropertyName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+  </class>
+</unit>

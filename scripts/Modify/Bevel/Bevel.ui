@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Bevel</class>
+ <widget class="QWidget" name="Bevel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>389</width>
+    <height>46</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QCheckBox" name="Trim">
+     <property name="text">
+      <string>Trim</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="Length1Label">
+     <property name="text">
+      <string>Length 1:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Length1</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Length1">
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="Length2Label">
+     <property name="text">
+      <string>Length 2:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Length1</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Length2">
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

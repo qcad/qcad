@@ -1,0 +1,8 @@
+/*!
+
+\defgroup gui GUI Module
+
+\brief GUI implementation of widgets, graphics views and graphics scenes based
+on the QWidget class of Qt.
+
+*/

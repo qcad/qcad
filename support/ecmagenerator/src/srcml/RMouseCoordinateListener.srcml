@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RMouseCoordinateListener.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RMOUSECOORDINATELISTENER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RMOUSECOORDINATELISTENER_H</name></cpp:define>
+  <class_decl>class 
+  <name>RVector</name>;</class_decl>
+  <comment type="block">/** * Abstract base class for classes that
+  are interested in * the current coordinate of the mouse cursor.
+  This can for example * be a widget that displays the cursor
+  coordinate. * * \ingroup core */</comment>
+  <class>class 
+  <name>RMouseCoordinateListener</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RMouseCoordinateListener</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
+  <comment type="block">/** * Notifies this listener if the current
+  mouse position has changed. * * \param wcsPosition world
+  coordinate position * \param ucsPosition user coordinate position
+  */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>setCoordinate</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>wcsPosition</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>ucsPosition</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>=
+  0</specifier>;</function_decl></public>}</block>;</class>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

@@ -1,0 +1,9 @@
+<list>
+  <item>isVariant()</item>
+  <item>isQObject()</item>
+  <item>isNumber()</item>
+  <item>isString()</item>
+  <item>isBool()</item>
+  <item>isArray()</item>
+  <item>isNull()</item>
+</list>

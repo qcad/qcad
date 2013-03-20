@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SelectRectangle</class>
+ <widget class="QWidget" name="SelectRectangle">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>386</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="labelMode">
+     <property name="text">
+      <string>Mode:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="ModeReplace">
+     <property name="toolTip">
+      <string>Replace the current selection</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../SelectionModeReplace.svg</normaloff>../SelectionModeReplace.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string>SelectionMode</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="ModeAdd">
+     <property name="toolTip">
+      <string>Add to the current selection</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../SelectionModeAdd.svg</normaloff>../SelectionModeAdd.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string>SelectionMode</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="ModeRemove">
+     <property name="toolTip">
+      <string>Subtract from the current selection</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../SelectionModeRemove.svg</normaloff>../SelectionModeRemove.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string>SelectionMode</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="ModeIntersect">
+     <property name="toolTip">
+      <string>Intersect with the current selection</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../SelectionModeIntersect.svg</normaloff>../SelectionModeIntersect.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string>SelectionMode</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="CrossSelection">
+     <property name="text">
+      <string>Cross Selection</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Reset"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="SelectionMode"/>
+ </buttongroups>
+</ui>

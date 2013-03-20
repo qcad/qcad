@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RGrid.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RGRID_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RGRID_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RVector.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RBox.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RRuler.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RDocument</name>;</class_decl>
+  <class_decl>class 
+  <name>RGraphicsView</name>;</class_decl>
+  <comment type="block">/** * Abstract base class for grid
+  implementations. A grid class * can for example implement an
+  orthogonal grid or a polar grid. * * \scriptable * \ingroup core
+  */</comment>
+  <class>class 
+  <name>RGrid</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor>
+    <name>RGrid</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>RGraphicsView</name>&amp;</type>
+        <name>view</name>
+      </decl>
+    </param>)</parameter_list>
+    <member_list>: 
+    <call>
+      <name>view</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>view</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>visible</name>
+      <argument_list>(
+      <argument>
+        <expr>-1</expr>
+      </argument>)</argument_list>
+    </call></member_list>
+    <block>{}</block>
+  </constructor>
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RGrid</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>clearCache</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <comment type="block">/** * Snaps the given UCS position to the
+  grid. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RVector</name>
+  </type>
+  <name>snapToGrid</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>positionUcs</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * This is called by the graphics view
+  this grid is attached to * whenever the view port changes and the
+  grid needs to be * updated. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>update</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>force</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * This is called by the graphics view
+  this grid is attached to * whenever the grid should be painted.
+  */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>paint</name>
+  <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * This is called by the graphics view
+  this grid is attached to * whenever the meta grid should be
+  painted. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>paintMetaGrid</name>
+  <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>paintCursor</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>pos</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>paintRuler</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RRuler</name>&amp;</type>
+      <name>ruler</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getInfoText</name>
+  <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>int</name>
+  </type>
+  <name>getViewportNumber</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+  <name>RDocument</name>*</type>
+  <name>getDocument</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setVisible</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>isVisible</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl></public>
+  <protected>protected: 
+  <decl_stmt>
+  <decl>
+    <type>
+    <name>RGraphicsView</name>&amp;</type>
+    <name>view</name>
+  </decl>;</decl_stmt>
+  <comment type="line">// cached:</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>mutable</name>
+      <name>int</name>
+    </type>
+    <name>visible</name>
+  </decl>;</decl_stmt></protected>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RGrid*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

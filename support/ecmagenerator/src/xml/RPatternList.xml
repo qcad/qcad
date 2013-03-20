@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPatternList"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="metric"
+        isConst="false" />
+        <arg type="RResourceList &lt; RPattern &gt; &amp;"
+        typeName="RResourceList &lt; RPattern &gt;" name="res"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

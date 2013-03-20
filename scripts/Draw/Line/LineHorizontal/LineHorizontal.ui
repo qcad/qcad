@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LineHorizontal</class>
+ <widget class="QWidget" name="LineHorizontal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>435</width>
+    <height>46</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="labelLength">
+     <property name="text">
+      <string>&amp;Length:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Length</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Length">
+     <property name="text">
+      <string notr="true">100</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelReferencePoint">
+     <property name="text">
+      <string>&amp;Reference Point:</string>
+     </property>
+     <property name="buddy">
+      <cstring>ReferencePoint</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="ReferencePoint">
+     <item>
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Middle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>End</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

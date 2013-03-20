@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsScene" />
+  <class_decl name="RGraphicsView" />
+  <class name="RTabletEvent"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QTabletEvent" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QTabletEvent &amp;" typeName="QTabletEvent"
+        name="tabletEvent" isConst="true" />
+        <arg type="RGraphicsScene &amp;" typeName="RGraphicsScene"
+        name="s" isConst="false" />
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="v" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getModelPosition" cppName="getModelPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getUcsPosition" cppName="getUcsPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getScreenPosition" cppName="getScreenPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getGraphicsView" cppName="getGraphicsView"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsView &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getGraphicsScene" cppName="getGraphicsScene"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsScene &amp;"
+      isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

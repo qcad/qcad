@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RFileExporter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <baseClass name="RExporter" specifier="public" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getCorrectedFileName"
+    cppName="getCorrectedFileName" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" isConst="true" />
+      </variant>
+    </method>
+    <method name="exportFile" cppName="exportFile"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" isConst="true" />
+        <arg type="bool" typeName="bool" name="setFileName"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

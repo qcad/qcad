@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RExporter" />
+  <class_decl name="RObject" />
+  <class name="RDeleteObjectOperation"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RDeleteObjectsOperation" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QSharedPointer &lt; RObject &gt;"
+        typeName="QSharedPointer &lt; RObject &gt;" name="object"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="undoable"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </constructor>
+  </class>
+</unit>

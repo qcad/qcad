@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="REntityPickEvent.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RENTITYPICKEVENT_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RENTITYPICKEVENT_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RInputEvent.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"REntity.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RVector.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RGraphicsView</name>;</class_decl>
+  <class_decl>class 
+  <name>RGraphicsScene</name>;</class_decl>
+  <comment type="block">/** * Entity pick event. * * \ingroup core
+  * \scriptable */</comment>
+  <class>class 
+  <name>REntityPickEvent</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RInputEvent</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <comment type="block">/** * \param entityId ID of picked entity.
+  * \param pos Absolute coordinate. */</comment>
+  <constructor_decl>
+  <name>REntityPickEvent</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>REntity</name>::
+        <name>Id</name></name>
+      </type>
+      <name>entityId</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>position</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>RGraphicsScene</name>&amp;</type>
+      <name>s</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>RGraphicsView</name>&amp;</type>
+      <name>v</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <comment type="block">/** * \return The ID of the picked entity
+  or REntity::INVALID_ID. */</comment>
+  <function>
+    <type>
+      <name>
+      <name>REntity</name>::
+      <name>Id</name></name>
+    </type>
+    <name>getEntityId</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>entityId</name>
+    </expr>;</return>}</block>
+  </function>
+  <comment type="block">/** * \return true If the entity ID of the
+  event is valid. */</comment>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isValid</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>entityId</name>!=
+    <name>
+    <name>REntity</name>::
+    <name>INVALID_ID</name></name></expr>;</return>}</block>
+  </function></public>
+  <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>
+      <name>REntity</name>::
+      <name>Id</name></name>
+    </type>
+    <name>entityId</name>
+  </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>REntityPickEvent*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>const REntityPickEvent*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

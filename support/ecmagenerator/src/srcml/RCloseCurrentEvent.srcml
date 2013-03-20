@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RCloseCurrentEvent.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RCLOSECURRENTEVENT_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RCLOSECURRENTEVENT_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QEvent&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * \brief Event that is posted when an
+  action requests the closing * of the current document. * *
+  \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RCloseCurrentEvent</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>QEvent</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor>
+    <name>RCloseCurrentEvent</name>
+    <parameter_list>()</parameter_list>
+    <member_list>: 
+    <call>
+      <name>QEvent</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>
+          <name>QEvent</name>::
+          <name>User</name></name>
+        </expr>
+      </argument>)</argument_list>
+    </call></member_list>
+    <block>{}</block>
+  </constructor>
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RCloseCurrentEvent</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RCloseCurrentEvent*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

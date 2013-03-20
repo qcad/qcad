@@ -1,0 +1,7 @@
+QLabel, QRadioButton, QCheckBox, QToolButton, QSlider {
+    background-color: transparent;
+}
+
+QLineEdit, QTextEdit, QComboBox, QAbstractItemView, QAbstractSpinBox {
+    background-color: transparent;
+}

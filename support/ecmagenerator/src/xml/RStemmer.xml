@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RStemmer"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <method name="stem" cppName="stem" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="word"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="locale"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

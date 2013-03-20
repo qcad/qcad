@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPatternLine"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <method name="getPainterPath" cppName="getPainterPath"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPainterPath" isPureVirtual="false" />
+    </method>
+    <method name="getLines" cppName="getLines" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RLine &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getLength" cppName="getLength" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="scale" cppName="scale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="f"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="rotate" cppName="rotate" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

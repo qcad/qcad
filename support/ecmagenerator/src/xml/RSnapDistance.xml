@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsView" />
+  <class_decl name="RMouseEvent" />
+  <class name="RSnapDistance"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RSnapEntityBase" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="showUiOptions" cppName="showUiOptions"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="hideUiOptions" cppName="hideUiOptions"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setDistance" cppName="setDistance"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="d"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="snapEntity" cppName="snapEntity"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="QSharedPointer &lt; REntity &gt;"
+        typeName="QSharedPointer &lt; REntity &gt;" name="entity"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
+        isConst="true" />
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="view" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

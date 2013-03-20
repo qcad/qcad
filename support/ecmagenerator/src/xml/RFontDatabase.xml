@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RFontDatabase"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QFontDatabase" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="families" cppName="families" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QFontDatabase::WritingSystem"
+        typeName="QFontDatabase::WritingSystem"
+        name="writingSystem" hasDefault="true" default=" Any"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

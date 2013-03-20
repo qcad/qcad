@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPluginInfo"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="errorString" isConst="true" />
+      </variant>
+      <variant>
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="aboutString" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="versionString" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="errorString" isConst="true" />
+      </variant>
+    </constructor>
+    <method name="getFileName" cppName="getFileName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getAboutString" cppName="getAboutString"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getVersionString" cppName="getVersionString"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getErrorString" cppName="getErrorString"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

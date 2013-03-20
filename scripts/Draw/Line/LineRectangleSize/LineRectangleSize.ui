@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LineRectangleSize</class>
+ <widget class="QWidget" name="LineRectangleSize">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>601</width>
+    <height>46</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="labelAngle">
+     <property name="text">
+      <string>&amp;Width:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Width</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Width">
+     <property name="text">
+      <string notr="true">100</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelLength">
+     <property name="text">
+      <string>&amp;Height:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Height</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Height">
+     <property name="text">
+      <string notr="true">50</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelReferencePoint">
+     <property name="text">
+      <string>Reference Point:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="ReferencePoint">
+     <property name="ForceSaveIndex" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

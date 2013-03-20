@@ -1,0 +1,9 @@
+/*!
+
+\defgroup operations Operations Module
+
+\brief This module contains implementations of the ROperation Interface.
+Operations offer a convenient API to preview and apply common modifications 
+to a drawing document (adding entities, changing entities, removing entities).
+
+*/

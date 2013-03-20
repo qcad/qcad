@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RStorage" />
+  <class_decl name="RExporter" />
+  <class name="RPropertyChange"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="true" isAbstract="false"
+  isScriptable="false" />
+</unit>

@@ -1,0 +1,80 @@
+/*!
+\mainpage Introduction, Overviews, Howtos
+
+<em>
+This is the developer documentation for QCAD Application Framework
+developers. If you are a user of QCAD and don't have any interest
+in extending or modifying the QCAD Application, please refer to the
+QCAD user documentation instead at:
+http://www.qcad.org/qcad_doc.html
+</em>
+
+\section what_is What is the QCAD Application Framework?
+
+The <em>QCAD Application</em> ("QCAD") is a cross platform open source 2D CAD 
+system.
+
+QCAD is based on the <em>QCAD Application Framework</em>, a framework that 
+can be used to build CAD related applications in C++ or in ECMAScript.
+
+The QCAD Application Framework consists of several programming libraries as 
+well as resources such as fonts or hatch patterns and an executable which is 
+capable of running ECMAScript code.
+
+The QCAD Application Framework is written in C++ and uses the Qt
+Application Framework ("Qt"). Qt provides a lot of the generic, low level
+functionality that is often found in desktop applications. The
+QCAD Application Framework adds all CAD specific functionality to that.
+On the ECMAScript level, the actual application is put together using the 
+components provided by Qt and the QCAD Application Framework.
+
+\image html qt_qcad_functionality.png
+
+\section language_choice C++ or ECMAScript
+
+The QCAD Application Framework can be extended in both C++ (developer license
+required) or ECMAScript (under any QCAD user license).
+
+\section doc_for_developers Further Documentation for Developers
+
+\subsection modules Modules
+
+- \ref core \copybrief core
+- \ref math \copybrief math
+- \ref entity \copybrief entity
+- \ref gui \copybrief gui
+- \ref grid \copybrief grid
+- \ref operations \copybrief operations
+- \ref snap \copybrief snap
+- \ref spatialindex \copybrief spatialindex
+- \ref run \copybrief run
+  
+\subsection ecma_modules ECMAScript Modules of the QCAD Application
+
+These modules are implemented in ECMAScript and used by the QCAD application.
+They may also be used by other applications.
+
+- \ref ecma_file \copybrief ecma_file
+- \ref ecma_edit \copybrief ecma_edit
+- \ref ecma_view \copybrief ecma_view
+- \ref ecma_select \copybrief ecma_select
+- \ref ecma_draw \copybrief ecma_draw
+- \ref ecma_modify \copybrief ecma_modify
+- \ref ecma_block \copybrief ecma_block
+- \ref ecma_snap \copybrief ecma_snap
+- \ref ecma_information \copybrief ecma_information
+- \ref ecma_layer \copybrief ecma_layer
+- \ref ecma_examples \copybrief ecma_examples
+- \ref ecma_help \copybrief ecma_help
+
+\subsection ecma_doc Overviews, Introductions and Howtos for Developers
+
+- \subpage ScriptLicensing
+- \subpage ScriptOverviews
+- \subpage ScriptTutorials
+- \ref ecma_scripts "ECMAScript classes and libraries"
+- <a href="http://www.ecmascript.org" target="_blank">ECMAScript Language Standard</a>
+
+<p>&nbsp;</p>
+
+*/

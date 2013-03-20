@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RSpatialIndexVisitor"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <method name="visitNode" cppName="visitNode" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="double" typeName="double" name="x1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z2"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

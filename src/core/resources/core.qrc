@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/qcad" >
+        <file>linetype_border.svg</file>
+        <file>linetype_border2.svg</file>
+        <file>linetype_borderx2.svg</file>
+        <file>linetype_center.svg</file>
+        <file>linetype_center2.svg</file>
+        <file>linetype_centerx2.svg</file>
+        <file>linetype_continuous.svg</file>
+        <file>linetype_dashdot.svg</file>
+        <file>linetype_dashdot2.svg</file>
+        <file>linetype_dashdotx2.svg</file>
+        <file>linetype_dashed.svg</file>
+        <file>linetype_dashed2.svg</file>
+        <file>linetype_dashedx2.svg</file>
+        <file>linetype_divide.svg</file>
+        <file>linetype_divide2.svg</file>
+        <file>linetype_dividex2.svg</file>
+        <file>linetype_dot.svg</file>
+        <file>linetype_dot2.svg</file>
+        <file>linetype_dotx2.svg</file>
+        <file>linetype_byblock.svg</file>
+        <file>linetype_bylayer.svg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xml:space="preserve"
+   id="svg153"
+   viewBox="0 0 256 256"
+   height="48"
+   width="48"
+   y="0.0000000"
+   x="0.0000000"
+   version="1.0"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="Empty.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"><sodipodi:namedview
+   inkscape:window-height="910"
+   inkscape:window-width="982"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   guidetolerance="10.0"
+   gridtolerance="10.0"
+   objecttolerance="10.0"
+   borderopacity="1.0"
+   bordercolor="#666666"
+   pagecolor="#ffffff"
+   id="base"
+   showgrid="false"
+   inkscape:zoom="8.8333333"
+   inkscape:cx="30.570889"
+   inkscape:cy="19.593257"
+   inkscape:window-x="148"
+   inkscape:window-y="70"
+   inkscape:current-layer="svg153" /><metadata
+   id="metadata14"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata>
+  <defs
+   id="defs172"><inkscape:perspective
+   sodipodi:type="inkscape:persp3d"
+   inkscape:vp_x="0 : 30 : 1"
+   inkscape:vp_y="0 : 1000 : 0"
+   inkscape:vp_z="60 : 30 : 1"
+   inkscape:persp3d-origin="30 : 20 : 1"
+   id="perspective16" />
+    
+    
+    
+    <linearGradient
+   gradientUnits="userSpaceOnUse"
+   id="XMLID_1_"
+   y2="312.2099"
+   x2="312.32861"
+   y1="86.276398"
+   x1="86.394997">
+      <stop
+   id="stop161"
+   offset="0.0000000"
+   style="stop-color: rgb(255, 255, 255); stop-opacity: 1;" />
+
+      <stop
+   id="stop162"
+   offset="1.0000000"
+   style="stop-color: rgb(153, 204, 255); stop-opacity: 1;" />
+
+    </linearGradient>
+
+    
+    
+    
+  <linearGradient
+   gradientUnits="userSpaceOnUse"
+   xlink:href="#XMLID_1_"
+   id="linearGradient1316"
+   y2="312.2099"
+   x2="312.32861"
+   y1="86.276398"
+   x1="86.394997" />
+</defs>
+
+  
+  <g
+   id="Layer_2"
+   style="stroke:#000000">
+    <path
+   id="path155"
+   style="fill:none;stroke:none"
+   d="M 256,256 L 0,256 L 0,0 L 256,0 L 256,256 z" />
+
+  </g>
+
+  
+
+</svg>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RGraphicsView" />
+  <class name="RGrid" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="false" hasShell="false" sharedPointerSupport="false"
+  isQObject="false" hasStreamOperator="false" isAbstract="true"
+  isScriptable="true">
+    <constructor>
+      <variant>
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="view" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="clearCache" cppName="clearCache"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="snapToGrid" cppName="snapToGrid"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="true">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="positionUcs" isConst="true" />
+      </variant>
+    </method>
+    <method name="update" cppName="update" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="bool" typeName="bool" name="force"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="paint" cppName="paint" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="paintMetaGrid" cppName="paintMetaGrid"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="paintCursor" cppName="paintCursor"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="paintRuler" cppName="paintRuler"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="RRuler &amp;" typeName="RRuler" name="ruler"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getInfoText" cppName="getInfoText"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="true" />
+    </method>
+    <method name="getViewportNumber" cppName="getViewportNumber"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument *" isPureVirtual="false" />
+    </method>
+    <method name="setVisible" cppName="setVisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isVisible" cppName="isVisible" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

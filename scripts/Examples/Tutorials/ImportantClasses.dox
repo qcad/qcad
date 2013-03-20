@@ -1,0 +1,137 @@
+/*!
+
+\page ImportantClasses Important Classes
+
+This section introduces some important part of the QCAD Application 
+Framework API.
+
+\section rdocument The Drawing Document
+
+The document that is being viewed or edited is a central part for most
+applications. Within the QCAD Application Framework, documents can exist
+independent of any user interface components. Think of a document as
+a complete CAD drawing.
+
+\image html RDocument.png
+
+The following ECMAScript code creates an empty drawing document:
+
+\code
+// Creating the storage underneath the document:
+var storage = new RMemoryStorage();
+
+// Creating the spatial index:
+var spatialIndex = new RSpatialIndexNavel();
+
+// Creating the document:
+var document = new RDocument(storage, spatialIndex);
+
+// Creating the document interface 
+// (required for import / export, graphics scenes and views):
+var documentInterface = new RDocumentInterface(document);
+\endcode
+
+Storage and spatial index are required for lower level data storage
+but usually only act behind the scenes.
+
+\section interaction Interaction
+
+The interaction between a user and an application typically consists of
+a user input, followed by an output of the application to indicate the result
+of the user input. The most important output when interacting with a CAD
+system is the visualization of the CAD drawing.
+
+\subsection RDocumentInterface Visualization
+
+The visualization of a drawing is handled in the QCAD Application Framework
+through one or multiple graphics views (classes derived from RGraphicsView).
+A graphics view is typically a visible widget or window.
+Each graphics view is attached to a graphics scene (RGraphicsScene) which 
+manages the visual representation of the drawing entities. The graphics
+scene is connected to a document (RDocument) via a document interface 
+(RDocumentInterface). 
+
+While the document knows what entities are and how they are geometrically 
+defined, the graphics scene knows how each entity looks like and the
+graphics view knows how to display that visual representation of an entity
+to the user. The document interface connects a document to one or 
+multiple graphics scenes and has some other important responsibilities
+that are outlined later on.
+
+This structure makes it possible
+to visualize a drawing in multiple views. Each view can have its own scene
+or share a scene with other views. The following diagram shows the
+relationship between a document and its graphics scenes and views.
+Note that any changes to the document automatically trigger an update 
+to all scenes and views attached to it.
+
+\image html RDocumentInterface.png
+
+Multiple scenes can be attached to a drawing interface to provide different
+visualizations, for example a 2D visualization and a 3D visualization of
+the same document.
+
+Multiple views can be attached to each scene to show the scene at a different
+zoom factor and offset or at a different angle.
+
+The following ECMAScript snippet attaches a graphics scene with one graphics
+view to a document interface. Note that RGraphicsViewQt is a complete
+implementation of a graphics view, based on a Qt QWidget. RGraphicsSceneQt
+is the graphics scene implementation that handles the visualization
+of the underlying document using QPainterPath objects.
+
+\code
+var graphicsScene = new RGraphicsSceneQt(documentInterface)
+var graphicsView = new RGraphicsViewQt();
+graphicsView.setScene(graphicsScene);
+\endcode
+
+\subsection RAction User Input
+
+In the QCAD Application Framework, user input and drawing visualization
+share the same structures. The document interface is at the heart
+of both visualization and interaction.
+
+Users typically interact with a graphics view, for example by moving the
+mouse, clicking a mouse button or pressing a key while a graphics view has
+the focus. The graphics view receives all such low level events
+from input devices and translates them into more useful, higher level events.
+For example the click of the left mouse button at a view coordinate in
+pixels is translated into a higher level event (RMouseEvent) that also 
+stores the model coordinates of the click. These higher level events are 
+then forwarded to the graphics scene to which the view is attached.
+
+The graphics scene simply forwards the events to the document interface.
+
+The document interface always knows what action (or tool) is currently
+active. For example if the user is drawing a line, the current action is
+a class derived from RAction that handles all user interaction to draw a
+line (e.g. Line2P). The document interface forwards all events it receives 
+to the current action.
+
+The current action is responsible for handling the user input, typically
+by reacting to it and visualizing the result.
+
+This flow of user input and application output is shown in the figure below:
+
+\image html RDocumentInterface2.png
+
+\section RImporter Importers
+
+Whenever a document has to be produced from existing data, a class that
+is derived from RImporter should be used. If the source is a file, a
+specialized base class RFileImporter can be used. 
+
+The QCAD Application Framework provides an importer for the DXF format.
+
+\section rexporter Exporters
+
+When a drawing is exported, an exporter, derived from RExporter is used.
+Graphics scenes are also derived from RExporter, since they are used
+to 'export' a drawing into a graphical representation (e.g. painter paths
+or an OpenGL context). For exporters that export to a file, the
+specialized class RFileExporter can be used as a base class.
+
+The QCAD Application Framework provides an exporter for the DXF format. 
+
+*/

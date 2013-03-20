@@ -1,0 +1,597 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RMatrix" />
+  <class_decl name="RBox" />
+  <class_decl name="RLine" />
+  <class_decl name="RPolyline" />
+  <class name="RVector"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="double" typeName="double" name="vx"
+        isConst="false" />
+        <arg type="double" typeName="double" name="vy"
+        isConst="false" />
+        <arg type="double" typeName="double" name="vz"
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="bool" typeName="bool" name="valid_in"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="set" cppName="set" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="vx"
+        isConst="false" />
+        <arg type="double" typeName="double" name="vy"
+        isConst="false" />
+        <arg type="double" typeName="double" name="vz"
+        hasDefault="true" default="0.0" isConst="false" />
+      </variant>
+    </method>
+    <method name="setPolar" cppName="setPolar" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="radius"
+        isConst="false" />
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isInside" cppName="isInside" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="b"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDistanceTo" cppName="getDistanceTo"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDistanceTo2d" cppName="getDistanceTo2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setAngle" cppName="setAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAngle" cppName="getAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getAngleToPlaneXY" cppName="getAngleToPlaneXY"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getAngleTo" cppName="getAngleTo"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setMagnitude2d" cppName="setMagnitude2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="m"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getMagnitude" cppName="getMagnitude"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getSquaredMagnitude"
+    cppName="getSquaredMagnitude" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getMagnitude2d" cppName="getMagnitude2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getLerp" cppName="getLerp" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+        <arg type="double" typeName="double" name="t"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getUnitVector" cppName="getUnitVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setX" cppName="setX" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="x"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getX" cppName="getX" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setY" cppName="setY" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="y"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getY" cppName="getY" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setZ" cppName="setZ" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="z"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getZ" cppName="getZ" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="isInWindow" cppName="isInWindow"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="firstCorner" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="secondCorner" isConst="true" />
+      </variant>
+    </method>
+    <method name="move" cppName="move" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="rotate" cppName="rotate" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="rotation"
+        isConst="false" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="rotation"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="rotate3d" cppName="rotate3d" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="axis"
+        isConst="true" />
+        <arg type="double" typeName="double" name="rotation"
+        isConst="false" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QQuaternion &amp;" typeName="QQuaternion"
+        name="quaternion" isConst="true" />
+      </variant>
+    </method>
+    <method name="scale" cppName="scale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="factor"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        hasDefault="true" default="nullVector" isConst="true" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="factors"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        hasDefault="true" default="nullVector" isConst="true" />
+      </variant>
+    </method>
+    <method name="mirror" cppName="mirror" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="axis"
+        isConst="true" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="axis1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="axis2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="flipHorizontal" cppName="flipHorizontal"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="flipVertical" cppName="flipVertical"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="stretch" cppName="stretch" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RPolyline &amp;" typeName="RPolyline"
+        name="area" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isoProject" cppName="isoProject"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RS::IsoProjectionType"
+        typeName="RS::IsoProjectionType" name="type"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="trueScale"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="transform" cppName="transform" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RMatrix &amp;" typeName="RMatrix" name="m"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="transform2d" cppName="transform2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RMatrix &amp;" typeName="RMatrix" name="m"
+        isConst="true" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QTransform &amp;" typeName="QTransform" name="t"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getTransformed" cppName="getTransformed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RMatrix &amp;" typeName="RMatrix" name="m"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getTransformed2d" cppName="getTransformed2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RMatrix &amp;" typeName="RMatrix" name="m"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDividedComponents"
+    cppName="getDividedComponents" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getMultipliedComponents"
+    cppName="getMultipliedComponents" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getClosest" cppName="getClosest"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getClosestDistance" cppName="getClosestDistance"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+        <arg type="int" typeName="int" name="counts"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getClosestIndex" cppName="getClosestIndex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator +" cppName="operator +"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator -" cppName="operator -"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="operator *" cppName="operator *"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="operator /" cppName="operator /"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getNegated" cppName="getNegated"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="normalize" cppName="normalize" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getNormalized" cppName="getNormalized"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="operator +=" cppName="operator +="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator -=" cppName="operator -="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator *=" cppName="operator *="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="operator /=" cppName="operator /="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="operator ==" cppName="operator =="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator !=" cppName="operator !="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getFloor" cppName="getFloor" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getCeil" cppName="getCeil" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getMinimum" cppName="getMinimum"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectors"
+        isConst="true" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getMaximum" cppName="getMaximum"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectors"
+        isConst="true" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getAverage" cppName="getAverage"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getXList" cppName="getXList" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectors"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getYList" cppName="getYList" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectors"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getZList" cppName="getZList" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectors"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCrossProduct" cppName="getCrossProduct"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDotProduct" cppName="getDotProduct"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="createPolar" cppName="createPolar"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="radius"
+        isConst="false" />
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="lessThanX" cppName="lessThanX" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="greaterThanX" cppName="greaterThanX"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="lessThanY" cppName="lessThanY" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="greaterThanY" cppName="greaterThanY"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <property name="x" type="double" cppGetter="getX"
+    cppSetter="setX" />
+    <property name="y" type="double" cppGetter="getY"
+    cppSetter="setY" />
+    <property name="z" type="double" cppGetter="getZ"
+    cppSetter="setZ" />
+    <property name="valid" type="bool" cppGetter="isValid" />
+    <property name="invalid" type="RVector" isConst="true"
+    isStatic="true" />
+    <property name="nullVector" type="RVector" isConst="true"
+    isStatic="true" />
+  </class>
+</unit>

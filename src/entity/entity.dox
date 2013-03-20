@@ -1,0 +1,8 @@
+/*!
+
+\defgroup entity Entity Module
+
+\brief This module contains implementations of all CAD entities that
+are supported by the QCAD Application Framework.
+
+*/

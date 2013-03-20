@@ -1,0 +1,18 @@
+/*!
+
+\page ExSvgExport Exporting a Drawing to SVG
+
+SVG Export in QCAD is completely implemented in ECMAScript with one of the
+main classes being SvgExporterPG:
+
+\snippet ExSvgExport.jsd include
+
+The export can be done through funciton 'exportFile':
+
+\snippet ExSvgExport.jsd export
+
+\section complete Complete code:
+
+\snippet ExSvgExport.jsd main
+
+*/

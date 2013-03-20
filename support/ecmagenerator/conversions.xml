@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dict>
+	<entry key="double" value="toNumber()" testFunction="isNumber()" />
+	<entry key="float" value="toNumber()" testFunction="isNumber()" />
+	<entry key="qreal" value="toNumber()" testFunction="isNumber()" />
+	<entry key="int" value="toNumber()" testFunction="isNumber()" />
+    <!--
+    causes ambigous calls:
+	<entry key="qint64" value="toNumber()" testFunction="isNumber()" />
+    -->
+	<entry key="uint" value="toNumber()" testFunction="isNumber()" />
+	<entry key="uint8_t" value="toNumber()" testFunction="isNumber()" />
+	<entry key="bool" value="toBool()" testFunction="isBool()" />
+
+	<entry key="RAction::ClickMode" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RGraphicsView::ColorMode" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RColor::Mode" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RObject::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="REntity::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RLayer::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RBlock::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RView::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RUcs::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RSnap::Status" value="toNumber()" testFunction="isNumber()" cast="int" />
+
+	<entry key="RS::AngleFormat" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::AngleUnit" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::EntityType" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::From" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::HAlign" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::IsoProjectionType" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::KnownVariable" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::LinearFormat" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::MessageType" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::ProjectionRenderingHint" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::Side" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::TextDrawingDirection" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::TextLineSpacingStyle" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RTextRenderer::Target" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::Unit" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::VAlign" value="toNumber()" testFunction="isNumber()" cast="int" />
+
+	<entry key="RLineweight::Lineweight" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RLinetype::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RDocumentInterface::IoErrorCode" value="toNumber()" testFunction="isNumber()" cast="int" />
+
+	<entry key="Qt::DropActions" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::WindowFlags" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::CursorShape" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::ItemDataRole" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::GlobalColor" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::PenStyle" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::BrushStyle" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::Orientation" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="QEvent::Type" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::MouseButton" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::MouseButtons" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="Qt::KeyboardModifiers" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="QVariant::Type" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="QFontDatabase::WritingSystem" value="toNumber()" testFunction="isNumber()" cast="int" />
+
+	<entry key="QString" value="toString()" testFunction="isString()" />
+	<entry key="QColor" value="toVariant()" testFunction="isVariant()" />
+	<entry key="QMouseEvent" value="toVariant()" testFunction="isVariant()" defaultConstructor="false"/>
+	<entry key="QKeyEvent" value="toVariant()" testFunction="isVariant()" defaultConstructor="false" copyable="false" />
+	<entry key="QWheelEvent" value="toVariant()" testFunction="isVariant()" defaultConstructor="false"/>
+	<entry key="QTabletEvent" value="toVariant()" testFunction="isVariant()" defaultConstructor="false"/>
+	<entry key="QPaintDevice" value="toVariant()" testFunction="isVariant()" defaultConstructor="false" copyable="false" />
+	<entry key="QAction" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QObject" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QMdiArea" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QMenu" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QTabBar" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QToolBar" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QWidget" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QWidget" value="toQObject()" testFunction="isNull()" />
+	<entry key="QDockWidget" value="toQObject()" testFunction="isNull()" />
+	<entry key="QComboBox" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QLabel" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QProgressBar" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QFileSystemModel" value="toQObject()" testFunction="isQObject()" />
+	<entry key="QAbstractItemModel" value="toQObject()" testFunction="isQObject()" />
+</dict>

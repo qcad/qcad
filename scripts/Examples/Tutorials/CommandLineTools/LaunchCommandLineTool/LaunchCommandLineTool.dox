@@ -1,0 +1,31 @@
+/*!
+
+\page LaunchCommandLineTool Launching Command Line Tools
+
+Any ECMAScript file can be executed with the QCAD binary as a standalone
+application, using the -autostart command line argument:
+
+\code
+./qcad -autostart myscript.js
+\endcode
+
+The default autostart script is scripts/autostart.js, which launches the QCAD
+application. If the autostart script is given as command line argument, the
+default autostart script is not launched.
+
+If your script does not require or does not have access to a user interface
+(for example in a server environment), you may pass the command line switch
+-no-gui to QCAD:
+
+\code
+./qcad -no-gui -autostart myscript.js
+\endcode
+
+Under Mac OS X, you might also want to use -no-dock-icon to prevent Mac OS X
+from showing a dock icon everytime your application is launched:
+
+\code
+./qcad -no-gui -no-dock-icon -autostart myscript.js
+\endcode
+
+*/

@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QMdiArea" />
+  <class_decl name="QMdiSubWindow" />
+  <class_decl name="RBlockListener" />
+  <class_decl name="RCoordinateListener" />
+  <class_decl name="RDocument" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="RFocusListener" />
+  <class_decl name="RGraphicsView" />
+  <class_decl name="RLayerListener" />
+  <class_decl name="RMdiChildQt" />
+  <class_decl name="RPenListener" />
+  <class_decl name="RPropertyListener" />
+  <class_decl name="RSelectionListener" />
+  <class_decl name="RSnapListener" />
+  <class_decl name="RUcsListener" />
+  <class_decl name="RViewFocusListener" />
+  <class_decl name="RViewListener" />
+  <class name="RMainWindowQt"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QMainWindow" specifier="public" />
+    <baseClass name="RMainWindow" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+        <arg type="bool" typeName="bool" name="hasMdiArea"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getMainWindow" cppName="getMainWindow"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMainWindowQt *"
+      isPureVirtual="false" />
+    </method>
+    <method name="getWidth" cppName="getWidth" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getHeight" cppName="getHeight" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getPositionX" cppName="getPositionX"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getPositionY" cppName="getPositionY"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="resize" cppName="resize" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="width"
+        isConst="false" />
+        <arg type="int" typeName="int" name="height"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="move" cppName="move" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="x" isConst="false" />
+        <arg type="int" typeName="int" name="y" isConst="false" />
+      </variant>
+    </method>
+    <method name="close" cppName="close" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument *" isPureVirtual="false" />
+    </method>
+    <method name="getDocumentInterface"
+    cppName="getDocumentInterface" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RDocumentInterface *"
+      isPureVirtual="false" />
+    </method>
+    <method name="handleUserMessage" cppName="handleUserMessage"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="message"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="handleUserInfo" cppName="handleUserInfo"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="message"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="handleUserWarning" cppName="handleUserWarning"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="message"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="messageBox"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleUserCommand" cppName="handleUserCommand"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="message"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="postSelectionChangedEvent"
+    cppName="postSelectionChangedEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="postTransactionEvent"
+    cppName="postTransactionEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </method>
+    <method name="postCloseEvent" cppName="postCloseEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getMdiChild" cppName="getMdiChild"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMdiChildQt *" isPureVirtual="false" />
+    </method>
+    <method name="getTabBar" cppName="getTabBar" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QTabBar *" isPureVirtual="false" />
+    </method>
+    <method name="getMdiArea" cppName="getMdiArea"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QMdiArea *" isPureVirtual="false" />
+    </method>
+    <method name="cancelProgress" cppName="cancelProgress"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setProgress" cppName="setProgress"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="value"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setProgressEnd" cppName="setProgressEnd"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setProgressText" cppName="setProgressText"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="setCommandPrompt" cppName="setCommandPrompt"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="setLeftMouseTip" cppName="setLeftMouseTip"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="setRightMouseTip" cppName="setRightMouseTip"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="escapeEvent" cppName="escapeEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setGraphicsViewCursor"
+    cppName="setGraphicsViewCursor" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QCursor &amp;" typeName="QCursor" name="cursor"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="readSettings" cppName="readSettings"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="writeSettings" cppName="writeSettings"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="currentTabChanged" cppName="currentTabChanged"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="subWindowActivated" cppName="subWindowActivated"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
+        name="sw" isConst="false" />
+      </variant>
+    </method>
+    <method name="objectDestroyed" cppName="objectDestroyed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="obj"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="closeEvent" cppName="closeEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QCloseEvent *" typeName="QCloseEvent *" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="dropEvent" cppName="dropEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDropEvent *" typeName="QDropEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="dragEnterEvent" cppName="dragEnterEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDragEnterEvent *" typeName="QDragEnterEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="event" cppName="event" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QEvent *" typeName="QEvent *" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="updateGuiActions" cppName="updateGuiActions"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
+        name="mdiChild" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="updateScenes" cppName="updateScenes"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
+        name="mdiChild" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyListenersSlot"
+    cppName="notifyListenersSlot" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
+        name="mdiChild" isConst="false" />
+      </variant>
+    </method>
+    <method name="suspendAndResume" cppName="suspendAndResume"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
+        name="mdiChild" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DrawPolyline</class>
+ <widget class="QWidget" name="DrawPolyline">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>375</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QToolButton" name="Close">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Close polyline</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>ClosePath.svg</normaloff>ClosePath.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Undo">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Undo Previous Segment</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>UndoPath.svg</normaloff>UndoPath.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="ArcSegment">
+     <property name="text">
+      <string>Arc segment with radius:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Radius">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string notr="true">1.0</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="defaultUnit" stdset="0">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ArcSegment</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Radius</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>158</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

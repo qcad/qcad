@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RExporter" />
+  <class name="RDimLinearEntity"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <baseClass name="RDimensionEntity" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" hasDefault="true"
+        default="RObject :: INVALID_ID" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setProperty" cppName="setProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getData" cppName="getData" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RDimLinearData &amp;"
+      isPureVirtual="true" />
+      <variant returnType="RDimLinearData &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setExtensionPoint1" cppName="setExtensionPoint1"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getExtensionPoint1" cppName="getExtensionPoint1"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setExtensionPoint2" cppName="setExtensionPoint2"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getExtensionPoint2" cppName="getExtensionPoint2"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="print" cppName="print" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDebug" typeName="QDebug" name="dbg"
+        isConst="false" />
+      </variant>
+    </method>
+    <property name="PropertyCustom" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyType" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyBlock" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLayer" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLinetype" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLineweight" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDrawOrder" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMiddleOfTextX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMiddleOfTextY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMiddleOfTextZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyText" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyUpperTolerance" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLowerTolerance" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimensionLinePosX"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyDimensionLinePosY"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyDimensionLinePosZ"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyExtensionPoint1X"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyExtensionPoint1Y"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyExtensionPoint1Z"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyExtensionPoint2X"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyExtensionPoint2Y"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyExtensionPoint2Z"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+  </class>
+</unit>

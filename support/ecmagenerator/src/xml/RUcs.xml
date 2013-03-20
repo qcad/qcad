@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class name="RUcs" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="false" hasShell="false" sharedPointerSupport="true"
+  isQObject="false" hasStreamOperator="true" isAbstract="false"
+  isScriptable="true">
+    <baseClass name="RObject" specifier="public" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="origin"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="xAxisDirection" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="yAxisDirection" isConst="true" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RUcs *" isPureVirtual="false" />
+    </method>
+    <method name="isSelectedForPropertyEditing"
+    cppName="isSelectedForPropertyEditing" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="setProperty" cppName="setProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setOrigin" cppName="setOrigin" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="o"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setXAxisDirection" cppName="setXAxisDirection"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="x"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setYAxisDirection" cppName="setYAxisDirection"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="y"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getZAxisDirection" cppName="getZAxisDirection"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="mapFromUcs" cppName="mapFromUcs"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="positionUcs" isConst="true" />
+      </variant>
+    </method>
+    <method name="mapToUcs" cppName="mapToUcs" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="positionWcs" isConst="true" />
+      </variant>
+    </method>
+    <property name="PropertyName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOriginX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOriginY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOriginZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyXAxisDirectionX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyXAxisDirectionY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyXAxisDirectionZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyYAxisDirectionX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyYAxisDirectionY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyYAxisDirectionZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+  </class>
+</unit>

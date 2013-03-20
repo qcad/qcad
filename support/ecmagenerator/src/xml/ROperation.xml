@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RExporter" />
+  <class name="ROperation"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <constructor>
+      <variant>
+        <arg type="bool" typeName="bool" name="undoable"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="apply" cppName="apply" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RTransaction" isPureVirtual="false">
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getEntityTypeFilter"
+    cppName="getEntityTypeFilter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="setRecordAffectedObjects"
+    cppName="setRecordAffectedObjects" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setSpatialIndexDisabled"
+    cppName="setSpatialIndexDisabled" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

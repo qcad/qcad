@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RDimensionData"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="REntityData" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector"
+        name="definitionPoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="textPositionCenter" isConst="true" />
+        <arg type="RS::VAlign" typeName="RS::VAlign" name="valign"
+        isConst="false" />
+        <arg type="RS::HAlign" typeName="RS::HAlign" name="halign"
+        isConst="false" />
+        <arg type="RS::TextLineSpacingStyle"
+        typeName="RS::TextLineSpacingStyle" name="lineSpacingStyle"
+        isConst="false" />
+        <arg type="double" typeName="double"
+        name="lineSpacingFactor" isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="fontName" isConst="true" />
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getBoundingBox" cppName="getBoundingBox"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RBox" isPureVirtual="false" />
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setDefinitionPoint" cppName="setDefinitionPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDefinitionPoint" cppName="getDefinitionPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setText" cppName="setText" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="t"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getText" cppName="getText" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setUpperTolerance" cppName="setUpperTolerance"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="t"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setLowerTolerance" cppName="setLowerTolerance"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="t"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setTextPosition" cppName="setTextPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getTextPosition" cppName="getTextPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setFontName" cppName="setFontName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="fn"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getFontName" cppName="getFontName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getDistanceTo" cppName="getDistanceTo"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="double" typeName="double" name="range"
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="bool" typeName="bool" name="draft"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="intersectsWith" cppName="intersectsWith"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="shape"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getReferencePoints" cppName="getReferencePoints"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RS::ProjectionRenderingHint"
+        typeName="RS::ProjectionRenderingHint" name="hint"
+        hasDefault="true" default="RS :: RenderTop"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="moveReferencePoint" cppName="moveReferencePoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="referencePoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="targetPoint" isConst="true" />
+      </variant>
+    </method>
+    <method name="move" cppName="move" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="rotate" cppName="rotate" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="rotation"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="scale" cppName="scale" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="scaleFactors" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="mirror" cppName="mirror" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="axis"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDimexo" cppName="getDimexo" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getDimexe" cppName="getDimexe" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getDimasz" cppName="getDimasz" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getDimgap" cppName="getDimgap" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getDimtxt" cppName="getDimtxt" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="useArchTick" cppName="useArchTick"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="hasCustomTextPosition"
+    cppName="hasCustomTextPosition" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setCustomTextPosition"
+    cppName="setCustomTextPosition" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getDimensionLineShapes"
+    cppName="getDimensionLineShapes" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p2"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="arrow1"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="arrow2"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getArrow" cppName="getArrow" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="double" typeName="double" name="direction"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getTextData" cppName="getTextData"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RTextData &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="initTextData" cppName="initTextData"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateTextData" cppName="updateTextData"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getMeasurement" cppName="getMeasurement"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="bool" typeName="bool"
+        name="resolveAutoMeasurement" hasDefault="true"
+        default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="getAutoMeasurement" cppName="getAutoMeasurement"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="formatLabel" cppName="formatLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="distance"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="formatAngleLabel" cppName="formatAngleLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="update" cppName="update" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

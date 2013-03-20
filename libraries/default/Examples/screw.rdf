@@ -1,0 +1,17 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ql="http://qcad.org/ql/elements/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dc:title>Sample screw</dc:title>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dc:creator>Andrew Mustun</dc:creator>
+    <dc:subject xml:lang="en">
+      <rdf:Bag>
+        <rdf:li>screw</rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject xml:lang="de">
+      <rdf:Bag>
+        <rdf:li>schraube</rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+  </rdf:Description>
+</rdf:RDF>

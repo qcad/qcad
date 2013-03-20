@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RS.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RS_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RS_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RVector</name>;</class_decl>
+  <class_decl>class 
+  <name>RPropertyAttributes</name>;</class_decl>
+  <comment type="block">/** * Some useful macros for OS detection.
+  */</comment>
+  <cpp:if>#
+  <cpp:directive>if</cpp:directive>
+  <expr>
+  <call>
+    <name>defined</name>
+    <argument_list>(
+    <argument>
+      <expr>
+        <name>WIN64</name>
+      </expr>
+    </argument>)</argument_list>
+  </call>|| 
+  <call>
+    <name>defined</name>
+    <argument_list>(
+    <argument>
+      <expr>
+        <name>_WIN64</name>
+      </expr>
+    </argument>)</argument_list>
+  </call>|| 
+  <call>
+    <name>defined</name>
+    <argument_list>(
+    <argument>
+      <expr>
+        <name>__WIN64__</name>
+      </expr>
+    </argument>)</argument_list>
+  </call></expr></cpp:if>
+  <cpp:define># 
+  <cpp:directive>define</cpp:directive>
+  <name>ROS_WINDOWS</name></cpp:define>
+  <cpp:define># 
+  <cpp:directive>define</cpp:directive>
+  <name>ROS_WIN32</name></cpp:define>
+  <cpp:define># 
+  <cpp:directive>define</cpp:directive>
+  <name>ROS_WIN64</name></cpp:define>
+  <cpp:elif>#
+  <cpp:directive>elif</cpp:directive>
+  <expr>
+  <call>
+    <name>defined</name>
+    <argument_list>(
+    <argument>
+      <expr>
+        <name>WIN32</name>
+      </expr>
+    </argument>)</argument_list>
+  </call>|| 
+  <call>
+    <name>defined</name>
+    <argument_list>(
+    <argument>
+      <expr>
+        <name>_WIN32</name>
+      </expr>
+    </argument>)</argument_list>
+  </call>|| 
+  <call>
+    <name>defined</name>
+    <argument_list>(
+    <argument>
+      <expr>
+        <name>__WIN32__</name>
+      </expr>
+    </argument>)</argument_list>
+  </call>|| 
+  <call>
+    <name>defined</name>
+    <argument_list>(
+    <argument>
+      <expr>
+        <name>__NT__</name>
+      </expr>
+    </argument>)</argument_list>
+  </call></expr></cpp:elif>
+  <cpp:define># 
+  <cpp:directive>define</cpp:directive>
+  <name>ROS_WINDOWS</name></cpp:define>
+  <cpp:define># 
+  <cpp:directive>define</cpp:directive>
+  <name>ROS_WIN32</name></cpp:define>
+  <cpp:else>#
+  <cpp:directive>else</cpp:directive></cpp:else>
+  <cpp:define># 
+  <cpp:directive>define</cpp:directive>
+  <name>ROS_POSIX</name></cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <comment type="block">/** * Class namespace for various global
+  enums. * * Most enums fit in a class, but some are truly global,
+  others * cannot be declared in a class because this would result
+  in * problems with include files that depend on each other (note
+  that * there is no way to forward-declare nested classes or
+  enums). * * \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RS</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <comment type="block">/** * Message type for debugging and
+  displaying user messages. */</comment>
+  <enum>enum 
+  <name>MessageType</name>
+  <block>{ 
+  <expr>
+    <name>Print</name>
+  </expr>, 
+  <expr>
+    <name>Debug</name>
+  </expr>, 
+  <expr>
+    <name>Warning</name>
+  </expr>, 
+  <expr>
+    <name>Critical</name>
+  </expr>, 
+  <expr>
+    <name>Command</name>
+  </expr>}</block>;</enum>
+  <comment type="block">/** * Entity types used for property
+  handling / filtering. */</comment>
+  <enum>enum 
+  <name>EntityType</name>
+  <block>{ 
+  <expr>
+    <name>EntityAll</name>
+  </expr>, 
+  <comment type="block">/**&lt; All entities (for filters)
+  */</comment>
+  <expr>
+    <name>EntityUnknown</name>
+  </expr>, 
+  <comment type="block">/**&lt; Unknown */</comment>
+  <expr>
+    <name>EntityBlockRef</name>
+  </expr>, 
+  <comment type="block">/**&lt; Block reference */</comment>
+  <expr>
+    <name>EntityPoint</name>
+  </expr>, 
+  <comment type="block">/**&lt; Point */</comment>
+  <expr>
+    <name>EntityLine</name>
+  </expr>, 
+  <comment type="block">/**&lt; Line */</comment>
+  <expr>
+    <name>EntityPolyline</name>
+  </expr>, 
+  <comment type="block">/**&lt; Polyline */</comment>
+  <expr>
+    <name>EntityArc</name>
+  </expr>, 
+  <comment type="block">/**&lt; Arc */</comment>
+  <expr>
+    <name>EntityCircle</name>
+  </expr>, 
+  <comment type="block">/**&lt; Circle */</comment>
+  <expr>
+    <name>EntityEllipse</name>
+  </expr>, 
+  <comment type="block">/**&lt; Ellipse */</comment>
+  <expr>
+    <name>EntitySolid</name>
+  </expr>, 
+  <comment type="block">/**&lt; Solid */</comment>
+  <expr>
+    <name>Entity3dFace</name>
+  </expr>, 
+  <comment type="block">/**&lt; 3d Face */</comment>
+  <expr>
+    <name>EntityText</name>
+  </expr>, 
+  <comment type="block">/**&lt; Text */</comment>
+  <expr>
+    <name>EntityDimension</name>
+  </expr>, 
+  <comment type="block">/**&lt; Any Dimension */</comment>
+  <expr>
+    <name>EntityDimLinear</name>
+  </expr>, 
+  <comment type="block">/**&lt; Any linear dimension */</comment>
+  <expr>
+    <name>EntityDimAligned</name>
+  </expr>, 
+  <comment type="block">/**&lt; Linear aligned Dimension
+  */</comment>
+  <expr>
+    <name>EntityDimRotated</name>
+  </expr>, 
+  <comment type="block">/**&lt; Linear rotated Dimension
+  */</comment>
+  <expr>
+    <name>EntityDimRadial</name>
+  </expr>, 
+  <comment type="block">/**&lt; Radial Dimension */</comment>
+  <expr>
+    <name>EntityDimDiametric</name>
+  </expr>, 
+  <comment type="block">/**&lt; Diametric Dimension */</comment>
+  <expr>
+    <name>EntityDimAngular</name>
+  </expr>, 
+  <comment type="block">/**&lt; Angular Dimension */</comment>
+  <expr>
+    <name>EntityDimOrdinate</name>
+  </expr>, 
+  <comment type="block">/**&lt; Ordinate Dimension */</comment>
+  <expr>
+    <name>EntityHatch</name>
+  </expr>, 
+  <comment type="block">/**&lt; Hatch */</comment>
+  <expr>
+    <name>EntityImage</name>
+  </expr>, 
+  <comment type="block">/**&lt; Image */</comment>
+  <expr>
+    <name>EntityLeader</name>
+  </expr>, 
+  <comment type="block">/**&lt; Leader */</comment>
+  <expr>
+    <name>EntitySpline</name>
+  </expr>, 
+  <comment type="block">/**&lt; Spline */</comment>
+  <expr>
+    <name>EntityUser</name>
+  </expr>
+  <comment type="block">/**&lt; User defined entity. Use this to
+  identify entities that are added in a separate library and resort
+  to C++ RTTI for RTTI. */</comment>}</block>;</enum>
+  <comment type="block">/** * Sets the current rendering hint for
+  exports. * * \see RExporter::setProjectionRenderingHint
+  */</comment>
+  <enum>enum 
+  <name>ProjectionRenderingHint</name>
+  <block>{ 
+  <expr>
+    <name>RenderTop</name>
+  </expr>, 
+  <expr>
+    <name>RenderSide</name>
+  </expr>, 
+  <expr>
+    <name>RenderFront</name>
+  </expr>, 
+  <expr>
+    <name>RenderThreeD</name>
+  </expr>}</block>;</enum>
+  <comment type="block">/** * Side used for side of a point relativ
+  to an entity * (right hand or left hand side) */</comment>
+  <enum>enum 
+  <name>Side</name>
+  <block>{ 
+  <expr>
+    <name>RightHand</name>
+  </expr>, 
+  <expr>
+    <name>LeftHand</name>
+  </expr>, 
+  <expr>
+    <name>NoSide</name>
+  </expr>, 
+  <expr>
+    <name>BothSides</name>
+  </expr>}</block>;</enum>
+  <comment type="block">/** * Entity ending. Used for returning
+  which end of an entity is ment. */</comment>
+  <enum>enum 
+  <name>Ending</name>
+  <block>{ 
+  <expr>
+    <name>EndingStart</name>
+  </expr>, 
+  <comment type="block">/**&lt; Start point. */</comment>
+  <expr>
+    <name>EndingEnd</name>
+  </expr>, 
+  <comment type="block">/**&lt; End point. */</comment>
+  <expr>
+    <name>EndingNone</name>
+  </expr>
+  <comment type="block">/**&lt; Neither.
+  */</comment>}</block>;</enum>
+  <comment type="block">/** * Vertical alignments. */</comment>
+  <enum>enum 
+  <name>VAlign</name>
+  <block>{ 
+  <expr>
+    <name>VAlignTop</name>
+  </expr>, 
+  <comment type="block">/**&lt; Top. */</comment>
+  <expr>
+    <name>VAlignMiddle</name>
+  </expr>, 
+  <comment type="block">/**&lt; Middle */</comment>
+  <expr>
+    <name>VAlignBase</name>
+  </expr>, 
+  <comment type="block">/**&lt; Base line */</comment>
+  <expr>
+    <name>VAlignBottom</name>
+  </expr>
+  <comment type="block">/**&lt; Bottom
+  */</comment>}</block>;</enum>
+  <comment type="block">/** * Horizontal alignments. */</comment>
+  <enum>enum 
+  <name>HAlign</name>
+  <block>{ 
+  <expr>
+    <name>HAlignLeft</name>
+  </expr>, 
+  <comment type="block">/**&lt; Left */</comment>
+  <expr>
+    <name>HAlignCenter</name>
+  </expr>, 
+  <comment type="block">/**&lt; Centered */</comment>
+  <expr>
+    <name>HAlignRight</name>
+  </expr>, 
+  <comment type="block">/**&lt; Right */</comment>
+  <expr>
+    <name>HAlignAlign</name>
+  </expr>, 
+  <comment type="block">/**&lt; Aligned */</comment>
+  <expr>
+    <name>HAlignMid</name>
+  </expr>, 
+  <comment type="block">/**&lt; Middle (?) */</comment>
+  <expr>
+    <name>HAlignFit</name>
+  </expr>
+  <comment type="block">/**&lt; Fit */</comment>}</block>;</enum>
+  <comment type="block">/** * Text drawing direction. */</comment>
+  <enum>enum 
+  <name>TextDrawingDirection</name>
+  <block>{ 
+  <expr>
+    <name>LeftToRight</name>
+  </expr>, 
+  <comment type="block">/**&lt; Left to right */</comment>
+  <expr>
+    <name>TopToBottom</name>
+  </expr>, 
+  <comment type="block">/**&lt; Top to bottom */</comment>
+  <expr>
+    <name>ByStyle</name>
+  </expr>
+  <comment type="block">/**&lt; Inherited from associated text
+  style */</comment>}</block>;</enum>
+  <comment type="block">/** * Line spacing style for texts.
+  */</comment>
+  <enum>enum 
+  <name>TextLineSpacingStyle</name>
+  <block>{ 
+  <expr>
+    <name>AtLeast</name>
+  </expr>, 
+  <comment type="block">/**&lt; Taller characters will override
+  */</comment>
+  <expr>
+    <name>Exact</name>
+  </expr>
+  <comment type="block">/**&lt; Taller characters will not override
+  */</comment>}</block>;</enum>
+  <comment type="block">/** * End used to specify from which end of
+  a shape to measure a distance. */</comment>
+  <enum>enum 
+  <name>From</name>
+  <block>{ 
+  <expr>
+    <name>FromStart</name>
+  </expr>, 
+  <expr>
+    <name>FromEnd</name>
+  </expr>, 
+  <expr>
+    <name>FromAny</name>
+  </expr>}</block>;</enum>
+  <comment type="block">/** * Projection type for isometric
+  projections. */</comment>
+  <enum>enum 
+  <name>IsoProjectionType</name>
+  <block>{ 
+  <expr>
+    <name>IsoTop</name>
+  </expr>, 
+  <comment type="line">//!&lt; Top projection (x/y)</comment>
+  <expr>
+    <name>IsoBottom</name>
+  </expr>, 
+  <comment type="line">//!&lt; Bottom projection (x/y)</comment>
+  <expr>
+    <name>IsoLeft</name>
+  </expr>, 
+  <comment type="line">//!&lt; Front left projection
+  (x/z)</comment>
+  <expr>
+    <name>IsoLeftBack</name>
+  </expr>, 
+  <comment type="line">//!&lt; Back left projection (x/z)</comment>
+  <expr>
+    <name>IsoRight</name>
+  </expr>, 
+  <comment type="line">//!&lt; Front right projection
+  (y/z)</comment>
+  <expr>
+    <name>IsoRightBack</name>
+  </expr>
+  <comment type="line">//!&lt; Back right projection
+  (y/z)</comment>}</block>;</enum>
+  <comment type="block">/** * Enum of supported units (values
+  correspond to DXF spec). */</comment>
+  <enum>enum 
+  <name>Unit</name>
+  <block>{ 
+  <expr>
+  <name>None</name>= 0</expr>, 
+  <comment type="block">/**&lt; No unit (unit from parent)
+  */</comment>
+  <expr>
+  <name>Inch</name>= 1</expr>, 
+  <comment type="block">/**&lt; Inch */</comment>
+  <expr>
+  <name>Foot</name>= 2</expr>, 
+  <comment type="block">/**&lt; Foot: 12 Inches */</comment>
+  <expr>
+  <name>Mile</name>= 3</expr>, 
+  <comment type="block">/**&lt; Mile: 1760 Yards = 1609 m
+  */</comment>
+  <expr>
+  <name>Millimeter</name>= 4</expr>, 
+  <comment type="block">/**&lt; Millimeter: 0.001m */</comment>
+  <expr>
+  <name>Centimeter</name>= 5</expr>, 
+  <comment type="block">/**&lt; Centimeter: 0.01m */</comment>
+  <expr>
+  <name>Meter</name>= 6</expr>, 
+  <comment type="block">/**&lt; Meter */</comment>
+  <expr>
+  <name>Kilometer</name>= 7</expr>, 
+  <comment type="block">/**&lt; Kilometer: 1000m */</comment>
+  <expr>
+  <name>Microinch</name>= 8</expr>, 
+  <comment type="block">/**&lt; Microinch: 0.000001 */</comment>
+  <expr>
+  <name>Mil</name>= 9</expr>, 
+  <comment type="block">/**&lt; Mil = 0.001 Inch*/</comment>
+  <expr>
+  <name>Yard</name>= 10</expr>, 
+  <comment type="block">/**&lt; Yard: 3 Feet */</comment>
+  <expr>
+  <name>Angstrom</name>= 11</expr>, 
+  <comment type="block">/**&lt; Angstrom: 10^-10m */</comment>
+  <expr>
+  <name>Nanometer</name>= 12</expr>, 
+  <comment type="block">/**&lt; Nanometer: 10^-9m */</comment>
+  <expr>
+  <name>Micron</name>= 13</expr>, 
+  <comment type="block">/**&lt; Micron: 10^-6m */</comment>
+  <expr>
+  <name>Decimeter</name>= 14</expr>, 
+  <comment type="block">/**&lt; Decimeter: 0.1m */</comment>
+  <expr>
+  <name>Decameter</name>= 15</expr>, 
+  <comment type="block">/**&lt; Decameter: 10m */</comment>
+  <expr>
+  <name>Hectometer</name>= 16</expr>, 
+  <comment type="block">/**&lt; Hectometer: 100m */</comment>
+  <expr>
+  <name>Gigameter</name>= 17</expr>, 
+  <comment type="block">/**&lt; Gigameter: 1000000m */</comment>
+  <expr>
+  <name>Astro</name>= 18</expr>, 
+  <comment type="block">/**&lt; Astro: 149.6 x 10^9m */</comment>
+  <expr>
+  <name>Lightyear</name>= 19</expr>, 
+  <comment type="block">/**&lt; Lightyear: 9460731798 x 10^6m
+  */</comment>
+  <expr>
+  <name>Parsec</name>= 20</expr>, 
+  <comment type="block">/**&lt; Parsec: 30857 x 10^12 */</comment>
+  <comment type="line">//Plu = 21 /**&lt; PLU: Plotter units used
+  in HP/GL. 40plu = 1mm. not supported by open design*/</comment>
+  <expr>
+  <name>MaxUnit</name>= 
+  <name>Parsec</name></expr>}</block>;</enum>
+  <comment type="block">/** * Angle format for printing angles.
+  */</comment>
+  <enum>enum 
+  <name>AngleFormat</name>
+  <block>{ 
+  <comment type="block">/** Degrees with decimal point (e.g.
+  24.5&lt;degree symbol&gt;) */</comment>
+  <expr>
+  <name>DegreesDecimal</name>= 0</expr>, 
+  <comment type="block">/** Degrees, Minutes and Seconds (e.g.
+  24&lt;degree symbol&gt;30'5'') */</comment>
+  <expr>
+  <name>DegreesMinutesSeconds</name>= 1</expr>, 
+  <comment type="block">/** Gradians with decimal point (e.g.
+  390.5)*/</comment>
+  <expr>
+  <name>Gradians</name>= 2</expr>, 
+  <comment type="block">/** Radians with decimal point (e.g.
+  1.57)*/</comment>
+  <expr>
+  <name>Radians</name>= 3</expr>, 
+  <comment type="block">/** Surveyor's units */</comment>
+  <expr>
+  <name>Surveyors</name>= 4</expr>}</block>;</enum>
+  <comment type="block">/** * Format for length values.
+  */</comment>
+  <enum>enum 
+  <name>LinearFormat</name>
+  <block>{ 
+  <comment type="block">/** Scientific (e.g. 2.5E+05) */</comment>
+  <expr>
+  <name>Scientific</name>= 1</expr>, 
+  <comment type="block">/** Decimal (e.g. 9.5)*/</comment>
+  <expr>
+  <name>Decimal</name>= 2</expr>, 
+  <comment type="block">/** Engineering (e.g. 7' 11.5")*/</comment>
+  <expr>
+  <name>Engineering</name>= 3</expr>, 
+  <comment type="block">/** Architectural stacked (e.g. 7'-9
+  1/8")*/</comment>
+  <expr>
+  <name>ArchitecturalStacked</name>= 4</expr>, 
+  <comment type="block">/** Fractional stacked (e.g. 7 9 1/8)
+  */</comment>
+  <expr>
+  <name>FractionalStacked</name>= 5</expr>, 
+  <comment type="block">/** Architectural (e.g. ?)*/</comment>
+  <expr>
+  <name>Architectural</name>= 6</expr>, 
+  <comment type="block">/** Fractional (e.g. ?)*/</comment>
+  <expr>
+  <name>Fractional</name>= 7</expr>, 
+  <comment type="block">/** Not supported */</comment>
+  <expr>
+  <name>WindowsDesktop</name>= 8</expr>}</block>;</enum>
+  <comment type="block">/** * Angle Units. */</comment>
+  <enum>enum 
+  <name>AngleUnit</name>
+  <block>{ 
+  <expr>
+    <name>Deg</name>
+  </expr>, 
+  <comment type="block">/**&lt; Degrees */</comment>
+  <expr>
+    <name>Rad</name>
+  </expr>, 
+  <comment type="block">/**&lt; Radians */</comment>
+  <expr>
+    <name>Gra</name>
+  </expr>
+  <comment type="block">/**&lt; Gradians
+  */</comment>}</block>;</enum>
+  <comment type="block">/** * Well established document variables.
+  */</comment>
+  <enum>enum 
+  <name>KnownVariable</name>
+  <block>{ 
+  <expr>
+    <name>ANGBASE</name>
+  </expr>, 
+  <expr>
+    <name>ANGDIR</name>
+  </expr>, 
+  <expr>
+    <name>ATTMODE</name>
+  </expr>, 
+  <expr>
+    <name>AUNITS</name>
+  </expr>, 
+  <expr>
+    <name>AUPREC</name>
+  </expr>, 
+  <expr>
+    <name>CECOLOR</name>
+  </expr>, 
+  <expr>
+    <name>CELTSCALE</name>
+  </expr>, 
+  <expr>
+    <name>CHAMFERA</name>
+  </expr>, 
+  <expr>
+    <name>CHAMFERB</name>
+  </expr>, 
+  <expr>
+    <name>CHAMFERC</name>
+  </expr>, 
+  <expr>
+    <name>CHAMFERD</name>
+  </expr>, 
+  <expr>
+    <name>CMLJUST</name>
+  </expr>, 
+  <expr>
+    <name>CMLSCALE</name>
+  </expr>, 
+  <comment type="block">/** Decimal places in angular dimensions
+  */</comment>
+  <expr>
+    <name>DIMADEC</name>
+  </expr>, 
+  <expr>
+    <name>DIMALT</name>
+  </expr>, 
+  <expr>
+    <name>DIMALTD</name>
+  </expr>, 
+  <expr>
+    <name>DIMALTF</name>
+  </expr>, 
+  <expr>
+    <name>DIMALTRND</name>
+  </expr>, 
+  <expr>
+    <name>DIMALTTD</name>
+  </expr>, 
+  <expr>
+    <name>DIMALTTZ</name>
+  </expr>, 
+  <expr>
+    <name>DIMALTU</name>
+  </expr>, 
+  <expr>
+    <name>DIMALTZ</name>
+  </expr>, 
+  <expr>
+    <name>DIMAPOST</name>
+  </expr>, 
+  <expr>
+    <name>DIMASZ</name>
+  </expr>, 
+  <expr>
+    <name>DIMATFIT</name>
+  </expr>, 
+  <comment type="block">/** Formatting of angular dimensions
+  */</comment>
+  <expr>
+    <name>DIMAUNIT</name>
+  </expr>, 
+  <comment type="block">/** Controls display of leading / trailing
+  zeros for angular dimensions */</comment>
+  <expr>
+    <name>DIMAZIN</name>
+  </expr>, 
+  <expr>
+    <name>DIMBLK</name>
+  </expr>, 
+  <expr>
+    <name>DIMBLK1</name>
+  </expr>, 
+  <expr>
+    <name>DIMBLK2</name>
+  </expr>, 
+  <expr>
+    <name>DIMCEN</name>
+  </expr>, 
+  <expr>
+    <name>DIMCLRD</name>
+  </expr>, 
+  <expr>
+    <name>DIMCLRE</name>
+  </expr>, 
+  <expr>
+    <name>DIMCLRT</name>
+  </expr>, 
+  <comment type="block">/** Decimal places in linear dimensions
+  */</comment>
+  <expr>
+    <name>DIMDEC</name>
+  </expr>, 
+  <expr>
+    <name>DIMDLE</name>
+  </expr>, 
+  <expr>
+    <name>DIMDLI</name>
+  </expr>, 
+  <expr>
+    <name>DIMDSEP</name>
+  </expr>, 
+  <expr>
+    <name>DIMEXE</name>
+  </expr>, 
+  <expr>
+    <name>DIMEXO</name>
+  </expr>, 
+  <expr>
+    <name>DIMFRAC</name>
+  </expr>, 
+  <comment type="block">/** Distance between dimension text and
+  dimension lines, negative for box */</comment>
+  <expr>
+    <name>DIMGAP</name>
+  </expr>, 
+  <comment type="block">/** Vertical position of dimension label
+  */</comment>
+  <expr>
+    <name>DIMJUST</name>
+  </expr>, 
+  <expr>
+    <name>DIMLDRBLK</name>
+  </expr>, 
+  <expr>
+    <name>DIMLFAC</name>
+  </expr>, 
+  <expr>
+    <name>DIMLIM</name>
+  </expr>, 
+  <comment type="block">/** Formatting of linear dimensions
+  */</comment>
+  <expr>
+    <name>DIMLUNIT</name>
+  </expr>, 
+  <expr>
+    <name>DIMLWD</name>
+  </expr>, 
+  <expr>
+    <name>DIMLWE</name>
+  </expr>, 
+  <expr>
+    <name>DIMPOST</name>
+  </expr>, 
+  <expr>
+    <name>DIMRND</name>
+  </expr>, 
+  <expr>
+    <name>DIMSAH</name>
+  </expr>, 
+  <expr>
+    <name>DIMSCALE</name>
+  </expr>, 
+  <expr>
+    <name>DIMSD1</name>
+  </expr>, 
+  <expr>
+    <name>DIMSD2</name>
+  </expr>, 
+  <expr>
+    <name>DIMSE1</name>
+  </expr>, 
+  <expr>
+    <name>DIMSE2</name>
+  </expr>, 
+  <expr>
+    <name>DIMSOXD</name>
+  </expr>, 
+  <comment type="block">/** Vertical position of dimension label
+  */</comment>
+  <expr>
+    <name>DIMTAD</name>
+  </expr>, 
+  <expr>
+    <name>DIMTDEC</name>
+  </expr>, 
+  <expr>
+    <name>DIMTFAC</name>
+  </expr>, 
+  <expr>
+    <name>DIMTIH</name>
+  </expr>, 
+  <expr>
+    <name>DIMTIX</name>
+  </expr>, 
+  <expr>
+    <name>DIMTM</name>
+  </expr>, 
+  <expr>
+    <name>DIMTOFL</name>
+  </expr>, 
+  <expr>
+    <name>DIMTOH</name>
+  </expr>, 
+  <expr>
+    <name>DIMTOL</name>
+  </expr>, 
+  <expr>
+    <name>DIMTOLJ</name>
+  </expr>, 
+  <expr>
+    <name>DIMTP</name>
+  </expr>, 
+  <comment type="block">/** Archtick size or 0 for arrows
+  */</comment>
+  <expr>
+    <name>DIMTSZ</name>
+  </expr>, 
+  <expr>
+    <name>DIMTVP</name>
+  </expr>, 
+  <expr>
+    <name>DIMTXSTY</name>
+  </expr>, 
+  <comment type="block">/** Dimension text size */</comment>
+  <expr>
+    <name>DIMTXT</name>
+  </expr>, 
+  <expr>
+    <name>DIMTZIN</name>
+  </expr>, 
+  <expr>
+    <name>DIMUPT</name>
+  </expr>, 
+  <comment type="block">/** Controls display of leading / trailing
+  zeros for linear dimensions */</comment>
+  <expr>
+    <name>DIMZIN</name>
+  </expr>, 
+  <expr>
+    <name>DISPSILH</name>
+  </expr>, 
+  <expr>
+    <name>DWGCODEPAGE</name>
+  </expr>, 
+  <expr>
+    <name>DRAWORDERCTL</name>
+  </expr>, 
+  <expr>
+    <name>ELEVATION</name>
+  </expr>, 
+  <expr>
+    <name>EXTMAX</name>
+  </expr>, 
+  <expr>
+    <name>EXTMIN</name>
+  </expr>, 
+  <expr>
+    <name>FACETRES</name>
+  </expr>, 
+  <expr>
+    <name>FILLETRAD</name>
+  </expr>, 
+  <expr>
+    <name>FILLMODE</name>
+  </expr>, 
+  <expr>
+    <name>INSBASE</name>
+  </expr>, 
+  <expr>
+    <name>INSUNITS</name>
+  </expr>, 
+  <expr>
+    <name>ISOLINES</name>
+  </expr>, 
+  <expr>
+    <name>LIMCHECK</name>
+  </expr>, 
+  <expr>
+    <name>LIMMAX</name>
+  </expr>, 
+  <expr>
+    <name>LIMMIN</name>
+  </expr>, 
+  <expr>
+    <name>LTSCALE</name>
+  </expr>, 
+  <expr>
+    <name>LUNITS</name>
+  </expr>, 
+  <expr>
+    <name>LUPREC</name>
+  </expr>, 
+  <expr>
+    <name>MAXACTVP</name>
+  </expr>, 
+  <expr>
+    <name>MIRRTEXT</name>
+  </expr>, 
+  <expr>
+    <name>ORTHOMODE</name>
+  </expr>, 
+  <expr>
+    <name>PDMODE</name>
+  </expr>, 
+  <expr>
+    <name>PDSIZE</name>
+  </expr>, 
+  <expr>
+    <name>PELEVATION</name>
+  </expr>, 
+  <expr>
+    <name>PELLIPSE</name>
+  </expr>, 
+  <expr>
+    <name>PEXTMAX</name>
+  </expr>, 
+  <expr>
+    <name>PEXTMIN</name>
+  </expr>, 
+  <expr>
+    <name>PINSBASE</name>
+  </expr>, 
+  <expr>
+    <name>PLIMCHECK</name>
+  </expr>, 
+  <expr>
+    <name>PLIMMAX</name>
+  </expr>, 
+  <expr>
+    <name>PLIMMIN</name>
+  </expr>, 
+  <expr>
+    <name>PLINEGEN</name>
+  </expr>, 
+  <expr>
+    <name>PLINEWID</name>
+  </expr>, 
+  <expr>
+    <name>PROXYGRAPHICS</name>
+  </expr>, 
+  <expr>
+    <name>PSLTSCALE</name>
+  </expr>, 
+  <expr>
+    <name>PUCSNAME</name>
+  </expr>, 
+  <expr>
+    <name>PUCSORG</name>
+  </expr>, 
+  <expr>
+    <name>PUCSXDIR</name>
+  </expr>, 
+  <expr>
+    <name>PUCSYDIR</name>
+  </expr>, 
+  <expr>
+    <name>QTEXTMODE</name>
+  </expr>, 
+  <expr>
+    <name>REGENMODE</name>
+  </expr>, 
+  <expr>
+    <name>SHADEDGE</name>
+  </expr>, 
+  <expr>
+    <name>SHADEDIF</name>
+  </expr>, 
+  <expr>
+    <name>SKETCHINC</name>
+  </expr>, 
+  <expr>
+    <name>SKPOLY</name>
+  </expr>, 
+  <expr>
+    <name>SPLFRAME</name>
+  </expr>, 
+  <expr>
+    <name>SPLINESEGS</name>
+  </expr>, 
+  <expr>
+    <name>SPLINETYPE</name>
+  </expr>, 
+  <expr>
+    <name>SURFTAB1</name>
+  </expr>, 
+  <expr>
+    <name>SURFTAB2</name>
+  </expr>, 
+  <expr>
+    <name>SURFTYPE</name>
+  </expr>, 
+  <expr>
+    <name>SURFU</name>
+  </expr>, 
+  <expr>
+    <name>SURFV</name>
+  </expr>, 
+  <expr>
+    <name>TEXTQLTY</name>
+  </expr>, 
+  <expr>
+    <name>TEXTSIZE</name>
+  </expr>, 
+  <expr>
+    <name>TEXTSTYLE</name>
+  </expr>, 
+  <expr>
+    <name>THICKNESS</name>
+  </expr>, 
+  <expr>
+    <name>TILEMODE</name>
+  </expr>, 
+  <expr>
+    <name>TRACEWID</name>
+  </expr>, 
+  <expr>
+    <name>TREEDEPTH</name>
+  </expr>, 
+  <expr>
+    <name>UCSNAME</name>
+  </expr>, 
+  <expr>
+    <name>UCSORG</name>
+  </expr>, 
+  <expr>
+    <name>UCSXDIR</name>
+  </expr>, 
+  <expr>
+    <name>UCSYDIR</name>
+  </expr>, 
+  <expr>
+    <name>UNITMODE</name>
+  </expr>, 
+  <expr>
+    <name>USERI1</name>
+  </expr>, 
+  <expr>
+    <name>USERI2</name>
+  </expr>, 
+  <expr>
+    <name>USERI3</name>
+  </expr>, 
+  <expr>
+    <name>USERI4</name>
+  </expr>, 
+  <expr>
+    <name>USERI5</name>
+  </expr>, 
+  <expr>
+    <name>USERR1</name>
+  </expr>, 
+  <expr>
+    <name>USERR2</name>
+  </expr>, 
+  <expr>
+    <name>USERR3</name>
+  </expr>, 
+  <expr>
+    <name>USERR4</name>
+  </expr>, 
+  <expr>
+    <name>USERR5</name>
+  </expr>, 
+  <expr>
+    <name>USRTIMER</name>
+  </expr>, 
+  <expr>
+    <name>VISRETAIN</name>
+  </expr>, 
+  <expr>
+    <name>WORLDVIEW</name>
+  </expr>, 
+  <expr>
+  <name>MaxKnownVariable</name>= 
+  <name>WORLDVIEW</name></expr>, 
+  <expr>
+  <name>INVALID</name>= -1</expr>}</block>;</enum></public>
+  <public>public: 
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>compare</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QVariant</name>&amp;</type>
+      <name>v1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QVariant</name>&amp;</type>
+      <name>v2</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>compare</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QPair
+      <argument_list>&lt;
+      <argument>
+        <name>QVariant</name>
+      </argument>, 
+      <argument>
+        <name>RPropertyAttributes</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>p1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QPair
+      <argument_list>&lt; 
+      <argument>
+        <name>QVariant</name>
+      </argument>, 
+      <argument>
+        <name>RPropertyAttributes</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>p2</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
+  <name>getCPUCores</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>getHostId</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>getSystemId</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QStringList</name>
+  </type>
+  <name>getDirectoryList</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>subDirectory</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QStringList</name>
+  </type>
+  <name>getFileList</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>subDirectory</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>fileExtension</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QStringList</name>
+  </type>
+  <name>getFontList</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QStringList</name>
+  </type>
+  <name>getPatternList</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>metric</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <template>template
+  <parameter_list>&lt;
+  <param>
+    <type>class</type>
+    <name>T</name>
+  </param>&gt;</parameter_list>
+  <function>
+    <type>
+      <name>static</name>
+      <name>bool</name>
+    </type>
+    <name>mapContainsCaseInsensitive</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QMap
+        <argument_list>&lt;
+        <argument>
+          <name>QString</name>
+        </argument>, 
+        <argument>
+          <name>T</name>
+        </argument>&gt;</argument_list></name>&amp;</type>
+        <name>map</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>key</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>QStringList</name>
+      <argument_list>(
+      <argument>
+        <expr>
+        <name>map</name>.
+        <call>
+          <name>keys</name>
+          <argument_list>()</argument_list>
+        </call></expr>
+      </argument>)</argument_list>
+    </call>.
+    <call>
+      <name>contains</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>key</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>
+          <name>Qt</name>::
+          <name>CaseInsensitive</name></name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</return>}</block>
+  </function></template>
+  <template>template
+  <parameter_list>&lt;
+  <param>
+    <type>class</type>
+    <name>T</name>
+  </param>&gt;</parameter_list>
+  <function>
+    <type>
+      <name>static</name>
+      <name>T</name>
+    </type>
+    <name>mapValueCaseInsensitive</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QMap
+        <argument_list>&lt;
+        <argument>
+          <name>QString</name>
+        </argument>, 
+        <argument>
+          <name>T</name>
+        </argument>&gt;</argument_list></name>&amp;</type>
+        <name>map</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>key</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <function_decl>
+    <type>
+      <name>QMapIterator
+      <argument_list>&lt;
+      <argument>
+        <name>QString</name>
+      </argument>, 
+      <argument>
+        <name>T</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>it</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>map</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</function_decl>
+    <while>while 
+    <condition>(
+    <expr>
+    <name>it</name>.
+    <call>
+      <name>hasNext</name>
+      <argument_list>()</argument_list>
+    </call></expr>)</condition>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>it</name>.
+    <call>
+      <name>next</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</expr_stmt>
+    <if>if 
+    <condition>(
+    <expr>
+    <call>
+      <name>
+      <name>QString</name>::
+      <name>compare</name></name>
+      <argument_list>(
+      <argument>
+        <expr>
+        <name>it</name>.
+        <call>
+          <name>key</name>
+          <argument_list>()</argument_list>
+        </call></expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>key</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>
+          <name>Qt</name>::
+          <name>CaseInsensitive</name></name>
+        </expr>
+      </argument>)</argument_list>
+    </call>==0</expr>)</condition>
+    <then>
+      <block>{ 
+      <return>return 
+      <expr>
+      <name>it</name>.
+      <call>
+        <name>value</name>
+        <argument_list>()</argument_list>
+      </call></expr>;</return>}</block>
+    </then></if>}</block></while>
+    <return>return 
+    <expr>
+      <call>
+        <name>T</name>
+        <argument_list>()</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function></template>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>const</name>
+      <name>double</name>
+    </type>
+    <name>PointTolerance</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>const</name>
+      <name>double</name>
+    </type>
+    <name>AngleTolerance</name>
+  </decl>;</decl_stmt></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::AngleFormat</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::AngleFormat*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::AngleUnit</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::EntityType</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::EntityType*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::From</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::From*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::HAlign</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::HAlign*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::IsoProjectionType</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::IsoProjectionType*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::KnownVariable</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::KnownVariable*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::LinearFormat</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::LinearFormat*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::MessageType</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>
+    RS::ProjectionRenderingHint</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::Side</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::Ending</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::TextDrawingDirection</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::TextDrawingDirection*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::TextLineSpacingStyle</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::TextLineSpacingStyle*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::Unit</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::VAlign</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::VAlign*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>
+    QList&lt;RS::EntityType&gt;</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

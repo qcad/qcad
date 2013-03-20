@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RLinetypePattern"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="other" isConst="true" />
+      </variant>
+    </constructor>
+    <method name="set" cppName="set" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; double &gt;"
+        typeName="QList &lt; double &gt;" name="dashes"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getNumDashes" cppName="getNumDashes"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getPatternLength" cppName="getPatternLength"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getDashLengthAt" cppName="getDashLengthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="getLargestGap" cppName="getLargestGap"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="hasDashAt" cppName="hasDashAt" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="pos"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getDelta" cppName="getDelta" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="pos"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isSymmetrical" cppName="isSymmetrical"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="scale" cppName="scale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="factor"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="operator=" cppName="operator=" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RLinetypePattern &amp;"
+      isPureVirtual="false">
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="other" isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

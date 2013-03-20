@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RPolyline" />
+  <class name="RBox" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="true" hasShell="false" sharedPointerSupport="true"
+  isQObject="false" hasStreamOperator="true" isAbstract="false"
+  isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="QRectF &amp;" typeName="QRectF" name="rect"
+        isConst="true" />
+      </variant>
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector" name="c1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="c2"
+        isConst="true" />
+      </variant>
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+        <arg type="double" typeName="double" name="range"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getWidth" cppName="getWidth" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getHeight" cppName="getHeight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getSize" cppName="getSize" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getCenter" cppName="getCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getMinimum" cppName="getMinimum"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getMaximum" cppName="getMaximum"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="isOutside" cppName="isOutside" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="contains" cppName="contains" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="containsBox" cppName="containsBox"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="containsPoint" cppName="containsPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="intersects" cppName="intersects"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="intersectsWith" cppName="intersectsWith"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="shape"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="growToInclude" cppName="growToInclude"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="growToIncludeBox" cppName="growToIncludeBox"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="growToIncludePoint" cppName="growToIncludePoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCorner1" cppName="getCorner1"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setCorner1" cppName="setCorner1"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCorner2" cppName="getCorner2"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setCorner2" cppName="setCorner2"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCorners" cppName="getCorners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getCorners2d" cppName="getCorners2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getLines2d" cppName="getLines2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RLine &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getPolyline2d" cppName="getPolyline2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false" />
+    </method>
+    <method name="getTriangles" cppName="getTriangles"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RTriangle &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="grow" cppName="grow" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RBox &amp;" isPureVirtual="false">
+        <arg type="double" typeName="double" name="offset"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="growXY" cppName="growXY" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RBox &amp;" isPureVirtual="false">
+        <arg type="double" typeName="double" name="offset"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="toQRectF" cppName="toQRectF" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QRectF" isPureVirtual="false" />
+    </method>
+    <method name="operator ==" cppName="operator =="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator !=" cppName="operator !="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+    <property name="c1" type="RVector" cppGetter="getCorner1"
+    cppSetter="setCorner1" />
+    <property name="c2" type="RVector" cppGetter="getCorner2"
+    cppSetter="setCorner2" />
+  </class>
+</unit>

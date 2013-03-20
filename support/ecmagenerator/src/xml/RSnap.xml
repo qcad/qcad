@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsView" />
+  <class name="RSnap" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="false" hasShell="true" sharedPointerSupport="false"
+  isQObject="false" hasStreamOperator="false" isAbstract="true"
+  isScriptable="true">
+    <enum name="Status">
+      <value name="Unknown" />
+      <value name="Free" />
+      <value name="Grid" />
+      <value name="Endpoint" />
+      <value name="OnEntity" />
+      <value name="Center" />
+      <value name="Middle" />
+      <value name="Distance" />
+      <value name="Intersection" />
+      <value name="IntersectionManual" />
+      <value name="Reference" />
+      <value name="Perpendicular" />
+      <value name="Coordinate" />
+      <value name="CoordinatePolar" />
+    </enum>
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="snap" cppName="snap" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="true">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="view" isConst="false" />
+        <arg type="double" typeName="double" name="range"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="showUiOptions" cppName="showUiOptions"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="hideUiOptions" cppName="hideUiOptions"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getEntityIds" cppName="getEntityIds"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getStatus" cppName="getStatus" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RSnap::Status" isPureVirtual="false" />
+    </method>
+    <method name="getLastSnap" cppName="getLastSnap"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="reset" cppName="reset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

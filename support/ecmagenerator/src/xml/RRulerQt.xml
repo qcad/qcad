@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsView" />
+  <class_decl name="RDocumentInterface" />
+  <class name="RRulerQt"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QFrame" specifier="public" />
+    <baseClass name="RRuler" specifier="public" />
+    <baseClass name="RCoordinateListener" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="setOrientation" cppName="setOrientation"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="Qt::Orientation" typeName="Qt::Orientation"
+        name="orientation" isConst="false" />
+      </variant>
+    </method>
+    <method name="sizeHint" cppName="sizeHint" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSize" isPureVirtual="false" />
+    </method>
+    <method name="paintTick" cppName="paintTick" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="pos"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="major"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="label"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getFont" cppName="getFont" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QFont" isPureVirtual="false" />
+    </method>
+    <method name="updateViewport" cppName="updateViewport"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateCoordinate" cppName="updateCoordinate"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="paintEvent" cppName="paintEvent"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPaintEvent *" typeName="QPaintEvent *" name=""
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

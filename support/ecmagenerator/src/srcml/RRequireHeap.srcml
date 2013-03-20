@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RRequireHeap.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RREQUIREHEAP_H_</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RREQUIREHEAP_H_</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RDebug.h"</cpp:file></cpp:include>
+  <comment type="block">/** * \ingroup core */</comment>
+  <class>class 
+  <name>RRequireHeap</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>doDelete</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>delete 
+    <name>this</name></expr>;</expr_stmt>}</block>
+  </function></public>
+  <protected>protected: 
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RRequireHeap</name>
+    <parameter_list>()</parameter_list>
+    <block>{ }</block>
+  </destructor></protected>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RRequireHeap*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <comment type="block">/* RREQUIREHEAP_H_ */</comment>
+</unit>

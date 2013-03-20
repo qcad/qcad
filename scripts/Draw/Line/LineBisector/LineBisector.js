@@ -1,0 +1,212 @@
+/**
+ * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */
+
+include("../Line.js");
+
+/**
+ * \class LineBisector
+ * \brief Line as bisector of two other lines.
+ * \ingroup ecma_draw_line
+ */
+function LineBisector(guiAction) {
+    Line.call(this, guiAction);
+
+    this.length = undefined;
+    this.number = undefined;
+    this.line1 = undefined;
+    this.pos1 = undefined;
+    this.line2 = undefined;
+    this.pos2 = undefined;
+
+    this.setUiOptions("LineBisector.ui");
+}
+
+LineBisector.prototype = new Line();
+
+LineBisector.State = {
+    ChoosingLine1 : 0,
+    ChoosingLine2 : 1
+};
+
+LineBisector.prototype.beginEvent = function() {
+    Line.prototype.beginEvent.call(this);
+
+    this.setState(LineBisector.State.ChoosingLine1);
+};
+
+LineBisector.prototype.setState = function(state) {
+    Line.prototype.setState.call(this, state);
+
+    this.getDocumentInterface().setClickMode(RAction.PickEntity);
+    this.setCrosshairCursor();
+
+    var appWin = RMainWindowQt.getMainWindow();
+    switch (this.state) {
+    case LineBisector.State.ChoosingLine1:
+        this.setLeftMouseTip(qsTr("First line"));
+        break;
+
+    case LineBisector.State.ChoosingLine2:
+        this.setLeftMouseTip(qsTr("Second line"));
+        break;
+    }
+
+    this.setRightMouseTip(EAction.trCancel);
+};
+
+LineBisector.prototype.escapeEvent = function() {
+    switch (this.state) {
+    case LineBisector.State.ChoosingLine1:
+        EAction.prototype.escapeEvent.call(this);
+        break;
+
+    case LineBisector.State.ChoosingLine2:
+        this.setState(LineBisector.State.ChoosingLine1);
+        break;
+    }
+};
+
+LineBisector.prototype.finishEvent = function() {
+    EAction.prototype.finishEvent.call(this);
+};
+
+LineBisector.prototype.entityPickEvent = function(event) {
+    this.pick(event, false);
+};
+
+LineBisector.prototype.entityPickEventPreview = function(event) {
+    this.pick(event, true);
+};
+
+LineBisector.prototype.pick = function(event, preview) {
+    var di = this.getDocumentInterface();
+    var doc = this.getDocument();
+    var pos = event.getModelPosition();
+    var entityId = event.getEntityId();
+    var entity = doc.queryEntity(entityId);
+
+    if (isNull(entity)) {
+        return;
+    }
+
+    if (!isLineEntity(entity)) {
+        if (!preview) {
+            EAction.warnNotLine();
+        }
+        return;
+    }
+
+    if (preview) {
+        di.highlightEntity(entityId);
+    }
+
+    switch (this.state) {
+    case LineBisector.State.ChoosingLine1:
+        this.line1 = entity;
+        this.pos1 = pos;
+        if (!preview) {
+            this.setState(LineBisector.State.ChoosingLine2);
+        }
+        break;
+
+    case LineBisector.State.ChoosingLine2:
+        this.line2 = entity;
+        this.pos2 = pos;
+        if (preview) {
+            //di.previewOperation(op);
+            this.updatePreview();
+        }
+        else {
+            var op = this.getOperation(false);
+            if (!isNull(op)) {
+                di.applyOperation(op);
+            }
+            else {
+                EAction.handleUserWarning(qsTr("Lines don't intersect."));
+            }
+            this.setState(LineBisector.State.ChoosingLine1);
+        }
+        break;
+    }
+};
+
+LineBisector.prototype.getOperation = function(preview) {
+    if (isNull(this.pos1) || isNull(this.pos2) ||
+        isNull(this.line1) || isNull(this.line2) ||
+        !isNumber(this.length) || !isNumber(this.number)) {
+
+        return undefined;
+    }
+
+    // get intersection of the two chosen lines:
+    var ips = this.line1.getIntersectionPoints(this.line2.data(), false);
+
+    if (ips.length==0) {
+        return undefined;
+    }
+
+    var doc = this.getDocument();
+    var ip = ips[0];
+
+    var angle1 = ip.getAngleTo(this.line1.getClosestPointOnEntity(this.pos1));
+    var angle2 = ip.getAngleTo(this.line2.getClosestPointOnEntity(this.pos2));
+    var angleDiff = RMath.getAngleDifference(angle1, angle2);
+    if (angleDiff>Math.PI) {
+        angleDiff = angleDiff - 2*Math.PI;
+    }
+
+    var op = new RAddObjectsOperation();
+    for (var n=1; n<=this.number; ++n) {
+        var angle = angle1 + (angleDiff / (this.number+1) * n);
+
+        // create vector from intersection to bisected angle / length:
+        var vector = new RVector();
+        vector.setPolar(this.length, angle);
+
+        var line = new RLineEntity(
+            doc,
+            new RLineData(ip, ip.operator_add(vector))
+        );
+
+        op.addObject(line);
+    }
+
+    return op;
+};
+
+LineBisector.prototype.update = function() {
+    var di = this.getDocumentInterface();
+    di.clearPreview();
+    var op = this.getOperation(false);
+    if (!isNull(op)) {
+        di.previewOperation(op);
+    }
+    di.repaintViews();
+};
+
+LineBisector.prototype.slotLengthChanged = function(value) {
+    this.length = value;
+    this.update();
+};
+
+LineBisector.prototype.slotNumberChanged = function(value) {
+    this.number = value;
+    this.update();
+};
+

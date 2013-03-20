@@ -1,0 +1,3 @@
+NAME = $${TARGET} 
+SOURCES = $${TARGET}.js
+OTHER_FILES = $${TARGET}.dox

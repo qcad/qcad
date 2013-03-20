@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RColor" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="true" hasShell="false" sharedPointerSupport="false"
+  isQObject="false" hasStreamOperator="true" isAbstract="false"
+  isScriptable="true">
+    <baseClass name="QColor" specifier="public" />
+    <enum name="Mode">
+      <value name="ByLayer" />
+      <value name="ByBlock" />
+      <value name="Fixed" />
+    </enum>
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="int" typeName="int" name="r" isConst="false" />
+        <arg type="int" typeName="int" name="g" isConst="false" />
+        <arg type="int" typeName="int" name="b" isConst="false" />
+        <arg type="int" typeName="int" name="a" hasDefault="true"
+        default="255" isConst="false" />
+        <arg type="RColor::Mode" typeName="RColor::Mode"
+        name="mode" hasDefault="true" default="RColor :: Fixed"
+        isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RColor::Mode" typeName="RColor::Mode"
+        name="mode" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+        <arg type="RColor::Mode" typeName="RColor::Mode"
+        name="mode" hasDefault="true" default="RColor :: Fixed"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getCustomColorCode" cppName="getCustomColorCode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getColorIndex" cppName="getColorIndex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="createFromCadIndex" cppName="createFromCadIndex"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="code"
+        isConst="true" />
+      </variant>
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="int" typeName="int" name="code"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="createFromCadCustom"
+    cppName="createFromCadCustom" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="code"
+        isConst="true" />
+      </variant>
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="int" typeName="int" name="code"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="createFromName" cppName="createFromName"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getList" cppName="getList" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QPair &lt; QString , RColor &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onlyFixed"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getIcon" cppName="getIcon" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QIcon" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="color"
+        isConst="true" />
+        <arg type="QSize &amp;" typeName="QSize" name="size"
+        hasDefault="true" default="RDEFAULT_QSIZE_ICON"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getHash" cppName="getHash" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="long" isPureVirtual="false" />
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getName" cppName="getName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="isByLayer" cppName="isByLayer" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isByBlock" cppName="isByBlock" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isFixed" cppName="isFixed" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="toCompat" cppName="toCompat" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QColor" isPureVirtual="false" />
+    </method>
+    <method name="getHighlighted" cppName="getHighlighted"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="color"
+        isConst="true" />
+        <arg type="QColor &amp;" typeName="QColor" name="bgColor"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator==" cppName="operator=="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="color"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator!=" cppName="operator!="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="color"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="operator&lt;" cppName="operator&lt;"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="color"
+        isConst="true" />
+      </variant>
+    </method>
+    <property name="CompatByLayer" type="QColor" isConst="false"
+    isStatic="true" />
+    <property name="CompatByBlock" type="QColor" isConst="false"
+    isStatic="true" />
+  </class>
+</unit>

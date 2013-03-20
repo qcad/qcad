@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class name="RFileImporterAdapter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RFileImporter" specifier="public" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+        <arg type="RMessageHandler *" typeName="RMessageHandler *"
+        name="messageHandler" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="RProgressHandler *"
+        typeName="RProgressHandler *" name="progressHandler"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="importFile" cppName="importFile"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
+    </method>
+    <method name="canImport" cppName="canImport" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

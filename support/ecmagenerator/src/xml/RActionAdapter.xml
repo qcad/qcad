@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RPropertyEvent" />
+  <class_decl name="RGraphicsScene" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="RCommandEvent" />
+  <class_decl name="RCoordinateEvent" />
+  <class_decl name="RDocument" />
+  <class_decl name="REntityPickEvent" />
+  <class_decl name="RMouseEvent" />
+  <class_decl name="RWheelEvent" />
+  <class_decl name="RGuiAction" />
+  <class_decl name="RStorage" />
+  <class_decl name="RTabletEvent" />
+  <class name="RActionAdapter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RAction" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RGuiAction *" typeName="RGuiAction *"
+        name="guiAction" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="beginEvent" cppName="beginEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setGraphicsView" cppName="setGraphicsView"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsView *" typeName="RGraphicsView *"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="finishEvent" cppName="finishEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="suspendEvent" cppName="suspendEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="resumeEvent" cppName="resumeEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="escapeEvent" cppName="escapeEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="keyPressEvent" cppName="keyPressEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent &amp;" typeName="QKeyEvent" name=""
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="keyReleaseEvent" cppName="keyReleaseEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent &amp;" typeName="QKeyEvent" name=""
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="mousePressEvent" cppName="mousePressEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="mouseMoveEvent" cppName="mouseMoveEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="mouseReleaseEvent" cppName="mouseReleaseEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="mouseDoubleClickEvent"
+    cppName="mouseDoubleClickEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="wheelEvent" cppName="wheelEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RWheelEvent &amp;" typeName="RWheelEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="tabletEvent" cppName="tabletEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTabletEvent &amp;" typeName="RTabletEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="swipeGestureEvent" cppName="swipeGestureEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSwipeGesture &amp;" typeName="QSwipeGesture"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="panGestureEvent" cppName="panGestureEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPanGesture &amp;" typeName="QPanGesture"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="pinchGestureEvent" cppName="pinchGestureEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPinchGesture &amp;" typeName="QPinchGesture"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="commandEvent" cppName="commandEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RCommandEvent &amp;" typeName="RCommandEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="commandEventPreview"
+    cppName="commandEventPreview" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RCommandEvent &amp;" typeName="RCommandEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="coordinateEvent" cppName="coordinateEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RCoordinateEvent &amp;"
+        typeName="RCoordinateEvent" name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="coordinateEventPreview"
+    cppName="coordinateEventPreview" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RCoordinateEvent &amp;"
+        typeName="RCoordinateEvent" name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="entityPickEvent" cppName="entityPickEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntityPickEvent &amp;"
+        typeName="REntityPickEvent" name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="entityPickEventPreview"
+    cppName="entityPickEventPreview" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntityPickEvent &amp;"
+        typeName="REntityPickEvent" name="" isConst="false" />
+      </variant>
+    </method>
+    <method name="propertyChangeEvent"
+    cppName="propertyChangeEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyEvent &amp;" typeName="RPropertyEvent"
+        name="" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

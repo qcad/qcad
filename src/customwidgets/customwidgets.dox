@@ -1,0 +1,47 @@
+/*!
+
+\page CustomWidgets Custom Widgets
+
+In this example the widget we want to make usable for the designer is called \c RListView,
+which is derived from \c QListView.
+The plugin class we create will be named \c RListViewPlugin. 
+
+\section new_class Creating the Plugin Class
+
+Create the new header file as shown below:
+
+\include trunk/src/plugins/qt/RListViewPlugin.h
+
+Create the new class. Be sure to include both, the Plugin header file just created, and
+the header file of the widget you want to map.
+It might be necessary to include the base class of your class as well, in this example
+\c QListView (\c RListView derives for \c QListView).
+
+\include RListViewPlugin.cpp
+
+\section new_class Adding the new Plugin Class to the custom Widgets
+
+Every plugin must be initialized in \c RCustomWidgets:
+
+\code
+// existing includes
+...
+// include the created header file
+#include "RListViewPlugin.h"
+
+RCustomWidgets::RCustomWidgets(QObject *parent) :
+    QObject(parent) {
+    // existing plugins
+    ...
+    // append the new plugin to the widgets
+    widgets.append(new RListViewPlugin(this));
+}
+\endcode
+
+That's it. Re-start the Designer and check if the plugin library is loaded correctly
+(Menu "About: Plugins"). The newly create custom widgets is now shown under the group
+"RCustomWidgets".
+
+<p>&nbsp;</p>
+
+*/

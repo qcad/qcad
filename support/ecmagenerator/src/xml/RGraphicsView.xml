@@ -1,0 +1,644 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RAction" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="RGraphicsScene" />
+  <class_decl name="RLine" />
+  <class_decl name="RMouseEvent" />
+  <class_decl name="RTabletEvent" />
+  <class_decl name="RWheelEvent" />
+  <class name="RGraphicsView"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <baseClass name="RNonCopyable" specifier="private" />
+    <enum name="ColorMode">
+      <value name="FullColor" />
+      <value name="GrayScale" />
+      <value name="BlackWhite" />
+    </enum>
+    <constructor>
+      <variant>
+        <arg type="RGraphicsScene *" typeName="RGraphicsScene *"
+        name="scene" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="setViewportNumber" cppName="setViewportNumber"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="n" isConst="false" />
+      </variant>
+    </method>
+    <method name="getViewportNumber" cppName="getViewportNumber"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="clearCaches" cppName="clearCaches"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setDisplayOnlyCurrentUcs"
+    cppName="setDisplayOnlyCurrentUcs" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setScene" cppName="setScene" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsScene *" typeName="RGraphicsScene *"
+        name="scene" isConst="false" />
+        <arg type="bool" typeName="bool" name="regen"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="getScene" cppName="getScene" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RGraphicsScene *"
+      isPureVirtual="false" />
+    </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument *" isPureVirtual="false" />
+    </method>
+    <method name="getDocumentInterface"
+    cppName="getDocumentInterface" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RDocumentInterface *"
+      isPureVirtual="false" />
+    </method>
+    <method name="mapFromView" cppName="mapFromView"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+        <arg type="double" typeName="double" name="z"
+        hasDefault="true" default="0.0" isConst="false" />
+      </variant>
+    </method>
+    <method name="mapToView" cppName="mapToView" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+      <variant returnType="RBox" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="mapDistanceFromView"
+    cppName="mapDistanceFromView" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="d"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="mapDistanceToView" cppName="mapDistanceToView"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="d"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="mapCornersFromView" cppName="mapCornersFromView"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getBox" cppName="getBox" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RBox" isPureVirtual="false" />
+    </method>
+    <method name="getMinimum" cppName="getMinimum"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getMaximum" cppName="getMaximum"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="handleTerminateEvent"
+    cppName="handleTerminateEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTerminateEvent &amp;"
+        typeName="RTerminateEvent" name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleKeyPressEvent"
+    cppName="handleKeyPressEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent &amp;" typeName="QKeyEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleKeyReleaseEvent"
+    cppName="handleKeyReleaseEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent &amp;" typeName="QKeyEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="simulateMouseMoveEvent"
+    cppName="simulateMouseMoveEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="handleMouseMoveEvent"
+    cppName="handleMouseMoveEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleMousePressEvent"
+    cppName="handleMousePressEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleMouseReleaseEvent"
+    cppName="handleMouseReleaseEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleMouseDoubleClickEvent"
+    cppName="handleMouseDoubleClickEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleWheelEvent" cppName="handleWheelEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RWheelEvent &amp;" typeName="RWheelEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleTabletEvent" cppName="handleTabletEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTabletEvent &amp;" typeName="RTabletEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="handleSwipeGestureEvent"
+    cppName="handleSwipeGestureEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSwipeGesture &amp;" typeName="QSwipeGesture"
+        name="gesture" isConst="false" />
+      </variant>
+    </method>
+    <method name="handlePanGestureEvent"
+    cppName="handlePanGestureEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPanGesture &amp;" typeName="QPanGesture"
+        name="gesture" isConst="false" />
+      </variant>
+    </method>
+    <method name="handlePinchGestureEvent"
+    cppName="handlePinchGestureEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPinchGesture &amp;" typeName="QPinchGesture"
+        name="gesture" isConst="false" />
+      </variant>
+    </method>
+    <method name="hasFocus" cppName="hasFocus" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="true" />
+    </method>
+    <method name="removeFocus" cppName="removeFocus"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="viewportChangeEvent"
+    cppName="viewportChangeEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="saveViewport" cppName="saveViewport"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="restoreViewport" cppName="restoreViewport"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="zoomIn" cppName="zoomIn" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="zoomOut" cppName="zoomOut" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="zoom" cppName="zoom" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+        <arg type="double" typeName="double" name="factor"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="zoomTo" cppName="zoomTo" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="window"
+        isConst="true" />
+        <arg type="int" typeName="int" name="margin"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </method>
+    <method name="zoomPrevious" cppName="zoomPrevious"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="autoZoom" cppName="autoZoom" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="margin"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="zoomToSelection" cppName="zoomToSelection"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="centerToPoint" cppName="centerToPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="centerToBox" cppName="centerToBox"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="pan" cppName="pan" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="delta"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="startPan" cppName="startPan" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getFactor" cppName="getFactor" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="includeStepFactor"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="setFactor" cppName="setFactor" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="f"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="regen"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="getOffset" cppName="getOffset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="includeStepOffset"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="setOffset" cppName="setOffset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="regen"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="regenerate" cppName="regenerate"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="bool" typeName="bool" name="force"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="repaintView" cppName="repaintView"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="getWidth" cppName="getWidth" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getHeight" cppName="getHeight" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setNavigationAction"
+    cppName="setNavigationAction" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RAction *" typeName="RAction *" name="action"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getGrid" cppName="getGrid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RGrid *" isPureVirtual="false" />
+    </method>
+    <method name="setGrid" cppName="setGrid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGrid *" typeName="RGrid *" name="g"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setGridVisible" cppName="setGridVisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isGridVisible" cppName="isGridVisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setDraftMode" cppName="setDraftMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getDraftMode" cppName="getDraftMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="paintGridPoint" cppName="paintGridPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="paintGridLine" cppName="paintGridLine"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCursor" cppName="getCursor" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QCursor" isPureVirtual="false" />
+    </method>
+    <method name="setCursor" cppName="setCursor" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="Qt::CursorShape" typeName="Qt::CursorShape"
+        name="" isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QCursor &amp;" typeName="QCursor" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getClosestReferencePoint"
+    cppName="getClosestReferencePoint" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="screenPosition" isConst="true" />
+        <arg type="int" typeName="int" name="range"
+        isConst="false" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="screenPosition" isConst="true" />
+      </variant>
+    </method>
+    <method name="getClosestEntity" cppName="getClosestEntity"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="REntity::Id" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="screenPosition" isConst="true" />
+        <arg type="int" typeName="int" name="range"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="includeLockedLayers"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="setBackgroundColor" cppName="setBackgroundColor"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QColor &amp;" typeName="QColor" name="col"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getBackgroundColor" cppName="getBackgroundColor"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QColor" isPureVirtual="false" />
+    </method>
+    <method name="getMargin" cppName="getMargin" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setMargin" cppName="setMargin" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="m" isConst="false" />
+      </variant>
+    </method>
+    <method name="setPrinting" cppName="setPrinting"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isPrinting" cppName="isPrinting"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setPrintPreview" cppName="setPrintPreview"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isPrintPreview" cppName="isPrintPreview"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setPrintPointSize" cppName="setPrintPointSize"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setColorMode" cppName="setColorMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsView::ColorMode"
+        typeName="RGraphicsView::ColorMode" name="cm"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getColorMode" cppName="getColorMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsView::ColorMode"
+      isPureVirtual="false" />
+    </method>
+    <method name="getTextLabels" cppName="getTextLabels"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RTextLabel &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="clearTextLabels" cppName="clearTextLabels"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="addTextLabel" cppName="addTextLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTextLabel &amp;" typeName="RTextLabel"
+        name="textLabel" isConst="true" />
+      </variant>
+    </method>
+    <method name="getLastKnownMousePosition"
+    cppName="getLastKnownMousePosition" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getCurrentStepScaleFactor"
+    cppName="getCurrentStepScaleFactor" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setCurrentStepScaleFactor"
+    cppName="setCurrentStepScaleFactor" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="f"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getCurrentStepOffset"
+    cppName="getCurrentStepOffset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setCurrentStepOffset"
+    cppName="setCurrentStepOffset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setTextHeightThresholdOverride"
+    cppName="setTextHeightThresholdOverride" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="v" isConst="false" />
+      </variant>
+    </method>
+    <method name="getTextHeightThresholdOverride"
+    cppName="getTextHeightThresholdOverride" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="updateTextHeightThreshold"
+    cppName="updateTextHeightThreshold" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="isPathVisible" cppName="isPathVisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="path" isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

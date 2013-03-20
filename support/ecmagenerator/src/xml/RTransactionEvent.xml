@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RTransactionEvent"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QEvent" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="hasOnlyChanges" cppName="hasOnlyChanges"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getEntityTypeFilter"
+    cppName="getEntityTypeFilter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

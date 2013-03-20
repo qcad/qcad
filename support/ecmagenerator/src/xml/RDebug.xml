@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RDebug" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="false" hasShell="false" sharedPointerSupport="false"
+  isQObject="false" hasStreamOperator="false" isAbstract="false"
+  isScriptable="true">
+    <method name="printBacktrace" cppName="printBacktrace"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="prefix"
+        hasDefault="true" default="RDEFAULT_QString"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="startTimer" cppName="startTimer"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" hasDefault="true"
+        default="0" isConst="false" />
+      </variant>
+    </method>
+    <method name="stopTimer" cppName="stopTimer" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="msg"
+        isConst="true" />
+      </variant>
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="msg"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

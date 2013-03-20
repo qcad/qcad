@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./snap" filename="RRestrictHorizontal.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RRESTRICTHORIZONTAL_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RRESTRICTHORIZONTAL_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RRestrictOrthogonal.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RDocumentInterface</name>;</class_decl>
+  <comment type="block">/** * \brief Horizontal snap restriction
+  implementation. * * \scriptable * * \ingroup snap */</comment>
+  <class>class 
+  <name>RRestrictHorizontal</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RRestrictOrthogonal</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor>
+    <name>RRestrictHorizontal</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>RDocumentInterface</name>&amp;</type>
+        <name>documentInterface</name>
+      </decl>
+    </param>)</parameter_list>
+    <member_list>: 
+    <call>
+      <name>RRestrictOrthogonal</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>documentInterface</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></member_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>mode</name>= 
+    <name>Horizonal</name></expr>;</expr_stmt>}</block>
+  </constructor>
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RRestrictHorizontal</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RRestrictHorizontal*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

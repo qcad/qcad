@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RModifyObjectsOperation"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RAddObjectsOperation" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="bool" typeName="bool" name="undoable"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="QList &lt; QSharedPointer &lt; RObject &gt; &gt; &amp;"
+        typeName="QList &lt; QSharedPointer &lt; RObject &gt; &gt;"
+        name="list" isConst="false" />
+        <arg type="bool" typeName="bool" name="undoable"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="transformSelection" cppName="transformSelection"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransformation *" typeName="RTransformation *"
+        name="transformation" isConst="false" />
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="di"
+        isConst="false" />
+        <arg type="int" typeName="int" name="copies"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="selectResult"
+        isConst="false" />
+        <arg type="bool" typeName="bool"
+        name="useCurrentAttributes" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Text</class>
+ <widget class="QWidget" name="Text">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>286</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QCheckBox" name="ShowFontPreview">
+     <property name="text">
+      <string>Show font preview in font controls</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="UseReducedFontList">
+     <property name="text">
+      <string>Use reduced selection of fonts:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" rowspan="2">
+      <widget class="QWidget" name="widget" native="true"/>
+     </item>
+     <item row="0" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QToolButton" name="UncheckAll">
+         <property name="text">
+          <string>Uncheck all</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="CheckAll">
+         <property name="text">
+          <string>Check all</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="1">
+      <widget class="QListWidget" name="ReducedFontList"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>UseReducedFontList</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ReducedFontList</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>154</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UseReducedFontList</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>UncheckAll</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>37</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>72</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UseReducedFontList</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>CheckAll</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>58</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

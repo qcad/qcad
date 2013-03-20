@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>IsoProject</class>
+ <widget class="QWidget" name="IsoProject">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QToolButton" name="Top">
+     <property name="toolTip">
+      <string>Top</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Top.svg</normaloff>Top.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ProjectionType</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Bottom">
+     <property name="toolTip">
+      <string>Bottom</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Bottom.svg</normaloff>Bottom.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ProjectionType</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Left">
+     <property name="toolTip">
+      <string>Left</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Left.svg</normaloff>Left.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ProjectionType</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="LeftBack">
+     <property name="toolTip">
+      <string>Left back</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>LeftBack.svg</normaloff>LeftBack.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ProjectionType</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Right">
+     <property name="toolTip">
+      <string>Right</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Right.svg</normaloff>Right.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ProjectionType</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="RightBack">
+     <property name="toolTip">
+      <string>Right back</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>RightBack.svg</normaloff>RightBack.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ProjectionType</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="RotateCCW">
+     <property name="toolTip">
+      <string>Rotate selection counter-clockwise before projection</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>RotateCCW.svg</normaloff>RotateCCW.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="RotateCW">
+     <property name="toolTip">
+      <string>Rotate selection clockwise before projection</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>RotateCW.svg</normaloff>RotateCW.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="TrueScale">
+     <property name="toolTip">
+      <string>Scale projection to original size ('isometric drawing')</string>
+     </property>
+     <property name="text">
+      <string>True scale</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="ProjectionType"/>
+ </buttongroups>
+</ui>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RDebug.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDEBUG_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RDEBUG_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;fstream&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;ostream&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;stdarg.h&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;stdio.h&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QTime&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QFile&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:ifdef>#
+  <cpp:directive>ifdef</cpp:directive>
+  <name>Q_OS_MAC</name></cpp:ifdef>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>
+  &lt;CoreServices/CoreServices.h&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;mach/mach.h&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;mach/mach_time.h&gt;</cpp:file></cpp:include>
+  <cpp:undef>#
+  <cpp:directive>undef</cpp:directive>
+  <name>check</name></cpp:undef>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>Q_OS_WIN32</name></cpp:ifndef>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;execinfo.h&gt;</cpp:file></cpp:include>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDEFAULT_QString</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RDEFAULT_QString</name>
+  <name>QString</name>()</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <comment type="block">/** * This class provides some static
+  methods for printing debugging information to * stderr. The
+  methods accept a format string and parameters in the same way *
+  as the printf functions from standard C. * * Messages can be
+  logged with different priorities. * * While there is no
+  restriction as to what is logged, it is a good idea to * log the
+  class name and function name first. * * \code * // output for
+  development: * qDebug("RMyClass::myFunction: i = %d", i); * //
+  warnings ("this should not happen under normal cicumstances"): *
+  qWarning("RMyClass::myFunction: cannot open file '%s'",
+  fileName); * // indication for a bug in the application: *
+  qWarning("RMyClass::myFunction: parent is NULL. Aborting."); *
+  \endcode * * \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RDebug</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>printBacktrace</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+    <name>const</name>
+    <name>QString</name>&amp;</type>
+    <name>prefix</name>=
+    <init>
+      <expr>
+        <name>RDEFAULT_QString</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * Starts a timer with the given ID.
+  */</comment>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>startTimer</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>int</name>
+    </type>
+    <name>id</name>=
+    <init>
+      <expr>0</expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * Stops the timer with the given ID and
+  prints the given message together * with the time that has
+  elapsed. */</comment>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
+  <name>stopTimer</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>id</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>msg</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * Stops the timer with ID 0 and prints
+  the given message together * with the time that has elapsed.
+  */</comment>
+  <function>
+    <type>
+      <name>static</name>
+      <name>int</name>
+    </type>
+    <name>stopTimer</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>msg</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>stopTimer</name>
+        <argument_list>(
+        <argument>
+          <expr>0</expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>msg</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function></public>
+  <private>private: 
+  <cpp:ifdef>#
+  <cpp:directive>ifdef</cpp:directive>
+  <name>Q_OS_MAC</name></cpp:ifdef>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>uint64_t</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>timerMac</name>
+  </decl>;</decl_stmt>
+  <cpp:else>#
+  <cpp:directive>else</cpp:directive></cpp:else>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>QTime</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>timer</name>
+  </decl>;</decl_stmt>
+  <cpp:endif>#
+  <cpp:directive>
+  endif</cpp:directive></cpp:endif></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RDebug*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

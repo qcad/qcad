@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphicsViewColors</class>
+ <widget class="QScrollArea" name="GraphicsViewColors">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>452</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="widgetResizable">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="scrollAreaWidgetContents">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>450</width>
+     <height>568</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <property name="fieldGrowthPolicy">
+     <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+    </property>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Background:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="RColorCombo" name="BackgroundColor">
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Crosshairs:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>Inactive Crosshairs:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="RColorCombo" name="CrosshairColorInactive">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="128">
+        <red>108</red>
+        <green>79</green>
+        <blue>0</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Origin:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="RColorCombo" name="OriginColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="192">
+        <red>255</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Relative Zero:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="RColorCombo" name="RelativeZeroColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color>
+        <red>162</red>
+        <green>36</green>
+        <blue>36</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>Reference Point:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="RColorCombo" name="ReferencePointColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color>
+        <red>0</red>
+        <green>0</green>
+        <blue>172</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Grid:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="RColorCombo" name="GridColor">
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="192">
+        <red>192</red>
+        <green>192</green>
+        <blue>192</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Meta Grid:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="RColorCombo" name="MetaGridColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="64">
+        <red>192</red>
+        <green>192</green>
+        <blue>192</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Zoom Box:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="RColorCombo" name="ZoomBoxColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color>
+        <red>127</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Selection:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="RColorCombo" name="SelectionColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="128">
+        <red>164</red>
+        <green>70</green>
+        <blue>70</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Selection Box Border:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="RColorCombo" name="SelectionBoxColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color>
+        <red>128</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>Selection Box:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1">
+     <widget class="RColorCombo" name="SelectionBoxBackgroundColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="30">
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>Cross Selection Box:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="RColorCombo" name="SelectionBoxBackgroundCrossColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="30">
+        <red>0</red>
+        <green>255</green>
+        <blue>0</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Auxiliary Shapes:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="RColorCombo" name="AuxShapeColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color>
+        <red>121</red>
+        <green>118</green>
+        <blue>197</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="RColorCombo" name="CrosshairColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="128">
+        <red>255</red>
+        <green>194</green>
+        <blue>0</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="RColorCombo" name="TextLabelBackgroundColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color alpha="184">
+        <red>234</red>
+        <green>199</green>
+        <blue>47</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Info Label Background:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="RColorCombo" name="TextLabelColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color>
+        <red>249</red>
+        <green>198</green>
+        <blue>31</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0">
+     <widget class="QLabel" name="label_16">
+      <property name="text">
+       <string>Info Label Font:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0">
+     <widget class="QLabel" name="label_17">
+      <property name="text">
+       <string>Measurement Tools:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1">
+     <widget class="RColorCombo" name="MeasurementToolsColor">
+      <property name="onlyFixed" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="color" stdset="0">
+       <color>
+        <red>155</red>
+        <green>220</green>
+        <blue>112</blue>
+       </color>
+      </property>
+      <property name="blackWhite" stdset="0">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RColorCombo</class>
+   <extends>QComboBox</extends>
+   <header>RColorCombo.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

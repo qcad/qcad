@@ -1,0 +1,7 @@
+/*!
+
+\defgroup snap Snap Module
+
+\brief Implements object and grid snaps.
+
+*/

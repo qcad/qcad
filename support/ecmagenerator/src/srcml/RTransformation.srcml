@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./operations" filename="RTransformation.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RTRANSFORMATION_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RTRANSFORMATION_H</name></cpp:define>
+  <comment type="block">/** * Helper class for
+  RModifyObjectsOperation::transformSelection * * \ingroup
+  operations * \scriptable */</comment>
+  <class>class 
+  <name>RTransformation</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor>
+    <name>RTransformation</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </constructor>
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RTransformation</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RTransformation*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

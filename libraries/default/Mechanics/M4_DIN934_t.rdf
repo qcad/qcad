@@ -1,0 +1,18 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ql="http://qcad.org/ql/elements/1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dcterms:license>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:license>
+    <dcterms:created>2003-08-07</dcterms:created>
+    <dc:creator>Peter (pa3fbo)</dc:creator>
+    <ql:perspective>top</ql:perspective>
+    <dc:subject xml:lang="en">
+      <rdf:Bag>
+        <rdf:li>DIN934</rdf:li>
+        <rdf:li>Screw</rdf:li>
+        <rdf:li>Metric</rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+  </rdf:Description>
+</rdf:RDF>

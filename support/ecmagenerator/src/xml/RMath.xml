@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RMath" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="false" hasShell="false" sharedPointerSupport="false"
+  isQObject="false" hasStreamOperator="false" isAbstract="false"
+  isScriptable="true">
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="uninit" cppName="uninit" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="mround" cppName="mround" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="trunc" cppName="trunc" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="pow" cppName="pow" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="x"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isNormal" cppName="isNormal" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isNaN" cppName="isNaN" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isInf" cppName="isInf" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="eval" cppName="eval" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="expression" isConst="true" />
+        <arg type="bool *" typeName="bool *" name="ok"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </method>
+    <method name="getError" cppName="getError" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="hasError" cppName="hasError" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="angleToString" cppName="angleToString"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="rad2deg" cppName="rad2deg" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="deg2rad" cppName="deg2rad" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="rad2gra" cppName="rad2gra" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="gra2deg" cppName="gra2deg" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getGcd" cppName="getGcd" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="int" typeName="int" name="a" isConst="false" />
+        <arg type="int" typeName="int" name="b" isConst="false" />
+      </variant>
+    </method>
+    <method name="isAngleBetween" cppName="isAngleBetween"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a2"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="reversed"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getNormalizedAngle" cppName="getNormalizedAngle"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getRelativeAngle" cppName="getRelativeAngle"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+        <arg type="double" typeName="double" name="baseAngle"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAngleDifference" cppName="getAngleDifference"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a2"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAngleDifference180"
+    cppName="getAngleDifference180" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a2"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="makeAngleReadable" cppName="makeAngleReadable"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="readable"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool *" typeName="bool *" name="corrected"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </method>
+    <method name="isAngleReadable" cppName="isAngleReadable"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: AngleTolerance"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isSameDirection" cppName="isSameDirection"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="dir1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="dir2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="tol"
+        hasDefault="true" default="RS :: AngleTolerance"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="absmod" cppName="absmod" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="int" typeName="int" name="a" isConst="false" />
+        <arg type="int" typeName="int" name="b" isConst="false" />
+      </variant>
+    </method>
+    <method name="toFractionString" cppName="toFractionString"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+        <arg type="int" typeName="int" name="maxDenominator"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="toFraction" cppName="toFraction"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+        <arg type="int" typeName="int" name="maxDenominator"
+        isConst="false" />
+        <arg type="int &amp;" typeName="int" name="number"
+        isConst="false" />
+        <arg type="int &amp;" typeName="int" name="numerator"
+        isConst="false" />
+        <arg type="int &amp;" typeName="int" name="denominator"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="simplify" cppName="simplify" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="numerator"
+        isConst="false" />
+        <arg type="int" typeName="int" name="denominator"
+        isConst="false" />
+        <arg type="int &amp;" typeName="int" name="numeratorRes"
+        isConst="false" />
+        <arg type="int &amp;" typeName="int" name="denominatorRes"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="fuzzyCompare" cppName="fuzzyCompare"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="v2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="parseScale" cppName="parseScale"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="scaleString" isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

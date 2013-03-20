@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPainterPathDevice"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QPaintDevice" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="getPainterPaths" cppName="getPainterPaths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPainterPath &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="paintEngine" cppName="paintEngine"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QPaintEngine *" isPureVirtual="false" />
+    </method>
+    <method name="metric" cppName="metric" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="PaintDeviceMetric" typeName="PaintDeviceMetric"
+        name="metric" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

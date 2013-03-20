@@ -1,0 +1,2 @@
+NAME = $${TARGET} 
+OTHER_FILES = $${TARGET}.dox

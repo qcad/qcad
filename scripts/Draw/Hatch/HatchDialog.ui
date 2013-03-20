@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HatchDialog</class>
+ <widget class="QDialog" name="HatchDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>431</width>
+    <height>293</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Hatch</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Hatch.svg</normaloff>Hatch.svg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QGridLayout" name="gridLayout" columnstretch="0,1">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="Type">
+       <property name="title">
+        <string>Type</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="SolidFill">
+          <property name="text">
+           <string>Solid Fill</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="HatchPattern">
+          <property name="text">
+           <string>Hatch Pattern</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="1" rowspan="2">
+      <widget class="QGroupBox" name="PreviewGroup">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Preview</string>
+       </property>
+       <layout class="QVBoxLayout" name="PreviewLayout"/>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="PatternGroup">
+       <property name="title">
+        <string>Pattern</string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="margin">
+         <number>8</number>
+        </property>
+        <item>
+         <widget class="QComboBox" name="Pattern"/>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="layout">
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Angle:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Scale:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="RMathLineEdit" name="Scale">
+            <property name="text">
+             <string notr="true">1.0</string>
+            </property>
+            <property name="angle" stdset="0">
+             <bool>false</bool>
+            </property>
+            <property name="defaultUnit" stdset="0">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="RMathLineEdit" name="Angle">
+            <property name="text">
+             <string notr="true">0.0</string>
+            </property>
+            <property name="angle" stdset="0">
+             <bool>true</bool>
+            </property>
+            <property name="defaultUnit" stdset="0">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="spacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>Pattern</tabstop>
+  <tabstop>Scale</tabstop>
+  <tabstop>Angle</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>HatchDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>169</x>
+     <y>504</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>HatchDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>169</x>
+     <y>504</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>HatchPattern</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>PatternGroup</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

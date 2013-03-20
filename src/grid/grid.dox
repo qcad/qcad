@@ -1,0 +1,7 @@
+/*!
+
+\defgroup grid Grid Module
+
+\brief Implements an orthogonal grid.
+
+*/

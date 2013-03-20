@@ -1,0 +1,18 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ql="http://qcad.org/ql/elements/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dcterms:license>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:license>
+    <dc:title xml:lang="en">Desk</dc:title>
+    <dc:creator>Andrew Mustun</dc:creator>
+    <ql:dimension>2d</ql:dimension>
+    <ql:perspective>top</ql:perspective>
+    <ql:presentation>schematic</ql:presentation>
+    <ql:levelOfDetail>medium</ql:levelOfDetail>
+    <dc:subject xml:lang="en">
+      <rdf:Bag>
+        <rdf:li>table</rdf:li>
+        <rdf:li>workplace</rdf:li>
+        <rdf:li>workstation</rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+  </rdf:Description>
+</rdf:RDF>

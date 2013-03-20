@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RFileExporter.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RFILEEXPORTER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RFILEEXPORTER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RExporter.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * \brief Base class for file exporters.
+  * * File exporters export \ref RDocument objects into files of a
+  specific format. * * \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RFileExporter</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RExporter</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor_decl>
+  <name>RFileExporter</name>
+  <parameter_list>()</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RFileExporter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>&amp;</type>
+      <name>document</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <destructor_decl>
+  <specifier>virtual</specifier>
+  <name>~RFileExporter</name>
+  <parameter_list>()</parameter_list>;</destructor_decl>
+  <comment type="block">/** * Must be implemented by file exporters
+  to correct the given * file name if necesary (add extension based
+  on chosen name filter). */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getCorrectedFileName</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>fileName</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>nameFilter</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * Must be implemented by file exporters
+  to export the document * into the given file. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>bool</name>
+  </type>
+  <name>exportFile</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>fileName</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>nameFilter</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>setFileName</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>=
+  0</specifier>;</function_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RFileExporter*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

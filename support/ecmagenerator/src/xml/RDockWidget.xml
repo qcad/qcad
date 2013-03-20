@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RDockWidget"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QDockWidget" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default=" NULL" isConst="false" />
+        <arg type="Qt::WindowFlags" typeName="Qt::WindowFlags"
+        name="flags" hasDefault="true" default="0"
+        isConst="false" />
+      </variant>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default=" NULL" isConst="false" />
+        <arg type="Qt::WindowFlags" typeName="Qt::WindowFlags"
+        name="flags" hasDefault="true" default="0"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="showEvent" cppName="showEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QShowEvent *" typeName="QShowEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="hideEvent" cppName="hideEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QHideEvent *" typeName="QHideEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

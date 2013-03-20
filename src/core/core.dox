@@ -1,0 +1,10 @@
+/*!
+
+\defgroup core Core Module
+
+\brief This module contains some fundamental core classes and abstract
+base classes for extensions, e.g. RStorage as an abstract base
+class for all storage implementations or REntity, the base class for all
+entity classes in the Entity module.
+
+*/

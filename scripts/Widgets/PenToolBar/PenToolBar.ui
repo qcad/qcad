@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Pen</class>
+ <widget class="QWidget" name="Pen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>405</width>
+    <height>32</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="RColorCombo" name="Color">
+     <property name="onlyFixed" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="blackWhite" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="showAlphaChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="color" stdset="0">
+      <color>
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RLineweightCombo" name="Lineweight">
+     <property name="onlyFixed" stdset="0">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RLinetypeCombo" name="Linetype">
+     <property name="onlyFixed" stdset="0">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Reset">
+     <property name="icon">
+      <iconset>
+       <normaloff>../../ResetToDefaults.svg</normaloff>../../ResetToDefaults.svg</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RColorCombo</class>
+   <extends>QComboBox</extends>
+   <header>RColorCombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RLineweightCombo</class>
+   <extends>QComboBox</extends>
+   <header>RLineweightCombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RLinetypeCombo</class>
+   <extends>QComboBox</extends>
+   <header>RLinetypeCombo.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

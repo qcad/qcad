@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RBlockListener" />
+  <class_decl name="RCoordinateListener" />
+  <class_decl name="RDocument" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="REntity" />
+  <class_decl name="RFocusListener" />
+  <class_decl name="RGraphicsView" />
+  <class_decl name="RLayerListener" />
+  <class_decl name="RPenListener" />
+  <class_decl name="RPropertyListener" />
+  <class_decl name="RSelectionListener" />
+  <class_decl name="RSnapListener" />
+  <class_decl name="RUcsListener" />
+  <class_decl name="RVector" />
+  <class_decl name="RViewFocusListener" />
+  <class_decl name="RViewListener" />
+  <class name="RMainWindow"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <baseClass name="RProgressHandler" specifier="public" />
+    <baseClass name="RMessageHandler" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="getMainWindow" cppName="getMainWindow"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMainWindow *" isPureVirtual="false" />
+    </method>
+    <method name="hasMainWindow" cppName="hasMainWindow"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="installMessageHandler"
+    cppName="installMessageHandler" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument *" isPureVirtual="true" />
+    </method>
+    <method name="getDocumentInterface"
+    cppName="getDocumentInterface" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RDocumentInterface *"
+      isPureVirtual="true" />
+    </method>
+    <method name="getDocumentInterfaceStatic"
+    cppName="getDocumentInterfaceStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RDocumentInterface *"
+      isPureVirtual="false" />
+    </method>
+    <method name="notifyListeners" cppName="notifyListeners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="withNull"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="addCoordinateListener"
+    cppName="addCoordinateListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RCoordinateListener *"
+        typeName="RCoordinateListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyCoordinateListeners"
+    cppName="notifyCoordinateListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addSelectionListener"
+    cppName="addSelectionListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSelectionListener *"
+        typeName="RSelectionListener *" name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifySelectionListeners"
+    cppName="notifySelectionListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="postSelectionChangedEvent"
+    cppName="postSelectionChangedEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="postTransactionEvent"
+    cppName="postTransactionEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </method>
+    <method name="postCloseEvent" cppName="postCloseEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="addPropertyListener"
+    cppName="addPropertyListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyListener *"
+        typeName="RPropertyListener *" name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyPropertyListeners"
+    cppName="notifyPropertyListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="addTransactionListener"
+    cppName="addTransactionListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransactionListener *"
+        typeName="RTransactionListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyTransactionListeners"
+    cppName="notifyTransactionListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+      </variant>
+    </method>
+    <method name="addSnapListener" cppName="addSnapListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSnapListener *" typeName="RSnapListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifySnapListeners"
+    cppName="notifySnapListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addFocusListener" cppName="addFocusListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RFocusListener *" typeName="RFocusListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyFocusListeners"
+    cppName="notifyFocusListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addViewFocusListener"
+    cppName="addViewFocusListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RViewFocusListener *"
+        typeName="RViewFocusListener *" name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyViewFocusListeners"
+    cppName="notifyViewFocusListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsView *" typeName="RGraphicsView *"
+        name="view" isConst="false" />
+      </variant>
+    </method>
+    <method name="propertyChangeEvent"
+    cppName="propertyChangeEvent" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyEvent &amp;" typeName="RPropertyEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="addUcsListener" cppName="addUcsListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RUcsListener *" typeName="RUcsListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyUcsListeners" cppName="notifyUcsListeners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addLayerListener" cppName="addLayerListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLayerListener *" typeName="RLayerListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyLayerListeners"
+    cppName="notifyLayerListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addBlockListener" cppName="addBlockListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBlockListener *" typeName="RBlockListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyBlockListeners"
+    cppName="notifyBlockListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addViewListener" cppName="addViewListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RViewListener *" typeName="RViewListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyViewListeners"
+    cppName="notifyViewListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addPenListener" cppName="addPenListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPenListener *" typeName="RPenListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyPenListeners" cppName="notifyPenListeners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="ucsSetEvent" cppName="ucsSetEvent"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="ucsName"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="escapeEvent" cppName="escapeEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="setGraphicsViewCursor"
+    cppName="setGraphicsViewCursor" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QCursor &amp;" typeName="QCursor" name="cursor"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getWidth" cppName="getWidth" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="true" />
+    </method>
+    <method name="getHeight" cppName="getHeight" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="true" />
+    </method>
+    <method name="getPositionX" cppName="getPositionX"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="true" />
+    </method>
+    <method name="getPositionY" cppName="getPositionY"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="true" />
+    </method>
+    <method name="resize" cppName="resize" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="int" typeName="int" name="width"
+        isConst="false" />
+        <arg type="int" typeName="int" name="height"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="move" cppName="move" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="int" typeName="int" name="x" isConst="false" />
+        <arg type="int" typeName="int" name="y" isConst="false" />
+      </variant>
+    </method>
+    <method name="close" cppName="close" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="setCommandPrompt" cppName="setCommandPrompt"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="setLeftMouseTip" cppName="setLeftMouseTip"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="setRightMouseTip" cppName="setRightMouseTip"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="readSettings" cppName="readSettings"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="writeSettings" cppName="writeSettings"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RListView"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QListView" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="contextMenuEvent" cppName="contextMenuEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QContextMenuEvent *"
+        typeName="QContextMenuEvent *" name="e" isConst="false" />
+      </variant>
+    </method>
+    <method name="mousePressEvent" cppName="mousePressEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMouseEvent *" typeName="QMouseEvent *" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="mouseReleaseEvent" cppName="mouseReleaseEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMouseEvent *" typeName="QMouseEvent *" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="mouseMoveEvent" cppName="mouseMoveEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMouseEvent *" typeName="QMouseEvent *" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="dragEnterEvent" cppName="dragEnterEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDragEnterEvent *" typeName="QDragEnterEvent *"
+        name="e" isConst="false" />
+      </variant>
+    </method>
+    <method name="dragMoveEvent" cppName="dragMoveEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDragMoveEvent *" typeName="QDragMoveEvent *"
+        name="e" isConst="false" />
+      </variant>
+    </method>
+    <method name="dropEvent" cppName="dropEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDropEvent *" typeName="QDropEvent *" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="startDrag" cppName="startDrag"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="Qt::DropActions" typeName="Qt::DropActions"
+        name="supportedActions" isConst="false" />
+      </variant>
+    </method>
+    <method name="selectionChanged" cppName="selectionChanged"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QItemSelection &amp;" typeName="QItemSelection"
+        name="selected" isConst="true" />
+        <arg type="QItemSelection &amp;" typeName="QItemSelection"
+        name="deselected" isConst="true" />
+      </variant>
+    </method>
+    <method name="currentChanged" cppName="currentChanged"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="current" isConst="true" />
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="previous" isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

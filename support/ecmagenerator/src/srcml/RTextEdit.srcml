@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./gui" filename="RTextEdit.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RTEXTEDIT_H_</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RTEXTEDIT_H_</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QTextEdit&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>
+  &lt;QtDesigner/QDesignerExportWidget&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * \scriptable */</comment>
+  <class>class 
+  <comment type="block">/*QDESIGNER_WIDGET_EXPORT*/</comment>
+  <name>RTextEdit</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>QTextEdit</name></super>
+  <block>{
+  <private type="default">
+    <macro>
+      <name>Q_OBJECT</name>
+    </macro>
+  </private>
+  <public>public: 
+  <constructor_decl>
+  <name>RTextEdit</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QWidget</name>*</type>
+      <name>parent</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSize</name>
+  </type>
+  <name>sizeHint</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSize</name>
+  </type>
+  <name>minimumSizeHint</name>
+  <parameter_list>()</parameter_list>
+  <specifier>
+  const</specifier>;</function_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RTextEdit*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

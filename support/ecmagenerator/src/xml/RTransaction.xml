@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RStorage" />
+  <class_decl name="RExporter" />
+  <class_decl name="RDocument" />
+  <class name="RTransaction"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RStorage &amp;" typeName="RStorage"
+        name="storage" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RStorage &amp;" typeName="RStorage"
+        name="storage" isConst="false" />
+        <arg type="int" typeName="int" name="transactionId"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+        <arg type="QList &lt; RObject::Id &gt; &amp;"
+        typeName="QList &lt; RObject::Id &gt;"
+        name="affectedObjects" isConst="true" />
+        <arg type="QMap &lt; RObject::Id , QList &lt; RPropertyChange &gt; &gt; &amp;"
+        typeName="QMap &lt; RObject::Id , QList &lt; RPropertyChange &gt; &gt;"
+        name="propertyChanges" isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="parent" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RStorage &amp;" typeName="RStorage"
+        name="storage" isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="undoable"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="parent" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="setRecordAffectedObjects"
+    cppName="setRecordAffectedObjects" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setAllowAll" cppName="setAllowAll"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setAllowInvisible" cppName="setAllowInvisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setSpatialIndexDisabled"
+    cppName="setSpatialIndexDisabled" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isUndoable" cppName="isUndoable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isFailed" cppName="isFailed" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="redo" cppName="redo" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="objectContainer" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="undo" cppName="undo" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="objectContainer" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="end" cppName="end" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateOverwrittenBlockReferences"
+    cppName="updateOverwrittenBlockReferences" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setId" cppName="setId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+      </variant>
+    </method>
+    <method name="getId" cppName="getId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getText" cppName="getText" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="overwriteBlock" cppName="overwriteBlock"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RBlock &gt;"
+        typeName="QSharedPointer &lt; RBlock &gt;" name="block"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addObject" cppName="addObject" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RObject &gt;"
+        typeName="QSharedPointer &lt; RObject &gt;" name="obj"
+        isConst="false" />
+        <arg type="bool" typeName="bool"
+        name="useCurrentAttributes" hasDefault="true"
+        default=" true" isConst="false" />
+        <arg type="QSet &lt; RPropertyTypeId &gt; &amp;"
+        typeName="QSet &lt; RPropertyTypeId &gt;"
+        name="modifiedPropertyTypeIds" hasDefault="true"
+        default="RDEFAULT_QSET_RPROPERTYTYPEID" isConst="true" />
+      </variant>
+    </method>
+    <method name="addAffectedObject" cppName="addAffectedObject"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RObject &gt;"
+        typeName="QSharedPointer &lt; RObject &gt;" name="object"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addAffectedObjects" cppName="addAffectedObjects"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="objectIds"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="deleteObject" cppName="deleteObject"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" isConst="false" />
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RObject &gt;"
+        typeName="QSharedPointer &lt; RObject &gt;" name="object"
+        isConst="false" />
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+      </variant>
+    </method>
+    <method name="getAffectedObjects" cppName="getAffectedObjects"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RObject::Id &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getStatusChanges" cppName="getStatusChanges"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RObject::Id &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getPropertyChanges" cppName="getPropertyChanges"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QMap &lt; RObject::Id , QList &lt; RPropertyChange &gt; &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="hasOnlyChanges" cppName="hasOnlyChanges"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="fail" cppName="fail" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="addPropertyChange" cppName="addPropertyChange"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" isConst="false" />
+        <arg type="RPropertyChange &amp;"
+        typeName="RPropertyChange" name="propertyChange"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="appendChild" cppName="appendChild"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="t" isConst="false" />
+      </variant>
+    </method>
+    <method name="commit" cppName="commit" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="rollback" cppName="rollback"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

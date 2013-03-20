@@ -10,3 +10,15 @@
 *.lai
 *.la
 *.a
+
+# Makefiles
+Makefile
+Makefile.Debug
+Makefile.Release
+
+# Mac:
+.DS_Store
+
+# Ouput folders:
+debug
+release

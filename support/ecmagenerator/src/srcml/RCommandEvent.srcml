@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RCommandEvent.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RCOMMANDEVENT_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RCOMMANDEVENT_H</name></cpp:define>
+  <comment type="block">/** * Command Event. * * \ingroup core *
+  \scriptable */</comment>
+  <class>class 
+  <name>RCommandEvent</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <comment type="block">/** * Creates a new command event that is
+  not yet accepted. * * \param cmd the command that was triggered.
+  */</comment>
+  <constructor>
+    <name>RCommandEvent</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>cmd</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>this</name>-&gt;
+    <name>cmd</name>= 
+    <name>cmd</name></expr>;</expr_stmt>
+    <expr_stmt>
+    <expr>
+    <name>accepted</name>= 
+    <name>false</name></expr>;</expr_stmt>}</block>
+  </constructor>
+  <comment type="block">/** * \return the command that was
+  triggered, usually by * the user. */</comment>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getCommand</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>cmd</name>
+    </expr>;</return>}</block>
+  </function>
+  <comment type="block">/** * Sets the event state to accepted.
+  */</comment>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>accept</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>accepted</name>= 
+    <name>true</name></expr>;</expr_stmt>}</block>
+  </function>
+  <comment type="block">/** * \return Whether the event was already
+  accepted or not. */</comment>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isAccepted</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>accepted</name>
+    </expr>;</return>}</block>
+  </function></public>
+  <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>cmd</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>accepted</name>
+  </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RCommandEvent*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

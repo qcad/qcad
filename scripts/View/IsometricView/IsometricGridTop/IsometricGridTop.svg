@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.2 r9819"
+   version="1.0"
+   sodipodi:docname="IsometricGridTop.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3811">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3813" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3815" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2477"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <symbol
+       id="*Paper_Space0" />
+    <symbol
+       id="*Paper_Space" />
+    <symbol
+       id="*Model_Space" />
+    <pattern
+       id="Hatch"
+       x="0"
+       y="0"
+       patternUnits="userSpaceOnUse"
+       width="8"
+       height="8">
+      <path
+         id="path3834"
+         d="M8 4 l-4,4"
+         stroke-width="0.25"
+         stroke="#000000"
+         linecap="square" />
+      <path
+         id="path3836"
+         d="M6 2 l-4,4"
+         stroke-width="0.25"
+         stroke="#000000"
+         linecap="square" />
+      <path
+         id="path3838"
+         d="M4 0 l-4,4"
+         stroke-width="0.25"
+         stroke="#000000"
+         linecap="square" />
+    </pattern>
+    <marker
+       orient="auto"
+       id="DistanceX"
+       style="overflow:visible"
+       refX="0.0"
+       refY="0.0">
+      <path
+         id="path3831"
+         d="M 3,-3 L -3,3 M 0,-5 L  0,5"
+         style="stroke:#000000; stroke-width:0.5" />
+    </marker>
+    <marker
+       refY="0.0"
+       refX="0.0"
+       style="overflow:visible"
+       id="DistanceX-5"
+       orient="auto">
+      <path
+         style="stroke:#000000; stroke-width:0.5"
+         d="M 3,-3 L -3,3 M 0,-5 L  0,5"
+         id="path3175" />
+    </marker>
+    <pattern
+       height="8"
+       width="8"
+       patternUnits="userSpaceOnUse"
+       y="0"
+       x="0"
+       id="Hatch-8">
+      <path
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         d="M8 4 l-4,4"
+         id="path3178" />
+      <path
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         d="M6 2 l-4,4"
+         id="path3180" />
+      <path
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         d="M4 0 l-4,4"
+         id="path3182" />
+    </pattern>
+    <symbol
+       id="*Model_Space-1" />
+    <symbol
+       id="*Paper_Space-4" />
+    <symbol
+       id="*Paper_Space0-7" />
+    <marker
+       refY="0.0"
+       refX="0.0"
+       style="overflow:visible"
+       id="DistanceX-2"
+       orient="auto">
+      <path
+         style="stroke:#000000; stroke-width:0.5"
+         d="M 3,-3 L -3,3 M 0,-5 L  0,5"
+         id="path3831-7" />
+    </marker>
+    <pattern
+       height="8"
+       width="8"
+       patternUnits="userSpaceOnUse"
+       y="0"
+       x="0"
+       id="Hatch-86">
+      <path
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         d="M8 4 l-4,4"
+         id="path3834-5" />
+      <path
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         d="M6 2 l-4,4"
+         id="path3836-7" />
+      <path
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         d="M4 0 l-4,4"
+         id="path3838-6" />
+    </pattern>
+    <symbol
+       id="*Model_Space-9" />
+    <symbol
+       id="*Paper_Space-3" />
+    <symbol
+       id="*Paper_Space0-0" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2477-7" />
+    <inkscape:perspective
+       id="perspective10-9"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3811"
+       id="linearGradient3819"
+       x1="-12"
+       y1="256"
+       x2="60"
+       y2="256"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       id="filter3823"
+       inkscape:menu="Transparency utilities"
+       inkscape:label="Alpha repaint"
+       inkscape:menu-tooltip="Repaint anything monochrome">
+      <feFlood
+         id="feFlood3825"
+         flood-color="rgb(255,0,105)"
+         result="result1" />
+      <feComposite
+         id="feComposite3827"
+         in2="SourceGraphic"
+         operator="in"
+         result="result2" />
+    </filter>
+    <filter
+       id="filter4029"
+       inkscape:label="Alpha draw"
+       inkscape:menu="Image effects, transparent"
+       inkscape:menu-tooltip="Gives a transparent drawing effect to bitmaps and materials"
+       height="1"
+       width="1"
+       y="0"
+       x="0"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4031"
+         result="result8"
+         stdDeviation="0.6" />
+      <feConvolveMatrix
+         id="feConvolveMatrix4033"
+         order="3 3"
+         kernelMatrix="1 1 1 1 -8 1 1 1 1 "
+         in="result8"
+         divisor="1"
+         targetX="1"
+         targetY="1"
+         preserveAlpha="true"
+         result="result0"
+         bias="0" />
+      <feColorMatrix
+         id="feColorMatrix4035"
+         values="1"
+         in="result0"
+         result="result1"
+         type="luminanceToAlpha" />
+      <feComposite
+         id="feComposite4037"
+         in2="result1"
+         k2="10"
+         in="result1"
+         result="result2"
+         operator="arithmetic" />
+      <feGaussianBlur
+         id="feGaussianBlur4039"
+         result="result7"
+         in="result2"
+         stdDeviation="0.01" />
+      <feColorMatrix
+         id="feColorMatrix4041"
+         result="result9"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1.7 " />
+      <feFlood
+         id="feFlood4043"
+         flood-opacity="1"
+         result="result10"
+         flood-color="rgb(0,0,0)" />
+      <feComposite
+         id="feComposite4045"
+         in2="result9"
+         in="result10"
+         operator="in"
+         result="result11" />
+      <feComposite
+         id="feComposite4047"
+         in2="result11"
+         operator="in" />
+    </filter>
+    <filter
+       id="filter4051"
+       inkscape:label="Feather"
+       inkscape:menu="ABCs"
+       inkscape:menu-tooltip="Blurred mask on the edge without altering the contents"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4053"
+         result="result6"
+         stdDeviation="5" />
+      <feComposite
+         id="feComposite4055"
+         in2="result6"
+         operator="atop"
+         in="SourceGraphic"
+         result="result91" />
+      <feComposite
+         id="feComposite4057"
+         in2="result91"
+         operator="in"
+         result="result92" />
+      <feComposite
+         id="feComposite4059"
+         in2="result92"
+         operator="in" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="144.97544"
+     inkscape:cy="254.61192"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-global="true"
+     inkscape:window-width="1442"
+     inkscape:window-height="931"
+     inkscape:window-x="301"
+     inkscape:window-y="135"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2485"
+       visible="true"
+       enabled="true"
+       dotted="false"
+       empspacing="10"
+       originx="-8px"
+       originy="-8px"
+       snapvisiblegridlinesonly="true"
+       spacingx="16px"
+       spacingy="16px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,492)">
+    <path
+       style="fill:#ff0000;stroke:none;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 255.46153,-296.53074 364.02113,-234.5 257.5,-173 148.9404,-235.03074 255.46153,-296.53075"
+       id="path3251"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 256,-50 70,-157.38702"
+       id="path3853" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 256,-50 442,-157.38702"
+       id="path3855" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 442,-314.61285 256,-422"
+       id="path3857" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 442,-190.61284 70,-405.38715"
+       id="path3859" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:none"
+       d="M 442,-66.612741 70,-281.38716"
+       id="path3861" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 70,-190.61284 442,-405.38715"
+       id="path3863" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 70,-314.61285 256,-422"
+       id="path3865" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 70,-66.612741 442,-281.38716"
+       id="path3867" />
+    <path
+       id="path4100"
+       d="M 256,-50 70,-157.38702"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path4102"
+       d="M 256,-50 442,-157.38702"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path4104"
+       d="M 442,-314.61285 256,-422"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 442,-190.61284 70,-405.38715"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0"
+       id="path73" />
+    <path
+       id="path4108"
+       d="M 442,-66.612741 70,-281.38716"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:none"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path4110"
+       d="M 70,-190.61284 442,-405.38715"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path4112"
+       d="M 70,-314.61285 256,-422"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path4114"
+       d="M 70,-66.612741 442,-281.38716"
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

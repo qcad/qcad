@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RFileImporter.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RFILEIMPORTER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RFILEIMPORTER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RImporter.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * \brief Base class for file importers.
+  * * File importers import files of a specific format into an \ref
+  RDocument. * * \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RFileImporter</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RImporter</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor_decl>
+  <name>RFileImporter</name>
+  <parameter_list>()</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RFileImporter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>&amp;</type>
+      <name>document</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RMessageHandler</name>*</type>
+    <name>messageHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RProgressHandler</name>*</type>
+    <name>progressHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <destructor_decl>
+  <specifier>virtual</specifier>
+  <name>~RFileImporter</name>
+  <parameter_list>()</parameter_list>;</destructor_decl>
+  <comment type="block">/** * Must be implemented by file importers
+  to import the given file into * the document. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>bool</name>
+  </type>
+  <name>importFile</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>fileName</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>=
+  0</specifier>;</function_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RFileImporter*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

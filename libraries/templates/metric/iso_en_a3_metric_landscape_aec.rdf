@@ -1,0 +1,12 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ql="http://qcad.org/ql/elements/1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dc:title xml:lang="en">AEC Layers</dc:title>
+    <dcterms:license>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:license>
+    <dcterms:created>2012-06</dcterms:created>
+    <dc:creator>Clive Tubb</dc:creator>
+    <ql:standard>AEC</ql:standard>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./stemmer" filename="RStemmer.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RSTEMMER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RSTEMMER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * Stemmer, used for indexing and
+  searching word stems * (e.g. 'draw' for 'drawing', 'drawn',
+  'draws', ...). * * \ingroup stemmer * \scriptable */</comment>
+  <class>class 
+  <name>RStemmer</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>stem</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>word</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>locale</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>}</block>;</class>
+  <expr_stmt>
+  <expr>
+    <call>
+      <name>Q_DECLARE_METATYPE</name>
+      <argument_list>(
+      <argument>
+        <expr>
+        <name>RStemmer</name>*</expr>
+      </argument>)</argument_list>
+    </call>
+  </expr>;</expr_stmt>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

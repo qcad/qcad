@@ -1,0 +1,198 @@
+/**
+ * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */
+#include "REllipseEntity.h"
+#include "RExporter.h"
+#include "RPoint.h"
+
+RPropertyTypeId REllipseEntity::PropertyCustom;
+RPropertyTypeId REllipseEntity::PropertyHandle;
+RPropertyTypeId REllipseEntity::PropertyType;
+RPropertyTypeId REllipseEntity::PropertyBlock;
+RPropertyTypeId REllipseEntity::PropertyLayer;
+RPropertyTypeId REllipseEntity::PropertyLinetype;
+RPropertyTypeId REllipseEntity::PropertyLineweight;
+RPropertyTypeId REllipseEntity::PropertyColor;
+RPropertyTypeId REllipseEntity::PropertyDrawOrder;
+
+RPropertyTypeId REllipseEntity::PropertyCenterX;
+RPropertyTypeId REllipseEntity::PropertyCenterY;
+RPropertyTypeId REllipseEntity::PropertyCenterZ;
+RPropertyTypeId REllipseEntity::PropertyMajorPointX;
+RPropertyTypeId REllipseEntity::PropertyMajorPointY;
+RPropertyTypeId REllipseEntity::PropertyMajorPointZ;
+RPropertyTypeId REllipseEntity::PropertyRatio;
+RPropertyTypeId REllipseEntity::PropertyStartParam;
+RPropertyTypeId REllipseEntity::PropertyEndParam;
+RPropertyTypeId REllipseEntity::PropertyStartAngle;
+RPropertyTypeId REllipseEntity::PropertyEndAngle;
+RPropertyTypeId REllipseEntity::PropertyReversed;
+
+RPropertyTypeId REllipseEntity::PropertyStartPointX;
+RPropertyTypeId REllipseEntity::PropertyStartPointY;
+RPropertyTypeId REllipseEntity::PropertyStartPointZ;
+RPropertyTypeId REllipseEntity::PropertyEndPointX;
+RPropertyTypeId REllipseEntity::PropertyEndPointY;
+RPropertyTypeId REllipseEntity::PropertyEndPointZ;
+
+RPropertyTypeId REllipseEntity::PropertyCircumference;
+
+REllipseEntity::REllipseEntity(RDocument* document, const REllipseData& data,
+        RObject::Id objectId) :
+    REntity(document, objectId), data(document, data) {
+}
+
+REllipseEntity::~REllipseEntity() {
+}
+
+void REllipseEntity::init() {
+    REllipseEntity::PropertyCustom.generateId(typeid(REllipseEntity), RObject::PropertyCustom);
+    REllipseEntity::PropertyHandle.generateId(typeid(REllipseEntity), RObject::PropertyHandle);
+    REllipseEntity::PropertyType.generateId(typeid(REllipseEntity), REntity::PropertyType);
+    REllipseEntity::PropertyBlock.generateId(typeid(REllipseEntity), REntity::PropertyBlock);
+    REllipseEntity::PropertyLayer.generateId(typeid(REllipseEntity), REntity::PropertyLayer);
+    REllipseEntity::PropertyLinetype.generateId(typeid(REllipseEntity), REntity::PropertyLinetype);
+    REllipseEntity::PropertyLineweight.generateId(typeid(REllipseEntity), REntity::PropertyLineweight);
+    REllipseEntity::PropertyColor.generateId(typeid(REllipseEntity), REntity::PropertyColor);
+    REllipseEntity::PropertyDrawOrder.generateId(typeid(REllipseEntity), REntity::PropertyDrawOrder);
+
+    REllipseEntity::PropertyCenterX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));
+    REllipseEntity::PropertyCenterY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    REllipseEntity::PropertyCenterZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    REllipseEntity::PropertyMajorPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    REllipseEntity::PropertyMajorPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    REllipseEntity::PropertyMajorPointZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    REllipseEntity::PropertyRatio.generateId(typeid(REllipseEntity), "",QT_TRANSLATE_NOOP("REntity",  "Ratio"));
+    REllipseEntity::PropertyStartParam.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Parameter"));
+    REllipseEntity::PropertyEndParam.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "End Parameter"));
+    REllipseEntity::PropertyStartAngle.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), true);
+    REllipseEntity::PropertyEndAngle.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), true);
+    REllipseEntity::PropertyReversed.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Reversed"));
+
+    REllipseEntity::PropertyStartPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    REllipseEntity::PropertyStartPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    REllipseEntity::PropertyStartPointZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    REllipseEntity::PropertyEndPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    REllipseEntity::PropertyEndPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    REllipseEntity::PropertyEndPointZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+
+    REllipseEntity::PropertyCircumference.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+}
+
+bool REllipseEntity::setProperty(RPropertyTypeId propertyTypeId,
+        const QVariant& value) {
+    bool ret = REntity::setProperty(propertyTypeId, value);
+    ret = ret || RObject::setMember(data.center.x, value, PropertyCenterX == propertyTypeId);
+    ret = ret || RObject::setMember(data.center.y, value, PropertyCenterY == propertyTypeId);
+    ret = ret || RObject::setMember(data.center.z, value, PropertyCenterZ == propertyTypeId);
+    ret = ret || RObject::setMember(data.majorPoint.x, value, PropertyMajorPointX == propertyTypeId);
+    ret = ret || RObject::setMember(data.majorPoint.y, value, PropertyMajorPointY == propertyTypeId);
+    ret = ret || RObject::setMember(data.majorPoint.z, value, PropertyMajorPointZ == propertyTypeId);
+    ret = ret || RObject::setMember(data.ratio, value, PropertyRatio == propertyTypeId);
+    ret = ret || RObject::setMember(data.startParam, value, PropertyStartParam == propertyTypeId);
+    ret = ret || RObject::setMember(data.endParam, value, PropertyEndParam == propertyTypeId);
+    if (PropertyStartAngle==propertyTypeId) {
+        data.setStartAngle(value.toDouble());
+        ret = true;
+    }
+    else if (PropertyEndAngle==propertyTypeId) {
+        data.setEndAngle(value.toDouble());
+        ret = true;
+    }
+    ret = ret || RObject::setMember(data.reversed, value, PropertyReversed == propertyTypeId);
+
+    if (ret) {
+        data.correctMajorMinor();
+    }
+    return ret;
+}
+
+QPair<QVariant, RPropertyAttributes> REllipseEntity::getProperty(
+        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+    if (propertyTypeId == PropertyType) {
+        return qMakePair(QVariant(RS::EntityEllipse), RPropertyAttributes(
+                RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyCenterX) {
+        return qMakePair(QVariant(data.center.x), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyCenterY) {
+        return qMakePair(QVariant(data.center.y), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyCenterZ) {
+        return qMakePair(QVariant(data.center.z), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyMajorPointX) {
+        return qMakePair(QVariant(data.majorPoint.x), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyMajorPointY) {
+        return qMakePair(QVariant(data.majorPoint.y), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyMajorPointZ) {
+        return qMakePair(QVariant(data.majorPoint.z), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyRatio) {
+        return qMakePair(QVariant(data.ratio), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyStartParam) {
+        return qMakePair(QVariant(data.startParam), RPropertyAttributes(RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyEndParam) {
+        return qMakePair(QVariant(data.endParam), RPropertyAttributes(RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyStartAngle) {
+        return qMakePair(QVariant(data.getStartAngle()), RPropertyAttributes(RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyEndAngle) {
+        return qMakePair(QVariant(data.getEndAngle()), RPropertyAttributes(RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyReversed) {
+        return qMakePair(QVariant(data.reversed), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyStartPointX) {
+        return qMakePair(QVariant(data.getStartPoint().x), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyStartPointY) {
+        return qMakePair(QVariant(data.getStartPoint().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyStartPointZ) {
+        return qMakePair(QVariant(data.getStartPoint().z), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyEndPointX) {
+        return qMakePair(QVariant(data.getEndPoint().x), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyEndPointY) {
+        return qMakePair(QVariant(data.getEndPoint().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyEndPointZ) {
+        return qMakePair(QVariant(data.getEndPoint().z), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyCircumference) {
+        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+}
+
+void REllipseEntity::setShape(const REllipse& e) {
+    data.setCenter(e.getCenter());
+    data.setMajorPoint(e.getMajorPoint());
+    data.setRatio(e.getRatio());
+    data.setStartParam(e.getStartParam());
+    data.setEndParam(e.getEndParam());
+    data.setReversed(e.isReversed());
+}
+
+void REllipseEntity::exportEntity(RExporter& e, bool preview) const {
+    Q_UNUSED(preview);
+
+    e.setBrush(Qt::NoBrush);
+    e.exportEllipse(data);
+}
+
+void REllipseEntity::print(QDebug dbg) const {
+    dbg.nospace() << "REllipseEntity(";
+    REntity::print(dbg);
+    dbg.nospace() << ", center: " << getCenter();
+    dbg.nospace() << ", majorPoint: " << getMajorPoint();
+    dbg.nospace() << ", ratio: " << getRatio();
+    dbg.nospace() << ", startAngle: " << getStartAngle();
+    dbg.nospace() << ", endAngle: " << getEndAngle();
+    dbg.nospace() << ", reversed: " << isReversed() << ")";
+}

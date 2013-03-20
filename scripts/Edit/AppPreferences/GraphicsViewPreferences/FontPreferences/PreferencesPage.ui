@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphicsViewFonts</class>
+ <widget class="QScrollArea" name="GraphicsViewFonts">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>473</width>
+    <height>246</height>
+   </rect>
+  </property>
+  <property name="horizontalScrollBarPolicy">
+   <enum>Qt::ScrollBarAlwaysOff</enum>
+  </property>
+  <property name="widgetResizable">
+   <bool>true</bool>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignJustify|Qt::AlignTop</set>
+  </property>
+  <widget class="QWidget" name="widget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>471</width>
+     <height>244</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout">
+    <item>
+     <widget class="RFontChooserWidget" name="Ruler">
+      <property name="label">
+       <string>Ruler Font:</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Helvetica</family>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <kerning>false</kerning>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="RFontChooserWidget" name="SnapLabel">
+      <property name="label">
+       <string>Snap Label Font:</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Helvetica</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="RFontChooserWidget" name="InfoLabel">
+      <property name="label">
+       <string>Info Label Font:</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Helvetica</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RFontChooserWidget</class>
+   <extends>QWidget</extends>
+   <header>RFontChooserWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

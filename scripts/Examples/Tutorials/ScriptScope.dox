@@ -1,0 +1,81 @@
+/*!
+
+\page ScriptScope Scope of Script Development
+
+The QCAD Application Framework offers a very complete and powerful
+ECMAScript interface. Almost the entire functionality of 
+the Qt Application Framework (Qt) and the QCAD Application Framework 
+is accessible through that scripting interface. 
+
+ECMAScript (also known as JavaScript) is a popular script language
+that is easy to learn for anyone with previous programming experience.
+
+\section extending_qcad Extending the QCAD Application
+
+Through the ECMAScript interface of, developers can extend QCAD in an easy 
+and very efficient way. Such extensions can for example be CAD related
+interactive construction or modification tools or user interface components
+(widgets).
+
+\image html ecmascript_extensions.png
+
+\section creating_applications Creating new Applications
+
+Alternatively, developers can build entirely new applications 
+based on the QCAD Application Framework. New applications might be 
+CAD related console tools or desktop applications with graphical user 
+interfaces that are significantly different to the QCAD application.
+
+\image html ecmascript_applications.png
+
+Since the QCAD Application itself is built using the ECMAScript interface
+of the QCAD Application Framework, there is plenty of example code available 
+which has been thoroughly tested.
+
+\section licensing Licensing
+
+To use the ECMAScript interface to extend QCAD or develop new applications
+based on QCAD technology, all you need is a regular QCAD single user
+license. Every QCAD user may use the ECMAScript interface and distribute
+any modifications and additions to anyone else with a valid QCAD license on
+their own terms.
+
+Note that to extend and modify the C++ sources of the QCAD Application Framework, 
+a special developer license is required.
+
+
+
+\section qt_qcad_ecma Qt, the QCAD Application Framework and ECMAScript
+
+The figure below shows some of the main functionality that is covered
+by Qt and the QCAD Application Framework. Qt covers the generic functionality 
+that is usually seen in all kinds of desktop applications and is not directly 
+related to CAD. The QCAD Application Framework offers CAD specific 
+functionality such as a CAD Core, DXF export and import, 
+a powerful graphics view, and so on. The ECMAScript files put the available 
+functionality together into an application.
+
+\image html qt_qcad_functionality.png
+
+The ECMAScript interface of the QCAD Application Framework can be used 
+to very rapidly build and extend CAD specific applications.
+
+The QCAD user interface itself and all its interactive tools as well as
+most widgets and dialogs are implemented through the ECMAScript interface.
+
+The QCAD executable that comes with every QCAD package is essentially 
+a script interpreter that features standard ECMAScript functionality and 
+on top of that provides additional classes from the Qt API and the QCAD API. 
+Running the QCAD executable in an isolated environment would do nothing 
+as there are no ECMAScripts to be executed. By default, the QCAD executable 
+looks for a file called "scripts/autostart.js" to execute. In the case of QCAD,
+the autostart script initializes all ECMAScript tools and user interface 
+components and launches the main application loop.
+
+Almost all widgets, menus and tools that are currently available in 
+QCAD are implemented in ECMAScript. 
+These scripts are located in the 'scripts' directory of the 
+downloaded QCAD package. Note that under Mac OS X, the scripts directory is 
+located inside the application bundle under 'QCAD.app/Contents/Resources/scripts'.
+
+*/

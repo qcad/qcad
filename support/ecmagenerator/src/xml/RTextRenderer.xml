@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QTextDocument" />
+  <class name="RTextRenderer"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <enum name="Target">
+      <value name="PainterPaths" />
+      <value name="RichText" />
+    </enum>
+    <constructor>
+      <variant>
+        <arg type="RTextData &amp;" typeName="RTextData"
+        name="textData" isConst="true" />
+        <arg type="bool" typeName="bool" name="draft"
+        isConst="false" />
+        <arg type="RTextRenderer::Target"
+        typeName="RTextRenderer::Target" name="target"
+        isConst="false" />
+        <arg type="double" typeName="double"
+        name="fontHeightFactor" hasDefault="true" default="1.0"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="renderSimple" cppName="renderSimple"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="render" cppName="render" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getPainterPaths" cppName="getPainterPaths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPainterPath &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getBoundingBox" cppName="getBoundingBox"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RBox" isPureVirtual="false" />
+    </method>
+    <method name="getHeight" cppName="getHeight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getWidth" cppName="getWidth" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getRichText" cppName="getRichText"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <property name="rxLineFeed" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxParagraphFeed" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxHeightChange" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxStackedText" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxColorChangeIndex" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxColorChangeCustom" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxNonBreakingSpace" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxOverlineOn" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxOverlineOff" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxUnderlineOn" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxUnderlineOff" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxWidthChange" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxObliqueAngleChange" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxTrackChange" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxAlignmentChange" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxFontChangeCad" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxFontChangeTtf" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxBeginBlock" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxEndBlock" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxBackslash" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxCurlyOpen" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxCurlyClose" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxDegree" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escDegree" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxPlusMinus" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escPlusMinus" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxDiameter" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escDiameter" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxUnicode" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxAll" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="chDegree" type="QChar" isConst="false"
+    isStatic="true" />
+    <property name="chPlusMinus" type="QChar" isConst="false"
+    isStatic="true" />
+    <property name="chDiameter" type="QChar" isConst="false"
+    isStatic="true" />
+  </class>
+</unit>

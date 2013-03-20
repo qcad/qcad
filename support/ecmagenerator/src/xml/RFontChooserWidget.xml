@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QLabel" />
+  <class name="RFontChooserWidget"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QWidget" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getFont" cppName="getFont" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QFont" isPureVirtual="false" />
+    </method>
+    <method name="setFont" cppName="setFont" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QFont &amp;" typeName="QFont" name="font"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getSize" cppName="getSize" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setSize" cppName="setSize" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="size"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getLabel" cppName="getLabel" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setLabel" cppName="setLabel" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="l"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="fontChanged" cppName="fontChanged"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QFont &amp;" typeName="QFont" name="font"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="sizeChanged" cppName="sizeChanged"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="resizeEvent" cppName="resizeEvent"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QResizeEvent *" typeName="QResizeEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

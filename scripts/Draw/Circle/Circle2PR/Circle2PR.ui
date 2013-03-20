@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Circle2PR</class>
+ <widget class="QWidget" name="Circle2PR">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>311</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Radius:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Radius">
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="defaultUnit" stdset="0">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Solution:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Solution1">
+     <property name="toolTip">
+      <string>Center Left of Line P1 - P2</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Solution1.svg</normaloff>Solution1.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string>Solution</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Solution2">
+     <property name="toolTip">
+      <string>Center Right of Line P1 - P2</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Solution2.svg</normaloff>Solution2.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string>Solution</string>
+     </attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="Solution"/>
+ </buttongroups>
+</ui>

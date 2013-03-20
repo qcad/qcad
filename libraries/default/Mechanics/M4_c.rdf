@@ -1,0 +1,10 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ql="http://qcad.org/ql/elements/1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dcterms:license>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:license>
+    <dcterms:created>2002-02-17</dcterms:created>
+    <dc:creator>Eivind Lund Vikeb&oslash;</dc:creator>
+  </rdf:Description>
+</rdf:RDF>

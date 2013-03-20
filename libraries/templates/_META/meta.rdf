@@ -1,0 +1,11 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ql="http://qcad.org/ql/elements/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dc:title xml:lang="en">Templates</dc:title>
+    <dc:subject xml:lang="en">
+      <rdf:Bag>
+        <rdf:li>template</rdf:li>
+        <rdf:li>border</rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+  </rdf:Description>
+</rdf:RDF>

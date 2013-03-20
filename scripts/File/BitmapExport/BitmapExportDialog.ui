@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BitmapExport</class>
+ <widget class="QDialog" name="BitmapExport">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>308</width>
+    <height>318</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Bitmap Export</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>BitmapExport.svg</normaloff>BitmapExport.svg</iconset>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout">
+   <item>
+    <widget class="QGroupBox" name="Size">
+     <property name="title">
+      <string>Size</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Width:</string>
+        </property>
+        <property name="buddy">
+         <cstring>Width</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="RMathLineEdit" name="Width">
+        <property name="text">
+         <string notr="true">640</string>
+        </property>
+        <property name="angle" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="defaultUnit" stdset="0">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Height:</string>
+        </property>
+        <property name="buddy">
+         <cstring>Height</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="RMathLineEdit" name="Height">
+        <property name="text">
+         <string notr="true">480</string>
+        </property>
+        <property name="angle" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="defaultUnit" stdset="0">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Pixels per drawing unit:</string>
+        </property>
+        <property name="buddy">
+         <cstring>Resolution</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="Resolution">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">auto</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">10</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">20</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">25</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">50</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">100</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Margin:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QComboBox" name="Margin">
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="currentIndex">
+           <number>6</number>
+          </property>
+          <item>
+           <property name="text">
+            <string notr="true">0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">5</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">10</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">15</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">20</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>px</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="Background">
+     <property name="title">
+      <string>Background</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="WhiteBackground">
+        <property name="text">
+         <string>White</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="BlackBackground">
+        <property name="text">
+         <string>Black</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>Width</tabstop>
+  <tabstop>Height</tabstop>
+  <tabstop>Resolution</tabstop>
+  <tabstop>WhiteBackground</tabstop>
+  <tabstop>BlackBackground</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>BitmapExport</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>263</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>BitmapExport</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,9 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ql="http://qcad.org/ql/elements/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dc:title xml:lang="en">Mechanics</dc:title>
+    <dc:title xml:lang="de">Mechanik</dc:title>
+    <dc:audience>mechanics</dc:audience>
+    <dc:subject xml:lang="en">mechanical engineering</dc:subject>
+    <dc:subject xml:lang="de">Maschinenbau</dc:subject>
+  </rdf:Description>
+</rdf:RDF>

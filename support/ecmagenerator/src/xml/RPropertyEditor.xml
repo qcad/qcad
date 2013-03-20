@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPropertyEditor"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RPropertyListener" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="updateFromDocument" cppName="updateFromDocument"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </method>
+    <method name="updateFromObject" cppName="updateFromObject"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject *" typeName="RObject *" name="object"
+        isConst="false" />
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="clearEditor" cppName="clearEditor"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="propertyChanged" cppName="propertyChanged"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant" typeName="QVariant"
+        name="propertyValue" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+        <arg type="QVariant::Type" typeName="QVariant::Type"
+        name="typeHint" hasDefault="true"
+        default="QVariant :: Invalid" isConst="false" />
+      </variant>
+    </method>
+    <method name="listPropertyChanged"
+    cppName="listPropertyChanged" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+        <arg type="QVariant" typeName="QVariant"
+        name="propertyValue" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </method>
+    <method name="getGroupTitles" cppName="getGroupTitles"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="getPropertyTitles" cppName="getPropertyTitles"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="group"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getPropertyValue" cppName="getPropertyValue"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="propertyTypeId"
+        isConst="true" />
+      </variant>
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="group"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getPropertyAttributes"
+    cppName="getPropertyAttributes" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RPropertyAttributes"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="propertyTypeId"
+        isConst="true" />
+      </variant>
+      <variant returnType="RPropertyAttributes"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="group"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getTypes" cppName="getTypes" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RS::EntityType &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getTypeCount" cppName="getTypeCount"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="false" />
+      </variant>
+    </method>
+    <method name="updateEditor" cppName="updateEditor"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject &amp;" typeName="RObject" name="object"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="doUpdateGui"
+        isConst="false" />
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="updateGui" cppName="updateGui"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </method>
+    <method name="updateProperty" cppName="updateProperty"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="propertyTypeId"
+        isConst="true" />
+        <arg type="RObject &amp;" typeName="RObject" name="object"
+        isConst="false" />
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeAllButThese" cppName="removeAllButThese"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QMultiMap &lt; QString , QString &gt; &amp;"
+        typeName="QMultiMap &lt; QString , QString &gt;"
+        name="propertyTitles" isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

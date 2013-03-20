@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RSiGetRegionVisitor"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false"
+  isScriptable="false" />
+  <class name="RSpatialIndexNavel"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RSpatialIndex" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="clear" cppName="clear" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="addToIndex" cppName="addToIndex"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="int" typeName="int" name="pos"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z2"
+        isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="int" typeName="int" name="pos"
+        isConst="false" />
+        <arg type="RBox &amp;" typeName="RBox" name="bb"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="removeFromIndex" cppName="removeFromIndex"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="QList &lt; RBox &gt; &amp;"
+        typeName="QList &lt; RBox &gt;" name="bb" isConst="true" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="int" typeName="int" name="pos"
+        isConst="false" />
+        <arg type="RBox &amp;" typeName="RBox" name="bb"
+        isConst="true" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="int" typeName="int" name="pos"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z2"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="queryIntersected" cppName="queryIntersected"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QMap &lt; int , QSet &lt; int &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="x1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z2"
+        isConst="false" />
+        <arg type="RSpatialIndexVisitor *"
+        typeName="RSpatialIndexVisitor *" name="dataVisitor"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </method>
+    <method name="queryContained" cppName="queryContained"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QMap &lt; int , QSet &lt; int &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="x1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z2"
+        isConst="false" />
+        <arg type="RSpatialIndexVisitor *"
+        typeName="RSpatialIndexVisitor *" name="dataVisitor"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </method>
+    <method name="queryNearestNeighbor"
+    cppName="queryNearestNeighbor" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QMap &lt; int , QSet &lt; int &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="uint" typeName="uint" name="k"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z"
+        isConst="false" />
+        <arg type="RSpatialIndexVisitor *"
+        typeName="RSpatialIndexVisitor *" name="dataVisitor"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+      <variant returnType="QPair &lt; int , int &gt;"
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="x"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y"
+        isConst="false" />
+        <arg type="double" typeName="double" name="z"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="init" cppName="init" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="uninit" cppName="uninit" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

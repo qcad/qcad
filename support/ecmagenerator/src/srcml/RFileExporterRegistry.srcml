@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RFileExporterRegistry.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RFILEEXPORTERREGISTRY_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RFILEEXPORTERREGISTRY_H</name></cpp:define>
+  <class_decl>class 
+  <name>RFileExporterFactory</name>;</class_decl>
+  <class_decl>class 
+  <name>RFileExporter</name>;</class_decl>
+  <class_decl>class 
+  <name>RDocument</name>;</class_decl>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * \brief Registry of all available file
+  exporters (\ref RFileExporter). * * File importers must register
+  themselves in this registry to become * available to the user of
+  the application. * * \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RFileExporterRegistry</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <comment type="line">//typedef RFileExporter*
+  (*FactoryFunction)(RDocument&amp; document);</comment>
+  <comment type="line">//typedef bool (*CheckFunction)(const
+  QString&amp;);</comment>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>registerFileExporter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RFileExporterFactory</name>*</type>
+      <name>factory</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+  <name>static</name>
+  <name>RFileExporter</name>*</type>
+  <name>getFileExporter</name>
+  <parameter_list>( 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>fileName</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>nameFilter</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>&amp;</type>
+      <name>document</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QStringList</name>
+  </type>
+  <name>getFilterStrings</name>
+  <parameter_list>()</parameter_list>;</function_decl></public>
+  <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+      <name>
+      RFileExporterFactory</name>*</argument>&gt;</argument_list></name>
+    </type>
+    <name>factories</name>
+  </decl>;</decl_stmt>
+  <comment type="line">//static QStringList
+  filterStrings;</comment></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RFileExporterRegistry*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

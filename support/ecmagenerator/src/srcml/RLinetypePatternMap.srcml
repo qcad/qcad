@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RLinetypePatternMap.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RLINETYPEPATTERNMAP_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RLINETYPEPATTERNMAP_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
+  <comment type="block">/** * Provides access to the global, static
+  map of available linetypes. * \todo Refactor to use linetypes
+  that are stored in drawings and * allow for custom linetypes. * *
+  \scriptable */</comment>
+  <class>class 
+  <name>RLinetypePatternMap</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>QMap
+  <argument_list>&lt;
+  <argument>
+    <name>QString</name>
+  </argument>, 
+  <argument>
+    <name>RLinetypePattern</name>
+  </argument>&gt;</argument_list></name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor_decl>
+  <name>RLinetypePatternMap</name>
+  <parameter_list>()</parameter_list>;</constructor_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>RLinetypePattern</name>
+  </type>
+  <name>getPattern</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>name</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
+  <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RLinetypePatternMap</name>
+    </type>
+    <name>patternMap</name>
+  </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RLinetypePatternMap*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RLinetypePatternMap</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

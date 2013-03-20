@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RNavigationAction"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RActionAdapter" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RGuiAction *" typeName="RGuiAction *"
+        name="guiAction" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="mousePressEvent" cppName="mousePressEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="mouseReleaseEvent" cppName="mouseReleaseEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="mouseMoveEvent" cppName="mouseMoveEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SnapCoordinate</class>
+ <widget class="QWidget" name="SnapCoordinate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>382</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="labelX">
+     <property name="text">
+      <string>&amp;x:</string>
+     </property>
+     <property name="buddy">
+      <cstring>X</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="X">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>X Coordinate</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelY">
+     <property name="text">
+      <string>&amp;y:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Y</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Y">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Y Coordinate</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="Relative">
+     <property name="toolTip">
+      <string>Tick for Relative Coordinate</string>
+     </property>
+     <property name="text">
+      <string>Relati&amp;ve</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Set">
+     <property name="icon">
+      <iconset>
+       <normaloff>Tick.svg</normaloff>Tick.svg</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

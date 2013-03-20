@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class name="RUnit" xsi:noNamespaceSchemaLocation="../class.xsd"
+  isCopyable="false" hasShell="false" sharedPointerSupport="false"
+  isQObject="false" hasStreamOperator="false" isAbstract="false"
+  isScriptable="true">
+    <method name="formatLinear" cppName="formatLinear"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="length"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="RS::LinearFormat" typeName="RS::LinearFormat"
+        name="format" isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showUnit"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="formatScientific" cppName="formatScientific"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="length"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showUnit"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="formatDecimal" cppName="formatDecimal"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="length"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showUnit"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="formatEngineering" cppName="formatEngineering"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="length"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showUnit"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="formatArchitectural"
+    cppName="formatArchitectural" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="length"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showUnit"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="formatFractional" cppName="formatFractional"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="length"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showUnit"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="trimTrailingZeroes" cppName="trimTrailingZeroes"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="formatAngle" cppName="formatAngle"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+        <arg type="RS::AngleFormat" typeName="RS::AngleFormat"
+        name="format" isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="isMetric" cppName="isMetric" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="convert" cppName="convert" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="source"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="dest"
+        isConst="false" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="value"
+        isConst="true" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="source"
+        isConst="false" />
+        <arg type="RS::Unit" typeName="RS::Unit" name="dest"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getFactorToM" cppName="getFactorToM"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="unitToSymbol" cppName="unitToSymbol"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="unitToName" cppName="unitToName"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="tr"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="getLabel" cppName="getLabel" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="maxPrecision"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool"
+        name="forceSuppressTrailingZeroes" hasDefault="true"
+        default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="doubleToString" cppName="doubleToString"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+        <arg type="double" typeName="double" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

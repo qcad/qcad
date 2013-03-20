@@ -1,0 +1,82 @@
+/*!
+
+\page PersistentWidgets Persistent Widgets
+
+With the QCAD Application Framework you can easily create a dialog or widget
+that can store and restore its user input.
+In this tutorial we will create a dialog with two input widgets:
+<em>X Position</em> and <em>Y Position</em>.
+
+
+\section folder Creating the Folder Structure
+
+Create a new action called "PersistentWidgets" as described in \ref CreatingActions.
+
+
+\section ui_file Creating the UI file
+
+With Qt Designer we create the UI file for the dialog called "PersistentWidgets.ui".
+
+\image html memorize_dialog/position_dialog.png
+
+- Set the object name of the dialog to "PersistentWidgets".
+- Set the object name of the upper \c QLineEdit widget to "PositionX".
+- Set the object name of the lower \c QLineEdit widget to "PositionY".
+- All input widgets should have meaningful default values.
+  In this example set both values to "0.00".
+
+
+\section save_restore Saving and Restoring User Input
+
+Thanks to the introspection facilities of Qt, storing and restoring 
+dialog data is a one-liner.
+
+\snippet PersistentWidgets.jsd include
+
+\snippet PersistentWidgets.jsd beginEvent
+
+Start QCAD and choose <em>Persistent Widgets</em> from the menu <em>Examples</em>.
+Enter numeric values e.g. for x "0.1" and for y "0.2".
+Then close the dialog and start the same action again.
+The input fields now shows <em>0.1</em> for x resp. <em>0.2</em> for y.
+You can also quit QCAD, restart it and start the action again.
+The dialog input fields are set to the last used valued.
+
+
+\section behind Behind the Scene
+
+The Widget Factory uses QSettings to save or restore values.
+The values set above are stored in a file called "QCAD3.conf" located in the
+QCAD configuration folder ($HOME/.config/RibbonSoft under Unix systems including
+Linux and Mac OS X or HKEY_CURRENT_USER\Software\RibbonSoft under Windows).
+
+Inside this file our dialog has its own group where values are stored.
+By definition the name of the group is the same as the dialog object
+name set in Qt Designer: \a PersistentWidgets.
+The same applies to the widget values. They are named after the object name set 
+in Qt Designer. 
+
+\code
+...
+[PersistentWidgets]
+PositionX=0.1
+PositionY=0.2
+...
+\endcode
+
+In this tutorial a \c QDialog is used as top level widget.
+However you can use a simple \c QWidget, a \c QDockWidget or any other widget.
+The mechanism and procedure are always the same.
+Always make sure that WidgetFactory.restoreState() is called before the widget 
+is shown, and analogically WidgetFactory.saveState() is called before the 
+widget is destroyed.
+
+
+
+\section complete_script The Complete Script
+
+\snippet PersistentWidgets.jsd main
+
+<p>&nbsp;</p>
+
+*/

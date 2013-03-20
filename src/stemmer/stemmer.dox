@@ -1,0 +1,8 @@
+/*!
+
+\defgroup stemmer Stemmer Module
+
+\brief This module contains class RStemmer for stemming in various languages,
+typically used for indexing / searching.
+
+*/

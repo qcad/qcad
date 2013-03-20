@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RGraphicsScene" />
+  <class_decl name="RGraphicsView" />
+  <class name="RMouseEvent"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QMouseEvent" specifier="public" />
+    <baseClass name="RInputEvent" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QEvent::Type" typeName="QEvent::Type"
+        name="type" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="Qt::MouseButton" typeName="Qt::MouseButton"
+        name="button" isConst="false" />
+        <arg type="Qt::MouseButtons" typeName="Qt::MouseButtons"
+        name="buttons" isConst="false" />
+        <arg type="Qt::KeyboardModifiers"
+        typeName="Qt::KeyboardModifiers" name="modifiers"
+        isConst="false" />
+        <arg type="RGraphicsScene &amp;" typeName="RGraphicsScene"
+        name="s" isConst="false" />
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="v" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="QMouseEvent &amp;" typeName="QMouseEvent"
+        name="mouseEvent" isConst="true" />
+        <arg type="RGraphicsScene &amp;" typeName="RGraphicsScene"
+        name="s" isConst="false" />
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="v" isConst="false" />
+      </variant>
+    </constructor>
+  </class>
+</unit>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RSnapListener.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RSNAPLISTENER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RSNAPLISTENER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RSnap.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RDocumentInterface</name>;</class_decl>
+  <class_decl>class 
+  <name>REntity</name>;</class_decl>
+  <comment type="block">/** * \brief Abstract base class for
+  classes that are interested in the current * snap mode. * *
+  \ingroup core * \scriptable */</comment>
+  <class>class 
+  <name>RSnapListener</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RSnapListener</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
+  <comment type="block">/** * Called by the document whenever the
+  current snap mode changes. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>updateSnap</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>di</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>=
+  0</specifier>;</function_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RSnapListener*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RViewListener.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RVIEWLISTENER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RVIEWLISTENER_H</name></cpp:define>
+  <class_decl>class 
+  <name>RDocumentInterface</name>;</class_decl>
+  <comment type="block">/** * \brief Abstract base class for
+  classes that are interested * in being notified whenever a view
+  has been added or changed. * This can for example be a widget
+  that lists all views. * * \ingroup core * \scriptable
+  */</comment>
+  <class>class 
+  <name>RViewListener</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RViewListener</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
+  <comment type="block">/** * This method is called whenever at
+  least one view in the given * document has changed. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>updateViews</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>documentInterface</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * This method is called to signal that
+  no document is currently active. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>clearViews</name>
+  <parameter_list>()</parameter_list>
+  <specifier>=
+  0</specifier>;</function_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RViewListener*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

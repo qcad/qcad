@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RCoordinateEvent.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RCOORDINATEEVENT_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RCOORDINATEEVENT_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RInputEvent.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RVector.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RGraphicsView</name>;</class_decl>
+  <class_decl>class 
+  <name>RGraphicsScene</name>;</class_decl>
+  <comment type="block">/** * Coordinate Event. * * \ingroup core *
+  \scriptable */</comment>
+  <class>class 
+  <name>RCoordinateEvent</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RInputEvent</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <comment type="block">/** * \param position Absolute model
+  coordinate. */</comment>
+  <constructor_decl>
+  <name>RCoordinateEvent</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>position</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>RGraphicsScene</name>&amp;</type>
+      <name>s</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>RGraphicsView</name>&amp;</type>
+      <name>v</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RCoordinateEvent*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>const RCoordinateEvent*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

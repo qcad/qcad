@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RTabletEvent.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RTABLETEVENT_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RTABLETEVENT_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QTabletEvent&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RVector.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RGraphicsScene</name>;</class_decl>
+  <class_decl>class 
+  <name>RGraphicsView</name>;</class_decl>
+  <comment type="block">/** * \brief A tablet event for a \ref
+  RGraphicsScene "graphics scene". * * The coordinates in a mouse
+  event are available as scene coordinates * of screen coordinates
+  from the view the event originated. * * \ingroup core *
+  \scriptable */</comment>
+  <class>class 
+  <name>RTabletEvent</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>QTabletEvent</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <comment type="block">/* RTabletEvent( QEvent::Type type, const
+  RVector&amp; position, int device, int pointerType, qreal
+  pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal
+  rotation, int z, Qt::KeyboardModifiers keyState, qint64 uniqueID,
+  RGraphicsScene&amp; s, RGraphicsView&amp; v); */</comment>
+  <constructor_decl>
+  <name>RTabletEvent</name>
+  <parameter_list>( 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QTabletEvent</name>&amp;</type>
+      <name>tabletEvent</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>RGraphicsScene</name>&amp;</type>
+      <name>s</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>RGraphicsView</name>&amp;</type>
+      <name>v</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <destructor_decl>
+  <specifier>virtual</specifier>
+  <name>~RTabletEvent</name>
+  <parameter_list>()</parameter_list>;</destructor_decl>
+  <function_decl>
+  <type>
+    <name>RVector</name>
+  </type>
+  <name>getModelPosition</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RVector</name>
+  </type>
+  <name>getUcsPosition</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RVector</name>
+  </type>
+  <name>getScreenPosition</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+  <name>RGraphicsView</name>&amp;</type>
+  <name>getGraphicsView</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+  <name>RGraphicsScene</name>&amp;</type>
+  <name>getGraphicsScene</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl></public>
+  <protected>protected: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>modelPosition</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>ucsPosition</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>screenPosition</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+    <name>RGraphicsScene</name>&amp;</type>
+    <name>scene</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+    <name>RGraphicsView</name>&amp;</type>
+    <name>view</name>
+  </decl>;</decl_stmt></protected>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RTabletEvent*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

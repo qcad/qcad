@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./core" filename="RFocusListenerAdapter.h">
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RFOCUSLISTENERADAPTER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RFOCUSLISTENERADAPTER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RFocusListener.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RDocumentInterface</name>;</class_decl>
+  <comment type="block">/** * \brief Abstract base class for
+  classes that are interested in the current * focus. * * \ingroup
+  core * \scriptable * \generateScriptShell */</comment>
+  <class>class 
+  <name>RFocusListenerAdapter</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RFocusListener</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RFocusListenerAdapter</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
+  <comment type="block">/** * Called by the document whenever the
+  focus changed from one MDI * to another. * * \param di The
+  document interface that has now the focus. */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>updateFocus</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>RDocumentInterface</name>*</type>
+        <name>di</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>di</argument>)</argument_list>
+    </macro>}</block>
+  </function></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RFocusListenerAdapter*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

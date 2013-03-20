@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RLineweight"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <enum name="Lineweight">
+      <value name="Weight000" />
+      <value name="Weight005" />
+      <value name="Weight009" />
+      <value name="Weight013" />
+      <value name="Weight015" />
+      <value name="Weight018" />
+      <value name="Weight020" />
+      <value name="Weight025" />
+      <value name="Weight030" />
+      <value name="Weight035" />
+      <value name="Weight040" />
+      <value name="Weight050" />
+      <value name="Weight053" />
+      <value name="Weight060" />
+      <value name="Weight070" />
+      <value name="Weight080" />
+      <value name="Weight090" />
+      <value name="Weight100" />
+      <value name="Weight106" />
+      <value name="Weight120" />
+      <value name="Weight140" />
+      <value name="Weight158" />
+      <value name="Weight200" />
+      <value name="Weight211" />
+      <value name="WeightByLayer" />
+      <value name="WeightByBlock" />
+      <value name="WeightByLwDefault" />
+      <value name="WeightInvalid" />
+    </enum>
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="getList" cppName="getList" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QPair &lt; QString , RLineweight::Lineweight &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onlyFixed"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getIcon" cppName="getIcon" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QIcon" isPureVirtual="false">
+        <arg type="RLineweight::Lineweight"
+        typeName="RLineweight::Lineweight" name="color"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getName" cppName="getName" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLineweight::Lineweight"
+        typeName="RLineweight::Lineweight" name="lineweight"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>
