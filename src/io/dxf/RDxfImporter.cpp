@@ -1364,7 +1364,6 @@ void RDxfImporter::addDictionaryEntry(const DL_DictionaryEntryData& data) {
 
     if (inDict) {
         qcadDict[data.handle.c_str()] = data.name.c_str();
-        qDebug() << "RDxfImporter::addDictionaryEntry: qcadDict[" << data.handle.c_str() << "] -> " << data.name.c_str();
     }
 }
 
