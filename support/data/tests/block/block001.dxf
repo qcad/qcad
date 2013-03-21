@@ -485,19 +485,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2456365.657534722
+2456373.44628471
   9
 $TDUCREATE
  40
-2456365.615868056
+2456373.404618056
   9
 $TDUPDATE
  40
-2456365.657534722
+2456373.44628471
   9
 $TDUUPDATE
  40
-2456365.615868056
+2456373.404618056
   9
 $TDINDWG
  40
@@ -545,7 +545,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-CD
+CE
   9
 $SURFTAB1
  70
@@ -925,7 +925,7 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{86C3584A-4CC9-430D-9D29-ACBFCAD13630}
+{D0C62A2C-5175-BBDE-BA4E-1F216F48A61B}
   9
 $VERSIONGUID
   2
@@ -1427,7 +1427,7 @@ Solid line
   0
 LTYPE
   5
-B2
+B3
 330
 28
 100
@@ -1473,7 +1473,7 @@ BORDER
   0
 LTYPE
   5
-B3
+B4
 330
 28
 100
@@ -1519,7 +1519,7 @@ BORDER2
   0
 LTYPE
   5
-B4
+B5
 330
 28
 100
@@ -1565,7 +1565,7 @@ BORDERX2
   0
 LTYPE
   5
-B5
+B6
 330
 28
 100
@@ -1603,7 +1603,7 @@ CENTER
   0
 LTYPE
   5
-B6
+B7
 330
 28
 100
@@ -1641,7 +1641,7 @@ CENTER2
   0
 LTYPE
   5
-B7
+B8
 330
 28
 100
@@ -1679,7 +1679,7 @@ CENTERX2
   0
 LTYPE
   5
-B8
+B9
 330
 28
 100
@@ -1717,7 +1717,7 @@ DASHDOT
   0
 LTYPE
   5
-B9
+BA
 330
 28
 100
@@ -1755,7 +1755,7 @@ DASHDOT2
   0
 LTYPE
   5
-BA
+BB
 330
 28
 100
@@ -1793,7 +1793,7 @@ DASHDOTX2
   0
 LTYPE
   5
-BB
+BC
 330
 28
 100
@@ -1823,7 +1823,7 @@ DASHED
   0
 LTYPE
   5
-BC
+BD
 330
 28
 100
@@ -1853,7 +1853,7 @@ DASHED2
   0
 LTYPE
   5
-BD
+BE
 330
 28
 100
@@ -1883,7 +1883,7 @@ DASHEDX2
   0
 LTYPE
   5
-BE
+BF
 330
 28
 100
@@ -1929,7 +1929,7 @@ DIVIDE
   0
 LTYPE
   5
-BF
+C0
 330
 28
 100
@@ -1975,7 +1975,7 @@ DIVIDE2
   0
 LTYPE
   5
-C0
+C1
 330
 28
 100
@@ -2021,7 +2021,7 @@ DIVIDEX2
   0
 LTYPE
   5
-C1
+C2
 330
 28
 100
@@ -2051,7 +2051,7 @@ DOT
   0
 LTYPE
   5
-C2
+C3
 330
 28
 100
@@ -2081,7 +2081,7 @@ DOT2
   0
 LTYPE
   5
-C3
+C4
 330
 28
 100
@@ -2151,7 +2151,7 @@ Continuous
   0
 LAYER
   5
-C4
+C5
 330
 25
 100
@@ -2323,7 +2323,7 @@ Standard
   0
 DIMSTYLE
 105
-B1
+B2
 330
 2D
 100
@@ -2429,7 +2429,7 @@ AcDbBlockTableRecord
   0
 BLOCK_RECORD
   5
-C5
+C6
 330
 24
 100
@@ -2581,9 +2581,9 @@ AcDbBlockEnd
   0
 BLOCK
   5
-C6
+C7
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2609,7 +2609,7 @@ LINE
   5
 1B
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2633,7 +2633,7 @@ LINE
   5
 1C
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2657,7 +2657,7 @@ LINE
   5
 1D
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2681,7 +2681,7 @@ LINE
   5
 1E
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2705,7 +2705,7 @@ CIRCLE
   5
 1F
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2725,7 +2725,7 @@ LINE
   5
 20
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2749,7 +2749,7 @@ LINE
   5
 21
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2771,9 +2771,9 @@ AcDbLine
   0
 ENDBLK
   5
-C7
+C8
 330
-C5
+C6
 100
 AcDbEntity
   8
@@ -2839,7 +2839,7 @@ ACAD_MATERIAL
   3
 ACAD_MLEADERSTYLE
 350
-CC
+CD
   3
 ACAD_MLINESTYLE
 350
@@ -2859,7 +2859,7 @@ ACAD_SCALELIST
   3
 ACAD_TABLESTYLE
 350
-CB
+CC
   3
 ACAD_VISUALSTYLE
 350
@@ -2867,11 +2867,11 @@ ACAD_VISUALSTYLE
   3
 AcDbVariableDictionary
 350
-C8
+C9
   3
 ACDB_RECOMPOSE_DATA
 350
-CA
+CB
   3
 QCAD_OBJECTS
 350
@@ -2983,7 +2983,7 @@ Global
   0
 DICTIONARY
   5
-CC
+CD
 102
 {ACAD_REACTORS
 330
@@ -3207,7 +3207,7 @@ D2
   0
 DICTIONARY
   5
-CB
+CC
 102
 {ACAD_REACTORS
 330
@@ -3303,7 +3303,7 @@ Thicken
   0
 DICTIONARY
   5
-C8
+C9
 102
 {ACAD_REACTORS
 330
@@ -3319,11 +3319,11 @@ AcDbDictionary
   3
 CANNOSCALE
 350
-C9
+CA
   0
 XRECORD
   5
-CA
+CB
 102
 {ACAD_REACTORS
 330
@@ -3355,51 +3355,51 @@ AcDbDictionary
   3
 Grid/DisplayGrid00
 350
-9B
+9C
   3
 Grid/DisplayGrid01
 350
-9C
+9D
   3
 Grid/DisplayGrid02
 350
-9D
+9E
   3
 Grid/DisplayGrid03
 350
-A0
+A1
   3
 Grid/GridSpacingX00
 350
-92
+93
   3
 Grid/GridSpacingX01
 350
-93
+94
   3
 Grid/GridSpacingX02
 350
-96
+97
   3
 Grid/GridSpacingX03
 350
-98
+99
   3
 Grid/GridSpacingY00
 350
-AD
+AE
   3
 Grid/GridSpacingY01
 350
-AE
+AF
   3
 Grid/GridSpacingY02
 350
-AF
+B0
   3
 Grid/GridSpacingY03
 350
-B0
+B1
   3
 Grid/IsometricGrid00
 350
@@ -3419,35 +3419,35 @@ Grid/IsometricGrid03
   3
 Grid/IsometricProjection00
 350
-A3
+A4
   3
 Grid/IsometricProjection01
 350
-A4
+A5
   3
 Grid/IsometricProjection02
 350
-A6
+A7
   3
 Grid/IsometricProjection03
 350
-A9
+AA
   3
 Grid/MetaGridSpacingX00
 350
-91
+92
   3
 Grid/MetaGridSpacingX01
 350
-95
+96
   3
 Grid/MetaGridSpacingX02
 350
-97
+98
   3
 Grid/MetaGridSpacingX03
 350
-99
+9A
   3
 Grid/MetaGridSpacingY00
 350
@@ -3463,63 +3463,67 @@ Grid/MetaGridSpacingY02
   3
 Grid/MetaGridSpacingY03
 350
-8E
+8F
   3
 MultiPageSettings/Columns
 350
-90
+91
   3
 MultiPageSettings/GlueMarginsBottom
 350
-9A
+9B
   3
 MultiPageSettings/GlueMarginsLeft
 350
-8F
+90
   3
 MultiPageSettings/GlueMarginsRight
 350
-A2
+A3
   3
 MultiPageSettings/GlueMarginsTop
 350
-A5
+A6
   3
 MultiPageSettings/PrintCropMarks
 350
-9F
+A0
   3
 MultiPageSettings/Rows
 350
-94
+95
   3
 PageSettings/OffsetX
 350
-A7
+A8
   3
 PageSettings/OffsetY
 350
-A8
+A9
   3
 PageSettings/PageOrientation
 350
-AB
+AC
   3
 PageSettings/PaperHeight
 350
-AA
+AB
+  3
+PageSettings/PaperSizeName
+350
+8E
   3
 PageSettings/PaperWidth
 350
-AC
+AD
   3
 PageSettings/Scale
 350
-9E
+9F
   3
 PageSettings/ShowPaperBorders
 350
-A1
+A2
   3
 UnitSettings/PaperUnit
 350
@@ -7041,39 +7045,21 @@ Thicken
   0
 DICTIONARYVAR
   5
-C9
+CA
 102
 {ACAD_REACTORS
 330
-C8
+C9
 102
 }
 330
-C8
+C9
 100
 DictionaryVariables
 280
      0
   1
 1:1
-  0
-XRECORD
-  5
-9B
-102
-{ACAD_REACTORS
-330
-85
-102
-}
-330
-85
-100
-AcDbXrecord
-280
-     1
-290
-     1
   0
 XRECORD
   5
@@ -7113,7 +7099,7 @@ AcDbXrecord
   0
 XRECORD
   5
-A0
+9E
 102
 {ACAD_REACTORS
 330
@@ -7131,7 +7117,7 @@ AcDbXrecord
   0
 XRECORD
   5
-92
+A1
 102
 {ACAD_REACTORS
 330
@@ -7144,8 +7130,8 @@ XRECORD
 AcDbXrecord
 280
      1
-1000
-auto
+290
+     1
   0
 XRECORD
   5
@@ -7167,7 +7153,7 @@ auto
   0
 XRECORD
   5
-96
+94
 102
 {ACAD_REACTORS
 330
@@ -7185,7 +7171,7 @@ auto
   0
 XRECORD
   5
-98
+97
 102
 {ACAD_REACTORS
 330
@@ -7203,7 +7189,7 @@ auto
   0
 XRECORD
   5
-AD
+99
 102
 {ACAD_REACTORS
 330
@@ -7258,6 +7244,24 @@ auto
 XRECORD
   5
 B0
+102
+{ACAD_REACTORS
+330
+85
+102
+}
+330
+85
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+B1
 102
 {ACAD_REACTORS
 330
@@ -7347,24 +7351,6 @@ AcDbXrecord
   0
 XRECORD
   5
-A3
-102
-{ACAD_REACTORS
-330
-85
-102
-}
-330
-85
-100
-AcDbXrecord
-280
-     1
- 90
-        0
-  0
-XRECORD
-  5
 A4
 102
 {ACAD_REACTORS
@@ -7383,7 +7369,7 @@ AcDbXrecord
   0
 XRECORD
   5
-A6
+A5
 102
 {ACAD_REACTORS
 330
@@ -7401,7 +7387,7 @@ AcDbXrecord
   0
 XRECORD
   5
-A9
+A7
 102
 {ACAD_REACTORS
 330
@@ -7419,7 +7405,25 @@ AcDbXrecord
   0
 XRECORD
   5
-91
+AA
+102
+{ACAD_REACTORS
+330
+85
+102
+}
+330
+85
+100
+AcDbXrecord
+280
+     1
+ 90
+        0
+  0
+XRECORD
+  5
+92
 102
 {ACAD_REACTORS
 330
@@ -7437,7 +7441,7 @@ auto
   0
 XRECORD
   5
-95
+96
 102
 {ACAD_REACTORS
 330
@@ -7455,7 +7459,7 @@ auto
   0
 XRECORD
   5
-97
+98
 102
 {ACAD_REACTORS
 330
@@ -7473,7 +7477,7 @@ auto
   0
 XRECORD
   5
-99
+9A
 102
 {ACAD_REACTORS
 330
@@ -7545,7 +7549,7 @@ auto
   0
 XRECORD
   5
-8E
+8F
 102
 {ACAD_REACTORS
 330
@@ -7563,7 +7567,7 @@ auto
   0
 XRECORD
   5
-90
+91
 102
 {ACAD_REACTORS
 330
@@ -7581,7 +7585,7 @@ AcDbXrecord
   0
 XRECORD
   5
-9A
+9B
 102
 {ACAD_REACTORS
 330
@@ -7599,7 +7603,7 @@ AcDbXrecord
   0
 XRECORD
   5
-8F
+90
 102
 {ACAD_REACTORS
 330
@@ -7617,7 +7621,7 @@ AcDbXrecord
   0
 XRECORD
   5
-A2
+A3
 102
 {ACAD_REACTORS
 330
@@ -7635,7 +7639,7 @@ AcDbXrecord
   0
 XRECORD
   5
-A5
+A6
 102
 {ACAD_REACTORS
 330
@@ -7653,7 +7657,7 @@ AcDbXrecord
   0
 XRECORD
   5
-9F
+A0
 102
 {ACAD_REACTORS
 330
@@ -7671,7 +7675,7 @@ AcDbXrecord
   0
 XRECORD
   5
-94
+95
 102
 {ACAD_REACTORS
 330
@@ -7686,24 +7690,6 @@ AcDbXrecord
      1
  90
         1
-  0
-XRECORD
-  5
-A7
-102
-{ACAD_REACTORS
-330
-85
-102
-}
-330
-85
-100
-AcDbXrecord
-280
-     1
- 40
-0.0
   0
 XRECORD
   5
@@ -7725,7 +7711,25 @@ AcDbXrecord
   0
 XRECORD
   5
-AB
+A9
+102
+{ACAD_REACTORS
+330
+85
+102
+}
+330
+85
+100
+AcDbXrecord
+280
+     1
+ 40
+0.0
+  0
+XRECORD
+  5
+AC
 102
 {ACAD_REACTORS
 330
@@ -7743,7 +7747,7 @@ Portrait
   0
 XRECORD
   5
-AA
+AB
 102
 {ACAD_REACTORS
 330
@@ -7756,12 +7760,12 @@ AA
 AcDbXrecord
 280
      1
- 40
-2.0
+1000
+297
   0
 XRECORD
   5
-AC
+8E
 102
 {ACAD_REACTORS
 330
@@ -7774,12 +7778,30 @@ AC
 AcDbXrecord
 280
      1
- 40
-2.0
+1000
+ISO A4
   0
 XRECORD
   5
-9E
+AD
+102
+{ACAD_REACTORS
+330
+85
+102
+}
+330
+85
+100
+AcDbXrecord
+280
+     1
+1000
+210
+  0
+XRECORD
+  5
+9F
 102
 {ACAD_REACTORS
 330
@@ -7797,7 +7819,7 @@ AcDbXrecord
   0
 XRECORD
   5
-A1
+A2
 102
 {ACAD_REACTORS
 330
