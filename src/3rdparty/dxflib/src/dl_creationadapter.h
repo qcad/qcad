@@ -38,7 +38,7 @@ class DL_CreationAdapter : public DL_CreationInterface {
 public:
     DL_CreationAdapter() {}
     virtual ~DL_CreationAdapter() {}
-    virtual void processCodeValuePair(unsigned int, char*) {}
+    virtual void processCodeValuePair(unsigned int, const std::string&) {}
     virtual void endSection() {}
     virtual void addLayer(const DL_LayerData&) {}
     virtual void addBlock(const DL_BlockData&) {}
@@ -61,7 +61,7 @@ public:
     virtual void addInsert(const DL_InsertData&) {}
 	
     virtual void addMText(const DL_MTextData&) {}
-    virtual void addMTextChunk(const char*) {}
+    virtual void addMTextChunk(const std::string&) {}
     virtual void addText(const DL_TextData&) {}
 	
     virtual void addDimAlign(const DL_DimensionData&,
@@ -91,12 +91,24 @@ public:
 	virtual void linkImage(const DL_ImageDefData&) {}
     virtual void addHatchLoop(const DL_HatchLoopData&) {}
     virtual void addHatchEdge(const DL_HatchEdgeData&) {}
+
+    virtual void addXRecord(const std::string&) {}
+    virtual void addXRecordString(int, const std::string&) {}
+    virtual void addXRecordReal(int, double) {}
+    virtual void addXRecordInt(int, int) {}
+    virtual void addXRecordBool(int, bool) {}
+
     virtual void addXDataApp(const std::string&) {}
     virtual void addXDataString(int, const std::string&) {}
     virtual void addXDataReal(int, double) {}
     virtual void addXDataInt(int, int) {}
+
+    virtual void addDictionary(const DL_DictionaryData&) {}
+    virtual void addDictionaryEntry(const DL_DictionaryEntryData&) {}
+
     virtual void endEntity() {}
-    virtual void addComment(const char*) {}
+
+    virtual void addComment(const std::string&) {}
 
     virtual void setVariableVector(const std::string&,  double, double, double, int) {}
     virtual void setVariableString(const std::string&, const std::string&, int) {}
@@ -107,6 +119,9 @@ public:
     virtual void setVariableString(const char*, const char*, int) {}
     virtual void setVariableInt(const char*, int, int) {}
     virtual void setVariableDouble(const char*, double, int) {}
+    virtual void processCodeValuePair(unsigned int, char*) {}
+    virtual void addComment(const char*) {}
+    virtual void addMTextChunk(const char*) {}
 #endif
     virtual void endSequence() {}
 };

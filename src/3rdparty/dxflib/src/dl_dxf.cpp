@@ -95,26 +95,6 @@ DL_Dxf::~DL_Dxf() {
     if (leaderVertices!=NULL) {
         delete[] leaderVertices;
     }
-
-    /*
-    if (hatchLoops!=NULL) {
-        delete[] hatchLoops;
-    }
-//    if (hatchEdges!=NULL) {
-//        for (int i=0; i<maxHatchLoops; ++i) {
-//            if (hatchEdges[i]!=NULL) {
-//                delete[] hatchEdges[i];
-//            }
-//        }
-//        delete[] hatchEdges;
-//    }
-    if (maxHatchEdges!=NULL) {
-        delete[] maxHatchEdges;
-    }
-    if (hatchEdgeIndex!=NULL) {
-        delete[] hatchEdgeIndex;
-    }
-    */
 }
 
 
@@ -208,31 +188,17 @@ bool DL_Dxf::in(std::stringstream& stream,
 bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface,
                            int* errorCounter) {
 
-    bool ok = true;
     static int line = 1;
 
-    // Read one group of the DXF file and chop the lines:
-    if (DL_Dxf::getChoppedLine(groupCodeTmp, DL_DXF_MAXLINE, fp) &&
-            DL_Dxf::getChoppedLine(groupValue, DL_DXF_MAXLINE, fp) ) {
+    // Read one group of the DXF file and strip the lines:
+    if (DL_Dxf::getStrippedLine(groupCodeTmp, DL_DXF_MAXLINE, fp) &&
+            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, fp) ) {
 
-        groupCode = (unsigned int)stringToInt(groupCodeTmp, &ok);
+        groupCode = (unsigned int)toInt(groupCodeTmp);
 
-        if (ok) {
-            //std::cerr << groupCode << "\n";
-            //std::cerr << groupValue << "\n";
-            creationInterface->processCodeValuePair(groupCode, groupValue);
-            line+=2;
-            processDXFGroup(creationInterface, groupCode, groupValue);
-        } else {
-            std::cerr << "DXF read error: Line: " << line << "\n";
-            if (errorCounter!=NULL) {
-                (*errorCounter)++;
-            }
-            // try to fix:
-            std::cerr << "DXF read error: trying to fix..\n";
-            // drop a line to sync:
-            DL_Dxf::getChoppedLine(groupCodeTmp, DL_DXF_MAXLINE, fp);
-        }
+        creationInterface->processCodeValuePair(groupCode, groupValue);
+        line+=2;
+        processDXFGroup(creationInterface, groupCode, groupValue);
     }
 
     return !feof(fp);
@@ -247,30 +213,16 @@ bool DL_Dxf::readDxfGroups(std::stringstream& stream,
                            DL_CreationInterface* creationInterface,
                            int* errorCounter) {
 
-    bool ok = true;
     static int line = 1;
 
     // Read one group of the DXF file and chop the lines:
-    if (DL_Dxf::getChoppedLine(groupCodeTmp, DL_DXF_MAXLINE, stream) &&
-            DL_Dxf::getChoppedLine(groupValue, DL_DXF_MAXLINE, stream) ) {
+    if (DL_Dxf::getStrippedLine(groupCodeTmp, DL_DXF_MAXLINE, stream) &&
+            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, stream) ) {
 
-        groupCode = (unsigned int)stringToInt(groupCodeTmp, &ok);
+        groupCode = (unsigned int)toInt(groupCodeTmp);
 
-        if (ok) {
-            //std::cout << "group code: " << groupCode << "\n";
-            //std::cout << "group value: " << groupValue << "\n";
-            line+=2;
-            processDXFGroup(creationInterface, groupCode, groupValue);
-        } else {
-            std::cerr << "DXF read error: Line: " << line << "\n";
-            if (errorCounter!=NULL) {
-                (*errorCounter)++;
-            }
-            // try to fix:
-            //std::cerr << "DXF read error: trying to fix..\n";
-            // drop a line to sync:
-            //DL_Dxf::getChoppedLine(groupCodeTmp, DL_DXF_MAXLINE, stream);
-        }
+        line+=2;
+        processDXFGroup(creationInterface, groupCode, groupValue);
     }
     return !stream.eof();
 }
@@ -294,7 +246,7 @@ bool DL_Dxf::readDxfGroups(std::stringstream& stream,
  * @todo Is it a problem if line is blank (i.e., newline only)?
  *		Then, when function returns, (s==NULL).
  */
-bool DL_Dxf::getChoppedLine(char *s, unsigned int size, FILE *fp) {
+bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp) {
     if (!feof(fp)) {
         // The whole line in the file.  Includes space for NULL.
         char* wholeLine = new char[size];
@@ -310,17 +262,15 @@ bool DL_Dxf::getChoppedLine(char *s, unsigned int size, FILE *fp) {
             // Strip leading whitespace and trailing CR/LF.
             stripWhiteSpace(&line);
 
-            strncpy(s, line, size);
-            s[size] = '\0';
-            // s should always be NULL terminated, because:
-            assert(size > strlen(line));
+            s = line;
+            assert(size > s.length());
         }
 
         delete[] wholeLine; // Done with wholeLine
 
         return true;
     } else {
-        s[0] = '\0';
+        s = "";
         return false;
     }
 }
@@ -330,7 +280,7 @@ bool DL_Dxf::getChoppedLine(char *s, unsigned int size, FILE *fp) {
 /**
  * Same as above but for stringstreams.
  */
-bool DL_Dxf::getChoppedLine(char *s, unsigned int size,
+bool DL_Dxf::getStrippedLine(std::string &s, unsigned int size,
                             std::stringstream& stream) {
 
     if (!stream.eof()) {
@@ -339,9 +289,8 @@ bool DL_Dxf::getChoppedLine(char *s, unsigned int size,
         char* oriLine = line;
         stream.getline(line, size);
         stripWhiteSpace(&line);
-        strncpy(s, line, size);
-        s[size] = '\0';
-        assert(size > strlen(s));
+        s = line;
+        assert(size > s.length());
         delete[] oriLine;
         return true;
     } else {
@@ -397,22 +346,19 @@ bool DL_Dxf::stripWhiteSpace(char** s) {
  * @retval false if not done processing current entity
 */
 bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
-                             int groupCode, const char *groupValue) {
+                             int groupCode, const std::string& groupValue) {
 
     // Init values on first call
     if (firstCall) {
-//        for (int i=0; i<DL_DXF_MAXGROUPCODE; ++i) {
-//            values[i][0] = '\0';
-//        }
         settingValue[0] = '\0';
         firstCall=false;
     }
 
     // Indicates comment or dxflib version:
     if (groupCode==999) {
-        if (groupValue!=NULL) {
-            if (!strncmp(groupValue, "dxflib", 6)) {
-                libVersion = getLibVersion(&groupValue[7]);
+        if (!groupValue.empty()) {
+            if (groupValue.substr(0, 6)=="dxflib") {
+                libVersion = getLibVersion(groupValue.substr(7));
             }
             
             addComment(creationInterface, groupValue);
@@ -423,7 +369,6 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
     else if (groupCode==0 || groupCode==9) {
         // If new entity is encountered, the last one is complete.
         // Prepare default attributes for next entity:
-        //char name[DL_DXF_MAXLINE+1];
         std::string layer = getStringValue(8, "0");
 
         int width;
@@ -605,7 +550,7 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
         case DL_ENTITY_SEQEND:
             endSequence(creationInterface);
             break;
-        
+
         default:
             break;
         }
@@ -623,6 +568,8 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
         firstHatchLoop = true;
         //firstHatchEdge = true;
         hatchEdge = DL_HatchEdgeData();
+        //xRecordHandle = "";
+        xRecordValues = false;
 
         // Last DXF entity or setting has been handled
         // Now determine what the next entity or setting type is
@@ -636,69 +583,71 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
         }
 
         // Read Layers:
-        else if (!strcmp(groupValue, "LAYER")) {
+        else if (groupValue=="LAYER") {
             currentObjectType = DL_LAYER;
         }
 
         // Read Blocks:
-        else if (!strcmp(groupValue, "BLOCK")) {
+        else if (groupValue=="BLOCK") {
             currentObjectType = DL_BLOCK;
-        } else if (!strcmp(groupValue, "ENDBLK")) {
+        } else if (groupValue=="ENDBLK") {
             currentObjectType = DL_ENDBLK;
         }
 
         // Read text styles:
-        else if (!strcmp(groupValue, "STYLE")) {
+        else if (groupValue=="STYLE") {
             currentObjectType = DL_STYLE;
         }
 
         // Read entities:
-        else if (!strcmp(groupValue, "POINT")) {
+        else if (groupValue=="POINT") {
             currentObjectType = DL_ENTITY_POINT;
-        } else if (!strcmp(groupValue, "LINE")) {
+        } else if (groupValue=="LINE") {
             currentObjectType = DL_ENTITY_LINE;
-        } else if (!strcmp(groupValue, "POLYLINE")) {
+        } else if (groupValue=="POLYLINE") {
             currentObjectType = DL_ENTITY_POLYLINE;
-        } else if (!strcmp(groupValue, "LWPOLYLINE")) {
+        } else if (groupValue=="LWPOLYLINE") {
             currentObjectType = DL_ENTITY_LWPOLYLINE;
-        } else if (!strcmp(groupValue, "VERTEX")) {
+        } else if (groupValue=="VERTEX") {
             currentObjectType = DL_ENTITY_VERTEX;
-        } else if (!strcmp(groupValue, "SPLINE")) {
+        } else if (groupValue=="SPLINE") {
             currentObjectType = DL_ENTITY_SPLINE;
-        } else if (!strcmp(groupValue, "ARC")) {
+        } else if (groupValue=="ARC") {
             currentObjectType = DL_ENTITY_ARC;
-        } else if (!strcmp(groupValue, "ELLIPSE")) {
+        } else if (groupValue=="ELLIPSE") {
             currentObjectType = DL_ENTITY_ELLIPSE;
-        } else if (!strcmp(groupValue, "CIRCLE")) {
+        } else if (groupValue=="CIRCLE") {
             currentObjectType = DL_ENTITY_CIRCLE;
-        } else if (!strcmp(groupValue, "INSERT")) {
+        } else if (groupValue=="INSERT") {
             currentObjectType = DL_ENTITY_INSERT;
-        } else if (!strcmp(groupValue, "TEXT")) {
+        } else if (groupValue=="TEXT") {
             currentObjectType = DL_ENTITY_TEXT;
-        } else if (!strcmp(groupValue, "MTEXT")) {
+        } else if (groupValue=="MTEXT") {
             currentObjectType = DL_ENTITY_MTEXT;
-        } else if (!strcmp(groupValue, "ATTRIB")) {
+        } else if (groupValue=="ATTRIB") {
             currentObjectType = DL_ENTITY_ATTRIB;
-        } else if (!strcmp(groupValue, "DIMENSION")) {
+        } else if (groupValue=="DIMENSION") {
             currentObjectType = DL_ENTITY_DIMENSION;
-        } else if (!strcmp(groupValue, "LEADER")) {
+        } else if (groupValue=="LEADER") {
             currentObjectType = DL_ENTITY_LEADER;
-        } else if (!strcmp(groupValue, "HATCH")) {
+        } else if (groupValue=="HATCH") {
             currentObjectType = DL_ENTITY_HATCH;
-        } else if (!strcmp(groupValue, "IMAGE")) {
+        } else if (groupValue=="IMAGE") {
             currentObjectType = DL_ENTITY_IMAGE;
-        } else if (!strcmp(groupValue, "IMAGEDEF")) {
+        } else if (groupValue=="IMAGEDEF") {
             currentObjectType = DL_ENTITY_IMAGEDEF;
-        } else if (!strcmp(groupValue, "TRACE")) {
+        } else if (groupValue=="TRACE") {
            currentObjectType = DL_ENTITY_TRACE;
-        } else if (!strcmp(groupValue, "SOLID")) {
+        } else if (groupValue=="SOLID") {
            currentObjectType = DL_ENTITY_SOLID;
-        } else if (!strcmp(groupValue, "3DFACE")) {
+        } else if (groupValue=="3DFACE") {
            currentObjectType = DL_ENTITY_3DFACE;
-        } else if (!strcmp(groupValue, "SEQEND")) {
+        } else if (groupValue=="SEQEND") {
             currentObjectType = DL_ENTITY_SEQEND;
-        } else if (!strcmp(groupValue, "XRECORD")) {
+        } else if (groupValue=="XRECORD") {
             currentObjectType = DL_XRECORD;
+        } else if (groupValue=="DICTIONARY") {
+            currentObjectType = DL_DICTIONARY;
         } else {
             currentObjectType = DL_UNKNOWN;
         }
@@ -744,6 +693,14 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
                 handled = handleHatchData(creationInterface);
                 break;
 
+            case DL_XRECORD:
+                handled = handleXRecordData(creationInterface);
+                break;
+
+            case DL_DICTIONARY:
+                handled = handleDictionaryData(creationInterface);
+                break;
+
             default:
                 break;
             }
@@ -756,8 +713,6 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
             if (!handled) {
                 // Normal group / value pair:
                 values[groupCode] = groupValue;
-                //strncpy(values[groupCode], groupValue, DL_DXF_MAXLINE);
-                //values[groupCode][DL_DXF_MAXLINE] = '\0';
             }
         }
 
@@ -771,8 +726,16 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
 /**
  * Adds a comment from the DXF file.
  */
-void DL_Dxf::addComment(DL_CreationInterface* creationInterface, const char* comment) {
+void DL_Dxf::addComment(DL_CreationInterface* creationInterface, const std::string& comment) {
     creationInterface->addComment(comment);
+}
+
+void DL_Dxf::addDictionary(DL_CreationInterface* creationInterface) {
+    creationInterface->addDictionary(DL_DictionaryData(getStringValue(5, "")));
+}
+
+void DL_Dxf::addDictionaryEntry(DL_CreationInterface* creationInterface) {
+    creationInterface->addDictionaryEntry(DL_DictionaryEntryData(getStringValue(3, ""), getStringValue(350, "")));
 }
 
 
@@ -1226,6 +1189,79 @@ void DL_Dxf::addMText(DL_CreationInterface* creationInterface) {
         // angle
         angle);
     creationInterface->addMText(d);
+}
+
+/**
+ * Handles all XRecord data.
+ */
+bool DL_Dxf::handleXRecordData(DL_CreationInterface* creationInterface) {
+    if (groupCode==105) {
+        return false;
+    }
+
+    if (groupCode==5) {
+        creationInterface->addXRecord(groupValue);
+        return true;
+    }
+
+    if (groupCode==280) {
+        xRecordValues = true;
+        return true;
+    }
+
+    if (!xRecordValues) {
+        return false;
+    }
+
+    // string:
+    if (groupCode<=9 ||
+        groupCode==100 || groupCode==102 || groupCode==105 ||
+        groupCode>=300 && groupCode<=369 ||
+        groupCode>=1000 && groupCode<=1009) {
+
+        creationInterface->addXRecordString(groupCode, groupValue);
+        return true;
+    }
+
+    // int:
+    else if (groupCode>=60 && groupCode<=99 || groupCode>=160 && groupCode<=179 || groupCode>=270 && groupCode<=289) {
+        creationInterface->addXRecordInt(groupCode, toInt(groupValue));
+        return true;
+    }
+
+    // bool:
+    else if (groupCode>=290 && groupCode<=299) {
+        creationInterface->addXRecordBool(groupCode, toBool(groupValue));
+        return true;
+    }
+
+    // double:
+    else if (groupCode>=10 && groupCode<=59 || groupCode>=110 && groupCode<=149 || groupCode>=210 && groupCode<=239) {
+        creationInterface->addXRecordReal(groupCode, toReal(groupValue));
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Handles all dictionary data.
+ */
+bool DL_Dxf::handleDictionaryData(DL_CreationInterface* creationInterface) {
+    if (groupCode==3) {
+        return true;
+    }
+
+    if (groupCode==5) {
+        creationInterface->addDictionary(DL_DictionaryData(groupValue));
+        return true;
+    }
+
+    if (groupCode==350) {
+        creationInterface->addDictionaryEntry(DL_DictionaryEntryData(getStringValue(3, ""), groupValue));
+        return true;
+    }
+    return false;
 }
 
 
@@ -2089,32 +2125,32 @@ void DL_Dxf::endSequence(DL_CreationInterface* creationInterface) {
  * Converts the given string into an int.
  * ok is set to false if there was an error.
  */
-int DL_Dxf::stringToInt(const char* s, bool* ok) {
-    if (ok!=NULL) {
-        // check string:
-        *ok = true;
-        int i=0;
-        bool dot = false;
-        do {
-            if (s[i]=='\0') {
-                break;
-            } else if (s[i]=='.') {
-                if (dot==true) {
-                    //std::cerr << "two dots\n";
-                    *ok = false;
-                } else {
-                    dot = true;
-                }
-            } else if (s[i]<'0' || s[i]>'9') {
-                //std::cerr << "NaN: '" << s[i] << "'\n";
-                *ok = false;
-            }
-            i++;
-        } while(s[i]!='\0' && *ok==true);
-    }
+//int DL_Dxf::stringToInt(const char* s, bool* ok) {
+//    if (ok!=NULL) {
+//        // check string:
+//        *ok = true;
+//        int i=0;
+//        bool dot = false;
+//        do {
+//            if (s[i]=='\0') {
+//                break;
+//            } else if (s[i]=='.') {
+//                if (dot==true) {
+//                    //std::cerr << "two dots\n";
+//                    *ok = false;
+//                } else {
+//                    dot = true;
+//                }
+//            } else if (s[i]<'0' || s[i]>'9') {
+//                //std::cerr << "NaN: '" << s[i] << "'\n";
+//                *ok = false;
+//            }
+//            i++;
+//        } while(s[i]!='\0' && *ok==true);
+//    }
 
-    return atoi(s);
-}
+//    return atoi(s);
+//}
 
 
 /**
@@ -5039,13 +5075,14 @@ bool DL_Dxf::checkVariable(const char* var, DL_Codes::version version) {
  * @returns the library version as int (4 bytes, each byte one version number).
  * e.g. if str = "2.0.2.0" getLibVersion returns 0x02000200
  */
-int DL_Dxf::getLibVersion(const char* str) {
+int DL_Dxf::getLibVersion(const std::string& str) {
     int d[4];
     int idx = 0;
-    char v[4][5];
+    //char v[4][5];
+    std::string v[4];
     int ret = 0;
 
-    for (unsigned int i=0; i<strlen(str) && idx<3; ++i) {
+    for (unsigned int i=0; i<str.length() && idx<3; ++i) {
         if (str[i]=='.') {
             d[idx] = i;
             idx++;
@@ -5053,24 +5090,28 @@ int DL_Dxf::getLibVersion(const char* str) {
     }
 
     if (idx==3) {
-        d[3] = strlen(str);
+        d[3] = str.length();
 
-        strncpy(v[0], str, d[0]);
-        v[0][d[0]] = '\0';
+        v[0] = str.substr(0, d[0]);
+        //strncpy(v[0], str, d[0]);
+        //v[0][d[0]] = '\0';
 
-        strncpy(v[1], &str[d[0]+1], d[1]-d[0]-1);
-        v[1][d[1]-d[0]-1] = '\0';
+        v[1] = str.substr(d[0]+1, d[1]-d[0]-1);
+        //strncpy(v[1], &str[d[0]+1], d[1]-d[0]-1);
+        //v[1][d[1]-d[0]-1] = '\0';
 
-        strncpy(v[2], &str[d[1]+1], d[2]-d[1]-1);
-        v[2][d[2]-d[1]-1] = '\0';
+        v[2] = str.substr(d[1]+1, d[2]-d[1]-1);
+        //strncpy(v[2], &str[d[1]+1], d[2]-d[1]-1);
+        //v[2][d[2]-d[1]-1] = '\0';
 
-        strncpy(v[3], &str[d[2]+1], d[3]-d[2]-1);
-        v[3][d[3]-d[2]-1] = '\0';
+        v[3] = str.substr(d[2]+1, d[3]-d[2]-1);
+        //strncpy(v[3], &str[d[2]+1], d[3]-d[2]-1);
+        //v[3][d[3]-d[2]-1] = '\0';
 
-        ret = (atoi(v[0])<<(3*8)) +
-              (atoi(v[1])<<(2*8)) +
-              (atoi(v[2])<<(1*8)) +
-              (atoi(v[3])<<(0*8));
+        ret = (atoi(v[0].c_str())<<(3*8)) +
+              (atoi(v[1].c_str())<<(2*8)) +
+              (atoi(v[2].c_str())<<(1*8)) +
+              (atoi(v[3].c_str())<<(0*8));
 
         return ret;
     } else {

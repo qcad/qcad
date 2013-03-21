@@ -89,6 +89,7 @@ class DL_WriterA;
 #define DL_ENTITY_3DFACE       122
 #define DL_ENTITY_SEQEND       123
 #define DL_XRECORD             200
+#define DL_DICTIONARY          210
 
 
 /**
@@ -118,21 +119,21 @@ public:
     bool readDxfGroups(FILE* fp,
                        DL_CreationInterface* creationInterface,
 					   int* errorCounter = NULL);
-    static bool getChoppedLine(char* s, unsigned int size,
-                               FILE *stream);
+    static bool getStrippedLine(std::string& s, unsigned int size,
+                               FILE* stream);
     
-    bool readDxfGroups(std::stringstream &stream,
+    bool readDxfGroups(std::stringstream& stream,
                        DL_CreationInterface* creationInterface,
 					   int* errorCounter = NULL);
     bool in(std::stringstream &stream,
             DL_CreationInterface* creationInterface);
-    static bool getChoppedLine(char *s, unsigned int size,
-                               std::stringstream &stream);
+    static bool getStrippedLine(std::string& s, unsigned int size,
+                               std::stringstream& stream);
 
     static bool stripWhiteSpace(char** s);
 
     bool processDXFGroup(DL_CreationInterface* creationInterface,
-                         int groupCode, const char* groupValue);
+                         int groupCode, const std::string& groupValue);
     void addSetting(DL_CreationInterface* creationInterface);
     void addLayer(DL_CreationInterface* creationInterface);
     void addBlock(DL_CreationInterface* creationInterface);
@@ -182,7 +183,13 @@ public:
     void addImage(DL_CreationInterface* creationInterface);
     void addImageDef(DL_CreationInterface* creationInterface);
     
-    void addComment(DL_CreationInterface* creationInterface, const char* comment);
+    void addComment(DL_CreationInterface* creationInterface, const std::string& comment);
+
+    void addDictionary(DL_CreationInterface* creationInterface);
+    void addDictionaryEntry(DL_CreationInterface* creationInterface);
+
+    bool handleXRecordData(DL_CreationInterface* creationInterface);
+    bool handleDictionaryData(DL_CreationInterface* creationInterface);
 
     bool handleXData(DL_CreationInterface *creationInterface);
     bool handleMTextData(DL_CreationInterface* creationInterface);
@@ -194,7 +201,7 @@ public:
 	
     void endSequence(DL_CreationInterface* creationInterface);
 	
-	int  stringToInt(const char* s, bool* ok=NULL);	
+    //int  stringToInt(const char* s, bool* ok=NULL);
 
     DL_WriterA* out(const char* file,
                     DL_Codes::version version=DL_VERSION_2000);
@@ -360,7 +367,7 @@ public:
 		return version;
 	}
 
-	int getLibVersion(const char* str);
+    int getLibVersion(const std::string &str);
 
 	static void test();
 
@@ -442,12 +449,15 @@ private:
     DL_HatchEdgeData hatchEdge;
     std::vector<std::vector<DL_HatchEdgeData> > hatchEdges;
 
+    std::string xRecordHandle;
+    bool xRecordValues;
+
     // Only the useful part of the group code
-    char groupCodeTmp[DL_DXF_MAXLINE+1];
+    std::string groupCodeTmp;
     // ...same as integer
     unsigned int groupCode;
     // Only the useful part of the group value
-    char groupValue[DL_DXF_MAXLINE+1];
+    std::string groupValue;
     // Current entity type
     int currentObjectType;
     // Value of the current setting

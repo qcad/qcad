@@ -1505,7 +1505,29 @@ struct DL_ImageDefData {
     std::string file;
 };
 
+
+
+/**
+ * Dictionary data.
+ */
+struct DL_DictionaryData {
+    DL_DictionaryData(const std::string& handle) : handle(handle) {}
+    std::string handle;
+};
+
+
+
+/**
+ * Dictionary entry data.
+ */
+struct DL_DictionaryEntryData {
+    DL_DictionaryEntryData(const std::string& name, const std::string& handle) :
+        name(name), handle(handle) {}
+
+    std::string name;
+    std::string handle;
+};
+
 #endif
 
 // EOF
-

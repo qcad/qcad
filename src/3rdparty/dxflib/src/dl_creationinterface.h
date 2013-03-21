@@ -55,7 +55,7 @@ public:
      * Called for every code / value tuple of the DXF file. The complete DXF file
      * contents can be handled by the implemetation of this function.
      */
-    virtual void processCodeValuePair(unsigned int groupCode, char* groupValue) = 0;
+    virtual void processCodeValuePair(unsigned int groupCode, const std::string& groupValue) = 0;
 
     /**
      * Called when a section (entity, table entry, etc.) is finished.
@@ -135,7 +135,7 @@ public:
      * The chunks come at 250 character in size each. Note that 
      * those chunks come <b>before</b> the actual MTEXT entity.
      */
-    virtual void addMTextChunk(const char* text) = 0;
+    virtual void addMTextChunk(const std::string& text) = 0;
 
     /** Called for every Text entity. */
     virtual void addText(const DL_TextData& data) = 0;
@@ -217,6 +217,31 @@ public:
     virtual void addHatchEdge(const DL_HatchEdgeData& data) = 0;
 
     /**
+     * Called for every XRecord with the given handle.
+     */
+    virtual void addXRecord(const std::string& handle) = 0;
+
+    /**
+     * Called for XRecords of type string.
+     */
+    virtual void addXRecordString(int code, const std::string& value) = 0;
+
+    /**
+     * Called for XRecords of type double.
+     */
+    virtual void addXRecordReal(int code, double value) = 0;
+
+    /**
+     * Called for XRecords of type int.
+     */
+    virtual void addXRecordInt(int code, int value) = 0;
+
+    /**
+     * Called for XRecords of type bool.
+     */
+    virtual void addXRecordBool(int code, bool value) = 0;
+
+    /**
      * Called for every beginning of an XData section of the given application.
      */
     virtual void addXDataApp(const std::string& appId) = 0;
@@ -235,7 +260,17 @@ public:
      * Called for XData tuples.
      */
     virtual void addXDataInt(int code, int value) = 0;
-	
+
+    /**
+     * Called for dictionary objects.
+     */
+    virtual void addDictionary(const DL_DictionaryData& data) = 0;
+
+    /**
+     * Called for dictionary entries.
+     */
+    virtual void addDictionaryEntry(const DL_DictionaryEntryData& data) = 0;
+
 	/** 
 	 * Called after an entity has been completed.  
 	 */
@@ -244,7 +279,7 @@ public:
     /**
      * Called for every comment in the DXF file (code 999).
      */
-    virtual void addComment(const char* comment) = 0;
+    virtual void addComment(const std::string& comment) = 0;
 
     /**
      * Called for every vector variable in the DXF file (e.g. "$EXTMIN").
@@ -271,6 +306,9 @@ public:
     virtual void setVariableString(const char* key, const char* value, int code) = 0;
     virtual void setVariableInt(const char* key, int value, int code) = 0;
     virtual void setVariableDouble(const char* key, double value, int code) = 0;
+    virtual void processCodeValuePair(unsigned int groupCode, char* groupValue) = 0;
+    virtual void addComment(const char* comment) = 0;
+    virtual void addMTextChunk(const char* text) = 0;
 #endif
 	
      /**
