@@ -18,7 +18,9 @@
  */
 
 include("../File.js");
-include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");
+if (isNull(PageSettings)) {
+    include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");
+}
 
 /**
  * Used to print the given document with the settings stored inside the document
