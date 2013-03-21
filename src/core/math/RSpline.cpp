@@ -1078,7 +1078,8 @@ void RSpline::updateFromFitPoints(bool useTangents) {
         updateFromFitPointsFunction(*this, useTangents);
     }
     else {
-        updateFromControlPoints();
+        invalidate();
+        return;
     }
 }
 

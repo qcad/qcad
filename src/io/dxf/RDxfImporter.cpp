@@ -600,11 +600,6 @@ void RDxfImporter::addPolyline(const DL_PolylineData& data) {
 }
 
 void RDxfImporter::addVertex(const DL_VertexData& data) {
-//    if (polyline.isNull()) {
-//        qWarning() << "RDxfImporter::addVertex: vertex outside polyline found";
-//        return;
-//    }
-
     RVector v(data.x, data.y);
     polyline.appendVertex(v, data.bulge);
 }
@@ -662,9 +657,6 @@ void RDxfImporter::addInsert(const DL_InsertData& data) {
 
     RVector insertionPoint(data.ipx, data.ipy);
     RVector scale(data.sx, data.sy);
-
-    qDebug() << "insert angle: " << data.angle;
-    //RVector sp(data.colSp, data.rowSp);
 
     QSharedPointer<RBlockReferenceEntity> entity(
             new RBlockReferenceEntity(
