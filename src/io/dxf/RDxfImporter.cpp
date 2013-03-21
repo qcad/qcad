@@ -1255,11 +1255,6 @@ void RDxfImporter::addImage(const DL_ImageData& data) {
     images.insertMulti(handle, entity->getId());
 }
 
-
-
-/**
- * Implementation of the method which links image entities to image files.
- */
 void RDxfImporter::linkImage(const DL_ImageDefData& data) {
     int handle = QString(data.ref.c_str()).toInt(NULL, 16);
 
@@ -1405,7 +1400,7 @@ void RDxfImporter::setVariableDouble(const std::string& key, double value, int c
 }
 
 /**
- * Tries to convert the given encoding string to an encoding Qt knows.
+ * Tries to convert the given DXF encoding string to an encoding recognized by Qt.
  */
 QString RDxfImporter::getEncoding(const QString& str) {
     QString l=str.toLower();
