@@ -61,7 +61,8 @@
 
 
 RDxfImporter::RDxfImporter(RDocument& document, RMessageHandler* messageHandler, RProgressHandler* progressHandler)
-    : RFileImporter(document, messageHandler, progressHandler) {
+    : RFileImporter(document, messageHandler, progressHandler),
+      inDict(false) {
 }
 
 RDxfImporter::~RDxfImporter() {
@@ -529,7 +530,6 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
 
     // Block:
     entity->setBlockId(getCurrentBlockId());
-    //qDebug() << "RDxfImporter::importEntity: entity in block: " << entity->getBlockId();
 
     if (RSettings::isXDataEnabled()) {
         // TODO:
@@ -708,8 +708,8 @@ void RDxfImporter::addTextStyle(const DL_StyleData& data) {
     textStyles.insert(QString(data.name.c_str()), s);
 }
 
-void RDxfImporter::addMTextChunk(const char* text) {
-    mtext.append(text);
+void RDxfImporter::addMTextChunk(const std::string& text) {
+    mtext.append(text.c_str());
 }
 
 void RDxfImporter::addMText(const DL_MTextData& data) {
@@ -758,8 +758,9 @@ void RDxfImporter::addMText(const DL_MTextData& data) {
     }
 
     mtext.append(data.text.c_str());
+    mtext.replace(QByteArray("^ "), QByteArray("^"));
     QString mtextString = QString(mtext);
-    mtextString.replace("^ ", "^");
+    //mtextString.replace("^ ", "^");
 
     QVariant vDwgCodePage = document->getKnownVariable(RS::DWGCODEPAGE);
     if (vDwgCodePage.isValid()) {
@@ -1242,39 +1243,16 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
 }
 
 void RDxfImporter::addImage(const DL_ImageData& data) {
-    //qDebug() << "addImage: ref: " << data.ref.c_str();
-
     int handle = QString(data.ref.c_str()).toInt(NULL, 16);
     RVector ip(data.ipx, data.ipy);
     RVector uv(data.ux, data.uy);
     RVector vv(data.vx, data.vy);
-    //RVector size(data.width, data.height);
 
     RImageData d("", ip, uv, vv, data.brightness, data.contrast, data.fade);
-
-    //images.insertMulti(data.ref.c_str(), );
 
     QSharedPointer<RImageEntity> entity(new RImageEntity(document, d));
     importEntity(entity);
     images.insertMulti(handle, entity->getId());
-
-    /*
-    RImageData data();
-
-    RImage* image =
-        new RImage(
-            currentContainer,
-            RImageData(RString(data.ref.c_str()).toInt(NULL, 16),
-                         ip, uv, vv,
-                         size,
-                         RString(""),
-                         data.brightness,
-                         data.contrast,
-                         data.fade));
-
-    setEntityAttributes(image);
-    currentContainer->addEntity(image);
-    */
 }
 
 
@@ -1290,29 +1268,7 @@ void RDxfImporter::linkImage(const DL_ImageDefData& data) {
         return;
     }
 
-    //QString drawingBasePath = QFileInfo(fileName).absolutePath();
     QString filePath = data.file.c_str();
-    //QString absFilePath = filePath;
-
-    // assume absolute path:
-    //QFileInfo fi(filePath);
-
-    /*
-    if (!fi.exists() && fi.isRelative()) {
-        // assume relative path:
-        fi = QFileInfo(drawingBasePath + QDir::separator() + filePath);
-    }
-
-    if (!fi.exists()) {
-        // look in drawing directory:
-        fi = QFileInfo(drawingBasePath + QDir::separator() + QFileInfo(filePath).fileName());
-    }
-
-    if (!fi.exists()) {
-        qWarning() << "image file not found: " << filePath;
-        fi = QFileInfo(filePath);
-    }
-    */
 
     QList<RObject::Id> imageData = images.values(handle);
     for (int i=0; i<imageData.length(); i++) {
@@ -1331,69 +1287,41 @@ void RDxfImporter::linkImage(const DL_ImageDefData& data) {
     }
 
     images.remove(handle);
-
-    /*
-    int handle = RString(data.ref.c_str()).toInt(NULL, 16);
-    RString sfile(data.file.c_str());
-    RFileInfo fiDxf(file);
-    RFileInfo fiBitmap(sfile);
-
-    // try to find the image file:
-
-    // first: absolute path:
-    if (!fiBitmap.exists()) {
-        RDEBUG->print("File %s doesn't exist.",
-                        (const char*)QFile::encodeName(sfile));
-        // try relative path:
-        RString f1 = fiDxf.absolutePath() + "/" + sfile;
-        if (RFileInfo(f1).exists()) {
-            sfile = f1;
-        } else {
-            RDEBUG->print("File %s doesn't exist.", (const char*)QFile::encodeName(f1));
-            // try drawing path:
-            RString f2 = fiDxf.absolutePath() + "/" + fiBitmap.fileName();
-            if (RFileInfo(f2).exists()) {
-                sfile = f2;
-            } else {
-                RDEBUG->print("File %s doesn't exist.", (const char*)QFile::encodeName(f2));
-            }
-        }
-    }
-
-    // Also link images in subcontainers (e.g. inserts):
-    for (REntity* e=graphic->firstEntity(RS2::ResolveNone);
-            e!=NULL; e=graphic->nextEntity(RS2::ResolveNone)) {
-        if (e->rtti()==RS2::EntityImage) {
-            RImage* img = dynamic_cast<RImage*>(e);
-            if (img->getHandle()==handle) {
-                img->setFile(sfile);
-                RDEBUG->print("image found: %s", (const char*)QFile::encodeName(img->getFile()));
-                img->update();
-            }
-        }
-    }
-
-    // update images in blocks:
-    for (int i=0; i<graphic->countBlocks(); ++i) {
-        RBlock* b = graphic->blockAt(i);
-        for (REntity* e=b->firstEntity(RS2::ResolveNone);
-                e!=NULL; e=b->nextEntity(RS2::ResolveNone)) {
-            if (e->rtti()==RS2::EntityImage) {
-                RImage* img = dynamic_cast<RImage*>(e);
-                if (img->getHandle()==handle) {
-                    img->setFile(sfile);
-                    RDEBUG->print("image in block found: %s",
-                                    (const char*)QFile::encodeName(img->getFile()));
-                    img->update();
-                }
-            }
-        }
-    }
-    */
 }
 
+void RDxfImporter::addXRecord(const std::string& handle) {
+    if (qcadDict.count(handle.c_str())==1) {
+        variableKey = qcadDict[handle.c_str()];
+    }
+}
 
+void RDxfImporter::addXRecordString(int code, const std::string& value) {
+    if (variableKey.isEmpty()) {
+        return;
+    }
+    document->setVariable(variableKey, value.c_str());
+}
 
+void RDxfImporter::addXRecordReal(int code, double value) {
+    if (variableKey.isEmpty()) {
+        return;
+    }
+    document->setVariable(variableKey, value);
+}
+
+void RDxfImporter::addXRecordInt(int code, int value) {
+    if (variableKey.isEmpty()) {
+        return;
+    }
+    document->setVariable(variableKey, value);
+}
+
+void RDxfImporter::addXRecordBool(int code, bool value) {
+    if (variableKey.isEmpty()) {
+        return;
+    }
+    document->setVariable(variableKey, value);
+}
 
 void RDxfImporter::addXDataApp(const std::string& appId) {
     xDataAppId = appId.c_str();
@@ -1403,7 +1331,6 @@ void RDxfImporter::addXDataApp(const std::string& appId) {
 void RDxfImporter::addXDataString(int code, const std::string& value) {
     if (!xData.contains(xDataAppId)) {
         qWarning() << "RDxfImporter::addXDataString: app ID not found: " << xDataAppId;
-        qWarning() << "RDxfImporter::addXDataString:     code / value: " << code << value.c_str();
         return;
     }
 
@@ -1428,6 +1355,24 @@ void RDxfImporter::addXDataInt(int code, int value) {
     xData[xDataAppId].append(QPair<int, QVariant>(code, value));
 }
 
+void RDxfImporter::addDictionary(const DL_DictionaryData& data) {
+    if (qcadDictHandle==data.handle.c_str()) {
+        inDict = true;
+    }
+}
+
+void RDxfImporter::addDictionaryEntry(const DL_DictionaryEntryData& data) {
+    if (data.name=="QCAD_OBJECTS") {
+        qcadDictHandle = data.handle.c_str();
+        return;
+    }
+
+    if (inDict) {
+        qcadDict[data.handle.c_str()] = data.name.c_str();
+        qDebug() << "RDxfImporter::addDictionaryEntry: qcadDict[" << data.handle.c_str() << "] -> " << data.name.c_str();
+    }
+}
+
 void RDxfImporter::setVariableVector(const std::string& key,
                                      double v1, double v2, double v3, int code) {
 
@@ -1438,10 +1383,10 @@ void RDxfImporter::setVariableVector(const std::string& key,
 }
 
 void RDxfImporter::setVariableString(const std::string& key,
-                                     const char* value, int code) {
+                                     const std::string& value, int code) {
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
     if (v!=RS::INVALID) {
-        document->setKnownVariable(v, QString(value));
+        document->setKnownVariable(v, value.c_str());
     }
 }
 

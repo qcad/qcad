@@ -99,7 +99,7 @@ private:
     virtual void addInsert(const DL_InsertData& data);
     virtual void addSolid(const DL_SolidData& data);
     virtual void addTextStyle(const DL_StyleData& data);
-    virtual void addMTextChunk(const char *text);
+    virtual void addMTextChunk(const std::string& text);
     virtual void addMText(const DL_MTextData& data);
     virtual void addText(const DL_TextData& data);
     virtual RDimensionData convDimensionData(const DL_DimensionData& data);
@@ -118,14 +118,22 @@ private:
     virtual void addImage(const DL_ImageData &data);
     virtual void linkImage(const DL_ImageDefData &data);
 
+    virtual void addXRecord(const std::string& handle);
+    virtual void addXRecordString(int code, const std::string& value);
+    virtual void addXRecordReal(int code, double value);
+    virtual void addXRecordInt(int code, int value);
+    virtual void addXRecordBool(int code, bool value);
 
     virtual void addXDataApp(const std::string& appId);
     virtual void addXDataString(int code, const std::string& value);
     virtual void addXDataReal(int code, double value);
     virtual void addXDataInt(int code, int value);
 
+    virtual void addDictionary(const DL_DictionaryData& data);
+    virtual void addDictionaryEntry(const DL_DictionaryEntryData& data);
+
     virtual void setVariableVector(const std::string& key, double v1, double v2, double v3, int code);
-    virtual void setVariableString(const std::string& key, const char *value, int code);
+    virtual void setVariableString(const std::string& key, const std::string& value, int code);
     virtual void setVariableInt(const std::string& key, int value, int code);
     virtual void setVariableDouble(const std::string& key, double value, int code);
 
@@ -157,6 +165,11 @@ private:
     QMap<QString, QList<QPair<int, QVariant> > > xData;
     // Current app id for XData:
     QString xDataAppId;
+    QString qcadDictHandle;
+    bool inDict;
+    // Dictionary handles -> names
+    QMap<QString, QString> qcadDict;
+    QString variableKey;
 };
 
 Q_DECLARE_METATYPE(RDxfImporter*)
