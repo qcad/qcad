@@ -24,45 +24,15 @@ TEMPLATE = app
 OTHER_FILES += run.dox
 
 win32 {
-    rtrial {
-        TARGET = qcad-trial
-    }
-    else {
-        TARGET = qcad
-    }
+     TARGET = qcad
 }
 
 macx {
-#    rcam {
-#        rtrial {
-#            TARGET = QCADCAMTrial
-#            QMAKE_INFO_PLIST = InfoCamTrial.plist
-#        }
-#        else {
-#            TARGET = QCADCAM
-#            QMAKE_INFO_PLIST = InfoCam.plist
-#        }
-#    }
-#    else {
-        rtrial {
-            TARGET = QCADTrial
-            QMAKE_INFO_PLIST = InfoTrial.plist
-        }
-        else {
-            TARGET = QCAD
-            QMAKE_INFO_PLIST = Info.plist
-        }
-#    }
+    TARGET = QCAD
+    QMAKE_INFO_PLIST = Info.plist
 } 
 else {
     unix {
-        rtrial {
-            TARGET = qcad-trial-bin
-        }
-        else {
-            TARGET = qcad-bin
-        }
+        TARGET = qcad-bin
     }
 }
-
-#RESOURCES = ../../scripts/scripts.qrc
