@@ -29,7 +29,6 @@ win32 {
 
 macx {
     TARGET = QCAD
-    QMAKE_INFO_PLIST = Info.plist
 } 
 else {
     unix {
