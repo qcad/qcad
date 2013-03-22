@@ -20,6 +20,8 @@
 #ifndef RPROGRESSHANDLER_H
 #define RPROGRESSHANDLER_H
 
+#include <QMetaType>
+
 /**
  * \brief Interface for classes that can handle progress status.
  *

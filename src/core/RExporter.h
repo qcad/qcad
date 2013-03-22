@@ -40,10 +40,11 @@ class RImageData;
 class RLine;
 class RLinetype;
 class RLinetypePattern;
+class RMessageHandler;
 class RPoint;
 class RPolyline;
+class RProgressHandler;
 class RSpline;
-//class RTextLabel;
 class RTriangle;
 class RVector;
 
@@ -59,7 +60,7 @@ class RExporter {
 
 public:
     RExporter();
-    RExporter(RDocument& document);
+    RExporter(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);
     virtual ~RExporter();
 
     QString getErrorMessage() const;
@@ -253,7 +254,6 @@ protected:
     QStack<REntity*> entityStack;
     RLayer* currentLayer;
     QStack<RBlockReferenceEntity*> blockRefStack;
-    //QSharedPointer<REntity> blockRefBS;
     RDocument* layerSource;
     RDocument* blockSource;
     bool draftMode;
@@ -263,7 +263,6 @@ protected:
 
 private:
     RS::ProjectionRenderingHint projectionRenderingHint;
-    //bool fixedColor;
 };
 
 Q_DECLARE_METATYPE(RExporter*)

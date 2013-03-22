@@ -18,17 +18,13 @@
  */
 #include "RFileExporter.h"
 
-
 RFileExporter::RFileExporter()
     : RExporter() {
-
 }
 
-RFileExporter::RFileExporter(RDocument& document)
-    : RExporter(document) {
+RFileExporter::RFileExporter(RDocument& document, RMessageHandler* messageHandler, RProgressHandler* progressHandler)
+    : RExporter(document, messageHandler, progressHandler) {
 }
-
-
 
 RFileExporter::~RFileExporter() {
 }

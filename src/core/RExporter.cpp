@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RExporter.h"
 
 #include <QSet>
 
@@ -27,7 +26,7 @@
 #include "RDocument.h"
 #include "REllipse.h"
 #include "REntity.h"
-//#include "RImageData.h"
+#include "RExporter.h"
 #include "RLine.h"
 #include "RLinetype.h"
 #include "RLinetypePatternMap.h"
@@ -60,7 +59,7 @@ RExporter::RExporter()
     currentBrush.setStyle(Qt::SolidPattern);
 }
 
-RExporter::RExporter(RDocument& document)
+RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProgressHandler *progressHandler)
     : document(&document),
       currentLayer(NULL),
       layerSource(NULL),

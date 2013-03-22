@@ -26,9 +26,13 @@
             
                 #include "RLinetypePattern.h"
             
+                #include "RMessageHandler.h"
+            
                 #include "RPoint.h"
             
                 #include "RPolyline.h"
+            
+                #include "RProgressHandler.h"
             
                 #include "RSpline.h"
             

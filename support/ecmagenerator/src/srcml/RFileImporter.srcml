@@ -92,9 +92,22 @@ dir="./core" filename="RFileImporter.h">
       <name>QString</name>&amp;</type>
       <name>fileName</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>nameFilter</name>
+    </decl>
   </param>)</parameter_list>
-  <specifier>=
-  0</specifier>;</function_decl></public>}</block>;</class>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * Must be implemented by script file
+  importers to check if the given file can * be imported by this
+  importer. */</comment>
+  <comment type="line">//virtual bool canImport(const QString&amp;
+  fileName, const QString&amp; nameFilter) =
+  0;</comment></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

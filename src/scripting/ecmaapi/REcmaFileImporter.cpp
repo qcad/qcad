@@ -167,8 +167,11 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
         ) /* type: QString */
     
     ){
@@ -182,13 +185,23 @@
                     context->argument( 0 ).
                     toString();
                 
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'bool'
     bool cppResult =
         
-               self->importFile(a0);
+               self->importFile(a0
+        ,
+    a1);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);

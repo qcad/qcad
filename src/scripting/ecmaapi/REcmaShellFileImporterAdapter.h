@@ -45,12 +45,6 @@
     
     
       bool importFile(
-                const QString & fileName
-            );
-        
-    
-    
-      bool canImport(
                 const QString & fileName, const QString & nameFilter
             );
         

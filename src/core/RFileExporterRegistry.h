@@ -20,21 +20,21 @@
 #ifndef RFILEEXPORTERREGISTRY_H
 #define RFILEEXPORTERREGISTRY_H
 
-class RFileExporterFactory;
-class RFileExporter;
-class RDocument;
-
 #include <QList>
 #include <QMetaType>
 #include <QString>
 #include <QStringList>
 
-
+class RDocument;
+class RFileExporter;
+class RFileExporterFactory;
+class RMessageHandler;
+class RProgressHandler;
 
 /**
  * \brief Registry of all available file exporters (\ref RFileExporter).
  *
- * File importers must register themselves in this registry to become 
+ * File exporters must register themselves in this registry to become 
  * available to the user of the application.
  *
  * \ingroup core
@@ -42,22 +42,20 @@ class RDocument;
  */
 class RFileExporterRegistry {
 public:
-    //typedef RFileExporter* (*FactoryFunction)(RDocument& document);
-    //typedef bool (*CheckFunction)(const QString&);
-
     static void registerFileExporter(RFileExporterFactory* factory);
 
     static RFileExporter* getFileExporter(
         const QString& fileName,
         const QString& nameFilter,
-        RDocument& document
+        RDocument& document,
+        RMessageHandler* messageHandler = NULL,
+        RProgressHandler* progressHandler = NULL
     );
 
     static QStringList getFilterStrings();
 
 private:
     static QList<RFileExporterFactory*> factories;
-    //static QStringList filterStrings;
 };
 
 Q_DECLARE_METATYPE(RFileExporterRegistry*)

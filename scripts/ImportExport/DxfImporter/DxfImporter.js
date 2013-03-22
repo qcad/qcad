@@ -26,7 +26,7 @@ function DxfImporter() {
 }
 
 DxfImporter.init = function(basePath) {
-    if (typeof(RDxfImporter)!="undefined") {
-        RDxfImporter.registerFileImporter();
+    if (typeof(RDxfImporterFactory)!="undefined") {
+        RDxfImporterFactory.registerFileImporter();
     }   
 };

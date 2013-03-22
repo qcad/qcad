@@ -21,11 +21,10 @@
 #define RFILEIMPORTERADAPTER_H
 
 #include "RFileImporter.h"
-#include "RMessageHandler.h"
-#include "RProgressHandler.h"
-
 
 class RDocument;
+class RMessageHandler;
+class RProgressHandler;
 
 /**
  * \brief Base class for file importers. 
@@ -44,16 +43,7 @@ public:
         : RFileImporter(document, messageHandler, progressHandler) {}
     virtual ~RFileImporterAdapter() {}
     
-    virtual bool importFile(const QString& fileName) {
-        Q_UNUSED(fileName)
-        return false;
-    }
-
-    /**
-     * Must be implemented by script file importers to check if the given file can
-     * be imported by this importer.
-     */
-    virtual bool canImport(const QString& fileName, const QString& nameFilter) {
+    virtual bool importFile(const QString& fileName, const QString& nameFilter) {
         Q_UNUSED(fileName)
         Q_UNUSED(nameFilter)
         return false;

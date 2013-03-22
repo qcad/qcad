@@ -28,6 +28,10 @@ dir="./core" filename="RFileExporterFactoryAdapter.h">
   <cpp:file>"RFileExporterFactory.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
+  <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
   <comment type="block">/** * \brief Need to be implemented for
   every RFileExporter implementation * to check if the exporter is
   suitable to export a file and to instantiate * the file exporter
@@ -110,12 +114,44 @@ dir="./core" filename="RFileExporterFactoryAdapter.h">
         <name>RDocument</name>&amp;</type>
         <name>document</name>
       </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+      <name>RMessageHandler</name>*</type>
+      <name>messageHandler</name>=
+      <init>
+        <expr>
+          <name>NULL</name>
+        </expr>
+      </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+      <name>RProgressHandler</name>*</type>
+      <name>progressHandler</name>=
+      <init>
+        <expr>
+          <name>NULL</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{ 
     <macro>
       <name>Q_UNUSED</name>
       <argument_list>(
       <argument>document</argument>)</argument_list>
+    </macro>
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>messageHandler</argument>)</argument_list>
+    </macro>
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>progressHandler</argument>)</argument_list>
     </macro>
     <return>return 
     <expr>

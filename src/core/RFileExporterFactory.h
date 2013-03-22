@@ -20,14 +20,16 @@
 #ifndef RFILEEXPORTERFACTORY_H
 #define RFILEEXPORTERFACTORY_H
 
-class RFileExporter;
 class RDocument;
+class RFileExporter;
+class RMessageHandler;
+class RProgressHandler;
 
 #include <QMetaType>
 #include <QString>
 
 /**
- * \brief Need to be implemented for every RFileExporter implementation
+ * \brief Needs to be implemented by RFileExporter implementations
  * to check if the exporter is suitable to export a file and to instantiate
  * the file exporter if required.
  *
@@ -37,8 +39,11 @@ class RDocument;
 class RFileExporterFactory {
 public:
     virtual QStringList getFilterStrings() = 0;
-    virtual bool canExport(const QString& fileName, const QString& nameFilter = "") = 0;
-    virtual RFileExporter* instantiate(RDocument& document) = 0;
+    virtual bool canExport(const QString& fileName,
+        const QString& nameFilter = "") = 0;
+    virtual RFileExporter* instantiate(RDocument& document,
+        RMessageHandler* messageHandler = NULL,
+        RProgressHandler* progressHandler = NULL) = 0;
 };
 
 Q_DECLARE_METATYPE(RFileExporterFactory*)

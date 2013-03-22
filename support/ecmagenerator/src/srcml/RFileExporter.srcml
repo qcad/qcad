@@ -22,13 +22,17 @@ dir="./core" filename="RFileExporter.h">
   <name>RFILEEXPORTER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RDocument.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
   <comment type="block">/** * \brief Base class for file exporters.
   * * File exporters export \ref RDocument objects into files of a
   specific format. * * \ingroup core * \scriptable */</comment>
@@ -52,14 +56,36 @@ dir="./core" filename="RFileExporter.h">
       <name>RDocument</name>&amp;</type>
       <name>document</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RMessageHandler</name>*</type>
+    <name>messageHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RProgressHandler</name>*</type>
+    <name>progressHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RFileExporter</name>
   <parameter_list>()</parameter_list>;</destructor_decl>
   <comment type="block">/** * Must be implemented by file exporters
-  to correct the given * file name if necesary (add extension based
-  on chosen name filter). */</comment>
+  to correct the given * file name if necessary (add extension
+  based on chosen name filter). */</comment>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -114,7 +140,7 @@ dir="./core" filename="RFileExporter.h">
     <type>
       <name>bool</name>
     </type>
-    <name>setFileName</name>=
+    <name>resetModified</name>=
     <init>
       <expr>
         <name>true</name>

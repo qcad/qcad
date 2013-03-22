@@ -20,18 +20,14 @@
 
 #include "RFileImporterRegistry.h"
 #include "RFileImporterAdapter.h"
+#include "RFileImporterFactory.h"
 #include "RMessageHandler.h"
 #include "RProgressHandler.h"
 #include "RScriptHandler.h"
 #include "RScriptHandlerRegistry.h"
 
-#include "RDebug.h"
-    
-    
-QList<RFileImporterRegistry::FactoryFunction> RFileImporterRegistry::factoryFunctions;
-QList<RFileImporterRegistry::CheckFunction> RFileImporterRegistry::checkFunctions;
-QStringList RFileImporterRegistry::filterStrings;
-QList<QString> RFileImporterRegistry::scriptImporters;
+
+QList<RFileImporterFactory*> RFileImporterRegistry::factories;
 
 
 
@@ -43,23 +39,9 @@ QList<QString> RFileImporterRegistry::scriptImporters;
  * \param checkFunction The function tht can be used to check whether
  *      the importer can import a given file.
  */
-void RFileImporterRegistry::registerFileImporter(
-    FactoryFunction factoryFunction,
-    CheckFunction checkFunction,
-    const QStringList& filters) {
-
-    factoryFunctions.append(factoryFunction);
-    checkFunctions.append(checkFunction);
-    filterStrings.append(filters);
+void RFileImporterRegistry::registerFileImporter(RFileImporterFactory* factory) {
+    factories.append(factory);
 }
-
-
-void RFileImporterRegistry::registerFileImporterScript(const QString& scriptFile, const QStringList& filters) {
-    scriptImporters.append(scriptFile);
-    filterStrings.append(filters);
-}
-
-
 
 /**
  * \return A new instance of the first file importer found that
@@ -72,41 +54,16 @@ RFileImporter* RFileImporterRegistry::getFileImporter(
     RDocument& document,
     RMessageHandler* messageHandler, RProgressHandler* progressHandler) {
 
-    // check script importers first, so users can override C++ importers:
-    for (int i=0; i<scriptImporters.size(); i++) {
-        QString script = scriptImporters[i];
-        QFileInfo scriptFi(script);
+    QList<RFileImporterFactory*>::iterator it;
 
-        RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler(scriptFi.suffix());
-        if (handler!=NULL) {
-            handler->doScript(script);
-            RFileImporterAdapter* importer = handler->createFileImporter(
-                scriptFi.completeBaseName(), document);
-            if (importer!=NULL) {
-                if (importer->canImport(fileName, nameFilter)) {
-                    return importer;
-                }
-                else {
-                    delete importer;
-                }
-            }
-        }
-    }
-
-    // check C++ importers:
-    QList<CheckFunction>::iterator itc;
-    QList<FactoryFunction>::iterator itf;
-
-    for (itc = checkFunctions.begin(), itf = factoryFunctions.begin(); itc
-            != checkFunctions.end(), itf != factoryFunctions.end(); ++itc, ++itf) {
-        bool suitable = (*itc)(fileName, nameFilter);
+    for (it = factories.begin(); it != factories.end(); ++it) {
+        bool suitable = (*it)->canImport(fileName, nameFilter);
         if (suitable) {
-            return (*itf)(document, messageHandler, progressHandler);
+            return (*it)->instantiate(document, messageHandler, progressHandler);
         }
     }
-
     qWarning("RFileImporterRegistry::getFileImporter: "
-             "No suitable importer found");
+        "No suitable importer found");
 
     return NULL;
 }
@@ -118,12 +75,10 @@ bool RFileImporterRegistry::hasFileImporter(
     const QString& fileName,
     const QString& nameFilter) {
 
-    QList<CheckFunction>::iterator itc;
-    QList<FactoryFunction>::iterator itf;
+    QList<RFileImporterFactory*>::iterator it;
 
-    for (itc = checkFunctions.begin(), itf = factoryFunctions.begin(); itc
-            != checkFunctions.end(), itf != factoryFunctions.end(); ++itc, ++itf) {
-        bool suitable = (*itc)(fileName, nameFilter);
+    for (it = factories.begin(); it != factories.end(); ++it) {
+        bool suitable = (*it)->canImport(fileName, nameFilter);
         if (suitable) {
             return true;
         }
@@ -134,19 +89,22 @@ bool RFileImporterRegistry::hasFileImporter(
 
 QStringList RFileImporterRegistry::getFilterExtensions() {
     QStringList ret;
-    for (int i=0; i<filterStrings.count(); i++) {
-        QString filterString = filterStrings[i];
-        //int p = filterString.
+    QList<RFileImporterFactory*>::iterator it;
 
-        QRegExp rx("(\\*\\.[^ ]*)");
-        QStringList list;
-        int pos = 0;
-         
-        while ((pos = rx.indexIn(filterString, pos)) != -1)  {
-            ret << rx.cap(1);
-            pos += rx.matchedLength();
+    for (it = factories.begin(); it != factories.end(); ++it) {
+        QStringList filterStrings = (*it)->getFilterStrings();
+        for (int i=0; i<filterStrings.count(); i++) {
+            QString filterString = filterStrings[i];
+            QRegExp rx("(\\*\\.[^ ]*)");
+            int pos = 0;
+             
+            while ((pos = rx.indexIn(filterString, pos)) != -1)  {
+                ret << rx.cap(1);
+                pos += rx.matchedLength();
+            }
         }
     }
+
     return ret;
 }
 
@@ -156,5 +114,16 @@ QStringList RFileImporterRegistry::getFilterExtensionPatterns() {
     for (int i=0; i<filterExtensions.count(); i++) {
         ret.append(QString("*.%1").arg(filterExtensions[i]));
     }
+    return ret;
+}
+
+QStringList RFileImporterRegistry::getFilterStrings() {
+    QStringList ret;
+    QList<RFileImporterFactory*>::iterator it;
+
+    for (it = factories.begin(); it != factories.end(); ++it) {
+        ret.append((*it)->getFilterStrings());
+    }
+
     return ret;
 }

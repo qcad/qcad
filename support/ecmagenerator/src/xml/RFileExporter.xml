@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RMessageHandler" />
+  <class_decl name="RProgressHandler" />
   <class name="RFileExporter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -11,6 +13,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant>
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
+        <arg type="RMessageHandler *" typeName="RMessageHandler *"
+        name="messageHandler" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="RProgressHandler *"
+        typeName="RProgressHandler *" name="progressHandler"
+        hasDefault="true" default=" NULL" isConst="false" />
       </variant>
     </constructor>
     <method name="getCorrectedFileName"
@@ -31,7 +39,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="fileName" isConst="true" />
         <arg type="QString &amp;" typeName="QString"
         name="nameFilter" isConst="true" />
-        <arg type="bool" typeName="bool" name="setFileName"
+        <arg type="bool" typeName="bool" name="resetModified"
         hasDefault="true" default=" true" isConst="false" />
       </variant>
     </method>

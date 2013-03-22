@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RArcEntity" />
+  <class_decl name="RBlockReferenceEntity" />
+  <class_decl name="RCircleEntity" />
+  <class_decl name="RDimensionEntity" />
+  <class_decl name="RDimAlignedEntity" />
+  <class_decl name="RDimAngularEntity" />
+  <class_decl name="RDimDiametricEntity" />
+  <class_decl name="RDimOrdinateEntity" />
+  <class_decl name="RDimRadialEntity" />
+  <class_decl name="RDimRotatedEntity" />
+  <class_decl name="REllipseEntity" />
+  <class_decl name="RHatchEntity" />
+  <class_decl name="RImageEntity" />
+  <class_decl name="RLeaderEntity" />
+  <class_decl name="RLineEntity" />
+  <class_decl name="RMessageHandler" />
+  <class_decl name="RPointEntity" />
+  <class_decl name="RPolylineEntity" />
+  <class_decl name="RProgressHandler" />
+  <class_decl name="RSolidEntity" />
+  <class_decl name="RSplineEntity" />
+  <class_decl name="RTextEntity" />
+  <class name="RDxfExporter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RFileExporter" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+        <arg type="RMessageHandler *" typeName="RMessageHandler *"
+        name="messageHandler" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="RProgressHandler *"
+        typeName="RProgressHandler *" name="progressHandler"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getCorrectedFileName"
+    cppName="getCorrectedFileName" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" isConst="true" />
+      </variant>
+    </method>
+    <method name="exportFile" cppName="exportFile"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" isConst="true" />
+        <arg type="bool" typeName="bool" name="resetModified"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportPoint" cppName="exportPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPoint &amp;" typeName="RPoint" name="point"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportArcSegment" cppName="exportArcSegment"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RArc &amp;" typeName="RArc" name="arc"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportLineSegment" cppName="exportLineSegment"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="line"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportTriangle" cppName="exportTriangle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTriangle &amp;" typeName="RTriangle"
+        name="triangle" isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

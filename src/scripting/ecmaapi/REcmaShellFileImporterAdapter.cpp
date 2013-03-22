@@ -11,6 +11,10 @@
         
                 #include "RDocument.h"
             
+                #include "RMessageHandler.h"
+            
+                #include "RProgressHandler.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -91,7 +95,7 @@
     
     
       bool REcmaShellFileImporterAdapter::importFile(
-                const QString & fileName
+                const QString & fileName, const QString & nameFilter
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileImporterAdapter::importFile", engine);
@@ -104,7 +108,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileImporterAdapter::importFile";
@@ -118,90 +122,13 @@
                         //}
                         bool ret =
                         RFileImporterAdapter::importFile(
-                            fileName
-                        );
-
-                        // block recursion again:
-                        _q_function.setData(QScriptValue(engine, prev));
-
-                        //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::importFile", engine);
-
-                        
-                          return ret;
-                        
-                } else {
-                    // prevent recursion if script implementation calls base implementation
-                    // mark function as 'in call':
-                    quint32 prev = _q_function.data().toUInt32();
-                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    bool res = qscriptvalue_cast< 
-                        bool
-                      >(
-                    
-                            _q_function.call(__qtscript_self,
-                                QScriptValueList()
-                                
-
-
-
-    // type: QString &, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        fileName
-        )
-      
-                            )
-                        
-                      )
-                    
-                    ;
-                    _q_function.setData(QScriptValue(engine, prev));
-
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::importFile", engine);
-
-                    
-                            return res;
-                          
-                }
-            }
-        
-    
-    
-      bool REcmaShellFileImporterAdapter::canImport(
-                const QString & fileName, const QString & nameFilter
-            ) {
-                QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellFileImporterAdapter::canImport", engine);
-                QScriptValue _q_function = __qtscript_self.property("canImport");
-
-
-
-                if (!_q_function.isFunction() || 
-                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
-                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
-                    
-                    /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
-                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
-                    ) {
-                    //QString cppSig = "RFileImporterAdapter::canImport";
-                    
-                        // re-enable recursion for calls from C++ into ECMAScript functions
-                        // leave it marked as generated though if appropriate:
-                        
-                        quint32 prev = _q_function.data().toUInt32();
-                        //if (cppSig!="RGraphicsViewQt::event") {
-                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
-                        //}
-                        bool ret =
-                        RFileImporterAdapter::canImport(
                             fileName, nameFilter
                         );
 
                         // block recursion again:
                         _q_function.setData(QScriptValue(engine, prev));
 
-                        //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::canImport", engine);
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::importFile", engine);
 
                         
                           return ret;
@@ -243,7 +170,7 @@
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::canImport", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::importFile", engine);
 
                     
                             return res;

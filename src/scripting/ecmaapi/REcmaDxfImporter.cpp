@@ -14,6 +14,10 @@
             
                 #include "RImageEntity.h"
             
+                #include "RMessageHandler.h"
+            
+                #include "RProgressHandler.h"
+            
                 #include "RVector.h"
             
             
@@ -94,10 +98,6 @@
     
     // static methods:
     
-            REcmaHelper::registerFunction(&engine, &ctor, registerFileImporter, "registerFileImporter");
-            
-            REcmaHelper::registerFunction(&engine, &ctor, getFilterStrings, "getFilterStrings");
-            
 
     // static properties:
     
@@ -465,79 +465,6 @@
 
     // public methods:
      QScriptValue
-        REcmaDxfImporter::registerFileImporter
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDxfImporter::registerFileImporter", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfImporter::registerFileImporter";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    RDxfImporter::
-       registerFileImporter();
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfImporter.registerFileImporter().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDxfImporter::registerFileImporter", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDxfImporter::getFilterStrings
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDxfImporter::getFilterStrings", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfImporter::getFilterStrings";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QStringList'
-    QStringList cppResult =
-        RDxfImporter::
-       getFilterStrings();
-        // return type: QStringList
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfImporter.getFilterStrings().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDxfImporter::getFilterStrings", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaDxfImporter::importFile
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -560,8 +487,11 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
         ) /* type: QString */
     
     ){
@@ -575,13 +505,23 @@
                     context->argument( 0 ).
                     toString();
                 
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'bool'
     bool cppResult =
         
-               self->importFile(a0);
+               self->importFile(a0
+        ,
+    a1);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);

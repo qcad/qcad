@@ -26,9 +26,13 @@
             
                 #include "RLinetypePattern.h"
             
+                #include "RMessageHandler.h"
+            
                 #include "RPoint.h"
             
                 #include "RPolyline.h"
+            
+                #include "RProgressHandler.h"
             
                 #include "RSpline.h"
             
@@ -226,6 +230,218 @@
                     REcmaShellFileExporterAdapter
                     (
                     a0
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+        cppResult->__qtscript_self = result;
+    
+    } else 
+
+    if( context->argumentCount() ==
+        2
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RDocument */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RMessageHandler * */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RDocument*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a0 = *ap0;
+                
+                    // argument is pointer
+                    RMessageHandler * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RMessageHandler >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RFileExporterAdapter: Argument 1 is not of type RMessageHandler *RMessageHandler *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            REcmaShellFileExporterAdapter
+                    * cppResult =
+                    new
+                    REcmaShellFileExporterAdapter
+                    (
+                    a0
+        ,
+    a1
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+        cppResult->__qtscript_self = result;
+    
+    } else 
+
+    if( context->argumentCount() ==
+        3
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RDocument */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RMessageHandler * */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isNull()
+                ) /* type: RProgressHandler * */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RDocument*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a0 = *ap0;
+                
+                    // argument is pointer
+                    RMessageHandler * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RMessageHandler >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RFileExporterAdapter: Argument 1 is not of type RMessageHandler *RMessageHandler *.", context);                    
+                    }
+                
+                    // argument is pointer
+                    RProgressHandler * a2 = NULL;
+
+                    a2 = 
+                        REcmaHelper::scriptValueTo<RProgressHandler >(
+                            context->argument(2)
+                        );
+                    
+                    if (a2==NULL && 
+                        !context->argument(2).isNull()) {
+                        return REcmaHelper::throwError("RFileExporterAdapter: Argument 2 is not of type RProgressHandler *RProgressHandler *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            REcmaShellFileExporterAdapter
+                    * cppResult =
+                    new
+                    REcmaShellFileExporterAdapter
+                    (
+                    a0
+        ,
+    a1
+        ,
+    a2
                     );
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:

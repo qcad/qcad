@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="RFileImporter" />
   <class_decl name="RDocument" />
+  <class_decl name="RFileImporter" />
+  <class_decl name="RFileImporterFactory" />
   <class_decl name="RMessageHandler" />
   <class_decl name="RProgressHandler" />
   <class name="RFileImporterRegistry"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <method name="registerFileImporterScript"
-    cppName="registerFileImporterScript" specifier="public"
+    <method name="registerFileImporter"
+    cppName="registerFileImporter" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString"
-        name="scriptFile" isConst="true" />
-        <arg type="QStringList &amp;" typeName="QStringList"
-        name="filters" isConst="true" />
+        <arg type="RFileImporterFactory *"
+        typeName="RFileImporterFactory *" name="factory"
+        isConst="false" />
       </variant>
     </method>
     <method name="getFileImporter" cppName="getFileImporter"
@@ -37,6 +37,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" NULL" isConst="false" />
       </variant>
     </method>
+    <method name="getFilterStrings" cppName="getFilterStrings"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
     <method name="hasFileImporter" cppName="hasFileImporter"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -46,11 +51,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString"
         name="nameFilter" isConst="true" />
       </variant>
-    </method>
-    <method name="getFilterStrings" cppName="getFilterStrings"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QStringList" isPureVirtual="false" />
     </method>
     <method name="getFilterExtensions"
     cppName="getFilterExtensions" specifier="public"

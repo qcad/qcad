@@ -12,6 +12,10 @@
         
                 #include "RDocument.h"
             
+                #include "RMessageHandler.h"
+            
+                #include "RProgressHandler.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -74,8 +78,6 @@
     // methods:
     
             REcmaHelper::registerFunction(&engine, proto, importFile, "importFile");
-            
-            REcmaHelper::registerFunction(&engine, proto, canImport, "canImport");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RFileImporterAdapter*>(), *proto);
@@ -494,66 +496,6 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->importFile(a0);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterAdapter.importFile().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaFileImporterAdapter::importFile", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaFileImporterAdapter::canImport
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaFileImporterAdapter::canImport", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterAdapter::canImport";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RFileImporterAdapter* self = 
-                        getSelf("canImport", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
     2 && (
             context->argument(0).isString()
         ) /* type: QString */
@@ -586,7 +528,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->canImport(a0
+               self->importFile(a0
         ,
     a1);
         // return type: bool
@@ -598,10 +540,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterAdapter.canImport().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterAdapter.importFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterAdapter::canImport", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileImporterAdapter::importFile", context, engine);
             return result;
         }
          QScriptValue REcmaFileImporterAdapter::toString

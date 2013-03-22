@@ -50,9 +50,6 @@
     static  QScriptValue
         importFile
         (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        canImport
-        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

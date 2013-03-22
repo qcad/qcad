@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="RFileExporterFactory" />
-  <class_decl name="RFileExporter" />
   <class_decl name="RDocument" />
+  <class_decl name="RFileExporter" />
+  <class_decl name="RFileExporterFactory" />
+  <class_decl name="RMessageHandler" />
+  <class_decl name="RProgressHandler" />
   <class name="RFileExporterRegistry"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -27,6 +29,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="nameFilter" isConst="true" />
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
+        <arg type="RMessageHandler *" typeName="RMessageHandler *"
+        name="messageHandler" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="RProgressHandler *"
+        typeName="RProgressHandler *" name="progressHandler"
+        hasDefault="true" default=" NULL" isConst="false" />
       </variant>
     </method>
     <method name="getFilterStrings" cppName="getFilterStrings"

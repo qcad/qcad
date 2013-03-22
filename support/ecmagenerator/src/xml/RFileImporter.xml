@@ -25,6 +25,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="true">
         <arg type="QString &amp;" typeName="QString"
         name="fileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" isConst="true" />
       </variant>
     </method>
   </class>

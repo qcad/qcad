@@ -67,12 +67,15 @@ dir="./core" filename="RExporter.h">
   <class_decl>class 
   <name>RLinetypePattern</name>;</class_decl>
   <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
   <name>RPoint</name>;</class_decl>
   <class_decl>class 
   <name>RPolyline</name>;</class_decl>
   <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
+  <class_decl>class 
   <name>RSpline</name>;</class_decl>
-  <comment type="line">//class RTextLabel;</comment>
   <class_decl>class 
   <name>RTriangle</name>;</class_decl>
   <class_decl>class 
@@ -97,6 +100,28 @@ dir="./core" filename="RExporter.h">
       <name>RDocument</name>&amp;</type>
       <name>document</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RMessageHandler</name>*</type>
+    <name>messageHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RProgressHandler</name>*</type>
+    <name>progressHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
   <specifier>virtual</specifier>

@@ -11,6 +11,10 @@
         
                 #include "RDocument.h"
             
+                #include "RMessageHandler.h"
+            
+                #include "RProgressHandler.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -224,7 +228,7 @@
     
     
       RFileExporter * REcmaShellFileExporterFactoryAdapter::instantiate(
-                RDocument & document
+                RDocument & document, RMessageHandler * messageHandler, RProgressHandler * progressHandler
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterFactoryAdapter::instantiate", engine);
@@ -237,7 +241,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterFactoryAdapter::instantiate";
@@ -251,7 +255,7 @@
                         //}
                         RFileExporter * ret =
                         RFileExporterFactoryAdapter::instantiate(
-                            document
+                            document, messageHandler, progressHandler
                         );
 
                         // block recursion again:
@@ -281,6 +285,24 @@
         << qScriptValueFromValue(engine, 
 
         &document
+        )
+      
+
+
+
+    // type: RMessageHandler *, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        messageHandler
+        )
+      
+
+
+
+    // type: RProgressHandler *, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        progressHandler
         )
       
                             )

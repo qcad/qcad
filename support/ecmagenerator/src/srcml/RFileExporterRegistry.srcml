@@ -20,12 +20,6 @@ dir="./core" filename="RFileExporterRegistry.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RFILEEXPORTERREGISTRY_H</name></cpp:define>
-  <class_decl>class 
-  <name>RFileExporterFactory</name>;</class_decl>
-  <class_decl>class 
-  <name>RFileExporter</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
@@ -38,8 +32,18 @@ dir="./core" filename="RFileExporterRegistry.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RDocument</name>;</class_decl>
+  <class_decl>class 
+  <name>RFileExporter</name>;</class_decl>
+  <class_decl>class 
+  <name>RFileExporterFactory</name>;</class_decl>
+  <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
   <comment type="block">/** * \brief Registry of all available file
-  exporters (\ref RFileExporter). * * File importers must register
+  exporters (\ref RFileExporter). * * File exporters must register
   themselves in this registry to become * available to the user of
   the application. * * \ingroup core * \scriptable */</comment>
   <class>class 
@@ -47,10 +51,6 @@ dir="./core" filename="RFileExporterRegistry.h">
   <block>{
   <private type="default"></private>
   <public>public: 
-  <comment type="line">//typedef RFileExporter*
-  (*FactoryFunction)(RDocument&amp; document);</comment>
-  <comment type="line">//typedef bool (*CheckFunction)(const
-  QString&amp;);</comment>
   <function_decl>
   <type>
     <name>static</name>
@@ -93,6 +93,28 @@ dir="./core" filename="RFileExporterRegistry.h">
       <name>RDocument</name>&amp;</type>
       <name>document</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RMessageHandler</name>*</type>
+    <name>messageHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RProgressHandler</name>*</type>
+    <name>progressHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -100,7 +122,10 @@ dir="./core" filename="RFileExporterRegistry.h">
     <name>QStringList</name>
   </type>
   <name>getFilterStrings</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <comment type="line">//static bool hasFileExporter(const
+  QString&amp; fileName, const QString&amp;
+  nameFilter);</comment></public>
   <private>private: 
   <decl_stmt>
   <decl>
@@ -113,9 +138,7 @@ dir="./core" filename="RFileExporterRegistry.h">
       RFileExporterFactory</name>*</argument>&gt;</argument_list></name>
     </type>
     <name>factories</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//static QStringList
-  filterStrings;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

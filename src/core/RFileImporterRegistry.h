@@ -20,16 +20,16 @@
 #ifndef RFILEIMPORTERREGISTRY_H
 #define RFILEIMPORTERREGISTRY_H
 
-class RFileImporter;
-class RDocument;
-class RMessageHandler;
-class RProgressHandler;
-
 #include <QString>
 #include <QList>
 #include <QMetaType>
 #include <QStringList>
 
+class RDocument;
+class RFileImporter;
+class RFileImporterFactory;
+class RMessageHandler;
+class RProgressHandler;
 
 /**
  * \brief Registry of all available file importers (\ref RFileImporter). 
@@ -42,23 +42,7 @@ class RProgressHandler;
  */
 class RFileImporterRegistry {
 public:
-    typedef RFileImporter* (*FactoryFunction)(RDocument& document,
-        RMessageHandler* messageHandler, RProgressHandler* progressHandler);
-    typedef bool (*CheckFunction)(const QString&, const QString&);
-
-    /**
-     * \nonscriptable
-     */
-    static void registerFileImporter(
-        RFileImporterRegistry::FactoryFunction factoryFunction,
-        RFileImporterRegistry::CheckFunction checkFunction,
-        const QStringList& filters
-    );
-
-    static void registerFileImporterScript(
-        const QString& scriptFile,
-        const QStringList& filters
-    );
+    static void registerFileImporter(RFileImporterFactory* factory);
 
     static RFileImporter* getFileImporter(
         const QString& fileName,
@@ -68,15 +52,9 @@ public:
         RProgressHandler* progressHandler = NULL
     );
 
-    static bool hasFileImporter(const QString& fileName, const QString& nameFilter);
+    static QStringList getFilterStrings();
 
-    /**
-     * \return List of all available filter strings, e.g. for a file open
-     * dialog.
-     */
-    static QStringList getFilterStrings() {
-        return filterStrings;
-    }
+    static bool hasFileImporter(const QString& fileName, const QString& nameFilter);
 
     /**
      * \return List of all importable file extensions (e.g. 'dxf', 'dwg', ...).
@@ -89,12 +67,7 @@ public:
     static QStringList getFilterExtensionPatterns();
 
 private:
-    static QList<FactoryFunction> factoryFunctions;
-    static QList<CheckFunction> checkFunctions;
-
-    static QList<QString> scriptImporters;
-
-    static QStringList filterStrings;
+    static QList<RFileImporterFactory*> factories;
 };
 
 Q_DECLARE_METATYPE(RFileImporterRegistry*)

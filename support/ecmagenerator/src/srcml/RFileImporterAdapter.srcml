@@ -23,14 +23,12 @@ dir="./core" filename="RFileImporterAdapter.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RFileImporter.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMessageHandler.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RProgressHandler.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
+  <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
   <comment type="block">/** * \brief Base class for file importers.
   * * File importers import files of a specific format into an \ref
   RDocument. * * \ingroup core * \scriptable * \generateScriptShell
@@ -127,35 +125,6 @@ dir="./core" filename="RFileImporterAdapter.h">
         <name>QString</name>&amp;</type>
         <name>fileName</name>
       </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>fileName</argument>)</argument_list>
-    </macro>
-    <return>return 
-    <expr>
-      <name>false</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Must be implemented by script file
-  importers to check if the given file can * be imported by this
-  importer. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>canImport</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>fileName</name>
-      </decl>
     </param>, 
     <param>
       <decl>
@@ -180,7 +149,11 @@ dir="./core" filename="RFileImporterAdapter.h">
     <expr>
       <name>false</name>
     </expr>;</return>}</block>
-  </function></public>}</block>;</class>
+  </function>
+  <comment type="block">/* virtual bool canImport(const
+  QString&amp; fileName, const QString&amp; nameFilter) {
+  Q_UNUSED(fileName) Q_UNUSED(nameFilter) return false; }
+  */</comment></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

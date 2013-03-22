@@ -25,9 +25,13 @@
             
                 #include "RLinetypePattern.h"
             
+                #include "RMessageHandler.h"
+            
                 #include "RPoint.h"
             
                 #include "RPolyline.h"
+            
+                #include "RProgressHandler.h"
             
                 #include "RSpline.h"
             
@@ -106,9 +110,9 @@
             }
         
       REcmaShellFileExporterAdapter::REcmaShellFileExporterAdapter(
-                RDocument & document
+                RDocument & document, RMessageHandler * messageHandler, RProgressHandler * progressHandler
             ) : RFileExporterAdapter(
-                document
+                document, messageHandler, progressHandler
                 ) {
             }
         
@@ -201,7 +205,7 @@
     
     
       bool REcmaShellFileExporterAdapter::exportFile(
-                const QString & fileName, const QString & nameFilter, bool setFileName
+                const QString & fileName, const QString & nameFilter, bool resetModified
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportFile", engine);
@@ -228,7 +232,7 @@
                         //}
                         bool ret =
                         RFileExporterAdapter::exportFile(
-                            fileName, nameFilter, setFileName
+                            fileName, nameFilter, resetModified
                         );
 
                         // block recursion again:
@@ -275,7 +279,7 @@
     // type: bool, copyable: true
         << qScriptValueFromValue(engine, 
 
-        setFileName
+        resetModified
         )
       
                             )

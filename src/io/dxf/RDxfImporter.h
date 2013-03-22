@@ -28,13 +28,13 @@
 #include "RFileImporter.h"
 #include "RHatchData.h"
 #include "RLeaderData.h"
-#include "RMessageHandler.h"
 #include "RPolyline.h"
-#include "RProgressHandler.h"
 #include "RSpline.h"
 
 class RDxfImporter;
 class RImageEntity;
+class RMessageHandler;
+class RProgressHandler;
 class RVector;
 
 
@@ -59,22 +59,11 @@ public:
  */
 class RDxfImporter : public RFileImporter, public DL_CreationAdapter {
 public:
-    RDxfImporter(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);
+    RDxfImporter(RDocument& document,
+        RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);
     virtual ~RDxfImporter();
 
-    static void registerFileImporter();
-    /**
-     * \nonscriptable
-     */
-    static RFileImporter* factory(RDocument& document, RMessageHandler* messageHandler, RProgressHandler* progressHandler);
-    /**
-     * \nonscriptable
-     */
-    static bool check(const QString& fileName, const QString& nameFilter);
-
-    static QStringList getFilterStrings();
-
-    virtual bool importFile(const QString& fileName);
+    virtual bool importFile(const QString& fileName, const QString& nameFilter);
 
     virtual void processCodeValuePair(unsigned int groupCode, char* groupValue);
 
@@ -152,7 +141,9 @@ private:
 private:
     QString fileName;
     RDxfServices dxfServices;
+    // list of locked layers. layers are locked after importing all entities:
     QStringList lockedLayers;
+
     RPolyline polyline;
     RSpline spline;
     RLeaderData leader;
@@ -161,10 +152,10 @@ private:
     QMap<QString, RDxfTextStyle> textStyles;
     QMultiMap<int, RObject::Id> images;
 
-    // AppID -> list of code / value pairs
-    QMap<QString, QList<QPair<int, QVariant> > > xData;
     // Current app id for XData:
     QString xDataAppId;
+    // AppID -> list of code / value pairs
+    QMap<QString, QList<QPair<int, QVariant> > > xData;
     QString qcadDictHandle;
     bool inDict;
     // Dictionary handles -> names

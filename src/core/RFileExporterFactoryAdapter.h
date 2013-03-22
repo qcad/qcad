@@ -24,6 +24,8 @@
 #include "RFileExporterFactory.h"
 
 class RDocument;
+class RMessageHandler;
+class RProgressHandler;
 
 
 /**
@@ -37,16 +39,21 @@ class RDocument;
  */
 class RFileExporterFactoryAdapter : public RFileExporterFactory {
 public:
-    virtual QStringList getFilterStrings() { return QStringList(); }
+    virtual QStringList getFilterStrings() { 
+        return QStringList(); 
+    }
     virtual bool canExport(const QString& fileName, const QString& nameFilter = "") {
         Q_UNUSED(fileName)
         Q_UNUSED(nameFilter)
-
         return false;
     }
-    virtual RFileExporter* instantiate(RDocument& document) {
-        Q_UNUSED(document)
+    virtual RFileExporter* instantiate(RDocument& document,
+        RMessageHandler* messageHandler = NULL,
+        RProgressHandler* progressHandler = NULL) {
 
+        Q_UNUSED(document)
+        Q_UNUSED(messageHandler)
+        Q_UNUSED(progressHandler)
         return NULL;
     }
 };

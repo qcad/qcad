@@ -40,19 +40,23 @@ dir="./core" filename="RFileExporterAdapter.h">
   <class_decl>class 
   <name>RLinetypePattern</name>;</class_decl>
   <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
   <name>RPoint</name>;</class_decl>
   <class_decl>class 
   <name>RPolyline</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
   <class_decl>class 
   <name>RSpline</name>;</class_decl>
   <class_decl>class 
   <name>RTriangle</name>;</class_decl>
   <class_decl>class 
   <name>RVector</name>;</class_decl>
-  <comment type="block">/** * \brief Base class for file exporters.
-  * * File exporters export \ref RDocument objects into files of a
-  specific format. * * \ingroup core * \scriptable *
-  \generateScriptShell */</comment>
+  <comment type="block">/** * \brief Base class for file exporters,
+  including script file exporters. * * File exporters export \ref
+  RDocument objects into files of a specific format. * * \ingroup
+  core * \scriptable * \generateScriptShell */</comment>
   <class>class 
   <name>RFileExporterAdapter</name>
   <super>: 
@@ -80,6 +84,28 @@ dir="./core" filename="RFileExporterAdapter.h">
         <name>RDocument</name>&amp;</type>
         <name>document</name>
       </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+      <name>RMessageHandler</name>*</type>
+      <name>messageHandler</name>=
+      <init>
+        <expr>
+          <name>NULL</name>
+        </expr>
+      </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+      <name>RProgressHandler</name>*</type>
+      <name>progressHandler</name>=
+      <init>
+        <expr>
+          <name>NULL</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <member_list>: 
     <call>
@@ -88,6 +114,16 @@ dir="./core" filename="RFileExporterAdapter.h">
       <argument>
         <expr>
           <name>document</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>messageHandler</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>progressHandler</name>
         </expr>
       </argument>)</argument_list>
     </call></member_list>
@@ -166,7 +202,7 @@ dir="./core" filename="RFileExporterAdapter.h">
       <type>
         <name>bool</name>
       </type>
-      <name>setFileName</name>=
+      <name>resetModified</name>=
       <init>
         <expr>
           <name>true</name>
@@ -200,7 +236,7 @@ dir="./core" filename="RFileExporterAdapter.h">
     <param>
       <decl>
         <type>
-          <name>setFileName</name>
+          <name>resetModified</name>
         </type>
       </decl>
     </param>)</parameter_list>;</constructor_decl>

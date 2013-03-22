@@ -21,17 +21,21 @@ dir="./core" filename="RFileExporterFactory.h">
   <cpp:directive>define</cpp:directive>
   <name>RFILEEXPORTERFACTORY_H</name></cpp:define>
   <class_decl>class 
+  <name>RDocument</name>;</class_decl>
+  <class_decl>class 
   <name>RFileExporter</name>;</class_decl>
   <class_decl>class 
-  <name>RDocument</name>;</class_decl>
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <comment type="block">/** * \brief Need to be implemented for
-  every RFileExporter implementation * to check if the exporter is
+  <comment type="block">/** * \brief Needs to be implemented by
+  RFileExporter implementations * to check if the exporter is
   suitable to export a file and to instantiate * the file exporter
   if required. * * \ingroup core * \scriptable */</comment>
   <class>class 
@@ -85,6 +89,28 @@ dir="./core" filename="RFileExporterFactory.h">
       <name>RDocument</name>&amp;</type>
       <name>document</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RMessageHandler</name>*</type>
+    <name>messageHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RProgressHandler</name>*</type>
+    <name>progressHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>=
   0</specifier>;</function_decl></public>}</block>;</class>

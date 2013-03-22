@@ -30,14 +30,16 @@ class RImageData;
 class RLine;
 class RLinetype;
 class RLinetypePattern;
+class RMessageHandler;
 class RPoint;
 class RPolyline;
+class RProgressHandler;
 class RSpline;
 class RTriangle;
 class RVector;
 
 /**
- * \brief Base class for file exporters. 
+ * \brief Base class for file exporters, including script file exporters. 
  *
  * File exporters export \ref RDocument objects into files of a specific format.
  *
@@ -48,7 +50,9 @@ class RVector;
 class RFileExporterAdapter : public RFileExporter {
 public:
     RFileExporterAdapter() : RFileExporter() {}
-    RFileExporterAdapter(RDocument& document) : RFileExporter(document) {}
+    RFileExporterAdapter(RDocument& document,
+        RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL)
+        : RFileExporter(document, messageHandler, progressHandler) {}
     virtual ~RFileExporterAdapter() {}
 
     virtual QString getCorrectedFileName(const QString& fileName, const QString& nameFilter) {
@@ -56,10 +60,10 @@ public:
         return fileName;
     }
 
-    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool setFileName = true) {
+    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true) {
         Q_UNUSED(fileName);
         Q_UNUSED(nameFilter);
-        Q_UNUSED(setFileName);
+        Q_UNUSED(resetModified);
         return false;
     }
 

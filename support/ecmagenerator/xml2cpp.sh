@@ -19,20 +19,22 @@ else
     profile="../../testing/scripting/ecmaapi/ecmaapi.pro"
 fi
 
-echo "include( ../../../shared.pri )" > "$profile"
-echo "TEMPLATE = lib" >> "$profile"
-echo "CONFIG += plugin" >> "$profile"
-echo "TARGET = qcadecmaapi" >> "$profile"
-echo "LIBS += -L$$PWD/$$ROUTDIR -ldxflib -lopennurbs -lqcadcore -lqcaddxf -lqcadentity -lqcadgrid -lqcadgui -lqcadoperations -lqcadsnap -lqcadspatialindex -lqcadstemmer -lspatialindexnavel -lstemmer" >> "$profile"
-echo "CONFIG -= warn_on" >> $profile
-echo "CONFIG += warn_off" >> $profile
-echo "OTHER_FILES += ecmaapi.dox" >> $profile
+profile_tmp="ecmaapi.pro"
+
+echo "include( ../../../shared.pri )" > "$profile_tmp"
+echo "TEMPLATE = lib" >> "$profile_tmp"
+echo "CONFIG += plugin" >> "$profile_tmp"
+echo "TARGET = qcadecmaapi" >> "$profile_tmp"
+echo "LIBS += -ldxflib -lopennurbs -lqcadcore -lqcaddxf -lqcadentity -lqcadgrid -lqcadgui -lqcadoperations -lqcadsnap -lqcadspatialindex -lqcadstemmer -lspatialindexnavel -lstemmer" >> "$profile_tmp"
+echo "CONFIG -= warn_on" >> $profile_tmp
+echo "CONFIG += warn_off" >> $profile_tmp
+echo "OTHER_FILES += ecmaapi.dox" >> $profile_tmp
 if [ $scope == "src" ]; then
-    echo "HEADERS += ../REcmaHelper.h" >> $profile
-    echo "SOURCES += ../REcmaHelper.cpp" >> $profile
+    echo "HEADERS += ../REcmaHelper.h" >> $profile_tmp
+    echo "SOURCES += ../REcmaHelper.cpp" >> $profile_tmp
 else
-    echo "HEADERS += ../../../src/scripting/REcmaHelper.h" >> $profile
-    echo "SOURCES += ../../../src/scripting/REcmaHelper.cpp" >> $profile
+    echo "HEADERS += ../../../src/scripting/REcmaHelper.h" >> $profile_tmp
+    echo "SOURCES += ../../../src/scripting/REcmaHelper.cpp" >> $profile_tmp
 fi
 
 threads=0
@@ -82,12 +84,19 @@ do
         if [ -s $f ]; then
             if [ $mode == "h" ]; then
 
-                echo "HEADERS += $file" >> "$profile"
+                echo "HEADERS += $file" >> "$profile_tmp"
             else
-                echo "SOURCES += $file" >> "$profile"
+                echo "SOURCES += $file" >> "$profile_tmp"
             fi
         fi
     done
 done
+
+diff $profile_tmp $profile
+if [ $? -eq 0 ]; then
+    rm $profile_tmp
+else
+    mv $profile_tmp $profile
+fi
 
 echo "done."

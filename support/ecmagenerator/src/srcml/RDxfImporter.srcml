@@ -44,13 +44,7 @@ dir="./io/dxf" filename="RDxfImporter.h">
   <cpp:file>"RLeaderData.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMessageHandler.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
   <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RProgressHandler.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RSpline.h"</cpp:file></cpp:include>
@@ -58,6 +52,10 @@ dir="./io/dxf" filename="RDxfImporter.h">
   <name>RDxfImporter</name>;</class_decl>
   <class_decl>class 
   <name>RImageEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
   <class_decl>class 
   <name>RVector</name>;</class_decl>
   <comment type="block">/** * Represents a text style. */</comment>
@@ -160,48 +158,23 @@ dir="./io/dxf" filename="RDxfImporter.h">
   <specifier>virtual</specifier>
   <name>~RDxfImporter</name>
   <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>registerFileImporter</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <comment type="line">//static void
+  registerFileImporter();</comment>
   <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RFileImporter</name>*</type>
-  <name>factory</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RMessageHandler</name>*</type>
-      <name>messageHandler</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RProgressHandler</name>*</type>
-      <name>progressHandler</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
+  <comment type="line">//static RFileImporter*
+  factory(RDocument&amp; document, RMessageHandler* messageHandler,
+  RProgressHandler* progressHandler);</comment>
   <comment type="block">/** * \nonscriptable */</comment>
+  <comment type="line">//static bool check(const QString&amp;
+  fileName, const QString&amp; nameFilter);</comment>
+  <comment type="line">//static QStringList
+  getFilterStrings();</comment>
   <function_decl>
   <type>
-    <name>static</name>
+    <name>virtual</name>
     <name>bool</name>
   </type>
-  <name>check</name>
+  <name>importFile</name>
   <parameter_list>(
   <param>
     <decl>
@@ -217,28 +190,6 @@ dir="./io/dxf" filename="RDxfImporter.h">
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>nameFilter</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QStringList</name>
-  </type>
-  <name>getFilterStrings</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>importFile</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -539,7 +490,9 @@ dir="./io/dxf" filename="RDxfImporter.h">
     <decl>
       <type>
       <name>const</name>
-      <name>char</name>*</type>
+      <name>
+      <name>std</name>::
+      <name>string</name></name>&amp;</type>
       <name>text</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
@@ -859,6 +812,117 @@ dir="./io/dxf" filename="RDxfImporter.h">
     <name>virtual</name>
     <name>void</name>
   </type>
+  <name>addXRecord</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>
+      <name>std</name>::
+      <name>string</name></name>&amp;</type>
+      <name>handle</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>addXRecordString</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>code</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>
+      <name>std</name>::
+      <name>string</name></name>&amp;</type>
+      <name>value</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>addXRecordReal</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>code</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>value</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>addXRecordInt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>code</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>value</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>addXRecordBool</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>code</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>value</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
   <name>addXDataApp</name>
   <parameter_list>(
   <param>
@@ -947,6 +1011,36 @@ dir="./io/dxf" filename="RDxfImporter.h">
     <name>virtual</name>
     <name>void</name>
   </type>
+  <name>addDictionary</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>DL_DictionaryData</name>&amp;</type>
+      <name>data</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>addDictionaryEntry</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>DL_DictionaryEntryData</name>&amp;</type>
+      <name>data</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
   <name>setVariableVector</name>
   <parameter_list>(
   <param>
@@ -1012,7 +1106,9 @@ dir="./io/dxf" filename="RDxfImporter.h">
     <decl>
       <type>
       <name>const</name>
-      <name>char</name>*</type>
+      <name>
+      <name>std</name>::
+      <name>string</name></name>&amp;</type>
       <name>value</name>
     </decl>
   </param>, 
@@ -1288,6 +1384,8 @@ dir="./io/dxf" filename="RDxfImporter.h">
     </type>
     <name>dxfServices</name>
   </decl>;</decl_stmt>
+  <comment type="line">// list of locked layers. layers are locked
+  after importing all entities:</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -1360,6 +1458,14 @@ dir="./io/dxf" filename="RDxfImporter.h">
     </type>
     <name>images</name>
   </decl>;</decl_stmt>
+  <comment type="line">// Current app id for XData:</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>xDataAppId</name>
+  </decl>;</decl_stmt>
   <comment type="line">// AppID -&gt; list of code / value
   pairs</comment>
   <decl_stmt>
@@ -1387,13 +1493,41 @@ dir="./io/dxf" filename="RDxfImporter.h">
     </type>
     <name>xData</name>
   </decl>;</decl_stmt>
-  <comment type="line">// Current app id for XData:</comment>
   <decl_stmt>
   <decl>
     <type>
       <name>QString</name>
     </type>
-    <name>xDataAppId</name>
+    <name>qcadDictHandle</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>inDict</name>
+  </decl>;</decl_stmt>
+  <comment type="line">// Dictionary handles -&gt; names</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>QString</name>
+      </argument>, 
+      <argument>
+        <name>QString</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>qcadDict</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>variableKey</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

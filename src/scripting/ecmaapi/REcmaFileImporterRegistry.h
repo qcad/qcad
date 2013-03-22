@@ -44,16 +44,16 @@
 
     // public methods:
     static  QScriptValue
-        registerFileImporterScript
+        registerFileImporter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getFileImporter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        hasFileImporter
+        getFilterStrings
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getFilterStrings
+        hasFileImporter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getFilterExtensions

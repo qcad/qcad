@@ -126,6 +126,8 @@ HEADERS = \
     RFileExporterRegistry.h \
     RFileImporter.h \
     RFileImporterAdapter.h \
+    RFileImporterFactory.h \
+    RFileImporterFactoryAdapter.h \
     RFileImporterRegistry.h \
     RFocusListener.h \
     RFocusListenerAdapter.h \

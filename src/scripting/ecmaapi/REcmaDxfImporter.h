@@ -50,12 +50,6 @@
 
     // public methods:
     static  QScriptValue
-        registerFileImporter
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getFilterStrings
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         importFile
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

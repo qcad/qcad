@@ -37,7 +37,9 @@
             );
         
       REcmaShellFileExporterAdapter(
-                RDocument & document
+                RDocument & document, RMessageHandler * messageHandler
+        =  NULL, RProgressHandler * progressHandler
+        =  NULL
             );
         
     
@@ -49,7 +51,7 @@
     
     
       bool exportFile(
-                const QString & fileName, const QString & nameFilter, bool setFileName
+                const QString & fileName, const QString & nameFilter, bool resetModified
         =  true
             );
         

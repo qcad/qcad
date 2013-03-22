@@ -16,15 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RFileExporterRegistry.h"
 
 #include "RDebug.h"
 #include "RFileExporterFactory.h"
+#include "RFileExporterRegistry.h"
 
     
 QList<RFileExporterFactory*> RFileExporterRegistry::factories;
-//QList<RFileExporterRegistry::CheckFunction> RFileExporterRegistry::checkFunctions;
-//QStringList RFileExporterRegistry::filterStrings;
 
 
 
@@ -36,7 +34,6 @@ QList<RFileExporterFactory*> RFileExporterRegistry::factories;
  */
 void RFileExporterRegistry::registerFileExporter(RFileExporterFactory* factory) {
     factories.append(factory);
-    //filterStrings.append(factory->getFilterStrings());
 }
 
 
@@ -46,15 +43,18 @@ void RFileExporterRegistry::registerFileExporter(RFileExporterFactory* factory) 
  *      can handle the given file or NULL if no suitable exporter
  *      can be found.
  */
-RFileExporter* RFileExporterRegistry::getFileExporter(const QString& fileName,
-        const QString& nameFilter, RDocument& document) {
+RFileExporter* RFileExporterRegistry::getFileExporter(
+    const QString& fileName,
+    const QString& nameFilter, 
+    RDocument& document,
+    RMessageHandler* messageHandler, RProgressHandler* progressHandler) {
 
     QList<RFileExporterFactory*>::iterator it;
 
     for (it = factories.begin(); it != factories.end(); ++it) {
         bool suitable = (*it)->canExport(fileName, nameFilter);
         if (suitable) {
-            return (*it)->instantiate(document);
+            return (*it)->instantiate(document, messageHandler, progressHandler);
         }
     }
     qWarning("RFileExporterRegistry::getFileExporter: "

@@ -10,11 +10,15 @@
 
         // forwards declarations mapped to includes
         
-                #include "RFileExporterFactory.h"
+                #include "RDocument.h"
             
                 #include "RFileExporter.h"
             
-                #include "RDocument.h"
+                #include "RFileExporterFactory.h"
+            
+                #include "RMessageHandler.h"
+            
+                #include "RProgressHandler.h"
             
             
         // includes for base ecma wrapper classes
@@ -285,6 +289,202 @@
     a1
         ,
     a2);
+        // return type: RFileExporter *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
+        ) /* type: RMessageHandler * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RFileExporterRegistry: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument is pointer
+                    RMessageHandler * a3 = NULL;
+
+                    a3 = 
+                        REcmaHelper::scriptValueTo<RMessageHandler >(
+                            context->argument(3)
+                        );
+                    
+                    if (a3==NULL && 
+                        !context->argument(3).isNull()) {
+                        return REcmaHelper::throwError("RFileExporterRegistry: Argument 3 is not of type RMessageHandler *RMessageHandler *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RFileExporter *'
+    RFileExporter * cppResult =
+        RFileExporterRegistry::
+       getFileExporter(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: RFileExporter *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
+        ) /* type: RMessageHandler * */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: RProgressHandler * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RFileExporterRegistry: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument is pointer
+                    RMessageHandler * a3 = NULL;
+
+                    a3 = 
+                        REcmaHelper::scriptValueTo<RMessageHandler >(
+                            context->argument(3)
+                        );
+                    
+                    if (a3==NULL && 
+                        !context->argument(3).isNull()) {
+                        return REcmaHelper::throwError("RFileExporterRegistry: Argument 3 is not of type RMessageHandler *RMessageHandler *.", context);                    
+                    }
+                
+                    // argument is pointer
+                    RProgressHandler * a4 = NULL;
+
+                    a4 = 
+                        REcmaHelper::scriptValueTo<RProgressHandler >(
+                            context->argument(4)
+                        );
+                    
+                    if (a4==NULL && 
+                        !context->argument(4).isNull()) {
+                        return REcmaHelper::throwError("RFileExporterRegistry: Argument 4 is not of type RProgressHandler *RProgressHandler *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RFileExporter *'
+    RFileExporter * cppResult =
+        RFileExporterRegistry::
+       getFileExporter(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
         // return type: RFileExporter *
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);

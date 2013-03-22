@@ -44,7 +44,9 @@
     
     
       RFileExporter * instantiate(
-                RDocument & document
+                RDocument & document, RMessageHandler * messageHandler
+        =  NULL, RProgressHandler * progressHandler
+        =  NULL
             );
         
     

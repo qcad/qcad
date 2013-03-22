@@ -20,11 +20,13 @@
 #ifndef RFILEEXPORTER_H
 #define RFILEEXPORTER_H
 
+#include <QString>
+
 #include "RDocument.h"
 #include "RExporter.h"
 
-#include <QString>
-
+class RMessageHandler;
+class RProgressHandler;
 
 
 /**
@@ -38,12 +40,12 @@
 class RFileExporter : public RExporter {
 public:
     RFileExporter();
-    RFileExporter(RDocument& document);
+    RFileExporter(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);
     virtual ~RFileExporter();
 
     /**
      * Must be implemented by file exporters to correct the given
-     * file name if necesary (add extension based on chosen name filter).
+     * file name if necessary (add extension based on chosen name filter).
      */
     virtual QString getCorrectedFileName(const QString& fileName, const QString& nameFilter) = 0;
     
@@ -51,7 +53,7 @@ public:
      * Must be implemented by file exporters to export the document
      * into the given file.
      */
-    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool setFileName = true) = 0;
+    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true) = 0;
 };
 
 Q_DECLARE_METATYPE(RFileExporter*)

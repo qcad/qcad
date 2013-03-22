@@ -24,8 +24,6 @@
 
 #include <QString>
 
-
-
 /**
  * \brief Base class for file importers. 
  *
@@ -44,7 +42,7 @@ public:
      * Must be implemented by file importers to import the given file into
      * the document.
      */
-    virtual bool importFile(const QString& fileName) = 0;
+    virtual bool importFile(const QString& fileName, const QString& nameFilter) = 0;
 };
 
 Q_DECLARE_METATYPE(RFileImporter*)

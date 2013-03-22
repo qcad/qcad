@@ -9,8 +9,10 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RLine" />
   <class_decl name="RLinetype" />
   <class_decl name="RLinetypePattern" />
+  <class_decl name="RMessageHandler" />
   <class_decl name="RPoint" />
   <class_decl name="RPolyline" />
+  <class_decl name="RProgressHandler" />
   <class_decl name="RSpline" />
   <class_decl name="RTriangle" />
   <class_decl name="RVector" />
@@ -23,6 +25,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant>
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
+        <arg type="RMessageHandler *" typeName="RMessageHandler *"
+        name="messageHandler" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="RProgressHandler *"
+        typeName="RProgressHandler *" name="progressHandler"
+        hasDefault="true" default=" NULL" isConst="false" />
       </variant>
     </constructor>
     <method name="getErrorMessage" cppName="getErrorMessage"

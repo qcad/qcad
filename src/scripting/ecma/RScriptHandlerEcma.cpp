@@ -299,6 +299,7 @@ extern "C" {
 
 #ifndef R_NO_DXF
 #include "REcmaDxfImporter.h"
+#include "REcmaDxfImporterFactory.h"
 #endif
 
 bool RScriptHandlerEcma::alwaysLoadScripts = false;
@@ -698,6 +699,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaFileImporterAdapter::init(*engine);
 #ifndef R_NO_DXF
     REcmaDxfImporter::init(*engine);
+    REcmaDxfImporterFactory::init(*engine);
 #endif
     REcmaFileImporterRegistry::init(*engine);
 

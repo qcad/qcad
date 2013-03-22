@@ -20,6 +20,8 @@
 #ifndef RMESSAGEHANDLER_H
 #define RMESSAGEHANDLER_H
 
+#include <QMetaType>
+
 /**
  * \brief Interface for classes that can handle user messages, warnings and errors.
  *

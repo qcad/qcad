@@ -67,32 +67,10 @@ RDxfImporter::RDxfImporter(RDocument& document, RMessageHandler* messageHandler,
 
 RDxfImporter::~RDxfImporter() {
 }
-    
-void RDxfImporter::registerFileImporter() {
-    RFileImporterRegistry::registerFileImporter(factory, check, RDxfImporter::getFilterStrings());
-}
-    
-RFileImporter* RDxfImporter::factory(RDocument& document, RMessageHandler* messageHandler, RProgressHandler* progressHandler) {
-    RFileImporter* f = new RDxfImporter(document, messageHandler, progressHandler);
-    return f;
-}
 
-bool RDxfImporter::check(const QString& fileName, const QString& nameFilter) {
-    if (nameFilter.contains("dxflib")) {
-        return true;
-    }
+bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter) {
+    Q_UNUSED(nameFilter)
 
-    QFileInfo fi(fileName);
-    return fi.suffix().toLower() == "dxf";
-}
-
-QStringList RDxfImporter::getFilterStrings() {
-    QStringList ret;
-    ret << QObject::tr("DXF Files (dxflib) %1").arg("(*.dxf)");
-    return ret;
-}
-
-bool RDxfImporter::importFile(const QString& fileName) {
     this->fileName = fileName;
     QFileInfo fi(fileName);
     if (!fi.exists()) {
@@ -883,8 +861,6 @@ void RDxfImporter::addText(const DL_TextData& data) {
             break;
         }
     } else {
-        //attachmentPoint = (data.hJustification+1)+(3-data.vJustification)*3;
-        //attachmentPoint = 7;
         halign = RS::HAlignLeft;
         valign = RS::VAlignBottom;
         refPoint = RVector(data.ipx, data.ipy);
@@ -893,19 +869,6 @@ void RDxfImporter::addText(const DL_TextData& data) {
     //int drawingDirection = 5;
     double width = 100.0;
 
-//    mtext = "";
-//    addMText(DL_MTextData(
-//                 refPoint.x,
-//                 refPoint.y,
-//                 refPoint.z,
-//                 0.0, 0.0, 0.0,
-//                 data.height, width,
-//                 attachmentPoint,
-//                 drawingDirection,
-//                 RS::Exact,
-//                 1.0,
-//                 data.text.c_str(), ,
-//                 angle));
     RTextData d(
         RVector::invalid, refPoint,
         data.height, width,
@@ -930,7 +893,6 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
     RS::HAlign halign;
     RS::TextLineSpacingStyle lss;
 
-    //QString sty = data.style.c_str();
     QString t;
 
     if (dxfServices.getQCad2Compatibility()) {
@@ -969,14 +931,9 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
         lss = RS::Exact;
     }
 
-    //t = toNativeString(data.text.c_str());
     t = data.text.c_str();
     t.replace("^ ", "^");
     dxfServices.fixQCad2String(t);
-
-//    if (sty.isEmpty()) {
-//        sty = variables.getString("$DIMSTYLE", "Standard");
-//    }
 
     // data needed to add the actual dimension entity
     RDimensionData ret(defP, midP,
@@ -994,9 +951,6 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
     return ret;
 }
 
-/**
- * Implementation of the method which handles aligned dimensions (DIMENSION).
- */
 void RDxfImporter::addDimAlign(const DL_DimensionData& data, const DL_DimAlignedData& edata) {
     RDimensionData dimData = convDimensionData(data);
 

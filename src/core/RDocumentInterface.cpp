@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+
 #include <QtNetwork>
 
 #include "RArc.h"
@@ -49,7 +50,6 @@
 #include "RSpline.h"
 #include "RTextLabel.h"
 #include "RTransaction.h"
-//#include "RTransactionEvent.h"
 #include "RWheelEvent.h"
 
 RDocumentInterface* RDocumentInterface::clipboard = NULL;
@@ -1009,7 +1009,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     RDocumentInterface::IoErrorCode ret = RDocumentInterface::IoErrorNoError;
     QString previousFileName = document.getFileName();
     document.setFileName(fileName);
-    if (fileImporter->importFile(fileName)) {
+    if (fileImporter->importFile(fileName, nameFilter)) {
         document.setModified(false);
     } else {
         document.setFileName(previousFileName);

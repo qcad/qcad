@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./io/dxf" filename="RDxfExporter.h">
+  <comment type="block">/** * Copyright (c) 2011-2013 by Andrew
+  Mustun. All rights reserved. * * This file is part of the QCAD
+  project. * * QCAD is free software: you can redistribute it
+  and/or modify * it under the terms of the GNU General Public
+  License as published by * the Free Software Foundation, either
+  version 3 of the License, or * (at your option) any later
+  version. * * QCAD is distributed in the hope that it will be
+  useful, * but WITHOUT ANY WARRANTY; without even the implied
+  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  PURPOSE. See the * GNU General Public License for more details. *
+  * You should have received a copy of the GNU General Public
+  License * along with QCAD. */</comment>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDXFEXPORTER_H</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RDXFEXPORTER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RDxfServices.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RArc.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RCircle.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"REllipse.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RFileExporterFactory.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RFileExporterRegistry.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RLine.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RPoint.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RSingleton.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RArcEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RBlockReferenceEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RCircleEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RDimensionEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RDimAlignedEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RDimAngularEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RDimDiametricEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RDimOrdinateEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RDimRadialEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RDimRotatedEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>REllipseEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RHatchEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RImageEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RLeaderEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RLineEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RPointEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RPolylineEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RSolidEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RSplineEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RTextEntity</name>;</class_decl>
+  <comment type="block">/** * \brief Exporter for the DXF format,
+  based on dxflib. * * \ingroup dxf * \scriptable */</comment>
+  <class>class 
+  <name>RDxfExporter</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RFileExporter</name></super>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor_decl>
+  <name>RDxfExporter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>&amp;</type>
+      <name>document</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RMessageHandler</name>*</type>
+    <name>messageHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RProgressHandler</name>*</type>
+    <name>progressHandler</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RDxfExporter</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>QString</name>
+    </type>
+    <name>getCorrectedFileName</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>fileName</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>nameFilter</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>fileName</name>
+    </expr>;</return>}</block>
+  </function>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>bool</name>
+  </type>
+  <name>exportFile</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>fileName</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>nameFilter</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>resetModified</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="line">// virtual void setColor(const QColor&amp;
+  c) {</comment>
+  <comment type="line">// Q_UNUSED(c)</comment>
+  <comment type="line">// }</comment>
+  <comment type="line">// virtual void exportLine(const RLine&amp;
+  line, double offset = RNANDOUBLE) {</comment>
+  <comment type="line">// Q_UNUSED(line)</comment>
+  <comment type="line">// Q_UNUSED(offset)</comment>
+  <comment type="line">// }</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>exportPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RPoint</name>&amp;</type>
+        <name>point</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>point</argument>)</argument_list>
+    </macro>}</block>
+  </function>
+  <comment type="line">// virtual void exportCircle(const
+  RCircle&amp; circle) {</comment>
+  <comment type="line">// Q_UNUSED(circle)</comment>
+  <comment type="line">// }</comment>
+  <comment type="line">// virtual void exportArc(const RArc&amp;
+  arc, double offset = RNANDOUBLE) {</comment>
+  <comment type="line">// Q_UNUSED(arc)</comment>
+  <comment type="line">// Q_UNUSED(offset)</comment>
+  <comment type="line">// }</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>exportArcSegment</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RArc</name>&amp;</type>
+        <name>arc</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>arc</argument>)</argument_list>
+    </macro>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>exportLineSegment</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RLine</name>&amp;</type>
+        <name>line</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>line</argument>)</argument_list>
+    </macro>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>exportTriangle</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RTriangle</name>&amp;</type>
+        <name>triangle</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>triangle</argument>)</argument_list>
+    </macro>}</block>
+  </function>
+  <comment type="line">// virtual void exportPolyline(const
+  RPolyline&amp; polyline) {</comment>
+  <comment type="line">// Q_UNUSED(polyline)</comment>
+  <comment type="line">// }</comment></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RDxfExporter*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>
