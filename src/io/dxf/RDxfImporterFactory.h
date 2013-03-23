@@ -29,6 +29,9 @@
 #include "RFileImporterFactory.h"
 #include "RFileImporterRegistry.h"
 
+class RMessageHandler;
+class RProgressHandler;
+
 /**
  * \scriptable
  */
@@ -42,7 +45,10 @@ public:
 
     virtual QStringList getFilterStrings();
 
-    virtual RFileImporter* instantiate(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL) {
+    virtual RFileImporter* instantiate(RDocument& document,
+        RMessageHandler* messageHandler = NULL,
+        RProgressHandler* progressHandler = NULL) {
+
         return new RDxfImporter(document, messageHandler, progressHandler);
     }
 
