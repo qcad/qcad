@@ -1,28 +1,8 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="RArcEntity" />
-  <class_decl name="RBlockReferenceEntity" />
-  <class_decl name="RCircleEntity" />
-  <class_decl name="RDimensionEntity" />
-  <class_decl name="RDimAlignedEntity" />
-  <class_decl name="RDimAngularEntity" />
-  <class_decl name="RDimDiametricEntity" />
-  <class_decl name="RDimOrdinateEntity" />
-  <class_decl name="RDimRadialEntity" />
-  <class_decl name="RDimRotatedEntity" />
-  <class_decl name="REllipseEntity" />
-  <class_decl name="RHatchEntity" />
-  <class_decl name="RImageEntity" />
-  <class_decl name="RLeaderEntity" />
-  <class_decl name="RLineEntity" />
   <class_decl name="RMessageHandler" />
-  <class_decl name="RPointEntity" />
-  <class_decl name="RPolylineEntity" />
   <class_decl name="RProgressHandler" />
-  <class_decl name="RSolidEntity" />
-  <class_decl name="RSplineEntity" />
-  <class_decl name="RTextEntity" />
   <class name="RDxfExporter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

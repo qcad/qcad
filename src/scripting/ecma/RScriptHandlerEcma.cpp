@@ -134,7 +134,6 @@ extern "C" {
 #include "REcmaGuiAction.h"
 #include "REcmaHatchData.h"
 #include "REcmaHatchEntity.h"
-#include "REcmaHelpBrowser.h"
 #include "REcmaImageData.h"
 #include "REcmaImageEntity.h"
 #include "REcmaImporter.h"
@@ -520,7 +519,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSnapListener::init(*engine);
 
     REcmaGuiAction::init(*engine);
-    REcmaHelpBrowser::init(*engine);
     REcmaSpatialIndex::init(*engine);
     REcmaSpatialIndexNavel::init(*engine);
     REcmaSpatialIndexSimple::init(*engine);

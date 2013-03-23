@@ -146,10 +146,6 @@ dir="./core" filename="RFileImporterRegistry.h">
       <name>nameFilter</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \return List of all available filter
-  strings, e.g. for a file open * dialog. */</comment>
-  <comment type="block">/* static QStringList getFilterStrings() {
-  return filterStrings; } */</comment>
   <comment type="block">/** * \return List of all importable file
   extensions (e.g. 'dxf', 'dwg', ...). */</comment>
   <function_decl>
@@ -180,28 +176,7 @@ dir="./core" filename="RFileImporterRegistry.h">
       RFileImporterFactory</name>*</argument>&gt;</argument_list></name>
     </type>
     <name>factories</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/* typedef RFileImporter*
-  (*FactoryFunction)(RDocument&amp; document, RMessageHandler*
-  messageHandler, RProgressHandler* progressHandler); typedef bool
-  (*CheckFunction)(const QString&amp;, const QString&amp;);
-  */</comment>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <comment type="block">/* static void registerFileImporter(
-  RFileImporterRegistry::FactoryFunction factoryFunction,
-  RFileImporterRegistry::CheckFunction checkFunction, const
-  QStringList&amp; filters ); static void
-  registerFileImporterScript( const QString&amp; scriptFile, const
-  QStringList&amp; filters ); */</comment>
-  <comment type="line">//private:</comment>
-  <comment type="line">//static QList&lt;FactoryFunction&gt;
-  factoryFunctions;</comment>
-  <comment type="line">//static QList&lt;CheckFunction&gt;
-  checkFunctions;</comment>
-  <comment type="line">//static QList&lt;QString&gt;
-  scriptImporters;</comment>
-  <comment type="line">//static QStringList
-  filterStrings;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

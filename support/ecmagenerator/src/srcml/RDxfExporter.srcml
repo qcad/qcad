@@ -25,81 +25,14 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <cpp:file>"RDxfServices.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RArc.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RCircle.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
   <cpp:file>"RDocument.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"REllipse.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
   <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RFileExporterFactory.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RFileExporterRegistry.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLine.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPoint.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSingleton.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RArcEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RBlockReferenceEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RCircleEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RDimensionEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RDimAlignedEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RDimAngularEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RDimDiametricEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RDimOrdinateEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RDimRadialEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RDimRotatedEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>REllipseEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RHatchEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RImageEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RLeaderEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RLineEntity</name>;</class_decl>
   <class_decl>class 
   <name>RMessageHandler</name>;</class_decl>
   <class_decl>class 
-  <name>RPointEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RPolylineEntity</name>;</class_decl>
-  <class_decl>class 
   <name>RProgressHandler</name>;</class_decl>
-  <class_decl>class 
-  <name>RSolidEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RSplineEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RTextEntity</name>;</class_decl>
   <comment type="block">/** * \brief Exporter for the DXF format,
   based on dxflib. * * \ingroup dxf * \scriptable */</comment>
   <class>class 
@@ -212,15 +145,6 @@ dir="./io/dxf" filename="RDxfExporter.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">// virtual void setColor(const QColor&amp;
-  c) {</comment>
-  <comment type="line">// Q_UNUSED(c)</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// virtual void exportLine(const RLine&amp;
-  line, double offset = RNANDOUBLE) {</comment>
-  <comment type="line">// Q_UNUSED(line)</comment>
-  <comment type="line">// Q_UNUSED(offset)</comment>
-  <comment type="line">// }</comment>
   <function>
     <type>
       <name>virtual</name>
@@ -243,15 +167,6 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <argument>point</argument>)</argument_list>
     </macro>}</block>
   </function>
-  <comment type="line">// virtual void exportCircle(const
-  RCircle&amp; circle) {</comment>
-  <comment type="line">// Q_UNUSED(circle)</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// virtual void exportArc(const RArc&amp;
-  arc, double offset = RNANDOUBLE) {</comment>
-  <comment type="line">// Q_UNUSED(arc)</comment>
-  <comment type="line">// Q_UNUSED(offset)</comment>
-  <comment type="line">// }</comment>
   <function>
     <type>
       <name>virtual</name>
@@ -317,11 +232,7 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <argument_list>(
       <argument>triangle</argument>)</argument_list>
     </macro>}</block>
-  </function>
-  <comment type="line">// virtual void exportPolyline(const
-  RPolyline&amp; polyline) {</comment>
-  <comment type="line">// Q_UNUSED(polyline)</comment>
-  <comment type="line">// }</comment></public>}</block>;</class>
+  </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

@@ -122,10 +122,7 @@ dir="./core" filename="RFileExporterRegistry.h">
     <name>QStringList</name>
   </type>
   <name>getFilterStrings</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="line">//static bool hasFileExporter(const
-  QString&amp; fileName, const QString&amp;
-  nameFilter);</comment></public>
+  <parameter_list>()</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>

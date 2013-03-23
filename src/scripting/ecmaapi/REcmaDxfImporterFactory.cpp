@@ -10,6 +10,10 @@
 
         // forwards declarations mapped to includes
         
+                #include "RMessageHandler.h"
+            
+                #include "RProgressHandler.h"
+            
             
         // includes for base ecma wrapper classes
         

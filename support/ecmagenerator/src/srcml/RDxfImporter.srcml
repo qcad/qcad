@@ -158,17 +158,6 @@ dir="./io/dxf" filename="RDxfImporter.h">
   <specifier>virtual</specifier>
   <name>~RDxfImporter</name>
   <parameter_list>()</parameter_list>;</destructor_decl>
-  <comment type="line">//static void
-  registerFileImporter();</comment>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <comment type="line">//static RFileImporter*
-  factory(RDocument&amp; document, RMessageHandler* messageHandler,
-  RProgressHandler* progressHandler);</comment>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <comment type="line">//static bool check(const QString&amp;
-  fileName, const QString&amp; nameFilter);</comment>
-  <comment type="line">//static QStringList
-  getFilterStrings();</comment>
   <function_decl>
   <type>
     <name>virtual</name>

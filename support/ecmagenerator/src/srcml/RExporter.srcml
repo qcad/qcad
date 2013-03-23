@@ -1574,8 +1574,6 @@ dir="./core" filename="RExporter.h">
     </type>
     <name>blockRefStack</name>
   </decl>;</decl_stmt>
-  <comment type="line">//QSharedPointer&lt;REntity&gt;
-  blockRefBS;</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -1625,9 +1623,7 @@ dir="./core" filename="RExporter.h">
       <name>ProjectionRenderingHint</name></name>
     </type>
     <name>projectionRenderingHint</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//bool
-  fixedColor;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

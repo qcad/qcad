@@ -15,7 +15,6 @@ SOURCES += \
     RGraphicsViewImage.cpp \
     RGraphicsViewGl.cpp \
     RGraphicsViewQt.cpp \
-    RHelpBrowser.cpp \
     RLinetypeCombo.cpp \
     RLineweightCombo.cpp \
     RListWidget.cpp \
@@ -40,7 +39,6 @@ HEADERS += \
     RGraphicsViewImage.h \
     RGraphicsViewGl.h \
     RGraphicsViewQt.h \
-    RHelpBrowser.h \
     RLinetypeCombo.h \
     RLineweightCombo.h \
     RListView.h \

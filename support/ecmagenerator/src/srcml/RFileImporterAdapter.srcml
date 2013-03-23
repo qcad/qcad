@@ -149,11 +149,7 @@ dir="./core" filename="RFileImporterAdapter.h">
     <expr>
       <name>false</name>
     </expr>;</return>}</block>
-  </function>
-  <comment type="block">/* virtual bool canImport(const
-  QString&amp; fileName, const QString&amp; nameFilter) {
-  Q_UNUSED(fileName) Q_UNUSED(nameFilter) return false; }
-  */</comment></public>}</block>;</class>
+  </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

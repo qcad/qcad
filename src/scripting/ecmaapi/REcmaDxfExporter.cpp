@@ -10,49 +10,9 @@
 
         // forwards declarations mapped to includes
         
-                #include "RArcEntity.h"
-            
-                #include "RBlockReferenceEntity.h"
-            
-                #include "RCircleEntity.h"
-            
-                #include "RDimensionEntity.h"
-            
-                #include "RDimAlignedEntity.h"
-            
-                #include "RDimAngularEntity.h"
-            
-                #include "RDimDiametricEntity.h"
-            
-                #include "RDimOrdinateEntity.h"
-            
-                #include "RDimRadialEntity.h"
-            
-                #include "RDimRotatedEntity.h"
-            
-                #include "REllipseEntity.h"
-            
-                #include "RHatchEntity.h"
-            
-                #include "RImageEntity.h"
-            
-                #include "RLeaderEntity.h"
-            
-                #include "RLineEntity.h"
-            
                 #include "RMessageHandler.h"
             
-                #include "RPointEntity.h"
-            
-                #include "RPolylineEntity.h"
-            
                 #include "RProgressHandler.h"
-            
-                #include "RSolidEntity.h"
-            
-                #include "RSplineEntity.h"
-            
-                #include "RTextEntity.h"
             
             
         // includes for base ecma wrapper classes
