@@ -4,17 +4,17 @@
 <context>
     <name>Circle2P</name>
     <message>
-        <location filename="../Circle2P.js" line="55"/>
+        <location filename="../Circle2P.js" line="58"/>
         <source>First point</source>
         <translation>Erster Punkt</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="62"/>
+        <location filename="../Circle2P.js" line="65"/>
         <source>Second point</source>
         <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="144"/>
+        <location filename="../Circle2P.js" line="147"/>
         <source>The two points are identical</source>
         <translation>Die zwei Punkte sind identisch</translation>
     </message>

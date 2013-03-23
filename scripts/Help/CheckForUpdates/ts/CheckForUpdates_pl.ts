@@ -4,7 +4,7 @@
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../CheckForUpdates.js" line="54"/>
+        <location filename="../CheckForUpdates.js" line="57"/>
         <location filename="../CheckForUpdatesDialog.ui" line="14"/>
         <source>Checking for Updates...</source>
         <translatorcomment>--google--</translatorcomment>

@@ -4,7 +4,7 @@
 <context>
     <name>Circle2PR</name>
     <message>
-        <location filename="../Circle2PR.js" line="62"/>
+        <location filename="../Circle2PR.js" line="65"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="69"/>
+        <location filename="../Circle2PR.js" line="72"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Wskaż drugi punkt
@@ -22,13 +22,13 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="175"/>
+        <location filename="../Circle2PR.js" line="178"/>
         <source>Invalid radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowy promień</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="180"/>
+        <location filename="../Circle2PR.js" line="183"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Te dwa punkty są identyczne</translation>

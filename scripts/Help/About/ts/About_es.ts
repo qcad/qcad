@@ -8,37 +8,37 @@
         <translation type="obsolete">&amp;Acerca de</translation>
     </message>
     <message>
-        <location filename="../About.js" line="30"/>
+        <location filename="../About.js" line="33"/>
         <source>About %1</source>
         <translation>Acerca de %1</translation>
     </message>
     <message>
-        <location filename="../About.js" line="66"/>
+        <location filename="../About.js" line="69"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="81"/>
+        <location filename="../About.js" line="84"/>
         <source>No information available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="83"/>
+        <location filename="../About.js" line="86"/>
         <source>Plugin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="87"/>
+        <location filename="../About.js" line="90"/>
         <source>Unknown version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="89"/>
+        <location filename="../About.js" line="92"/>
         <source>Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="94"/>
+        <location filename="../About.js" line="97"/>
         <source>Error:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -4,17 +4,17 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="70"/>
+        <location filename="../DrawPolyline.js" line="73"/>
         <source>Next vertex</source>
         <translation>Prossimo vertice</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="73"/>
+        <location filename="../DrawPolyline.js" line="76"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="60"/>
+        <location filename="../DrawPolyline.js" line="63"/>
         <source>First vertex</source>
         <translation>Primo vertice</translation>
     </message>

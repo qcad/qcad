@@ -4,13 +4,13 @@
 <context>
     <name>FontPreferences</name>
     <message>
-        <location filename="../FontPreferences.js" line="21"/>
+        <location filename="../FontPreferences.js" line="24"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Graphics View</translation>
     </message>
     <message>
-        <location filename="../FontPreferences.js" line="21"/>
+        <location filename="../FontPreferences.js" line="24"/>
         <source>Fonts</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--

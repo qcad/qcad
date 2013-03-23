@@ -4,7 +4,7 @@
 <context>
     <name>SplineControlPoints</name>
     <message>
-        <location filename="../SplineControlPoints.js" line="70"/>
+        <location filename="../SplineControlPoints.js" line="73"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -32,12 +32,12 @@
         <translation>Geschlossen</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="57"/>
+        <location filename="../SplineControlPoints.js" line="60"/>
         <source>First control point</source>
         <translation>Erster Kontrollpunkt</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="66"/>
+        <location filename="../SplineControlPoints.js" line="69"/>
         <source>Next control point</source>
         <translation>Nächster Kontrollpunkt</translation>
     </message>

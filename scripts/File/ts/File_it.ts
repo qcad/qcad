@@ -4,17 +4,17 @@
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="49"/>
+        <location filename="../File.js" line="52"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
     <message>
-        <location filename="../File.js" line="100"/>
+        <location filename="../File.js" line="103"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location filename="../File.js" line="136"/>
+        <location filename="../File.js" line="139"/>
         <source>Overwrite File?</source>
         <translatorcomment>--exact match--
 --file: Save_it.ts--
@@ -25,7 +25,7 @@ Sovrascrivere?</translatorcomment>
         <translation>Sovrascrivere il file?</translation>
     </message>
     <message>
-        <location filename="../File.js" line="137"/>
+        <location filename="../File.js" line="140"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--exact match--
 --file: Save_it.ts--

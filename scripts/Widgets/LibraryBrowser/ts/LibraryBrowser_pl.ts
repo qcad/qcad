@@ -4,19 +4,19 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="51"/>
+        <location filename="../LibraryBrowser.js" line="69"/>
         <source>audience</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">publiczność</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="52"/>
+        <location filename="../LibraryBrowser.js" line="70"/>
         <source>creator</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">twórca</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="53"/>
+        <location filename="../LibraryBrowser.js" line="71"/>
         <source>dimension</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -26,13 +26,13 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation type="unfinished">Wymiar</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="54"/>
+        <location filename="../LibraryBrowser.js" line="72"/>
         <source>levelOfDetail</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">levelOfDetail</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="55"/>
+        <location filename="../LibraryBrowser.js" line="73"/>
         <source>license</source>
         <translatorcomment>--google--
 Kontrolka licencjonowana
@@ -40,13 +40,13 @@ Kontrolka wymaga licencji podczas projektowania</translatorcomment>
         <translation type="unfinished">licencja</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="56"/>
+        <location filename="../LibraryBrowser.js" line="74"/>
         <source>perspective</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">perspektywa</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="57"/>
+        <location filename="../LibraryBrowser.js" line="75"/>
         <source>presentation</source>
         <translatorcomment>--google--
 [FB00-FB4F] Alphabetic Presentation Forms
@@ -55,19 +55,19 @@ Kontrolka wymaga licencji podczas projektowania</translatorcomment>
         <translation type="unfinished">prezentacja</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="58"/>
+        <location filename="../LibraryBrowser.js" line="76"/>
         <source>publisher</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">wydawca</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="59"/>
+        <location filename="../LibraryBrowser.js" line="77"/>
         <source>subject</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">przedmiot</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="60"/>
+        <location filename="../LibraryBrowser.js" line="78"/>
         <source>title</source>
         <translatorcomment>--google--
 Nienazwany
@@ -76,7 +76,7 @@ Tytuł:</translatorcomment>
         <translation type="unfinished">tytuł</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="63"/>
+        <location filename="../LibraryBrowser.js" line="81"/>
         <source>Widgets</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -85,8 +85,8 @@ Zastępcze widżety</translatorcomment>
         <translation type="unfinished">Widżety</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="63"/>
-        <location filename="../LibraryBrowser.js" line="1161"/>
+        <location filename="../LibraryBrowser.js" line="81"/>
+        <location filename="../LibraryBrowser.js" line="1182"/>
         <location filename="../LibraryBrowserInit.js" line="18"/>
         <source>Library Browser</source>
         <translatorcomment>--exact match--
@@ -95,7 +95,7 @@ Przeglądarka bibliotek</translatorcomment>
         <translation type="unfinished">Przeglądarka bibliotek</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="71"/>
+        <location filename="../LibraryBrowser.js" line="89"/>
         <source>Icon</source>
         <translatorcomment>--google--
 XX ikona wybrana wyłączona
@@ -104,7 +104,7 @@ Widok z ikonkami
         <translation type="unfinished">Ikona</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="72"/>
+        <location filename="../LibraryBrowser.js" line="90"/>
         <source>List</source>
         <translatorcomment>--google--
 Lista warstw
@@ -113,13 +113,13 @@ Atrybuty filtru bieżącej dokumentacji (lista oddzielona przecinkami):</transla
         <translation type="unfinished">Lista</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="75"/>
+        <location filename="../LibraryBrowser.js" line="93"/>
         <source>Choose Source Folder</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz folder źródłowy</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="727"/>
+        <location filename="../LibraryBrowser.js" line="745"/>
         <source>Page %1 of %2</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -127,14 +127,14 @@ Strona %1 z %2</translatorcomment>
         <translation type="unfinished">Strona %1 z %2</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="939"/>
+        <location filename="../LibraryBrowser.js" line="960"/>
         <source>Updating icons...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktualizowanie ikony ...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="940"/>
-        <location filename="../LibraryBrowser.js" line="1159"/>
+        <location filename="../LibraryBrowser.js" line="961"/>
+        <location filename="../LibraryBrowser.js" line="1180"/>
         <source>Abort</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -143,7 +143,7 @@ Drukowanie przerwane</translatorcomment>
         <translation type="unfinished">Przerwij</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1132"/>
+        <location filename="../LibraryBrowser.js" line="1153"/>
         <source>File:</source>
         <translatorcomment>--ignored colon--
 --file: qtconfig_pl.ts--
@@ -153,7 +153,7 @@ Niepoprawny plik UI: brak głównego elementu &lt;ui&gt;
         <translation type="unfinished">Plik:</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1133"/>
+        <location filename="../LibraryBrowser.js" line="1154"/>
         <source>Folder:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -162,37 +162,37 @@ Wirtualny katalog:</translatorcomment>
         <translation type="unfinished">Katalog:</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1136"/>
+        <location filename="../LibraryBrowser.js" line="1157"/>
         <source>License:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Licencja:</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1139"/>
+        <location filename="../LibraryBrowser.js" line="1160"/>
         <source>Attribute as:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Parametry jak:</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1142"/>
+        <location filename="../LibraryBrowser.js" line="1163"/>
         <source>Creator:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Twórca:</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1158"/>
+        <location filename="../LibraryBrowser.js" line="1179"/>
         <source>Updating library index:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktualizowanie indeksu biblioteki:</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1188"/>
+        <location filename="../LibraryBrowser.js" line="1209"/>
         <source>DB error</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Błąd DB</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1189"/>
+        <location filename="../LibraryBrowser.js" line="1210"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
@@ -202,7 +202,7 @@ Library browser will not be available.</source>
         <translation type="unfinished">LibraryBrowser Plugin: nie można połączyć się z DB. Błąd kierowcy: Błąd bazy danych: Plik bazy danych: przeglądarka Biblioteka nie będzie dostępna.</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1633"/>
+        <location filename="../LibraryBrowser.js" line="1657"/>
         <source>&amp;Insert</source>
         <translatorcomment>--google--
 &amp;Wstaw blok
@@ -210,19 +210,19 @@ Library browser will not be available.</source>
         <translation type="unfinished">Wstawić</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1643"/>
+        <location filename="../LibraryBrowser.js" line="1667"/>
         <source>&amp;Edit Script File...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Edycja pliku skryptu ...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1651"/>
+        <location filename="../LibraryBrowser.js" line="1675"/>
         <source>Open &amp;SVG File...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Otwórz plik SVG ...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1660"/>
+        <location filename="../LibraryBrowser.js" line="1684"/>
         <source>&amp;Open...</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -230,44 +230,44 @@ Library browser will not be available.</source>
         <translation type="unfinished">&amp;Otwórz...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1663"/>
+        <location filename="../LibraryBrowser.js" line="1687"/>
         <source>&amp;Edit...</source>
         <translatorcomment>--ignored ...--
 --file: linguist_pl.ts--</translatorcomment>
         <translation type="unfinished">&amp;Edycja...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1688"/>
+        <location filename="../LibraryBrowser.js" line="1712"/>
         <source>File Browser</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przeglądarka plików</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1690"/>
+        <location filename="../LibraryBrowser.js" line="1714"/>
         <source>&amp;Show in %1...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż na ...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1718"/>
+        <location filename="../LibraryBrowser.js" line="1742"/>
         <source>&amp;Remove from Favorites</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Usuń z ulubionych</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1738"/>
+        <location filename="../LibraryBrowser.js" line="1762"/>
         <source>&amp;Add to Favorites</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Dodaj do ulubionych</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1772"/>
+        <location filename="../LibraryBrowser.js" line="1796"/>
         <source>&amp;Regenerate Icon</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Regeneruj Ikona</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1783"/>
+        <location filename="../LibraryBrowser.js" line="1807"/>
         <source>&amp;Regenerate Icons</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Regeneruj Ikony</translation>

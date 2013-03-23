@@ -21,7 +21,7 @@
 <context>
     <name>View</name>
     <message>
-        <location filename="../View.js" line="38"/>
+        <location filename="../View.js" line="41"/>
         <source>&amp;View</source>
         <translation>&amp;Ansicht</translation>
     </message>
@@ -29,22 +29,22 @@
 <context>
     <name>ViewDialog</name>
     <message>
-        <location filename="../ViewDialog.js" line="28"/>
+        <location filename="../ViewDialog.js" line="31"/>
         <source>View Data</source>
         <translation>Ansicht Daten</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="30"/>
+        <location filename="../ViewDialog.js" line="33"/>
         <source>Enter View Data</source>
         <translation>Ansicht Daten eingeben</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="32"/>
+        <location filename="../ViewDialog.js" line="35"/>
         <source>Edit View Data</source>
         <translation>Ansicht Daten bearbeiten</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="34"/>
+        <location filename="../ViewDialog.js" line="37"/>
         <source>Enter the name for the new view.</source>
         <translation>Name der neuen Ansicht eingeben.</translation>
     </message>

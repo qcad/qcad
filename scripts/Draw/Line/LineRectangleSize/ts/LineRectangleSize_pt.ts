@@ -4,7 +4,7 @@
 <context>
     <name>LineRectangleSize</name>
     <message>
-        <location filename="../LineRectangleSize.js" line="45"/>
+        <location filename="../LineRectangleSize.js" line="48"/>
         <source>Top Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -14,7 +14,7 @@ Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</tr
         <translation>Esquerda acima</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="46"/>
+        <location filename="../LineRectangleSize.js" line="49"/>
         <source>Top</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -23,7 +23,7 @@ Centro Acima</translatorcomment>
         <translation>Topo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="47"/>
+        <location filename="../LineRectangleSize.js" line="50"/>
         <source>Top Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -32,7 +32,7 @@ Em cima à direita</translatorcomment>
         <translation>Direita acima</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="48"/>
+        <location filename="../LineRectangleSize.js" line="51"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -42,7 +42,7 @@ Esquerda ao Meio</translatorcomment>
         <translation>Esquerda</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="49"/>
+        <location filename="../LineRectangleSize.js" line="52"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -52,7 +52,7 @@ Salta aos pontos de meio</translatorcomment>
         <translation>Meio</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="50"/>
+        <location filename="../LineRectangleSize.js" line="53"/>
         <source>Right</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -62,7 +62,7 @@ Em baixo à direita</translatorcomment>
         <translation>Direita</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="51"/>
+        <location filename="../LineRectangleSize.js" line="54"/>
         <source>Bottom Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -71,7 +71,7 @@ Em baixo à esquerda</translatorcomment>
         <translation>Esquerda abaixo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="52"/>
+        <location filename="../LineRectangleSize.js" line="55"/>
         <source>Bottom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -81,7 +81,7 @@ Centro Abaixo</translatorcomment>
         <translation>Fundo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="53"/>
+        <location filename="../LineRectangleSize.js" line="56"/>
         <source>Bottom Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -90,7 +90,7 @@ Em baixo à direita</translatorcomment>
         <translation>Direita abaixo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="155"/>
+        <location filename="../LineRectangleSize.js" line="158"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

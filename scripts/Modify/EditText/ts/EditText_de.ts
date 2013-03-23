@@ -14,7 +14,7 @@
         <translation>Te&amp;xt editieren</translation>
     </message>
     <message>
-        <location filename="../EditText.js" line="58"/>
+        <location filename="../EditText.js" line="61"/>
         <source>Choose text</source>
         <translation>Text wählen</translation>
     </message>

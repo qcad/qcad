@@ -4,12 +4,12 @@
 <context>
     <name>DimOrdinate</name>
     <message>
-        <location filename="../DimOrdinate.js" line="58"/>
+        <location filename="../DimOrdinate.js" line="61"/>
         <source>Feature location</source>
         <translation>Posición de referencia</translation>
     </message>
     <message>
-        <location filename="../DimOrdinate.js" line="66"/>
+        <location filename="../DimOrdinate.js" line="69"/>
         <source>Endpoint of leader</source>
         <translation>Punto final de la guia</translation>
     </message>

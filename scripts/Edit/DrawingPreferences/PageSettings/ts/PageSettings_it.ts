@@ -82,7 +82,7 @@
         <translation type="obsolete">Mostra riquadro di delimitazione</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Printing</source>
         <translation>Stampa</translation>
     </message>
@@ -91,22 +91,22 @@
         <translation type="obsolete">Impostazioni della pagina di default</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Defaults for New Drawings</source>
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Printing - Page</source>
         <translation>Stampa - Pagina</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Page</source>
         <translation>Pagina</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="35"/>
+        <location filename="../PageSettings.js" line="38"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>

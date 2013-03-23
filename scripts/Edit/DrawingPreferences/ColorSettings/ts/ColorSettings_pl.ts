@@ -4,7 +4,7 @@
 <context>
     <name>ColorSettings</name>
     <message>
-        <location filename="../ColorSettings.js" line="22"/>
+        <location filename="../ColorSettings.js" line="25"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -12,13 +12,13 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="22"/>
+        <location filename="../ColorSettings.js" line="25"/>
         <source>Printing - Colors</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Drukowanie - Colors</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="24"/>
+        <location filename="../ColorSettings.js" line="27"/>
         <source>Printing</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -28,7 +28,7 @@ Drukowanie zakończone</translatorcomment>
         <translation type="unfinished">Drukowanie</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="24"/>
+        <location filename="../ColorSettings.js" line="27"/>
         <source>Colors</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

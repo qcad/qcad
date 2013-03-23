@@ -25,7 +25,7 @@ Supporto per lo scripting di Python</translatorcomment>
 <context>
     <name>ScriptingPreferences</name>
     <message>
-        <location filename="../ScriptingPreferences.js" line="21"/>
+        <location filename="../ScriptingPreferences.js" line="24"/>
         <source>Scripting</source>
         <translation>Scripts</translation>
     </message>

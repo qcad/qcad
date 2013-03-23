@@ -4,12 +4,12 @@
 <context>
     <name>CreateLibraryItem</name>
     <message>
-        <location filename="../CreateLibraryItem.js" line="46"/>
+        <location filename="../CreateLibraryItem.js" line="49"/>
         <source>Reference Point</source>
         <translation>Referenzpunkt</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItem.js" line="70"/>
+        <location filename="../CreateLibraryItem.js" line="73"/>
         <source>Save library item as...</source>
         <translation>Bibliothekeintrag speichern unter...</translation>
     </message>

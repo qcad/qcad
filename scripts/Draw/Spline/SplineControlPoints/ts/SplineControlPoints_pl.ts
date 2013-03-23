@@ -4,14 +4,14 @@
 <context>
     <name>SplineControlPoints</name>
     <message>
-        <location filename="../SplineControlPoints.js" line="57"/>
+        <location filename="../SplineControlPoints.js" line="60"/>
         <source>First control point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt kontrolny</translatorcomment>
         <translation type="unfinished">Pierwszy punkt kontrolny</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="66"/>
+        <location filename="../SplineControlPoints.js" line="69"/>
         <source>Next control point</source>
         <translatorcomment>--google--
 Wskaż następny punkt kontrolny lub [%1]
@@ -19,7 +19,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <translation type="unfinished">Następny punkt kontrolny</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="70"/>
+        <location filename="../SplineControlPoints.js" line="73"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

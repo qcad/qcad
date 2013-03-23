@@ -30,17 +30,17 @@
         <translation>Chiuso</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="57"/>
+        <location filename="../SplineControlPoints.js" line="60"/>
         <source>First control point</source>
         <translation>Primo punto di controllo</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="66"/>
+        <location filename="../SplineControlPoints.js" line="69"/>
         <source>Next control point</source>
         <translation>Punto di controllo successivo</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="70"/>
+        <location filename="../SplineControlPoints.js" line="73"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>

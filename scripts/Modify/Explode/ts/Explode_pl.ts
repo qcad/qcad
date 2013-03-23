@@ -109,7 +109,7 @@ Zablokuj wszystkie bloki</translatorcomment>
 <context>
     <name>Explode</name>
     <message>
-        <location filename="../Explode.js" line="28"/>
+        <location filename="../Explode.js" line="31"/>
         <source>Modify</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -119,7 +119,7 @@ Zmień atrybuty obiektu</translatorcomment>
         <translation type="unfinished">Zmień</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="28"/>
+        <location filename="../Explode.js" line="31"/>
         <source>Explode</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

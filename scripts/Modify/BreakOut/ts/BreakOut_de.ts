@@ -18,12 +18,12 @@
         <translation type="obsolete">Linie, Bogen oder Kreis wählen</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="55"/>
+        <location filename="../BreakOut.js" line="58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
         <translation>Linie, Bogen, Kreis oder Ellipse zum Trimmen wählen</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="58"/>
+        <location filename="../BreakOut.js" line="61"/>
         <source>Choose line, arc, circle or ellipse segment</source>
         <translation>Linien-, Bogen-, Kreis- oder Ellipsensegment wählen</translation>
     </message>

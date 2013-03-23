@@ -13,12 +13,12 @@
         <translation>Liste &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="34"/>
+        <location filename="../RecentFiles.js" line="37"/>
         <source>Load/Save</source>
         <translation>Laden/Speichern</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="34"/>
+        <location filename="../RecentFiles.js" line="37"/>
         <source>Recent Files</source>
         <translation>Zuletzt geöffneten Dateien</translation>
     </message>

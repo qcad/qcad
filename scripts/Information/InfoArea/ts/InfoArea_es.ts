@@ -4,22 +4,22 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="61"/>
+        <location filename="../InfoArea.js" line="64"/>
         <source>Set next polygon corner</source>
         <translation>Establecer la esquina siguiente polígono</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="67"/>
+        <location filename="../InfoArea.js" line="70"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="191"/>
+        <location filename="../InfoArea.js" line="194"/>
         <source>Polygon area:</source>
         <translation>Área de un polígono:</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="192"/>
+        <location filename="../InfoArea.js" line="195"/>
         <source>circumference:</source>
         <translation>circunferencia:</translation>
     </message>

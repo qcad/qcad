@@ -4,12 +4,12 @@
 <context>
     <name>Translate</name>
     <message>
-        <location filename="../Translate.js" line="59"/>
+        <location filename="../Translate.js" line="62"/>
         <source>Reference point</source>
         <translation>Point de référence</translation>
     </message>
     <message>
-        <location filename="../Translate.js" line="67"/>
+        <location filename="../Translate.js" line="70"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Indiquer le point cible</translatorcomment>

@@ -4,13 +4,13 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="40"/>
+        <location filename="../DefaultNavigation.js" line="43"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Visualizzazione grafica</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="40"/>
+        <location filename="../DefaultNavigation.js" line="43"/>
         <source>Navigation</source>
         <translatorcomment>--google--
 Barra di navigazione
@@ -19,13 +19,13 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Navigazione</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="45"/>
+        <location filename="../DefaultNavigation.js" line="48"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zoom (rotellina del mouse)</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="46"/>
+        <location filename="../DefaultNavigation.js" line="49"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Scorrimento (Trackpad, Multi-Touch Mouse)</translation>

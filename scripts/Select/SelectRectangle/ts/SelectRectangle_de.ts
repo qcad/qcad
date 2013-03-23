@@ -4,17 +4,17 @@
 <context>
     <name>SelectRectangle</name>
     <message>
-        <location filename="../SelectRectangle.js" line="68"/>
+        <location filename="../SelectRectangle.js" line="71"/>
         <source>First corner</source>
         <translation>Erster Eckpunkt</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.js" line="75"/>
+        <location filename="../SelectRectangle.js" line="78"/>
         <source>Second corner</source>
         <translation>Zweiter Eckpunkt</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.js" line="76"/>
+        <location filename="../SelectRectangle.js" line="79"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>

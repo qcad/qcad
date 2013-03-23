@@ -4,7 +4,7 @@
 <context>
     <name>LineAngle</name>
     <message>
-        <location filename="../LineAngle.js" line="61"/>
+        <location filename="../LineAngle.js" line="64"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -14,7 +14,7 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Położenie</translation>
     </message>
     <message>
-        <location filename="../LineAngle.js" line="62"/>
+        <location filename="../LineAngle.js" line="65"/>
         <source>Specify position</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

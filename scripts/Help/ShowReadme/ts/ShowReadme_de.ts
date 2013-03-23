@@ -17,7 +17,7 @@
 <context>
     <name>ShowReadme</name>
     <message>
-        <location filename="../ShowReadme.js" line="42"/>
+        <location filename="../ShowReadme.js" line="45"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
         <translation>Datei &apos;%1&apos; besteht nicht.</translation>
     </message>

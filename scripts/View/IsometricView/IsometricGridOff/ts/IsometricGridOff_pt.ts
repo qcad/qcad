@@ -4,7 +4,7 @@
 <context>
     <name>IsometricGridOff</name>
     <message>
-        <location filename="../IsometricGridOff.js" line="32"/>
+        <location filename="../IsometricGridOff.js" line="35"/>
         <source>Isometric Grid &amp;Off</source>
         <translation>&amp;Incapacitar grade isométrica</translation>
     </message>

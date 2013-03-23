@@ -4,12 +4,12 @@
 <context>
     <name>CircleCR</name>
     <message>
-        <location filename="../CircleCR.js" line="53"/>
+        <location filename="../CircleCR.js" line="56"/>
         <source>Center or radius</source>
         <translation>Centre ou le rayon</translation>
     </message>
     <message>
-        <location filename="../CircleCR.js" line="54"/>
+        <location filename="../CircleCR.js" line="57"/>
         <source>Center</source>
         <translation>Centrer</translation>
     </message>

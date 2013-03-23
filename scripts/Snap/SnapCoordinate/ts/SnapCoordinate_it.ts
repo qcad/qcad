@@ -39,7 +39,7 @@
         <translation type="obsolete">Ritorna</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinate.js" line="77"/>
+        <location filename="../SnapCoordinate.js" line="80"/>
         <source>Set coordinate</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Accetta le coordinate</translation>

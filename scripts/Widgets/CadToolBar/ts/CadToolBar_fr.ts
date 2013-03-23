@@ -4,17 +4,17 @@
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>CAD Toolbar</source>
         <translation>Barre d&apos;outils de CAO</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="77"/>
+        <location filename="../CadToolBar.js" line="80"/>
         <source>Toggle Title Bar</source>
         <translation>Montrer la barre de titre</translation>
     </message>
@@ -54,7 +54,7 @@ Espacement de grille minimal (px)</translatorcomment>
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="73"/>
+        <location filename="../CadToolBarPanel.js" line="76"/>
         <source>Back</source>
         <translation>Précédent</translation>
     </message>

@@ -13,7 +13,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="78"/>
+        <location filename="../Text.js" line="81"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -69,7 +69,7 @@ Rysuj obiekty tekstowe</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="348"/>
+        <location filename="../TextDialog/TextDialog.js" line="351"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -77,7 +77,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation type="unfinished">&amp;Cofnij</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="352"/>
+        <location filename="../TextDialog/TextDialog.js" line="355"/>
         <source>&amp;Redo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -85,7 +85,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation type="unfinished">&amp;Przywróć</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="356"/>
+        <location filename="../TextDialog/TextDialog.js" line="359"/>
         <source>Cu&amp;t</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -94,7 +94,7 @@ Wy&amp;tnij z punktem odniesienia</translatorcomment>
         <translation type="unfinished">W&amp;ytnij</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="360"/>
+        <location filename="../TextDialog/TextDialog.js" line="363"/>
         <source>&amp;Copy</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -103,7 +103,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">S&amp;kopiuj</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="364"/>
+        <location filename="../TextDialog/TextDialog.js" line="367"/>
         <source>&amp;Paste</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -111,50 +111,50 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">&amp;Wklej</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="372"/>
+        <location filename="../TextDialog/TextDialog.js" line="375"/>
         <source>&amp;Bold</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Śmiały</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="381"/>
+        <location filename="../TextDialog/TextDialog.js" line="384"/>
         <source>&amp;Italic</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Italic</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="401"/>
+        <location filename="../TextDialog/TextDialog.js" line="404"/>
         <source>&amp;Subscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Indeks</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="407"/>
+        <location filename="../TextDialog/TextDialog.js" line="410"/>
         <source>&amp;Superscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Napisany u góry</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="425"/>
+        <location filename="../TextDialog/TextDialog.js" line="428"/>
         <source>&amp;Color...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kolor ...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="431"/>
+        <location filename="../TextDialog/TextDialog.js" line="434"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Znaki specjalne ...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="731"/>
+        <location filename="../TextDialog/TextDialog.js" line="734"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
         <translation type="unfinished">Inne...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="859"/>
+        <location filename="../TextDialog/TextDialog.js" line="862"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -163,13 +163,13 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Stopień</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="860"/>
+        <location filename="../TextDialog/TextDialog.js" line="863"/>
         <source>Plus-Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plus-Minus</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="862"/>
+        <location filename="../TextDialog/TextDialog.js" line="865"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -178,13 +178,13 @@ Przełącz znak średnicy
         <translation type="unfinished">Średnica</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="863"/>
+        <location filename="../TextDialog/TextDialog.js" line="866"/>
         <source>Almost equal</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Prawie równe</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="864"/>
+        <location filename="../TextDialog/TextDialog.js" line="867"/>
         <source>Multiplication</source>
         <translatorcomment>--google--
 Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) jest niedozwolone.
@@ -192,7 +192,7 @@ Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) j
         <translation type="unfinished">Mnożenie</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="865"/>
+        <location filename="../TextDialog/TextDialog.js" line="868"/>
         <source>Division</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -201,13 +201,13 @@ Dzielenie (÷)</translatorcomment>
         <translation type="unfinished">Dzielenie</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="866"/>
+        <location filename="../TextDialog/TextDialog.js" line="869"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="867"/>
+        <location filename="../TextDialog/TextDialog.js" line="870"/>
         <source>Pi</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -216,7 +216,7 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Pi</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="868"/>
+        <location filename="../TextDialog/TextDialog.js" line="871"/>
         <source>Identity</source>
         <translatorcomment>--google--
 Selektor narzucenia niepowtarzalności W3C XML Schema
@@ -225,31 +225,31 @@ Pole narzucenia niepowtarzalności W3C XML Schema
         <translation type="unfinished">Tożsamość</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="869"/>
+        <location filename="../TextDialog/TextDialog.js" line="872"/>
         <source>Not equal</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie równa</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="870"/>
+        <location filename="../TextDialog/TextDialog.js" line="873"/>
         <source>Ohm</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Om</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="871"/>
+        <location filename="../TextDialog/TextDialog.js" line="874"/>
         <source>Omega</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Omega</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="872"/>
+        <location filename="../TextDialog/TextDialog.js" line="875"/>
         <source>Squared</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Squared</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="873"/>
+        <location filename="../TextDialog/TextDialog.js" line="876"/>
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Cubed</translation>

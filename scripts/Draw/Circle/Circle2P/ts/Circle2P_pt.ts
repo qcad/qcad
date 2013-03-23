@@ -4,7 +4,7 @@
 <context>
     <name>Circle2P</name>
     <message>
-        <location filename="../Circle2P.js" line="55"/>
+        <location filename="../Circle2P.js" line="58"/>
         <source>First point</source>
         <translatorcomment>--google--
 Especifique o ponto inicial
@@ -13,7 +13,7 @@ Especifique o primeiro ponto de distância</translatorcomment>
         <translation>Primeiro ponto</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="62"/>
+        <location filename="../Circle2P.js" line="65"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Indique o segundo ponto
@@ -22,7 +22,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="144"/>
+        <location filename="../Circle2P.js" line="147"/>
         <source>The two points are identical</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--

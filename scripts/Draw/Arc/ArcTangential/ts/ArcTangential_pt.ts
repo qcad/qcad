@@ -15,13 +15,13 @@ Raio</translatorcomment>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../ArcTangential.js" line="60"/>
+        <location filename="../ArcTangential.js" line="63"/>
         <source>Choose base line or base arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha linha de base ou arco de base</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.js" line="66"/>
+        <location filename="../ArcTangential.js" line="69"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolham o ponto final do arco</translation>

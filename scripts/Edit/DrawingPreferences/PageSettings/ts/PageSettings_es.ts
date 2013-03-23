@@ -82,7 +82,7 @@
         <translation type="obsolete">Mostrar cuadro delimitador</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Printing</source>
         <translation>Imprimiendo</translation>
     </message>
@@ -91,22 +91,22 @@
         <translation type="obsolete">Configuración por defecto de página</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Defaults for New Drawings</source>
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Printing - Page</source>
         <translation>Imprimiendo - Página</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Page</source>
         <translation>Página</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="35"/>
+        <location filename="../PageSettings.js" line="38"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="65"/>
+        <location filename="../Rotate.js" line="68"/>
         <source>Center point</source>
         <translatorcomment>--google--
 Salta aos pontos de centro
@@ -12,7 +12,7 @@ Fazer espiral com bitmap(s) seleccionado(s) em redor de um ponto central</transl
         <translation>Ponto central</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="75"/>
+        <location filename="../Rotate.js" line="78"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -21,7 +21,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Ponto de referência</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="84"/>
+        <location filename="../Rotate.js" line="87"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--

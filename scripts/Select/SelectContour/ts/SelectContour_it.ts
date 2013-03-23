@@ -4,7 +4,7 @@
 <context>
     <name>SelectContour</name>
     <message>
-        <location filename="../SelectContour.js" line="125"/>
+        <location filename="../SelectContour.js" line="128"/>
         <source>Choose entity of contour</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Scegli entità di contorno</translation>

@@ -122,61 +122,61 @@ Percentuale di elementi
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../InputPreferences.js" line="29"/>
+        <location filename="../InputPreferences.js" line="32"/>
         <source>General</source>
         <translation>Generale</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="29"/>
+        <location filename="../InputPreferences.js" line="32"/>
         <source>Coordinate Format</source>
         <translation>Formato delle coordinate</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="44"/>
-        <location filename="../InputPreferences.js" line="70"/>
+        <location filename="../InputPreferences.js" line="47"/>
+        <location filename="../InputPreferences.js" line="73"/>
         <source>Comma</source>
         <translation>Virgola</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="44"/>
-        <location filename="../InputPreferences.js" line="50"/>
-        <location filename="../InputPreferences.js" line="54"/>
-        <location filename="../InputPreferences.js" line="69"/>
+        <location filename="../InputPreferences.js" line="47"/>
+        <location filename="../InputPreferences.js" line="53"/>
+        <location filename="../InputPreferences.js" line="57"/>
+        <location filename="../InputPreferences.js" line="72"/>
         <source>(Default)</source>
         <translation>(Predefinito)</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="45"/>
+        <location filename="../InputPreferences.js" line="48"/>
         <source>Semicolon</source>
         <translation>Punto e virgola</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="50"/>
+        <location filename="../InputPreferences.js" line="53"/>
         <source>Less Than</source>
         <translation>Minore di</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="54"/>
+        <location filename="../InputPreferences.js" line="57"/>
         <source>At</source>
         <translation>At</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="55"/>
+        <location filename="../InputPreferences.js" line="58"/>
         <source>Percentage</source>
         <translation>Percentuale</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="56"/>
+        <location filename="../InputPreferences.js" line="59"/>
         <source>Dollar</source>
         <translation>Dollaro</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="57"/>
+        <location filename="../InputPreferences.js" line="60"/>
         <source>Hash</source>
         <translation>Cancelletto</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="69"/>
+        <location filename="../InputPreferences.js" line="72"/>
         <source>Dot</source>
         <translation>Puntinata</translation>
     </message>

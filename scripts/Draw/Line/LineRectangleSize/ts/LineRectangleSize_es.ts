@@ -4,52 +4,52 @@
 <context>
     <name>LineRectangleSize</name>
     <message>
-        <location filename="../LineRectangleSize.js" line="45"/>
+        <location filename="../LineRectangleSize.js" line="48"/>
         <source>Top Left</source>
         <translation>Arriba izquierda</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="46"/>
+        <location filename="../LineRectangleSize.js" line="49"/>
         <source>Top</source>
         <translation>Parte superior</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="47"/>
+        <location filename="../LineRectangleSize.js" line="50"/>
         <source>Top Right</source>
         <translation>Arriba derecha</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="48"/>
+        <location filename="../LineRectangleSize.js" line="51"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="49"/>
+        <location filename="../LineRectangleSize.js" line="52"/>
         <source>Middle</source>
         <translation>Punto medio</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="50"/>
+        <location filename="../LineRectangleSize.js" line="53"/>
         <source>Right</source>
         <translation>Derecha</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="51"/>
+        <location filename="../LineRectangleSize.js" line="54"/>
         <source>Bottom Left</source>
         <translation>Abajo izquierda</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="52"/>
+        <location filename="../LineRectangleSize.js" line="55"/>
         <source>Bottom</source>
         <translation>Parte inferior</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="53"/>
+        <location filename="../LineRectangleSize.js" line="56"/>
         <source>Bottom Right</source>
         <translation>Abajo derecha</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="155"/>
+        <location filename="../LineRectangleSize.js" line="158"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>

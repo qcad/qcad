@@ -4,19 +4,19 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="52"/>
+        <location filename="../Hatch.js" line="55"/>
         <source>No boundary selected.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No granica zaznaczona.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="81"/>
+        <location filename="../Hatch.js" line="84"/>
         <source>Loop not closed at point %1/%2.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pętla nie zamknięta w punkcie /.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="146"/>
+        <location filename="../Hatch.js" line="149"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Każda jednostka musi być granica linia, łuk, okrąg, elipsa, łuk, elipsa, polilinia lub splajn. Znaleziono:</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>SetRelativeZero</name>
     <message>
-        <location filename="../SetRelativeZero.js" line="47"/>
+        <location filename="../SetRelativeZero.js" line="50"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

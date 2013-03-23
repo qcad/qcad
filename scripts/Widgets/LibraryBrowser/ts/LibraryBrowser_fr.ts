@@ -11,119 +11,119 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="51"/>
+        <location filename="../LibraryBrowser.js" line="69"/>
         <source>audience</source>
         <translation>Cible</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="52"/>
+        <location filename="../LibraryBrowser.js" line="70"/>
         <source>creator</source>
         <translation>Auteur</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="53"/>
+        <location filename="../LibraryBrowser.js" line="71"/>
         <source>dimension</source>
         <translation>Dimension</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="54"/>
+        <location filename="../LibraryBrowser.js" line="72"/>
         <source>levelOfDetail</source>
         <translation>Niveau de détail</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="55"/>
+        <location filename="../LibraryBrowser.js" line="73"/>
         <source>license</source>
         <translation>Licence</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="56"/>
+        <location filename="../LibraryBrowser.js" line="74"/>
         <source>perspective</source>
         <translation>Perspective</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="57"/>
+        <location filename="../LibraryBrowser.js" line="75"/>
         <source>presentation</source>
         <translation>Présentation</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="58"/>
+        <location filename="../LibraryBrowser.js" line="76"/>
         <source>publisher</source>
         <translation>Éditeur</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="59"/>
+        <location filename="../LibraryBrowser.js" line="77"/>
         <source>subject</source>
         <translation>Sujet</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="60"/>
+        <location filename="../LibraryBrowser.js" line="78"/>
         <source>title</source>
         <translation>Titre</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="63"/>
+        <location filename="../LibraryBrowser.js" line="81"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="63"/>
-        <location filename="../LibraryBrowser.js" line="1161"/>
+        <location filename="../LibraryBrowser.js" line="81"/>
+        <location filename="../LibraryBrowser.js" line="1182"/>
         <location filename="../LibraryBrowserInit.js" line="18"/>
         <source>Library Browser</source>
         <translation>Explorateur de la bibliothèque</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="71"/>
+        <location filename="../LibraryBrowser.js" line="89"/>
         <source>Icon</source>
         <translation>Icône</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="72"/>
+        <location filename="../LibraryBrowser.js" line="90"/>
         <source>List</source>
         <translation>Liste</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="75"/>
+        <location filename="../LibraryBrowser.js" line="93"/>
         <source>Choose Source Folder</source>
         <translation>Choisissez le dossier source</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="727"/>
+        <location filename="../LibraryBrowser.js" line="745"/>
         <source>Page %1 of %2</source>
         <translation>Page %1 de %2</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="939"/>
+        <location filename="../LibraryBrowser.js" line="960"/>
         <source>Updating icons...</source>
         <translation>Régénérer icônes...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1132"/>
+        <location filename="../LibraryBrowser.js" line="1153"/>
         <source>File:</source>
         <translation>Fichier :</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1133"/>
+        <location filename="../LibraryBrowser.js" line="1154"/>
         <source>Folder:</source>
         <translation>Dossier :</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1136"/>
+        <location filename="../LibraryBrowser.js" line="1157"/>
         <source>License:</source>
         <translation>Licence :</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1139"/>
+        <location filename="../LibraryBrowser.js" line="1160"/>
         <source>Attribute as:</source>
         <translation>Attribution:</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1142"/>
+        <location filename="../LibraryBrowser.js" line="1163"/>
         <source>Creator:</source>
         <translation>Auteur :</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1158"/>
+        <location filename="../LibraryBrowser.js" line="1179"/>
         <source>Updating library index:</source>
         <translation>Mise à jour de l&apos;index :</translation>
     </message>
@@ -132,8 +132,8 @@
         <translation type="obsolete">Mise à jour de l&apos;index...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="940"/>
-        <location filename="../LibraryBrowser.js" line="1159"/>
+        <location filename="../LibraryBrowser.js" line="961"/>
+        <location filename="../LibraryBrowser.js" line="1180"/>
         <source>Abort</source>
         <translation>Abandonner</translation>
     </message>
@@ -142,12 +142,12 @@
         <translation type="obsolete">Mise à jour de l&apos;index :</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1188"/>
+        <location filename="../LibraryBrowser.js" line="1209"/>
         <source>DB error</source>
         <translation>Erreur DB</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1189"/>
+        <location filename="../LibraryBrowser.js" line="1210"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
@@ -160,57 +160,57 @@ Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1633"/>
+        <location filename="../LibraryBrowser.js" line="1657"/>
         <source>&amp;Insert</source>
         <translation>&amp;Insérer</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1643"/>
+        <location filename="../LibraryBrowser.js" line="1667"/>
         <source>&amp;Edit Script File...</source>
         <translation>&amp;Modifier le fichier de script...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1651"/>
+        <location filename="../LibraryBrowser.js" line="1675"/>
         <source>Open &amp;SVG File...</source>
         <translation>Ouvrir fichier &amp;SVG...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1660"/>
+        <location filename="../LibraryBrowser.js" line="1684"/>
         <source>&amp;Open...</source>
         <translation>&amp;Ouvrir...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1663"/>
+        <location filename="../LibraryBrowser.js" line="1687"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Édition...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1688"/>
+        <location filename="../LibraryBrowser.js" line="1712"/>
         <source>File Browser</source>
         <translation>Fichiers</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1690"/>
+        <location filename="../LibraryBrowser.js" line="1714"/>
         <source>&amp;Show in %1...</source>
         <translation>&amp;Afficher avec %1...</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1718"/>
+        <location filename="../LibraryBrowser.js" line="1742"/>
         <source>&amp;Remove from Favorites</source>
         <translation>&amp;Retirer des favoris</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1738"/>
+        <location filename="../LibraryBrowser.js" line="1762"/>
         <source>&amp;Add to Favorites</source>
         <translation>&amp;Ajouter aux favoris</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1772"/>
+        <location filename="../LibraryBrowser.js" line="1796"/>
         <source>&amp;Regenerate Icon</source>
         <translation>Régénérer &amp;icône</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowser.js" line="1783"/>
+        <location filename="../LibraryBrowser.js" line="1807"/>
         <source>&amp;Regenerate Icons</source>
         <translation>&amp;Régénérer les icônes</translation>
     </message>

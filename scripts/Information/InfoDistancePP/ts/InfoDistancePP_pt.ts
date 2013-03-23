@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="48"/>
+        <location filename="../InfoDistancePP.js" line="51"/>
         <source>First point</source>
         <translatorcomment>--exact match--
 --file: Line2P_pt.ts--
@@ -13,7 +13,7 @@ Especifique o primeiro ponto do polígono</translatorcomment>
         <translation>Primeiro ponto</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="55"/>
+        <location filename="../InfoDistancePP.js" line="58"/>
         <source>Second point</source>
         <translatorcomment>--exact match--
 --file: Circle3P_pt.ts--
@@ -22,7 +22,7 @@ Especifique o segundo ponto de distância</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="58"/>
+        <location filename="../InfoDistancePP.js" line="61"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -32,7 +32,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="95"/>
+        <location filename="../InfoDistancePP.js" line="98"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: InfoDistanceEP_pt.ts--
@@ -41,7 +41,7 @@ Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
         <translation>Distância:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="99"/>
+        <location filename="../InfoDistancePP.js" line="102"/>
         <source>Delta X:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -49,7 +49,7 @@ Delta X</translatorcomment>
         <translation>Delta X:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="100"/>
+        <location filename="../InfoDistancePP.js" line="103"/>
         <source>Delta Y:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -57,7 +57,7 @@ Delta Y</translatorcomment>
         <translation>Delta Y:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="101"/>
+        <location filename="../InfoDistancePP.js" line="104"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

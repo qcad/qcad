@@ -4,7 +4,7 @@
 <context>
     <name>LinePolygonCP</name>
     <message>
-        <location filename="../LinePolygonCP.js" line="55"/>
+        <location filename="../LinePolygonCP.js" line="58"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -13,13 +13,13 @@ Wskaż środek
         <translation type="unfinished">Wyśrodkuj</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.js" line="62"/>
+        <location filename="../LinePolygonCP.js" line="65"/>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Punkt narożny</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.js" line="65"/>
+        <location filename="../LinePolygonCP.js" line="68"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

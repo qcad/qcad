@@ -4,13 +4,13 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="53"/>
+        <location filename="../SelectionDisplay.js" line="56"/>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não entidades selecionadas.</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="76"/>
+        <location filename="../SelectionDisplay.js" line="79"/>
         <source>Entities</source>
         <translatorcomment>--google--
 Crie um novo carimbo a partir de entidades existentes
@@ -26,24 +26,24 @@ Ponto de corte não está na entidade.</translatorcomment>
         <translation type="obsolete">em</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="78"/>
+        <location filename="../SelectionDisplay.js" line="81"/>
         <source>on</source>
         <translation>em</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="80"/>
+        <location filename="../SelectionDisplay.js" line="83"/>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Camada &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="82"/>
+        <location filename="../SelectionDisplay.js" line="85"/>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>%1 Camadas</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="85"/>
+        <location filename="../SelectionDisplay.js" line="88"/>
         <source>Selected entities:
 %1.</source>
         <translatorcomment>--google--</translatorcomment>

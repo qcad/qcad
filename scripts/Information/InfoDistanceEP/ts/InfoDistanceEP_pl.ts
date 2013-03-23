@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="48"/>
+        <location filename="../InfoDistanceEP.js" line="51"/>
         <source>Specify entity</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -13,7 +13,7 @@ Wskaż obiekt do cięcia</translatorcomment>
         <translation type="unfinished">Wprowadź obiekt</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="56"/>
+        <location filename="../InfoDistanceEP.js" line="59"/>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -21,7 +21,7 @@ Wskaż punkt</translatorcomment>
         <translation type="unfinished">Wskaż punkt</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="59"/>
+        <location filename="../InfoDistanceEP.js" line="62"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -31,7 +31,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="121"/>
+        <location filename="../InfoDistanceEP.js" line="124"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

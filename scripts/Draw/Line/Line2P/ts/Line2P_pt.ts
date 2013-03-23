@@ -4,7 +4,7 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="57"/>
+        <location filename="../Line2P.js" line="60"/>
         <source>First point</source>
         <translatorcomment>--exact match--
 --file: Circle3P_pt.ts--
@@ -13,7 +13,7 @@ Especifique o primeiro ponto do polígono</translatorcomment>
         <translation>Primeiro ponto</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="65"/>
+        <location filename="../Line2P.js" line="68"/>
         <source>Next point</source>
         <translatorcomment>--google--
 Indique o próximo ponto
@@ -22,7 +22,7 @@ Especifique o próximo ponto do polígono</translatorcomment>
         <translation>Próximo ponto</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="68"/>
+        <location filename="../Line2P.js" line="71"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

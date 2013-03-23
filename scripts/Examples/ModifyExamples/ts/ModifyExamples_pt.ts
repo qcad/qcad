@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Camada</translation>
     </message>
     <message>
-        <location filename="../ModifyExamples.js" line="48"/>
+        <location filename="../ModifyExamples.js" line="51"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifique</translation>
     </message>

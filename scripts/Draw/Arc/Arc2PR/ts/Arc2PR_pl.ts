@@ -4,7 +4,7 @@
 <context>
     <name>Arc2PR</name>
     <message>
-        <location filename="../Arc2PR.js" line="64"/>
+        <location filename="../Arc2PR.js" line="67"/>
         <source>Start point</source>
         <translatorcomment>--google--
 Punkt początkowy (y):
@@ -13,7 +13,7 @@ Punkt początkowy (x):</translatorcomment>
         <translation type="unfinished">Punkt startowy</translation>
     </message>
     <message>
-        <location filename="../Arc2PR.js" line="73"/>
+        <location filename="../Arc2PR.js" line="76"/>
         <source>End point</source>
         <translatorcomment>--google--
 Punkt końcowy (x):
@@ -22,13 +22,13 @@ Punkt końcowy (y):</translatorcomment>
         <translation type="unfinished">Punkt końcowy</translation>
     </message>
     <message>
-        <location filename="../Arc2PR.js" line="154"/>
+        <location filename="../Arc2PR.js" line="157"/>
         <source>Invalid radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowy promień</translation>
     </message>
     <message>
-        <location filename="../Arc2PR.js" line="161"/>
+        <location filename="../Arc2PR.js" line="164"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Te dwa punkty są identyczne</translation>

@@ -4,14 +4,14 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="65"/>
+        <location filename="../Rotate.js" line="68"/>
         <source>Center point</source>
         <translatorcomment>--google--
 Przyciągaj do punktów centralnych</translatorcomment>
         <translation type="unfinished">Srodek</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="75"/>
+        <location filename="../Rotate.js" line="78"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -20,7 +20,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="84"/>
+        <location filename="../Rotate.js" line="87"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>

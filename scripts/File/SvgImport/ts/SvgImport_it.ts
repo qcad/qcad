@@ -4,13 +4,13 @@
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../SvgImport.js" line="35"/>
+        <location filename="../SvgImport.js" line="38"/>
         <source>Import SVG</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Importa SVG</translation>
     </message>
     <message>
-        <location filename="../SvgImport.js" line="36"/>
+        <location filename="../SvgImport.js" line="39"/>
         <source>SVG Files</source>
         <translatorcomment>--exact match--
 --file: SvgExportAs_it.ts--
@@ -19,7 +19,7 @@ File SVG</translatorcomment>
         <translation>File SVG</translation>
     </message>
     <message>
-        <location filename="../SvgImport.js" line="36"/>
+        <location filename="../SvgImport.js" line="39"/>
         <source>All Files</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--

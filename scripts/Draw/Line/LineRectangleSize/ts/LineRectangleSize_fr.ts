@@ -4,52 +4,52 @@
 <context>
     <name>LineRectangleSize</name>
     <message>
-        <location filename="../LineRectangleSize.js" line="45"/>
+        <location filename="../LineRectangleSize.js" line="48"/>
         <source>Top Left</source>
         <translation>En haut à gauche</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="46"/>
+        <location filename="../LineRectangleSize.js" line="49"/>
         <source>Top</source>
         <translation>En haut</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="47"/>
+        <location filename="../LineRectangleSize.js" line="50"/>
         <source>Top Right</source>
         <translation>En haut à droite</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="48"/>
+        <location filename="../LineRectangleSize.js" line="51"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="49"/>
+        <location filename="../LineRectangleSize.js" line="52"/>
         <source>Middle</source>
         <translation>Milieu</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="50"/>
+        <location filename="../LineRectangleSize.js" line="53"/>
         <source>Right</source>
         <translation>Droite</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="51"/>
+        <location filename="../LineRectangleSize.js" line="54"/>
         <source>Bottom Left</source>
         <translation>En bas à gauche</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="52"/>
+        <location filename="../LineRectangleSize.js" line="55"/>
         <source>Bottom</source>
         <translation>En bas</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="53"/>
+        <location filename="../LineRectangleSize.js" line="56"/>
         <source>Bottom Right</source>
         <translation>En bas à droite</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="155"/>
+        <location filename="../LineRectangleSize.js" line="158"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

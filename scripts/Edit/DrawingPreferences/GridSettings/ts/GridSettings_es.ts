@@ -83,7 +83,7 @@
 <context>
     <name>GridSettings</name>
     <message>
-        <location filename="../GridSettings.js" line="24"/>
+        <location filename="../GridSettings.js" line="27"/>
         <source>General</source>
         <translation>General</translation>
     </message>
@@ -92,22 +92,22 @@
         <translation type="obsolete">Cuadrícula por defecto</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="22"/>
-        <location filename="../GridSettings.js" line="24"/>
+        <location filename="../GridSettings.js" line="25"/>
+        <location filename="../GridSettings.js" line="27"/>
         <source>Grid</source>
         <translation>Rejilla</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="22"/>
+        <location filename="../GridSettings.js" line="25"/>
         <source>Defaults for New Drawings</source>
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="105"/>
-        <location filename="../GridSettings.js" line="208"/>
-        <location filename="../GridSettings.js" line="209"/>
-        <location filename="../GridSettings.js" line="231"/>
-        <location filename="../GridSettings.js" line="232"/>
+        <location filename="../GridSettings.js" line="108"/>
+        <location filename="../GridSettings.js" line="211"/>
+        <location filename="../GridSettings.js" line="212"/>
+        <location filename="../GridSettings.js" line="234"/>
+        <location filename="../GridSettings.js" line="235"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>

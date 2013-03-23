@@ -4,7 +4,7 @@
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>Widgets</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -13,12 +13,12 @@ O seu tema não suporta menus de navegação ou de widgets.</translatorcomment>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>CAD Toolbar</source>
         <translation>Barra de ferramentas CAD</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="77"/>
+        <location filename="../CadToolBar.js" line="80"/>
         <source>Toggle Title Bar</source>
         <translation>Mostrar barra de título</translation>
     </message>
@@ -67,7 +67,7 @@ Colunas:</translatorcomment>
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="73"/>
+        <location filename="../CadToolBarPanel.js" line="76"/>
         <source>Back</source>
         <translation>Retorne</translation>
     </message>

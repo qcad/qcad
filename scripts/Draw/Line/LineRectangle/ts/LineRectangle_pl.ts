@@ -4,14 +4,14 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangle.js" line="53"/>
+        <location filename="../LineRectangle.js" line="56"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Wskaż pierwszy wierzchołek</translatorcomment>
         <translation type="unfinished">Pierwszy zakręt</translation>
     </message>
     <message>
-        <location filename="../LineRectangle.js" line="60"/>
+        <location filename="../LineRectangle.js" line="63"/>
         <source>Second corner</source>
         <translatorcomment>--google--
 Wskaż drugi wierzchołek</translatorcomment>

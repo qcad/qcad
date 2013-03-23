@@ -4,22 +4,22 @@
 <context>
     <name>Arc2PA</name>
     <message>
-        <location filename="../Arc2PA.js" line="62"/>
+        <location filename="../Arc2PA.js" line="65"/>
         <source>Start point</source>
         <translation>Startpunkt</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="69"/>
+        <location filename="../Arc2PA.js" line="72"/>
         <source>End point</source>
         <translation>Endpunkt</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="153"/>
+        <location filename="../Arc2PA.js" line="156"/>
         <source>Invalid angle</source>
         <translation>Ungültiger Winkel</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="158"/>
+        <location filename="../Arc2PA.js" line="161"/>
         <source>The two points are identical</source>
         <translation>Die zwei Punkte sind identisch</translation>
     </message>

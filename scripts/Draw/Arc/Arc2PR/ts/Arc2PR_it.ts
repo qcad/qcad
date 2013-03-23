@@ -51,22 +51,22 @@
         <translation>Arco lungo</translation>
     </message>
     <message>
-        <location filename="../Arc2PR.js" line="64"/>
+        <location filename="../Arc2PR.js" line="67"/>
         <source>Start point</source>
         <translation>Punto di partenza</translation>
     </message>
     <message>
-        <location filename="../Arc2PR.js" line="73"/>
+        <location filename="../Arc2PR.js" line="76"/>
         <source>End point</source>
         <translation>Punto finale</translation>
     </message>
     <message>
-        <location filename="../Arc2PR.js" line="154"/>
+        <location filename="../Arc2PR.js" line="157"/>
         <source>Invalid radius</source>
         <translation>Raggio valido</translation>
     </message>
     <message>
-        <location filename="../Arc2PR.js" line="161"/>
+        <location filename="../Arc2PR.js" line="164"/>
         <source>The two points are identical</source>
         <translation>I due punti sono identici</translation>
     </message>

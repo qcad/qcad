@@ -89,22 +89,22 @@ Seleziona Singolo Oggetto</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="300"/>
+        <location filename="../Viewport.js" line="303"/>
         <source>Grid</source>
         <translation>&amp;Griglia</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="303"/>
+        <location filename="../Viewport.js" line="306"/>
         <source>End</source>
         <translation>Fine</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="306"/>
+        <location filename="../Viewport.js" line="309"/>
         <source>On Entity</source>
         <translation>&amp;Sull&apos;entità</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="309"/>
+        <location filename="../Viewport.js" line="312"/>
         <source>Perpendicular</source>
         <translatorcomment>--exact match--
 --file: SnapPerpendicular_it.ts--
@@ -114,22 +114,22 @@ Seleziona il piano perpendicolare alla vista corrente</translatorcomment>
         <translation>Perpendicolare</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="312"/>
+        <location filename="../Viewport.js" line="315"/>
         <source>Center</source>
         <translation>&amp;Centro</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="315"/>
+        <location filename="../Viewport.js" line="318"/>
         <source>Middle</source>
         <translation>&amp;Medio</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="318"/>
+        <location filename="../Viewport.js" line="321"/>
         <source>Intersection</source>
         <translation>&amp;Intersezione</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="321"/>
+        <location filename="../Viewport.js" line="324"/>
         <source>Reference</source>
         <translation>&amp;Riferimento</translation>
     </message>

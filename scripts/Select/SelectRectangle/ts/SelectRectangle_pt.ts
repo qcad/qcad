@@ -4,7 +4,7 @@
 <context>
     <name>SelectRectangle</name>
     <message>
-        <location filename="../SelectRectangle.js" line="68"/>
+        <location filename="../SelectRectangle.js" line="71"/>
         <source>First corner</source>
         <translatorcomment>--exact match--
 --file: Stretch_pt.ts--
@@ -13,7 +13,7 @@ Primeira ponto de canto</translatorcomment>
         <translation>Primeira ponto de canto</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.js" line="75"/>
+        <location filename="../SelectRectangle.js" line="78"/>
         <source>Second corner</source>
         <translatorcomment>--exact match--
 --file: Stretch_pt.ts--
@@ -22,7 +22,7 @@ Segundo ponto de canto</translatorcomment>
         <translation>Segundo ponto de canto</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.js" line="76"/>
+        <location filename="../SelectRectangle.js" line="79"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

@@ -4,17 +4,17 @@
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../Leader.js" line="56"/>
+        <location filename="../Leader.js" line="59"/>
         <source>Arrow position</source>
         <translation>Posición de la flecha</translation>
     </message>
     <message>
-        <location filename="../Leader.js" line="66"/>
+        <location filename="../Leader.js" line="69"/>
         <source>Next vertex</source>
         <translation>Siguiente vértice</translation>
     </message>
     <message>
-        <location filename="../Leader.js" line="69"/>
+        <location filename="../Leader.js" line="72"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>

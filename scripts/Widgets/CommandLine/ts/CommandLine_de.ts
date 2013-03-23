@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="72"/>
+        <location filename="../CommandLine.js" line="75"/>
         <location filename="../CommandLine.ui" line="14"/>
         <source>Command Line</source>
         <translation>Kommandozeile</translation>
@@ -18,37 +18,37 @@
         <translation type="obsolete">Unbekanntes Kommando &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="53"/>
+        <location filename="../CommandLine.js" line="56"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Kommandozeile</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="180"/>
+        <location filename="../CommandLine.js" line="183"/>
         <source>Invalid coordinate &apos;%1&apos;.</source>
         <translation>Ungültige Koordinate &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="199"/>
+        <location filename="../CommandLine.js" line="202"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Unbekanntes Kommando oder ungültige Koordinate oder Wert: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="206"/>
+        <location filename="../CommandLine.js" line="209"/>
         <source>Numbers may be entered as: &apos;%1&apos;</source>
         <translation>Zahlen können wie folgt eingegeben werden: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="212"/>
+        <location filename="../CommandLine.js" line="215"/>
         <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
         <translation>Koordinaten können wie folgt eingegeben werden: &apos;%1&apos; (absolut) oder &apos;%2&apos; (relativ) oder &apos;%3&apos; (polar) oder &apos;%4&apos; (relativ polar)</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="220"/>
+        <location filename="../CommandLine.js" line="223"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
         <translation>Sie können das Format für Zahlen und Koordinaten in den Einstellungen anpassen.</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="284"/>
+        <location filename="../CommandLine.js" line="287"/>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
         <translation>Versuch Objekte auf gesperrtem oder unsichtbarem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
@@ -57,32 +57,32 @@
         <translation type="obsolete">Versuch Objekte auf gesperrtem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="289"/>
+        <location filename="../CommandLine.js" line="292"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="297"/>
+        <location filename="../CommandLine.js" line="300"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="313"/>
+        <location filename="../CommandLine.js" line="316"/>
         <source>Coordinate</source>
         <translation>Koordinate</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="316"/>
+        <location filename="../CommandLine.js" line="319"/>
         <source>Command</source>
         <translation>Kommando</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="327"/>
+        <location filename="../CommandLine.js" line="330"/>
         <source>Command:</source>
         <translation>Kommando:</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="330"/>
+        <location filename="../CommandLine.js" line="333"/>
         <source>: </source>
         <translation>: </translation>
     </message>

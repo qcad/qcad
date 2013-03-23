@@ -4,13 +4,13 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="40"/>
+        <location filename="../DefaultNavigation.js" line="43"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ver gráficos</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="40"/>
+        <location filename="../DefaultNavigation.js" line="43"/>
         <source>Navigation</source>
         <translatorcomment>--google--
 O seu tema não suporta menus de navegação ou de widgets.
@@ -19,13 +19,13 @@ Texto a mostrar</translatorcomment>
         <translation>Navegação</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="45"/>
+        <location filename="../DefaultNavigation.js" line="48"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zoom (roda do rato)</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="46"/>
+        <location filename="../DefaultNavigation.js" line="49"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Deslocamento (Trackpad, Multi-Touch Mouse)</translation>

@@ -23,7 +23,7 @@
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../StartupPreferences.js" line="21"/>
+        <location filename="../StartupPreferences.js" line="24"/>
         <source>Startup</source>
         <translation>Start</translation>
     </message>

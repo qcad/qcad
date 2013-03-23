@@ -15,20 +15,20 @@ Cantos:</translatorcomment>
 <context>
     <name>LinePolygonPP</name>
     <message>
-        <location filename="../LinePolygonPP.js" line="55"/>
+        <location filename="../LinePolygonPP.js" line="58"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Indique o primeiro vértice</translatorcomment>
         <translation>Primeira ponto de canto:</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPP.js" line="62"/>
+        <location filename="../LinePolygonPP.js" line="65"/>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto de canto</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPP.js" line="65"/>
+        <location filename="../LinePolygonPP.js" line="68"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

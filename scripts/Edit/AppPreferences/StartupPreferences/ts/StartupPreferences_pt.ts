@@ -29,7 +29,7 @@ Indique o ponto de início ou [Centro]</translatorcomment>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../StartupPreferences.js" line="21"/>
+        <location filename="../StartupPreferences.js" line="24"/>
         <source>Startup</source>
         <translation>Início</translation>
     </message>

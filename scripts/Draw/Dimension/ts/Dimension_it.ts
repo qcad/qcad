@@ -4,12 +4,12 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="62"/>
+        <location filename="../Dimension.js" line="65"/>
         <source>No prefix</source>
         <translation>Nessun prefisso</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="64"/>
+        <location filename="../Dimension.js" line="66"/>
         <source>Radius</source>
         <translation>Raggio</translation>
     </message>
@@ -18,42 +18,52 @@
         <translation type="obsolete">Metrica</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="65"/>
+        <location filename="../Dimension.js" line="67"/>
         <source>Metric screw</source>
         <translation>Metrica</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="66"/>
+        <location filename="../Dimension.js" line="68"/>
         <source>Diameter</source>
         <translation>Diametro</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="67"/>
+        <location filename="../Dimension.js" line="69"/>
         <source>Plus/Minus</source>
         <translation>Plus / minus</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="68"/>
+        <location filename="../Dimension.js" line="70"/>
+        <source>Almost equal to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Dimension.js" line="71"/>
+        <source>Asymptotically equal to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Dimension.js" line="72"/>
         <source>Square</source>
         <translation>Quadrato</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="69"/>
+        <location filename="../Dimension.js" line="73"/>
         <source>Delta</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="110"/>
+        <location filename="../Dimension.js" line="114"/>
         <source>Dimension Tools</source>
         <translation>Utensili dimensione</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="115"/>
+        <location filename="../Dimension.js" line="119"/>
         <source>Show dimension tools</source>
         <translation>Utensili dimensione</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="132"/>
+        <location filename="../Dimension.js" line="136"/>
         <source>D&amp;imension</source>
         <translation>&amp;Quota</translation>
     </message>

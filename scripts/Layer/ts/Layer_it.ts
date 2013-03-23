@@ -4,7 +4,7 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../Layer.js" line="39"/>
+        <location filename="../Layer.js" line="42"/>
         <source>&amp;Layer</source>
         <translation>&amp;Layer</translation>
     </message>
@@ -42,12 +42,12 @@
         <translation>Tipo di linea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="101"/>
+        <location filename="../LayerDialog.js" line="104"/>
         <source>Layer name is empty.</source>
         <translation>Nome del layer è vuoto.</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="112"/>
+        <location filename="../LayerDialog.js" line="115"/>
         <source>Layer already exists.</source>
         <translation>Layer già esistente.</translation>
     </message>

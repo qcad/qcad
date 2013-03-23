@@ -4,7 +4,7 @@
 <context>
     <name>EditText</name>
     <message>
-        <location filename="../EditText.js" line="58"/>
+        <location filename="../EditText.js" line="61"/>
         <source>Choose text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz tekst</translation>

@@ -17,17 +17,17 @@
 <context>
     <name>ViewportSettings</name>
     <message>
-        <location filename="../ViewportSettings.js" line="24"/>
+        <location filename="../ViewportSettings.js" line="27"/>
         <source>Defaults for New Drawings</source>
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="24"/>
+        <location filename="../ViewportSettings.js" line="27"/>
         <source>Layout - Viewports</source>
         <translation>Layout - Ansichten</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="26"/>
+        <location filename="../ViewportSettings.js" line="29"/>
         <source>Layout</source>
         <translation>Layout</translation>
     </message>
@@ -40,7 +40,7 @@
         <translation type="obsolete">Vorgabe Ansichten</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="26"/>
+        <location filename="../ViewportSettings.js" line="29"/>
         <source>Viewports</source>
         <translation>Ansichten</translation>
     </message>

@@ -4,21 +4,21 @@
 <context>
     <name>DimRotated</name>
     <message>
-        <location filename="../DimRotated.js" line="57"/>
+        <location filename="../DimRotated.js" line="60"/>
         <source>First extension line origin</source>
         <translatorcomment>--google--
 Indique a primeira extensão da linha de origem</translatorcomment>
         <translation>Origem primeira linha de extensão</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="66"/>
+        <location filename="../DimRotated.js" line="69"/>
         <source>Second extension line origin</source>
         <translatorcomment>--google--
 Indique a segunda extensão da linha de origem</translatorcomment>
         <translation>Origem segunda linha de extensão</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="74"/>
+        <location filename="../DimRotated.js" line="77"/>
         <source>Dimension line location</source>
         <translatorcomment>--google--
 Indique a dimensão da linha de localização</translatorcomment>

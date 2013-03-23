@@ -4,17 +4,17 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../SaveAs.js" line="29"/>
+        <location filename="../SaveAs.js" line="32"/>
         <source>Load/Save</source>
         <translation>Charger/Enregistrer</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="29"/>
+        <location filename="../SaveAs.js" line="32"/>
         <source>Save as</source>
         <translation>Enregistrer sous</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="96"/>
+        <location filename="../SaveAs.js" line="93"/>
         <source>Format:</source>
         <translation>Format :</translation>
     </message>

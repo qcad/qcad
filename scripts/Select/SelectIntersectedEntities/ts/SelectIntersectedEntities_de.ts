@@ -4,12 +4,12 @@
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
-        <location filename="../SelectIntersectedEntities.js" line="81"/>
+        <location filename="../SelectIntersectedEntities.js" line="84"/>
         <source>First point</source>
         <translation>Erster Punkt</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.js" line="86"/>
+        <location filename="../SelectIntersectedEntities.js" line="89"/>
         <source>Second point</source>
         <translation>Zweiter Punkt</translation>
     </message>

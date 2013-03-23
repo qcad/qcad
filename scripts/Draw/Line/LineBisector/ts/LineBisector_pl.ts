@@ -4,7 +4,7 @@
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../LineBisector.js" line="59"/>
+        <location filename="../LineBisector.js" line="62"/>
         <source>First line</source>
         <translatorcomment>--google--
 Zaznacz pierwszą linię
@@ -13,7 +13,7 @@ Wskaż pierwszą linie</translatorcomment>
         <translation type="unfinished">Pierwsza linia</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="63"/>
+        <location filename="../LineBisector.js" line="66"/>
         <source>Second line</source>
         <translatorcomment>--google--
 Zaznacz drugą linię
@@ -22,7 +22,7 @@ Wskaż drugą linie</translatorcomment>
         <translation type="unfinished">Druga linia</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="138"/>
+        <location filename="../LineBisector.js" line="141"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Linie nie przecinają się.</translation>

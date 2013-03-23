@@ -33,19 +33,19 @@ Fuji PXG</translatorcomment>
         <translation>Columnas:</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>Widgets</source>
         <translatorcomment>--google--
 Seleccionador de varios métodos de entrada que usa el menú contextual de los elementos de texto</translatorcomment>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>CAD Toolbar</source>
         <translation>Barra de herramientas CAD</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="77"/>
+        <location filename="../CadToolBar.js" line="80"/>
         <source>Toggle Title Bar</source>
         <translation>Mostrar barra de título</translation>
     </message>
@@ -58,7 +58,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="73"/>
+        <location filename="../CadToolBarPanel.js" line="76"/>
         <source>Back</source>
         <translation>Atrás</translation>
     </message>

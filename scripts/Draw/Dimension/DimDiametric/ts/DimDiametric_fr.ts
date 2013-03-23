@@ -4,12 +4,12 @@
 <context>
     <name>DimDiametric</name>
     <message>
-        <location filename="../DimDiametric.js" line="54"/>
+        <location filename="../DimDiametric.js" line="57"/>
         <source>Choose arc or circle entity</source>
         <translation>Choisissez un arc ou un cercle</translation>
     </message>
     <message>
-        <location filename="../DimDiametric.js" line="62"/>
+        <location filename="../DimDiametric.js" line="65"/>
         <source>Dimension line location or angle</source>
         <translation>Lieu de la ligne de cote ou l&apos;angle</translation>
     </message>

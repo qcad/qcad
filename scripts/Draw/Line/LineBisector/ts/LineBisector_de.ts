@@ -4,7 +4,7 @@
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../LineBisector.js" line="63"/>
+        <location filename="../LineBisector.js" line="66"/>
         <source>Second line</source>
         <translation>Zweite Linie</translation>
     </message>
@@ -23,12 +23,12 @@
         <translation>Anzahl:</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="59"/>
+        <location filename="../LineBisector.js" line="62"/>
         <source>First line</source>
         <translation>Erste Linie</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="138"/>
+        <location filename="../LineBisector.js" line="141"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Linien schneiden sich nicht.</translation>
     </message>

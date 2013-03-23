@@ -19,7 +19,7 @@
 <context>
     <name>View</name>
     <message>
-        <location filename="../View.js" line="38"/>
+        <location filename="../View.js" line="41"/>
         <source>&amp;View</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -31,25 +31,25 @@
 <context>
     <name>ViewDialog</name>
     <message>
-        <location filename="../ViewDialog.js" line="28"/>
+        <location filename="../ViewDialog.js" line="31"/>
         <source>View Data</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Widok danych</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="30"/>
+        <location filename="../ViewDialog.js" line="33"/>
         <source>Enter View Data</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wpisz widoku danych</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="32"/>
+        <location filename="../ViewDialog.js" line="35"/>
         <source>Edit View Data</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Edytuj Wyświetl dane</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="34"/>
+        <location filename="../ViewDialog.js" line="37"/>
         <source>Enter the name for the new view.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wprowadź nazwę nowego widoku.</translation>

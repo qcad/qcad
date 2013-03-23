@@ -4,13 +4,13 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="59"/>
+        <location filename="../LineParallelThrough.js" line="62"/>
         <source>Choose line, arc or circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz linię, łuk lub okrąg</translation>
     </message>
     <message>
-        <location filename="../LineParallelThrough.js" line="65"/>
+        <location filename="../LineParallelThrough.js" line="68"/>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

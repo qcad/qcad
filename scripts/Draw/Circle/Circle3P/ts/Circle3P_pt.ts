@@ -4,7 +4,7 @@
 <context>
     <name>Circle3P</name>
     <message>
-        <location filename="../Circle3P.js" line="60"/>
+        <location filename="../Circle3P.js" line="63"/>
         <source>First point</source>
         <translatorcomment>--google--
 Especifique o ponto inicial
@@ -13,7 +13,7 @@ Especifique o primeiro ponto de distância</translatorcomment>
         <translation>Primeiro ponto</translation>
     </message>
     <message>
-        <location filename="../Circle3P.js" line="69"/>
+        <location filename="../Circle3P.js" line="72"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Indique o segundo ponto
@@ -22,7 +22,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location filename="../Circle3P.js" line="77"/>
+        <location filename="../Circle3P.js" line="80"/>
         <source>Third point</source>
         <translatorcomment>--google--
 Indique o terceiro ponto</translatorcomment>

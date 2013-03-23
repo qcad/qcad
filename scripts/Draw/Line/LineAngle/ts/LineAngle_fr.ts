@@ -4,12 +4,12 @@
 <context>
     <name>LineAngle</name>
     <message>
-        <location filename="../LineAngle.js" line="61"/>
+        <location filename="../LineAngle.js" line="64"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../LineAngle.js" line="62"/>
+        <location filename="../LineAngle.js" line="65"/>
         <source>Specify position</source>
         <translation>Spécifiez la position</translation>
     </message>

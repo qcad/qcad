@@ -18,22 +18,22 @@
         <translation>Dibujar tangente (punto, círculo)</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="59"/>
+        <location filename="../LineTangent1.js" line="62"/>
         <source>Choose start point of tangent</source>
         <translation>Elija el punto de inicio de la tangencia</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="69"/>
+        <location filename="../LineTangent1.js" line="72"/>
         <source>Choose circle, arc or ellipse</source>
         <translation>Elija un círculo, un arco o una elipse</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="152"/>
+        <location filename="../LineTangent1.js" line="155"/>
         <source>No tangent possible.</source>
         <translation>No tangente es posible.</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="208"/>
+        <location filename="../LineTangent1.js" line="211"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>No se puede trazar una tangente desde un punto dentro de un círculo con el círculo</translation>
     </message>

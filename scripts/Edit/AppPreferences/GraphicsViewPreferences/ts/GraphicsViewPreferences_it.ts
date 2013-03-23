@@ -229,7 +229,7 @@ Selezioni persistenti</translatorcomment>
         <translation type="obsolete">Selezione permanente</translation>
     </message>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="21"/>
+        <location filename="../GraphicsViewPreferences.js" line="24"/>
         <source>Graphics View</source>
         <translatorcomment>--exact match--
 --file: DefaultNavigation_it.ts--
@@ -237,7 +237,7 @@ Visualizzazione grafica</translatorcomment>
         <translation>Visualizzazione grafica</translation>
     </message>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="21"/>
+        <location filename="../GraphicsViewPreferences.js" line="24"/>
         <source>Appearance</source>
         <translation>Aspetto</translation>
     </message>

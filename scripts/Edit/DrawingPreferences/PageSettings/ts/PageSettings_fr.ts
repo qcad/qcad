@@ -4,7 +4,7 @@
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Printing</source>
         <translation>Impression</translation>
     </message>
@@ -13,22 +13,22 @@
         <translation type="obsolete">Paramètres de la page par défaut</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Defaults for New Drawings</source>
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Printing - Page</source>
         <translation>Impression - Page</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Page</source>
         <translation>Page</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="35"/>
+        <location filename="../PageSettings.js" line="38"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>

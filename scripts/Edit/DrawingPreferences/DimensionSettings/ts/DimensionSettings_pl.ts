@@ -4,7 +4,7 @@
 <context>
     <name>DimensionSettings</name>
     <message>
-        <location filename="../DimensionSettings.js" line="24"/>
+        <location filename="../DimensionSettings.js" line="27"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -12,14 +12,14 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="24"/>
-        <location filename="../DimensionSettings.js" line="26"/>
+        <location filename="../DimensionSettings.js" line="27"/>
+        <location filename="../DimensionSettings.js" line="29"/>
         <source>Dimension Settings</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Ustawienia wymiarowe</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="26"/>
+        <location filename="../DimensionSettings.js" line="29"/>
         <source>Dimension</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -29,7 +29,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation type="unfinished">Wymiar</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="111"/>
+        <location filename="../DimensionSettings.js" line="114"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -37,7 +37,7 @@ Naukowy</translatorcomment>
         <translation type="unfinished">Naukowy</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="112"/>
+        <location filename="../DimensionSettings.js" line="115"/>
         <source>Decimal</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -46,7 +46,7 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Dziesiętny</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="113"/>
+        <location filename="../DimensionSettings.js" line="116"/>
         <source>Engineering</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -55,7 +55,7 @@ Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,j
         <translation type="unfinished">Inżynierski</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="114"/>
+        <location filename="../DimensionSettings.js" line="117"/>
         <source>Architectural</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -64,7 +64,7 @@ Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,j
         <translation type="unfinished">Architektoniczny</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="115"/>
+        <location filename="../DimensionSettings.js" line="118"/>
         <source>Fractional</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -72,7 +72,7 @@ Ułamkowy</translatorcomment>
         <translation type="unfinished">Ułamkowy</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="143"/>
+        <location filename="../DimensionSettings.js" line="146"/>
         <source>Decimal Degrees</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -80,7 +80,7 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Stopnie dziesiętne</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="144"/>
+        <location filename="../DimensionSettings.js" line="147"/>
         <source>Deg/min/sec</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -88,7 +88,7 @@ Stopnie/minuty/sekundy</translatorcomment>
         <translation type="unfinished">Stopnie/minuty/sekundy</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="145"/>
+        <location filename="../DimensionSettings.js" line="148"/>
         <source>Gradians</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -96,7 +96,7 @@ Gradusy</translatorcomment>
         <translation type="unfinished">Gradusy</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="146"/>
+        <location filename="../DimensionSettings.js" line="149"/>
         <source>Radians</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -105,7 +105,7 @@ Gradusy</translatorcomment>
         <translation type="unfinished">Radiany</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="147"/>
+        <location filename="../DimensionSettings.js" line="150"/>
         <source>Surveyor&apos;s units</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -113,13 +113,13 @@ Jednostki geometryczne</translatorcomment>
         <translation type="unfinished">Jednostki geometryczne</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="283"/>
+        <location filename="../DimensionSettings.js" line="286"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka / Format</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="284"/>
+        <location filename="../DimensionSettings.js" line="287"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka rysunek musi być &quot;Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>

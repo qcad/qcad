@@ -4,17 +4,17 @@
 <context>
     <name>Stretch</name>
     <message>
-        <location filename="../Stretch.js" line="56"/>
+        <location filename="../Stretch.js" line="59"/>
         <source>First corner</source>
         <translation>Premier point d&apos;angle</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="75"/>
+        <location filename="../Stretch.js" line="78"/>
         <source>Reference point</source>
         <translation>Point de référence</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="83"/>
+        <location filename="../Stretch.js" line="86"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Indiquer le point cible</translatorcomment>
@@ -26,7 +26,7 @@ Indiquer le point cible</translatorcomment>
         <translation>E&amp;tirer</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="66"/>
+        <location filename="../Stretch.js" line="69"/>
         <source>Second corner</source>
         <translation>Deuxième point d&apos;angle</translation>
     </message>

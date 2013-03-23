@@ -4,7 +4,7 @@
 <context>
     <name>CreateBlock</name>
     <message>
-        <location filename="../CreateBlock.js" line="44"/>
+        <location filename="../CreateBlock.js" line="47"/>
         <source>Reference Point</source>
         <translation>Point de référence</translation>
     </message>

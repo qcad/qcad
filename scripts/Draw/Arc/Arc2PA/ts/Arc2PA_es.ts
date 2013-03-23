@@ -30,22 +30,22 @@
         <translation>Dirección Reloj (negativo)</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="62"/>
+        <location filename="../Arc2PA.js" line="65"/>
         <source>Start point</source>
         <translation>Punto de inicio</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="69"/>
+        <location filename="../Arc2PA.js" line="72"/>
         <source>End point</source>
         <translation>Punto final</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="153"/>
+        <location filename="../Arc2PA.js" line="156"/>
         <source>Invalid angle</source>
         <translation>Ángulo no válido</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="158"/>
+        <location filename="../Arc2PA.js" line="161"/>
         <source>The two points are identical</source>
         <translation>Los dos puntos son idénticos</translation>
     </message>

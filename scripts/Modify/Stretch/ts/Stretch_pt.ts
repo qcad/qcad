@@ -4,7 +4,7 @@
 <context>
     <name>Stretch</name>
     <message>
-        <location filename="../Stretch.js" line="56"/>
+        <location filename="../Stretch.js" line="59"/>
         <source>First corner</source>
         <translatorcomment>--exact match--
 --file: LineRectangle_pt.ts--
@@ -13,7 +13,7 @@ Primeira ponto de canto</translatorcomment>
         <translation>Primeira ponto de canto</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="66"/>
+        <location filename="../Stretch.js" line="69"/>
         <source>Second corner</source>
         <translatorcomment>--exact match--
 --file: LineRectangle_pt.ts--
@@ -22,7 +22,7 @@ Segundo ponto de canto</translatorcomment>
         <translation>Segundo ponto de canto</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="75"/>
+        <location filename="../Stretch.js" line="78"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -31,7 +31,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Ponto de referência</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="83"/>
+        <location filename="../Stretch.js" line="86"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--

@@ -14,17 +14,17 @@
         <translation>Número:</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="59"/>
+        <location filename="../LineBisector.js" line="62"/>
         <source>First line</source>
         <translation>Primera línea</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="63"/>
+        <location filename="../LineBisector.js" line="66"/>
         <source>Second line</source>
         <translation>Segunda línea</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="138"/>
+        <location filename="../LineBisector.js" line="141"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Las líneas no se cruzan.</translation>
     </message>

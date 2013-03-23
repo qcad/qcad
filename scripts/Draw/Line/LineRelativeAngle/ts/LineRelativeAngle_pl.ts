@@ -4,13 +4,13 @@
 <context>
     <name>LineRelativeAngle</name>
     <message>
-        <location filename="../LineRelativeAngle.js" line="60"/>
+        <location filename="../LineRelativeAngle.js" line="63"/>
         <source>Choose base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz jednostkę bazową</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngle.js" line="69"/>
+        <location filename="../LineRelativeAngle.js" line="72"/>
         <source>Set position</source>
         <translatorcomment>--google--
 Zmień pozycje punktu zera względnego

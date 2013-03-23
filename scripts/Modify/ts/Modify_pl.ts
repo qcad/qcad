@@ -4,19 +4,19 @@
 <context>
     <name>Modify</name>
     <message>
-        <location filename="../Modify.js" line="101"/>
+        <location filename="../Modify.js" line="104"/>
         <source>Modification Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia modyfikacji</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="106"/>
+        <location filename="../Modify.js" line="109"/>
         <source>Show modification tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż narzędzi modyfikacji</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="123"/>
+        <location filename="../Modify.js" line="126"/>
         <source>&amp;Modify</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
@@ -27,13 +27,13 @@
 <context>
     <name>ModifyCorner</name>
     <message>
-        <location filename="../ModifyCorner.js" line="66"/>
+        <location filename="../ModifyCorner.js" line="69"/>
         <source>Choose first entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz pierwszy podmiot</translation>
     </message>
     <message>
-        <location filename="../ModifyCorner.js" line="76"/>
+        <location filename="../ModifyCorner.js" line="79"/>
         <source>Choose second entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz drugi podmiot</translation>
@@ -42,7 +42,7 @@
 <context>
     <name>Transform</name>
     <message>
-        <location filename="../Transform.js" line="35"/>
+        <location filename="../Transform.js" line="38"/>
         <source>This tool requires a selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzie to wymaga zaznaczenia</translation>

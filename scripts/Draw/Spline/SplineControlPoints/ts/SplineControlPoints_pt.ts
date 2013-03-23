@@ -4,14 +4,14 @@
 <context>
     <name>SplineControlPoints</name>
     <message>
-        <location filename="../SplineControlPoints.js" line="57"/>
+        <location filename="../SplineControlPoints.js" line="60"/>
         <source>First control point</source>
         <translatorcomment>--google--
 Indique o primeiro ponto de controle</translatorcomment>
         <translation>Primeiro ponto de controle</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="66"/>
+        <location filename="../SplineControlPoints.js" line="69"/>
         <source>Next control point</source>
         <translatorcomment>--google--
 Especifique o próximo ponto de controle ou [%1]
@@ -19,7 +19,7 @@ Especifique o próximo ponto de controle</translatorcomment>
         <translation>Ponto de controle seguinte</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.js" line="70"/>
+        <location filename="../SplineControlPoints.js" line="73"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

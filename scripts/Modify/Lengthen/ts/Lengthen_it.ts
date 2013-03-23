@@ -4,7 +4,7 @@
 <context>
     <name>Lengthen</name>
     <message>
-        <location filename="../Lengthen.js" line="57"/>
+        <location filename="../Lengthen.js" line="60"/>
         <source>Choose line or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Scegli linea o arco</translation>

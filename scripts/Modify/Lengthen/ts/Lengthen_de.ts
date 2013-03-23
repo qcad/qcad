@@ -22,7 +22,7 @@
         <translation type="obsolete">10</translation>
     </message>
     <message>
-        <location filename="../Lengthen.js" line="57"/>
+        <location filename="../Lengthen.js" line="60"/>
         <source>Choose line or arc</source>
         <translation>Linie oder Bogen wählen</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Circle2P</name>
     <message>
-        <location filename="../Circle2P.js" line="55"/>
+        <location filename="../Circle2P.js" line="58"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="62"/>
+        <location filename="../Circle2P.js" line="65"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Wskaż drugi punkt
@@ -22,7 +22,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="144"/>
+        <location filename="../Circle2P.js" line="147"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Te dwa punkty są identyczne</translation>

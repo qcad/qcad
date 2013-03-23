@@ -16,13 +16,13 @@
         <translation type="unfinished">Pokaż ostrzeżenie podczas zapisywania w formacie pliku, który nie obsługuje 24bit kolory</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="29"/>
+        <location filename="../SaveAs.js" line="32"/>
         <source>Load/Save</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Load / Save</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="29"/>
+        <location filename="../SaveAs.js" line="32"/>
         <source>Save as</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -33,7 +33,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation type="unfinished">Zachowaj jako</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="96"/>
+        <location filename="../SaveAs.js" line="93"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

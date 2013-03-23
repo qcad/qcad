@@ -17,17 +17,17 @@
 <context>
     <name>ViewportSettings</name>
     <message>
-        <location filename="../ViewportSettings.js" line="24"/>
+        <location filename="../ViewportSettings.js" line="27"/>
         <source>Defaults for New Drawings</source>
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="24"/>
+        <location filename="../ViewportSettings.js" line="27"/>
         <source>Layout - Viewports</source>
         <translation>Diseño - Viewports</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="26"/>
+        <location filename="../ViewportSettings.js" line="29"/>
         <source>Layout</source>
         <translation>Diseño</translation>
     </message>
@@ -36,7 +36,7 @@
         <translation type="obsolete">Configuración por defecto de el viewport</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="26"/>
+        <location filename="../ViewportSettings.js" line="29"/>
         <source>Viewports</source>
         <translation>Viewports</translation>
     </message>

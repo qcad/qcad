@@ -100,61 +100,61 @@
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../InputPreferences.js" line="29"/>
+        <location filename="../InputPreferences.js" line="32"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="29"/>
+        <location filename="../InputPreferences.js" line="32"/>
         <source>Coordinate Format</source>
         <translation>Koordinatenformat</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="44"/>
-        <location filename="../InputPreferences.js" line="70"/>
+        <location filename="../InputPreferences.js" line="47"/>
+        <location filename="../InputPreferences.js" line="73"/>
         <source>Comma</source>
         <translation>Komma</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="44"/>
-        <location filename="../InputPreferences.js" line="50"/>
-        <location filename="../InputPreferences.js" line="54"/>
-        <location filename="../InputPreferences.js" line="69"/>
+        <location filename="../InputPreferences.js" line="47"/>
+        <location filename="../InputPreferences.js" line="53"/>
+        <location filename="../InputPreferences.js" line="57"/>
+        <location filename="../InputPreferences.js" line="72"/>
         <source>(Default)</source>
         <translation>(Vorgabe)</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="45"/>
+        <location filename="../InputPreferences.js" line="48"/>
         <source>Semicolon</source>
         <translation>Semikolon</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="50"/>
+        <location filename="../InputPreferences.js" line="53"/>
         <source>Less Than</source>
         <translation>Kleiner als</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="54"/>
+        <location filename="../InputPreferences.js" line="57"/>
         <source>At</source>
         <translation>At</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="55"/>
+        <location filename="../InputPreferences.js" line="58"/>
         <source>Percentage</source>
         <translation>Prozent</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="56"/>
+        <location filename="../InputPreferences.js" line="59"/>
         <source>Dollar</source>
         <translation>Dollar</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="57"/>
+        <location filename="../InputPreferences.js" line="60"/>
         <source>Hash</source>
         <translation>Nummernzeichen</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="69"/>
+        <location filename="../InputPreferences.js" line="72"/>
         <source>Dot</source>
         <translation>Punkt</translation>
     </message>

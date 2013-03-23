@@ -121,61 +121,61 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../InputPreferences.js" line="29"/>
+        <location filename="../InputPreferences.js" line="32"/>
         <source>General</source>
         <translation>Générale</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="29"/>
+        <location filename="../InputPreferences.js" line="32"/>
         <source>Coordinate Format</source>
         <translation>Format des coordonnées</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="44"/>
-        <location filename="../InputPreferences.js" line="70"/>
+        <location filename="../InputPreferences.js" line="47"/>
+        <location filename="../InputPreferences.js" line="73"/>
         <source>Comma</source>
         <translation>Comma</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="44"/>
-        <location filename="../InputPreferences.js" line="50"/>
-        <location filename="../InputPreferences.js" line="54"/>
-        <location filename="../InputPreferences.js" line="69"/>
+        <location filename="../InputPreferences.js" line="47"/>
+        <location filename="../InputPreferences.js" line="53"/>
+        <location filename="../InputPreferences.js" line="57"/>
+        <location filename="../InputPreferences.js" line="72"/>
         <source>(Default)</source>
         <translation>(Par défaut)</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="45"/>
+        <location filename="../InputPreferences.js" line="48"/>
         <source>Semicolon</source>
         <translation>Virgule</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="50"/>
+        <location filename="../InputPreferences.js" line="53"/>
         <source>Less Than</source>
         <translation>Moins de</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="54"/>
+        <location filename="../InputPreferences.js" line="57"/>
         <source>At</source>
         <translation>A</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="55"/>
+        <location filename="../InputPreferences.js" line="58"/>
         <source>Percentage</source>
         <translation>Pourcentage</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="56"/>
+        <location filename="../InputPreferences.js" line="59"/>
         <source>Dollar</source>
         <translation>Dollar</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="57"/>
+        <location filename="../InputPreferences.js" line="60"/>
         <source>Hash</source>
         <translation>Dièse</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="69"/>
+        <location filename="../InputPreferences.js" line="72"/>
         <source>Dot</source>
         <translation>Point</translation>
     </message>

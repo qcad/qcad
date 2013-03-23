@@ -4,51 +4,51 @@
 <context>
     <name>ShortcutPreferences</name>
     <message>
-        <location filename="../ShortcutPreferences.js" line="25"/>
+        <location filename="../ShortcutPreferences.js" line="28"/>
         <source>General</source>
         <translation>Geral</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="25"/>
+        <location filename="../ShortcutPreferences.js" line="28"/>
         <source>Shortcuts and Commands</source>
         <translation>Atalhos e comandos</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="170"/>
+        <location filename="../ShortcutPreferences.js" line="173"/>
         <source>Restore Shortcuts and Commands</source>
         <translation>Restaurar atalhos e comandos</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="171"/>
+        <location filename="../ShortcutPreferences.js" line="174"/>
         <source>Do you want to restore all shortcuts and commands?
 User defined shortcuts and commands will be lost.</source>
         <translation>Você deseja restaurar todos os atalhos e comandos? Atalhos e os comandos definidos pelo usuário serão perdidos.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="256"/>
+        <location filename="../ShortcutPreferences.js" line="259"/>
         <source>Changes will be lost</source>
         <translation>Alterações serão perdidas</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="257"/>
+        <location filename="../ShortcutPreferences.js" line="260"/>
         <source>Any changes made since starting this dialog will be lost. 
 Press cancel and then apply to keep your changes
 or press OK to continue.</source>
         <translation>Todas as mudanças feitas desde o início deste diálogo será perdido. Pressione cancelar e depois aplicar para manter suas alterações ou pressione OK para continuar.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="816"/>
+        <location filename="../ShortcutPreferences.js" line="819"/>
         <source>Shortcuts conflict with at least one other shortcut.</source>
         <translation>Atalhos conflito com pelo menos um outro atalho.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="818"/>
-        <location filename="../ShortcutPreferences.js" line="825"/>
+        <location filename="../ShortcutPreferences.js" line="821"/>
+        <location filename="../ShortcutPreferences.js" line="828"/>
         <source>No conflicts.</source>
         <translation>Sem conflitos.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="823"/>
+        <location filename="../ShortcutPreferences.js" line="826"/>
         <source>Commands conflict with at least one other command.</source>
         <translation>Comandos em conflito com pelo menos um outro comando.</translation>
     </message>

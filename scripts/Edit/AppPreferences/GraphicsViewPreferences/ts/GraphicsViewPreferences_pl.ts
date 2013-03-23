@@ -160,13 +160,13 @@ Stałe zaznaczenia</translatorcomment>
 <context>
     <name>GraphicsViewPreferences</name>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="21"/>
+        <location filename="../GraphicsViewPreferences.js" line="24"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Graphics View</translation>
     </message>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="21"/>
+        <location filename="../GraphicsViewPreferences.js" line="24"/>
         <source>Appearance</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--

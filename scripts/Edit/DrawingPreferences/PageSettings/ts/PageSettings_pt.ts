@@ -4,7 +4,7 @@
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Printing</source>
         <translatorcomment>--exact match--
 --file: MultiPageSettings_pt.ts--
@@ -19,17 +19,17 @@ Impressão completa</translatorcomment>
         <translation type="obsolete">Configurações de página padrão</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Defaults for New Drawings</source>
         <translation>Padrões para novos desenhos</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Printing - Page</source>
         <translation>Imprimindo - Página</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Page</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -39,7 +39,7 @@ Centralize à página</translatorcomment>
         <translation>Página</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="35"/>
+        <location filename="../PageSettings.js" line="38"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

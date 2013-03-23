@@ -4,19 +4,19 @@
 <context>
     <name>Spline</name>
     <message>
-        <location filename="../Spline.js" line="69"/>
+        <location filename="../Spline.js" line="72"/>
         <source>Spline Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Spline Tools</translation>
     </message>
     <message>
-        <location filename="../Spline.js" line="74"/>
+        <location filename="../Spline.js" line="77"/>
         <source>Show spline tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż narzędzia spline</translation>
     </message>
     <message>
-        <location filename="../Spline.js" line="91"/>
+        <location filename="../Spline.js" line="94"/>
         <source>&amp;Spline</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

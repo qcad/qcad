@@ -4,7 +4,7 @@
 <context>
     <name>IsometricGridRight</name>
     <message>
-        <location filename="../IsometricGridRight.js" line="32"/>
+        <location filename="../IsometricGridRight.js" line="35"/>
         <source>&amp;Right Projection</source>
         <translation>Projection &amp;droit</translation>
     </message>

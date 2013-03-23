@@ -4,7 +4,7 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../Layer.js" line="39"/>
+        <location filename="../Layer.js" line="42"/>
         <source>&amp;Layer</source>
         <translation>&amp;Capa</translation>
     </message>
@@ -48,13 +48,13 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Tipo de línea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="101"/>
+        <location filename="../LayerDialog.js" line="104"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nombre de la capa está vacía.</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="112"/>
+        <location filename="../LayerDialog.js" line="115"/>
         <source>Layer already exists.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Capa ya existe.</translation>

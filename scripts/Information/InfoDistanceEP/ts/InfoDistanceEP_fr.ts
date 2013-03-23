@@ -4,22 +4,22 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="48"/>
+        <location filename="../InfoDistanceEP.js" line="51"/>
         <source>Specify entity</source>
         <translation>Indiquer l&apos;entité</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="56"/>
+        <location filename="../InfoDistanceEP.js" line="59"/>
         <source>Specify point</source>
         <translation>Indiquer le point</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="59"/>
+        <location filename="../InfoDistanceEP.js" line="62"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="121"/>
+        <location filename="../InfoDistanceEP.js" line="124"/>
         <source>Distance:</source>
         <translation>Distance :</translation>
     </message>

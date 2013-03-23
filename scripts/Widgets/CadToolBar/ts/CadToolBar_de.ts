@@ -31,17 +31,17 @@
         <translation>Spalten:</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>CAD Toolbar</source>
         <translation>CAD Werkzeugleiste</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="77"/>
+        <location filename="../CadToolBar.js" line="80"/>
         <source>Toggle Title Bar</source>
         <translation>Titelleiste anzeigen</translation>
     </message>
@@ -90,7 +90,7 @@
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="73"/>
+        <location filename="../CadToolBarPanel.js" line="76"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>

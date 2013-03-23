@@ -4,7 +4,7 @@
 <context>
     <name>DimensionSettings</name>
     <message>
-        <location filename="../DimensionSettings.js" line="26"/>
+        <location filename="../DimensionSettings.js" line="29"/>
         <source>Dimension</source>
         <translation>Cotation</translation>
     </message>
@@ -13,73 +13,73 @@
         <translation type="obsolete">Paramètres par défaut cotation</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="24"/>
-        <location filename="../DimensionSettings.js" line="26"/>
+        <location filename="../DimensionSettings.js" line="27"/>
+        <location filename="../DimensionSettings.js" line="29"/>
         <source>Dimension Settings</source>
         <translation>Paramètres cotation</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="24"/>
+        <location filename="../DimensionSettings.js" line="27"/>
         <source>Defaults for New Drawings</source>
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="111"/>
+        <location filename="../DimensionSettings.js" line="114"/>
         <source>Scientific</source>
         <translation>Scientifique</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="112"/>
+        <location filename="../DimensionSettings.js" line="115"/>
         <source>Decimal</source>
         <translation>Décimal</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="113"/>
+        <location filename="../DimensionSettings.js" line="116"/>
         <source>Engineering</source>
         <translation>Génie mécanique</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="114"/>
+        <location filename="../DimensionSettings.js" line="117"/>
         <source>Architectural</source>
         <translation>Architecture</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="115"/>
+        <location filename="../DimensionSettings.js" line="118"/>
         <source>Fractional</source>
         <translation>Fractionnel</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="143"/>
+        <location filename="../DimensionSettings.js" line="146"/>
         <source>Decimal Degrees</source>
         <translation>Degrés décimaux</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="144"/>
+        <location filename="../DimensionSettings.js" line="147"/>
         <source>Deg/min/sec</source>
         <translation>Deg/min/sec</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="145"/>
+        <location filename="../DimensionSettings.js" line="148"/>
         <source>Gradians</source>
         <translation>Grades</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="146"/>
+        <location filename="../DimensionSettings.js" line="149"/>
         <source>Radians</source>
         <translation>Radians</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="147"/>
+        <location filename="../DimensionSettings.js" line="150"/>
         <source>Surveyor&apos;s units</source>
         <translation>Unités de géomètre</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="283"/>
+        <location filename="../DimensionSettings.js" line="286"/>
         <source>Unit / Format</source>
         <translation>Unité / format</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="284"/>
+        <location filename="../DimensionSettings.js" line="287"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translation>L&apos;unité de dessin doivent être &apos;Inch&apos; pour afficher des étiquettes de dimension dans des formats &apos;architecturale&apos; ou &apos;ingénierie&apos;. Format changé en &apos;décimal&apos;.</translation>
     </message>

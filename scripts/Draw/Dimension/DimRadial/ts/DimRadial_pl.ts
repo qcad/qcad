@@ -4,13 +4,13 @@
 <context>
     <name>DimRadial</name>
     <message>
-        <location filename="../DimRadial.js" line="54"/>
+        <location filename="../DimRadial.js" line="57"/>
         <source>Choose arc or circle entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz łuk lub okrąg encji</translation>
     </message>
     <message>
-        <location filename="../DimRadial.js" line="62"/>
+        <location filename="../DimRadial.js" line="65"/>
         <source>Dimension line location or angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Położenie linii wymiarowej lub kąt</translation>

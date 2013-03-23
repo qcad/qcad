@@ -4,7 +4,7 @@
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../FirstStart.js" line="215"/>
+        <location filename="../FirstStart.js" line="218"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -13,7 +13,7 @@ Preto</translatorcomment>
         <translation>Preto</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="216"/>
+        <location filename="../FirstStart.js" line="219"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -22,7 +22,7 @@ Branco</translatorcomment>
         <translation>Branco</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="220"/>
+        <location filename="../FirstStart.js" line="223"/>
         <source>Language:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -37,23 +37,23 @@ Idioma GUI:</translatorcomment>
         <translation type="obsolete">Bem-vindo ao QCAD</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="32"/>
+        <location filename="../FirstStart.js" line="35"/>
         <source>%1 First Start</source>
         <translation>%1 primeiro iniciar</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="221"/>
+        <location filename="../FirstStart.js" line="224"/>
         <source>Welcome to %1</source>
         <translation>Bem-vindo ao %1</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="222"/>
+        <location filename="../FirstStart.js" line="225"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Por favor, escolha as configurações usadas para novos desenhos. Todas essas configurações podem ser alteradas posteriormente no diálogo preferências.</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="236"/>
+        <location filename="../FirstStart.js" line="239"/>
         <source>Unit:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -62,13 +62,13 @@ Unidade Padrão:
         <translation>Unidades:</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="237"/>
+        <location filename="../FirstStart.js" line="240"/>
         <source>Default Paper Size:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tamanho de papel padrão:</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="238"/>
+        <location filename="../FirstStart.js" line="241"/>
         <source>Decimal Point:</source>
         <translatorcomment>--exact match--
 --file: Input_pt.ts--
@@ -76,7 +76,7 @@ Ponto decimal:</translatorcomment>
         <translation>Ponto decimal:</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="239"/>
+        <location filename="../FirstStart.js" line="242"/>
         <source>Background Color:</source>
         <translatorcomment>--ignored case--
 --file: pt.po--

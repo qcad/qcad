@@ -4,7 +4,7 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../Layer.js" line="39"/>
+        <location filename="../Layer.js" line="42"/>
         <source>&amp;Layer</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
@@ -16,13 +16,13 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="101"/>
+        <location filename="../LayerDialog.js" line="104"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nazwa warstwy jest pusta.</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="112"/>
+        <location filename="../LayerDialog.js" line="115"/>
         <source>Layer already exists.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Warstwa już istnieje.</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangle.js" line="53"/>
+        <location filename="../LineRectangle.js" line="56"/>
         <source>First corner</source>
         <translation>Primo punto dell&apos;angolo</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>&amp;Rettangolo</translation>
     </message>
     <message>
-        <location filename="../LineRectangle.js" line="60"/>
+        <location filename="../LineRectangle.js" line="63"/>
         <source>Second corner</source>
         <translation>Secondo punto dell&apos;angolo</translation>
     </message>

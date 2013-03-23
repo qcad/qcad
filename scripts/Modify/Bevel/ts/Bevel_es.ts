@@ -19,19 +19,19 @@
         <translation>Medida 2:</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="50"/>
+        <location filename="../Bevel.js" line="53"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Las dos entidades no pueden ser biselados.</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="270"/>
+        <location filename="../Bevel.js" line="273"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primera entidad no se pueden recortar.</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="278"/>
+        <location filename="../Bevel.js" line="281"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Segunda entidad no se pueden recortar.</translation>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>Spline (Control Points)</title>
+<link rel='stylesheet' type='text/css' href='../../../../../style.css' />
+</head>
+<body>
+<h2>Spline (Control Points)</h2>
+<div class='brief'>
+<b>Toolbar / Icon:</b>
+<br /><img src='../../Spline.svg' class='button' style='background-image:url(../../../../../support/doc/manual/button_bg.png)' />
+&#160;&#160;&#160;
+<img src='../SplineControlPoints.svg' class='button' style='background-image:url(../../../../../support/doc/manual/button_bg.png)' />
+&#160;&#160;&#160;
+<br/>
+<b>Menu:</b> <font face='courier new'>Draw - Spline - Spline (Control Points)</font>
+<br /><b>Shortcut:</b> <font face='courier new'>S, P</font>
+<br /><b>Commands:</b> <font face='courier new'>spline | sp</font>
+</div>
+<p><strong>Description:</strong></p>
+<p>Draws spline curves from control points. Non-uniform rational B-Splines
+(NURBS) with homogeneous weighting factors are the only splines that are
+supported.</p>
+<p><strong>Procedure:</strong></p>
+<div>
+<ol>
+  <li>Choose the degree of the spline in the options tool bar. Supported degrees
+  are 2 (quadratic b-spline) and 3 (cubic b-spline). The higher the degree, the
+  'smoother' the curve becomes. 
+  <br />Note that a quadratic b-spline requires by definition at least 3
+  control points while a cubic b-spline has at least 4 control points.</li>
+  <li>Check the 'Closed' check box in the options tool bar if you want to create
+  a closed spline. Closed splines are continuous closed loops.</li>
+  <li>Specify the control points. After defining the third (for quadratic
+  b-splines) or fourth (for cubic b-splines) control point, a preview will be
+  shown. You can remove the last control point again by clicking the 'Undo' 
+  button in the options tool bar.</li>
+</ol>
+
+<p>
+Example for two open splines (quadratic and cubic):
+<br/>
+<img src="SplineControlPoints01.svg" class="figure"/>
+<br/>
+Example for two closed, periodic splines (quadratic and cubic):
+<br/>
+<img src="SplineControlPoints02.svg" class="figure"/>
+</p>
+</div>
+</body>
+</html>

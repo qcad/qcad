@@ -4,21 +4,21 @@
 <context>
     <name>Stretch</name>
     <message>
-        <location filename="../Stretch.js" line="56"/>
+        <location filename="../Stretch.js" line="59"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Wskaż pierwszy wierzchołek</translatorcomment>
         <translation type="unfinished">Pierwszy zakręt</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="66"/>
+        <location filename="../Stretch.js" line="69"/>
         <source>Second corner</source>
         <translatorcomment>--google--
 Wskaż drugi wierzchołek</translatorcomment>
         <translation type="unfinished">Drugi narożnik</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="75"/>
+        <location filename="../Stretch.js" line="78"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -27,7 +27,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="83"/>
+        <location filename="../Stretch.js" line="86"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>

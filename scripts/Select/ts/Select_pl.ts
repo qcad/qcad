@@ -4,14 +4,14 @@
 <context>
     <name>Select</name>
     <message>
-        <location filename="../Select.js" line="61"/>
+        <location filename="../Select.js" line="64"/>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
         <translation type="unfinished">Narzędzia wyboru</translation>
     </message>
     <message>
-        <location filename="../Select.js" line="66"/>
+        <location filename="../Select.js" line="69"/>
         <source>Show selection tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -19,13 +19,13 @@ Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Zaznacz&quot;</translation>
     </message>
     <message>
-        <location filename="../Select.js" line="74"/>
+        <location filename="../Select.js" line="77"/>
         <source>Selection Tools Panel</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybór panelu Narzędzia</translation>
     </message>
     <message>
-        <location filename="../Select.js" line="220"/>
+        <location filename="../Select.js" line="223"/>
         <source>&amp;Select</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

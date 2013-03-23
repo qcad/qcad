@@ -4,19 +4,19 @@
 <context>
     <name>Trim</name>
     <message>
-        <location filename="../Trim.js" line="67"/>
+        <location filename="../Trim.js" line="70"/>
         <source>Choose limiting entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha entidade limitando</translation>
     </message>
     <message>
-        <location filename="../Trim.js" line="76"/>
+        <location filename="../Trim.js" line="79"/>
         <source>Choose entity to trim</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha entidade para cortar</translation>
     </message>
     <message>
-        <location filename="../Trim.js" line="190"/>
+        <location filename="../Trim.js" line="193"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>As duas entidades não se cruzam, ou não são suportados atualmente para aparar.</translation>

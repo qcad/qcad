@@ -102,7 +102,7 @@ Mnożnik &amp;X:</translatorcomment>
 <context>
     <name>GridSettings</name>
     <message>
-        <location filename="../GridSettings.js" line="22"/>
+        <location filename="../GridSettings.js" line="25"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -110,8 +110,8 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="22"/>
-        <location filename="../GridSettings.js" line="24"/>
+        <location filename="../GridSettings.js" line="25"/>
+        <location filename="../GridSettings.js" line="27"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -121,7 +121,7 @@ Pozycjonowanie siatki</translatorcomment>
         <translation type="unfinished">Siatka</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="24"/>
+        <location filename="../GridSettings.js" line="27"/>
         <source>General</source>
         <translatorcomment>--google--
 Ogólne ustawienia aplikacji
@@ -130,11 +130,11 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="105"/>
-        <location filename="../GridSettings.js" line="208"/>
-        <location filename="../GridSettings.js" line="209"/>
-        <location filename="../GridSettings.js" line="231"/>
-        <location filename="../GridSettings.js" line="232"/>
+        <location filename="../GridSettings.js" line="108"/>
+        <location filename="../GridSettings.js" line="211"/>
+        <location filename="../GridSettings.js" line="212"/>
+        <location filename="../GridSettings.js" line="234"/>
+        <location filename="../GridSettings.js" line="235"/>
         <source>auto</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--

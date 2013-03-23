@@ -4,7 +4,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="38"/>
+        <location filename="../AbstractPreferences.js" line="41"/>
         <source>Application Preferences</source>
         <translatorcomment>--exact match--
 --file: AppPreferences_pt.ts--
@@ -14,7 +14,7 @@ Preferências Gerais do Aplicativo</translatorcomment>
         <translation>Preferências do aplicativo</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="40"/>
+        <location filename="../AbstractPreferences.js" line="43"/>
         <source>Drawing Preferences</source>
         <translatorcomment>--exact match--
 --file: DrawingPreferences_pt.ts--
@@ -24,13 +24,13 @@ Preferências do Desenho Atual...</translatorcomment>
         <translation>Preferências de desenho</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="295"/>
+        <location filename="../AbstractPreferences.js" line="298"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>É necessário reiniciar</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="298"/>
+        <location filename="../AbstractPreferences.js" line="301"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -41,7 +41,7 @@ para as mudanças de preferências entrem em vigor.</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="38"/>
+        <location filename="../ClipboardOperation.js" line="41"/>
         <source>Reference point</source>
         <translatorcomment>--ignored case--
 --file: CreateBlock_pt.ts--
@@ -53,7 +53,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="49"/>
+        <location filename="../Edit.js" line="52"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

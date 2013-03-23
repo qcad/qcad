@@ -4,17 +4,17 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="57"/>
+        <location filename="../Line2P.js" line="60"/>
         <source>First point</source>
         <translation>Primer punto</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="65"/>
+        <location filename="../Line2P.js" line="68"/>
         <source>Next point</source>
         <translation>Siguiente punto</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="68"/>
+        <location filename="../Line2P.js" line="71"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>

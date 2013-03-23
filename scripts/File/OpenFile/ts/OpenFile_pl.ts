@@ -4,7 +4,7 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="49"/>
+        <location filename="../OpenFile.js" line="52"/>
         <source>Open Drawing</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -12,7 +12,7 @@ Otwórz rysunek</translatorcomment>
         <translation type="unfinished">Otwórz rysunek</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="55"/>
         <source>All Files</source>
         <translatorcomment>--google--
 Wszystkie pliki (*.*)
@@ -22,13 +22,12 @@ Wszystkie pliki (*)</translatorcomment>
         <translation type="unfinished">Wszystkie pliki</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="57"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Format:
 Format:</translatorcomment>
-        <translation type="unfinished">Format:</translation>
+        <translation type="obsolete">Format:</translation>
     </message>
     <message>
         <location filename="../OpenFileInit.js" line="2"/>

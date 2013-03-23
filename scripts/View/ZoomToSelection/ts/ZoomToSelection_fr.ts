@@ -4,7 +4,7 @@
 <context>
     <name>ZoomToSelection</name>
     <message>
-        <location filename="../ZoomToSelection.js" line="28"/>
+        <location filename="../ZoomToSelection.js" line="31"/>
         <source>No selection found.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aucune sélection trouvée.</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../SnapCoordinate.js" line="77"/>
+        <location filename="../SnapCoordinate.js" line="80"/>
         <source>Set coordinate</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Conjunto de coordenadas</translation>

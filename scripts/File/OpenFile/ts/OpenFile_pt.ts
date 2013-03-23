@@ -4,7 +4,7 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="49"/>
+        <location filename="../OpenFile.js" line="52"/>
         <source>Open Drawing</source>
         <translatorcomment>--exact match--
 --file: Compare_pt.ts--
@@ -12,7 +12,7 @@ Abra desenho</translatorcomment>
         <translation>Abra desenho</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="55"/>
         <source>All Files</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -21,13 +21,12 @@ Todos os tipos</translatorcomment>
         <translation>Todos os ficheiros</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="57"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 &amp;Formato:
 Formato:</translatorcomment>
-        <translation>Formato:</translation>
+        <translation type="obsolete">Formato:</translation>
     </message>
     <message>
         <source>Loading...</source>

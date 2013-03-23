@@ -4,7 +4,7 @@
 <context>
     <name>MathExamples</name>
     <message>
-        <location filename="../MathExamples.js" line="49"/>
+        <location filename="../MathExamples.js" line="52"/>
         <source>&amp;Mathematics</source>
         <translation>&amp;Matematica</translation>
     </message>

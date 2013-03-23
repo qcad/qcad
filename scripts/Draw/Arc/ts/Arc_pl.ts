@@ -4,14 +4,14 @@
 <context>
     <name>Arc</name>
     <message>
-        <location filename="../Arc.js" line="64"/>
+        <location filename="../Arc.js" line="67"/>
         <source>Arc Tools</source>
         <translatorcomment>--google--
 Pokaż menu &quot;Łuki&quot;</translatorcomment>
         <translation type="unfinished">Narzędzia Arc</translation>
     </message>
     <message>
-        <location filename="../Arc.js" line="69"/>
+        <location filename="../Arc.js" line="72"/>
         <source>Show arc tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -19,7 +19,7 @@ Pokaż menu &quot;Łuki&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Łuki&quot;</translation>
     </message>
     <message>
-        <location filename="../Arc.js" line="82"/>
+        <location filename="../Arc.js" line="85"/>
         <source>&amp;Arc</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

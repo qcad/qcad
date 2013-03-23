@@ -4,12 +4,12 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="59"/>
+        <location filename="../LineParallelThrough.js" line="62"/>
         <source>Choose line, arc or circle</source>
         <translation>Choisissez une ligne, arc ou cercle</translation>
     </message>
     <message>
-        <location filename="../LineParallelThrough.js" line="65"/>
+        <location filename="../LineParallelThrough.js" line="68"/>
         <source>Specify point</source>
         <translation>Indiquer le point</translation>
     </message>

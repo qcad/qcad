@@ -4,22 +4,22 @@
 <context>
     <name>Divide</name>
     <message>
-        <location filename="../Divide.js" line="64"/>
+        <location filename="../Divide.js" line="67"/>
         <source>Choose line, arc or circle</source>
         <translation>Scegliere una linea, un arco o un cerchio</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="74"/>
+        <location filename="../Divide.js" line="77"/>
         <source>Specify point</source>
         <translation>Punto</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="82"/>
+        <location filename="../Divide.js" line="85"/>
         <source>Specify second point</source>
         <translation>Secondo punto</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="275"/>
+        <location filename="../Divide.js" line="278"/>
         <source>Cutting point is not on entity.</source>
         <translation>Il punto per spezzare non è sull&apos;entità.</translation>
     </message>

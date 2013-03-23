@@ -4,7 +4,7 @@
 <context>
     <name>DrawingPreferences</name>
     <message>
-        <location filename="../DrawingPreferences.js" line="40"/>
+        <location filename="../DrawingPreferences.js" line="43"/>
         <source>Drawing &amp;Preferences</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Preferencje rysowania</translation>

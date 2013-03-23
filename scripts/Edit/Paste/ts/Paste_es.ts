@@ -64,7 +64,7 @@
         <translation>Sobreescribir los bloques</translation>
     </message>
     <message>
-        <location filename="../Paste.js" line="59"/>
+        <location filename="../Paste.js" line="62"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>

@@ -66,12 +66,12 @@
         <translation>Sobreescribir los bloques</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="84"/>
+        <location filename="../InsertBlockItem.js" line="87"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajustado nombre de bloque no válido &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="97"/>
+        <location filename="../InsertBlockItem.js" line="100"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>

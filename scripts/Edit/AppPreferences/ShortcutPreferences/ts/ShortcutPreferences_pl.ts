@@ -4,7 +4,7 @@
 <context>
     <name>ShortcutPreferences</name>
     <message>
-        <location filename="../ShortcutPreferences.js" line="25"/>
+        <location filename="../ShortcutPreferences.js" line="28"/>
         <source>General</source>
         <translatorcomment>--google--
 Ogólne ustawienia aplikacji
@@ -13,26 +13,26 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="25"/>
+        <location filename="../ShortcutPreferences.js" line="28"/>
         <source>Shortcuts and Commands</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skróty i komendy</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="170"/>
+        <location filename="../ShortcutPreferences.js" line="173"/>
         <source>Restore Shortcuts and Commands</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przywracanie skrótów i poleceń</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="171"/>
+        <location filename="../ShortcutPreferences.js" line="174"/>
         <source>Do you want to restore all shortcuts and commands?
 User defined shortcuts and commands will be lost.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Czy chcesz przywrócić wszystkie skróty i polecenia? Definiowane przez użytkownika skróty i polecenia zostaną utracone.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="256"/>
+        <location filename="../ShortcutPreferences.js" line="259"/>
         <source>Changes will be lost</source>
         <translatorcomment>--google--
 Jeśli ich nie zachowasz, zostaną utracone.
@@ -41,7 +41,7 @@ Jeśli nie przejrzysz dokumentów, wszystkie zmiany zostaną utracone.</translat
         <translation type="unfinished">Zmiany zostaną utracone</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="257"/>
+        <location filename="../ShortcutPreferences.js" line="260"/>
         <source>Any changes made since starting this dialog will be lost. 
 Press cancel and then apply to keep your changes
 or press OK to continue.</source>
@@ -49,20 +49,20 @@ or press OK to continue.</source>
         <translation type="unfinished">Wszelkie zmiany dokonane od czasu rozpoczęcia tego okna zostaną utracone. Naciśnij przycisk Anuluj, a następnie zastosować zachować zmiany, lub naciśnij przycisk OK, aby kontynuować.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="816"/>
+        <location filename="../ShortcutPreferences.js" line="819"/>
         <source>Shortcuts conflict with at least one other shortcut.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skróty w sprzeczności z co najmniej jednego innego skrótu.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="818"/>
-        <location filename="../ShortcutPreferences.js" line="825"/>
+        <location filename="../ShortcutPreferences.js" line="821"/>
+        <location filename="../ShortcutPreferences.js" line="828"/>
         <source>No conflicts.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Brak konfliktów.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="823"/>
+        <location filename="../ShortcutPreferences.js" line="826"/>
         <source>Commands conflict with at least one other command.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Konflikt polecenia, z co najmniej jednym innym poleceniu.</translation>

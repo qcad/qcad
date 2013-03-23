@@ -4,7 +4,7 @@
 <context>
     <name>PenToolBar</name>
     <message>
-        <location filename="../PenToolBar.js" line="23"/>
+        <location filename="../PenToolBar.js" line="26"/>
         <source>Pen</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -14,7 +14,7 @@ Abertura abortada</translatorcomment>
         <translation>Caneta</translation>
     </message>
     <message>
-        <location filename="../PenToolBar.js" line="79"/>
+        <location filename="../PenToolBar.js" line="82"/>
         <source>Reset to Defaults</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Redefinição para os padrões</translation>

@@ -4,13 +4,13 @@
 <context>
     <name>DimAngular</name>
     <message>
-        <location filename="../DimAngular.js" line="69"/>
+        <location filename="../DimAngular.js" line="72"/>
         <source>Arc or first of two lines</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arco ou primeira de duas linhas</translation>
     </message>
     <message>
-        <location filename="../DimAngular.js" line="81"/>
+        <location filename="../DimAngular.js" line="84"/>
         <source>Second line</source>
         <translatorcomment>--google--
 Selecione a segunda linha
@@ -19,7 +19,7 @@ Especifique a segunda linha</translatorcomment>
         <translation>Segunda linha</translation>
     </message>
     <message>
-        <location filename="../DimAngular.js" line="89"/>
+        <location filename="../DimAngular.js" line="92"/>
         <source>Dimension arc location</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Localização arco cota</translation>

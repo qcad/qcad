@@ -4,21 +4,21 @@
 <context>
     <name>DimAligned</name>
     <message>
-        <location filename="../DimAligned.js" line="57"/>
+        <location filename="../DimAligned.js" line="60"/>
         <source>First extension line origin</source>
         <translatorcomment>--google--
 Wskaż początek pierwszej linii rozszerzenia</translatorcomment>
         <translation type="unfinished">Pierwszym początkiem linia wewnętrzna</translation>
     </message>
     <message>
-        <location filename="../DimAligned.js" line="66"/>
+        <location filename="../DimAligned.js" line="69"/>
         <source>Second extension line origin</source>
         <translatorcomment>--google--
 Wskaż początek drugiej linii rozszerzenia</translatorcomment>
         <translation type="unfinished">Drugie źródło linia wewnętrzna</translation>
     </message>
     <message>
-        <location filename="../DimAligned.js" line="74"/>
+        <location filename="../DimAligned.js" line="77"/>
         <source>Dimension line location</source>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej</translatorcomment>

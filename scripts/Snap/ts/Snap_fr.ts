@@ -4,13 +4,13 @@
 <context>
     <name>Snap</name>
     <message>
-        <location filename="../Snap.js" line="27"/>
+        <location filename="../Snap.js" line="30"/>
         <source>Snap Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Outils de accrochage</translation>
     </message>
     <message>
-        <location filename="../Snap.js" line="44"/>
+        <location filename="../Snap.js" line="47"/>
         <source>&amp;Snap</source>
         <translation>&amp;Accrochage</translation>
     </message>

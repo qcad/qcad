@@ -13,13 +13,13 @@
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="38"/>
+        <location filename="../LanguagePreferences.js" line="41"/>
         <source>Language Settings</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Ustawienia językowe</translation>
     </message>
     <message>
-        <location filename="../LanguagePreferences.js" line="38"/>
+        <location filename="../LanguagePreferences.js" line="41"/>
         <source>Language</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

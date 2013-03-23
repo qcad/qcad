@@ -4,19 +4,19 @@
 <context>
     <name>LineTangent2</name>
     <message>
-        <location filename="../LineTangent2.js" line="64"/>
+        <location filename="../LineTangent2.js" line="67"/>
         <source>Choose first circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha primeiro círculo ou arco</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="75"/>
+        <location filename="../LineTangent2.js" line="78"/>
         <source>Choose second circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha segundo círculo ou arco</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="213"/>
+        <location filename="../LineTangent2.js" line="216"/>
         <source>No tangent possible</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tangent não é possível</translation>

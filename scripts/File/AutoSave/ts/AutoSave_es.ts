@@ -27,75 +27,75 @@
         <translation type="obsolete">auto</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="31"/>
+        <location filename="../AutoSave.js" line="34"/>
         <source>Load/Save</source>
         <translation>Cargar/Guardar</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="31"/>
+        <location filename="../AutoSave.js" line="34"/>
         <source>Autosave</source>
         <translation>Guardado automático</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="140"/>
+        <location filename="../AutoSave.js" line="143"/>
         <source>Autosave failed:</source>
         <translation>Guardado automático fallado:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="146"/>
+        <location filename="../AutoSave.js" line="149"/>
         <source>Autosave complete.</source>
         <translation>Guardado automático se ha completado.</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="167"/>
+        <location filename="../AutoSave.js" line="170"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translation>Un archivo de copia de &apos;guardado automática&apos; para un dibujo sin título fue encontrado.
 ¿Quiere recuperarlo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="171"/>
+        <location filename="../AutoSave.js" line="174"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
         <translation>%1 archivos de copia de &apos;guardado automática&apos; para dibujos sin título se encontraron.
 ¿Quiere recuperarlos?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="189"/>
+        <location filename="../AutoSave.js" line="192"/>
         <source>Recovered</source>
         <translation>Recuperado</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="236"/>
+        <location filename="../AutoSave.js" line="239"/>
         <source>Recover File?</source>
         <translation>Recuperar archivo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="237"/>
+        <location filename="../AutoSave.js" line="240"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translation>Un archivo de copia de &apos;guardado automática&apos; para &apos;%1&apos; fue encontrado.
 ¿Quiere recuperarlo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="262"/>
-        <location filename="../AutoSave.js" line="273"/>
-        <location filename="../AutoSave.js" line="278"/>
+        <location filename="../AutoSave.js" line="265"/>
+        <location filename="../AutoSave.js" line="276"/>
+        <location filename="../AutoSave.js" line="281"/>
         <source>Cannot rename file:</source>
         <translation>No se puede renombrar el archivo:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="265"/>
+        <location filename="../AutoSave.js" line="268"/>
         <source>Moved autosave backup file to:</source>
         <translation>Renombrado archivo de seguridad automática:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="281"/>
+        <location filename="../AutoSave.js" line="284"/>
         <source>Moved original file to:</source>
         <translation>Movido archivo original a:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="297"/>
+        <location filename="../AutoSave.js" line="300"/>
         <source>Cannot remove file:</source>
         <translation>No se puede eliminar el archivo:</translation>
     </message>
@@ -112,7 +112,7 @@ Do you wish to recover it?</source>
         <translation type="obsolete">Renombrado archivo de seguridad automática:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="177"/>
+        <location filename="../AutoSave.js" line="180"/>
         <source>Recover Files?</source>
         <translation>Recuperar archivos?</translation>
     </message>
@@ -121,7 +121,7 @@ Do you wish to recover it?</source>
         <translation type="obsolete">Elija el directorio de guardado automático</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="120"/>
+        <location filename="../AutoSave.js" line="123"/>
         <source>Autosaving to:</source>
         <translation>Guardado automático de:</translation>
     </message>

@@ -13,7 +13,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="78"/>
+        <location filename="../Text.js" line="81"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -65,7 +65,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="348"/>
+        <location filename="../TextDialog/TextDialog.js" line="351"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -73,7 +73,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>&amp;Desfazer</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="352"/>
+        <location filename="../TextDialog/TextDialog.js" line="355"/>
         <source>&amp;Redo</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -81,7 +81,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>&amp;Refazer</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="356"/>
+        <location filename="../TextDialog/TextDialog.js" line="359"/>
         <source>Cu&amp;t</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -90,7 +90,7 @@ Cor&amp;te com referência </translatorcomment>
         <translation>Cor&amp;tar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="360"/>
+        <location filename="../TextDialog/TextDialog.js" line="363"/>
         <source>&amp;Copy</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -99,7 +99,7 @@ Cor&amp;te com referência </translatorcomment>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="364"/>
+        <location filename="../TextDialog/TextDialog.js" line="367"/>
         <source>&amp;Paste</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -107,50 +107,50 @@ Co&amp;lar</translatorcomment>
         <translation>Co&amp;lar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="372"/>
+        <location filename="../TextDialog/TextDialog.js" line="375"/>
         <source>&amp;Bold</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Negrito</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="381"/>
+        <location filename="../TextDialog/TextDialog.js" line="384"/>
         <source>&amp;Italic</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Itálico</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="401"/>
+        <location filename="../TextDialog/TextDialog.js" line="404"/>
         <source>&amp;Subscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Subscrito</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="407"/>
+        <location filename="../TextDialog/TextDialog.js" line="410"/>
         <source>&amp;Superscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>So&amp;brescrito</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="425"/>
+        <location filename="../TextDialog/TextDialog.js" line="428"/>
         <source>&amp;Color...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Cor...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="431"/>
+        <location filename="../TextDialog/TextDialog.js" line="434"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Caracteres especiais...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="731"/>
+        <location filename="../TextDialog/TextDialog.js" line="734"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
         <translation>Outras...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="859"/>
+        <location filename="../TextDialog/TextDialog.js" line="862"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: SplineControlPoints_pt.ts--
@@ -159,13 +159,13 @@ Grau:</translatorcomment>
         <translation>Grau</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="860"/>
+        <location filename="../TextDialog/TextDialog.js" line="863"/>
         <source>Plus-Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Plus-minus</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="862"/>
+        <location filename="../TextDialog/TextDialog.js" line="865"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: Dimension_pt.ts--
@@ -174,19 +174,19 @@ Diâmetro (ø)</translatorcomment>
         <translation>Diâmetro</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="863"/>
+        <location filename="../TextDialog/TextDialog.js" line="866"/>
         <source>Almost equal</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Quase igual</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="864"/>
+        <location filename="../TextDialog/TextDialog.js" line="867"/>
         <source>Multiplication</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Multiplicação</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="865"/>
+        <location filename="../TextDialog/TextDialog.js" line="868"/>
         <source>Division</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -195,7 +195,7 @@ Divisão</translatorcomment>
         <translation>Divisão</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="866"/>
+        <location filename="../TextDialog/TextDialog.js" line="869"/>
         <source>Delta</source>
         <translatorcomment>--exact match--
 --file: Dimension_pt.ts--
@@ -204,7 +204,7 @@ Delta X</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="867"/>
+        <location filename="../TextDialog/TextDialog.js" line="870"/>
         <source>Pi</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -213,7 +213,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="868"/>
+        <location filename="../TextDialog/TextDialog.js" line="871"/>
         <source>Identity</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -222,31 +222,31 @@ identidade</translatorcomment>
         <translation>Identidade</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="869"/>
+        <location filename="../TextDialog/TextDialog.js" line="872"/>
         <source>Not equal</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não igual</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="870"/>
+        <location filename="../TextDialog/TextDialog.js" line="873"/>
         <source>Ohm</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ohm</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="871"/>
+        <location filename="../TextDialog/TextDialog.js" line="874"/>
         <source>Omega</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ómega</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="872"/>
+        <location filename="../TextDialog/TextDialog.js" line="875"/>
         <source>Squared</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Quadrado</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="873"/>
+        <location filename="../TextDialog/TextDialog.js" line="876"/>
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cubado</translation>

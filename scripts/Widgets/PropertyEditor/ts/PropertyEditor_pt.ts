@@ -31,13 +31,13 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="184"/>
+        <location filename="../PropertyEditor.js" line="187"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="188"/>
+        <location filename="../PropertyEditor.js" line="191"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -46,13 +46,13 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="319"/>
+        <location filename="../PropertyEditor.js" line="322"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não seleção</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="335"/>
+        <location filename="../PropertyEditor.js" line="338"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -61,7 +61,7 @@ Geometria</translatorcomment>
         <translation>Geometria</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="349"/>
+        <location filename="../PropertyEditor.js" line="352"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -71,7 +71,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="469"/>
+        <location filename="../PropertyEditor.js" line="472"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó
@@ -79,7 +79,7 @@ Trocar para a próxima camada</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="546"/>
+        <location filename="../PropertyEditor.js" line="549"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -89,13 +89,13 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="566"/>
+        <location filename="../PropertyEditor.js" line="569"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -105,7 +105,7 @@ Esquerda ao meio</translatorcomment>
         <translation>Esquerda</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -115,7 +115,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Right</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -125,7 +125,7 @@ Em baixo à direita</translatorcomment>
         <translation>Direita</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
+        <location filename="../PropertyEditor.js" line="608"/>
         <source>Aligned</source>
         <translatorcomment>--exact match--
 --file: DimAligned_pt.ts--
@@ -135,8 +135,8 @@ Dimensão Alinhada</translatorcomment>
         <translation>Alinhado</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="608"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -146,7 +146,7 @@ Salta aos pontos de meio</translatorcomment>
         <translation>Meio</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
+        <location filename="../PropertyEditor.js" line="608"/>
         <source>Fit</source>
         <translatorcomment>--google--
 Ajuste à página
@@ -155,7 +155,7 @@ Ponto de ajustar próximo</translatorcomment>
         <translation>Caber</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Top</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -164,7 +164,7 @@ Centro acima</translatorcomment>
         <translation>Topo</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Base</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -173,7 +173,7 @@ Arco tangencial à entidade de base com raio</translatorcomment>
         <translation>Base</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Bottom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -183,7 +183,7 @@ Centro abaixo</translatorcomment>
         <translation>Fundo</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="697"/>
+        <location filename="../PropertyEditor.js" line="700"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: SnapAuto_pt.ts--
@@ -193,13 +193,13 @@ Salta automaticamente</translatorcomment>
         <translation>Auto</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="816"/>
+        <location filename="../PropertyEditor.js" line="819"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Use medição automática</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="848"/>
+        <location filename="../PropertyEditor.js" line="851"/>
         <source>Yes</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -208,7 +208,7 @@ Ontem</translatorcomment>
         <translation>Sim</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="849"/>
+        <location filename="../PropertyEditor.js" line="852"/>
         <source>No</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -224,8 +224,8 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="1160"/>
-        <location filename="../PropertyEditor.js" line="1172"/>
+        <location filename="../PropertyEditor.js" line="1163"/>
+        <location filename="../PropertyEditor.js" line="1175"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

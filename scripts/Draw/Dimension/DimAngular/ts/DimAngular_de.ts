@@ -4,17 +4,17 @@
 <context>
     <name>DimAngular</name>
     <message>
-        <location filename="../DimAngular.js" line="69"/>
+        <location filename="../DimAngular.js" line="72"/>
         <source>Arc or first of two lines</source>
         <translation>Bogen oder erste von zwei Linien</translation>
     </message>
     <message>
-        <location filename="../DimAngular.js" line="81"/>
+        <location filename="../DimAngular.js" line="84"/>
         <source>Second line</source>
         <translation>Zweite Linie</translation>
     </message>
     <message>
-        <location filename="../DimAngular.js" line="89"/>
+        <location filename="../DimAngular.js" line="92"/>
         <source>Dimension arc location</source>
         <translation>Bemassungsbogen Position</translation>
     </message>

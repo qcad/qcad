@@ -4,13 +4,13 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="40"/>
+        <location filename="../DefaultNavigation.js" line="43"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Vue graphique</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="40"/>
+        <location filename="../DefaultNavigation.js" line="43"/>
         <source>Navigation</source>
         <translatorcomment>--google--
 Barre d&apos;outils de navigation
@@ -18,13 +18,13 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
         <translation>Navigation</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="45"/>
+        <location filename="../DefaultNavigation.js" line="48"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zoom (souris à molette)</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="46"/>
+        <location filename="../DefaultNavigation.js" line="49"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Défilement (trackpad, souris multi-touch)</translation>

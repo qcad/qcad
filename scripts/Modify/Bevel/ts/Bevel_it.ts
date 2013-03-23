@@ -4,19 +4,19 @@
 <context>
     <name>Bevel</name>
     <message>
-        <location filename="../Bevel.js" line="50"/>
+        <location filename="../Bevel.js" line="53"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Le due entità non può essere cimare.</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="270"/>
+        <location filename="../Bevel.js" line="273"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Prima entità non può essere tagliato.</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="278"/>
+        <location filename="../Bevel.js" line="281"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Seconda entità non può essere tagliato.</translation>

@@ -4,12 +4,12 @@
 <context>
     <name>LineFreehand</name>
     <message>
-        <location filename="../LineFreehand.js" line="52"/>
+        <location filename="../LineFreehand.js" line="55"/>
         <source>Press to start drawing</source>
         <translation>Premere verso il basso per iniziare a disegnare</translation>
     </message>
     <message>
-        <location filename="../LineFreehand.js" line="60"/>
+        <location filename="../LineFreehand.js" line="63"/>
         <source>Release to stop drawing</source>
         <translation>Lasciate andare per smettere di disegnare</translation>
     </message>

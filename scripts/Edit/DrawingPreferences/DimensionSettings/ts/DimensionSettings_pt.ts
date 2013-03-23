@@ -4,7 +4,7 @@
 <context>
     <name>DimensionSettings</name>
     <message>
-        <location filename="../DimensionSettings.js" line="26"/>
+        <location filename="../DimensionSettings.js" line="29"/>
         <source>Dimension</source>
         <translatorcomment>--exact match--
 --file: Dimension_pt.ts--
@@ -19,19 +19,19 @@ Dimensão Alinhada</translatorcomment>
         <translation type="obsolete">Cotas configurações padrão</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="24"/>
-        <location filename="../DimensionSettings.js" line="26"/>
+        <location filename="../DimensionSettings.js" line="27"/>
+        <location filename="../DimensionSettings.js" line="29"/>
         <source>Dimension Settings</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Configurações cotas</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="24"/>
+        <location filename="../DimensionSettings.js" line="27"/>
         <source>Defaults for New Drawings</source>
         <translation>Padrões para novos desenhos</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="111"/>
+        <location filename="../DimensionSettings.js" line="114"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -39,7 +39,7 @@ Científico</translatorcomment>
         <translation>Científico</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="112"/>
+        <location filename="../DimensionSettings.js" line="115"/>
         <source>Decimal</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -48,7 +48,7 @@ Graus Decimais</translatorcomment>
         <translation>Decimal</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="113"/>
+        <location filename="../DimensionSettings.js" line="116"/>
         <source>Engineering</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -57,7 +57,7 @@ Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&ap
         <translation>Engenharia</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="114"/>
+        <location filename="../DimensionSettings.js" line="117"/>
         <source>Architectural</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -66,7 +66,7 @@ Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&ap
         <translation>Arquitetura</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="115"/>
+        <location filename="../DimensionSettings.js" line="118"/>
         <source>Fractional</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -74,7 +74,7 @@ Fracionais</translatorcomment>
         <translation>Fracionais</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="143"/>
+        <location filename="../DimensionSettings.js" line="146"/>
         <source>Decimal Degrees</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -82,7 +82,7 @@ Graus Decimais</translatorcomment>
         <translation>Graus decimais</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="144"/>
+        <location filename="../DimensionSettings.js" line="147"/>
         <source>Deg/min/sec</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -90,7 +90,7 @@ Grau/min/seg</translatorcomment>
         <translation>Grau/min/seg</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="145"/>
+        <location filename="../DimensionSettings.js" line="148"/>
         <source>Gradians</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -98,7 +98,7 @@ Gradianos</translatorcomment>
         <translation>Gradianos</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="146"/>
+        <location filename="../DimensionSettings.js" line="149"/>
         <source>Radians</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -107,7 +107,7 @@ Radianos</translatorcomment>
         <translation>Radianos</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="147"/>
+        <location filename="../DimensionSettings.js" line="150"/>
         <source>Surveyor&apos;s units</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -115,13 +115,13 @@ Unidades de topógrafo</translatorcomment>
         <translation>Unidades de topógrafo</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="283"/>
+        <location filename="../DimensionSettings.js" line="286"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Unidade / format</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="284"/>
+        <location filename="../DimensionSettings.js" line="287"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>A unidade de desenho deve ser &apos;Inch&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>

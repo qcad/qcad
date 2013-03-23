@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="72"/>
+        <location filename="../CommandLine.js" line="75"/>
         <location filename="../CommandLine.ui" line="14"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
@@ -25,37 +25,37 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Comando desconhecido &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="53"/>
+        <location filename="../CommandLine.js" line="56"/>
         <source>&amp;Command Line</source>
         <translation>Linha de &amp;comando</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="180"/>
+        <location filename="../CommandLine.js" line="183"/>
         <source>Invalid coordinate &apos;%1&apos;.</source>
         <translation>Coordenar inválido &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="199"/>
+        <location filename="../CommandLine.js" line="202"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconhecido ou coordenadas ou valor inválido: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="206"/>
+        <location filename="../CommandLine.js" line="209"/>
         <source>Numbers may be entered as: &apos;%1&apos;</source>
         <translation>Números podem ser inseridos como: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="212"/>
+        <location filename="../CommandLine.js" line="215"/>
         <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
         <translation>Coordenadas podem ser introduzidas como: &apos;%1&apos; (absoluto) ou &apos;%2&apos; (relativa) ou &apos;%3&apos; (polar) ou &apos;%4&apos; (relativa polar)</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="220"/>
+        <location filename="../CommandLine.js" line="223"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
         <translation>Você pode alterar o formato número e coordenadas nas preferências do aplicativo.</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="284"/>
+        <location filename="../CommandLine.js" line="287"/>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
         <translation>Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
@@ -65,7 +65,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="289"/>
+        <location filename="../CommandLine.js" line="292"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -75,12 +75,12 @@ Aviso:</translatorcomment>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="297"/>
+        <location filename="../CommandLine.js" line="300"/>
         <source>Info</source>
         <translation>Informação</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="313"/>
+        <location filename="../CommandLine.js" line="316"/>
         <source>Coordinate</source>
         <translatorcomment>--exact match--
 --file: SnapCoordinate_pt.ts--
@@ -90,7 +90,7 @@ Salta a uma coordenada dada</translatorcomment>
         <translation>Coordenadas</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="316"/>
+        <location filename="../CommandLine.js" line="319"/>
         <source>Command</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -100,7 +100,7 @@ Linha de Comando</translatorcomment>
         <translation>Comando</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="327"/>
+        <location filename="../CommandLine.js" line="330"/>
         <source>Command:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -109,7 +109,7 @@ Impossível executar o comando: %s</translatorcomment>
         <translation>Comando:</translation>
     </message>
     <message>
-        <location filename="../CommandLine.js" line="330"/>
+        <location filename="../CommandLine.js" line="333"/>
         <source>: </source>
         <translatorcomment>--exact match--
 --file: LibraryBrowser_pt.ts--

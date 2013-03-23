@@ -4,14 +4,14 @@
 <context>
     <name>Mirror</name>
     <message>
-        <location filename="../Mirror.js" line="59"/>
+        <location filename="../Mirror.js" line="62"/>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Primo punto di asse di simmetria</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="66"/>
+        <location filename="../Mirror.js" line="69"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--
 Secondo punto per l&apos;asse dello specchio</translatorcomment>

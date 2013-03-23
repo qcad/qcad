@@ -22,103 +22,103 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="184"/>
+        <location filename="../PropertyEditor.js" line="187"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="188"/>
+        <location filename="../PropertyEditor.js" line="191"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="319"/>
+        <location filename="../PropertyEditor.js" line="322"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="335"/>
+        <location filename="../PropertyEditor.js" line="338"/>
         <source>Geometry</source>
         <translation>Geometrie</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="469"/>
+        <location filename="../PropertyEditor.js" line="472"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="546"/>
+        <location filename="../PropertyEditor.js" line="549"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="566"/>
+        <location filename="../PropertyEditor.js" line="569"/>
         <source>Add Custom Property</source>
         <translation>Benutzerdefiniertes Property hinzufügen</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Center</source>
         <translation>Zentrum</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
+        <location filename="../PropertyEditor.js" line="608"/>
         <source>Aligned</source>
         <translation>Ausgerichtet</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
+        <location filename="../PropertyEditor.js" line="608"/>
         <source>Fit</source>
         <translation>Anpassen</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Top</source>
         <translation>Oben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="608"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Middle</source>
         <translation>Mittelpunkt</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Base</source>
         <translation>Basis</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="697"/>
+        <location filename="../PropertyEditor.js" line="700"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="816"/>
+        <location filename="../PropertyEditor.js" line="819"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="848"/>
+        <location filename="../PropertyEditor.js" line="851"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="849"/>
+        <location filename="../PropertyEditor.js" line="852"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
@@ -127,8 +127,8 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="1160"/>
-        <location filename="../PropertyEditor.js" line="1172"/>
+        <location filename="../PropertyEditor.js" line="1163"/>
+        <location filename="../PropertyEditor.js" line="1175"/>
         <source>Property Editor</source>
         <translation>Eigenschaften Editor</translation>
     </message>
@@ -173,7 +173,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="349"/>
+        <location filename="../PropertyEditor.js" line="352"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

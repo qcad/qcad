@@ -9,12 +9,12 @@
         <translation>Schrift der Statusleiste:</translation>
     </message>
     <message>
-        <location filename="../StatusBar.js" line="24"/>
+        <location filename="../StatusBar.js" line="27"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../StatusBar.js" line="24"/>
+        <location filename="../StatusBar.js" line="27"/>
         <source>Status Bar</source>
         <translation>Statuszeile</translation>
     </message>

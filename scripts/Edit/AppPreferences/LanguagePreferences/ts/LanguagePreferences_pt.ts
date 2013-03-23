@@ -28,12 +28,12 @@ Idioma GUI:</translatorcomment>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="38"/>
+        <location filename="../LanguagePreferences.js" line="41"/>
         <source>Language Settings</source>
         <translation>Configurações de linguagem</translation>
     </message>
     <message>
-        <location filename="../LanguagePreferences.js" line="38"/>
+        <location filename="../LanguagePreferences.js" line="41"/>
         <source>Language</source>
         <translation>Linguagem</translation>
     </message>

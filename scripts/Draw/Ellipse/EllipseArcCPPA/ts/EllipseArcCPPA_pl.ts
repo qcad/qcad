@@ -4,7 +4,7 @@
 <context>
     <name>EllipseArcCPPA</name>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="71"/>
+        <location filename="../EllipseArcCPPA.js" line="74"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -13,31 +13,31 @@ Wskaż środek
         <translation type="unfinished">Wyśrodkuj</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="78"/>
+        <location filename="../EllipseArcCPPA.js" line="81"/>
         <source>Major point of ellipse or major radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Głównym punktem elipsy lub promień głównej</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="79"/>
+        <location filename="../EllipseArcCPPA.js" line="82"/>
         <source>Major point of ellipse</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Głównym punktem elipsy</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="84"/>
+        <location filename="../EllipseArcCPPA.js" line="87"/>
         <source>Minor point of ellipse or minor radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Minor punkt promienia elipsy lub drobne</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="85"/>
+        <location filename="../EllipseArcCPPA.js" line="88"/>
         <source>Minor point of ellipse</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Minor punkt elipsy</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="90"/>
+        <location filename="../EllipseArcCPPA.js" line="93"/>
         <source>Rotation angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -47,31 +47,31 @@ Kąt obracania</translatorcomment>
         <translation type="unfinished">Kąt obracania</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="97"/>
+        <location filename="../EllipseArcCPPA.js" line="100"/>
         <source>Start parameter</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kliknij parametr</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="104"/>
+        <location filename="../EllipseArcCPPA.js" line="107"/>
         <source>End parameter</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Parametr End</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="368"/>
+        <location filename="../EllipseArcCPPA.js" line="371"/>
         <source>Invalid major radius.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowy główny promień.</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="378"/>
+        <location filename="../EllipseArcCPPA.js" line="381"/>
         <source>Major radius:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Główne promień:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="394"/>
+        <location filename="../EllipseArcCPPA.js" line="397"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -80,13 +80,13 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished">Kąt:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="407"/>
+        <location filename="../EllipseArcCPPA.js" line="410"/>
         <source>Minor radius:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Mniejszy promień:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="432"/>
+        <location filename="../EllipseArcCPPA.js" line="435"/>
         <source>Start angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -95,7 +95,7 @@ Kąt początkowy:</translatorcomment>
         <translation type="unfinished">Kąt początkowy:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="448"/>
+        <location filename="../EllipseArcCPPA.js" line="451"/>
         <source>End angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

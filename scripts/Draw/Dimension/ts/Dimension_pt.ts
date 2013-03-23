@@ -4,13 +4,13 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="62"/>
+        <location filename="../Dimension.js" line="65"/>
         <source>No prefix</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sem prefixo</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="64"/>
+        <location filename="../Dimension.js" line="66"/>
         <source>Radius</source>
         <translation>Raio</translation>
     </message>
@@ -19,12 +19,12 @@
         <translation type="obsolete">Métrica</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="65"/>
+        <location filename="../Dimension.js" line="67"/>
         <source>Metric screw</source>
         <translation>Métrica</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="66"/>
+        <location filename="../Dimension.js" line="68"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -33,13 +33,23 @@ Diâmetro (ø)</translatorcomment>
         <translation>Diâmetro</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="67"/>
+        <location filename="../Dimension.js" line="69"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Plus / Minus</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="68"/>
+        <location filename="../Dimension.js" line="70"/>
+        <source>Almost equal to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Dimension.js" line="71"/>
+        <source>Asymptotically equal to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Dimension.js" line="72"/>
         <source>Square</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -47,7 +57,7 @@ Quadras Em</translatorcomment>
         <translation>Quadrado</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="69"/>
+        <location filename="../Dimension.js" line="73"/>
         <source>Delta</source>
         <translatorcomment>--google--
 Delta X
@@ -55,19 +65,19 @@ Delta Y</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="110"/>
+        <location filename="../Dimension.js" line="114"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas cotas</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="115"/>
+        <location filename="../Dimension.js" line="119"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mostrar as ferramentas cotas</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="132"/>
+        <location filename="../Dimension.js" line="136"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>D&amp;imensão</translation>

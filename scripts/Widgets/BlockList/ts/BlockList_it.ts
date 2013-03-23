@@ -4,8 +4,8 @@
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../BlockList.js" line="266"/>
-        <location filename="../BlockList.js" line="300"/>
+        <location filename="../BlockList.js" line="269"/>
+        <location filename="../BlockList.js" line="303"/>
         <source>Block List</source>
         <translation>Lista Blocchi</translation>
     </message>

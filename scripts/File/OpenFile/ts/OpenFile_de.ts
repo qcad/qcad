@@ -4,19 +4,18 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="49"/>
+        <location filename="../OpenFile.js" line="52"/>
         <source>Open Drawing</source>
         <translation>Zeichnung öffnen</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="55"/>
         <source>All Files</source>
         <translation>Alle Dateien</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="57"/>
         <source>Format:</source>
-        <translation>Format:</translation>
+        <translation type="obsolete">Format:</translation>
     </message>
     <message>
         <source>Loading...</source>

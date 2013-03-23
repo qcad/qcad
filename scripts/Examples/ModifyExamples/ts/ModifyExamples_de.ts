@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Layer</translation>
     </message>
     <message>
-        <location filename="../ModifyExamples.js" line="48"/>
+        <location filename="../ModifyExamples.js" line="51"/>
         <source>&amp;Modify</source>
         <translation>M&amp;odifizieren</translation>
     </message>

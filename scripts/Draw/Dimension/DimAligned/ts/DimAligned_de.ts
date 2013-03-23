@@ -4,17 +4,17 @@
 <context>
     <name>DimAligned</name>
     <message>
-        <location filename="../DimAligned.js" line="57"/>
+        <location filename="../DimAligned.js" line="60"/>
         <source>First extension line origin</source>
         <translation>Startpunkt erste Bemassungslinie</translation>
     </message>
     <message>
-        <location filename="../DimAligned.js" line="66"/>
+        <location filename="../DimAligned.js" line="69"/>
         <source>Second extension line origin</source>
         <translation>Startpunkt zweite Bemassungslinie</translation>
     </message>
     <message>
-        <location filename="../DimAligned.js" line="74"/>
+        <location filename="../DimAligned.js" line="77"/>
         <source>Dimension line location</source>
         <translation>Position Bemassungslinie</translation>
     </message>

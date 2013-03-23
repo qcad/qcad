@@ -4,7 +4,7 @@
 <context>
     <name>LinePolygonCP</name>
     <message>
-        <location filename="../LinePolygonCP.js" line="55"/>
+        <location filename="../LinePolygonCP.js" line="58"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -14,13 +14,13 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.js" line="62"/>
+        <location filename="../LinePolygonCP.js" line="65"/>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto de canto</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.js" line="65"/>
+        <location filename="../LinePolygonCP.js" line="68"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

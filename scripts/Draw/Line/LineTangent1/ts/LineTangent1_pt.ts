@@ -4,25 +4,25 @@
 <context>
     <name>LineTangent1</name>
     <message>
-        <location filename="../LineTangent1.js" line="59"/>
+        <location filename="../LineTangent1.js" line="62"/>
         <source>Choose start point of tangent</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha o punto de inicio da tangente</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="69"/>
+        <location filename="../LineTangent1.js" line="72"/>
         <source>Choose circle, arc or ellipse</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha círculo, arco ou elipse</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="152"/>
+        <location filename="../LineTangent1.js" line="155"/>
         <source>No tangent possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não tangente possível.</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="208"/>
+        <location filename="../LineTangent1.js" line="211"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não pode chamar a tangente do ponto dentro de círculo para círculo</translation>

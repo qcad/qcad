@@ -4,17 +4,17 @@
 <context>
     <name>Arc3P</name>
     <message>
-        <location filename="../Arc3P.js" line="59"/>
+        <location filename="../Arc3P.js" line="62"/>
         <source>Start point</source>
         <translation>Point de départ</translation>
     </message>
     <message>
-        <location filename="../Arc3P.js" line="67"/>
+        <location filename="../Arc3P.js" line="70"/>
         <source>Point on arc</source>
         <translation>Point sur l&apos;arc</translation>
     </message>
     <message>
-        <location filename="../Arc3P.js" line="74"/>
+        <location filename="../Arc3P.js" line="77"/>
         <source>End point</source>
         <translation>Point final</translation>
     </message>

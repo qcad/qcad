@@ -4,18 +4,18 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="65"/>
+        <location filename="../Rotate.js" line="68"/>
         <source>Center point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Point central</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="75"/>
+        <location filename="../Rotate.js" line="78"/>
         <source>Reference point</source>
         <translation>Point de référence</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="84"/>
+        <location filename="../Rotate.js" line="87"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Indiquer le point cible</translatorcomment>

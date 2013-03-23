@@ -14,12 +14,12 @@
         <translation>Longueur :</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngle.js" line="60"/>
+        <location filename="../LineRelativeAngle.js" line="63"/>
         <source>Choose base entity</source>
         <translation>Choisissez l&apos;entité de base</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngle.js" line="69"/>
+        <location filename="../LineRelativeAngle.js" line="72"/>
         <source>Set position</source>
         <translation>Définir la position</translation>
     </message>

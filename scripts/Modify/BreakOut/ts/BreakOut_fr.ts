@@ -19,12 +19,12 @@
         <translation>Supprimer le segment</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="55"/>
+        <location filename="../BreakOut.js" line="58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
         <translation>Choisissez ligne, arc, cercle ou ellipse pour ajuster</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="58"/>
+        <location filename="../BreakOut.js" line="61"/>
         <source>Choose line, arc, circle or ellipse segment</source>
         <translation>Choisissez segment de ligne, arc, cercle ou ellipse</translation>
     </message>

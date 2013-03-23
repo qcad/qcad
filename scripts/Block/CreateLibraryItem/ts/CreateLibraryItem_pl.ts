@@ -4,7 +4,7 @@
 <context>
     <name>CreateLibraryItem</name>
     <message>
-        <location filename="../CreateLibraryItem.js" line="46"/>
+        <location filename="../CreateLibraryItem.js" line="49"/>
         <source>Reference Point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -13,7 +13,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItem.js" line="70"/>
+        <location filename="../CreateLibraryItem.js" line="73"/>
         <source>Save library item as...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zapisz jako ... elementu biblioteki</translation>

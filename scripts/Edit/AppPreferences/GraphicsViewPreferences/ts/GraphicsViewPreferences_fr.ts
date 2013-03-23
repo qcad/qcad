@@ -237,13 +237,13 @@ Sélections persistantes</translatorcomment>
         <translation type="obsolete">Sélection persistante</translation>
     </message>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="21"/>
+        <location filename="../GraphicsViewPreferences.js" line="24"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Vue graphique</translation>
     </message>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="21"/>
+        <location filename="../GraphicsViewPreferences.js" line="24"/>
         <source>Appearance</source>
         <translation>Apparence</translation>
     </message>

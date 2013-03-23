@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="48"/>
+        <location filename="../InfoDistanceEP.js" line="51"/>
         <source>Specify entity</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -13,7 +13,7 @@ Especifique a entidade a ser cortada</translatorcomment>
         <translation>Especifique a entidade</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="56"/>
+        <location filename="../InfoDistanceEP.js" line="59"/>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: LineParallelThrough_pt.ts--
@@ -21,7 +21,7 @@ Especifique o ponto</translatorcomment>
         <translation>Especifique o ponto</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="59"/>
+        <location filename="../InfoDistanceEP.js" line="62"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -31,7 +31,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="121"/>
+        <location filename="../InfoDistanceEP.js" line="124"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: PolylineEquidistant_pt.ts--

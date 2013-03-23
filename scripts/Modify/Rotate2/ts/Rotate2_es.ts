@@ -4,13 +4,13 @@
 <context>
     <name>Rotate2</name>
     <message>
-        <location filename="../Rotate2.js" line="64"/>
+        <location filename="../Rotate2.js" line="67"/>
         <source>Center of primary rotation</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Centro de rotación primaria</translation>
     </message>
     <message>
-        <location filename="../Rotate2.js" line="71"/>
+        <location filename="../Rotate2.js" line="74"/>
         <source>Center of secondary rotation</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Centro de rotación secundaria</translation>

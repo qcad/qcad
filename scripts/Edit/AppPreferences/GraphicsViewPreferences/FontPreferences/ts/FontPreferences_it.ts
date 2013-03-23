@@ -4,12 +4,12 @@
 <context>
     <name>FontPreferences</name>
     <message>
-        <location filename="../FontPreferences.js" line="21"/>
+        <location filename="../FontPreferences.js" line="24"/>
         <source>Graphics View</source>
         <translation>Visualizzazione grafica</translation>
     </message>
     <message>
-        <location filename="../FontPreferences.js" line="21"/>
+        <location filename="../FontPreferences.js" line="24"/>
         <source>Fonts</source>
         <translation>Tipi di carattere</translation>
     </message>

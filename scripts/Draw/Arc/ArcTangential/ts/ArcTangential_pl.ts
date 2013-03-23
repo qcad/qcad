@@ -4,13 +4,13 @@
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../ArcTangential.js" line="60"/>
+        <location filename="../ArcTangential.js" line="63"/>
         <source>Choose base line or base arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz linię bazową lub łuku bazowego</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.js" line="66"/>
+        <location filename="../ArcTangential.js" line="69"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz punkt końcowy łuku</translation>

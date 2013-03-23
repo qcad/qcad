@@ -23,7 +23,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="63"/>
+        <location filename="../InsertBlock.js" line="66"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>

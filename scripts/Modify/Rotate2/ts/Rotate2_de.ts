@@ -9,12 +9,12 @@
         <translation>Rotieren &amp;Zwei</translation>
     </message>
     <message>
-        <location filename="../Rotate2.js" line="64"/>
+        <location filename="../Rotate2.js" line="67"/>
         <source>Center of primary rotation</source>
         <translation>Zentrum der primären Rotation</translation>
     </message>
     <message>
-        <location filename="../Rotate2.js" line="71"/>
+        <location filename="../Rotate2.js" line="74"/>
         <source>Center of secondary rotation</source>
         <translation>Zentrum der sekundären Rotation</translation>
     </message>

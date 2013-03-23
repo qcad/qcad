@@ -4,27 +4,27 @@
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../Projection.js" line="72"/>
+        <location filename="../Projection.js" line="75"/>
         <source>Projection Tools</source>
         <translation>Projektionswerkzeuge</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="77"/>
+        <location filename="../Projection.js" line="80"/>
         <source>Show projection tools</source>
         <translation>Projektionswerkzeuge</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="90"/>
+        <location filename="../Projection.js" line="93"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projektion</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="125"/>
+        <location filename="../Projection.js" line="128"/>
         <source>Reference point</source>
         <translation>Referenzpunkt</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="132"/>
+        <location filename="../Projection.js" line="135"/>
         <source>Target point</source>
         <translation>Zielpunkt</translation>
     </message>
@@ -32,14 +32,12 @@
 <context>
     <name>ProjectionCylindrical</name>
     <message>
-        <location filename="../ProjectionCylindrical.js" line="71"/>
         <source>Cylinder axis start point</source>
-        <translation>Startpunkt der Zylinderachse</translation>
+        <translation type="obsolete">Startpunkt der Zylinderachse</translation>
     </message>
     <message>
-        <location filename="../ProjectionCylindrical.js" line="80"/>
         <source>Cylinder axis end point</source>
-        <translation>Endpunkt der Zylinderachse</translation>
+        <translation type="obsolete">Endpunkt der Zylinderachse</translation>
     </message>
 </context>
 </TS>

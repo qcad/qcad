@@ -4,13 +4,13 @@
 <context>
     <name>ColorPreferences</name>
     <message>
-        <location filename="../ColorPreferences.js" line="21"/>
+        <location filename="../ColorPreferences.js" line="24"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Graphics View</translation>
     </message>
     <message>
-        <location filename="../ColorPreferences.js" line="21"/>
+        <location filename="../ColorPreferences.js" line="24"/>
         <source>Colors</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

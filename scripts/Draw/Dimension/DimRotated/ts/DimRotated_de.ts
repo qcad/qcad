@@ -4,17 +4,17 @@
 <context>
     <name>DimRotated</name>
     <message>
-        <location filename="../DimRotated.js" line="57"/>
+        <location filename="../DimRotated.js" line="60"/>
         <source>First extension line origin</source>
         <translation>Startpunkt erste Bemassungslinie</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="66"/>
+        <location filename="../DimRotated.js" line="69"/>
         <source>Second extension line origin</source>
         <translation>Startpunkt zweite Bemassungslinie</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="74"/>
+        <location filename="../DimRotated.js" line="77"/>
         <source>Dimension line location</source>
         <translation>Position Bemassungslinie</translation>
     </message>

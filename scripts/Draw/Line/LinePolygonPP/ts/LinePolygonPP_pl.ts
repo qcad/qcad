@@ -13,20 +13,20 @@
 <context>
     <name>LinePolygonPP</name>
     <message>
-        <location filename="../LinePolygonPP.js" line="55"/>
+        <location filename="../LinePolygonPP.js" line="58"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Wskaż pierwszy wierzchołek</translatorcomment>
         <translation type="unfinished">Pierwszy zakręt</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPP.js" line="62"/>
+        <location filename="../LinePolygonPP.js" line="65"/>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Punkt narożny</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPP.js" line="65"/>
+        <location filename="../LinePolygonPP.js" line="68"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

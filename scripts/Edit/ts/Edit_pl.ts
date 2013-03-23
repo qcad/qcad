@@ -4,7 +4,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="38"/>
+        <location filename="../AbstractPreferences.js" line="41"/>
         <source>Application Preferences</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -14,7 +14,7 @@ Ogólne ustawienia aplikacji</translatorcomment>
         <translation type="unfinished">Preferencje aplikacji</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="40"/>
+        <location filename="../AbstractPreferences.js" line="43"/>
         <source>Drawing Preferences</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -23,13 +23,13 @@ Preferencje bieżącego rysunku
         <translation type="unfinished">Preferencje rysowania</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="295"/>
+        <location filename="../AbstractPreferences.js" line="298"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymaga ponownego uruchomienia</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="298"/>
+        <location filename="../AbstractPreferences.js" line="301"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -39,7 +39,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="38"/>
+        <location filename="../ClipboardOperation.js" line="41"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -51,7 +51,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="49"/>
+        <location filename="../Edit.js" line="52"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

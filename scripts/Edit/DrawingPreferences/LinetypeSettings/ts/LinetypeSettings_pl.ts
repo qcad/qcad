@@ -4,7 +4,7 @@
 <context>
     <name>LinetypeSettings</name>
     <message>
-        <location filename="../LinetypeSettings.js" line="22"/>
+        <location filename="../LinetypeSettings.js" line="25"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -12,14 +12,14 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../LinetypeSettings.js" line="22"/>
-        <location filename="../LinetypeSettings.js" line="24"/>
+        <location filename="../LinetypeSettings.js" line="25"/>
+        <location filename="../LinetypeSettings.js" line="27"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rodzaj linii</translation>
     </message>
     <message>
-        <location filename="../LinetypeSettings.js" line="24"/>
+        <location filename="../LinetypeSettings.js" line="27"/>
         <source>General</source>
         <translatorcomment>--google--
 Ogólne ustawienia aplikacji

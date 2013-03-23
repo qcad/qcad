@@ -4,17 +4,17 @@
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="49"/>
+        <location filename="../File.js" line="52"/>
         <source>&amp;File</source>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location filename="../File.js" line="100"/>
+        <location filename="../File.js" line="103"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
     <message>
-        <location filename="../File.js" line="137"/>
+        <location filename="../File.js" line="140"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translation>Die Datei &apos;%1&apos; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation type="obsolete">Datei</translation>
     </message>
     <message>
-        <location filename="../File.js" line="136"/>
+        <location filename="../File.js" line="139"/>
         <source>Overwrite File?</source>
         <translation>Datei überschreiben?</translation>
     </message>

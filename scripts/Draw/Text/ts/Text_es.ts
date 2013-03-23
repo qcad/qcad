@@ -12,7 +12,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="78"/>
+        <location filename="../Text.js" line="81"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
@@ -45,133 +45,133 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="348"/>
+        <location filename="../TextDialog/TextDialog.js" line="351"/>
         <source>&amp;Undo</source>
         <translation>&amp;Deshacer</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="352"/>
+        <location filename="../TextDialog/TextDialog.js" line="355"/>
         <source>&amp;Redo</source>
         <translation>&amp;Rehacer</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="356"/>
+        <location filename="../TextDialog/TextDialog.js" line="359"/>
         <source>Cu&amp;t</source>
         <translation>Cor&amp;tar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="360"/>
+        <location filename="../TextDialog/TextDialog.js" line="363"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="364"/>
+        <location filename="../TextDialog/TextDialog.js" line="367"/>
         <source>&amp;Paste</source>
         <translation>&amp;Pegar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="372"/>
+        <location filename="../TextDialog/TextDialog.js" line="375"/>
         <source>&amp;Bold</source>
         <translation>&amp;Negrita</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="381"/>
+        <location filename="../TextDialog/TextDialog.js" line="384"/>
         <source>&amp;Italic</source>
         <translation>&amp;Cursivo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="401"/>
+        <location filename="../TextDialog/TextDialog.js" line="404"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Subíndice</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="407"/>
+        <location filename="../TextDialog/TextDialog.js" line="410"/>
         <source>&amp;Superscript</source>
         <translation>&amp;Sobrescrito</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="425"/>
+        <location filename="../TextDialog/TextDialog.js" line="428"/>
         <source>&amp;Color...</source>
         <translation>&amp;Color...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="431"/>
+        <location filename="../TextDialog/TextDialog.js" line="434"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Caracteres especiales ...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="731"/>
+        <location filename="../TextDialog/TextDialog.js" line="734"/>
         <source>Others...</source>
         <translation>Otros...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="859"/>
+        <location filename="../TextDialog/TextDialog.js" line="862"/>
         <source>Degree</source>
         <translation>Grados</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="860"/>
+        <location filename="../TextDialog/TextDialog.js" line="863"/>
         <source>Plus-Minus</source>
         <translation>Más-menos</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="862"/>
+        <location filename="../TextDialog/TextDialog.js" line="865"/>
         <source>Diameter</source>
         <translation>Diámetro</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="863"/>
+        <location filename="../TextDialog/TextDialog.js" line="866"/>
         <source>Almost equal</source>
         <translation>Casi igual</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="864"/>
+        <location filename="../TextDialog/TextDialog.js" line="867"/>
         <source>Multiplication</source>
         <translation>Multiplicación</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="865"/>
+        <location filename="../TextDialog/TextDialog.js" line="868"/>
         <source>Division</source>
         <translation>Dividir</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="866"/>
+        <location filename="../TextDialog/TextDialog.js" line="869"/>
         <source>Delta</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="867"/>
+        <location filename="../TextDialog/TextDialog.js" line="870"/>
         <source>Pi</source>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="868"/>
+        <location filename="../TextDialog/TextDialog.js" line="871"/>
         <source>Identity</source>
         <translation>Identidad</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="869"/>
+        <location filename="../TextDialog/TextDialog.js" line="872"/>
         <source>Not equal</source>
         <translation>Desigual</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="870"/>
+        <location filename="../TextDialog/TextDialog.js" line="873"/>
         <source>Ohm</source>
         <translation>Ohm</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="871"/>
+        <location filename="../TextDialog/TextDialog.js" line="874"/>
         <source>Omega</source>
         <translation>Omega</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="872"/>
+        <location filename="../TextDialog/TextDialog.js" line="875"/>
         <source>Squared</source>
         <translation>Cuadratura</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="873"/>
+        <location filename="../TextDialog/TextDialog.js" line="876"/>
         <source>Cubed</source>
         <translation>Cúbico</translation>
     </message>

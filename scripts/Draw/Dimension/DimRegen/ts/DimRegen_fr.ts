@@ -4,12 +4,12 @@
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../DimRegen.js" line="60"/>
+        <location filename="../DimRegen.js" line="63"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Aucun objets de dimension sélectionné avec une position de texte personnalisé.</translation>
     </message>
     <message>
-        <location filename="../DimRegen.js" line="63"/>
+        <location filename="../DimRegen.js" line="66"/>
         <source>Reset label position of %1 dimension(s).</source>
         <translation>Position de l&apos;étiquette de %1 dimension(s) a été réinitialisé.</translation>
     </message>

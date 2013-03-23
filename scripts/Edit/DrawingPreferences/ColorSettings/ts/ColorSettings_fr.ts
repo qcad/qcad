@@ -4,17 +4,17 @@
 <context>
     <name>ColorSettings</name>
     <message>
-        <location filename="../ColorSettings.js" line="22"/>
+        <location filename="../ColorSettings.js" line="25"/>
         <source>Defaults for New Drawings</source>
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="22"/>
+        <location filename="../ColorSettings.js" line="25"/>
         <source>Printing - Colors</source>
         <translation>Impression - Couleurs</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="24"/>
+        <location filename="../ColorSettings.js" line="27"/>
         <source>Printing</source>
         <translation>Impression</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation type="obsolete">Paramètres de couleur par défaut</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="24"/>
+        <location filename="../ColorSettings.js" line="27"/>
         <source>Colors</source>
         <translation>Couleurs</translation>
     </message>

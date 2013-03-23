@@ -9,12 +9,12 @@
         <translation>&amp;Rechteck</translation>
     </message>
     <message>
-        <location filename="../LineRectangle.js" line="53"/>
+        <location filename="../LineRectangle.js" line="56"/>
         <source>First corner</source>
         <translation>Erster Eckpunkt</translation>
     </message>
     <message>
-        <location filename="../LineRectangle.js" line="60"/>
+        <location filename="../LineRectangle.js" line="63"/>
         <source>Second corner</source>
         <translation>Zweiter Eckpunkt</translation>
     </message>

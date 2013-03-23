@@ -4,19 +4,19 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="60"/>
+        <location filename="../DrawPolyline.js" line="63"/>
         <source>First vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pierwszy wierzchołek</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="70"/>
+        <location filename="../DrawPolyline.js" line="73"/>
         <source>Next vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Następny wierzchołek</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="73"/>
+        <location filename="../DrawPolyline.js" line="76"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

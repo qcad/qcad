@@ -4,17 +4,17 @@
 <context>
     <name>Stretch</name>
     <message>
-        <location filename="../Stretch.js" line="56"/>
+        <location filename="../Stretch.js" line="59"/>
         <source>First corner</source>
         <translation>Primo punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="75"/>
+        <location filename="../Stretch.js" line="78"/>
         <source>Reference point</source>
         <translation>Punto di riferimento</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="83"/>
+        <location filename="../Stretch.js" line="86"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_it.ts--
@@ -28,7 +28,7 @@ Obiettivo punto</translatorcomment>
         <translation>&amp;Stira</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="66"/>
+        <location filename="../Stretch.js" line="69"/>
         <source>Second corner</source>
         <translation>Secondo punto dell&apos;angolo</translation>
     </message>

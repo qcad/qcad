@@ -33,12 +33,12 @@
         <translation type="obsolete">Unbenannt %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="88"/>
+        <location filename="../NewFile.js" line="91"/>
         <source>Loading...</source>
         <translation>Lade..</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="92"/>
+        <location filename="../NewFile.js" line="95"/>
         <source>Import Error</source>
         <translation>Import Fehler</translation>
     </message>
@@ -55,37 +55,37 @@
 </translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="96"/>
+        <location filename="../NewFile.js" line="99"/>
         <source>Cannot open file</source>
         <translation>Kann Datei nicht öffnen</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="99"/>
+        <location filename="../NewFile.js" line="102"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
         <translation>Kein geeigneter Importer gefunden. Bitte überprüfen Sie das Dateiformat und die Dateiendung.</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="103"/>
+        <location filename="../NewFile.js" line="106"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translation>Bitte überprüfen Sie die Zugriffsrechte, das Dateiformat und die Dateiendung.</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="191"/>
+        <location filename="../NewFile.js" line="194"/>
         <source>Untitled %1</source>
         <translation>Unbenannt %1</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="203"/>
+        <location filename="../NewFile.js" line="206"/>
         <source>read-only</source>
         <translation>nur lesen</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="235"/>
+        <location filename="../NewFile.js" line="238"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Möchten Sie die gemachten Änderungen in der&lt;br&gt;Zeichnung &apos;%1&apos; speichern?</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="238"/>
+        <location filename="../NewFile.js" line="241"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
         <translation>Ihre Änderungen gehen verloren wenn sie nicht gespeichert werden.</translation>
     </message>

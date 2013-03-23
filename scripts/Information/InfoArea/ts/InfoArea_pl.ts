@@ -4,13 +4,13 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="61"/>
+        <location filename="../InfoArea.js" line="64"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Ustaw następny róg wielokąta</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="67"/>
+        <location filename="../InfoArea.js" line="70"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -20,13 +20,13 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="191"/>
+        <location filename="../InfoArea.js" line="194"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Polygon area:</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="192"/>
+        <location filename="../InfoArea.js" line="195"/>
         <source>circumference:</source>
         <translatorcomment>--google--
 Obwód: %1</translatorcomment>

@@ -4,17 +4,17 @@
 <context>
     <name>Circle3P</name>
     <message>
-        <location filename="../Circle3P.js" line="60"/>
+        <location filename="../Circle3P.js" line="63"/>
         <source>First point</source>
         <translation>Primer punto</translation>
     </message>
     <message>
-        <location filename="../Circle3P.js" line="69"/>
+        <location filename="../Circle3P.js" line="72"/>
         <source>Second point</source>
         <translation>Segundo punto</translation>
     </message>
     <message>
-        <location filename="../Circle3P.js" line="77"/>
+        <location filename="../Circle3P.js" line="80"/>
         <source>Third point</source>
         <translation>El tercer punto</translation>
     </message>

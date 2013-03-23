@@ -4,7 +4,7 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="65"/>
+        <location filename="../LineParallelThrough.js" line="68"/>
         <source>Specify point</source>
         <translation>Punkt angeben</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Anzahl:</translation>
     </message>
     <message>
-        <location filename="../LineParallelThrough.js" line="59"/>
+        <location filename="../LineParallelThrough.js" line="62"/>
         <source>Choose line, arc or circle</source>
         <translation>Linie, Bogen oder Kreis wählen</translation>
     </message>

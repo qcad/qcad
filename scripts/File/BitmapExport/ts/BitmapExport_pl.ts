@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="85"/>
+        <location filename="../BitmapExport.js" line="88"/>
         <source>Files</source>
         <translatorcomment>--exact match--
 --file: assistant_pl.ts--
@@ -13,19 +13,19 @@ Wszystkie pliki (*.*)</translatorcomment>
         <translation type="unfinished">Pliki</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="95"/>
+        <location filename="../BitmapExport.js" line="98"/>
         <source>Export as Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Eksportuj jako bitmapę</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="215"/>
+        <location filename="../BitmapExport.js" line="218"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Błąd podczas generowania pliku bitmapy&apos;&amp;#39;:</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="220"/>
+        <location filename="../BitmapExport.js" line="223"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Bitmap file został wywieziony do&apos;&amp;#39;</translation>

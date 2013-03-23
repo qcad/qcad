@@ -25,7 +25,7 @@ QtiPlot - Error de Programación</translatorcomment>
 <context>
     <name>ScriptingPreferences</name>
     <message>
-        <location filename="../ScriptingPreferences.js" line="21"/>
+        <location filename="../ScriptingPreferences.js" line="24"/>
         <source>Scripting</source>
         <translation>Script</translation>
     </message>

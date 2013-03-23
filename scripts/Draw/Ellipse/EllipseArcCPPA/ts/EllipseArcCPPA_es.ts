@@ -4,72 +4,72 @@
 <context>
     <name>EllipseArcCPPA</name>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="71"/>
+        <location filename="../EllipseArcCPPA.js" line="74"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="78"/>
+        <location filename="../EllipseArcCPPA.js" line="81"/>
         <source>Major point of ellipse or major radius</source>
         <translation>El punto principal de la elipse o radio mayor</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="79"/>
+        <location filename="../EllipseArcCPPA.js" line="82"/>
         <source>Major point of ellipse</source>
         <translation>El punto principal de la elipse</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="84"/>
+        <location filename="../EllipseArcCPPA.js" line="87"/>
         <source>Minor point of ellipse or minor radius</source>
         <translation>El punto de menor de la elipse o el radio menor</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="85"/>
+        <location filename="../EllipseArcCPPA.js" line="88"/>
         <source>Minor point of ellipse</source>
         <translation>El punto de menor de la elipse</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="90"/>
+        <location filename="../EllipseArcCPPA.js" line="93"/>
         <source>Rotation angle</source>
         <translation>Ángulo de rotación</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="97"/>
+        <location filename="../EllipseArcCPPA.js" line="100"/>
         <source>Start parameter</source>
         <translation>Parámetro de partida</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="104"/>
+        <location filename="../EllipseArcCPPA.js" line="107"/>
         <source>End parameter</source>
         <translation>Parámetro final</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="368"/>
+        <location filename="../EllipseArcCPPA.js" line="371"/>
         <source>Invalid major radius.</source>
         <translation>Inválida radio mayor.</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="378"/>
+        <location filename="../EllipseArcCPPA.js" line="381"/>
         <source>Major radius:</source>
         <translation>Radio mayor:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="394"/>
+        <location filename="../EllipseArcCPPA.js" line="397"/>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="407"/>
+        <location filename="../EllipseArcCPPA.js" line="410"/>
         <source>Minor radius:</source>
         <translation>Radio menor:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="432"/>
+        <location filename="../EllipseArcCPPA.js" line="435"/>
         <source>Start angle:</source>
         <translation>Ángulo inicial:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="448"/>
+        <location filename="../EllipseArcCPPA.js" line="451"/>
         <source>End angle:</source>
         <translation>Ángulo final:</translation>
     </message>

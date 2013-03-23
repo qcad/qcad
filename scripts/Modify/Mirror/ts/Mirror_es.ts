@@ -4,13 +4,13 @@
 <context>
     <name>Mirror</name>
     <message>
-        <location filename="../Mirror.js" line="59"/>
+        <location filename="../Mirror.js" line="62"/>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primer punto del eje de simetría</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="66"/>
+        <location filename="../Mirror.js" line="69"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Segundo punto del eje de simetría</translation>

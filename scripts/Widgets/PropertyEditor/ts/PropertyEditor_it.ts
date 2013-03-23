@@ -23,49 +23,49 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="335"/>
+        <location filename="../PropertyEditor.js" line="338"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="604"/>
+        <location filename="../PropertyEditor.js" line="607"/>
         <source>Right</source>
         <translation>Destra</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
+        <location filename="../PropertyEditor.js" line="608"/>
         <source>Aligned</source>
         <translation>Allineato</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Top</source>
         <translation>Sopra</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="608"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Middle</source>
         <translation>Medio</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="184"/>
+        <location filename="../PropertyEditor.js" line="187"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="188"/>
+        <location filename="../PropertyEditor.js" line="191"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -74,7 +74,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="319"/>
+        <location filename="../PropertyEditor.js" line="322"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -82,28 +82,28 @@ Nessuna selezione</translatorcomment>
         <translation>Nessuna selezione</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="349"/>
+        <location filename="../PropertyEditor.js" line="352"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="469"/>
+        <location filename="../PropertyEditor.js" line="472"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="546"/>
+        <location filename="../PropertyEditor.js" line="549"/>
         <source>All</source>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="566"/>
+        <location filename="../PropertyEditor.js" line="569"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aggiungi proprietà personalizzata</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="605"/>
+        <location filename="../PropertyEditor.js" line="608"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -112,12 +112,12 @@ Primo punto di adattamento</translatorcomment>
         <translation>Fit</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Bottom</source>
         <translation>Sotto</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="614"/>
+        <location filename="../PropertyEditor.js" line="617"/>
         <source>Base</source>
         <translatorcomment>--exact match--
 --file: src_shell_data_translations_ktoon_it.ts--
@@ -126,29 +126,29 @@ Specifica la base</translatorcomment>
         <translation>Base</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="697"/>
+        <location filename="../PropertyEditor.js" line="700"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="816"/>
+        <location filename="../PropertyEditor.js" line="819"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="848"/>
+        <location filename="../PropertyEditor.js" line="851"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="849"/>
+        <location filename="../PropertyEditor.js" line="852"/>
         <source>No</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="1160"/>
-        <location filename="../PropertyEditor.js" line="1172"/>
+        <location filename="../PropertyEditor.js" line="1163"/>
+        <location filename="../PropertyEditor.js" line="1175"/>
         <source>Property Editor</source>
         <translation>Editor delle proprietà</translation>
     </message>

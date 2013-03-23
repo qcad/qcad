@@ -4,13 +4,13 @@
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../SvgImport.js" line="35"/>
+        <location filename="../SvgImport.js" line="38"/>
         <source>Import SVG</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Importar SVG</translation>
     </message>
     <message>
-        <location filename="../SvgImport.js" line="36"/>
+        <location filename="../SvgImport.js" line="39"/>
         <source>SVG Files</source>
         <translatorcomment>--exact match--
 --file: SvgExport_pt.ts--
@@ -19,7 +19,7 @@ Arquivos SVG</translatorcomment>
         <translation>Arquivos SVG</translation>
     </message>
     <message>
-        <location filename="../SvgImport.js" line="36"/>
+        <location filename="../SvgImport.js" line="39"/>
         <source>All Files</source>
         <translatorcomment>--exact match--
 --file: pt.po--

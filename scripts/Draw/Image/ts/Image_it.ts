@@ -4,32 +4,32 @@
 <context>
     <name>Image</name>
     <message>
-        <location filename="../Image.js" line="115"/>
+        <location filename="../Image.js" line="118"/>
         <source>Files</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="132"/>
+        <location filename="../Image.js" line="135"/>
         <source>All Image Files (%1)</source>
         <translation>Tutti i file immagine (%1)</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="134"/>
+        <location filename="../Image.js" line="137"/>
         <source>All Files</source>
         <translation>Tutti i file</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="142"/>
+        <location filename="../Image.js" line="145"/>
         <source>Import Bitmap</source>
         <translation>Importazione bitmap</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="147"/>
+        <location filename="../Image.js" line="150"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="172"/>
+        <location filename="../Image.js" line="175"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>

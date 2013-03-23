@@ -4,7 +4,7 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="57"/>
+        <location filename="../Line2P.js" line="60"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="65"/>
+        <location filename="../Line2P.js" line="68"/>
         <source>Next point</source>
         <translatorcomment>--google--
 Wskaż następny punkt
@@ -22,7 +22,7 @@ Wskaż następny punkt wieloboku</translatorcomment>
         <translation type="unfinished">Następny punkt</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="68"/>
+        <location filename="../Line2P.js" line="71"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

@@ -4,7 +4,7 @@
 <context>
     <name>Window</name>
     <message>
-        <location filename="../Window.js" line="87"/>
+        <location filename="../Window.js" line="90"/>
         <source>&amp;Window</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

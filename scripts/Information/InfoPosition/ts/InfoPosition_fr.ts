@@ -4,7 +4,7 @@
 <context>
     <name>InfoPosition</name>
     <message>
-        <location filename="../InfoPosition.js" line="44"/>
+        <location filename="../InfoPosition.js" line="47"/>
         <source>Point</source>
         <translation>Point</translation>
     </message>

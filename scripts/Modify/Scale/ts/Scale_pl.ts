@@ -4,13 +4,13 @@
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../Scale.js" line="67"/>
+        <location filename="../Scale.js" line="70"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Punkt ostrości</translation>
     </message>
     <message>
-        <location filename="../Scale.js" line="78"/>
+        <location filename="../Scale.js" line="81"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -19,7 +19,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../Scale.js" line="88"/>
+        <location filename="../Scale.js" line="91"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>

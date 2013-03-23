@@ -4,25 +4,25 @@
 <context>
     <name>LineTangent1</name>
     <message>
-        <location filename="../LineTangent1.js" line="59"/>
+        <location filename="../LineTangent1.js" line="62"/>
         <source>Choose start point of tangent</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz punkt początkowy styczna</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="69"/>
+        <location filename="../LineTangent1.js" line="72"/>
         <source>Choose circle, arc or ellipse</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz okrąg, łuk lub elipsy</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="152"/>
+        <location filename="../LineTangent1.js" line="155"/>
         <source>No tangent possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No styczna możliwe.</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="208"/>
+        <location filename="../LineTangent1.js" line="211"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie można narysować styczną z punktu wewnątrz okręgu do okręgu</translation>

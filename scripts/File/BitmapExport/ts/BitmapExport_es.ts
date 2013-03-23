@@ -4,22 +4,22 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="85"/>
+        <location filename="../BitmapExport.js" line="88"/>
         <source>Files</source>
         <translation>Archivos</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="95"/>
+        <location filename="../BitmapExport.js" line="98"/>
         <source>Export as Bitmap</source>
         <translation>Exportar mapa de bits</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="215"/>
+        <location filename="../BitmapExport.js" line="218"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>Error al generar el archivo de mapa de bits &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="220"/>
+        <location filename="../BitmapExport.js" line="223"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translation>Archivo de mapa de bits se ha exportado en &apos;%1&apos;</translation>
     </message>

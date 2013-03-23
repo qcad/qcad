@@ -4,7 +4,7 @@
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="46"/>
+        <location filename="../Block.js" line="49"/>
         <source>&amp;Block</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
@@ -15,13 +15,13 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="89"/>
+        <location filename="../BlockDialog.js" line="92"/>
         <source>Block name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nome do bloco está vazio.</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.js" line="96"/>
+        <location filename="../BlockDialog.js" line="99"/>
         <source>Block already exists.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bloco já existe.</translation>

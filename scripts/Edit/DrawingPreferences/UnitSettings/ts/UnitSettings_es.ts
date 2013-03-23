@@ -4,7 +4,7 @@
 <context>
     <name>UnitSettings</name>
     <message>
-        <location filename="../UnitSettings.js" line="24"/>
+        <location filename="../UnitSettings.js" line="27"/>
         <source>General</source>
         <translation>General</translation>
     </message>
@@ -13,118 +13,118 @@
         <translation type="obsolete">Unidad de dibujo por defecto</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="22"/>
-        <location filename="../UnitSettings.js" line="24"/>
+        <location filename="../UnitSettings.js" line="25"/>
+        <location filename="../UnitSettings.js" line="27"/>
         <source>Drawing Unit</source>
         <translation>Unidad de dibujo</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="22"/>
+        <location filename="../UnitSettings.js" line="25"/>
         <source>Defaults for New Drawings</source>
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="72"/>
+        <location filename="../UnitSettings.js" line="75"/>
         <source>None</source>
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="73"/>
+        <location filename="../UnitSettings.js" line="76"/>
         <source>Inch</source>
         <translation>Pulgada</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="74"/>
+        <location filename="../UnitSettings.js" line="77"/>
         <source>Foot</source>
         <translation>Pie</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="75"/>
+        <location filename="../UnitSettings.js" line="78"/>
         <source>Mile</source>
         <translation>Milla</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="76"/>
+        <location filename="../UnitSettings.js" line="79"/>
         <source>Millimeter</source>
         <translation>Milímetro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="77"/>
+        <location filename="../UnitSettings.js" line="80"/>
         <source>Centimeter</source>
         <translation>Centímetro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="78"/>
+        <location filename="../UnitSettings.js" line="81"/>
         <source>Meter</source>
         <translation>Metro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="79"/>
+        <location filename="../UnitSettings.js" line="82"/>
         <source>Kilometer</source>
         <translation>Kilómetro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="80"/>
+        <location filename="../UnitSettings.js" line="83"/>
         <source>Microinch</source>
         <translation>Micro pulgada</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="81"/>
+        <location filename="../UnitSettings.js" line="84"/>
         <source>Mil</source>
         <translation>Mil</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="82"/>
+        <location filename="../UnitSettings.js" line="85"/>
         <source>Yard</source>
         <translation>Yarda</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="83"/>
+        <location filename="../UnitSettings.js" line="86"/>
         <source>Angstrom</source>
         <translation>Angstrom</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="84"/>
+        <location filename="../UnitSettings.js" line="87"/>
         <source>Nanometer</source>
         <translation>Nanómetro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="85"/>
+        <location filename="../UnitSettings.js" line="88"/>
         <source>Micron</source>
         <translation>Micrón</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="86"/>
+        <location filename="../UnitSettings.js" line="89"/>
         <source>Decimeter</source>
         <translation>Desímetro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="87"/>
+        <location filename="../UnitSettings.js" line="90"/>
         <source>Decameter</source>
         <translation>Decámetro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="88"/>
+        <location filename="../UnitSettings.js" line="91"/>
         <source>Hectometer</source>
         <translation>Hectómetro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="89"/>
+        <location filename="../UnitSettings.js" line="92"/>
         <source>Gigameter</source>
         <translation>Gigámetro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="90"/>
+        <location filename="../UnitSettings.js" line="93"/>
         <source>Astro</source>
         <translation>Astro</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="91"/>
+        <location filename="../UnitSettings.js" line="94"/>
         <source>Lightyear</source>
         <translation>Años Luz</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="92"/>
+        <location filename="../UnitSettings.js" line="95"/>
         <source>Parsec</source>
         <translation>Parsec</translation>
     </message>

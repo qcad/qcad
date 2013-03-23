@@ -4,7 +4,7 @@
 <context>
     <name>CommandLineTools</name>
     <message>
-        <location filename="../CommandLineTools.js" line="46"/>
+        <location filename="../CommandLineTools.js" line="49"/>
         <source>&amp;Command Line Tools</source>
         <translation>Herramientas de línea de &amp;comandos</translation>
     </message>

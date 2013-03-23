@@ -61,7 +61,7 @@
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../InputPreferences.js" line="29"/>
+        <location filename="../InputPreferences.js" line="32"/>
         <source>General</source>
         <translatorcomment>--google--
 Ogólne ustawienia aplikacji
@@ -70,14 +70,14 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="29"/>
+        <location filename="../InputPreferences.js" line="32"/>
         <source>Coordinate Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Format współrzędnych</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="44"/>
-        <location filename="../InputPreferences.js" line="70"/>
+        <location filename="../InputPreferences.js" line="47"/>
+        <location filename="../InputPreferences.js" line="73"/>
         <source>Comma</source>
         <translatorcomment>--google--
 Aktywuj linię poleceń
@@ -86,10 +86,10 @@ Linia poleceń</translatorcomment>
         <translation type="unfinished">Przecinek</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="44"/>
-        <location filename="../InputPreferences.js" line="50"/>
-        <location filename="../InputPreferences.js" line="54"/>
-        <location filename="../InputPreferences.js" line="69"/>
+        <location filename="../InputPreferences.js" line="47"/>
+        <location filename="../InputPreferences.js" line="53"/>
+        <location filename="../InputPreferences.js" line="57"/>
+        <location filename="../InputPreferences.js" line="72"/>
         <source>(Default)</source>
         <translatorcomment>--google--
 Automatyczny (domyślnie)
@@ -97,13 +97,13 @@ Ustawienia pulpitu (domyślne)</translatorcomment>
         <translation type="unfinished">(Default)</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="45"/>
+        <location filename="../InputPreferences.js" line="48"/>
         <source>Semicolon</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Średnik</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="50"/>
+        <location filename="../InputPreferences.js" line="53"/>
         <source>Less Than</source>
         <translatorcomment>--google--
 Wartość aspektu %1 musi być mniejsza od lub równa wartości aspektu %2 typu podstawowego.
@@ -114,7 +114,7 @@ Wartość aspektu %1 musi być mniejsza od wartości aspektu %2 typu podstawoweg
         <translation type="unfinished">Mniej niż</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="54"/>
+        <location filename="../InputPreferences.js" line="57"/>
         <source>At</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -123,13 +123,13 @@ Tworzenie nowego pliku...</translatorcomment>
         <translation type="unfinished">przy</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="55"/>
+        <location filename="../InputPreferences.js" line="58"/>
         <source>Percentage</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odsetek</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="56"/>
+        <location filename="../InputPreferences.js" line="59"/>
         <source>Dollar</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -138,7 +138,7 @@ Dolar</translatorcomment>
         <translation type="unfinished">Dolar</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="57"/>
+        <location filename="../InputPreferences.js" line="60"/>
         <source>Hash</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -147,7 +147,7 @@ Hash</translatorcomment>
         <translation type="unfinished">Hash</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="69"/>
+        <location filename="../InputPreferences.js" line="72"/>
         <source>Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

@@ -16,7 +16,7 @@
         <translation type="obsolete">Anzahl:</translation>
     </message>
     <message>
-        <location filename="../LineParallel.js" line="65"/>
+        <location filename="../LineParallel.js" line="68"/>
         <source>Choose line, arc or circle</source>
         <translation>Linie, Bogen oder Kreis wählen</translation>
     </message>

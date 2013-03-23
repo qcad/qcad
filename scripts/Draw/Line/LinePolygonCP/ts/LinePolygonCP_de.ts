@@ -4,12 +4,12 @@
 <context>
     <name>LinePolygonCP</name>
     <message>
-        <location filename="../LinePolygonCP.js" line="55"/>
+        <location filename="../LinePolygonCP.js" line="58"/>
         <source>Center</source>
         <translation>Mittelpunkt</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.js" line="65"/>
+        <location filename="../LinePolygonCP.js" line="68"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Ecken:</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.js" line="62"/>
+        <location filename="../LinePolygonCP.js" line="65"/>
         <source>Corner point</source>
         <translation>Eckpunkt</translation>
     </message>

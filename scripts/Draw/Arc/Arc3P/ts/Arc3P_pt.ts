@@ -4,7 +4,7 @@
 <context>
     <name>Arc3P</name>
     <message>
-        <location filename="../Arc3P.js" line="59"/>
+        <location filename="../Arc3P.js" line="62"/>
         <source>Start point</source>
         <translatorcomment>--google--
 Ponto inicial (x):
@@ -13,13 +13,13 @@ Ponto inicial (y):</translatorcomment>
         <translation>Ponto de início</translation>
     </message>
     <message>
-        <location filename="../Arc3P.js" line="67"/>
+        <location filename="../Arc3P.js" line="70"/>
         <source>Point on arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto no arco</translation>
     </message>
     <message>
-        <location filename="../Arc3P.js" line="74"/>
+        <location filename="../Arc3P.js" line="77"/>
         <source>End point</source>
         <translatorcomment>--google--
 Ponto final (y):

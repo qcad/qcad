@@ -4,12 +4,12 @@
 <context>
     <name>SelectRectangle</name>
     <message>
-        <location filename="../SelectRectangle.js" line="68"/>
+        <location filename="../SelectRectangle.js" line="71"/>
         <source>First corner</source>
         <translation>Primo punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.js" line="76"/>
+        <location filename="../SelectRectangle.js" line="79"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
@@ -30,7 +30,7 @@
         <translation>(De-)seleziona tutte le entità all&apos;interno di un rettangolo</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.js" line="75"/>
+        <location filename="../SelectRectangle.js" line="78"/>
         <source>Second corner</source>
         <translation>Secondo punto dell&apos;angolo</translation>
     </message>

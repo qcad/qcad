@@ -4,22 +4,22 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="38"/>
+        <location filename="../AbstractPreferences.js" line="41"/>
         <source>Application Preferences</source>
         <translation>Preferencias de la aplicación</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="40"/>
+        <location filename="../AbstractPreferences.js" line="43"/>
         <source>Drawing Preferences</source>
         <translation>Preferencias del dibujo</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="295"/>
+        <location filename="../AbstractPreferences.js" line="298"/>
         <source>Restart required</source>
         <translation>Se requiere reiniciar</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="298"/>
+        <location filename="../AbstractPreferences.js" line="301"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>Por favor, reiniciar QCAD
@@ -29,7 +29,7 @@ para aplicar los cambios.</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="38"/>
+        <location filename="../ClipboardOperation.js" line="41"/>
         <source>Reference point</source>
         <translation>Punto de referencia</translation>
     </message>
@@ -37,7 +37,7 @@ para aplicar los cambios.</translation>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="49"/>
+        <location filename="../Edit.js" line="52"/>
         <source>&amp;Edit</source>
         <translation>&amp;Editar</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>Widgets</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -13,13 +13,13 @@ Zastępcze widżety</translatorcomment>
         <translation type="unfinished">Widżety</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="46"/>
+        <location filename="../CadToolBar.js" line="49"/>
         <source>CAD Toolbar</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">CAD Toolbar</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="77"/>
+        <location filename="../CadToolBar.js" line="80"/>
         <source>Toggle Title Bar</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przełącz Nagłówek</translation>
@@ -60,7 +60,7 @@ Kolumn:</translatorcomment>
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="73"/>
+        <location filename="../CadToolBarPanel.js" line="76"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

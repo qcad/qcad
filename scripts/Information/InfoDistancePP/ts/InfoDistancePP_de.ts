@@ -4,37 +4,37 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="48"/>
+        <location filename="../InfoDistancePP.js" line="51"/>
         <source>First point</source>
         <translation>Erster Punkt</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="55"/>
+        <location filename="../InfoDistancePP.js" line="58"/>
         <source>Second point</source>
         <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="58"/>
+        <location filename="../InfoDistancePP.js" line="61"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="95"/>
+        <location filename="../InfoDistancePP.js" line="98"/>
         <source>Distance:</source>
         <translation>Abstand:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="99"/>
+        <location filename="../InfoDistancePP.js" line="102"/>
         <source>Delta X:</source>
         <translation>Delta X:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="100"/>
+        <location filename="../InfoDistancePP.js" line="103"/>
         <source>Delta Y:</source>
         <translation>Delta Y:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="101"/>
+        <location filename="../InfoDistancePP.js" line="104"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>

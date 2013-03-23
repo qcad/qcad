@@ -30,22 +30,22 @@
         <translation>Center è a destra della linea P1-P2</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="62"/>
+        <location filename="../Circle2PR.js" line="65"/>
         <source>First point</source>
         <translation>Primo punto</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="69"/>
+        <location filename="../Circle2PR.js" line="72"/>
         <source>Second point</source>
         <translation>Secondo punto</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="175"/>
+        <location filename="../Circle2PR.js" line="178"/>
         <source>Invalid radius</source>
         <translation>Raggio valido</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="180"/>
+        <location filename="../Circle2PR.js" line="183"/>
         <source>The two points are identical</source>
         <translation>I due punti sono identici</translation>
     </message>

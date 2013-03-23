@@ -14,12 +14,12 @@
         <translation>&amp;Cancella elenco</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="34"/>
+        <location filename="../RecentFiles.js" line="37"/>
         <source>Load/Save</source>
         <translation>Carico/Salvare</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="34"/>
+        <location filename="../RecentFiles.js" line="37"/>
         <source>Recent Files</source>
         <translation>File recenti</translation>
     </message>

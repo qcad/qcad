@@ -4,7 +4,7 @@
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../ArcCPA.js" line="63"/>
+        <location filename="../ArcCPA.js" line="66"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -14,19 +14,19 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="70"/>
+        <location filename="../ArcCPA.js" line="73"/>
         <source>Point on arc or radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto no arco ou raio</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="71"/>
+        <location filename="../ArcCPA.js" line="74"/>
         <source>Point on arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto no arco</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="76"/>
+        <location filename="../ArcCPA.js" line="79"/>
         <source>Start angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -35,7 +35,7 @@ Indique o ângulo de início</translatorcomment>
         <translation>Ângulo de início</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="83"/>
+        <location filename="../ArcCPA.js" line="86"/>
         <source>End angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

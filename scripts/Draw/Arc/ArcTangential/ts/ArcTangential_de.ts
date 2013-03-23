@@ -11,12 +11,12 @@
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../ArcTangential.js" line="60"/>
+        <location filename="../ArcTangential.js" line="63"/>
         <source>Choose base line or base arc</source>
         <translation>Basislinie oder Basisbogen wählen</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.js" line="66"/>
+        <location filename="../ArcTangential.js" line="69"/>
         <source>Choose end point of arc</source>
         <translation>Endpunkt des Bogens wählen</translation>
     </message>

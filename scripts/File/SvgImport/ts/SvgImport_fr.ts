@@ -4,18 +4,18 @@
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../SvgImport.js" line="35"/>
+        <location filename="../SvgImport.js" line="38"/>
         <source>Import SVG</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Importer SVG</translation>
     </message>
     <message>
-        <location filename="../SvgImport.js" line="36"/>
+        <location filename="../SvgImport.js" line="39"/>
         <source>SVG Files</source>
         <translation>Fichiers SVG</translation>
     </message>
     <message>
-        <location filename="../SvgImport.js" line="36"/>
+        <location filename="../SvgImport.js" line="39"/>
         <source>All Files</source>
         <translation>Tous les fichiers</translation>
     </message>

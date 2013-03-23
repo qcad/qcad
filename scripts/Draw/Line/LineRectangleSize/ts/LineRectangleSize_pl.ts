@@ -4,7 +4,7 @@
 <context>
     <name>LineRectangleSize</name>
     <message>
-        <location filename="../LineRectangleSize.js" line="45"/>
+        <location filename="../LineRectangleSize.js" line="48"/>
         <source>Top Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -12,7 +12,7 @@ Góra - lewo</translatorcomment>
         <translation type="unfinished">Góra - lewo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="46"/>
+        <location filename="../LineRectangleSize.js" line="49"/>
         <source>Top</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -21,7 +21,7 @@ Góra - prawo</translatorcomment>
         <translation type="unfinished">Do góry</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="47"/>
+        <location filename="../LineRectangleSize.js" line="50"/>
         <source>Top Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -29,7 +29,7 @@ Góra - prawo</translatorcomment>
         <translation type="unfinished">Góra - prawo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="48"/>
+        <location filename="../LineRectangleSize.js" line="51"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -38,7 +38,7 @@ Góra - lewo
         <translation type="unfinished">Lewo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="49"/>
+        <location filename="../LineRectangleSize.js" line="52"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -48,7 +48,7 @@ Przyciągaj do punktów pośrednich</translatorcomment>
         <translation type="unfinished">Środek</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="50"/>
+        <location filename="../LineRectangleSize.js" line="53"/>
         <source>Right</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -57,7 +57,7 @@ Góra - prawo
         <translation type="unfinished">Prawo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="51"/>
+        <location filename="../LineRectangleSize.js" line="54"/>
         <source>Bottom Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -65,7 +65,7 @@ Dół - lewo</translatorcomment>
         <translation type="unfinished">Dół - lewo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="52"/>
+        <location filename="../LineRectangleSize.js" line="55"/>
         <source>Bottom</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -74,7 +74,7 @@ Dół - prawo</translatorcomment>
         <translation type="unfinished">W dół</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="53"/>
+        <location filename="../LineRectangleSize.js" line="56"/>
         <source>Bottom Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -82,7 +82,7 @@ Dół - prawo</translatorcomment>
         <translation type="unfinished">Dół - prawo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.js" line="155"/>
+        <location filename="../LineRectangleSize.js" line="158"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

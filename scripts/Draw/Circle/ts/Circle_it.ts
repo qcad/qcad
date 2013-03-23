@@ -4,17 +4,17 @@
 <context>
     <name>Circle</name>
     <message>
-        <location filename="../Circle.js" line="64"/>
+        <location filename="../Circle.js" line="67"/>
         <source>Circle Tools</source>
         <translation>Utensili cerchio</translation>
     </message>
     <message>
-        <location filename="../Circle.js" line="69"/>
+        <location filename="../Circle.js" line="72"/>
         <source>Show circle tools</source>
         <translation>Mostra menù &quot;Cerchi&quot;</translation>
     </message>
     <message>
-        <location filename="../Circle.js" line="82"/>
+        <location filename="../Circle.js" line="85"/>
         <source>&amp;Circle</source>
         <translation>&amp;Cerchio</translation>
     </message>

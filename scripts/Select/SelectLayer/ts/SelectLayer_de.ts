@@ -4,7 +4,7 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="60"/>
+        <location filename="../SelectLayer.js" line="63"/>
         <source>Choose entity on layer</source>
         <translation>Objekt auf gewünschtem Layer auswählen</translation>
     </message>

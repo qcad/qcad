@@ -4,7 +4,7 @@
 <context>
     <name>Arc2PA</name>
     <message>
-        <location filename="../Arc2PA.js" line="62"/>
+        <location filename="../Arc2PA.js" line="65"/>
         <source>Start point</source>
         <translatorcomment>--google--
 Ponto inicial (x):
@@ -13,7 +13,7 @@ Ponto inicial (y):</translatorcomment>
         <translation>Ponto de início</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="69"/>
+        <location filename="../Arc2PA.js" line="72"/>
         <source>End point</source>
         <translatorcomment>--google--
 Ponto final (y):
@@ -22,13 +22,13 @@ Ponto final (x):</translatorcomment>
         <translation>Ponto final</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="153"/>
+        <location filename="../Arc2PA.js" line="156"/>
         <source>Invalid angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inválido ângulo</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="158"/>
+        <location filename="../Arc2PA.js" line="161"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Os dois pontos são idênticos</translation>

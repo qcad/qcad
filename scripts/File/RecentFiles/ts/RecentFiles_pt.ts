@@ -10,13 +10,13 @@
         <translation>&amp;Limpar lista</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="34"/>
+        <location filename="../RecentFiles.js" line="37"/>
         <source>Load/Save</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Carregar/Guardar</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="34"/>
+        <location filename="../RecentFiles.js" line="37"/>
         <source>Recent Files</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arquivos recentes</translation>

@@ -9,17 +9,17 @@
         <translation>&amp;Runden</translation>
     </message>
     <message>
-        <location filename="../Round.js" line="53"/>
+        <location filename="../Round.js" line="56"/>
         <source>The two entities cannot be rounded.</source>
         <translation>Die zwei Objekte können nicht gerundet werden.</translation>
     </message>
     <message>
-        <location filename="../Round.js" line="268"/>
+        <location filename="../Round.js" line="271"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
     </message>
     <message>
-        <location filename="../Round.js" line="278"/>
+        <location filename="../Round.js" line="281"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Zweites Objekt kann nicht getrimmt werden.</translation>
     </message>

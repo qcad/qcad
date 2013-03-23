@@ -4,7 +4,7 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="75"/>
+        <location filename="../Rotate.js" line="78"/>
         <source>Reference point</source>
         <translation>Referenzpunkt</translation>
     </message>
@@ -14,12 +14,12 @@
         <translation>&amp;Rotieren</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="65"/>
+        <location filename="../Rotate.js" line="68"/>
         <source>Center point</source>
         <translation>Zentrum</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="84"/>
+        <location filename="../Rotate.js" line="87"/>
         <source>Target point</source>
         <translation>Zielpunkt</translation>
     </message>

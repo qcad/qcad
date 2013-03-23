@@ -4,7 +4,7 @@
 <context>
     <name>InsertScriptItem</name>
     <message>
-        <location filename="../InsertScriptItem.js" line="62"/>
+        <location filename="../InsertScriptItem.js" line="65"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

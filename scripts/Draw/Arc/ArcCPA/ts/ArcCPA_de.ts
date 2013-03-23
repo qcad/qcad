@@ -4,27 +4,27 @@
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../ArcCPA.js" line="63"/>
+        <location filename="../ArcCPA.js" line="66"/>
         <source>Center</source>
         <translation>Zentrum</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="70"/>
+        <location filename="../ArcCPA.js" line="73"/>
         <source>Point on arc or radius</source>
         <translation>Punkt auf Bogen oder Radius</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="71"/>
+        <location filename="../ArcCPA.js" line="74"/>
         <source>Point on arc</source>
         <translation>Punkt auf Bogen</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="76"/>
+        <location filename="../ArcCPA.js" line="79"/>
         <source>Start angle</source>
         <translation>Startwinkel</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="83"/>
+        <location filename="../ArcCPA.js" line="86"/>
         <source>End angle</source>
         <translation>Endwinkel</translation>
     </message>

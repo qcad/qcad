@@ -4,27 +4,27 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="48"/>
+        <location filename="../InfoDistancePP.js" line="51"/>
         <source>First point</source>
         <translation>Primer punto</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="55"/>
+        <location filename="../InfoDistancePP.js" line="58"/>
         <source>Second point</source>
         <translation>Segundo punto</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="58"/>
+        <location filename="../InfoDistancePP.js" line="61"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="95"/>
+        <location filename="../InfoDistancePP.js" line="98"/>
         <source>Distance:</source>
         <translation>Distancia:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="99"/>
+        <location filename="../InfoDistancePP.js" line="102"/>
         <source>Delta X:</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -32,7 +32,7 @@ Delta X:</translatorcomment>
         <translation>Delta X:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="100"/>
+        <location filename="../InfoDistancePP.js" line="103"/>
         <source>Delta Y:</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -40,7 +40,7 @@ Delta Y:</translatorcomment>
         <translation>Delta Y:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="101"/>
+        <location filename="../InfoDistancePP.js" line="104"/>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>

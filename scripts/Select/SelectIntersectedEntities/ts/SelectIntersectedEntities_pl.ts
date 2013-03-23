@@ -4,7 +4,7 @@
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
-        <location filename="../SelectIntersectedEntities.js" line="81"/>
+        <location filename="../SelectIntersectedEntities.js" line="84"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.js" line="86"/>
+        <location filename="../SelectIntersectedEntities.js" line="89"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Wskaż drugi punkt

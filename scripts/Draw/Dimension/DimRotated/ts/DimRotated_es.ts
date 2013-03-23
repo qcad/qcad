@@ -9,17 +9,17 @@
         <translation>Ángulo:</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="57"/>
+        <location filename="../DimRotated.js" line="60"/>
         <source>First extension line origin</source>
         <translation>Origen de la primera línea de la extensión</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="66"/>
+        <location filename="../DimRotated.js" line="69"/>
         <source>Second extension line origin</source>
         <translation>Origen de la segundo línea de la extensión</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="74"/>
+        <location filename="../DimRotated.js" line="77"/>
         <source>Dimension line location</source>
         <translation>Posición de la línea de dimensión</translation>
     </message>

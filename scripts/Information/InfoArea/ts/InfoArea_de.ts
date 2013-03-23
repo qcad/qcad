@@ -4,17 +4,17 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="67"/>
+        <location filename="../InfoArea.js" line="70"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="191"/>
+        <location filename="../InfoArea.js" line="194"/>
         <source>Polygon area:</source>
         <translation>Polygonfläche:</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="192"/>
+        <location filename="../InfoArea.js" line="195"/>
         <source>circumference:</source>
         <translation>Umfang:</translation>
     </message>
@@ -32,7 +32,7 @@
         <translation type="obsolete">Polygonfläche</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="61"/>
+        <location filename="../InfoArea.js" line="64"/>
         <source>Set next polygon corner</source>
         <translation>Nächsten Eckpunkt setzen</translation>
     </message>

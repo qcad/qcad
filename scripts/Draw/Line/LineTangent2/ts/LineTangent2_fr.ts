@@ -18,17 +18,17 @@
         <translation>Dessine une tangente (cercle, cercle)</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="64"/>
+        <location filename="../LineTangent2.js" line="67"/>
         <source>Choose first circle or arc</source>
         <translation>Choisissez premier cercle ou arc</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="75"/>
+        <location filename="../LineTangent2.js" line="78"/>
         <source>Choose second circle or arc</source>
         <translation>Choisissez deuxième cercle ou arc</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="213"/>
+        <location filename="../LineTangent2.js" line="216"/>
         <source>No tangent possible</source>
         <translation>Aucune tangentes sont possibles</translation>
     </message>

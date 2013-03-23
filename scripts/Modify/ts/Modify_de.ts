@@ -12,17 +12,17 @@
         <translation type="obsolete">Bearbeitungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="101"/>
+        <location filename="../Modify.js" line="104"/>
         <source>Modification Tools</source>
         <translation>Bearbeitungswerkzeuge</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="106"/>
+        <location filename="../Modify.js" line="109"/>
         <source>Show modification tools</source>
         <translation>Bearbeitungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="123"/>
+        <location filename="../Modify.js" line="126"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifizieren</translation>
     </message>
@@ -30,12 +30,12 @@
 <context>
     <name>ModifyCorner</name>
     <message>
-        <location filename="../ModifyCorner.js" line="66"/>
+        <location filename="../ModifyCorner.js" line="69"/>
         <source>Choose first entity</source>
         <translation>Erstes Objekt wählen</translation>
     </message>
     <message>
-        <location filename="../ModifyCorner.js" line="76"/>
+        <location filename="../ModifyCorner.js" line="79"/>
         <source>Choose second entity</source>
         <translation>Zweites Objekt wählen</translation>
     </message>
@@ -43,7 +43,7 @@
 <context>
     <name>Transform</name>
     <message>
-        <location filename="../Transform.js" line="35"/>
+        <location filename="../Transform.js" line="38"/>
         <source>This tool requires a selection</source>
         <translation>Dieses Werkzeug benötigt eine Selektion</translation>
     </message>

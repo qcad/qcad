@@ -4,7 +4,7 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="65"/>
+        <location filename="../Rotate.js" line="68"/>
         <source>Center point</source>
         <translatorcomment>--google--
 Forzar al centro
@@ -13,12 +13,12 @@ Arremolinar los mapas de bits seleccionados alrededor de un punto central</trans
         <translation>Punto central</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="75"/>
+        <location filename="../Rotate.js" line="78"/>
         <source>Reference point</source>
         <translation>Punto de referencia</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="84"/>
+        <location filename="../Rotate.js" line="87"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_es.ts--

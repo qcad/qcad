@@ -4,7 +4,7 @@
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../DirectoryList.js" line="55"/>
+        <location filename="../DirectoryList.js" line="58"/>
         <source>The folder
 &apos;%1&apos;
 is already in the list.</source>
@@ -14,7 +14,7 @@ is already in the list.</source>
 è già nella lista.</translation>
     </message>
     <message>
-        <location filename="../DirectoryList.js" line="58"/>
+        <location filename="../DirectoryList.js" line="61"/>
         <source>Folder not added</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cartella non ha aggiunto</translation>

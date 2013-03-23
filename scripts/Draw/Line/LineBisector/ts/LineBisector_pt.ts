@@ -4,7 +4,7 @@
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../LineBisector.js" line="59"/>
+        <location filename="../LineBisector.js" line="62"/>
         <source>First line</source>
         <translatorcomment>--google--
 Selecione a primeira linha ou arco
@@ -13,7 +13,7 @@ Especifique a primeira linha</translatorcomment>
         <translation>Primeira linha</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="63"/>
+        <location filename="../LineBisector.js" line="66"/>
         <source>Second line</source>
         <translatorcomment>--exact match--
 --file: DimAngular_pt.ts--
@@ -22,7 +22,7 @@ Selecione a segunda linha [comprimento/número]</translatorcomment>
         <translation>Segunda linha</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="138"/>
+        <location filename="../LineBisector.js" line="141"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linhas não se cruzam.</translation>

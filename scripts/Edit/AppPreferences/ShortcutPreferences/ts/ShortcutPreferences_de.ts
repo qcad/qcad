@@ -4,34 +4,34 @@
 <context>
     <name>ShortcutPreferences</name>
     <message>
-        <location filename="../ShortcutPreferences.js" line="25"/>
+        <location filename="../ShortcutPreferences.js" line="28"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="25"/>
+        <location filename="../ShortcutPreferences.js" line="28"/>
         <source>Shortcuts and Commands</source>
         <translation>Schnelltasten und Kommandos</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="170"/>
+        <location filename="../ShortcutPreferences.js" line="173"/>
         <source>Restore Shortcuts and Commands</source>
         <translation>Schnelltasten und Kommandos wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="171"/>
+        <location filename="../ShortcutPreferences.js" line="174"/>
         <source>Do you want to restore all shortcuts and commands?
 User defined shortcuts and commands will be lost.</source>
         <translation>Alle Schnelltasten und Kommandos wiederherstellen?
 Benutzerdefinierte Schnelltasten und Kommandos gehen verloren.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="256"/>
+        <location filename="../ShortcutPreferences.js" line="259"/>
         <source>Changes will be lost</source>
         <translation>Änderungen gehen verloren</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="257"/>
+        <location filename="../ShortcutPreferences.js" line="260"/>
         <source>Any changes made since starting this dialog will be lost. 
 Press cancel and then apply to keep your changes
 or press OK to continue.</source>
@@ -40,18 +40,18 @@ Klicken Sie auf Abbrechen und dann auf Anwenden um die Änderungen
 zu behalten oder auf OK um weiterzufahren.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="816"/>
+        <location filename="../ShortcutPreferences.js" line="819"/>
         <source>Shortcuts conflict with at least one other shortcut.</source>
         <translation>Schnelltasten im Konflikt mit mindestens einer anderen Schnelltaste.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="818"/>
-        <location filename="../ShortcutPreferences.js" line="825"/>
+        <location filename="../ShortcutPreferences.js" line="821"/>
+        <location filename="../ShortcutPreferences.js" line="828"/>
         <source>No conflicts.</source>
         <translation>Keine Konflikte.</translation>
     </message>
     <message>
-        <location filename="../ShortcutPreferences.js" line="823"/>
+        <location filename="../ShortcutPreferences.js" line="826"/>
         <source>Commands conflict with at least one other command.</source>
         <translation>Kommandos im Konflikt mit mindestens einem anderen Kommando.</translation>
     </message>

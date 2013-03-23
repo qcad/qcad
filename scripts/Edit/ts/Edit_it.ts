@@ -4,22 +4,22 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="38"/>
+        <location filename="../AbstractPreferences.js" line="41"/>
         <source>Application Preferences</source>
         <translation>Preferenze Applicazione</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="40"/>
+        <location filename="../AbstractPreferences.js" line="43"/>
         <source>Drawing Preferences</source>
         <translation>Preferenze Disegno</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="295"/>
+        <location filename="../AbstractPreferences.js" line="298"/>
         <source>Restart required</source>
         <translation>Riavvio richiesto</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="298"/>
+        <location filename="../AbstractPreferences.js" line="301"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>Riavviare QCAD per
@@ -29,7 +29,7 @@ applicare le modifiche.</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="38"/>
+        <location filename="../ClipboardOperation.js" line="41"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: Translate_it.ts--
@@ -41,7 +41,7 @@ Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="49"/>
+        <location filename="../Edit.js" line="52"/>
         <source>&amp;Edit</source>
         <translation>&amp;Modifica</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -12,13 +12,13 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="25"/>
+        <location filename="../PageSettings.js" line="28"/>
         <source>Printing - Page</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Drukowanie - Page</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Printing</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -28,7 +28,7 @@ Drukowanie zakończone</translatorcomment>
         <translation type="unfinished">Drukowanie</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="27"/>
+        <location filename="../PageSettings.js" line="30"/>
         <source>Page</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -38,7 +38,7 @@ Wycentruj na stronie</translatorcomment>
         <translation type="unfinished">Strona</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="35"/>
+        <location filename="../PageSettings.js" line="38"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--

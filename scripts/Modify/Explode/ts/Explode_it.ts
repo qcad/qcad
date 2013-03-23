@@ -91,12 +91,12 @@
         <translation>&amp;Esplodi</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="28"/>
+        <location filename="../Explode.js" line="31"/>
         <source>Modify</source>
         <translation>Modifica</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="28"/>
+        <location filename="../Explode.js" line="31"/>
         <source>Explode</source>
         <translation>Esplodi</translation>
     </message>

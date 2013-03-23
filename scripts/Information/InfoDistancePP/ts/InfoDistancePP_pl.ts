@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="48"/>
+        <location filename="../InfoDistancePP.js" line="51"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="55"/>
+        <location filename="../InfoDistancePP.js" line="58"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Wskaż drugi punkt
@@ -22,7 +22,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="58"/>
+        <location filename="../InfoDistancePP.js" line="61"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -32,7 +32,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="95"/>
+        <location filename="../InfoDistancePP.js" line="98"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -41,19 +41,19 @@ Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
         <translation type="unfinished">Odległość:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="99"/>
+        <location filename="../InfoDistancePP.js" line="102"/>
         <source>Delta X:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta X:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="100"/>
+        <location filename="../InfoDistancePP.js" line="103"/>
         <source>Delta Y:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta Y:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="101"/>
+        <location filename="../InfoDistancePP.js" line="104"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

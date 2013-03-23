@@ -4,17 +4,17 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="73"/>
+        <location filename="../Line.js" line="76"/>
         <source>Show line tools</source>
         <translation>Mostrar menú &quot;Líneas&quot;</translation>
     </message>
     <message>
-        <location filename="../Line.js" line="90"/>
+        <location filename="../Line.js" line="93"/>
         <source>&amp;Line</source>
         <translation>&amp;Línea</translation>
     </message>
     <message>
-        <location filename="../Line.js" line="68"/>
+        <location filename="../Line.js" line="71"/>
         <source>Line Tools</source>
         <translation>Herramientas de línea</translation>
     </message>

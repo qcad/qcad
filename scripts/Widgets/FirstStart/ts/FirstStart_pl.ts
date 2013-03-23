@@ -4,13 +4,13 @@
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../FirstStart.js" line="32"/>
+        <location filename="../FirstStart.js" line="35"/>
         <source>%1 First Start</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pierwszy start</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="215"/>
+        <location filename="../FirstStart.js" line="218"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -19,7 +19,7 @@ Bardzo gruby</translatorcomment>
         <translation type="unfinished">Bardzo gruby</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="216"/>
+        <location filename="../FirstStart.js" line="219"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -28,7 +28,7 @@ Biały</translatorcomment>
         <translation type="unfinished">Biały</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="220"/>
+        <location filename="../FirstStart.js" line="223"/>
         <source>Language:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -38,19 +38,19 @@ Język poleceń:</translatorcomment>
         <translation type="unfinished">Język:</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="221"/>
+        <location filename="../FirstStart.js" line="224"/>
         <source>Welcome to %1</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Witamy</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="222"/>
+        <location filename="../FirstStart.js" line="225"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Proszę wybrać ustawienia wykorzystywane dla nowych rysunków. Wszystkie te ustawienia można zmienić później w oknie dialogowym Preferencje.</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="236"/>
+        <location filename="../FirstStart.js" line="239"/>
         <source>Unit:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -59,19 +59,19 @@ Jednostka domyślna:
         <translation type="unfinished">Jednostka:</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="237"/>
+        <location filename="../FirstStart.js" line="240"/>
         <source>Default Paper Size:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Domyślny rozmiar papieru:</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="238"/>
+        <location filename="../FirstStart.js" line="241"/>
         <source>Decimal Point:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przecinku:</translation>
     </message>
     <message>
-        <location filename="../FirstStart.js" line="239"/>
+        <location filename="../FirstStart.js" line="242"/>
         <source>Background Color:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kolor tła:</translation>

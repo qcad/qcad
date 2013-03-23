@@ -4,7 +4,7 @@
 <context>
     <name>ToggleGrid</name>
     <message>
-        <location filename="../ToggleGrid.js" line="105"/>
+        <location filename="../ToggleGrid.js" line="108"/>
         <source>&amp;Grid</source>
         <translation>Grille</translation>
     </message>

@@ -4,12 +4,12 @@
 <context>
     <name>ColorPreferences</name>
     <message>
-        <location filename="../ColorPreferences.js" line="21"/>
+        <location filename="../ColorPreferences.js" line="24"/>
         <source>Graphics View</source>
         <translation>Grafikansicht</translation>
     </message>
     <message>
-        <location filename="../ColorPreferences.js" line="21"/>
+        <location filename="../ColorPreferences.js" line="24"/>
         <source>Colors</source>
         <translation>Farben</translation>
     </message>

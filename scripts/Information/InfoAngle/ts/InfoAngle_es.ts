@@ -4,22 +4,22 @@
 <context>
     <name>InfoAngle</name>
     <message>
-        <location filename="../InfoAngle.js" line="56"/>
+        <location filename="../InfoAngle.js" line="59"/>
         <source>Specify first line</source>
         <translation>Especifique la primera línea</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="65"/>
+        <location filename="../InfoAngle.js" line="68"/>
         <source>Specify second line</source>
         <translation>Especifique la segunda línea</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="68"/>
+        <location filename="../InfoAngle.js" line="71"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="148"/>
+        <location filename="../InfoAngle.js" line="151"/>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>

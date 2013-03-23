@@ -4,7 +4,7 @@
 <context>
     <name>Divide</name>
     <message>
-        <location filename="../Divide.js" line="64"/>
+        <location filename="../Divide.js" line="67"/>
         <source>Choose line, arc or circle</source>
         <translatorcomment>--exact match--
 --file: LineParallelThrough_pt.ts--
@@ -12,7 +12,7 @@ Escolha linha, arco ou círculo</translatorcomment>
         <translation>Escolha linha, arco ou círculo</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="74"/>
+        <location filename="../Divide.js" line="77"/>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: InfoDistanceEP_pt.ts--
@@ -20,12 +20,12 @@ Especifique o ponto</translatorcomment>
         <translation>Especifique o ponto</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="82"/>
+        <location filename="../Divide.js" line="85"/>
         <source>Specify second point</source>
         <translation>Indique o segundo ponto</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="275"/>
+        <location filename="../Divide.js" line="278"/>
         <source>Cutting point is not on entity.</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

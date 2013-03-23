@@ -112,7 +112,7 @@
 <context>
     <name>GraphicsViewPreferences</name>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="21"/>
+        <location filename="../GraphicsViewPreferences.js" line="24"/>
         <source>Graphics View</source>
         <translatorcomment>--exact match--
 --file: DefaultNavigation_pt.ts--
@@ -120,7 +120,7 @@ Ver gráficos</translatorcomment>
         <translation>Ver gráficos</translation>
     </message>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="21"/>
+        <location filename="../GraphicsViewPreferences.js" line="24"/>
         <source>Appearance</source>
         <translation>Apresentação</translation>
     </message>

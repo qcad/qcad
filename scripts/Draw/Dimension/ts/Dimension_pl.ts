@@ -4,14 +4,14 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="62"/>
+        <location filename="../Dimension.js" line="65"/>
         <source>No prefix</source>
         <translatorcomment>--google--
 &lt;brak przedrostka&gt;</translatorcomment>
         <translation type="unfinished">Bez prefiksu</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="64"/>
+        <location filename="../Dimension.js" line="66"/>
         <source>Radius</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -20,13 +20,13 @@ Wskaż promień
         <translation type="unfinished">Promień</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="65"/>
+        <location filename="../Dimension.js" line="67"/>
         <source>Metric screw</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wkręt metryczny</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="66"/>
+        <location filename="../Dimension.js" line="68"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -35,37 +35,47 @@ Przełącz znak średnicy
         <translation type="unfinished">Średnica</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="67"/>
+        <location filename="../Dimension.js" line="69"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plus / Minus</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="68"/>
+        <location filename="../Dimension.js" line="70"/>
+        <source>Almost equal to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Dimension.js" line="71"/>
+        <source>Asymptotically equal to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Dimension.js" line="72"/>
         <source>Square</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kwadrat</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="69"/>
+        <location filename="../Dimension.js" line="73"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="110"/>
+        <location filename="../Dimension.js" line="114"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia wymiarowe</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="115"/>
+        <location filename="../Dimension.js" line="119"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż narzędzia rozmiarom</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="132"/>
+        <location filename="../Dimension.js" line="136"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiar</translation>

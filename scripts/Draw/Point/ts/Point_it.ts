@@ -4,17 +4,17 @@
 <context>
     <name>Point</name>
     <message>
-        <location filename="../Point.js" line="90"/>
+        <location filename="../Point.js" line="93"/>
         <source>&amp;Point</source>
         <translation>&amp;Punto</translation>
     </message>
     <message>
-        <location filename="../Point.js" line="68"/>
+        <location filename="../Point.js" line="71"/>
         <source>Point Tools</source>
         <translation>Strumenti di punto</translation>
     </message>
     <message>
-        <location filename="../Point.js" line="73"/>
+        <location filename="../Point.js" line="76"/>
         <source>Show point tools</source>
         <translation>Strumenti di punto</translation>
     </message>

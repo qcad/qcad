@@ -4,7 +4,7 @@
 <context>
     <name>LayerExamples</name>
     <message>
-        <location filename="../LayerExamples.js" line="48"/>
+        <location filename="../LayerExamples.js" line="51"/>
         <source>&amp;Layer</source>
         <translation>&amp;Camada</translation>
     </message>

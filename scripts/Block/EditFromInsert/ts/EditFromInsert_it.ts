@@ -4,7 +4,7 @@
 <context>
     <name>EditFromInsert</name>
     <message>
-        <location filename="../EditFromInsert.js" line="52"/>
+        <location filename="../EditFromInsert.js" line="55"/>
         <source>Choose block reference</source>
         <translation>Scegliere il riferimento di blocco</translation>
     </message>

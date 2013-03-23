@@ -22,12 +22,12 @@
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="38"/>
+        <location filename="../LanguagePreferences.js" line="41"/>
         <source>Language Settings</source>
         <translation>Configuration de langue</translation>
     </message>
     <message>
-        <location filename="../LanguagePreferences.js" line="38"/>
+        <location filename="../LanguagePreferences.js" line="41"/>
         <source>Language</source>
         <translation>Langue</translation>
     </message>

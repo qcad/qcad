@@ -4,13 +4,13 @@
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../InsertBlockItem.js" line="84"/>
+        <location filename="../InsertBlockItem.js" line="87"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skorygowany nieprawidłową nazwę bloku do&apos;&amp;#39;</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="97"/>
+        <location filename="../InsertBlockItem.js" line="100"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

@@ -4,7 +4,7 @@
 <context>
     <name>LineAngle</name>
     <message>
-        <location filename="../LineAngle.js" line="61"/>
+        <location filename="../LineAngle.js" line="64"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -14,7 +14,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Posição</translation>
     </message>
     <message>
-        <location filename="../LineAngle.js" line="62"/>
+        <location filename="../LineAngle.js" line="65"/>
         <source>Specify position</source>
         <translatorcomment>--google--
 Indique a posição [ângulo/comprimento]

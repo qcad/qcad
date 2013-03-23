@@ -12,17 +12,17 @@
 <context>
     <name>LinePolygonPP</name>
     <message>
-        <location filename="../LinePolygonPP.js" line="55"/>
+        <location filename="../LinePolygonPP.js" line="58"/>
         <source>First corner</source>
         <translation>Premier point d&apos;angle</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPP.js" line="62"/>
+        <location filename="../LinePolygonPP.js" line="65"/>
         <source>Corner point</source>
         <translation>Point d&apos;angle</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPP.js" line="65"/>
+        <location filename="../LinePolygonPP.js" line="68"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>

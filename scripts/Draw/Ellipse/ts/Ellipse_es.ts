@@ -4,17 +4,17 @@
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../Ellipse.js" line="68"/>
+        <location filename="../Ellipse.js" line="71"/>
         <source>Ellipse Tools</source>
         <translation>Herramientas elipse</translation>
     </message>
     <message>
-        <location filename="../Ellipse.js" line="73"/>
+        <location filename="../Ellipse.js" line="76"/>
         <source>Show ellipse tools</source>
         <translation>Mostrar menú &quot;Elipses&quot;</translation>
     </message>
     <message>
-        <location filename="../Ellipse.js" line="86"/>
+        <location filename="../Ellipse.js" line="89"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipse</translation>
     </message>

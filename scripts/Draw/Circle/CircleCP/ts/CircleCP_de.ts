@@ -4,12 +4,12 @@
 <context>
     <name>CircleCP</name>
     <message>
-        <location filename="../CircleCP.js" line="53"/>
+        <location filename="../CircleCP.js" line="56"/>
         <source>Center</source>
         <translation>Zentrum</translation>
     </message>
     <message>
-        <location filename="../CircleCP.js" line="60"/>
+        <location filename="../CircleCP.js" line="63"/>
         <source>Point on circle or radius</source>
         <translation>Punkt auf Kreis oder Radius</translation>
     </message>

@@ -4,13 +4,13 @@
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../Scale.js" line="67"/>
+        <location filename="../Scale.js" line="70"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>De ponto de foco</translation>
     </message>
     <message>
-        <location filename="../Scale.js" line="78"/>
+        <location filename="../Scale.js" line="81"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -19,7 +19,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Ponto de referência</translation>
     </message>
     <message>
-        <location filename="../Scale.js" line="88"/>
+        <location filename="../Scale.js" line="91"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--

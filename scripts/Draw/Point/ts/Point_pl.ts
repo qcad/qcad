@@ -4,19 +4,19 @@
 <context>
     <name>Point</name>
     <message>
-        <location filename="../Point.js" line="68"/>
+        <location filename="../Point.js" line="71"/>
         <source>Point Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia punkt</translation>
     </message>
     <message>
-        <location filename="../Point.js" line="73"/>
+        <location filename="../Point.js" line="76"/>
         <source>Show point tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż narzędzi punktowych</translation>
     </message>
     <message>
-        <location filename="../Point.js" line="90"/>
+        <location filename="../Point.js" line="93"/>
         <source>&amp;Point</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

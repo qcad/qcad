@@ -4,19 +4,19 @@
 <context>
     <name>Trim</name>
     <message>
-        <location filename="../Trim.js" line="67"/>
+        <location filename="../Trim.js" line="70"/>
         <source>Choose limiting entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz ograniczenie podmiotu</translation>
     </message>
     <message>
-        <location filename="../Trim.js" line="76"/>
+        <location filename="../Trim.js" line="79"/>
         <source>Choose entity to trim</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz jednostkę do wykończenia</translation>
     </message>
     <message>
-        <location filename="../Trim.js" line="190"/>
+        <location filename="../Trim.js" line="193"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Oba podmioty nie przecinają się, ani nie są obecnie obsługiwane przez przycinanie.</translation>

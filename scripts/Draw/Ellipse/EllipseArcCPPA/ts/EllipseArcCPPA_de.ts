@@ -4,22 +4,22 @@
 <context>
     <name>EllipseArcCPPA</name>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="71"/>
+        <location filename="../EllipseArcCPPA.js" line="74"/>
         <source>Center</source>
         <translation>Zentrum</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="78"/>
+        <location filename="../EllipseArcCPPA.js" line="81"/>
         <source>Major point of ellipse or major radius</source>
         <translation>Hauptscheitelpunkt der Ellipse oder Hauptachsenradius</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="79"/>
+        <location filename="../EllipseArcCPPA.js" line="82"/>
         <source>Major point of ellipse</source>
         <translation>Hauptscheitelpunkt der Ellipse</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="84"/>
+        <location filename="../EllipseArcCPPA.js" line="87"/>
         <source>Minor point of ellipse or minor radius</source>
         <translation>Nebenscheitelpunkt der Ellipse oder Nebenachsenradius</translation>
     </message>
@@ -28,52 +28,52 @@
         <translation type="obsolete">Nebenachsenradius der Ellipse</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="85"/>
+        <location filename="../EllipseArcCPPA.js" line="88"/>
         <source>Minor point of ellipse</source>
         <translation>Nebenscheitelpunkt der Ellipse</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="90"/>
+        <location filename="../EllipseArcCPPA.js" line="93"/>
         <source>Rotation angle</source>
         <translation>Rotationswinkel</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="97"/>
+        <location filename="../EllipseArcCPPA.js" line="100"/>
         <source>Start parameter</source>
         <translation>Startparameter</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="104"/>
+        <location filename="../EllipseArcCPPA.js" line="107"/>
         <source>End parameter</source>
         <translation>Endparameter</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="368"/>
+        <location filename="../EllipseArcCPPA.js" line="371"/>
         <source>Invalid major radius.</source>
         <translation>Ungültiger Hauptachsenradius.</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="378"/>
+        <location filename="../EllipseArcCPPA.js" line="381"/>
         <source>Major radius:</source>
         <translation>Hauptachsenradius:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="394"/>
+        <location filename="../EllipseArcCPPA.js" line="397"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="407"/>
+        <location filename="../EllipseArcCPPA.js" line="410"/>
         <source>Minor radius:</source>
         <translation>Nebenachsenradius:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="432"/>
+        <location filename="../EllipseArcCPPA.js" line="435"/>
         <source>Start angle:</source>
         <translation>Startwinkel:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="448"/>
+        <location filename="../EllipseArcCPPA.js" line="451"/>
         <source>End angle:</source>
         <translation>Endwinkel:</translation>
     </message>

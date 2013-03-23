@@ -9,12 +9,12 @@
         <translation>S&amp;piegeln</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="59"/>
+        <location filename="../Mirror.js" line="62"/>
         <source>First point of symmetry axis</source>
         <translation>Erster Punkt der Symmetrieachse</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="66"/>
+        <location filename="../Mirror.js" line="69"/>
         <source>Second point of symmetry axis</source>
         <translation>Zweiter Punkt der Symmetrieachse</translation>
     </message>
