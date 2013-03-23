@@ -53,6 +53,8 @@ public:
         return pluginsInfo[i];
     }
 
+    static QString getPluginsPath();
+
 private:
     static QList<RPluginInfo> pluginsInfo;
 };

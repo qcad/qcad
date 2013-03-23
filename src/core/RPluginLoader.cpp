@@ -29,18 +29,20 @@ QList<RPluginInfo> RPluginLoader::pluginsInfo;
  * TODO: should be done in a script library, called by the script that initializes the plugin
  */
 void RPluginLoader::loadPlugins() {
-    QDir pluginsDir = QDir(".");
-    pluginsDir.cd("plugins");
+    QString pluginsPath = getPluginsPath();
+    if (pluginsPath.isNull()) {
+        return;
+    }
 
-    qDebug() << "Try to load plugins in folder " << pluginsDir.path();
+    QDir pluginsDir = QDir(pluginsPath);
+
+    qDebug() << "Trying to load plugins from folder " << pluginsDir.path();
 
     foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
-        qDebug() << "Testing " << pluginsDir.absoluteFilePath(fileName);
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
         QObject* plugin = loader.instance();
         RPluginInfo info;
         if (plugin) {
-            qDebug() << "Loading " << fileName;
             RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
             if (p) {
                 QString err;
@@ -65,17 +67,31 @@ void RPluginLoader::loadPlugins() {
 }
 
 void RPluginLoader::initScriptExtensions(QScriptEngine& engine) {
-    QDir pluginsDir = QDir(".");
-    pluginsDir.cd("plugins");
+    QString pluginsPath = getPluginsPath();
+    if (pluginsPath.isNull()) {
+        return;
+    }
+
+    QDir pluginsDir = QDir(pluginsPath);
 
     foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
-        if (loader.isLoaded()) {
-            QObject* plugin = loader.instance();
-            RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
-            if (p) {
-                p->initScriptExtensions(engine);
-            }
+        QObject* plugin = loader.instance();
+        RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+        if (p) {
+            p->initScriptExtensions(engine);
         }
     }
+}
+
+QString RPluginLoader::getPluginsPath() {
+    QDir pluginsDir = QDir(".");
+    if (!pluginsDir.cd("plugins")) {
+        pluginsDir.cdUp();
+        if (!pluginsDir.cd("PlugIns")) {
+            qWarning() << "RPluginLoader::loadPlugins: No plugins directory found.";
+            return QString();
+        }
+    }
+    return pluginsDir.absolutePath();
 }
