@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="227"/>
+        <location filename="../src/core/RUnit.cpp" line="245"/>
         <source>None</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -15,7 +15,7 @@ Remover
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="230"/>
+        <location filename="../src/core/RUnit.cpp" line="248"/>
         <source>Inch</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -24,7 +24,7 @@ Polegada</translatorcomment>
         <translation>Polegada</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="233"/>
+        <location filename="../src/core/RUnit.cpp" line="251"/>
         <source>Foot</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -34,7 +34,7 @@ Rodapé</translatorcomment>
         <translation>Fonte</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="236"/>
+        <location filename="../src/core/RUnit.cpp" line="254"/>
         <source>Mile</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -42,7 +42,7 @@ Milha</translatorcomment>
         <translation>Milha</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="239"/>
+        <location filename="../src/core/RUnit.cpp" line="257"/>
         <source>Millimeter</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -51,7 +51,7 @@ Milímetros</translatorcomment>
         <translation>Milímetro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="242"/>
+        <location filename="../src/core/RUnit.cpp" line="260"/>
         <source>Centimeter</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -60,7 +60,7 @@ Centímetros</translatorcomment>
         <translation>Centímetro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="245"/>
+        <location filename="../src/core/RUnit.cpp" line="263"/>
         <source>Meter</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -69,7 +69,7 @@ Diâmetro (ø)</translatorcomment>
         <translation>Metro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="248"/>
+        <location filename="../src/core/RUnit.cpp" line="266"/>
         <source>Kilometer</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -77,7 +77,7 @@ Quilômetro</translatorcomment>
         <translation>Quilômetro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="251"/>
+        <location filename="../src/core/RUnit.cpp" line="269"/>
         <source>Microinch</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -85,7 +85,7 @@ Polegada Milimétrica</translatorcomment>
         <translation>Microinch</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="254"/>
+        <location filename="../src/core/RUnit.cpp" line="272"/>
         <source>Mil</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -95,7 +95,7 @@ Tâmil</translatorcomment>
         <translation>Milha</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="257"/>
+        <location filename="../src/core/RUnit.cpp" line="275"/>
         <source>Yard</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -103,7 +103,7 @@ Jarda</translatorcomment>
         <translation>Jarda</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="260"/>
+        <location filename="../src/core/RUnit.cpp" line="278"/>
         <source>Angstrom</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -111,7 +111,7 @@ Jarda</translatorcomment>
         <translation>Ângstrom</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="263"/>
+        <location filename="../src/core/RUnit.cpp" line="281"/>
         <source>Nanometer</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -119,7 +119,7 @@ Nanômetro</translatorcomment>
         <translation>Nanômetro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="266"/>
+        <location filename="../src/core/RUnit.cpp" line="284"/>
         <source>Micron</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -127,7 +127,7 @@ Mícron</translatorcomment>
         <translation>Mícron</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="269"/>
+        <location filename="../src/core/RUnit.cpp" line="287"/>
         <source>Decimeter</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -135,7 +135,7 @@ Decímetro</translatorcomment>
         <translation>Decímetro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="272"/>
+        <location filename="../src/core/RUnit.cpp" line="290"/>
         <source>Decameter</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -143,7 +143,7 @@ Decâmetro</translatorcomment>
         <translation>Decâmetro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="275"/>
+        <location filename="../src/core/RUnit.cpp" line="293"/>
         <source>Hectometer</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -151,7 +151,7 @@ Hectômetro</translatorcomment>
         <translation>Hectômetro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="278"/>
+        <location filename="../src/core/RUnit.cpp" line="296"/>
         <source>Gigameter</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -159,7 +159,7 @@ Gigâmetro</translatorcomment>
         <translation>Gigâmetro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="281"/>
+        <location filename="../src/core/RUnit.cpp" line="299"/>
         <source>Astro</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -167,7 +167,7 @@ Astro</translatorcomment>
         <translation>Astro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="284"/>
+        <location filename="../src/core/RUnit.cpp" line="302"/>
         <source>Lightyear</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -175,7 +175,7 @@ Anos-Luz</translatorcomment>
         <translation>Anos-Luz</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="287"/>
+        <location filename="../src/core/RUnit.cpp" line="305"/>
         <source>Parsec</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -186,7 +186,7 @@ Parsec</translatorcomment>
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="393"/>
+        <location filename="../src/core/RColor.cpp" line="411"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -194,7 +194,7 @@ Pela Camada</translatorcomment>
         <translation>Pela Camada</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="394"/>
+        <location filename="../src/core/RColor.cpp" line="412"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -202,7 +202,7 @@ Pelo Carimbo</translatorcomment>
         <translation>Pelo bloco</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="395"/>
+        <location filename="../src/core/RColor.cpp" line="413"/>
         <source>Red</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -211,7 +211,7 @@ Refaça a última ação</translatorcomment>
         <translation>Encarnado</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="396"/>
+        <location filename="../src/core/RColor.cpp" line="414"/>
         <source>Yellow</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -221,7 +221,7 @@ Canal Amarelo</translatorcomment>
         <translation>Amarelo</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="397"/>
+        <location filename="../src/core/RColor.cpp" line="415"/>
         <source>Green</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -230,7 +230,7 @@ V&amp;erde:</translatorcomment>
         <translation>Verde</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="398"/>
+        <location filename="../src/core/RColor.cpp" line="416"/>
         <source>Cyan</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -240,7 +240,7 @@ Canal Ciano</translatorcomment>
         <translation>Ciano</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="399"/>
+        <location filename="../src/core/RColor.cpp" line="417"/>
         <source>Blue</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -250,7 +250,7 @@ Remover Azul</translatorcomment>
         <translation>Azul</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="400"/>
+        <location filename="../src/core/RColor.cpp" line="418"/>
         <source>Magenta</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -260,7 +260,7 @@ Canal Magenta</translatorcomment>
         <translation>Magenta</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="402"/>
+        <location filename="../src/core/RColor.cpp" line="420"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -269,7 +269,7 @@ Preto</translatorcomment>
         <translation>Preto</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="403"/>
+        <location filename="../src/core/RColor.cpp" line="421"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -278,7 +278,7 @@ Branco</translatorcomment>
         <translation>Branco</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="404"/>
+        <location filename="../src/core/RColor.cpp" line="422"/>
         <source>Gray</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -288,7 +288,7 @@ Cinza Claro</translatorcomment>
         <translation>CInzento</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="405"/>
+        <location filename="../src/core/RColor.cpp" line="423"/>
         <source>Light Gray</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -296,7 +296,7 @@ Cinza Claro</translatorcomment>
         <translation>Cinza Claro</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="406"/>
+        <location filename="../src/core/RColor.cpp" line="424"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
@@ -306,15 +306,15 @@ Cinza Claro</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="57"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="75"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bloco referenciado</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="58"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="59"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="60"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="78"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -323,8 +323,8 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Posição</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="58"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="61"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="79"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -333,8 +333,8 @@ Exportando o desenho...</translatorcomment>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="59"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="62"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="80"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -344,8 +344,8 @@ Modifique
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="60"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="63"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="78"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="81"/>
         <source>Z</source>
         <translatorcomment>Oculte (congele) todos os carimbos
 Mostre (descongele) todos os carimbos
@@ -353,9 +353,9 @@ Mostre (descongele) todos os carimbos
         <translation>Z</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="61"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="62"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="63"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="79"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="80"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="81"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -364,7 +364,7 @@ Escalone entidades</translatorcomment>
         <translation>Escala</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="64"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="82"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -373,7 +373,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="25"/>
+        <location filename="../src/core/REntity.cpp" line="43"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -382,7 +382,7 @@ Tipo Ordinal</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="26"/>
+        <location filename="../src/core/REntity.cpp" line="44"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_pt.ts--
@@ -392,7 +392,7 @@ Lista de Blocos</translatorcomment>
         <translation>Bloco</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="27"/>
+        <location filename="../src/core/REntity.cpp" line="45"/>
         <source>Layer</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -401,19 +401,19 @@ Lista de Camadas</translatorcomment>
         <translation>Camada</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="28"/>
+        <location filename="../src/core/REntity.cpp" line="46"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tipo de linha</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="29"/>
+        <location filename="../src/core/REntity.cpp" line="47"/>
         <source>Lineweight</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Peso da linha</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="30"/>
+        <location filename="../src/core/REntity.cpp" line="48"/>
         <source>Color</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -422,7 +422,7 @@ Abre diálogo de cores</translatorcomment>
         <translation>Cor</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="31"/>
+        <location filename="../src/core/REntity.cpp" line="49"/>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordem do traçado</translation>
@@ -431,7 +431,7 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="145"/>
+        <location filename="../src/core/RGuiAction.cpp" line="163"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Requer a seleção</translation>
@@ -440,7 +440,7 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="28"/>
+        <location filename="../src/core/RLinetype.cpp" line="46"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -448,7 +448,7 @@ Pela Camada</translatorcomment>
         <translation>Pela Camada</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="29"/>
+        <location filename="../src/core/RLinetype.cpp" line="47"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -456,7 +456,7 @@ Pelo Carimbo</translatorcomment>
         <translation>Pelo bloco</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="30"/>
+        <location filename="../src/core/RLinetype.cpp" line="48"/>
         <source>Continuous</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -464,7 +464,7 @@ Contínuo</translatorcomment>
         <translation>Contínuo</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="31"/>
+        <location filename="../src/core/RLinetype.cpp" line="49"/>
         <source>Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -473,7 +473,7 @@ Pontilhado</translatorcomment>
         <translation>Pontilhado</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="32"/>
+        <location filename="../src/core/RLinetype.cpp" line="50"/>
         <source>Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -482,7 +482,7 @@ Traço Ponto (pequeno)</translatorcomment>
         <translation>Pontilhado (pequeno)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="33"/>
+        <location filename="../src/core/RLinetype.cpp" line="51"/>
         <source>Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -491,7 +491,7 @@ Traço Ponto (grande)</translatorcomment>
         <translation>Pontilhado (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="34"/>
+        <location filename="../src/core/RLinetype.cpp" line="52"/>
         <source>Dash</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -500,7 +500,7 @@ Tracejado (pequeno)</translatorcomment>
         <translation>Tracejado</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="35"/>
+        <location filename="../src/core/RLinetype.cpp" line="53"/>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -508,7 +508,7 @@ Tracejado (pequeno)</translatorcomment>
         <translation>Tracejado (pequeno)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="36"/>
+        <location filename="../src/core/RLinetype.cpp" line="54"/>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -516,7 +516,7 @@ Tracejado (grande)</translatorcomment>
         <translation>Tracejado (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="37"/>
+        <location filename="../src/core/RLinetype.cpp" line="55"/>
         <source>Dash Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -525,7 +525,7 @@ Traço Ponto (pequeno)</translatorcomment>
         <translation>Traço Ponto</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="38"/>
+        <location filename="../src/core/RLinetype.cpp" line="56"/>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -533,7 +533,7 @@ Traço Ponto (pequeno)</translatorcomment>
         <translation>Traço Ponto (pequeno)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="39"/>
+        <location filename="../src/core/RLinetype.cpp" line="57"/>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -541,7 +541,7 @@ Traço Ponto (grande)</translatorcomment>
         <translation>Traço Ponto (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="40"/>
+        <location filename="../src/core/RLinetype.cpp" line="58"/>
         <source>Divide</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -550,7 +550,7 @@ Separação</translatorcomment>
         <translation>Separação</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="41"/>
+        <location filename="../src/core/RLinetype.cpp" line="59"/>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -558,7 +558,7 @@ Separação (pequeno)</translatorcomment>
         <translation>Separação (pequeno)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="42"/>
+        <location filename="../src/core/RLinetype.cpp" line="60"/>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -566,7 +566,7 @@ Separação (grande)</translatorcomment>
         <translation>Separação (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="43"/>
+        <location filename="../src/core/RLinetype.cpp" line="61"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -575,7 +575,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="44"/>
+        <location filename="../src/core/RLinetype.cpp" line="62"/>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -583,7 +583,7 @@ Centro (pequeno)</translatorcomment>
         <translation>Centro (pequeno)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="45"/>
+        <location filename="../src/core/RLinetype.cpp" line="63"/>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -591,7 +591,7 @@ Centro (grande)</translatorcomment>
         <translation>Centro (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="46"/>
+        <location filename="../src/core/RLinetype.cpp" line="64"/>
         <source>Border</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -601,7 +601,7 @@ Borda (pequeno)</translatorcomment>
         <translation>Limite</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="47"/>
+        <location filename="../src/core/RLinetype.cpp" line="65"/>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -609,7 +609,7 @@ Borda (pequeno)</translatorcomment>
         <translation>Borda (pequeno)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="48"/>
+        <location filename="../src/core/RLinetype.cpp" line="66"/>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -620,7 +620,7 @@ Borda (grande)</translatorcomment>
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="16"/>
+        <location filename="../src/core/RLineweight.cpp" line="34"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -628,7 +628,7 @@ Pela Camada</translatorcomment>
         <translation>Pela Camada</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="17"/>
+        <location filename="../src/core/RLineweight.cpp" line="35"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -636,7 +636,7 @@ Pelo Carimbo</translatorcomment>
         <translation>Pelo bloco</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="18"/>
+        <location filename="../src/core/RLineweight.cpp" line="36"/>
         <source>Default</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -645,7 +645,7 @@ Unidade Padrão:
         <translation>Predefinição</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="19"/>
+        <location filename="../src/core/RLineweight.cpp" line="37"/>
         <source>0.00mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -653,7 +653,7 @@ Unidade Padrão:
         <translation>0,00mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="20"/>
+        <location filename="../src/core/RLineweight.cpp" line="38"/>
         <source>0.05mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -661,7 +661,7 @@ Unidade Padrão:
         <translation>0,05mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="21"/>
+        <location filename="../src/core/RLineweight.cpp" line="39"/>
         <source>0.09mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -669,7 +669,7 @@ Unidade Padrão:
         <translation>0,09mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="22"/>
+        <location filename="../src/core/RLineweight.cpp" line="40"/>
         <source>0.13mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -677,7 +677,7 @@ Unidade Padrão:
         <translation>0,13mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="23"/>
+        <location filename="../src/core/RLineweight.cpp" line="41"/>
         <source>0.15mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -685,7 +685,7 @@ Unidade Padrão:
         <translation>0,15mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="24"/>
+        <location filename="../src/core/RLineweight.cpp" line="42"/>
         <source>0.18mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -693,7 +693,7 @@ Unidade Padrão:
         <translation>0,18mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="25"/>
+        <location filename="../src/core/RLineweight.cpp" line="43"/>
         <source>0.20mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -701,7 +701,7 @@ Unidade Padrão:
         <translation>0,20mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="26"/>
+        <location filename="../src/core/RLineweight.cpp" line="44"/>
         <source>0.25mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -709,7 +709,7 @@ Unidade Padrão:
         <translation>0,25mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="27"/>
+        <location filename="../src/core/RLineweight.cpp" line="45"/>
         <source>0.30mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -717,7 +717,7 @@ Unidade Padrão:
         <translation>0,30mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="28"/>
+        <location filename="../src/core/RLineweight.cpp" line="46"/>
         <source>0.35mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -725,7 +725,7 @@ Unidade Padrão:
         <translation>0,35mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="29"/>
+        <location filename="../src/core/RLineweight.cpp" line="47"/>
         <source>0.40mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -733,7 +733,7 @@ Unidade Padrão:
         <translation>0,40mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="30"/>
+        <location filename="../src/core/RLineweight.cpp" line="48"/>
         <source>0.50mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -741,7 +741,7 @@ Unidade Padrão:
         <translation>0,50mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="31"/>
+        <location filename="../src/core/RLineweight.cpp" line="49"/>
         <source>0.53mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -749,7 +749,7 @@ Unidade Padrão:
         <translation>0,53mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="32"/>
+        <location filename="../src/core/RLineweight.cpp" line="50"/>
         <source>0.60mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -757,7 +757,7 @@ Unidade Padrão:
         <translation>0,60mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="33"/>
+        <location filename="../src/core/RLineweight.cpp" line="51"/>
         <source>0.70mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -765,7 +765,7 @@ Unidade Padrão:
         <translation>0,70mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="34"/>
+        <location filename="../src/core/RLineweight.cpp" line="52"/>
         <source>0.80mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -773,7 +773,7 @@ Unidade Padrão:
         <translation>0,80mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="35"/>
+        <location filename="../src/core/RLineweight.cpp" line="53"/>
         <source>0.90mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -781,7 +781,7 @@ Unidade Padrão:
         <translation>0,90mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="36"/>
+        <location filename="../src/core/RLineweight.cpp" line="54"/>
         <source>1.00mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -789,7 +789,7 @@ Unidade Padrão:
         <translation>1,00mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="37"/>
+        <location filename="../src/core/RLineweight.cpp" line="55"/>
         <source>1.06mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -797,7 +797,7 @@ Unidade Padrão:
         <translation>1,06mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="38"/>
+        <location filename="../src/core/RLineweight.cpp" line="56"/>
         <source>1.20mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -805,7 +805,7 @@ Unidade Padrão:
         <translation>1,20mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="39"/>
+        <location filename="../src/core/RLineweight.cpp" line="57"/>
         <source>1.40mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -813,7 +813,7 @@ Unidade Padrão:
         <translation>1,40mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="40"/>
+        <location filename="../src/core/RLineweight.cpp" line="58"/>
         <source>1.58mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -821,7 +821,7 @@ Unidade Padrão:
         <translation>1,58mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="41"/>
+        <location filename="../src/core/RLineweight.cpp" line="59"/>
         <source>2.00mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -829,7 +829,7 @@ Unidade Padrão:
         <translation>2,00mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="42"/>
+        <location filename="../src/core/RLineweight.cpp" line="60"/>
         <source>2.11mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -840,7 +840,7 @@ Unidade Padrão:
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="17"/>
+        <location filename="../src/core/RObject.cpp" line="35"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -849,7 +849,7 @@ Configurar...</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location filename="../src/core/RObject.cpp" line="18"/>
+        <location filename="../src/core/RObject.cpp" line="36"/>
         <source>Handle</source>
         <translatorcomment>--exact match--
 --file: pt.po--

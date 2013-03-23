@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="227"/>
+        <location filename="../src/core/RUnit.cpp" line="245"/>
         <source>None</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -13,7 +13,7 @@ Aucune des expressions pragma n&apos;est supportée. Une expression par défault
         <translation>Aucun</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="230"/>
+        <location filename="../src/core/RUnit.cpp" line="248"/>
         <source>Inch</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -22,7 +22,7 @@ Micropouce</translatorcomment>
         <translation>Pouce</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="233"/>
+        <location filename="../src/core/RUnit.cpp" line="251"/>
         <source>Foot</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -30,7 +30,7 @@ Pied</translatorcomment>
         <translation>Pied</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="236"/>
+        <location filename="../src/core/RUnit.cpp" line="254"/>
         <source>Mile</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -38,7 +38,7 @@ Mile</translatorcomment>
         <translation>Mile</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="239"/>
+        <location filename="../src/core/RUnit.cpp" line="257"/>
         <source>Millimeter</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -47,7 +47,7 @@ Millimètres (mm)</translatorcomment>
         <translation>Millimètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="242"/>
+        <location filename="../src/core/RUnit.cpp" line="260"/>
         <source>Centimeter</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -56,7 +56,7 @@ Centimètres (cm)</translatorcomment>
         <translation>Centimètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="245"/>
+        <location filename="../src/core/RUnit.cpp" line="263"/>
         <source>Meter</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -65,7 +65,7 @@ Diamètre</translatorcomment>
         <translation>Mètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="248"/>
+        <location filename="../src/core/RUnit.cpp" line="266"/>
         <source>Kilometer</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -73,7 +73,7 @@ Kilomètre</translatorcomment>
         <translation>Kilomètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="251"/>
+        <location filename="../src/core/RUnit.cpp" line="269"/>
         <source>Microinch</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -81,7 +81,7 @@ Micropouce</translatorcomment>
         <translation>Micropouce</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="254"/>
+        <location filename="../src/core/RUnit.cpp" line="272"/>
         <source>Mil</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -90,7 +90,7 @@ Mile</translatorcomment>
         <translation>Mil</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="257"/>
+        <location filename="../src/core/RUnit.cpp" line="275"/>
         <source>Yard</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -98,7 +98,7 @@ Yard</translatorcomment>
         <translation>Yard</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="260"/>
+        <location filename="../src/core/RUnit.cpp" line="278"/>
         <source>Angstrom</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -106,7 +106,7 @@ Angström</translatorcomment>
         <translation>Angström</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="263"/>
+        <location filename="../src/core/RUnit.cpp" line="281"/>
         <source>Nanometer</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -114,7 +114,7 @@ Nanomètre</translatorcomment>
         <translation>Nanomètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="266"/>
+        <location filename="../src/core/RUnit.cpp" line="284"/>
         <source>Micron</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -122,7 +122,7 @@ Micron</translatorcomment>
         <translation>Micron</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="269"/>
+        <location filename="../src/core/RUnit.cpp" line="287"/>
         <source>Decimeter</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -130,7 +130,7 @@ Décimètre</translatorcomment>
         <translation>Décimètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="272"/>
+        <location filename="../src/core/RUnit.cpp" line="290"/>
         <source>Decameter</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -138,7 +138,7 @@ Décamètre</translatorcomment>
         <translation>Décamètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="275"/>
+        <location filename="../src/core/RUnit.cpp" line="293"/>
         <source>Hectometer</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -146,7 +146,7 @@ Hectomètre</translatorcomment>
         <translation>Hectomètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="278"/>
+        <location filename="../src/core/RUnit.cpp" line="296"/>
         <source>Gigameter</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -154,7 +154,7 @@ Gigamètre</translatorcomment>
         <translation>Gigamètre</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="281"/>
+        <location filename="../src/core/RUnit.cpp" line="299"/>
         <source>Astro</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -162,7 +162,7 @@ Astro</translatorcomment>
         <translation>Astro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="284"/>
+        <location filename="../src/core/RUnit.cpp" line="302"/>
         <source>Lightyear</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -170,7 +170,7 @@ Année-lumière</translatorcomment>
         <translation>Année-lumière</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="287"/>
+        <location filename="../src/core/RUnit.cpp" line="305"/>
         <source>Parsec</source>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
@@ -181,7 +181,7 @@ Parsec</translatorcomment>
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="393"/>
+        <location filename="../src/core/RColor.cpp" line="411"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -189,7 +189,7 @@ Par calque</translatorcomment>
         <translation>Par calque</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="394"/>
+        <location filename="../src/core/RColor.cpp" line="412"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -197,7 +197,7 @@ Par bloc</translatorcomment>
         <translation>Par bloc</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="395"/>
+        <location filename="../src/core/RColor.cpp" line="413"/>
         <source>Red</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -207,7 +207,7 @@ Rétablit la dernière action</translatorcomment>
         <translation>Rouge</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="396"/>
+        <location filename="../src/core/RColor.cpp" line="414"/>
         <source>Yellow</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -215,7 +215,7 @@ Jaune</translatorcomment>
         <translation>Jaune</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="397"/>
+        <location filename="../src/core/RColor.cpp" line="415"/>
         <source>Green</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -224,7 +224,7 @@ Greenphone (179 x 185)</translatorcomment>
         <translation>Vert</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="398"/>
+        <location filename="../src/core/RColor.cpp" line="416"/>
         <source>Cyan</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -232,7 +232,7 @@ Cyan</translatorcomment>
         <translation>Cyan</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="399"/>
+        <location filename="../src/core/RColor.cpp" line="417"/>
         <source>Blue</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -242,7 +242,7 @@ Bluetooth</translatorcomment>
         <translation>Bleu</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="400"/>
+        <location filename="../src/core/RColor.cpp" line="418"/>
         <source>Magenta</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -250,7 +250,7 @@ Magenta</translatorcomment>
         <translation>Magenta</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="402"/>
+        <location filename="../src/core/RColor.cpp" line="420"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -259,7 +259,7 @@ Extra-gras</translatorcomment>
         <translation>Noir</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="403"/>
+        <location filename="../src/core/RColor.cpp" line="421"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: FirstStart_fr.ts--
@@ -268,7 +268,7 @@ Blanc</translatorcomment>
         <translation>Blanc</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="404"/>
+        <location filename="../src/core/RColor.cpp" line="422"/>
         <source>Gray</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -277,7 +277,7 @@ Gris clair</translatorcomment>
         <translation>Gris</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="405"/>
+        <location filename="../src/core/RColor.cpp" line="423"/>
         <source>Light Gray</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -285,7 +285,7 @@ Gris clair</translatorcomment>
         <translation>Gris clair</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="406"/>
+        <location filename="../src/core/RColor.cpp" line="424"/>
         <source>Others...</source>
         <translatorcomment>--exact match--
 --file: Text_fr.ts--
@@ -296,7 +296,7 @@ Autres...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="26"/>
+        <location filename="../src/core/REntity.cpp" line="44"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_fr.ts--
@@ -306,14 +306,14 @@ Liste des blocs</translatorcomment>
         <translation>Bloc</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="57"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="75"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bloc référencé</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="58"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="61"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="79"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -323,9 +323,9 @@ Exportation du dessin...</translatorcomment>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="58"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="59"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="60"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="78"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -335,8 +335,8 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="59"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="62"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="80"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -346,8 +346,8 @@ Modifier
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="60"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="63"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="78"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="81"/>
         <source>Z</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -356,9 +356,9 @@ Partage Horizontal
         <translation>Z</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="61"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="62"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="63"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="79"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="80"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="81"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: Scale_fr.ts--
@@ -368,7 +368,7 @@ Met les entités à l&apos;échelle</translatorcomment>
         <translation>Echelle</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="64"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="82"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -378,7 +378,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="25"/>
+        <location filename="../src/core/REntity.cpp" line="43"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -388,7 +388,7 @@ Type ordonnée</translatorcomment>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="27"/>
+        <location filename="../src/core/REntity.cpp" line="45"/>
         <source>Layer</source>
         <translatorcomment>--exact match--
 --file: AdvancedSelection_fr.ts--
@@ -397,7 +397,7 @@ Liste des calques</translatorcomment>
         <translation>Calque</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="28"/>
+        <location filename="../src/core/REntity.cpp" line="46"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_fr.ts--
@@ -406,13 +406,13 @@ Type de ligne</translatorcomment>
         <translation>Type de ligne</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="29"/>
+        <location filename="../src/core/REntity.cpp" line="47"/>
         <source>Lineweight</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Épaisseur de ligne</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="30"/>
+        <location filename="../src/core/REntity.cpp" line="48"/>
         <source>Color</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -421,7 +421,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation>Couleur</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="31"/>
+        <location filename="../src/core/REntity.cpp" line="49"/>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordre de dessin</translation>
@@ -430,7 +430,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="145"/>
+        <location filename="../src/core/RGuiAction.cpp" line="163"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nécessite une sélection</translation>
@@ -439,7 +439,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="28"/>
+        <location filename="../src/core/RLinetype.cpp" line="46"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -447,7 +447,7 @@ Par calque</translatorcomment>
         <translation>Par calque</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="29"/>
+        <location filename="../src/core/RLinetype.cpp" line="47"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -455,7 +455,7 @@ Par bloc</translatorcomment>
         <translation>Par bloc</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="30"/>
+        <location filename="../src/core/RLinetype.cpp" line="48"/>
         <source>Continuous</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -463,7 +463,7 @@ Continu</translatorcomment>
         <translation>Continu</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="31"/>
+        <location filename="../src/core/RLinetype.cpp" line="49"/>
         <source>Dot</source>
         <translatorcomment>--exact match--
 --file: Input_fr.ts--
@@ -473,7 +473,7 @@ Points de la grille :</translatorcomment>
         <translation>Point</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="32"/>
+        <location filename="../src/core/RLinetype.cpp" line="50"/>
         <source>Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -482,7 +482,7 @@ Tiret-point (petit)</translatorcomment>
         <translation>Point (petit)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="33"/>
+        <location filename="../src/core/RLinetype.cpp" line="51"/>
         <source>Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -491,7 +491,7 @@ Tiret-point (grand)</translatorcomment>
         <translation>Point (grand)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="34"/>
+        <location filename="../src/core/RLinetype.cpp" line="52"/>
         <source>Dash</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -500,7 +500,7 @@ Tiret (petit)</translatorcomment>
         <translation>Tiret</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="35"/>
+        <location filename="../src/core/RLinetype.cpp" line="53"/>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -508,7 +508,7 @@ Tiret (petit)</translatorcomment>
         <translation>Tiret (petit)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="36"/>
+        <location filename="../src/core/RLinetype.cpp" line="54"/>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -516,7 +516,7 @@ Tiret (grand)</translatorcomment>
         <translation>Tiret (grand)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="37"/>
+        <location filename="../src/core/RLinetype.cpp" line="55"/>
         <source>Dash Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -525,7 +525,7 @@ Tiret-point (petit)</translatorcomment>
         <translation>Tiret-point</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="38"/>
+        <location filename="../src/core/RLinetype.cpp" line="56"/>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -533,7 +533,7 @@ Tiret-point (petit)</translatorcomment>
         <translation>Tiret-point (petit)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="39"/>
+        <location filename="../src/core/RLinetype.cpp" line="57"/>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -541,7 +541,7 @@ Tiret-point (grand)</translatorcomment>
         <translation>Tiret-point (grand)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="40"/>
+        <location filename="../src/core/RLinetype.cpp" line="58"/>
         <source>Divide</source>
         <translatorcomment>--exact match--
 --file: Divide_fr.ts--
@@ -551,7 +551,7 @@ Divise les entités</translatorcomment>
         <translation>Division</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="41"/>
+        <location filename="../src/core/RLinetype.cpp" line="59"/>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -559,7 +559,7 @@ Division (petite)</translatorcomment>
         <translation>Division (petite)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="42"/>
+        <location filename="../src/core/RLinetype.cpp" line="60"/>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -567,7 +567,7 @@ Division (grande)</translatorcomment>
         <translation>Division (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="43"/>
+        <location filename="../src/core/RLinetype.cpp" line="61"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -577,7 +577,7 @@ Indiquer le centre</translatorcomment>
         <translation>Centré</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="44"/>
+        <location filename="../src/core/RLinetype.cpp" line="62"/>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -585,7 +585,7 @@ Centre (petit)</translatorcomment>
         <translation>Centre (petit)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="45"/>
+        <location filename="../src/core/RLinetype.cpp" line="63"/>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -593,7 +593,7 @@ Centre (grand)</translatorcomment>
         <translation>Centre (grand)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="46"/>
+        <location filename="../src/core/RLinetype.cpp" line="64"/>
         <source>Border</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -602,7 +602,7 @@ Bordure (petite)</translatorcomment>
         <translation>Bordure</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="47"/>
+        <location filename="../src/core/RLinetype.cpp" line="65"/>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -610,7 +610,7 @@ Bordure (petite)</translatorcomment>
         <translation>Bordure (petite)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="48"/>
+        <location filename="../src/core/RLinetype.cpp" line="66"/>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -621,7 +621,7 @@ Bordure (grande)</translatorcomment>
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="16"/>
+        <location filename="../src/core/RLineweight.cpp" line="34"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -629,7 +629,7 @@ Par calque</translatorcomment>
         <translation>Par calque</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="17"/>
+        <location filename="../src/core/RLineweight.cpp" line="35"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -637,7 +637,7 @@ Par bloc</translatorcomment>
         <translation>Par bloc</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="18"/>
+        <location filename="../src/core/RLineweight.cpp" line="36"/>
         <source>Default</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -647,7 +647,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>Défaut</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="19"/>
+        <location filename="../src/core/RLineweight.cpp" line="37"/>
         <source>0.00mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -655,7 +655,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.00mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="20"/>
+        <location filename="../src/core/RLineweight.cpp" line="38"/>
         <source>0.05mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -663,7 +663,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.05mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="21"/>
+        <location filename="../src/core/RLineweight.cpp" line="39"/>
         <source>0.09mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -671,7 +671,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.09mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="22"/>
+        <location filename="../src/core/RLineweight.cpp" line="40"/>
         <source>0.13mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -679,7 +679,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.13mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="23"/>
+        <location filename="../src/core/RLineweight.cpp" line="41"/>
         <source>0.15mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -687,7 +687,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.15mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="24"/>
+        <location filename="../src/core/RLineweight.cpp" line="42"/>
         <source>0.18mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -695,7 +695,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.18mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="25"/>
+        <location filename="../src/core/RLineweight.cpp" line="43"/>
         <source>0.20mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -703,7 +703,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.20mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="26"/>
+        <location filename="../src/core/RLineweight.cpp" line="44"/>
         <source>0.25mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -711,7 +711,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.25mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="27"/>
+        <location filename="../src/core/RLineweight.cpp" line="45"/>
         <source>0.30mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -719,7 +719,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.30mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="28"/>
+        <location filename="../src/core/RLineweight.cpp" line="46"/>
         <source>0.35mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -727,7 +727,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.35mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="29"/>
+        <location filename="../src/core/RLineweight.cpp" line="47"/>
         <source>0.40mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -735,7 +735,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.40mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="30"/>
+        <location filename="../src/core/RLineweight.cpp" line="48"/>
         <source>0.50mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -743,7 +743,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.50mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="31"/>
+        <location filename="../src/core/RLineweight.cpp" line="49"/>
         <source>0.53mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -751,7 +751,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.53mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="32"/>
+        <location filename="../src/core/RLineweight.cpp" line="50"/>
         <source>0.60mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -759,7 +759,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.60mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="33"/>
+        <location filename="../src/core/RLineweight.cpp" line="51"/>
         <source>0.70mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -767,7 +767,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.70mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="34"/>
+        <location filename="../src/core/RLineweight.cpp" line="52"/>
         <source>0.80mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -775,7 +775,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.80mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="35"/>
+        <location filename="../src/core/RLineweight.cpp" line="53"/>
         <source>0.90mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -783,7 +783,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>0.90mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="36"/>
+        <location filename="../src/core/RLineweight.cpp" line="54"/>
         <source>1.00mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -791,7 +791,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>1.00mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="37"/>
+        <location filename="../src/core/RLineweight.cpp" line="55"/>
         <source>1.06mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -799,7 +799,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>1.06mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="38"/>
+        <location filename="../src/core/RLineweight.cpp" line="56"/>
         <source>1.20mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -807,7 +807,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>1.20mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="39"/>
+        <location filename="../src/core/RLineweight.cpp" line="57"/>
         <source>1.40mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -815,7 +815,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>1.40mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="40"/>
+        <location filename="../src/core/RLineweight.cpp" line="58"/>
         <source>1.58mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -823,7 +823,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>1.58mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="41"/>
+        <location filename="../src/core/RLineweight.cpp" line="59"/>
         <source>2.00mm (ISO)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -831,7 +831,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translation>2.00mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="42"/>
+        <location filename="../src/core/RLineweight.cpp" line="60"/>
         <source>2.11mm</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -842,7 +842,7 @@ Valeurs par &amp;défaut</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="17"/>
+        <location filename="../src/core/RObject.cpp" line="35"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -852,7 +852,7 @@ Personnalisé</translatorcomment>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location filename="../src/core/RObject.cpp" line="18"/>
+        <location filename="../src/core/RObject.cpp" line="36"/>
         <source>Handle</source>
         <translatorcomment>--google--
 Séquence ambiguë %1 non traitée

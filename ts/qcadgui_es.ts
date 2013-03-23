@@ -17,22 +17,20 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/gui/RHelpBrowser.cpp" line="95"/>
         <source>Cannot find user manual at: %1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>No se puede encontrar manual del usuario: %1</translation>
+        <translation type="obsolete">No se puede encontrar manual del usuario: %1</translation>
     </message>
     <message>
-        <location filename="../src/gui/RHelpBrowser.cpp" line="114"/>
         <source>Unable to launch Qt Assistant (%1)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>No se puede iniciar Asistente de Qt (%1)</translation>
+        <translation type="obsolete">No se puede iniciar Asistente de Qt (%1)</translation>
     </message>
 </context>
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="108"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="126"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: es.po--
