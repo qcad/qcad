@@ -95,15 +95,18 @@ QStringList RFileImporterRegistry::getFilterExtensions() {
         QStringList filterStrings = (*it)->getFilterStrings();
         for (int i=0; i<filterStrings.count(); i++) {
             QString filterString = filterStrings[i];
-            QRegExp rx("(\\*\\.[^ ]*)");
+            QRegExp rx("\\*\\.([^ )]*)");
             int pos = 0;
              
             while ((pos = rx.indexIn(filterString, pos)) != -1)  {
-                ret << rx.cap(1);
+                ret.append(rx.cap(1));
                 pos += rx.matchedLength();
             }
         }
     }
+
+    // unique:
+    ret = ret.toSet().toList();
 
     return ret;
 }
