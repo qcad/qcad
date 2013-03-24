@@ -23,6 +23,8 @@
 #include <QtPlugin>
 #include <QMetaType>
 
+#include "RPluginInfo.h"
+
 QT_BEGIN_NAMESPACE
 class QString;
 class QScriptEngine;
@@ -35,9 +37,7 @@ public:
     virtual bool init() = 0;
     virtual void initScriptExtensions(QScriptEngine& engine) = 0;
 
-    virtual QString getErrorString() = 0;
-    virtual QString getVersionString() = 0;
-    virtual QString getAboutString() = 0;
+    virtual RPluginInfo getPluginInfo() = 0;
 };
 
 QT_BEGIN_NAMESPACE

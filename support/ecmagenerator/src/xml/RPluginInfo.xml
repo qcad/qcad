@@ -7,42 +7,71 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <constructor>
       <variant />
-      <variant>
-        <arg type="QString &amp;" typeName="QString"
-        name="fileName" isConst="true" />
-        <arg type="QString &amp;" typeName="QString"
-        name="errorString" isConst="true" />
-      </variant>
-      <variant>
-        <arg type="QString &amp;" typeName="QString"
-        name="fileName" isConst="true" />
-        <arg type="QString &amp;" typeName="QString"
-        name="aboutString" isConst="true" />
-        <arg type="QString &amp;" typeName="QString"
-        name="versionString" isConst="true" />
-        <arg type="QString &amp;" typeName="QString"
-        name="errorString" isConst="true" />
-      </variant>
     </constructor>
     <method name="getFileName" cppName="getFileName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="setFileName" cppName="setFileName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="fn"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getAboutString" cppName="getAboutString"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setAboutString" cppName="setAboutString"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="s"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getVersionString" cppName="getVersionString"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="setVersionString" cppName="setVersionString"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="vs"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getErrorString" cppName="getErrorString"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setErrorString" cppName="setErrorString"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="es"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getLicense" cppName="getLicense"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setLicense" cppName="setLicense"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="l"
+        isConst="true" />
+      </variant>
     </method>
   </class>
 </unit>

@@ -32,33 +32,45 @@
 class RPluginInfo {
 public:
     RPluginInfo() {}
-    RPluginInfo(const QString& fileName,
-                const QString& errorString) :
-        fileName(fileName),
-        errorString(errorString) {}
-    RPluginInfo(const QString& fileName,
-                const QString& aboutString,
-                const QString& versionString,
-                const QString& errorString) :
-        fileName(fileName),
-        versionString(versionString),
-        aboutString(aboutString),
-        errorString(errorString) {}
 
     QString getFileName() {
         return fileName;
+    }
+
+    void setFileName(const QString& fn) {
+        fileName = fn;
     }
 
     QString getAboutString() {
         return aboutString;
     }
 
+    void setAboutString(const QString& s) {
+        aboutString = s;
+    }
+
     QString getVersionString() {
         return versionString;
     }
 
+    void setVersionString(const QString& vs) {
+        versionString = vs;
+    }
+
     QString getErrorString() {
         return errorString;
+    }
+
+    void setErrorString(const QString& es) {
+        errorString = es;
+    }
+
+    QString getLicense() {
+        return license;
+    }
+
+    void setLicense(const QString& l) {
+        license = l;
     }
 
 private:
@@ -66,6 +78,7 @@ private:
     QString aboutString;
     QString versionString;
     QString errorString;
+    QString license;
 };
 
 Q_DECLARE_METATYPE(RPluginInfo)

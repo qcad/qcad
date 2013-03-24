@@ -45,21 +45,19 @@ void RPluginLoader::loadPlugins() {
         if (plugin) {
             RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
             if (p) {
-                QString err;
-                if (!p->init()) {
-                    err = p->getErrorString();
-                    qDebug() << "Plugin reported error: " << err;
-                }
-
-                info = RPluginInfo(fileName, p->getAboutString(), p->getVersionString(), err);
+                p->init();
+                info = p->getPluginInfo();
+                info.setFileName(fileName);
             }
             else {
-                info = RPluginInfo(fileName, loader.errorString());
+                info.setFileName(fileName);
+                info.setErrorString(loader.errorString());
                 qDebug() << "Plugin loader reported error: " << loader.errorString();
             }
         }
         else {
-            info = RPluginInfo(fileName, loader.errorString());
+            info.setFileName(fileName);
+            info.setErrorString(loader.errorString());
             qDebug() << "Plugin loader reported error: " << loader.errorString();
         }
         pluginsInfo.append(info);

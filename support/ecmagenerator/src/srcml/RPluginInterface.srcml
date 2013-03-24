@@ -25,6 +25,9 @@ the GNU General Public License * along with QCAD. */</comment>
 <cpp:include>#
 <cpp:directive>include</cpp:directive>
 <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#
+<cpp:directive>include</cpp:directive>
+<cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
 <decl_stmt>
 <decl>
   <type>
@@ -72,25 +75,9 @@ the GNU General Public License * along with QCAD. */</comment>
     <function_decl>
     <type>
       <name>virtual</name>
-      <name>QString</name>
+      <name>RPluginInfo</name>
     </type>
-    <name>getErrorString</name>
-    <parameter_list>()</parameter_list>
-    <specifier>= 0</specifier>;</function_decl>
-    <function_decl>
-    <type>
-      <name>virtual</name>
-      <name>QString</name>
-    </type>
-    <name>getVersionString</name>
-    <parameter_list>()</parameter_list>
-    <specifier>= 0</specifier>;</function_decl>
-    <function_decl>
-    <type>
-      <name>virtual</name>
-      <name>QString</name>
-    </type>
-    <name>getAboutString</name>
+    <name>getPluginInfo</name>
     <parameter_list>()</parameter_list>
     <specifier>= 0</specifier>;</function_decl></public>}</block>
   </decl>

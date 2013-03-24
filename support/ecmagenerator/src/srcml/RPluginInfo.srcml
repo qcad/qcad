@@ -36,120 +36,6 @@ dir="./core" filename="RPluginInfo.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </constructor>
-  <constructor>
-    <name>RPluginInfo</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>fileName</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>errorString</name>
-      </decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>fileName</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>fileName</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>errorString</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>errorString</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{}</block>
-  </constructor>
-  <constructor>
-    <name>RPluginInfo</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>fileName</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>aboutString</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>versionString</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>errorString</name>
-      </decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>fileName</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>fileName</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>versionString</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>versionString</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>aboutString</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>aboutString</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>errorString</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>errorString</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{}</block>
-  </constructor>
   <function>
     <type>
       <name>QString</name>
@@ -161,6 +47,26 @@ dir="./core" filename="RPluginInfo.h">
     <expr>
       <name>fileName</name>
     </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setFileName</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>fn</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>fileName</name>= 
+    <name>fn</name></expr>;</expr_stmt>}</block>
   </function>
   <function>
     <type>
@@ -176,6 +82,26 @@ dir="./core" filename="RPluginInfo.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setAboutString</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>s</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>aboutString</name>= 
+    <name>s</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
       <name>QString</name>
     </type>
     <name>getVersionString</name>
@@ -188,6 +114,26 @@ dir="./core" filename="RPluginInfo.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setVersionString</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>vs</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>versionString</name>= 
+    <name>vs</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
       <name>QString</name>
     </type>
     <name>getErrorString</name>
@@ -197,6 +143,58 @@ dir="./core" filename="RPluginInfo.h">
     <expr>
       <name>errorString</name>
     </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setErrorString</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>es</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>errorString</name>= 
+    <name>es</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getLicense</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>license</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setLicense</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>l</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>license</name>= 
+    <name>l</name></expr>;</expr_stmt>}</block>
   </function></public>
   <private>private: 
   <decl_stmt>
@@ -226,6 +224,13 @@ dir="./core" filename="RPluginInfo.h">
       <name>QString</name>
     </type>
     <name>errorString</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>license</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

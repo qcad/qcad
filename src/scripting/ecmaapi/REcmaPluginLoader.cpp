@@ -66,6 +66,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getPluginInfo, "getPluginInfo");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPluginsPath, "getPluginsPath");
+            
 
     // static properties:
     
@@ -277,6 +279,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginLoader::getPluginInfo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginLoader::getPluginsPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginLoader::getPluginsPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginLoader::getPluginsPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RPluginLoader::
+       getPluginsPath();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginLoader.getPluginsPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginLoader::getPluginsPath", context, engine);
             return result;
         }
          QScriptValue REcmaPluginLoader::toString

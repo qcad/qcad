@@ -126,7 +126,14 @@ dir="./core" filename="RPluginLoader.h">
         </expr>]</index>
       </name>
     </expr>;</return>}</block>
-  </function></public>
+  </function>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>getPluginsPath</name>
+  <parameter_list>()</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>

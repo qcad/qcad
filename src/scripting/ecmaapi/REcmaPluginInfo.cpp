@@ -55,11 +55,23 @@
     
             REcmaHelper::registerFunction(&engine, proto, getFileName, "getFileName");
             
+            REcmaHelper::registerFunction(&engine, proto, setFileName, "setFileName");
+            
             REcmaHelper::registerFunction(&engine, proto, getAboutString, "getAboutString");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAboutString, "setAboutString");
             
             REcmaHelper::registerFunction(&engine, proto, getVersionString, "getVersionString");
             
+            REcmaHelper::registerFunction(&engine, proto, setVersionString, "setVersionString");
+            
             REcmaHelper::registerFunction(&engine, proto, getErrorString, "getErrorString");
+            
+            REcmaHelper::registerFunction(&engine, proto, setErrorString, "setErrorString");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLicense, "getLicense");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLicense, "setLicense");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RPluginInfo*>(), *proto);
@@ -120,144 +132,6 @@
             // copyable class:
             RPluginInfo
                     cppResult;
-                
-            result = engine->newVariant(
-            context->thisObject(), qVariantFromValue(cppResult));
-        
-    } else 
-
-    if( context->argumentCount() ==
-        2
-                && (
-                
-                        context->argument(
-                        0
-                        ).isString()
-                ) /* type: QString */
-            
-                && (
-                
-                        context->argument(
-                        1
-                        ).isString()
-                ) /* type: QString */
-            
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-                    // argument isStandardType
-                    QString
-                    a1 =
-                    (QString)
-                    
-                    context->argument( 1 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // copyable class:
-            RPluginInfo
-                    cppResult(
-                    a0
-        ,
-    a1
-                    );
-                
-            result = engine->newVariant(
-            context->thisObject(), qVariantFromValue(cppResult));
-        
-    } else 
-
-    if( context->argumentCount() ==
-        4
-                && (
-                
-                        context->argument(
-                        0
-                        ).isString()
-                ) /* type: QString */
-            
-                && (
-                
-                        context->argument(
-                        1
-                        ).isString()
-                ) /* type: QString */
-            
-                && (
-                
-                        context->argument(
-                        2
-                        ).isString()
-                ) /* type: QString */
-            
-                && (
-                
-                        context->argument(
-                        3
-                        ).isString()
-                ) /* type: QString */
-            
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-                    // argument isStandardType
-                    QString
-                    a1 =
-                    (QString)
-                    
-                    context->argument( 1 ).
-                    toString();
-                
-                    // argument isStandardType
-                    QString
-                    a2 =
-                    (QString)
-                    
-                    context->argument( 2 ).
-                    toString();
-                
-                    // argument isStandardType
-                    QString
-                    a3 =
-                    (QString)
-                    
-                    context->argument( 3 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // copyable class:
-            RPluginInfo
-                    cppResult(
-                    a0
-        ,
-    a1
-        ,
-    a2
-        ,
-    a3
-                    );
                 
             result = engine->newVariant(
             context->thisObject(), qVariantFromValue(cppResult));
@@ -350,6 +224,61 @@
             return result;
         }
          QScriptValue
+        REcmaPluginInfo::setFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::setFileName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::setFileName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("setFileName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFileName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.setFileName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::setFileName", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPluginInfo::getAboutString
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -396,6 +325,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginInfo::getAboutString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::setAboutString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::setAboutString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::setAboutString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("setAboutString", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAboutString(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.setAboutString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::setAboutString", context, engine);
             return result;
         }
          QScriptValue
@@ -448,6 +432,61 @@
             return result;
         }
          QScriptValue
+        REcmaPluginInfo::setVersionString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::setVersionString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::setVersionString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("setVersionString", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setVersionString(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.setVersionString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::setVersionString", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPluginInfo::getErrorString
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -494,6 +533,165 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginInfo::getErrorString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::setErrorString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::setErrorString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::setErrorString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("setErrorString", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setErrorString(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.setErrorString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::setErrorString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::getLicense
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::getLicense", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::getLicense";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("getLicense", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLicense();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.getLicense().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::getLicense", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::setLicense
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::setLicense", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::setLicense";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("setLicense", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLicense(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.setLicense().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::setLicense", context, engine);
             return result;
         }
          QScriptValue REcmaPluginInfo::toString

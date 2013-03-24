@@ -47,13 +47,31 @@
         getFileName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAboutString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAboutString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getVersionString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setVersionString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getErrorString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setErrorString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLicense
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLicense
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
