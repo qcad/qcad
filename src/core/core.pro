@@ -238,10 +238,6 @@ HEADERS = \
     math/RTextLabel.h \
     math/RTriangle.h \
     math/RVector.h
-win32-msvc {
-    HEADERS += getopt_long.h
-    SOURCES += getopt_long.c getopt.c
-}
 TEMPLATE = lib
 #CONFIG += staticlib
 CONFIG += plugin

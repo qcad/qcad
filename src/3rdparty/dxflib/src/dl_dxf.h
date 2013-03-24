@@ -117,14 +117,12 @@ public:
     bool in(const std::string& file,
             DL_CreationInterface* creationInterface);
     bool readDxfGroups(FILE* fp,
-                       DL_CreationInterface* creationInterface,
-					   int* errorCounter = NULL);
+                       DL_CreationInterface* creationInterface);
     static bool getStrippedLine(std::string& s, unsigned int size,
                                FILE* stream);
     
     bool readDxfGroups(std::stringstream& stream,
-                       DL_CreationInterface* creationInterface,
-					   int* errorCounter = NULL);
+                       DL_CreationInterface* creationInterface);
     bool in(std::stringstream &stream,
             DL_CreationInterface* creationInterface);
     static bool getStrippedLine(std::string& s, unsigned int size,

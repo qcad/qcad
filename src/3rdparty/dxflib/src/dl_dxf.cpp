@@ -36,10 +36,6 @@
 #include "dl_writer_ascii.h"
 
 
-#if defined(__OS2__)||defined(__EMX__)||defined(_WIN32)
-#define strcasecmp(s,t) stricmp(s,t)
-#endif
-
 
 /**
  * Default constructor.
@@ -115,16 +111,11 @@ bool DL_Dxf::in(const std::string& file, DL_CreationInterface* creationInterface
     FILE *fp;
     firstCall = true;
     currentObjectType = DL_UNKNOWN;
-    int errorCounter = 0;
 
     fp = fopen(file.c_str(), "rt");
     if (fp) {
-        while (readDxfGroups(fp, creationInterface, &errorCounter)) {}
+        while (readDxfGroups(fp, creationInterface)) {}
         fclose(fp);
-        if (errorCounter>0) {
-            std::cerr << "DXF Filter: There have been " << errorCounter <<
-            " errors. The drawing might be incomplete / incorrect.\n";
-        }
         return true;
     }
 
@@ -146,16 +137,10 @@ bool DL_Dxf::in(const std::string& file, DL_CreationInterface* creationInterface
 bool DL_Dxf::in(std::stringstream& stream,
                 DL_CreationInterface* creationInterface) {
     
-    int errorCounter = 0;
-
     if (stream.good()) {
         firstCall=true;
         currentObjectType = DL_UNKNOWN;
-        while (readDxfGroups(stream, creationInterface, &errorCounter)) {}
-        if (errorCounter>0) {
-            std::cerr << "DXF Filter: There have been " << errorCounter <<
-            " errors. The drawing might be incomplete / incorrect.\n";
-        }
+        while (readDxfGroups(stream, creationInterface)) {}
         return true;
     }
     return false;
@@ -185,8 +170,7 @@ bool DL_Dxf::in(std::stringstream& stream,
  * @retval true If EOF not reached.
  * @retval false If EOF reached.
  */
-bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface,
-                           int* errorCounter) {
+bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface) {
 
     static int line = 1;
 
@@ -210,8 +194,7 @@ bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface,
  * Same as above but for stringstreams.
  */
 bool DL_Dxf::readDxfGroups(std::stringstream& stream,
-                           DL_CreationInterface* creationInterface,
-                           int* errorCounter) {
+                           DL_CreationInterface* creationInterface) {
 
     static int line = 1;
 
@@ -803,8 +786,10 @@ void DL_Dxf::addLayer(DL_CreationInterface* creationInterface) {
     if (attrib.getWidth()<0) {
         attrib.setWidth(1);
     }
-    if (!strcasecmp(attrib.getLineType().c_str(), "BYLAYER") ||
-            !strcasecmp(attrib.getLineType().c_str(), "BYBLOCK")) {
+
+    std::string lineType = attrib.getLineType();
+    std::transform(lineType.begin(), lineType.end(), lineType.begin(), ::toupper);
+    if (lineType=="BYLAYER" || lineType=="BYBLOCK") {
         attrib.setLineType("CONTINUOUS");
     }
 
@@ -1822,9 +1807,9 @@ void DL_Dxf::addHatch(DL_CreationInterface* creationInterface) {
                     getStringValue(2, ""));
     creationInterface->addHatch(hd);
 
-    for (int i=0; i<hatchEdges.size(); i++) {
+    for (unsigned int i=0; i<hatchEdges.size(); i++) {
         creationInterface->addHatchLoop(DL_HatchLoopData(hatchEdges[i].size()));
-        for (int k=0; k<hatchEdges[i].size(); k++) {
+        for (unsigned int k=0; k<hatchEdges[i].size(); k++) {
             creationInterface->addHatchEdge(DL_HatchEdgeData(hatchEdges[i][k]));
         }
     }
@@ -3442,6 +3427,8 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
     //const char* description,
     //int elements,
     //double patternLength) {
+    std::string name = data.name;
+    std::transform(name.begin(), name.end(), name.begin(), ::toupper);
 
     if (data.name.empty()) {
         std::cerr << "DL_Dxf::writeLineType: "
@@ -3451,18 +3438,17 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
 
 	// ignore BYLAYER, BYBLOCK for R12
     if (version<DL_VERSION_2000) {
-		if (!strcasecmp(data.name.c_str(), "BYBLOCK") ||
-		    !strcasecmp(data.name.c_str(), "BYLAYER")) {
+		if (name=="BYBLOCK" || name=="BYLAYER") {
 			return;
 		}
 	}
 
 	// write id (not for R12)
-    if (!strcasecmp(data.name.c_str(), "BYBLOCK")) {
+    if (name=="BYBLOCK") {
         dw.tableLineTypeEntry(0x14);
-    } else if (!strcasecmp(data.name.c_str(), "BYLAYER")) {
+    } else if (name=="BYLAYER") {
         dw.tableLineTypeEntry(0x15);
-    } else if (!strcasecmp(data.name.c_str(), "CONTINUOUS")) {
+    } else if (name=="CONTINUOUS") {
         dw.tableLineTypeEntry(0x16);
     } else {
         dw.tableLineTypeEntry();
@@ -3473,22 +3459,22 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
     	dw.dxfInt(70, data.flags);
 	//}
 
-    if (!strcasecmp(data.name.c_str(), "BYBLOCK")) {
+    if (name=="BYBLOCK") {
         dw.dxfString(3, "");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 0);
         dw.dxfReal(40, 0.0);
-    } else if (!strcasecmp(data.name.c_str(), "BYLAYER")) {
+    } else if (name=="BYLAYER") {
         dw.dxfString(3, "");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 0);
         dw.dxfReal(40, 0.0);
-    } else if (!strcasecmp(data.name.c_str(), "CONTINUOUS")) {
+    } else if (name=="CONTINUOUS") {
         dw.dxfString(3, "Solid line");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 0);
         dw.dxfReal(40, 0.0);
-    } else if (!strcasecmp(data.name.c_str(), "ACAD_ISO02W100")) {
+    } else if (name=="ACAD_ISO02W100") {
         dw.dxfString(3, "ISO Dashed __ __ __ __ __ __ __ __ __ __ _");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 2);
@@ -3499,7 +3485,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.0);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "ACAD_ISO03W100")) {
+    } else if (name=="ACAD_ISO03W100") {
         dw.dxfString(3, "ISO Dashed with Distance __    __    __    _");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 2);
@@ -3510,7 +3496,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -18.0);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "ACAD_ISO04W100")) {
+    } else if (name=="ACAD_ISO04W100") {
         dw.dxfString(3, "ISO Long Dashed Dotted ____ . ____ . __");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 4);
@@ -3527,7 +3513,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.0);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "ACAD_ISO05W100")) {
+    } else if (name=="ACAD_ISO05W100") {
         dw.dxfString(3, "ISO Long Dashed Double Dotted ____ .. __");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 6);
@@ -3550,7 +3536,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.0);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "BORDER")) {
+    } else if (name=="BORDER") {
         dw.dxfString(3, "Border __ __ . __ __ . __ __ . __ __ . __ __ .");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 6);
@@ -3573,7 +3559,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -6.35);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "BORDER2")) {
+    } else if (name=="BORDER2") {
         dw.dxfString(3, "Border (.5x) __.__.__.__.__.__.__.__.__.__.__.");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 6);
@@ -3596,7 +3582,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.175);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "BORDERX2")) {
+    } else if (name=="BORDERX2") {
         dw.dxfString(3, "Border (2x) ____  ____  .  ____  ____  .  ___");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 6);
@@ -3619,7 +3605,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -12.7);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "CENTER")) {
+    } else if (name=="CENTER") {
         dw.dxfString(3, "Center ____ _ ____ _ ____ _ ____ _ ____ _ ____");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 4);
@@ -3636,7 +3622,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -6.35);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "CENTER2")) {
+    } else if (name=="CENTER2") {
         dw.dxfString(3, "Center (.5x) ___ _ ___ _ ___ _ ___ _ ___ _ ___");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 4);
@@ -3653,7 +3639,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.175);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "CENTERX2")) {
+    } else if (name=="CENTERX2") {
         dw.dxfString(3, "Center (2x) ________  __  ________  __  _____");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 4);
@@ -3670,7 +3656,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -12.7);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DASHDOT")) {
+    } else if (name=="DASHDOT") {
         dw.dxfString(3, "Dash dot __ . __ . __ . __ . __ . __ . __ . __");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 4);
@@ -3687,7 +3673,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -6.35);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DASHDOT2")) {
+    } else if (name=="DASHDOT2") {
         dw.dxfString(3, "Dash dot (.5x) _._._._._._._._._._._._._._._.");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 4);
@@ -3704,7 +3690,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.175);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DASHDOTX2")) {
+    } else if (name=="DASHDOTX2") {
         dw.dxfString(3, "Dash dot (2x) ____  .  ____  .  ____  .  ___");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 4);
@@ -3721,7 +3707,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -12.7);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DASHED")) {
+    } else if (name=="DASHED") {
         dw.dxfString(3, "Dashed __ __ __ __ __ __ __ __ __ __ __ __ __ _");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 2);
@@ -3732,7 +3718,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -6.35);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DASHED2")) {
+    } else if (name=="DASHED2") {
         dw.dxfString(3, "Dashed (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 2);
@@ -3743,7 +3729,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.175);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DASHEDX2")) {
+    } else if (name=="DASHEDX2") {
         dw.dxfString(3, "Dashed (2x) ____  ____  ____  ____  ____  ___");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 2);
@@ -3754,7 +3740,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -12.7);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DIVIDE")) {
+    } else if (name=="DIVIDE") {
         dw.dxfString(3, "Divide ____ . . ____ . . ____ . . ____ . . ____");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 6);
@@ -3777,7 +3763,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -6.35);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DIVIDE2")) {
+    } else if (name=="DIVIDE2") {
         dw.dxfString(3, "Divide (.5x) __..__..__..__..__..__..__..__.._");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 6);
@@ -3800,7 +3786,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.175);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DIVIDEX2")) {
+    } else if (name=="DIVIDEX2") {
         dw.dxfString(3, "Divide (2x) ________  .  .  ________  .  .  _");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 6);
@@ -3823,7 +3809,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -12.7);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DOT")) {
+    } else if (name=="DOT") {
         dw.dxfString(3, "Dot . . . . . . . . . . . . . . . . . . . . . .");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 2);
@@ -3834,7 +3820,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -6.35);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DOT2")) {
+    } else if (name=="DOT2") {
         dw.dxfString(3, "Dot (.5x) .....................................");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 2);
@@ -3845,7 +3831,7 @@ void DL_Dxf::writeLineType(DL_WriterA& dw,
         dw.dxfReal(49, -3.175);
         if (version>=DL_VERSION_R13)
             dw.dxfInt(74, 0);
-    } else if (!strcasecmp(data.name.c_str(), "DOTX2")) {
+    } else if (name=="DOTX2") {
         dw.dxfString(3, "Dot (2x) .  .  .  .  .  .  .  .  .  .  .  .  .");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 2);
@@ -3875,7 +3861,10 @@ void DL_Dxf::writeAppid(DL_WriterA& dw, const std::string& name) {
         return;
     }
 
-    if (!strcasecmp(name.c_str(), "ACAD")) {
+    std::string n = name;
+    std::transform(n.begin(), n.end(), n.begin(), ::toupper);
+
+    if (n=="ACAD") {
         dw.tableAppidEntry(0x12);
     } else {
         dw.tableAppidEntry();
@@ -3896,14 +3885,14 @@ void DL_Dxf::writeBlock(DL_WriterA& dw, const DL_BlockData& data) {
         return;
     }
 
-    //bool paperSpace = !strcasecmp(name, "*paper_space");
-    //!strcasecmp(name, "*paper_space0");
+    std::string n = data.name;
+    std::transform(n.begin(), n.end(), n.begin(), ::toupper);
 
-    if (!strcasecmp(data.name.c_str(), "*paper_space")) {
+    if (n=="*PAPER_SPACE") {
         dw.sectionBlockEntry(0x1C);
-    } else if (!strcasecmp(data.name.c_str(), "*model_space")) {
+    } else if (n=="*MODEL_SPACE") {
         dw.sectionBlockEntry(0x20);
-    } else if (!strcasecmp(data.name.c_str(), "*paper_space0")) {
+    } else if (n=="*PAPER_SPACE0") {
         dw.sectionBlockEntry(0x24);
     } else {
         dw.sectionBlockEntry();
@@ -3923,11 +3912,14 @@ void DL_Dxf::writeBlock(DL_WriterA& dw, const DL_BlockData& data) {
  * @param name Block name
  */
 void DL_Dxf::writeEndBlock(DL_WriterA& dw, const std::string& name) {
-    if (!strcasecmp(name.c_str(), "*paper_space")) {
+    std::string n = name;
+    std::transform(n.begin(), n.end(), n.begin(), ::toupper);
+
+    if (n=="*PAPER_SPACE") {
         dw.sectionBlockEntryEnd(0x1D);
-    } else if (!strcasecmp(name.c_str(), "*model_space")) {
+    } else if (n=="*MODEL_SPACE") {
         dw.sectionBlockEntryEnd(0x21);
-    } else if (!strcasecmp(name.c_str(), "*paper_space0")) {
+    } else if (n=="*PAPER_SPACE0") {
         dw.sectionBlockEntryEnd(0x25);
     } else {
         dw.sectionBlockEntryEnd();

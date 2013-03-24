@@ -245,3 +245,6 @@ HEADERS += \
 TEMPLATE = lib
 #CONFIG += staticlib
 CONFIG += plugin
+win32 {
+    LIBS += -lRpcrt4 -lAdvapi32
+}

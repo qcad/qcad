@@ -34,11 +34,8 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#if defined(__OS2__)||defined(__EMX__)||defined(_WIN32)
-#define strcasecmp(s,t) stricmp(s,t)
-#endif
-
 #include <iostream>
+#include <algorithm>
 
 #include "dl_attributes.h"
 #include "dl_codes.h"
@@ -337,8 +334,9 @@ public:
         if (version>=DL_VERSION_2000) {
             dxfInt(370, attrib.getWidth());
         }
-        if (version>=DL_VERSION_2000 || 
-			strcasecmp(attrib.getLineType().c_str(), "BYLAYER")) {
+        std::string lineType = attrib.getLineType();
+        std::transform(lineType.begin(), lineType.end(), lineType.begin(), ::toupper);
+        if (version>=DL_VERSION_2000 || lineType=="BYLAYER") {
 	        dxfString(6, attrib.getLineType());
 		}
     }
