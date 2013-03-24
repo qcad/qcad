@@ -73,6 +73,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLicense, "setLicense");
             
+            REcmaHelper::registerFunction(&engine, proto, getUrl, "getUrl");
+            
+            REcmaHelper::registerFunction(&engine, proto, setUrl, "setUrl");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPluginInfo*>(), *proto);
 
@@ -692,6 +696,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginInfo::setLicense", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::getUrl
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::getUrl", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::getUrl";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("getUrl", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getUrl();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.getUrl().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::getUrl", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::setUrl
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::setUrl", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::setUrl";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("setUrl", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setUrl(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.setUrl().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::setUrl", context, engine);
             return result;
         }
          QScriptValue REcmaPluginInfo::toString

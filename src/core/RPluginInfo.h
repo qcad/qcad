@@ -33,7 +33,7 @@ class RPluginInfo {
 public:
     RPluginInfo() {}
 
-    QString getFileName() {
+    QString getFileName() const {
         return fileName;
     }
 
@@ -41,7 +41,7 @@ public:
         fileName = fn;
     }
 
-    QString getAboutString() {
+    QString getAboutString() const {
         return aboutString;
     }
 
@@ -49,7 +49,7 @@ public:
         aboutString = s;
     }
 
-    QString getVersionString() {
+    QString getVersionString() const {
         return versionString;
     }
 
@@ -57,7 +57,7 @@ public:
         versionString = vs;
     }
 
-    QString getErrorString() {
+    QString getErrorString() const {
         return errorString;
     }
 
@@ -65,12 +65,20 @@ public:
         errorString = es;
     }
 
-    QString getLicense() {
+    QString getLicense() const {
         return license;
     }
 
     void setLicense(const QString& l) {
         license = l;
+    }
+
+    QString getUrl() const {
+        return url;
+    }
+
+    void setUrl(const QString& u) {
+        url = u;
     }
 
 private:
@@ -79,6 +87,7 @@ private:
     QString versionString;
     QString errorString;
     QString license;
+    QString url;
 };
 
 Q_DECLARE_METATYPE(RPluginInfo)

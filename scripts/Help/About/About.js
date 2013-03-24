@@ -32,11 +32,20 @@ About.prototype.beginEvent = function() {
     var formWidget = this.createWidget("About.ui");
     formWidget.windowTitle = qsTr("About %1").arg(qApp.applicationName);
 
+    var head = "<head>"
+            + "<style type='text/css'>"
+            + "a { text-decoration:none };"
+            + "font-family:sans;"
+            + "font-size:13pt;"
+            + "</style>"
+            + "</head>";
+
     var webView = formWidget.findChild("QCADText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     var html =
             "<html>"
-            + "<body style'font-family:sans; font-size:13pt;'>"
+            + head
+            + "<body>"
             + "<b style='font-size:18pt'>%1</b>".arg(qApp.applicationName)
             + "<br/>"
             + "<table border='0'><tr>"
@@ -65,7 +74,8 @@ About.prototype.beginEvent = function() {
     WidgetFactory.initWebView(webView, this, "openUrl");
     html =
             "<html>"
-            + "<body style'font-family:sans; font-size:13pt;'>"
+            + head
+            + "<body>"
             + "<b style='font-size:18pt'>%1</b>".arg(qsTr("Plugins"))
             + "<br/>";
 
@@ -79,21 +89,49 @@ About.prototype.beginEvent = function() {
         html += "<col width='10%'/>";
         html += "<col width='90%'/>";
 
+        // plugin about info:
         var text = pluginInfo.getAboutString();
         if (text.length===0) {
             text = qsTr("No information available");
         }
         html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("Plugin:")).arg(Qt.escape(text));
 
+        // plugin version:
         text = pluginInfo.getVersionString();
         if (text.length===0) {
-            text = qsTr("Unknown version");
+            text = qsTr("Unknown");
         }
         html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("Version:")).arg(Qt.escape(text));
 
+        // plugin license:
+        text = pluginInfo.getLicense();
+        if (text.length===0) {
+            text = qsTr("Unknown");
+        }
+        html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("License:")).arg(Qt.escape(text));
+
+        // plugin URL:
+        text = pluginInfo.getUrl();
+        if (text.length!==0) {
+            var url = new QUrl(text);
+            if (url.isValid()) {
+//                var opt = new QUrl.FormattingOption(
+//                    QUrl.RemoveScheme, QUrl.RemoveAuthority, QUrl.RemovePath,
+//                    QUrl.RemoveQuery, QUrl.RemoveFragment,
+//                    QUrl.StripTrailingSlash
+//                );
+                //debugger;
+                html += "<tr><td>%1 </td><td><a href=\"%2\">%3</a></td></tr>"
+                    .arg(qsTr("Internet:"))
+                    .arg(url.toString())
+                    .arg(url.host().replace(/^www./, ""));
+            }
+        }
+
+        // plugin error:
         var err = pluginInfo.getErrorString();
         if (err.length!==0) {
-            html += "<tr style='color:red'><td>%1 </td><td><div>%2</div></td></tr>"
+            html += "<tr><td>%1 </td><td><div>%2</div></td></tr>"
                 .arg(qsTr("Error:"))
                 .arg(Qt.escape(err));
         }

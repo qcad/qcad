@@ -73,6 +73,12 @@
         ;static  QScriptValue
         setLicense
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getUrl
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUrl
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

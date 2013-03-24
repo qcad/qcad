@@ -12,6 +12,10 @@
 *.la
 *.a
 
+# Compiled application binaries / bundles
+*.exe
+*.app
+
 # Makefiles
 Makefile
 Makefile.Debug

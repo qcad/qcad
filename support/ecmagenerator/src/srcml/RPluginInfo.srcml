@@ -42,6 +42,7 @@ dir="./core" filename="RPluginInfo.h">
     </type>
     <name>getFileName</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -74,6 +75,7 @@ dir="./core" filename="RPluginInfo.h">
     </type>
     <name>getAboutString</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -106,6 +108,7 @@ dir="./core" filename="RPluginInfo.h">
     </type>
     <name>getVersionString</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -138,6 +141,7 @@ dir="./core" filename="RPluginInfo.h">
     </type>
     <name>getErrorString</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -170,6 +174,7 @@ dir="./core" filename="RPluginInfo.h">
     </type>
     <name>getLicense</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -195,6 +200,39 @@ dir="./core" filename="RPluginInfo.h">
     <expr>
     <name>license</name>= 
     <name>l</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getUrl</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>url</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setUrl</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>u</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>url</name>= 
+    <name>u</name></expr>;</expr_stmt>}</block>
   </function></public>
   <private>private: 
   <decl_stmt>
@@ -231,6 +269,13 @@ dir="./core" filename="RPluginInfo.h">
       <name>QString</name>
     </type>
     <name>license</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>url</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
