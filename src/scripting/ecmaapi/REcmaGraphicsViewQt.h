@@ -7,6 +7,8 @@
         #ifndef RECMAGRAPHICSVIEWQT_H
         #define RECMAGRAPHICSVIEWQT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaGraphicsViewQt {
+        class QCADECMAAPI_EXPORT REcmaGraphicsViewQt {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

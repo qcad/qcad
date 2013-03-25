@@ -7,6 +7,8 @@
         #ifndef RECMATRANSACTIONLISTENER_H
         #define RECMATRANSACTIONLISTENER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaTransactionListener {
+        class QCADECMAAPI_EXPORT REcmaTransactionListener {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

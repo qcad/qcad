@@ -7,6 +7,8 @@
         #ifndef RECMARUNNER_H
         #define RECMARUNNER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaRunner {
+        class QCADECMAAPI_EXPORT REcmaRunner {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

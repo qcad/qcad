@@ -7,6 +7,8 @@
         #ifndef RECMAPROPERTYTYPEID_H
         #define RECMAPROPERTYTYPEID_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPropertyTypeId {
+        class QCADECMAAPI_EXPORT REcmaPropertyTypeId {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

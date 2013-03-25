@@ -7,6 +7,8 @@
         #ifndef RECMAGRID_H
         #define RECMAGRID_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaGrid {
+        class QCADECMAAPI_EXPORT REcmaGrid {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

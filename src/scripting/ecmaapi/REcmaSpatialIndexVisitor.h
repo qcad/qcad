@@ -7,6 +7,8 @@
         #ifndef RECMASPATIALINDEXVISITOR_H
         #define RECMASPATIALINDEXVISITOR_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSpatialIndexVisitor {
+        class QCADECMAAPI_EXPORT REcmaSpatialIndexVisitor {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

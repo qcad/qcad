@@ -7,6 +7,8 @@
         #ifndef RECMADIMROTATEDDATA_H
         #define RECMADIMROTATEDDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimRotatedData {
+        class QCADECMAAPI_EXPORT REcmaDimRotatedData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

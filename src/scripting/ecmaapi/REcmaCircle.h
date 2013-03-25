@@ -7,6 +7,8 @@
         #ifndef RECMACIRCLE_H
         #define RECMACIRCLE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaCircle {
+        class QCADECMAAPI_EXPORT REcmaCircle {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

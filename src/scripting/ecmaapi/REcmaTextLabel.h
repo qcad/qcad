@@ -7,6 +7,8 @@
         #ifndef RECMATEXTLABEL_H
         #define RECMATEXTLABEL_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaTextLabel {
+        class QCADECMAAPI_EXPORT REcmaTextLabel {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

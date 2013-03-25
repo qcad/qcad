@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERDIMROTATEDENTITY_H
         #define RECMASHAREDPOINTERDIMROTATEDENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerDimRotatedEntity {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerDimRotatedEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

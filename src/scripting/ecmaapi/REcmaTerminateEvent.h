@@ -7,6 +7,8 @@
         #ifndef RECMATERMINATEEVENT_H
         #define RECMATERMINATEEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaTerminateEvent {
+        class QCADECMAAPI_EXPORT REcmaTerminateEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

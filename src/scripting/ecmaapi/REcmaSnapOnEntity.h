@@ -7,6 +7,8 @@
         #ifndef RECMASNAPONENTITY_H
         #define RECMASNAPONENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapOnEntity {
+        class QCADECMAAPI_EXPORT REcmaSnapOnEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

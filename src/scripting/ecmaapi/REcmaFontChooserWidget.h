@@ -7,6 +7,8 @@
         #ifndef RECMAFONTCHOOSERWIDGET_H
         #define RECMAFONTCHOOSERWIDGET_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaFontChooserWidget {
+        class QCADECMAAPI_EXPORT REcmaFontChooserWidget {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

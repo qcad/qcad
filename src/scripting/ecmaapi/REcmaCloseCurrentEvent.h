@@ -7,6 +7,8 @@
         #ifndef RECMACLOSECURRENTEVENT_H
         #define RECMACLOSECURRENTEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaCloseCurrentEvent {
+        class QCADECMAAPI_EXPORT REcmaCloseCurrentEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

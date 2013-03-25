@@ -7,6 +7,8 @@
         #ifndef RECMALISTWIDGET_H
         #define RECMALISTWIDGET_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaListWidget {
+        class QCADECMAAPI_EXPORT REcmaListWidget {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

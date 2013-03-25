@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERDIMORDINATEENTITY_H
         #define RECMASHAREDPOINTERDIMORDINATEENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerDimOrdinateEntity {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerDimOrdinateEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

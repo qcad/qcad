@@ -7,6 +7,8 @@
         #ifndef RECMALINETYPECOMBO_H
         #define RECMALINETYPECOMBO_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaLinetypeCombo {
+        class QCADECMAAPI_EXPORT REcmaLinetypeCombo {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

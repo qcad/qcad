@@ -7,6 +7,8 @@
         #ifndef RECMADIMANGULARDATA_H
         #define RECMADIMANGULARDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimAngularData {
+        class QCADECMAAPI_EXPORT REcmaDimAngularData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

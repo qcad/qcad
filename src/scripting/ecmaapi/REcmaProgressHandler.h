@@ -7,6 +7,8 @@
         #ifndef RECMAPROGRESSHANDLER_H
         #define RECMAPROGRESSHANDLER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaProgressHandler {
+        class QCADECMAAPI_EXPORT REcmaProgressHandler {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

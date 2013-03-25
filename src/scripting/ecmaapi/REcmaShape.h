@@ -7,6 +7,8 @@
         #ifndef RECMASHAPE_H
         #define RECMASHAPE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaShape {
+        class QCADECMAAPI_EXPORT REcmaShape {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMANAVIGATIONACTION_H
         #define RECMANAVIGATIONACTION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaNavigationAction {
+        class QCADECMAAPI_EXPORT REcmaNavigationAction {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

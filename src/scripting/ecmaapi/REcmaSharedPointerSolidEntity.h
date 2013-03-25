@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERSOLIDENTITY_H
         #define RECMASHAREDPOINTERSOLIDENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerSolidEntity {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerSolidEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

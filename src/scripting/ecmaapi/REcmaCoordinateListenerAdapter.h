@@ -7,6 +7,8 @@
         #ifndef RECMACOORDINATELISTENERADAPTER_H
         #define RECMACOORDINATELISTENERADAPTER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaCoordinateListenerAdapter {
+        class QCADECMAAPI_EXPORT REcmaCoordinateListenerAdapter {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

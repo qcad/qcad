@@ -7,6 +7,8 @@
         #ifndef RECMAENTITYDATA_H
         #define RECMAENTITYDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaEntityData {
+        class QCADECMAAPI_EXPORT REcmaEntityData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

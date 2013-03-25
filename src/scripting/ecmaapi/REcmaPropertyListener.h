@@ -7,6 +7,8 @@
         #ifndef RECMAPROPERTYLISTENER_H
         #define RECMAPROPERTYLISTENER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPropertyListener {
+        class QCADECMAAPI_EXPORT REcmaPropertyListener {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMARESTRICTVERTICAL_H
         #define RECMARESTRICTVERTICAL_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaRestrictVertical {
+        class QCADECMAAPI_EXPORT REcmaRestrictVertical {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

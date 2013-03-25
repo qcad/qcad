@@ -7,6 +7,8 @@
         #ifndef RECMAFILEIMPORTERFACTORYADAPTER_H
         #define RECMAFILEIMPORTERFACTORYADAPTER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaFileImporterFactoryAdapter {
+        class QCADECMAAPI_EXPORT REcmaFileImporterFactoryAdapter {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

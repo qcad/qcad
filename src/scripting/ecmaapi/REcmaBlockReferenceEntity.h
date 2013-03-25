@@ -7,6 +7,8 @@
         #ifndef RECMABLOCKREFERENCEENTITY_H
         #define RECMABLOCKREFERENCEENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaBlockReferenceEntity {
+        class QCADECMAAPI_EXPORT REcmaBlockReferenceEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

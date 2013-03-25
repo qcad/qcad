@@ -7,6 +7,8 @@
         #ifndef RECMAENTITYPICKEVENT_H
         #define RECMAENTITYPICKEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaEntityPickEvent {
+        class QCADECMAAPI_EXPORT REcmaEntityPickEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

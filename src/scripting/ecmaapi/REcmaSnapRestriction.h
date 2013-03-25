@@ -7,6 +7,8 @@
         #ifndef RECMASNAPRESTRICTION_H
         #define RECMASNAPRESTRICTION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapRestriction {
+        class QCADECMAAPI_EXPORT REcmaSnapRestriction {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

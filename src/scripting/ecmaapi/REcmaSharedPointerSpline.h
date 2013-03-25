@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERSPLINE_H
         #define RECMASHAREDPOINTERSPLINE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerSpline {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerSpline {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

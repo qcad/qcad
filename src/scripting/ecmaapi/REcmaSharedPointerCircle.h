@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERCIRCLE_H
         #define RECMASHAREDPOINTERCIRCLE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerCircle {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerCircle {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

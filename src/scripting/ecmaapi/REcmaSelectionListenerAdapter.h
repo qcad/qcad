@@ -7,6 +7,8 @@
         #ifndef RECMASELECTIONLISTENERADAPTER_H
         #define RECMASELECTIONLISTENERADAPTER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSelectionListenerAdapter {
+        class QCADECMAAPI_EXPORT REcmaSelectionListenerAdapter {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

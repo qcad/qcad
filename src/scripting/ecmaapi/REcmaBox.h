@@ -7,6 +7,8 @@
         #ifndef RECMABOX_H
         #define RECMABOX_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaBox {
+        class QCADECMAAPI_EXPORT REcmaBox {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

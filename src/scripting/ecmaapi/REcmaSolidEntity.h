@@ -7,6 +7,8 @@
         #ifndef RECMASOLIDENTITY_H
         #define RECMASOLIDENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSolidEntity {
+        class QCADECMAAPI_EXPORT REcmaSolidEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

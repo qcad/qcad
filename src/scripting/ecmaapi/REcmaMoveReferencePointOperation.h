@@ -7,6 +7,8 @@
         #ifndef RECMAMOVEREFERENCEPOINTOPERATION_H
         #define RECMAMOVEREFERENCEPOINTOPERATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaMoveReferencePointOperation {
+        class QCADECMAAPI_EXPORT REcmaMoveReferencePointOperation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

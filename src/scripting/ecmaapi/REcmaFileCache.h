@@ -7,6 +7,8 @@
         #ifndef RECMAFILECACHE_H
         #define RECMAFILECACHE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaFileCache {
+        class QCADECMAAPI_EXPORT REcmaFileCache {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

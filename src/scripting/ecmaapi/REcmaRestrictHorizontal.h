@@ -7,6 +7,8 @@
         #ifndef RECMARESTRICTHORIZONTAL_H
         #define RECMARESTRICTHORIZONTAL_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaRestrictHorizontal {
+        class QCADECMAAPI_EXPORT REcmaRestrictHorizontal {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

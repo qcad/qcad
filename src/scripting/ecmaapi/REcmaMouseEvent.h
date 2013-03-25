@@ -7,6 +7,8 @@
         #ifndef RECMAMOUSEEVENT_H
         #define RECMAMOUSEEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaMouseEvent {
+        class QCADECMAAPI_EXPORT REcmaMouseEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

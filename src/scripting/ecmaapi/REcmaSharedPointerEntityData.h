@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERENTITYDATA_H
         #define RECMASHAREDPOINTERENTITYDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerEntityData {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerEntityData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

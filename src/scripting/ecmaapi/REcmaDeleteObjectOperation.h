@@ -7,6 +7,8 @@
         #ifndef RECMADELETEOBJECTOPERATION_H
         #define RECMADELETEOBJECTOPERATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDeleteObjectOperation {
+        class QCADECMAAPI_EXPORT REcmaDeleteObjectOperation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

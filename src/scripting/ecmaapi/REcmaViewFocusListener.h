@@ -7,6 +7,8 @@
         #ifndef RECMAVIEWFOCUSLISTENER_H
         #define RECMAVIEWFOCUSLISTENER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaViewFocusListener {
+        class QCADECMAAPI_EXPORT REcmaViewFocusListener {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

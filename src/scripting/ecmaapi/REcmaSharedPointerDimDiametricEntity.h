@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERDIMDIAMETRICENTITY_H
         #define RECMASHAREDPOINTERDIMDIAMETRICENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerDimDiametricEntity {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerDimDiametricEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

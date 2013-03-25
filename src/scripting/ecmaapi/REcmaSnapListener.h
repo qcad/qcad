@@ -7,6 +7,8 @@
         #ifndef RECMASNAPLISTENER_H
         #define RECMASNAPLISTENER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapListener {
+        class QCADECMAAPI_EXPORT REcmaSnapListener {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

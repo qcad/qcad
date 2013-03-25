@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERPOLYLINE_H
         #define RECMASHAREDPOINTERPOLYLINE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerPolyline {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerPolyline {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

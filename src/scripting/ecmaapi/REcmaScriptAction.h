@@ -7,6 +7,8 @@
         #ifndef RECMASCRIPTACTION_H
         #define RECMASCRIPTACTION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaScriptAction {
+        class QCADECMAAPI_EXPORT REcmaScriptAction {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMABLOCKLISTENER_H
         #define RECMABLOCKLISTENER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaBlockListener {
+        class QCADECMAAPI_EXPORT REcmaBlockListener {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

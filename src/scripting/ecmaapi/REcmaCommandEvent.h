@@ -7,6 +7,8 @@
         #ifndef RECMACOMMANDEVENT_H
         #define RECMACOMMANDEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaCommandEvent {
+        class QCADECMAAPI_EXPORT REcmaCommandEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMACLIPBOARDOPERATION_H
         #define RECMACLIPBOARDOPERATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaClipboardOperation {
+        class QCADECMAAPI_EXPORT REcmaClipboardOperation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

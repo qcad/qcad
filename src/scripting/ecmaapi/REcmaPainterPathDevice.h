@@ -7,6 +7,8 @@
         #ifndef RECMAPAINTERPATHDEVICE_H
         #define RECMAPAINTERPATHDEVICE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPainterPathDevice {
+        class QCADECMAAPI_EXPORT REcmaPainterPathDevice {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

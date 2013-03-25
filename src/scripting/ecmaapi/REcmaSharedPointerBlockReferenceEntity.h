@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERBLOCKREFERENCEENTITY_H
         #define RECMASHAREDPOINTERBLOCKREFERENCEENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerBlockReferenceEntity {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerBlockReferenceEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

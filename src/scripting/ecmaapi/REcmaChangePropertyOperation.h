@@ -7,6 +7,8 @@
         #ifndef RECMACHANGEPROPERTYOPERATION_H
         #define RECMACHANGEPROPERTYOPERATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaChangePropertyOperation {
+        class QCADECMAAPI_EXPORT REcmaChangePropertyOperation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

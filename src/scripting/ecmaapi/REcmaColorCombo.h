@@ -7,6 +7,8 @@
         #ifndef RECMACOLORCOMBO_H
         #define RECMACOLORCOMBO_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaColorCombo {
+        class QCADECMAAPI_EXPORT REcmaColorCombo {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMAMATHLINEEDIT_H
         #define RECMAMATHLINEEDIT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaMathLineEdit {
+        class QCADECMAAPI_EXPORT REcmaMathLineEdit {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

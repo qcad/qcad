@@ -7,6 +7,8 @@
         #ifndef RECMASNAPGRID_H
         #define RECMASNAPGRID_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapGrid {
+        class QCADECMAAPI_EXPORT REcmaSnapGrid {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

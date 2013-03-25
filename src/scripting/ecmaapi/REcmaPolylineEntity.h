@@ -7,6 +7,8 @@
         #ifndef RECMAPOLYLINEENTITY_H
         #define RECMAPOLYLINEENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPolylineEntity {
+        class QCADECMAAPI_EXPORT REcmaPolylineEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

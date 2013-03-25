@@ -153,6 +153,8 @@
         #ifndef <xsl:value-of select="$uEcmaName" />_H
         #define <xsl:value-of select="$uEcmaName" />_H
 
+        #include &lt;ecmaapi_global.h&gt;
+
         #include &lt;QScriptEngine&gt;
         #include &lt;QScriptValue&gt;
         #include &lt;QScriptContextInfo&gt;
@@ -178,7 +180,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class <xsl:value-of select="$ecmaName" /> {
+        class QCADECMAAPI_EXPORT <xsl:value-of select="$ecmaName" /> {
 
         public:
       </xsl:when>

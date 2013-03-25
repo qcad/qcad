@@ -7,6 +7,8 @@
         #ifndef RECMACOMMANDLINE_H
         #define RECMACOMMANDLINE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaCommandLine {
+        class QCADECMAAPI_EXPORT REcmaCommandLine {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

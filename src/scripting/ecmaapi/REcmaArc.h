@@ -7,6 +7,8 @@
         #ifndef RECMAARC_H
         #define RECMAARC_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaArc {
+        class QCADECMAAPI_EXPORT REcmaArc {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

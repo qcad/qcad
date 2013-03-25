@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERTRIANGLE_H
         #define RECMASHAREDPOINTERTRIANGLE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerTriangle {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerTriangle {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

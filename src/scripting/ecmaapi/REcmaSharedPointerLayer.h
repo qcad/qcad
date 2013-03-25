@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERLAYER_H
         #define RECMASHAREDPOINTERLAYER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerLayer {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerLayer {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

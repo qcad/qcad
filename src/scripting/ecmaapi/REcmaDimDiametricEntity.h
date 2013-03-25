@@ -7,6 +7,8 @@
         #ifndef RECMADIMDIAMETRICENTITY_H
         #define RECMADIMDIAMETRICENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimDiametricEntity {
+        class QCADECMAAPI_EXPORT REcmaDimDiametricEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

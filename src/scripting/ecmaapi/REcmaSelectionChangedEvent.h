@@ -7,6 +7,8 @@
         #ifndef RECMASELECTIONCHANGEDEVENT_H
         #define RECMASELECTIONCHANGEDEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSelectionChangedEvent {
+        class QCADECMAAPI_EXPORT REcmaSelectionChangedEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

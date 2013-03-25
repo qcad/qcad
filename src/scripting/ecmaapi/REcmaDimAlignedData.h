@@ -7,6 +7,8 @@
         #ifndef RECMADIMALIGNEDDATA_H
         #define RECMADIMALIGNEDDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimAlignedData {
+        class QCADECMAAPI_EXPORT REcmaDimAlignedData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

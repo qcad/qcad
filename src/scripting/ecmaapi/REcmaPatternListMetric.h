@@ -7,6 +7,8 @@
         #ifndef RECMAPATTERNLISTMETRIC_H
         #define RECMAPATTERNLISTMETRIC_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPatternListMetric {
+        class QCADECMAAPI_EXPORT REcmaPatternListMetric {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

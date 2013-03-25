@@ -7,6 +7,8 @@
         #ifndef RECMAPROPERTYEDITOR_H
         #define RECMAPROPERTYEDITOR_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPropertyEditor {
+        class QCADECMAAPI_EXPORT REcmaPropertyEditor {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

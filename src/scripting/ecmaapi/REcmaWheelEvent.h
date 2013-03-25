@@ -7,6 +7,8 @@
         #ifndef RECMAWHEELEVENT_H
         #define RECMAWHEELEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaWheelEvent {
+        class QCADECMAAPI_EXPORT REcmaWheelEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

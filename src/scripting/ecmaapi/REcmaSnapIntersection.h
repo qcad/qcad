@@ -7,6 +7,8 @@
         #ifndef RECMASNAPINTERSECTION_H
         #define RECMASNAPINTERSECTION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapIntersection {
+        class QCADECMAAPI_EXPORT REcmaSnapIntersection {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

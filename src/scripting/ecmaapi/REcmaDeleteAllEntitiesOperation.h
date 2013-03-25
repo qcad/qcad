@@ -7,6 +7,8 @@
         #ifndef RECMADELETEALLENTITIESOPERATION_H
         #define RECMADELETEALLENTITIESOPERATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDeleteAllEntitiesOperation {
+        class QCADECMAAPI_EXPORT REcmaDeleteAllEntitiesOperation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

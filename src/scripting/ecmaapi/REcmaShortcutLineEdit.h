@@ -7,6 +7,8 @@
         #ifndef RECMASHORTCUTLINEEDIT_H
         #define RECMASHORTCUTLINEEDIT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaShortcutLineEdit {
+        class QCADECMAAPI_EXPORT REcmaShortcutLineEdit {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

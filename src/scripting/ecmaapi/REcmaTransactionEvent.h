@@ -7,6 +7,8 @@
         #ifndef RECMATRANSACTIONEVENT_H
         #define RECMATRANSACTIONEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaTransactionEvent {
+        class QCADECMAAPI_EXPORT REcmaTransactionEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

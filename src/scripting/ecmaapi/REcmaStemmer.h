@@ -7,6 +7,8 @@
         #ifndef RECMASTEMMER_H
         #define RECMASTEMMER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaStemmer {
+        class QCADECMAAPI_EXPORT REcmaStemmer {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

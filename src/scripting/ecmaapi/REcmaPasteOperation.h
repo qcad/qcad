@@ -7,6 +7,8 @@
         #ifndef RECMAPASTEOPERATION_H
         #define RECMAPASTEOPERATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPasteOperation {
+        class QCADECMAAPI_EXPORT REcmaPasteOperation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

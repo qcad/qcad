@@ -7,6 +7,8 @@
         #ifndef RECMAEXPLODABLE_H
         #define RECMAEXPLODABLE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaExplodable {
+        class QCADECMAAPI_EXPORT REcmaExplodable {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

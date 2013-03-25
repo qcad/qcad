@@ -7,6 +7,8 @@
         #ifndef RECMAMAINWINDOW_H
         #define RECMAMAINWINDOW_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaMainWindow {
+        class QCADECMAAPI_EXPORT REcmaMainWindow {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

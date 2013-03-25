@@ -7,6 +7,8 @@
         #ifndef RECMAACTIONADAPTER_H
         #define RECMAACTIONADAPTER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaActionAdapter {
+        class QCADECMAAPI_EXPORT REcmaActionAdapter {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

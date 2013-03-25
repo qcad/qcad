@@ -7,6 +7,8 @@
         #ifndef RECMATRANSLATION_H
         #define RECMATRANSLATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaTranslation {
+        class QCADECMAAPI_EXPORT REcmaTranslation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

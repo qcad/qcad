@@ -7,6 +7,8 @@
         #ifndef RECMAADDOBJECTSOPERATION_H
         #define RECMAADDOBJECTSOPERATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaAddObjectsOperation {
+        class QCADECMAAPI_EXPORT REcmaAddObjectsOperation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

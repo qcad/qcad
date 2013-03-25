@@ -7,6 +7,8 @@
         #ifndef RECMASPATIALINDEX_H
         #define RECMASPATIALINDEX_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSpatialIndex {
+        class QCADECMAAPI_EXPORT REcmaSpatialIndex {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMAUCS_H
         #define RECMAUCS_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaUcs {
+        class QCADECMAAPI_EXPORT REcmaUcs {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

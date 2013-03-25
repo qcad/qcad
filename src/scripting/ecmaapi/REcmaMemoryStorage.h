@@ -7,6 +7,8 @@
         #ifndef RECMAMEMORYSTORAGE_H
         #define RECMAMEMORYSTORAGE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaMemoryStorage {
+        class QCADECMAAPI_EXPORT REcmaMemoryStorage {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

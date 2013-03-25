@@ -7,6 +7,8 @@
         #ifndef RECMADIMALIGNEDENTITY_H
         #define RECMADIMALIGNEDENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimAlignedEntity {
+        class QCADECMAAPI_EXPORT REcmaDimAlignedEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

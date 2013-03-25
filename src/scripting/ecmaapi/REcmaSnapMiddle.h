@@ -7,6 +7,8 @@
         #ifndef RECMASNAPMIDDLE_H
         #define RECMASNAPMIDDLE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapMiddle {
+        class QCADECMAAPI_EXPORT REcmaSnapMiddle {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

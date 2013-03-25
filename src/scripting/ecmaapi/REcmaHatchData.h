@@ -7,6 +7,8 @@
         #ifndef RECMAHATCHDATA_H
         #define RECMAHATCHDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaHatchData {
+        class QCADECMAAPI_EXPORT REcmaHatchData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

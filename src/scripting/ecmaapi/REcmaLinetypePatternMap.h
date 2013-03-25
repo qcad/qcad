@@ -7,6 +7,8 @@
         #ifndef RECMALINETYPEPATTERNMAP_H
         #define RECMALINETYPEPATTERNMAP_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaLinetypePatternMap {
+        class QCADECMAAPI_EXPORT REcmaLinetypePatternMap {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

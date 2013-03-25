@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERTEXTLABEL_H
         #define RECMASHAREDPOINTERTEXTLABEL_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerTextLabel {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerTextLabel {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

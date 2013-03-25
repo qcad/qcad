@@ -7,6 +7,8 @@
         #ifndef RECMASNAPDISTANCE_H
         #define RECMASNAPDISTANCE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapDistance {
+        class QCADECMAAPI_EXPORT REcmaSnapDistance {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

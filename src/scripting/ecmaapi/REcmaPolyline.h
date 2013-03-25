@@ -7,6 +7,8 @@
         #ifndef RECMAPOLYLINE_H
         #define RECMAPOLYLINE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPolyline {
+        class QCADECMAAPI_EXPORT REcmaPolyline {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

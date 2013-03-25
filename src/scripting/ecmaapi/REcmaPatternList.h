@@ -7,6 +7,8 @@
         #ifndef RECMAPATTERNLIST_H
         #define RECMAPATTERNLIST_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPatternList {
+        class QCADECMAAPI_EXPORT REcmaPatternList {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

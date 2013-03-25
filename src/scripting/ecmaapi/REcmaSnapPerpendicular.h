@@ -7,6 +7,8 @@
         #ifndef RECMASNAPPERPENDICULAR_H
         #define RECMASNAPPERPENDICULAR_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapPerpendicular {
+        class QCADECMAAPI_EXPORT REcmaSnapPerpendicular {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

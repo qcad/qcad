@@ -7,6 +7,8 @@
         #ifndef RECMAGUIACTION_H
         #define RECMAGUIACTION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaGuiAction {
+        class QCADECMAAPI_EXPORT REcmaGuiAction {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

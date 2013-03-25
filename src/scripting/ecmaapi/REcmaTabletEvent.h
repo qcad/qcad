@@ -7,6 +7,8 @@
         #ifndef RECMATABLETEVENT_H
         #define RECMATABLETEVENT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaTabletEvent {
+        class QCADECMAAPI_EXPORT REcmaTabletEvent {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMALINKEDSTORAGE_H
         #define RECMALINKEDSTORAGE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaLinkedStorage {
+        class QCADECMAAPI_EXPORT REcmaLinkedStorage {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMADIMENSIONENTITY_H
         #define RECMADIMENSIONENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimensionEntity {
+        class QCADECMAAPI_EXPORT REcmaDimensionEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMAFOCUSFRAME_H
         #define RECMAFOCUSFRAME_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaFocusFrame {
+        class QCADECMAAPI_EXPORT REcmaFocusFrame {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

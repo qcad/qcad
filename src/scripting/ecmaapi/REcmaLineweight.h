@@ -7,6 +7,8 @@
         #ifndef RECMALINEWEIGHT_H
         #define RECMALINEWEIGHT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaLineweight {
+        class QCADECMAAPI_EXPORT REcmaLineweight {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

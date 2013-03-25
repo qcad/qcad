@@ -7,6 +7,8 @@
         #ifndef RECMARESTRICTORTHOGONAL_H
         #define RECMARESTRICTORTHOGONAL_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaRestrictOrthogonal {
+        class QCADECMAAPI_EXPORT REcmaRestrictOrthogonal {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

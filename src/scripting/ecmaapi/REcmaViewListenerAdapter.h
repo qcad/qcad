@@ -7,6 +7,8 @@
         #ifndef RECMAVIEWLISTENERADAPTER_H
         #define RECMAVIEWLISTENERADAPTER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaViewListenerAdapter {
+        class QCADECMAAPI_EXPORT REcmaViewListenerAdapter {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

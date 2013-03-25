@@ -7,6 +7,8 @@
         #ifndef RECMADIRECTED_H
         #define RECMADIRECTED_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDirected {
+        class QCADECMAAPI_EXPORT REcmaDirected {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

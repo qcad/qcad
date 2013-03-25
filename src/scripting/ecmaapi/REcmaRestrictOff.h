@@ -7,6 +7,8 @@
         #ifndef RECMARESTRICTOFF_H
         #define RECMARESTRICTOFF_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaRestrictOff {
+        class QCADECMAAPI_EXPORT REcmaRestrictOff {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

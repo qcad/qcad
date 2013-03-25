@@ -7,6 +7,8 @@
         #ifndef RECMAPROPERTYATTRIBUTES_H
         #define RECMAPROPERTYATTRIBUTES_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPropertyAttributes {
+        class QCADECMAAPI_EXPORT REcmaPropertyAttributes {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

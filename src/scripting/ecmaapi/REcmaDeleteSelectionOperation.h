@@ -7,6 +7,8 @@
         #ifndef RECMADELETESELECTIONOPERATION_H
         #define RECMADELETESELECTIONOPERATION_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDeleteSelectionOperation {
+        class QCADECMAAPI_EXPORT REcmaDeleteSelectionOperation {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

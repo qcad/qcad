@@ -7,6 +7,8 @@
         #ifndef RECMADIMANGULARENTITY_H
         #define RECMADIMANGULARENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimAngularEntity {
+        class QCADECMAAPI_EXPORT REcmaDimAngularEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

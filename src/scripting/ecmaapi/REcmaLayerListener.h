@@ -7,6 +7,8 @@
         #ifndef RECMALAYERLISTENER_H
         #define RECMALAYERLISTENER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaLayerListener {
+        class QCADECMAAPI_EXPORT REcmaLayerListener {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

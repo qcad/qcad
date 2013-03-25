@@ -7,6 +7,8 @@
         #ifndef RECMADIMRADIALDATA_H
         #define RECMADIMRADIALDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimRadialData {
+        class QCADECMAAPI_EXPORT REcmaDimRadialData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

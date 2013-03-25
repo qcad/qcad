@@ -7,6 +7,8 @@
         #ifndef RECMADIMORDINATEENTITY_H
         #define RECMADIMORDINATEENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimOrdinateEntity {
+        class QCADECMAAPI_EXPORT REcmaDimOrdinateEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

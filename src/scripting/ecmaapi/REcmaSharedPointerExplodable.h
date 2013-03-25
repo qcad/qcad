@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTEREXPLODABLE_H
         #define RECMASHAREDPOINTEREXPLODABLE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerExplodable {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerExplodable {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

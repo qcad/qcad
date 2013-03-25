@@ -7,6 +7,8 @@
         #ifndef RECMAGRAPHICSSCENEQT_H
         #define RECMAGRAPHICSSCENEQT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaGraphicsSceneQt {
+        class QCADECMAAPI_EXPORT REcmaGraphicsSceneQt {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

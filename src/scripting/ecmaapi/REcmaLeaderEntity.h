@@ -7,6 +7,8 @@
         #ifndef RECMALEADERENTITY_H
         #define RECMALEADERENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaLeaderEntity {
+        class QCADECMAAPI_EXPORT REcmaLeaderEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

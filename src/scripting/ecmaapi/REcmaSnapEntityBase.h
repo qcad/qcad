@@ -7,6 +7,8 @@
         #ifndef RECMASNAPENTITYBASE_H
         #define RECMASNAPENTITYBASE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapEntityBase {
+        class QCADECMAAPI_EXPORT REcmaSnapEntityBase {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMADIMORDINATEDATA_H
         #define RECMADIMORDINATEDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimOrdinateData {
+        class QCADECMAAPI_EXPORT REcmaDimOrdinateData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

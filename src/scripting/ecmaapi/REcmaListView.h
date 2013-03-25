@@ -7,6 +7,8 @@
         #ifndef RECMALISTVIEW_H
         #define RECMALISTVIEW_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaListView {
+        class QCADECMAAPI_EXPORT REcmaListView {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

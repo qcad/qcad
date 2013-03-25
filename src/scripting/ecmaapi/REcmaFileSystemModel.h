@@ -7,6 +7,8 @@
         #ifndef RECMAFILESYSTEMMODEL_H
         #define RECMAFILESYSTEMMODEL_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaFileSystemModel {
+        class QCADECMAAPI_EXPORT REcmaFileSystemModel {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERDIMANGULARENTITY_H
         #define RECMASHAREDPOINTERDIMANGULARENTITY_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerDimAngularEntity {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerDimAngularEntity {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

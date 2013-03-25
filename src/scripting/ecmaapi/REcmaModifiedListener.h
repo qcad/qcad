@@ -7,6 +7,8 @@
         #ifndef RECMAMODIFIEDLISTENER_H
         #define RECMAMODIFIEDLISTENER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaModifiedListener {
+        class QCADECMAAPI_EXPORT REcmaModifiedListener {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMACHARACTERWIDGET_H
         #define RECMACHARACTERWIDGET_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaCharacterWidget {
+        class QCADECMAAPI_EXPORT REcmaCharacterWidget {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

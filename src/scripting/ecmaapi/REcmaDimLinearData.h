@@ -7,6 +7,8 @@
         #ifndef RECMADIMLINEARDATA_H
         #define RECMADIMLINEARDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaDimLinearData {
+        class QCADECMAAPI_EXPORT REcmaDimLinearData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

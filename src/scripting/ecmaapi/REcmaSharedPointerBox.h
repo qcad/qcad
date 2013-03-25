@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERBOX_H
         #define RECMASHAREDPOINTERBOX_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerBox {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerBox {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

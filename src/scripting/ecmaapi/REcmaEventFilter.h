@@ -7,6 +7,8 @@
         #ifndef RECMAEVENTFILTER_H
         #define RECMAEVENTFILTER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaEventFilter {
+        class QCADECMAAPI_EXPORT REcmaEventFilter {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

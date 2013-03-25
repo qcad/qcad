@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTERELLIPSE_H
         #define RECMASHAREDPOINTERELLIPSE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerEllipse {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerEllipse {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

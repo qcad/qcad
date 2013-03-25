@@ -29,6 +29,7 @@ echo "LIBS += -ldxflib -lopennurbs -lqcadcore -lqcaddxf -lqcadentity -lqcadgrid 
 echo "CONFIG -= warn_on" >> $profile_tmp
 echo "CONFIG += warn_off" >> $profile_tmp
 echo "OTHER_FILES += ecmaapi.dox" >> $profile_tmp
+echo "DEFINES += QCADECMAAPI_LIBRARY" >> $profile_tmp
 for f in ../../$scope/scripting/ecmaapi/adapters/*.h
 do
     bn=`basename $f`

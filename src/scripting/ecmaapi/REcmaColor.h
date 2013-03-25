@@ -7,6 +7,8 @@
         #ifndef RECMACOLOR_H
         #define RECMACOLOR_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaColor {
+        class QCADECMAAPI_EXPORT REcmaColor {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

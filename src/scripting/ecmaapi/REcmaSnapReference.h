@@ -7,6 +7,8 @@
         #ifndef RECMASNAPREFERENCE_H
         #define RECMASNAPREFERENCE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSnapReference {
+        class QCADECMAAPI_EXPORT REcmaSnapReference {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

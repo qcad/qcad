@@ -7,6 +7,8 @@
         #ifndef RECMAPAINTERPATHSOURCE_H
         #define RECMAPAINTERPATHSOURCE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPainterPathSource {
+        class QCADECMAAPI_EXPORT REcmaPainterPathSource {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

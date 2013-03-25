@@ -7,6 +7,8 @@
         #ifndef RECMAPLUGINLOADER_H
         #define RECMAPLUGINLOADER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaPluginLoader {
+        class QCADECMAAPI_EXPORT REcmaPluginLoader {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

@@ -7,6 +7,8 @@
         #ifndef RECMAFONTDATABASE_H
         #define RECMAFONTDATABASE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaFontDatabase {
+        class QCADECMAAPI_EXPORT REcmaFontDatabase {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

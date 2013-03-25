@@ -7,6 +7,8 @@
         #ifndef RECMASPLINEDATA_H
         #define RECMASPLINEDATA_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSplineData {
+        class QCADECMAAPI_EXPORT REcmaSplineData {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

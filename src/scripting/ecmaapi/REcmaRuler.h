@@ -7,6 +7,8 @@
         #ifndef RECMARULER_H
         #define RECMARULER_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaRuler {
+        class QCADECMAAPI_EXPORT REcmaRuler {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

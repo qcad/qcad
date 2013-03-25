@@ -7,6 +7,8 @@
         #ifndef RECMAMDICHILDQT_H
         #define RECMAMDICHILDQT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaMdiChildQt {
+        class QCADECMAAPI_EXPORT REcmaMdiChildQt {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

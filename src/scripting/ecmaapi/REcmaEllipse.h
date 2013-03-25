@@ -7,6 +7,8 @@
         #ifndef RECMAELLIPSE_H
         #define RECMAELLIPSE_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -19,7 +21,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaEllipse {
+        class QCADECMAAPI_EXPORT REcmaEllipse {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 

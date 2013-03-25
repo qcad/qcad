@@ -7,6 +7,8 @@
         #ifndef RECMASHAREDPOINTEROBJECT_H
         #define RECMASHAREDPOINTEROBJECT_H
 
+        #include <ecmaapi_global.h>
+
         #include <QScriptEngine>
         #include <QScriptValue>
         #include <QScriptContextInfo>
@@ -21,7 +23,7 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class REcmaSharedPointerObject {
+        class QCADECMAAPI_EXPORT REcmaSharedPointerObject {
 
         public:
       static  void init(QScriptEngine& engine, QScriptValue* proto 
