@@ -22,6 +22,9 @@ dir="./operations" filename="RTranslation.h">
   <name>RTRANSLATION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RTransformation.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -30,6 +33,9 @@ dir="./operations" filename="RTranslation.h">
   RModifyObjectsOperation::transformSelection * * \ingroup
   operations * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADOPERATIONS_EXPORT</name>
+  </macro>
   <name>RTranslation</name>
   <super>: 
   <specifier>public</specifier>

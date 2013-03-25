@@ -20,6 +20,9 @@ dir="./core" filename="RMouseCoordinateListener.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RMOUSECOORDINATELISTENER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RVector</name>;</class_decl>
   <comment type="block">/** * Abstract base class for classes that
@@ -27,6 +30,9 @@ dir="./core" filename="RMouseCoordinateListener.h">
   This can for example * be a widget that displays the cursor
   coordinate. * * \ingroup core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RMouseCoordinateListener</name>
   <block>{
   <private type="default"></private>

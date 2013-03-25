@@ -22,6 +22,9 @@ dir="./core" filename="RColor.h">
   <name>RCOLOR_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -48,6 +51,9 @@ dir="./core" filename="RColor.h">
   <comment type="block">/** * Color. Fixed RGBA or ByLayer or
   ByBlock. * * \ingroup core * \scriptable * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RColor</name>
   <super>: 
   <specifier>public</specifier>
@@ -733,6 +739,7 @@ dir="./core" filename="RColor.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>

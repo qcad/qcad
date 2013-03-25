@@ -76,6 +76,9 @@
         ;static  QScriptValue
         operator_assign
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        equals
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

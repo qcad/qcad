@@ -22,10 +22,16 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <name>RDXFEXPORTER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDxfServices.h"</cpp:file></cpp:include>
+  <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RArc.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RDxfServices.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
@@ -36,6 +42,9 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <comment type="block">/** * \brief Exporter for the DXF format,
   based on dxflib. * * \ingroup dxf * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADDXF_EXPORT</name>
+  </macro>
   <name>RDxfExporter</name>
   <super>: 
   <specifier>public</specifier>

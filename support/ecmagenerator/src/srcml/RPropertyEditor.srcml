@@ -22,6 +22,9 @@ dir="./core" filename="RPropertyEditor.h">
   <name>RPROPERTYEDITOR_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -49,6 +52,9 @@ dir="./core" filename="RPropertyEditor.h">
   editor implementation. * * \ingroup core * \scriptable *
   \generateScriptShell */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPropertyEditor</name>
   <super>: 
   <specifier>public</specifier>

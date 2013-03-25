@@ -22,6 +22,9 @@ dir="./entity" filename="RCircleEntity.h">
   <name>RCIRCLENTITY_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -33,6 +36,9 @@ dir="./entity" filename="RCircleEntity.h">
   <comment type="block">/** * Circle entity. * * \scriptable *
   \sharedPointerSupport * \ingroup entity */</comment>
   <class>class 
+  <macro>
+    <name>QCADENTITY_EXPORT</name>
+  </macro>
   <name>RCircleEntity</name>
   <super>: 
   <specifier>public</specifier>

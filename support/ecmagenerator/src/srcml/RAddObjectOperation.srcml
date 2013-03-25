@@ -22,6 +22,9 @@ dir="./operations" filename="RAddObjectOperation.h">
   <name>RADDOBJECTOPERATION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -37,6 +40,9 @@ dir="./operations" filename="RAddObjectOperation.h">
   <comment type="block">/** * Implementation of an operation that
   adds entities. * * \ingroup operations * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADOPERATIONS_EXPORT</name>
+  </macro>
   <name>RAddObjectOperation</name>
   <super>: 
   <specifier>public</specifier>

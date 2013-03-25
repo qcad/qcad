@@ -22,6 +22,9 @@ dir="./stemmer" filename="RStemmer.h">
   <name>RSTEMMER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"stemmer_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -30,6 +33,9 @@ dir="./stemmer" filename="RStemmer.h">
   searching word stems * (e.g. 'draw' for 'drawing', 'drawn',
   'draws', ...). * * \ingroup stemmer * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADSTEMMER_EXPORT</name>
+  </macro>
   <name>RStemmer</name>
   <block>{
   <private type="default"></private>

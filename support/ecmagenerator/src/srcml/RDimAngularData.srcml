@@ -22,6 +22,9 @@ dir="./entity" filename="RDimAngularData.h">
   <name>RDimAngularDataDATA_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RArc.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -38,6 +41,9 @@ dir="./entity" filename="RDimAngularData.h">
   <comment type="block">/** * Angular dimension entity data class.
   * * \scriptable * \ingroup entity */</comment>
   <class>class 
+  <macro>
+    <name>QCADENTITY_EXPORT</name>
+  </macro>
   <name>RDimAngularData</name>
   <super>: 
   <specifier>public</specifier>

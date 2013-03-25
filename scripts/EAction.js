@@ -18,7 +18,7 @@
  */
 
 include("WidgetFactory.js");
-include("Plugin.js");
+//include("AddOn.js");
 
 if (RSettings.isGuiEnabled()) {
     if (new QFileInfo("scripts/Widgets/CadToolBar/CadToolBar.js").exists()) {
@@ -76,17 +76,19 @@ EAction.prototype.beginEvent = function() {
     }
     this.showUiOptions(false);
 
+    /*
     if (!isNull(this.getGuiAction())) {
         // show doc if available
         var path = new QFileInfo(this.getGuiAction().getScriptFile()).filePath();
-        var plugin = new Plugin(path);
-        if (plugin.hasDoc()) {
+        var addOn = new AddOn(path);
+        if (addOn.hasDoc()) {
             var webView = EAction.getMainWindow().findChild("HelpViewer");
             if (!isNull(webView)) {
-                webView.url = plugin.getDocHtmlUrl();
+                webView.url = addOn.getDocHtmlUrl();
             }
         }
     }
+    */
 
     // reset snap to auto snap / no restriction:
     if (isNull(this.getGuiAction())

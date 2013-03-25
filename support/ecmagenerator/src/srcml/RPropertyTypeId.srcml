@@ -22,6 +22,9 @@ dir="./core" filename="RPropertyTypeId.h">
   <name>RPROPERTYTYPEID_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;typeinfo&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -43,11 +46,14 @@ dir="./core" filename="RPropertyTypeId.h">
   * E.g. all objects of type car may have a property * type called
   brand. This property type is uniquely identified by an instance *
   of this class. All instances of this class are automatically
-  unique. * * \code * class Car { * public: * static
-  RPropertyTypeId propertyBrand; * } * * RPropertyTypeId
+  unique. * * \code * class QCADCORE_EXPORT Car { * public: *
+  static RPropertyTypeId propertyBrand; * } * * RPropertyTypeId
   Car::propertyBrand(typeid(Car)); * \endcode * * \ingroup core * *
   \scriptable * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPropertyTypeId</name>
   <block>{
   <private type="default"></private>
@@ -406,6 +412,7 @@ dir="./core" filename="RPropertyTypeId.h">
   </decl>;</decl_stmt></private>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>
@@ -427,6 +434,7 @@ dir="./core" filename="RPropertyTypeId.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>uint</name>
   </type>
   <name>qHash</name>

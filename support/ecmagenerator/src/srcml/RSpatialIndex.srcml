@@ -22,6 +22,9 @@ dir="./core" filename="RSpatialIndex.h">
   <name>RSPATIALINDEX_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;stdint.h&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -45,6 +48,9 @@ dir="./core" filename="RSpatialIndex.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RSpatialIndexVisitor.h"</cpp:file></cpp:include>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSpatialIndexDebugVisitor</name>
   <super>: 
   <specifier>public</specifier>
@@ -268,6 +274,9 @@ dir="./core" filename="RSpatialIndex.h">
   spatial index implementations. * * \ingroup core * \scriptable
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSpatialIndex</name>
   <super>: 
   <specifier>public</specifier>
@@ -998,6 +1007,7 @@ dir="./core" filename="RSpatialIndex.h">
   </decl>;</decl_stmt></protected>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>

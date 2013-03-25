@@ -22,6 +22,9 @@ dir="./core" filename="RPatternLine.h">
   <name>RPATTERNLINE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RLine.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -32,6 +35,9 @@ dir="./core" filename="RPatternLine.h">
   <comment type="block">/** * Represents a hatch pattern line. * *
   \ingroup core * \scriptable * \hasStreamOperator */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPatternLine</name>
   <block>{
   <private type="default"></private>
@@ -123,6 +129,7 @@ dir="./core" filename="RPatternLine.h">
   </param>)</parameter_list>;</function_decl></public>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>

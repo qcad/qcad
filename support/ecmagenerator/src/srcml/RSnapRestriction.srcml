@@ -22,6 +22,9 @@ dir="./core" filename="RSnapRestriction.h">
   <name>RSNAPRESTRICTION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocumentInterface</name>;</class_decl>
@@ -29,6 +32,9 @@ dir="./core" filename="RSnapRestriction.h">
   snap restriction implementations. * * \scriptable *
   \generateScriptShell * * \ingroup core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSnapRestriction</name>
   <block>{
   <private type="default"></private>

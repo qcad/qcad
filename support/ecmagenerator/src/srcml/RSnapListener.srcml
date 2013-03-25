@@ -22,6 +22,9 @@ dir="./core" filename="RSnapListener.h">
   <name>RSNAPLISTENER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RSnap.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocumentInterface</name>;</class_decl>
@@ -31,6 +34,9 @@ dir="./core" filename="RSnapListener.h">
   classes that are interested in the current * snap mode. * *
   \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSnapListener</name>
   <block>{
   <private type="default"></private>

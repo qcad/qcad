@@ -22,6 +22,9 @@ dir="./core" filename="RLinetypePattern.h">
   <name>RLINETYPEPATTERN_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;stdarg.h&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -33,6 +36,9 @@ dir="./core" filename="RLinetypePattern.h">
   can be used to draw * dashed graphical elements. * * \scriptable
   * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RLinetypePattern</name>
   <block>{
   <private type="default"></private>
@@ -200,7 +206,22 @@ dir="./core" filename="RLinetypePattern.h">
       <name>RLinetypePattern</name>&amp;</type>
       <name>other</name>
     </decl>
-  </param>)</parameter_list>;</function_decl></public>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>operator==</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>other</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>
@@ -223,6 +244,7 @@ dir="./core" filename="RLinetypePattern.h">
   </decl>;</decl_stmt></private>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>

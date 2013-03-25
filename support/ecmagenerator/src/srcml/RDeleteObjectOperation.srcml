@@ -22,6 +22,9 @@ dir="./operations" filename="RDeleteObjectOperation.h">
   <name>RDELETEOBJECTOPERATION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -42,6 +45,9 @@ dir="./operations" filename="RDeleteObjectOperation.h">
   deletes entities. * * \ingroup operations * \scriptable
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADOPERATIONS_EXPORT</name>
+  </macro>
   <name>RDeleteObjectOperation</name>
   <super>: 
   <specifier>public</specifier>

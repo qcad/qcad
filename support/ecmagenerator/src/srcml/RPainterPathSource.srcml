@@ -22,6 +22,9 @@ dir="./entity" filename="RPainterPathSource.h">
   <name>RPAINTERPATHSOURCE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -30,6 +33,9 @@ dir="./entity" filename="RPainterPathSource.h">
   that can deliver painter paths. * * \ingroup entity * \scriptable
   * \sharedPointerSupport */</comment>
   <class>class 
+  <macro>
+    <name>QCADENTITY_EXPORT</name>
+  </macro>
   <name>RPainterPathSource</name>
   <block>{
   <private type="default"></private>

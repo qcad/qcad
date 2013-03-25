@@ -22,6 +22,9 @@ dir="./gui" filename="RTextEdit.h">
   <name>RTEXTEDIT_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QTextEdit&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -29,7 +32,9 @@ dir="./gui" filename="RTextEdit.h">
   &lt;QtDesigner/QDesignerExportWidget&gt;</cpp:file></cpp:include>
   <comment type="block">/** * \scriptable */</comment>
   <class>class 
-  <comment type="block">/*QDESIGNER_WIDGET_EXPORT*/</comment>
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RTextEdit</name>
   <super>: 
   <specifier>public</specifier>

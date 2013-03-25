@@ -20,12 +20,18 @@ dir="./core" filename="RViewFocusListener.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RVIEWFOCUSLISTENER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RGraphicsView</name>;</class_decl>
   <comment type="block">/** * \brief Abstract base class for
   classes that are interested in the current * view focus. * *
   \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RViewFocusListener</name>
   <block>{
   <private type="default"></private>

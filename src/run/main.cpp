@@ -61,7 +61,6 @@
 #include "RSingleton.h"
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
-#include "RStreamOperators.h"
 #include "RTextEntity.h"
 
 

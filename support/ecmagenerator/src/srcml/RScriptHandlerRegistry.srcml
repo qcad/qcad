@@ -22,6 +22,9 @@ dir="./core" filename="RScriptHandlerRegistry.h">
   <name>RSCRIPTHANDLERREGISTRY_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -53,6 +56,9 @@ dir="./core" filename="RScriptHandlerRegistry.h">
   <comment type="block">/** * Script Handler Registry for global
   Script Handlers. * * \ingroup core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RScriptHandlerRegistry</name>
   <super>: 
   <specifier>public</specifier>

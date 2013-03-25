@@ -38,6 +38,9 @@ dir="./scripting/ecma" filename="RScriptHandlerEcma.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"REcmaFocusListenerAdapter.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>QScriptEngineDebugger</name>;</class_decl>
   <comment type="block">/** * Script handler implementation for
@@ -980,27 +983,9 @@ dir="./scripting/ecma" filename="RScriptHandlerEcma.h">
   <comment type="line">//static QScriptValue
   ecmaUnblockEvents(QScriptContext* context, QScriptEngine*
   engine);</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaGetOpt</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
+  <comment type="line">//static QScriptValue
+  ecmaGetOpt(QScriptContext* context, QScriptEngine*
+  engine);</comment>
   <function_decl>
   <type>
     <name>static</name>

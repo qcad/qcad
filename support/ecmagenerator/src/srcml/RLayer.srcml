@@ -22,6 +22,9 @@ dir="./core" filename="RLayer.h">
   <name>RLAYER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -58,6 +61,9 @@ dir="./core" filename="RLayer.h">
   <comment type="block">/** * Represents a layer in a drawing. * *
   \ingroup core * \scriptable * \sharedPointerSupport */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RLayer</name>
   <super>: 
   <specifier>public</specifier>
@@ -548,6 +554,7 @@ dir="./core" filename="RLayer.h">
   </decl>;</decl_stmt></private>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>

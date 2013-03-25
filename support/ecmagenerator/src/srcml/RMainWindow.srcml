@@ -22,6 +22,9 @@ dir="./core" filename="RMainWindow.h">
   <name>RMAINWINDOW_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -81,6 +84,9 @@ dir="./core" filename="RMainWindow.h">
   <comment type="block">/** * \brief Base class for an MDI main
   application window. * * \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RMainWindow</name>
   <super>: 
   <specifier>public</specifier>

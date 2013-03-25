@@ -18,7 +18,7 @@
  */
 
 include("library.js");
-include("Plugin.js");
+include("AddOn.js");
 include("scripts/Edit/AppPreferences/StylePreferences/StylePreferences.js");
 include("scripts/File/OpenFile/OpenFile.js");
 include("scripts/File/AutoSave/AutoSave.js");
@@ -72,7 +72,7 @@ function usage() {
           + "-no-show                         Use but don't display GUI.\n"
           + "-open [filter] [file]            Opens the given file with the explicitly \n"
           + "                                 given import filter.\n"
-          + "-rescan                          Rescan scripts folder for new plugins\n"
+          + "-rescan                          Rescan scripts folder for new add-ons\n"
           + "-version                         Displays the application version.\n"
           + "-quit                            Quits QCAD, for example after executing the\n"
           + "                                 given script(s).\n"
@@ -278,9 +278,9 @@ function setUpDragAndDrop(appWin) {
 }
 
 /**
- * Loads translations for all plugins if appropriate.
+ * Loads translations for all add-ons if appropriate.
  */
-function loadTranslations(plugins, splash) {
+function loadTranslations(addOns, splash) {
     var locale = RSettings.getLocale();
     if (locale === "en" || locale.toLowerCase() === "en_us") {
         return;
@@ -337,97 +337,97 @@ function loadTranslations(plugins, splash) {
     }
     */
 
-    // install one QTranslator for each script plugin (random crashes):
+    // install one QTranslator for each script add-on (random crashes):
     if (!isNull(splash)) {
-        splash.showMessage(qsTr("Loading plugin translations...") + "\n", Qt.AlignBottom);
+        splash.showMessage(qsTr("Loading add-on translations...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
-    for (i = 0; i < plugins.length; ++i) {
-        var plugin = plugins[i];
+    for (i = 0; i < addOns.length; ++i) {
+        var addOn = addOns[i];
 
         translator = new QTranslator(qApp);
-        if (translator.load(plugin.getClassName() + "_" + locale, plugin.getPath() + "/ts")) {
+        if (translator.load(addOn.getClassName() + "_" + locale, addOn.getPath() + "/ts")) {
             QCoreApplication.installTranslator(translator);
         }
         else {
-            qWarning("Cannot load translation: ", plugin.getClassName() + "_" + locale);
-            qWarning("Directory: ", plugin.getPath() + "/ts");
+            qWarning("Cannot load translation: ", addOn.getClassName() + "_" + locale);
+            qWarning("Directory: ", addOn.getPath() + "/ts");
         }
     }
 }
 
 /**
- * Loads and initializes all plugins.
+ * Loads and initializes all add-ons.
  *
- * \param plugins array of Plugin objects.
+ * \param addOns array of AddOn objects.
  * \param splash the splash window for displaying status updates.
  */
-function loadPlugins(plugins, splash) {
+function loadAddOns(addOns, splash) {
     if (!isNull(splash)) {
-        splash.showMessage(qsTr("Loading plugins...") + "\n", Qt.AlignBottom);
+        splash.showMessage(qsTr("Loading add-ons...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
 
-    var plugin;
+    var addOn;
     var i;
 
-    for (i=0; i<plugins.length; ++i) {
-        plugin = plugins[i];
-        plugin.load(true);
+    for (i=0; i<addOns.length; ++i) {
+        addOn = addOns[i];
+        addOn.load(true);
     }
 }
 
-function initPlugins(plugins, splash) {
+function initAddOns(addOns, splash) {
     if (!isNull(splash)) {
-        splash.showMessage(qsTr("Initializing plugins...") + "\n", Qt.AlignBottom);
+        splash.showMessage(qsTr("Initializing add-ons...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
 
-    var plugin;
+    var addOn;
     var i;
     var text;
 
-    for (i=0; i<plugins.length; ++i) {
-        plugin = plugins[i];
+    for (i=0; i<addOns.length; ++i) {
+        addOn = addOns[i];
         if (i%10===0 && !isNull(splash)) {
-            text = qsTr("Initializing plugins:") +
+            text = qsTr("Initializing add-ons:") +
                 " %1%\n%2"
-                .arg(Math.round(i/plugins.length*100))
-                .arg(plugin.getClassName());
+                .arg(Math.round(i/addOns.length*100))
+                .arg(addOn.getClassName());
             splash.showMessage(text, Qt.AlignBottom);
             QCoreApplication.processEvents();
         }
-        plugin.init(splash, text);
+        addOn.init(splash, text);
     }
 }
 
-function postInitPlugins(plugins, splash) {
+function postInitAddOns(addOns, splash) {
     if (!isNull(splash)) {
-        splash.showMessage(qsTr("Post-initializing plugins...") + "\n", Qt.AlignBottom);
+        splash.showMessage(qsTr("Post-initializing add-ons...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
 
-    var plugin;
+    var addOn;
     var i;
 
-    var viewToolBarsPlugin = undefined;
-    for (i=0; i<plugins.length; ++i) {
-        plugin = plugins[i];
-        if (plugin.getClassName()==="ViewToolbars") {
-            viewToolBarsPlugin = plugin;
+    var viewToolBarsAddOn = undefined;
+    for (i=0; i<addOns.length; ++i) {
+        addOn = addOns[i];
+        if (addOn.getClassName()==="ViewToolbars") {
+            viewToolBarsAddOn = addOn;
         }
         else {
-            plugin.postInit();
+            addOn.postInit();
         }
     }
 
-    if (!isNull(viewToolBarsPlugin)) {
-        viewToolBarsPlugin.postInit();
+    if (!isNull(viewToolBarsAddOn)) {
+        viewToolBarsAddOn.postInit();
     }
 }
 
 /**
- * Loads the plugins and starts QCAD.
+ * Loads the add-ons and starts QCAD.
  */
 function main() {
     qApp.organizationName = "RibbonSoft";
@@ -464,7 +464,7 @@ function main() {
         return;
     }
 
-    var gotCamExtension = (new QFileInfo("scripts/Cam").exists() && !Plugin.isIgnored("scripts/Cam"));
+    var gotCamExtension = (new QFileInfo("scripts/Cam").exists() && !AddOn.isIgnored("scripts/Cam"));
 
     // in test mode, clean up first:
     var testMode = args.contains("-test");
@@ -572,36 +572,36 @@ function main() {
     }
 
 
-    // scan for script plugins (forced for first start, first start after
+    // scan for script add-ons (forced for first start, first start after
     // update, if configured):
-    var plugins;
-    var pluginFilePaths = RSettings.getValue("Plugins/List", []);
-    if (pluginFilePaths.length===0 || newVersion ||
+    var addOns;
+    var addOnFilePaths = RSettings.getValue("AddOns/List", []);
+    if (addOnFilePaths.length===0 || newVersion ||
             QCoreApplication.arguments().contains("-rescan") ||
             RSettings.getBoolValue("Scripting/Rescan", true)===true) {
 
         if (!isNull(splash)) {
             // no translations yet:
-            splash.showMessage("Searching for Plugins...\n", Qt.AlignBottom);
+            splash.showMessage("...\n", Qt.AlignBottom);
             QCoreApplication.processEvents();
         }
-        plugins = Plugin.getPlugins();
+        addOns = AddOn.getAddOns();
 
-        var pluginList = [];
-        for (i = 0; i < plugins.length; ++i) {
-            pluginList.push(plugins[i].getFilePath());
+        var addOnList = [];
+        for (i = 0; i < addOns.length; ++i) {
+            addOnList.push(addOns[i].getFilePath());
         }
-        RSettings.setValue("Plugins/List", pluginList);
+        RSettings.setValue("AddOns/List", addOnList);
     }
     else {
-        plugins = [];
-        for (i=0; i<pluginFilePaths.length; i++) {
-            plugins.push(new Plugin(pluginFilePaths[i]));
+        addOns = [];
+        for (i=0; i<addOnFilePaths.length; i++) {
+            addOns.push(new AddOn(addOnFilePaths[i]));
         }
     }
 
-    // load plugin translations:
-    loadTranslations(plugins, splash);
+    // load add-on translations:
+    loadTranslations(addOns, splash);
 
     // create application window:
     var appWin = new RMainWindowQt();
@@ -625,14 +625,14 @@ function main() {
     var menuBar = appWin.menuBar();
     menuBar.objectName = "MenuBar";
 
-    // load plugins:
+    // load add-ons:
     RDebug.startTimer(0);
-    loadPlugins(plugins, splash);
-    RDebug.stopTimer(0, "loading plugins");
+    loadAddOns(addOns, splash);
+    RDebug.stopTimer(0, "loading addOns");
 
     RDebug.startTimer(0);
-    initPlugins(plugins, splash);
-    RDebug.stopTimer(0, "initializing plugins");
+    initAddOns(addOns, splash);
+    RDebug.stopTimer(0, "initializing add-ons");
 
     appWin.updateGuiActions();
     appWin.acceptDrops = true;
@@ -661,7 +661,7 @@ function main() {
         appWin.show();
     }
 
-    postInitPlugins(plugins, splash);
+    postInitAddOns(addOns, splash);
 
     if (!isNull(splash)) {
         splash.close();

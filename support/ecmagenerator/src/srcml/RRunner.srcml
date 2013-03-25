@@ -20,9 +20,15 @@ dir="./core" filename="RRunner.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RRUNNER_H_</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <comment type="block">/** * \scriptable * \generateScriptShell
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RRunner</name>
   <block>{
   <private type="default">

@@ -22,12 +22,18 @@ dir="./core" filename="RTerminateEvent.h">
   <name>RTERMINATEEVENT_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QEvent&gt;</cpp:file></cpp:include>
   <comment type="block">/** * \brief Event that is posted whenever
   an action has terminated itself. * As a reaction to this event,
   all terminated actions are cleaned up. * * \ingroup core *
   \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RTerminateEvent</name>
   <super>: 
   <specifier>public</specifier>

@@ -22,6 +22,9 @@ dir="./grid" filename="ROrthoGrid.h">
   <name>RORTHOGRID_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"grid_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RGrid.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RGraphicsView</name>;</class_decl>
@@ -31,6 +34,9 @@ dir="./grid" filename="ROrthoGrid.h">
   class is responsible for updating the grid and snapping to the
   grid. * * \scriptable * \ingroup grids */</comment>
   <class>class 
+  <macro>
+    <name>QCADGRID_EXPORT</name>
+  </macro>
   <name>ROrthoGrid</name>
   <super>: 
   <specifier>public</specifier>

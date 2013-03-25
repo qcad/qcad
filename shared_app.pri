@@ -12,8 +12,7 @@ LIBS += \
     -lqcadgrid \
     -lqcadsnap \
     -lqcadcore \
-    -lqcadstemmer \
-    -lstemmer
+    -lqcadstemmer
 
 !r_no_opennurbs {
     LIBS += \
@@ -53,7 +52,6 @@ win32 {
         $$PWD/$$ROUTDIR/spatialindexnavel.lib \
         $$PWD/$$ROUTDIR/qcadcore.lib \
         $$PWD/$$ROUTDIR/qcadstemmer.lib \
-        $$PWD/$$ROUTDIR/stemmer.lib \
         $$PWD/$$ROUTDIR/qcadgrid.lib \
         $$PWD/$$ROUTDIR/qcadsnap.lib \
         $$PWD/$$ROUTDIR/qcadmath.lib \
@@ -80,8 +78,7 @@ else {
         $$PWD/$$ROUTDIR/libqcadsnap.dylib \
         $$PWD/$$ROUTDIR/libqcadspatialindex.dylib \
         $$PWD/$$ROUTDIR/libqcadstemmer.dylib \
-        $$PWD/$$ROUTDIR/libspatialindexnavel.dylib \
-        $$PWD/$$ROUTDIR/libstemmer.dylib
+        $$PWD/$$ROUTDIR/libspatialindexnavel.dylib
         !r_no_opennurbs {
             POST_TARGETDEPS += $$PWD/$$ROUTDIR/libopennurbs.dylib
         }

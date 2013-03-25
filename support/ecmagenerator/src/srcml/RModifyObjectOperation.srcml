@@ -22,10 +22,16 @@ dir="./operations" filename="RModifyObjectOperation.h">
   <name>RMODIFYOBJECTOPERATION_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RAddObjectOperation.h"</cpp:file></cpp:include>
   <comment type="block">/** * Implementation of an operation that
   adds entities. * * \ingroup operations * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADOPERATIONS_EXPORT</name>
+  </macro>
   <name>RModifyObjectOperation</name>
   <super>: 
   <specifier>public</specifier>
@@ -33,60 +39,38 @@ dir="./operations" filename="RModifyObjectOperation.h">
   <block>{
   <private type="default"></private>
   <public>public: 
-  <constructor>
-    <name>RModifyObjectOperation</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>QSharedPointer
-          <argument_list>&lt;
-          <argument>
-            <name>RObject</name>
-          </argument>&gt;</argument_list></name>
-        </type>
-        <name>object</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
+  <constructor_decl>
+  <name>RModifyObjectOperation</name>
+  <parameter_list>(
+  <param>
+    <decl>
       <type>
-        <name>bool</name>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RObject</name>
+        </argument>&gt;</argument_list></name>
       </type>
-      <name>undoable</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>RAddObjectOperation</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>object</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>false</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>undoable</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
+      <name>object</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>undoable</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</constructor_decl>
   <destructor>
     <specifier>virtual</specifier>
     <name>~RModifyObjectOperation</name>
     <parameter_list>()</parameter_list>
-    <block>{ }</block>
+    <block>{}</block>
   </destructor></public>}</block>;</class>
   <expr_stmt>
   <expr>

@@ -2,21 +2,7 @@ include( ../../../shared.pri )
 SOURCES = \
     RScriptHandlerEcma.cpp
 HEADERS = \
-    RActionAdapter.h \
-    RBlockListenerAdapter.h \
-    RCoordinateListenerAdapter.h \
-    RFileExporterFactoryAdapter.h \
-    RFileImporterAdapter.h \
-    RFileImporterFactoryAdapter.h \
-    RFocusListenerAdapter.h \
-    RLayerListenerAdapter.h \
-    RPenListenerAdapter.h \
-    RSelectionListenerAdapter.h \
-    RSpatialIndexVisitorAdapter.h \
-    RViewFocusListenerAdapter.h \
-    RViewListenerAdapter.h \
-    RScriptHandlerEcma.h \
-    RFontDatabase.h
+    RScriptHandlerEcma.h
 TEMPLATE = lib
 #CONFIG += staticlib
 CONFIG += plugin

@@ -22,6 +22,9 @@ dir="./core" filename="RPropertyListener.h">
   <name>RPROPERTYLISTENER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RS.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -39,6 +42,9 @@ dir="./core" filename="RPropertyListener.h">
   selection or the current action. For example a * property browser
   or editor. * * \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPropertyListener</name>
   <block>{
   <private type="default"></private>

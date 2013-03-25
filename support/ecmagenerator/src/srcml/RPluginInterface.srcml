@@ -21,6 +21,9 @@ the GNU General Public License * along with QCAD. */</comment>
 <name>RPLUGININTERFACE_H</name></cpp:define>
 <cpp:include>#
 <cpp:directive>include</cpp:directive>
+<cpp:file>"core_global.h"</cpp:file></cpp:include>
+<cpp:include>#
+<cpp:directive>include</cpp:directive>
 <cpp:file>&lt;QtPlugin&gt;</cpp:file></cpp:include>
 <cpp:include>#
 <cpp:directive>include</cpp:directive>
@@ -39,7 +42,8 @@ the GNU General Public License * along with QCAD. */</comment>
 <decl_stmt>
   <decl>
     <type>
-    <name>QT_END_NAMESPACE</name>class</type>
+    <name>QT_END_NAMESPACE</name>class 
+    <name>QCADCORE_EXPORT</name></type>
     <name>RPluginInterface</name>
     <block>{ 
     <public>public: 

@@ -22,6 +22,9 @@ dir="./core" filename="RPainterPathEngine.h">
   <name>RPAINTERPATHENGINE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QPaintEngine&gt;</cpp:file></cpp:include>
   <comment type="line">//#include
   "private/qtextengine_p.h"</comment>
@@ -33,6 +36,9 @@ dir="./core" filename="RPainterPathEngine.h">
   <comment type="block">/** * Experimental. * * \ingroup core
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPainterPathEngine</name>
   <super>: 
   <specifier>public</specifier>

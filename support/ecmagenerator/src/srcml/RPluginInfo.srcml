@@ -22,11 +22,17 @@ dir="./core" filename="RPluginInfo.h">
   <name>RPLUGININFO_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <comment type="block">/** * Information about a plugin. Ususally
   shown in an about dialog. * * \ingroup core * \scriptable *
   \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPluginInfo</name>
   <block>{
   <private type="default"></private>

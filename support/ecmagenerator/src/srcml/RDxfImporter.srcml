@@ -22,6 +22,9 @@ dir="./io/dxf" filename="RDxfImporter.h">
   <name>RDXFIMPORTER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>
   "dxflib/src/dl_creationadapter.h"</cpp:file></cpp:include>
   <cpp:include>#
@@ -60,6 +63,9 @@ dir="./io/dxf" filename="RDxfImporter.h">
   <name>RVector</name>;</class_decl>
   <comment type="block">/** * Represents a text style. */</comment>
   <class>class 
+  <macro>
+    <name>QCADDXF_EXPORT</name>
+  </macro>
   <name>RDxfTextStyle</name>
   <block>{
   <private type="default"></private>
@@ -113,6 +119,9 @@ dir="./io/dxf" filename="RDxfImporter.h">
   based on the dxflib library. * * \ingroup qcadiodxf * \scriptable
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADDXF_EXPORT</name>
+  </macro>
   <name>RDxfImporter</name>
   <super>: 
   <specifier>public</specifier>

@@ -22,6 +22,9 @@ dir="./entity" filename="RDimensionEntity.h">
   <name>RDIMENSIONENTITY_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -34,6 +37,9 @@ dir="./entity" filename="RDimensionEntity.h">
   classes. * * \scriptable * \sharedPointerSupport * \ingroup
   entity */</comment>
   <class>class 
+  <macro>
+    <name>QCADENTITY_EXPORT</name>
+  </macro>
   <name>RDimensionEntity</name>
   <super>: 
   <specifier>public</specifier>

@@ -22,6 +22,9 @@ dir="./snap" filename="RSnapGrid.h">
   <name>RSNAPGRID_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"snap_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RSnap.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RGraphicsView</name>;</class_decl>
@@ -30,6 +33,9 @@ dir="./snap" filename="RSnapGrid.h">
   <comment type="block">/** * \brief Grid snapper implementation. *
   * \scriptable * * \ingroup snap */</comment>
   <class>class 
+  <macro>
+    <name>QCADSNAP_EXPORT</name>
+  </macro>
   <name>RSnapGrid</name>
   <super>: 
   <specifier>public</specifier>

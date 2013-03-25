@@ -22,6 +22,9 @@ dir="./core/math" filename="RTextLabel.h">
   <name>RTEXTLABEL_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RPoint.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -43,6 +46,9 @@ dir="./core/math" filename="RTextLabel.h">
   snap mode. * * \ingroup math * \scriptable *
   \sharedPointerSupport * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RTextLabel</name>
   <super>: 
   <specifier>public</specifier>

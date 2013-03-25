@@ -22,6 +22,9 @@ dir="./operations" filename="RChangePropertyOperation.h">
   <name>RCHANGEPROPERTYOPERATION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -45,6 +48,9 @@ dir="./operations" filename="RChangePropertyOperation.h">
   changes a given property to * a given value for the selection in
   a document. * * \ingroup operations * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADOPERATIONS_EXPORT</name>
+  </macro>
   <name>RChangePropertyOperation</name>
   <super>: 
   <specifier>public</specifier>

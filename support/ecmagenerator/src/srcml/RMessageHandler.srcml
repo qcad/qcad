@@ -22,11 +22,17 @@ dir="./core" filename="RMessageHandler.h">
   <name>RMESSAGEHANDLER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <comment type="block">/** * \brief Interface for classes that can
   handle user messages, warnings and errors. * * \ingroup core *
   \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RMessageHandler</name>
   <block>{
   <private type="default"></private>

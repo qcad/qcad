@@ -20,6 +20,9 @@ dir="./core" filename="RUcsListener.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RUCSLISTENER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocumentInterface</name>;</class_decl>
   <comment type="block">/** * \brief Abstract base class for
@@ -27,6 +30,9 @@ dir="./core" filename="RUcsListener.h">
   has been added or changed. * This can for example be a widget
   that lists all UCSs. * * \ingroup core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RUcsListener</name>
   <block>{
   <private type="default"></private>

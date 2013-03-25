@@ -18,8 +18,6 @@
             
                 #include "REllipse.h"
             
-                #include "RImageData.h"
-            
                 #include "RLine.h"
             
                 #include "RLinetype.h"

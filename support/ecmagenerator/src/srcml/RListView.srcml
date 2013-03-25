@@ -22,6 +22,9 @@ dir="./gui" filename="RListView.h">
   <name>RLISTVIEW_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -35,6 +38,9 @@ dir="./gui" filename="RListView.h">
   <comment type="block">/** * \scriptable * \generateScriptShell
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RListView</name>
   <super>: 
   <specifier>public</specifier>

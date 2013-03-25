@@ -22,6 +22,9 @@ dir="./operations" filename="RPasteOperation.h">
   <name>RPASTEOPERATION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RDocument.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -39,6 +42,9 @@ dir="./operations" filename="RPasteOperation.h">
   pastes the clipboard * at a given reference point. * * \ingroup
   operations * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADOPERATIONS_EXPORT</name>
+  </macro>
   <name>RPasteOperation</name>
   <super>: 
   <specifier>public</specifier>

@@ -22,12 +22,18 @@ dir="./snap" filename="RSnapPerpendicular.h">
   <name>RSNAPPERPENDICULAR_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"snap_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RSnapEntityBase.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RMouseEvent</name>;</class_decl>
   <comment type="block">/** * \brief On entity snapper
   implementation. * * \scriptable * * \ingroup snap */</comment>
   <class>class 
+  <macro>
+    <name>QCADSNAP_EXPORT</name>
+  </macro>
   <name>RSnapPerpendicular</name>
   <super>: 
   <specifier>public</specifier>

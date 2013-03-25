@@ -22,6 +22,9 @@ dir="./snap" filename="RSnapReference.h">
   <name>RSNAPREFERENCE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"snap_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RSnapEntityBase.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -31,6 +34,9 @@ dir="./snap" filename="RSnapReference.h">
   <comment type="block">/** * \brief Reference snapper
   implementation. * * \scriptable * * \ingroup snap */</comment>
   <class>class 
+  <macro>
+    <name>QCADSNAP_EXPORT</name>
+  </macro>
   <name>RSnapReference</name>
   <super>: 
   <specifier>public</specifier>

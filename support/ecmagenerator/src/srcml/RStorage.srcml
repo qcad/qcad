@@ -22,6 +22,9 @@ dir="./core" filename="RStorage.h">
   <name>RSTORAGE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -66,6 +69,9 @@ dir="./core" filename="RStorage.h">
   object. * * A storage implementation is available in the \ref
   qcaddbstorage. * * \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RStorage</name>
   <super>: 
   <name>RNonCopyable</name>, 

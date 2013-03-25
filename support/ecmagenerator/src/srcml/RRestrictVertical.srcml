@@ -22,12 +22,18 @@ dir="./snap" filename="RRestrictVertical.h">
   <name>RRESTRICTVERTICAL_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"snap_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RRestrictOrthogonal.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocumentInterface</name>;</class_decl>
   <comment type="block">/** * \brief Vertical snap restriction
   implementation. * * \scriptable * * \ingroup snap */</comment>
   <class>class 
+  <macro>
+    <name>QCADSNAP_EXPORT</name>
+  </macro>
   <name>RRestrictVertical</name>
   <super>: 
   <specifier>public</specifier>

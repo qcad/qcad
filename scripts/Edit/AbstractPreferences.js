@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Plugin.js");
+include("../AddOn.js");
 include("Edit.js");
 
 function AbstractPreferences(guiAction, appPreferences) {
@@ -60,11 +60,11 @@ AbstractPreferences.prototype.beginEvent = function() {
     btApply.clicked.connect(this, "apply");
 
     if (this.appPreferences) {
-        this.plugins = Plugin.getPlugins();
+        this.addOns = AddOn.getAddOns();
     } else {
-        this.plugins = Plugin.getPlugins("scripts/Edit/DrawingPreferences");
+        this.addOns = AddOn.getAddOns("scripts/Edit/DrawingPreferences");
     }
-    AbstractPreferences.fillTreeWidget(this.plugins, this.treeWidget,
+    AbstractPreferences.fillTreeWidget(this.addOns, this.treeWidget,
             this.appPreferences);
     this.treeWidget.expandAll();
 
@@ -89,12 +89,12 @@ AbstractPreferences.prototype.beginEvent = function() {
 };
 
 /**
- * Initializes the navigation tree based on available plugins with preferences.
+ * Initializes the navigation tree based on available add-ons with preferences.
  */
-AbstractPreferences.fillTreeWidget = function(plugins, treeWidget, appPreferences) {
-    for (var i = 0; i < plugins.length; ++i) {
-        var plugin = plugins[i];
-        var className = plugin.getClassName();
+AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences) {
+    for (var i = 0; i < addOns.length; ++i) {
+        var addOn = addOns[i];
+        var className = addOn.getClassName();
         try {
             // include normally not needed
             var doInclude = false;
@@ -102,7 +102,7 @@ AbstractPreferences.fillTreeWidget = function(plugins, treeWidget, appPreference
                 +    "doInclude = true;"
                 + "}");
             if(doInclude) {
-                eval("include('" + plugin.getFilePath() + "');");
+                eval("include('" + addOn.getFilePath() + "');");
             }
         } catch (e1) {
             qWarning("AppPreferences.js: Exception: ", e1);
@@ -120,11 +120,11 @@ AbstractPreferences.fillTreeWidget = function(plugins, treeWidget, appPreference
                 continue;
             }
         } catch (e2) {
-            qWarning("AppPreferences.js: Plugin class not found: ", className, " exception: ", e2);
+            qWarning("AppPreferences.js: Add-on class not found: ", className, " exception: ", e2);
             continue;
         }
         
-        if (!plugin.preferenceFileExists()) {
+        if (!addOn.preferenceFileExists()) {
             continue;
         }
 
@@ -167,7 +167,7 @@ AbstractPreferences.fillTreeWidget = function(plugins, treeWidget, appPreference
 
 /**
  * Applies the settings of all preference pages by calling
- * 'applyPreferences' for every plugin class.
+ * 'applyPreferences' for every add-on class.
  */
 AbstractPreferences.prototype.apply = function() {
     var mdiChild, document;
@@ -178,11 +178,11 @@ AbstractPreferences.prototype.apply = function() {
     
     this.save();
 
-    for (var i = 0; i < this.plugins.length; ++i) {
-        var plugin = this.plugins[i];
-        var className = plugin.getClassName();
+    for (var i = 0; i < this.addOns.length; ++i) {
+        var addOn = this.addOns[i];
+        var className = addOn.getClassName();
         
-        var widget = plugin.getPreferenceWidget();
+        var widget = addOn.getPreferenceWidget();
         if (isNull(widget) || widget.hasChanged != true) {
             continue;
         }
@@ -194,7 +194,7 @@ AbstractPreferences.prototype.apply = function() {
                 +    "doInclude = true;"
                 + "}");
             if (doInclude) {
-                eval("include('" + plugin.getFilePath() + "');");
+                eval("include('" + addOn.getFilePath() + "');");
             }
             
             // apply application settings globally:
@@ -232,16 +232,16 @@ AbstractPreferences.prototype.apply = function() {
 };
 
 /**
- * Loads the preference page of the given plugin.
+ * Loads the preference page of the given add-on.
  * Called by 'showPage'.
  */
-AbstractPreferences.prototype.load = function(plugin) {
-    var widget = plugin.getPreferenceWidget();
+AbstractPreferences.prototype.load = function(addOn) {
+    var widget = addOn.getPreferenceWidget();
     if (widget == undefined) {
         return;
     }
     // load preferences
-    var className = plugin.getClassName();
+    var className = addOn.getClassName();
     var document;
     document = undefined;
     if (!this.appPreferences) {
@@ -269,13 +269,13 @@ AbstractPreferences.prototype.load = function(plugin) {
  * or to a global settings file (this.appPreferences==true).
  */
 AbstractPreferences.prototype.save = function() {
-    for (var i = 0; i < this.plugins.length; ++i) {
-        var plugin = this.plugins[i];
-        var widget = plugin.getPreferenceWidget();
+    for (var i = 0; i < this.addOns.length; ++i) {
+        var addOn = this.addOns[i];
+        var widget = addOn.getPreferenceWidget();
         if (isNull(widget) || widget.hasChanged !== true) {
             continue;
         }
-        var className = plugin.getClassName();
+        var className = addOn.getClassName();
         var document;
         document = undefined;
         if (!this.appPreferences) {
@@ -392,14 +392,14 @@ AbstractPreferences.prototype.showPage = function() {
     var i = item.data(0, Qt.UserRole);
     var widget;
     if (typeof(i) != "undefined") {
-        var plugin = this.plugins[i];
-        widget = plugin.getPreferenceWidget();
+        var addOn = this.addOns[i];
+        widget = addOn.getPreferenceWidget();
         if (typeof(widget) == "undefined") {
-            var prefFile = plugin.getPreferenceFile();
+            var prefFile = addOn.getPreferenceFile();
             widget = this.createWidget(prefFile);
             this.pageWidget.addWidget(widget);
-            plugin.setPreferenceWidget(widget);
-            this.load(plugin);
+            addOn.setPreferenceWidget(widget);
+            this.load(addOn);
             var treeWidget = this.treeWidget;
             widget.settingChangedEvent = function() {
                 var font = treeWidget.currentItem().font(0);
@@ -433,15 +433,15 @@ AbstractPreferences.prototype.reset = function() {
 
 /**
  * Called when the global or drawing unit changes. Notifies all loaded
- * plugin pages.
+ * add-on pages.
  */
 AbstractPreferences.prototype.unitUpdated = function(unit) {
-    for (var i=0; i<this.plugins.length; ++i) {
-        var plugin = this.plugins[i];
-        var className = plugin.getClassName();
+    for (var i=0; i<this.addOns.length; ++i) {
+        var addOn = this.addOns[i];
+        var className = addOn.getClassName();
 
-        // pref page of this plugin is not opened yet, skip:
-        var widget = plugin.getPreferenceWidget();
+        // pref page of this add-on is not opened yet, skip:
+        var widget = addOn.getPreferenceWidget();
         if (isNull(widget)) {
             continue;
         }
@@ -459,15 +459,15 @@ AbstractPreferences.prototype.unitUpdated = function(unit) {
 
 /**
  * Called when the global or drawing paper unit changes. Notifies all loaded
- * plugin pages.
+ * add-on pages.
  */
 AbstractPreferences.prototype.paperUnitUpdated = function(unit) {
-    for (var i=0; i<this.plugins.length; ++i) {
-        var plugin = this.plugins[i];
-        var className = plugin.getClassName();
+    for (var i=0; i<this.addOns.length; ++i) {
+        var addOn = this.addOns[i];
+        var className = addOn.getClassName();
 
-        // pref page of this plugin is not opened yet, skip:
-        var widget = plugin.getPreferenceWidget();
+        // pref page of this add-on is not opened yet, skip:
+        var widget = addOn.getPreferenceWidget();
         if (isNull(widget)) {
             continue;
         }
@@ -484,12 +484,12 @@ AbstractPreferences.prototype.paperUnitUpdated = function(unit) {
 };
 
 AbstractPreferences.prototype.linearFormatUpdated = function(linearFormat) {
-    for (var i=0; i<this.plugins.length; ++i) {
-        var plugin = this.plugins[i];
-        var className = plugin.getClassName();
+    for (var i=0; i<this.addOns.length; ++i) {
+        var addOn = this.addOns[i];
+        var className = addOn.getClassName();
 
-        // pref page of this plugin is not opened yet, skip:
-        var widget = plugin.getPreferenceWidget();
+        // pref page of this add-on is not opened yet, skip:
+        var widget = addOn.getPreferenceWidget();
         if (isNull(widget)) {
             continue;
         }

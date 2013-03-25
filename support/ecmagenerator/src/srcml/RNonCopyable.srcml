@@ -20,9 +20,15 @@ dir="./core" filename="RNonCopyable.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RNONCOPYABLE_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <comment type="block">/** * Instances of classes derived from
   this base class cannot be copied. * * \ingroup core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RNonCopyable</name>
   <block>{
   <private type="default"></private>

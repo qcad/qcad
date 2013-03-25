@@ -22,6 +22,9 @@ dir="./core" filename="RAction.h">
   <name>RACTION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -84,6 +87,9 @@ dir="./core" filename="RAction.h">
   document. A menu, * toolbar button or command usually triggers an
   action. * * \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RAction</name>
   <block>{
   <private type="default"></private>

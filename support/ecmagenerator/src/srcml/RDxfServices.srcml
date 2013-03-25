@@ -22,6 +22,9 @@ dir="./io/dxf" filename="RDxfServices.h">
   <name>RDXFSERVICES_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -33,6 +36,9 @@ dir="./io/dxf" filename="RDxfServices.h">
   <comment type="block">/** * \brief DXF support tools. * *
   \ingroup qcadiodxf */</comment>
   <class>class 
+  <macro>
+    <name>QCADDXF_EXPORT</name>
+  </macro>
   <name>RDxfServices</name>
   <block>{
   <private type="default"></private>

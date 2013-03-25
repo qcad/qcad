@@ -31,8 +31,11 @@ CONFIG += staticlib
 #    LIBS += -lRpcrt4 -lAdvapi32
 #}
 
-DESTDIR = release
 CONFIG(release, debug|release) {
     DEFINES += NDEBUG
+    DESTDIR = release
+}
+else {
+    DESTDIR = debug
 }
 #DEFINES += ZLIB_DLL

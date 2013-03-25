@@ -22,6 +22,9 @@ dir="./core" filename="RPropertyEvent.h">
   <name>RPROPERTYEVENT_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -34,6 +37,9 @@ dir="./core" filename="RPropertyEvent.h">
   the value of a property. * * \ingroup core * \scriptable *
   \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPropertyEvent</name>
   <block>{
   <private type="default"></private>

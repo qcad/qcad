@@ -22,6 +22,9 @@ dir="./core" filename="RMemoryStorage.h">
   <name>RMEMORYSTORAGE_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -32,6 +35,9 @@ dir="./core" filename="RMemoryStorage.h">
   <comment type="block">/** * Basic memory based storage. * *
   \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RMemoryStorage</name>
   <super>: 
   <specifier>public</specifier>

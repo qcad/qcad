@@ -22,11 +22,17 @@ dir="./core" filename="RSpatialIndexVisitor.h">
   <name>RSPATIALINDEXVISITOR_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;stdint.h&gt;</cpp:file></cpp:include>
   <comment type="block">/** * \brief Abstract base class for
   classes that are interested in * the data of spatial index items.
   * * \scriptable * \ingroup core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSpatialIndexVisitor</name>
   <block>{
   <private type="default"></private>

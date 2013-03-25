@@ -20,6 +20,9 @@ dir="./core" filename="RViewListener.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RVIEWLISTENER_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocumentInterface</name>;</class_decl>
   <comment type="block">/** * \brief Abstract base class for
@@ -28,6 +31,9 @@ dir="./core" filename="RViewListener.h">
   that lists all views. * * \ingroup core * \scriptable
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RViewListener</name>
   <block>{
   <private type="default"></private>

@@ -22,6 +22,9 @@ dir="./core" filename="RImporter.h">
   <name>RIMPORTER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
@@ -41,6 +44,9 @@ dir="./core" filename="RImporter.h">
   implemented to support custom entity types * supported by a
   specific importer. * * \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RImporter</name>
   <block>{
   <private type="default"></private>

@@ -22,6 +22,9 @@ dir="./core/math" filename="RDirected.h">
   <name>RDIRECTED_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -30,6 +33,9 @@ dir="./core/math" filename="RDirected.h">
   * * \ingroup math * \scriptable * \sharedPointerSupport
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RDirected</name>
   <block>{
   <private type="default"></private>

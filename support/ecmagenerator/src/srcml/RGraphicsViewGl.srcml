@@ -22,6 +22,9 @@ dir="./gui" filename="RGraphicsViewGl.h">
   <name>RGRAPHICSVIEWGL_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QGLWidget&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -43,6 +46,9 @@ dir="./gui" filename="RGraphicsViewGl.h">
   \ref RGraphicsSceneGl "OpenGL graphics scene". * * \ingroup
   qcadguiqt * * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RGraphicsViewGl</name>
   <super>: 
   <specifier>public</specifier>

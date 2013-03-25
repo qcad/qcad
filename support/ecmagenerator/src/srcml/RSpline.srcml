@@ -22,6 +22,9 @@ dir="./core/math" filename="RSpline.h">
   <name>RSPLINE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RArc.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -60,6 +63,9 @@ dir="./core/math" filename="RSpline.h">
   \ingroup math * \scriptable * \sharedPointerSupport * \copyable
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSpline</name>
   <super>: 
   <specifier>public</specifier>

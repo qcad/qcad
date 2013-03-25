@@ -22,9 +22,15 @@ dir="./core" filename="RRequireHeap.h">
   <name>RREQUIREHEAP_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RDebug.h"</cpp:file></cpp:include>
   <comment type="block">/** * \ingroup core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RRequireHeap</name>
   <block>{
   <private type="default"></private>

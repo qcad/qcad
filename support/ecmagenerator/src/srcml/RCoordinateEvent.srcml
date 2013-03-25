@@ -22,6 +22,9 @@ dir="./core" filename="RCoordinateEvent.h">
   <name>RCOORDINATEEVENT_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RInputEvent.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -33,6 +36,9 @@ dir="./core" filename="RCoordinateEvent.h">
   <comment type="block">/** * Coordinate Event. * * \ingroup core *
   \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RCoordinateEvent</name>
   <super>: 
   <specifier>public</specifier>

@@ -22,6 +22,9 @@ dir="./snap" filename="RRestrictOff.h">
   <name>RRESTRICTOFF_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"snap_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RSnapRestriction.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocumentInterface</name>;</class_decl>
@@ -29,6 +32,9 @@ dir="./snap" filename="RRestrictOff.h">
   implementation (no restriction). * * \scriptable * * \ingroup
   snap */</comment>
   <class>class 
+  <macro>
+    <name>QCADSNAP_EXPORT</name>
+  </macro>
   <name>RRestrictOff</name>
   <super>: 
   <specifier>public</specifier>

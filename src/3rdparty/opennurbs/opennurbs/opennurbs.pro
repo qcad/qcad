@@ -218,7 +218,14 @@ HEADERS += \
 
 TEMPLATE = lib
 CONFIG += plugin
-DEFINES += ON_DLL_EXPORTS ON_COMPILING_OPENNURBS NDEBUG
+CONFIG(release, debug|release) {
+    LIBS += -L../zlib/release
+}
+else {
+    LIBS += -L../zlib/debug
+}
+LIBS += -lzlib
 win32 {
+    DEFINES += ON_DLL_EXPORTS ON_COMPILING_OPENNURBS NDEBUG
     LIBS += -lRpcrt4 -lAdvapi32
 }

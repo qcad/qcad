@@ -22,6 +22,9 @@ dir="./core" filename="RDocument.h">
   <name>RDOCUMENT_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -82,6 +85,9 @@ dir="./core" filename="RDocument.h">
   duration of the document's lifetime. * * \ingroup core *
   \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RDocument</name>
   <super>: 
   <specifier>public</specifier>

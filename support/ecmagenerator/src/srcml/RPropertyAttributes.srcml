@@ -22,6 +22,9 @@ dir="./core" filename="RPropertyAttributes.h">
   <name>RPROPERTYATTRIBUTES_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -52,6 +55,9 @@ dir="./core" filename="RPropertyAttributes.h">
   require * conversion between radiants and degrees), etc. * *
   \ingroup core * \scriptable * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPropertyAttributes</name>
   <block>{
   <private type="default"></private>

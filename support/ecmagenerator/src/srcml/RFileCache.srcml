@@ -22,6 +22,9 @@ dir="./core" filename="RFileCache.h">
   <name>RFILECACHE_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -35,6 +38,9 @@ dir="./core" filename="RFileCache.h">
   <comment type="block">/** * QBuffer based file cache. * *
   \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RFileCache</name>
   <block>{
   <private type="default"></private>

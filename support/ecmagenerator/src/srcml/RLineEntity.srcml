@@ -22,6 +22,9 @@ dir="./entity" filename="RLineEntity.h">
   <name>RLINEENTITY_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -33,6 +36,9 @@ dir="./entity" filename="RLineEntity.h">
   <comment type="block">/** * Line entity. * * \scriptable *
   \sharedPointerSupport * \ingroup entity */</comment>
   <class>class 
+  <macro>
+    <name>QCADENTITY_EXPORT</name>
+  </macro>
   <name>RLineEntity</name>
   <super>: 
   <specifier>public</specifier>

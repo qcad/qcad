@@ -22,6 +22,9 @@ dir="./core" filename="RSettings.h">
   <name>RSETTINGS_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -54,6 +57,9 @@ dir="./core" filename="RSettings.h">
   <comment type="block">/** * \ingroup core * \scriptable
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSettings</name>
   <block>{
   <private type="default"></private>

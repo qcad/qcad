@@ -22,6 +22,9 @@ dir="./core" filename="RS.h">
   <name>RS_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -136,6 +139,9 @@ dir="./core" filename="RS.h">
   that * there is no way to forward-declare nested classes or
   enums). * * \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RS</name>
   <block>{
   <private type="default"></private>

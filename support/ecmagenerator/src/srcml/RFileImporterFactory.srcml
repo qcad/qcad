@@ -20,6 +20,9 @@ dir="./core" filename="RFileImporterFactory.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RFILEIMPORTERFACTORY_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
   <class_decl>class 
@@ -39,6 +42,9 @@ dir="./core" filename="RFileImporterFactory.h">
   suitable to import a file and to instantiate * the file importer
   if required. * * \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RFileImporterFactory</name>
   <block>{
   <private type="default"></private>

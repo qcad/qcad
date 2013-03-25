@@ -22,6 +22,9 @@ dir="./gui" filename="RCharacterWidget.h">
   <name>RCHARACTERWIDGET_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -48,7 +51,9 @@ dir="./gui" filename="RCharacterWidget.h">
   <name>QPaintEvent</name>;</class_decl>
   <comment type="block">/** * \scriptable */</comment>
   <class>class 
-  <comment type="block">/*QDESIGNER_WIDGET_EXPORT*/</comment>
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RCharacterWidget</name>
   <super>: 
   <specifier>public</specifier>

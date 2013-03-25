@@ -5,7 +5,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RCircle" />
   <class_decl name="RDocument" />
   <class_decl name="REllipse" />
-  <class_decl name="RImageData" />
   <class_decl name="RLine" />
   <class_decl name="RLinetype" />
   <class_decl name="RLinetypePattern" />

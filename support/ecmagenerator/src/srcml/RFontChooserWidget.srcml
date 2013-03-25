@@ -22,6 +22,9 @@ dir="./gui" filename="RFontChooserWidget.h">
   <name>_RFONTCHOOSERWIDGET_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -33,6 +36,9 @@ dir="./gui" filename="RFontChooserWidget.h">
   <name>QLabel</name>;</class_decl>
   <comment type="block">/** * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RFontChooserWidget</name>
   <super>: 
   <specifier>public</specifier>

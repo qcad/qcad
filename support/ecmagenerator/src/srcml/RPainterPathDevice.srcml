@@ -22,6 +22,9 @@ dir="./core" filename="RPainterPathDevice.h">
   <name>RPAINTERPATHDEVICE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QPaintDevice&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -29,6 +32,9 @@ dir="./core" filename="RPainterPathDevice.h">
   <comment type="block">/** * Paint device that produces painter
   paths as output. * * \scriptable * \ingroup core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPainterPathDevice</name>
   <super>: 
   <specifier>public</specifier>

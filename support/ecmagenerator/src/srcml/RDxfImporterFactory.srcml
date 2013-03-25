@@ -22,6 +22,9 @@ dir="./io/dxf" filename="RDxfImporterFactory.h">
   <name>RDXFIMPORTERFACTORY_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -47,6 +50,9 @@ dir="./io/dxf" filename="RDxfImporterFactory.h">
   <name>RProgressHandler</name>;</class_decl>
   <comment type="block">/** * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADDXF_EXPORT</name>
+  </macro>
   <name>RDxfImporterFactory</name>
   <super>: 
   <specifier>public</specifier>

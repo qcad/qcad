@@ -22,6 +22,9 @@ dir="./gui" filename="RMdiChildQt.h">
   <name>RMDICHILDQT_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMdiSubWindow&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -38,6 +41,9 @@ dir="./gui" filename="RMdiChildQt.h">
   <comment type="block">/** * \brief MDI child window. * * \ingroup
   gui_qt * * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RMdiChildQt</name>
   <super>: 
   <specifier>public</specifier>

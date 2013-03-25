@@ -22,6 +22,9 @@ dir="./core" filename="RSingleApplication.h">
   <name>RSINGLEAPPLICATION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QApplication&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -32,6 +35,9 @@ dir="./core" filename="RSingleApplication.h">
   <class_decl>class 
   <name>RLocalPeer</name>;</class_decl>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSingleApplication</name>
   <super>: 
   <specifier>public</specifier>

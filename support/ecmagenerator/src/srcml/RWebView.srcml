@@ -22,6 +22,9 @@ dir="./gui" filename="RWebView.h">
   <name>RWEBVIEW_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QWebView&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -29,7 +32,9 @@ dir="./gui" filename="RWebView.h">
   &lt;QtDesigner/QDesignerExportWidget&gt;</cpp:file></cpp:include>
   <comment type="block">/** * \scriptable */</comment>
   <class>class 
-  <comment type="block">/*QDESIGNER_WIDGET_EXPORT*/</comment>
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RWebView</name>
   <super>: 
   <specifier>public</specifier>

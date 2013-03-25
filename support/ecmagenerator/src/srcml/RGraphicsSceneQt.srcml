@@ -22,6 +22,9 @@ dir="./gui" filename="RGraphicsSceneQt.h">
   <name>RGRAPHICSSCENEQT_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QPen&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -66,6 +69,9 @@ dir="./gui" filename="RGraphicsSceneQt.h">
   QPainterPaths (2d). * * \ref RGraphicView "graphics views". * *
   \ingroup qcadguiqt * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RGraphicsSceneQt</name>
   <super>: 
   <specifier>public</specifier>

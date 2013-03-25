@@ -22,6 +22,9 @@ dir="./core/math" filename="RLine.h">
   <name>RLINE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RDirected.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -41,6 +44,9 @@ dir="./core/math" filename="RLine.h">
   \sharedPointerSupport * \copyable * \hasStreamOperator
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RLine</name>
   <super>: 
   <specifier>public</specifier>

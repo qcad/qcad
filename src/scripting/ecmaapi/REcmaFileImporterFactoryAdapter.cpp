@@ -12,8 +12,6 @@
         
                 #include "RFileImporter.h"
             
-                #include "RDocument.h"
-            
                 #include "RMessageHandler.h"
             
                 #include "RProgressHandler.h"

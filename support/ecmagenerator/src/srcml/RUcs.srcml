@@ -22,6 +22,9 @@ dir="./core" filename="RUcs.h">
   <name>RUCS_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RObject.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -37,6 +40,9 @@ dir="./core" filename="RUcs.h">
   all input. * * \ingroup core * \scriptable *
   \sharedPointerSupport */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RUcs</name>
   <super>: 
   <specifier>public</specifier>
@@ -503,6 +509,7 @@ dir="./core" filename="RUcs.h">
   </decl>;</decl_stmt></public>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>

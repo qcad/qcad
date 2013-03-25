@@ -20,10 +20,16 @@ dir="./operations" filename="RTransformation.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RTRANSFORMATION_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
   <comment type="block">/** * Helper class for
   RModifyObjectsOperation::transformSelection * * \ingroup
   operations * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADOPERATIONS_EXPORT</name>
+  </macro>
   <name>RTransformation</name>
   <block>{
   <private type="default"></private>

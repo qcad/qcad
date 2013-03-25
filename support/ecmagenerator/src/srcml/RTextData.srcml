@@ -22,6 +22,9 @@ dir="./entity" filename="RTextData.h">
   <name>RTEXTDATA_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -45,6 +48,9 @@ dir="./entity" filename="RTextData.h">
   \scriptable * \sharedPointerSupport * \copyable * \ingroup entity
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADENTITY_EXPORT</name>
+  </macro>
   <name>RTextData</name>
   <super>: 
   <specifier>public</specifier>

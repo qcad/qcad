@@ -22,6 +22,9 @@ dir="./core/math" filename="RBox.h">
   <name>RBOX_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QRectF&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -40,6 +43,9 @@ dir="./core/math" filename="RBox.h">
   coordinate system. * * \ingroup math * \scriptable *
   \sharedPointerSupport * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RBox</name>
   <block>{
   <private type="default"></private>
@@ -553,6 +559,7 @@ dir="./core/math" filename="RBox.h">
   </decl>;</decl_stmt></public>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>

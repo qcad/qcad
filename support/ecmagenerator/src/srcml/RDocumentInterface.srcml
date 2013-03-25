@@ -22,6 +22,9 @@ dir="./core" filename="RDocumentInterface.h">
   <name>RDOCUMENTINTERFACE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -124,6 +127,9 @@ dir="./core" filename="RDocumentInterface.h">
   * events to the currently active action object. * * \ingroup core
   * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RDocumentInterface</name>
   <block>{
   <private type="default"></private>

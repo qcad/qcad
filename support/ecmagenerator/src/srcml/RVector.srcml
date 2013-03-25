@@ -22,6 +22,9 @@ dir="./core/math" filename="RVector.h">
   <name>RVECTOR_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -50,6 +53,9 @@ dir="./core/math" filename="RVector.h">
   <comment type="block">/** * Represents a 3d vector (x/y/z). * *
   \ingroup math * \scriptable * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RVector</name>
   <block>{
   <private type="default"></private>
@@ -1676,6 +1682,7 @@ dir="./core/math" filename="RVector.h">
   </decl>;</decl_stmt></public>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>RVector</name>
   </type>
   <name>operator*</name>
@@ -1698,6 +1705,7 @@ dir="./core/math" filename="RVector.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>
@@ -1721,6 +1729,7 @@ dir="./core/math" filename="RVector.h">
   <comment type="block">/** *\nonscriptable */</comment>
   <function_decl>
   <type>
+  <name>QCADCORE_EXPORT</name>
   <name>QDataStream</name>&amp;</type>
   <name>operator&lt;&lt;</name>
   <parameter_list>(
@@ -1742,6 +1751,7 @@ dir="./core/math" filename="RVector.h">
   <comment type="block">/** *\nonscriptable */</comment>
   <function_decl>
   <type>
+  <name>QCADCORE_EXPORT</name>
   <name>QDataStream</name>&amp;</type>
   <name>operator&gt;&gt;</name>
   <parameter_list>(

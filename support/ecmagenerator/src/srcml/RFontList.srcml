@@ -22,6 +22,9 @@ dir="./core" filename="RFontList.h">
   <name>RFONTLIST_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RFont.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -29,6 +32,9 @@ dir="./core" filename="RFontList.h">
   <comment type="block">/** * The global list of fonts. * *
   \ingroup core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RFontList</name>
   <block>{
   <private type="default"></private>

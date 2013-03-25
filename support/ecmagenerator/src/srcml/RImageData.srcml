@@ -22,6 +22,9 @@ dir="./entity" filename="RImageData.h">
   <name>RIMAGEDATA_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RBox.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -45,6 +48,9 @@ dir="./entity" filename="RImageData.h">
   defines the geometry and * appearance of a raster image entity. *
   * \scriptable * \ingroup entity */</comment>
   <class>class 
+  <macro>
+    <name>QCADENTITY_EXPORT</name>
+  </macro>
   <name>RImageData</name>
   <super>: 
   <specifier>public</specifier>

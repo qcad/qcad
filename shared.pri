@@ -97,6 +97,7 @@ INCLUDEPATH += \
     $$PWD/src/stemmer \
     $$PWD/src/scripting/ecma \
     $$PWD/src/scripting/ecmaapi \
+    $$PWD/src/scripting/ecmaapi/adapters \
     $$PWD/src/plugins/qt \
     $$PWD/src/io/dxf \
     $$PWD/src/spatialindex \

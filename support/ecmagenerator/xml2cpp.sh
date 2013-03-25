@@ -29,6 +29,11 @@ echo "LIBS += -ldxflib -lopennurbs -lqcadcore -lqcaddxf -lqcadentity -lqcadgrid 
 echo "CONFIG -= warn_on" >> $profile_tmp
 echo "CONFIG += warn_off" >> $profile_tmp
 echo "OTHER_FILES += ecmaapi.dox" >> $profile_tmp
+for f in ../../$scope/scripting/ecmaapi/adapters/*.h
+do
+    echo "HEADER += adapters/$f"
+done
+echo "SOURCES += adapters/RScriptAdapters.cpp" >> $profile_tmp
 if [ $scope == "src" ]; then
     echo "HEADERS += ../REcmaHelper.h" >> $profile_tmp
     echo "SOURCES += ../REcmaHelper.cpp" >> $profile_tmp

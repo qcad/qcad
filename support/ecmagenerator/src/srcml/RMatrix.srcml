@@ -22,6 +22,9 @@ dir="./core/math" filename="RMatrix.h">
   <name>RMATRIX_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RMath.h"</cpp:file></cpp:include>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
@@ -29,6 +32,9 @@ dir="./core/math" filename="RMatrix.h">
   <comment type="block">/** * Simple matrix class. * * \ingroup
   math * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RMatrix</name>
   <block>{
   <private type="default"></private>

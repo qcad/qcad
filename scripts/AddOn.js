@@ -20,27 +20,27 @@
 //include("WidgetFactory.js");
 
 /**
- * \class Plugin
- * \brief Initializes and manages all plugins. Every directory in the
- * script directory of QCAD is a plugin if it contains an ECMAScript
+ * \class AddOn
+ * \brief Initializes and manages all add-ons. Every directory in the
+ * script directory of QCAD is a add-on if it contains an ECMAScript
  * file with the same name as the directory and the extension ".js".
- * For example MyPlugin/MyPlugin.js.
+ * For example MyAddOn/MyAddOn.js.
  */
-function Plugin(pluginPath) {
-    this.fileInfo = new QFileInfo(pluginPath);
+function AddOn(addOnPath) {
+    this.fileInfo = new QFileInfo(addOnPath);
     this.widget = undefined;
-    Plugin.xslt = undefined;
+    AddOn.xslt = undefined;
 }
 
 /**
  * For debugging.
  */
-Plugin.prototype.toString = function() {
+AddOn.prototype.toString = function() {
     var actionText = "";
     if (!isNull(this.getGuiAction())) {
         actionText = this.getGuiAction().text;
     }
-    return "Plugin("
+    return "AddOn("
         + "actionText: '" + actionText + "'"
         + ", groupName: " + this.getGroupName()
         + ", filePath: " + this.getFilePath()
@@ -48,28 +48,28 @@ Plugin.prototype.toString = function() {
 };
 
 /**
- * Called once on startup to initialize the plugin, its preference page
+ * Called once on startup to initialize the add-on, its preference page
  * and its documentation if applicable.
  */
-Plugin.prototype.init = function(splash, text) {
-    this.initPlugin(splash, text);
+AddOn.prototype.init = function(splash, text) {
+    this.initAddOn(splash, text);
     //this.initPreferencePage();
 };
 
 /**
- * Called once on startup to post-initialize the plugin.
+ * Called once on startup to post-initialize the add-on.
  */
-Plugin.prototype.postInit = function(splash, text) {
-    this.postInitPlugin(splash, text);
+AddOn.prototype.postInit = function(splash, text) {
+    this.postInitAddOn(splash, text);
 };
 
 /**
- * Loads the plugin by including its main source file.
+ * Loads the add-on by including its main source file.
  *
- * \param initOnly True: only load the plugin if no file ClassNameInit.js
+ * \param initOnly True: only load the add-on if no file ClassNameInit.js
  * is present.
  */
-Plugin.prototype.load = function(initOnly) {
+AddOn.prototype.load = function(initOnly) {
     if (isNull(initOnly)) {
         initOnly = false;
     }
@@ -83,7 +83,7 @@ Plugin.prototype.load = function(initOnly) {
 
     var fileName = this.getFilePath();
     if (!new QFileInfo(fileName).exists()) {
-        qWarning("Plugin " + fileName + " not found and not loaded.");
+        qWarning("AddOn " + fileName + " not found and not loaded.");
         return;
     }
 
@@ -93,7 +93,7 @@ Plugin.prototype.load = function(initOnly) {
 /**
  * \internal Called once on startup.
  */
-Plugin.prototype.initPlugin = function(splash, text) {
+AddOn.prototype.initAddOn = function(splash, text) {
     var className = this.getClassName();
     var path = this.getPath();
 
@@ -126,14 +126,14 @@ Plugin.prototype.initPlugin = function(splash, text) {
 
     includeBasePath = bak;
 
-    // TODO: release plugin to free memory:
+    // TODO: release add-on to free memory:
     //eval(className + " = undefined;");
 };
 
 /**
  * \internal Called once in the end after startup.
  */
-Plugin.prototype.postInitPlugin = function(splash, text) {
+AddOn.prototype.postInitAddOn = function(splash, text) {
     var className = this.getClassName();
     var path = this.getPath();
 
@@ -155,7 +155,7 @@ Plugin.prototype.postInitPlugin = function(splash, text) {
     includeBasePath = bak;
 };
 
-Plugin.prototype.uninit = function() {
+AddOn.prototype.uninit = function() {
     var className = this.getClassName();
     eval(className + " = undefined;");
 };
@@ -164,7 +164,7 @@ Plugin.prototype.uninit = function() {
  * \internal Called once on startup.
  */
 /*
-Plugin.prototype.initPreferencePage = function() {
+AddOn.prototype.initPreferencePage = function() {
     var className = this.getClassName();
     var uiFileName = this.getPreferenceFile();
 
@@ -187,7 +187,7 @@ Plugin.prototype.initPreferencePage = function() {
                  + className + ".initPreferences(widget);"
                  + "}");
         } catch (e) {
-            qDebug("Plugin.js:", "Plugin has no method initPreferences(): " + e );
+            qDebug("AddOn.js:", "AddOn has no method initPreferences(): " + e );
         }
         WidgetFactory.restoreState(widget);
         WidgetFactory.saveState(widget);
@@ -200,34 +200,34 @@ Plugin.prototype.initPreferencePage = function() {
 */
 
 /**
- * \return Absolute path of the preference UI definition for this plugin.
- * The file name is PreferencesPage.ui and it must be located in the plugin
+ * \return Absolute path of the preference UI definition for this add-on.
+ * The file name is PreferencesPage.ui and it must be located in the add-on
  * path to be found.
  */
-Plugin.prototype.getPreferenceFile = function() {
+AddOn.prototype.getPreferenceFile = function() {
     var path = this.getPath();
     var uiFile = new QFileInfo("%1/PreferencesPage.ui".arg(path));
     return uiFile.absoluteFilePath();
 };
 
 /**
- * \return True if this plugin has a preferences UI file.
+ * \return True if this add-on has a preferences UI file.
  */
-Plugin.prototype.preferenceFileExists = function() {
+AddOn.prototype.preferenceFileExists = function() {
     var uiFileName = this.getPreferenceFile();
     var ret = (new QFileInfo(uiFileName).exists());
     if (!ret) {
-        qWarning("Plugin.js: File does not exists: " + uiFileName);
+        qWarning("AddOn.js: File does not exists: " + uiFileName);
     }
     return ret;
 };
 
 /**
- * \return True if shortcuts can be defined for this plugin (default) or
- *      false if a plugin explicitely defines, that is does not support
+ * \return True if shortcuts can be defined for this add-on (default) or
+ *      false if a add-on explicitely defines, that is does not support
  *      shortcuts (ClassName.hasShortcuts()).
  */
-Plugin.prototype.hasShortcuts = function() {
+AddOn.prototype.hasShortcuts = function() {
     var className = this.getClassName();
     try {
         var ret = true;
@@ -242,35 +242,35 @@ Plugin.prototype.hasShortcuts = function() {
 };
 
 /**
- * \return True if this plugin has a GUI action (QAction) attached to it
- *      which can be used to launch the action this plugin represents.
+ * \return True if this add-on has a GUI action (QAction) attached to it
+ *      which can be used to launch the action this add-on represents.
  */
-Plugin.prototype.hasGuiAction = function() {
+AddOn.prototype.hasGuiAction = function() {
     return this.getGuiAction() != null;
 };
 
 /**
- * \return The GUI action attached to this plugin.
+ * \return The GUI action attached to this add-on.
  */
-Plugin.prototype.getGuiAction = function() {
+AddOn.prototype.getGuiAction = function() {
     return RGuiAction.getByScriptFile(this.getFilePath());
 };
 
-Plugin.prototype.setPreferenceWidget = function(w) {
+AddOn.prototype.setPreferenceWidget = function(w) {
     this.widget = w;
 };
 
-Plugin.prototype.getPreferenceWidget = function() {
+AddOn.prototype.getPreferenceWidget = function() {
     return this.widget;
 };
 
-Plugin.prototype.getGroupName = function() {
+AddOn.prototype.getGroupName = function() {
     var dir = new QDir(this.fileInfo.path());
     dir.cdUp();
     return dir.dirName();
 };
 
-Plugin.prototype.getTitle = function() {
+AddOn.prototype.getTitle = function() {
     var title;
     try {
         var className = this.getClassName();
@@ -281,17 +281,17 @@ Plugin.prototype.getTitle = function() {
             title = title.replace("&", "");
         }
     } catch (e) {
-        qWarning("Plugin.js:", "getTitle(): Exception:", e);
+        qWarning("AddOn.js:", "getTitle(): Exception:", e);
     }
     return title;
 };
 
 /**
- * \return The title of this plugin's parent plugin. E.g. for
+ * \return The title of this add-on's parent add-on. E.g. for
  *      scripts/Draw/Line/Line2P.js, that's the title returned by
  *      Line.getTitle().
  */
-Plugin.prototype.getParentTitle = function() {
+AddOn.prototype.getParentTitle = function() {
     var parentTitle;
     try {
         var gn = this.getGroupName();
@@ -302,97 +302,97 @@ Plugin.prototype.getParentTitle = function() {
             parentTitle = parentTitle.replace("&", "");
         }        
     } catch (e) {
-        qWarning("Plugin.js:", "getParentTitle(): Exception:", e);
+        qWarning("AddOn.js:", "getParentTitle(): Exception:", e);
     }
     return parentTitle;
 };
 
 /**
- * \return true If the plugin's parent is "scripts", the top level
- *      directory that contains all script plugins.
+ * \return true If the add-on's parent is "scripts", the top level
+ *      directory that contains all script add-ons.
  */
-Plugin.prototype.isTopLevel = function() {
+AddOn.prototype.isTopLevel = function() {
     return this.getGroupName() === "scripts";
 };
 
-Plugin.prototype.getClassName = function() {
+AddOn.prototype.getClassName = function() {
     return this.fileInfo.completeBaseName();
 };
 
-Plugin.prototype.getPath = function() {
+AddOn.prototype.getPath = function() {
     return this.fileInfo.path();
 };
 
 /**
- * \return The ECMAScript file path of the plugin implementation.
+ * \return The ECMAScript file path of the add-on implementation.
  */
-Plugin.prototype.getFilePath = function() {
+AddOn.prototype.getFilePath = function() {
     return this.fileInfo.filePath();
 };
 
 /**
- * \return The ECMAScript file path of the plugin init function implementation.
+ * \return The ECMAScript file path of the add-on init function implementation.
  */
-Plugin.prototype.getInitFilePath = function() {
+AddOn.prototype.getInitFilePath = function() {
     return this.fileInfo.absolutePath() + QDir.separator + this.fileInfo.completeBaseName() + "Init.js";
 };
 
 /**
- * \return The ECMAScript file path of the plugin postInit function implementation.
+ * \return The ECMAScript file path of the add-on postInit function implementation.
  */
-Plugin.prototype.getPostInitFilePath = function() {
+AddOn.prototype.getPostInitFilePath = function() {
     return this.fileInfo.absolutePath() + QDir.separator + this.fileInfo.completeBaseName() + "PostInit.js";
 };
 
-Plugin.prototype.getBaseName = function() {
+AddOn.prototype.getBaseName = function() {
     return this.fileInfo.completeBaseName();
 };
 
-Plugin.prototype.hasDoc = function() {
+AddOn.prototype.hasDoc = function() {
     return this.getDocPath().exists();
 };
 
-Plugin.prototype.getDocPath = function() {
+AddOn.prototype.getDocPath = function() {
     return new QFileInfo(this.getPath() + "/doc");
 };
 
-Plugin.prototype.getDocJsFile = function() {
+AddOn.prototype.getDocJsFile = function() {
     return new QFile(this.getDocPath().filePath() + "/" + this.getClassName()
             + "_doc.js");
 };
 
-Plugin.prototype.getDocHtmlUrl = function() {
+AddOn.prototype.getDocHtmlUrl = function() {
     return QUrl.fromLocalFile(this.getDocPath().absoluteFilePath() + "/"
             + this.getClassName() + "_" + RSettings.getLocale()
             + ".html");
 };
 
-Plugin.findByGroupName = function(plugins, groupName) {
-    for ( var i = 0; i < plugins.length; ++i) {
-        var plugin = plugins[i];
-        //qDebug("class name: ", plugin.getClassName(), " groupName: ", groupName);
-        if (plugin.getClassName() === groupName) {
-            return plugin;
+AddOn.findByGroupName = function(addOns, groupName) {
+    for ( var i = 0; i < addOns.length; ++i) {
+        var addOn = addOns[i];
+        //qDebug("class name: ", addOn.getClassName(), " groupName: ", groupName);
+        if (addOn.getClassName() === groupName) {
+            return addOn;
         }
     }
     return undefined;
 };
 
-Plugin.getParentPlugin = function(plugins, plugin) {
-    var ret = Plugin.findByGroupName(plugins, plugin.getGroupName());
+AddOn.getParentAddOn = function(addOns, addOn) {
+    var ret = AddOn.findByGroupName(addOns, addOn.getGroupName());
     if (isNull(ret)) {
-        qWarning("Plugin.getParentPlugin: no parent plugin found for group name: ", plugin.getGroupName());
+        qWarning("AddOn.getParentAddOn: no parent add-on found for group name: ", addOn.getGroupName());
     }
     return ret;
 };
 
 /**
- * \return Array of all Plugin objects found.
+ * \return Array of all AddOn objects found.
  */
-Plugin.getPlugins = function(dir, ignores) {
+AddOn.getAddOns = function(dir, ignores) {
     var fileMenuList, i, k;
     
-    var plugins = new Array();
+    var addOns = new Array();
     var dirFilter = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs);
     var sortFlags = new QDir.SortFlags(QDir.NoSort);
     
@@ -401,7 +401,7 @@ Plugin.getPlugins = function(dir, ignores) {
         var args = QCoreApplication.arguments();
 
         dir = "scripts";
-        // fixed set of directories that will be scanned for plugins first to 
+        // fixed set of directories that will be scanned for add-ons first to 
         // ensure fixed order of menus:
         fileMenuList = [
                 new QFileInfo("scripts/Reset"),
@@ -441,7 +441,7 @@ Plugin.getPlugins = function(dir, ignores) {
             continue;
         }
 
-        if (Plugin.isIgnored(dirInfo.filePath())) {
+        if (AddOn.isIgnored(dirInfo.filePath())) {
             continue;
         }
 
@@ -450,33 +450,33 @@ Plugin.getPlugins = function(dir, ignores) {
             continue;
         }
         var fileInfo = new QFileInfo(dirInfo.filePath() + "/" + dirInfo.fileName() + ".js");
-        if (fileInfo.exists() && !Plugin.isIgnored(fileInfo.absoluteFilePath())) {
-            plugins.push(new Plugin(fileInfo.filePath()));
+        if (fileInfo.exists() && !AddOn.isIgnored(fileInfo.absoluteFilePath())) {
+            addOns.push(new AddOn(fileInfo.filePath()));
         }
 
-        plugins = plugins.concat(Plugin.getPlugins(dirInfo.filePath(), ignores));
+        addOns = addOns.concat(AddOn.getAddOns(dirInfo.filePath(), ignores));
     }
 
-    return plugins;
+    return addOns;
 };
 
-Plugin.isIgnored = function(path) {
-    if (isNull(Plugin.ignores)) {
+AddOn.isIgnored = function(path) {
+    if (isNull(AddOn.ignores)) {
         var args = QCoreApplication.arguments();
-        Plugin.ignores = [];
+        AddOn.ignores = [];
         for (var i=1; i < args.length; ++i) {
             if (args[i] === "-ignore") {
                 ++i;
                 if (isNull(args[i])) {
                     break;
                 }
-                Plugin.ignores.push(args[i]);
+                AddOn.ignores.push(args[i]);
             }
         }
     }
 
-    for (var k=0; k<Plugin.ignores.length; ++k) {
-        if (path.contains(Plugin.ignores[k])) {
+    for (var k=0; k<AddOn.ignores.length; ++k) {
+        if (path.contains(AddOn.ignores[k])) {
             return true;
         }
     }
@@ -484,12 +484,12 @@ Plugin.isIgnored = function(path) {
     return false;
 };
 
-Plugin.getPluginPath = function(name) {
-    var plugins = Plugin.getPlugins();
-    for (var i = 0; i < plugins.length; ++i) {
-        var plugin = plugins[i];
-        if (plugin.getClassName()===name) {
-            return plugin.getPath();
+AddOn.getAddOnPath = function(name) {
+    var addOns = AddOn.getAddOns();
+    for (var i = 0; i < addOns.length; ++i) {
+        var addOn = addOns[i];
+        if (addOn.getClassName()===name) {
+            return addOn.getPath();
         }
     }
 };

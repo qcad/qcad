@@ -22,6 +22,9 @@ dir="./core" filename="RExporter.h">
   <name>REXPORTER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QBrush&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -40,16 +43,19 @@ dir="./core" filename="RExporter.h">
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMatrix.h"</cpp:file></cpp:include>
+  <cpp:file>"RImageData.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RView.h"</cpp:file></cpp:include>
+  <cpp:file>"RMatrix.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RView.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RArc</name>;</class_decl>
   <class_decl>class 
@@ -58,8 +64,6 @@ dir="./core" filename="RExporter.h">
   <name>RDocument</name>;</class_decl>
   <class_decl>class 
   <name>REllipse</name>;</class_decl>
-  <class_decl>class 
-  <name>RImageData</name>;</class_decl>
   <class_decl>class 
   <name>RLine</name>;</class_decl>
   <class_decl>class 
@@ -84,6 +88,9 @@ dir="./core" filename="RExporter.h">
   * Exporters export documents into files, views, etc. * * \ingroup
   core * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RExporter</name>
   <block>{
   <private type="default"></private>

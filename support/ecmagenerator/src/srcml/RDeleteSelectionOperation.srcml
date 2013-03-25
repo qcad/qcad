@@ -22,6 +22,9 @@ dir="./operations" filename="RDeleteSelectionOperation.h">
   <name>RDELETESELECTIONOPERATION_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RDocument.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -39,6 +42,9 @@ dir="./operations" filename="RDeleteSelectionOperation.h">
   deletes the selection of the * given document to the clipboard. *
   * \ingroup operations * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADOPERATIONS_EXPORT</name>
+  </macro>
   <name>RDeleteSelectionOperation</name>
   <super>: 
   <specifier>public</specifier>

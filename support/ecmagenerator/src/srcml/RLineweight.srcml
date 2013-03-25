@@ -22,6 +22,9 @@ dir="./core" filename="RLineweight.h">
   <name>RLINEWEIGHT_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -43,6 +46,9 @@ dir="./core" filename="RLineweight.h">
   <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
   <comment type="block">/** * \scriptable * \copyable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RLineweight</name>
   <block>{
   <private type="default">

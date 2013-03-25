@@ -20,9 +20,15 @@ dir="./core" filename="RCommandEvent.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RCOMMANDEVENT_H</name></cpp:define>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <comment type="block">/** * Command Event. * * \ingroup core *
   \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RCommandEvent</name>
   <block>{
   <private type="default"></private>

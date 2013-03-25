@@ -75,6 +75,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, operator_assign, "operator_assign");
             
+            REcmaHelper::registerFunction(&engine, proto, equals, "equals");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RLinetypePattern*>(), *proto);
 
@@ -849,6 +851,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePattern::operator=", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::equals
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::operator==", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::operator==";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("operator==", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLinetypePattern */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLinetypePattern: Argument 0 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->operator==(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.equals().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::operator==", context, engine);
             return result;
         }
          QScriptValue REcmaLinetypePattern::toString

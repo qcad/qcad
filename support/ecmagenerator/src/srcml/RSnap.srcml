@@ -22,6 +22,9 @@ dir="./core" filename="RSnap.h">
   <name>RSNAP_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -40,6 +43,9 @@ dir="./core" filename="RSnap.h">
   of objects. * * \scriptable * \generateScriptShell * * \ingroup
   core */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RSnap</name>
   <block>{
   <private type="default"></private>

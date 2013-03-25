@@ -22,6 +22,9 @@ dir="./gui" filename="RLinetypeCombo.h">
   <name>RLINETYPECOMBO_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -34,6 +37,9 @@ dir="./gui" filename="RLinetypeCombo.h">
   <cpp:file>"RLinetype.h"</cpp:file></cpp:include>
   <comment type="block">/** * \scriptable */</comment>
   <class>class 
+  <macro>
+    <name>QCADGUI_EXPORT</name>
+  </macro>
   <name>RLinetypeCombo</name>
   <super>: 
   <specifier>public</specifier>

@@ -22,6 +22,9 @@ dir="./core" filename="RPainterPath.h">
   <name>RPAINTERPATH_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QPainterPath&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -45,6 +48,9 @@ dir="./core" filename="RPainterPath.h">
   and a pen. * * \ingroup core * \scriptable * \copyable
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADCORE_EXPORT</name>
+  </macro>
   <name>RPainterPath</name>
   <super>: 
   <specifier>public</specifier>
@@ -1216,6 +1222,7 @@ dir="./core" filename="RPainterPath.h">
   </decl>;</decl_stmt></private>}</block>;</class>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>QDebug</name>
   </type>
   <name>operator&lt;&lt;</name>
@@ -1242,6 +1249,7 @@ dir="./core" filename="RPainterPath.h">
   (QDataStream&amp; stream, RPainterPath&amp; path);</comment>
   <function_decl>
   <type>
+    <name>QCADCORE_EXPORT</name>
     <name>bool</name>
   </type>
   <name>operator&lt;</name>

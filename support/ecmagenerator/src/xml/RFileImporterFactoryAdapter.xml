@@ -2,7 +2,6 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RFileImporter" />
-  <class_decl name="RDocument" />
   <class_decl name="RMessageHandler" />
   <class_decl name="RProgressHandler" />
   <class name="RFileImporterFactoryAdapter"
