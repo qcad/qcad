@@ -6,6 +6,7 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
+*.exp
 *.dll
 
 # Compiled Static libraries

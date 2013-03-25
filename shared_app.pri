@@ -54,7 +54,6 @@ win32 {
         $$PWD/$$ROUTDIR/qcadstemmer.lib \
         $$PWD/$$ROUTDIR/qcadgrid.lib \
         $$PWD/$$ROUTDIR/qcadsnap.lib \
-        $$PWD/$$ROUTDIR/qcadmath.lib \
         $$PWD/$$ROUTDIR/qcadecma.lib \
         $$PWD/$$ROUTDIR/qcadecmaapi.lib
         !r_no_opennurbs {

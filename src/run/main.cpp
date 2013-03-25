@@ -147,9 +147,10 @@ int main(int argc, char *argv[]) {
     QSqlDatabase::drivers();
 #endif
 
-    if (guiEnabled) {
-        Q_INIT_RESOURCE(core);
-    }
+    // TODO:
+    //if (guiEnabled) {
+    //    Q_INIT_RESOURCE(core);
+    //}
 
     qRegisterMetaType<RColor>();
     qRegisterMetaTypeStreamOperators<RColor>("RColor");

@@ -45,9 +45,9 @@ class QCADCORE_EXPORT RColor: public QColor {
 
 
 public:
-    friend QDataStream& operator<<(QDataStream& stream, const RColor& color);
+    friend QCADCORE_EXPORT QDataStream& operator<<(QDataStream& stream, const RColor& color);
 
-    friend QDataStream& operator>>(QDataStream& stream, RColor& color);
+    friend QCADCORE_EXPORT QDataStream& operator>>(QDataStream& stream, RColor& color);
 
     enum Mode {
         ByLayer, ByBlock, Fixed
@@ -124,12 +124,12 @@ private:
 /**
  *\nonscriptable
  */
-QDataStream& operator<<(QDataStream& stream, const RColor& color);
+QCADCORE_EXPORT QDataStream& operator<<(QDataStream& stream, const RColor& color);
 
 /**
  *\nonscriptable
  */
-QDataStream& operator>>(QDataStream& stream, RColor& color);
+QCADCORE_EXPORT QDataStream& operator>>(QDataStream& stream, RColor& color);
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RColor& c);
 

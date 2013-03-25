@@ -20,6 +20,8 @@
 #ifndef RSCRIPTHANDLERECMA_H
 #define RSCRIPTHANDLERECMA_H
 
+#include "ecma_global.h"
+
 #include <QString>
 #include <QtScript>
 #include <QMainWindow>
@@ -37,7 +39,7 @@ class QScriptEngineDebugger;
  *
  * \ingroup scripting_ecma
  */
-class RScriptHandlerEcma: public QObject, public RScriptHandler {
+class QCADECMA_EXPORT RScriptHandlerEcma: public QObject, public RScriptHandler {
 Q_OBJECT
 
 public:

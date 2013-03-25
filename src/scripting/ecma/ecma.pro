@@ -23,3 +23,4 @@ LIBS += -L$$PWD/$$ROUTDIR \
     -lspatialindexnavel \
     -lstemmer
 OTHER_FILES += ecma.dox
+DEFINES += QCADECMA_LIBRARY
