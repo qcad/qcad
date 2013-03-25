@@ -19,7 +19,7 @@
 #include <QFileInfo>
 
 #include "RFileImporterRegistry.h"
-#include "RFileImporterAdapter.h"
+#include "RFileImporter.h"
 #include "RFileImporterFactory.h"
 #include "RMessageHandler.h"
 #include "RProgressHandler.h"
