@@ -404,6 +404,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="scriptFile" isConst="true" />
       </variant>
     </method>
+    <method name="getByClassName" cppName="getByClassName"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGuiAction *" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="className" isConst="true" />
+      </variant>
+    </method>
     <method name="triggerByScriptFile"
     cppName="triggerByScriptFile" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

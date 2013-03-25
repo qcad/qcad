@@ -31,7 +31,8 @@ echo "CONFIG += warn_off" >> $profile_tmp
 echo "OTHER_FILES += ecmaapi.dox" >> $profile_tmp
 for f in ../../$scope/scripting/ecmaapi/adapters/*.h
 do
-    echo "HEADER += adapters/$f"
+    bn=`basename $f`
+    echo "HEADERS += adapters/$bn" >> $profile_tmp
 done
 echo "SOURCES += adapters/RScriptAdapters.cpp" >> $profile_tmp
 if [ $scope == "src" ]; then

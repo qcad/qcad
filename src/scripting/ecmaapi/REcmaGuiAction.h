@@ -235,6 +235,9 @@
         getByScriptFile
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getByClassName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         triggerByScriptFile
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -545,6 +545,24 @@ RGuiAction* RGuiAction::getByScriptFile(const QString& scriptFile) {
     }
 }
 
+/**
+ * \return The first action in the list of actions that defines 
+ * a class with the given name. Test is based on file name only.
+ */
+RGuiAction* RGuiAction::getByClassName(const QString& className) {
+    for (int i=0; i<actions.size(); i++) {
+        RGuiAction* a = actions[i];
+        if (a==NULL) {
+            return NULL;
+        }
+        QString fileName = a->getScriptFile();
+        if (QFileInfo(fileName).baseName()==className) {
+            return a;
+        }
+    }
+    return NULL;
+}
+
 
 /**
  * \return A list of available top level commands. These are commands
