@@ -20,6 +20,8 @@
 #ifndef RGRID_H
 #define RGRID_H
 
+#include "core_global.h"
+
 #include "RVector.h"
 #include "RBox.h"
 #include "RRuler.h"
@@ -34,7 +36,7 @@ class RGraphicsView;
  * \scriptable
  * \ingroup core
  */
-class RGrid {
+class QCADCORE_EXPORT RGrid {
 public:
     RGrid(RGraphicsView& view) : view(view), visible(-1) {}
     virtual ~RGrid() {}

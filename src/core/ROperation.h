@@ -20,6 +20,8 @@
 #ifndef ROPERATION_H
 #define ROPERATION_H
 
+#include "core_global.h"
+
 #include "RS.h"
 #include "RTransaction.h"
 
@@ -37,7 +39,7 @@ class RExporter;
  * \ingroup core
  * \scriptable
  */
-class ROperation {
+class QCADCORE_EXPORT ROperation {
 public:
     ROperation(
         bool undoable=true,

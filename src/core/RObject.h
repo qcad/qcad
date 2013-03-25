@@ -20,6 +20,8 @@
 #ifndef ROBJECT_H
 #define ROBJECT_H
 
+#include "core_global.h"
+
 #include "RPropertyAttributes.h"
 #include "RPropertyTypeId.h"
 
@@ -42,7 +44,7 @@ class RDocument;
  * \scriptable
  * \sharedPointerSupport
  */
-class RObject {
+class QCADCORE_EXPORT RObject {
 
     friend class RStorage;
 

@@ -28,6 +28,7 @@ SOURCES += \
 HEADERS += \
     RShortcutLineEdit.h \
     RCharacterWidget.h \
+    RCloseCurrentEvent.h \
     RColorCombo.h \
     RCommandLine.h \
     RDockWidget.h \
@@ -50,9 +51,9 @@ HEADERS += \
     RTextEdit.h \
     RWebView.h
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadentity
 TARGET = qcadgui
 OTHER_FILES += gui.dox
+DEFINES += QCADGUI_LIBRARY
 !win32:include( ../../shared_ts.pri )

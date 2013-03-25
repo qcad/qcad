@@ -20,6 +20,8 @@
 #ifndef RRULER_H
 #define RRULER_H
 
+#include "core_global.h"
+
 #include <Qt>
 #include <QMetaType>
 
@@ -32,7 +34,7 @@ class RGraphicsView;
  *
  * \scriptable
  */
-class RRuler {
+class QCADCORE_EXPORT RRuler {
 
 public:
     RRuler() :

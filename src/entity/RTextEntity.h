@@ -20,6 +20,8 @@
 #ifndef RTEXTENTITY_H
 #define RTEXTENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RTextData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RTextEntity: public REntity {
+class QCADENTITY_EXPORT RTextEntity: public REntity {
 
     Q_DECLARE_TR_FUNCTIONS(RTextEntity)
 

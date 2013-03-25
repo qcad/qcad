@@ -20,6 +20,8 @@
 #ifndef RLINETYPECOMBO_H_
 #define RLINETYPECOMBO_H_
 
+#include "gui_global.h"
+
 #include <QComboBox>
 #include <QColor>
 
@@ -29,7 +31,7 @@
 /**
  * \scriptable
  */
-class RLinetypeCombo: public QComboBox {
+class QCADGUI_EXPORT RLinetypeCombo: public QComboBox {
 
 Q_OBJECT
 Q_PROPERTY(bool onlyFixed READ getOnlyFixed WRITE setOnlyFixed);

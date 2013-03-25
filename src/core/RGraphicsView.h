@@ -20,6 +20,8 @@
 #ifndef RGRAPHICSVIEW_H
 #define RGRAPHICSVIEW_H
 
+#include "core_global.h"
+
 #include <QKeyEvent>
 #include <QCursor>
 #include <QSwipeGesture>
@@ -53,7 +55,7 @@ class RWheelEvent;
  * \ingroup core
  * \scriptable
  */
-class RGraphicsView : RNonCopyable {
+class QCADCORE_EXPORT RGraphicsView : RNonCopyable {
 public:
     enum ColorMode {
         FullColor,

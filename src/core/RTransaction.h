@@ -20,6 +20,8 @@
 #ifndef RTRANSACTION_H
 #define RTRANSACTION_H
 
+#include "core_global.h"
+
 #include <QList>
 #include <QMap>
 #include <QSet>
@@ -66,7 +68,7 @@ class RDocument;
  * \scriptable
  * \copyable
  */
-class RTransaction {
+class QCADCORE_EXPORT RTransaction {
 public:
     RTransaction();
 
@@ -286,7 +288,7 @@ protected:
     bool spatialIndexDisabled;
 };
 
-QDebug operator<<(QDebug dbg, RTransaction& t);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RTransaction& t);
 
 Q_DECLARE_METATYPE(RTransaction)
 Q_DECLARE_METATYPE(RTransaction*)

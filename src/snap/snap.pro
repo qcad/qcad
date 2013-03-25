@@ -39,3 +39,4 @@ CONFIG += plugin
 TARGET = qcadsnap
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadgrid
 OTHER_FILES += snap.dox
+DEFINES += QCADSNAP_LIBRARY

@@ -20,6 +20,8 @@
 #ifndef RBLOCKREFERENCEENTITY_H
 #define RBLOCKREFERENCEENTITY_H
 
+#include "core_global.h"
+
 #include "REntity.h"
 #include "RBlockReferenceData.h"
 
@@ -31,7 +33,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RBlockReferenceEntity: public REntity {
+class QCADCORE_EXPORT RBlockReferenceEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

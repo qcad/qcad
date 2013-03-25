@@ -20,6 +20,8 @@
 #ifndef RRESTRICTOFF_H
 #define RRESTRICTOFF_H
 
+#include "snap_global.h"
+
 #include "RSnapRestriction.h"
 
 class RDocumentInterface;
@@ -31,7 +33,7 @@ class RDocumentInterface;
  *
  * \ingroup snap
  */
-class RRestrictOff : public RSnapRestriction {
+class QCADSNAP_EXPORT RRestrictOff : public RSnapRestriction {
 public:
     RRestrictOff(RDocumentInterface& documentInterface)
         : RSnapRestriction(documentInterface) {}

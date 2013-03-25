@@ -20,6 +20,8 @@
 #ifndef RMODIFIEDLISTENER_H
 #define RMODIFIEDLISTENER_H
 
+#include "core_global.h"
+
 class RStorage;
 
 /**
@@ -29,7 +31,7 @@ class RStorage;
  * \ingroup core
  * \scriptable
  */
-class RModifiedListener {
+class QCADCORE_EXPORT RModifiedListener {
 public:
     virtual ~RModifiedListener() {}
 

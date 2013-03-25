@@ -20,6 +20,8 @@
 #ifndef RPROPERTYEDITOR_H
 #define RPROPERTYEDITOR_H
 
+#include "core_global.h"
+
 #include <QCoreApplication>
 #include <QList>
 #include <QMap>
@@ -39,7 +41,7 @@
  * \scriptable
  * \generateScriptShell
  */
-class RPropertyEditor: public RPropertyListener {
+class QCADCORE_EXPORT RPropertyEditor: public RPropertyListener {
 
     Q_DECLARE_TR_FUNCTIONS(RPropertyEditor)
 

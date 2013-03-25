@@ -20,6 +20,8 @@
 #ifndef RDIMDIAMETRICDATA_H
 #define RDIMDIAMETRICDATA_H
 
+#include "entity_global.h"
+
 #include "RDocument.h"
 #include "RDimensionData.h"
 #include "RVector.h"
@@ -30,7 +32,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RDimDiametricData: public RDimensionData {
+class QCADENTITY_EXPORT RDimDiametricData: public RDimensionData {
     friend class RDimDiametricEntity;
 
 protected:

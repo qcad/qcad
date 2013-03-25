@@ -20,6 +20,8 @@
 #ifndef RHATCHENTITY_H
 #define RHATCHENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RHatchData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RHatchEntity: public REntity {
+class QCADENTITY_EXPORT RHatchEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

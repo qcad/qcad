@@ -20,6 +20,8 @@
 #ifndef RNONCOPYABLE_H
 #define RNONCOPYABLE_H
 
+#include "core_global.h"
+
 
 
 /**
@@ -27,7 +29,7 @@
  *
  * \ingroup core
  */
-class RNonCopyable {
+class QCADCORE_EXPORT RNonCopyable {
 protected:
     RNonCopyable() {}
     ~RNonCopyable() {}

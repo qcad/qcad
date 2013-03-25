@@ -20,6 +20,8 @@
 #ifndef RDELETESELECTIONOPERATION_H
 #define RDELETESELECTIONOPERATION_H
 
+#include "operations_global.h"
+
 #include "RDocument.h"
 #include "REntity.h"
 #include "RExporter.h"
@@ -34,7 +36,7 @@
  * \ingroup operations
  * \scriptable
  */
-class RDeleteSelectionOperation : public RClipboardOperation {
+class QCADOPERATIONS_EXPORT RDeleteSelectionOperation : public RClipboardOperation {
 public:
     RDeleteSelectionOperation();
     virtual ~RDeleteSelectionOperation() {}

@@ -20,6 +20,8 @@
 #ifndef RPOLYLINEDATA_H
 #define RPOLYLINEDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -33,7 +35,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RPolylineData: public REntityData, protected RPolyline {
+class QCADENTITY_EXPORT RPolylineData: public REntityData, protected RPolyline {
 
     friend class RPolylineEntity;
 

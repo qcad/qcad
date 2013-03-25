@@ -20,6 +20,8 @@
 #ifndef RLINEWEIGHTCOMBO_H_
 #define RLINEWEIGHTCOMBO_H_
 
+#include "gui_global.h"
+
 #include <QComboBox>
 
 #include "RGlobal.h"
@@ -28,7 +30,7 @@
 /**
  * \scriptable
  */
-class RLineweightCombo: public QComboBox {
+class QCADGUI_EXPORT RLineweightCombo: public QComboBox {
 
 Q_OBJECT
 Q_PROPERTY(bool onlyFixed READ getOnlyFixed WRITE setOnlyFixed);

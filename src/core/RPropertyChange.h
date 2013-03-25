@@ -20,6 +20,8 @@
 #ifndef RPROPERTYCHANGE_H
 #define RPROPERTYCHANGE_H
 
+#include "core_global.h"
+
 #include <QVariant>
 
 #include "RObject.h"
@@ -31,7 +33,7 @@ class RExporter;
 /**
  * Stores the change that was made to a property of an object.
  */
-class RPropertyChange {
+class QCADCORE_EXPORT RPropertyChange {
 public:
     RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue,
             QVariant newValue);
@@ -40,7 +42,7 @@ public:
     QVariant newValue;
 };
 
-QDebug operator<<(QDebug dbg, RPropertyChange& p);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RPropertyChange& p);
 
 typedef QMap<int, QList<RPropertyChange> > _RMapIntPropertyChange;
 Q_DECLARE_METATYPE(_RMapIntPropertyChange*)

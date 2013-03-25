@@ -20,6 +20,8 @@
 #ifndef RTRIANGLE_H
 #define RTRIANGLE_H
 
+#include "../core_global.h"
+
 #include "RShape.h"
 #include "RVector.h"
 #include "RLine.h"
@@ -35,7 +37,7 @@ class RBox;
  * \copyable
  * \hasStreamOperator
  */
-class RTriangle: public RShape {
+class QCADCORE_EXPORT RTriangle: public RShape {
 public:
     RTriangle();
     RTriangle(const RVector& p1, const RVector& p2, const RVector& p3);

@@ -20,6 +20,8 @@
 #ifndef RMATRIX_H
 #define RMATRIX_H
 
+#include "../core_global.h"
+
 #include "RMath.h"
 
 #define RMATRIX_TOLERANCE 1.0e-8
@@ -30,7 +32,7 @@
  * \ingroup math
  * \copyable
  */
-class RMatrix {
+class QCADCORE_EXPORT RMatrix {
 public:
     RMatrix();
     RMatrix(int r, int c);

@@ -20,6 +20,8 @@
 #ifndef RDOCUMENT_H
 #define RDOCUMENT_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QSharedPointer>
 
@@ -56,7 +58,7 @@ class RStorage;
  * \ingroup core
  * \scriptable
  */
-class RDocument : public RRequireHeap, RNonCopyable {
+class QCADCORE_EXPORT RDocument : public RRequireHeap, RNonCopyable {
 public:
     RDocument(RStorage& storage, RSpatialIndex& spatialIndex);
     virtual ~RDocument();

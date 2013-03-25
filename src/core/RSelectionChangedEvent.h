@@ -20,6 +20,8 @@
 #ifndef RSELECTIONCHANGEDEVENT_H
 #define RSELECTIONCHANGEDEVENT_H
 
+#include "core_global.h"
+
 #include <QEvent>
 
 /**
@@ -28,7 +30,7 @@
  * \ingroup core
  * \scriptable
  */
-class RSelectionChangedEvent : public QEvent {
+class QCADCORE_EXPORT RSelectionChangedEvent : public QEvent {
 public:
     RSelectionChangedEvent() : QEvent(QEvent::User) {}
     virtual ~RSelectionChangedEvent() {}

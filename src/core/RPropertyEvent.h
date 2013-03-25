@@ -20,6 +20,8 @@
 #ifndef RPROPERTYEVENT_H
 #define RPROPERTYEVENT_H
 
+#include "core_global.h"
+
 #include <QVariant>
 
 #include "RPropertyTypeId.h"
@@ -35,7 +37,7 @@
  * \scriptable
  * \copyable
  */
-class RPropertyEvent {
+class QCADCORE_EXPORT RPropertyEvent {
 public:
     RPropertyEvent() :
         propertyTypeId(-1) {

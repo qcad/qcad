@@ -20,6 +20,8 @@
 #ifndef RSNAPINTERSECTION_H
 #define RSNAPINTERSECTION_H
 
+#include "snap_global.h"
+
 #include "RSnap.h"
 #include "REntity.h"
 
@@ -33,7 +35,7 @@ class RMouseEvent;
  *
  * \ingroup snap
  */
-class RSnapIntersection : public RSnap {
+class QCADSNAP_EXPORT RSnapIntersection : public RSnap {
 public:
     RSnapIntersection();
     virtual ~RSnapIntersection() {}

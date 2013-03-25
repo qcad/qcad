@@ -27,6 +27,7 @@
 #include "RScriptHandler.h"
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"
+#include "REcmaFocusListenerAdapter.h"
 
 class QScriptEngineDebugger;
 
@@ -103,7 +104,7 @@ public:
     static QScriptValue ecmaSerialize(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue ecmaBlockEvents(QScriptContext* context, QScriptEngine* engine);
     //static QScriptValue ecmaUnblockEvents(QScriptContext* context, QScriptEngine* engine);
-    static QScriptValue ecmaGetOpt(QScriptContext* context, QScriptEngine* engine);
+    //static QScriptValue ecmaGetOpt(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaAddApplicationFont(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaDownload(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQSortFilterProxyModelCastToQAbstractItemModel(QScriptContext* context, QScriptEngine* engine);

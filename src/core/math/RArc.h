@@ -20,6 +20,8 @@
 #ifndef RARC_H
 #define RARC_H
 
+#include "../core_global.h"
+
 #include "RDirected.h"
 #include "RShape.h"
 #include "RVector.h"
@@ -36,7 +38,7 @@ class RPolyline;
  * \copyable
  * \hasStreamOperator
  */
-class RArc: public RShape, public RDirected {
+class QCADCORE_EXPORT RArc: public RShape, public RDirected {
 public:
     RArc();
     RArc(const RVector& center, double radius, double startAngle,

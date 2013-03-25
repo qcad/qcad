@@ -20,6 +20,8 @@
 #ifndef RCIRCLE_H
 #define RCIRCLE_H
 
+#include "../core_global.h"
+
 #include "RShape.h"
 #include "RVector.h"
 
@@ -34,7 +36,7 @@ class RBox;
  * \copyable
  * \hasStreamOperator
  */
-class RCircle: public RShape {
+class QCADCORE_EXPORT RCircle: public RShape {
 public:
     RCircle();
     RCircle(const RVector& center, const double radius);

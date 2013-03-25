@@ -9,6 +9,7 @@ DEFINES += PACKAGE_BUGREPORT=\\\"mhadji@gmail.com\\\"
 
 # suppress spatial debug messages
 DEFINES += NDEBUG
+DEFINES += SPATIALINDEX_CREATE_DLL
 
 CONFIG -= warn_on
 CONFIG += warn_off

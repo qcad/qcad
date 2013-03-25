@@ -20,6 +20,8 @@
 #ifndef RCOMMANDLINE_H_
 #define RCOMMANDLINE_H_
 
+#include "gui_global.h"
+
 #include <QEvent>
 #include <QLineEdit>
 #include <QMetaType>
@@ -28,7 +30,7 @@
 /**
  * \scriptable
  */
-class RCommandLine: public QLineEdit {
+class QCADGUI_EXPORT RCommandLine: public QLineEdit {
 
 Q_OBJECT
 

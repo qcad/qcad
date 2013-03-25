@@ -20,6 +20,8 @@
 #ifndef RGRAPHICSVIEWQT_H
 #define RGRAPHICSVIEWQT_H
 
+#include "gui_global.h"
+
 #include <QtCore>
 #include <QFrame>
 #include <QFocusFrame>
@@ -50,7 +52,7 @@ class RSnapRestriction;
  * \scriptable
  * \generateScriptShell
  */
-class RGraphicsViewQt : public QWidget, public RGraphicsViewImage {
+class QCADGUI_EXPORT RGraphicsViewQt : public QWidget, public RGraphicsViewImage {
     Q_OBJECT
 
 public:

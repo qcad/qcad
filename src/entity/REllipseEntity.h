@@ -20,6 +20,8 @@
 #ifndef RELLIPSEENTITY_H
 #define RELLIPSEENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "REllipseData.h"
 #include "RLineweight.h"
@@ -34,7 +36,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class REllipseEntity: public REntity {
+class QCADENTITY_EXPORT REllipseEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

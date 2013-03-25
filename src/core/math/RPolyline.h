@@ -20,6 +20,8 @@
 #ifndef RPOLYLINE_H
 #define RPOLYLINE_H
 
+#include "../core_global.h"
+
 #include <QPainterPath>
 
 #include "RDirected.h"
@@ -43,7 +45,7 @@ class RBox;
  * \copyable
  * \hasStreamOperator
  */
-class RPolyline: public RShape, public RExplodable, public RDirected {
+class QCADCORE_EXPORT RPolyline: public RShape, public RExplodable, public RDirected {
 public:
     RPolyline();
     RPolyline(const QList<RVector>& vertices, bool closed);

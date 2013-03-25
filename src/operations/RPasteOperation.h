@@ -20,6 +20,8 @@
 #ifndef RPASTEOPERATION_H
 #define RPASTEOPERATION_H
 
+#include "operations_global.h"
+
 #include "RDocument.h"
 #include "REntity.h"
 #include "RExporter.h"
@@ -33,7 +35,7 @@
  * \ingroup operations
  * \scriptable
  */
-class RPasteOperation: public RClipboardOperation {
+class QCADOPERATIONS_EXPORT RPasteOperation: public RClipboardOperation {
 public:
     RPasteOperation(RDocument& sourceDocument);
     virtual ~RPasteOperation() {

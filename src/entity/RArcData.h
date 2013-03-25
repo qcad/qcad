@@ -20,6 +20,8 @@
 #ifndef RARCDATA_H
 #define RARCDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -34,7 +36,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RArcData: public REntityData, protected RArc {
+class QCADENTITY_EXPORT RArcData: public REntityData, protected RArc {
 
     friend class RArcEntity;
 

@@ -20,6 +20,8 @@
 #ifndef RFILEIMPORTERREGISTRY_H
 #define RFILEIMPORTERREGISTRY_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QList>
 #include <QMetaType>
@@ -40,7 +42,7 @@ class RProgressHandler;
  * \ingroup core
  * \scriptable
  */
-class RFileImporterRegistry {
+class QCADCORE_EXPORT RFileImporterRegistry {
 public:
     static void registerFileImporter(RFileImporterFactory* factory);
 

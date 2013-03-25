@@ -20,6 +20,8 @@
 #ifndef RTRANSACTIONSTACK_H
 #define RTRANSACTIONSTACK_H
 
+#include "core_global.h"
+
 #include <QMetaType>
 
 #include "RNonCopyable.h"
@@ -34,7 +36,7 @@ class RDocument;
  *
  * \ingroup core
  */
-class RTransactionStack : RNonCopyable {
+class QCADCORE_EXPORT RTransactionStack : RNonCopyable {
 public:
     RTransactionStack(RDocument& document);
     ~RTransactionStack();

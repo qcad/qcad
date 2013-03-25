@@ -6,6 +6,7 @@ SUBDIRS = \
 
 !r_no_opennurbs {
     SUBDIRS += \
+        zlib \
         opennurbs
 }
 !rs_no_dxf {

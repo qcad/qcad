@@ -20,6 +20,8 @@
 #ifndef RDXFIMPORTERFACTORY_H_
 #define RDXFIMPORTERFACTORY_H_
 
+#include "dxf_global.h"
+
 #include <QFileInfo>
 #include <QMetaType>
 
@@ -35,7 +37,7 @@ class RProgressHandler;
 /**
  * \scriptable
  */
-class RDxfImporterFactory: public RFileImporterFactory {
+class QCADDXF_EXPORT RDxfImporterFactory: public RFileImporterFactory {
 public:
     static void registerFileImporter() {
         RFileImporterRegistry::registerFileImporter(

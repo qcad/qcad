@@ -20,6 +20,8 @@
 #ifndef RCIRCLENTITY_H
 #define RCIRCLENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RCircleData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RCircleEntity: public REntity {
+class QCADENTITY_EXPORT RCircleEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

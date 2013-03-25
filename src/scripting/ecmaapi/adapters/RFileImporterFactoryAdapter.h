@@ -23,10 +23,10 @@
 #include <QMetaType>
 #include <QString>
 
+#include "RDocument.h"
 #include "RFileImporterFactory.h"
 
 class RFileImporter;
-class RDocument;
 class RMessageHandler;
 class RProgressHandler;
 

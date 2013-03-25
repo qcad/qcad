@@ -20,6 +20,8 @@
 #ifndef RELLIPSE_H
 #define RELLIPSE_H
 
+#include "../core_global.h"
+
 #include "RShape.h"
 #include "RDirected.h"
 #include "RLine.h"
@@ -36,7 +38,7 @@ class RBox;
  * \copyable
  * \hasStreamOperator
  */
-class REllipse: public RShape, public RDirected {
+class QCADCORE_EXPORT REllipse: public RShape, public RDirected {
 public:
     REllipse();
     REllipse(const RVector& center,

@@ -20,6 +20,8 @@
 #ifndef RSOLIDENTITY_H
 #define RSOLIDENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RSolidData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RSolidEntity: public REntity {
+class QCADENTITY_EXPORT RSolidEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

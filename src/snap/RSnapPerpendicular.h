@@ -20,6 +20,8 @@
 #ifndef RSNAPPERPENDICULAR_H
 #define RSNAPPERPENDICULAR_H
 
+#include "snap_global.h"
+
 #include "RSnapEntityBase.h"
 
 class RMouseEvent;
@@ -31,7 +33,7 @@ class RMouseEvent;
  *
  * \ingroup snap
  */
-class RSnapPerpendicular : public RSnapEntityBase {
+class QCADSNAP_EXPORT RSnapPerpendicular : public RSnapEntityBase {
 public:
     virtual ~RSnapPerpendicular() {}
 

@@ -20,6 +20,8 @@
 #ifndef RLINETYPE_H
 #define RLINETYPE_H
 
+#include "core_global.h"
+
 #include <QColor>
 #include <QCoreApplication>
 #include <QIcon>
@@ -44,7 +46,7 @@ class RDocument;
  * \sharedPointerSupport
  * \copyable
  */
-class RLinetype: public RObject {
+class QCADCORE_EXPORT RLinetype: public RObject {
 
     Q_DECLARE_TR_FUNCTIONS(RLinetype);
 
@@ -99,7 +101,7 @@ private:
     static QMap<RLinetype, QIcon> iconMap;
 };
 
-QDebug operator<<(QDebug dbg, const RLinetype& l);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RLinetype& l);
 
 Q_DECLARE_METATYPE(RLinetype)
 Q_DECLARE_METATYPE(RLinetype*)

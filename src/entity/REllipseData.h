@@ -20,6 +20,8 @@
 #ifndef RELLIPSEDATA_H
 #define RELLIPSEDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -34,7 +36,7 @@
  * \scriptable
  * \ingroup entity
  */
-class REllipseData: public REntityData, protected REllipse {
+class QCADENTITY_EXPORT REllipseData: public REntityData, protected REllipse {
 
     friend class REllipseEntity;
 

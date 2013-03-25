@@ -20,6 +20,8 @@
 #ifndef RPOINTDATA_H
 #define RPOINTDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -34,7 +36,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RPointData: public REntityData, protected RPoint {
+class QCADENTITY_EXPORT RPointData: public REntityData, protected RPoint {
 
     friend class RPointEntity;
 

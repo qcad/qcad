@@ -20,6 +20,8 @@
 #ifndef RFILEIMPORTER_H
 #define RFILEIMPORTER_H
 
+#include "core_global.h"
+
 #include "RImporter.h"
 
 #include <QString>
@@ -32,7 +34,7 @@
  * \ingroup core
  * \scriptable
  */
-class RFileImporter : public RImporter {
+class QCADCORE_EXPORT RFileImporter : public RImporter {
 public:
     RFileImporter();
     RFileImporter(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);

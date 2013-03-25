@@ -20,6 +20,8 @@
 #ifndef RCHARACTERWIDGET_H
 #define RCHARACTERWIDGET_H
 
+#include "gui_global.h"
+
 #include <QMetaType>
 #include <QFont>
 #include <QPoint>
@@ -34,7 +36,7 @@ class QPaintEvent;
 /**
  * \scriptable
  */
-class /*QDESIGNER_WIDGET_EXPORT*/ RCharacterWidget: public QWidget {
+class QCADGUI_EXPORT RCharacterWidget: public QWidget {
 
     Q_OBJECT
 

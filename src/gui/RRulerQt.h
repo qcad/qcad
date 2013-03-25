@@ -20,6 +20,8 @@
 #ifndef RRULERQT_H
 #define RRULERQT_H
 
+#include "gui_global.h"
+
 #include <QFrame>
 #include <QMetaType>
 
@@ -36,7 +38,7 @@ class RDocumentInterface;
  *
  * \scriptable
  */
-class RRulerQt: public QFrame, public RRuler, public RCoordinateListener {
+class QCADGUI_EXPORT RRulerQt: public QFrame, public RRuler, public RCoordinateListener {
 
 Q_OBJECT
 Q_PROPERTY(Qt::Orientation orientation READ getOrientation WRITE setOrientation);

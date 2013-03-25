@@ -20,6 +20,8 @@
 #ifndef RPAINTERPATHENGINE_H
 #define RPAINTERPATHENGINE_H
 
+#include "core_global.h"
+
 #include <QPaintEngine>
 //#include "private/qtextengine_p.h"
 //#include "private/qfontengine_p.h"
@@ -31,7 +33,7 @@
  *
  * \ingroup core
  */
-class RPainterPathEngine : public QPaintEngine {
+class QCADCORE_EXPORT RPainterPathEngine : public QPaintEngine {
 public:
     RPainterPathEngine();
     virtual ~RPainterPathEngine();

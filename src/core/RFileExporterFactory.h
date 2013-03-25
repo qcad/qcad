@@ -20,6 +20,8 @@
 #ifndef RFILEEXPORTERFACTORY_H
 #define RFILEEXPORTERFACTORY_H
 
+#include "core_global.h"
+
 class RDocument;
 class RFileExporter;
 class RMessageHandler;
@@ -36,7 +38,7 @@ class RProgressHandler;
  * \ingroup core
  * \scriptable
  */
-class RFileExporterFactory {
+class QCADCORE_EXPORT RFileExporterFactory {
 public:
     virtual QStringList getFilterStrings() = 0;
     virtual bool canExport(const QString& fileName,

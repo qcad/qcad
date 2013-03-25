@@ -20,6 +20,8 @@
 #ifndef RFILESYSTEMMODEL_H_
 #define RFILESYSTEMMODEL_H_
 
+#include "gui_global.h"
+
 #include <QFileSystemModel>
 
 #define RDEFAULT_QMODELINDEX QModelIndex()
@@ -27,7 +29,7 @@
 /**
  * \scriptable
  */
-class RFileSystemModel: public QFileSystemModel {
+class QCADGUI_EXPORT RFileSystemModel: public QFileSystemModel {
 
 Q_OBJECT
 

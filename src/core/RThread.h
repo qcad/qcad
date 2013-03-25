@@ -20,6 +20,8 @@
 #ifndef RTHREAD_H_
 #define RTHREAD_H_
 
+#include "core_global.h"
+
 #include <QMetaType>
 #include <QThread>
 
@@ -29,7 +31,7 @@
  * \scriptable
  * _generateScriptShell
  */
-class RThread: public QThread {
+class QCADCORE_EXPORT RThread: public QThread {
 
 Q_OBJECT
 

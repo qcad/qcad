@@ -20,6 +20,8 @@
 #ifndef RFILEEXPORTERREGISTRY_H
 #define RFILEEXPORTERREGISTRY_H
 
+#include "core_global.h"
+
 #include <QList>
 #include <QMetaType>
 #include <QString>
@@ -40,7 +42,7 @@ class RProgressHandler;
  * \ingroup core
  * \scriptable
  */
-class RFileExporterRegistry {
+class QCADCORE_EXPORT RFileExporterRegistry {
 public:
     static void registerFileExporter(RFileExporterFactory* factory);
 

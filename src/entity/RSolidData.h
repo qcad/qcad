@@ -20,6 +20,8 @@
 #ifndef RSOLIDDATA_H
 #define RSOLIDDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -33,7 +35,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RSolidData: public REntityData, protected RPolyline {
+class QCADENTITY_EXPORT RSolidData: public REntityData, protected RPolyline {
 
     friend class RSolidEntity;
 

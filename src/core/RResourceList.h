@@ -20,6 +20,8 @@
 #ifndef RRESOURCELIST_H
 #define RRESOURCELIST_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QMap>
 #include <QFileInfo>
@@ -32,7 +34,7 @@
  * \ingroup core
  */
 template <class T>
-class RResourceList {
+class QCADCORE_EXPORT RResourceList {
 public:
 //    void init() {
 //    }

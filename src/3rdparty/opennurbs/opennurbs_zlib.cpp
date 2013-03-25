@@ -54,7 +54,7 @@
 #if defined(ON_PURIFY_BUILD)
 #pragma comment(lib, "./zlib/ReleasePurify/zlib.lib")
 #else
-#pragma comment(lib, "./zlib/Release/zlib.lib")
+#pragma comment(lib, "../zlib/release/zlib.lib")
 #endif
 
 #else // _DEBUG

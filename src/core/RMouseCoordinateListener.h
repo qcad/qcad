@@ -20,6 +20,8 @@
 #ifndef RMOUSECOORDINATELISTENER_H
 #define RMOUSECOORDINATELISTENER_H
 
+#include "core_global.h"
+
 class RVector;
 
 /**
@@ -29,7 +31,7 @@ class RVector;
  *
  * \ingroup core
  */
-class RMouseCoordinateListener {
+class QCADCORE_EXPORT RMouseCoordinateListener {
 public:
     virtual ~RMouseCoordinateListener() {}
     /**

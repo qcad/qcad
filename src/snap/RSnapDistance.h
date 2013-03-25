@@ -20,6 +20,8 @@
 #ifndef RSNAPDISTANCE_H
 #define RSNAPDISTANCE_H
 
+#include "snap_global.h"
+
 #include "REntity.h"
 #include "RSnapEntityBase.h"
 
@@ -34,7 +36,7 @@ class RMouseEvent;
  *
  * \ingroup snap
  */
-class RSnapDistance : public RSnapEntityBase {
+class QCADSNAP_EXPORT RSnapDistance : public RSnapEntityBase {
 public:
     RSnapDistance();
     virtual ~RSnapDistance() {}

@@ -20,6 +20,8 @@
 #ifndef RPENLISTENER_H
 #define RPENLISTENER_H
 
+#include "core_global.h"
+
 class RDocumentInterface;
 
 
@@ -32,7 +34,7 @@ class RDocumentInterface;
  * \ingroup core
  * \scriptable
  */
-class RPenListener {
+class QCADCORE_EXPORT RPenListener {
 public:
     virtual ~RPenListener() {}
 

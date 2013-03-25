@@ -20,6 +20,8 @@
 #ifndef RVIEWFOCUSLISTENER_H
 #define RVIEWFOCUSLISTENER_H
 
+#include "core_global.h"
+
 class RGraphicsView;
 
 
@@ -31,7 +33,7 @@ class RGraphicsView;
  * \ingroup core
  * \scriptable
  */
-class RViewFocusListener {
+class QCADCORE_EXPORT RViewFocusListener {
 public:
     virtual ~RViewFocusListener() {}
 

@@ -20,6 +20,8 @@
 #ifndef RCIRCLEDATA_H
 #define RCIRCLEDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -34,7 +36,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RCircleData: public REntityData, protected RCircle {
+class QCADENTITY_EXPORT RCircleData: public REntityData, protected RCircle {
 
     friend class RCircleEntity;
 

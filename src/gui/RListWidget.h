@@ -20,6 +20,8 @@
 #ifndef RLISTWIDGET_H_
 #define RLISTWIDGET_H_
 
+#include "gui_global.h"
+
 #include <QWidget>
 #include <QListWidget>
 #include <QListWidgetItem>
@@ -31,7 +33,7 @@
  * \scriptable
  * \generateScriptShell
  */
-class RListWidget: public QListWidget {
+class QCADGUI_EXPORT RListWidget: public QListWidget {
 
     Q_OBJECT
 

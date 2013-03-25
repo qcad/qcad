@@ -20,6 +20,8 @@
 #ifndef RUCS_H
 #define RUCS_H
 
+#include "core_global.h"
+
 #include "RObject.h"
 #include "RVector.h"
 #include "RPropertyTypeId.h"
@@ -36,7 +38,7 @@ class RDocument;
  * \scriptable
  * \sharedPointerSupport
  */
-class RUcs : public RObject {
+class QCADCORE_EXPORT RUcs : public RObject {
 public:
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyOriginX;
@@ -109,7 +111,7 @@ public:
     RVector yAxisDirection;
 };
 
-QDebug operator<<(QDebug dbg, const RUcs& u);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RUcs& u);
 
 Q_DECLARE_METATYPE(RUcs)
 Q_DECLARE_METATYPE(RUcs*)

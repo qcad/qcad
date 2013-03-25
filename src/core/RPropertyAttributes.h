@@ -20,6 +20,8 @@
 #ifndef RPROPERTYATTRIBUTES_H
 #define RPROPERTYATTRIBUTES_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QSet>
 #include <QMap>
@@ -42,7 +44,7 @@
  * \scriptable
  * \copyable
  */
-class RPropertyAttributes {
+class QCADCORE_EXPORT RPropertyAttributes {
 public:
     enum Option {
         NoOptions = 0x0,

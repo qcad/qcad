@@ -20,6 +20,8 @@
 #ifndef RENTITYPICKEVENT_H
 #define RENTITYPICKEVENT_H
 
+#include "core_global.h"
+
 #include "RInputEvent.h"
 #include "REntity.h"
 #include "RVector.h"
@@ -33,7 +35,7 @@ class RGraphicsScene;
  * \ingroup core
  * \scriptable
  */
-class REntityPickEvent : public RInputEvent {
+class QCADCORE_EXPORT REntityPickEvent : public RInputEvent {
 public:
     /**
      * \param entityId ID of picked entity.

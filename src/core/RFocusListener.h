@@ -20,6 +20,8 @@
 #ifndef RFOCUSLISTENER_H
 #define RFOCUSLISTENER_H
 
+#include "core_global.h"
+
 class RDocumentInterface;
 
 
@@ -31,7 +33,7 @@ class RDocumentInterface;
  * \ingroup core
  * \scriptable
  */
-class RFocusListener {
+class QCADCORE_EXPORT RFocusListener {
 public:
     virtual ~RFocusListener() {}
 

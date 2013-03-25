@@ -20,6 +20,8 @@
 #ifndef RTERMINATEEVENT_H
 #define RTERMINATEEVENT_H
 
+#include "core_global.h"
+
 #include <QEvent>
 
 /**
@@ -29,7 +31,7 @@
  * \ingroup core
  * \scriptable
  */
-class RTerminateEvent : public QEvent {
+class QCADCORE_EXPORT RTerminateEvent : public QEvent {
 public:
     RTerminateEvent() : QEvent(QEvent::User) {}
     virtual ~RTerminateEvent() {}

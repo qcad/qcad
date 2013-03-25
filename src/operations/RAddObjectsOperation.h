@@ -20,6 +20,8 @@
 #ifndef RADDOBJECTSOPERATION_H
 #define RADDOBJECTSOPERATION_H
 
+#include "operations_global.h"
+
 #include <QList>
 #include <QSharedPointer>
 
@@ -37,7 +39,7 @@ class RObject;
  * \ingroup operations
  * \scriptable
  */
-class RAddObjectsOperation: public ROperation {
+class QCADOPERATIONS_EXPORT RAddObjectsOperation: public ROperation {
 public:
     RAddObjectsOperation(bool undoable = true);
     RAddObjectsOperation(QList<QSharedPointer<RObject> >& list,

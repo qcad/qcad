@@ -20,6 +20,8 @@
 #ifndef RSNAPRESTRICTION_H
 #define RSNAPRESTRICTION_H
 
+#include "core_global.h"
+
 #include "RVector.h"
 
 class RDocumentInterface;
@@ -32,7 +34,7 @@ class RDocumentInterface;
  *
  * \ingroup core
  */
-class RSnapRestriction {
+class QCADCORE_EXPORT RSnapRestriction {
 public:
     RSnapRestriction(RDocumentInterface& documentInterface) : documentInterface(documentInterface), lastSnap(RVector::invalid) {}
     virtual ~RSnapRestriction() {}

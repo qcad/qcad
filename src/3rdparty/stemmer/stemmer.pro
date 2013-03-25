@@ -43,5 +43,5 @@ HEADERS += \
     src_c/stem_UTF_8_turkish.h
 
 TEMPLATE = lib
-#CONFIG += staticlib
-CONFIG += plugin
+CONFIG += staticlib
+#CONFIG += plugin

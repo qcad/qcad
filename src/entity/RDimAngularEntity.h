@@ -20,6 +20,8 @@
 #ifndef RDIMANGULARENTITY_H
 #define RDIMANGULARENTITY_H
 
+#include "entity_global.h"
+
 #include "RDimensionEntity.h"
 #include "RDimAngularData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RDimAngularEntity: public RDimensionEntity {
+class QCADENTITY_EXPORT RDimAngularEntity: public RDimensionEntity {
 
     Q_DECLARE_TR_FUNCTIONS(RDimAngularEntity)
 

@@ -20,6 +20,8 @@
 #ifndef RWHEELEVENT_H
 #define RWHEELEVENT_H
 
+#include "core_global.h"
+
 #include <QWheelEvent>
 
 #include "RInputEvent.h"
@@ -36,7 +38,7 @@ class RGraphicsScene;
  * \ingroup core
  * \scriptable
  */
-class RWheelEvent: public QWheelEvent, public RInputEvent {
+class QCADCORE_EXPORT RWheelEvent: public QWheelEvent, public RInputEvent {
 public:
     RWheelEvent(const RVector& position, int delta, Qt::MouseButtons buttons,
             Qt::KeyboardModifiers modifiers, Qt::Orientation orient,

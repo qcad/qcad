@@ -20,6 +20,8 @@
 #ifndef RSNAPCENTER_H
 #define RSNAPCENTER_H
 
+#include "snap_global.h"
+
 #include "RSnapEntityBase.h"
 
 class RMouseEvent;
@@ -31,7 +33,7 @@ class RMouseEvent;
  *
  * \ingroup snap
  */
-class RSnapCenter : public RSnapEntityBase {
+class QCADSNAP_EXPORT RSnapCenter : public RSnapEntityBase {
 public:
     virtual ~RSnapCenter() {}
 

@@ -20,6 +20,8 @@
 #ifndef RBLOCKLISTENER_H
 #define RBLOCKLISTENER_H
 
+#include "core_global.h"
+
 #include <QMetaType>
 
 class RDocumentInterface;
@@ -32,7 +34,7 @@ class RDocumentInterface;
  * \ingroup core
  * \scriptable
  */
-class RBlockListener {
+class QCADCORE_EXPORT RBlockListener {
 public:
     virtual ~RBlockListener() {}
 

@@ -20,6 +20,8 @@
 #ifndef RSPLINE_H
 #define RSPLINE_H
 
+#include "../core_global.h"
+
 #include "RArc.h"
 #include "RBox.h"
 #include "RDirected.h"
@@ -46,7 +48,7 @@
  * \sharedPointerSupport
  * \copyable
  */
-class RSpline: public RShape, public RExplodable, public RDirected {
+class QCADCORE_EXPORT RSpline: public RShape, public RExplodable, public RDirected {
 public:
     typedef void (*UpdateFromFitPointsFunction)(RSpline& spline, bool useTangents);
 

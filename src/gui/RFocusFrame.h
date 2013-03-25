@@ -20,13 +20,15 @@
 #ifndef RFOCUSFRAME_H_
 #define RFOCUSFRAME_H_
 
+#include "gui_global.h"
+
 #include <QMetaType>
 #include <QFocusFrame>
 
 /**
  * \scriptable
  */
-class RFocusFrame: public QFocusFrame {
+class QCADGUI_EXPORT RFocusFrame: public QFocusFrame {
 
 Q_OBJECT
 

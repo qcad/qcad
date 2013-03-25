@@ -20,6 +20,8 @@
 #ifndef RCHANGEPROPERTYOPERATION_H
 #define RCHANGEPROPERTYOPERATION_H
 
+#include "operations_global.h"
+
 #include <QVariant>
 
 #include "RDocument.h"
@@ -36,7 +38,7 @@
  * \ingroup operations
  * \scriptable
  */
-class RChangePropertyOperation : public ROperation {
+class QCADOPERATIONS_EXPORT RChangePropertyOperation : public ROperation {
 public:
     RChangePropertyOperation(
         const RPropertyTypeId& propertyTypeId,

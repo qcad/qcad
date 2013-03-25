@@ -60,7 +60,7 @@ win32 {
         $$PWD/$$ROUTDIR/qcadecma.lib \
         $$PWD/$$ROUTDIR/qcadecmaapi.lib
         !r_no_opennurbs {
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/opennurbs.lib
+            POST_TARGETDEPS += $$PWD/$$ROUTDIR/opennurbs.dll
         }
         !r_no_dxf {
             POST_TARGETDEPS += $$PWD/$$ROUTDIR/qcaddxf.lib

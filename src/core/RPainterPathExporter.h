@@ -20,10 +20,12 @@
 #ifndef RPAINTERPATHEXPORTER_H
 #define RPAINTERPATHEXPORTER_H
 
+#include "core_global.h"
+
 #include "RExporter.h"
 #include "RPainterPath.h"
 
-class RPainterPathExporter : public RExporter {
+class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:
     virtual void exportLineSegment(const RLine& line);
 

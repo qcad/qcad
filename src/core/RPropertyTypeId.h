@@ -20,6 +20,8 @@
 #ifndef RPROPERTYTYPEID_H_
 #define RPROPERTYTYPEID_H_
 
+#include "core_global.h"
+
 #include <typeinfo>
 
 #include <QMap>
@@ -38,7 +40,7 @@
  * of this class. All instances of this class are automatically unique.
  *
  * \code
- * class Car {
+ * class QCADCORE_EXPORT Car {
  * public:
  * static RPropertyTypeId propertyBrand;
  * }
@@ -51,7 +53,7 @@
  * \scriptable
  * \copyable
  */
-class RPropertyTypeId {
+class QCADCORE_EXPORT RPropertyTypeId {
 public:
     /**
      * \ nonscriptable
@@ -116,9 +118,9 @@ private:
     static QMap<long int, QPair<QString, QString> > titleMap;
 };
 
-QDebug operator<<(QDebug dbg, RPropertyTypeId& p);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RPropertyTypeId& p);
 
-uint qHash(RPropertyTypeId propertyTypeId);
+QCADCORE_EXPORT uint qHash(RPropertyTypeId propertyTypeId);
 
 Q_DECLARE_METATYPE(RPropertyTypeId)
 Q_DECLARE_METATYPE(RPropertyTypeId*)

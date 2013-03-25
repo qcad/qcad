@@ -20,6 +20,8 @@
 #ifndef RDIMALIGNEDENTITY_H
 #define RDIMALIGNEDENTITY_H
 
+#include "entity_global.h"
+
 #include "RDimensionEntity.h"
 #include "RDimAlignedData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RDimAlignedEntity: public RDimensionEntity {
+class QCADENTITY_EXPORT RDimAlignedEntity: public RDimensionEntity {
 
     Q_DECLARE_TR_FUNCTIONS(RDimAlignedEntity)
 

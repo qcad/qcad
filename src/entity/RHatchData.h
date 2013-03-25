@@ -20,6 +20,8 @@
 #ifndef RHATCHDATA_H
 #define RHATCHDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -36,7 +38,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RHatchData: public REntityData, public RPainterPathSource {
+class QCADENTITY_EXPORT RHatchData: public REntityData, public RPainterPathSource {
 
     friend class RHatchEntity;
 

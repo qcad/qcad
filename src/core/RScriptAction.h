@@ -20,6 +20,8 @@
 #ifndef RSCRIPTACTION_H
 #define RSCRIPTACTION_H
 
+#include "core_global.h"
+
 #include "RAction.h"
 #include "RMainWindow.h"
 
@@ -30,7 +32,7 @@
  * \scriptable
  * \abstract
  */
-class RScriptAction: public RAction {
+class QCADCORE_EXPORT RScriptAction: public RAction {
 
 public:
     RScriptAction(const QString& scriptFile, RGuiAction* guiAction);

@@ -20,6 +20,8 @@
 #ifndef RSNAPAUTO_H
 #define RSNAPAUTO_H
 
+#include "snap_global.h"
+
 #include "RSnap.h"
 
 class RMouseEvent;
@@ -32,7 +34,7 @@ class RGraphicsView;
  *
  * \ingroup snap
  */
-class RSnapAuto : public RSnap {
+class QCADSNAP_EXPORT RSnapAuto : public RSnap {
 public:
     virtual ~RSnapAuto() {}
 

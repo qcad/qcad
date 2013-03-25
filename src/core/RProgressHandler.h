@@ -20,6 +20,8 @@
 #ifndef RPROGRESSHANDLER_H
 #define RPROGRESSHANDLER_H
 
+#include "core_global.h"
+
 #include <QMetaType>
 
 /**
@@ -28,7 +30,7 @@
  * \ingroup core
  * \scriptable
  */
-class RProgressHandler {
+class QCADCORE_EXPORT RProgressHandler {
 public:
     RProgressHandler() : progressEnabled(true) {}
 

@@ -20,6 +20,8 @@
 #ifndef RCLIPBOARDLISTENER_H
 #define RCLIPBOARDLISTENER_H
 
+#include "core_global.h"
+
 class RDocument;
 
 
@@ -30,7 +32,7 @@ class RDocument;
  *
  * \ingroup core
  */
-class RClipboardListener {
+class QCADCORE_EXPORT RClipboardListener {
 public:
     virtual ~RClipboardListener() {}
 

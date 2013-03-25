@@ -25,6 +25,8 @@
 #ifndef DL_ATTRIBUTES_H
 #define DL_ATTRIBUTES_H
 
+#include "dl_global.h"
+
 #include <string>
 
 #include "dl_codes.h"
@@ -35,7 +37,7 @@
  *
  * @author Andrew Mustun
  */
-class DL_Attributes {
+class DXFLIB_EXPORT DL_Attributes {
 
 public:
 

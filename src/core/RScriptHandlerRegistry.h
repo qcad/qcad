@@ -20,6 +20,8 @@
 #ifndef RSCRIPTHANDLERREGISTRY_H
 #define RSCRIPTHANDLERREGISTRY_H
 
+#include "core_global.h"
+
 #include <QList>
 #include <QMetaType>
 #include <QString>
@@ -38,7 +40,7 @@
  *
  * \ingroup core
  */
-class RScriptHandlerRegistry: public RSingleton {
+class QCADCORE_EXPORT RScriptHandlerRegistry: public RSingleton {
 
     friend class RSingleton;
 

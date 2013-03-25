@@ -20,6 +20,8 @@
 #ifndef RSPATIALINDEXNAVEL_H
 #define RSPATIALINDEXNAVEL_H
 
+#include "spatialindex_global.h"
+
 #include <QSet>
 #include <QList>
 
@@ -72,7 +74,7 @@ public:
  * \ingroup spatialindex
  * \scriptable
  */
-class RSpatialIndexNavel: public RSpatialIndex {
+class QCADSPATIALINDEX_EXPORT RSpatialIndexNavel: public RSpatialIndex {
 protected:
     /**
      * Internal representation of a rectangular region.

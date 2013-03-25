@@ -20,12 +20,14 @@
 #ifndef RREQUIREHEAP_H_
 #define RREQUIREHEAP_H_
 
+#include "core_global.h"
+
 #include "RDebug.h"
 
 /**
  * \ingroup core
  */
-class RRequireHeap {
+class QCADCORE_EXPORT RRequireHeap {
 public:
     void doDelete() {
         delete this;

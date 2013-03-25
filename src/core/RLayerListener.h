@@ -20,6 +20,8 @@
 #ifndef RLAYERLISTENER_H
 #define RLAYERLISTENER_H
 
+#include "core_global.h"
+
 class RDocumentInterface;
 
 
@@ -32,7 +34,7 @@ class RDocumentInterface;
  * \ingroup core
  * \scriptable
  */
-class RLayerListener {
+class QCADCORE_EXPORT RLayerListener {
 public:
     virtual ~RLayerListener() {}
 

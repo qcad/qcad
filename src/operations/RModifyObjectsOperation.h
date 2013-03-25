@@ -20,6 +20,8 @@
 #ifndef RMODIFYOBJECTSOPERATION_H_
 #define RMODIFYOBJECTSOPERATION_H_
 
+#include "operations_global.h"
+
 #include "RAddObjectsOperation.h"
 #include "RDocumentInterface.h"
 #include "RTransformation.h"
@@ -30,7 +32,7 @@
  * \ingroup operations
  * \scriptable
  */
-class RModifyObjectsOperation: public RAddObjectsOperation {
+class QCADOPERATIONS_EXPORT RModifyObjectsOperation: public RAddObjectsOperation {
 public:
     RModifyObjectsOperation(bool undoable = true) :
         RAddObjectsOperation(undoable) {

@@ -20,6 +20,8 @@
 #ifndef RPAINTERPATHDEVICE_H
 #define RPAINTERPATHDEVICE_H
 
+#include "core_global.h"
+
 #include <QPaintDevice>
 
 #include "RPainterPathEngine.h"
@@ -30,7 +32,7 @@
  * \scriptable
  * \ingroup core
  */
-class RPainterPathDevice : public QPaintDevice {
+class QCADCORE_EXPORT RPainterPathDevice : public QPaintDevice {
 public:
     RPainterPathDevice();
     virtual ~RPainterPathDevice();

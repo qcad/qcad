@@ -20,6 +20,8 @@
 #ifndef RLINETYPEPATTERN_H
 #define RLINETYPEPATTERN_H
 
+#include "core_global.h"
+
 #include <stdarg.h>
 #include <math.h>
 
@@ -34,7 +36,7 @@
  * \scriptable
  * \copyable
  */
-class RLinetypePattern {
+class QCADCORE_EXPORT RLinetypePattern {
 public:
     /**
      * \nonscriptable
@@ -57,6 +59,7 @@ public:
     void scale(double factor);
 
     RLinetypePattern& operator=(const RLinetypePattern& other);
+    bool operator==(const RLinetypePattern& other) const;
 
 private:
     int num;
@@ -64,7 +67,7 @@ private:
     bool* symmetrical;
 };
 
-QDebug operator<<(QDebug dbg, const RLinetypePattern& p);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RLinetypePattern& p);
 
 Q_DECLARE_METATYPE(RLinetypePattern*)
 Q_DECLARE_METATYPE(const RLinetypePattern*)

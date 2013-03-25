@@ -26,6 +26,8 @@
 #ifndef DL_WRITER_ASCII_H
 #define DL_WRITER_ASCII_H
 
+#include "dl_global.h"
+
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
@@ -44,7 +46,7 @@
  * @todo What if \c fname is NULL?  Or \c fname can't be opened for
  * another reason?
  */
-class DL_WriterA : public DL_Writer {
+class DXFLIB_EXPORT DL_WriterA : public DL_Writer {
 public:
     DL_WriterA(const char* fname, DL_Codes::version version=DL_VERSION_2000)
             : DL_Writer(version), m_ofile(fname) {}

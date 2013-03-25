@@ -20,6 +20,8 @@
 #ifndef RFONTLIST_H
 #define RFONTLIST_H
 
+#include "core_global.h"
+
 #include "RFont.h"
 #include "RResourceList.h"
 
@@ -29,7 +31,7 @@
  * \ingroup core
  * \scriptable
  */
-class RFontList {
+class QCADCORE_EXPORT RFontList {
 public:
     static void init();
     static void uninit();

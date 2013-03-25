@@ -20,6 +20,8 @@
 #ifndef RPAINTERPATHSOURCE_H
 #define RPAINTERPATHSOURCE_H
 
+#include "core_global.h"
+
 #include <QList>
 
 #include "RPainterPath.h"
@@ -31,9 +33,9 @@
  * \scriptable
  * \sharedPointerSupport
  */
-class RPainterPathSource {
+class QCADCORE_EXPORT RPainterPathSource {
 public:
-    virtual ~RPainterPathSource() {}
+    //virtual ~RPainterPathSource() {}
     virtual QList<RPainterPath> getPainterPaths(bool draft = false) const = 0;
 };
 

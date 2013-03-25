@@ -20,6 +20,8 @@
 #ifndef RPROPERTYLISTENER_H
 #define RPROPERTYLISTENER_H
 
+#include "core_global.h"
+
 #include "RS.h"
 #include "RPropertyTypeId.h"
 
@@ -38,7 +40,7 @@ class RObject;
  * \ingroup core
  * \scriptable
  */
-class RPropertyListener {
+class QCADCORE_EXPORT RPropertyListener {
 public:
     virtual ~RPropertyListener() {}
 

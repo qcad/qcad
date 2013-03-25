@@ -20,6 +20,8 @@
 #ifndef RLINKEDSTORAGE_H_
 #define RLINKEDSTORAGE_H_
 
+#include "core_global.h"
+
 #include <QSharedPointer>
 
 #include "RMemoryStorage.h"
@@ -34,7 +36,7 @@
  * \ingroup core
  * \scriptable
  */
-class RLinkedStorage: public RMemoryStorage {
+class QCADCORE_EXPORT RLinkedStorage: public RMemoryStorage {
 public:
     RLinkedStorage(RStorage& backStorage);
     virtual ~RLinkedStorage();

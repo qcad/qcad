@@ -20,6 +20,8 @@
 #ifndef RSHORTCUTLINEEDIT_H_
 #define RSHORTCUTLINEEDIT_H_
 
+#include "gui_global.h"
+
 #include <QMetaType>
 #include <QEvent>
 #include <QLineEdit>
@@ -28,7 +30,7 @@
 /**
  * \scriptable
  */
-class /*QDESIGNER_WIDGET_EXPORT*/RShortcutLineEdit: public QLineEdit {
+class QCADGUI_EXPORT RShortcutLineEdit: public QLineEdit {
 
 Q_OBJECT
 

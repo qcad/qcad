@@ -20,6 +20,8 @@
 #ifndef RTRANSLATION_H
 #define RTRANSLATION_H
 
+#include "operations_global.h"
+
 #include "RTransformation.h"
 #include "RVector.h"
 
@@ -29,7 +31,7 @@
  * \ingroup operations
  * \scriptable
  */
-class RTranslation : public RTransformation {
+class QCADOPERATIONS_EXPORT RTranslation : public RTransformation {
 public:
     RTranslation(const RVector& offset) : offset(offset) {}
 

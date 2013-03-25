@@ -20,6 +20,8 @@
 #ifndef RMATH_H
 #define RMATH_H
 
+#include "../core_global.h"
+
 #include <QMetaType>
 
 #include <cstdio>
@@ -83,7 +85,7 @@
  * \ingroup math
  * \scriptable
  */
-class RMath {
+class QCADCORE_EXPORT RMath {
 public:
     static void init() {
     }

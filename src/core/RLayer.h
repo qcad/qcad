@@ -20,6 +20,8 @@
 #ifndef RLAYER_H
 #define RLAYER_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QColor>
 #include <QDebug>
@@ -42,7 +44,7 @@ class RDocument;
  * \scriptable
  * \sharedPointerSupport
  */
-class RLayer: public RObject {
+class QCADCORE_EXPORT RLayer: public RObject {
 public:
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyFrozen;
@@ -128,7 +130,7 @@ private:
     RLineweight::Lineweight lineweight;
 };
 
-QDebug operator<<(QDebug dbg, const RLayer& l);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RLayer& l);
 
 Q_DECLARE_METATYPE(QSharedPointer<RLayer>)
 Q_DECLARE_METATYPE(QSharedPointer<RLayer>*)

@@ -20,6 +20,8 @@
 #ifndef RS_H
 #define RS_H
 
+#include "core_global.h"
+
 #include <QPair>
 #include <QString>
 #include <QStringList>
@@ -53,7 +55,7 @@ class RPropertyAttributes;
  * \ingroup core
  * \scriptable
  */
-class RS {
+class QCADCORE_EXPORT RS {
 public:
 
     /**

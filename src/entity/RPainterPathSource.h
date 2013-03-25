@@ -20,6 +20,8 @@
 #ifndef RPAINTERPATHSOURCE_H
 #define RPAINTERPATHSOURCE_H
 
+#include "entity_global.h"
+
 #include <QList>
 
 #include "RPainterPath.h"
@@ -31,7 +33,7 @@
  * \scriptable
  * \sharedPointerSupport
  */
-class RPainterPathSource {
+class QCADENTITY_EXPORT RPainterPathSource {
 public:
     virtual ~RPainterPathSource() {}
     virtual QList<RPainterPath> getPainterPaths(bool draft = false) const = 0;

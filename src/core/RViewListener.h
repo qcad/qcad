@@ -20,6 +20,8 @@
 #ifndef RVIEWLISTENER_H
 #define RVIEWLISTENER_H
 
+#include "core_global.h"
+
 class RDocumentInterface;
 
 
@@ -32,7 +34,7 @@ class RDocumentInterface;
  * \ingroup core
  * \scriptable
  */
-class RViewListener {
+class QCADCORE_EXPORT RViewListener {
 public:
     virtual ~RViewListener() {}
 

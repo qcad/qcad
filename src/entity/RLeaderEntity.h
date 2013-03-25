@@ -20,6 +20,8 @@
 #ifndef RLEADERENTITY_H
 #define RLEADERENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RLeaderData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RLeaderEntity: public REntity {
+class QCADENTITY_EXPORT RLeaderEntity: public REntity {
     Q_DECLARE_TR_FUNCTIONS(RLeaderEntity)
 
 public:

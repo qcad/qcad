@@ -20,6 +20,8 @@
 #ifndef RPOINTENTITY_H
 #define RPOINTENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RPointData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RPointEntity: public REntity {
+class QCADENTITY_EXPORT RPointEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

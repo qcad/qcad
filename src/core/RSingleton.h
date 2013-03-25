@@ -20,6 +20,8 @@
 #ifndef RSINGLETON_H_
 #define RSINGLETON_H_
 
+#include "core_global.h"
+
 #include <QApplication>
 #include <QObject>
 #include <QMap>
@@ -30,7 +32,7 @@
 /**
  * \ingroup core
  */
-class RSingleton {
+class QCADCORE_EXPORT RSingleton {
 public:
     virtual ~RSingleton() {
     }

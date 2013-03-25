@@ -20,6 +20,8 @@
 #ifndef RGRAPHICSVIEWGL_H
 #define RGRAPHICSVIEWGL_H
 
+#include "gui_global.h"
+
 #include <QGLWidget>
 
 #include "RGraphicsView.h"
@@ -43,7 +45,7 @@ class RLine;
  *
  * \scriptable
  */
-class RGraphicsViewGl : public QGLWidget, public RGraphicsView {
+class QCADGUI_EXPORT RGraphicsViewGl : public QGLWidget, public RGraphicsView {
     Q_OBJECT
 
 public:

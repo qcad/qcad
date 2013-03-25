@@ -26,6 +26,8 @@
 #ifndef DL_WRITER_H
 #define DL_WRITER_H
 
+#include "dl_global.h"
+
 #ifndef _WIN32
 #include <strings.h>
 #endif
@@ -52,7 +54,7 @@
  *
  * @todo Add error checking for string/entry length.
  */
-class DL_Writer {
+class DXFLIB_EXPORT DL_Writer {
 public:
     /**
      * @para version DXF version. Defaults to DL_VERSION_2002.

@@ -35,7 +35,7 @@
 
 #if !defined(MY_ZCALLOC)
 /* have zlib use oncalloc() and onfree() for memory managment*/
-#define MY_ZCALLOC
+//#define MY_ZCALLOC
 #endif
 
 #include "./zlib/zlib.h"

@@ -20,6 +20,8 @@
 #ifndef RSETTINGS_H
 #define RSETTINGS_H
 
+#include "core_global.h"
+
 #include <QColor>
 #include <QSettings>
 #include <QFont>
@@ -39,7 +41,7 @@
  * \ingroup core
  * \scriptable
  */
-class RSettings {
+class QCADCORE_EXPORT RSettings {
 public:
     static void uninit();
 

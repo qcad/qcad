@@ -20,6 +20,8 @@
 #ifndef RPATTERNLIST_H
 #define RPATTERNLIST_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QMap>
 #include <QPair>
@@ -33,7 +35,7 @@
  * \ingroup core
  * \scriptable
  */
-class RPatternList {
+class QCADCORE_EXPORT RPatternList {
 public:
     static void init(bool metric, RResourceList<RPattern>& res);
 };

@@ -17,13 +17,13 @@
  * along with QCAD.
  */
 #include <iostream>
-#ifdef _MSC_VER
-extern "C" {
-#include "getopt_long.h"
-}
-#else
-#include <getopt.h>
-#endif
+//#ifdef _MSC_VER
+//extern "C" {
+//#include "getopt_long.h"
+//}
+//#else
+//#include <getopt.h>
+//#endif
 
 #include <QDomNode>
 #include <QFile>
@@ -376,7 +376,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("serialize", engine->newFunction(ecmaSerialize));
     //globalObject.setProperty("blockEvents", engine->newFunction(ecmaBlockEvents));
     //globalObject.setProperty("unblockEvents", engine->newFunction(ecmaUnblockEvents));
-    globalObject.setProperty("getOpt", engine->newFunction(ecmaGetOpt));
+    //globalObject.setProperty("getOpt", engine->newFunction(ecmaGetOpt));
     globalObject.setProperty("addApplicationFont", engine->newFunction(ecmaAddApplicationFont));
     globalObject.setProperty("download", engine->newFunction(ecmaDownload));
     globalObject.setProperty("qApp", engine->newQObject(dynamic_cast<RSingleApplication*>(qApp)));
@@ -1837,6 +1837,7 @@ QScriptValue RScriptHandlerEcma::ecmaQSortFilterProxyModelCastToQAbstractItemMod
 //    return engine->toScriptValue(ret);
 //}
 
+/*
 QScriptValue RScriptHandlerEcma::ecmaGetOpt(QScriptContext* context,
         QScriptEngine* engine) {
 
@@ -1926,6 +1927,7 @@ QScriptValue RScriptHandlerEcma::ecmaGetOpt(QScriptContext* context,
 
     return REcmaHelper::toScriptValue(engine, map);
 }
+*/
 
 QScriptValue RScriptHandlerEcma::ecmaBlockEvents(QScriptContext* context,
         QScriptEngine* engine) {

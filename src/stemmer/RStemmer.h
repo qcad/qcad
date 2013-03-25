@@ -20,6 +20,8 @@
 #ifndef RSTEMMER_H
 #define RSTEMMER_H
 
+#include "stemmer_global.h"
+
 #include <QMetaType>
 #include <QString>
 
@@ -31,7 +33,7 @@
  * \ingroup stemmer
  * \scriptable
  */
-class RStemmer {
+class QCADSTEMMER_EXPORT RStemmer {
 public:
     static QString stem(const QString& word, const QString& locale);
 };

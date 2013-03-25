@@ -20,6 +20,8 @@
 #ifndef RSTORAGE_H
 #define RSTORAGE_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QSharedPointer>
 
@@ -47,7 +49,7 @@
  * \ingroup core
  * \scriptable
  */
-class RStorage : RNonCopyable, public RRequireHeap {
+class QCADCORE_EXPORT RStorage : RNonCopyable, public RRequireHeap {
 public:
     RStorage();
     virtual ~RStorage() { }

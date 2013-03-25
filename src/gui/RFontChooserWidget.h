@@ -20,6 +20,8 @@
 #ifndef _RFONTCHOOSERWIDGET_H_
 #define _RFONTCHOOSERWIDGET_H_
 
+#include "gui_global.h"
+
 #include <QComboBox>
 #include <QFont>
 #include <QFontComboBox>
@@ -29,7 +31,7 @@ class QLabel;
 /**
  * \scriptable
  */
-class RFontChooserWidget: public QWidget {
+class QCADGUI_EXPORT RFontChooserWidget: public QWidget {
 
 Q_OBJECT
 Q_PROPERTY(QString label READ getLabel WRITE setLabel);

@@ -35,7 +35,7 @@ TEMPLATE = lib
 CONFIG += \
     designer \
     plugin
-LIBS += -L$$PWD/$$ROUTDIR -lqcadgui
+LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadgui
 TARGET = qcadcustomwidgets
 DESTDIR = ../../plugins/designer
 OTHER_FILES += customwidgets.dox

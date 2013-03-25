@@ -20,6 +20,8 @@
 #ifndef RCOORDINATEEVENT_H
 #define RCOORDINATEEVENT_H
 
+#include "core_global.h"
+
 #include "RInputEvent.h"
 #include "RVector.h"
 
@@ -32,7 +34,7 @@ class RGraphicsScene;
  * \ingroup core
  * \scriptable
  */
-class RCoordinateEvent : public RInputEvent {
+class QCADCORE_EXPORT RCoordinateEvent : public RInputEvent {
 public:
     /**
      * \param position Absolute model coordinate.

@@ -20,6 +20,8 @@
 #ifndef RSNAPGRID_H
 #define RSNAPGRID_H
 
+#include "snap_global.h"
+
 #include "RSnap.h"
 
 class RGraphicsView;
@@ -32,7 +34,7 @@ class RMouseEvent;
  *
  * \ingroup snap
  */
-class RSnapGrid : public RSnap {
+class QCADSNAP_EXPORT RSnapGrid : public RSnap {
 public:
     virtual ~RSnapGrid() {}
 

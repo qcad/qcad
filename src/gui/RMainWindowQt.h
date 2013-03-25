@@ -20,9 +20,12 @@
 #ifndef RMAINWINDOWQT_H
 #define RMAINWINDOWQT_H
 
+#include "gui_global.h"
+
 #include <QMainWindow>
 #include <QKeyEvent>
 
+#include "RCloseCurrentEvent.h"
 #include "RMainWindow.h"
 
 class QMdiArea;
@@ -51,7 +54,7 @@ class RViewListener;
  *
  * \scriptable
  */
-class RMainWindowQt: public QMainWindow, public RMainWindow {
+class QCADGUI_EXPORT RMainWindowQt: public QMainWindow, public RMainWindow {
 Q_OBJECT
 
 public:

@@ -20,6 +20,8 @@
 #ifndef RFILEEXPORTER_H
 #define RFILEEXPORTER_H
 
+#include "core_global.h"
+
 #include <QString>
 
 #include "RDocument.h"
@@ -37,7 +39,7 @@ class RProgressHandler;
  * \ingroup core
  * \scriptable
  */
-class RFileExporter : public RExporter {
+class QCADCORE_EXPORT RFileExporter : public RExporter {
 public:
     RFileExporter();
     RFileExporter(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);

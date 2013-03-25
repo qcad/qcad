@@ -20,6 +20,8 @@
 #ifndef RORTHOGRID_H
 #define RORTHOGRID_H
 
+#include "grid_global.h"
+
 #include "RGrid.h"
 
 class RGraphicsView;
@@ -35,7 +37,7 @@ class RRuler;
  * \scriptable
  * \ingroup grids
  */
-class ROrthoGrid : public RGrid {
+class QCADGRID_EXPORT ROrthoGrid : public RGrid {
 public:
     ROrthoGrid(RGraphicsView& view);
     virtual ~ROrthoGrid();

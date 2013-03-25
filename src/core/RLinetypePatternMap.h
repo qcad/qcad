@@ -20,6 +20,8 @@
 #ifndef RLINETYPEPATTERNMAP_H
 #define RLINETYPEPATTERNMAP_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QMap>
 
@@ -32,7 +34,7 @@
  *
  * \scriptable
  */
-class RLinetypePatternMap: public QMap<QString, RLinetypePattern> {
+class QCADCORE_EXPORT RLinetypePatternMap: public QMap<QString, RLinetypePattern> {
 public:
     RLinetypePatternMap();
     static RLinetypePattern getPattern(const QString& name);

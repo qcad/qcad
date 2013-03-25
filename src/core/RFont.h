@@ -20,6 +20,8 @@
 #ifndef RFONT_H
 #define RFONT_H
 
+#include "core_global.h"
+
 #include <QMetaType>
 #include <QChar>
 #include <QMap>
@@ -34,7 +36,7 @@
  * \ingroup core
  * \scriptable
  */
-class RFont {
+class QCADCORE_EXPORT RFont {
 public:
     RFont();
     RFont(const QString& fileName);

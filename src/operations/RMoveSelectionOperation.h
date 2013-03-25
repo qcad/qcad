@@ -20,6 +20,8 @@
 #ifndef RMOVESELECTIONOPERATION_H
 #define RMOVESELECTIONOPERATION_H
 
+#include "operations_global.h"
+
 #include "RDocument.h"
 #include "REntity.h"
 #include "RExporter.h"
@@ -34,7 +36,7 @@
  * \ingroup operations
  * \scriptable
  */
-class RMoveSelectionOperation : public ROperation {
+class QCADOPERATIONS_EXPORT RMoveSelectionOperation : public ROperation {
 public:
     RMoveSelectionOperation(
         const RVector& referencePoint, const RVector& targetPoint

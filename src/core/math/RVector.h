@@ -20,6 +20,8 @@
 #ifndef RVECTOR_H
 #define RVECTOR_H
 
+#include "../core_global.h"
+
 #include <QDebug>
 #include <QList>
 #include <QMetaType>
@@ -41,7 +43,7 @@ class RPolyline;
  * \scriptable
  * \copyable
  */
-class RVector {
+class QCADCORE_EXPORT RVector {
 public:
     /**
      * Constructor for a valid vector (0/0/0).
@@ -250,19 +252,19 @@ public:
     static const RVector nullVector;
 };
 
-RVector operator*(double s, const RVector& v);
+QCADCORE_EXPORT RVector operator*(double s, const RVector& v);
 
-QDebug operator<<(QDebug dbg, const RVector& v);
-
-/**
- *\nonscriptable
- */
-QDataStream& operator<<(QDataStream& stream, const RVector& vector);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RVector& v);
 
 /**
  *\nonscriptable
  */
-QDataStream& operator>>(QDataStream& stream, RVector& vector);
+QCADCORE_EXPORT QDataStream& operator<<(QDataStream& stream, const RVector& vector);
+
+/**
+ *\nonscriptable
+ */
+QCADCORE_EXPORT QDataStream& operator>>(QDataStream& stream, RVector& vector);
 
 
 Q_DECLARE_METATYPE(QList<RVector>)

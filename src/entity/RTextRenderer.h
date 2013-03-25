@@ -20,6 +20,8 @@
 #ifndef RTEXTRENDERER_H
 #define RTEXTRENDERER_H
 
+#include "entity_global.h"
+
 #include <QTextLayout>
 
 #include "RDocument.h"
@@ -37,7 +39,7 @@ class QTextDocument;
  * \scriptable
  * \ingroup entity
  */
-class RTextRenderer {
+class QCADENTITY_EXPORT RTextRenderer {
 public:
     enum Target {
         PainterPaths = 0x01,

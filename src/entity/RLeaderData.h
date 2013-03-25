@@ -20,6 +20,8 @@
 #ifndef RLEADERDATA_H
 #define RLEADERDATA_H
 
+#include "entity_global.h"
+
 #include "RDocument.h"
 #include "RDimLinearData.h"
 #include "RVector.h"
@@ -31,7 +33,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RLeaderData: public REntityData, protected RPolyline {
+class QCADENTITY_EXPORT RLeaderData: public REntityData, protected RPolyline {
     friend class RLeaderEntity;
 
 protected:

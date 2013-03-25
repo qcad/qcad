@@ -20,13 +20,15 @@
 #ifndef RDOCKWIDGET_H_
 #define RDOCKWIDGET_H_
 
+#include "gui_global.h"
+
 #include <QMetaType>
 #include <QDockWidget>
 
 /**
  * \scriptable
  */
-class RDockWidget: public QDockWidget {
+class QCADGUI_EXPORT RDockWidget: public QDockWidget {
 
 Q_OBJECT
 

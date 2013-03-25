@@ -20,6 +20,8 @@
 #ifndef RPATTERN_H
 #define RPATTERN_H
 
+#include "core_global.h"
+
 #include <QChar>
 #include <QMap>
 #include <QPainterPath>
@@ -38,7 +40,7 @@
  * \scriptable
  * \hasStreamOperator
  */
-class RPattern {
+class QCADCORE_EXPORT RPattern {
 public:
     static QList<QPair<QString, RPattern*> > loadAllFrom(const QString& fileName);
 
@@ -90,7 +92,7 @@ private:
     QList<RPatternLine> patternLines;
 };
 
-QDebug operator<<(QDebug dbg, const RPattern& p);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RPattern& p);
 
 Q_DECLARE_METATYPE(RPattern)
 Q_DECLARE_METATYPE(RPattern*)

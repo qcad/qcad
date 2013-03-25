@@ -25,6 +25,8 @@
 #ifndef DL_DXF_H
 #define DL_DXF_H
 
+#include "dl_global.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
@@ -109,7 +111,7 @@ class DL_WriterA;
  *
  * @author Andrew Mustun
  */
-class DL_Dxf {
+class DXFLIB_EXPORT DL_Dxf {
 public:
     DL_Dxf();
     ~DL_Dxf();

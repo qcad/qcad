@@ -20,11 +20,13 @@
 #ifndef RRUNNER_H_
 #define RRUNNER_H_
 
+#include "core_global.h"
+
 /**
  * \scriptable
  * \generateScriptShell
  */
-class RRunner {
+class QCADCORE_EXPORT RRunner {
     friend class RThread;
 protected:
     /**

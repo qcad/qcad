@@ -20,6 +20,8 @@
 #ifndef RDimAngularDataDATA_H
 #define RDimAngularDataDATA_H
 
+#include "entity_global.h"
+
 #include "RArc.h"
 #include "RDocument.h"
 #include "RDimensionData.h"
@@ -32,7 +34,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RDimAngularData: public RDimensionData {
+class QCADENTITY_EXPORT RDimAngularData: public RDimensionData {
     friend class RDimAngularEntity;
 
 protected:

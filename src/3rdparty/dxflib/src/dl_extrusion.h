@@ -25,6 +25,8 @@
 #ifndef DL_EXTRUSION_H
 #define DL_EXTRUSION_H
 
+#include "dl_global.h"
+
 #include <math.h>
 
 
@@ -34,7 +36,7 @@
  *
  * @author Andrew Mustun
  */
-class DL_Extrusion {
+class DXFLIB_EXPORT DL_Extrusion {
 
 public:
 

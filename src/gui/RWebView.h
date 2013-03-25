@@ -20,13 +20,15 @@
 #ifndef RWEBVIEW_H_
 #define RWEBVIEW_H_
 
+#include "gui_global.h"
+
 #include <QWebView>
 #include <QtDesigner/QDesignerExportWidget>
 
 /**
  * \scriptable
  */
-class /*QDESIGNER_WIDGET_EXPORT*/ RWebView: public QWebView {
+class QCADGUI_EXPORT RWebView: public QWebView {
 
 Q_OBJECT
 

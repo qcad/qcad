@@ -20,6 +20,8 @@
 #ifndef RSPATIALINDEX_H
 #define RSPATIALINDEX_H
 
+#include "core_global.h"
+
 #include <stdint.h>
 
 #include <QSet>
@@ -31,7 +33,7 @@
 #include "RRequireHeap.h"
 #include "RSpatialIndexVisitor.h"
 
-class RSpatialIndexDebugVisitor : public RSpatialIndexVisitor {
+class QCADCORE_EXPORT RSpatialIndexDebugVisitor : public RSpatialIndexVisitor {
 public:
     RSpatialIndexDebugVisitor(QDebug dbg) : dbg(dbg) {}
     virtual ~RSpatialIndexDebugVisitor() {}
@@ -63,7 +65,7 @@ public:
  * \ingroup core
  * \scriptable
  */
-class RSpatialIndex: public RRequireHeap {
+class QCADCORE_EXPORT RSpatialIndex: public RRequireHeap {
 public:
     RSpatialIndex() {
     }
@@ -207,7 +209,7 @@ protected:
     int idCounter;
 };
 
-QDebug operator<<(QDebug dbg, RSpatialIndex& si);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RSpatialIndex& si);
 
 Q_DECLARE_METATYPE(RSpatialIndex*)
 

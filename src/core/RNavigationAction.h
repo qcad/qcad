@@ -20,6 +20,8 @@
 #ifndef RNAVIGATIONACTION_H
 #define RNAVIGATIONACTION_H
 
+#include "core_global.h"
+
 #include "RActionAdapter.h"
 #include "RMouseEvent.h"
 #include "RGraphicsView.h"
@@ -29,7 +31,7 @@
  * \ingroup core
  * \scriptable
  */
-class RNavigationAction : public RActionAdapter {
+class QCADCORE_EXPORT RNavigationAction : public RActionAdapter {
 public:
     RNavigationAction(RGuiAction* guiAction=NULL);
 

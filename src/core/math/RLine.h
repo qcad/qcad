@@ -20,6 +20,8 @@
 #ifndef RLINE_H
 #define RLINE_H
 
+#include "../core_global.h"
+
 #include "RDirected.h"
 #include "RS.h"
 #include "RShape.h"
@@ -37,7 +39,7 @@ class RPolyline;
  * \copyable
  * \hasStreamOperator
  */
-class RLine: public RShape, public RDirected {
+class QCADCORE_EXPORT RLine: public RShape, public RDirected {
 public:
     RLine();
     RLine(const RVector& startPoint, const RVector& endPoint);

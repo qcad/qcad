@@ -20,9 +20,11 @@
 #ifndef RDXFEXPORTER_H
 #define RDXFEXPORTER_H
 
-#include "RDxfServices.h"
+#include "dxf_global.h"
 
+#include "RArc.h"
 #include "RDocument.h"
+#include "RDxfServices.h"
 #include "RFileExporter.h"
 
 class RMessageHandler;
@@ -35,7 +37,7 @@ class RProgressHandler;
  * \ingroup dxf
  * \scriptable
  */
-class RDxfExporter: public RFileExporter {
+class QCADDXF_EXPORT RDxfExporter: public RFileExporter {
 public:
     RDxfExporter(RDocument& document,
         RMessageHandler* messageHandler = NULL,

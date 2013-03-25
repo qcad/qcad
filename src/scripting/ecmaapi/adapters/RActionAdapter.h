@@ -20,6 +20,7 @@
 #ifndef RACTIONADAPTER_H
 #define RACTIONADAPTER_H
 
+#include "core_global.h"
 #include "RAction.h"
 #include "RVector.h"
 #include "RDebug.h"
@@ -48,7 +49,7 @@ class RTabletEvent;
  * \scriptable
  * \generateScriptShell
  */
-class RActionAdapter : public RAction {
+class QCADCORE_EXPORT RActionAdapter : public RAction {
 public:
     RActionAdapter(RGuiAction* guiAction=NULL) : RAction(guiAction) {}
     virtual void beginEvent() {}

@@ -20,6 +20,8 @@
 #ifndef RMDICHILDQT_H
 #define RMDICHILDQT_H
 
+#include "gui_global.h"
+
 #include <QMdiSubWindow>
 
 #include "RDebug.h"
@@ -36,7 +38,7 @@ class RGraphicsViewQt;
  *
  * \scriptable
  */
-class RMdiChildQt: public QMdiSubWindow, public RModifiedListener {
+class QCADGUI_EXPORT RMdiChildQt: public QMdiSubWindow, public RModifiedListener {
 Q_OBJECT
 
 public:

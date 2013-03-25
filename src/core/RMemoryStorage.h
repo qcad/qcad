@@ -20,6 +20,8 @@
 #ifndef RMEMORYSTORAGE_H_
 #define RMEMORYSTORAGE_H_
 
+#include "core_global.h"
+
 #include <QSharedPointer>
 
 #include "RStorage.h"
@@ -31,7 +33,7 @@
  * \ingroup core
  * \scriptable
  */
-class RMemoryStorage: public RStorage {
+class QCADCORE_EXPORT RMemoryStorage: public RStorage {
 public:
     RMemoryStorage();
     virtual ~RMemoryStorage();

@@ -26,7 +26,9 @@
 
 #if !defined(MY_ZCALLOC)
 /* have zlib use oncalloc() and onfree() for memory managment*/
-#define MY_ZCALLOC
+// BEGIN - QCAD Modification
+//#define MY_ZCALLOC
+// END - QCAD Modification
 #endif
 /* END - OpenNURBS Modification */
 

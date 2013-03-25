@@ -20,6 +20,8 @@
 #ifndef RTRANSACTIONLISTENER_H
 #define RTRANSACTIONLISTENER_H
 
+#include "core_global.h"
+
 class RDocument;
 class REntity;
 
@@ -32,7 +34,7 @@ class REntity;
  * \ingroup core
  * \scriptable
  */
-class RTransactionListener {
+class QCADCORE_EXPORT RTransactionListener {
 public:
     virtual ~RTransactionListener() {}
 

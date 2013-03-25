@@ -20,6 +20,8 @@
 #ifndef RPATTERNLISTIMPERIAL_H
 #define RPATTERNLISTIMPERIAL_H
 
+#include "core_global.h"
+
 #include "RPatternList.h"
 
 /**
@@ -28,7 +30,7 @@
  * \ingroup core
  * \scriptable
  */
-class RPatternListImperial : public RPatternList {
+class QCADCORE_EXPORT RPatternListImperial : public RPatternList {
 public:
     static void init();
 

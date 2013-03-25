@@ -39,7 +39,6 @@
   #include <stdint.h>
 #endif
 
-/*
 #if defined _WIN32 || defined _WIN64 || defined WIN32 || defined WIN64
   #ifdef SPATIALINDEX_CREATE_DLL
     #define SIDX_DLL __declspec(dllexport)
@@ -47,9 +46,8 @@
     #define SIDX_DLL __declspec(dllimport)
   #endif
 #else
-*/
   #define SIDX_DLL
-//#endif
+#endif
 
 #include <assert.h>
 #include <iostream>

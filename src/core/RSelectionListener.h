@@ -20,6 +20,8 @@
 #ifndef RSELECTIONLISTENER_H
 #define RSELECTIONLISTENER_H
 
+#include "core_global.h"
+
 class RDocumentInterface;
 
 
@@ -31,7 +33,7 @@ class RDocumentInterface;
  * \ingroup core
  * \scriptable
  */
-class RSelectionListener {
+class QCADCORE_EXPORT RSelectionListener {
 public:
     virtual ~RSelectionListener() {}
 

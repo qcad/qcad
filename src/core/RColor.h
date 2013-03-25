@@ -20,6 +20,8 @@
 #ifndef RCOLOR_H_
 #define RCOLOR_H_
 
+#include "core_global.h"
+
 #include <QCoreApplication>
 #include <QObject>
 #include <QColor>
@@ -37,7 +39,7 @@
  * \scriptable
  * \copyable
  */
-class RColor: public QColor {
+class QCADCORE_EXPORT RColor: public QColor {
 
     Q_DECLARE_TR_FUNCTIONS(RColor);
 
@@ -129,7 +131,7 @@ QDataStream& operator<<(QDataStream& stream, const RColor& color);
  */
 QDataStream& operator>>(QDataStream& stream, RColor& color);
 
-QDebug operator<<(QDebug dbg, const RColor& c);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RColor& c);
 
 Q_DECLARE_METATYPE(RColor)
 Q_DECLARE_METATYPE(RColor*)

@@ -20,6 +20,8 @@
 #ifndef RTABLETEVENT_H
 #define RTABLETEVENT_H
 
+#include "core_global.h"
+
 #include <QTabletEvent>
 
 #include "RVector.h"
@@ -38,7 +40,7 @@ class RGraphicsView;
  * \ingroup core
  * \scriptable
  */
-class RTabletEvent: public QTabletEvent {
+class QCADCORE_EXPORT RTabletEvent: public QTabletEvent {
 public:
     /*
     RTabletEvent(

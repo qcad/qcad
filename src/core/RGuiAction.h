@@ -20,6 +20,8 @@
 #ifndef RGUIACTION_H
 #define RGUIACTION_H
 
+#include "core_global.h"
+
 #include <QMap>
 #include <QMetaType>
 #include <QString>
@@ -54,7 +56,7 @@ class RDocumentInterface;
  * 
  * \scriptable
  */
-class RGuiAction:
+class QCADCORE_EXPORT RGuiAction:
     public QAction,
     public RFocusListener,
     public RTransactionListener,

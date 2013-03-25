@@ -20,6 +20,8 @@
 #ifndef RPOINT_H
 #define RPOINT_H
 
+#include "../core_global.h"
+
 #include "RShape.h"
 #include "RVector.h"
 #include "RBox.h"
@@ -33,7 +35,7 @@
  * \copyable
  * \hasStreamOperator
  */
-class RPoint: public RShape {
+class QCADCORE_EXPORT RPoint: public RShape {
 public:
     RPoint();
     RPoint(const RVector& position);

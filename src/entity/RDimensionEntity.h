@@ -20,6 +20,8 @@
 #ifndef RDIMENSIONENTITY_H
 #define RDIMENSIONENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RDimensionData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RDimensionEntity: public REntity {
+class QCADENTITY_EXPORT RDimensionEntity: public REntity {
 
     Q_DECLARE_TR_FUNCTIONS(RDimensionEntity)
 

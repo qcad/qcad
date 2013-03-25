@@ -20,6 +20,8 @@
 #ifndef REVENTFILTER_H
 #define REVENTFILTER_H
 
+#include "gui_global.h"
+
 #include <QEvent>
 #include <QMetaType>
 #include <QObject>
@@ -27,7 +29,7 @@
 /**
  * \scriptable
  */
-class REventFilter : public QObject {
+class QCADGUI_EXPORT REventFilter : public QObject {
     Q_OBJECT
 
 public:

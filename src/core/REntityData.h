@@ -20,6 +20,8 @@
 #ifndef RENTITYDATA_H
 #define RENTITYDATA_H
 
+#include "core_global.h"
+
 #include <QList>
 #include <QStack>
 
@@ -54,7 +56,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup core
  */
-class REntityData {
+class QCADCORE_EXPORT REntityData {
 
     friend class REntity;
 

@@ -20,6 +20,8 @@
 #ifndef RDIMORDINATEENTITY_H
 #define RDIMORDINATEENTITY_H
 
+#include "entity_global.h"
+
 #include "RDimensionEntity.h"
 #include "RDimOrdinateData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RDimOrdinateEntity: public RDimensionEntity {
+class QCADENTITY_EXPORT RDimOrdinateEntity: public RDimensionEntity {
 
     Q_DECLARE_TR_FUNCTIONS(RDimOrdinateEntity)
 

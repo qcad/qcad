@@ -20,6 +20,8 @@
 #ifndef RIMPORTER_H
 #define RIMPORTER_H
 
+#include "core_global.h"
+
 #include "RTransaction.h"
 
 class RDocument;
@@ -40,7 +42,7 @@ class RProgressHandler;
  * \ingroup core
  * \scriptable
  */
-class RImporter {
+class QCADCORE_EXPORT RImporter {
 public:
     RImporter();
     RImporter(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);

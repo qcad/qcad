@@ -20,6 +20,8 @@
 #ifndef RDIMLINEARDATA_H
 #define RDIMLINEARDATA_H
 
+#include "entity_global.h"
+
 #include "RDocument.h"
 #include "RDimensionData.h"
 #include "RVector.h"
@@ -31,7 +33,7 @@
  * \abstract
  * \ingroup entity
  */
-class RDimLinearData: public RDimensionData {
+class QCADENTITY_EXPORT RDimLinearData: public RDimensionData {
     friend class RDimLinearEntity;
 
 protected:

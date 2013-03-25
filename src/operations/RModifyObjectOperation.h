@@ -20,6 +20,8 @@
 #ifndef RMODIFYOBJECTOPERATION_H_
 #define RMODIFYOBJECTOPERATION_H_
 
+#include "operations_global.h"
+
 #include "RAddObjectOperation.h"
 
 /**
@@ -28,13 +30,10 @@
  * \ingroup operations
  * \scriptable
  */
-class RModifyObjectOperation: public RAddObjectOperation {
+class QCADOPERATIONS_EXPORT RModifyObjectOperation: public RAddObjectOperation {
 public:
-    RModifyObjectOperation(QSharedPointer<RObject> object, bool undoable = true) :
-        RAddObjectOperation(object, false, undoable) {
-    }
-    virtual ~RModifyObjectOperation() {
-    }
+    RModifyObjectOperation(QSharedPointer<RObject> object, bool undoable = true);
+    virtual ~RModifyObjectOperation() {}
 };
 
 Q_DECLARE_METATYPE(RModifyObjectOperation*);

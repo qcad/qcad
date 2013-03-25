@@ -20,6 +20,8 @@
 #ifndef RDIMRADIALENTITY_H
 #define RDIMRADIALENTITY_H
 
+#include "entity_global.h"
+
 #include "RDimensionEntity.h"
 #include "RDimRadialData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RDimRadialEntity: public RDimensionEntity {
+class QCADENTITY_EXPORT RDimRadialEntity: public RDimensionEntity {
 
     Q_DECLARE_TR_FUNCTIONS(RDimRadialEntity)
 

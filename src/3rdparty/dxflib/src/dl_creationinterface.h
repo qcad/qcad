@@ -25,6 +25,8 @@
 #ifndef DL_CREATIONINTERFACE_H
 #define DL_CREATIONINTERFACE_H
 
+#include "dl_global.h"
+
 #include <string.h>
 
 #include "dl_attributes.h"
@@ -42,7 +44,7 @@
  *
  * @author Andrew Mustun
  */
-class DL_CreationInterface {
+class DXFLIB_EXPORT DL_CreationInterface {
 public:
     DL_CreationInterface() {
         extrusion = new DL_Extrusion;

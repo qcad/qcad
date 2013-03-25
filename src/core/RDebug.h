@@ -20,6 +20,8 @@
 #ifndef RDEBUG_H
 #define RDEBUG_H
 
+#include "core_global.h"
+
 #include <fstream>
 #include <ostream>
 #include <stdarg.h>
@@ -68,7 +70,7 @@
  * \ingroup core
  * \scriptable
  */
-class RDebug {
+class QCADCORE_EXPORT RDebug {
 public:
     static void printBacktrace(const QString& prefix = RDEFAULT_QString);
 

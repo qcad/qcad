@@ -20,6 +20,8 @@
 #ifndef RSNAPLISTENER_H
 #define RSNAPLISTENER_H
 
+#include "core_global.h"
+
 #include "RSnap.h"
 
 class RDocumentInterface;
@@ -34,7 +36,7 @@ class REntity;
  * \ingroup core
  * \scriptable
  */
-class RSnapListener {
+class QCADCORE_EXPORT RSnapListener {
 public:
     virtual ~RSnapListener() {}
 

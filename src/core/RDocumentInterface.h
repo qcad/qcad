@@ -20,6 +20,8 @@
 #ifndef RDOCUMENTINTERFACE_H
 #define RDOCUMENTINTERFACE_H
 
+#include "core_global.h"
+
 #include <QKeyEvent>
 #include <QList>
 #include <QMap>
@@ -77,7 +79,7 @@ class RWheelEvent;
  * \ingroup core
  * \scriptable
  */
-class RDocumentInterface {
+class QCADCORE_EXPORT RDocumentInterface {
 public:
     enum IoErrorCode {
         /**

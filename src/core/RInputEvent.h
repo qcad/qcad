@@ -20,6 +20,8 @@
 #ifndef RINPUTEVENT_H
 #define RINPUTEVENT_H
 
+#include "core_global.h"
+
 #include <QMouseEvent>
 
 #include "RVector.h"
@@ -36,7 +38,7 @@ class RGraphicsView;
  * \ingroup core
  * \scriptable
  */
-class RInputEvent {
+class QCADCORE_EXPORT RInputEvent {
 public:
     RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v);
     virtual ~RInputEvent();

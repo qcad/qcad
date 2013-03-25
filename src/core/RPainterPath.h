@@ -20,6 +20,8 @@
 #ifndef RPAINTERPATH_H
 #define RPAINTERPATH_H
 
+#include "core_global.h"
+
 #include <QPainterPath>
 #include <QPen>
 #include <QBrush>
@@ -39,7 +41,7 @@ class RSpline;
  * \scriptable
  * \copyable
  */
-class RPainterPath : public QPainterPath {
+class QCADCORE_EXPORT RPainterPath : public QPainterPath {
 
 public:
     enum Mode {
@@ -183,11 +185,11 @@ private:
     double pixelSizeHint;
 };
 
-QDebug operator<<(QDebug dbg, RPainterPath& p);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RPainterPath& p);
 
 //QDataStream& operator<< (QDataStream& stream, const RPainterPath& path);
 //QDataStream& operator>> (QDataStream& stream, RPainterPath& path);
-bool operator< (const RPainterPath& p1, const RPainterPath& p2);
+QCADCORE_EXPORT bool operator< (const RPainterPath& p1, const RPainterPath& p2);
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(RPainterPath::Modes)
 Q_DECLARE_METATYPE(RPainterPath)

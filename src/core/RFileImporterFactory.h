@@ -20,6 +20,8 @@
 #ifndef RFILEIMPORTERFACTORY_H
 #define RFILEIMPORTERFACTORY_H
 
+#include "core_global.h"
+
 class RDocument;
 class RFileImporter;
 class RMessageHandler;
@@ -36,7 +38,7 @@ class RProgressHandler;
  * \ingroup core
  * \scriptable
  */
-class RFileImporterFactory {
+class QCADCORE_EXPORT RFileImporterFactory {
 public:
     virtual QStringList getFilterStrings() = 0;
     virtual bool canImport(const QString& fileName, const QString& nameFilter = "") = 0;

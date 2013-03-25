@@ -20,6 +20,8 @@
 #ifndef RVIEW_H
 #define RVIEW_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QColor>
 #include <QDebug>
@@ -37,7 +39,7 @@ class RDocument;
  * \scriptable
  * \sharedPointerSupport
  */
-class RView: public RObject {
+class QCADCORE_EXPORT RView: public RObject {
 public:
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyCenterPoint;
@@ -108,7 +110,7 @@ private:
     double height;
 };
 
-QDebug operator<<(QDebug dbg, const RView& v);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RView& v);
 
 Q_DECLARE_METATYPE(QSharedPointer<RView>)
 Q_DECLARE_METATYPE(QSharedPointer<RView>*)

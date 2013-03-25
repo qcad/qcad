@@ -20,6 +20,8 @@
 #ifndef RDIMALIGNEDDATA_H
 #define RDIMALIGNEDDATA_H
 
+#include "entity_global.h"
+
 #include "RDocument.h"
 #include "RDimLinearData.h"
 #include "RVector.h"
@@ -30,7 +32,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RDimAlignedData: public RDimLinearData {
+class QCADENTITY_EXPORT RDimAlignedData: public RDimLinearData {
     friend class RDimAlignedEntity;
 
 protected:

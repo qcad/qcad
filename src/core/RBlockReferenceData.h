@@ -20,6 +20,8 @@
 #ifndef RBLOCKREFERENCEDATA_H
 #define RBLOCKREFERENCEDATA_H
 
+#include "core_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -30,7 +32,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RBlockReferenceData: public REntityData {
+class QCADCORE_EXPORT RBlockReferenceData: public REntityData {
 
 friend class RBlockReferenceEntity;
 

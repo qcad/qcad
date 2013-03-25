@@ -108,6 +108,23 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
     return *this;
 }
 
+bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
+    if (num!=other.num) {
+        return false;
+    }
+
+    for (int i = 0; i < num; ++i) {
+        if (pattern[i] != other.pattern[i]) {
+            return false;
+        }
+        if (symmetrical[i] != other.symmetrical[i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 void RLinetypePattern::scale(double factor) {
     for (int i = 0; i < num; ++i) {
         pattern[i] *= factor;

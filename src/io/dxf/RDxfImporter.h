@@ -20,6 +20,8 @@
 #ifndef RDXFIMPORTER_H
 #define RDXFIMPORTER_H
 
+#include "dxf_global.h"
+
 #include "dxflib/src/dl_creationadapter.h"
 
 #include "RDimensionEntity.h"
@@ -41,7 +43,7 @@ class RVector;
 /**
  * Represents a text style.
  */
-class RDxfTextStyle {
+class QCADDXF_EXPORT RDxfTextStyle {
 public:
     RDxfTextStyle() : bold(false), italic(false) {}
 
@@ -57,7 +59,7 @@ public:
  * \ingroup qcadiodxf
  * \scriptable
  */
-class RDxfImporter : public RFileImporter, public DL_CreationAdapter {
+class QCADDXF_EXPORT RDxfImporter : public RFileImporter, public DL_CreationAdapter {
 public:
     RDxfImporter(RDocument& document,
         RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);

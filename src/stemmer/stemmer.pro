@@ -10,3 +10,4 @@ CONFIG += plugin
 TARGET = qcadstemmer
 LIBS += -L$$PWD/$$ROUTDIR -lstemmer
 OTHER_FILES += stemmer.dox
+DEFINES += QCADSTEMMER_LIBRARY

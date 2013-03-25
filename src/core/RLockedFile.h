@@ -20,12 +20,14 @@
 #ifndef RLOCKEDFILE_H
 #define RLOCKEDFILE_H
 
+#include "core_global.h"
+
 #include <QtCore/QFile>
 #ifdef Q_OS_WIN
 #include <QtCore/QVector>
 #endif
 
-class RLockedFile : public QFile
+class QCADCORE_EXPORT RLockedFile : public QFile
 {
 public:
     enum LockMode { NoLock = 0, ReadLock, WriteLock };

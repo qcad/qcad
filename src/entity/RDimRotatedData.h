@@ -20,6 +20,8 @@
 #ifndef RDIMROTATEDDATA_H
 #define RDIMROTATEDDATA_H
 
+#include "entity_global.h"
+
 #include "RDocument.h"
 #include "RDimLinearData.h"
 #include "RVector.h"
@@ -30,7 +32,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RDimRotatedData: public RDimLinearData {
+class QCADENTITY_EXPORT RDimRotatedData: public RDimLinearData {
     friend class RDimRotatedEntity;
 
 protected:

@@ -22,7 +22,6 @@
 
 #include <RSingleApplication.h>
 
-#include "RCloseCurrentEvent.h"
 #include "RDebug.h"
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"

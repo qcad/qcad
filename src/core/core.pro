@@ -58,7 +58,6 @@ SOURCES += \
     RScriptAction.cpp \
     RScriptHandler.cpp \
     RScriptHandlerRegistry.cpp \
-    RSelectionListenerAdapter.cpp \
     RSettings.cpp \
     RSingleApplication.cpp \
     RSingleton.cpp \
@@ -98,19 +97,15 @@ else {
 
 HEADERS = \
     RAction.h \
-    RActionAdapter.h \
     RBlock.h \
     RBlockListener.h \
-    RBlockListenerAdapter.h \
     RBlockReferenceData.h \
     RBlockReferenceEntity.h \
-    RCloseCurrentEvent.h \
     RColor.h \
     RColorCodes.h \
     RCommandEvent.h \
     RCoordinateEvent.h \
     RCoordinateListener.h \
-    RCoordinateListenerAdapter.h \
     RDebug.h \
     RDocument.h \
     RDocumentInterface.h \
@@ -120,17 +115,12 @@ HEADERS = \
     RExporter.h \
     RFileCache.h \
     RFileExporter.h \
-    RFileExporterAdapter.h \
     RFileExporterFactory.h \
-    RFileExporterFactoryAdapter.h \
     RFileExporterRegistry.h \
     RFileImporter.h \
-    RFileImporterAdapter.h \
     RFileImporterFactory.h \
-    RFileImporterFactoryAdapter.h \
     RFileImporterRegistry.h \
     RFocusListener.h \
-    RFocusListenerAdapter.h \
     RFont.h \
     RFontList.h \
     RGlobal.h \
@@ -142,7 +132,6 @@ HEADERS = \
     RInputEvent.h \
     RLayer.h \
     RLayerListener.h \
-    RLayerListenerAdapter.h \
     RLinetype.h \
     RLinetypePattern.h \
     RLinetypePatternMap.h \
@@ -172,7 +161,6 @@ HEADERS = \
     RPatternListImperial.h \
     RPatternListMetric.h \
     RPenListener.h \
-    RPenListenerAdapter.h \
     RPluginInterface.h \
     RPluginLoader.h \
     RPluginInfo.h \
@@ -193,7 +181,6 @@ HEADERS = \
     RScriptHandlerRegistry.h \
     RSelectionChangedEvent.h \
     RSelectionListener.h \
-    RSelectionListenerAdapter.h \
     RSettings.h \
     RSingleApplication.h \
     RSingleton.h \
@@ -202,9 +189,7 @@ HEADERS = \
     RSpatialIndex.h \
     RSpatialIndexSimple.h \
     RSpatialIndexVisitor.h \
-    RSpatialIndexVisitorAdapter.h \
     RStorage.h \
-    RStreamOperators.h \
     RTabletEvent.h \
     RTerminateEvent.h \
     RThread.h \
@@ -218,9 +203,7 @@ HEADERS = \
     RVersion.h \
     RView.h \
     RViewFocusListener.h \
-    RViewFocusListenerAdapter.h \
     RViewListener.h \
-    RViewListenerAdapter.h \
     RWheelEvent.h \
     math/RArc.h \
     math/RBox.h \
@@ -239,11 +222,11 @@ HEADERS = \
     math/RTriangle.h \
     math/RVector.h
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 TARGET = qcadcore
 RESOURCES = resources/core.qrc
 OTHER_FILES += core.dox
+DEFINES += QCADCORE_LIBRARY
 
 LIBS += -L$$PWD/$$ROUTDIR -lopennurbs
 

@@ -20,13 +20,15 @@
 #ifndef RCOMMANDEVENT_H
 #define RCOMMANDEVENT_H
 
+#include "core_global.h"
+
 /**
  * Command Event.
  *
  * \ingroup core
  * \scriptable
  */
-class RCommandEvent {
+class QCADCORE_EXPORT RCommandEvent {
 public:
     /**
      * Creates a new command event that is not yet accepted.

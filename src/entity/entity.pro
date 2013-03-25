@@ -86,10 +86,10 @@ HEADERS = \
     RTextRenderer.h
 
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 TARGET = qcadentity
 OTHER_FILES += entity.dox
+DEFINES += QCADENTITY_LIBRARY
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lopennurbs
 !win32 {
     include( ../../shared_ts.pri )

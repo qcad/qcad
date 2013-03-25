@@ -20,6 +20,8 @@
 #ifndef RPOLYLINEENTITY_H
 #define RPOLYLINEENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RPolylineData.h"
 
@@ -35,7 +37,7 @@ class RLine;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RPolylineEntity: public REntity {
+class QCADENTITY_EXPORT RPolylineEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

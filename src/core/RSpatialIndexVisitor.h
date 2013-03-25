@@ -20,6 +20,8 @@
 #ifndef RSPATIALINDEXVISITOR_H
 #define RSPATIALINDEXVISITOR_H
 
+#include "core_global.h"
+
 #include <stdint.h>
 
 
@@ -30,7 +32,7 @@
  * \scriptable
  * \ingroup core
  */
-class RSpatialIndexVisitor {
+class QCADCORE_EXPORT RSpatialIndexVisitor {
 public:
     virtual ~RSpatialIndexVisitor() {}
     /**

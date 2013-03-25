@@ -20,6 +20,8 @@
 #ifndef RLINEWEIGHT_H_
 #define RLINEWEIGHT_H_
 
+#include "core_global.h"
+
 #include <QCoreApplication>
 #include <QMetaType>
 #include <QString>
@@ -32,7 +34,7 @@
  * \scriptable
  * \copyable
  */
-class RLineweight {
+class QCADCORE_EXPORT RLineweight {
 
     Q_DECLARE_TR_FUNCTIONS(RLineweight);
 

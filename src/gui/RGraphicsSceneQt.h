@@ -20,6 +20,8 @@
 #ifndef RGRAPHICSSCENEQT_H
 #define RGRAPHICSSCENEQT_H
 
+#include "gui_global.h"
+
 #include <QPen>
 #include <QList>
 #include <QMultiMap>
@@ -48,7 +50,7 @@ class RGraphicsViewImage;
  * \ingroup qcadguiqt
  * \scriptable
  */
-class RGraphicsSceneQt : public RGraphicsScene {
+class QCADGUI_EXPORT RGraphicsSceneQt : public RGraphicsScene {
 public:
     RGraphicsSceneQt(RDocumentInterface& documentInterface);
     virtual ~RGraphicsSceneQt();

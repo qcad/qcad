@@ -20,6 +20,8 @@
 #ifndef RDIMORDINATEDATA_H
 #define RDIMORDINATEDATA_H
 
+#include "entity_global.h"
+
 #include "RDocument.h"
 #include "RDimLinearData.h"
 #include "RVector.h"
@@ -30,7 +32,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RDimOrdinateData: public RDimensionData {
+class QCADENTITY_EXPORT RDimOrdinateData: public RDimensionData {
     friend class RDimOrdinateEntity;
 
 protected:

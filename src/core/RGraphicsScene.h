@@ -20,6 +20,8 @@
 #ifndef RGRAPHICSSCENE_H
 #define RGRAPHICSSCENE_H
 
+#include "core_global.h"
+
 #include <QCursor>
 #include <QDebug>
 
@@ -55,7 +57,7 @@ class RDocumentInterface;
  * \ingroup core
  * \scriptable
  */
-class RGraphicsScene : public RExporter {
+class QCADCORE_EXPORT RGraphicsScene : public RExporter {
 public:
     RGraphicsScene(RDocumentInterface& documentInterface);
     virtual ~RGraphicsScene();

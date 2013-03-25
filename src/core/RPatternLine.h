@@ -20,6 +20,8 @@
 #ifndef RPATTERNLINE_H
 #define RPATTERNLINE_H
 
+#include "core_global.h"
+
 #include "RLine.h"
 #include "RPainterPath.h"
 #include "RVector.h"
@@ -32,7 +34,7 @@
  * \scriptable
  * \hasStreamOperator
  */
-class RPatternLine {
+class QCADCORE_EXPORT RPatternLine {
 public:
     double angle;
     RVector offset;
@@ -46,7 +48,7 @@ public:
     void rotate(double a);
 };
 
-QDebug operator<<(QDebug dbg, const RPatternLine& p);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RPatternLine& p);
 
 Q_DECLARE_METATYPE(RPatternLine)
 Q_DECLARE_METATYPE(RPatternLine*)

@@ -20,13 +20,15 @@
 #ifndef RTEXTEDIT_H_
 #define RTEXTEDIT_H_
 
+#include "gui_global.h"
+
 #include <QTextEdit>
 #include <QtDesigner/QDesignerExportWidget>
 
 /**
  * \scriptable
  */
-class /*QDESIGNER_WIDGET_EXPORT*/ RTextEdit: public QTextEdit {
+class QCADGUI_EXPORT RTextEdit: public QTextEdit {
 
 Q_OBJECT
 

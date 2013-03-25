@@ -20,6 +20,8 @@
 #ifndef REXPORTER_H
 #define REXPORTER_H
 
+#include "core_global.h"
+
 #include <QBrush>
 #include <QColor>
 #include <QPen>
@@ -27,16 +29,16 @@
 #include <QTextLayout>
 
 #include "REntity.h"
+#include "RImageData.h"
 #include "RMatrix.h"
-#include "RView.h"
 #include "RPainterPath.h"
 #include "RPainterPathSource.h"
+#include "RView.h"
 
 class RArc;
 class RCircle;
 class RDocument;
 class REllipse;
-class RImageData;
 class RLine;
 class RLinetype;
 class RLinetypePattern;
@@ -56,7 +58,7 @@ class RVector;
  * \ingroup core
  * \scriptable
  */
-class RExporter {
+class QCADCORE_EXPORT RExporter {
 
 public:
     RExporter();

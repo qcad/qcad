@@ -20,6 +20,8 @@
 #ifndef RTRANSACTIONEVENT_H
 #define RTRANSACTIONEVENT_H
 
+#include "core_global.h"
+
 #include <QEvent>
 
 #include "RS.h"
@@ -30,7 +32,7 @@
  * \ingroup core
  * \scriptable
  */
-class RTransactionEvent : public QEvent {
+class QCADCORE_EXPORT RTransactionEvent : public QEvent {
 public:
     RTransactionEvent(bool onlyChanges=false, RS::EntityType entityTypeFilter = RS::EntityAll) :
         QEvent(QEvent::User), onlyChanges(onlyChanges), entityTypeFilter(entityTypeFilter) {}

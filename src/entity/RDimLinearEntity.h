@@ -20,6 +20,8 @@
 #ifndef RDIMLINEARENTITY_H
 #define RDIMLINEARENTITY_H
 
+#include "entity_global.h"
+
 #include "RDimensionEntity.h"
 #include "RDimLinearData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RDimLinearEntity: public RDimensionEntity {
+class QCADENTITY_EXPORT RDimLinearEntity: public RDimensionEntity {
 
     Q_DECLARE_TR_FUNCTIONS(RDimLinearEntity)
 

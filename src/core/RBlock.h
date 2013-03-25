@@ -20,6 +20,8 @@
 #ifndef RBLOCK_H
 #define RBLOCK_H
 
+#include "core_global.h"
+
 #include <QString>
 #include <QDebug>
 
@@ -37,7 +39,7 @@ class RDocument;
  * \scriptable
  * \sharedPointerSupport
  */
-class RBlock: public RObject {
+class QCADCORE_EXPORT RBlock: public RObject {
 public:
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyFrozen;

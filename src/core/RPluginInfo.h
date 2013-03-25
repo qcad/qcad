@@ -20,6 +20,8 @@
 #ifndef RPLUGININFO_H
 #define RPLUGININFO_H
 
+#include "core_global.h"
+
 #include <QMetaType>
 
 /**
@@ -29,7 +31,7 @@
  * \scriptable
  * \copyable
  */
-class RPluginInfo {
+class QCADCORE_EXPORT RPluginInfo {
 public:
     RPluginInfo() {}
 

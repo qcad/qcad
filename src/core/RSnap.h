@@ -20,6 +20,8 @@
 #ifndef RSNAP_H
 #define RSNAP_H
 
+#include "core_global.h"
+
 #include <QSet>
 
 #include "REntity.h"
@@ -39,7 +41,7 @@ class RGraphicsView;
  *
  * \ingroup core
  */
-class RSnap {
+class QCADCORE_EXPORT RSnap {
 public:
     /**
      * Snap status, returned by snap tools (most importantly auto snap tool)

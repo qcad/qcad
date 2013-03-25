@@ -9,6 +9,7 @@ SOURCES += RAddObjectOperation.cpp \
     RDeleteObjectsOperation.cpp \
     RDeleteSelectionOperation.cpp \
     RMixedOperation.cpp \
+    RModifyObjectOperation.cpp \
     RModifyObjectsOperation.cpp \
     RMoveReferencePointOperation.cpp \
     RMoveSelectionOperation.cpp \
@@ -31,8 +32,8 @@ HEADERS = RAddObjectOperation.h \
     RTransformation.h \
     RTranslation.h
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 TARGET = qcadoperations
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore
 OTHER_FILES += operations.dox
+DEFINES += QCADOPERATIONS_LIBRARY

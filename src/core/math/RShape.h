@@ -20,6 +20,8 @@
 #ifndef RSHAPE_H
 #define RSHAPE_H
 
+#include "../core_global.h"
+
 #include <QList>
 #include <QSharedPointer>
 
@@ -45,7 +47,7 @@ class RTriangle;
  * \scriptable
  * \sharedPointerSupport
  */
-class RShape {
+class QCADCORE_EXPORT RShape {
 public:
     RShape() {
     }

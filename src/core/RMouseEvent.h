@@ -20,6 +20,8 @@
 #ifndef RMOUSEEVENT_H
 #define RMOUSEEVENT_H
 
+#include "core_global.h"
+
 #include <QMouseEvent>
 
 #include "RVector.h"
@@ -37,7 +39,7 @@ class RGraphicsView;
  * \ingroup core
  * \scriptable
  */
-class RMouseEvent: public QMouseEvent, public RInputEvent {
+class QCADCORE_EXPORT RMouseEvent: public QMouseEvent, public RInputEvent {
 public:
     RMouseEvent(QEvent::Type type, const RVector& position,
             Qt::MouseButton button, Qt::MouseButtons buttons,

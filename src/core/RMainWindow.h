@@ -20,6 +20,8 @@
 #ifndef RMAINWINDOW_H
 #define RMAINWINDOW_H
 
+#include "core_global.h"
+
 #include <QMutex>
 
 #include "RTransactionListener.h"
@@ -55,7 +57,7 @@ class RViewListener;
  * \ingroup core
  * \scriptable
  */
-class RMainWindow : public RProgressHandler, public RMessageHandler {
+class QCADCORE_EXPORT RMainWindow : public RProgressHandler, public RMessageHandler {
 
 public:
     RMainWindow();

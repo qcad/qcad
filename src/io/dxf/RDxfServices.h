@@ -20,6 +20,8 @@
 #ifndef RDXFSERVICES_H
 #define RDXFSERVICES_H
 
+#include "dxf_global.h"
+
 #include <QString>
 
 #include "rs.h"
@@ -32,7 +34,7 @@ class RHatchData;
  *
  * \ingroup qcadiodxf
  */
-class RDxfServices {
+class QCADDXF_EXPORT RDxfServices {
 public:
     RDxfServices();
 

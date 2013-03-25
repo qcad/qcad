@@ -20,6 +20,8 @@
 #ifndef RUNIT_H
 #define RUNIT_H
 
+#include "core_global.h"
+
 #include "RS.h"
 #include "RVector.h"
 
@@ -30,7 +32,7 @@ class RDocument;
  *
  * \scriptable
  */
-class RUnit {
+class QCADCORE_EXPORT RUnit {
 public:
     //static RS::Unit stringToUnit(const QString& u);
 

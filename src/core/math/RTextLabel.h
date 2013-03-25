@@ -20,6 +20,8 @@
 #ifndef RTEXTLABEL_H
 #define RTEXTLABEL_H
 
+#include "../core_global.h"
+
 #include "RPoint.h"
 #include "RVector.h"
 #include "RBox.h"
@@ -37,7 +39,7 @@
  * \sharedPointerSupport
  * \copyable
  */
-class RTextLabel: public RPoint {
+class QCADCORE_EXPORT RTextLabel: public RPoint {
 public:
     RTextLabel();
     RTextLabel(const RVector& position, const QString& text, const QVariant& userData = RDEFAULT_QVARIANT);

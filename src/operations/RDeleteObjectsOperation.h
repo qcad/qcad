@@ -20,6 +20,8 @@
 #ifndef RDELETEOBJECTSOPERATION_H
 #define RDELETEOBJECTSOPERATION_H
 
+#include "operations_global.h"
+
 #include <QList>
 #include <QSharedPointer>
 
@@ -37,7 +39,7 @@ class RObject;
  * \ingroup operations
  * \scriptable
  */
-class RDeleteObjectsOperation: public ROperation {
+class QCADOPERATIONS_EXPORT RDeleteObjectsOperation: public ROperation {
 public:
     RDeleteObjectsOperation(bool undoable = true);
     RDeleteObjectsOperation(QList<QSharedPointer<RObject> >& list, bool undoable =

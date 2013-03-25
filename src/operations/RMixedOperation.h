@@ -20,6 +20,8 @@
 #ifndef RMIXEDOPERATION_H
 #define RMIXEDOPERATION_H
 
+#include "operations_global.h"
+
 #include <QList>
 #include <QSharedPointer>
 #include <QFlags>
@@ -38,7 +40,7 @@ class RObject;
  * \ingroup operations
  * \scriptable
  */
-class RMixedOperation: public ROperation {
+class QCADOPERATIONS_EXPORT RMixedOperation: public ROperation {
 public:
     enum Mode {
         NoMode = 0x0,

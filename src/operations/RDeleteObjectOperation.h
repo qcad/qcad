@@ -20,6 +20,8 @@
 #ifndef RDELETEOBJECTOPERATION_H
 #define RDELETEOBJECTOPERATION_H
 
+#include "operations_global.h"
+
 #include <QSharedPointer>
 
 #include "RDeleteObjectsOperation.h"
@@ -36,7 +38,7 @@ class RObject;
  * \ingroup operations
  * \scriptable
  */
-class RDeleteObjectOperation: public RDeleteObjectsOperation {
+class QCADOPERATIONS_EXPORT RDeleteObjectOperation: public RDeleteObjectsOperation {
 public:
     RDeleteObjectOperation(QSharedPointer<RObject> object, bool undoable = true);
     virtual ~RDeleteObjectOperation() {

@@ -20,6 +20,8 @@
 #ifndef RSPLINEENTITY_H
 #define RSPLINEENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RSplineData.h"
 
@@ -37,7 +39,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RSplineEntity: public REntity {
+class QCADENTITY_EXPORT RSplineEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

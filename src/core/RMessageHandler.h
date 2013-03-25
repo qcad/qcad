@@ -20,6 +20,8 @@
 #ifndef RMESSAGEHANDLER_H
 #define RMESSAGEHANDLER_H
 
+#include "core_global.h"
+
 #include <QMetaType>
 
 /**
@@ -28,7 +30,7 @@
  * \ingroup core
  * \scriptable
  */
-class RMessageHandler {
+class QCADCORE_EXPORT RMessageHandler {
 public:
     virtual void handleUserMessage(const QString& message) = 0;
     virtual void handleUserInfo(const QString& message) = 0;

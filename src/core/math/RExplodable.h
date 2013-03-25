@@ -20,6 +20,8 @@
 #ifndef REXPLODABLE_H
 #define REXPLODABLE_H
 
+#include "../core_global.h"
+
 #include <QSharedPointer>
 
 #include "RShape.h"
@@ -35,7 +37,7 @@
  * \scriptable
  * \sharedPointerSupport
  */
-class RExplodable {
+class QCADCORE_EXPORT RExplodable {
 public:
     virtual ~RExplodable() {}
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const = 0;

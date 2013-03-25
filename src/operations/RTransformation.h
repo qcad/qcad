@@ -20,6 +20,8 @@
 #ifndef RTRANSFORMATION_H
 #define RTRANSFORMATION_H
 
+#include "operations_global.h"
+
 
 /**
  * Helper class for RModifyObjectsOperation::transformSelection
@@ -27,7 +29,7 @@
  * \ingroup operations
  * \scriptable
  */
-class RTransformation {
+class QCADOPERATIONS_EXPORT RTransformation {
 public:
     RTransformation() {}
     virtual ~RTransformation() {}

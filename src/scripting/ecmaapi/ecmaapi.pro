@@ -8,6 +8,7 @@ CONFIG += warn_off
 OTHER_FILES += ecmaapi.dox
 HEADERS += ../REcmaHelper.h
 SOURCES += ../REcmaHelper.cpp
+INCLUDEPATH += adapters
 HEADERS += REcmaAction.h
 HEADERS += REcmaActionAdapter.h
 HEADERS += REcmaAddObjectOperation.h

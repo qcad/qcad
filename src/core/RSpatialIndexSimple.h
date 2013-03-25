@@ -20,6 +20,8 @@
 #ifndef RSPATIALINDEXSIMPLE_H
 #define RSPATIALINDEXSIMPLE_H
 
+#include "core_global.h"
+
 #include <QSet>
 #include <QList>
 
@@ -35,7 +37,7 @@
  * \ingroup core
  * \scriptable
  */
-class RSpatialIndexSimple: public RSpatialIndex {
+class QCADCORE_EXPORT RSpatialIndexSimple: public RSpatialIndex {
 public:
     RSpatialIndexSimple();
     virtual ~RSpatialIndexSimple();

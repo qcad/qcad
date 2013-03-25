@@ -20,6 +20,8 @@
 #ifndef RDIRECTED_H
 #define RDIRECTED_H
 
+#include "../core_global.h"
+
 #include <QSharedPointer>
 
 #include "RShape.h"
@@ -31,7 +33,7 @@
  * \scriptable
  * \sharedPointerSupport
  */
-class RDirected {
+class QCADCORE_EXPORT RDirected {
 public:
     virtual ~RDirected() {}
 

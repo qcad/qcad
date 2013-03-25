@@ -20,6 +20,8 @@
 #ifndef RUCSLISTENER_H
 #define RUCSLISTENER_H
 
+#include "core_global.h"
+
 class RDocumentInterface;
 
 
@@ -31,7 +33,7 @@ class RDocumentInterface;
  *
  * \ingroup core
  */
-class RUcsListener {
+class QCADCORE_EXPORT RUcsListener {
 public:
     virtual ~RUcsListener() {}
 

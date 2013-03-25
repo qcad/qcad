@@ -16,26 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RModifyObjectOperation.h"
 
-#ifndef RSTREAMOPERATORS_H
-#define RSTREAMOPERATORS_H
-
-#include <QPrinter>
-
-#include "RMetaTypes.h"
-
-/*
-QDataStream& operator<<(QDataStream& stream, const QPrinter::PaperSize& ps) {
-    stream << (quint16)ps;
-    return stream;
+RModifyObjectOperation::RModifyObjectOperation(QSharedPointer<RObject> object, bool undoable) :
+        RAddObjectOperation(object, false, undoable) {
 }
-
-QDataStream& operator>>(QDataStream& stream, QPrinter::PaperSize& ps) {
-    quint16 psi;
-    stream >> psi;
-    ps = (QPrinter::PaperSize)psi;
-    return stream;
-}
-*/
-
-#endif

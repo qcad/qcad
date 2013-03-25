@@ -20,6 +20,8 @@
 #ifndef RMATHLINEEDIT_H_
 #define RMATHLINEEDIT_H_
 
+#include "gui_global.h"
+
 #include <QMetaType>
 #include <QLabel>
 #include <QLineEdit>
@@ -30,7 +32,7 @@
 /**
  * \scriptable
  */
-class /*QDESIGNER_WIDGET_EXPORT*/ RMathLineEdit: public QLineEdit {
+class QCADGUI_EXPORT RMathLineEdit: public QLineEdit {
 
 Q_OBJECT
 Q_PROPERTY(bool angle READ isAngle WRITE setAngle);

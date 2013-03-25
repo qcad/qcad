@@ -20,6 +20,8 @@
 #ifndef RBOX_H
 #define RBOX_H
 
+#include "../core_global.h"
+
 #include <QRectF>
 
 #include "RVector.h"
@@ -38,7 +40,7 @@ class RPolyline;
  * \sharedPointerSupport
  * \copyable
  */
-class RBox {
+class QCADCORE_EXPORT RBox {
 public:
     RBox();
     explicit RBox(const QRectF& rect);
@@ -114,7 +116,7 @@ public:
     RVector c2;
 };
 
-QDebug operator<<(QDebug dbg, const RBox& b);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RBox& b);
 
 Q_DECLARE_METATYPE(RBox)
 Q_DECLARE_METATYPE(RBox*)

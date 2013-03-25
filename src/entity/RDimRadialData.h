@@ -20,6 +20,8 @@
 #ifndef RDIMRADIALDATA_H
 #define RDIMRADIALDATA_H
 
+#include "entity_global.h"
+
 #include "RDocument.h"
 #include "RDimensionData.h"
 #include "RVector.h"
@@ -30,7 +32,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RDimRadialData: public RDimensionData {
+class QCADENTITY_EXPORT RDimRadialData: public RDimensionData {
     friend class RDimRadialEntity;
 
 protected:

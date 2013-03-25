@@ -20,6 +20,8 @@
 #ifndef RRESTRICTVERTICAL_H
 #define RRESTRICTVERTICAL_H
 
+#include "snap_global.h"
+
 #include "RRestrictOrthogonal.h"
 
 class RDocumentInterface;
@@ -31,7 +33,7 @@ class RDocumentInterface;
  *
  * \ingroup snap
  */
-class RRestrictVertical : public RRestrictOrthogonal {
+class QCADSNAP_EXPORT RRestrictVertical : public RRestrictOrthogonal {
 public:
     RRestrictVertical(RDocumentInterface& documentInterface)
         : RRestrictOrthogonal(documentInterface) {

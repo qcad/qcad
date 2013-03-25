@@ -20,13 +20,15 @@
 #ifndef RLOCALPEER_H
 #define RLOCALPEER_H
 
+#include "core_global.h"
+
 #include <QLocalServer>
 #include <QLocalSocket>
 #include <QDir>
 
 #include "RLockedFile.h"
 
-class RLocalPeer : public QObject {
+class QCADCORE_EXPORT RLocalPeer : public QObject {
     Q_OBJECT
 
 public:

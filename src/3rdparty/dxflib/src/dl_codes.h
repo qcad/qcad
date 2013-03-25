@@ -30,6 +30,8 @@
 #ifndef DXF_CODES_H
 #define DXF_CODES_H
 
+#include "dl_global.h"
+
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
@@ -62,7 +64,7 @@
 /**
  * Codes for colors and DXF versions.
  */
-class DL_Codes {
+class DXFLIB_EXPORT DL_Codes {
 public:
     /**
      * Standard DXF colors.

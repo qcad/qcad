@@ -20,6 +20,8 @@
 #ifndef RACTION_H
 #define RACTION_H
 
+#include "core_global.h"
+
 #include <QKeyEvent>
 #include <QList>
 #include <QMap>
@@ -56,7 +58,7 @@ class RTabletEvent;
  * \ingroup core
  * \scriptable
  */
-class RAction {
+class QCADCORE_EXPORT RAction {
 public:
     /**
      * Current mouse click mode.

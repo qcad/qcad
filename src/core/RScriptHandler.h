@@ -20,6 +20,8 @@
 #ifndef RSCRIPTHANDLER_H
 #define RSCRIPTHANDLER_H
 
+#include "core_global.h"
+
 #include <QList>
 #include <QMetaType>
 #include <QString>
@@ -39,7 +41,7 @@ class RFileImporterAdapter;
  *
  * \ingroup core
  */
-class RScriptHandler {
+class QCADCORE_EXPORT RScriptHandler {
 
 public:
 

@@ -20,13 +20,15 @@
 #ifndef RSINGLEAPPLICATION_H
 #define RSINGLEAPPLICATION_H
 
+#include "core_global.h"
+
 #include <QApplication>
 #include <QMetaType>
 #include <QMutex>
 
 class RLocalPeer;
 
-class RSingleApplication : public QApplication {
+class QCADCORE_EXPORT RSingleApplication : public QApplication {
     Q_OBJECT
 
 public:

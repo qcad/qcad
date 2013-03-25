@@ -25,6 +25,7 @@
 #ifndef DL_ENTITIES_H
 #define DL_ENTITIES_H
 
+#include "dl_global.h"
 
 #include <string>
 #include <vector>
@@ -32,7 +33,7 @@
 /**
  * Layer Data.
  */
-struct DL_LayerData {
+struct DXFLIB_EXPORT DL_LayerData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -54,7 +55,7 @@ struct DL_LayerData {
 /**
  * Block Data.
  */
-struct DL_BlockData {
+struct DXFLIB_EXPORT DL_BlockData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -86,7 +87,7 @@ struct DL_BlockData {
 /**
  * Line Type Data.
  */
-struct DL_LineTypeData {
+struct DXFLIB_EXPORT DL_LineTypeData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -108,7 +109,7 @@ struct DL_LineTypeData {
 /**
  * Text style data.
  */
-struct DL_StyleData {
+struct DXFLIB_EXPORT DL_StyleData {
     /**
      * Constructor
      * Parameters: see member variables.
@@ -158,7 +159,7 @@ struct DL_StyleData {
 /**
  * Point Data.
  */
-struct DL_PointData {
+struct DXFLIB_EXPORT DL_PointData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -182,7 +183,7 @@ struct DL_PointData {
 /**
  * Line Data.
  */
-struct DL_LineData {
+struct DXFLIB_EXPORT DL_LineData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -218,7 +219,7 @@ struct DL_LineData {
 /**
  * Arc Data.
  */
-struct DL_ArcData {
+struct DXFLIB_EXPORT DL_ArcData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -255,7 +256,7 @@ struct DL_ArcData {
 /**
  * Circle Data.
  */
-struct DL_CircleData {
+struct DXFLIB_EXPORT DL_CircleData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -285,7 +286,7 @@ struct DL_CircleData {
 /**
  * Polyline Data.
  */
-struct DL_PolylineData {
+struct DXFLIB_EXPORT DL_PolylineData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -315,7 +316,7 @@ struct DL_PolylineData {
 /**
  * Vertex Data.
  */
-struct DL_VertexData {
+struct DXFLIB_EXPORT DL_VertexData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -343,7 +344,7 @@ struct DL_VertexData {
 /**
  * Trace Data / solid data / 3d face data.
  */
-struct DL_TraceData {
+struct DXFLIB_EXPORT DL_TraceData {
     DL_TraceData() {
         thickness = 0.0;
         for (int i=0; i<4; i++) {
@@ -410,7 +411,7 @@ typedef DL_TraceData DL_3dFaceData;
 /**
  * Spline Data.
  */
-struct DL_SplineData {
+struct DXFLIB_EXPORT DL_SplineData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -455,7 +456,7 @@ struct DL_SplineData {
 /**
  * Spline knot data.
  */
-struct DL_KnotData {
+struct DXFLIB_EXPORT DL_KnotData {
     DL_KnotData() {}
     /**
      * Constructor.
@@ -474,7 +475,7 @@ struct DL_KnotData {
 /**
  * Spline control point data.
  */
-struct DL_ControlPointData {
+struct DXFLIB_EXPORT DL_ControlPointData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -501,7 +502,7 @@ struct DL_ControlPointData {
 /**
  * Spline fit point data.
  */
-struct DL_FitPointData {
+struct DXFLIB_EXPORT DL_FitPointData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -521,7 +522,7 @@ struct DL_FitPointData {
 /**
  * Ellipse Data.
  */
-struct DL_EllipseData {
+struct DXFLIB_EXPORT DL_EllipseData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -569,7 +570,7 @@ struct DL_EllipseData {
 /**
  * Insert Data.
  */
-struct DL_InsertData {
+struct DXFLIB_EXPORT DL_InsertData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -619,7 +620,7 @@ struct DL_InsertData {
 /**
  * MText Data.
  */
-struct DL_MTextData {
+struct DXFLIB_EXPORT DL_MTextData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -700,7 +701,7 @@ struct DL_MTextData {
 /**
  * Text Data.
  */
-struct DL_TextData {
+struct DXFLIB_EXPORT DL_TextData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -779,7 +780,7 @@ struct DL_TextData {
 /**
  * Generic Dimension Data.
  */
-struct DL_DimensionData {
+struct DXFLIB_EXPORT DL_DimensionData {
     /**
     * Constructor.
     * Parameters: see member variables.
@@ -884,7 +885,7 @@ struct DL_DimensionData {
 /**
  * Aligned Dimension Data.
  */
-struct DL_DimAlignedData {
+struct DXFLIB_EXPORT DL_DimAlignedData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -921,7 +922,7 @@ struct DL_DimAlignedData {
 /**
  * Linear Dimension Data.
  */
-struct DL_DimLinearData {
+struct DXFLIB_EXPORT DL_DimLinearData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -967,7 +968,7 @@ struct DL_DimLinearData {
 /**
  * Radial Dimension Data.
  */
-struct DL_DimRadialData {
+struct DXFLIB_EXPORT DL_DimRadialData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -996,7 +997,7 @@ struct DL_DimRadialData {
 /**
  * Diametric Dimension Data.
  */
-struct DL_DimDiametricData {
+struct DXFLIB_EXPORT DL_DimDiametricData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -1025,7 +1026,7 @@ struct DL_DimDiametricData {
 /**
  * Angular Dimension Data.
  */
-struct DL_DimAngularData {
+struct DXFLIB_EXPORT DL_DimAngularData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -1085,7 +1086,7 @@ struct DL_DimAngularData {
 /**
  * Angular Dimension Data (3 points version).
  */
-struct DL_DimAngular3PData {
+struct DXFLIB_EXPORT DL_DimAngular3PData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -1134,7 +1135,7 @@ struct DL_DimAngular3PData {
 /**
  * Ordinate Dimension Data.
  */
-struct DL_DimOrdinateData {
+struct DXFLIB_EXPORT DL_DimOrdinateData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -1177,7 +1178,7 @@ struct DL_DimOrdinateData {
 /**
  * Leader (arrow).
  */
-struct DL_LeaderData {
+struct DXFLIB_EXPORT DL_LeaderData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -1224,7 +1225,7 @@ struct DL_LeaderData {
 /**
  * Leader Vertex Data.
  */
-struct DL_LeaderVertexData {
+struct DXFLIB_EXPORT DL_LeaderVertexData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -1248,7 +1249,7 @@ struct DL_LeaderVertexData {
 /**
  * Hatch data.
  */
-struct DL_HatchData {
+struct DXFLIB_EXPORT DL_HatchData {
     /**
      * Default constructor.
      */
@@ -1287,7 +1288,7 @@ struct DL_HatchData {
 /**
  * Hatch boundary path (loop) data.
  */
-struct DL_HatchLoopData {
+struct DXFLIB_EXPORT DL_HatchLoopData {
     /**
      * Default constructor.
      */
@@ -1309,7 +1310,7 @@ struct DL_HatchLoopData {
 /**
  * Hatch edge data.
  */
-struct DL_HatchEdgeData {
+struct DXFLIB_EXPORT DL_HatchEdgeData {
     /**
      * Default constructor.
      */
@@ -1420,7 +1421,7 @@ struct DL_HatchEdgeData {
 /**
  * Image Data.
  */
-struct DL_ImageData {
+struct DXFLIB_EXPORT DL_ImageData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -1486,7 +1487,7 @@ struct DL_ImageData {
 /**
  * Image Definition Data.
  */
-struct DL_ImageDefData {
+struct DXFLIB_EXPORT DL_ImageDefData {
     /**
      * Constructor.
      * Parameters: see member variables.
@@ -1510,7 +1511,7 @@ struct DL_ImageDefData {
 /**
  * Dictionary data.
  */
-struct DL_DictionaryData {
+struct DXFLIB_EXPORT DL_DictionaryData {
     DL_DictionaryData(const std::string& handle) : handle(handle) {}
     std::string handle;
 };
@@ -1520,7 +1521,7 @@ struct DL_DictionaryData {
 /**
  * Dictionary entry data.
  */
-struct DL_DictionaryEntryData {
+struct DXFLIB_EXPORT DL_DictionaryEntryData {
     DL_DictionaryEntryData(const std::string& name, const std::string& handle) :
         name(name), handle(handle) {}
 

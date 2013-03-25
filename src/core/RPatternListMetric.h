@@ -20,6 +20,8 @@
 #ifndef RPATTERNLISTMETRIC_H
 #define RPATTERNLISTMETRIC_H
 
+#include "core_global.h"
+
 #include "RPatternList.h"
 
 /**
@@ -28,7 +30,7 @@
  * \ingroup core
  * \scriptable
  */
-class RPatternListMetric : public RPatternList {
+class QCADCORE_EXPORT RPatternListMetric : public RPatternList {
 public:
     static void init();
     static void uninit() {

@@ -20,6 +20,8 @@
 #ifndef RCOPYOPERATION_H
 #define RCOPYOPERATION_H
 
+#include "operations_global.h"
+
 #include "RDocument.h"
 #include "REntity.h"
 #include "RExporter.h"
@@ -34,7 +36,7 @@
  * \ingroup operations
  * \scriptable
  */
-class RCopyOperation : public RClipboardOperation {
+class QCADOPERATIONS_EXPORT RCopyOperation : public RClipboardOperation {
 public:
     RCopyOperation(const RVector& offset, RDocument& src);
     virtual ~RCopyOperation() {}

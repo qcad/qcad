@@ -20,6 +20,8 @@
 #ifndef RMOVEREFERENCEPOINTOPERATION_H
 #define RMOVEREFERENCEPOINTOPERATION_H
 
+#include "operations_global.h"
+
 #include "RDocument.h"
 #include "RExporter.h"
 #include "ROperation.h"
@@ -34,7 +36,7 @@ class REntity;
  * \ingroup operations
  * \scriptable
  */
-class RMoveReferencePointOperation : public ROperation {
+class QCADOPERATIONS_EXPORT RMoveReferencePointOperation : public ROperation {
 public:
     RMoveReferencePointOperation(
         const RVector& referencePoint, const RVector& targetPoint

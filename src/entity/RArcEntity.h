@@ -20,6 +20,8 @@
 #ifndef RARCENTITY_H
 #define RARCENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RArcData.h"
 #include "RLineweight.h"
@@ -34,7 +36,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RArcEntity: public REntity {
+class QCADENTITY_EXPORT RArcEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

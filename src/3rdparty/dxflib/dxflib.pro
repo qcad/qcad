@@ -28,5 +28,5 @@ SOURCES = \
 
 TARGET = dxflib
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
+DEFINES += DXFLIB_LIBRARY

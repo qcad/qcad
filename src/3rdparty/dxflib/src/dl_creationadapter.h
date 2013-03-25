@@ -25,6 +25,8 @@
 #ifndef DL_CREATIONADAPTER_H
 #define DL_CREATIONADAPTER_H
 
+#include "dl_global.h"
+
 #include "dl_creationinterface.h"
 
 /**
@@ -34,7 +36,7 @@
  *
  * @author Andrew Mustun
  */
-class DL_CreationAdapter : public DL_CreationInterface {
+class DXFLIB_EXPORT DL_CreationAdapter : public DL_CreationInterface {
 public:
     DL_CreationAdapter() {}
     virtual ~DL_CreationAdapter() {}

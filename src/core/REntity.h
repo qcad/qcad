@@ -20,6 +20,8 @@
 #ifndef RENTITY_H
 #define RENTITY_H
 
+#include "core_global.h"
+
 #include <QList>
 #include <QStack>
 
@@ -55,7 +57,7 @@ class RExporter;
  * \scriptable
  * \sharedPointerSupport
  */
-class REntity : public RObject {
+class QCADCORE_EXPORT REntity : public RObject {
 
     Q_DECLARE_TR_FUNCTIONS(REntity)
 

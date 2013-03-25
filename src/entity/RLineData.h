@@ -20,6 +20,8 @@
 #ifndef RLINEDATA_H
 #define RLINEDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -33,7 +35,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RLineData: public REntityData, protected RLine {
+class QCADENTITY_EXPORT RLineData: public REntityData, protected RLine {
 
     friend class RLineEntity;
 

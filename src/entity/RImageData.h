@@ -20,6 +20,8 @@
 #ifndef RIMAGEDATA_H
 #define RIMAGEDATA_H
 
+#include "entity_global.h"
+
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
@@ -35,7 +37,7 @@
  * \scriptable
  * \ingroup entity
  */
-class RImageData: public REntityData {
+class QCADENTITY_EXPORT RImageData: public REntityData {
 
     friend class RImageEntity;
 

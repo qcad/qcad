@@ -20,6 +20,8 @@
 #ifndef RCOLORCOMBO_H_
 #define RCOLORCOMBO_H_
 
+#include "gui_global.h"
+
 #include <QComboBox>
 
 #include "RColor.h"
@@ -27,7 +29,7 @@
 /**
  * \scriptable
  */
-class RColorCombo: public QComboBox {
+class QCADGUI_EXPORT RColorCombo: public QComboBox {
 
 Q_OBJECT
 Q_PROPERTY(bool onlyFixed READ getOnlyFixed WRITE setOnlyFixed);

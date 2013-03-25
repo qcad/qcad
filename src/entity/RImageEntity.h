@@ -20,6 +20,8 @@
 #ifndef RIMAGEENTITY_H
 #define RIMAGEENTITY_H
 
+#include "entity_global.h"
+
 #include "REntity.h"
 #include "RImageData.h"
 
@@ -33,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class RImageEntity: public REntity {
+class QCADENTITY_EXPORT RImageEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

@@ -17,31 +17,26 @@
  * along with QCAD.
  */
 
-#ifndef RSELECTIONLISTENERADAPTER_H_
-#define RSELECTIONLISTENERADAPTER_H_
+#ifndef RCLOSECURRENTEVENT_H
+#define RCLOSECURRENTEVENT_H
 
-#include <QObject>
+#include "gui_global.h"
 
-#include "RDocumentInterface.h"
-#include "RSelectionListener.h"
-#include "RMainWindow.h"
+#include <QEvent>
 
 /**
+ * \brief Event that is posted when an action requests the closing
+ * of the current document.
+ * 
+ * \ingroup core
  * \scriptable
  */
-class RSelectionListenerAdapter: public QObject, public RSelectionListener {
-Q_OBJECT
-
+class QCADGUI_EXPORT RCloseCurrentEvent : public QEvent {
 public:
-    RSelectionListenerAdapter(QObject* parent=NULL) : QObject(parent) { }
-    virtual ~RSelectionListenerAdapter() { }
-
-    virtual void updateSelectionListener(RDocumentInterface* documentInterface);
-
-signals:
-    void selectionChanged(RDocumentInterface* documentInterface);
+    RCloseCurrentEvent() : QEvent(QEvent::User) {}
+    virtual ~RCloseCurrentEvent() {}
 };
 
-Q_DECLARE_METATYPE(RSelectionListenerAdapter*)
+Q_DECLARE_METATYPE(RCloseCurrentEvent*)
 
 #endif

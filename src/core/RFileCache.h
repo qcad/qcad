@@ -20,6 +20,8 @@
 #ifndef RFILECACHE_H_
 #define RFILECACHE_H_
 
+#include "core_global.h"
+
 #include <QMetaType>
 #include <QBuffer>
 #include <QCache>
@@ -31,7 +33,7 @@
  * \ingroup core
  * \scriptable
  */
-class RFileCache {
+class QCADCORE_EXPORT RFileCache {
 public:
     static QString getContents(const QString& fileName, bool forceReload=false);
     static QBuffer* getBuffer(const QString& fileName, bool forceReload=false);

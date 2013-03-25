@@ -20,6 +20,8 @@
 #ifndef RDIMENSIONDATA_H
 #define RDIMENSIONDATA_H
 
+#include "entity_global.h"
+
 #include "RDocument.h"
 #include "REntityData.h"
 #include "RTextData.h"
@@ -33,7 +35,7 @@
  *
  * \todo explodable interface that returns list of REntityData, maybe base class RComposedEntityData?
  */
-class RDimensionData: public REntityData {
+class QCADENTITY_EXPORT RDimensionData: public REntityData {
     friend class RDimensionEntity;
 
 protected:

@@ -20,6 +20,8 @@
 #ifndef RPLUGININTERFACE_H
 #define RPLUGININTERFACE_H
 
+#include "core_global.h"
+
 #include <QtPlugin>
 #include <QMetaType>
 
@@ -30,7 +32,7 @@ class QString;
 class QScriptEngine;
 QT_END_NAMESPACE
 
-class RPluginInterface {
+class QCADCORE_EXPORT RPluginInterface {
 public:
     virtual ~RPluginInterface() {}
 

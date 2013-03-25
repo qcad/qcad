@@ -20,6 +20,8 @@
 #ifndef RLISTVIEW_H_
 #define RLISTVIEW_H_
 
+#include "gui_global.h"
+
 #include <QWidget>
 #include <QListView>
 #include <QEvent>
@@ -29,7 +31,7 @@
  * \scriptable
  * \generateScriptShell
  */
-class RListView: public QListView {
+class QCADGUI_EXPORT RListView: public QListView {
 
 Q_OBJECT
 

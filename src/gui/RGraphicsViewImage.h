@@ -20,6 +20,8 @@
 #ifndef RGRAPHICSVIEWIMAGE_H
 #define RGRAPHICSVIEWIMAGE_H
 
+#include "gui_global.h"
+
 #include <QtCore>
 #include <QPinchGesture>
 
@@ -46,7 +48,7 @@ class RSnapRestriction;
  * \scriptable
  * \generateScriptShell
  */
-class RGraphicsViewImage : public RGraphicsView {
+class QCADGUI_EXPORT RGraphicsViewImage : public RGraphicsView {
 
 public:
     RGraphicsViewImage();

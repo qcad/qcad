@@ -20,6 +20,8 @@
 #ifndef RCOORDINATELISTENER_H
 #define RCOORDINATELISTENER_H
 
+#include "core_global.h"
+
 #include <QMetaType>
 
 class RDocumentInterface;
@@ -33,7 +35,7 @@ class RDocumentInterface;
  * \ingroup core
  * \scriptable
  */
-class RCoordinateListener {
+class QCADCORE_EXPORT RCoordinateListener {
 public:
     virtual ~RCoordinateListener() {}
     virtual void updateCoordinate(RDocumentInterface* documentInterface) = 0;

@@ -20,6 +20,8 @@
 #ifndef RCLIPBOARDOPERATION_H
 #define RCLIPBOARDOPERATION_H
 
+#include "operations_global.h"
+
 #include "RDocument.h"
 #include "REntity.h"
 #include "RExporter.h"
@@ -34,7 +36,7 @@
  * \scriptable
  * \abstract
  */
-class RClipboardOperation : public ROperation {
+class QCADOPERATIONS_EXPORT RClipboardOperation : public ROperation {
 public:
     RClipboardOperation();
     virtual ~RClipboardOperation() {}

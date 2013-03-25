@@ -20,6 +20,8 @@
 #ifndef RPLUGINLOADER_H
 #define RPLUGINLOADER_H
 
+#include "core_global.h"
+
 #include <QList>
 #include <QMetaType>
 #include <QScriptEngine>
@@ -33,7 +35,7 @@
  * \ingroup core
  * \scriptable
  */
-class RPluginLoader {
+class QCADCORE_EXPORT RPluginLoader {
 public:
     static void loadPlugins();
 
