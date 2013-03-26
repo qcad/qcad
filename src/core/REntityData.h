@@ -63,8 +63,7 @@ class QCADCORE_EXPORT REntityData {
 public:
     REntityData(RDocument* document=NULL);
 
-    virtual ~REntityData() {
-    }
+    virtual ~REntityData() {}
 
     RDocument* getDocument() {
         return document;

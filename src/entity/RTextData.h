@@ -64,6 +64,7 @@ public:
               bool italic,
               double angle,
               bool simple);
+    virtual ~RTextData() {}
 
     virtual RBox getBoundingBox() const;
     double getWidth() const;
