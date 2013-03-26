@@ -37,8 +37,18 @@ void RPluginLoader::loadPlugins() {
     QDir pluginsDir = QDir(pluginsPath);
 
     qDebug() << "Trying to load plugins from folder " << pluginsDir.path();
+    QStringList nameFilter;
+#if defined(Q_OS_WIN)
+    nameFilter.append("*.dll");
+#else
+#   if defined(Q_OS_MAC)
+    nameFilter.append("*.dylib");
+#   else
+    nameFi.append("*.so");
+#   endif
+#endif
 
-    foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
+    foreach (QString fileName, pluginsDir.entryList(nameFilter, QDir::Files)) {
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
         QObject* plugin = loader.instance();
         RPluginInfo info;
