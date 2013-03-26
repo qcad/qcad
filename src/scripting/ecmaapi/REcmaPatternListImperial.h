@@ -7,7 +7,7 @@
         #ifndef RECMAPATTERNLISTIMPERIAL_H
         #define RECMAPATTERNLISTIMPERIAL_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

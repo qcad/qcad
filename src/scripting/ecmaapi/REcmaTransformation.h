@@ -7,7 +7,7 @@
         #ifndef RECMATRANSFORMATION_H
         #define RECMATRANSFORMATION_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

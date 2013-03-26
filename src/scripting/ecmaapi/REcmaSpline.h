@@ -7,7 +7,7 @@
         #ifndef RECMASPLINE_H
         #define RECMASPLINE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

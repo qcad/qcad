@@ -7,7 +7,7 @@
         #ifndef RECMADELETEALLENTITIESOPERATION_H
         #define RECMADELETEALLENTITIESOPERATION_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

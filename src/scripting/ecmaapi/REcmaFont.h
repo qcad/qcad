@@ -7,7 +7,7 @@
         #ifndef RECMAFONT_H
         #define RECMAFONT_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

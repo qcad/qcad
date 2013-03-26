@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERUCS_H
         #define RECMASHAREDPOINTERUCS_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

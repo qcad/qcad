@@ -7,7 +7,7 @@
         #ifndef RECMADOCKWIDGET_H
         #define RECMADOCKWIDGET_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

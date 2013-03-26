@@ -7,7 +7,7 @@
         #ifndef RECMAS_H
         #define RECMAS_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

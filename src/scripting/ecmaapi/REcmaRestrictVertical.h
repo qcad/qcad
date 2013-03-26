@@ -7,7 +7,7 @@
         #ifndef RECMARESTRICTVERTICAL_H
         #define RECMARESTRICTVERTICAL_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

@@ -1,7 +1,6 @@
 include( ../../../shared.pri )
 
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 
 # this is required to compile the spatial index library from navel ltd:

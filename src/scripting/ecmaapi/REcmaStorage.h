@@ -7,7 +7,7 @@
         #ifndef RECMASTORAGE_H
         #define RECMASTORAGE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

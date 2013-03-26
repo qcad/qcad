@@ -7,7 +7,7 @@
         #ifndef RECMASNAPINTERSECTION_H
         #define RECMASNAPINTERSECTION_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

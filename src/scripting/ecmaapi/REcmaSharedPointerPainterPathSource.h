@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERPAINTERPATHSOURCE_H
         #define RECMASHAREDPOINTERPAINTERPATHSOURCE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

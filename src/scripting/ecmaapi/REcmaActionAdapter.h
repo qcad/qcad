@@ -7,7 +7,7 @@
         #ifndef RECMAACTIONADAPTER_H
         #define RECMAACTIONADAPTER_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

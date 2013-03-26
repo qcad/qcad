@@ -7,7 +7,7 @@
         #ifndef RECMAPLUGININFO_H
         #define RECMAPLUGININFO_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

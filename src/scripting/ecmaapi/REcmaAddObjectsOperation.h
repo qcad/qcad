@@ -7,7 +7,7 @@
         #ifndef RECMAADDOBJECTSOPERATION_H
         #define RECMAADDOBJECTSOPERATION_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

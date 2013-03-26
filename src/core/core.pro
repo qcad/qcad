@@ -222,7 +222,7 @@ HEADERS = \
     math/RTriangle.h \
     math/RVector.h
 TEMPLATE = lib
-CONFIG += plugin
+CONFIG += staticlib
 TARGET = qcadcore
 RESOURCES = resources/core.qrc
 OTHER_FILES += core.dox

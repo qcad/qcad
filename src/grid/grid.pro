@@ -6,6 +6,6 @@ HEADERS = \
 TEMPLATE = lib
 OTHER_FILES += grid.dox
 DEFINES += QCADGRID_LIBRARY
-CONFIG += plugin
+CONFIG += staticlib
 TARGET = qcadgrid
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore

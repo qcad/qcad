@@ -153,7 +153,7 @@
         #ifndef <xsl:value-of select="$uEcmaName" />_H
         #define <xsl:value-of select="$uEcmaName" />_H
 
-        #include &lt;ecmaapi_global.h&gt;
+        #include "ecmaapi_global.h"
 
         #include &lt;QScriptEngine&gt;
         #include &lt;QScriptValue&gt;

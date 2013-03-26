@@ -7,7 +7,7 @@
         #ifndef RECMAFOCUSLISTENER_H
         #define RECMAFOCUSLISTENER_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

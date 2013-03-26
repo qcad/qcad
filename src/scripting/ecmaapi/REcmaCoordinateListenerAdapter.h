@@ -7,7 +7,7 @@
         #ifndef RECMACOORDINATELISTENERADAPTER_H
         #define RECMACOORDINATELISTENERADAPTER_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

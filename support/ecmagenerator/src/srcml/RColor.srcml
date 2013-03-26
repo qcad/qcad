@@ -75,6 +75,7 @@ dir="./core" filename="RColor.h">
   <function_decl>
   <type>
   <name>friend</name>
+  <name>QCADCORE_EXPORT</name>
   <name>QDataStream</name>&amp;</type>
   <name>operator&lt;&lt;</name>
   <parameter_list>(
@@ -96,6 +97,7 @@ dir="./core" filename="RColor.h">
   <function_decl>
   <type>
   <name>friend</name>
+  <name>QCADCORE_EXPORT</name>
   <name>QDataStream</name>&amp;</type>
   <name>operator&gt;&gt;</name>
   <parameter_list>(
@@ -699,6 +701,7 @@ dir="./core" filename="RColor.h">
   <comment type="block">/** *\nonscriptable */</comment>
   <function_decl>
   <type>
+  <name>QCADCORE_EXPORT</name>
   <name>QDataStream</name>&amp;</type>
   <name>operator&lt;&lt;</name>
   <parameter_list>(
@@ -720,6 +723,7 @@ dir="./core" filename="RColor.h">
   <comment type="block">/** *\nonscriptable */</comment>
   <function_decl>
   <type>
+  <name>QCADCORE_EXPORT</name>
   <name>QDataStream</name>&amp;</type>
   <name>operator&gt;&gt;</name>
   <parameter_list>(

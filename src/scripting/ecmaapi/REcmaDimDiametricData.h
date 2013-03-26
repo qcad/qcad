@@ -7,7 +7,7 @@
         #ifndef RECMADIMDIAMETRICDATA_H
         #define RECMADIMDIAMETRICDATA_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

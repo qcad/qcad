@@ -7,7 +7,7 @@
         #ifndef RECMAENTITY_H
         #define RECMAENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

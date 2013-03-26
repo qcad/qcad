@@ -7,7 +7,7 @@
         #ifndef RECMALINETYPEPATTERN_H
         #define RECMALINETYPEPATTERN_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

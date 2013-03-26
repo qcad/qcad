@@ -7,7 +7,7 @@
         #ifndef RECMAFILEIMPORTERREGISTRY_H
         #define RECMAFILEIMPORTERREGISTRY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

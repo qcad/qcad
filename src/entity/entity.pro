@@ -86,7 +86,7 @@ HEADERS = \
     RTextRenderer.h
 
 TEMPLATE = lib
-CONFIG += plugin
+CONFIG += staticlib
 TARGET = qcadentity
 OTHER_FILES += entity.dox
 DEFINES += QCADENTITY_LIBRARY

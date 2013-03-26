@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTEREXPLODABLE_H
         #define RECMASHAREDPOINTEREXPLODABLE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

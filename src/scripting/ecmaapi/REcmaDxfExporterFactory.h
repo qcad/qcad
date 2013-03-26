@@ -7,7 +7,7 @@
         #ifndef RECMADXFEXPORTERFACTORY_H
         #define RECMADXFEXPORTERFACTORY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

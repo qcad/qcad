@@ -4,8 +4,7 @@ SOURCES = \
 HEADERS = \
     RScriptHandlerEcma.h
 TEMPLATE = lib
-#CONFIG += staticlib
-CONFIG += plugin
+CONFIG += staticlib
 TARGET = qcadecma
 LIBS += -L$$PWD/$$ROUTDIR \
     -ldxflib \

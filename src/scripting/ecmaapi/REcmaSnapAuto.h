@@ -7,7 +7,7 @@
         #ifndef RECMASNAPAUTO_H
         #define RECMASNAPAUTO_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

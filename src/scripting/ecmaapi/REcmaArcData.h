@@ -7,7 +7,7 @@
         #ifndef RECMAARCDATA_H
         #define RECMAARCDATA_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

@@ -7,7 +7,7 @@
         #ifndef RECMASNAPPERPENDICULAR_H
         #define RECMASNAPPERPENDICULAR_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

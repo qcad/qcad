@@ -7,7 +7,7 @@
         #ifndef RECMASNAPFREE_H
         #define RECMASNAPFREE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

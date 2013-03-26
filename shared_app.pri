@@ -3,7 +3,7 @@ include($$PWD/shared.pri)
 LIBS += \
     -lqcadecma \
     -lqcadecmaapi \
-    #-lqcadcustomwidgets \
+    -lqcadcustomwidgets \
     -lqcadgui \
     -lqcadentity \
     -lqcadoperations \
@@ -12,11 +12,13 @@ LIBS += \
     -lqcadgrid \
     -lqcadsnap \
     -lqcadcore \
-    -lqcadstemmer
+    -lqcadstemmer \
+    -lstemmer
 
 !r_no_opennurbs {
     LIBS += \
-        -lopennurbs
+        -lopennurbs \
+        -lzlib
 }
 
 !r_no_dxf {
@@ -66,23 +68,28 @@ win32 {
 }
 else {
     POST_TARGETDEPS += \
-        $$PWD/$$ROUTDIR/libopennurbs.dylib \
-        $$PWD/$$ROUTDIR/libqcadcore.dylib \
-        $$PWD/$$ROUTDIR/libqcadecma.dylib \
-        $$PWD/$$ROUTDIR/libqcadecmaapi.dylib \
-        $$PWD/$$ROUTDIR/libqcadentity.dylib \
-        $$PWD/$$ROUTDIR/libqcadgrid.dylib \
-        $$PWD/$$ROUTDIR/libqcadgui.dylib \
-        $$PWD/$$ROUTDIR/libqcadoperations.dylib \
-        $$PWD/$$ROUTDIR/libqcadsnap.dylib \
-        $$PWD/$$ROUTDIR/libqcadspatialindex.dylib \
-        $$PWD/$$ROUTDIR/libqcadstemmer.dylib \
+        $$PWD/$$ROUTDIR/libopennurbs.a \
+        $$PWD/$$ROUTDIR/libqcadcore.a \
+        $$PWD/$$ROUTDIR/libqcadecma.a \
+        $$PWD/$$ROUTDIR/libqcadecmaapi.a \
+        $$PWD/$$ROUTDIR/libqcadentity.a \
+        $$PWD/$$ROUTDIR/libqcadgrid.a \
+        $$PWD/$$ROUTDIR/libqcadgui.a \
+        $$PWD/$$ROUTDIR/libqcadoperations.a \
+        $$PWD/$$ROUTDIR/libqcadsnap.a \
+        $$PWD/$$ROUTDIR/libqcadspatialindex.a \
+        $$PWD/$$ROUTDIR/libqcadstemmer.a \
+        $$PWD/$$ROUTDIR/libstemmer.a \
         $$PWD/$$ROUTDIR/libspatialindexnavel.dylib
         !r_no_opennurbs {
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libopennurbs.dylib
+            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libopennurbs.a
         }
         !r_no_dxf {
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libqcaddxf.dylib
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libdxflib.dylib
+            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libqcaddxf.a
+            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libdxflib.a
         }
+}
+
+exists($$PWD/shared_app_ext.pri) {
+    include($$PWD/shared_app_ext.pri)
 }

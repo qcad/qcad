@@ -7,7 +7,7 @@
         #ifndef RECMAGRID_H
         #define RECMAGRID_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

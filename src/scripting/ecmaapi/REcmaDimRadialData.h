@@ -7,7 +7,7 @@
         #ifndef RECMADIMRADIALDATA_H
         #define RECMADIMRADIALDATA_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

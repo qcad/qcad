@@ -7,7 +7,7 @@
         #ifndef RECMABLOCKLISTENERADAPTER_H
         #define RECMABLOCKLISTENERADAPTER_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

@@ -7,7 +7,7 @@
         #ifndef RECMALINEWEIGHT_H
         #define RECMALINEWEIGHT_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

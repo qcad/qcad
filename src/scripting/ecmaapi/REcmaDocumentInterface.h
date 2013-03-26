@@ -7,7 +7,7 @@
         #ifndef RECMADOCUMENTINTERFACE_H
         #define RECMADOCUMENTINTERFACE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

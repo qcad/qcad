@@ -7,7 +7,7 @@
         #ifndef RECMAPASTEOPERATION_H
         #define RECMAPASTEOPERATION_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

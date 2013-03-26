@@ -38,11 +38,17 @@
 class QCADCORE_EXPORT RPluginLoader {
 public:
     static void loadPlugins();
+    static void loadPlugin(QObject* plugin, const QString& fileName = QString(), const QString& errorString = QString());
 
     /**
      * \nonscriptable
      */
     static void initScriptExtensions(QScriptEngine& engine);
+
+    /**
+     * \nonscriptable
+     */
+    static void initScriptExtensions(QObject* plugin, QScriptEngine& engine);
 
     static int countPlugins() {
         return pluginsInfo.count();

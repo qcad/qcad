@@ -1,6 +1,6 @@
 include( ../../../shared.pri )
 TEMPLATE = lib
-CONFIG += plugin
+CONFIG += staticlib
 TARGET = qcadecmaapi
 LIBS += -ldxflib -lopennurbs -lqcadcore -lqcaddxf -lqcadentity -lqcadgrid -lqcadgui -lqcadoperations -lqcadsnap -lqcadspatialindex -lqcadstemmer -lspatialindexnavel -lstemmer
 CONFIG -= warn_on

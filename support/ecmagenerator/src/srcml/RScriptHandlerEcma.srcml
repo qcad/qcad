@@ -22,6 +22,9 @@ dir="./scripting/ecma" filename="RScriptHandlerEcma.h">
   <name>RSCRIPTHANDLERECMA_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"ecma_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -47,6 +50,9 @@ dir="./scripting/ecma" filename="RScriptHandlerEcma.h">
   ECMA scripts, based on Qt Script. * * \ingroup scripting_ecma
   */</comment>
   <class>class 
+  <macro>
+    <name>QCADECMA_EXPORT</name>
+  </macro>
   <name>RScriptHandlerEcma</name>
   <super>: 
   <specifier>public</specifier>

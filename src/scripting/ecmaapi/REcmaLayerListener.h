@@ -7,7 +7,7 @@
         #ifndef RECMALAYERLISTENER_H
         #define RECMALAYERLISTENER_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

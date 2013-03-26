@@ -23,7 +23,7 @@ profile_tmp="ecmaapi.pro"
 
 echo "include( ../../../shared.pri )" > "$profile_tmp"
 echo "TEMPLATE = lib" >> "$profile_tmp"
-echo "CONFIG += plugin" >> "$profile_tmp"
+echo "CONFIG += staticlib" >> "$profile_tmp"
 echo "TARGET = qcadecmaapi" >> "$profile_tmp"
 echo "LIBS += -ldxflib -lopennurbs -lqcadcore -lqcaddxf -lqcadentity -lqcadgrid -lqcadgui -lqcadoperations -lqcadsnap -lqcadspatialindex -lqcadstemmer -lspatialindexnavel -lstemmer" >> "$profile_tmp"
 echo "CONFIG -= warn_on" >> $profile_tmp

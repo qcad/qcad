@@ -7,7 +7,7 @@
         #ifndef RECMABLOCKREFERENCEDATA_H
         #define RECMABLOCKREFERENCEDATA_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

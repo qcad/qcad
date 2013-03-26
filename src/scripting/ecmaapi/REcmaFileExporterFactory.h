@@ -7,7 +7,7 @@
         #ifndef RECMAFILEEXPORTERFACTORY_H
         #define RECMAFILEEXPORTERFACTORY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

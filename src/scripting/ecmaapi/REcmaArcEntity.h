@@ -7,7 +7,7 @@
         #ifndef RECMAARCENTITY_H
         #define RECMAARCENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

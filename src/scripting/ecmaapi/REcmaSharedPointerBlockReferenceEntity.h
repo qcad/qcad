@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERBLOCKREFERENCEENTITY_H
         #define RECMASHAREDPOINTERBLOCKREFERENCEENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

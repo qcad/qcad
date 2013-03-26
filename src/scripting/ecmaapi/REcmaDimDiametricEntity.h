@@ -7,7 +7,7 @@
         #ifndef RECMADIMDIAMETRICENTITY_H
         #define RECMADIMDIAMETRICENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

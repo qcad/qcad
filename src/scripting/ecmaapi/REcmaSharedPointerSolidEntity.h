@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERSOLIDENTITY_H
         #define RECMASHAREDPOINTERSOLIDENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

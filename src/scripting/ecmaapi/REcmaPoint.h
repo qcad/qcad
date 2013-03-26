@@ -7,7 +7,7 @@
         #ifndef RECMAPOINT_H
         #define RECMAPOINT_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

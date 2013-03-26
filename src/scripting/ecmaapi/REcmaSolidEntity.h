@@ -7,7 +7,7 @@
         #ifndef RECMASOLIDENTITY_H
         #define RECMASOLIDENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

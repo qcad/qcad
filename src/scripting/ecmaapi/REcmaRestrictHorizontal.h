@@ -7,7 +7,7 @@
         #ifndef RECMARESTRICTHORIZONTAL_H
         #define RECMARESTRICTHORIZONTAL_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

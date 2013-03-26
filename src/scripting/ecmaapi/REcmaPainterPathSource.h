@@ -7,7 +7,7 @@
         #ifndef RECMAPAINTERPATHSOURCE_H
         #define RECMAPAINTERPATHSOURCE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

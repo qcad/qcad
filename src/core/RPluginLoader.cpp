@@ -51,25 +51,46 @@ void RPluginLoader::loadPlugins() {
     foreach (QString fileName, pluginsDir.entryList(nameFilter, QDir::Files)) {
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
         QObject* plugin = loader.instance();
-        RPluginInfo info;
-        if (plugin) {
-            RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
-            if (p) {
-                p->init();
-                info = p->getPluginInfo();
-                info.setFileName(fileName);
-            }
-            else {
-                info.setFileName(fileName);
-                info.setErrorString(loader.errorString());
-                qDebug() << "Plugin loader reported error: " << loader.errorString();
-            }
+        loadPlugin(plugin, fileName, loader.errorString());
+    }
+
+    QObjectList staticPlugins = QPluginLoader::staticInstances();
+    for (int i=0; i<staticPlugins.size(); i++) {
+        QObject* plugin = staticPlugins[i];
+        loadPlugin(plugin);
+    }
+}
+
+void RPluginLoader::loadPlugin(QObject* plugin, const QString& fileName, const QString& errorString) {
+    if (fileName.isEmpty()) {
+        qDebug() << "RPluginLoader::loadPlugin: static";
+    }
+    else {
+        qDebug() << "RPluginLoader::loadPlugin: " << fileName;
+    }
+    RPluginInfo info;
+    if (plugin) {
+        RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+        if (p) {
+            p->init();
+            info = p->getPluginInfo();
         }
         else {
-            info.setFileName(fileName);
-            info.setErrorString(loader.errorString());
-            qDebug() << "Plugin loader reported error: " << loader.errorString();
+            // ignore other Qt plugins
+            return;
+//            info.setErrorString(errorString);
+//            qDebug() << "Plugin loader reported error: " << errorString;
         }
+    }
+    else {
+        info.setErrorString(errorString);
+        qDebug() << "Plugin loader reported error: " << errorString;
+    }
+    if (!fileName.isEmpty()) {
+        info.setFileName(fileName);
+    }
+
+    if (!info.getFileName().isEmpty()) {
         pluginsInfo.append(info);
     }
 }
@@ -85,10 +106,20 @@ void RPluginLoader::initScriptExtensions(QScriptEngine& engine) {
     foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
         QObject* plugin = loader.instance();
-        RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
-        if (p) {
-            p->initScriptExtensions(engine);
-        }
+        initScriptExtensions(plugin, engine);
+    }
+
+    QObjectList staticPlugins = QPluginLoader::staticInstances();
+    for (int i=0; i<staticPlugins.size(); i++) {
+        QObject* plugin = staticPlugins[i];
+        initScriptExtensions(plugin, engine);
+    }
+}
+
+void RPluginLoader::initScriptExtensions(QObject* plugin, QScriptEngine& engine) {
+    RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+    if (p) {
+        p->initScriptExtensions(engine);
     }
 }
 

@@ -217,7 +217,7 @@ HEADERS += \
     ../opennurbs_zlib.h
 
 TEMPLATE = lib
-CONFIG += plugin
+CONFIG += staticlib
 CONFIG(release, debug|release) {
     LIBS += -L../zlib/release
 }
@@ -226,6 +226,7 @@ else {
 }
 LIBS += -lzlib
 win32 {
-    DEFINES += ON_DLL_EXPORTS ON_COMPILING_OPENNURBS NDEBUG
+    #DEFINES += ON_DLL_EXPORTS ON_COMPILING_OPENNURBS NDEBUG
+    DEFINES += ON_COMPILING_OPENNURBS NDEBUG
     LIBS += -lRpcrt4 -lAdvapi32
 }

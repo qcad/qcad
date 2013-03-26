@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERLAYER_H
         #define RECMASHAREDPOINTERLAYER_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

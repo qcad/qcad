@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERDIMDIAMETRICENTITY_H
         #define RECMASHAREDPOINTERDIMDIAMETRICENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

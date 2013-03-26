@@ -7,7 +7,7 @@
         #ifndef RECMAGRAPHICSVIEWIMAGE_H
         #define RECMAGRAPHICSVIEWIMAGE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

@@ -7,7 +7,7 @@
         #ifndef RECMAEXPLODABLE_H
         #define RECMAEXPLODABLE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERTEXTENTITY_H
         #define RECMASHAREDPOINTERTEXTENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

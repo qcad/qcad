@@ -7,7 +7,7 @@
         #ifndef RECMASELECTIONLISTENERADAPTER_H
         #define RECMASELECTIONLISTENERADAPTER_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

@@ -18,13 +18,12 @@ linux-g++ {
     QMAKE_LFLAGS += -static-libgcc -static-libstdc++
 }
 
-SOURCES = main.cpp
-HEADERS = 
+SOURCES += main.cpp
 TEMPLATE = app
 OTHER_FILES += run.dox
 
 win32 {
-     TARGET = qcad
+    TARGET = qcad
 }
 
 macx {

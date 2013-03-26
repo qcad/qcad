@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERDIRECTED_H
         #define RECMASHAREDPOINTERDIRECTED_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

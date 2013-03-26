@@ -5,8 +5,7 @@ HEADERS = \
     RStemmer.h
 
 TEMPLATE = lib
-#CONFIG += staticlib
-CONFIG += plugin
+CONFIG += staticlib
 TARGET = qcadstemmer
 LIBS += -L$$PWD/$$ROUTDIR -lstemmer
 OTHER_FILES += stemmer.dox

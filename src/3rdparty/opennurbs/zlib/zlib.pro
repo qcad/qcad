@@ -33,9 +33,9 @@ CONFIG += staticlib
 
 CONFIG(release, debug|release) {
     DEFINES += NDEBUG
-    DESTDIR = release
+    #DESTDIR = release
 }
 else {
-    DESTDIR = debug
+    #DESTDIR = debug
 }
 #DEFINES += ZLIB_DLL

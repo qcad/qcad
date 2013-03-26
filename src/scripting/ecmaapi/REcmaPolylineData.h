@@ -7,7 +7,7 @@
         #ifndef RECMAPOLYLINEDATA_H
         #define RECMAPOLYLINEDATA_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

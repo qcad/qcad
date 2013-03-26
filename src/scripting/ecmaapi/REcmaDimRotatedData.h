@@ -7,7 +7,7 @@
         #ifndef RECMADIMROTATEDDATA_H
         #define RECMADIMROTATEDDATA_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

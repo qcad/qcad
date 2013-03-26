@@ -7,7 +7,7 @@
         #ifndef RECMALEADERDATA_H
         #define RECMALEADERDATA_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

@@ -7,7 +7,7 @@
         #ifndef RECMASNAPLISTENER_H
         #define RECMASNAPLISTENER_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

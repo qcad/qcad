@@ -63,19 +63,18 @@
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
 
-
-//Q_IMPORT_PLUGIN(customwidgetsplugin)
+Q_IMPORT_PLUGIN(customwidgetsplugin)
 
 
 #ifdef Q_WS_MACX
- void qt_mac_set_menubar_icons(bool);
+void qt_mac_set_menubar_icons(bool);
 #endif
 
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
- void catchSigPipe(int /*s*/){
-     qDebug() << "SIGPIPE caught";
- }
+void catchSigPipe(int /*s*/){
+    qDebug() << "SIGPIPE caught";
+}
 #endif
 
 
@@ -147,10 +146,9 @@ int main(int argc, char *argv[]) {
     QSqlDatabase::drivers();
 #endif
 
-    // TODO:
-    //if (guiEnabled) {
-    //    Q_INIT_RESOURCE(core);
-    //}
+    if (guiEnabled) {
+        Q_INIT_RESOURCE(core);
+    }
 
     qRegisterMetaType<RColor>();
     qRegisterMetaTypeStreamOperators<RColor>("RColor");

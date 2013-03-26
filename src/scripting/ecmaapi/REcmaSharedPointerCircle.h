@@ -7,7 +7,7 @@
         #ifndef RECMASHAREDPOINTERCIRCLE_H
         #define RECMASHAREDPOINTERCIRCLE_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>

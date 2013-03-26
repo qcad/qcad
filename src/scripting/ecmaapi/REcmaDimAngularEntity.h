@@ -7,7 +7,7 @@
         #ifndef RECMADIMANGULARENTITY_H
         #define RECMADIMANGULARENTITY_H
 
-        #include <ecmaapi_global.h>
+        #include "ecmaapi_global.h"
 
         #include <QScriptEngine>
         #include <QScriptValue>
