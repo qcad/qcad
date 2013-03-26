@@ -20,6 +20,8 @@
 #ifndef RECMAHELPER_H
 #define RECMAHELPER_H
 
+#include "ecmaapi/ecmaapi_global.h"
+
 #include <QtScript>
 #include <QList>
 
@@ -34,7 +36,7 @@ class RGraphicsScene;
 class RGraphicsView;
 
 
-class REcmaHelper {
+class QCADECMAAPI_EXPORT REcmaHelper {
 public:
 
 // tries to convert the given value to all possible inheritance strains 
