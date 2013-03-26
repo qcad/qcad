@@ -28,6 +28,10 @@ Makefile.Release
 # Mac:
 .DS_Store
 
-# Ouput folders:
+# Output folders:
 debug
 release
+
+# Misc
+shared_app_ext.pri
+Pro
