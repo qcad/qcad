@@ -1,4 +1,5 @@
 include($$PWD/ccache.pri)
+exists($$PWD/../shared.pri)
 
 # output directory:
 CONFIG(debug, debug|release) {

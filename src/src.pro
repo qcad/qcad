@@ -12,7 +12,7 @@ SUBDIRS = \
     io \
     customwidgets \
     scripting \
-    run
+    run 
 
 TEMPLATE = subdirs
 OTHER_FILES += api_overview.dox
