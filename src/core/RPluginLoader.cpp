@@ -62,16 +62,16 @@ void RPluginLoader::loadPlugins() {
 }
 
 void RPluginLoader::loadPlugin(QObject* plugin, const QString& fileName, const QString& errorString) {
-    if (fileName.isEmpty()) {
-        qDebug() << "RPluginLoader::loadPlugin: static";
-    }
-    else {
-        qDebug() << "RPluginLoader::loadPlugin: " << fileName;
-    }
     RPluginInfo info;
     if (plugin) {
         RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
         if (p) {
+            if (fileName.isEmpty()) {
+                qDebug() << "RPluginLoader::loadPlugin: static";
+            }
+            else {
+                qDebug() << "RPluginLoader::loadPlugin: " << fileName;
+            }
             p->init();
             info = p->getPluginInfo();
         }
