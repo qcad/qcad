@@ -90,6 +90,6 @@ else {
         }
 }
 
-exists($$PWD/shared_app_ext.pri) {
-    include($$PWD/shared_app_ext.pri)
+exists($$PWD/../shared_app.pri) {
+    include($$PWD/../shared_app.pri)
 }
