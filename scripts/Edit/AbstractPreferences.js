@@ -59,13 +59,9 @@ AbstractPreferences.prototype.beginEvent = function() {
     var btApply = this.formWidget.findChild("buttonBox").button(QDialogButtonBox.Apply);
     btApply.clicked.connect(this, "apply");
 
-    if (this.appPreferences) {
-        this.addOns = AddOn.getAddOns();
-    } else {
-        this.addOns = AddOn.getAddOns("scripts/Edit/DrawingPreferences");
-    }
-    AbstractPreferences.fillTreeWidget(this.addOns, this.treeWidget,
-            this.appPreferences);
+    this.addOns = AddOn.getAddOns();
+
+    AbstractPreferences.fillTreeWidget(this.addOns, this.treeWidget, this.appPreferences);
     this.treeWidget.expandAll();
 
     if (this.formWidget.exec() === QDialog.Accepted.valueOf()) {
@@ -95,6 +91,15 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
     for (var i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
         var className = addOn.getClassName();
+
+        var scriptFile = addOn.getFilePath();
+        if (appPreferences===false) {
+            if (!scriptFile.contains("DrawingPreferences")) {
+                continue;
+            }
+        }
+
+        qDebug("className: ", className);
         try {
             // include normally not needed
             var doInclude = false;
