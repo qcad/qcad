@@ -705,7 +705,10 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         painterPaths = sceneQt->getPainterPaths(id);
 
         // ideal pixel size for rendering arc at current zoom:
-        double ps = this->mapDistanceFromView(1.0);
+        double ps = mapDistanceFromView(1.0);
+        if (isPrinting()) {
+            ps = getScene()->getPixelSizeHint();
+        }
 
         bool regen = false;
         for (int p=0; p<painterPaths.size(); p++) {

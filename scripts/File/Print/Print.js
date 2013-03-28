@@ -39,6 +39,7 @@ function Print(guiAction, document, view) {
 
     this.document = document;
     this.view = view;
+    this.scene = view.getScene();
 }
 
 Print.prototype = new File();
@@ -167,6 +168,12 @@ Print.prototype.print = function(pdfFile) {
     //printerFactor.y *= 280/280.30;
 
     this.view.setPrintPointSize(new RVector(1.0/printerFactor.x, 1.0/printerFactor.y));
+
+    var widthInDrawingUnits = RUnit.convert(widthInMM, RS.Millimeter, this.document.getUnit());
+    if (printer.paperRect().width()>0) {
+        var e = this.scene.getRExporter();
+        e.setPixelSizeHint(1.0/printer.paperRect().width()*widthInDrawingUnits);
+    }
 
     // iterate through all pages and print the appropriate area
     var first = true;
