@@ -32,13 +32,22 @@ About.prototype.beginEvent = function() {
     var formWidget = this.createWidget("About.ui");
     formWidget.windowTitle = qsTr("About %1").arg(qApp.applicationName);
 
-    var head = "<head>"
-            + "<style type='text/css'>"
-            + "a { text-decoration:none };"
-            + "font-family:sans;"
-            + "font-size:13pt;"
-            + "</style>"
-            + "</head>";
+    var f = 1.0;
+    if (RS.getSystemId()=="win") {
+        f = 0.75;
+    }
+
+    var head;
+    head = "<head>\n"
+         + "<style type='text/css'>\n"
+         + "a { text-decoration:none }\n"
+         + "h1 { font-family:sans;font-size:" + 18*f + "pt;margin-bottom:8pt; }\n"
+         + "h2 { font-family:sans;font-size:" + 14*f + "pt;margin-bottom:5pt; }\n"
+         + "body,td { font-family:sans;font-size:" + 11*f + "pt; }\n"
+         + "}\n</style>\n"
+         + "</head>";
+
+    qDebug(head);
 
     var webView = formWidget.findChild("QCADText");
     WidgetFactory.initWebView(webView, this, "openUrl");
@@ -46,7 +55,7 @@ About.prototype.beginEvent = function() {
             "<html>"
             + head
             + "<body>"
-            + "<b style='font-size:18pt'>%1</b>".arg(qApp.applicationName)
+            + "<h1>%1</h1>".arg(qApp.applicationName)
             + "<br/>"
             + "<table border='0'><tr>"
             + "<td><b>Version:</b> </td><td>%1</td>".arg(RSettings.getVersionString())
@@ -76,70 +85,77 @@ About.prototype.beginEvent = function() {
             "<html>"
             + head
             + "<body>"
-            + "<b style='font-size:18pt'>%1</b>".arg(qsTr("Plugins"))
-            + "<br/>";
+            + "<h1>%1</h1>".arg(qsTr("Plugins"))
+            + "<hr/>";
 
     var numPlugins = RPluginLoader.countPlugins();
-    for (var i=0; i<numPlugins; i++) {
-        var pluginInfo = RPluginLoader.getPluginInfo(i);
 
-        html += "<br/>";
-        html += "<b style='font-size:12pt'>%1</b>".arg(pluginInfo.getFileName())
-        html += "<table border='0'>";
-        html += "<col width='10%'/>";
-        html += "<col width='90%'/>";
-
-        // plugin about info:
-        var text = pluginInfo.getAboutString();
-        if (text.length===0) {
-            text = qsTr("No information available");
-        }
-        html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("Plugin:")).arg(Qt.escape(text));
-
-        // plugin version:
-        text = pluginInfo.getVersionString();
-        if (text.length===0) {
-            text = qsTr("Unknown");
-        }
-        html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("Version:")).arg(Qt.escape(text));
-
-        // plugin license:
-        text = pluginInfo.getLicense();
-        if (text.length===0) {
-            text = qsTr("Unknown");
-        }
-        html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("License:")).arg(Qt.escape(text));
-
-        // plugin URL:
-        text = pluginInfo.getUrl();
-        if (text.length!==0) {
-            var url = new QUrl(text);
-            if (url.isValid()) {
-//                var opt = new QUrl.FormattingOption(
-//                    QUrl.RemoveScheme, QUrl.RemoveAuthority, QUrl.RemovePath,
-//                    QUrl.RemoveQuery, QUrl.RemoveFragment,
-//                    QUrl.StripTrailingSlash
-//                );
-                //debugger;
-                html += "<tr><td>%1 </td><td><a href=\"%2\">%3</a></td></tr>"
-                    .arg(qsTr("Internet:"))
-                    .arg(url.toString())
-                    .arg(url.host().replace(/^www./, ""));
-            }
-        }
-
-        // plugin error:
-        var err = pluginInfo.getErrorString();
-        if (err.length!==0) {
-            html += "<tr><td>%1 </td><td><div>%2</div></td></tr>"
-                .arg(qsTr("Error:"))
-                .arg(Qt.escape(err));
-        }
-        html += "</table>";
-        html += "</body>";
-        html += "</html>";
-        webView.setHtml(html);
+    if (numPlugins===0) {
+        html += "No plugins found.";
     }
+    else {
+        for (var i=0; i<numPlugins; i++) {
+            var pluginInfo = RPluginLoader.getPluginInfo(i);
+
+            html += "<h2>%1</h2>".arg(pluginInfo.getFileName())
+            html += "<table border='0'>";
+            html += "<col width='10%'/>";
+            html += "<col width='90%'/>";
+
+            // plugin about info:
+            var text = pluginInfo.getAboutString();
+            if (text.length===0) {
+                text = qsTr("No information available");
+            }
+            html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("Plugin:")).arg(Qt.escape(text));
+
+            // plugin version:
+            text = pluginInfo.getVersionString();
+            if (text.length===0) {
+                text = qsTr("Unknown");
+            }
+            html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("Version:")).arg(Qt.escape(text));
+
+            // plugin license:
+            text = pluginInfo.getLicense();
+            if (text.length===0) {
+                text = qsTr("Unknown");
+            }
+            html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("License:")).arg(Qt.escape(text));
+
+            // plugin URL:
+            text = pluginInfo.getUrl();
+            if (text.length!==0) {
+                var url = new QUrl(text);
+                if (url.isValid()) {
+    //                var opt = new QUrl.FormattingOption(
+    //                    QUrl.RemoveScheme, QUrl.RemoveAuthority, QUrl.RemovePath,
+    //                    QUrl.RemoveQuery, QUrl.RemoveFragment,
+    //                    QUrl.StripTrailingSlash
+    //                );
+                    //debugger;
+                    html += "<tr><td>%1 </td><td><a href=\"%2\">%3</a></td></tr>"
+                        .arg(qsTr("Internet:"))
+                        .arg(url.toString())
+                        .arg(url.host().replace(/^www./, ""));
+                }
+            }
+
+            // plugin error:
+            var err = pluginInfo.getErrorString();
+            if (err.length!==0) {
+                html += "<tr><td>%1 </td><td><div>%2</div></td></tr>"
+                    .arg(qsTr("Error:"))
+                    .arg(Qt.escape(err));
+            }
+            html += "</table>";
+            html += "<hr/>";
+        }
+    }
+
+    html += "</body>";
+    html += "</html>";
+    webView.setHtml(html);
 
     formWidget.exec();
 };
