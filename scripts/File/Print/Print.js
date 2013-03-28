@@ -18,7 +18,7 @@
  */
 
 include("../File.js");
-if (isNull(PageSettings)) {
+if (typeof(PageSettings)=="undefined") {
     include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");
 }
 
