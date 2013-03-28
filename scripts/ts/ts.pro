@@ -3,7 +3,7 @@ TSDIR = .
 include(../translations.pri)
 SOURCES = \
     ../EAction.js \
-    ../Plugin.js \
+    ../AddOn.js \
     ../WidgetFactory.js \
     ../ShapeAlgorithms.js \
     ../DbConnection.js \
