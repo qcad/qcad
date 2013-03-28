@@ -467,20 +467,10 @@ function main() {
     var gotCamExtension = (new QFileInfo("scripts/Cam").exists() && !AddOn.isIgnored("scripts/Cam"));
 
     // in test mode, clean up first:
-    var testMode = args.contains("-test");
-    if (testMode) {
-        qDebug("Running in test mode.");
-        qApp.applicationName = "QCAD3Test";
-        QFile.remove(RSettings.getFileName());
-        RSettings.setValue("testing", true);
-        include("Widgets/LibraryBrowser/LibraryBrowser.js");
-        QFile.remove(LibraryBrowser.getDbFileName(testMode));
-    } else {
-        qApp.applicationName = "QCAD";
-        // app name for ini file differs to avoid conflict with 
-        // older QCAD versions:
-        RSettings.setApplicationName("QCAD3");
-    }
+    qApp.applicationName = "QCAD";
+    // app name for ini file differs to avoid conflict with
+    // older QCAD versions:
+    RSettings.setApplicationName("QCAD3");
 
     // ignore config file if it does not identify itself with a version
     // number or is known as being incompatible
@@ -608,15 +598,7 @@ function main() {
     // animated is nice, but crashes sometimes (Qt 4.7.2):
     appWin.animated = false;
     appWin.objectName = "MainWindow";
-    if (testMode) {
-        appWin.windowTitle = "QCAD running in TEST Mode";
-        include("scripts/Developer/UiTest/uitestlib.js");
-        if (!uiHasExecArgument()) {
-            uiCreateTestMenuWidget();
-        }
-    } else {
-        appWin.windowTitle = qApp.applicationName;
-    }
+    appWin.windowTitle = qApp.applicationName;
 
     // save locale
     appWin.setProperty("Locale", RSettings.getLocale());
@@ -650,11 +632,6 @@ function main() {
     appWin.windowIcon = new QIcon("scripts/qcad_icon.png");
     if (!ignoreDockappWindows) {
         appWin.readSettings();
-    }
-
-    if (testMode) {
-        appWin.move(0, 0);
-        appWin.resize(1024, 768);
     }
 
     if (!QCoreApplication.arguments().contains("-no-show")) {
