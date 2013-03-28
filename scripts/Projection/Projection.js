@@ -81,7 +81,7 @@ Projection.getCadToolBarPanel = function() {
         action.setDefaultShortcut(new QKeySequence("w,j"));
         action.setNoState();
         action.setProperty("SortOrder", 8000);
-        action.setDefaultCommands(["arcmenu"]);
+        action.setDefaultCommands(["projectmenu"]);
         CadToolBarPanel.prototype.addAction.call(mtb, action);
     }
 
