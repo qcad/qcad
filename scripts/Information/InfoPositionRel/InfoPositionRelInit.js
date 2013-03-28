@@ -3,8 +3,8 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/InfoPositionRel.js");
     action.setIcon(basePath + "/InfoPositionRel.svg");
-    action.setDefaultShortcut(new QKeySequence("i,s"));
-    action.setDefaultCommands([ "infoposrel", "is" ]);
+    action.setDefaultShortcut(new QKeySequence("i,v"));
+    action.setDefaultCommands([ "infoposrel", "iv" ]);
     action.setSortOrder(55);
     EAction.addGuiActionTo(action, Information, true, true, true);
 }
