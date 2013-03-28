@@ -270,19 +270,28 @@ AddOn.prototype.getGroupName = function() {
     return dir.dirName();
 };
 
+/**
+ * \return Translated title of this add on (from GUI action or class info).
+ */
 AddOn.prototype.getTitle = function() {
     var title;
-    try {
-        var className = this.getClassName();
-        eval("if( typeof(" + className + ")!='undefined' && isFunction(" + className + ".getTitle) ) {"
-                + "title = " + className + ".getTitle();"
-                + "}");
-        if (!isNull(title)) {
-            title = title.replace("&", "");
+
+    // try to get title from class (getTitle):
+    var className = this.getClassName();
+    title = AddOn.getClassTitle(className);
+
+    if (isNull(title)) {
+        // try to get title from gui action:
+        var a = this.getGuiAction();
+        if (!isNull(a)) {
+            title = a.text;
         }
-    } catch (e) {
-        qWarning("AddOn.js:", "getTitle(): Exception:", e);
     }
+
+    if (!isNull(title)) {
+        title = title.replace("&", "");
+    }
+
     return title;
 };
 
@@ -292,19 +301,51 @@ AddOn.prototype.getTitle = function() {
  *      Line.getTitle().
  */
 AddOn.prototype.getParentTitle = function() {
-    var parentTitle;
+    var gn = this.getGroupName();
+    return AddOn.getClassTitle(gn);
+};
+
+/**
+ * \return Translated title for the given class name.
+ */
+AddOn.getClassTitle = function(cn) {
+    var title;
     try {
-        var gn = this.getGroupName();
-        eval("if( " + gn + ".getTitle != undefined ) {"
-                + "parentTitle = " + gn + ".getTitle()"
-                + "}");
-        if (!isNull(parentTitle)) {
-            parentTitle = parentTitle.replace("&", "");
-        }        
+        eval("if (typeof(" + cn + ") != 'undefined' && typeof(" + cn + ".getTitle) != 'undefined') {"
+            +"    title = " + cn + ".getTitle()"
+            +"}");
     } catch (e) {
-        qWarning("AddOn.js:", "getParentTitle(): Exception:", e);
+        qWarning("AddOn.js:", "getClassTitle(): Exception:", e);
     }
-    return parentTitle;
+
+    if (!isNull(title)) {
+        title = title.replace("&", "");
+    }
+    return title;
+};
+
+/**
+ * \return Hierarchy of titles for this add on (e.g. [Draw, Line, Line 2P]).
+ */
+AddOn.prototype.getParentTitles = function() {
+    var ret = [];
+
+    var dir = new QDir(this.fileInfo.path());
+    ret.unshift(this.getTitle());
+    do {
+        if (!dir.cdUp()) {
+            break;
+        }
+        var dn = dir.dirName();
+        var title = AddOn.getClassTitle(dn);
+        if (isNull(title)) {
+            break;
+        }
+        ret.unshift(title);
+
+    } while (true);
+
+    return ret;
 };
 
 /**
