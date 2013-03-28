@@ -7,7 +7,7 @@ function init(basePath) {
     action.setDefaultShortcuts(
         [ new QKeySequence("r,m"),
           new QKeySequence("x,t") ]);
-    action.setDefaultCommands(["trim", "extend", "rm", "xt", "mr"]);
+    action.setDefaultCommands(["trim", "extend", "rm", "xt"]);
     action.setSortOrder(1000);
     EAction.addGuiActionTo(action, Modify, true, true, true, true);
 }
