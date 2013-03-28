@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-08 15:10:01
 // Description : Rotate 2 using a polyline
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Rotate2Test05() {
     TdbTest.call(this, 'scripts/Modify/Rotate2/Tests/Rotate2Test05.js');

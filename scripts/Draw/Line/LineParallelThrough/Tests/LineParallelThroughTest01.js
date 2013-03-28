@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-08 11:57:22
 // Description : Draw parallels to polyline segments
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineParallelThroughTest01() {
     TdbTest.call(this, 'scripts/Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest01.js');

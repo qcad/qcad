@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 11:05:48
 // Description : 3 concentric arcs on the inside, 3 concentric arcs on the outside of an arc
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ArcConcentricTest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/ArcConcentric/Tests/ArcConcentricTest00.js');

@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 13:53:03
 // Description : 4 ellipse arcs
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function EllipseArcCPPATest00() {
     TdbTest.call(this, 'scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js');

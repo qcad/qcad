@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 14:11:43
 // Description : 3 concentric circles (2 inside, 1 outside) going through the end points of a line
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function CircleConcentricThroughTest00() {
     TdbTest.call(this, 'scripts/Draw/Circle/CircleConcentricThrough/Tests/CircleConcentricThroughTest00.js');

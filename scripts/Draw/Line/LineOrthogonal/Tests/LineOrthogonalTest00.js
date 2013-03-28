@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 10:04:20
 // Description : 4 orthogonal lines, different lengths
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineOrthogonalTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineOrthogonal/Tests/LineOrthogonalTest00.js');

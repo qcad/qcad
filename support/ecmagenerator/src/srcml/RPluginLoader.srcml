@@ -55,6 +55,40 @@ dir="./core" filename="RPluginLoader.h">
   </type>
   <name>loadPlugins</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>void</name>
+    </type>
+    <name>loadPlugin</name>
+    <argument_list>(
+    <argument>
+      <expr>
+      <name>QObject</name>* 
+      <name>plugin</name></expr>
+    </argument>, 
+    <argument>
+      <expr>
+      <name>const</name>
+      <name>QString</name>&amp; 
+      <name>fileName</name>= 
+      <call>
+        <name>QString</name>
+        <argument_list>()</argument_list>
+      </call></expr>
+    </argument>, 
+    <argument>
+      <expr>
+      <name>const</name>
+      <name>QString</name>&amp; 
+      <name>errorString</name>= 
+      <call>
+        <name>QString</name>
+        <argument_list>()</argument_list>
+      </call></expr>
+    </argument>)</argument_list>
+  </decl>;</decl_stmt>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
@@ -63,6 +97,28 @@ dir="./core" filename="RPluginLoader.h">
   </type>
   <name>initScriptExtensions</name>
   <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QScriptEngine</name>&amp;</type>
+      <name>engine</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>initScriptExtensions</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QObject</name>*</type>
+      <name>plugin</name>
+    </decl>
+  </param>, 
   <param>
     <decl>
       <type>

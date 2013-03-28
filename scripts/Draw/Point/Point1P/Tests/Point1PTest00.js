@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-25 14:26:43
 // Description : 9 points
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Point1PTest00() {
     TdbTest.call(this, 'scripts/Draw/Point/Point1P/Tests/Point1PTest00.js');

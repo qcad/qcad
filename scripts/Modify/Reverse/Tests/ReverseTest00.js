@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-08 10:23:17
 // Description : 
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ReverseTest00() {
     TdbTest.call(this, 'scripts/Modify/Reverse/Tests/ReverseTest00.js');

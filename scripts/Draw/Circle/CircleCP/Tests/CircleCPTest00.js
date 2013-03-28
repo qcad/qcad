@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 14:00:07
 // Description : 4 circles each defined by the center and 1 point
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function CircleCPTest00() {
     TdbTest.call(this, 'scripts/Draw/Circle/CircleCP/Tests/CircleCPTest00.js');

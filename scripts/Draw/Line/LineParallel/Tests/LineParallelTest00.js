@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 10:07:14
 // Description : Parallel lines with different distances on both sides of a line
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineParallelTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineParallel/Tests/LineParallelTest00.js');

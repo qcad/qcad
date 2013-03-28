@@ -21,7 +21,7 @@
 // Timestamp   : 2011-04-27 10:03:11
 // Description : 
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function DimOrdinateTest00() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimOrdinate/Tests/DimOrdinateTest00.js');

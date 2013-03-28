@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-16 15:03:22
 // Description : spline, pattern GRAVEL, scale 1, angle 176° [SLOW! be patient!]
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function HatchTest03() {
     TdbTest.call(this, 'scripts/Draw/Hatch/Tests/HatchTest03.js');

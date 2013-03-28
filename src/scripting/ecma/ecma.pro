@@ -1,7 +1,9 @@
 include( ../../../shared.pri )
 SOURCES = \
+    RAutoLoadEcma.cpp \
     RScriptHandlerEcma.cpp
 HEADERS = \
+    RAutoLoadEcma.h \
     RScriptHandlerEcma.h
 TEMPLATE = lib
 CONFIG += staticlib

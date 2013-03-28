@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 09:52:01
 // Description : 2 x 6 arcs, angles between 15° and 270°
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Arc2PATest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/Arc2PA/Tests/Arc2PATest00.js');

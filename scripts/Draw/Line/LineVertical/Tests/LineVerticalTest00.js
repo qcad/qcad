@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 13:35:55
 // Description : 6 lines, length of 10 / 20, different reference points
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineVerticalTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineVertical/Tests/LineVerticalTest00.js');

@@ -21,7 +21,7 @@
 // Timestamp   : 2012-06-20 17:53:59
 // Description : 
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function DivideTest01() {
     TdbTest.call(this, 'scripts/Modify/Divide/Tests/DivideTest01.js');

@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-16 14:45:43
 // Description : contour, pattern NET, scale 0.2, angle 56°
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function HatchTest01() {
     TdbTest.call(this, 'scripts/Draw/Hatch/Tests/HatchTest01.js');

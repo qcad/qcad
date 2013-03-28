@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 10:37:40
 // Description : Regular polygons, 3 up to 8 lines, defined by base line
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinePolygonPPTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LinePolygonPP/Tests/LinePolygonPPTest00.js');

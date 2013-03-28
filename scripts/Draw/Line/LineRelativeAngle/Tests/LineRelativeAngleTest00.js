@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 11:21:51
 // Description : Lines with relative angels to a line
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineRelativeAngleTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineRelativeAngle/Tests/LineRelativeAngleTest00.js');

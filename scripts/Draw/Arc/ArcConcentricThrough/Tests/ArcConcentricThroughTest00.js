@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 11:12:59
 // Description : concentric arcs through end points of a line
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ArcConcentricThroughTest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/ArcConcentricThrough/Tests/ArcConcentricThroughTest00.js');

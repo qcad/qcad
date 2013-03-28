@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-08 13:59:18
 // Description : Rotate 2 using an ellipse
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Rotate2Test03() {
     TdbTest.call(this, 'scripts/Modify/Rotate2/Tests/Rotate2Test03.js');

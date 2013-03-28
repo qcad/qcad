@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-16 10:02:22
 // Description : moves entities, keeps original
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function TranslateTest00() {
     TdbTest.call(this, 'scripts/Modify/Translate/Tests/TranslateTest00.js');

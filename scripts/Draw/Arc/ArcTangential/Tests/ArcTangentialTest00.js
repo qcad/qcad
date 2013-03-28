@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 11:18:08
 // Description : 4 tangential arcs to a line, different radii
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ArcTangentialTest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/ArcTangential/Tests/ArcTangentialTest00.js');

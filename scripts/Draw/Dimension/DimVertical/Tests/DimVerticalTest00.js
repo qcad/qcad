@@ -21,7 +21,7 @@
 // Timestamp   : 2011-04-27 09:41:02
 // Description : 
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function DimVerticalTest00() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimVertical/Tests/DimVerticalTest00.js');

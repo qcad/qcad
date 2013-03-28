@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-05 11:35:30
 // Description : isometric projection of a spline using segment length 1
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function IsoProjectTest01() {
     TdbTest.call(this, 'scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest01.js');

@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-05 13:45:17
 // Description : isometric projection of a circle using segment length 1
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function IsoProjectTest02() {
     TdbTest.call(this, 'scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest02.js');

@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 14:07:43
 // Description : 3 inside resp. 2 outside concentric circles to another circle
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function CircleConcentricTest00() {
     TdbTest.call(this, 'scripts/Draw/Circle/CircleConcentric/Tests/CircleConcentricTest00.js');

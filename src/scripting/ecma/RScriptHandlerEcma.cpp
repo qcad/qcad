@@ -43,6 +43,7 @@
 #include "RMetaTypes.h"
 #include "REcmaHelper.h"
 
+#include "RAutoLoadEcma.h"
 #include "RDebug.h"
 #include "RScriptHandlerEcma.h"
 #include "RSingleApplication.h"
@@ -54,6 +55,7 @@
 #include "REcmaArc.h"
 #include "REcmaArcData.h"
 #include "REcmaArcEntity.h"
+#include "REcmaAutoLoadEcma.h"
 #include "REcmaBlock.h"
 #include "REcmaBlockListener.h"
 #include "REcmaBlockListenerAdapter.h"
@@ -332,7 +334,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
             << "qt.svg" << "qt.xml" << "qt.xmlpatterns";
 
 #ifndef Q_OS_WIN32
-    // needed for babelfish translator, does not compile under windows:
     // NOTE: qt.network wrapper does not compile under Windows (SSL problems)
     modules << "qt.network";
 #endif
@@ -776,10 +777,18 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaTextRenderer::init(*engine);
 
+    REcmaAutoLoadEcma::init(*engine);
+
     // *** end of "do not change the order" ***
 
     // give plugins a chance to initialize their script extensions:
     RPluginLoader::initScriptExtensions(*engine);
+
+    // eval auto load scripts:
+    QStringList files = RAutoLoadEcma::getAutoLoadFiles();
+    for (int i=0; i<files.size(); i++) {
+        doScript(files[i]);
+    }
 }
 
 

@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-08 14:58:56
 // Description : Rotate 2 using a spline
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Rotate2Test04() {
     TdbTest.call(this, 'scripts/Modify/Rotate2/Tests/Rotate2Test04.js');

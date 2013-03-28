@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 15:41:47
 // Description : 2 circles, 4 tangents
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineTangent2Test00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineTangent2/Tests/LineTangent2Test00.js');

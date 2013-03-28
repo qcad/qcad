@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-15 13:38:11
 // Description : scaling spline, factor 0.5
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ScaleTest04() {
     TdbTest.call(this, 'scripts/Modify/Scale/Tests/ScaleTest04.js');

@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-15 11:03:21
 // Description : scaling lines, factor 0.5
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ScaleTest00() {
     TdbTest.call(this, 'scripts/Modify/Scale/Tests/ScaleTest00.js');

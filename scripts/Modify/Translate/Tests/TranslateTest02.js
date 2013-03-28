@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-16 10:10:49
 // Description : moves entities, 4 multiple copies
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function TranslateTest02() {
     TdbTest.call(this, 'scripts/Modify/Translate/Tests/TranslateTest02.js');

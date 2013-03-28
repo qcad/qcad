@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-05 17:05:14
 // Description : 
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function MirrorTest01() {
     TdbTest.call(this, 'scripts/Modify/Mirror/Tests/MirrorTest01.js');

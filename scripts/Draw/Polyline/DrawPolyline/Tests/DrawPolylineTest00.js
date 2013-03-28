@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 13:59:03
 // Description : 1 opened polyline, 1 closed with the close button
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function DrawPolylineTest00() {
     TdbTest.call(this, 'scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest00.js');

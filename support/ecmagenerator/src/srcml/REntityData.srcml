@@ -113,7 +113,7 @@ dir="./core" filename="REntityData.h">
     <specifier>virtual</specifier>
     <name>~REntityData</name>
     <parameter_list>()</parameter_list>
-    <block>{ }</block>
+    <block>{}</block>
   </destructor>
   <function>
     <type>

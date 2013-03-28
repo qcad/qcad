@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 10:19:53
 // Description : 4 parallel lines through end points of other lines
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineParallelThroughTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest00.js');

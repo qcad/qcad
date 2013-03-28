@@ -21,7 +21,7 @@
 // Timestamp   : 2011-04-26 15:23:19
 // Description : 
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function DimAlignedTest00() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js');

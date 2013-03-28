@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 13:30:11
 // Description : 4 ellipses
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function EllipseCPPTest00() {
     TdbTest.call(this, 'scripts/Draw/Ellipse/EllipseCPP/Tests/EllipseCPPTest00.js');

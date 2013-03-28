@@ -103,8 +103,10 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
 WidgetFactory.createDialog = function(basePath, uiFile, parent) {
     var dialog = WidgetFactory.createWidget(basePath, uiFile, parent);
 
-    if (typeof(TestingDashboard)!=="undefined") {
-        TestingDashboard.execDialog(dialog);
+    // a global function might be defined to do additional
+    // initilization for all dialogs (e.g. for testing purposes):
+    if (typeof(initDialog)!=="undefined") {
+        initDialog(dialog);
     }
 
     return dialog;

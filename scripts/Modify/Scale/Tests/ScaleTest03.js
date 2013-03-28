@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-15 11:34:07
 // Description : scaling points, factor 0.5
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ScaleTest03() {
     TdbTest.call(this, 'scripts/Modify/Scale/Tests/ScaleTest03.js');

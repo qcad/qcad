@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 14:04:01
 // Description : opened polyline with arc segments, radii from 2 to 8
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function DrawPolylineTest01() {
     TdbTest.call(this, 'scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest01.js');

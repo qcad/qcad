@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-05 14:05:32
 // Description : isometric projection of an ellipse using segment length 1
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function IsoProjectTest04() {
     TdbTest.call(this, 'scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest04.js');

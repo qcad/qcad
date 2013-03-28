@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 10:38:20
 // Description : 6 arcs, each defined with 3 points
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Arc3PTest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/Arc3P/Tests/Arc3PTest00.js');

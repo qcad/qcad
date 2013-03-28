@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-15 14:22:49
 // Description : scaling text, factor 0.5
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ScaleTest06() {
     TdbTest.call(this, 'scripts/Modify/Scale/Tests/ScaleTest06.js');

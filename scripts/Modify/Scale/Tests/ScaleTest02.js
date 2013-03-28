@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-15 11:26:18
 // Description : scaling arcs, factor 0.5
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ScaleTest02() {
     TdbTest.call(this, 'scripts/Modify/Scale/Tests/ScaleTest02.js');

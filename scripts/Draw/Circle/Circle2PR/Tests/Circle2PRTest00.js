@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 13:46:16
 // Description : 2 circles, same 2 points, different radii and solutions
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Circle2PRTest00() {
     TdbTest.call(this, 'scripts/Draw/Circle/Circle2PR/Tests/Circle2PRTest00.js');

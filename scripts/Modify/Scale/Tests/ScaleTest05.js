@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-15 14:15:45
 // Description : scaling polyline, factor 0.5
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ScaleTest05() {
     TdbTest.call(this, 'scripts/Modify/Scale/Tests/ScaleTest05.js');

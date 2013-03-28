@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-16 12:01:35
 // Description : disabled (needs native open file dialog)
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function ImageTest00() {
     TdbTest.call(this, 'scripts/Draw/Image/Tests/ImageTest00.js');

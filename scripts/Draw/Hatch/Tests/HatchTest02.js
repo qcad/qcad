@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-16 14:54:19
 // Description : contour, solid fill
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function HatchTest02() {
     TdbTest.call(this, 'scripts/Draw/Hatch/Tests/HatchTest02.js');

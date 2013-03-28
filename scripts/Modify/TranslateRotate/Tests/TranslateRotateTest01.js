@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-16 10:25:38
 // Description : moves and rotates by 30°, deletes the original
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function TranslateRotateTest01() {
     TdbTest.call(this, 'scripts/Modify/TranslateRotate/Tests/TranslateRotateTest01.js');

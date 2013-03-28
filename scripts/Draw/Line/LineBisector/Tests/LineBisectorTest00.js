@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-17 14:34:09
 // Description : 6 lines, length 15
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineBisectorTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineBisector/Tests/LineBisectorTest00.js');

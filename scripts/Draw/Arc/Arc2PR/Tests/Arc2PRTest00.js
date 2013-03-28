@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 10:09:09
 // Description : 4 arcs using all combinations of clockwise, counter clockwise, solution1 and solution2
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Arc2PRTest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/Arc2PR/Tests/Arc2PRTest00.js');

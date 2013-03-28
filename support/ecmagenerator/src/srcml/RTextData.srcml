@@ -220,6 +220,12 @@ dir="./entity" filename="RTextData.h">
       <name>simple</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RTextData</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
   <function_decl>
   <type>
     <name>virtual</name>

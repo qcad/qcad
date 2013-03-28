@@ -4,7 +4,6 @@ SUBDIRS = \
     InputPreferences \
     LanguagePreferences \
     ScriptingPreferences \
-    ShortcutPreferences \
     StartupPreferences \
     StylePreferences \
     TextPreferences \

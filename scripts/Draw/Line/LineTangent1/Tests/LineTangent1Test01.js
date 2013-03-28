@@ -21,7 +21,7 @@
 // Timestamp   : 2011-03-01 15:30:19
 // Description : 4 tangents to an arc
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineTangent1Test01() {
     TdbTest.call(this, 'scripts/Draw/Line/LineTangent1/Tests/LineTangent1Test01.js');

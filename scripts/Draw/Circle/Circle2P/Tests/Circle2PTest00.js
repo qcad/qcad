@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 13:44:41
 // Description : 3 circles defined by 2 points
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Circle2PTest00() {
     TdbTest.call(this, 'scripts/Draw/Circle/Circle2P/Tests/Circle2PTest00.js');

@@ -21,7 +21,7 @@
 // Timestamp   : 2011-04-27 13:13:19
 // Description : 
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function DimAngularTest00() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimAngular/Tests/DimAngularTest00.js');

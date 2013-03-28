@@ -21,7 +21,7 @@
 // Timestamp   : 2011-08-16 14:34:21
 // Description : contour, pattern HOUND, scale 0.5, angle 15°
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function HatchTest00() {
     TdbTest.call(this, 'scripts/Draw/Hatch/Tests/HatchTest00.js');

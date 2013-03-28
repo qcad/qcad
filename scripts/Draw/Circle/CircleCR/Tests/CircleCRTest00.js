@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 14:04:43
 // Description : 6 circles defined by radius and center
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function CircleCRTest00() {
     TdbTest.call(this, 'scripts/Draw/Circle/CircleCR/Tests/CircleCRTest00.js');
