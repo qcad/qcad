@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-11 11:40:52
 // Description : Lines drawn with grid snap while zooming out
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapGrid() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapGrid.js');

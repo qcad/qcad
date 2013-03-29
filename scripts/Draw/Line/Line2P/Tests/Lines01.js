@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-24 15:00:17
 // Description : 5 lines, drawn non-continuously, input mouse clicks
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Lines01() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/Lines01.js');

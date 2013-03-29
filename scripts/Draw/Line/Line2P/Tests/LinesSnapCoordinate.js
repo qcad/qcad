@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-11 16:32:54
 // Description : Lines drawn with coordinate snap
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapCoordinate() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapCoordinate.js');

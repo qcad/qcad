@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-09 14:15:16
 // Description : 4 lines, snap to end point / start point, input mouse clicks
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function Lines02() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/Lines02.js');

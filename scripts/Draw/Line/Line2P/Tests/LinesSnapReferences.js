@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-25 14:44:26
 // Description : Lines drawn with references snap
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapReferences() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapReferences.js');

@@ -32,14 +32,12 @@ TranslateTest00.prototype = new TdbTest();
 TranslateTest00.prototype.test00 = function() {
     qDebug('running TranslateTest00.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(41, 424), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(41, 424), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Translate/Tests/data/entities.dxf');
-    this.setZoom(2.0813704496788006, new RVector(160.055, 63.2973, 0) );
-    var p = new RVector(-77.416667, -1.799383);
+    this.setZoom(2, new RVector(160.055, 63.2973, 0) );
+    var p = new RVector(-140,-20);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
+    var p = new RVector(85,15);
+    this.sendMouseEventModelPos(QEvent.MouseMove, p, Qt.LeftButton, 0, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.triggerCommand('move');
     this.setZoom(2.0813704496788006, new RVector(160.055, 63.2973, 0) );

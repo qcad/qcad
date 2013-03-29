@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-11 13:53:43
 // Description : Lines drawn with middle snap
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapMiddle() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapMiddle.js');

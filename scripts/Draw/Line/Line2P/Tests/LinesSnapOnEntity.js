@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-11 13:48:20
 // Description : Lines drawn with snap on entity
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapOnEntity() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapOnEntity.js');

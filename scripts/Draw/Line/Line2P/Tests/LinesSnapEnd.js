@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-11 13:35:05
 // Description : Lines drawn with end snap
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapEnd() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapEnd.js');

@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-09 14:44:10
 // Description : same length, different angles, input mouse clicks
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LineAngle00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineAngle/Tests/LineAngle00.js');

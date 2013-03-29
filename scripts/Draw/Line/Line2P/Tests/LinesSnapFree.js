@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 09:46:29
 // Description : Lines drawn with free snap
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapFree() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapFree.js');

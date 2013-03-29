@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-25 14:12:08
 // Description : Lines drawn with center snap
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapCenter() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapCenter.js');

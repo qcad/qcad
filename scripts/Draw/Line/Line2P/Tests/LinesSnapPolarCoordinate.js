@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-17 14:12:54
 // Description : Lines drawn with polar coordinate snap
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapPolarCoordinate() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapPolarCoordinate.js');

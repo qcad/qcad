@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-11 14:53:11
 // Description : Lines drawn with distance snap
 
-include('scripts/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapDistance() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapDistance.js');
