@@ -65,6 +65,8 @@ public:
     RDocumentInterface& getDocumentInterface();
     QList<RGraphicsView*> getGraphicsViews();
 
+    virtual void clear();
+
     /**
      * Override for performance reasons, we don't need settings to be
      * exported for graphics scenes.

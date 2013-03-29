@@ -55,6 +55,14 @@ RGraphicsViewImage* RGraphicsSceneQt::getGraphicsView() {
     return NULL;
 }
 
+void RGraphicsSceneQt::clear() {
+    RGraphicsScene::clear();
+    painterPaths.clear();
+    painterPathsDraft.clear();
+    images.clear();
+    previewPainterPaths.clear();
+}
+
 void RGraphicsSceneQt::updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews) {
     RGraphicsScene::updateSelectionStatus(affectedEntities, updateViews);
     /*

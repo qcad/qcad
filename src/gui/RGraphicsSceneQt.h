@@ -57,6 +57,8 @@ public:
 
     RGraphicsViewImage* getGraphicsView();
 
+    virtual void clear();
+
     virtual void updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews);
 
     virtual void clearPreview();

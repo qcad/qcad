@@ -212,6 +212,11 @@ void RDocumentInterface::clear() {
     document.clear();
     suspended = false;
     setCurrentBlock(RBlock::modelSpaceName);
+
+    QList<RGraphicsScene*>::iterator it;
+    for (it=scenes.begin(); it!=scenes.end(); it++) {
+        (*it)->clear();
+    }
 }
 
 

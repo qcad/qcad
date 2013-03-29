@@ -61,6 +61,15 @@ QList<RGraphicsView*> RGraphicsScene::getGraphicsViews() {
 }
 
 /**
+ * Clears (resets) the scene contents.
+ */
+void RGraphicsScene::clear() {
+    referencePoints.clear();
+    previewIsEmpty = true;
+    highlightedReferencePoint = RVector::invalid;
+}
+
+/**
  * Registers a view with this scene.
  */
 void RGraphicsScene::registerView(RGraphicsView* view, bool regen) {
