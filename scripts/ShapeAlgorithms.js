@@ -148,9 +148,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
     }
 
     var res = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
-    qDebug("ShapeAlgorithms.autoTrim: res: ", res);
-
-    //debugger;
 
     var cutPos1 = undefined;
     var cutPos2 = undefined;
@@ -338,10 +335,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
     }
 
     var ret = new Array();
-
-    qDebug("rest1: ", rest1);
-    qDebug("rest2: ", rest2);
-    qDebug("segment: ", segment);
 
     // add new rest entities:
     ret.push(rest1);
