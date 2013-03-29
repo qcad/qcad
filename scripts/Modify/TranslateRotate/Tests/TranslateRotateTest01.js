@@ -51,7 +51,7 @@ TranslateRotateTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
     this.dlgAppendCode('var map = new Map()');
-    this.dlgAppendCode("map.put('DialogOpenedByTdb/groupBox', 'DeleteOriginal')");
+    this.dlgAppendCode("map.put('DialogOpenedByTdb/Mode', 'DeleteOriginal')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/NumberOfCopies',  [ 10, 0 ] )");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Angle',  [ 30, 0 ] )");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/UseCurrentAttributes', false)");
