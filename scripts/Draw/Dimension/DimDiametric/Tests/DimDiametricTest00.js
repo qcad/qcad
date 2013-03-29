@@ -45,7 +45,7 @@ DimDiametricTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(11.120000000000001, new RVector(6.96043, 3.14928, 0) );
-    var p = new RVector(24.42446, 12.048561);
+    var p = new RVector(24.8, 11.5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('Dimension/Prefix', '(No prefix)');
