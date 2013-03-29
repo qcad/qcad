@@ -279,11 +279,7 @@ DefaultAction.prototype.mousePressEvent = function(event) {
         if (this.state == DefaultAction.State.Neutral) {
             this.d1Model = event.getModelPosition();
             this.d1Screen = event.getScreenPosition();
-            //this.d2Model = undefined;
-            //this.d2Screen = undefined;
             this.setState(DefaultAction.State.Dragging);
-            //view = event.getGraphicsView();
-            //view.simulateMouseMoveEvent();
             this.di.clearPreview();
         }
     }
