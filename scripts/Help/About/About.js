@@ -47,8 +47,6 @@ About.prototype.beginEvent = function() {
          + "}\n</style>\n"
          + "</head>";
 
-    qDebug(head);
-
     var webView = formWidget.findChild("QCADText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     var html =
