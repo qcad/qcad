@@ -161,8 +161,22 @@ double RStorage::getLinetypeScale() const {
 QDebug operator<<(QDebug dbg, RStorage& s) {
     dbg.nospace() << "RStorage(" << QString("%1").arg((long int)&s, 0, 16) << ", ";
     dbg.nospace() << "\n";
-    dbg.nospace() << "current block ID: " << s.getCurrentBlockId() << "\n";
-    dbg.nospace() << "current layer ID: " << s.getCurrentLayerId() << "\n";
+    //dbg.nospace() << "current block ID: " << s.getCurrentBlockId() << "\n";
+    QSharedPointer<RBlock> block = s.queryCurrentBlock();
+    if (block.isNull()) {
+        dbg.nospace() << "current block: INVALID\n";
+    }
+    else {
+        dbg.nospace() << "current block: " << block->getName() << "\n";
+    }
+    //dbg.nospace() << "current layer ID: " << s.getCurrentLayerId() << "\n";
+    QSharedPointer<RLayer> layer = s.queryCurrentLayer();
+    if (layer.isNull()) {
+        dbg.nospace() << "current layer: INVALID\n";
+    }
+    else {
+        dbg.nospace() << "current layer: " << layer->getName() << "\n";
+    }
     dbg.nospace() << "current view ID: " << s.getCurrentViewId() << "\n";
     dbg.nospace() << "drawing unit: " << s.getUnit() << "\n";
     dbg.nospace() << "bounding box: " << s.getBoundingBox() << "\n";

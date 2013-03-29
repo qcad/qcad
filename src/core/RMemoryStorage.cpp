@@ -47,6 +47,7 @@ void RMemoryStorage::clear() {
     transactionMap.clear();
     variables.clear();
     variableCaseMap.clear();
+    knownVariables.clear();
     setLastTransactionId(-1);
 }
 
@@ -340,6 +341,7 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(RLayer::Id layerId) const {
         return QSharedPointer<RLayer>((RLayer*)objectMap[layerId]->clone());
     }
 
+    Q_ASSERT(false);
     qWarning() << "RMemoryStorage::queryLayer: should never be reached: " << layerId;
     qWarning() << "RMemoryStorage::queryLayer: found object but not layer: " << *objectMap[layerId];
     return QSharedPointer<RLayer>();
