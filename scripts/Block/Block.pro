@@ -6,7 +6,7 @@ SUBDIRS = \
     CreateBlock \
     CreateLibraryItem \
     EditBlock \
-    EditFromInsert \
+    EditFromReference \
     EditMainDrawing \
     HideAllBlocks \
     InsertBlock \

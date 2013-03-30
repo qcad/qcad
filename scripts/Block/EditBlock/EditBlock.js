@@ -41,53 +41,11 @@ EditBlock.prototype.beginEvent = function() {
         return;
     }
 
-    var di = this.getDocumentInterface();
-    var doc = this.getDocument();
-    var views = this.getGraphicsViews();
 
     // don't display another block when activating one:
     blockList.blockSignals(true);
 
-    var i, view, blockZoom;
-
-    // store offset and zoom factor of all views in a map blockId -> [factor, offset vector]:
-    var blockId = doc.getCurrentBlockId();
-    for (i=0; i<views.length; i++) {
-        view = views[i];
-
-        blockZoom = view.property("blockZoom");
-        if (isNull(blockZoom)) {
-            blockZoom = new Object();
-        }
-
-        blockZoom[blockId] = [view.getFactor(), view.getOffset()];
-        view.setProperty("blockZoom", blockZoom);
-        //print("stored zoom for block: ", blockId, ", view: ", i, ", factor: ", view.getFactor());
-    }
-
-    // change current block that is being edited:
-    di.setCurrentBlock(item.text());
-
-    // restore offset and zoom factor for all views:
-    blockId = doc.getCurrentBlockId();
-    for (i=0; i<views.length; i++) {
-        view = views[i];
-
-        blockZoom = view.property("blockZoom");
-        if (isNull(blockZoom)) {
-            view.autoZoom();
-            continue;
-        }
-
-        if (isNull(blockZoom[blockId]) || blockZoom[blockId].length!==2) {
-            view.autoZoom();
-        }
-        else {
-            view.setFactor(blockZoom[blockId][0]);
-            view.setOffset(blockZoom[blockId][1]);
-            //print("restored zoom for block: ", blockId, ", view: ", i, ", factor: ", view.getFactor());
-        }
-    }
+    this.editBlock(item.text());
 
     blockList.blockSignals(false);
 

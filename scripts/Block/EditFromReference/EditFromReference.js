@@ -20,30 +20,30 @@
 include("../Block.js");
 
 /**
- * \class EditFromInsert
- * \brief Edits the block that is referenced by the insert (reference)
+ * \class EditFromReference
+ * \brief Edits the block that is referenced by the block reference
  * the user clicks.
  * \ingroup ecma_draw_line
  */
-function EditFromInsert(guiAction) {
+function EditFromReference(guiAction) {
     Block.call(this, guiAction);
 
     this.entity = undefined;
 }
 
-EditFromInsert.prototype = new Block();
+EditFromReference.prototype = new Block();
 
-EditFromInsert.State = {
+EditFromReference.State = {
     ChoosingEntity : 0
 };
 
-EditFromInsert.prototype.beginEvent = function() {
+EditFromReference.prototype.beginEvent = function() {
     Block.prototype.beginEvent.call(this);
 
-    this.setState(EditFromInsert.State.ChoosingEntity);
+    this.setState(EditFromReference.State.ChoosingEntity);
 };
 
-EditFromInsert.prototype.setState = function(state) {
+EditFromReference.prototype.setState = function(state) {
     Block.prototype.setState.call(this, state);
 
     this.getDocumentInterface().setClickMode(RAction.PickEntity);
@@ -51,7 +51,7 @@ EditFromInsert.prototype.setState = function(state) {
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
-    case EditFromInsert.State.ChoosingEntity:
+    case EditFromReference.State.ChoosingEntity:
         this.setLeftMouseTip(qsTr("Choose block reference"));
         break;
     }
@@ -59,15 +59,15 @@ EditFromInsert.prototype.setState = function(state) {
     this.setRightMouseTip(EAction.trCancel);
 };
 
-EditFromInsert.prototype.escapeEvent = function() {
+EditFromReference.prototype.escapeEvent = function() {
     switch (this.state) {
-    case EditFromInsert.State.ChoosingEntity:
+    case EditFromReference.State.ChoosingEntity:
         EAction.prototype.escapeEvent.call(this);
         break;
     }
 };
 
-EditFromInsert.prototype.pickEntity = function(event, preview) {
+EditFromReference.prototype.pickEntity = function(event, preview) {
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
     var entityId = event.getEntityId();
@@ -78,7 +78,7 @@ EditFromInsert.prototype.pickEntity = function(event, preview) {
     }
 
     switch (this.state) {
-    case EditFromInsert.State.ChoosingEntity:
+    case EditFromReference.State.ChoosingEntity:
         if (isBlockReferenceEntity(entity)) {
             this.entity = entity;
         }
@@ -94,7 +94,8 @@ EditFromInsert.prototype.pickEntity = function(event, preview) {
         }
         else {
             var blockName = entity.getReferencedBlockName();
-            di.setCurrentBlock(blockName);
+            //di.setCurrentBlock(blockName);
+            this.editBlock(blockName);
 
             this.terminate();
         }
@@ -102,7 +103,7 @@ EditFromInsert.prototype.pickEntity = function(event, preview) {
     }
 };
 
-EditFromInsert.prototype.getHighlightedEntities = function() {
+EditFromReference.prototype.getHighlightedEntities = function() {
     var ret = new Array();
     if (isEntity(this.entity)) {
         ret.push(this.entity.getId());

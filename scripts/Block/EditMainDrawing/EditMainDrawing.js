@@ -37,7 +37,8 @@ EditMainDrawing.prototype.beginEvent = function() {
 
     // don't display another block when activating one:
     blockList.blockSignals(true);
-    this.getDocumentInterface().setCurrentBlock(RBlock.modelSpaceName);
+    //this.getDocumentInterface().setCurrentBlock(RBlock.modelSpaceName);
+    this.editBlock(RBlock.modelSpaceName);
     blockList.blockSignals(false);
 
     this.terminate();

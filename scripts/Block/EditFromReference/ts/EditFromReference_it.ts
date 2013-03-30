@@ -2,19 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="it_IT">
 <context>
-    <name>EditFromInsert</name>
+    <name>EditFromReference</name>
     <message>
-        <location filename="../EditFromInsert.js" line="55"/>
+        <location filename="../EditFromReference.js" line="55"/>
         <source>Choose block reference</source>
         <translation>Scegliere il riferimento di blocco</translation>
     </message>
     <message>
-        <location filename="../EditFromInsertInit.js" line="3"/>
+        <location filename="../EditFromReferenceInit.js" line="3"/>
         <source>E&amp;dit Block from Reference</source>
         <translation>M&amp;odifica blocco da un riferimento</translation>
     </message>
     <message>
-        <location filename="../EditFromInsertInit.js" line="4"/>
+        <location filename="../EditFromReferenceInit.js" line="4"/>
         <source>Edit block based on chosen block reference</source>
         <translation>Modificare un blocco sulla base di un riferimento di blocco scelto</translation>
     </message>
