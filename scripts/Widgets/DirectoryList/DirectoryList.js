@@ -25,8 +25,7 @@ function DirectoryList(pageWidget, listWidgetName, fileDlgTitle) {
     this.doInit(pageWidget, listWidgetName, fileDlgTitle);
 }
 
-DirectoryList.prototype.doInit = function(pageWidget, listWidgetName,
-        fileDlgTitle) {
+DirectoryList.prototype.doInit = function(pageWidget, listWidgetName, fileDlgTitle) {
     var widgets = getWidgets(pageWidget);
     var listWidget = widgets[listWidgetName];
     listWidget.dragDropMode = QAbstractItemView.InternalMove;
