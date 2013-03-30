@@ -202,7 +202,7 @@ int main(int argc, char *argv[]) {
 
     // disable Qt library paths to avoid plugins for Qt designer from being found:
     app->setLibraryPaths(QStringList() << appDir.absolutePath());
-    qDebug() << "library dir is: " << appDir.absolutePath();
+    //qDebug() << "library dir is: " << appDir.absolutePath();
 
     RMath::init();
     RFontList::init();
