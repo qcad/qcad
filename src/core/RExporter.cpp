@@ -758,12 +758,6 @@ void RExporter::exportLine(const RLine& line, double offset) {
 
     p.scale(getPatternFactor());
 
-    // avoid exporting a huge number of small segments that overlap anyway:
-    if (p.getLargestGap() < currentPen.widthF()) {
-        exportLineSegment(line);
-        return;
-    }
-
     // avoid huge number of small segments due to very fine 
     // pattern or long lines:
     if (length / p.getPatternLength() > 5000) {
