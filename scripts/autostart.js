@@ -430,8 +430,8 @@ function postInitAddOns(addOns, splash) {
  * Loads the add-ons and starts QCAD.
  */
 function main() {
-    qApp.organizationName = "RibbonSoft";
-    qApp.organizationDomain = "ribbonsoft.com";
+    qApp.organizationName = "QCAD";
+    qApp.organizationDomain = "qcad.org";
     qApp.applicationVersion = RSettings.getVersionString();
 
     var i;
