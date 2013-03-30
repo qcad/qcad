@@ -99,7 +99,6 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
             }
         }
 
-        qDebug("className: ", className);
         try {
             // include normally not needed
             var doInclude = false;
