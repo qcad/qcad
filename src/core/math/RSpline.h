@@ -221,6 +221,7 @@ public:
     mutable bool periodic;
 
     mutable bool dirty;
+    mutable bool updateInProgress;
 
 protected:
     virtual void print(QDebug dbg) const;

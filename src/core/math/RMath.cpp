@@ -45,9 +45,7 @@ int RMath::absmod(int a, int b) {
 }
 
 double RMath::trunc(double v) {
-#ifdef Q_OS_MAC
-    return ::trunc(v);
-#elif defined Q_OS_WIN32
+#if defined Q_OS_WIN32
     if (v==0 || RMath::isNaN(v) || RMath::isInf(v)) {
         return v;
     }

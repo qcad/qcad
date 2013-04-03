@@ -48,6 +48,7 @@ void RMemoryStorage::clear() {
     variables.clear();
     variableCaseMap.clear();
     knownVariables.clear();
+    linetypeScale = 1.0;
     setLastTransactionId(-1);
 }
 

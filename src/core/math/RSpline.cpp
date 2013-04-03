@@ -32,14 +32,14 @@ RSpline::UpdateFromFitPointsFunction RSpline::updateFromFitPointsFunction = NULL
  * Creates a spline object without controlPoints.
  */
 RSpline::RSpline() :
-    degree(3), periodic(false), dirty(true) {
+    degree(3), periodic(false), dirty(true), updateInProgress(false) {
 }
 
 /**
  * Creates a spline object with the given control points and degree.
  */
 RSpline::RSpline(const QList<RVector>& controlPoints, int degree) :
-    controlPoints(controlPoints), degree(degree), periodic(false), dirty(true) {
+    controlPoints(controlPoints), degree(degree), periodic(false), dirty(true), updateInProgress(false) {
 
     //updateInternal();
 }
@@ -469,7 +469,7 @@ double RSpline::getDirection1() const {
     if (!isValid()) {
         return 0.0;
     }
-    //updateInternal();
+    updateInternal();
 
 #ifndef R_NO_OPENNURBS
     ON_3dVector ontan = curve.TangentAt(getTMin());
@@ -487,7 +487,7 @@ double RSpline::getDirection2() const {
     if (!isValid()) {
         return 0.0;
     }
-    //updateInternal();
+    updateInternal();
 
 #ifndef R_NO_OPENNURBS
     ON_3dVector ontan = curve.TangentAt(getTMax());
@@ -951,15 +951,17 @@ void RSpline::invalidate() const {
 
 void RSpline::updateInternal() const {
 //    RDebug::printBacktrace();
-    if (!dirty) {
+    if (!dirty || updateInProgress) {
         return;
     }
 
     dirty = false;
+    updateInProgress = true;
 
     if (degree<2 || degree>3) {
         invalidate();
         qWarning() << "RSpline::update: invalid degree: " << degree;
+        updateInProgress = false;
         return;
     }
 
@@ -978,6 +980,8 @@ void RSpline::updateInternal() const {
     //updateBoundingBox();
     boundingBox = RBox();
     getExploded();
+
+    updateInProgress = false;
 }
 
 void RSpline::updateFromControlPoints() const {
