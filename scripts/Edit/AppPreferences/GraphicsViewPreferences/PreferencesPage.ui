@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>582</width>
-    <height>704</height>
+    <height>615</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>580</width>
-     <height>702</height>
+     <height>613</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -378,13 +378,6 @@
        </item>
        <item row="1" column="1">
         <widget class="QSpinBox" name="TextHeightThreshold"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QCheckBox" name="RenderArcsPrecise">
-         <property name="text">
-          <string>Render circular arcs precise (slower)</string>
-         </property>
-        </widget>
        </item>
       </layout>
      </widget>
