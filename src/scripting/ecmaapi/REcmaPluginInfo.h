@@ -58,6 +58,12 @@
         setAboutString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVersionString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

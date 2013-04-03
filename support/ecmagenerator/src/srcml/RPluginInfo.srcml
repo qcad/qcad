@@ -112,6 +112,39 @@ dir="./core" filename="RPluginInfo.h">
     <type>
       <name>QString</name>
     </type>
+    <name>getDescription</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>description</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setDescription</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>s</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>description</name>= 
+    <name>s</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
     <name>getVersionString</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
@@ -254,6 +287,13 @@ dir="./core" filename="RPluginInfo.h">
       <name>QString</name>
     </type>
     <name>aboutString</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>description</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

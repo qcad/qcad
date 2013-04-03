@@ -51,6 +51,14 @@ public:
         aboutString = s;
     }
 
+    QString getDescription() const {
+        return description;
+    }
+
+    void setDescription(const QString& s) {
+        description = s;
+    }
+
     QString getVersionString() const {
         return versionString;
     }
@@ -86,6 +94,7 @@ public:
 private:
     QString fileName;
     QString aboutString;
+    QString description;
     QString versionString;
     QString errorString;
     QString license;

@@ -61,6 +61,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAboutString, "setAboutString");
             
+            REcmaHelper::registerFunction(&engine, proto, getDescription, "getDescription");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDescription, "setDescription");
+            
             REcmaHelper::registerFunction(&engine, proto, getVersionString, "getVersionString");
             
             REcmaHelper::registerFunction(&engine, proto, setVersionString, "setVersionString");
@@ -384,6 +388,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginInfo::setAboutString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::getDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::getDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("getDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDescription();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.getDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::getDescription", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::setDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::setDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::setDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("setDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDescription(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.setDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::setDescription", context, engine);
             return result;
         }
          QScriptValue

@@ -51,7 +51,7 @@ void RPluginLoader::loadPlugins() {
     foreach (QString fileName, pluginsDir.entryList(nameFilter, QDir::Files)) {
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
         QObject* plugin = loader.instance();
-        loadPlugin(plugin, fileName, loader.errorString());
+        loadPlugin(plugin, pluginsDir.absoluteFilePath(fileName), loader.errorString());
     }
 
     QObjectList staticPlugins = QPluginLoader::staticInstances();
@@ -82,9 +82,9 @@ void RPluginLoader::loadPlugin(QObject* plugin, const QString& fileName, const Q
         info.setFileName(fileName);
     }
 
-    if (!info.getFileName().isEmpty()) {
+    //if (!info.getFileName().isEmpty()) {
         pluginsInfo.append(info);
-    }
+    //}
 }
 
 void RPluginLoader::initScriptExtensions(QScriptEngine& engine) {
