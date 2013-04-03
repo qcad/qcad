@@ -431,7 +431,7 @@ function postInitAddOns(addOns, splash) {
  */
 function main() {
     qApp.organizationName = "QCAD";
-    qApp.organizationDomain = "qcad.org";
+    qApp.organizationDomain = "QCAD.org";
     qApp.applicationVersion = RSettings.getVersionString();
 
     var i;
