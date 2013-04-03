@@ -120,7 +120,6 @@ public:
     static void resetCache();
 
     static bool isXDataEnabled();
-    static bool getRenderArcsPrecise();
 
 private:
     static bool isInitialized();
@@ -154,8 +153,6 @@ private:
     static int enableXData;
 
     static bool quitFlag;
-    //static bool eventBlocking;
-    static int renderArcsPrecise;
 };
 
 Q_DECLARE_METATYPE(RSettings*)

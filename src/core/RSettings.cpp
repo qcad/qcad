@@ -42,7 +42,6 @@ int RSettings::showLargeCrosshair = -1;
 int RSettings::concurrentDrawing = -1;
 int RSettings::previewEntities = -1;
 int RSettings::enableXData = -1;
-int RSettings::renderArcsPrecise = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -50,7 +49,6 @@ QSettings* RSettings::qSettings = NULL;
 
 QStringList RSettings::originalArguments;
 
-//bool RSettings::eventBlocking = true;
 bool RSettings::quitFlag = false;
 
 QStringList RSettings::getOriginalArguments() {
@@ -60,16 +58,6 @@ QStringList RSettings::getOriginalArguments() {
 void RSettings::setOriginalArguments(const QStringList& a) {
     originalArguments = a;
 }
-
-/*
-bool RSettings::isEventBlockingEnabled() {
-    return eventBlocking;
-}
-
-void RSettings::setEventBlocking(bool on) {
-    eventBlocking = on;
-}
-*/
 
 bool RSettings::isGuiEnabled() {
     return !QCoreApplication::arguments().contains("-no-gui");
@@ -379,41 +367,6 @@ QLocale RSettings::getNumberLocale() {
     return *numberLocale;
 }
 
-/*
-QChar RSettings::getDecimalPoint() {
-    if (decimalPoint.isNull()) {
-        decimalPoint =
-                getValue("Input/DecimalPoint", QChar('.')).toChar();
-    }
-    return decimalPoint;
-}
-
-QChar RSettings::getCartesianCoordinateSeparator() {
-    if (cartesianCoordinateSeparator.isNull()) {
-        cartesianCoordinateSeparator =
-                getValue("Input/CartesianCoordinateSeparator", QChar(',')).toChar();
-    }
-    return cartesianCoordinateSeparator;
-}
-
-QChar RSettings::getPolarCoordinateSeparator() {
-    if (polarCoordinateSeparator.isNull()) {
-        polarCoordinateSeparator =
-                getValue("Input/PolarCoordinateSeparator", QChar('<')).toChar();
-    }
-    return polarCoordinateSeparator;
-}
-
-
-QChar RSettings::getRelativeCoordinatePrefix() {
-    if (relativeCoordinatePrefix.isNull()) {
-        relativeCoordinatePrefix =
-                getValue("Input/RelativeCoordinatePrefix", QChar('@')).toChar();
-    }
-    return relativeCoordinatePrefix;
-}
-*/
-
 RColor RSettings::getColor(const QString& key, const RColor& defaultValue) {
     // colors are 'different' and need to be handled without RSettings::getValue:
     if (!isInitialized()) {
@@ -465,9 +418,6 @@ double RSettings::getDoubleValue(const QString& key, double defaultValue) {
     if (ret.type()==QVariant::List || ret.canConvert<QStringList>()) {
         if (ret.toList().count()>0) {
             ret = ret.toList().at(0);
-        }
-        else {
-            //qWarning() << "RSettings::getDoubleValue: check key: " << key;
         }
     }
 
@@ -530,13 +480,6 @@ bool RSettings::isXDataEnabled() {
     return (bool)enableXData;
 }
 
-bool RSettings::getRenderArcsPrecise() {
-    if (renderArcsPrecise==-1) {
-        renderArcsPrecise = getBoolValue("GraphicsView/RenderArcsPrecise", false);
-    }
-    return (bool)renderArcsPrecise;
-}
-
 void RSettings::resetCache() {
     if (rulerFont!=NULL) {
         delete rulerFont;
@@ -559,7 +502,6 @@ void RSettings::resetCache() {
     showLargeCrosshair = -1;
     concurrentDrawing = -1;
     previewEntities = -1;
-    renderArcsPrecise = -1;
     cache.clear();
 }
 
@@ -569,4 +511,3 @@ void RSettings::uninit() {
         qSettings = NULL;
     }
 }
-
