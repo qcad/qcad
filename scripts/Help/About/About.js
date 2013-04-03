@@ -33,7 +33,7 @@ About.prototype.beginEvent = function() {
     formWidget.windowTitle = qsTr("About %1").arg(qApp.applicationName);
 
     var f = 1.0;
-    if (RS.getSystemId()=="win") {
+    if (RS.getSystemId()==="win") {
         f = 0.75;
     }
 
@@ -41,12 +41,13 @@ About.prototype.beginEvent = function() {
     head = "<head>\n"
          + "<style type='text/css'>\n"
          + "a { text-decoration:none }\n"
-         + "h1 { font-family:sans;font-size:" + 18*f + "pt;margin-bottom:8pt; }\n"
-         + "h2 { font-family:sans;font-size:" + 14*f + "pt;margin-bottom:5pt; }\n"
-         + "body,td { font-family:sans;font-size:" + 11*f + "pt; }\n"
+         + "h1 { font-family:sans;font-size:" + 16*f + "pt;margin-bottom:8pt; }\n"
+         + "h2 { font-family:sans;font-size:" + 12*f + "pt;font-style:italic;margin-bottom:5pt; }\n"
+         + "body,td { font-family:sans;font-size:" + 9*f + "pt; }\n"
          + "}\n</style>\n"
          + "</head>";
 
+    // init about view:
     var webView = formWidget.findChild("QCADText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     var html =
@@ -65,8 +66,9 @@ About.prototype.beginEvent = function() {
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
             + "<p/>"
             + "<p>QCAD is free (open source) software.</p>"
+            + "<p>Plugins are subject to their respective license (see 'Plugins' tab).</p>"
             + "<p/>"
-            + "<p>Internet: <a href='http://www.qcad.org'>QCAD.org</a></p>"
+            + "<p>Internet: <a href='http://%1'>%1</a></p>".arg(qApp.organizationDomain)
             + "<p/>"
             + "<p>All brand or product names are trademarks or registered trademarks of their respective holders.</p>"
             + "<p/>"
@@ -77,8 +79,11 @@ About.prototype.beginEvent = function() {
     webView.setHtml(html);
 
 
+    // init plugin view:
     webView = formWidget.findChild("PluginsText");
     WidgetFactory.initWebView(webView, this, "openUrl");
+    var webPage = webView.page();
+    webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
     html =
             "<html>"
             + head
@@ -95,36 +100,44 @@ About.prototype.beginEvent = function() {
         for (var i=0; i<numPlugins; i++) {
             var pluginInfo = RPluginLoader.getPluginInfo(i);
 
-            html += "<h2>%1</h2>".arg(pluginInfo.getFileName())
-            html += "<table border='0'>";
-            html += "<col width='10%'/>";
+            //html += "<h2>%1</h2>".arg(pluginInfo.getFileName())
+            html += "<table border='0' width='100%'>";
+            html += "<col width='25%'/>";
             html += "<col width='90%'/>";
 
+            var text, url;
+
             // plugin about info:
-            var text = pluginInfo.getAboutString();
+            text = pluginInfo.getAboutString();
             if (text.length===0) {
                 text = qsTr("No information available");
             }
-            html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("Plugin:")).arg(Qt.escape(text));
+            html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
+
+            // description:
+            text = pluginInfo.getDescription();
+            if (text.length!==0) {
+                html += this.getTableRow(qsTr("Description:"), text, false);
+            }
 
             // plugin version:
             text = pluginInfo.getVersionString();
             if (text.length===0) {
                 text = qsTr("Unknown");
             }
-            html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("Version:")).arg(Qt.escape(text));
+            html += this.getTableRow(qsTr("Version:"), text);
 
             // plugin license:
             text = pluginInfo.getLicense();
             if (text.length===0) {
                 text = qsTr("Unknown");
             }
-            html += "<tr><td>%1 </td><td>%2</td></tr>".arg(qsTr("License:")).arg(Qt.escape(text));
+            html += this.getTableRow(qsTr("License:"), text);
 
             // plugin URL:
             text = pluginInfo.getUrl();
             if (text.length!==0) {
-                var url = new QUrl(text);
+                url = new QUrl(text);
                 if (url.isValid()) {
     //                var opt = new QUrl.FormattingOption(
     //                    QUrl.RemoveScheme, QUrl.RemoveAuthority, QUrl.RemovePath,
@@ -132,19 +145,27 @@ About.prototype.beginEvent = function() {
     //                    QUrl.StripTrailingSlash
     //                );
                     //debugger;
-                    html += "<tr><td>%1 </td><td><a href=\"%2\">%3</a></td></tr>"
-                        .arg(qsTr("Internet:"))
-                        .arg(url.toString())
-                        .arg(url.host().replace(/^www./, ""));
+                    html += this.getTableRow(
+                        qsTr("Internet:"),
+                        "<a href='%2'>%3</a>"
+                            .arg(url.toString()).arg(url.host().replace(/^www./, "")),
+                        false
+                    );
                 }
+            }
+
+            text = pluginInfo.getFileName();
+            if (text.length!==0) {
+                var fi = new QFileInfo(text);
+                text = fi.fileName();
+                url = QUrl.fromLocalFile(fi.absolutePath());
+                html += this.getTableRow(qsTr("File:"), "<a href='" + url.toString() + "'>" + text + "</a>", false);
             }
 
             // plugin error:
             var err = pluginInfo.getErrorString();
             if (err.length!==0) {
-                html += "<tr><td>%1 </td><td><div>%2</div></td></tr>"
-                    .arg(qsTr("Error:"))
-                    .arg(Qt.escape(err));
+                html += this.getTableRow(qsTr("Error:"), err);
             }
             html += "</table>";
             html += "<hr/>";
@@ -156,6 +177,14 @@ About.prototype.beginEvent = function() {
     webView.setHtml(html);
 
     formWidget.exec();
+};
+
+About.prototype.getTableRow = function(text1, text2, escape) {
+    if (isNull(escape) || escape!==false) {
+        text2 = Qt.escape(text2);
+    }
+
+    return "<tr><td valign='top'>%1 </td><td>%2</td></tr>".arg(text1).arg(text2);
 };
 
 About.prototype.openUrl = function(url) {
