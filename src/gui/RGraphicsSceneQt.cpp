@@ -275,6 +275,11 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
         return;
     }
 
+    // arc approximation with splines: faster but not precise enough:
+    // RPainterPath p;
+    // p.addArc(arc);
+    // path.addPath(p);
+
     path.setAutoRegen(true);
     RGraphicsScene::exportArcSegment(arc);
 }
