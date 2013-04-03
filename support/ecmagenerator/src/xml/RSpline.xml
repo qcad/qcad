@@ -63,10 +63,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="removeLastControlPoint"
     cppName="removeLastControlPoint" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="upd"
-        hasDefault="true" default=" true" isConst="false" />
-      </variant>
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="setControlPoints" cppName="setControlPoints"
     specifier="public" isStatic="false" isVirtual="false"
@@ -105,10 +102,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="removeLastFitPoint" cppName="removeLastFitPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="upd"
-        hasDefault="true" default=" true" isConst="false" />
-      </variant>
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="setFitPoints" cppName="setFitPoints"
     specifier="public" isStatic="false" isVirtual="false"
@@ -148,6 +142,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QList &lt; double &gt; &amp;"
         typeName="QList &lt; double &gt;" name="knots"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="appendKnot" cppName="appendKnot"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="k"
+        isConst="false" />
       </variant>
     </method>
     <method name="getWeights" cppName="getWeights"
@@ -447,6 +449,23 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="updateFromControlPoints"
+    cppName="updateFromControlPoints" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateFromFitPoints"
+    cppName="updateFromFitPoints" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="useTangents"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="update" cppName="update" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="invalidate" cppName="invalidate"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -462,19 +481,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
-    <method name="updateFromControlPoints"
-    cppName="updateFromControlPoints" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="updateFromFitPoints"
-    cppName="updateFromFitPoints" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="useTangents"
-        hasDefault="true" default=" false" isConst="false" />
-      </variant>
-    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -486,6 +492,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppGetter="getControlPoints" cppSetter="setControlPoints" />
     <property name="knotVector" type="QList &lt; double &gt;"
     cppGetter="getKnotVector" />
+    <property name="weights" type="QList &lt; double &gt;"
+    cppGetter="getWeights" />
     <property name="fitPoints" type="QList &lt; RVector &gt;"
     cppGetter="getFitPoints" cppSetter="setFitPoints" />
     <property name="degree" type="int" cppGetter="getDegree"

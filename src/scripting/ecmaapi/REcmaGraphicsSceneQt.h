@@ -53,6 +53,9 @@
         getGraphicsView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateSelectionStatus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

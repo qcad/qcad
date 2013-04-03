@@ -428,9 +428,17 @@ void RDxfImporter::endEntity() {
             if (fitPoints.first().getDistanceTo(fitPoints.last()) < RS::PointTolerance) {
                 spline.setPeriodic(true);
                 //fitPoints.removeLast();
-                spline.removeLastFitPoint(true);
+                spline.removeLastFitPoint();
             }
         }
+
+        QList<double> kv = spline.getKnotVector();
+
+        // remove historical, superfluous knots:
+        kv.removeFirst();
+        kv.removeLast();
+
+        spline.setKnotVector(kv);
 
         QSharedPointer<RSplineEntity> entity(new RSplineEntity(document, RSplineData(spline)));
         importEntity(entity);
@@ -589,7 +597,7 @@ void RDxfImporter::addSpline(const DL_SplineData& data) {
     }
 
     spline.setDegree(data.degree);
-    //spline.setPeriodic(data.flags&0x2);
+//    spline.setPeriodic(data.flags&0x2);
     spline.setPeriodic(false);
     RVector tanS(data.tangentStartX, data.tangentStartY, data.tangentStartZ);
     RVector tanE(data.tangentEndX, data.tangentEndY, data.tangentEndZ);
@@ -612,12 +620,12 @@ void RDxfImporter::addControlPoint(const DL_ControlPointData& data) {
 
 void RDxfImporter::addFitPoint(const DL_FitPointData& data) {
     RVector v(data.x, data.y);
-
     spline.appendFitPoint(v);
 }
 
 void RDxfImporter::addKnot(const DL_KnotData& data) {
 //    printf("add knot\n");
+    spline.appendKnot(data.k);
 }
 
 void RDxfImporter::addInsert(const DL_InsertData& data) {

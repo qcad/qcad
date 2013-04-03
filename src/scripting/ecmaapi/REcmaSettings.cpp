@@ -176,8 +176,6 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isXDataEnabled, "isXDataEnabled");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getRenderArcsPrecise, "getRenderArcsPrecise");
-            
 
     // static properties:
     
@@ -2858,45 +2856,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::isXDataEnabled", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSettings::getRenderArcsPrecise
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSettings::getRenderArcsPrecise", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getRenderArcsPrecise";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        RSettings::
-       getRenderArcsPrecise();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getRenderArcsPrecise().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSettings::getRenderArcsPrecise", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

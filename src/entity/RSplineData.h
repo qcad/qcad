@@ -147,6 +147,10 @@ public:
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RSpline(*this));
     }
+
+    virtual void update() const {
+        //RSpline::update();
+    }
 };
 
 Q_DECLARE_METATYPE(RSplineData*)

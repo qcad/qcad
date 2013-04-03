@@ -150,5 +150,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
       </variant>
     </method>
+    <method name="update" cppName="update" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

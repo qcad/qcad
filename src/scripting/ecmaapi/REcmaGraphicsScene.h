@@ -54,6 +54,9 @@
         getGraphicsViews
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportDocumentSettings
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

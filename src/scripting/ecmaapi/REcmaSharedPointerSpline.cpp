@@ -110,6 +110,12 @@
                 
             );          
             
+            proto->setProperty("weights", engine.newFunction(
+                getSetWeights),
+                QScriptValue::PropertyGetter
+                
+            );          
+            
             proto->setProperty("fitPoints", engine.newFunction(
                 getSetFitPoints),
                 QScriptValue::PropertyGetter
@@ -162,6 +168,8 @@
             REcmaHelper::registerFunction(&engine, proto, getKnotVector, "getKnotVector");
             
             REcmaHelper::registerFunction(&engine, proto, setKnotVector, "setKnotVector");
+            
+            REcmaHelper::registerFunction(&engine, proto, appendKnot, "appendKnot");
             
             REcmaHelper::registerFunction(&engine, proto, getWeights, "getWeights");
             
@@ -260,6 +268,8 @@
             REcmaHelper::registerFunction(&engine, proto, updateFromControlPoints, "updateFromControlPoints");
             
             REcmaHelper::registerFunction(&engine, proto, updateFromFitPoints, "updateFromFitPoints");
+            
+            REcmaHelper::registerFunction(&engine, proto, update, "update");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RSplinePointer>(), *proto);
@@ -572,6 +582,26 @@
         QList < double >
         cppResult = self->
         getKnotVector();
+        QScriptValue result;
+        
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+        return result;
+        }
+         QScriptValue REcmaSharedPointerSpline::getSetWeights
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+        RSpline* self = getSelf("weights", context);
+        //Q_ASSERT(self!=NULL);
+        if (self==NULL) {
+            return REcmaHelper::throwError("self is NULL", context);
+        }
+        QList < double >
+        cppResult = self->
+        getWeights();
         QScriptValue result;
         
         // return type: QList < double >
@@ -1034,33 +1064,6 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->removeLastControlPoint(a0);
-    } else
-
-
-        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.removeLastControlPoint().",
                    context);
@@ -1371,33 +1374,6 @@
     // return type 'void'
     
                self->removeLastFitPoint();
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->removeLastFitPoint(a0);
     } else
 
 
@@ -1715,6 +1691,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::setKnotVector", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::appendKnot
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::appendKnot", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::appendKnot";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("appendKnot", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->appendKnot(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.appendKnot().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::appendKnot", context, engine);
             return result;
         }
          QScriptValue
@@ -4709,6 +4740,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::updateFromFitPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::update
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::update", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::update";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("update", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->update();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.update().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::update", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerSpline::toString

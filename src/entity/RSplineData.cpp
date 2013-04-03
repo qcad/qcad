@@ -88,7 +88,7 @@ bool RSplineData::moveReferencePoint(const RVector& referencePoint,
         //if (periodic) {
             //RSpline::updateTangentsPeriodic();
         //}
-        RSpline::updateInternal();
+        RSpline::update();
     }
 
     return ret;

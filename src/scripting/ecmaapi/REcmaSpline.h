@@ -65,6 +65,8 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue getSetKnotVector
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetWeights
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue getSetFitPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue getSetDegree
@@ -128,6 +130,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setKnotVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        appendKnot
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getWeights
@@ -275,6 +280,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateFromFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        update
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

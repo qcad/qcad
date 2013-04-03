@@ -25,6 +25,9 @@ dir="./scripting/ecma" filename="RAutoLoadEcma.h">
   <cpp:file>"ecma_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -69,6 +72,16 @@ dir="./scripting/ecma" filename="RAutoLoadEcma.h">
     </type>
     <name>autoLoadFiles</name>
   </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RAutoLoadEcma</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RAutoLoadEcma*</argument>)</argument_list>
+  </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -50,7 +50,7 @@
  */
 class QCADCORE_EXPORT RSpline: public RShape, public RExplodable, public RDirected {
 public:
-    typedef void (*UpdateFromFitPointsFunction)(RSpline& spline, bool useTangents);
+    typedef RSpline (*UpdateFromFitPointsFunction)(const RSpline& spline, bool useTangents);
 
     RSpline();
     RSpline(const QList<RVector>& controlPoints, int degree);
@@ -72,14 +72,14 @@ public:
     //virtual RVector getClosestPointOnShape(const RVector& p, bool limited) const;
 
     void appendControlPoint(const RVector& point);
-    void removeLastControlPoint(bool upd=true);
+    void removeLastControlPoint();
     void setControlPoints(const QList<RVector>& points);
     QList<RVector> getControlPoints() const;
     QList<RVector> getControlPointsWrapped() const;
     int countControlPoints() const;
 
     void appendFitPoint(const RVector& point);
-    void removeLastFitPoint(bool upd=true);
+    void removeLastFitPoint();
     void setFitPoints(const QList<RVector>& points);
     QList<RVector> getFitPoints() const;
     int countFitPoints() const;
@@ -87,6 +87,7 @@ public:
 
     QList<double> getKnotVector() const;
     void setKnotVector(const QList<double>& knots);
+    void appendKnot(double k);
     QList<double> getWeights() const;
 
     void setDegree(int d);
@@ -157,6 +158,10 @@ public:
     double getTMin() const;
     double getTMax() const;
 
+    void updateFromControlPoints() const;
+    void updateFromFitPoints(bool useTangents = false) const;
+    void update() const;
+
     /**
      * \nonscriptable
      */
@@ -165,24 +170,28 @@ public:
     }
 
 protected:
-    void invalidate();
-    void updateInternal();
+    void invalidate() const;
+    void updateInternal() const;
     void updateBoundingBox() const;
 
 public:
-    void updateFromControlPoints();
-    void updateFromFitPoints(bool useTangents = false);
+    // members are mutable, so the spline can update itself from fit points
 
     /**
      * \getter{getControlPoints}
      * \setter{setControlPoints}
      */
-    QList<RVector> controlPoints;
+    mutable QList<RVector> controlPoints;
 
     /**
      * \getter{getKnotVector}
      */
-    QList<double> knotVector;
+    mutable QList<double> knotVector;
+
+    /**
+     * \getter{getWeights}
+     */
+    mutable QList<double> weights;
 
     /**
      * \getter{getFitPoints}
@@ -194,22 +203,24 @@ public:
      * \getter{getDegree}
      * \setter{setDegree}
      */
-    int degree;
+    mutable int degree;
 
     /**
      * Unit vector start tangent.
      */
-    RVector tangentStart;
+    mutable RVector tangentStart;
 
     /**
      * Unit vector end tangent.
      */
-    RVector tangentEnd;
+    mutable RVector tangentEnd;
 
     /**
      * Closed periodic flag.
      */
-    bool periodic;
+    mutable bool periodic;
+
+    mutable bool dirty;
 
 protected:
     virtual void print(QDebug dbg) const;

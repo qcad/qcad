@@ -19,6 +19,7 @@
 #include <cmath>
 
 #include "RArc.h"
+#include "RDebug.h"
 #include "RLine.h"
 #include "RSpline.h"
 #include "RPainterPath.h"
@@ -31,16 +32,16 @@ RSpline::UpdateFromFitPointsFunction RSpline::updateFromFitPointsFunction = NULL
  * Creates a spline object without controlPoints.
  */
 RSpline::RSpline() :
-    degree(3), periodic(false) {
+    degree(3), periodic(false), dirty(true) {
 }
 
 /**
  * Creates a spline object with the given control points and degree.
  */
 RSpline::RSpline(const QList<RVector>& controlPoints, int degree) :
-    controlPoints(controlPoints), degree(degree), periodic(false) {
+    controlPoints(controlPoints), degree(degree), periodic(false), dirty(true) {
 
-    updateInternal();
+    //updateInternal();
 }
 
 RSpline::~RSpline() {
@@ -162,7 +163,7 @@ RSpline RSpline::createBezierFromSmallArc(double r, double a1, double a2) {
 //    qDebug() << "ctrlPts: " << ctrlPts[2];
 //    qDebug() << "ctrlPts: " << ctrlPts[3];
 
-    return RSpline(ctrlPts, 3);
+    return RSpline(ctrlPts, 2);
 }
 
 void RSpline::to2D() {
@@ -183,7 +184,7 @@ void RSpline::to2D() {
     }
 
     if (upd) {
-        updateInternal();
+        update();
     }
 }
 
@@ -200,7 +201,7 @@ void RSpline::to2D() {
  */
 void RSpline::appendControlPoint(const RVector& point) {
     controlPoints.append(point);
-    updateInternal();
+    update();
 }
 
 /**
@@ -208,11 +209,9 @@ void RSpline::appendControlPoint(const RVector& point) {
  *
  * \param upd Update internal spline representation.
  */
-void RSpline::removeLastControlPoint(bool upd) {
+void RSpline::removeLastControlPoint() {
     controlPoints.removeLast();
-    if (upd) {
-        updateInternal();
-    }
+    update();
 }
 
 /**
@@ -220,7 +219,7 @@ void RSpline::removeLastControlPoint(bool upd) {
  */
 void RSpline::setControlPoints(const QList<RVector>& controlPoints) {
     this->controlPoints = controlPoints;
-    updateInternal();
+    update();
 }
 
 /**
@@ -235,6 +234,8 @@ QList<RVector> RSpline::getControlPoints() const {
  */
 QList<RVector> RSpline::getControlPointsWrapped() const {
     QList<RVector> ret;
+
+    updateInternal();
 
 #ifndef R_NO_OPENNURBS
     ON_3dPoint onp;
@@ -259,17 +260,15 @@ int RSpline::countControlPoints() const {
  */
 void RSpline::appendFitPoint(const RVector& point) {
     fitPoints.append(point);
-    updateInternal();
+    update();
 }
 
 /**
  * Removes the last fit point.
  */
-void RSpline::removeLastFitPoint(bool upd) {
+void RSpline::removeLastFitPoint() {
     fitPoints.removeLast();
-    if (upd) {
-        updateInternal();
-    }
+    update();
 }
 
 /**
@@ -277,7 +276,7 @@ void RSpline::removeLastFitPoint(bool upd) {
  */
 void RSpline::setFitPoints(const QList<RVector>& fitPoints) {
     this->fitPoints = fitPoints;
-    updateInternal();
+    update();
 }
 
 /**
@@ -306,13 +305,17 @@ bool RSpline::hasFitPoints() const {
  * \return Knot vector, internally calculated and updated.
  */
 QList<double> RSpline::getKnotVector() const {
-    QList<double> ret;
+    return knotVector;
 
+/*
+#ifndef R_NO_OPENNURBS
+    QList<double> ret;
     for (int i=0; i<curve.KnotCount(); ++i) {
         ret.append(curve.Knot(i));
     }
-
     return ret;
+#endif
+*/
 }
 
 /**
@@ -320,20 +323,28 @@ QList<double> RSpline::getKnotVector() const {
  */
 void RSpline::setKnotVector(const QList<double>& knots) {
     knotVector = knots;
-    updateInternal();
+    update();
+}
+
+void RSpline::appendKnot(double k) {
+    knotVector.append(k);
+    update();
 }
 
 /**
  * \return Knot weights, internally calculated and updated.
  */
 QList<double> RSpline::getWeights() const {
+    return weights;
+
+    /*
     QList<double> ret;
 
     for (int i=0; i<curve.CVCount(); ++i) {
         ret.append(curve.Weight(i));
     }
-
     return ret;
+    */
 }
 
 /**
@@ -342,7 +353,7 @@ QList<double> RSpline::getWeights() const {
  */
 void RSpline::setDegree(int d) {
     degree = d;
-    updateInternal();
+    update();
 }
 
 /**
@@ -361,7 +372,7 @@ int RSpline::getOrder() const {
 
 void RSpline::setPeriodic(bool on) {
     periodic = on;
-    updateInternal();
+    update();
 }
 
 /**
@@ -369,7 +380,10 @@ void RSpline::setPeriodic(bool on) {
  *      are very close to each other.
  */
 bool RSpline::isClosed() const {
-    return curve.IsClosed();
+    return periodic;
+
+    //return curve.IsClosed();
+
     /*
     if (hasFitPoints()) {
         return fitPoints.first().getDistanceTo(fitPoints.last()) < RS::PointTolerance;
@@ -400,6 +414,8 @@ bool RSpline::isClosed() const {
  *      end point are nearly identical.
  */
 bool RSpline::isPeriodic() const {
+    return periodic;
+    /*
     int c = curve.CVCount();
     if (c<=degree) {
         return false;
@@ -427,6 +443,7 @@ bool RSpline::isPeriodic() const {
     }
 
     return true;
+    */
 
 //    return periodic;
 
@@ -452,6 +469,7 @@ double RSpline::getDirection1() const {
     if (!isValid()) {
         return 0.0;
     }
+    //updateInternal();
 
 #ifndef R_NO_OPENNURBS
     ON_3dVector ontan = curve.TangentAt(getTMin());
@@ -469,6 +487,8 @@ double RSpline::getDirection2() const {
     if (!isValid()) {
         return 0.0;
     }
+    //updateInternal();
+
 #ifndef R_NO_OPENNURBS
     ON_3dVector ontan = curve.TangentAt(getTMax());
     RVector rtan(ontan.x, ontan.y);
@@ -484,7 +504,7 @@ RVector RSpline::getStartPoint() const {
 
 void RSpline::setStartPoint(const RVector& v) {
     controlPoints[0] = v;
-    updateInternal();
+    update();
 }
 
 RVector RSpline::getEndPoint() const {
@@ -493,7 +513,7 @@ RVector RSpline::getEndPoint() const {
 
 void RSpline::setEndPoint(const RVector& v) {
     controlPoints[controlPoints.size()-1] = v;
-    updateInternal();
+    update();
 }
 
 /**
@@ -502,7 +522,7 @@ void RSpline::setEndPoint(const RVector& v) {
 void RSpline::setTangents(const RVector& start, const RVector& end) {
     tangentStart = start;
     tangentEnd = end;
-    //update();
+    update();
 }
 
 /**
@@ -510,7 +530,7 @@ void RSpline::setTangents(const RVector& start, const RVector& end) {
  */
 void RSpline::setTangentAtStart(const RVector& t) {
     tangentStart = t;
-    updateInternal();
+    update();
 }
 
 /**
@@ -525,7 +545,7 @@ RVector RSpline::getTangentAtStart() const {
  */
 void RSpline::setTangentAtEnd(const RVector& t) {
     tangentEnd = t;
-    updateInternal();
+    update();
 }
 
 /**
@@ -587,10 +607,14 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
         return exploded;
     }
 
-//    qDebug() << "RSpline::getExploded";
-//    RDebug::printBacktrace("getExploded:    ");
+    //qDebug() << "RSpline::getExploded: segments: " << segments;
+    //RDebug::printBacktrace("getExploded:    ");
 
     //##boundingBox = RBox();
+
+    updateInternal();
+
+    exploded.clear();
 
     if (!isValid()) {
         //qWarning() << "RSpline::getExploded: invalid spline";
@@ -667,7 +691,6 @@ RBox RSpline::getBoundingBox() const {
 
 double RSpline::getLength() const {
     if (!isValid()) {
-        qDebug("RSpline::getLength: invalid spline");
         return 0.0;
     }
 
@@ -679,7 +702,7 @@ double RSpline::getLength() const {
     }
 
     // seems to only work in the context of another product which uses OpenNURBS:
-    //curve.GetLength(&length);
+//    curve.GetLength(&length);
 
     return length;
 }
@@ -688,6 +711,7 @@ double RSpline::getLength() const {
  * \return Point on spline at given position t (0..1).
  */
 RVector RSpline::getPointAt(double t) const {
+    updateInternal();
 #ifndef R_NO_OPENNURBS
     ON_3dPoint p = curve.PointAt(t);
     return RVector(p.x, p.y);
@@ -745,7 +769,8 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
 RVector RSpline::getVectorTo(const RVector& point, bool limited) const {
     RVector ret = RVector::invalid;
 
-    QList<QSharedPointer<RShape> > sub = getExploded(16);
+    //QList<QSharedPointer<RShape> > sub = getExploded(16);
+    QList<QSharedPointer<RShape> > sub = getExploded();
     QList<QSharedPointer<RShape> >::iterator it;
     for (it=sub.begin(); it!=sub.end(); ++it) {
         RVector v = (*it)->getVectorTo(point, limited);
@@ -764,7 +789,7 @@ bool RSpline::move(const RVector& offset) {
     for (int i=0; i<fitPoints.size(); i++) {
         fitPoints[i].move(offset);
     }
-    updateInternal();
+    update();
     return true;
 }
 
@@ -780,7 +805,7 @@ bool RSpline::rotate(double rotation, const RVector& center) {
     }
     tangentStart.rotate(rotation, center);
     tangentEnd.rotate(rotation, center);
-    updateInternal();
+    update();
     return true;
 }
 
@@ -791,7 +816,7 @@ bool RSpline::scale(const RVector& scaleFactors, const RVector& center) {
     for (int i=0; i<fitPoints.size(); i++) {
         fitPoints[i].scale(scaleFactors, center);
     }
-    updateInternal();
+    update();
     return true;
 }
 
@@ -804,7 +829,7 @@ bool RSpline::mirror(const RLine& axis) {
     }
     tangentStart.mirror(axis);
     tangentEnd.mirror(axis);
-    updateInternal();
+    update();
     return true;
 }
 
@@ -817,7 +842,7 @@ bool RSpline::flipHorizontal() {
     }
     tangentStart.flipHorizontal();
     tangentEnd.flipHorizontal();
-    updateInternal();
+    update();
     return true;
 }
 
@@ -830,7 +855,7 @@ bool RSpline::flipVertical() {
     }
     tangentStart.flipVertical();
     tangentEnd.flipVertical();
-    updateInternal();
+    update();
     return true;
 }
 
@@ -848,9 +873,7 @@ bool RSpline::reverse() {
     RVector t = tangentStart;
     tangentStart = tangentEnd;
     tangentEnd = t;
-
-    updateInternal();
-
+    update();
     return true;
     // TODO:
 //    curve.Reverse();
@@ -859,7 +882,27 @@ bool RSpline::reverse() {
 }
 
 bool RSpline::isValid() const {
-    return curve.IsValid();
+    if (!dirty) {
+#ifndef R_NO_OPENNURBS
+        return curve.IsValid();
+#endif
+    }
+
+    if (degree<1 || degree>3) {
+        return false;
+    }
+    if (hasFitPoints()) {
+        if (fitPoints.count() < 3) {
+            return false;
+        }
+        return true;
+    }
+    else {
+        if (controlPoints.count() < degree+1) {
+            return false;
+        }
+        return true;
+    }
     /*
     bool ret = curve.ctrlPnts().size() > degree &&
            curve.ctrlPnts().size() + degree + 1 == curve.knot().size();
@@ -876,31 +919,43 @@ double RSpline::getTDelta() const {
 }
 
 double RSpline::getTMin() const {
+    updateInternal();
+
     if (isValid()) {
+#ifndef R_NO_OPENNURBS
         return curve.Domain().Min();
+#endif
     }
-    else {
-        return 0.0;
-    }
+
+    return 0.0;
 }
 
 double RSpline::getTMax() const {
+    updateInternal();
+
     if (isValid()) {
+#ifndef R_NO_OPENNURBS
         return curve.Domain().Max();
+#endif
     }
-    else {
-        return 0.0;
-    }
+
+    return 0.0;
 }
 
-void RSpline::invalidate() {
+void RSpline::invalidate() const {
+#ifndef R_NO_OPENNURBS
     curve.Destroy();
+#endif
     exploded.clear();
 }
 
-void RSpline::updateInternal() {
-//    qDebug() << "RSpline::updateInternal(): ";
+void RSpline::updateInternal() const {
 //    RDebug::printBacktrace();
+    if (!dirty) {
+        return;
+    }
+
+    dirty = false;
 
     if (degree<2 || degree>3) {
         invalidate();
@@ -916,19 +971,21 @@ void RSpline::updateInternal() {
         updateFromControlPoints();
     }
     else {
+        RDebug::printBacktrace();
         updateFromFitPoints();
     }
 
     //updateBoundingBox();
     boundingBox = RBox();
+    getExploded();
 }
 
-void RSpline::updateFromControlPoints() {
+void RSpline::updateFromControlPoints() const {
 #ifndef R_NO_OPENNURBS
     if (controlPoints.size()<degree+1) {
         invalidate();
-        //qWarning() << "RSpline::updateFromControlPoints: not enough control points: "
-        //           << controlPoints.size();
+        qWarning() << "RSpline::updateFromControlPoints: not enough control points: "
+                   << controlPoints.size();
         return;
     }
 
@@ -956,7 +1013,9 @@ void RSpline::updateFromControlPoints() {
         }
 
         bool knotCondition = (knotVector.size() == getOrder() + controlPoints.size() - 2);
+        //knotCondition = true;
 
+        // genetate knot vector automatically:
         if (knotVector.isEmpty() || !knotCondition) {
 //            if (!knotVector.isEmpty()) {
 //                qDebug() << "RSpline: knotVector ignored";
@@ -967,6 +1026,7 @@ void RSpline::updateFromControlPoints() {
 
             int si = ON_KnotCount(getOrder(), controlPoints.size());
             double* knot = new double[si];
+            //ON_MakePeriodicUniformKnotVector(getOrder(), controlPoints.size(), knot);
             ON_MakeClampedUniformKnotVector(getOrder(), controlPoints.size(), knot);
             for (int i=0; i<si; ++i) {
 //                qDebug() << "RSpline: knot[" << i << "]: " << knot[i];
@@ -977,11 +1037,11 @@ void RSpline::updateFromControlPoints() {
         else {
             int k=0;
             for (int i=0; i<knotVector.count(); ++i) {
-//                qDebug() << "RSpline: knot[" << i << "]: " << knotVector.at(i);
+                //qDebug() << "RSpline: knot[" << i << "]: " << knotVector.at(i);
                 bool ok = curve.SetKnot(k++, knotVector.at(i));
-//                if (!ok) {
-//                    qDebug() << "RSpline: knot[" << i << "]: NOT set";
-//                }
+                if (!ok) {
+                    //qDebug() << "RSpline: knot[" << i << "]: NOT set";
+                }
             }
         }
     }
@@ -1067,7 +1127,7 @@ void RSpline::updateFromControlPoints() {
  * Updates the internal spline data from \c fitPoints.
  * Degree is always corrected to 3rd degree.
  */
-void RSpline::updateFromFitPoints(bool useTangents) {
+void RSpline::updateFromFitPoints(bool useTangents) const {
     if (fitPoints.size()<degree) {
         invalidate();
         return;
@@ -1075,7 +1135,16 @@ void RSpline::updateFromFitPoints(bool useTangents) {
 
     // call into plugin
     if (updateFromFitPointsFunction!=NULL) {
-        updateFromFitPointsFunction(*this, useTangents);
+        RSpline spline = updateFromFitPointsFunction(*this, useTangents);
+        this->degree = spline.degree;
+        this->periodic = spline.periodic;
+        this->controlPoints = spline.controlPoints;
+        this->knotVector = spline.knotVector;
+        this->weights = spline.weights;
+        this->tangentStart = spline.tangentStart;
+        this->tangentEnd = spline.tangentEnd;
+        this->curve = spline.curve;
+        this->dirty = false;
     }
     else {
         invalidate();
@@ -1094,9 +1163,11 @@ void RSpline::updateBoundingBox() const {
 }
 
 /**
- * \return Bezier spline segments which together represent this curve.
+ * \return List of bezier spline segments which together represent this curve.
  */
 QList<RSpline> RSpline::getBezierSegments() const {
+    updateInternal();
+
     QList<RSpline> ret;
 #ifndef R_NO_OPENNURBS
     ON_NurbsCurve* dup = dynamic_cast<ON_NurbsCurve*>(curve.DuplicateCurve());
@@ -1135,6 +1206,12 @@ void RSpline::trimStartPoint(const RVector& p) {
 
 void RSpline::trimEndPoint(const RVector& p) {
     Q_ASSERT(false);
+}
+
+void RSpline::update() const {
+    dirty = true;
+    boundingBox = RBox();
+    exploded.clear();
 }
 
 

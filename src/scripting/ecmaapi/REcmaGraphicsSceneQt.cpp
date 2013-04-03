@@ -75,6 +75,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, getGraphicsView, "getGraphicsView");
             
+            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
+            
             REcmaHelper::registerFunction(&engine, proto, updateSelectionStatus, "updateSelectionStatus");
             
             REcmaHelper::registerFunction(&engine, proto, clearPreview, "clearPreview");
@@ -337,6 +339,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getGraphicsView", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneQt::clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::clear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::clear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneQt* self = 
+                        getSelf("clear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clear();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.clear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::clear", context, engine);
             return result;
         }
          QScriptValue

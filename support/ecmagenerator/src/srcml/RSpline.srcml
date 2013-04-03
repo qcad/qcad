@@ -80,13 +80,14 @@ dir="./core/math" filename="RSpline.h">
   <typedef>typedef 
   <function_decl>
   <type>
-    <name>void</name>
+    <name>RSpline</name>
   </type>(*
   <name>UpdateFromFitPointsFunction</name>)
   <parameter_list>(
   <param>
     <decl>
       <type>
+      <name>const</name>
       <name>RSpline</name>&amp;</type>
       <name>spline</name>
     </decl>
@@ -241,19 +242,7 @@ dir="./core/math" filename="RSpline.h">
     <name>void</name>
   </type>
   <name>removeLastControlPoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>upd</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -320,19 +309,7 @@ dir="./core/math" filename="RSpline.h">
     <name>void</name>
   </type>
   <name>removeLastFitPoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>upd</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -403,6 +380,20 @@ dir="./core/math" filename="RSpline.h">
         <name>double</name>
       </argument>&gt;</argument_list></name>&amp;</type>
       <name>knots</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>appendKnot</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>k</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -986,6 +977,45 @@ dir="./core/math" filename="RSpline.h">
   <name>getTMax</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>updateFromControlPoints</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>updateFromFitPoints</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>useTangents</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>update</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>dirty</name>= 
+    <name>true</name></expr>;</expr_stmt>}</block>
+  </function>
   <comment type="block">/** * \nonscriptable */</comment>
   <function>
     <type>
@@ -1014,13 +1044,15 @@ dir="./core/math" filename="RSpline.h">
     <name>void</name>
   </type>
   <name>invalidate</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
   </type>
   <name>updateInternal</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -1029,35 +1061,14 @@ dir="./core/math" filename="RSpline.h">
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl></protected>
   <public>public: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateFromControlPoints</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateFromFitPoints</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>useTangents</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
+  <comment type="line">// members are mutable, so the spline can
+  update itself from fit points</comment>
   <comment type="block">/** * \getter{getControlPoints} *
   \setter{setControlPoints} */</comment>
   <decl_stmt>
   <decl>
     <type>
+      <name>mutable</name>
       <name>QList
       <argument_list>&lt;
       <argument>
@@ -1070,6 +1081,7 @@ dir="./core/math" filename="RSpline.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>mutable</name>
       <name>QList
       <argument_list>&lt;
       <argument>
@@ -1077,6 +1089,19 @@ dir="./core/math" filename="RSpline.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>knotVector</name>
+  </decl>;</decl_stmt>
+  <comment type="block">/** * \getter{getWeights} */</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>mutable</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>weights</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * \getter{getFitPoints} *
   \setter{setFitPoints} */</comment>
@@ -1096,6 +1121,7 @@ dir="./core/math" filename="RSpline.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>mutable</name>
       <name>int</name>
     </type>
     <name>degree</name>
@@ -1105,6 +1131,7 @@ dir="./core/math" filename="RSpline.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>mutable</name>
       <name>RVector</name>
     </type>
     <name>tangentStart</name>
@@ -1113,6 +1140,7 @@ dir="./core/math" filename="RSpline.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>mutable</name>
       <name>RVector</name>
     </type>
     <name>tangentEnd</name>
@@ -1121,9 +1149,18 @@ dir="./core/math" filename="RSpline.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>mutable</name>
       <name>bool</name>
     </type>
     <name>periodic</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>mutable</name>
+      <name>bool</name>
+    </type>
+    <name>dirty</name>
   </decl>;</decl_stmt></public>
   <protected>protected: 
   <function_decl>

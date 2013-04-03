@@ -405,7 +405,7 @@ dir="./entity" filename="RSplineEntity.h">
     <expr>
     <name>data</name>.
     <call>
-      <name>updateInternal</name>
+      <name>update</name>
       <argument_list>()</argument_list>
     </call></expr>;</expr_stmt>}</block>
   </function>

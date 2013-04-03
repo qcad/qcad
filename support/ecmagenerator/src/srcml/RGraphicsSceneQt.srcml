@@ -103,6 +103,13 @@ dir="./gui" filename="RGraphicsSceneQt.h">
     <name>virtual</name>
     <name>void</name>
   </type>
+  <name>clear</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
   <name>updateSelectionStatus</name>
   <parameter_list>(
   <param>

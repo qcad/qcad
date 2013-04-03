@@ -117,6 +117,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
+            REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RSplineData*>(), *proto);
 
@@ -1559,6 +1561,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSplineData::getShapes", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineData::update
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineData::update", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::update";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineData* self = 
+                        getSelf("update", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->update();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.update().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineData::update", context, engine);
             return result;
         }
          QScriptValue REcmaSplineData::toString

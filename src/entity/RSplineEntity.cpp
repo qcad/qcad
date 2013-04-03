@@ -92,8 +92,8 @@ bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 
     if (ret) {
-//        data.RSpline::update();
-        data.updateInternal();
+        data.RSpline::update();
+//        data.update();
     }
 
     return ret;

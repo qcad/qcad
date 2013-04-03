@@ -107,6 +107,13 @@ dir="./core" filename="RGraphicsScene.h">
   </type>
   <name>getGraphicsViews</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>clear</name>
+  <parameter_list>()</parameter_list>;</function_decl>
   <comment type="block">/** * Override for performance reasons, we
   don't need settings to be * exported for graphics scenes.
   */</comment>

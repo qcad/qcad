@@ -86,7 +86,7 @@ public:
 
     virtual void setUndone(bool on) {
         REntity::setUndone(on);
-        data.updateInternal();
+        data.update();
     }
 
     virtual RSplineData& getData() {

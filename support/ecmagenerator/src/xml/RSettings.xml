@@ -362,10 +362,5 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="getRenderArcsPrecise"
-    cppName="getRenderArcsPrecise" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
   </class>
 </unit>

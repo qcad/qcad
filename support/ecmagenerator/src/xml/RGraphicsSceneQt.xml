@@ -20,6 +20,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RGraphicsViewImage *"
       isPureVirtual="false" />
     </method>
+    <method name="clear" cppName="clear" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="updateSelectionStatus"
     cppName="updateSelectionStatus" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
