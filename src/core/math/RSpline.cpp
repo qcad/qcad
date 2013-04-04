@@ -950,7 +950,6 @@ void RSpline::invalidate() const {
 }
 
 void RSpline::updateInternal() const {
-//    RDebug::printBacktrace();
     if (!dirty || updateInProgress) {
         return;
     }
@@ -960,7 +959,7 @@ void RSpline::updateInternal() const {
 
     if (degree<2 || degree>3) {
         invalidate();
-        qWarning() << "RSpline::update: invalid degree: " << degree;
+        qWarning() << "RSpline::updateInternal: invalid degree: " << degree;
         updateInProgress = false;
         return;
     }
