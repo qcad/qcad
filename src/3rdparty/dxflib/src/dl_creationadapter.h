@@ -51,21 +51,21 @@ public:
     virtual void addArc(const DL_ArcData&) {}
     virtual void addCircle(const DL_CircleData&) {}
     virtual void addEllipse(const DL_EllipseData&) {}
-	
+    
     virtual void addPolyline(const DL_PolylineData&) {}
     virtual void addVertex(const DL_VertexData&) {}
-	
+    
     virtual void addSpline(const DL_SplineData&) {}
     virtual void addControlPoint(const DL_ControlPointData&) {}
     virtual void addFitPoint(const DL_FitPointData&) {}
     virtual void addKnot(const DL_KnotData&) {}
-	
+    
     virtual void addInsert(const DL_InsertData&) {}
-	
+    
     virtual void addMText(const DL_MTextData&) {}
     virtual void addMTextChunk(const std::string&) {}
     virtual void addText(const DL_TextData&) {}
-	
+    
     virtual void addDimAlign(const DL_DimensionData&,
                              const DL_DimAlignedData&) {}
     virtual void addDimLinear(const DL_DimensionData&,
@@ -82,15 +82,15 @@ public:
                              const DL_DimOrdinateData&) {}
     virtual void addLeader(const DL_LeaderData&) {}
     virtual void addLeaderVertex(const DL_LeaderVertexData&) {}
-	
+    
     virtual void addHatch(const DL_HatchData&) {}
 
     virtual void addTrace(const DL_TraceData&) {}
     virtual void add3dFace(const DL_3dFaceData&) {}
     virtual void addSolid(const DL_SolidData&) {}
-	
+    
     virtual void addImage(const DL_ImageData&) {}
-	virtual void linkImage(const DL_ImageDefData&) {}
+    virtual void linkImage(const DL_ImageDefData&) {}
     virtual void addHatchLoop(const DL_HatchLoopData&) {}
     virtual void addHatchEdge(const DL_HatchEdgeData&) {}
 

@@ -1428,29 +1428,29 @@ struct DXFLIB_EXPORT DL_ImageData {
      */
     DL_ImageData(const std::string& iref,
                   double iipx, double iipy, double iipz,
-				  double iux, double iuy, double iuz,
-				  double ivx, double ivy, double ivz,
-				  int iwidth, int iheight,
-				  int ibrightness, int icontrast, int ifade) {
+                  double iux, double iuy, double iuz,
+                  double ivx, double ivy, double ivz,
+                  int iwidth, int iheight,
+                  int ibrightness, int icontrast, int ifade) {
         ref = iref;
         ipx = iipx;
         ipy = iipy;
         ipz = iipz;
-		ux = iux;
-		uy = iuy;
-		uz = iuz;
-		vx = ivx;
-		vy = ivy;
-		vz = ivz;
-		width = iwidth;
-		height = iheight;
-		brightness = ibrightness;
-		contrast = icontrast;
-		fade = ifade;
+        ux = iux;
+        uy = iuy;
+        uz = iuz;
+        vx = ivx;
+        vy = ivy;
+        vz = ivz;
+        width = iwidth;
+        height = iheight;
+        brightness = ibrightness;
+        contrast = icontrast;
+        fade = ifade;
     }
 
     /*! Reference to the image file 
-	    (unique, used to refer to the image def object). */
+        (unique, used to refer to the image def object). */
     std::string ref;
     /*! X Coordinate of insertion point. */
     double ipx;
@@ -1458,28 +1458,28 @@ struct DXFLIB_EXPORT DL_ImageData {
     double ipy;
     /*! Z Coordinate of insertion point. */
     double ipz;
-	/*! X Coordinate of u vector along bottom of image. */
-	double ux;
-	/*! Y Coordinate of u vector along bottom of image. */
-	double uy;
-	/*! Z Coordinate of u vector along bottom of image. */
-	double uz;
-	/*! X Coordinate of v vector along left side of image. */
-	double vx;
-	/*! Y Coordinate of v vector along left side of image. */
-	double vy;
-	/*! Z Coordinate of v vector along left side of image. */
-	double vz;
-	/*! Width of image in pixel. */
-	int width;
-	/*! Height of image in pixel. */
-	int height;
-	/*! Brightness (0..100, default = 50). */
-	int brightness;
-	/*! Contrast (0..100, default = 50). */
-	int contrast;
-	/*! Fade (0..100, default = 0). */
-	int fade;
+    /*! X Coordinate of u vector along bottom of image. */
+    double ux;
+    /*! Y Coordinate of u vector along bottom of image. */
+    double uy;
+    /*! Z Coordinate of u vector along bottom of image. */
+    double uz;
+    /*! X Coordinate of v vector along left side of image. */
+    double vx;
+    /*! Y Coordinate of v vector along left side of image. */
+    double vy;
+    /*! Z Coordinate of v vector along left side of image. */
+    double vz;
+    /*! Width of image in pixel. */
+    int width;
+    /*! Height of image in pixel. */
+    int height;
+    /*! Brightness (0..100, default = 50). */
+    int brightness;
+    /*! Contrast (0..100, default = 50). */
+    int contrast;
+    /*! Fade (0..100, default = 0). */
+    int fade;
 };
 
 
@@ -1495,14 +1495,14 @@ struct DXFLIB_EXPORT DL_ImageDefData {
     DL_ImageDefData(const std::string& iref,
                  const std::string& ifile) {
         ref = iref;
-		file = ifile;
+        file = ifile;
     }
 
     /*! Reference to the image file 
-	    (unique, used to refer to the image def object). */
+        (unique, used to refer to the image def object). */
     std::string ref;
 
-	/*! Image file */
+    /*! Image file */
     std::string file;
 };
 

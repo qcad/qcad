@@ -296,8 +296,8 @@ public:
      *   0
      *  entTypeName
      * </pre>
-	 *
-	 * @return Unique handle or 0.
+     *
+     * @return Unique handle or 0.
      */
     void entity(const char* entTypeName) const {
         dxfString(0, entTypeName);
@@ -321,15 +321,15 @@ public:
      * </pre>
      */
     void entityAttributes(const DL_Attributes& attrib) const {
-	
-		// layer name:
+    
+        // layer name:
         dxfString(8, attrib.getLayer());
-		
-		// R12 doesn't accept BYLAYER values. The value has to be missing
-		//   in that case.
+        
+        // R12 doesn't accept BYLAYER values. The value has to be missing
+        //   in that case.
         if (version>=DL_VERSION_2000 || attrib.getColor()!=256) {
-        	dxfInt(62, attrib.getColor());
-		}
+            dxfInt(62, attrib.getColor());
+        }
         if (version>=DL_VERSION_2000 && attrib.getColor24()!=-1) {
             dxfInt(420, attrib.getColor24());
         }
@@ -339,8 +339,8 @@ public:
         std::string lineType = attrib.getLineType();
         std::transform(lineType.begin(), lineType.end(), lineType.begin(), ::toupper);
         if (version>=DL_VERSION_2000 || lineType=="BYLAYER") {
-	        dxfString(6, attrib.getLineType());
-		}
+            dxfString(6, attrib.getLineType());
+        }
     }
 
     /**
@@ -513,7 +513,7 @@ public:
     unsigned long getNextHandle() const {
         return m_handle;
     }
-	
+    
     /**
      * Increases handle, so that the handle returned remains available.
      */

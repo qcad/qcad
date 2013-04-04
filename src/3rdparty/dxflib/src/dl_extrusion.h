@@ -44,7 +44,7 @@ public:
      * Default constructor.
      */
     DL_Extrusion() {
-		direction = new double[3];
+        direction = new double[3];
         setDirection(0.0, 0.0, 1.0);
         setElevation(0.0);
     }
@@ -53,8 +53,8 @@ public:
     /**
      * Destructor.
      */
-	~DL_Extrusion() {
-		delete[] direction ;
+    ~DL_Extrusion() {
+        delete[] direction ;
     }
 
 
@@ -62,13 +62,13 @@ public:
      * Constructor for DXF extrusion.
      *
      * @param direction Vector of axis along which the entity shall be extruded
-	 *                  this is also the Z axis of the Entity coordinate system
+     *                  this is also the Z axis of the Entity coordinate system
      * @param elevation Distance of the entities XY plane from the origin of the
-	 *                  world coordinate system
+     *                  world coordinate system
      */
     DL_Extrusion(double dx, double dy, double dz, double elevation) {
-		direction = new double[3];
-		setDirection(dx, dy, dz);
+        direction = new double[3];
+        setDirection(dx, dy, dz);
         setElevation(elevation);
     }
 
@@ -78,7 +78,7 @@ public:
      * Sets the direction vector. 
      */
     void setDirection(double dx, double dy, double dz) {
-		direction[0]=dx;
+        direction[0]=dx;
         direction[1]=dy;
         direction[2]=dz;
     }
@@ -136,8 +136,8 @@ public:
 
 
 private:
-	double *direction;
-	double elevation;
+    double *direction;
+    double elevation;
 };
 
 #endif

@@ -47,7 +47,7 @@ void DL_WriterA::close() const {
  * @retval false Otherwise.
  */
 bool DL_WriterA::openFailed() const {
-	return m_ofile.fail();
+    return m_ofile.fail();
 }
 
 
@@ -61,9 +61,9 @@ bool DL_WriterA::openFailed() const {
 void DL_WriterA::dxfReal(int gc, double value) const {
     char str[256];
     sprintf(str, "%.16lf", value);
-	
-	// fix for german locale:
-	strReplace(str, ',', '.');
+    
+    // fix for german locale:
+    strReplace(str, ',', '.');
 
     // Cut away those zeros at the end:
     bool dot = false;
@@ -142,11 +142,11 @@ void DL_WriterA::dxfString(int gc, const std::string& value) const {
  * Replaces every occurence of src with dest in the null terminated str.
  */
 void DL_WriterA::strReplace(char* str, char src, char dest) {
-	size_t i;
-	for	(i=0; i<strlen(str); i++) {
-		if (str[i]==src) {
-			str[i] = dest;
-		}
-	}
+    size_t i;
+    for (i=0; i<strlen(str); i++) {
+        if (str[i]==src) {
+            str[i] = dest;
+        }
+    }
 }
 

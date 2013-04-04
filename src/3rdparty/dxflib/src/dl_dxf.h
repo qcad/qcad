@@ -142,14 +142,14 @@ public:
 
     void addPoint(DL_CreationInterface* creationInterface);
     void addLine(DL_CreationInterface* creationInterface);
-	
+    
     void addPolyline(DL_CreationInterface* creationInterface);
     void addVertex(DL_CreationInterface* creationInterface);
-	
+    
     void addSpline(DL_CreationInterface* creationInterface);
     //void addKnot(DL_CreationInterface* creationInterface);
     //void addControlPoint(DL_CreationInterface* creationInterface);
-	
+    
     void addArc(DL_CreationInterface* creationInterface);
     void addCircle(DL_CreationInterface* creationInterface);
     void addEllipse(DL_CreationInterface* creationInterface);
@@ -197,10 +197,10 @@ public:
     bool handleSplineData(DL_CreationInterface* creationInterface);
     bool handleLeaderData(DL_CreationInterface* creationInterface);
 
-	void endEntity(DL_CreationInterface* creationInterface);
-	
+    void endEntity(DL_CreationInterface* creationInterface);
+    
     void endSequence(DL_CreationInterface* creationInterface);
-	
+    
     //int  stringToInt(const char* s, bool* ok=NULL);
 
     DL_WriterA* out(const char* file,
@@ -322,8 +322,8 @@ public:
     void writeView(DL_WriterA& dw);
     void writeUcs(DL_WriterA& dw);
     void writeDimStyle(DL_WriterA& dw, 
-	                   double dimasz, double dimexe, double dimexo,
-					   double dimgap, double dimtxt);
+                       double dimasz, double dimexe, double dimexo,
+                       double dimgap, double dimtxt);
     void writeBlockRecord(DL_WriterA& dw);
     void writeBlockRecord(DL_WriterA& dw, const std::string& name);
     void writeObjects(DL_WriterA& dw);
@@ -361,15 +361,15 @@ public:
 //        }
 //    }
 
-	static bool checkVariable(const char* var, DL_Codes::version version);
+    static bool checkVariable(const char* var, DL_Codes::version version);
 
-	DL_Codes::version getVersion() {
-		return version;
-	}
+    DL_Codes::version getVersion() {
+        return version;
+    }
 
     int getLibVersion(const std::string &str);
 
-	static void test();
+    static void test();
 
     bool hasValue(int code) {
         return values.count(code)==1;
@@ -425,11 +425,11 @@ private:
     double* vertices;
     int maxVertices;
     int vertexIndex;
-	
+    
     double* knots;
     int maxKnots;
     int knotIndex;
-	
+    
     double* weights;
     int weightIndex;
 
@@ -471,8 +471,8 @@ private:
     bool firstCall;
     // Attributes of the current entity (layer, color, width, line type)
     DL_Attributes attrib;
-	// library version. hex: 0x20003001 = 2.0.3.1
-	int libVersion;
+    // library version. hex: 0x20003001 = 2.0.3.1
+    int libVersion;
 };
 
 #endif

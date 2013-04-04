@@ -103,17 +103,17 @@ public:
 
     /** Called for every polyline vertex */
     virtual void addVertex(const DL_VertexData& data) = 0;
-	
-	/** Called for every spline */
+    
+    /** Called for every spline */
     virtual void addSpline(const DL_SplineData& data) = 0;
-	
-	/** Called for every spline control point */
+    
+    /** Called for every spline control point */
     virtual void addControlPoint(const DL_ControlPointData& data) = 0;
 
     /** Called for every spline fit point */
     virtual void addFitPoint(const DL_FitPointData& data) = 0;
-	
-	/** Called for every spline knot value */
+    
+    /** Called for every spline knot value */
     virtual void addKnot(const DL_KnotData& data) = 0;
 
     /** Called for every insert. */
@@ -153,30 +153,30 @@ public:
     virtual void addDimLinear(const DL_DimensionData& data,
                               const DL_DimLinearData& edata) = 0;
 
-	/**
+    /**
      * Called for every radial dimension entity. 
      */
     virtual void addDimRadial(const DL_DimensionData& data,
                               const DL_DimRadialData& edata) = 0;
 
-	/**
+    /**
      * Called for every diametric dimension entity. 
      */
     virtual void addDimDiametric(const DL_DimensionData& data,
                               const DL_DimDiametricData& edata) = 0;
 
-	/**
+    /**
      * Called for every angular dimension (2 lines version) entity. 
      */
     virtual void addDimAngular(const DL_DimensionData& data,
                               const DL_DimAngularData& edata) = 0;
 
-	/**
+    /**
      * Called for every angular dimension (3 points version) entity. 
      */
     virtual void addDimAngular3P(const DL_DimensionData& data,
                               const DL_DimAngular3PData& edata) = 0;
-	
+    
     /**
      * Called for every ordinate dimension entity. 
      */
@@ -184,38 +184,38 @@ public:
                              const DL_DimOrdinateData& edata) = 0;
     
     /** 
-	 * Called for every leader start. 
-	 */
+     * Called for every leader start. 
+     */
     virtual void addLeader(const DL_LeaderData& data) = 0;
-	
-	/** 
-	 * Called for every leader vertex 
-	 */
+    
+    /** 
+     * Called for every leader vertex 
+     */
     virtual void addLeaderVertex(const DL_LeaderVertexData& data) = 0;
-	
-	/** 
-	 * Called for every hatch entity. 
-	 */
+    
+    /** 
+     * Called for every hatch entity. 
+     */
     virtual void addHatch(const DL_HatchData& data) = 0;
-	
-	/** 
-	 * Called for every image entity. 
-	 */
+    
+    /** 
+     * Called for every image entity. 
+     */
     virtual void addImage(const DL_ImageData& data) = 0;
 
-	/**
-	 * Called for every image definition.
-	 */
-	virtual void linkImage(const DL_ImageDefData& data) = 0;
+    /**
+     * Called for every image definition.
+     */
+    virtual void linkImage(const DL_ImageDefData& data) = 0;
 
-	/** 
-	 * Called for every hatch loop. 
-	 */
+    /** 
+     * Called for every hatch loop. 
+     */
     virtual void addHatchLoop(const DL_HatchLoopData& data) = 0;
 
-	/** 
-	 * Called for every hatch edge entity. 
-	 */
+    /** 
+     * Called for every hatch edge entity. 
+     */
     virtual void addHatchEdge(const DL_HatchEdgeData& data) = 0;
 
     /**
@@ -273,9 +273,9 @@ public:
      */
     virtual void addDictionaryEntry(const DL_DictionaryEntryData& data) = 0;
 
-	/** 
-	 * Called after an entity has been completed.  
-	 */
+    /** 
+     * Called after an entity has been completed.  
+     */
     virtual void endEntity() = 0;
     
     /**
@@ -287,17 +287,17 @@ public:
      * Called for every vector variable in the DXF file (e.g. "$EXTMIN").
      */
     virtual void setVariableVector(const std::string& key,  double v1, double v2, double v3, int code) = 0;
-	
+    
     /**
      * Called for every string variable in the DXF file (e.g. "$ACADVER").
      */
     virtual void setVariableString(const std::string& key, const std::string& value, int code) = 0;
-	
+    
     /**
      * Called for every int variable in the DXF file (e.g. "$ACADMAINTVER").
      */
     virtual void setVariableInt(const std::string& key, int value, int code) = 0;
-	
+    
     /**
      * Called for every double variable in the DXF file (e.g. "$DIMEXO").
      */
@@ -312,7 +312,7 @@ public:
     virtual void addComment(const char* comment) = 0;
     virtual void addMTextChunk(const char* text) = 0;
 #endif
-	
+    
      /**
       * Called when a SEQEND occurs (when a POLYLINE or ATTRIB is done)
       */
@@ -331,7 +331,7 @@ public:
     /** Sets the current attributes for entities. */
     void setExtrusion(double dx, double dy, double dz, double elevation) {
         extrusion->setDirection(dx, dy, dz);
-		extrusion->setElevation(elevation);
+        extrusion->setElevation(elevation);
     }
 
     /** @return the current attributes used for new entities. */

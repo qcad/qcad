@@ -52,7 +52,7 @@ public:
             : DL_Writer(version), m_ofile(fname) {}
     virtual ~DL_WriterA() {}
 
-	bool openFailed() const;
+    bool openFailed() const;
     void close() const;
     void dxfReal(int gc, double value) const;
     void dxfInt(int gc, int value) const;
@@ -60,7 +60,7 @@ public:
     void dxfString(int gc, const char* value) const;
     void dxfString(int gc, const std::string& value) const;
 
-	static void strReplace(char* str, char src, char dest);
+    static void strReplace(char* str, char src, char dest);
 
 private:
     /**
