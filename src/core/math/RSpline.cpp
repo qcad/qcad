@@ -973,7 +973,6 @@ void RSpline::updateInternal() const {
         updateFromControlPoints();
     }
     else {
-        RDebug::printBacktrace();
         updateFromFitPoints();
     }
 
