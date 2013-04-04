@@ -27,17 +27,19 @@ CheckForUpdates.prototype = new Help();
 
 CheckForUpdates.includeBasePath = includeBasePath;
 
+CheckForUpdates.prototype.getUrl = function() {
+    return CheckForUpdates.getUrl();
+};
+
 CheckForUpdates.getUrl = function() {
     // compile update info URL:
-    var url = "http://www.ribbonsoft.com/qcad/version/";
+    var url = "http://www.qcad.org/qcad/version/";
     url += RSettings.getMajorVersion() + "_";
     url += RSettings.getMinorVersion() + "_";
     url += RSettings.getRevisionVersion() + "_";
-    url += RSettings.getBuildVersion() + "_";
-    // TODO:
-    //url += RSettings.getVersionTicket();
+    url += RSettings.getBuildVersion();
     url += ".html";
-
+    qDebug("community: ", url);
     return url;
 };
 
@@ -45,7 +47,7 @@ CheckForUpdates.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
     // compile update info URL:
-    var url = CheckForUpdates.getUrl();
+    var url = this.getUrl();
 
     // set up dialog:
     var appWin = EAction.getMainWindow();
@@ -67,26 +69,4 @@ CheckForUpdates.prototype.beginEvent = function() {
 
 CheckForUpdates.prototype.openUrl = function(url) {
     QDesktopServices.openUrl(url);
-};
-
-CheckForUpdates.postInit = function() {
-    if (RSettings.hasQuitFlag()) {
-        return;
-    }
-
-    // check for updates at startup:
-    if (RSettings.getBoolValue("CheckForUpdates/AutoCheckUpdates", false)===true) {
-        qDebug("checking for updates...");
-        var html = download(CheckForUpdates.getUrl(), 3000);
-        if (html.indexOf("<title>Up To Date</title>")!==-1) {
-            qDebug("no updates available");
-        }
-        else if (html.indexOf("<title>Update Available</title>")!=-1) {
-            qDebug("updates available");
-            var action = RGuiAction.getByScriptFile("scripts/Help/CheckForUpdates/CheckForUpdates.js");
-            if (!isNull(action)) {
-                action.slotTrigger();
-            }
-        }
-    }
 };
