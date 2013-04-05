@@ -328,17 +328,17 @@ Dzielenie (÷)</translatorcomment>
     </message>
     <message>
         <location filename="../autostart.js" line="342"/>
-        <source>Loading add-on translations...</source>
+        <source>Loading add-on translations ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../autostart.js" line="367"/>
-        <source>Loading add-ons...</source>
+        <source>Loading add-ons ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../autostart.js" line="382"/>
-        <source>Initializing add-ons...</source>
+        <source>Initializing add-ons ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -348,7 +348,7 @@ Dzielenie (÷)</translatorcomment>
     </message>
     <message>
         <location filename="../autostart.js" line="406"/>
-        <source>Post-initializing add-ons...</source>
+        <source>Post-initializing add-ons ...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

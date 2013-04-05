@@ -253,12 +253,12 @@ Plus / Minus</translatorcomment>
     <message>
         <location filename="../WidgetFactory.js" line="930"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Quase igual</translation>
     </message>
     <message>
         <location filename="../WidgetFactory.js" line="931"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Assintoticamente igual</translation>
     </message>
     <message>
         <location filename="../WidgetFactory.js" line="932"/>
@@ -344,29 +344,33 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="342"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Carregar add-on traduções...</translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="342"/>
+        <source>Loading add-on translations ...</source>
+        <translation>Carregar add-on traduções ...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="367"/>
-        <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <source>Loading add-ons ...</source>
+        <translation>Carregando add-ons ...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="382"/>
-        <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <source>Initializing add-ons ...</source>
+        <translation>Inicializar add-ons ...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="393"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicializar add-ons:</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="406"/>
-        <source>Post-initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <source>Post-initializing add-ons ...</source>
+        <translation>Pós-inicialização ...</translation>
     </message>
 </context>
 <context>

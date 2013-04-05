@@ -17,53 +17,53 @@
     <message>
         <location filename="../About.js" line="91"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugins</translation>
     </message>
     <message>
         <location filename="../About.js" line="113"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>Não há informações disponíveis</translation>
     </message>
     <message>
         <location filename="../About.js" line="115"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin:</translation>
     </message>
     <message>
         <location filename="../About.js" line="120"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Descrição:</translation>
     </message>
     <message>
         <location filename="../About.js" line="126"/>
         <location filename="../About.js" line="133"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Desconhecido</translation>
     </message>
     <message>
         <location filename="../About.js" line="128"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Versão:</translation>
     </message>
     <message>
         <location filename="../About.js" line="135"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licença:</translation>
     </message>
     <message>
         <location filename="../About.js" line="149"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>Internet:</translation>
     </message>
     <message>
         <location filename="../About.js" line="162"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheiro:</translation>
     </message>
     <message>
         <location filename="../About.js" line="168"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro:</translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="2"/>
@@ -88,7 +88,7 @@
     <message>
         <location filename="../About.ui" line="106"/>
         <source>About Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugins</translation>
     </message>
 </context>
 <context>

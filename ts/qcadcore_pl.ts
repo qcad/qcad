@@ -255,7 +255,7 @@
         <location filename="../src/core/REntity.cpp" line="49"/>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Kolejność rysowania</translation>
+        <translation>Kolejność rysowania</translation>
     </message>
 </context>
 <context>
@@ -264,7 +264,7 @@
         <location filename="../src/core/RGuiAction.cpp" line="163"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wymaga doboru</translation>
+        <translation>Wymaga doboru</translation>
     </message>
 </context>
 <context>

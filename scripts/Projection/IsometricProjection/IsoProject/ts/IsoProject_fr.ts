@@ -59,12 +59,12 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../IsoProject.ui" line="143"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation sens anti-horaire avant la projection</translation>
     </message>
     <message>
         <location filename="../IsoProject.ui" line="154"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation sens horaire avant la projection</translation>
     </message>
     <message>
         <source>Rotate counter-clockwise</source>

@@ -64,12 +64,12 @@ Proiezione &amp;Isometrica</translatorcomment>
     <message>
         <location filename="../IsoProject.ui" line="143"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruota senso antiorario prima di proiezione</translation>
     </message>
     <message>
         <location filename="../IsoProject.ui" line="154"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruota senso orario prima di proiezione</translation>
     </message>
     <message>
         <source>Rotate counter-clockwise</source>

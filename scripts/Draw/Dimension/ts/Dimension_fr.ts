@@ -35,12 +35,12 @@
     <message>
         <location filename="../Dimension.js" line="70"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Presque égale</translation>
     </message>
     <message>
         <location filename="../Dimension.js" line="71"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Asymptotiquement égal</translation>
     </message>
     <message>
         <location filename="../Dimension.js" line="72"/>

@@ -72,12 +72,12 @@ Em baixo à direita</translatorcomment>
     <message>
         <location filename="../IsoProject.ui" line="143"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotacione anti-horário antes de projeção</translation>
     </message>
     <message>
         <location filename="../IsoProject.ui" line="154"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotacione no sentido horário antes de projeção</translation>
     </message>
     <message>
         <source>Rotate counter-clockwise</source>

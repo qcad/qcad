@@ -44,12 +44,12 @@
     <message>
         <location filename="../IsoProject.ui" line="143"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Im Gegenuhrzeigersinn rotieren vor Projektion</translation>
     </message>
     <message>
         <location filename="../IsoProject.ui" line="154"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Im Uhrzeigersinn rotieren vor Projektion</translation>
     </message>
     <message>
         <source>Rotate counter-clockwise</source>
