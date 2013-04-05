@@ -5,7 +5,7 @@
     <name>Reset</name>
     <message>
         <location filename="../ResetInit.js" line="5"/>
-        <location filename="../ResetPostInit.js" line="10"/>
+        <location filename="../ResetPostInit.js" line="11"/>
         <source>Reset</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--

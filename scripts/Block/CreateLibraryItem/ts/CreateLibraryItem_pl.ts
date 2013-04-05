@@ -13,7 +13,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItem.js" line="73"/>
+        <location filename="../CreateLibraryItem.js" line="74"/>
         <source>Save library item as...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zapisz jako ... elementu biblioteki</translation>

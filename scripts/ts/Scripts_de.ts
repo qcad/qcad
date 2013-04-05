@@ -42,8 +42,8 @@
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="316"/>
-        <location filename="../EAction.js" line="420"/>
+        <location filename="../EAction.js" line="318"/>
+        <location filename="../EAction.js" line="422"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
     </message>
@@ -52,72 +52,72 @@
         <translation type="obsolete">Aktives Werkzeug: %1</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="420"/>
+        <location filename="../EAction.js" line="422"/>
         <source>None</source>
         <translation>Kein</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="776"/>
+        <location filename="../EAction.js" line="778"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="794"/>
+        <location filename="../EAction.js" line="796"/>
         <source>Block Options</source>
         <translation>Blockoptionen</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="804"/>
+        <location filename="../EAction.js" line="806"/>
         <source>Main Tools</source>
         <translation>Hauptwerkzeuge</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="830"/>
+        <location filename="../EAction.js" line="832"/>
         <source>CAD Tools</source>
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1388"/>
+        <location filename="../EAction.js" line="1390"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1442"/>
+        <location filename="../EAction.js" line="1444"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1446"/>
+        <location filename="../EAction.js" line="1448"/>
         <source>Entity is not a line or arc.</source>
         <translation>Element ist keine Linie und kein Bogen.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1450"/>
+        <location filename="../EAction.js" line="1452"/>
         <source>Entity is not a line.</source>
         <translation>Element ist keine Linie.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1454"/>
+        <location filename="../EAction.js" line="1456"/>
         <source>Entity is not an arc or circle.</source>
         <translation>Element ist kein Bogen und kein Kreis.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1458"/>
+        <location filename="../EAction.js" line="1460"/>
         <source>Entity is not a line, arc or circle.</source>
         <translation>Element ist keine Linie und kein Bogen oder Kreis.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1462"/>
+        <location filename="../EAction.js" line="1464"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translation>Element ist kein Bogen oder Kreis und keine Ellipse.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1466"/>
+        <location filename="../EAction.js" line="1468"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translation>Element ist keine Linie, kein Bogen oder Kreis und keine Ellipse.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1471"/>
+        <location filename="../EAction.js" line="1473"/>
         <source>Entity is not a polyline.</source>
         <translation>Element ist keine Polylinie.</translation>
     </message>
@@ -135,22 +135,22 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="494"/>
+        <location filename="../ShapeAlgorithms.js" line="487"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="526"/>
+        <location filename="../ShapeAlgorithms.js" line="519"/>
         <source>No arc possible.</source>
         <translation>Kein Bogen möglich.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="550"/>
+        <location filename="../ShapeAlgorithms.js" line="543"/>
         <source>Invalid number of segments: %1.</source>
         <translation>Ungültige Anzahl Segmente: %1.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="556"/>
+        <location filename="../ShapeAlgorithms.js" line="549"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translation>Ungültiges Verhältnis von Major Radius zu Minor Radius: %1 / %2.</translation>
     </message>
@@ -159,8 +159,8 @@
         <translation type="obsolete">Mindestens zwei Punkte sind identisch</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="487"/>
-        <location filename="../ShapeAlgorithms.js" line="519"/>
+        <location filename="../ShapeAlgorithms.js" line="480"/>
+        <location filename="../ShapeAlgorithms.js" line="512"/>
         <source>At least two points are identical.</source>
         <translation>Mindestens zwei Punkte sind identisch.</translation>
     </message>
@@ -168,72 +168,72 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="902"/>
+        <location filename="../WidgetFactory.js" line="904"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="922"/>
+        <location filename="../WidgetFactory.js" line="924"/>
         <source>Insert Symbol</source>
         <translation>Symbol einfügen</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="925"/>
+        <location filename="../WidgetFactory.js" line="927"/>
         <source>Diameter</source>
         <translation>Durchmesser</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="926"/>
+        <location filename="../WidgetFactory.js" line="928"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="927"/>
+        <location filename="../WidgetFactory.js" line="929"/>
         <source>Plus/Minus</source>
         <translation>Plus/Minus</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="928"/>
+        <location filename="../WidgetFactory.js" line="930"/>
         <source>Almost equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="929"/>
+        <location filename="../WidgetFactory.js" line="931"/>
         <source>Asymptotically equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="930"/>
+        <location filename="../WidgetFactory.js" line="932"/>
         <source>Pi</source>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="931"/>
+        <location filename="../WidgetFactory.js" line="933"/>
         <source>Multiplication</source>
         <translation>Multiplikation</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="932"/>
+        <location filename="../WidgetFactory.js" line="934"/>
         <source>Division</source>
         <translation>Division</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="933"/>
+        <location filename="../WidgetFactory.js" line="935"/>
         <source>Square</source>
         <translation>Quadrat</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="934"/>
+        <location filename="../WidgetFactory.js" line="936"/>
         <source>Delta</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="935"/>
+        <location filename="../WidgetFactory.js" line="937"/>
         <source>Stacked text</source>
         <translation>Übereinander angeordneter Text</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="940"/>
+        <location filename="../WidgetFactory.js" line="942"/>
         <source>Measured value</source>
         <translation>Gemessener Wert</translation>
     </message>
@@ -245,29 +245,24 @@
         <translation type="obsolete">Lade Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="342"/>
         <source>Loading plugin translations...</source>
-        <translation type="unfinished">Lade Plugin Übersetzungen...</translation>
+        <translation type="obsolete">Lade Plugin Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="367"/>
         <source>Loading plugins...</source>
-        <translation>Lade Plugins...</translation>
+        <translation type="obsolete">Lade Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="382"/>
         <source>Initializing plugins...</source>
-        <translation>Initialisiere Plugins...</translation>
+        <translation type="obsolete">Initialisiere Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="393"/>
         <source>Initializing plugins:</source>
-        <translation>Initialisiere Plugins:</translation>
+        <translation type="obsolete">Initialisiere Plugins:</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="406"/>
         <source>Post-initializing plugins...</source>
-        <translation>Post-Initialisierung...</translation>
+        <translation type="obsolete">Post-Initialisierung...</translation>
     </message>
     <message>
         <source>Post-Initialization...</source>
@@ -276,6 +271,31 @@
     <message>
         <source>Searching for Plugins...</source>
         <translation type="obsolete">Suche Plugins...</translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="342"/>
+        <source>Loading add-on translations...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="367"/>
+        <source>Loading add-ons...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="382"/>
+        <source>Initializing add-ons...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="393"/>
+        <source>Initializing add-ons:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="406"/>
+        <source>Post-initializing add-ons...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

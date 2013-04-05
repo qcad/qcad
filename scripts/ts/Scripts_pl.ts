@@ -55,14 +55,14 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="316"/>
-        <location filename="../EAction.js" line="420"/>
+        <location filename="../EAction.js" line="318"/>
+        <location filename="../EAction.js" line="422"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktywne narzędzia:</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="420"/>
+        <location filename="../EAction.js" line="422"/>
         <source>None</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -71,7 +71,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="776"/>
+        <location filename="../EAction.js" line="778"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -80,19 +80,19 @@ Opcje łuku</translatorcomment>
         <translation type="unfinished">Opcje</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="794"/>
+        <location filename="../EAction.js" line="796"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Opcje Zablokuj</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="804"/>
+        <location filename="../EAction.js" line="806"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Głównymi narzędziami</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="830"/>
+        <location filename="../EAction.js" line="832"/>
         <source>CAD Tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -100,55 +100,55 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1388"/>
+        <location filename="../EAction.js" line="1390"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1442"/>
+        <location filename="../EAction.js" line="1444"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie odniesienia do bloku jest.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1446"/>
+        <location filename="../EAction.js" line="1448"/>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie linii lub łuku.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1450"/>
+        <location filename="../EAction.js" line="1452"/>
         <source>Entity is not a line.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie jest wiersz.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1454"/>
+        <location filename="../EAction.js" line="1456"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie łuk lub okrąg.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1458"/>
+        <location filename="../EAction.js" line="1460"/>
         <source>Entity is not a line, arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie linia, łuk lub okrąg.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1462"/>
+        <location filename="../EAction.js" line="1464"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie łuk, okrąg lub elipsa jest.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1466"/>
+        <location filename="../EAction.js" line="1468"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie linia, łuk, okrąg lub elipsa jest.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1471"/>
+        <location filename="../EAction.js" line="1473"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie polilinia jest.</translation>
@@ -169,32 +169,32 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="487"/>
-        <location filename="../ShapeAlgorithms.js" line="519"/>
+        <location filename="../ShapeAlgorithms.js" line="480"/>
+        <location filename="../ShapeAlgorithms.js" line="512"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Co najmniej dwa punkty są identyczne.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="494"/>
+        <location filename="../ShapeAlgorithms.js" line="487"/>
         <source>No circle possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No koło możliwe.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="526"/>
+        <location filename="../ShapeAlgorithms.js" line="519"/>
         <source>No arc possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie można łuku.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="550"/>
+        <location filename="../ShapeAlgorithms.js" line="543"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowa liczba segmentów:.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="556"/>
+        <location filename="../ShapeAlgorithms.js" line="549"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowy elipsa major / minor: /.</translation>
@@ -203,7 +203,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="902"/>
+        <location filename="../WidgetFactory.js" line="904"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -211,7 +211,7 @@ Przywróć ustawienia</translatorcomment>
         <translation type="unfinished">Przywróć ustawienia</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="922"/>
+        <location filename="../WidgetFactory.js" line="924"/>
         <source>Insert Symbol</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -220,7 +220,7 @@ Wstaw symbol</translatorcomment>
         <translation type="unfinished">Wstaw symbol</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="925"/>
+        <location filename="../WidgetFactory.js" line="927"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -229,7 +229,7 @@ Przełącz znak średnicy
         <translation type="unfinished">Średnica</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="926"/>
+        <location filename="../WidgetFactory.js" line="928"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -238,23 +238,23 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Stopień</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="927"/>
+        <location filename="../WidgetFactory.js" line="929"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plus / Minus</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="928"/>
+        <location filename="../WidgetFactory.js" line="930"/>
         <source>Almost equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="929"/>
+        <location filename="../WidgetFactory.js" line="931"/>
         <source>Asymptotically equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="930"/>
+        <location filename="../WidgetFactory.js" line="932"/>
         <source>Pi</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -263,7 +263,7 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Pi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="931"/>
+        <location filename="../WidgetFactory.js" line="933"/>
         <source>Multiplication</source>
         <translatorcomment>--google--
 Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) jest niedozwolone.
@@ -271,7 +271,7 @@ Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) j
         <translation type="unfinished">Mnożenie</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="932"/>
+        <location filename="../WidgetFactory.js" line="934"/>
         <source>Division</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -280,25 +280,25 @@ Dzielenie (÷)</translatorcomment>
         <translation type="unfinished">Dzielenie</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="933"/>
+        <location filename="../WidgetFactory.js" line="935"/>
         <source>Square</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kwadrat</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="934"/>
+        <location filename="../WidgetFactory.js" line="936"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="935"/>
+        <location filename="../WidgetFactory.js" line="937"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Stacked tekst</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="940"/>
+        <location filename="../WidgetFactory.js" line="942"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zmierzona wartość</translation>
@@ -307,33 +307,49 @@ Dzielenie (÷)</translatorcomment>
 <context>
     <name>autostart</name>
     <message>
+        <source>Loading plugins...</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Ładowanie wtyczek ...</translation>
+    </message>
+    <message>
+        <source>Initializing plugins...</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Inicjalizacja wtyczki ...</translation>
+    </message>
+    <message>
+        <source>Initializing plugins:</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Plugins Inicjalizacja:</translation>
+    </message>
+    <message>
+        <source>Post-initializing plugins...</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
+    </message>
+    <message>
         <location filename="../autostart.js" line="342"/>
-        <source>Loading plugin translations...</source>
+        <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../autostart.js" line="367"/>
-        <source>Loading plugins...</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ładowanie wtyczek ...</translation>
+        <source>Loading add-ons...</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../autostart.js" line="382"/>
-        <source>Initializing plugins...</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Inicjalizacja wtyczki ...</translation>
+        <source>Initializing add-ons...</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../autostart.js" line="393"/>
-        <source>Initializing plugins:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Plugins Inicjalizacja:</translation>
+        <source>Initializing add-ons:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../autostart.js" line="406"/>
-        <source>Post-initializing plugins...</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Po inicjalizacji wtyczki ...</translation>
+        <source>Post-initializing add-ons...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

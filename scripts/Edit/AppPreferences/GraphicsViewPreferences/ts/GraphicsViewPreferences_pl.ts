@@ -135,12 +135,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
         <translation type="unfinished">Wysokość progu Text display:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="385"/>
-        <source>Render circular arcs precise (slower)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../PreferencesPage.ui" line="395"/>
+        <location filename="../PreferencesPage.ui" line="388"/>
         <source>Selection</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -149,7 +144,7 @@ Kontynuuj działanie
         <translation type="unfinished">Wybrane strony</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="401"/>
+        <location filename="../PreferencesPage.ui" line="394"/>
         <source>Persistent Selection</source>
         <translatorcomment>--google--
 &amp;Stałe zaznaczenia

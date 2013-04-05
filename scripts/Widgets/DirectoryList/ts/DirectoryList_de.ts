@@ -4,7 +4,7 @@
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../DirectoryList.js" line="58"/>
+        <location filename="../DirectoryList.js" line="57"/>
         <source>The folder
 &apos;%1&apos;
 is already in the list.</source>
@@ -13,7 +13,7 @@ is already in the list.</source>
 ist bereits in der Liste.</translation>
     </message>
     <message>
-        <location filename="../DirectoryList.js" line="61"/>
+        <location filename="../DirectoryList.js" line="60"/>
         <source>Folder not added</source>
         <translation>Ordner nicht hinzugefügt</translation>
     </message>

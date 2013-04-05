@@ -8,13 +8,13 @@
         <translation type="obsolete">Produktaktualität überprüfen...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdates.js" line="57"/>
+        <location filename="../CheckForUpdates.js" line="58"/>
         <location filename="../CheckForUpdatesDialog.ui" line="14"/>
         <source>Checking for Updates...</source>
         <translation>Überprüfung der Produktaktualität...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesInit.js" line="6"/>
+        <location filename="../CheckForUpdatesInit.js" line="7"/>
         <source>Check for &amp;Updates...</source>
         <translation>&amp;Produktaktualität überprüfen...</translation>
     </message>

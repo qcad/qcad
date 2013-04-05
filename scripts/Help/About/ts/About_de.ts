@@ -13,32 +13,53 @@
         <translation>Über %1</translation>
     </message>
     <message>
-        <location filename="../About.js" line="69"/>
+        <location filename="../About.js" line="91"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="84"/>
+        <location filename="../About.js" line="113"/>
         <source>No information available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="86"/>
+        <location filename="../About.js" line="115"/>
         <source>Plugin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="90"/>
-        <source>Unknown version</source>
+        <location filename="../About.js" line="120"/>
+        <source>Description:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="92"/>
+        <location filename="../About.js" line="126"/>
+        <location filename="../About.js" line="133"/>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../About.js" line="128"/>
         <source>Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="97"/>
+        <location filename="../About.js" line="135"/>
+        <source>License:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../About.js" line="149"/>
+        <source>Internet:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../About.js" line="162"/>
+        <source>File:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../About.js" line="168"/>
         <source>Error:</source>
         <translation type="unfinished"></translation>
     </message>

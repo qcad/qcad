@@ -9,7 +9,7 @@
         <translation>Ponto de referência</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItem.js" line="73"/>
+        <location filename="../CreateLibraryItem.js" line="74"/>
         <source>Save library item as...</source>
         <translation>Salvar item de biblioteca...</translation>
     </message>

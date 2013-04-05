@@ -4,14 +4,14 @@
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../CheckForUpdates.js" line="57"/>
+        <location filename="../CheckForUpdates.js" line="58"/>
         <location filename="../CheckForUpdatesDialog.ui" line="14"/>
         <source>Checking for Updates...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Verificar se há atualizações...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesInit.js" line="6"/>
+        <location filename="../CheckForUpdatesInit.js" line="7"/>
         <source>Check for &amp;Updates...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Verificar se há &amp;atualizações...</translation>

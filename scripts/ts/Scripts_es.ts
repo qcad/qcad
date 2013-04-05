@@ -47,8 +47,8 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="316"/>
-        <location filename="../EAction.js" line="420"/>
+        <location filename="../EAction.js" line="318"/>
+        <location filename="../EAction.js" line="422"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
     </message>
@@ -58,81 +58,81 @@
         <translation type="obsolete">Herramienta activa: %1</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="420"/>
+        <location filename="../EAction.js" line="422"/>
         <source>None</source>
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="776"/>
+        <location filename="../EAction.js" line="778"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="794"/>
+        <location filename="../EAction.js" line="796"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Opciones de bloque</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="804"/>
+        <location filename="../EAction.js" line="806"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Herramientas principales</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="830"/>
+        <location filename="../EAction.js" line="832"/>
         <source>CAD Tools</source>
         <translation>Herramientas CAD</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1388"/>
+        <location filename="../EAction.js" line="1390"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad está en una capa bloqueada.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1442"/>
+        <location filename="../EAction.js" line="1444"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una referencia a bloque.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1446"/>
+        <location filename="../EAction.js" line="1448"/>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una línea o un arco.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1450"/>
+        <location filename="../EAction.js" line="1452"/>
         <source>Entity is not a line.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una línea.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1454"/>
+        <location filename="../EAction.js" line="1456"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es un arco o círculo.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1458"/>
+        <location filename="../EAction.js" line="1460"/>
         <source>Entity is not a line, arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una línea, arco o círculo.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1462"/>
+        <location filename="../EAction.js" line="1464"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es un arco, círculo o una elipse.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1466"/>
+        <location filename="../EAction.js" line="1468"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translation>Entidad no es una línea, un arco, círculo o una elipse.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1471"/>
+        <location filename="../EAction.js" line="1473"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una polilínea.</translation>
@@ -153,31 +153,31 @@
         <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="487"/>
-        <location filename="../ShapeAlgorithms.js" line="519"/>
+        <location filename="../ShapeAlgorithms.js" line="480"/>
+        <location filename="../ShapeAlgorithms.js" line="512"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Por lo menos dos puntos son idénticos.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="494"/>
+        <location filename="../ShapeAlgorithms.js" line="487"/>
         <source>No circle possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ningún círculo es posible.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="526"/>
+        <location filename="../ShapeAlgorithms.js" line="519"/>
         <source>No arc possible.</source>
         <translation>Ningún arco es posible.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="550"/>
+        <location filename="../ShapeAlgorithms.js" line="543"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>No válido número de segmentos:.%1.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="556"/>
+        <location filename="../ShapeAlgorithms.js" line="549"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inválida elipse mayor / menor: %1 / %2.</translation>
@@ -186,73 +186,73 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="902"/>
+        <location filename="../WidgetFactory.js" line="904"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="922"/>
+        <location filename="../WidgetFactory.js" line="924"/>
         <source>Insert Symbol</source>
         <translation>Insertar símbolo</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="925"/>
+        <location filename="../WidgetFactory.js" line="927"/>
         <source>Diameter</source>
         <translation>Diámetro</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="926"/>
+        <location filename="../WidgetFactory.js" line="928"/>
         <source>Degree</source>
         <translation>Grados</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="927"/>
+        <location filename="../WidgetFactory.js" line="929"/>
         <source>Plus/Minus</source>
         <translation>Más / menos</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="928"/>
+        <location filename="../WidgetFactory.js" line="930"/>
         <source>Almost equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="929"/>
+        <location filename="../WidgetFactory.js" line="931"/>
         <source>Asymptotically equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="930"/>
+        <location filename="../WidgetFactory.js" line="932"/>
         <source>Pi</source>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="931"/>
+        <location filename="../WidgetFactory.js" line="933"/>
         <source>Multiplication</source>
         <translation>Multiplicación</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="932"/>
+        <location filename="../WidgetFactory.js" line="934"/>
         <source>Division</source>
         <translation>Dividir</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="933"/>
+        <location filename="../WidgetFactory.js" line="935"/>
         <source>Square</source>
         <translation>Cuadrado</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="934"/>
+        <location filename="../WidgetFactory.js" line="936"/>
         <source>Delta</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="935"/>
+        <location filename="../WidgetFactory.js" line="937"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Texto apilado</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="940"/>
+        <location filename="../WidgetFactory.js" line="942"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valor medido</translation>
@@ -261,36 +261,52 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="342"/>
-        <source>Loading plugin translations...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../autostart.js" line="367"/>
         <source>Loading plugins...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cargar plugins...</translation>
+        <translation type="obsolete">Cargar plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="382"/>
         <source>Initializing plugins...</source>
-        <translation>Inicialización de plugins...</translation>
+        <translation type="obsolete">Inicialización de plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="393"/>
         <source>Initializing plugins:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inicialización de plugins:</translation>
+        <translation type="obsolete">Inicialización de plugins:</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="406"/>
         <source>Post-initializing plugins...</source>
-        <translation>Inicialización de plugins...</translation>
+        <translation type="obsolete">Inicialización de plugins...</translation>
     </message>
     <message>
         <source>Post-Initialization...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Después de la inicialización...</translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="342"/>
+        <source>Loading add-on translations...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="367"/>
+        <source>Loading add-ons...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="382"/>
+        <source>Initializing add-ons...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="393"/>
+        <source>Initializing add-ons:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../autostart.js" line="406"/>
+        <source>Post-initializing add-ons...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

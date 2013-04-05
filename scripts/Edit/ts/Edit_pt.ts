@@ -24,13 +24,13 @@ Preferências do Desenho Atual...</translatorcomment>
         <translation>Preferências de desenho</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="298"/>
+        <location filename="../AbstractPreferences.js" line="302"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>É necessário reiniciar</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="301"/>
+        <location filename="../AbstractPreferences.js" line="305"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translatorcomment>--google--</translatorcomment>

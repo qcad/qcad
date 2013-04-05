@@ -94,17 +94,12 @@
         <translation>Anzeigegrenzwert für Texte:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="385"/>
-        <source>Render circular arcs precise (slower)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../PreferencesPage.ui" line="395"/>
+        <location filename="../PreferencesPage.ui" line="388"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="401"/>
+        <location filename="../PreferencesPage.ui" line="394"/>
         <source>Persistent Selection</source>
         <translation>Persistente Selektion</translation>
     </message>

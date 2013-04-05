@@ -9,7 +9,7 @@
     </message>
     <message>
         <location filename="../ResetInit.js" line="5"/>
-        <location filename="../ResetPostInit.js" line="10"/>
+        <location filename="../ResetPostInit.js" line="11"/>
         <source>Reset</source>
         <translation>Reset</translation>
     </message>
