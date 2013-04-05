@@ -28,6 +28,6 @@ ReportBug.prototype = new Help();
 ReportBug.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
-    Help.openUrl("http://www.ribbonsoft.com/bugtracker/index.php?do=newtask&project=1");
+    Help.openUrl("http://www.qcad.org/bugtracker/index.php?do=newtask&project=1");
 };
 

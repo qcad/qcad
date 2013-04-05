@@ -27,6 +27,6 @@ Website.prototype = new Help();
 
 Website.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
-    Help.openUrl("http://www.ribbonsoft.com");
+    Help.openUrl("http://www.qcad.org");
 };
 

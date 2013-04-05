@@ -3,11 +3,13 @@ function init(basePath) {
         return;
     }
 
-    var action = new RGuiAction(qsTranslate("CheckForUpdates", "Check for &Updates..."), RMainWindowQt
-            .getMainWindow());
+    var action = new RGuiAction(
+        qsTranslate("CheckForUpdates", "Check for &Updates..."),
+        RMainWindowQt.getMainWindow()
+    );
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/CheckForUpdates.js");
-    action.setSortOrder(400);
+    action.setSortOrder(1000);
     action.setNoState();
     EAction.addGuiActionTo(action, Help, true, false, false, true);
 }

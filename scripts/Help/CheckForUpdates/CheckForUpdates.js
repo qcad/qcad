@@ -39,7 +39,6 @@ CheckForUpdates.getUrl = function() {
     url += RSettings.getRevisionVersion() + "_";
     url += RSettings.getBuildVersion();
     url += ".html";
-    qDebug("community: ", url);
     return url;
 };
 
@@ -55,7 +54,7 @@ CheckForUpdates.prototype.beginEvent = function() {
     var webView = dialog.findChild("WebView");
     WidgetFactory.initWebView(webView, this, "openUrl");
 
-    // load version info from ribbonsoft.com:
+    // load version info from qcad.org:
     webView.setHtml("<p>" + qsTr("Checking for Updates...") + "</p>");
     webView.load(new QUrl(url));
 

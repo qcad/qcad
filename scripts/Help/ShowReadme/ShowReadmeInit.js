@@ -3,8 +3,7 @@ function init(basePath) {
             .getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ShowReadme.js");
-    // action.setIcon(basePath + "/ShowReadme.svg");
-    action.setSortOrder(110);
+    action.setSortOrder(200);
     action.setNoState();
     EAction.addGuiActionTo(action, Help, true, false, false);
 }

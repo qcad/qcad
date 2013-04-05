@@ -1,9 +1,11 @@
-QCAD - Drawing is Creating!
-===========================
+QCAD Community
 
-QCAD is an open source 2D CAD system.
+This is a snapshop release of the current development version of 
+QCAD Community, version 3.
 
-With QCAD you can create technical drawings such as plans for buildings, 
-interiors, mechanical parts or schematics and diagrams. 
+Snapshot releases are not intended for production use but for
+interested users and developers to try out the latest features and tools.
 
-QCAD runs on Windows, Mac OS X and many Linux and Unix Systems. 
+Users are advised to safeguard important data, to use caution and not 
+to fully rely on the correct functioning or performance of the software 
+and/or accompanying materials.

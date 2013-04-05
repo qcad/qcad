@@ -36,7 +36,6 @@ void RPluginLoader::loadPlugins() {
 
     QDir pluginsDir = QDir(pluginsPath);
 
-    qDebug() << "Trying to load plugins from folder " << pluginsDir.path();
     QStringList nameFilter;
 #if defined(Q_OS_WIN)
     nameFilter.append("*.dll");

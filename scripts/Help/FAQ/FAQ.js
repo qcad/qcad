@@ -27,12 +27,6 @@ FAQ.prototype = new Help();
 
 FAQ.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
-
-    // TODO provide URL aliases, e.g.
-    // http://www.ribbonsoft.com/faq/
-    // http://www.ribbonsoft.com/reportbug/
-    // http://www.ribbonsoft.com/contact/
-    // etc.
-    Help.openUrl("http://www.ribbonsoft.com/qcad_doc_faq.html");
+    Help.openUrl("http://www.qcad.org/faq");
 };
 

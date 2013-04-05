@@ -3,7 +3,7 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/Purchase.js");
-    action.setSortOrder(500);
+    action.setSortOrder(1500);
     action.setNoState();
     EAction.addGuiActionTo(action, Help, true, false, false, true);
 }

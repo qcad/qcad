@@ -27,6 +27,6 @@ BrowseAddOns.prototype = new Help();
 
 BrowseAddOns.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
-    Help.openUrl("http://www.ribbonsoft.com/qcad-add-ons");
+    Help.openUrl("http://www.qcad.org/add-ons");
 };
 

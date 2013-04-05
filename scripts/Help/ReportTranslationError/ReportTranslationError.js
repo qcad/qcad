@@ -27,7 +27,6 @@ ReportTranslationError.prototype = new Help();
 
 ReportTranslationError.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
-
-    Help.openUrl("http://www.ribbonsoft.com/bugtracker/index.php?do=details&task_id=513");
+    Help.openUrl("http://www.qcad.org/translationreport");
 };
 
