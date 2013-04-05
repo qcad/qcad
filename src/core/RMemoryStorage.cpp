@@ -342,7 +342,6 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(RLayer::Id layerId) const {
         return QSharedPointer<RLayer>((RLayer*)objectMap[layerId]->clone());
     }
 
-    Q_ASSERT(false);
     qWarning() << "RMemoryStorage::queryLayer: should never be reached: " << layerId;
     qWarning() << "RMemoryStorage::queryLayer: found object but not layer: " << *objectMap[layerId];
     return QSharedPointer<RLayer>();
