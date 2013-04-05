@@ -950,7 +950,7 @@ LibraryBrowser.updateFsView = function(dirPath, model) {
     var filters = new QDir.Filters(QDir.Files, QDir.AllDirs, QDir.NoDotAndDotDot, QDir.Readable);
     var sort = new QDir.SortFlags(QDir.DirsFirst, QDir.Name, QDir.IgnoreCase);
     var dir = new QDir(dirPath);
-    var pats = RFileImporterRegistry.getFilterExtensionsPatterns();
+    var pats = RFileImporterRegistry.getFilterExtensionPatterns();
     pats.push("*.js");
     pats.push("*.svg");
     var eil = dir.entryInfoList(pats, filters, sort);
@@ -1376,7 +1376,7 @@ LibraryBrowser.sync = function(path, parentId, progressDialog, levels) {
         var filters = new QDir.Filters(QDir.Files, QDir.AllDirs, QDir.NoDotAndDotDot, QDir.Readable);
         var sortFlags = new QDir.SortFlags(QDir.Name, QDir.IgnoreCase);
         var dir = new QDir(path);
-        var pats = RFileImporterRegistry.getFilterExtensionsPatterns();
+        var pats = RFileImporterRegistry.getFilterExtensionPatterns();
         pats.push("*.js");
         pats.push("*.svg");
         var fileNames = dir.entryList(pats, filters, sortFlags);

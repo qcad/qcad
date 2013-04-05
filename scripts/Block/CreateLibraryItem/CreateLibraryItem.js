@@ -68,6 +68,7 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
     var op = new RCopyOperation(pos.getNegated(), document);
     itemDocumentInterface.applyOperation(op);
 
+    qDebug("RSettings.getLaunchPath(): ", RSettings.getLaunchPath());
     var res = File.getSaveFileName(
         EAction.getMainWindow(),
         qsTr("Save library item as..."),
