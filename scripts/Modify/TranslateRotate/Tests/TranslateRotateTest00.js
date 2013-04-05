@@ -32,14 +32,11 @@ TranslateRotateTest00.prototype = new TdbTest();
 TranslateRotateTest00.prototype.test00 = function() {
     qDebug('running TranslateRotateTest00.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(30, 459), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(30, 459), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/TranslateRotate/Tests/data/entities.dxf');
     this.setZoom(2.308788598574822, new RVector(134.581, 23.7923, 0) );
-    var p = new RVector(-9.840535, 1.762226);
+    var p = new RVector(50,-5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
+    var p = new RVector(-50,5);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.triggerCommand('moverotate');
     this.setZoom(2.308788598574822, new RVector(134.581, 23.7923, 0) );

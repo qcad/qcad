@@ -37,7 +37,6 @@ TranslateTest01.prototype.test00 = function() {
     var p = new RVector(-140,-20);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     var p = new RVector(85,15);
-    this.sendMouseEventModelPos(QEvent.MouseMove, p, Qt.LeftButton, 0, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.triggerCommand('move');
     this.setZoom(2.0813704496788006, new RVector(160.055, 63.2973, 0) );
@@ -49,7 +48,7 @@ TranslateTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
     this.dlgAppendCode('var map = new Map()');
-    this.dlgAppendCode("map.put('DialogOpenedByTdb/groupBox', 'DeleteOriginal')");
+    this.dlgAppendCode("map.put('DialogOpenedByTdb/Mode', 'DeleteOriginal')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/NumberOfCopies',  [ 10, 0 ] )");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/UseCurrentAttributes', false)");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");

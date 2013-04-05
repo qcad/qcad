@@ -33,16 +33,10 @@ IsoProjectTest03.prototype.test00 = function() {
     qDebug('running IsoProjectTest03.test00()...');
     this.setUp();
     this.importFile('scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_arc.dxf');
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::SnapToolsPanel');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(79, 479), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::SnapToolsPanel');
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(79, 479), Qt.LeftButton, 0, 0);
-    var p = new RVector(10.017543, -8.109712);
-    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
-    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
-    var p = new RVector(4.522238, 18.209904);
+    var p = new RVector(5, 15);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
+    var p = new RVector(1, 19);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     // key: 'P'
     this.pressAndReleaseKeyOnGv(0x50, 0);
