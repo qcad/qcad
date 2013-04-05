@@ -689,9 +689,7 @@ dir="./core" filename="RSettings.h">
     <name>bool</name>
   </type>
   <name>isXDataEnabled</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="line">//static bool
-  getRenderArcsPrecise();</comment></public>
+  <parameter_list>()</parameter_list>;</function_decl></public>
   <private>private: 
   <function_decl>
   <type>
@@ -854,10 +852,7 @@ dir="./core" filename="RSettings.h">
       <name>bool</name>
     </type>
     <name>quitFlag</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//static bool eventBlocking;</comment>
-  <comment type="line">//static int
-  renderArcsPrecise;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

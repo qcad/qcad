@@ -613,10 +613,7 @@ dir="./entity" filename="RSplineData.h">
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
     <block>{ 
-    <constructor_decl>
-    <name>RSpline::update</name>
-    <parameter_list>
-    ()</parameter_list>;</constructor_decl>}</block>
+    <comment type="line">//RSpline::update();</comment>}</block>
   </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
