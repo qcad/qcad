@@ -32,18 +32,13 @@ About.prototype.beginEvent = function() {
     var formWidget = this.createWidget("About.ui");
     formWidget.windowTitle = qsTr("About %1").arg(qApp.applicationName);
 
-    var f = 1.0;
-    if (RS.getSystemId()==="win") {
-        f = 0.75;
-    }
-
     var head;
     head = "<head>\n"
          + "<style type='text/css'>\n"
          + "a { text-decoration:none }\n"
-         + "h1 { font-family:sans;font-size:" + 16*f + "pt;margin-bottom:8pt; }\n"
-         + "h2 { font-family:sans;font-size:" + 12*f + "pt;font-style:italic;margin-bottom:5pt; }\n"
-         + "body,td { font-family:sans;font-size:" + 9*f + "pt; }\n"
+         + "h1 { font-family:sans;font-size:16pt;margin-bottom:8pt; }\n"
+         + "h2 { font-family:sans;font-size:12pt;font-style:italic;margin-bottom:5pt; }\n"
+         + "body,td { font-family:sans;font-size:9pt; }\n"
          + "}\n</style>\n"
          + "</head>";
 
