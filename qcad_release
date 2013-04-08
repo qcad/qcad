@@ -11,13 +11,11 @@ OPT2=""
 
 if [[ "$UNAME" != *Darwin* ]];
 then
-    # Ubuntu and friends and 64bit Linux systems might have broken 
-    # default style or no 32bit GTK style:
-    if [[ "$KERNEL" == *Ubuntu* || "$MACHINE" == "x86_64" ]];
-    then
-        OPT1="-style"
-        OPT2="plastique"
-    fi
+    # Many Linux distributions try to use a style plugin that
+    # is 64bit, links against another version of Qt or is
+    # otherwise incompatible:
+    OPT1="-style"
+    OPT2="plastique"
 fi
 
 DIR=${0%/*}/release

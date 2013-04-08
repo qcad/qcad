@@ -43,7 +43,7 @@ void RPluginLoader::loadPlugins() {
 #   if defined(Q_OS_MAC)
     nameFilter.append("*.dylib");
 #   else
-    nameFi.append("*.so");
+    nameFilter.append("*.so");
 #   endif
 #endif
 

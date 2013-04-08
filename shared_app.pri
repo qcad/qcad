@@ -79,15 +79,22 @@ else {
         $$PWD/$$ROUTDIR/libqcadsnap.a \
         $$PWD/$$ROUTDIR/libqcadspatialindex.a \
         $$PWD/$$ROUTDIR/libqcadstemmer.a \
-        $$PWD/$$ROUTDIR/libstemmer.a \
-        $$PWD/$$ROUTDIR/libspatialindexnavel.dylib
-        !r_no_opennurbs {
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libopennurbs.a
-        }
-        !r_no_dxf {
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libqcaddxf.a
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/libdxflib.a
-        }
+        $$PWD/$$ROUTDIR/libstemmer.a
+
+    macx {
+        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libspatialindexnavel.dylib
+    }
+    else {
+        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libspatialindexnavel.so
+    }
+
+    !r_no_opennurbs {
+        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libopennurbs.a
+    }
+    !r_no_dxf {
+        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libqcaddxf.a
+        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libdxflib.a
+    }
 }
 
 exists($$PWD/../shared_app.pri) {

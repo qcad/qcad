@@ -20,11 +20,11 @@
 #ifndef RDXFSERVICES_H
 #define RDXFSERVICES_H
 
-#include "dxf_global.h"
-
 #include <QString>
 
-#include "rs.h"
+#include "dxf_global.h"
+
+#include "RS.h"
 
 class RDimensionData;
 class RHatchData;
