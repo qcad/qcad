@@ -13,53 +13,53 @@
         <translation>Informazioni su %1</translation>
     </message>
     <message>
-        <location filename="../About.js" line="91"/>
+        <location filename="../About.js" line="86"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location filename="../About.js" line="113"/>
+        <location filename="../About.js" line="108"/>
         <source>No information available</source>
         <translation>Nessuna informazione disponibile</translation>
     </message>
     <message>
-        <location filename="../About.js" line="115"/>
+        <location filename="../About.js" line="110"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="120"/>
+        <location filename="../About.js" line="115"/>
         <source>Description:</source>
         <translation>Descrizione:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="126"/>
-        <location filename="../About.js" line="133"/>
+        <location filename="../About.js" line="121"/>
+        <location filename="../About.js" line="128"/>
         <source>Unknown</source>
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../About.js" line="128"/>
+        <location filename="../About.js" line="123"/>
         <source>Version:</source>
         <translation>Versione:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="135"/>
+        <location filename="../About.js" line="130"/>
         <source>License:</source>
         <translation>Licenza:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="149"/>
+        <location filename="../About.js" line="144"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="162"/>
+        <location filename="../About.js" line="157"/>
         <source>File:</source>
         <translation>File:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="168"/>
+        <location filename="../About.js" line="163"/>
         <source>Error:</source>
         <translation>Errore:</translation>
     </message>
