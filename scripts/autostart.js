@@ -296,7 +296,7 @@ function loadTranslations(addOns, splash) {
     var i;
 
     // load C++ translations:
-    var modules = ["qt", "assistant", "qt_help", "core", "entity", "gui"];
+    var modules = ["qt", "assistant", "qt_help", "qcadcore", "qcadentity", "qcadgui"];
     for (var mi=0; mi<modules.length; ++mi) {
         var module = modules[mi];
         translator = new QTranslator(qApp);
@@ -337,13 +337,25 @@ function loadTranslations(addOns, splash) {
     }
     */
 
-    // install one QTranslator for each script add-on (random crashes):
+    // install one QTranslator for each script add-on:
     if (!isNull(splash)) {
         splash.showMessage(qsTr("Loading add-on translations ...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
+
+    translator = new QTranslator(qApp);
+    if (translator.load("Scripts_" + locale, "scripts/ts")) {
+        QCoreApplication.installTranslator(translator);
+    }
+
     for (i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
+
+        var fi = new QFileInfo(addOn.getPath() + "/ts");
+        if (!fi.exists()) {
+            // no ts dir:
+            continue;
+        }
 
         translator = new QTranslator(qApp);
         if (translator.load(addOn.getClassName() + "_" + locale, addOn.getPath() + "/ts")) {
@@ -354,6 +366,7 @@ function loadTranslations(addOns, splash) {
             qWarning("Directory: ", addOn.getPath() + "/ts");
         }
     }
+
 }
 
 /**
