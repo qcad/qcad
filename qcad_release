@@ -12,8 +12,10 @@ OPT2=""
 if [[ "$UNAME" != *Darwin* ]];
 then
     # Many Linux distributions try to use a style plugin that
-    # is 64bit, links against another version of Qt or is
-    # otherwise incompatible:
+    # is not available as 32bit version, links against another 
+    # version of Qt or is otherwise incompatible. For this
+    # reason, we force the style to the integrated plastique 
+    # style of Qt:
     OPT1="-style"
     OPT2="plastique"
 fi
