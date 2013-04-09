@@ -35,7 +35,7 @@ HEADERS = \
     RSnapReference.h 
 TEMPLATE = lib
 #CONFIG += staticlib
-CONFIG += staticlib
+CONFIG += plugin
 TARGET = qcadsnap
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadgrid
 OTHER_FILES += snap.dox

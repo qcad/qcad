@@ -40,6 +40,7 @@ SOURCES += \
     RNavigationAction.cpp \
     RObject.cpp \
     RPainterPath.cpp \
+    RPainterPathSource.cpp \
     RPainterPathDevice.cpp \
     RPainterPathEngine.cpp \
     RPainterPathExporter.cpp \
@@ -222,13 +223,18 @@ HEADERS = \
     math/RTriangle.h \
     math/RVector.h
 TEMPLATE = lib
-CONFIG += staticlib
+#CONFIG += staticlib
+CONFIG += plugin
 TARGET = qcadcore
 RESOURCES = resources/core.qrc
 OTHER_FILES += core.dox
 DEFINES += QCADCORE_LIBRARY
 
-LIBS += -L$$PWD/$$ROUTDIR -lopennurbs
+LIBS += -L$$PWD/$$ROUTDIR -lzlib -lopennurbs
+
+win32 {
+    LIBS += -lRpcrt4 -lAdvapi32
+}
 
 macx {
     QMAKE_LFLAGS += -framework ApplicationServices

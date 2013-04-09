@@ -32,7 +32,8 @@ HEADERS = RAddObjectOperation.h \
     RTransformation.h \
     RTranslation.h
 TEMPLATE = lib
-CONFIG += staticlib
+#CONFIG += staticlib
+CONFIG += plugin
 TARGET = qcadoperations
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore
 OTHER_FILES += operations.dox

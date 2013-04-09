@@ -228,5 +228,5 @@ LIBS += -lzlib
 win32 {
     #DEFINES += ON_DLL_EXPORTS ON_COMPILING_OPENNURBS NDEBUG
     DEFINES += ON_COMPILING_OPENNURBS NDEBUG
-    LIBS += -lRpcrt4 -lAdvapi32
+    #LIBS += -lRpcrt4 -lAdvapi32
 }

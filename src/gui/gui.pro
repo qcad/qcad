@@ -51,7 +51,8 @@ HEADERS += \
     RTextEdit.h \
     RWebView.h
 TEMPLATE = lib
-CONFIG += staticlib
+#CONFIG += staticlib
+CONFIG += plugin
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadentity
 TARGET = qcadgui
 OTHER_FILES += gui.dox

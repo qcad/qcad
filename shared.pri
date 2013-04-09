@@ -1,6 +1,8 @@
 include($$PWD/ccache.pri)
 exists($$PWD/../shared.pri)
 
+DEFINES += QCAD_DLL
+
 # output directory:
 CONFIG(debug, debug|release) {
     ROUTDIR = debug

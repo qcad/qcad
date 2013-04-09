@@ -34,6 +34,7 @@
 #include "RImageData.h"
 #include "RLine.h"
 #include "RPainterPath.h"
+#include "RPainterPathSource.h"
 #include "RPoint.h"
 #include "RPolyline.h"
 

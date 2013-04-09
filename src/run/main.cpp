@@ -63,7 +63,7 @@
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
 
-Q_IMPORT_PLUGIN(customwidgetsplugin)
+//##Q_IMPORT_PLUGIN(customwidgetsplugin)
 
 
 #ifdef Q_WS_MACX
@@ -147,7 +147,7 @@ int main(int argc, char *argv[]) {
 #endif
 
     if (guiEnabled) {
-        Q_INIT_RESOURCE(core);
+        //##Q_INIT_RESOURCE(core);
     }
 
     qRegisterMetaType<RColor>();

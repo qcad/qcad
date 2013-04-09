@@ -7,7 +7,8 @@ SOURCES = \
     RSpatialIndexNavel.cpp
 
 TEMPLATE = lib
-CONFIG += staticlib
+#CONFIG += staticlib
+CONFIG += plugin
 TARGET = qcadspatialindex
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lspatialindexnavel
 OTHER_FILES += spatialindex.dox

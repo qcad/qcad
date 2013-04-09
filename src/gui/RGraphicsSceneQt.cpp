@@ -29,6 +29,7 @@
 #include "RSettings.h"
 #include "RSpline.h"
 #include "RTextLabel.h"
+#include "RPainterPathSource.h"
 #include "RPolyline.h"
 #include "RBlockReferenceEntity.h"
 

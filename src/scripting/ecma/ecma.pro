@@ -6,7 +6,8 @@ HEADERS = \
     RAutoLoadEcma.h \
     RScriptHandlerEcma.h
 TEMPLATE = lib
-CONFIG += staticlib
+#CONFIG += staticlib
+CONFIG += plugin
 TARGET = qcadecma
 LIBS += -L$$PWD/$$ROUTDIR \
     -ldxflib \

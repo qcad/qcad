@@ -13,7 +13,7 @@ SOURCES = \
     RDxfServices.cpp
 TEMPLATE = lib
 #CONFIG += staticlib
-CONFIG += staticlib
+CONFIG += plugin
 TARGET = qcaddxf
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadentity -ldxflib -lqcadoperations
 DEFINES += QCADDXF_LIBRARY

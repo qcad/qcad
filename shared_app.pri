@@ -3,7 +3,7 @@ include($$PWD/shared.pri)
 LIBS += \
     -lqcadecma \
     -lqcadecmaapi \
-    -lqcadcustomwidgets \
+    #-lqcadcustomwidgets \
     -lqcadgui \
     -lqcadentity \
     -lqcadoperations \
