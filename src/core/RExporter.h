@@ -32,7 +32,6 @@
 #include "RImageData.h"
 #include "RMatrix.h"
 #include "RPainterPath.h"
-#include "RPainterPathSource.h"
 #include "RView.h"
 
 class RArc;
@@ -43,6 +42,7 @@ class RLine;
 class RLinetype;
 class RLinetypePattern;
 class RMessageHandler;
+class RPainterPathSource;
 class RPoint;
 class RPolyline;
 class RProgressHandler;

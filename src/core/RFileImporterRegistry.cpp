@@ -41,6 +41,7 @@ QList<RFileImporterFactory*> RFileImporterRegistry::factories;
  */
 void RFileImporterRegistry::registerFileImporter(RFileImporterFactory* factory) {
     factories.append(factory);
+    qDebug() << "registring file importer factory. factories: " << (int)&factories;
 }
 
 /**
@@ -53,6 +54,8 @@ RFileImporter* RFileImporterRegistry::getFileImporter(
     const QString& nameFilter,
     RDocument& document,
     RMessageHandler* messageHandler, RProgressHandler* progressHandler) {
+
+    qDebug() << "RFileImporterRegistry::getFileImporter: factories: " << factories.count();
 
     QList<RFileImporterFactory*>::iterator it;
 

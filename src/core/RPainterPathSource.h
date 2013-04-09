@@ -35,7 +35,7 @@
  */
 class QCADCORE_EXPORT RPainterPathSource {
 public:
-    virtual ~RPainterPathSource() {}
+    virtual ~RPainterPathSource();
     virtual QList<RPainterPath> getPainterPaths(bool draft = false) const = 0;
 };
 

@@ -30,6 +30,7 @@
 #include "RLine.h"
 #include "RLinetype.h"
 #include "RLinetypePatternMap.h"
+#include "RPainterPathSource.h"
 #include "RPolyline.h"
 #include "RSpline.h"
 #include "RStorage.h"
