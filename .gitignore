@@ -29,6 +29,10 @@ Makefile.Release
 # Mac:
 .DS_Store
 
+# MSVC:
+_CL_*
+*.tmp
+
 # Output folders:
 debug
 release
