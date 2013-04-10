@@ -33,7 +33,7 @@
 #include "RTransactionEvent.h"
 
 RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
-    QMainWindow(parent), RMainWindow(), mdiArea(NULL), objectWasDestroyed(false) {
+    QMainWindow(parent), RMainWindow(), mdiArea(NULL) {
 
     if (hasMdiArea) {
         mdiArea = new QMdiArea(this);
@@ -97,10 +97,10 @@ void RMainWindowQt::subWindowActivated(QMdiSubWindow* sw) {
     suspendAndResume(sw);
 }
 
-void RMainWindowQt::objectDestroyed(QObject* obj) {
-    qDebug() << "objectDestroyed: " << obj->objectName();
-    objectWasDestroyed = true;
-}
+//void RMainWindowQt::objectDestroyed(QObject* obj) {
+//    qDebug() << "objectDestroyed: " << obj->objectName();
+//    objectWasDestroyed = true;
+//}
 
 void RMainWindowQt::handleUserMessage(const QString& message) {
     emit userMessage(message);

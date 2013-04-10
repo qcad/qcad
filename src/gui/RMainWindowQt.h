@@ -105,7 +105,7 @@ public:
 public slots:
     void currentTabChanged(int index);
     void subWindowActivated(QMdiSubWindow* sw);
-    void objectDestroyed(QObject *obj);
+    //void objectDestroyed(QObject *obj);
 
 signals:
     /**
@@ -139,15 +139,12 @@ signals:
 
 protected:
     virtual void closeEvent(QCloseEvent* e);
-    //virtual void keyPressEvent(QKeyEvent* e);
     virtual void dropEvent(QDropEvent* event);
     virtual void dragEnterEvent(QDragEnterEvent* event);
 
     virtual bool event(QEvent* e);
 
 protected slots:
-//    void disableTabBar(QMdiSubWindow* mdiChild);
-//    void enableTabBar(QMdiSubWindow* mdiChild);
     void updateGuiActions(QMdiSubWindow* mdiChild = NULL);
     void updateScenes(QMdiSubWindow* mdiChild);
     void notifyListenersSlot(QMdiSubWindow* mdiChild);
@@ -156,8 +153,8 @@ protected slots:
 protected:
     QMdiArea* mdiArea;
 
-private:
-    bool objectWasDestroyed;
+//private:
+//    bool objectWasDestroyed;
 };
 
 Q_DECLARE_METATYPE(RMainWindowQt*)

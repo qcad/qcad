@@ -124,25 +124,27 @@ EAction.prototype.finishEvent = function() {
         return;
     }
 
-    if (!isNull(this.getGuiAction()) && !isDeleted(this.getGuiAction())) {
-        if (this.getGuiAction().getGroup().isEmpty()) {
-            this.getGuiAction().setChecked(false);
-        }
-        if (this.getGuiAction().isOverride()) {
-            this.getGuiAction().setChecked(false);
+    var guiAction = this.getGuiAction();
+
+    // unckeck tool GUI action:
+    if (!isNull(guiAction) && !isDeleted(guiAction)) {
+        if (guiAction.getGroup().isEmpty() || guiAction.isOverride()) {
+            guiAction.setChecked(false);
         }
     }
 
     this.hideUiOptions();
 
+    // clear mouse tips:
     if (!isNull(EAction.getMainWindow())) {
         this.setLeftMouseTip("");
         this.setRightMouseTip("");
     }
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().getGroup() === "") {
+    // reset CAD tool bar:
+    if (!isNull(guiAction) && guiAction.getGroup() === "") {
         if (typeof(CadToolBar) !== "undefined") {
-            if (CadToolBar.getCurrentPanelName()=="SnapToolsPanel") {
+            if (CadToolBar.getCurrentPanelName()==="SnapToolsPanel") {
                 CadToolBar.back();
             }
         }
