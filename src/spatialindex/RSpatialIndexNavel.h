@@ -232,7 +232,7 @@ public:
             RSpatialIndexVisitor* dataVisitor = NULL);
 
     virtual QMap<int, QSet<int> > queryNearestNeighbor(
-            uint k,
+            unsigned int k,
             double x, double y, double z,
             RSpatialIndexVisitor* dataVisitor = NULL);
 
@@ -257,7 +257,7 @@ protected:
     /**
      * \nonscriptable
      */
-    QMap<int, QSet<int> > queryNearestNeighbor(uint k, const RSiPoint& point,
+    QMap<int, QSet<int> > queryNearestNeighbor(unsigned int k, const RSiPoint& point,
             RSpatialIndexVisitor* dataVisitor = NULL);
 
 //    QSet<int> sidsToIds(const QSet<int> sids);

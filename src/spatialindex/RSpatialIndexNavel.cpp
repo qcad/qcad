@@ -388,7 +388,7 @@ QMap<int, QSet<int> > RSpatialIndexNavel::queryContained(
 
 
 QMap<int, QSet<int> > RSpatialIndexNavel::queryNearestNeighbor(
-    uint k,
+    unsigned int k,
     double x, double y, double z,
     RSpatialIndexVisitor *dataVisitor) {
 
@@ -405,7 +405,7 @@ QMap<int, QSet<int> > RSpatialIndexNavel::queryNearestNeighbor(
  * Internal.
  */
 QMap<int, QSet<int> > RSpatialIndexNavel::queryNearestNeighbor(
-    uint k,
+    unsigned int k,
     const RSiPoint& point, RSpatialIndexVisitor* dataVisitor) {
 
     QMap<int, QSet<int> > result;

@@ -20,7 +20,8 @@
 #ifndef RMETATYPES_H
 #define RMETATYPES_H
 
-#include <stdint.h>
+// MSVC <= 2008 does not have this:
+//#include <stdint.h>
 
 #include <QAbstractItemModel>
 #include <QAbstractProxyModel>
@@ -114,9 +115,9 @@
 #include "RSingleApplication.h"
 
 Q_DECLARE_METATYPE(int*)
-Q_DECLARE_METATYPE(uint*)
+Q_DECLARE_METATYPE(unsigned int*)
 Q_DECLARE_METATYPE(qint64*)
-Q_DECLARE_METATYPE(uint8_t*)
+//Q_DECLARE_METATYPE(uint8_t*)
 #if !defined Q_OS_WIN32 && !defined Q_OS_LINUX
 Q_DECLARE_METATYPE(size_t*)
 #endif

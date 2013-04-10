@@ -22,7 +22,8 @@
 
 #include "core_global.h"
 
-#include <stdint.h>
+// MSVC <= 2008 does not have this:
+//#include <stdint.h>
 
 #include <QSet>
 #include <QList>
@@ -198,7 +199,7 @@ public:
      *      this object (visitor pattern).
      */
     virtual QMap<int, QSet<int> > queryNearestNeighbor(
-        uint k,
+        unsigned int k,
         double x, double y, double z,
         RSpatialIndexVisitor* dataVisitor=NULL
     ) = 0;

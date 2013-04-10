@@ -52,7 +52,7 @@ static QScriptValue qtscript_QFileOpenEvent_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QFileOpenEvent*)
-Q_DECLARE_METATYPE(QFile)
+//Q_DECLARE_METATYPE(QFile)
 Q_DECLARE_METATYPE(QFlags<QIODevice::OpenModeFlag>)
 Q_DECLARE_METATYPE(QEvent*)
 
@@ -91,10 +91,11 @@ static QScriptValue qtscript_QFileOpenEvent_prototype_call(QScriptContext *conte
 
     case 1:
     if (context->argumentCount() == 2) {
-        QFile _q_arg0 = qscriptvalue_cast<QFile>(context->argument(0));
-        QFlags<QIODevice::OpenModeFlag> _q_arg1 = qscriptvalue_cast<QFlags<QIODevice::OpenModeFlag> >(context->argument(1));
-        bool _q_result = _q_self->openFile(_q_arg0, _q_arg1);
-        return QScriptValue(context->engine(), _q_result);
+        //QFile _q_arg0 = qscriptvalue_cast<QFile>(context->argument(0));
+        //QFlags<QIODevice::OpenModeFlag> _q_arg1 = qscriptvalue_cast<QFlags<QIODevice::OpenModeFlag> >(context->argument(1));
+        //bool _q_result = _q_self->openFile(_q_arg0, _q_arg1);
+        //return QScriptValue(context->engine(), _q_result);
+        return QScriptValue();
     }
     break;
 
