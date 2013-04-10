@@ -1,7 +1,6 @@
 include($$PWD/shared.pri)
 
 LIBS += \
-    -lqcadecma \
     -lqcadecmaapi \
     #-lqcadcustomwidgets \
     -lqcadgui \
@@ -46,55 +45,37 @@ macx {
 }
 
 win32 {
-    POST_TARGETDEPS += \
-        $$PWD/$$ROUTDIR/qcadgui.lib \
-        $$PWD/$$ROUTDIR/qcadentity.lib \
-        $$PWD/$$ROUTDIR/qcadoperations.lib \
-        $$PWD/$$ROUTDIR/qcadspatialindex.lib \
-        $$PWD/$$ROUTDIR/spatialindexnavel.lib \
-        $$PWD/$$ROUTDIR/qcadcore.lib \
-        $$PWD/$$ROUTDIR/qcadstemmer.lib \
-        $$PWD/$$ROUTDIR/qcadgrid.lib \
-        $$PWD/$$ROUTDIR/qcadsnap.lib \
-        $$PWD/$$ROUTDIR/qcadecma.lib \
-        $$PWD/$$ROUTDIR/qcadecmaapi.lib
-        !r_no_opennurbs {
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/opennurbs.lib
-        }
-        !r_no_dxf {
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/qcaddxf.lib
-            POST_TARGETDEPS += $$PWD/$$ROUTDIR/dxflib.lib
-        }
+    PFX=
+    EXT=dll
 }
-else {
-    POST_TARGETDEPS += \
-        $$PWD/$$ROUTDIR/libopennurbs.a \
-        $$PWD/$$ROUTDIR/libqcadcore.a \
-        $$PWD/$$ROUTDIR/libqcadecma.a \
-        $$PWD/$$ROUTDIR/libqcadecmaapi.a \
-        $$PWD/$$ROUTDIR/libqcadentity.a \
-        $$PWD/$$ROUTDIR/libqcadgrid.a \
-        $$PWD/$$ROUTDIR/libqcadgui.a \
-        $$PWD/$$ROUTDIR/libqcadoperations.a \
-        $$PWD/$$ROUTDIR/libqcadsnap.a \
-        $$PWD/$$ROUTDIR/libqcadspatialindex.a \
-        $$PWD/$$ROUTDIR/libqcadstemmer.a \
-        $$PWD/$$ROUTDIR/libstemmer.a
+macx {
+    PFX=lib
+    EXT=dylib
+}
+linux {
+    PFX=lib
+    EXT=so
+}
+POST_TARGETDEPS += \
+    $$PWD/$$ROUTDIR/$${PFX}qcadgui.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}qcadentity.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}qcadoperations.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}qcadspatialindex.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}spatialindexnavel.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}qcadcore.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}qcadstemmer.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}qcadgrid.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}qcadsnap.$$EXT \
+    #$$PWD/$$ROUTDIR/$${PFX}qcadecma.$$EXT \
+    $$PWD/$$ROUTDIR/$${PFX}qcadecmaapi.$$EXT
 
-    macx {
-        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libspatialindexnavel.dylib
-    }
-    else {
-        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libspatialindexnavel.so
-    }
+#!r_no_opennurbs {
+    #POST_TARGETDEPS += $$PWD/$$ROUTDIR/$${PFX}opennurbs.$$EXT
+#}
 
-    !r_no_opennurbs {
-        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libopennurbs.a
-    }
-    !r_no_dxf {
-        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libqcaddxf.a
-        POST_TARGETDEPS += $$PWD/$$ROUTDIR/libdxflib.a
-    }
+!r_no_dxf {
+    POST_TARGETDEPS += $$PWD/$$ROUTDIR/$${PFX}qcaddxf.$$EXT
+    #POST_TARGETDEPS += $$PWD/$$ROUTDIR/$${PFX}dxflib.$$EXT
 }
 
 exists($$PWD/../shared_app.pri) {

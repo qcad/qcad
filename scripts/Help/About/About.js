@@ -32,8 +32,7 @@ About.prototype.beginEvent = function() {
     var formWidget = this.createWidget("About.ui");
     formWidget.windowTitle = qsTr("About %1").arg(qApp.applicationName);
 
-    var head;
-    head = "<head>\n"
+    this.head = "<head>\n"
          + "<style type='text/css'>\n"
          + "a { text-decoration:none }\n"
          + "h1 { font-family:sans;font-size:16pt;margin-bottom:8pt; }\n"
@@ -45,9 +44,27 @@ About.prototype.beginEvent = function() {
     // init about view:
     var webView = formWidget.findChild("QCADText");
     WidgetFactory.initWebView(webView, this, "openUrl");
+    this.initAboutQCAD(webView);
+
+    // init plugin view:
+    webView = formWidget.findChild("PluginsText");
+    WidgetFactory.initWebView(webView, this, "openUrl");
+    var webPage = webView.page();
+    webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
+    this.initAboutPlugins(webView);
+
+    // init scripts view:
+    webView = formWidget.findChild("ScriptsText");
+    WidgetFactory.initWebView(webView, this, "openUrl");
+    this.initAboutScripts(webView);
+
+    formWidget.exec();
+};
+
+About.prototype.initAboutQCAD = function(webView) {
     var html =
             "<html>"
-            + head
+            + this.head
             + "<body>"
             + "<h1>%1</h1>".arg(qApp.applicationName)
             + "<br/>"
@@ -61,7 +78,7 @@ About.prototype.beginEvent = function() {
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
             + "<p/>"
             + "<p>QCAD is free (open source) software.</p>"
-            + "<p>Plugins are subject to their respective license (see 'Plugins' tab).</p>"
+            + "<p>Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).</p>"
             + "<p/>"
             + "<p>Internet: <a href='http://%1'>%1</a></p>".arg(qApp.organizationDomain)
             + "<p/>"
@@ -72,16 +89,12 @@ About.prototype.beginEvent = function() {
             + "<p/>"
             + "</body></html>";
     webView.setHtml(html);
+};
 
-
-    // init plugin view:
-    webView = formWidget.findChild("PluginsText");
-    WidgetFactory.initWebView(webView, this, "openUrl");
-    var webPage = webView.page();
-    webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
-    html =
+About.prototype.initAboutPlugins = function(webView) {
+    var html =
             "<html>"
-            + head
+            + this.head
             + "<body>"
             + "<h1>%1</h1>".arg(qsTr("Plugins"))
             + "<hr/>";
@@ -170,9 +183,51 @@ About.prototype.beginEvent = function() {
     html += "</body>";
     html += "</html>";
     webView.setHtml(html);
-
-    formWidget.exec();
 };
+
+About.prototype.initAboutScripts = function(webView) {
+    var html =
+            "<html>"
+            + this.head
+            + "<body>"
+            + "<h1>%1</h1>".arg(qsTr("Script Add-Ons"))
+            + "<hr/>";
+
+    var addOns = AddOn.getAddOns();
+    var numAddOns = addOns.length;
+
+    if (numAddOns===0) {
+        html += "No script add-ons found.";
+    }
+    else {
+        var i;
+        var scriptsPath = RS.getDirectoryList("scripts")[0];
+        var scriptsDir = new QDir(scriptsPath);
+
+        var sorted = new Array();
+        for (i=0; i<numAddOns; i++) {
+            var addOn = addOns[i];
+            sorted.push([addOn.getClassName(), scriptsDir.relativeFilePath(addOn.getPath())]);
+        }
+
+        sorted = sorted.sort(function(a,b) { return a[1].localeCompare(b[1]); });
+
+        html += "<table border='0' width='100%'>";
+        html += "<col width='25%'/>";
+        html += "<col width='90%'/>";
+
+        for (i=0; i<sorted.length; i++) {
+            html += "<tr><td>" + sorted[i][0] + "</td><td>" + sorted[i][1] + "</td></tr>"
+        }
+    }
+
+    html += "</table>";
+    html += "</body>";
+    html += "</html>";
+    webView.setHtml(html);
+};
+
+
 
 About.prototype.getTableRow = function(text1, text2, escape) {
     if (isNull(escape) || escape!==false) {

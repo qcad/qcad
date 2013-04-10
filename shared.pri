@@ -98,8 +98,8 @@ INCLUDEPATH += \
     $$PWD/src/storage/db \
     $$PWD/src/scripting \
     $$PWD/src/stemmer \
-    $$PWD/src/scripting/ecma \
     $$PWD/src/scripting/ecmaapi \
+    $$PWD/src/scripting/ecmaapi/generated \
     $$PWD/src/scripting/ecmaapi/adapters \
     $$PWD/src/plugins/qt \
     $$PWD/src/io/dxf \

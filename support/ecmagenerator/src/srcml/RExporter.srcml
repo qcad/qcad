@@ -52,9 +52,6 @@ dir="./core" filename="RExporter.h">
   <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
   <cpp:file>"RView.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RArc</name>;</class_decl>
@@ -72,6 +69,8 @@ dir="./core" filename="RExporter.h">
   <name>RLinetypePattern</name>;</class_decl>
   <class_decl>class 
   <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RPainterPathSource</name>;</class_decl>
   <class_decl>class 
   <name>RPoint</name>;</class_decl>
   <class_decl>class 

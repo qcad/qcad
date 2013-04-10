@@ -20,7 +20,7 @@
 #ifndef RECMAHELPER_H
 #define RECMAHELPER_H
 
-#include "ecmaapi/ecmaapi_global.h"
+#include "ecmaapi_global.h"
 
 #include <QtScript>
 #include <QList>

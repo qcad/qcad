@@ -21,7 +21,7 @@ do
         xmlfile=${f##*/}
         file=${xmlfile%%.*}
         ecmafile=$(echo $file|sed s/^R/REcmaSharedPointer/).$mode
-        ecmapath=../../$scope/scripting/ecmaapi/$ecmafile
+        ecmapath=../../$scope/scripting/ecmaapi/generated/$ecmafile
         grep "sharedPointerSupport=\"true\"" $f >/dev/null
         sharedPointerSupport=$?
 

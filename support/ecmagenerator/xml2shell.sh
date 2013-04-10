@@ -21,7 +21,7 @@ do
         xmlfile=${f##*/}
         file=${xmlfile%%.*}
         ecmafile=$(echo $file|sed s/^R/REcmaShell/).$mode
-        ecmapath=../../$scope/scripting/ecmaapi/$ecmafile
+        ecmapath=../../$scope/scripting/ecmaapi/generated/$ecmafile
         grep "hasShell=\"true\"" $f >/dev/null
         hasShell=$?
 

@@ -23,6 +23,8 @@
             
                 #include "RMessageHandler.h"
             
+                #include "RPainterPathSource.h"
+            
                 #include "RPoint.h"
             
                 #include "RPolyline.h"

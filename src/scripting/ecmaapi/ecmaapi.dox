@@ -2,6 +2,7 @@
 
 \defgroup scripting_ecmaapi EMCAScript API Module
 
-\brief Automatically generated script bindings for the QCAD Application Framework.
+\brief This module implements a script handler for the ECMAScript language.
+The automatically generated script bindings are located in folder 'generated'.
 
 */

@@ -9,6 +9,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RLinetype" />
   <class_decl name="RLinetypePattern" />
   <class_decl name="RMessageHandler" />
+  <class_decl name="RPainterPathSource" />
   <class_decl name="RPoint" />
   <class_decl name="RPolyline" />
   <class_decl name="RProgressHandler" />

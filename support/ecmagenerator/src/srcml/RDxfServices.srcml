@@ -22,13 +22,13 @@ dir="./io/dxf" filename="RDxfServices.h">
   <name>RDXFSERVICES_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"rs.h"</cpp:file></cpp:include>
+  <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RS.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDimensionData</name>;</class_decl>
   <class_decl>class 

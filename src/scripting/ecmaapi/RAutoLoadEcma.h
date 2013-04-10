@@ -20,7 +20,7 @@
 #ifndef RAUTOLOADECMA_H
 #define RAUTOLOADECMA_H
 
-#include "ecma_global.h"
+#include "ecmaapi_global.h"
 
 #include <QMetaType>
 #include <QString>
@@ -29,7 +29,7 @@
 /**
  * \scriptable
  */
-class QCADECMA_EXPORT RAutoLoadEcma {
+class QCADECMAAPI_EXPORT RAutoLoadEcma {
 public:
     static void addAutoLoadFile(const QString& file);
     static QStringList getAutoLoadFiles();
