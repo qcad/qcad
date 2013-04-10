@@ -245,14 +245,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="sw" isConst="false" />
       </variant>
     </method>
-    <method name="objectDestroyed" cppName="objectDestroyed"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QObject *" typeName="QObject *" name="obj"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="closeEvent" cppName="closeEvent"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

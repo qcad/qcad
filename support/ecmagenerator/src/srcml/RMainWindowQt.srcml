@@ -509,19 +509,8 @@ dir="./gui" filename="RMainWindowQt.h">
       <name>sw</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>objectDestroyed</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QObject</name>*</type>
-      <name>obj</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
+  <comment type="line">//void objectDestroyed(QObject
+  *obj);</comment>
   <label>
   <name>signals</name>:</label>
   <comment type="block">/** * Emmitted when the command prompt is
@@ -736,8 +725,6 @@ dir="./gui" filename="RMainWindowQt.h">
       <name>e</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">//virtual void keyPressEvent(QKeyEvent*
-  e);</comment>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -781,10 +768,6 @@ dir="./gui" filename="RMainWindowQt.h">
     </decl>
   </param>)</parameter_list>;</function_decl></protected>
   <protected>protected slots: 
-  <comment type="line">// void disableTabBar(QMdiSubWindow*
-  mdiChild);</comment>
-  <comment type="line">// void enableTabBar(QMdiSubWindow*
-  mdiChild);</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -847,15 +830,10 @@ dir="./gui" filename="RMainWindowQt.h">
     <type>
     <name>QMdiArea</name>*</type>
     <name>mdiArea</name>
-  </decl>;</decl_stmt></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>objectWasDestroyed</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
+  </decl>;</decl_stmt>
+  <comment type="line">//private:</comment>
+  <comment type="line">// bool
+  objectWasDestroyed;</comment></protected>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

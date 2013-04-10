@@ -233,8 +233,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, subWindowActivated, "subWindowActivated");
             
-            REcmaHelper::registerFunction(&engine, proto, objectDestroyed, "objectDestroyed");
-            
         engine.setDefaultPrototype(
             qMetaTypeId<RMainWindowQt*>(), *proto);
 
@@ -4335,64 +4333,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::subWindowActivated", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaMainWindowQt::objectDestroyed
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMainWindowQt::objectDestroyed", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::objectDestroyed";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMainWindowQt* self = 
-                        getSelf("objectDestroyed", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isQObject()
-        ) /* type: QObject * */
-    
-    ){
-    // prepare arguments:
-    
-            // argument isQObject
-            QObject *
-            a0 =
-            qobject_cast<
-            QObject *>
-            ( context->argument(
-            0
-            ).
-            toQObject()
-            );
-        
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->objectDestroyed(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.objectDestroyed().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMainWindowQt::objectDestroyed", context, engine);
             return result;
         }
          QScriptValue REcmaMainWindowQt::toString
