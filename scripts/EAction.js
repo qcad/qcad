@@ -124,13 +124,6 @@ EAction.prototype.finishEvent = function() {
         return;
     }
 
-    //var appWin = EAction.getMainWindow();
-//    if (!appWin.tryLock("EACTION FINISH: "
-//            + (isNull(this.getGuiAction()) ? "NULL" : this.getGuiAction()
-//                    .getScriptFile()))) {
-//        return;
-//    }
-
     if (!isNull(this.getGuiAction()) && !isDeleted(this.getGuiAction())) {
         if (this.getGuiAction().getGroup().isEmpty()) {
             this.getGuiAction().setChecked(false);
@@ -140,15 +133,7 @@ EAction.prototype.finishEvent = function() {
         }
     }
 
-//    appWin.unlock("EACTION FINISH");
-
     this.hideUiOptions();
-
-//    if (!appWin.tryLock("EACTION FINISH: "
-//            + (isNull(this.getGuiAction()) ? "NULL" : this.getGuiAction()
-//                    .getScriptFile()))) {
-//        return;
-//    }
 
     if (!isNull(EAction.getMainWindow())) {
         this.setLeftMouseTip("");
@@ -162,8 +147,6 @@ EAction.prototype.finishEvent = function() {
             }
         }
     }
-
-//    appWin.unlock("EACTION FINISH");
 
     // to remove snap info:
     var di = this.getDocumentInterface();

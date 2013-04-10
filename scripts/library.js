@@ -671,13 +671,6 @@ function getWidgets(widget, ca) {
         return undefined;
     }
 
-//    var appWin = RMainWindowQt.getMainWindow();
-//    if (!isNull(appWin)) {
-//        if (!appWin.tryLock("getWidgets")) {
-//            return;
-//        }
-//    }
-
     if (isNull(ca)) {
         ca = new Array();
     }
@@ -694,8 +687,6 @@ function getWidgets(widget, ca) {
             getWidgets(child, ca);
         }
     }
-
-//    appWin.unlock("getWidgets");
 
     return ca;
 }

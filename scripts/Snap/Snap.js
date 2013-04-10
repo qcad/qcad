@@ -68,13 +68,6 @@ Snap.prototype.finishEvent = function() {
         return;
     }
 
-//    var appWin = EAction.getMainWindow();
-//    if (!appWin.tryLock("SNAP FINISH: "
-//            + (isNull(this.getGuiAction()) ? "NULL" : this.getGuiAction()
-//                    .getScriptFile()))) {
-//        return;
-//    }
-
     if (!isNull(this.getGuiAction()) && !isDeleted(this.getGuiAction())) {
         if (this.getGuiAction().getGroup().isEmpty()) {
             this.getGuiAction().setChecked(false);
@@ -83,8 +76,6 @@ Snap.prototype.finishEvent = function() {
             this.getGuiAction().setChecked(false);
         }
     }
-
-//    appWin.unlock("SNAP FINISH");
 };
 
 Snap.prototype.restrict = function(coord) {
