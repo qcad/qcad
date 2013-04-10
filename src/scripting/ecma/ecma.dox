@@ -1,9 +1,0 @@
-/*!
-
-\defgroup scripting_ecma ECMAScript Handler
-
-\brief This module implements a script handler for the ECMAScript language.
-The automatically generated script bindings are located in 
-the scripting_ecmaapi.
-
-*/
