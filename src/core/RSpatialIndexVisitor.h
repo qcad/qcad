@@ -22,7 +22,7 @@
 
 #include "core_global.h"
 
-#include <stdint.h>
+//#include <stdint.h>
 
 
 /**
