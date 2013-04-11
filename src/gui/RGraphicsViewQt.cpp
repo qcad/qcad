@@ -68,12 +68,7 @@ RGraphicsViewQt::~RGraphicsViewQt() {
  * Triggers a paintEvent based on a buffered offscreen bitmap (very fast).
  */
 void RGraphicsViewQt::repaintView() {
-#if defined(Q_OS_WIN32) && QT_VERSION >= 0x040800
-    // workaround for bug in Qt 4.8.x on Windows (update does not always work, FS#716): 
-    QWidget::repaint();
-#else
     update();
-#endif
 }
 
 void RGraphicsViewQt::repaintNow() {
