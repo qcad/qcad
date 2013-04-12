@@ -22,6 +22,7 @@
 
 #include "core_global.h"
 
+#include <QList>
 #include <QString>
 #include <QMap>
 
@@ -38,6 +39,7 @@ class QCADCORE_EXPORT RLinetypePatternMap: public QMap<QString, RLinetypePattern
 public:
     RLinetypePatternMap();
     static RLinetypePattern getPattern(const QString& name);
+    static QList<RLinetypePattern> getPatterns();
 
 private:
     static RLinetypePatternMap patternMap;

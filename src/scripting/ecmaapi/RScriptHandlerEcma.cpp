@@ -298,11 +298,6 @@
 #include "REcmaWebView.h"
 #include "REcmaWheelEvent.h"
 
-#ifndef R_NO_DXF
-#include "REcmaDxfImporter.h"
-#include "REcmaDxfImporterFactory.h"
-#endif
-
 bool RScriptHandlerEcma::alwaysLoadScripts = false;
 bool RScriptHandlerEcma::translatorInstalled = false;
 QAbstractEventDispatcher::EventFilter RScriptHandlerEcma::defaultEventFilter;
@@ -696,10 +691,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaImporter::init(*engine);
     REcmaFileImporter::init(*engine);
     REcmaFileImporterAdapter::init(*engine);
-#ifndef R_NO_DXF
-    REcmaDxfImporter::init(*engine);
-    REcmaDxfImporterFactory::init(*engine);
-#endif
     REcmaFileImporterRegistry::init(*engine);
 
     REcmaExporter::init(*engine);

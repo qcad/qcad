@@ -22,6 +22,9 @@
 
 #include "dxf_global.h"
 
+#include "dxflib/src/dl_creationinterface.h"
+#include "dxflib/src/dl_dxf.h"
+
 #include "RArc.h"
 #include "RDocument.h"
 #include "RDxfServices.h"
@@ -50,6 +53,8 @@ public:
 
     virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true);
 
+    void writeVariables();
+
     virtual void exportPoint(const RPoint& point) {
         Q_UNUSED(point)
     }
@@ -65,6 +70,10 @@ public:
     virtual void exportTriangle(const RTriangle& triangle) {
         Q_UNUSED(triangle)
     }
+
+private:
+    DL_Dxf dxf;
+    DL_WriterA* dw;
 };
 
 Q_DECLARE_METATYPE(RDxfExporter*)

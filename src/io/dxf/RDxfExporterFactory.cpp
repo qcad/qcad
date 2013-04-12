@@ -21,7 +21,8 @@
 
 QStringList RDxfExporterFactory::getFilterStrings() {
     QStringList ret;
-    ret << QObject::tr("DXF (dxflib) (*.dxf)");
+    ret << "DXF R12 (dxflib) (*.dxf)";
+    ret << "DXF 2000 (dxflib) (*.dxf)";
     return ret;
 }
 

@@ -17,7 +17,10 @@
  * along with QCAD.
  */
 
-requiresFramework([3,0,9,0], [3,0,9,0]);
+// Version check is disabled for now. This can be used in the future to
+// ensure compatibility between scripts and script bindings.
+//requiresFramework([3,0,9,0], [3,1,0,0]);
+
 include("sprintf.js");
 
 if (isNull(Global)) {

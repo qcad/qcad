@@ -57,3 +57,7 @@ RLinetypePattern RLinetypePatternMap::getPattern(const QString& name) {
     }
     return RLinetypePattern();
 }
+
+QList<RLinetypePattern> RLinetypePatternMap::getPatterns() {
+    return patternMap.values();
+}

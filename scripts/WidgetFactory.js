@@ -945,7 +945,7 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
         for (var i=0; i<symbols.length; ++i) {
             var symbol = symbols[i];
 
-            if (symbol.length==0) {
+            if (symbol.length===0) {
                 subMenu.addSeparator();
                 continue;
             }
@@ -953,7 +953,7 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
             var symbolSelf = symbol[0];
             var symbolText = symbol[1];
             var insertion = symbol[0];
-            if (symbol.length==3) {
+            if (symbol.length===3) {
                 insertion = symbol[2];
             }
 
