@@ -1,3 +1,4 @@
+include (../../../../shared.pri)
 TEMPLATE = subdirs
 SUBDIRS = qtscript_core \
 	  qtscript_gui \
@@ -7,8 +8,7 @@ SUBDIRS = qtscript_core \
 	  qtscript_xml \
 	  qtscript_webkit \
 	  qtscript_xmlpatterns \
-	  qtscript_uitools \
-	  qs_eval
+	  qtscript_uitools
 
 !win32 {
     SUBDIRS += qtscript_network
