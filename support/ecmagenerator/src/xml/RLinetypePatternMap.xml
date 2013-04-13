@@ -18,5 +18,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getPatterns" cppName="getPatterns"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RLinetypePattern &gt;"
+      isPureVirtual="false" />
+    </method>
   </class>
 </unit>

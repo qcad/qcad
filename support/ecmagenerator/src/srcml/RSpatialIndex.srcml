@@ -23,9 +23,9 @@ dir="./core" filename="RSpatialIndex.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;stdint.h&gt;</cpp:file></cpp:include>
+  <comment type="line">// MSVC &lt;= 2008 does not have
+  this:</comment>
+  <comment type="line">//#include &lt;stdint.h&gt;</comment>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
@@ -918,7 +918,8 @@ dir="./core" filename="RSpatialIndex.h">
   <param>
     <decl>
       <type>
-        <name>uint</name>
+        <name>unsigned</name>
+        <name>int</name>
       </type>
       <name>k</name>
     </decl>

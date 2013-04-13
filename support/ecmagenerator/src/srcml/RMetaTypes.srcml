@@ -20,9 +20,9 @@ dir="./core" filename="RMetaTypes.h">
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RMETATYPES_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;stdint.h&gt;</cpp:file></cpp:include>
+  <comment type="line">// MSVC &lt;= 2008 does not have
+  this:</comment>
+  <comment type="line">//#include &lt;stdint.h&gt;</comment>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QAbstractItemModel&gt;</cpp:file></cpp:include>
@@ -298,18 +298,14 @@ dir="./core" filename="RMetaTypes.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
-    <argument>uint*</argument>)</argument_list>
+    <argument>unsigned int*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>qint64*</argument>)</argument_list>
   </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>uint8_t*</argument>)</argument_list>
-  </macro>
+  <comment type="line">//Q_DECLARE_METATYPE(uint8_t*)</comment>
   <cpp:if>#
   <cpp:directive>if</cpp:directive>
   <expr>!

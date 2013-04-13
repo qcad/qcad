@@ -172,8 +172,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QMap &lt; int , QSet &lt; int &gt; &gt;"
       isPureVirtual="true">
-        <arg type="uint" typeName="uint" name="k"
-        isConst="false" />
+        <arg type="int" typeName="int" name="k" isConst="false" />
         <arg type="double" typeName="double" name="x"
         isConst="false" />
         <arg type="double" typeName="double" name="y"

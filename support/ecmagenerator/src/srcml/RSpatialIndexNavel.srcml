@@ -1514,7 +1514,8 @@ dir="./spatialindex" filename="RSpatialIndexNavel.h">
   <param>
     <decl>
       <type>
-        <name>uint</name>
+        <name>unsigned</name>
+        <name>int</name>
       </type>
       <name>k</name>
     </decl>
@@ -1741,7 +1742,8 @@ dir="./spatialindex" filename="RSpatialIndexNavel.h">
   <param>
     <decl>
       <type>
-        <name>uint</name>
+        <name>unsigned</name>
+        <name>int</name>
       </type>
       <name>k</name>
     </decl>

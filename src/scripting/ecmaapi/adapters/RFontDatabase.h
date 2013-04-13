@@ -17,6 +17,9 @@
  * along with QCAD.
  */
 
+#ifndef RFONTDATABASE_H
+#define RFONTDATABASE_H
+
 #include <QFontDatabase>
 #include <QMetaType>
 
@@ -32,3 +35,5 @@ public:
 };
 
 Q_DECLARE_METATYPE(RFontDatabase*)
+
+#endif

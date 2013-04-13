@@ -25,6 +25,9 @@ dir="./core" filename="RLinetypePatternMap.h">
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -71,7 +74,18 @@ dir="./core" filename="RLinetypePatternMap.h">
       <name>QString</name>&amp;</type>
       <name>name</name>
     </decl>
-  </param>)</parameter_list>;</function_decl></public>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RLinetypePattern</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getPatterns</name>
+  <parameter_list>()</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>

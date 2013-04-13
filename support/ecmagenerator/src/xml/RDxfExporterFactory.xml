@@ -6,40 +6,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RDxfExporterFactory"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <baseClass name="RFileExporterFactory" specifier="public" />
-    <method name="registerFileExporter"
-    cppName="registerFileExporter" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="getFilterStrings" cppName="getFilterStrings"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QStringList" isPureVirtual="false" />
-    </method>
-    <method name="instantiate" cppName="instantiate"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="RFileExporter *" isPureVirtual="false">
-        <arg type="RDocument &amp;" typeName="RDocument"
-        name="document" isConst="false" />
-        <arg type="RMessageHandler *" typeName="RMessageHandler *"
-        name="messageHandler" hasDefault="true" default=" NULL"
-        isConst="false" />
-        <arg type="RProgressHandler *"
-        typeName="RProgressHandler *" name="progressHandler"
-        hasDefault="true" default=" NULL" isConst="false" />
-      </variant>
-    </method>
-    <method name="canExport" cppName="canExport" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString"
-        name="fileName" isConst="true" />
-        <arg type="QString &amp;" typeName="QString"
-        name="nameFilter" isConst="true" />
-      </variant>
-    </method>
-  </class>
+  hasStreamOperator="false" isAbstract="false"
+  isScriptable="false" />
 </unit>

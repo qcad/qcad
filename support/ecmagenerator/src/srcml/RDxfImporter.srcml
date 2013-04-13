@@ -116,8 +116,7 @@ dir="./io/dxf" filename="RDxfImporter.h">
     <name>italic</name>
   </decl>;</decl_stmt></public>}</block>;</class>
   <comment type="block">/** * \brief Importer for the DXF format,
-  based on the dxflib library. * * \ingroup qcadiodxf * \scriptable
-  */</comment>
+  based on the dxflib library. * * \ingroup qcadiodxf */</comment>
   <class>class 
   <macro>
     <name>QCADDXF_EXPORT</name>

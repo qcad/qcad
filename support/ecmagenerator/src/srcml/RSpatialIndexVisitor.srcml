@@ -23,9 +23,7 @@ dir="./core" filename="RSpatialIndexVisitor.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;stdint.h&gt;</cpp:file></cpp:include>
+  <comment type="line">//#include &lt;stdint.h&gt;</comment>
   <comment type="block">/** * \brief Abstract base class for
   classes that are interested in * the data of spatial index items.
   * * \scriptable * \ingroup core */</comment>
