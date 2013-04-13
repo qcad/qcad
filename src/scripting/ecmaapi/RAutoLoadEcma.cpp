@@ -1,4 +1,4 @@
-#include <RAutoLoadEcma.h>
+#include "RAutoLoadEcma.h"
 
 QStringList RAutoLoadEcma::autoLoadFiles;
 
