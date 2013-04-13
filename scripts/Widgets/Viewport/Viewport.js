@@ -107,7 +107,6 @@ Viewport.prototype.initEventHandler = function() {
  * Initializes this viewport.
  */
 Viewport.prototype.init = function() {
-    debugger;
     // delete placeholder children if there are any (clear out parent window):
     var chs = this.vpWidget.children();
     for (var i = 0; i < chs.length; ++i) {
