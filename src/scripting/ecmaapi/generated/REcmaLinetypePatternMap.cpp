@@ -75,6 +75,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, getPattern, "getPattern");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPatterns, "getPatterns");
+            
 
     // static properties:
     
@@ -224,6 +226,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePatternMap::getPattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePatternMap::getPatterns
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePatternMap::getPatterns", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePatternMap::getPatterns";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLinetypePattern >'
+    QList < RLinetypePattern > cppResult =
+        RLinetypePatternMap::
+       getPatterns();
+        // return type: QList < RLinetypePattern >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePatternMap.getPatterns().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePatternMap::getPatterns", context, engine);
             return result;
         }
          QScriptValue REcmaLinetypePatternMap::toString

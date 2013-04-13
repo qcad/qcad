@@ -107,7 +107,8 @@ Viewport.prototype.initEventHandler = function() {
  * Initializes this viewport.
  */
 Viewport.prototype.init = function() {
-    // delete placeholder children:
+    debugger;
+    // delete placeholder children if there are any (clear out parent window):
     var chs = this.vpWidget.children();
     for (var i = 0; i < chs.length; ++i) {
         var ch = chs[i];
@@ -129,11 +130,11 @@ Viewport.prototype.init = function() {
     this.vpWidget.styleSheet = "";
 
     this.graphicsView = this.vpWidget.findChild("GraphicsView");
-    this.graphicsView.setViewportNumber(this.vpNumber);
     if (isNull(this.graphicsView)) {
         qWarning("graphics view not found");
         return;
     }
+    this.graphicsView.setViewportNumber(this.vpNumber);
     if (isFunction(this.graphicsView.setFocusFrameWidget)) {
         this.graphicsView.setFocusFrameWidget(this.vpWidget);
     }

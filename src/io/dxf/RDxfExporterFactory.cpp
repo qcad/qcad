@@ -21,13 +21,17 @@
 
 QStringList RDxfExporterFactory::getFilterStrings() {
     QStringList ret;
-    ret << "DXF R12 (dxflib) (*.dxf)";
-    ret << "DXF 2000 (dxflib) (*.dxf)";
+    ret << "R2000 DXF (dxflib) (*.dxf)";
+    ret << "R12 DXF (dxflib) (*.dxf)";
     return ret;
 }
 
 bool RDxfExporterFactory::canExport(const QString& fileName, const QString& nameFilter) {
     QFileInfo fi(fileName);
+
+    if (!nameFilter.isEmpty() && !nameFilter.contains("dxflib")) {
+        return false;
+    }
 
     // supported file suffix:
     if (fi.suffix().toLower() == "dxf") {

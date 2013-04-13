@@ -9,6 +9,7 @@ SOURCES += \
     RDebug.cpp \
     RDocument.cpp \
     RDocumentInterface.cpp \
+    RDxfServices.cpp \
     REntity.cpp \
     REntityData.cpp \
     REntityPickEvent.cpp \
@@ -110,6 +111,7 @@ HEADERS = \
     RDebug.h \
     RDocument.h \
     RDocumentInterface.h \
+    RDxfServices.h \
     REntity.h \
     REntityData.h \
     REntityPickEvent.h \

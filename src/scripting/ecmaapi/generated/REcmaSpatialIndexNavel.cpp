@@ -1233,7 +1233,7 @@
     if( context->argumentCount() ==
     4 && (
             context->argument(0).isNumber()
-        ) /* type: uint */
+        ) /* type: int */
      && (
             context->argument(1).isNumber()
         ) /* type: double */
@@ -1248,9 +1248,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    uint
+                    int
                     a0 =
-                    (uint)
+                    (int)
                     
                     context->argument( 0 ).
                     toNumber();
@@ -1304,7 +1304,7 @@
     if( context->argumentCount() ==
     5 && (
             context->argument(0).isNumber()
-        ) /* type: uint */
+        ) /* type: int */
      && (
             context->argument(1).isNumber()
         ) /* type: double */
@@ -1324,9 +1324,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    uint
+                    int
                     a0 =
-                    (uint)
+                    (int)
                     
                     context->argument( 0 ).
                     toNumber();

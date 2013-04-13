@@ -21,6 +21,8 @@
 #include "dxflib/src/dl_codes.h"
 #include "dxflib/src/dl_writer_ascii.h"
 
+#include <QFileInfo>
+
 #include "RDxfExporter.h"
 #include "RLinetypePatternMap.h"
 
@@ -32,6 +34,8 @@ RDxfExporter::RDxfExporter(RDocument& document,
 }
 
 bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter, bool resetModified) {
+    qDebug() << "RDxfExporter::exportFile";
+
     // set version for DXF filter:
     DL_Codes::version exportVersion;
     if (nameFilter.contains("R12")) {
@@ -41,7 +45,11 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         exportVersion = DL_Codes::AC1015;
     }
 
+    qDebug() << "RDxfExporter::exportFile: 001";
+
     dw = dxf.out((const char*)QFile::encodeName(fileName), exportVersion);
+
+    qDebug() << "RDxfExporter::exportFile: 002";
 
     if (dw==NULL) {
         qWarning() << "RS_FilterDxf::fileExport: cannot open file for writing";
@@ -49,25 +57,33 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     }
 
     // Header
+    qDebug() << "RDxfExporter::exportFile: header";
     dxf.writeHeader(*dw);
 
     // Variables
+    qDebug() << "RDxfExporter::exportFile: variables";
     writeVariables();
 
     // Section TABLES
+    qDebug() << "RDxfExporter::exportFile: tables";
     dw->sectionTables();
 
     // VPORT:
+    qDebug() << "RDxfExporter::exportFile: vport";
     dxf.writeVPort(*dw);
 
     // Line types:
+    qDebug() << "RDxfExporter::exportFile: linetypes";
     QList<RLinetypePattern> patterns = RLinetypePatternMap::getPatterns();
     int numLT = patterns.count();
+    qDebug() << "RDxfExporter::exportFile: linetypes: " << numLT;
     //int numLT = (int)RS::BorderLineX2-(int)RS2::LineByBlock;
     //if (formatType==RS2::FormatDxf12) {
     //    numLT-=2;
     //}
+    qDebug() << "RDxfExporter::exportFile: linetypes table";
     dw->tableLineTypes(numLT);
+    qDebug() << "RDxfExporter::exportFile: linetypes loop";
     for (int i=0; patterns.count(); i++) {
         //writeLineType(patterns[i]);
     }
@@ -76,6 +92,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 //            writeLineType((RS2::LineType)t);
 //        }
 //    }
+    qDebug() << "RDxfExporter::exportFile: linetypes table end";
     dw->tableEnd();
 
     /*
@@ -208,20 +225,22 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     RS_DEBUG->print("writing EOF...");
     dw->dxfEOF();
+    */
 
-
-    RS_DEBUG->print("close..");
+    qDebug() << "RDxfExporter::exportFile: close";
     dw->close();
 
+    qDebug() << "RDxfExporter::exportFile: delete";
     delete dw;
     dw = NULL;
 
-    // check if file was actually written (strange world of windoze xp):
-    if (RS_FileInfo(file).exists()==false) {
-        RS_DEBUG->print("RS_FilterDxf::fileExport: file could not be written");
+    qDebug() << "RDxfExporter::exportFile: OK";
+
+    // check if file was actually written. Windows might not write
+    // any output without reporting an error.
+    if (QFileInfo(fileName).exists()==false) {
         return false;
     }
-    */
 
     return true;
 }

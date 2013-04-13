@@ -38,7 +38,6 @@ class RProgressHandler;
  * \brief Exporter for the DXF format, based on dxflib.
  *
  * \ingroup dxf
- * \scriptable
  */
 class QCADDXF_EXPORT RDxfExporter: public RFileExporter {
 public:

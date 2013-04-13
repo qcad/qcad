@@ -3,7 +3,6 @@ TEMPLATE = lib
 #CONFIG += staticlib
 CONFIG += plugin
 TARGET = qcadecmaapi
-LIBS += -ldxflib -lopennurbs -lqcadcore -lqcaddxf -lqcadentity -lqcadgrid -lqcadgui -lqcadoperations -lqcadsnap -lqcadspatialindex -lqcadstemmer -lspatialindexnavel -lstemmer
 CONFIG -= warn_on
 CONFIG += warn_off
 OTHER_FILES += ecmaapi.dox
@@ -19,16 +18,11 @@ SOURCES += \
     REcmaHelper.cpp \
     RScriptHandlerEcma.cpp
 LIBS += -L$$PWD/$$ROUTDIR \
-    -ldxflib \
-    -lopennurbs \
     -lqcadcore \
-    -lqcaddxf \
     -lqcadentity \
     -lqcadgrid \
     -lqcadgui \
     -lqcadoperations \
     -lqcadsnap \
     -lqcadspatialindex \
-    -lqcadstemmer \
-    -lspatialindexnavel \
-    -lstemmer
+    -lqcadstemmer

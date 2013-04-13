@@ -87,15 +87,21 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
 
     if (!saveAs && noFullColor) {
         if (colorWarning) {
-            buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
-            ret = QMessageBox.warning(
-                        appWin,
-                        qsTr("File Format Version Not Recommended"),
-                        qsTr("The file format version you are using is not recommended: '%1'.").arg(fileVersion) + "\n"
-                        + qsTr("All black entities and layers will be saved as white.") + "\n"
-                        + qsTr("All custom colors will be 'rounded' to the nearest fixed color. Proceed?"), buttons);
-            if (ret!=QMessageBox.Yes) {
-                saveAs = true;
+            // dxflib has no full color support:
+            if (fileVersion.contains("dxflib")) {
+                EAction.handleUserWarning(qsTr("All custom colors will be 'rounded' to the nearest fixed color."));
+            }
+            else {
+                buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
+                ret = QMessageBox.warning(
+                            appWin,
+                            qsTr("File Format Version Not Recommended"),
+                            qsTr("The file format version you are using is not recommended: '%1'.").arg(fileVersion) + "\n"
+                            + qsTr("All black entities and layers will be saved as white.") + "\n"
+                            + qsTr("All custom colors will be 'rounded' to the nearest fixed color.") + " " + qsTr("Proceed?"), buttons);
+                if (ret!=QMessageBox.Yes) {
+                    saveAs = true;
+                }
             }
         }
     }

@@ -34,9 +34,6 @@
 class RMessageHandler;
 class RProgressHandler;
 
-/**
- * \scriptable
- */
 class QCADDXF_EXPORT RDxfImporterFactory: public RFileImporterFactory {
 public:
     static void registerFileImporter() {

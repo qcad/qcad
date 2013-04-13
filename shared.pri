@@ -1,4 +1,3 @@
-include($$PWD/ccache.pri)
 exists($$PWD/../shared.pri)
 
 DEFINES += QCAD_DLL
