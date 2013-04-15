@@ -99,8 +99,11 @@ Viewport.prototype.initEventHandler = function() {
         this.graphicsView.updateSnapInfo.connect(this.eventHandler, "updateSnapInfo");
         this.graphicsView.updateTextLabel.connect(this.eventHandler, "updateTextLabel");
     }
-    this.hsb.valueChanged.connect(this.eventHandler, "horizontalScrolled");
-    this.vsb.valueChanged.connect(this.eventHandler, "verticalScrolled");
+
+    if (!isNull(this.hsb)) {
+        this.hsb.valueChanged.connect(this.eventHandler, "horizontalScrolled");
+        this.vsb.valueChanged.connect(this.eventHandler, "verticalScrolled");
+    }
 };
 
 /**
@@ -150,14 +153,22 @@ Viewport.prototype.init = function() {
     this.graphicsView.setFocus();
 
     this.hsb = this.vpWidget.findChild("HorizontalScrollBar");
-    this.hsb.singleStep = 50;
+    if (!isNull(this.hsb)) {
+        this.hsb.singleStep = 50;
+    }
     this.vsb = this.vpWidget.findChild("VerticalScrollBar");
-    this.vsb.singleStep = 50;
+    if (!isNull(this.vsb)) {
+        this.vsb.singleStep = 50;
+    }
     if (RSettings.getBoolValue("GraphicsView/ShowScrollbars", true)===false) {
         var infoLabel = this.vpWidget.findChild("InfoLabel");
         infoLabel.hide();
-        this.hsb.hide();
-        this.vsb.hide();
+        if (!isNull(this.hsb)) {
+            this.hsb.hide();
+        }
+        if (!isNull(this.vsb)) {
+            this.vsb.hide();
+        }
     }
 
     if (RSettings.getBoolValue("GraphicsView/ShowRulers", true)) {
