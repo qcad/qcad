@@ -59,7 +59,7 @@ RSingleApplication::RSingleApplication(int &argc, char **argv, Type type)
 }
 
 
-#if defined(Q_WS_X11)
+#if defined(Q_OS_X11)
 RSingleApplication::RSingleApplication(Display* dpy, Qt::HANDLE visual, Qt::HANDLE cmap)
     : QApplication(dpy, visual, cmap) {
     sysInit();

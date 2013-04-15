@@ -43,10 +43,10 @@ QString RS::getHostId() {
             .arg(getSystemId())
 #if defined(Q_OS_LINUX)
     .arg(getenv("HOSTNAME"));
-#elif defined(Q_WS_MAC)
+#elif defined(Q_OS_MAC)
     // environment variable HOSTNAME not exported on OS X by default:
     .arg(QHostInfo::localHostName());
-#elif defined(Q_WS_WIN)
+#elif defined(Q_OS_WIN)
     .arg(getenv("COMPUTERNAME"));
 #else
     .arg("unknown");
@@ -59,9 +59,9 @@ QString RS::getHostId() {
 QString RS::getSystemId() {
 #if defined(Q_OS_LINUX)
     return "linux";
-#elif defined(Q_WS_MAC)
+#elif defined(Q_OS_MAC)
     return "osx";
-#elif defined(Q_WS_WIN)
+#elif defined(Q_OS_WIN)
     return "win";
 #else
     return "unknown";

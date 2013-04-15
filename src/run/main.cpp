@@ -28,7 +28,7 @@
 #include <signal.h>
 #endif
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
 #include <Carbon/Carbon.h>
 #include <CoreServices/CoreServices.h>
 #endif
@@ -66,7 +66,7 @@
 //##Q_IMPORT_PLUGIN(customwidgetsplugin)
 
 
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
 void qt_mac_set_menubar_icons(bool);
 #endif
 
@@ -79,7 +79,7 @@ void catchSigPipe(int /*s*/){
 
 
 int main(int argc, char *argv[]) {
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     // TODO: make available as script function:
     qt_mac_set_menubar_icons(false);
 #endif
@@ -118,7 +118,7 @@ int main(int argc, char *argv[]) {
     signal(SIGPIPE,catchSigPipe);
 #endif
 
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     // activate Mac OS X dock icon if desired:
     if (!app->arguments().contains("-no-dock-icon") &&
             !app->arguments().contains("-help") && !app->arguments().contains("-h") &&
