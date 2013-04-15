@@ -20,11 +20,7 @@
 
 #include "RTextEditPlugin.h"
 #include "RCommandLinePlugin.h"
-//#include "RHeaderDialogPlugin.h"
-#include "RGraphicsViewGlPlugin.h"
-//#include "RGraphicsViewGl3dPlugin.h"
 #include "RGraphicsViewQtPlugin.h"
-//#include "RGraphicsViewQVPlugin.h"
 #include "RMathLineEditPlugin.h"
 #include "RMdiChildQtPlugin.h"
 #include "RColorComboPlugin.h"
@@ -43,11 +39,7 @@ RCustomWidgets::RCustomWidgets(QObject *parent) :
     QObject(parent) {
     widgets.append(new RTextEditPlugin(this));
     widgets.append(new RCommandLinePlugin(this));
-    widgets.append(new RGraphicsViewGlPlugin(this));
-    //widgets.append(new RGraphicsViewGl3dPlugin(this));
     widgets.append(new RGraphicsViewQtPlugin(this));
-    //widgets.append(new RHeaderDialogPlugin(this));
-    //widgets.append(new RGraphicsViewQVPlugin(this));
     widgets.append(new RMathLineEditPlugin(this));
     widgets.append(new RMdiChildQtPlugin(this));
     widgets.append(new RColorComboPlugin(this));
