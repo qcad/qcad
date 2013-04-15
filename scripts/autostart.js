@@ -76,14 +76,11 @@ function usage() {
           + "-version                         Displays the application version.\n"
           + "-quit                            Quits QCAD, for example after executing the\n"
           + "                                 given script(s).\n"
-          //+ "-no-fail                         Ignores test failures (test mode only).\n"
-          //+ "-test                            Launches QCAD in test mode (developer mode).\n"
     );
 
-
-    if (RS.getSystemId()=="osx") {
+    // Mac OS X only:
+    if (RS.getSystemId()==="osx") {
         print("\nMac OS X specific options:\n");
-        // Mac OS X only:
         print("-no-dock-icon                    Don't show icon in dock. This should only be used\n"
             + "                                 in combination with -no-gui."  );
     }
@@ -465,7 +462,6 @@ function main() {
 
     // install custom message handler for qDebug, etc.
     RMainWindow.installMessageHandler();
-    RPluginLoader.loadPlugins();
 
     var args = QCoreApplication.arguments();
     if (args.contains("-help") || args.contains("-h")) {

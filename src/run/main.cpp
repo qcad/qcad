@@ -52,6 +52,7 @@
 #include "RLineEntity.h"
 #include "RPatternListImperial.h"
 #include "RPatternListMetric.h"
+#include "RPluginLoader.h"
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
 #include "RScriptHandlerEcma.h"
@@ -238,6 +239,8 @@ int main(int argc, char *argv[]) {
     RLinetype::init();
     RBlock::init();
     RView::init();
+
+    RPluginLoader::loadPlugins();
 
     // check for autostart option:
     QString autostartFile;
