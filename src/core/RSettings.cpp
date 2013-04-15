@@ -59,6 +59,65 @@ void RSettings::setOriginalArguments(const QStringList& a) {
     originalArguments = a;
 }
 
+bool RSettings::isDeployed() {
+#ifdef Q_OS_MAC
+    QDir appDir(QApplication::applicationDirPath());
+    if (appDir.dirName() == "MacOS") {
+        appDir.cdUp();
+        // deployed (scripts inside app bundle):
+        return appDir.cd("Resources/scripts");
+    }
+#else
+    return true;
+#endif
+}
+
+QString RSettings::getApplicationPath() {
+    QDir ret(QApplication::applicationDirPath());
+
+#ifdef Q_OS_MAC
+    if (ret.dirName() == "MacOS") {
+        ret.cdUp();
+        // deployed (scripts inside app bundle):
+        if (ret.cd("Resources/scripts")) {
+            ret.cdUp();
+        }
+        // development (scripts outside add bundle):
+        else {
+            ret.cdUp();
+            ret.cdUp();
+        }
+    }
+#endif
+
+    if (ret.dirName() == "debug" || ret.dirName() == "release") {
+        ret.cdUp();
+    }
+
+    return ret.path();
+}
+
+QString RSettings::getPluginPath() {
+    QDir appDir = QDir(getApplicationPath());
+
+#ifdef Q_OS_MAC
+    if (isDeployed()) {
+        appDir.cdUp();
+    }
+#endif
+
+    QString pluginFolder = "plugins";
+#ifdef Q_OS_MAC
+    pluginFolder = "PlugIns";
+#endif
+    if (!appDir.cd(pluginFolder)) {
+        qWarning() << QString("Folder '%1' does not exist").arg(pluginFolder);
+        return QString();
+    }
+
+    return appDir.path();
+}
+
 bool RSettings::isGuiEnabled() {
     return !QCoreApplication::arguments().contains("-no-gui");
 }

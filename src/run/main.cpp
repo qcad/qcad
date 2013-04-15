@@ -105,9 +105,6 @@ int main(int argc, char *argv[]) {
         if (!strcmp(argv[i], "-no-gui")) {
             guiEnabled = false;
         }
-        //if (!strcmp(argv[i], "-no-event-blocking")) {
-        //    RSettings::setEventBlocking(false);
-        //}
     }
 
     RSingleApplication* app = new RSingleApplication(appId, argc, argv, guiEnabled);
@@ -160,50 +157,16 @@ int main(int argc, char *argv[]) {
     QString cwd = QDir::currentPath();
     RSettings::setLaunchPath(cwd);
 
-    QDir appDir(QApplication::applicationDirPath());
-
-#ifdef Q_OS_MAC
-    bool development = false;
-    if (appDir.dirName() == "MacOS") {
-        appDir.cdUp();
-        // deployed (scripts inside app bundle):
-        if (appDir.cd("Resources/scripts")) {
-            appDir.cdUp();
-        }
-        // development (scripts outside add bundle):
-        else {
-            appDir.cdUp();
-            appDir.cdUp();
-            development = true;
-        }
-    }
-#endif
-
-    if (appDir.dirName() == "debug" || appDir.dirName() == "release") {
-        appDir.cdUp();
-    }
-
     // set current working directory:
-    QDir::setCurrent(appDir.absolutePath());
-
-#ifdef Q_OS_MAC
-    if (!development) {
-        appDir.cdUp();
-    }
-#endif
-
-    QString pluginFolder = "plugins";
-#ifdef Q_OS_MAC
-    pluginFolder = "PlugIns";
-#endif
-    if (!appDir.cd(pluginFolder)) {
-        qWarning() << QString("Folder '%1' does not exist").arg(pluginFolder);
-        return (-1);
-    }
+    QDir::setCurrent(RSettings::getApplicationPath());
 
     // disable Qt library paths to avoid plugins for Qt designer from being found:
-    app->setLibraryPaths(QStringList() << appDir.absolutePath());
-    //qDebug() << "library dir is: " << appDir.absolutePath();
+    QString pluginPath = RSettings::getPluginPath();
+    if (pluginPath.isEmpty()) {
+        qWarning() << QString("Folder '%1' does not exist").arg(pluginPath);
+        return -1;
+    }
+    app->setLibraryPaths(QStringList() << pluginPath);
 
     RMath::init();
     RFontList::init();

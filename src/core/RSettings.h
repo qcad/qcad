@@ -23,6 +23,7 @@
 #include "core_global.h"
 
 #include <QColor>
+#include <QDir>
 #include <QSettings>
 #include <QFont>
 
@@ -49,6 +50,10 @@ public:
 
     static QStringList getOriginalArguments();
     static void setOriginalArguments(const QStringList& a);
+
+    static bool isDeployed();
+    static QString getApplicationPath();
+    static QString getPluginPath();
 
     //static void setEventBlocking(bool on);
     //static bool isEventBlockingEnabled();

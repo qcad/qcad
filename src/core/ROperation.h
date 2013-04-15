@@ -22,6 +22,8 @@
 
 #include "core_global.h"
 
+#include "RNonCopyable.h"
+#include "RRequireHeap.h"
 #include "RS.h"
 #include "RTransaction.h"
 
@@ -39,7 +41,7 @@ class RExporter;
  * \ingroup core
  * \scriptable
  */
-class QCADCORE_EXPORT ROperation {
+class QCADCORE_EXPORT ROperation : public RRequireHeap, RNonCopyable {
 public:
     ROperation(
         bool undoable=true,
