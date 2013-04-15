@@ -197,23 +197,19 @@ public:
 
     REntity::Id getClosestEntity(RMouseEvent& event);
     REntity::Id getClosestEntity(const RVector& position, double range, bool includeLockedLayers = true);
-    //REntity::Id getClosestEntityInUcs(const RVector& position, double range);
     void highlightEntity(REntity::Id entityId);
     void highlightReferencePoint(const RVector& position);
     void selectEntities(const QSet<REntity::Id>& entityIds, bool add = false);
     void selectEntity(REntity::Id entityId, bool add = false);
     void deselectEntities(const QSet<REntity::Id>& entityIds);
     void deselectEntity(REntity::Id entityId);
-    //void selectClosestEntity(RMouseEvent& event, const RLine& line, bool add = false);
     void selectBoxXY(const RBox& box, bool add = false);
-    //void selectBoxInUcs(const RBox& box, bool add = false);
     void selectAll();
     void deselectAll();
     void clearSelection();
     bool hasSelection();
 
     void addZoomBoxToPreview(const RBox& box);
-    //void addTextLabelToPreview(const RTextLabel& textLabel);
     void addShapeToPreview(RShape& shape, const RColor& color,
             const QBrush& brush, RLineweight::Lineweight lineweight,
             Qt::PenStyle style, const QList<qreal>& dashValues = RDEFAULT_QLIST_QREAL);
@@ -327,8 +323,6 @@ private:
     bool cursorOverride;
 
     bool keepPreviewOnce;
-
-    //QMutex mutex;
 };
 
 Q_DECLARE_METATYPE(RDocumentInterface::IoErrorCode)

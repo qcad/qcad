@@ -71,8 +71,6 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     deleting(false),
     cursorOverride(false),
     keepPreviewOnce(false) {
-
-    //setCurrentBlock("*Model_Space");
 }
 
 RDocumentInterface::~RDocumentInterface() {
@@ -156,7 +154,6 @@ RStorage& RDocumentInterface::getStorage() {
     return document.getStorage();
 }
 
-
 RScriptHandler* RDocumentInterface::getScriptHandler(const QString& extension) {
     if (!scriptHandlers.contains(extension)) {
         scriptHandlers[extension] = RScriptHandlerRegistry::createScriptHandler(extension);
@@ -204,7 +201,6 @@ void RDocumentInterface::notifyCoordinateListeners() {
     RMainWindow::getMainWindow()->notifyCoordinateListeners(this);
 }
 
-
 /**
  * Resets the document to its original, empty state.
  */
@@ -218,7 +214,6 @@ void RDocumentInterface::clear() {
         (*it)->clear();
     }
 }
-
 
 /**
  * \return The graphics view that currently has the focus or the
@@ -245,8 +240,6 @@ RGraphicsView* RDocumentInterface::getGraphicsViewWithFocus() {
     return ret;
 }
 
-
-
 /**
  * Sets the action that is active if no other action is active.
  */
@@ -259,8 +252,6 @@ void RDocumentInterface::setDefaultAction(RAction* action) {
     }
 }
 
-
-
 /**
  * Sets the current action. This action will receive all events
  * until it finishes.
@@ -269,10 +260,6 @@ void RDocumentInterface::setCurrentAction(RAction* action) {
     if (action==NULL) {
         return;
     }
-
-//    if (!mutex.tryLock()) {
-//        return;
-//    }
 
     action->setDocumentInterface(this);
 
@@ -307,10 +294,6 @@ void RDocumentInterface::setCurrentAction(RAction* action) {
     // add new action to action stack:
     currentActions.push(action);
 
-    // unlock mutex before beginEvent. beginEvent might already trigger another
-    // action (e.g. save might trigger save as).
-    //mutex.unlock();
-
     action->beginEvent();
 
     deleteTerminatedActions();
@@ -325,8 +308,6 @@ void RDocumentInterface::queueAction(RAction* action) {
  *      script interfaces.
  */
 RAction* RDocumentInterface::getCurrentAction() {
-    //deleteTerminatedActions();
-
     if (hasCurrentAction()) {
         return currentActions.top();
     }
@@ -338,8 +319,6 @@ RAction* RDocumentInterface::getCurrentAction() {
  * \return True if at least one action is active.
  */
 bool RDocumentInterface::hasCurrentAction() {
-    //deleteTerminatedActions();
-
     if (currentActions.size()>0) {
         return true;
     }
@@ -358,16 +337,8 @@ void RDocumentInterface::suspend() {
         currentSnap->hideUiOptions();
     }
 
-    /*
-    if (getGraphicsViewWithFocus()) {
-        getGraphicsViewWithFocus()->removeFocus();
-    }
-    */
-
     suspended = true;
 }
-
-
 
 void RDocumentInterface::resume() {
     if (currentSnap!=NULL) {
@@ -388,15 +359,10 @@ void RDocumentInterface::resume() {
     suspended = false;
 }
 
-
 /**
  * Deletes all actions that have been terminated.
  */
 void RDocumentInterface::deleteTerminatedActions() {
-    // prevents recursion (crash when e.g. keeping minus key pressed to zoom out):
-//    if (!mutex.tryLock()) {
-//        return;
-//    }
     bool removed = false;
 
     while (currentActions.size()>0 && currentActions.top()->isTerminated()) {
@@ -433,15 +399,11 @@ void RDocumentInterface::deleteTerminatedActions() {
         }
     }
 
-    //mutex.unlock();
-
     // run next queued action:
     if (queuedActions.size()>0) {
         setCurrentAction(queuedActions.dequeue());
     }
 }
-
-
 
 /**
  * Sets the click mode of the current action to the given mode.
@@ -481,7 +443,6 @@ RAction::ClickMode RDocumentInterface::getClickMode() {
     return RAction::PickingDisabled;
 }
 
-
 void RDocumentInterface::setCursor(const QCursor& cursor, bool global) {
     if (global) {
         RMainWindow* appWin = RMainWindow::getMainWindow();
@@ -505,16 +466,12 @@ void RDocumentInterface::registerScene(RGraphicsScene& scene) {
     scenes.push_back(&scene);
 }
 
-
-
 /**
  * Unregisters a scene from this document interface.
  */
 void RDocumentInterface::unregisterScene(RGraphicsScene& scene) {
     scenes.removeOne(&scene);
 }
-
-
 
 void RDocumentInterface::enableUpdates() {
     allowUpdate = true;
@@ -547,8 +504,6 @@ void RDocumentInterface::regenerateScenes(bool undone) {
     }
 }
 
-
-
 /**
  * Regenerates the given part of all scenes attached to this document
  * interface by exporting the given list of entities into them.
@@ -564,8 +519,6 @@ void RDocumentInterface::regenerateScenes(QSet<REntity::Id>& entityIds, bool upd
     }
 }
 
-
-
 /**
  * \overload
  */
@@ -579,7 +532,6 @@ void RDocumentInterface::regenerateScenes(REntity::Id entityId, bool updateViews
     regenerateScenes(s, updateViews);
 }
 
-
 void RDocumentInterface::updateSelectionStatus(QSet<REntity::Id>& entityIds, bool updateViews) {
     if (!allowUpdate) {
         return;
@@ -591,7 +543,6 @@ void RDocumentInterface::updateSelectionStatus(QSet<REntity::Id>& entityIds, boo
     }
 }
 
-
 void RDocumentInterface::updateSelectionStatus(REntity::Id entityId, bool updateViews) {
     if (!allowUpdate) {
         return;
@@ -602,8 +553,6 @@ void RDocumentInterface::updateSelectionStatus(REntity::Id entityId, bool update
     updateSelectionStatus(s, updateViews);
 }
 
-
-
 /**
  * Regenerates all views.
  */
@@ -613,8 +562,6 @@ void RDocumentInterface::regenerateViews(bool force) {
         (*it)->regenerateViews(force);
     }
 }
-
-
 
 /**
  * Repaints all views.
@@ -635,7 +582,6 @@ void RDocumentInterface::terminateEvent(RTerminateEvent& event) {
     deleteTerminatedActions();
 }
 
-
 void RDocumentInterface::keyPressEvent(QKeyEvent& event) {
     if (hasCurrentAction()) {
         getCurrentAction()->keyPressEvent(event);
@@ -644,8 +590,6 @@ void RDocumentInterface::keyPressEvent(QKeyEvent& event) {
     } else {
         event.ignore();
     }
-
-    //deleteTerminatedActions();
 }
 
 void RDocumentInterface::keyReleaseEvent(QKeyEvent& event) {
@@ -656,10 +600,7 @@ void RDocumentInterface::keyReleaseEvent(QKeyEvent& event) {
     } else {
         event.ignore();
     }
-
-    //deleteTerminatedActions();
 }
-
 
 /**
  * Forwards the given mouse move \c event to the current action.
@@ -688,7 +629,6 @@ void RDocumentInterface::mouseMoveEvent(RMouseEvent& event) {
 
     repaintViews();
 }
-
 
 /**
  * Forwards the given mouse press \c event to the current action.
@@ -771,8 +711,6 @@ void RDocumentInterface::commandEventPreview(RCommandEvent& event) {
     }
 }
 
-
-
 /**
  * Helper function for \ref mouseReleaseEvent. Triggers an appropriate
  * higher level event for mouse clicks for the given \c action.
@@ -794,11 +732,9 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
         case RAction::PickEntity: {
                 cursorPosition = RVector::invalid;
                 REntity::Id entityId = getClosestEntity(event);
-                //if (entityId!=REntity::INVALID_ID) {
-                    REntityPickEvent pe(entityId, event.getModelPosition(),
-                        event.getGraphicsScene(), event.getGraphicsView());
-                    action.entityPickEvent(pe);
-                //}
+                REntityPickEvent pe(entityId, event.getModelPosition(),
+                    event.getGraphicsScene(), event.getGraphicsView());
+                action.entityPickEvent(pe);
             }
             break;
 
@@ -808,12 +744,7 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
             break;
         }
     }
-
-    // right clicks or any other events might lead to termination of the action:
-    //deleteTerminatedActions();
 }
-
-
 
 /**
  * Helper function for \ref mouseMoveEvent. Triggers an appropriate
@@ -837,15 +768,12 @@ void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) 
         break;
 
         case RAction::PickEntity: {
-            //cursorPosition = RVector::invalid;
             cursorPosition = event.getModelPosition();
             REntity::Id entityId = getClosestEntity(event);
             // trigger event even if entity ID is invalid:
-            //if (entityId != REntity::INVALID_ID) {
-                REntityPickEvent pe(entityId, event.getModelPosition(),
-                    event.getGraphicsScene(), event.getGraphicsView());
-                action.entityPickEventPreview(pe);
-            //}
+            REntityPickEvent pe(entityId, event.getModelPosition(),
+                event.getGraphicsScene(), event.getGraphicsView());
+            action.entityPickEventPreview(pe);
 
             if (RMainWindow::hasMainWindow()) {
                 notifyCoordinateListeners();
@@ -854,7 +782,6 @@ void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) 
         break;
 
         case RAction::PickingDisabled: {
-            //cursorPosition = RVector::invalid;
             cursorPosition = event.getModelPosition();
 
             if (RMainWindow::hasMainWindow()) {
@@ -863,11 +790,7 @@ void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) 
         }
         break;
     }
-
-    //deleteTerminatedActions();
 }
-
-
 
 /**
  * Forwards the given mouse wheel \c event to the current action.
@@ -880,8 +803,6 @@ void RDocumentInterface::wheelEvent(RWheelEvent& event) {
     } else {
         event.ignore();
     }
-
-    //deleteTerminatedActions();
 }
 
 /**
@@ -895,8 +816,6 @@ void RDocumentInterface::tabletEvent(RTabletEvent& event) {
     } else {
         event.ignore();
     }
-
-    //deleteTerminatedActions();
 }
 
 /**
@@ -942,8 +861,6 @@ void RDocumentInterface::propertyChangeEvent(RPropertyEvent& event) {
     } else if (defaultAction != NULL) {
         defaultAction->propertyChangeEvent(event);
     }
-
-    //deleteTerminatedActions();
 }
 
 
@@ -954,18 +871,6 @@ void RDocumentInterface::propertyChangeEvent(RPropertyEvent& event) {
 void RDocumentInterface::ucsSetEvent(const QString& ucsName) {
     setCurrentUcs(ucsName);
 }
-
-/**
- * Sets the given pen style for all scenes.
- */
-/*
-void RDocumentInterface::setPen(const QPen& pen) {
-    QList<RGraphicsScene*>::iterator it;
-    for (it = scenes.begin(); it != scenes.end(); it++) {
-        (*it)->setPen(pen);
-    }
-}
-*/
 
 RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
         bool notify) {
@@ -1051,8 +956,8 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
     bool success = fileExporter->exportFile(fileName, fileVersion, resetModified);
 
     if (success) {
-        // up to the exporter:
-        // document.setFileName(fileName);
+        // Note: exporter might set the file name of the document
+        // to the new name if desired
 
         if (resetModified) {
             document.setFileVersion(fileVersion);
@@ -1070,7 +975,6 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
     return success;
 }
 
-
 /**
  * Transaction based undo.
  */
@@ -1078,12 +982,7 @@ void RDocumentInterface::undo() {
     clearPreview();
 
     RTransaction t = document.undo();
-
-    //document.rebuildSpatialIndex();
-
-    //QSet<REntity::Id> entityIds = t.getAffectedEntites();
     QList<RObject::Id> objectIds = t.getAffectedObjects();
-    //regenerateScenes(entityIds);
     objectChangeEvent(objectIds);
 
     if (RMainWindow::hasMainWindow()) {
@@ -1099,11 +998,7 @@ void RDocumentInterface::redo() {
 
     RTransaction t = document.redo();
 
-    //document.rebuildSpatialIndex();
-
-    //QSet<REntity::Id> entityIds = t.getAffectedEntites();
     QList<RObject::Id> objectIds = t.getAffectedObjects();
-    //regenerateScenes(entityIds);
     objectChangeEvent(objectIds);
 
     if (RMainWindow::hasMainWindow()) {
@@ -1125,7 +1020,6 @@ void RDocumentInterface::setSnap(RSnap* snap) {
     if (!suspended && currentSnap!=NULL) {
         currentSnap->showUiOptions();
     }
-    //RMainWindow::getMainWindow()->notifySnapListeners(this);
 }
 
 /**
@@ -1180,9 +1074,6 @@ RVector RDocumentInterface::snap(RMouseEvent& event) {
     return event.getModelPosition();
 }
 
-
-
-
 /**
  * \return ID of the entity that is the closest to the mouse cursor
  *      of the given event.
@@ -1214,27 +1105,6 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
     return document.queryClosestXY(position, range, draft, includeLockedLayers);
 }
 
-
-
-/*
-REntity::Id RDocumentInterface::getClosestEntityInUcs(
-    const RVector& position,
-    double range) {
-
-    double zMin = getCurrentUcs().origin.z;
-    double zMax = getCurrentUcs().origin.z + getCurrentUcs().getZAxisDirection().getMagnitude();
-
-    return document.queryClosest(
-        position,
-        range,
-        zMin,
-        zMax
-    );
-}
-*/
-
-
-
 /**
  * \override
  */
@@ -1250,8 +1120,6 @@ void RDocumentInterface::highlightEntity(REntity::Id entityId) {
     }
 }
 
-
-
 /**
  * Highlights the given reference point.
  */
@@ -1261,8 +1129,6 @@ void RDocumentInterface::highlightReferencePoint(const RVector& position) {
         (*it)->highlightReferencePoint(position);
     }
 }
-
-
 
 /**
  * Selects the given entity and updates the scenes accordingly.
@@ -1276,8 +1142,6 @@ void RDocumentInterface::selectEntity(REntity::Id entityId, bool add) {
     set.insert(entityId);
     selectEntities(set, add);
 }
-
-
 
 /**
  * Selects the given entities and updates the scenes accordingly.
@@ -1294,8 +1158,6 @@ void RDocumentInterface::selectEntities(const QSet<REntity::Id>& entityIds, bool
     }
 }
 
-
-
 /**
  * Deselects the given entities and updates the scenes accordingly.
  */
@@ -1309,8 +1171,6 @@ void RDocumentInterface::deselectEntities(const QSet<REntity::Id>& entityIds) {
     }
 }
 
-
-
 /**
  * Deselects the given entity and updates the scenes accordingly.
  */
@@ -1319,118 +1179,6 @@ void RDocumentInterface::deselectEntity(REntity::Id entityId) {
     set.insert(entityId);
     deselectEntities(set);
 }
-
-
-
-/**
- * Selects the entity that is closest and within a fixed range of the
- * mouse cursor.
- *
- * \param event Typically a mouse move event.
- * \param add True to add to the correct selection, false otherwise.
- *
- * \todo refactor into operations
- */
-/*
-void RDocumentInterface::selectClosestEntity(
-    RMouseEvent& event,
-    bool add) {
-
-    RGraphicsView& view = event.getGraphicsView();
-    RVector position = event.getModelPosition();
-
-    int rangePixels = RSettings::getSnapRange();
-    double range = view.mapDistanceFromView(rangePixels);
-
-    REntity::Id entityId =
-        document.queryClosest(
-            position,
-            range
-        );
-
-    if (entityId!=-1) {
-        selectEntity(entityId, add);
-    }
-    else {
-        if (!add) {
-            clearEntitySelection();
-        }
-    }
-}
-*/
-
-
-
-/*
-void RDocumentInterface::selectClosestEntity(
-    RMouseEvent& event,
-    const RLine& line,
-    bool add) {
-
-    RGraphicsView& view = event.getGraphicsView();
-
-    int rangePixels = RSettings::getSnapRange();
-    double range = view.mapDistanceFromView(rangePixels);
-
-    REntity::Id entityId =
-        document.queryClosestToLine(
-            line,
-            range
-        );
-
-    if (entityId!=-1) {
-        selectEntity(entityId, add);
-    }
-    else {
-        if (!add) {
-            clearEntitySelection();
-        }
-    }
-}
-*/
-
-
-
-/**
- * Selects all entities inside the given box and in the current UCS range
- * (e.g. on the current floor).
- *
- * \todo refactor into operations
- */
-/*
-void RDocumentInterface::selectBoxInUcs(const RBox& box, bool add) {
-    double z1 = box.c1.z;
-    double z2 = box.c2.z;
-    RBox smallerBox(
-        RVector(box.c1.x, box.c1.y, z1),
-        RVector(box.c2.x, box.c2.y, z2)
-    );
-
-//    qDebug("RDocumentInterface::selectBoxInUcs: box: "
-//        "%f/%f/%f - %f/%f/%f",
-//        box.c1.x, box.c1.y, z1,
-//        box.c2.x, box.c2.y, z2);
-
-    QSet<REntity::Id> entityIds;
-
-    if (box.c2.x<box.c1.x) {
-        entityIds = document.queryIntersectedEntities(smallerBox);
-    }
-    else {
-        entityIds = document.queryEntitiesContainedXYIntersectedZ(smallerBox);
-    }
-
-    QSet<REntity::Id> affectedEntities;
-    document.selectEntities(entityIds, add, &affectedEntities);
-    regenerateScenes(affectedEntities);
-
-    if (RMainWindow::hasMainWindow()) {
-        RMainWindow::getMainWindow()->notifyPropertyListeners(&document);
-        RMainWindow::getMainWindow()->notifySelectionListeners(&document);
-    }
-}
-*/
-
 
 void RDocumentInterface::selectBoxXY(const RBox& box, bool add) {
     QSet<REntity::Id> entityIds;
@@ -1448,13 +1196,6 @@ void RDocumentInterface::selectBoxXY(const RBox& box, bool add) {
 
     if (RMainWindow::hasMainWindow()) {
         RMainWindow::getMainWindow()->postSelectionChangedEvent();
-        /*
-        QObject* obj = dynamic_cast<QObject*>(RMainWindow::getMainWindow());
-        if (obj!=NULL) {
-            RSelectionChangedEvent* event = new RSelectionChangedEvent();
-            QCoreApplication::postEvent(obj, event);
-        }
-        */
     }
 }
 
@@ -1516,38 +1257,8 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
         (*it)->setStyle(Qt::DashLine);
         (*it)->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
 
-        /*
-        // bottom:
-        (*it)->exportQuad(
-            boxCorners[0],
-            boxCorners[1],
-            boxCorners[2],
-            boxCorners[3]
-        );
-        // top:
-        (*it)->exportQuad(
-            boxCorners[4],
-            boxCorners[5],
-            boxCorners[6],
-            boxCorners[7]
-        );
-        */
         for (int i=0; i<4; ++i) {
-            // 4 lines of box at z==point1.z:
             (*it)->exportLine(RLine(boxCorners[i], boxCorners[(i+1)%4]));
-            // 4 lines of box at z==point2.z:
-            //(*it)->exportLine(RLine(boxCorners[i+4], boxCorners[(i+1)%4+4]));
-            // 4 vertical lines:
-            //(*it)->exportLine(RLine(boxCorners[i], boxCorners[i+4]));
-            // sides:
-            /*
-            (*it)->exportQuad(
-                boxCorners[i],
-                boxCorners[(i+1)%4],
-                boxCorners[(i+1)%4+4],
-                boxCorners[i+4]
-            );
-            */
         }
         (*it)->endPreview();
     }
@@ -1718,8 +1429,6 @@ void RDocumentInterface::beginPreview() {
     }
 }
 
-
-
 /**
  * After calling this function, all exports go into the scene
  * again and not the preview anymore.
@@ -1732,8 +1441,6 @@ void RDocumentInterface::endPreview() {
         (*it)->endPreview();
     }
 }
-
-
 
 /**
  * Clears the preview of all scenes.
@@ -1764,15 +1471,12 @@ bool RDocumentInterface::isPreviewEmpty() {
     return true;
 }
 
-
 /**
  * Makes sure that the current preview survives one mouse move.
  */
 void RDocumentInterface::keepPreview() {
     keepPreviewOnce = true;
 }
-
-
 
 /**
  * Notifies all property listeners that the properties of the given entity should
@@ -1783,8 +1487,6 @@ void RDocumentInterface::showPropertiesOf(REntity& entity) {
         RMainWindow::getMainWindow()->notifyPropertyListeners(document, entity);
     }
 }
-
-
 
 /**
  * Notifies all property listeners that no properties are relevant at this
@@ -1797,8 +1499,6 @@ void RDocumentInterface::clearProperties() {
     }
 }
 
-
-
 /**
  * Zooms in at the view that currently has the focus.
  */
@@ -1809,8 +1509,6 @@ void RDocumentInterface::zoomIn() {
     }
 }
 
-
-
 /**
  * Zooms out at the view that currently has the focus.
  */
@@ -1820,8 +1518,6 @@ void RDocumentInterface::zoomOut() {
         view->zoomOut();
     }
 }
-
-
 
 /**
  * Auto zooms in the view that currently has the focus.
@@ -1860,7 +1556,6 @@ void RDocumentInterface::zoomPrevious() {
         view->zoomPrevious();
     }
 }
-
 
 /**
  * Previews the given operation by applying the operation to a
@@ -1906,8 +1601,6 @@ void RDocumentInterface::previewOperation(const ROperation* operation) {
     delete previewDocument;
 }
 
-
-
 /**
  * Applies the given operation to the document. The operation might
  * for example do something with the current selection.
@@ -1942,8 +1635,6 @@ RTransaction RDocumentInterface::applyOperation(const ROperation* operation) {
 
     return transaction;
 }
-
-
 
 /**
  * Triggers an objectChangeEvent for every object in the given set.
@@ -2036,14 +1727,8 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
     regenerateViews(true);
 }
 
-
 void RDocumentInterface::setCurrentColor(const RColor& color) {
     document.setCurrentColor(color);
-    /*
-    if (RMainWindow::hasMainWindow()) {
-        RMainWindow::getMainWindow()->notifyPenListeners(this);
-    }
-    */
 }
 
 RColor RDocumentInterface::getCurrentColor() {
@@ -2066,7 +1751,6 @@ RLinetype RDocumentInterface::getCurrentLinetype() {
     return document.getCurrentLinetype();
 }
 
-
 /**
  * Sets the current layer based on the given layer name.
  */
@@ -2076,8 +1760,6 @@ void RDocumentInterface::setCurrentLayer(const QString& layerName) {
         RMainWindow::getMainWindow()->notifyLayerListeners(this);
     }
 }
-
-
 
 /**
  * Sets the current Layer that is in use for all views attached to 
@@ -2097,13 +1779,6 @@ void RDocumentInterface::setCurrentBlock(const QString& blockName) {
         RMainWindow::getMainWindow()->notifyBlockListeners(this);
     }
     regenerateScenes();
-
-    // commented out 20111112: we always have all blocks in the spatial index for block reference queries:
-    // put back in 20111204: block reference bounding boxes need to be updated to reflect the changes
-    // made while editing the block:
-    //document.rebuildSpatialIndex();
-
-    //autoZoom();
 }
 
 /**
@@ -2125,16 +1800,6 @@ void RDocumentInterface::setCurrentView(const QString& viewName) {
 }
 
 /**
- * Sets the current block that is in use for all views attached to
- * this document interface.
- */
-/*
-void RDocumentInterface::setCurrentView(const RView& view) {
-    setCurrentView(view.getName());
-}
-*/
-
-/**
  * Sets the current UCS based on the given UCS name.
  * \todo refactor to store current UCS in document / storage like layer
  */
@@ -2151,8 +1816,6 @@ void RDocumentInterface::setCurrentUcs(const QString& ucsName) {
     setCurrentUcs(*ucs);
 }
 
-
-
 /**
  * Sets the current UCS (user coordinate system) that is in use
  * for all views attached to this document interface.
@@ -2165,16 +1828,12 @@ void RDocumentInterface::setCurrentUcs(const RUcs& ucs) {
     }
 }
 
-
-
 /**
  * \return The current UCS (user coordinate system).
  */
 RUcs RDocumentInterface::getCurrentUcs() {
     return currentUcs;
 }
-
-
 
 /**
  * \return The current UCS name.
@@ -2191,31 +1850,6 @@ RDocumentInterface& RDocumentInterface::getClipboard() {
 
     return *clipboard;
 }
-
-/**
- * Copies selected entities, the layers they're on and blocks they reference
- * to the clipboard document.
- */
-/*
-void RDocumentInterface::copySelectionToClipboard(const RVector& reference) {
-    document.copySelectionToClipboard(reference);
-    getClipboard().regenerateScenes();
-    getClipboard().autoZoom();
-}
-*/
-
-/**
- * Pastes the clipboard to the given position in the document.
- */
-/*
-void RDocumentInterface::pasteFromClipboard(const RVector& reference) {
-    document.pasteFromClipboard(reference);
-    regenerateScenes();
-    if (RMainWindow::hasMainWindow()) {
-        RMainWindow::getMainWindow()->notifyListeners();
-    }
-}
-*/
 
 RGraphicsView* RDocumentInterface::getLastKnownViewWithFocus() {
     return lastKnownViewWithFocus;
