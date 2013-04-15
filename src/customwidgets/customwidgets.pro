@@ -12,7 +12,6 @@ SOURCES = RShortcutLineEditPlugin.cpp \
     RMdiChildQtPlugin.cpp \
     RTextEditPlugin.cpp \
     RMathLineEditPlugin.cpp \
-    RGraphicsViewGlPlugin.cpp \
     RGraphicsViewQtPlugin.cpp \
     RListViewPlugin.cpp
 HEADERS = RShortcutLineEditPlugin.h \
@@ -28,7 +27,6 @@ HEADERS = RShortcutLineEditPlugin.h \
     RMdiChildQtPlugin.h \
     RTextEditPlugin.h \
     RMathLineEditPlugin.h \
-    RGraphicsViewGlPlugin.h \
     RGraphicsViewQtPlugin.h \
     RListViewPlugin.h
 TEMPLATE = lib

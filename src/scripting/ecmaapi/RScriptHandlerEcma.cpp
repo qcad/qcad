@@ -17,13 +17,6 @@
  * along with QCAD.
  */
 #include <iostream>
-//#ifdef _MSC_VER
-//extern "C" {
-//#include "getopt_long.h"
-//}
-//#else
-//#include <getopt.h>
-//#endif
 
 #include <QDomNode>
 #include <QFile>
@@ -40,11 +33,10 @@
 
 #include <QtScriptTools>
 
-#include "RMetaTypes.h"
-#include "REcmaHelper.h"
-
 #include "RAutoLoadEcma.h"
 #include "RDebug.h"
+#include "REcmaHelper.h"
+#include "RMetaTypes.h"
 #include "RScriptHandlerEcma.h"
 #include "RSingleApplication.h"
 
@@ -126,10 +118,8 @@
 #include "REcmaFontList.h"
 #include "REcmaFontList.h"
 #include "REcmaGraphicsScene.h"
-//#include "REcmaGraphicsSceneGl.h"
 #include "REcmaGraphicsSceneQt.h"
 #include "REcmaGraphicsView.h"
-#include "REcmaGraphicsViewGl.h"
 #include "REcmaGraphicsViewImage.h"
 #include "REcmaGraphicsViewQt.h"
 #include "REcmaGrid.h"
@@ -308,8 +298,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     alwaysLoadScripts = qApp->arguments().contains("-always-load-scripts");
 
-    // 20120403: only enable script debugger over command line as expert option.
-    // Script debugger causes crashes.
+    // only enable script debugger over command line as expert option.
+    // Script debugger can cause crashes.
     if (RSettings::isGuiEnabled() && RSettings::isDebuggerEnabled()) {
         qWarning() << "RScriptHandlerEcma::RScriptHandlerEcma: script debugger enabled! Not recommended.";
         debugger = new QScriptEngineDebugger(engine);
@@ -345,14 +335,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
         }
     }
     
-    // TODO: load more modules, based on chosen settings from application preferences
-
-    //  QStringList availableExtensions = engine->availableExtensions();
-    //  for (int i = 0; i < availableExtensions.size(); ++i) {
-    //      qDebug("REcmaHandler::REcmaHandler: script extension: %s",
-    //              (const char*) availableExtensions.at(i).toLatin1());
-    //  }
-
     QScriptValue globalObject = engine->globalObject();
     globalObject.setProperty("include", engine->newFunction(ecmaInclude, 1));
     globalObject.setProperty("print", engine->newFunction(ecmaPrint));
@@ -361,18 +343,11 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("qCritical", engine->newFunction(ecmaCritical));
     globalObject.setProperty("qGray", engine->newFunction(ecmaGray));
 
-    // crashes:
-    //globalObject.setProperty("attachDebugger", engine->newFunction(ecmaAttachDebugger));
-
     globalObject.setProperty("detachDebugger", engine->newFunction(ecmaDetachDebugger));
     globalObject.setProperty("collectGarbage", engine->newFunction(ecmaCollectGarbage));
-//  globalObject.setProperty("msleep", engine->newFunction(ecmaMSleep));
     globalObject.setProperty("importExtension", engine->newFunction(ecmaImportExtension));
     globalObject.setProperty("isDeleted", engine->newFunction(ecmaIsDeleted));
     globalObject.setProperty("serialize", engine->newFunction(ecmaSerialize));
-    //globalObject.setProperty("blockEvents", engine->newFunction(ecmaBlockEvents));
-    //globalObject.setProperty("unblockEvents", engine->newFunction(ecmaUnblockEvents));
-    //globalObject.setProperty("getOpt", engine->newFunction(ecmaGetOpt));
     globalObject.setProperty("addApplicationFont", engine->newFunction(ecmaAddApplicationFont));
     globalObject.setProperty("download", engine->newFunction(ecmaDownload));
     globalObject.setProperty("qApp", engine->newQObject(dynamic_cast<RSingleApplication*>(qApp)));
@@ -388,17 +363,9 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQObject.property("prototype").setProperty("destroy",
             engine->newFunction(ecmaDestroy));
 
-//    QScriptValue classQDateTime = globalObject.property("QDateTime");
-//    classQDateTime.property("prototype").setProperty("toString",
-//            engine->newFunction(ecmaQDateTimeToString));
-
     QScriptValue classQSortFilterProxyModel = globalObject.property("QSortFilterProxyModel");
-    //QScriptValue proto = classQSortFilterProxyModel.prototype();
-    //proto.setPrototype(engine->defaultPrototype(qMetaTypeId<QAbstractProxyModel*>()));
     classQSortFilterProxyModel.property("prototype").setProperty("castToQAbstractItemModel",
             engine->newFunction(ecmaQSortFilterProxyModelCastToQAbstractItemModel));
-    //classQSortFilterProxyModel.property("prototype").setProperty("sourceModel",
-    //        engine->newFunction(ecmaQSortFilterProxyModel));
 
     QScriptValue classQDir = globalObject.property("QDir");
     classQDir.setProperty("separator", engine->newVariant(QDir::separator()));
@@ -440,17 +407,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     QScriptValue classQt = globalObject.property("Qt");
     classQt.setProperty("escape",
             engine->newFunction(ecmaQtEscape));
-
-//    globalObject.setProperty("QFontDatabase", engine->newFunction());
-//    QScriptValue classQFontDatabase = globalObject.property("QFontDatabase");
-//    classQFontDatabase.setProperty("families", engine->newFunction(ecmaQFontDatabaseFamilies));
-
-
-    /*
-    QScriptValue classQListView = globalObject.property("QListView");
-    classQListView.property("prototype").setProperty("mousePressEvent",
-            engine->newFunction(ecmaQListViewMousePressEvent));
-            */
 
     QScriptValue classQCoreApplication = globalObject.property(
             "QCoreApplication");
@@ -522,9 +478,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSpatialIndexVisitorAdapter::init(*engine);
 
     REcmaGraphicsScene::init(*engine);
-//    REcmaGraphicsSceneGl::init(*engine);
     REcmaGraphicsSceneQt::init(*engine);
-    //REcmaGraphicsSceneQV::init(*engine);
     REcmaPainterPath::init(*engine);
     REcmaPainterPathDevice::init(*engine);
 
@@ -554,10 +508,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaRestrictOff::init(*engine);
 
     REcmaGraphicsView::init(*engine);
-    REcmaGraphicsViewGl::init(*engine);
     REcmaGraphicsViewImage::init(*engine);
     REcmaGraphicsViewQt::init(*engine);
-    //REcmaGraphicsViewQV::init(*engine);
 
     REcmaMainWindow::init(*engine);
     REcmaMainWindowQt::init(*engine);
@@ -567,7 +519,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaActionAdapter::init(*engine);
     REcmaNavigationAction::init(*engine);
     REcmaScriptAction::init(*engine);
-//  REcmaScriptActionEcma::init(*engine);
 
     REcmaEventFilter::init(*engine);
 
@@ -799,8 +750,6 @@ RScriptHandlerEcma::~RScriptHandlerEcma() {
     if (engine->isEvaluating()) {
         qWarning() << "Deleting script engine that is still evaluating.";
     }
-    // potential fix for FS#414:
-    //engine->abortEvaluation();
     delete engine;
 }
 
@@ -842,26 +791,7 @@ void RScriptHandlerEcma::doScript(const QString& scriptFile,const QStringList& a
         return;
     }
 
-    QString className = fi.completeBaseName();
-
-    /*
-    // leads to cryptic crashes:
-    if (isIncluded(engine, className)) {
-        return;
-    }
-    */
-
     QScriptValue globalObject = engine->globalObject();
-
-//    qDebug() << "RScriptHandlerEcma::doScript: " << className << " (" << scriptFile << ")";
-
-//    QScriptValue cl = globalObject.property(className);
-//    if (cl.isValid() && cl.isFunction()) {
-//        qDebug() << "RScriptHandlerEcma::doScript: class already loaded: " << className;
-//        return;
-//    }
-
-//    qDebug() << "RScriptHandlerEcma::doScript: loading class: " << className;
 
     initGlobalVariables(scriptFile);
     if (!arguments.isEmpty()) {
@@ -875,29 +805,7 @@ void RScriptHandlerEcma::doScript(const QString& scriptFile,const QStringList& a
         return;
     }
 
-    /*
-    if (!qApp->arguments().contains("-always-load-scripts")) {
-        alreadyIncluded.insert(fi.completeBaseName());
-        vAlreadyIncluded.setValue(alreadyIncluded);
-        engine->setProperty("alreadyIncluded", vAlreadyIncluded);
-    }
-    */
-
-    //engine->currentContext()
-    //engine->currentContext()->setActivationObject(engine->globalObject());
     eval(contents, scriptFile);
-
-//    if (!alwaysLoadScripts) {
-//        alreadyIncluded.insert(className);
-//        vAlreadyIncluded.setValue(alreadyIncluded);
-//        engine->setProperty("alreadyIncluded", vAlreadyIncluded);
-//    }
-
-//    if (className!="RestrictOff" && className!="SnapAuto") {
-//    markIncluded(engine, className);
-//    }
-
-//    qDebug() << "RScriptHandlerEcma::doScript: " << className << " DONE";
 }
 
 void RScriptHandlerEcma::eval(const QString& script, const QString& fileName) {
@@ -912,7 +820,6 @@ void RScriptHandlerEcma::eval(const QString& script, const QString& fileName) {
 
 RFileImporterAdapter* RScriptHandlerEcma::createFileImporter(const QString& className, RDocument& document) {
     QScriptValue globalObject = engine->globalObject();
-    //QScriptContext* context = engine->currentContext();
 
     // get script class:
     QScriptValue clazz = globalObject.property(className);
@@ -932,21 +839,6 @@ RFileImporterAdapter* RScriptHandlerEcma::createFileImporter(const QString& clas
 QString RScriptHandlerEcma::readScript(const QString& fileName, bool forceReload) {
 
     return RFileCache::getContents(fileName, forceReload);
-
-    /*
-    QFile f(fileName);
-    if (!f.open(QIODevice::ReadOnly)) {
-        qWarning() << "RScriptHandlerEcma::readScript: cannot read script file: " << fileName;
-        return QString();
-    }
-
-    QTextStream stream(&f);
-    stream.setCodec("UTF-8");
-    QString contents = stream.readAll();
-    f.close();
-
-    return contents;
-    */
 }
 
 void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
@@ -1013,8 +905,6 @@ void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
     }
 
     REcmaShellActionAdapter* action = qscriptvalue_cast<REcmaShellActionAdapter*>(ecmaObject.prototype());
-    //REcmaShellActionAdapter* action = qscriptvalue_cast<REcmaShellActionAdapter*>(ecmaObject);
-    //REcmaShellActionAdapter* action = new REcmaShellActionAdapter(guiAction);
     if (action!=NULL) {
         if (documentInterface != NULL) {
             // essential to rescue member variables that were set in the constructor:
@@ -1032,8 +922,6 @@ void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
 
 void RScriptHandlerEcma::createActionApplicationLevel(
         const QString& scriptFile, RGuiAction* guiAction) {
-
-    //createActionApplicationLevelT<RScriptActionEcma> (scriptFile, guiAction);
 
     if (!QFileInfo(scriptFile).exists()) {
         engine->currentContext()->throwError(QString(
@@ -1096,14 +984,9 @@ void RScriptHandlerEcma::createActionApplicationLevel(
  * Initializes some global ECMA variables that are available to all scripts.
  */
 void RScriptHandlerEcma::initGlobalVariables(const QString& scriptFile) {
-
     // initialize global ECMA variables:
     QScriptValue globalObject = engine->globalObject();
     globalObject.setProperty("scriptFile", QScriptValue(engine, scriptFile));
-    /*
-    globalObject.setProperty("scriptFilePath", QScriptValue(engine, QFileInfo(
-            scriptFile).filePath()));
-    */
     globalObject.setProperty("includeBasePath", QScriptValue(engine,
             QFileInfo(scriptFile).absolutePath()));
 }
@@ -1134,60 +1017,44 @@ QScriptValue RScriptHandlerEcma::ecmaInclude(QScriptContext* context, QScriptEng
 
 
 bool RScriptHandlerEcma::isIncluded(QScriptEngine* engine, const QString& className) {
-    //if (alwaysLoadScripts) {
-    //    return false;
-    //}
-
     QVariant vAlreadyIncluded;
 
     vAlreadyIncluded = engine->property("alreadyIncluded");
     if (!vAlreadyIncluded.isValid()) {
-        //qDebug() << "isIncluded: no property alreadyIncluded";
         return false;
     }
 
     QSet<QString> alreadyIncluded;
     alreadyIncluded = vAlreadyIncluded.value<QSet<QString> >();
     if (!alreadyIncluded.contains(className)) {
-        //qDebug() << "isIncluded: not yet included: " << className;
         return false;
     }
 
-    //qDebug() << "ecmaInclude: already included: " << className;
     return true;
 }
 
 void RScriptHandlerEcma::markIncluded(QScriptEngine* engine, const QString& className) {
-    //if (alwaysLoadScripts) {
-    //    return;
-    //}
-
     QVariant vAlreadyIncluded;
     QSet<QString> alreadyIncluded;
 
     vAlreadyIncluded = engine->property("alreadyIncluded");
     if (vAlreadyIncluded.isValid()) {
         alreadyIncluded = vAlreadyIncluded.value<QSet<QString> >();
-        //qDebug() << "markIncluded: alreadyIncluded: " << alreadyIncluded;
     }
 
     if (alreadyIncluded.contains(className)) {
-        //qDebug() << "markIncluded: already in list";
         return;
     }
 
     alreadyIncluded.insert(className);
     vAlreadyIncluded.setValue(alreadyIncluded);
     engine->setProperty("alreadyIncluded", vAlreadyIncluded);
-
-    //qDebug() << "markIncluded: alreadyIncluded: new[" << (int)engine << "]: " << alreadyIncluded;
 }
 
 QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString& arg, QString trContext, bool force) {
     static int including = 0;
 
     QScriptContext* context = engine->currentContext();
-    //qDebug() << "ecmaInclude: " << arg;
 
     QString className = QFileInfo(arg).completeBaseName();
 
@@ -1196,8 +1063,6 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
     }
 
     QStringList list;
-    //list << ":/scripts";
-    //list << ":";
     list << engine->globalObject().property("includeBasePath").toString();
     list << QDir::currentPath();
 
@@ -1209,39 +1074,19 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
         QString basePath = i.next();
 
         QString fileName;
-        //qDebug() << "arg: " << arg;
         QFileInfo fi(arg);
         if (fi.isAbsolute()) {
             fileName = arg;
         } else {
             fileName = basePath + QDir::separator() + arg;
-            //fileName = QFileInfo(fileName).canonicalFilePath();
-            //qDebug() << "fileName (canonical): " << fileName;
             fi = QFileInfo(fileName);
         }
 
         if (!fi.exists()) {
-            //qDebug() << "ecmaInclude: file not found: " << fi.absoluteFilePath();
             continue;
         }
 
-        //qDebug() << "ecmaInclude: including[" << (int)engine << "]: " << className << " (" << fi.absoluteFilePath() << ")";
-
-        // file does not exist in that path or cannot be read:
-        //QFile f(fileName);
-        //if (!f.open(QIODevice::ReadOnly)) {
-        //    continue;
-        //}
-
-        //qDebug() << "########    INCLUDING: " << fileName;
-
-        //QTextStream stream(&f);
-        //stream.setCodec("UTF-8");
-        //QString contents = stream.readAll();
-        //f.close();
         QString contents = readScript(fileName, force);
-
-        //QFileInfo fi(fileName);
 
         if (trContext.isNull()) {
             trContext = fi.completeBaseName();
@@ -1253,9 +1098,6 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
 
         QString includeBasePath = engine->globalObject().property("includeBasePath").toString();
         engine->globalObject().setProperty("includeBasePath", fi.absolutePath());
-        //QScriptContext* nested = engine->pushContext();
-        // this will make the evaluate "global":
-        //nested->setActivationObject(engine->globalObject());
         context->setActivationObject(engine->globalObject());
         context->setThisObject(engine->globalObject());
         including++;
@@ -1264,10 +1106,7 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
         including--;
         engine->globalObject().setProperty("including", including!=0);
 
-        //engine->popContext();
         engine->globalObject().setProperty("includeBasePath", includeBasePath);
-
-        //qDebug() << "ecmaInclude: including: " << className << " DONE";
 
         markIncluded(engine, className);
 
@@ -1326,8 +1165,6 @@ QScriptValue RScriptHandlerEcma::ecmaQtEscape(QScriptContext* context,
 
 QScriptValue RScriptHandlerEcma::ecmaMessageHandler(QScriptContext* context,
         QScriptEngine* engine, RS::MessageType type) {
-    //QScriptValue globalObject = engine->globalObject();
-    //QString scriptFile = globalObject.property("scriptFile").toString();
 
     QString str;
     for (int i = 0; i < context->argumentCount(); ++i) {
@@ -1355,21 +1192,6 @@ QScriptValue RScriptHandlerEcma::ecmaMessageHandler(QScriptContext* context,
 
     return qScriptValueFromValue(engine, str);
 }
-
-/*
-QScriptValue RScriptHandlerEcma::ecmaQListViewMousePressEvent(QScriptContext* context,
-        QScriptEngine* engine) {
-    QtScriptShell_QListView* self =
-            qscriptvalue_cast<QtScriptShell_QListView*> (context->thisObject().prototype());
-    if (self == NULL) {
-        return throwError("QListView.mousePressEvent(): This object is not a QListView",
-                context);
-    }
-    QMouseEvent* evt = REcmaHelper::scriptValueTo<QMouseEvent>(
-            context->argument(0));
-    self->mousePressEvent(evt);
-}
-*/
 
 QScriptValue RScriptHandlerEcma::ecmaQDomNodeAppendChild(QScriptContext* context,
         QScriptEngine* engine) {
@@ -1460,26 +1282,17 @@ QScriptValue RScriptHandlerEcma::ecmaQObjectGetChildren(QScriptContext* context,
     if (context->argumentCount() == 0) {
         QObjectList objList = self->children();
         QObjectList cppResult;
-//        QVariantList vl;
-//        qDebug() << "RScriptHandlerEcma::ecmaQObjectGetChildren: typeName: objList.size(): " << objList.size();
         for (int i=0; i<objList.size(); i++) {
-            //if (dynamic_cast<QFormInternal::TranslationWatcher*>(objList.at(i))!=NULL) {
-            //    continue;
-            //}
             QString typeName = objList.at(i)->metaObject()->className();
-//            qDebug() << "RScriptHandlerEcma::ecmaQObjectGetChildren: typeName: " << typeName;
             if (typeName=="QFormInternal::TranslationWatcher") {
                 continue;
             }
             if (typeName=="QWebView") {
                 continue;
             }
-            //vl.append(objList.at(i));
             cppResult.append(objList.at(i));
         }
-        //result = engine->newVariant(vl);
         result = REcmaHelper::listToScriptValue(engine, cppResult);
-        //result = qScriptValueFromSequence(cppResult);
     } else {
         return throwError(
                 "Wrong number/types of arguments for QObject.getChildren().",
@@ -1488,24 +1301,6 @@ QScriptValue RScriptHandlerEcma::ecmaQObjectGetChildren(QScriptContext* context,
 
     return result;
 }
-
-//QScriptValue RScriptHandlerEcma::ecmaQDateTimeToString(QScriptContext* context,
-//        QScriptEngine* engine) {
-
-//    qDebug() << "RScriptHandlerEcma::ecmaQDateTimeToString";
-//    QDateTime* self = REcmaHelper::scriptValueTo<QDateTime>(context->thisObject());
-//    if (self == NULL) {
-//        return throwError("QDateTime.toString(): Object is NULL", context);
-//    }
-
-//    if (context->argumentCount() == 1) {
-//        QString format = context->argument(0).toString();
-//        return qScriptValueFromValue(engine, QString(self->toString(format)));
-//    }
-//    else {
-//        return qScriptValueFromValue(engine, QString(self->toString()));
-//    }
-//}
 
 QScriptValue RScriptHandlerEcma::ecmaAttachDebugger(QScriptContext* context,
         QScriptEngine* engine) {
@@ -1552,9 +1347,6 @@ QScriptValue RScriptHandlerEcma::ecmaCollectGarbage(QScriptContext* context,
 
 QScriptValue RScriptHandlerEcma::ecmaDestroy(QScriptContext* context,
         QScriptEngine* engine) {
-    //  QScriptValue arg = context->argument(0);
-
-    //  void* self = arg.data().toVariant().data();
     QObject* self = qscriptvalue_cast<QObject*> (context->thisObject());
 
     if (self == NULL) {
@@ -1756,16 +1548,6 @@ QScriptValue RScriptHandlerEcma::ecmaIsDeleted(QScriptContext* context,
     }
 }
 
-//QScriptValue RScriptHandlerEcma::ecmaUnblockEvents(QScriptContext* context,
-//        QScriptEngine* engine) {
-//    Q_UNUSED(context)
-//    Q_UNUSED(engine)
-
-//    QAbstractEventDispatcher* evtDisp = QAbstractEventDispatcher::instance();
-//    evtDisp->setEventFilter(defaultEventFilter);
-//    return QScriptValue();
-//}
-
 QScriptValue RScriptHandlerEcma::ecmaAddApplicationFont(QScriptContext* context,
         QScriptEngine* engine) {
 
@@ -1830,104 +1612,6 @@ QScriptValue RScriptHandlerEcma::ecmaQSortFilterProxyModelCastToQAbstractItemMod
 
     return engine->newQObject(dynamic_cast<QAbstractItemModel*>(self));
 }
-
-//QScriptValue RScriptHandlerEcma::ecmaQFontDatabaseFamilies(QScriptContext* context, QScriptEngine* engine) {
-//    QFontDatabase fdb;
-//    QStringList ret = fdb.families();
-//    return engine->toScriptValue(ret);
-//}
-
-/*
-QScriptValue RScriptHandlerEcma::ecmaGetOpt(QScriptContext* context,
-        QScriptEngine* engine) {
-
-
-    QMap<QString,QString> map;
-    if (context->argumentCount() == 2 && context->argument(0).isArray()
-            && context->argument(1).isArray()) {
-        QStringList a0;
-        REcmaHelper::fromScriptValue(engine, context->argument(0), a0);
-        char** argv = new char*[a0.size()];
-        for (int i = 0; i < a0.size(); ++i) {
-            QString s = a0.at(i);
-            argv[i] = new char[s.length() + 1];
-            strcpy(argv[i], (const char*) s.toLatin1());
-        }
-
-        QList<QStringList> a1;
-        REcmaHelper::fromScriptValue(engine, context->argument(1), a1);
-
-        int size = a1.size();
-        struct option* long_options = new option[size + 1];
-        char** ccname = new char*[size];
-        option* opt = new option[size];
-
-        QString shortOptions;
-        for (int i = 0; i < size; ++i) {
-            QStringList sl = a1.at(i);
-
-            char c;
-            if (sl.at(2).size() == 0) {
-                c = 0;
-            } else {
-                c = sl.at(2).toAscii().at(0);
-            }
-
-            QString name(sl.at(0));
-            ccname[i] = new char[name.toLatin1().size() + 1];
-            strcpy(ccname[i], name.toLatin1());
-
-            int hasArgs = no_argument;
-            if (sl.at(1) == "true") {
-                hasArgs = required_argument;
-            }
-
-            opt[i].name = ccname[i];
-            opt[i].has_arg = hasArgs;
-            opt[i].flag = 0;
-            opt[i].val = c;
-            long_options[i] = opt[i];
-
-            shortOptions.append(QString(c));
-            if (hasArgs == required_argument) {
-                shortOptions.append(":");
-            }
-        }
-        option end_opt = { 0, 0, 0, 0 };
-        long_options[size] = end_opt;
-
-        int option_index = 0;
-        while (1) {
-            QByteArray shortOptionsBA = shortOptions.toLatin1();
-            int c = getopt_long_only(a0.size(), argv,
-                    (const char*)shortOptionsBA, long_options,
-                    &option_index);
-
-            if (c == -1) {
-                break;
-            }
-            if (c == 0) {
-                // If this option set a flag, do nothing else now.
-                if (long_options[option_index].flag != 0) {
-                    break;
-                }
-                map.insert(QString(long_options[option_index].name), QString(
-                        optarg));
-                continue;
-            }
-            if (shortOptions.contains(QChar(c))) {
-                map.insert(QString(c), QString(optarg));
-            }
-        }
-
-    } else {
-        return throwError("Wrong number/types of arguments for getOpt().",
-                context);
-    }
-
-    return REcmaHelper::toScriptValue(engine, map);
-}
-*/
 
 QScriptValue RScriptHandlerEcma::ecmaBlockEvents(QScriptContext* context,
         QScriptEngine* engine) {

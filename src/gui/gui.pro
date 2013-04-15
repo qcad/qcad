@@ -10,10 +10,8 @@ SOURCES += \
     RFileSystemModel.cpp \
     RFocusFrame.cpp \
     RFontChooserWidget.cpp \
-    #RGraphicsSceneGl.cpp \
     RGraphicsSceneQt.cpp \
     RGraphicsViewImage.cpp \
-    RGraphicsViewGl.cpp \
     RGraphicsViewQt.cpp \
     RLinetypeCombo.cpp \
     RLineweightCombo.cpp \
@@ -38,7 +36,6 @@ HEADERS += \
     RFontChooserWidget.h \
     RGraphicsSceneQt.h \
     RGraphicsViewImage.h \
-    RGraphicsViewGl.h \
     RGraphicsViewQt.h \
     RLinetypeCombo.h \
     RLineweightCombo.h \
@@ -51,7 +48,6 @@ HEADERS += \
     RTextEdit.h \
     RWebView.h
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadentity
 TARGET = qcadgui
