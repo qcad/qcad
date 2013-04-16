@@ -137,192 +137,20 @@ void RDxfImporter::processCodeValuePair(unsigned int groupCode, char* groupValue
     //printf("group value: %s\n", groupValue);
 }
 
-/**
- * @return Pen with the same attributes as 'attributes'.
- */
-RColor RDxfImporter::attributesToColor(bool forLayer) const {
-    RColor color;
-    if (attributes.getColor24()!=-1) {
-        color = numberToColor24(attributes.getColor24());
-    }
-    else {
-        color = numberToColor(attributes.getColor(), false, forLayer);
-    }
 
-    return color;
-}
-
-/**
- * Converts a color index (num) into a RS_Color object.
- * Please refer to the dxflib documentation for details.
- *
- * @param num Color number.
- * @param comp Compatibility with older QCad versions (1.5.3 and older)
- */
-RColor RDxfImporter::numberToColor(int num, bool comp, bool forLayer) const {
-    if (forLayer) {
-        num = abs(num);
-    }
-
-    // Compatibility with QCad 1.5.3 and older:
-    if (comp) {
-        switch(num) {
-        case 0:
-            return RColor(Qt::black);
-            break;
-        case 1:
-            return RColor(Qt::darkBlue);
-            break;
-        case 2:
-            return RColor(Qt::darkGreen);
-            break;
-        case 3:
-            return RColor(Qt::darkCyan);
-            break;
-        case 4:
-            return RColor(Qt::darkRed);
-            break;
-        case 5:
-            return RColor(Qt::darkMagenta);
-            break;
-        case 6:
-            return RColor(Qt::darkYellow);
-            break;
-        case 7:
-            return RColor(Qt::lightGray);
-            break;
-        case 8:
-            return RColor(Qt::darkGray);
-            break;
-        case 9:
-            return RColor(Qt::blue);
-            break;
-        case 10:
-            return RColor(Qt::green);
-            break;
-        case 11:
-            return RColor(Qt::cyan);
-            break;
-        case 12:
-            return RColor(Qt::red);
-            break;
-        case 13:
-            return RColor(Qt::magenta);
-            break;
-        case 14:
-            return RColor(Qt::yellow);
-            break;
-        case 15:
-            return RColor(Qt::black);
-            break;
-        default:
-            break;
-        }
-    } else {
-        if (num==0) {
-            return RColor(RColor::ByBlock);
-        } else if (num==256) {
-            return RColor(RColor::ByLayer);
-        } else if (num<=255 && num>=0) {
-            return RColor((int)(dxfColors[num][0]*255),
-                          (int)(dxfColors[num][1]*255),
-                          (int)(dxfColors[num][2]*255));
-        } else {
-            qWarning() << "RDxfImporter::numberToColor: Invalid color number given.";
-            return RColor(RColor::ByLayer);
-        }
-    }
-    return RColor();
-}
-
-/**
- * @return color object from DXF coded integar 24 bit color number.
- */
-RColor RDxfImporter::numberToColor24(int num) const {
-    return RColor(
-              (num&0x00ff0000) >> 16,
-              (num&0x0000ff00) >> 8,
-              (num&0x000000ff) >> 0
-           );
-}
-
-/**
- * Converts a line width number (e.g. 1) into a RS2::LineWidth.
- */
-RLineweight::Lineweight RDxfImporter::numberToWeight(int num) {
-    switch (num) {
-    case -1:
-        return RLineweight::WeightByLayer;
-    case -2:
-        return RLineweight::WeightByBlock;
-    case -3:
-        return RLineweight::WeightByLwDefault;
-    default:
-        if (num<3) {
-            return RLineweight::Weight000;
-        } else if (num<7) {
-            return RLineweight::Weight005;
-        } else if (num<11) {
-            return RLineweight::Weight009;
-        } else if (num<14) {
-            return RLineweight::Weight013;
-        } else if (num<16) {
-            return RLineweight::Weight015;
-        } else if (num<19) {
-            return RLineweight::Weight018;
-        } else if (num<22) {
-            return RLineweight::Weight020;
-        } else if (num<27) {
-            return RLineweight::Weight025;
-        } else if (num<32) {
-            return RLineweight::Weight030;
-        } else if (num<37) {
-            return RLineweight::Weight035;
-        } else if (num<45) {
-            return RLineweight::Weight040;
-        } else if (num<52) {
-            return RLineweight::Weight050;
-        } else if (num<57) {
-            return RLineweight::Weight053;
-        } else if (num<65) {
-            return RLineweight::Weight060;
-        } else if (num<75) {
-            return RLineweight::Weight070;
-        } else if (num<85) {
-            return RLineweight::Weight080;
-        } else if (num<95) {
-            return RLineweight::Weight090;
-        } else if (num<103) {
-            return RLineweight::Weight100;
-        } else if (num<112) {
-            return RLineweight::Weight106;
-        } else if (num<130) {
-            return RLineweight::Weight120;
-        } else if (num<149) {
-            return RLineweight::Weight140;
-        } else if (num<180) {
-            return RLineweight::Weight158;
-        } else if (num<205) {
-            return RLineweight::Weight200;
-        } else {
-            return RLineweight::Weight211;
-        }
-    }
-    return (RLineweight::Lineweight)num;
-}
 
 void RDxfImporter::addLayer(const DL_LayerData& data) {
     QString layerName = data.name.c_str();
     bool frozen = (attributes.getColor()<0 || data.flags&0x01);
     bool locked = data.flags&0x04;
     attributes.setColor(abs(attributes.getColor()));
-    RColor color = attributesToColor(true);
+    RColor color = RDxfServices::attributesToColor(attributes.getColor(), attributes.getColor24(), true);
     RLinetype::Id linetypeId = RLinetype::INVALID_ID;
     linetypeId = document->getLinetypeId(attributes.getLineType().c_str());
     if (linetypeId == RLinetype::INVALID_ID) {
         linetypeId = document->getLinetypeId("CONTINUOUS");
     }
-    RLineweight::Lineweight lw = numberToWeight(attributes.getWidth());
+    RLineweight::Lineweight lw = RDxfServices::numberToWeight(attributes.getWidth());
 
     QSharedPointer<RLayer> layer(
                 new RLayer(
@@ -478,8 +306,8 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     }
 
     // Color:
-    RColor col = numberToColor(attributes.getColor());
-    RColor col24 = numberToColor24(attributes.getColor24());
+    RColor col = RDxfServices::numberToColor(attributes.getColor(), dxfColors);
+    RColor col24 = RDxfServices::numberToColor24(attributes.getColor24());
 
     // bylayer / byblock overrules all colors:
     if (col.isByBlock() || col.isByLayer()) {
@@ -507,7 +335,7 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     entity->setLinetypeId(linetypeId);
 
     // Width:
-    entity->setLineweight(numberToWeight(attributes.getWidth()));
+    entity->setLineweight(RDxfServices::numberToWeight(attributes.getWidth()));
 
     int handle = attributes.getHandle();
     if (handle!=-1) {
@@ -942,20 +770,23 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
     t = data.text.c_str();
     t.replace("^ ", "^");
     dxfServices.fixQCad2String(t);
+    QString uTol, lTol;
+    dxfServices.fixDimensionLabel(t, uTol, lTol);
 
     // data needed to add the actual dimension entity
     RDimensionData ret(defP, midP,
-                            valign, halign,
-                            lss,
-                            data.lineSpacingFactor,
-                            t, "standard",
-                            data.angle);
+                       valign, halign,
+                       lss,
+                       data.lineSpacingFactor,
+                       t, "standard",
+                       data.angle);
+    ret.setUpperTolerance(uTol);
+    ret.setLowerTolerance(lTol);
 
     if (midP.isValid()) {
         ret.setCustomTextPosition(true);
     }
 
-    dxfServices.fixDimensionLabel(ret);
     return ret;
 }
 

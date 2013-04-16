@@ -47,6 +47,8 @@ public:
     virtual ~RDxfExporter() {}
 
     virtual QString getCorrectedFileName(const QString& fileName, const QString& nameFilter) {
+        Q_UNUSED(nameFilter)
+
         return fileName;
     }
 

@@ -132,10 +132,6 @@ private:
 
     void importEntity(QSharedPointer<REntity> entity);
 
-    RColor attributesToColor(bool forLayer) const;
-    RColor numberToColor(int num, bool comp=false, bool forLayer=false) const;
-    RColor numberToColor24(int num) const;
-    RLineweight::Lineweight numberToWeight(int num);
     QString getXDataString(const QString& appId, int code, int pos=0);
     int getXDataInt(const QString& appId, int code, int pos=0);
 

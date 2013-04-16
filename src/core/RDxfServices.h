@@ -25,6 +25,8 @@
 #include "dxf_global.h"
 
 #include "RS.h"
+#include "RColor.h"
+#include "RLineweight.h"
 
 class RDimensionData;
 class RHatchData;
@@ -45,7 +47,7 @@ public:
     QString fixFontName(const QString& fontName) const;
 
     void fixQCad2String(QString& str) const;
-    void fixDimensionLabel(RDimensionData& dimData);
+    void fixDimensionLabel(QString& text, QString& uTol, QString& lTol);
     RS::KnownVariable stringToVariable(const QString& s);
     void detectQCad2Format(const QString& fileName);
 
@@ -74,6 +76,15 @@ public:
     QString getQCad2PatternName(const QString& patternName) const;
 
     void fixQCad2HatchData(RHatchData& data) const;
+
+    static RColor attributesToColor(int color, int color24, bool forLayer=false);
+    static RColor numberToColor(int num, const double dxfColors[][3], bool comp=false, bool forLayer=false);
+    static RColor numberToColor24(int num);
+    static RLineweight::Lineweight numberToWeight(int num);
+
+    static int widthToNumber(RLineweight::Lineweight w);
+    static int colorToNumber24(const RColor& col);
+    static int colorToNumber(const RColor& col, const double dxfColors[][3]);
 
 private:
     bool qcad2GotDIMZIN;

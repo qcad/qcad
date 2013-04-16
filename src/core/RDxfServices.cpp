@@ -19,7 +19,6 @@
 #include <QFileInfo>
 #include <QTemporaryFile>
 
-#include "RDimensionData.h"
 #include "RDxfServices.h"
 #include "REllipse.h"
 #include "RHatchData.h"
@@ -45,9 +44,7 @@ void RDxfServices::fixQCad2String(QString& str) const {
     str.replace(rx, "\\S\\1^\\2;");
 }
 
-void RDxfServices::fixDimensionLabel(RDimensionData& dimData) {
-    QString text = dimData.getText();
-
+void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol) {
     // strip away initial vertical alignment, e.g. '\A1;'
     QRegExp rxAlignment("^\\\\A(\\d+);");
     text.replace(rxAlignment, "");
@@ -55,8 +52,8 @@ void RDxfServices::fixDimensionLabel(RDimensionData& dimData) {
     // analyze and strip stacked text (tolerance) at end:
     QRegExp rxTolerance("\\\\S([^^]*)\\^([^;]*);$");
     if (rxTolerance.indexIn(text)!=-1) {
-        dimData.setUpperTolerance(rxTolerance.cap(1));
-        dimData.setLowerTolerance(rxTolerance.cap(2));
+        uTol = rxTolerance.cap(1);
+        lTol = rxTolerance.cap(2);
     }
     text.replace(rxTolerance, "");
 
@@ -64,8 +61,6 @@ void RDxfServices::fixDimensionLabel(RDimensionData& dimData) {
     if (text=="<>") {
         text = "";
     }
-
-    dimData.setText(text);
 }
 
 void RDxfServices::detectQCad2Format(const QString& fileName) {
@@ -1052,3 +1047,253 @@ RS::KnownVariable RDxfServices::stringToVariable(const QString& s) {
     return RS::INVALID;
 }
 
+/**
+ * @return Pen with the same attributes as 'attributes'.
+ */
+RColor RDxfServices::attributesToColor(int color, int color24, bool forLayer) {
+    RColor ret;
+    if (color24!=-1) {
+        ret = numberToColor24(color24);
+    }
+    else {
+        ret = numberToColor(color, false, forLayer);
+    }
+
+    return ret;
+}
+
+/**
+ * Converts a color index (num) into a RColor object.
+ * Please refer to the dxflib documentation for details.
+ *
+ * @param num Color number.
+ * @param comp Compatibility with older QCad versions (1.5.3 and older)
+ */
+RColor RDxfServices::numberToColor(int num, const double dxfColors[][3], bool comp, bool forLayer) {
+    if (forLayer) {
+        num = abs(num);
+    }
+
+    // Compatibility with QCad 1.5.3 and older:
+    if (comp) {
+        switch(num) {
+        case 0:
+            return RColor(Qt::black);
+            break;
+        case 1:
+            return RColor(Qt::darkBlue);
+            break;
+        case 2:
+            return RColor(Qt::darkGreen);
+            break;
+        case 3:
+            return RColor(Qt::darkCyan);
+            break;
+        case 4:
+            return RColor(Qt::darkRed);
+            break;
+        case 5:
+            return RColor(Qt::darkMagenta);
+            break;
+        case 6:
+            return RColor(Qt::darkYellow);
+            break;
+        case 7:
+            return RColor(Qt::lightGray);
+            break;
+        case 8:
+            return RColor(Qt::darkGray);
+            break;
+        case 9:
+            return RColor(Qt::blue);
+            break;
+        case 10:
+            return RColor(Qt::green);
+            break;
+        case 11:
+            return RColor(Qt::cyan);
+            break;
+        case 12:
+            return RColor(Qt::red);
+            break;
+        case 13:
+            return RColor(Qt::magenta);
+            break;
+        case 14:
+            return RColor(Qt::yellow);
+            break;
+        case 15:
+            return RColor(Qt::black);
+            break;
+        default:
+            break;
+        }
+    } else {
+        if (num==0) {
+            return RColor(RColor::ByBlock);
+        } else if (num==256) {
+            return RColor(RColor::ByLayer);
+        } else if (num<=255 && num>=0) {
+            return RColor((int)(dxfColors[num][0]*255),
+                          (int)(dxfColors[num][1]*255),
+                          (int)(dxfColors[num][2]*255));
+        } else {
+            qWarning() << "RDxfImporter::numberToColor: Invalid color number given.";
+            return RColor(RColor::ByLayer);
+        }
+    }
+    return RColor();
+}
+
+/**
+ * @return color object from DXF coded integar 24 bit color number.
+ */
+RColor RDxfServices::numberToColor24(int num) {
+    return RColor(
+              (num&0x00ff0000) >> 16,
+              (num&0x0000ff00) >> 8,
+              (num&0x000000ff) >> 0
+           );
+}
+
+/**
+ * Converts a line width number (e.g. 1) into a RS2::LineWidth.
+ */
+RLineweight::Lineweight RDxfServices::numberToWeight(int num) {
+    switch (num) {
+    case -1:
+        return RLineweight::WeightByLayer;
+    case -2:
+        return RLineweight::WeightByBlock;
+    case -3:
+        return RLineweight::WeightByLwDefault;
+    default:
+        if (num<3) {
+            return RLineweight::Weight000;
+        } else if (num<7) {
+            return RLineweight::Weight005;
+        } else if (num<11) {
+            return RLineweight::Weight009;
+        } else if (num<14) {
+            return RLineweight::Weight013;
+        } else if (num<16) {
+            return RLineweight::Weight015;
+        } else if (num<19) {
+            return RLineweight::Weight018;
+        } else if (num<22) {
+            return RLineweight::Weight020;
+        } else if (num<27) {
+            return RLineweight::Weight025;
+        } else if (num<32) {
+            return RLineweight::Weight030;
+        } else if (num<37) {
+            return RLineweight::Weight035;
+        } else if (num<45) {
+            return RLineweight::Weight040;
+        } else if (num<52) {
+            return RLineweight::Weight050;
+        } else if (num<57) {
+            return RLineweight::Weight053;
+        } else if (num<65) {
+            return RLineweight::Weight060;
+        } else if (num<75) {
+            return RLineweight::Weight070;
+        } else if (num<85) {
+            return RLineweight::Weight080;
+        } else if (num<95) {
+            return RLineweight::Weight090;
+        } else if (num<103) {
+            return RLineweight::Weight100;
+        } else if (num<112) {
+            return RLineweight::Weight106;
+        } else if (num<130) {
+            return RLineweight::Weight120;
+        } else if (num<149) {
+            return RLineweight::Weight140;
+        } else if (num<180) {
+            return RLineweight::Weight158;
+        } else if (num<205) {
+            return RLineweight::Weight200;
+        } else {
+            return RLineweight::Weight211;
+        }
+    }
+    return (RLineweight::Lineweight)num;
+}
+
+/**
+ * Converts a color into a color number in the DXF palette.
+ * The color that fits best is chosen.
+ */
+int RDxfServices::colorToNumber(const RColor& col, const double dxfColors[][3]) {
+
+    // Special color BYBLOCK:
+    if (col.isByBlock()) {
+        return 0;
+    }
+
+    // Special color BYLAYER
+    else if (col.isByLayer()) {
+        return 256;
+    }
+
+    // Special color black is not in the table but white represents both
+    // black and white
+    else if (col.red()==0 && col.green()==0 && col.blue()==0) {
+        return 7;
+    }
+
+    // All other colors
+    else {
+        int num=0;
+        int diff=255*3;  // smallest difference to a color in the table found so far
+
+        // Run through the whole table and compare
+        for (int i=1; i<=255; i++) {
+            int d = abs(col.red()-(int)(dxfColors[i][0]*255))
+                    + abs(col.green()-(int)(dxfColors[i][1]*255))
+                    + abs(col.blue()-(int)(dxfColors[i][2]*255));
+
+            if (d<diff) {
+                diff = d;
+                num = i;
+                if (d==0) {
+                    break;
+                }
+            }
+        }
+        return num;
+    }
+}
+
+/**
+ * @return 24 bit color as DXF prepared int.
+ */
+int RDxfServices::colorToNumber24(const RColor& col) {
+    if (col.isByLayer() || col.isByBlock()) {
+        return -1;
+    }
+    else {
+        return (col.red()<<16) | (col.green()<<8) | (col.blue()<<0);
+    }
+}
+
+/**
+ * Converts a RLineweight::Lineweight into an int width for use in DXF files.
+ */
+int RDxfServices::widthToNumber(RLineweight::Lineweight w) {
+    switch (w) {
+    case RLineweight::WeightByLayer:
+        return -1;
+        break;
+    case RLineweight::WeightByBlock:
+        return -2;
+        break;
+    case RLineweight::WeightByLwDefault:
+        return -3;
+        break;
+    default:
+        break;
+    }
+    return (int)w;
+}

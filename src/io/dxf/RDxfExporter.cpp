@@ -33,7 +33,7 @@ RDxfExporter::RDxfExporter(RDocument& document,
 
 }
 
-bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter, bool resetModified) {
+bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter, bool setFileName) {
     qDebug() << "RDxfExporter::exportFile";
 
     // set version for DXF filter:
@@ -54,6 +54,10 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     if (dw==NULL) {
         qWarning() << "RS_FilterDxf::fileExport: cannot open file for writing";
         return false;
+    }
+
+    if (setFileName) {
+        document->setFileName(fileName);
     }
 
     // Header
@@ -311,15 +315,13 @@ void RDxfExporter::writeLayer(const RLayer& l) {
         return;
     }
 
-    /*
     dxf.writeLayer(
         *dw,
         DL_LayerData((const char*)l.getName().toLatin1(),
                      l.isFrozen() + (l.isLocked()<<2)),
         DL_Attributes(std::string(""),
-                      RDxfServices::colorToNumber(l.getColor()),
+                      RDxfServices::colorToNumber(l.getColor(), dxfColors),
                       RDxfServices::colorToNumber24(l.getColor()),
                       RDxfServices::widthToNumber(l.getLineweight()),
                       (const char*)lt->getName().toLatin1()));
-    */
 }
