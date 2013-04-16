@@ -28,15 +28,12 @@
 #include "RColor.h"
 #include "RLineweight.h"
 
-class RDimensionData;
-class RHatchData;
-
 /**
  * \brief DXF support tools, mainly for QCAD 2 DXF imports.
  *
  * \ingroup qcadcore
  */
-class QCADDXF_EXPORT RDxfServices {
+class QCADCORE_EXPORT RDxfServices {
 public:
     RDxfServices();
 
@@ -75,7 +72,7 @@ public:
     double getQCad2PatternScale(double scale, const QString& patternName) const;
     QString getQCad2PatternName(const QString& patternName) const;
 
-    void fixQCad2HatchData(RHatchData& data) const;
+    void fixQCad2HatchData(QString& patternName, double& angle, double& scale, bool solid) const;
 
     static RColor attributesToColor(int color, int color24, bool forLayer=false);
     static RColor numberToColor(int num, const double dxfColors[][3], bool comp=false, bool forLayer=false);

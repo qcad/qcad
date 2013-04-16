@@ -895,14 +895,15 @@ void RDxfImporter::addLeaderVertex(const DL_LeaderVertexData& data) {
 }
 
 void RDxfImporter::addHatch(const DL_HatchData& data) {
-    hatch = RHatchData(data.solid,
-                       data.scale,
-                       RMath::deg2rad(data.angle),
-                       data.pattern.c_str());
+    QString patternName = data.pattern.c_str();
+    double angle = RMath::deg2rad(data.angle);
+    double scale = data.scale;
 
     if (dxfServices.getQCad2Compatibility()) {
-        dxfServices.fixQCad2HatchData(hatch);
+        dxfServices.fixQCad2HatchData(patternName, angle, scale, data.solid);
     }
+
+    hatch = RHatchData(data.solid, scale, angle, patternName);
 }
 
 void RDxfImporter::addHatchLoop(const DL_HatchLoopData& data) {
