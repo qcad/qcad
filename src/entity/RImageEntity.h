@@ -86,12 +86,41 @@ public:
     virtual const RImageData& getData() const {
         return data;
     }
+
+    QString getFileName() const {
+        return data.getFileName();
+    }
+
     void setFileName(const QString& fn) {
         data.setFileName(fn);
     }
 
+    RVector getInsertionPoint() const {
+        return data.getInsertionPoint();
+    }
+
     void setInsertionPoint(const RVector& ip) {
         data.setInsertionPoint(ip);
+    }
+
+    RVector getUVector() const {
+        return data.getUVector();
+    }
+
+    RVector getVVector() const {
+        return data.getVVector();
+    }
+
+    int getBrightness() const {
+        return data.getBrightness();
+    }
+
+    int getContrast() const {
+        return data.getContrast();
+    }
+
+    int getFade() const {
+        return data.getFade();
     }
 
     void setWidth(double w, bool keepRatio=false) {
