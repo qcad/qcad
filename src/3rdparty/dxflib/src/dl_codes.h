@@ -94,7 +94,10 @@ public:
      * Version numbers for the DXF Format.
      */
     enum version {
-        AC1009, AC1012, AC1014, AC1015
+        AC1009,         // R12
+        AC1012,
+        AC1014,
+        AC1015          // R2000
     };
 };
 
