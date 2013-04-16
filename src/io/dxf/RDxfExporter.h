@@ -53,6 +53,8 @@ public:
     virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true);
 
     void writeVariables();
+    void writeLinetype(const RLinetype& lt);
+    void writeLayer(const RLayer& l);
 
     virtual void exportPoint(const RPoint& point) {
         Q_UNUSED(point)

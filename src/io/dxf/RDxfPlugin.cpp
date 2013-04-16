@@ -8,7 +8,8 @@
 bool RDxfPlugin::init() {
     qDebug() << "RDxfPlugin::init";
     RDxfImporterFactory::registerFileImporter();
-    RDxfExporterFactory::registerFileExporter();
+    // work in progress:
+    //RDxfExporterFactory::registerFileExporter();
     return true;
 }
 

@@ -74,18 +74,13 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     // Line types:
     qDebug() << "RDxfExporter::exportFile: linetypes";
-    QList<RLinetypePattern> patterns = RLinetypePatternMap::getPatterns();
-    int numLT = patterns.count();
-    qDebug() << "RDxfExporter::exportFile: linetypes: " << numLT;
-    //int numLT = (int)RS::BorderLineX2-(int)RS2::LineByBlock;
-    //if (formatType==RS2::FormatDxf12) {
-    //    numLT-=2;
-    //}
+    QStringList lts = document->getLinetypeNames().toList();
     qDebug() << "RDxfExporter::exportFile: linetypes table";
-    dw->tableLineTypes(numLT);
+    dw->tableLineTypes(lts.count());
     qDebug() << "RDxfExporter::exportFile: linetypes loop";
-    for (int i=0; patterns.count(); i++) {
-        //writeLineType(patterns[i]);
+    for (int i=0; i<lts.count(); i++) {
+        QSharedPointer<RLinetype> lt = document->queryLinetype(lts[i]);
+        writeLinetype(*lt);
     }
 //    for (int t=(int)RS2::LineByBlock; t<=(int)RS2::BorderLineX2; ++t) {
 //        if ((RS2::LineType)t!=RS2::NoPen) {
@@ -95,16 +90,19 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "RDxfExporter::exportFile: linetypes table end";
     dw->tableEnd();
 
-    /*
     // Layers:
-    RS_DEBUG->print("writing layers...");
-    dw->tableLayers(graphic->countLayers());
-    for (int i=0; i<graphic->countLayers(); ++i) {
-        RS_Layer* l = graphic->layerAt(i);
-        writeLayer(l);
+    qDebug() << "RDxfExporter::exportFile: layers";
+    QStringList layerNames = document->getLayerNames().toList();
+    dw->tableLayers(layerNames.count());
+    for (int i=0; i<layerNames.count(); ++i) {
+        QSharedPointer<RLayer> layer = document->queryLayer(layerNames[i]);
+        writeLayer(*layer);
+        //RS_Layer* l = graphic->layerAt(i);
+        //writeLayer(l);
     }
     dw->tableEnd();
 
+    /*
     // STYLE:
     RS_DEBUG->print("writing styles...");
     dxf.writeStyle(*dw);
@@ -293,5 +291,35 @@ void RDxfExporter::writeVariables() {
         dw->dxfString(8, (const char*)current->getName().toLatin1());
     }
     dw->sectionEnd();
+    */
+}
+
+void RDxfExporter::writeLinetype(const RLinetype& lt) {
+    dxf.writeLineType(
+        *dw,
+        DL_LineTypeData((const char*)lt.getName().toLatin1(), 0));
+}
+
+void RDxfExporter::writeLayer(const RLayer& l) {
+    qDebug() << "RS_FilterDxf::writeLayer: " << l.getName();
+
+    //int colorSign = 1;
+
+    QSharedPointer<RLinetype> lt = document->queryLinetype(l.getLinetypeId());
+    if (lt.isNull()) {
+        qDebug() << "Layer " << l.getName() << " has invalid line type ID";
+        return;
+    }
+
+    /*
+    dxf.writeLayer(
+        *dw,
+        DL_LayerData((const char*)l.getName().toLatin1(),
+                     l.isFrozen() + (l.isLocked()<<2)),
+        DL_Attributes(std::string(""),
+                      RDxfServices::colorToNumber(l.getColor()),
+                      RDxfServices::colorToNumber24(l.getColor()),
+                      RDxfServices::widthToNumber(l.getLineweight()),
+                      (const char*)lt->getName().toLatin1()));
     */
 }
