@@ -21,7 +21,6 @@
 
 #include "RDxfServices.h"
 #include "REllipse.h"
-#include "RHatchData.h"
 #include "RUnit.h"
 
 RDxfServices::RDxfServices() :
@@ -523,14 +522,14 @@ QString RDxfServices::getQCad2PatternName(const QString& patternName) const {
     return pat;
 }
 
-void RDxfServices::fixQCad2HatchData(RHatchData& data) const {
-    if (data.isSolid() || !getQCad2Compatibility()) {
+void RDxfServices::fixQCad2HatchData(QString& patternName, double& angle, double& scale, bool solid) const {
+    if (solid || !getQCad2Compatibility()) {
         return;
     }
 
-    QString patternName = data.getPatternName();
-    double angle = data.getAngle();
-    double scale = data.getScale();
+    //QString patternName = data.getPatternName();
+    //double angle = data.getAngle();
+    //double scale = data.getScale();
 
     // QCAD 2 stores angles in rad instead of deg as
     // it should for DXF hatch angles:
@@ -541,12 +540,12 @@ void RDxfServices::fixQCad2HatchData(RHatchData& data) const {
     scale = getQCad2PatternScale(scale, patternName);
 
     // angle is now in rad!
-    data.setAngle(angle);
-    data.setScale(scale);
+    //data.setAngle(angle);
+    //data.setScale(scale);
 
     // fix some QCAD 2 pattern names:
     patternName = getQCad2PatternName(patternName);
-    data.setPatternName(patternName);
+    //data.setPatternName(patternName);
 }
 
 /**
