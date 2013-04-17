@@ -460,9 +460,6 @@ function main() {
         execScripts(args);
     });
 
-    // install custom message handler for qDebug, etc.
-    RMainWindow.installMessageHandler();
-
     var args = QCoreApplication.arguments();
     if (args.contains("-help") || args.contains("-h")) {
         usage();
@@ -619,7 +616,7 @@ function main() {
     // load add-ons:
     RDebug.startTimer(0);
     loadAddOns(addOns, splash);
-    RDebug.stopTimer(0, "loading addOns");
+    RDebug.stopTimer(0, "loading add-ons");
 
     RDebug.startTimer(0);
     initAddOns(addOns, splash);

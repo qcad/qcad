@@ -80,6 +80,7 @@ void catchSigPipe(int /*s*/){
 
 
 int main(int argc, char *argv[]) {
+    RMainWindow::installMessageHandler();
 #ifdef Q_OS_MAC
     // TODO: make available as script function:
     qt_mac_set_menubar_icons(false);
