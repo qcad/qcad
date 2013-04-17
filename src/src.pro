@@ -11,14 +11,8 @@ SUBDIRS = \
     gui \
     io \
     customwidgets \
-    scripting
-
-# external modules that need compilation before linking:
-exists(../../src) {
-    SUBDIRS += ../../src
-}
-
-SUBDIRS += run
+    scripting \
+    run
 
 TEMPLATE = subdirs
 OTHER_FILES += api_overview.dox
