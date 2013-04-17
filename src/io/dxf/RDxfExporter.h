@@ -32,6 +32,9 @@
 
 class RMessageHandler;
 class RProgressHandler;
+class RLineEntity;
+class RImageEntity;
+class RPointEntity;
 
 
 /**
@@ -57,6 +60,14 @@ public:
     void writeVariables();
     void writeLinetype(const RLinetype& lt);
     void writeLayer(const RLayer& l);
+    void writeBlock(const RBlock& b);
+
+    void writeEntity(REntity::Id id);
+    void writeEntity(REntity& e);
+    void writePoint(const RPointEntity& p);
+    void writeLine(const RLineEntity& l);
+
+    void writeImageDef(const RImageEntity& img);
 
     virtual void exportPoint(const RPoint& point) {
         Q_UNUSED(point)
@@ -75,8 +86,12 @@ public:
     }
 
 private:
+    DL_Attributes getEntityAttributes(REntity& entity);
+
+private:
     DL_Dxf dxf;
     DL_WriterA* dw;
+    DL_Attributes attributes;
 };
 
 Q_DECLARE_METATYPE(RDxfExporter*)

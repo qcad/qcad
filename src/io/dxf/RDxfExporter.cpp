@@ -25,6 +25,10 @@
 
 #include "RDxfExporter.h"
 #include "RLinetypePatternMap.h"
+#include "RLineEntity.h"
+#include "RImageEntity.h"
+#include "RPointEntity.h"
+#include "RStorage.h"
 
 RDxfExporter::RDxfExporter(RDocument& document,
     RMessageHandler* messageHandler,
@@ -80,9 +84,9 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "RDxfExporter::exportFile: linetypes";
     QStringList lts = document->getLinetypeNames().toList();
     qDebug() << "RDxfExporter::exportFile: linetypes table";
-    dw->tableLineTypes(lts.count());
+    dw->tableLineTypes(lts.size());
     qDebug() << "RDxfExporter::exportFile: linetypes loop";
-    for (int i=0; i<lts.count(); i++) {
+    for (int i=0; i<lts.size(); i++) {
         QSharedPointer<RLinetype> lt = document->queryLinetype(lts[i]);
         writeLinetype(*lt);
     }
@@ -97,50 +101,56 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     // Layers:
     qDebug() << "RDxfExporter::exportFile: layers";
     QStringList layerNames = document->getLayerNames().toList();
-    dw->tableLayers(layerNames.count());
-    for (int i=0; i<layerNames.count(); ++i) {
+    dw->tableLayers(layerNames.size());
+    for (int i=0; i<layerNames.size(); ++i) {
         QSharedPointer<RLayer> layer = document->queryLayer(layerNames[i]);
+        if (layer.isNull()) {
+            continue;
+        }
         writeLayer(*layer);
-        //RS_Layer* l = graphic->layerAt(i);
-        //writeLayer(l);
     }
     dw->tableEnd();
 
-    /*
     // STYLE:
-    RS_DEBUG->print("writing styles...");
+    qDebug() << "writing styles...";
     dxf.writeStyle(*dw);
 
     // VIEW:
-    RS_DEBUG->print("writing views...");
+    qDebug() << "writing views...";
     dxf.writeView(*dw);
 
     // UCS:
-    RS_DEBUG->print("writing ucs...");
+    qDebug() << "writing ucs...";
     dxf.writeUcs(*dw);
 
     // Appid:
-    RS_DEBUG->print("writing appid...");
+    qDebug() << "writing appid...";
     dw->tableAppid(1);
-    writeAppid("ACAD");
+    dxf.writeAppid(*dw, "QCAD");
     dw->tableEnd();
 
     // DIMSTYLE:
-    RS_DEBUG->print("writing dim styles...");
+    qDebug() << "writing dim styles...";
     dxf.writeDimStyle(*dw,
-                      graphic->getVariableDouble("$DIMASZ", 2.5),
-                      graphic->getVariableDouble("$DIMEXE", 1.25),
-                      graphic->getVariableDouble("$DIMEXO", 0.625),
-                      graphic->getVariableDouble("$DIMGAP", 0.625),
-                      graphic->getVariableDouble("$DIMTXT", 2.5));
+                      document->getKnownVariable(RS::DIMASZ, 2.5).toDouble(),
+                      document->getKnownVariable(RS::DIMEXE, 0.625).toDouble(),
+                      document->getKnownVariable(RS::DIMEXO, 0.625).toDouble(),
+                      document->getKnownVariable(RS::DIMGAP, 0.625).toDouble(),
+                      document->getKnownVariable(RS::DIMTXT, 2.5).toDouble()
+    );
 
     // BLOCK_RECORD:
-    if (formatType!=RS2::FormatDxf12) {
-        RS_DEBUG->print("writing block records...");
+    QStringList blockNames = document->getBlockNames().toList();
+    if (exportVersion!=DL_Codes::AC1009) {
+        qDebug() << "writing block records...";
         dxf.writeBlockRecord(*dw);
 
-        for (int i=0; i<graphic->countBlocks(); ++i) {
-            RS_Block* blk = graphic->blockAt(i);
+        for (int i=0; i<blockNames.size(); ++i) {
+            QSharedPointer<RBlock> blk = document->queryBlock(blockNames[i]);
+            if (blk.isNull()) {
+                continue;
+            }
+
             dxf.writeBlockRecord(*dw,
                 std::string((const char*)blk->getName().toLatin1()));
         }
@@ -148,15 +158,16 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     }
 
     // end of tables:
-    RS_DEBUG->print("writing end of section TABLES...");
+    qDebug() << "writing end of section TABLES...";
     dw->sectionEnd();
 
-
     // Section BLOCKS:
-    RS_DEBUG->print("writing blocks...");
+    qDebug() << "writing blocks...";
     dw->sectionBlocks();
 
-    if (formatType!=RS2::FormatDxf12) {
+    /*
+    if (exportVersion!=DL_Codes::AC1009) {
+
         RS_Block b1(graphic, RS_BlockData("*Model_Space",
                                           RS_Vector(0.0,0.0), false));
         writeBlock(&b1);
@@ -167,67 +178,78 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
                                           RS_Vector(0.0,0.0), false));
         writeBlock(&b3);
     }
+    */
 
-    for (int i=0; i<graphic->countBlocks(); ++i) {
-        RS_Block* blk = graphic->blockAt(i);
-
-        writeBlock(blk);
+    for (int i=0; i<blockNames.size(); ++i) {
+        QSharedPointer<RBlock> block = document->queryBlock(blockNames[i]);
+        if (block.isNull()) {
+            continue;
+        }
+        writeBlock(*block);
     }
     dw->sectionEnd();
-
 
     // Section ENTITIES:
-    RS_DEBUG->print("writing section ENTITIES...");
+    qDebug() << "writing section ENTITIES...";
     dw->sectionEntities();
-    for (RS_Entity* e=graphic->firstEntity(RS2::ResolveNone);
-            e!=NULL;
-            e=graphic->nextEntity(RS2::ResolveNone)) {
 
-        writeEntity(e);
+    QSet<REntity::Id> ids = document->queryBlockEntities(document->getModelSpaceBlockId());
+    QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
+
+    for (int i=0; i<list.size(); i++) {
+        writeEntity(list[i]);
     }
-    RS_DEBUG->print("writing end of section ENTITIES...");
+    qDebug() << "writing end of section ENTITIES...";
     dw->sectionEnd();
 
-    if (formatType!=RS2::FormatDxf12) {
-        RS_DEBUG->print("writing section OBJECTS...");
+    if (exportVersion!=DL_Codes::AC1009) {
+        qDebug() << "writing section OBJECTS...";
         dxf.writeObjects(*dw);
 
         // IMAGEDEF's from images in entities and images in blocks
-        RS_StringList written;
-        for (int i=0; i<graphic->countBlocks(); ++i) {
-            RS_Block* block = graphic->blockAt(i);
-            for (RS_Entity* e=block->firstEntity(RS2::ResolveAll);
-                    e!=NULL;
-                    e=block->nextEntity(RS2::ResolveAll)) {
+        QStringList written;
+//        for (int i=0; i<blockNames.size(); ++i) {
+//            RS_Block* block = graphic->blockAt(i);
+//            for (RS_Entity* e=block->firstEntity(RS2::ResolveAll);
+//                    e!=NULL;
+//                    e=block->nextEntity(RS2::ResolveAll)) {
 
-                if (e->rtti()==RS2::EntityImage) {
-                    RS_Image* img = dynamic_cast<RS_Image*>(e);
-                    if (written.contains(file)==0 && img->getHandle()!=0) {
-                        writeImageDef(img);
-                        written.append(img->getFile());
-                    }
-                }
+//                if (e->rtti()==RS2::EntityImage) {
+//                    RS_Image* img = dynamic_cast<RS_Image*>(e);
+//                    if (written.contains(file)==0 && img->getHandle()!=0) {
+//                        writeImageDef(img);
+//                        written.append(img->getFile());
+//                    }
+//                }
+//            }
+//        }
+
+        QSet<REntity::Id> ids = document->queryAllEntities(false, true);
+        QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
+        for (int i=0; i<list.size(); i++) {
+            QSharedPointer<REntity> e = document->queryEntity(list[i]);
+            if (e.isNull()) {
+                continue;
+            }
+
+            QSharedPointer<RImageEntity> img = e.dynamicCast<RImageEntity>();
+
+            if (img.isNull()) {
+                continue;
+            }
+
+            QString file = img->getFileName();
+            if (written.contains(file)==0 && img->getHandle()!=0) {
+                writeImageDef(*img);
+                written.append(file);
             }
         }
-        for (RS_Entity* e=graphic->firstEntity(RS2::ResolveNone);
-                e!=NULL;
-                e=graphic->nextEntity(RS2::ResolveNone)) {
-
-            if (e->rtti()==RS2::EntityImage) {
-                RS_Image* img = dynamic_cast<RS_Image*>(e);
-                if (written.contains(file)==0 && img->getHandle()!=0) {
-                    writeImageDef(img);
-                    written.append(img->getFile());
-                }
-            }
-        }
-        RS_DEBUG->print("writing end of section OBJECTS...");
+        qDebug() << "writing end of section OBJECTS...";
         dxf.writeObjectsEnd(*dw);
     }
 
-    RS_DEBUG->print("writing EOF...");
+    qDebug() << "writing EOF...";
     dw->dxfEOF();
-    */
 
     qDebug() << "RDxfExporter::exportFile: close";
     dw->close();
@@ -307,7 +329,10 @@ void RDxfExporter::writeLinetype(const RLinetype& lt) {
 void RDxfExporter::writeLayer(const RLayer& l) {
     qDebug() << "RS_FilterDxf::writeLayer: " << l.getName();
 
-    //int colorSign = 1;
+    int colorSign = 1;
+    if (l.isFrozen()) {
+        colorSign = -1;
+    }
 
     QSharedPointer<RLinetype> lt = document->queryLinetype(l.getLinetypeId());
     if (lt.isNull()) {
@@ -320,8 +345,194 @@ void RDxfExporter::writeLayer(const RLayer& l) {
         DL_LayerData((const char*)l.getName().toLatin1(),
                      l.isFrozen() + (l.isLocked()<<2)),
         DL_Attributes(std::string(""),
-                      RDxfServices::colorToNumber(l.getColor(), dxfColors),
+                      colorSign * RDxfServices::colorToNumber(l.getColor(), dxfColors),
                       RDxfServices::colorToNumber24(l.getColor()),
                       RDxfServices::widthToNumber(l.getLineweight()),
                       (const char*)lt->getName().toLatin1()));
+}
+
+void RDxfExporter::writeBlock(const RBlock& b) {
+    QString blockName = b.getName();
+    if (dxf.getVersion()==DL_Codes::AC1009) {
+        if (blockName.at(0)=='*') {
+            blockName[0] = '_';
+        }
+    }
+
+    dxf.writeBlock( *dw, DL_BlockData((const char*)blockName.toLatin1(), 0,
+                                      b.getOrigin().x,
+                                      b.getOrigin().y,
+                                      b.getOrigin().z));
+
+    QSet<REntity::Id> ids = document->queryBlockEntities(b.getId());
+    QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
+
+    QList<REntity::Id>::iterator it;
+    for (it=list.begin(); it!=list.end(); it++) {
+        writeEntity(*it);
+    }
+    dxf.writeEndBlock(*dw, (const char*)b.getName().toLatin1());
+}
+
+void RDxfExporter::writeEntity(REntity::Id id) {
+    QSharedPointer<REntity> e = document->queryEntity(id);
+    if (e.isNull()) {
+        return;
+    }
+    writeEntity(*e);
+}
+
+/**
+ * Writes the given entity to the DXF file.
+ */
+void RDxfExporter::writeEntity(REntity& e) {
+    if (e.isUndone()) {
+        // never reached:
+        return;
+    }
+    qDebug() << "writing entity";
+
+    attributes = getEntityAttributes(e);
+
+    switch (e.getType()) {
+    case RS::EntityPoint:
+        writePoint(dynamic_cast<RPointEntity&>(e));
+        break;
+    case RS::EntityLine:
+        writeLine(dynamic_cast<RLineEntity&>(e));
+        break;
+    /*
+    case RS::EntityPolyline:
+        writePolyline(dynamic_cast<RS_Polyline*>(e));
+        break;
+    case RS::EntitySpline:
+        writeSpline(dynamic_cast<RS_Spline*>(e));
+        break;
+    case RS::EntityCircle:
+        writeCircle(dynamic_cast<RS_Circle*>(e));
+        break;
+    case RS::EntityArc:
+        writeArc(dynamic_cast<RS_Arc*>(e));
+        break;
+    case RS::EntityEllipse:
+        writeEllipse(dynamic_cast<RS_Ellipse*>(e));
+        break;
+    case RS::EntityBlockRef:
+        writeInsert(dynamic_cast<RS_Insert*>(e));
+        break;
+    case RS::EntityText:
+        writeText(dynamic_cast<RS_Text*>(e));
+        break;
+
+    case RS::EntityDimAligned:
+    case RS::EntityDimAngular:
+    case RS::EntityDimLinear:
+    case RS::EntityDimRadial:
+    case RS::EntityDimDiametric:
+    case RS::EntityDimOrdinate:
+        writeDimension(dynamic_cast<RS_Dimension*>(e));
+        break;
+    case RS::EntityDimLeader:
+        writeLeader(dynamic_cast<RS_Leader*>(e));
+        break;
+    case RS::EntityHatch:
+        writeHatch(dynamic_cast<RS_Hatch*>(e));
+        break;
+    case RS::EntityImage:
+        writeImage(dynamic_cast<RS_Image*>(e));
+        break;
+    case RS::EntitySolid:
+        writeSolid(dynamic_cast<RS_Solid*>(e));
+        break;
+    case RS::Entity3dFace:
+        write3dFace(dynamic_cast<RS_3dFace*>(e));
+        break;
+
+#ifndef RS_NO_COMPLEX_ENTITIES
+    case RS::EntityContainer:
+        writeEntityContainer(dynamic_cast<RS_EntityContainer*>(e));
+        break;
+#endif
+    */
+
+    default:
+        break;
+    }
+}
+
+/**
+ * Writes the given Point entity to the file.
+ */
+void RDxfExporter::writePoint(const RPointEntity& p) {
+    dxf.writePoint(
+        *dw,
+        DL_PointData(p.getPosition().x,
+                     p.getPosition().y,
+                     0.0),
+        attributes);
+}
+
+/**
+ * Writes the given Line( entity to the file.
+ */
+void RDxfExporter::writeLine(const RLineEntity& l) {
+    dxf.writeLine(
+        *dw,
+        DL_LineData(l.getStartPoint().x,
+                    l.getStartPoint().y,
+                    l.getStartPoint().z,
+                    l.getEndPoint().x,
+                    l.getEndPoint().y,
+                    l.getEndPoint().z),
+        attributes);
+}
+
+/**
+ * \return the entities attributes as a DL_Attributes object.
+ */
+DL_Attributes RDxfExporter::getEntityAttributes(REntity& entity) {
+    // Layer:
+    QString layerName = entity.getLayerName();
+
+    // Color:
+    int color = RDxfServices::colorToNumber(entity.getColor(), dxfColors);
+    int color24 = RDxfServices::colorToNumber24(entity.getColor());
+
+    // Linetype:
+    QString lineType = document->getLinetypeName(entity.getLinetypeId());
+
+    // Width:
+    int width = RDxfServices::widthToNumber(entity.getLineweight());
+
+    DL_Attributes attrib((const char*)layerName.toLatin1(),
+                         color,
+                         color24,
+                         width,
+                         (const char*)lineType.toLatin1());
+
+    return attrib;
+}
+
+/**
+ * Writes an IMAGEDEF object into an OBJECT section.
+ */
+void RDxfExporter::writeImageDef(const RImageEntity& img) {
+    dxf.writeImageDef(
+        *dw,
+        img.getHandle(),
+        DL_ImageData((const char*)img.getFileName().toLatin1(),
+                     img.getInsertionPoint().x,
+                     img.getInsertionPoint().y,
+                     0.0,
+                     img.getUVector().x,
+                     img.getUVector().y,
+                     0.0,
+                     img.getVVector().x,
+                     img.getVVector().y,
+                     0.0,
+                     img.getWidth(),
+                     img.getHeight(),
+                     img.getBrightness(),
+                     img.getContrast(),
+                     img.getFade()));
 }
