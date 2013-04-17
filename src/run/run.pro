@@ -34,3 +34,25 @@ else {
         TARGET = qcad-bin
     }
 }
+
+# copy Qt plugins if not copied already:
+macx {
+    FILES = \
+        designer/libqwebview.dylib \
+        imageformats/libqgif.dylib \
+        imageformats/libqico.dylib \
+        imageformats/libqjpeg.dylib \
+        imageformats/libqmng.dylib \
+        imageformats/libqsvg.dylib \
+        imageformats/libqtga.dylib \
+        imageformats/libqtiff.dylib \
+        sqldrivers/libqsqlite.dylib \
+        sqldrivers/libqsqlodbc.dylib
+
+    for(FILE,FILES) {
+        system(cp -n $$[QT_INSTALL_PLUGINS]/$${FILE} $${DESTDIR}/../plugins/$${FILE})
+    }
+}
+
+# TODO: copy Qt plugins under Linux / Windows:
+
