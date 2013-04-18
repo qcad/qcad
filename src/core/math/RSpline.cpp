@@ -306,16 +306,19 @@ bool RSpline::hasFitPoints() const {
  */
 QList<double> RSpline::getKnotVector() const {
     return knotVector;
+}
 
-/*
+QList<double> RSpline::getActualKnotVector() const {
 #ifndef R_NO_OPENNURBS
+    updateInternal();
     QList<double> ret;
     for (int i=0; i<curve.KnotCount(); ++i) {
         ret.append(curve.Knot(i));
     }
     return ret;
+#else
+    return QList<double>();
 #endif
-*/
 }
 
 /**

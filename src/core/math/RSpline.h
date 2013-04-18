@@ -86,6 +86,7 @@ public:
     bool hasFitPoints() const;
 
     QList<double> getKnotVector() const;
+    QList<double> getActualKnotVector() const;
     void setKnotVector(const QList<double>& knots);
     void appendKnot(double k);
     QList<double> getWeights() const;

@@ -126,6 +126,10 @@ public:
         return RSpline::getKnotVector();
     }
 
+    QList<double> getActualKnotVector() const {
+        return RSpline::getActualKnotVector();
+    }
+
     QList<double> getWeights() const {
         return RSpline::getWeights();
     }

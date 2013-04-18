@@ -153,6 +153,10 @@ public:
         return data.getKnotVector();
     }
 
+    QList<double> getActualKnotVector() const {
+        return data.getActualKnotVector();
+    }
+
     QList<double> getWeights() const {
         return data.getWeights();
     }
