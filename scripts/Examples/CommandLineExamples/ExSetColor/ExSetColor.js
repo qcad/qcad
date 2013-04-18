@@ -125,7 +125,7 @@ function main() {
 
     di.applyOperation(op);
 
-    di.exportFile(outputFile, "DXF 2010");
+    di.exportFile(outputFile, "R24 (2010) DXF");
 }
 
 if (typeof(including)=='undefined' || including===false) {

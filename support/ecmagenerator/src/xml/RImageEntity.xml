@@ -71,6 +71,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RImageData &amp;"
       isPureVirtual="false" />
     </method>
+    <method name="getFileName" cppName="getFileName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="setFileName" cppName="setFileName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -79,6 +84,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getInsertionPoint" cppName="getInsertionPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
     <method name="setInsertionPoint" cppName="setInsertionPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -86,6 +96,30 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="ip"
         isConst="true" />
       </variant>
+    </method>
+    <method name="getUVector" cppName="getUVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getVVector" cppName="getVVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getBrightness" cppName="getBrightness"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getContrast" cppName="getContrast"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getFade" cppName="getFade" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
     </method>
     <method name="setWidth" cppName="setWidth" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

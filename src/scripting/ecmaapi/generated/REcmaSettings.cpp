@@ -65,6 +65,12 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, setOriginalArguments, "setOriginalArguments");
             
+            REcmaHelper::registerFunction(&engine, &ctor, isDeployed, "isDeployed");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getApplicationPath, "getApplicationPath");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getPluginPath, "getPluginPath");
+            
             REcmaHelper::registerFunction(&engine, &ctor, isGuiEnabled, "isGuiEnabled");
             
             REcmaHelper::registerFunction(&engine, &ctor, isDebuggerEnabled, "isDebuggerEnabled");
@@ -419,6 +425,123 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::setOriginalArguments", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::isDeployed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::isDeployed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::isDeployed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       isDeployed();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.isDeployed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::isDeployed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getApplicationPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getApplicationPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getApplicationPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getApplicationPath();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getApplicationPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getApplicationPath", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getPluginPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPluginPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPluginPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getPluginPath();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPluginPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPluginPath", context, engine);
             return result;
         }
          QScriptValue

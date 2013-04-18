@@ -55,6 +55,15 @@
         setOriginalArguments
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isDeployed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getApplicationPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPluginPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isGuiEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

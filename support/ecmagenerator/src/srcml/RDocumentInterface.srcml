@@ -156,6 +156,10 @@ dir="./core" filename="RDocumentInterface.h">
   given, i.e. non of the errors above. */</comment>
   <expr>
     <name>IoErrorGeneralImportUrlError</name>
+  </expr>, 
+  <comment type="block">/** * File size is zero bytes. */</comment>
+  <expr>
+    <name>IoErrorZeroSize</name>
   </expr>}</block>;</enum></public>
   <public>public: 
   <constructor_decl>
@@ -1024,8 +1028,6 @@ dir="./core" filename="RDocumentInterface.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">//REntity::Id getClosestEntityInUcs(const
-  RVector&amp; position, double range);</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -1152,8 +1154,6 @@ dir="./core" filename="RDocumentInterface.h">
       <name>entityId</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">//void selectClosestEntity(RMouseEvent&amp;
-  event, const RLine&amp; line, bool add = false);</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -1180,8 +1180,6 @@ dir="./core" filename="RDocumentInterface.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">//void selectBoxInUcs(const RBox&amp; box,
-  bool add = false);</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -1220,8 +1218,6 @@ dir="./core" filename="RDocumentInterface.h">
       <name>box</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">//void addTextLabelToPreview(const
-  RTextLabel&amp; textLabel);</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -2030,9 +2026,7 @@ dir="./core" filename="RDocumentInterface.h">
       <name>bool</name>
     </type>
     <name>keepPreviewOnce</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//QMutex
-  mutex;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

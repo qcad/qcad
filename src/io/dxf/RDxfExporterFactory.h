@@ -51,7 +51,7 @@ public:
         return new RDxfExporter(document, messageHandler, progressHandler);
     }
 
-    virtual bool canExport(const QString& fileName, const QString& nameFilter);
+    virtual int canExport(const QString& fileName, const QString& nameFilter);
 };
 
 Q_DECLARE_METATYPE(RDxfExporterFactory*)

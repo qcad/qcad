@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <unit xmlns="http://www.sdml.info/srcML/src"
 xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./io/dxf" filename="RDxfServices.h">
+dir="./core" filename="RDxfServices.h">
   <comment type="block">/** * Copyright (c) 2011-2013 by Andrew
   Mustun. All rights reserved. * * This file is part of the QCAD
   project. * * QCAD is free software: you can redistribute it
@@ -29,15 +29,17 @@ dir="./io/dxf" filename="RDxfServices.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RS.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RDimensionData</name>;</class_decl>
-  <class_decl>class 
-  <name>RHatchData</name>;</class_decl>
-  <comment type="block">/** * \brief DXF support tools. * *
-  \ingroup qcadiodxf */</comment>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RColor.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
+  <comment type="block">/** * \brief DXF support tools, mainly for
+  QCAD 2 DXF imports. * * \ingroup qcadcore */</comment>
   <class>class 
   <macro>
-    <name>QCADDXF_EXPORT</name>
+    <name>QCADCORE_EXPORT</name>
   </macro>
   <name>RDxfServices</name>
   <block>{
@@ -116,8 +118,22 @@ dir="./io/dxf" filename="RDxfServices.h">
   <param>
     <decl>
       <type>
-      <name>RDimensionData</name>&amp;</type>
-      <name>dimData</name>
+      <name>QString</name>&amp;</type>
+      <name>text</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>QString</name>&amp;</type>
+      <name>uTol</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>QString</name>&amp;</type>
+      <name>lTol</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -346,11 +362,214 @@ dir="./io/dxf" filename="RDxfServices.h">
   <param>
     <decl>
       <type>
-      <name>RHatchData</name>&amp;</type>
-      <name>data</name>
+      <name>QString</name>&amp;</type>
+      <name>patternName</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>double</name>&amp;</type>
+      <name>angle</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>double</name>&amp;</type>
+      <name>scale</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>solid</name>
     </decl>
   </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>RColor</name>
+  </type>
+  <name>attributesToColor</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>color</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>color24</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forLayer</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>RColor</name>
+  </type>
+  <name>numberToColor</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>num</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>const</name>
+        <name>double</name>
+      </type>
+      <name>
+        <name>dxfColors</name>
+        <index>[]</index>
+        <index>[
+        <expr>3</expr>]</index>
+      </name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>comp</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forLayer</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>RColor</name>
+  </type>
+  <name>numberToColor24</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>num</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>
+    <name>RLineweight</name>::
+    <name>Lineweight</name></name>
+  </type>
+  <name>numberToWeight</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>num</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
+  <name>widthToNumber</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLineweight</name>::
+        <name>Lineweight</name></name>
+      </type>
+      <name>w</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
+  <name>colorToNumber24</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RColor</name>&amp;</type>
+      <name>col</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
+  <name>colorToNumber</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RColor</name>&amp;</type>
+      <name>col</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>const</name>
+        <name>double</name>
+      </type>
+      <name>
+        <name>dxfColors</name>
+        <index>[]</index>
+        <index>[
+        <expr>3</expr>]</index>
+      </name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>

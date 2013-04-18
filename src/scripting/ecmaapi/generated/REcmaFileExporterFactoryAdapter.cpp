@@ -280,11 +280,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'bool'
-    bool cppResult =
+    // return type 'int'
+    int cppResult =
         
                self->canExport(a0);
-        // return type: bool
+        // return type: int
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -323,13 +323,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'bool'
-    bool cppResult =
+    // return type 'int'
+    int cppResult =
         
                self->canExport(a0
         ,
     a1);
-        // return type: bool
+        // return type: int
                 // standard Type
                 result = QScriptValue(cppResult);
             

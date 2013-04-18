@@ -36,7 +36,7 @@
         
     
     
-      bool canExport(
+      int canExport(
                 const QString & fileName, const QString & nameFilter
         = ""
             );

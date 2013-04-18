@@ -26,23 +26,23 @@ QStringList RDxfExporterFactory::getFilterStrings() {
     return ret;
 }
 
-bool RDxfExporterFactory::canExport(const QString& fileName, const QString& nameFilter) {
+int RDxfExporterFactory::canExport(const QString& fileName, const QString& nameFilter) {
     QFileInfo fi(fileName);
 
-    if (!nameFilter.isEmpty() && !nameFilter.contains("dxflib")) {
-        return false;
+    if (nameFilter.contains("dxflib")) {
+        return 1;
     }
 
     // supported file suffix:
     if (fi.suffix().toLower() == "dxf") {
-        return true;
+        return 100;
     }
 
     // supported name filter if no extension is given:
     QString nfl = nameFilter.toLower();
     if (nfl.contains(".dxf")) {
-        return true;
+        return 100;
     }
 
-    return false;
+    return -1;
 }

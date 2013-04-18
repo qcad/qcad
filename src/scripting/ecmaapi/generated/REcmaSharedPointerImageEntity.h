@@ -70,10 +70,31 @@
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFileName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getInsertionPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setInsertionPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getUVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBrightness
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getContrast
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFade
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setWidth

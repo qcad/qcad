@@ -45,7 +45,8 @@ AutoSave.applyPreferences = function(doc, mdiChild) {
 
     if (enableAutoSave) {
         if (!AutoSave.autoSaveTimer.active) {
-            AutoSave.autoSaveTimer.start(interval);
+//            AutoSave.autoSaveTimer.start(interval);
+            AutoSave.autoSaveTimer.start(10000);
         }
     }
     else {
@@ -117,7 +118,8 @@ AutoSave.autoSave = function() {
 
     qDebug("autosaving [" + AutoSave.getTimestamp() + "]: file: ", bakFileName);
 
-    var fileVersion = document.getFileVersion();
+    var fileVersion = "R2012 DXF";
+    qDebug("fileVersion: ", fileVersion);
 
     EAction.handleUserMessage("[" + AutoSave.getTimestamp() + "] "
         + qsTr("Autosaving to:") + " "
@@ -184,11 +186,15 @@ AutoSave.recoverUntitled = function() {
     if (ret===QMessageBox.Yes) {
         for (var i=0; i<list.length; i++) {
             var fileName = RSettings.getPath() + QDir.separator + list[i];
-            NewFile.createMdiChild(fileName);
+            var mdiChild = NewFile.createMdiChild(fileName);
+            if (isNull(mdiChild)) {
+                qWarning("Cannot recover file " + fileName);
+                continue;
+            }
 
-            EAction.getDocument().setFileName("");
-            EAction.getDocument().setModified(true);
-            var mdiChild = EAction.getMdiChild();
+            var document = mdiChild.getDocument();
+            document.setFileName("");
+            document.setModified(true);
             mdiChild.setWindowTitle(qsTr("Recovered") + " %1 [*]".arg(documentCounter));
             mdiChild.objectName = "Recovered%1".arg(documentCounter);
             documentCounter++;
@@ -341,5 +347,10 @@ AutoSave.getAutoSaveFileNameCurrent = function() {
  */
 AutoSave.getAutoSaveFileName = function(fileName) {
     var fi = new QFileInfo(fileName);
-    return fi.absolutePath() + QDir.separator + "~" + fi.fileName();
+    var suffix = fi.suffix();
+    if (suffix.toLowerCase()!=="dxf") {
+        suffix = "dxf";
+    }
+
+    return fi.absolutePath() + QDir.separator + "~" + fi.completeBaseName() + "." + suffix;
 };

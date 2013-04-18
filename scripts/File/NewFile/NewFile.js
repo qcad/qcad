@@ -73,7 +73,7 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
         if (!isNull(AutoSave) && !new QFileInfo(fileName).baseName().startsWith("~")) {
             if (!AutoSave.recover(fileName)) {
                 // canceled file recovering:
-                return false;
+                return undefined;
             }
         }
     }
@@ -106,11 +106,19 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
                 text += qsTr("Please check your access rights, "
                              + "the file format and file extension.");
                 break;
+            case RDocumentInterface.IoErrorZeroSize:
+                text += qsTr("File is empty.");
+                break;
             }
             dlg.text = text;
             dlg.exec();
             RSettings.removeRecentFile(fileName);
-            return false;
+            return undefined;
+        }
+
+        appWin.handleUserMessage(qsTr("Opened drawing:") + " " + fileName);
+        if (document.getFileVersion().length!==0) {
+            appWin.handleUserMessage(qsTr("Format:") + " " + document.getFileVersion());
         }
 
         RSettings.removeRecentFile(fileName);

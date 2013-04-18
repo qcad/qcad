@@ -97,7 +97,11 @@ public:
         /**
          * General import error if an URL was given, i.e. non of the errors above.
          */
-        IoErrorGeneralImportUrlError
+        IoErrorGeneralImportUrlError,
+        /**
+         * File size is zero bytes.
+         */
+        IoErrorZeroSize
     };
 
 public:

@@ -46,6 +46,12 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <name>RMessageHandler</name>;</class_decl>
   <class_decl>class 
   <name>RProgressHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RLineEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RImageEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RPointEntity</name>;</class_decl>
   <comment type="block">/** * \brief Exporter for the DXF format,
   based on dxflib. * * \ingroup dxf */</comment>
   <class>class 
@@ -121,6 +127,11 @@ dir="./io/dxf" filename="RDxfExporter.h">
       </decl>
     </param>)</parameter_list>
     <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>nameFilter</argument>)</argument_list>
+    </macro>
     <return>return 
     <expr>
       <name>fileName</name>
@@ -167,6 +178,119 @@ dir="./io/dxf" filename="RDxfExporter.h">
   </type>
   <name>writeVariables</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeLinetype</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLinetype</name>&amp;</type>
+      <name>lt</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeLayer</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLayer</name>&amp;</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeBlock</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RBlock</name>&amp;</type>
+      <name>b</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeEntity</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>REntity</name>::
+        <name>Id</name></name>
+      </type>
+      <name>id</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeEntity</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>REntity</name>&amp;</type>
+      <name>e</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writePoint</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RPointEntity</name>&amp;</type>
+      <name>p</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeLine</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLineEntity</name>&amp;</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeImageDef</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RImageEntity</name>&amp;</type>
+      <name>img</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function>
     <type>
       <name>virtual</name>
@@ -256,6 +380,20 @@ dir="./io/dxf" filename="RDxfExporter.h">
     </macro>}</block>
   </function></public>
   <private>private: 
+  <function_decl>
+  <type>
+    <name>DL_Attributes</name>
+  </type>
+  <name>getEntityAttributes</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>REntity</name>&amp;</type>
+      <name>entity</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></private>
+  <private>private: 
   <decl_stmt>
   <decl>
     <type>
@@ -268,6 +406,13 @@ dir="./io/dxf" filename="RDxfExporter.h">
     <type>
     <name>DL_WriterA</name>*</type>
     <name>dw</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>DL_Attributes</name>
+    </type>
+    <name>attributes</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

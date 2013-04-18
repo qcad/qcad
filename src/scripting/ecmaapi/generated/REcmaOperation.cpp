@@ -13,7 +13,11 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaOperation::init(QScriptEngine& engine, QScriptValue* proto 
+        
+                  #include "REcmaRequireHeap.h"
+                
+                  #include "REcmaNonCopyable.h"
+                 void REcmaOperation::init(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -27,6 +31,19 @@
     }
 
     
+        // primary base class RRequireHeap:
+        
+            QScriptValue dpt = engine.defaultPrototype(
+                qMetaTypeId<RRequireHeap*>());
+
+            if (dpt.isValid()) {
+                proto->setPrototype(dpt);
+            }
+          
+        /*
+        
+        */
+    
 
     QScriptValue fun;
 
@@ -37,6 +54,9 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
+        // conversion for base class RRequireHeap
+        REcmaHelper::registerFunction(&engine, proto, getRRequireHeap, "getRRequireHeap");
+        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -97,7 +117,16 @@
     
 
     // conversion functions for base classes:
-    
+     QScriptValue REcmaOperation::getRRequireHeap(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                RRequireHeap* cppResult =
+                    qscriptvalue_cast<ROperation*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
+            
 
     // returns class name:
      QScriptValue REcmaOperation::getClassName(QScriptContext *context, QScriptEngine *engine) 
@@ -113,6 +142,8 @@
     {
         QStringList list;
         
+        list.append("RRequireHeap");
+    
 
         return qScriptValueFromSequence(engine, list);
     }

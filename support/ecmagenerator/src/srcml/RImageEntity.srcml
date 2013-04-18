@@ -383,6 +383,22 @@ dir="./entity" filename="RImageEntity.h">
   </function>
   <function>
     <type>
+      <name>QString</name>
+    </type>
+    <name>getFileName</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getFileName</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>void</name>
     </type>
     <name>setFileName</name>
@@ -411,6 +427,22 @@ dir="./entity" filename="RImageEntity.h">
   </function>
   <function>
     <type>
+      <name>RVector</name>
+    </type>
+    <name>getInsertionPoint</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getInsertionPoint</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>void</name>
     </type>
     <name>setInsertionPoint</name>
@@ -436,6 +468,86 @@ dir="./entity" filename="RImageEntity.h">
         </expr>
       </argument>)</argument_list>
     </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>getUVector</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getUVector</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>getVVector</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getVVector</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>int</name>
+    </type>
+    <name>getBrightness</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getBrightness</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>int</name>
+    </type>
+    <name>getContrast</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getContrast</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>int</name>
+    </type>
+    <name>getFade</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getFade</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function>
   <function>
     <type>

@@ -342,6 +342,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("IoErrorZeroSize",
+    QScriptValue(RDocumentInterface::IoErrorZeroSize),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RDocumentInterface::IoErrorCode>(

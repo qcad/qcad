@@ -28,7 +28,9 @@
     ;
 
     // conversion functions for base classes:
-    
+    static  QScriptValue getRRequireHeap(QScriptContext *context,
+            QScriptEngine *engine)
+        ;
 
     // returns class name:
     static  QScriptValue getClassName(QScriptContext *context, QScriptEngine *engine) 

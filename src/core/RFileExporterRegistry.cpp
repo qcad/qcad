@@ -50,13 +50,21 @@ RFileExporter* RFileExporterRegistry::getFileExporter(
     RMessageHandler* messageHandler, RProgressHandler* progressHandler) {
 
     QList<RFileExporterFactory*>::iterator it;
+    RFileExporterFactory* bestMatch = NULL;
 
+    int bestPriority = -1;
     for (it = factories.begin(); it != factories.end(); ++it) {
-        bool suitable = (*it)->canExport(fileName, nameFilter);
-        if (suitable) {
-            return (*it)->instantiate(document, messageHandler, progressHandler);
+        int p = (*it)->canExport(fileName, nameFilter);
+        if (p>0 && (p<bestPriority || bestPriority==-1)) {
+            bestMatch = (*it);
+            bestPriority = p;
         }
     }
+
+    if (bestMatch!=NULL) {
+        return bestMatch->instantiate(document, messageHandler, progressHandler);
+    }
+
     qWarning("RFileExporterRegistry::getFileExporter: "
         "No suitable exporter found");
 

@@ -177,16 +177,19 @@ File.isRecommendedVersion = function(version) {
     else if (version.indexOf("R14")!==-1) {
         return false;
     }
-    else if (version.indexOf("2000")!==-1) {
+    else if (version.indexOf("R15")!==-1) {
         return false;
     }
-    else if (version.indexOf("2004")!==-1) {
+    else if (version.indexOf("R18")!==-1) {
         return true;
     }
-    else if (version.indexOf("2007")!==-1) {
+    else if (version.indexOf("R21")!==-1) {
         return true;
     }
-    else if (version.indexOf("2010")!==-1) {
+    else if (version.indexOf("R24")!==-1) {
+        return true;
+    }
+    else if (version.indexOf("R27")!==-1) {
         return true;
     }
     else {

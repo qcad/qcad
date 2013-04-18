@@ -3,6 +3,9 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RMessageHandler" />
   <class_decl name="RProgressHandler" />
+  <class_decl name="RLineEntity" />
+  <class_decl name="RImageEntity" />
+  <class_decl name="RPointEntity" />
   <class name="RDxfExporter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

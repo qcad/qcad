@@ -25,6 +25,12 @@ dir="./core" filename="ROperation.h">
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RRequireHeap.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RS.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -44,6 +50,10 @@ dir="./core" filename="ROperation.h">
     <name>QCADCORE_EXPORT</name>
   </macro>
   <name>ROperation</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>RRequireHeap</name>, 
+  <name>RNonCopyable</name></super>
   <block>{
   <private type="default"></private>
   <public>public: 

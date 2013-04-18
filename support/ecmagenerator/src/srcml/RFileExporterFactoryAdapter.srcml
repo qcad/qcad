@@ -65,7 +65,7 @@ filename="RFileExporterFactoryAdapter.h">
   <function>
     <type>
       <name>virtual</name>
-      <name>bool</name>
+      <name>int</name>
     </type>
     <name>canExport</name>
     <parameter_list>(
@@ -99,9 +99,7 @@ filename="RFileExporterFactoryAdapter.h">
       <argument>nameFilter</argument>)</argument_list>
     </macro>
     <return>return 
-    <expr>
-      <name>false</name>
-    </expr>;</return>}</block>
+    <expr>-1</expr>;</return>}</block>
   </function>
   <function>
     <type>

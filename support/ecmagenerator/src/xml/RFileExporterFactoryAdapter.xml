@@ -16,7 +16,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="canExport" cppName="canExport" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
+      <variant returnType="int" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="fileName" isConst="true" />
         <arg type="QString &amp;" typeName="QString"

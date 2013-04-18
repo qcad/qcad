@@ -38,10 +38,10 @@ SaveAs.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     var nameFilters = RFileExporterRegistry.getFilterStrings();
 
     // Offer only a limited choice here as not all file format versions
-    // are suitable for saving 24 bit colors:
+    // are suitable for saving all information (e.g. 24 bit colors):
     for (var i=0; i<nameFilters.length; i++) {
         var nameFilter = nameFilters[i];
-        if (nameFilter.contains("2004") || nameFilter.contains("2007") || nameFilter.contains("2010")) {
+        if (File.isRecommendedVersion(nameFilter)) {
             widgets["Filter"].addItem(nameFilter);
         }
     }

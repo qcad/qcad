@@ -86,9 +86,23 @@
             
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
             
+            REcmaHelper::registerFunction(&engine, proto, getFileName, "getFileName");
+            
             REcmaHelper::registerFunction(&engine, proto, setFileName, "setFileName");
             
+            REcmaHelper::registerFunction(&engine, proto, getInsertionPoint, "getInsertionPoint");
+            
             REcmaHelper::registerFunction(&engine, proto, setInsertionPoint, "setInsertionPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, getUVector, "getUVector");
+            
+            REcmaHelper::registerFunction(&engine, proto, getVVector, "getVVector");
+            
+            REcmaHelper::registerFunction(&engine, proto, getBrightness, "getBrightness");
+            
+            REcmaHelper::registerFunction(&engine, proto, getContrast, "getContrast");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFade, "getFade");
             
             REcmaHelper::registerFunction(&engine, proto, setWidth, "setWidth");
             
@@ -1132,6 +1146,55 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerImageEntity::getFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerImageEntity::getFileName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerImageEntity::getFileName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImageEntity* self = 
+                        getSelf("getFileName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getFileName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImageEntity.getFileName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::getFileName", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerImageEntity::setFileName
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1184,6 +1247,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::setFileName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerImageEntity::getInsertionPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerImageEntity::getInsertionPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerImageEntity::getInsertionPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImageEntity* self = 
+                        getSelf("getInsertionPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getInsertionPoint();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImageEntity.getInsertionPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::getInsertionPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1251,6 +1363,251 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::setInsertionPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerImageEntity::getUVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerImageEntity::getUVector", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerImageEntity::getUVector";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImageEntity* self = 
+                        getSelf("getUVector", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getUVector();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImageEntity.getUVector().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::getUVector", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerImageEntity::getVVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerImageEntity::getVVector", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerImageEntity::getVVector";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImageEntity* self = 
+                        getSelf("getVVector", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getVVector();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImageEntity.getVVector().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::getVVector", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerImageEntity::getBrightness
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerImageEntity::getBrightness", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerImageEntity::getBrightness";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImageEntity* self = 
+                        getSelf("getBrightness", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getBrightness();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImageEntity.getBrightness().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::getBrightness", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerImageEntity::getContrast
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerImageEntity::getContrast", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerImageEntity::getContrast";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImageEntity* self = 
+                        getSelf("getContrast", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getContrast();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImageEntity.getContrast().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::getContrast", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerImageEntity::getFade
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerImageEntity::getFade", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerImageEntity::getFade";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImageEntity* self = 
+                        getSelf("getFade", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getFade();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImageEntity.getFade().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerImageEntity::getFade", context, engine);
             return result;
         }
          QScriptValue

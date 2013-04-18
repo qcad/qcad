@@ -54,6 +54,9 @@
         // conversion for base class ROperation
         REcmaHelper::registerFunction(&engine, proto, getROperation, "getROperation");
         
+        // conversion for base class RRequireHeap
+        REcmaHelper::registerFunction(&engine, proto, getRRequireHeap, "getRRequireHeap");
+        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -165,6 +168,15 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
+             QScriptValue REcmaDeleteSelectionOperation::getRRequireHeap(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                RRequireHeap* cppResult =
+                    qscriptvalue_cast<RDeleteSelectionOperation*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
             
 
     // returns class name:
@@ -184,6 +196,8 @@
         list.append("RClipboardOperation");
     
         list.append("ROperation");
+    
+        list.append("RRequireHeap");
     
 
         return qScriptValueFromSequence(engine, list);

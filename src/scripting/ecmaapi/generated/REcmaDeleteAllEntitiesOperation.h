@@ -30,6 +30,8 @@
     // conversion functions for base classes:
     static  QScriptValue getROperation(QScriptContext *context,
             QScriptEngine *engine)
+        ;static  QScriptValue getRRequireHeap(QScriptContext *context,
+            QScriptEngine *engine)
         ;
 
     // returns class name:

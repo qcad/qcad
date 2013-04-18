@@ -911,6 +911,10 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
 
     clearCaches();
 
+    if (QFileInfo(fileName).size()==0) {
+        return RDocumentInterface::IoErrorZeroSize;
+    }
+
     RFileImporter* fileImporter = RFileImporterRegistry::getFileImporter(
         fileName, nameFilter, document, mainWindow, mainWindow);
     if (fileImporter == NULL) {

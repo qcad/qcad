@@ -104,6 +104,8 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
         return false;
     }
 
+    document->setFileVersion("R15 (2000) DXF Drawing (dxflib) (*.dxf)");
+
     // lock locked layers now. they are unlocked during import to load
     // the entitied on them:
     for (int i=0; i<lockedLayers.size(); i++) {

@@ -7,6 +7,8 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <baseClass name="RRequireHeap" specifier="public" />
+    <baseClass name="RNonCopyable" specifier="private" />
     <constructor>
       <variant>
         <arg type="bool" typeName="bool" name="undoable"

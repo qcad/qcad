@@ -42,10 +42,10 @@ public:
     virtual QStringList getFilterStrings() { 
         return QStringList(); 
     }
-    virtual bool canExport(const QString& fileName, const QString& nameFilter = "") {
+    virtual int canExport(const QString& fileName, const QString& nameFilter = "") {
         Q_UNUSED(fileName)
         Q_UNUSED(nameFilter)
-        return false;
+        return -1;
     }
     virtual RFileExporter* instantiate(RDocument& document,
         RMessageHandler* messageHandler = NULL,

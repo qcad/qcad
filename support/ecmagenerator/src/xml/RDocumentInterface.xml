@@ -20,6 +20,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="IoErrorNoImporterFound" />
       <value name="IoErrorGeneralImportError" />
       <value name="IoErrorGeneralImportUrlError" />
+      <value name="IoErrorZeroSize" />
     </enum>
     <constructor>
       <variant>
