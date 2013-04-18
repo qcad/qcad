@@ -30,7 +30,6 @@ HEADERS = RShortcutLineEditPlugin.h \
     RGraphicsViewQtPlugin.h \
     RListViewPlugin.h
 TEMPLATE = lib
-#CONFIG += static designer plugin
 CONFIG += designer plugin
 LIBS += -L$$PWD/$$ROUTDIR -lqcadgui -lqcadcore
 TARGET = qcadcustomwidgets
