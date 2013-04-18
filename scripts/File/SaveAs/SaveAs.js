@@ -71,10 +71,12 @@ SaveAs.prototype.beginEvent = function() {
     var nameFilters = RFileExporterRegistry.getFilterStrings();
     fileDialog.setNameFilters(nameFilters);
 
-    if (fileInfo.suffix().length!==0) {
+    var suffix = fileInfo.suffix().toLowerCase();
+
+    if (suffix.length!==0 && !defaultNameFilter.containsIgnoreCase(suffix)) {
         // preselect first name filter that matches current extension:
         for (var i=0; i<nameFilters.length; ++i) {
-            if (nameFilters[i].contains("*." + fileInfo.suffix().toLowerCase())) {
+            if (nameFilters[i].contains("*." + suffix)) {
                 fileDialog.selectNameFilter(nameFilters[i]);
                 break;
             }
