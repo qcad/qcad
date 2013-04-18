@@ -70,7 +70,7 @@ function usage() {
           + "                                 E.g. '-locale de' starts QCAD in German.\n"
           + "-no-gui                          Don't use GUI. X11: don't connect to X11 server.\n"
           + "-no-show                         Use but don't display GUI.\n"
-          + "-open [filter] [file]            Opens the given file with the explicitly \n"
+          + "-filter [filter]                 Opens the subsequent file(s) with the explicitly \n"
           + "                                 given import filter.\n"
           + "-rescan                          Rescan scripts folder for new add-ons\n"
           + "-version                         Displays the application version.\n"
@@ -104,8 +104,6 @@ function openFiles(args, createNew) {
     var filter = undefined;
 
     for (var i = 0; i < args.length; ++i) {
-        filter = undefined;
-
         // arguments with one parameter:
         if (args[i] === "-gui-style" || args[i] === "-gui-css-file"
             || args[i] === "-locale" || args[i] === "-autostart"
@@ -123,17 +121,15 @@ function openFiles(args, createNew) {
             break;
         }
 
-        if (args[i] === "-open") {
+        if (args[i] === "-filter") {
             if (++i>=args.length) {
                 break;
             }
             filter = args[i];
-            if (++i>=args.length) {
-                break;
-            }
+            continue;
         }
 
-        // skip other argument without parameter:
+        // skip other arguments without parameter:
         if (args[i][0] === "-") {
             continue;
         }
