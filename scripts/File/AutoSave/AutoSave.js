@@ -45,8 +45,7 @@ AutoSave.applyPreferences = function(doc, mdiChild) {
 
     if (enableAutoSave) {
         if (!AutoSave.autoSaveTimer.active) {
-//            AutoSave.autoSaveTimer.start(interval);
-            AutoSave.autoSaveTimer.start(10000);
+            AutoSave.autoSaveTimer.start(interval);
         }
     }
     else {
