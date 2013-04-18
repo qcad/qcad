@@ -80,6 +80,13 @@ void catchSigPipe(int /*s*/){
 
 
 int main(int argc, char *argv[]) {
+
+    // 20130418 (experimental):
+    // For correct Unicode translation, apply the current system locale:
+    setlocale(LC_ALL, "");
+    // But use usual conversion for scanf()/sprintf():
+    setlocale(LC_NUMERIC, "C");
+
     RMainWindow::installMessageHandler();
 #ifdef Q_OS_MAC
     // TODO: make available as script function:
