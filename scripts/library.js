@@ -1079,6 +1079,14 @@ String.prototype.contains = function(str) {
 };
 
 /**
+ * Returns true if this string contains \c str. Case insensitive.
+ */
+String.prototype.containsIgnoreCase = function(str) {
+    return this.toLowerCase().indexOf(str.toLowerCase())!==-1;
+};
+
+
+/**
  * Returns the number of occurrences of \c ch in this string.
  */
 String.prototype.count = function(ch) {

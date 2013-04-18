@@ -51,7 +51,7 @@ public:
         return new RDxfImporter(document, messageHandler, progressHandler);
     }
 
-    virtual bool canImport(const QString& fileName, const QString& nameFilter);
+    virtual int canImport(const QString& fileName, const QString& nameFilter);
 };
 
 Q_DECLARE_METATYPE(RDxfImporterFactory*)

@@ -55,13 +55,21 @@ RFileImporter* RFileImporterRegistry::getFileImporter(
     RMessageHandler* messageHandler, RProgressHandler* progressHandler) {
 
     QList<RFileImporterFactory*>::iterator it;
+    RFileImporterFactory* bestMatch = NULL;
 
+    int bestPriority = -1;
     for (it = factories.begin(); it != factories.end(); ++it) {
-        bool suitable = (*it)->canImport(fileName, nameFilter);
-        if (suitable) {
-            return (*it)->instantiate(document, messageHandler, progressHandler);
+        int p = (*it)->canImport(fileName, nameFilter);
+        if (p>0 && (p<bestPriority || bestPriority==-1)) {
+            bestMatch = (*it);
+            bestPriority = p;
         }
     }
+
+    if (bestMatch!=NULL) {
+        return bestMatch->instantiate(document, messageHandler, progressHandler);
+    }
+
     qWarning("RFileImporterRegistry::getFileImporter: "
         "No suitable importer found");
 
@@ -78,8 +86,8 @@ bool RFileImporterRegistry::hasFileImporter(
     QList<RFileImporterFactory*>::iterator it;
 
     for (it = factories.begin(); it != factories.end(); ++it) {
-        bool suitable = (*it)->canImport(fileName, nameFilter);
-        if (suitable) {
+        int p = (*it)->canImport(fileName, nameFilter);
+        if (p!=-1) {
             return true;
         }
     }

@@ -36,7 +36,7 @@
         
     
     
-      bool canImport(
+      int canImport(
                 const QString & fileName, const QString & nameFilter
         = ""
             );

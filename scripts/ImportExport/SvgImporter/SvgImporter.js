@@ -785,9 +785,9 @@ SvgImporter.prototype.importSvgPolygon = function(pointsData) {
  */
 SvgImporter.prototype.canImport = function(fileName, nameFilter) {
     if (new QFileInfo(fileName).suffix().toLowerCase()==="svg") {
-        return true;
+        return 100;
     }
     else {
-        return false;
+        return -1;
     }
 };

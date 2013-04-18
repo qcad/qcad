@@ -152,7 +152,7 @@ dir="./io/dxf" filename="RDxfImporterFactory.h">
   <function_decl>
   <type>
     <name>virtual</name>
-    <name>bool</name>
+    <name>int</name>
   </type>
   <name>canImport</name>
   <parameter_list>(

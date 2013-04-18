@@ -25,19 +25,23 @@ QStringList RDxfImporterFactory::getFilterStrings() {
     return ret;
 }
 
-bool RDxfImporterFactory::canImport(const QString& fileName, const QString& nameFilter) {
+int RDxfImporterFactory::canImport(const QString& fileName, const QString& nameFilter) {
     QFileInfo fi(fileName);
+
+    if (nameFilter.contains("dxflib")) {
+        return 1;
+    }
 
     // supported file suffix:
     if (fi.suffix().toLower() == "dxf") {
-        return true;
+        return 100;
     }
 
     // supported name filter if no extension is given:
     QString nfl = nameFilter.toLower();
     if (nfl.contains(".dxf")) {
-        return true;
+        return 100;
     }
 
-    return false;
+    return -1;
 }
