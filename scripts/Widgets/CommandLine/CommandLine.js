@@ -273,7 +273,7 @@ CommandLine.init = function(basePath) {
         }
     });
     
-    leCommand.clearHistory.connect(teHistory, "clear");    
+    leCommand.clearHistory.connect(teHistory, "clear");
 
     // show message to user:
     appWin.userMessage.connect(function(message) {
