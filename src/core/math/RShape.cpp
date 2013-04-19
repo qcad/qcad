@@ -639,6 +639,8 @@ QList<RVector> RShape::getIntersectionPointsAE(const RArc& arc1,
 QList<RVector> RShape::getIntersectionPointsAT(const RArc& arc1,
             const RTriangle& triangle2, bool limited) {
 
+    Q_UNUSED(limited)
+
     RTriangle plane(arc1.getCenter(), arc1.getStartPoint(), arc1.getEndPoint());
     QList<RVector> r = plane.getIntersectionPoints(RLine(triangle2.getCorner(0), triangle2.getCorner(1)));
     r.append(plane.getIntersectionPoints(RLine(triangle2.getCorner(1), triangle2.getCorner(2))));

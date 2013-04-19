@@ -1204,15 +1204,22 @@ QList<RSpline> RSpline::getBezierSegments() const {
 }
 
 RS::Ending RSpline::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
+    Q_UNUSED(coord)
+    Q_UNUSED(trimPoint)
+
     // TODO: implement
     return RS::EndingNone;
 }
 
 void RSpline::trimStartPoint(const RVector& p) {
+    Q_UNUSED(p)
+
     Q_ASSERT(false);
 }
 
 void RSpline::trimEndPoint(const RVector& p) {
+    Q_UNUSED(p)
+
     Q_ASSERT(false);
 }
 
