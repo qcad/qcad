@@ -102,9 +102,8 @@ InfoDistancePP.prototype.pickCoordinate = function(event, preview) {
             resultMessage += ",\n" + qsTr("Delta X:") + " " + this.formatLinearResultCmd(dx);
             resultMessage += ",\n" + qsTr("Delta Y:") + " " + this.formatLinearResultCmd(dy);
             resultMessage += ",\n" + qsTr("Angle:") + " " + this.formatAngularResultCmd(angle);
-            appWin.handleUserInfo(resultMessage);
-
             this.setState(InfoDistancePP.State.SettingFirstPoint);
+            appWin.handleUserInfo(resultMessage);
         }
         break;
     }
