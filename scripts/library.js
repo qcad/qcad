@@ -104,7 +104,7 @@ function getTypeOf(v) {
  * derived from QWidget.
  */
 function isOfType(obj, type) {
-    return !isNull(obj) && obj.constructor==type;
+    return !isNull(obj) && obj.constructor===type;
 }
 
 /**
