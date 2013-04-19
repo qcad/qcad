@@ -191,6 +191,8 @@ void RTextRenderer::renderSimple() {
         boundingBox.growToInclude(painterPaths[i].getBoundingBox());
     }
 
+    // feature size of a text is its height
+    // determines if text is displayed or only bounding box
     double featureSize = boundingBox.getHeight();
 
     QPen pen;
