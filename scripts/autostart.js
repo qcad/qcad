@@ -218,7 +218,7 @@ function loadStyleSheets(args) {
     // load predefined style sheets
     idx = args.indexOf("-gui-style");
     if (idx>-1) {
-        qDebug("Loading Style Sheets ...");
+        qDebug("Loading Style Sheets...");
         if (idx+1<args.length) {
             StylePreferences.loadByName(args[idx + 1]);
         }
@@ -281,7 +281,7 @@ function loadTranslations(addOns, splash) {
 
     if (!isNull(splash)) {
         // no translations yet:
-        splash.showMessage("Loading translations ...\n", Qt.AlignBottom);
+        splash.showMessage("Loading translations...\n", Qt.AlignBottom);
     }
 
     var translationsDirs = RS.getDirectoryList("ts");
@@ -332,7 +332,7 @@ function loadTranslations(addOns, splash) {
 
     // install one QTranslator for each script add-on:
     if (!isNull(splash)) {
-        splash.showMessage(qsTr("Loading add-on translations ...") + "\n", Qt.AlignBottom);
+        splash.showMessage(qsTr("Loading add-on translations...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
 
@@ -370,7 +370,7 @@ function loadTranslations(addOns, splash) {
  */
 function loadAddOns(addOns, splash) {
     if (!isNull(splash)) {
-        splash.showMessage(qsTr("Loading add-ons ...") + "\n", Qt.AlignBottom);
+        splash.showMessage(qsTr("Loading add-ons...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
 
@@ -385,7 +385,7 @@ function loadAddOns(addOns, splash) {
 
 function initAddOns(addOns, splash) {
     if (!isNull(splash)) {
-        splash.showMessage(qsTr("Initializing add-ons ...") + "\n", Qt.AlignBottom);
+        splash.showMessage(qsTr("Initializing add-ons...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
 
@@ -409,7 +409,7 @@ function initAddOns(addOns, splash) {
 
 function postInitAddOns(addOns, splash) {
     if (!isNull(splash)) {
-        splash.showMessage(qsTr("Post-initializing add-ons ...") + "\n", Qt.AlignBottom);
+        splash.showMessage(qsTr("Post-initializing add-ons...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
 
