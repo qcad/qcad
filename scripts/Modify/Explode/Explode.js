@@ -75,7 +75,7 @@ Explode.prototype.beginEvent = function() {
             if (polySegments.length>0) {
                 for (k=0; k<polySegments.length; k++) {
                     shape = polySegments[k].data();
-                    newShapes.push(shape);
+                    newShapes.push(shape.clone());
                 }
             }
         }
@@ -105,7 +105,7 @@ Explode.prototype.beginEvent = function() {
                     if (isSplineShape(shape)) {
                         shape = ShapeAlgorithms.splineToLineOrArc(shape, 0.01);
                     }
-                    newShapes.push(shape);
+                    newShapes.push(shape.clone());
                 }
             }
         }
@@ -127,7 +127,8 @@ Explode.prototype.beginEvent = function() {
         else if (isLeaderEntity(entity)) {
             shapes = entity.getShapes();
             for (k=0; k<shapes.length; k++) {
-                newShapes.push(shapes[k].data());
+                shape = shapes[k].data();
+                newShapes.push(shape.clone());
             }
         }
 
@@ -135,17 +136,20 @@ Explode.prototype.beginEvent = function() {
         else if (isTextEntity(entity)) {
             var painterPaths = entity.getPainterPaths();
             for (k=0; k<painterPaths.length; k++) {
+                // ignore text bounding box, used only to display instead of
+                // text at small zoom factors:
                 if (painterPaths[k].getFeatureSize()<0) {
                     continue;
                 }
                 shapes = painterPaths[k].getShapes();
                 for (n=0; n<shapes.length; n++) {
-                    shape = shapes[n].data();
+                    shape = shapes[n];
                     if (isSplineShape(shape)) {
-                        shape = ShapeAlgorithms.splineToLineOrArc(shape, 0.01);
+                        shape = ShapeAlgorithms.splineToLineOrArc(shape, 1e-6 * painterPaths[k].getFeatureSize());
                     }
+
                     if (!isNull(shape)) {
-                        newShapes.push(shape);
+                        newShapes.push(shape.clone());
                     }
                 }
             }
