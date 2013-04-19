@@ -67,6 +67,7 @@ Hatch.prototype.beginEvent = function() {
         }
     }
 
+    // collect hatch data (boundary elements ordered as loops):
     this.hatchData = new RHatchData();
     document.traversed = new Object();
 
