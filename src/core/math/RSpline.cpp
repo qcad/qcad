@@ -717,6 +717,9 @@ RVector RSpline::getPointAt(double t) const {
     updateInternal();
 #ifndef R_NO_OPENNURBS
     ON_3dPoint p = curve.PointAt(t);
+    if (p.IsUnsetPoint()) {
+        return RVector::invalid;
+    }
     return RVector(p.x, p.y);
 #else
     return RVector::invalid;

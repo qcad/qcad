@@ -47,6 +47,7 @@
  * \scriptable
  * \sharedPointerSupport
  * \copyable
+ * \hasStreamOperator
  */
 class QCADCORE_EXPORT RSpline: public RShape, public RExplodable, public RDirected {
 public:

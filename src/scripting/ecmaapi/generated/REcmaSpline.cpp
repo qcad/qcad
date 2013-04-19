@@ -162,6 +162,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getKnotVector, "getKnotVector");
             
+            REcmaHelper::registerFunction(&engine, proto, getActualKnotVector, "getActualKnotVector");
+            
             REcmaHelper::registerFunction(&engine, proto, setKnotVector, "setKnotVector");
             
             REcmaHelper::registerFunction(&engine, proto, appendKnot, "appendKnot");
@@ -1635,6 +1637,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::getKnotVector", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::getActualKnotVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getActualKnotVector", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getActualKnotVector";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getActualKnotVector", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getActualKnotVector();
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getActualKnotVector().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getActualKnotVector", context, engine);
             return result;
         }
          QScriptValue
@@ -4795,7 +4846,13 @@
     
     QString result;
     
-            result = QString("RSpline(0x%1)").arg((unsigned long int)self, 0, 16);
+            QDebug d(&result);
+            if (self!=NULL) {
+                d << *self;
+            }
+            else {
+                d << "NULL";
+            }
         
     return QScriptValue(result);
     }

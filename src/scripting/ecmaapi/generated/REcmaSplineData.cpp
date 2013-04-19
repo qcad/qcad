@@ -108,6 +108,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getKnotVector, "getKnotVector");
             
+            REcmaHelper::registerFunction(&engine, proto, getActualKnotVector, "getActualKnotVector");
+            
             REcmaHelper::registerFunction(&engine, proto, getWeights, "getWeights");
             
             REcmaHelper::registerFunction(&engine, proto, castToShape, "castToShape");
@@ -1367,6 +1369,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSplineData::getKnotVector", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineData::getActualKnotVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineData::getActualKnotVector", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getActualKnotVector";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineData* self = 
+                        getSelf("getActualKnotVector", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getActualKnotVector();
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getActualKnotVector().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineData::getActualKnotVector", context, engine);
             return result;
         }
          QScriptValue

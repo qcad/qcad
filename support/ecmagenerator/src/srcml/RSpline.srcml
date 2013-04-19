@@ -60,8 +60,8 @@ dir="./core/math" filename="RSpline.h">
   <comment type="block">/** * Low-level mathematical representation
   of a 2nd or 3rd degree spline. * * The spline may be defined by
   its control points or by its fit points but * not both. * *
-  \ingroup math * \scriptable * \sharedPointerSupport * \copyable
-  */</comment>
+  \ingroup math * \scriptable * \sharedPointerSupport * \copyable *
+  \hasStreamOperator */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
@@ -126,6 +126,8 @@ dir="./core/math" filename="RSpline.h">
       <name>degree</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
+  <comment type="line">//RSpline(const RSpline&amp;
+  other);</comment>
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RSpline</name>
@@ -362,6 +364,17 @@ dir="./core/math" filename="RSpline.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getKnotVector</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>double</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getActualKnotVector</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

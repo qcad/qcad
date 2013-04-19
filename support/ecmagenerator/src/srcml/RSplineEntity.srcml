@@ -707,6 +707,26 @@ dir="./entity" filename="RSplineEntity.h">
         <name>double</name>
       </argument>&gt;</argument_list></name>
     </type>
+    <name>getActualKnotVector</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getActualKnotVector</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>
+    </type>
     <name>getWeights</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>

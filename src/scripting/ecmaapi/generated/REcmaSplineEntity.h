@@ -113,6 +113,9 @@
         getKnotVector
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getActualKnotVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getWeights
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

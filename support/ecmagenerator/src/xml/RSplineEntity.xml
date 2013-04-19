@@ -156,6 +156,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; double &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getActualKnotVector"
+    cppName="getActualKnotVector" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="getWeights" cppName="getWeights"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

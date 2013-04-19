@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RSpline"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
-  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <baseClass name="RShape" specifier="public" />
     <baseClass name="RExplodable" specifier="public" />
     <baseClass name="RDirected" specifier="public" />
@@ -132,6 +132,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getKnotVector" cppName="getKnotVector"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getActualKnotVector"
+    cppName="getActualKnotVector" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; double &gt;"
       isPureVirtual="false" />
     </method>
