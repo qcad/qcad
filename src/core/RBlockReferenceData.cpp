@@ -150,7 +150,7 @@ RBox RBlockReferenceData::getBoundingBox() const {
         document->queryBlockEntities(referencedBlockId);
 
     if (ids.isEmpty()) {
-        qWarning() << "RBlockReferenceData::getBoundingBox: empty block";
+        //qWarning() << "RBlockReferenceData::getBoundingBox: empty block";
     }
     QSet<REntity::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
