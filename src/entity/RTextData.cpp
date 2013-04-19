@@ -150,6 +150,7 @@ RVector RTextData::getPointOnEntity() const {
 
 double RTextData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
     Q_UNUSED(limited)
+    Q_UNUSED(draft)
     
     if (!getBoundingBox().grow(range).contains(point)) {
         //qDebug() << "RTextData::getDistanceTo: bounding box not in range: " << getBoundingBox();
