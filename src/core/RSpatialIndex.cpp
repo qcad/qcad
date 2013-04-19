@@ -115,14 +115,12 @@ QMap<int, QSet<int> > RSpatialIndex::queryContained(const RBox& b,
  * For scripts.
  */
 QPair<int, int> RSpatialIndex::queryNearestNeighbor(double x, double y, double z) {
-    //qWarning() << "RSpatialIndexNavel::queryNearestNeighbor: " << x << "/" << y << "/" << z;
     QMap<int, QSet<int> > res = queryNearestNeighbor(1, x, y, z);
     QList<int> keys = res.keys();
     if (keys.length()<1) {
         qWarning() << "RSpatialIndex::queryNearestNeighbor: no result";
         return QPair<int, int>(-1,-1);
     }
-    //return getSIId(keys.at(0), res[keys.at(0)].toList().first());
     return QPair<int, int>(keys.at(0), res[keys.at(0)].toList().first());
 }
 
