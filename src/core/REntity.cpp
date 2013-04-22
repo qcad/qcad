@@ -122,8 +122,7 @@ void REntity::copyAttributesFrom(REntity* entity) {
 }
 
 QList<RVector> REntity::getIntersectionPoints(
-        const REntity& other, bool limited, const RBox& queryBox
-        /*const QSet<int>& pos, const QSet<int>& posOther*/) const {
+        const REntity& other, bool limited, const RBox& queryBox) const {
 
     bool same = false;
 
