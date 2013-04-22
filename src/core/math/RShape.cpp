@@ -957,9 +957,13 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     double AA, BB, CC, DD, EE, FF, H2_TR, K2_TR, A22, B22, PHI_2R;
     double cosphi, cosphi2, sinphi, sinphi2, cosphisinphi;
     double tmp0, tmp1, tmp2, tmp3;
-    double cy[5] = {0.0}, py[5] = {0.0}, r[3][5] = {0.0};
+    double cy[5] = {0.0};
+    double py[5] = {0.0};
+    double r[3][5] = { {0.0} };
     double x1, x2;
-    double ychk[5] = {0.0}, xint[5], yint[5];
+    double ychk[5] = {0.0};
+    double xint[5];
+    double yint[5];
 
     // each of the ellipse axis lengths must be positive
     if ( (!(a1 > 0.0) || !(b1 > 0.0)) || (!(a2 > 0.0) || !(b2 > 0.0)) ) {

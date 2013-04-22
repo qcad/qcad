@@ -19,5 +19,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
       </variant>
     </method>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="force"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>

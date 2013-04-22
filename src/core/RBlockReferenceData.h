@@ -45,24 +45,21 @@ public:
             const RVector& position, const RVector& scaleFactors, double angle);
 
     virtual RBox getBoundingBox() const;
-    virtual QList<RBox> getBoundingBoxes(/*RObject::Id subEntityId = REntity::INVALID_ID*/) const;
-    //virtual QList<QPair<REntity::Id, RBox> > getIdBoundingBoxes() const;
+    virtual QList<RBox> getBoundingBoxes() const;
 
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
-    //virtual QList<RVector> getEndPoints() const;
-    //virtual QList<RVector> getMiddlePoints() const;
-    //virtual QList<RVector> getCenterPoints() const;
-    virtual RVector getClosestPointOnEntity(
-        const RVector& point, double range=RNANDOUBLE
-    ) const;
-    virtual QList<RVector> getIntersectionPoints(const REntity& other,
-        bool limited = true) const;
+//    virtual RVector getClosestPointOnEntity(
+//        const RVector& point, double range=RNANDOUBLE,
+//        bool limited=true
+//    ) const;
+    //virtual QList<RVector> getIntersectionPoints(
+    //    const REntityData& other, bool limited = true, bool same = false,
+    //    const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual RVector getVectorTo(const RVector& point, 
         bool limited = true) const;
     virtual double getDistanceTo(const RVector& point,
         bool limited = true, double range = 0.0, bool draft = false) const;
-//    virtual QList<RVector> getPointsWithDistanceToEnd(double distance, const RBox& queryBox = RDEFAULT_RBOX) const;
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
 

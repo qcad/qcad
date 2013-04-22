@@ -907,7 +907,8 @@ dir="./core" filename="RLinkedStorage.h">
     <name>Id</name></name>
   </type>
   <name>getCurrentBlockId</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>

@@ -25,6 +25,14 @@ function SnapAuto(guiAction) {
 
 SnapAuto.prototype = new Snap();
 
+SnapAuto.getPreferencesCategory = function() {
+    return [qsTr("Snap"), qsTr("Auto Snap")];
+};
+
+SnapAuto.applyPreferences = function(doc, mdiChild) {
+    RSnapAuto.init(true);
+};
+
 SnapAuto.prototype.beginEvent = function() {
     Snap.prototype.beginEvent.call(this);
     var di = this.getDocumentInterface();

@@ -126,8 +126,6 @@ dir="./core/math" filename="RSpline.h">
       <name>degree</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
-  <comment type="line">//RSpline(const RSpline&amp;
-  other);</comment>
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RSpline</name>

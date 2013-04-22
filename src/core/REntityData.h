@@ -223,9 +223,7 @@ public:
 
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,
-            const RBox& queryBox = RDEFAULT_RBOX/*,
-            const QSet<int>& pos = RDEFAULT_QSET_INT,
-            const QSet<int>& posOther = RDEFAULT_QSET_INT*/) const;
+            const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual QList<RVector> getIntersectionPoints(
             const RShape& shape, bool limited = true,
             const RBox& queryBox = RDEFAULT_RBOX) const;

@@ -404,6 +404,12 @@ bool REntityData::intersectsWith(const RShape& shape) const {
  */
 QList<RVector> REntityData::getIntersectionPoints(
         const REntityData& other, bool limited, bool same, const RBox& queryBox) const {
+
+//    const RBlockReferenceData* blockRef = dynamic_cast<const RBlockReferenceData*>(&other);
+//    if (blockRef!=NULL) {
+//        return other.getIntersectionPoints(*this, limited, same, queryBox);
+//    }
+
     QList<RVector> ret;
     QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox);
     QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox);

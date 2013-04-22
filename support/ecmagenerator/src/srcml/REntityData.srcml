@@ -986,10 +986,7 @@ dir="./core" filename="REntityData.h">
         <name>RDEFAULT_RBOX</name>
       </expr>
     </init></decl>
-  </param>
-  <comment type="block">/*, const QSet&lt;int&gt;&amp; pos =
-  RDEFAULT_QSET_INT, const QSet&lt;int&gt;&amp; posOther =
-  RDEFAULT_QSET_INT*/</comment>)</parameter_list>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>

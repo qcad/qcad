@@ -43,6 +43,21 @@ public:
             RGraphicsView& view,
             double range=RNANDOUBLE
     );
+
+    static void init(bool force = false);
+
+private:
+    static bool initialized;
+
+    static bool intersections;
+    static bool endPoints;
+    static bool middlePoints;
+    static bool centerPoints;
+    static bool perpendicular;
+    static bool referencePoints;
+    static bool gridPoints;
+    static bool pointsOnEntity;
+    static bool freePositioning;
 };
 
 Q_DECLARE_METATYPE(RSnapAuto*)

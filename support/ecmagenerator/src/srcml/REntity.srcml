@@ -1627,11 +1627,6 @@ dir="./core" filename="REntity.h">
     </call></expr>;</return>}</block>
   </function>
   <comment type="block">/** * \copydoc
-  REntityData::getIntersectionPoints(RDocument&amp;) */</comment>
-  <comment type="block">/* virtual QList&lt;RVector&gt;
-  getIntersectionPoints(RDocument&amp; document) const { return
-  getData().getIntersectionPoints(document); } */</comment>
-  <comment type="block">/** * \copydoc
   REntityData::getIntersectionPoints(const REntity&amp;, bool)
   */</comment>
   <function_decl>
@@ -1676,10 +1671,7 @@ dir="./core" filename="REntity.h">
         <name>RDEFAULT_RBOX</name>
       </expr>
     </init></decl>
-  </param>
-  <comment type="block">/*const QSet&lt;int&gt;&amp; pos =
-  RDEFAULT_QSET_INT, const QSet&lt;int&gt;&amp; posOther =
-  RDEFAULT_QSET_INT*/</comment>)</parameter_list>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \copydoc
   REntityData::getIntersectionPoints(const RShape&amp;, bool)

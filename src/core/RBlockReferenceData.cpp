@@ -330,8 +330,11 @@ QList<RVector> RBlockReferenceData::getReferencePoints(
 //    return ret;
 //}
 
+/*
 RVector RBlockReferenceData::getClosestPointOnEntity(
-        const RVector& point, double range) const {
+        const RVector& point, double range, bool limited) const {
+
+    Q_UNUSED(limited)
 
     RVector ret;
     double minDist = RMAXDOUBLE;
@@ -354,23 +357,35 @@ RVector RBlockReferenceData::getClosestPointOnEntity(
     }
     return ret;
 }
+*/
 
+/*
 QList<RVector> RBlockReferenceData::getIntersectionPoints(
-    const REntity& other, bool limited) const {
+    const REntityData& other, bool limited, bool same, const RBox& queryBox) const {
+
+    return REntityData::getIntersectionPoints(other, limited, same, queryBox);
+
+    //Q_UNUSED(same)
+    qDebug() << "same: " << same;
 
     QList<RVector> ret;
-    QSet<REntity::Id> ids =
-        document->queryBlockEntities(referencedBlockId);
+    RDebug::startTimer();
+    QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
+    RDebug::stopTimer("queryBlockEntities");
+
+    RDebug::startTimer(567);
     QSet<REntity::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<REntity> entity = queryEntity(*it);
         if (entity.isNull()) {
             continue;
         }
-        ret.append(entity->getIntersectionPoints(other, limited));
+        ret.append(entity->getData().getIntersectionPoints(other, limited, false, queryBox));
     }
+    RDebug::stopTimer(567, "intersection points");
     return ret;
 }
+*/
 
 //QList<RVector> RBlockReferenceData::getPointsWithDistanceToEnd(
 //        double distance, const RVector& point, double range) const {

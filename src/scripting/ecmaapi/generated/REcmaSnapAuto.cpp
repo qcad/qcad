@@ -81,6 +81,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, init, "init");
+            
 
     // static properties:
     
@@ -355,6 +357,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSnapAuto::snap", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::init
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::init", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::init";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       init();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       init(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.init().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::init", context, engine);
             return result;
         }
          QScriptValue REcmaSnapAuto::toString
