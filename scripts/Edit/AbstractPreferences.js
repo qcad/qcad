@@ -187,7 +187,7 @@ AbstractPreferences.prototype.apply = function() {
         var className = addOn.getClassName();
         
         var widget = addOn.getPreferenceWidget();
-        if (isNull(widget) || widget.hasChanged != true) {
+        if (isNull(widget) || widget.hasChanged !== true) {
             continue;
         }
         
