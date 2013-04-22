@@ -74,43 +74,45 @@ bool RPolylineData::moveReferencePoint(const RVector& referencePoint,
  */
 QList<RVector> RPolylineData::getIntersectionPoints(
         const REntityData& other, bool limited, bool same,
-        const RBox& queryBox
-        /*const QSet<int>& pos,
-        const QSet<int>& posOther*/) const {
-
-//    if (!same) {
-//        return REntityData::getIntersectionPoints(other, limited, same, queryBox, pos, posOther);
-//    }
-
+        const RBox& queryBox) const {
 
     QList<RVector> ret;
 
-    //RDebug::startTimer(8);
     QList<QSharedPointer<RShape> > shapes1All = getExploded();
     QList<QSharedPointer<RShape> > shapes2All;
-    const RPolylineData* otherPl = dynamic_cast<const RPolylineData*>(&other);
-    if (otherPl!=NULL) {
-        shapes2All = otherPl->getExploded();
+    if (same) {
+        shapes2All = shapes1All;
     }
     else {
-        shapes2All = other.getShapes(queryBox);
+        const RPolylineData* otherPl = dynamic_cast<const RPolylineData*>(&other);
+        if (otherPl!=NULL) {
+            shapes2All = otherPl->getExploded();
+        }
+        else {
+            shapes2All = other.getShapes(queryBox);
+        }
     }
-    //RDebug::stopTimer(8, "RPolylineData::getIntersectionPoints: exploding");
 
     QList<QSharedPointer<RShape> > shapes1;
     QList<QSharedPointer<RShape> > shapes2;
 
     // filter out shapes that are not in query box:
-    //RDebug::startTimer(8);
     if (queryBox.isValid()) {
-        for (int i=0; i<shapes1All.size(); i++) {
-            if (queryBox.intersects(shapes1All.at(i)->getBoundingBox())) {
-                shapes1.append(shapes1All.at(i));
+        for (int i1=0; i1<shapes1All.size(); i1++) {
+            QSharedPointer<RShape> shape1 = shapes1All.at(i1);
+            if (queryBox.intersects(shape1->getBoundingBox())) {
+                shapes1.append(shape1);
             }
         }
-        for (int i=0; i<shapes2All.size(); i++) {
-            if (queryBox.intersects(shapes2All.at(i)->getBoundingBox())) {
-                shapes2.append(shapes2All.at(i));
+        if (same) {
+           shapes2 = shapes1;
+        }
+        else {
+            for (int i2=0; i2<shapes2All.size(); i2++) {
+                QSharedPointer<RShape> shape2 = shapes2All.at(i2);
+                if (queryBox.intersects(shape2->getBoundingBox())) {
+                    shapes2.append(shape2);
+                }
             }
         }
     }
@@ -118,29 +120,49 @@ QList<RVector> RPolylineData::getIntersectionPoints(
         shapes1 = shapes1All;
         shapes2 = shapes2All;
     }
-    //RDebug::stopTimer(8, "RPolylineData::getIntersectionPoints: filtering");
 
-    //RDebug::startTimer(8);
-    for (int i=0; i<shapes1.size(); i++) {
-        for (int k=0; k<shapes2.size(); k++) {
+    for (int i1=0; i1<shapes1.size(); i1++) {
+        int i2Start = 0;
+        if (same) {
+            i2Start = i1+1;
+        }
+        for (int i2=i2Start; i2<shapes2.size(); i2++) {
             // very same polyline segments can't intersect:
-            if (same && i==k) {
+            if (same && i1==i2) {
                 continue;
             }
-            // sequential line segments touch but don't intersect for polylines:
-            if (same && abs(i-k)==1) {
-                QSharedPointer<RLine> l1 = shapes1.at(i).dynamicCast<RLine>();
-                QSharedPointer<RLine> l2 = shapes2.at(k).dynamicCast<RLine>();
-                if (!l1.isNull() && !l2.isNull()) {
-                    continue;
+
+            QSharedPointer<RShape> shape1 = shapes1.at(i1);
+            QSharedPointer<RShape> shape2 = shapes2.at(i2);
+            QList<RVector> candidates = shape1->getIntersectionPoints(*shape2, limited, false);
+            if (same) {
+                // polygon internal intersections:
+                QSharedPointer<RDirected> dir1 = shape1.dynamicCast<RDirected>();
+                QSharedPointer<RDirected> dir2 = shape2.dynamicCast<RDirected>();
+                if (!dir1.isNull() && !dir2.isNull()) {
+                    // ignore polyline nodes:
+                    for (int c=0; c<candidates.size(); c++) {
+                        if (candidates[c].getDistanceTo(dir1->getStartPoint()) < RS::PointTolerance) {
+                            continue;
+                        }
+                        if (candidates[c].getDistanceTo(dir1->getEndPoint()) < RS::PointTolerance) {
+                            continue;
+                        }
+                        if (candidates[c].getDistanceTo(dir2->getStartPoint()) < RS::PointTolerance) {
+                            continue;
+                        }
+                        if (candidates[c].getDistanceTo(dir2->getEndPoint()) < RS::PointTolerance) {
+                            continue;
+                        }
+                        ret.append(candidates[c]);
+                    }
                 }
             }
-            ret.append(
-                shapes1.at(i)->getIntersectionPoints(*shapes2.at(k), limited, same)
-            );
+            else {
+                ret.append(candidates);
+            }
         }
     }
-    //RDebug::stopTimer(8, "RPolylineData::getIntersectionPoints: intersecting");
 
     return ret;
 }
