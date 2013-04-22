@@ -26,5 +26,5 @@ QList<RVector> RSnapReference::snapEntity(QSharedPointer<REntity> entity,
     Q_UNUSED(queryBox);
     Q_UNUSED(view);
 
-    return entity->getReferencePoints();
+    return entity->getInternalReferencePoints();
 }

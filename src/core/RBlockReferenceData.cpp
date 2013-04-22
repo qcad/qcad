@@ -34,8 +34,6 @@ RBlockReferenceData::RBlockReferenceData(
         const RVector& scaleFactors, double rotation) :
         referencedBlockId(referencedBlockId),
         position(position), scaleFactors(scaleFactors), rotation(rotation) {
-
-    //getBoundingBox();
 }
 
 void RBlockReferenceData::setReferencedBlockName(const QString& blockName) {
@@ -107,32 +105,6 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
     return minDist;
 }
 
-/*
-RVector RBlockReferenceData::getVectorTo(const RLine& line, bool limited) const {
-    if (document == NULL) {
-        return RVector::invalid;
-    }
-    QSet<REntity::Id> ids =
-        document->queryBlockEntities(referencedBlockId);
-    QSet<REntity::Id>::iterator it;
-    double minDist = RMAXDOUBLE;
-    RVector res(RVector::invalid);
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
-        RVector v = entity->getVectorTo(line, limited);
-        double dist = v.getMagnitude();
-        if (dist < minDist) {
-            minDist = dist;
-            res = v;
-        }
-    }
-    return res;
-}
-*/
-
 RBox RBlockReferenceData::getBoundingBox() const {
     if (boundingBox.isValid()) {
         return boundingBox;
@@ -149,9 +121,6 @@ RBox RBlockReferenceData::getBoundingBox() const {
     QSet<REntity::Id> ids =
         document->queryBlockEntities(referencedBlockId);
 
-    if (ids.isEmpty()) {
-        //qWarning() << "RBlockReferenceData::getBoundingBox: empty block";
-    }
     QSet<REntity::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<REntity> entity = queryEntity(*it);
@@ -166,61 +135,6 @@ RBox RBlockReferenceData::getBoundingBox() const {
 
     return boundingBox;
 }
-
-QList<RBox> RBlockReferenceData::getBoundingBoxes(/*REntity::Id subEntityId*/) const {
-//    if (document == NULL) {
-//        return QList<RBox>();
-//    }
-
-    QList<RBox> ret;
-
-    // 20111119: multiple spatial index entries with the same
-    // ID not supported by Navel spatial index library:
-    ret << getBoundingBox();
-
-/*
-    if (subEntityId!=REntity::INVALID_ID) {
-        QSharedPointer<REntity> entity = queryEntity(subEntityId);
-        if (entity.isNull()) {
-            continue;
-        }
-        ret.append(entity->getBoundingBoxes());
-        return ret;
-    }
-    */
-/*
-    QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
-    QSet<REntity::Id>::iterator it;
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
-        ret.append(entity->getBoundingBoxes());
-    }
-    */
-
-    return ret;
-}
-
-/*
-QList<QPair<REntity::Id, RBox> > RBlockReferenceData::getIdBoundingBoxes() const {
-
-    QList<QPair<REntity::Id, RBox> > ret;
-
-    QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
-    QSet<REntity::Id>::iterator it;
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
-        ret.append(QPair(*it, entity->getBoundingBox()));
-    }
-
-    return ret;
-}
-*/
 
 /**
  * \return The entity with the given ID, transformed according to
@@ -276,6 +190,28 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
     return entity;
 }
 
+QList<RVector> RBlockReferenceData::getInternalReferencePoints(
+        RS::ProjectionRenderingHint hint) const {
+
+    QList<RVector> ret;
+
+    if (document == NULL) {
+        return ret;
+    }
+    QSet<REntity::Id> ids =
+        document->queryBlockEntities(referencedBlockId);
+    QSet<REntity::Id>::iterator it;
+    for (it = ids.begin(); it != ids.end(); it++) {
+        QSharedPointer<REntity> entity = queryEntity(*it);
+        if (entity.isNull()) {
+            continue;
+        }
+        ret.append(entity->getInternalReferencePoints(hint));
+    }
+
+    return ret;
+}
+
 QList<RVector> RBlockReferenceData::getReferencePoints(
         RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
@@ -284,125 +220,6 @@ QList<RVector> RBlockReferenceData::getReferencePoints(
     ret.append(position);
     return ret;
 }
-
-//QList<RVector> RBlockReferenceData::getEndPoints() const {
-//    QList<RVector> ret;
-//    QSet<REntity::Id> ids =
-//        document->queryBlockEntities(referencedBlockId);
-//    QSet<REntity::Id>::iterator it;
-//    for (it = ids.begin(); it != ids.end(); it++) {
-//        QSharedPointer<REntity> entity = queryEntity(*it);
-//        if (entity.isNull()) {
-//            continue;
-//        }
-//        ret.append(entity->getEndPoints());
-//    }
-//    return ret;
-//}
-
-//QList<RVector> RBlockReferenceData::getMiddlePoints() const {
-//    QList<RVector> ret;
-//    QSet<REntity::Id> ids =
-//        document->queryBlockEntities(referencedBlockId);
-//    QSet<REntity::Id>::iterator it;
-//    for (it = ids.begin(); it != ids.end(); it++) {
-//        QSharedPointer<REntity> entity = queryEntity(*it);
-//        if (entity.isNull()) {
-//            continue;
-//        }
-//        ret.append(entity->getMiddlePoints());
-//    }
-//    return ret;
-//}
-
-//QList<RVector> RBlockReferenceData::getCenterPoints() const {
-//    QList<RVector> ret;
-//    QSet<REntity::Id> ids =
-//        document->queryBlockEntities(referencedBlockId);
-//    QSet<REntity::Id>::iterator it;
-//    for (it = ids.begin(); it != ids.end(); it++) {
-//        QSharedPointer<REntity> entity = queryEntity(*it);
-//        if (entity.isNull()) {
-//            continue;
-//        }
-//        ret.append(entity->getCenterPoints());
-//    }
-//    return ret;
-//}
-
-/*
-RVector RBlockReferenceData::getClosestPointOnEntity(
-        const RVector& point, double range, bool limited) const {
-
-    Q_UNUSED(limited)
-
-    RVector ret;
-    double minDist = RMAXDOUBLE;
-    RVector vRange2(range/2,range/2);
-    RBox box(point - vRange2, point + vRange2);
-    QSet<REntity::Id> ids =
-        document->queryIntersectedEntitiesXY(box, true, true, referencedBlockId);
-    QSet<REntity::Id>::iterator it;
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
-        RVector v = entity->getClosestPointOnEntity(point);
-        double dist = v.getDistanceTo(point);
-        if (dist < minDist) {
-            minDist = dist;
-            ret = v;
-        }
-    }
-    return ret;
-}
-*/
-
-/*
-QList<RVector> RBlockReferenceData::getIntersectionPoints(
-    const REntityData& other, bool limited, bool same, const RBox& queryBox) const {
-
-    return REntityData::getIntersectionPoints(other, limited, same, queryBox);
-
-    //Q_UNUSED(same)
-    qDebug() << "same: " << same;
-
-    QList<RVector> ret;
-    RDebug::startTimer();
-    QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
-    RDebug::stopTimer("queryBlockEntities");
-
-    RDebug::startTimer(567);
-    QSet<REntity::Id>::iterator it;
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
-        ret.append(entity->getData().getIntersectionPoints(other, limited, false, queryBox));
-    }
-    RDebug::stopTimer(567, "intersection points");
-    return ret;
-}
-*/
-
-//QList<RVector> RBlockReferenceData::getPointsWithDistanceToEnd(
-//        double distance, const RVector& point, double range) const {
-
-//    QList<RVector> ret;
-//    QSet<REntity::Id> ids =
-//        document->queryBlockEntities(referencedBlockId);
-//    QSet<REntity::Id>::iterator it;
-//    for (it = ids.begin(); it != ids.end(); it++) {
-//        QSharedPointer<REntity> entity = queryEntity(*it);
-//        if (entity.isNull()) {
-//            continue;
-//        }
-//        ret.append(entity->getPointsWithDistanceToEnd(distance));
-//    }
-//    return ret;
-//}
 
 QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox) const {
     QList<QSharedPointer<RShape> > ret;

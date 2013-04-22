@@ -69,30 +69,23 @@ RColor REntityData::getColor(bool resolve, const QStack<RBlockReferenceEntity*>&
     }
 
     if (color.isByLayer()) {
-        //if (layer!=NULL) {
-        //    return layer->getColor();
-        //}
-        //else {
-            if (document==NULL) {
-                qWarning() << "REntityData::getColor: "
-                              "color is ByLayer but layer is NULL "
-                              "and document is NULL";
-                return RColor(Qt::white);
-            }
-            QSharedPointer<RLayer> l = document->queryLayerDirect(layerId);
-            if (l.isNull()) {
-                qWarning() << "REntityData::getColor: "
-                              "color is ByLayer but layer is invalid";
-                return RColor(Qt::white);
-            }
-            return l->getColor();
-        //}
+        if (document==NULL) {
+            qWarning() << "REntityData::getColor: "
+                          "color is ByLayer but layer is NULL "
+                          "and document is NULL";
+            return RColor(Qt::white);
+        }
+        QSharedPointer<RLayer> l = document->queryLayerDirect(layerId);
+        if (l.isNull()) {
+            qWarning() << "REntityData::getColor: "
+                          "color is ByLayer but layer is invalid";
+            return RColor(Qt::white);
+        }
+        return l->getColor();
     }
 
     if (color.isByBlock()) {
         if (blockRefStack.isEmpty()) {
-            //qWarning() << "REntityData::getColor: "
-            //              "color is ByBlock but entity not in block reference";
             return RColor(Qt::white);
         }
         return blockRefStack.top()->getColor(true, blockRefStack);
@@ -117,36 +110,28 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RB
     RLineweight::Lineweight lw = lineweight;
 
     if (lineweight==RLineweight::WeightByLayer) {
-        //if (layer!=NULL) {
-        //    lw = layer->getLineweight();
-        //}
-        //else {
-            const RDocument* doc = getDocument();
-            if (doc==NULL) {
-                qWarning() << "REntityData::getLineweight: "
-                              "line weight is ByLayer but layer is NULL "
-                              "and document is NULL";
-                return RLineweight::Weight000;
-            }
-            QSharedPointer<RLayer> l = doc->queryLayerDirect(layerId);
-            if (l.isNull()) {
-                qWarning() << "REntityData::getLineweight: "
-                              "line weight is ByLayer but layer is invalid";
-                return RLineweight::Weight000;
-            }
-            lw = l->getLineweight();
-            if (lw==RLineweight::WeightByLayer) {
-                qWarning() << "REntityData::getLineweight: "
-                              "line weight of layer '" << l->getName() << "' is ByLayer";
-                return RLineweight::Weight000;
-            }
-        //}
+        const RDocument* doc = getDocument();
+        if (doc==NULL) {
+            qWarning() << "REntityData::getLineweight: "
+                          "line weight is ByLayer but layer is NULL "
+                          "and document is NULL";
+            return RLineweight::Weight000;
+        }
+        QSharedPointer<RLayer> l = doc->queryLayerDirect(layerId);
+        if (l.isNull()) {
+            qWarning() << "REntityData::getLineweight: "
+                          "line weight is ByLayer but layer is invalid";
+            return RLineweight::Weight000;
+        }
+        lw = l->getLineweight();
+        if (lw==RLineweight::WeightByLayer) {
+            qWarning() << "REntityData::getLineweight: "
+                          "line weight of layer '" << l->getName() << "' is ByLayer";
+            return RLineweight::Weight000;
+        }
     }
     else if (lineweight==RLineweight::WeightByBlock) {
         if (blockRefStack.isEmpty()) {
-            // TODO: is this warning needed?
-//            qWarning() << "REntityData::getLineweight: "
-//                          "line weight is ByBlock but entity not in block reference";
             return RLineweight::Weight000;
         }
         lw = blockRefStack.top()->getLineweight(true, blockRefStack);
@@ -178,14 +163,6 @@ RLinetype::Id REntityData::getLinetypeId(bool resolve,
 
     if (document!=NULL) {
         if (document->isByLayer(linetypeId)) {
-            //return layer->getLinetypeId();
-            //const RDocument* doc = getDocument();
-            //if (doc==NULL) {
-            //    qWarning() << "REntityData::getLinetypeId: "
-            //                  "line type is ByLayer but layer is NULL "
-            //                  "and document is NULL";
-            //    return RLinetype::INVALID_ID;
-            //}
             QSharedPointer<RLayer> l = document->queryLayerDirect(layerId);
             if (l.isNull()) {
                 qWarning() << "REntityData::getLinetypeId: "
@@ -201,16 +178,10 @@ RLinetype::Id REntityData::getLinetypeId(bool resolve,
                               "color is ByBlock but entity not in block reference";
                 return RLinetype::INVALID_ID;
             }
-            //QSharedPointer<RLayer> layerBlockRef =
-            //    document->queryLayer(blockRef->getLayerId());
             return blockRefStack.top()->getLinetypeId(true, blockRefStack);
-            //QSharedPointer<RLayer> layerBlockRef =
-            //  document->queryLayer(blockRef->getLayerId());
-            //return blockRef->getLinetypeId(resolve, layerBlockRef.data(), blockRef);
         }
     }
 
-    //return RLinetype::INVALID_ID;
     return getLinetypeId();
 }
 
@@ -405,11 +376,6 @@ bool REntityData::intersectsWith(const RShape& shape) const {
 QList<RVector> REntityData::getIntersectionPoints(
         const REntityData& other, bool limited, bool same, const RBox& queryBox) const {
 
-//    const RBlockReferenceData* blockRef = dynamic_cast<const RBlockReferenceData*>(&other);
-//    if (blockRef!=NULL) {
-//        return other.getIntersectionPoints(*this, limited, same, queryBox);
-//    }
-
     QList<RVector> ret;
     QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox);
     QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox);
@@ -437,64 +403,6 @@ QList<RVector> REntityData::getIntersectionPoints(const RShape& shape, bool limi
     }
     return ret;
 }
-
-/**
- * \return Points on entity which are intersection points in the given document.
- */
-/*
-QList<RVector> REntityData::getIntersectionPoints(RDocument& document) const {
-    QList<RVector> ret;
-
-    QSet<REntity::Id> candidates;
-    document.queryIntersectedEntities(candidates, getBoundingBox(), true);
-
-    QSet<REntity::Id>::iterator it;
-    for (it=candidates.begin(); it!=candidates.end(); it++) {
-        QSharedPointer<REntity> e = document.queryEntity(*it);
-        if (e.isNull()) {
-            continue;
-        }
-
-        QList<RVector> intersections = getIntersectionPoints(e->getData(), true);
-        ret += intersections;
-    }
-
-    return ret;
-}
-*/
-
-/**
- * \return True if this entity intersects with the given box or is completely
- *      inside it, false otherwise.
- */
-/*
-bool REntityData::intersectsWith(const RBox& box) const {
-    // if the bounding box of this entity is completely outside of
-    // the given box, there is no intersection:
-    if (getBoundingBox().isOutside(box)) {
-        return false;
-    }
-
-    // if the bounding box of this entity is completely inside of
-    // the given box, there is an intersection:
-    if (box.contains(getBoundingBox())) {
-        return true;
-    }
-
-    // if the bounding box of this entity is neither completely inside
-    // nor outside of the given box, we have to do the more expensive
-    // intersection test with the walls of the box:
-    QList<RTriangle> triangles = box.getTriangles();
-    QList<RTriangle>::iterator it;
-    for (it=triangles.begin(); it!=triangles.end(); ++it) {
-        if (intersectsWith(*it)) {
-            return true;
-        }
-    }
-
-    return false;
-}
-*/
 
 /**
  * Moves this entity by the given offset.

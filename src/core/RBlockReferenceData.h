@@ -45,17 +45,11 @@ public:
             const RVector& position, const RVector& scaleFactors, double angle);
 
     virtual RBox getBoundingBox() const;
-    virtual QList<RBox> getBoundingBoxes() const;
 
+    virtual QList<RVector> getInternalReferencePoints(
+        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
-//    virtual RVector getClosestPointOnEntity(
-//        const RVector& point, double range=RNANDOUBLE,
-//        bool limited=true
-//    ) const;
-    //virtual QList<RVector> getIntersectionPoints(
-    //    const REntityData& other, bool limited = true, bool same = false,
-    //    const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual RVector getVectorTo(const RVector& point, 
         bool limited = true) const;
     virtual double getDistanceTo(const RVector& point,

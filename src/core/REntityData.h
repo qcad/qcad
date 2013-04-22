@@ -204,6 +204,18 @@ public:
         const QStack<RBlockReferenceEntity*>& blockRefStack) const;
 
     /**
+     * Can be overwritten to return internal, resolved reference points.
+     * This is used for example for block references in combination with
+     * snap to reference points.
+     * Default implementation returns same as getReferencePoints().
+     */
+    virtual QList<RVector> getInternalReferencePoints(
+        RS::ProjectionRenderingHint hint=RS::RenderTop) const {
+
+        return getReferencePoints();
+    }
+
+    /**
      * \return Vector of reference points of this entity. Reference points
      *      can usually be moved around by the user to change the geometry
      *      of the entity.

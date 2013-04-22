@@ -220,9 +220,11 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     if (freePositioning) {
         lastSnap = position;
         status = RSnap::Free;
+        return lastSnap;
     }
 
-    return position;
+    //return position;
+    return RVector::invalid;
 }
 
 void RSnapAuto::init(bool force) {

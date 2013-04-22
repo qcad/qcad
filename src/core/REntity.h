@@ -296,6 +296,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::getInternalReferencePoints
+     */
+    virtual QList<RVector> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop) const {
+        return getData().getInternalReferencePoints(hint);
+    }
+
+    /**
      * \copydoc REntityData::getReferencePoints
      */
     virtual QList<RVector> getReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop) const {
