@@ -1297,4 +1297,10 @@ void RSpline::print(QDebug dbg) const {
     for (int i=0; i<knotVector.count(); ++i) {
         dbg.nospace() << i << ": " << knotVector.at(i) << ", ";
     }
+
+    knotVector = getActualKnotVector();
+    dbg.nospace() << ",\ninternally used knots (" << knotVector.count() << "): ";
+    for (int i=0; i<knotVector.count(); ++i) {
+        dbg.nospace() << i << ": " << knotVector.at(i) << ", ";
+    }
 }
