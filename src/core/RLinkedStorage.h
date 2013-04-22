@@ -96,7 +96,7 @@ public:
     virtual RObject::Handle getNewObjectHandle();
 
     virtual RLayer::Id getCurrentLayerId();
-    virtual RBlock::Id getCurrentBlockId();
+    virtual RBlock::Id getCurrentBlockId() const;
     virtual RView::Id getCurrentViewId();
     virtual RColor getCurrentColor();
     virtual RLineweight::Lineweight getCurrentLineweight();

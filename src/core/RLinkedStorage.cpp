@@ -304,7 +304,7 @@ RLayer::Id RLinkedStorage::getCurrentLayerId() {
     return backStorage->getCurrentLayerId();
 }
 
-RBlock::Id RLinkedStorage::getCurrentBlockId() {
+RBlock::Id RLinkedStorage::getCurrentBlockId() const {
     return backStorage->getCurrentBlockId();
 }
 
