@@ -64,8 +64,6 @@ RVector RSnapIntersection::snap(
         return lastSnap;
     }
 
-//    RDebug::startTimer(2);
-
     REntity::Id entityId1 = REntity::INVALID_ID;
     REntity::Id entityId2 = REntity::INVALID_ID;
     lastSnap = RVector::invalid;
@@ -80,24 +78,15 @@ RVector RSnapIntersection::snap(
         }
 
         QMap<REntity::Id, QSet<int> >::const_iterator it2;
-        for (it2=it1+1; it2!=candidates.end(); it2++) {
+        for (it2=it1; it2!=candidates.end(); it2++) {
             QSharedPointer<REntity> e2 = document->queryEntity(it2.key());
             if (e2.isNull()) {
                 continue;
             }
 
-            // note: intersection points with entity self are possible (polyline, block reference, ...)
-            // TODO: can be very slow:
-            //qDebug() << "getting intersection points for " << e1->getId() << " and " << e2->getId();
-            //RDebug::startTimer(1);
-            // limiting query to queryBox:
-            //qDebug() << "RSnapIntersection::snap: pos1: " << it1.value();
-            //qDebug() << "RSnapIntersection::snap: pos2: " << it2.value();
-            RVector candidate =
-                position.getClosest(
-                    e1->getIntersectionPoints(*e2, true, queryBox/*, it1.value(), it2.value()*/)
-                );
-            //RDebug::stopTimer(1, "getting intersection points");
+            QList<RVector> candidates = e1->getIntersectionPoints(*e2, true, queryBox);
+
+            RVector candidate = position.getClosest(candidates);
 
             dist = candidate.getDistanceTo(position);
             if (dist<minDist) {
@@ -108,8 +97,6 @@ RVector RSnapIntersection::snap(
             }
         }
     }
-
-//    RDebug::stopTimer(2, "RSnapIntersection::snap");
 
     if (!lastSnap.isValid()) {
         lastSnap = position;
