@@ -350,20 +350,10 @@ public:
     }
 
     /**
-     * \copydoc REntityData::getIntersectionPoints(RDocument&)
-     */
-    /*
-    virtual QList<RVector> getIntersectionPoints(RDocument& document) const {
-        return getData().getIntersectionPoints(document);
-    }
-    */
-
-    /**
      * \copydoc REntityData::getIntersectionPoints(const REntity&, bool)
      */
     virtual QList<RVector> getIntersectionPoints(
-            const REntity& other, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX
-            /*const QSet<int>& pos = RDEFAULT_QSET_INT, const QSet<int>& posOther = RDEFAULT_QSET_INT*/) const;
+            const REntity& other, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX) const;
 
     /**
      * \copydoc REntityData::getIntersectionPoints(const RShape&, bool)
