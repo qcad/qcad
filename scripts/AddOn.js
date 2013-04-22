@@ -53,6 +53,8 @@ AddOn.prototype.toString = function() {
  */
 AddOn.prototype.init = function(splash, text) {
     this.initAddOn(splash, text);
+
+    // slow:
     //this.initPreferencePage();
 };
 
@@ -109,19 +111,6 @@ AddOn.prototype.initAddOn = function(splash, text) {
         eval("if (typeof(" + className + ")!='undefined' && isFunction(" + className + ".init)) {"
              + className + ".init('" + includeBasePath + "', splash, text);"
              + "}");
-
-        /*
-        if (!path.contains("/Developer/") && !path.contains("/Examples/")) {
-            if (!new QFileInfo(path + "/PreferencesPage.ui").exists()) {
-                qDebug("refactoring: ", className);
-                this.refactor(false);
-                this.refactor(true);
-            }
-            else {
-                qDebug("not refactoring: ", className);
-            }
-        }
-        */
     }
 
     includeBasePath = bak;
