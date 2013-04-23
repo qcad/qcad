@@ -4,6 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RMessageHandler" />
   <class_decl name="RProgressHandler" />
   <class_decl name="RLineEntity" />
+  <class_decl name="RPolylineEntity" />
   <class_decl name="RImageEntity" />
   <class_decl name="RPointEntity" />
   <class name="RDxfExporter"

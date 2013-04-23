@@ -49,6 +49,8 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <class_decl>class 
   <name>RLineEntity</name>;</class_decl>
   <class_decl>class 
+  <name>RPolylineEntity</name>;</class_decl>
+  <class_decl>class 
   <name>RImageEntity</name>;</class_decl>
   <class_decl>class 
   <name>RPointEntity</name>;</class_decl>
@@ -245,6 +247,7 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <param>
     <decl>
       <type>
+      <name>const</name>
       <name>REntity</name>&amp;</type>
       <name>e</name>
     </decl>
@@ -275,6 +278,20 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <name>const</name>
       <name>RLineEntity</name>&amp;</type>
       <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writePolyline</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RPolylineEntity</name>&amp;</type>
+      <name>pl</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -389,6 +406,7 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <param>
     <decl>
       <type>
+      <name>const</name>
       <name>REntity</name>&amp;</type>
       <name>entity</name>
     </decl>

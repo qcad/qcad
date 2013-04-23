@@ -49,7 +49,7 @@ HEADERS += \
     RWebView.h
 TEMPLATE = lib
 CONFIG += plugin
-LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadentity
+LIBS += -lqcadcore -lqcadentity
 TARGET = qcadgui
 OTHER_FILES += gui.dox
 DEFINES += QCADGUI_LIBRARY

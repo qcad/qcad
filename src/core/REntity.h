@@ -139,7 +139,7 @@ public:
     /**
      * \copydoc REntityData::getLayerName
      */
-    QString getLayerName() {
+    QString getLayerName() const {
         return getData().getLayerName();
     }
 
@@ -160,7 +160,7 @@ public:
     /**
      * \copydoc REntityData::getBlockName
      */
-    QString getBlockName() {
+    QString getBlockName() const {
         return getData().getBlockName();
     }
 

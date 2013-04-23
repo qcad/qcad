@@ -247,7 +247,7 @@ public:
     virtual RLineweight::Lineweight getCurrentLineweight();
 
     void setCurrentLinetype(RLinetype lt);
-    virtual RLinetype getCurrentLinetype();
+    virtual RLinetype getCurrentLinetype() const;
 
     virtual QSharedPointer<RBlock> queryCurrentBlock() {
         return queryBlock(getCurrentBlockId());
@@ -294,24 +294,24 @@ public:
     virtual double getLinetypeScale() const;
 
     virtual QString getBlockName(RBlock::Id blockId) const = 0;
-    virtual QSet<QString> getBlockNames() = 0;
-    virtual RBlock::Id getBlockId(const QString& blockName) = 0;
-    virtual bool hasBlock(const QString& blockName);
+    virtual QSet<QString> getBlockNames() const = 0;
+    virtual RBlock::Id getBlockId(const QString& blockName) const = 0;
+    virtual bool hasBlock(const QString& blockName) const;
 
-    virtual QString getViewName(RView::Id viewId) = 0;
-    virtual QSet<QString> getViewNames() = 0;
-    virtual RView::Id getViewId(const QString& viewName) = 0;
-    virtual bool hasView(const QString& viewName);
+    virtual QString getViewName(RView::Id viewId) const = 0;
+    virtual QSet<QString> getViewNames() const = 0;
+    virtual RView::Id getViewId(const QString& viewName) const = 0;
+    virtual bool hasView(const QString& viewName) const;
 
-    virtual QString getLayerName(RLayer::Id layerId) = 0;
-    virtual QSet<QString> getLayerNames() = 0;
-    virtual RLayer::Id getLayerId(const QString& layerName) = 0;
-    virtual bool hasLayer(const QString& layerName);
+    virtual QString getLayerName(RLayer::Id layerId) const = 0;
+    virtual QSet<QString> getLayerNames() const = 0;
+    virtual RLayer::Id getLayerId(const QString& layerName) const = 0;
+    virtual bool hasLayer(const QString& layerName) const;
 
-    virtual QString getLinetypeName(RLinetype::Id linetypeId) = 0;
-    virtual QSet<QString> getLinetypeNames() = 0;
-    virtual RLinetype::Id getLinetypeId(const QString& linetypeName) = 0;
-    virtual bool hasLinetype(const QString& linetypeName);
+    virtual QString getLinetypeName(RLinetype::Id linetypeId) const = 0;
+    virtual QSet<QString> getLinetypeNames() const = 0;
+    virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const = 0;
+    virtual bool hasLinetype(const QString& linetypeName) const;
 
     virtual QStringList getVariables() const = 0;
     virtual void setVariable(const QString& key, const QVariant & value) = 0;

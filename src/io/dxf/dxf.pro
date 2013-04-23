@@ -16,4 +16,14 @@ CONFIG += plugin
 DEFINES += QCADDXF_LIBRARY
 TARGET = qcaddxf
 DESTDIR = ../../../plugins
-LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lqcadentity -ldxflib -lqcadoperations
+LIBS += -lqcadcore -lqcadentity -ldxflib -lqcadoperations
+
+win32 {
+    POST_TARGETDEPS += ../../../$$ROUTDIR/dxflib.lib
+}
+macx {
+    POST_TARGETDEPS += ../../../$$ROUTDIR/libdxflib.a
+}
+linux {
+    POST_TARGETDEPS += ../../../$$ROUTDIR/libdxflib.a
+}

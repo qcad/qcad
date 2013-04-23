@@ -34,7 +34,7 @@ REntityData::REntityData(RDocument* document) :
 
 }
 
-QString REntityData::getLayerName() {
+QString REntityData::getLayerName() const {
     if (getDocument()==NULL) {
         qWarning("REntityData::getLayerName: document is NULL");
         return QString();

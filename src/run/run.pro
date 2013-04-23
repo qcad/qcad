@@ -12,11 +12,11 @@ win32 {
     QMAKE_LFLAGS_WINDOWS += /FORCE:MULTIPLE
 }
 
-linux-g++ {
-    QMAKE_CXXFLAGS += -static-libgcc -static-libstdc++
-    QMAKE_LFLAGS += -L.
-    QMAKE_LFLAGS += -static-libgcc -static-libstdc++
-}
+#linux-g++ {
+#    QMAKE_CXXFLAGS += -static-libgcc -static-libstdc++
+#    QMAKE_LFLAGS += -L.
+#    QMAKE_LFLAGS += -static-libgcc -static-libstdc++
+#}
 
 SOURCES += main.cpp
 TEMPLATE = app

@@ -87,26 +87,26 @@ void RStorage::setCurrentLinetype(RLinetype lt) {
     currentLinetype = lt;
 }
 
-RLinetype RStorage::getCurrentLinetype() {
+RLinetype RStorage::getCurrentLinetype() const {
     return currentLinetype;
 }
 
-bool RStorage::hasView(const QString& viewName) {
+bool RStorage::hasView(const QString& viewName) const {
     QStringList sl = getViewNames().toList();
     return sl.contains(viewName, Qt::CaseInsensitive);
 }
 
-bool RStorage::hasLayer(const QString& layerName) {
+bool RStorage::hasLayer(const QString& layerName) const {
     QStringList sl = getLayerNames().toList();
     return sl.contains(layerName, Qt::CaseInsensitive);
 }
 
-bool RStorage::hasBlock(const QString& blockName) {
+bool RStorage::hasBlock(const QString& blockName) const {
     QStringList sl = getBlockNames().toList();
     return sl.contains(blockName, Qt::CaseInsensitive);
 }
 
-bool RStorage::hasLinetype(const QString& linetypeName) {
+bool RStorage::hasLinetype(const QString& linetypeName) const {
     return getLinetypeNames().contains(linetypeName);
 }
 

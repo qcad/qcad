@@ -7,9 +7,18 @@ SOURCES = \
     RSpatialIndexNavel.cpp
 
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 TARGET = qcadspatialindex
-LIBS += -L$$PWD/$$ROUTDIR -lqcadcore -lspatialindexnavel
+LIBS += -lqcadcore -lspatialindexnavel
 OTHER_FILES += spatialindex.dox
 DEFINES += QCADSPATIALINDEX_LIBRARY
+
+win32 {
+    POST_TARGETDEPS += ../../$$ROUTDIR/spatialindexnavel.dll
+}
+macx {
+    POST_TARGETDEPS += ../../$$ROUTDIR/libspatialindexnavel.dylib
+}
+linux {
+    POST_TARGETDEPS += ../../$$ROUTDIR/libspatialindexnavel.so
+}

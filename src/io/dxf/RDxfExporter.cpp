@@ -26,6 +26,7 @@
 #include "RDxfExporter.h"
 #include "RLinetypePatternMap.h"
 #include "RLineEntity.h"
+#include "RPolylineEntity.h"
 #include "RImageEntity.h"
 #include "RPointEntity.h"
 #include "RStorage.h"
@@ -167,7 +168,6 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     /*
     if (exportVersion!=DL_Codes::AC1009) {
-
         RS_Block b1(graphic, RS_BlockData("*Model_Space",
                                           RS_Vector(0.0,0.0), false));
         writeBlock(&b1);
@@ -353,6 +353,8 @@ void RDxfExporter::writeLayer(const RLayer& l) {
 
 void RDxfExporter::writeBlock(const RBlock& b) {
     QString blockName = b.getName();
+
+
     if (dxf.getVersion()==DL_Codes::AC1009) {
         if (blockName.at(0)=='*') {
             blockName[0] = '_';
@@ -363,6 +365,11 @@ void RDxfExporter::writeBlock(const RBlock& b) {
                                       b.getOrigin().x,
                                       b.getOrigin().y,
                                       b.getOrigin().z));
+
+    // entities in model space are stored in section ENTITIES, not in block:
+    if (blockName.toLower()==RBlock::modelSpaceName.toLower()) {
+        return;
+    }
 
     QSet<REntity::Id> ids = document->queryBlockEntities(b.getId());
     QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
@@ -385,26 +392,25 @@ void RDxfExporter::writeEntity(REntity::Id id) {
 /**
  * Writes the given entity to the DXF file.
  */
-void RDxfExporter::writeEntity(REntity& e) {
+void RDxfExporter::writeEntity(const REntity& e) {
     if (e.isUndone()) {
         // never reached:
         return;
     }
-    qDebug() << "writing entity";
 
     attributes = getEntityAttributes(e);
 
     switch (e.getType()) {
     case RS::EntityPoint:
-        writePoint(dynamic_cast<RPointEntity&>(e));
+        writePoint(dynamic_cast<const RPointEntity&>(e));
         break;
     case RS::EntityLine:
-        writeLine(dynamic_cast<RLineEntity&>(e));
+        writeLine(dynamic_cast<const RLineEntity&>(e));
         break;
-    /*
     case RS::EntityPolyline:
-        writePolyline(dynamic_cast<RS_Polyline*>(e));
+        writePolyline(dynamic_cast<const RPolylineEntity&>(e));
         break;
+        /*
     case RS::EntitySpline:
         writeSpline(dynamic_cast<RS_Spline*>(e));
         break;
@@ -488,9 +494,100 @@ void RDxfExporter::writeLine(const RLineEntity& l) {
 }
 
 /**
+ * Writes the given polyline entity to the file.
+ */
+void RDxfExporter::writePolyline(const RPolylineEntity& pl) {
+
+    int count = pl.countVertices();
+
+    dxf.writePolyline(
+        *dw,
+        DL_PolylineData(count,
+                        0, 0,
+                        pl.isClosed()*0x1),
+        attributes
+    );
+
+//    bool first = true;
+
+    for (int i=0; i<pl.countVertices(); i++) {
+        RVector v = pl.getVertexAt(i);
+        double bulge = pl.getBulgeAt(i);
+
+        //if (first) {
+            dxf.writeVertex(*dw,
+                            DL_VertexData(v.x,
+                                          v.y,
+                                          0.0,
+                                          bulge));
+//            first = false;
+//        }
+
+//        if (!pl.isClosed() || v!=lastEntity) {
+//            dxf.writeVertex(*dw,
+//                        DL_VertexData(ae->getEndpoint().x,
+//                                      ae->getEndpoint().y,
+//                                      0.0,
+//                                      bulge));
+//        }
+    }
+
+
+    /*
+    RS_Entity* nextEntity = 0;
+    RS_AtomicEntity* ae = NULL;
+    RS_Entity* lastEntity = pl.lastEntity(RS2::ResolveNone);
+    for (RS_Entity* v=pl.firstEntity(RS2::ResolveNone);
+            v!=NULL;
+            v=nextEntity) {
+
+        nextEntity = pl.nextEntity(RS2::ResolveNone);
+
+        if (!v->isAtomic()) {
+            continue;
+        }
+
+        ae = dynamic_cast<RS_AtomicEntity*>(v);
+        double bulge=0.0;
+
+        // Write vertex:
+        if (first) {
+            if (v->rtti()==RS2::EntityArc) {
+                bulge = dynamic_cast<RS_Arc*>(v)->getBulge();
+            }
+            dxf.writeVertex(*dw,
+                            DL_VertexData(ae->getStartpoint().x,
+                                          ae->getStartpoint().y,
+                                          0.0,
+                                          bulge));
+            first = false;
+        }
+
+        if (nextEntity!=NULL) {
+            if (nextEntity->rtti()==RS2::EntityArc) {
+                bulge = dynamic_cast<RS_Arc*>(nextEntity)->getBulge();
+            }
+            else {
+                bulge = 0.0;
+            }
+        }
+
+        if (pl.isClosed()==false || v!=lastEntity) {
+            dxf.writeVertex(*dw,
+                        DL_VertexData(ae->getEndpoint().x,
+                                      ae->getEndpoint().y,
+                                      0.0,
+                                      bulge));
+        }
+    }
+    */
+    dxf.writePolylineEnd(*dw);
+}
+
+/**
  * \return the entities attributes as a DL_Attributes object.
  */
-DL_Attributes RDxfExporter::getEntityAttributes(REntity& entity) {
+DL_Attributes RDxfExporter::getEntityAttributes(const REntity& entity) {
     // Layer:
     QString layerName = entity.getLayerName();
 

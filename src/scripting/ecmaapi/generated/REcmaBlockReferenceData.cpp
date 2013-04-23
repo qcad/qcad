@@ -67,7 +67,7 @@
     
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
-            REcmaHelper::registerFunction(&engine, proto, getBoundingBoxes, "getBoundingBoxes");
+            REcmaHelper::registerFunction(&engine, proto, getInternalReferencePoints, "getInternalReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
             
@@ -401,19 +401,19 @@
             return result;
         }
          QScriptValue
-        REcmaBlockReferenceData::getBoundingBoxes
+        REcmaBlockReferenceData::getInternalReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlockReferenceData::getBoundingBoxes", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getBoundingBoxes";
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::getInternalReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getInternalReferencePoints";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RBlockReferenceData* self = 
-                        getSelf("getBoundingBoxes", context);
+                        getSelf("getInternalReferencePoints", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -430,11 +430,43 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QList < RBox >'
-    QList < RBox > cppResult =
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
         
-               self->getBoundingBoxes();
-        // return type: QList < RBox >
+               self->getInternalReferencePoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::ProjectionRenderingHint */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::ProjectionRenderingHint
+                    a0 =
+                    (RS::ProjectionRenderingHint)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getInternalReferencePoints(a0);
+        // return type: QList < RVector >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             
@@ -443,10 +475,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getBoundingBoxes().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getInternalReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getBoundingBoxes", context, engine);
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getInternalReferencePoints", context, engine);
             return result;
         }
          QScriptValue

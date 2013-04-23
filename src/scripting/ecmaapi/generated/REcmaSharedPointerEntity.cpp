@@ -139,6 +139,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getVectorTo, "getVectorTo");
             
+            REcmaHelper::registerFunction(&engine, proto, getInternalReferencePoints, "getInternalReferencePoints");
+            
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, getPointOnEntity, "getPointOnEntity");
@@ -2770,6 +2772,87 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntity::getVectorTo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntity::getInternalReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntity::getInternalReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntity::getInternalReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("getInternalReferencePoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getInternalReferencePoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::ProjectionRenderingHint */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::ProjectionRenderingHint
+                    a0 =
+                    (RS::ProjectionRenderingHint)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getInternalReferencePoints(a0);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.getInternalReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntity::getInternalReferencePoints", context, engine);
             return result;
         }
          QScriptValue

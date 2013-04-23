@@ -1,6 +1,5 @@
 include( ../../../shared.pri )
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 TARGET = qcadecmaapi
 CONFIG -= warn_on
@@ -17,7 +16,7 @@ SOURCES += \
     RAutoLoadEcma.cpp \
     REcmaHelper.cpp \
     RScriptHandlerEcma.cpp
-LIBS += -L$$PWD/$$ROUTDIR \
+LIBS += \
     -lqcadcore \
     -lqcadentity \
     -lqcadgrid \

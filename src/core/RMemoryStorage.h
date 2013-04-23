@@ -118,21 +118,21 @@ public:
     virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value);
     virtual QVariant getKnownVariable(RS::KnownVariable key) const;
 
-    virtual QString getLayerName(RLayer::Id layerId);
-    virtual QSet<QString> getLayerNames();
-    virtual RLayer::Id getLayerId(const QString& layerName);
+    virtual QString getLayerName(RLayer::Id layerId) const;
+    virtual QSet<QString> getLayerNames() const;
+    virtual RLayer::Id getLayerId(const QString& layerName) const;
 
     virtual QString getBlockName(RBlock::Id blockId) const;
-    virtual QSet<QString> getBlockNames();
-    virtual RBlock::Id getBlockId(const QString& blockName);
+    virtual QSet<QString> getBlockNames() const;
+    virtual RBlock::Id getBlockId(const QString& blockName) const;
 
-    virtual QString getViewName(RView::Id viewId);
-    virtual QSet<QString> getViewNames();
-    virtual RView::Id getViewId(const QString& viewName);
+    virtual QString getViewName(RView::Id viewId) const;
+    virtual QSet<QString> getViewNames() const;
+    virtual RView::Id getViewId(const QString& viewName) const;
 
-    virtual QString getLinetypeName(RLinetype::Id linetypeId);
-    virtual QSet<QString> getLinetypeNames();
-    virtual RLinetype::Id getLinetypeId(const QString& linetypeName);
+    virtual QString getLinetypeName(RLinetype::Id linetypeId) const;
+    virtual QSet<QString> getLinetypeNames() const;
+    virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const;
 
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
     virtual QSharedPointer<REntity> queryEntityDirect(REntity::Id objectId) const;

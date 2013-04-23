@@ -173,7 +173,7 @@ QString RLinkedStorage::getBlockName(RBlock::Id blockId) const {
     return ret;
 }
 
-QString RLinkedStorage::getViewName(RView::Id viewId) {
+QString RLinkedStorage::getViewName(RView::Id viewId) const {
     QString ret = RMemoryStorage::getViewName(viewId);
     if (ret.isNull()) {
         ret = backStorage->getViewName(viewId);
@@ -233,7 +233,7 @@ QSharedPointer<RLinetype> RLinkedStorage::queryLinetype(const QString& linetypeN
     return ret;
 }
 
-QString RLinkedStorage::getLayerName(RLayer::Id layerId) {
+QString RLinkedStorage::getLayerName(RLayer::Id layerId) const {
     QString ret = RMemoryStorage::getLayerName(layerId);
     if (ret.isNull()) {
         ret = backStorage->getLayerName(layerId);
@@ -241,7 +241,7 @@ QString RLinkedStorage::getLayerName(RLayer::Id layerId) {
     return ret;
 }
 
-RLayer::Id RLinkedStorage::getLayerId(const QString& layerName) {
+RLayer::Id RLinkedStorage::getLayerId(const QString& layerName) const {
     RLayer::Id ret = RMemoryStorage::getLayerId(layerName);
     if (ret==RLayer::INVALID_ID) {
         ret = backStorage->getLayerId(layerName);
@@ -249,7 +249,7 @@ RLayer::Id RLinkedStorage::getLayerId(const QString& layerName) {
     return ret;
 }
 
-RBlock::Id RLinkedStorage::getBlockId(const QString& blockName) {
+RBlock::Id RLinkedStorage::getBlockId(const QString& blockName) const {
     RBlock::Id ret = RMemoryStorage::getBlockId(blockName);
     if (ret==RBlock::INVALID_ID) {
         ret = backStorage->getBlockId(blockName);
@@ -257,7 +257,7 @@ RBlock::Id RLinkedStorage::getBlockId(const QString& blockName) {
     return ret;
 }
 
-RView::Id RLinkedStorage::getViewId(const QString& viewName) {
+RView::Id RLinkedStorage::getViewId(const QString& viewName) const {
     RView::Id ret = RMemoryStorage::getViewId(viewName);
     if (ret==RView::INVALID_ID) {
         ret = backStorage->getViewId(viewName);
@@ -265,7 +265,7 @@ RView::Id RLinkedStorage::getViewId(const QString& viewName) {
     return ret;
 }
 
-QString RLinkedStorage::getLinetypeName(RLinetype::Id linetypeId) {
+QString RLinkedStorage::getLinetypeName(RLinetype::Id linetypeId) const {
     QString ret = RMemoryStorage::getLinetypeName(linetypeId);
     if (ret.isNull()) {
         ret = backStorage->getLinetypeName(linetypeId);
@@ -273,7 +273,7 @@ QString RLinkedStorage::getLinetypeName(RLinetype::Id linetypeId) {
     return ret;
 }
 
-RLinetype::Id RLinkedStorage::getLinetypeId(const QString& linetypeName) {
+RLinetype::Id RLinkedStorage::getLinetypeId(const QString& linetypeName) const {
     RLinetype::Id ret = RMemoryStorage::getLinetypeId(linetypeName);
     if (ret==RLinetype::INVALID_ID) {
         ret = backStorage->getLinetypeId(linetypeName);
@@ -316,27 +316,27 @@ RColor RLinkedStorage::getCurrentColor() {
     return backStorage->getCurrentColor();
 }
 
-RLineweight::Lineweight RLinkedStorage::getCurrentLineweight() {
+RLineweight::Lineweight RLinkedStorage::getCurrentLineweight() const {
     return backStorage->getCurrentLineweight();
 }
 
-RLinetype RLinkedStorage::getCurrentLinetype() {
+RLinetype RLinkedStorage::getCurrentLinetype() const {
     return backStorage->getCurrentLinetype();
 }
 
-QSet<QString> RLinkedStorage::getBlockNames() {
+QSet<QString> RLinkedStorage::getBlockNames() const {
     return RMemoryStorage::getBlockNames().unite(backStorage->getBlockNames());
 }
 
-QSet<QString> RLinkedStorage::getViewNames() {
+QSet<QString> RLinkedStorage::getViewNames() const {
     return RMemoryStorage::getViewNames().unite(backStorage->getViewNames());
 }
 
-QSet<QString> RLinkedStorage::getLayerNames() {
+QSet<QString> RLinkedStorage::getLayerNames() const {
     return RMemoryStorage::getLayerNames().unite(backStorage->getLayerNames());
 }
 
-QSet<QString> RLinkedStorage::getLinetypeNames() {
+QSet<QString> RLinkedStorage::getLinetypeNames() const {
     return RMemoryStorage::getLinetypeNames().unite(backStorage->getLinetypeNames());
 }
 

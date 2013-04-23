@@ -69,6 +69,7 @@ RDxfImporter::~RDxfImporter() {
 }
 
 bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter) {
+    qDebug() << "RDxfImporter::importFile";
     Q_UNUSED(nameFilter)
 
     this->fileName = fileName;
@@ -97,7 +98,9 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     RImporter::startImport();
 
     DL_Dxf dxflib;
+    qDebug() << "dxflib.in";
     bool success = dxflib.in((const char*)fileName.toUtf8(), this);
+    qDebug() << "dxflib.in: OK";
 
     if (success==false) {
         qWarning() << "Cannot open DXF file: " << fileName;
@@ -411,12 +414,14 @@ void RDxfImporter::addCircle(const DL_CircleData& data) {
 }
 
 void RDxfImporter::addPolyline(const DL_PolylineData& data) {
+    qDebug() << "RDxfImporter::addPolyline";
     polyline = RPolyline();
     polyline.setClosed(data.flags&0x1);
 }
 
 void RDxfImporter::addVertex(const DL_VertexData& data) {
     RVector v(data.x, data.y);
+    qDebug() << "RDxfImporter::addVertex: " << v << " / " << data.bulge;
     polyline.appendVertex(v, data.bulge);
 }
 

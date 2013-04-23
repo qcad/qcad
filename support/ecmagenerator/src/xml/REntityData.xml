@@ -205,6 +205,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="blockRefStack" isConst="true" />
       </variant>
     </method>
+    <method name="getInternalReferencePoints"
+    cppName="getInternalReferencePoints" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RS::ProjectionRenderingHint"
+        typeName="RS::ProjectionRenderingHint" name="hint"
+        hasDefault="true" default="RS :: RenderTop"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getReferencePoints" cppName="getReferencePoints"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

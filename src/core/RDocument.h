@@ -229,10 +229,10 @@ public:
     RView::Id getCurrentViewId();
 
     QString getBlockName(RBlock::Id blockId) const;
-    QSet<QString> getBlockNames();
-    QString getLayerName(RLayer::Id layerId);
-    QSet<QString> getLayerNames();
-    QSet<QString> getViewNames();
+    QSet<QString> getBlockNames() const;
+    QString getLayerName(RLayer::Id layerId) const;
+    QSet<QString> getLayerNames() const;
+    QSet<QString> getViewNames() const;
 
     bool hasLayer(const QString& layerName);
     bool hasBlock(const QString& blockName);

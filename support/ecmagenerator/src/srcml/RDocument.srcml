@@ -1768,7 +1768,8 @@ dir="./core" filename="RDocument.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getBlockNames</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>QString</name>
@@ -1784,7 +1785,8 @@ dir="./core" filename="RDocument.h">
       </type>
       <name>layerId</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>QSet

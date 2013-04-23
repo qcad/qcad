@@ -394,10 +394,10 @@ QString RMemoryStorage::getBlockName(RBlock::Id blockId) const {
     return l->getName();
 }
 
-QSet<QString> RMemoryStorage::getBlockNames() {
+QSet<QString> RMemoryStorage::getBlockNames() const {
     QSet<QString> ret;
-    QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
-    for (it = objectMap.begin(); it != objectMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = it->dynamicCast<RBlock> ();
         if (!b.isNull() && !b->isUndone()) {
             ret.insert(b->getName());
@@ -406,7 +406,7 @@ QSet<QString> RMemoryStorage::getBlockNames() {
     return ret;
 }
 
-QString RMemoryStorage::getViewName(RView::Id viewId) {
+QString RMemoryStorage::getViewName(RView::Id viewId) const {
     QSharedPointer<RView> v = queryView(viewId);
     if (v.isNull()) {
         return QString();
@@ -414,10 +414,10 @@ QString RMemoryStorage::getViewName(RView::Id viewId) {
     return v->getName();
 }
 
-QSet<QString> RMemoryStorage::getViewNames() {
+QSet<QString> RMemoryStorage::getViewNames() const {
     QSet<QString> ret;
-    QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
-    for (it = objectMap.begin(); it != objectMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
         QSharedPointer<RView> v = it->dynamicCast<RView> ();
         if (!v.isNull() && !v->isUndone()) {
             ret.insert(v->getName());
@@ -953,7 +953,7 @@ QVariant RMemoryStorage::getKnownVariable(RS::KnownVariable key) const {
     }
 }
 
-QString RMemoryStorage::getLayerName(RLayer::Id layerId) {
+QString RMemoryStorage::getLayerName(RLayer::Id layerId) const {
     QSharedPointer<RLayer> l = queryLayer(layerId);
     if (l.isNull()) {
         return QString();
@@ -961,10 +961,10 @@ QString RMemoryStorage::getLayerName(RLayer::Id layerId) {
     return l->getName();
 }
 
-QSet<QString> RMemoryStorage::getLayerNames() {
+QSet<QString> RMemoryStorage::getLayerNames() const {
     QSet<QString> ret;
-    QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
-    for (it = objectMap.begin(); it != objectMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
         QSharedPointer<RLayer> l = it->dynamicCast<RLayer>();
         if (!l.isNull() && !l->isUndone()) {
             ret.insert(l->getName());
@@ -973,7 +973,7 @@ QSet<QString> RMemoryStorage::getLayerNames() {
     return ret;
 }
 
-RLayer::Id RMemoryStorage::getLayerId(const QString& layerName) {
+RLayer::Id RMemoryStorage::getLayerId(const QString& layerName) const {
     QSharedPointer<RLayer> l = queryLayer(layerName);
     if (l.isNull()) {
         return RLayer::INVALID_ID;
@@ -981,7 +981,7 @@ RLayer::Id RMemoryStorage::getLayerId(const QString& layerName) {
     return l->getId();
 }
 
-RBlock::Id RMemoryStorage::getBlockId(const QString& blockName) {
+RBlock::Id RMemoryStorage::getBlockId(const QString& blockName) const {
     QSharedPointer<RBlock> b = queryBlock(blockName);
     if (b.isNull()) {
         return RBlock::INVALID_ID;
@@ -989,7 +989,7 @@ RBlock::Id RMemoryStorage::getBlockId(const QString& blockName) {
     return b->getId();
 }
 
-RView::Id RMemoryStorage::getViewId(const QString& viewName) {
+RView::Id RMemoryStorage::getViewId(const QString& viewName) const {
     QSharedPointer<RView> v = queryView(viewName);
     if (v.isNull()) {
         return RView::INVALID_ID;
@@ -997,7 +997,7 @@ RView::Id RMemoryStorage::getViewId(const QString& viewName) {
     return v->getId();
 }
 
-QString RMemoryStorage::getLinetypeName(RLinetype::Id linetypeId) {
+QString RMemoryStorage::getLinetypeName(RLinetype::Id linetypeId) const {
     QSharedPointer<RLinetype> l = queryLinetype(linetypeId);
     if (l.isNull()) {
         return QString();
@@ -1005,10 +1005,10 @@ QString RMemoryStorage::getLinetypeName(RLinetype::Id linetypeId) {
     return l->getName();
 }
 
-QSet<QString> RMemoryStorage::getLinetypeNames() {
+QSet<QString> RMemoryStorage::getLinetypeNames() const {
     QSet<QString> ret;
-    QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
-    for (it = objectMap.begin(); it != objectMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
         QSharedPointer<RLinetype> l = it->dynamicCast<RLinetype>();
         if (!l.isNull() && !l->isUndone()) {
             ret.insert(l->getName());
@@ -1017,7 +1017,7 @@ QSet<QString> RMemoryStorage::getLinetypeNames() {
     return ret;
 }
 
-RLinetype::Id RMemoryStorage::getLinetypeId(const QString& linetypeName) {
+RLinetype::Id RMemoryStorage::getLinetypeId(const QString& linetypeName) const {
     QSharedPointer<RLinetype> l = queryLinetype(linetypeName);
     if (l.isNull()) {
         return RLinetype::INVALID_ID;

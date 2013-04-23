@@ -225,14 +225,13 @@ HEADERS = \
     math/RTriangle.h \
     math/RVector.h
 TEMPLATE = lib
-#CONFIG += staticlib
 CONFIG += plugin
 TARGET = qcadcore
 RESOURCES = resources/core.qrc
-OTHER_FILES += core.dox
+OTHER_FILES += core.dox math/math.dox
 DEFINES += QCADCORE_LIBRARY
 
-LIBS += -L$$PWD/$$ROUTDIR -lzlib -lopennurbs
+LIBS += -lzlib -lopennurbs
 
 win32 {
     LIBS += -lRpcrt4 -lAdvapi32

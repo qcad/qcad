@@ -118,6 +118,9 @@
         getColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getInternalReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

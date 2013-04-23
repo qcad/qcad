@@ -154,7 +154,7 @@ public:
         return layerId;
     }
 
-    QString getLayerName();
+    QString getLayerName() const;
 
     virtual void setBlockId(RBlock::Id blockId) {
         this->blockId = blockId;
@@ -211,6 +211,8 @@ public:
      */
     virtual QList<RVector> getInternalReferencePoints(
         RS::ProjectionRenderingHint hint=RS::RenderTop) const {
+
+        Q_UNUSED(hint)
 
         return getReferencePoints();
     }

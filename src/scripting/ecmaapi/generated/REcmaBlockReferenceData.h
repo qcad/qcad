@@ -48,7 +48,7 @@
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getBoundingBoxes
+        getInternalReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getReferencePoints

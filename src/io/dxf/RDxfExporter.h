@@ -33,6 +33,7 @@
 class RMessageHandler;
 class RProgressHandler;
 class RLineEntity;
+class RPolylineEntity;
 class RImageEntity;
 class RPointEntity;
 
@@ -63,9 +64,10 @@ public:
     void writeBlock(const RBlock& b);
 
     void writeEntity(REntity::Id id);
-    void writeEntity(REntity& e);
+    void writeEntity(const REntity& e);
     void writePoint(const RPointEntity& p);
     void writeLine(const RLineEntity& l);
+    void writePolyline(const RPolylineEntity& pl);
 
     void writeImageDef(const RImageEntity& img);
 
@@ -86,7 +88,7 @@ public:
     }
 
 private:
-    DL_Attributes getEntityAttributes(REntity& entity);
+    DL_Attributes getEntityAttributes(const REntity& entity);
 
 private:
     DL_Dxf dxf;

@@ -443,7 +443,7 @@ QString RDocument::getBlockName(RBlock::Id blockId) const {
     return storage.getBlockName(blockId);
 }
 
-QSet<QString> RDocument::getBlockNames() {
+QSet<QString> RDocument::getBlockNames() const {
     return storage.getBlockNames();
 }
 
@@ -467,15 +467,15 @@ bool RDocument::hasView(const QString& viewName) {
     return storage.hasView(viewName);
 }
 
-QString RDocument::getLayerName(RLayer::Id layerId) {
+QString RDocument::getLayerName(RLayer::Id layerId) const {
     return storage.getLayerName(layerId);
 }
 
-QSet<QString> RDocument::getLayerNames() {
+QSet<QString> RDocument::getLayerNames() const {
     return storage.getLayerNames();
 }
 
-QSet<QString> RDocument::getViewNames() {
+QSet<QString> RDocument::getViewNames() const {
     return storage.getViewNames();
 }
 

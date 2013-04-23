@@ -1143,7 +1143,8 @@ dir="./core" filename="RStorage.h">
     <name>RLinetype</name>
   </type>
   <name>getCurrentLinetype</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>virtual</name>
@@ -1444,6 +1445,7 @@ dir="./core" filename="RStorage.h">
   </type>
   <name>getBlockNames</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1477,7 +1479,8 @@ dir="./core" filename="RStorage.h">
       <name>QString</name>&amp;</type>
       <name>blockName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -1495,6 +1498,7 @@ dir="./core" filename="RStorage.h">
       <name>viewId</name>
     </decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1507,6 +1511,7 @@ dir="./core" filename="RStorage.h">
   </type>
   <name>getViewNames</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1540,7 +1545,8 @@ dir="./core" filename="RStorage.h">
       <name>QString</name>&amp;</type>
       <name>viewName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -1558,6 +1564,7 @@ dir="./core" filename="RStorage.h">
       <name>layerId</name>
     </decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1570,6 +1577,7 @@ dir="./core" filename="RStorage.h">
   </type>
   <name>getLayerNames</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1588,6 +1596,7 @@ dir="./core" filename="RStorage.h">
       <name>layerName</name>
     </decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1603,7 +1612,8 @@ dir="./core" filename="RStorage.h">
       <name>QString</name>&amp;</type>
       <name>layerName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -1621,6 +1631,7 @@ dir="./core" filename="RStorage.h">
       <name>linetypeId</name>
     </decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1633,6 +1644,7 @@ dir="./core" filename="RStorage.h">
   </type>
   <name>getLinetypeNames</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1651,6 +1663,7 @@ dir="./core" filename="RStorage.h">
       <name>linetypeName</name>
     </decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1666,7 +1679,8 @@ dir="./core" filename="RStorage.h">
       <name>QString</name>&amp;</type>
       <name>linetypeName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>

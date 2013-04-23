@@ -455,7 +455,8 @@ dir="./core" filename="REntityData.h">
     <name>QString</name>
   </type>
   <name>getLayerName</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>virtual</name>
@@ -732,6 +733,53 @@ dir="./core" filename="REntityData.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="block">/** * Can be overwritten to return
+  internal, resolved reference points. * This is used for example
+  for block references in combination with * snap to reference
+  points. * Default implementation returns same as
+  getReferencePoints(). */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>getInternalReferencePoints</name>
+    <parameter_list>( 
+    <param>
+      <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>ProjectionRenderingHint</name></name>
+      </type>
+      <name>hint</name>=
+      <init>
+        <expr>
+          <name>
+          <name>RS</name>::
+          <name>RenderTop</name></name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>hint</argument>)</argument_list>
+    </macro>
+    <return>return 
+    <expr>
+      <call>
+        <name>getReferencePoints</name>
+        <argument_list>()</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <comment type="block">/** * \return Vector of reference points of
   this entity. Reference points * can usually be moved around by
   the user to change the geometry * of the entity. */</comment>
