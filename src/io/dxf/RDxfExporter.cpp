@@ -24,6 +24,8 @@
 #include <QFileInfo>
 
 #include "RDxfExporter.h"
+#include "RArcEntity.h"
+#include "RCircleEntity.h"
 #include "RLinetypePatternMap.h"
 #include "RLineEntity.h"
 #include "RSplineEntity.h"
@@ -411,13 +413,13 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntitySpline:
         writeSpline(dynamic_cast<const RSplineEntity&>(e));
         break;
-        /*
     case RS::EntityCircle:
-        writeCircle(dynamic_cast<RS_Circle*>(e));
+        writeCircle(dynamic_cast<const RCircleEntity&>(e));
         break;
     case RS::EntityArc:
-        writeArc(dynamic_cast<RS_Arc*>(e));
+        writeArc(dynamic_cast<const RArcEntity&>(e));
         break;
+        /*
     case RS::EntityEllipse:
         writeEllipse(dynamic_cast<RS_Ellipse*>(e));
         break;
@@ -488,6 +490,41 @@ void RDxfExporter::writeLine(const RLineEntity& l) {
                     l.getEndPoint().x,
                     l.getEndPoint().y,
                     l.getEndPoint().z),
+        attributes);
+}
+
+/**
+ * Writes the given circle entity to the file.
+ */
+void RDxfExporter::writeCircle(const RCircleEntity& c) {
+    dxf.writeCircle(
+        *dw,
+        DL_CircleData(c.getCenter().x,
+                      c.getCenter().y,
+                      0.0,
+                      c.getRadius()),
+        attributes);
+}
+
+/**
+ * Writes the given circle entity to the file.
+ */
+void RDxfExporter::writeArc(const RArcEntity& a) {
+    double a1, a2;
+    if (a.isReversed()) {
+        a1 = RMath::rad2deg(a.getEndAngle());
+        a2 = RMath::rad2deg(a.getStartAngle());
+    } else {
+        a1 = RMath::rad2deg(a.getStartAngle());
+        a2 = RMath::rad2deg(a.getEndAngle());
+    }
+    dxf.writeArc(
+        *dw,
+        DL_ArcData(a.getCenter().x,
+                   a.getCenter().y,
+                   0.0,
+                   a.getRadius(),
+                   a1, a2),
         attributes);
 }
 

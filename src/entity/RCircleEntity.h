@@ -90,7 +90,7 @@ public:
         return data.getCenter();
     }
 
-    double getRadius() {
+    double getRadius() const {
         return data.getRadius();
     }
 
