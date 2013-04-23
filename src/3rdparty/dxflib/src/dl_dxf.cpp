@@ -428,7 +428,7 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
             break;
 
         case DL_ENTITY_VERTEX:
-            addVertex(creationInterface);
+            //addVertex(creationInterface);
             break;
 
         case DL_ENTITY_SPLINE:
@@ -902,6 +902,8 @@ void DL_Dxf::addPolyline(DL_CreationInterface* creationInterface) {
     DL_PolylineData pd(maxVertices, getIntValue(71, 0), getIntValue(72, 0), getIntValue(70, 0));
     creationInterface->addPolyline(pd);
 
+    maxVertices = std::min(maxVertices, vertexIndex+1);
+
     if (currentObjectType==DL_ENTITY_LWPOLYLINE) {
         for (int i=0; i<maxVertices; i++) {
             DL_VertexData d(vertices[i*4],
@@ -913,24 +915,6 @@ void DL_Dxf::addPolyline(DL_CreationInterface* creationInterface) {
         }
         creationInterface->endEntity();
     }
-}
-
-
-
-/**
- * Adds a polyline vertex entity that was read from the file 
- * via the creation interface.
- */
-void DL_Dxf::addVertex(DL_CreationInterface* creationInterface) {
-    DL_VertexData d(getRealValue(10, 0.0),
-                    getRealValue(20, 0.0),
-                    getRealValue(30, 0.0),
-                    //bulge);
-                    getRealValue(42, 0.0));
-
-    //bulge = getRealValue(42, 0.0);
-
-    creationInterface->addVertex(d);
 }
 
 
@@ -1327,8 +1311,7 @@ bool DL_Dxf::handleLWPolylineData(DL_CreationInterface* /*creationInterface*/) {
 
         if (groupCode<=30) {
             if (vertexIndex>=0 && vertexIndex<maxVertices) {
-                vertices[4*vertexIndex + (groupCode/10-1)]
-                = toReal(groupValue);
+                vertices[4*vertexIndex + (groupCode/10-1)] = toReal(groupValue);
             }
         } else if (groupCode==42 && vertexIndex<maxVertices) {
             vertices[4*vertexIndex + 3] = toReal(groupValue);
@@ -5081,24 +5064,18 @@ int DL_Dxf::getLibVersion(const std::string& str) {
         }
     }
 
-    if (idx==3) {
+    if (idx>=2) {
         d[3] = str.length();
 
         v[0] = str.substr(0, d[0]);
-        //strncpy(v[0], str, d[0]);
-        //v[0][d[0]] = '\0';
-
         v[1] = str.substr(d[0]+1, d[1]-d[0]-1);
-        //strncpy(v[1], &str[d[0]+1], d[1]-d[0]-1);
-        //v[1][d[1]-d[0]-1] = '\0';
-
         v[2] = str.substr(d[1]+1, d[2]-d[1]-1);
-        //strncpy(v[2], &str[d[1]+1], d[2]-d[1]-1);
-        //v[2][d[2]-d[1]-1] = '\0';
-
-        v[3] = str.substr(d[2]+1, d[3]-d[2]-1);
-        //strncpy(v[3], &str[d[2]+1], d[3]-d[2]-1);
-        //v[3][d[3]-d[2]-1] = '\0';
+        if (idx>=3) {
+            v[3] = str.substr(d[2]+1, d[3]-d[2]-1);
+        }
+        else {
+            v[3] = "0";
+        }
 
         ret = (atoi(v[0].c_str())<<(3*8)) +
               (atoi(v[1].c_str())<<(2*8)) +

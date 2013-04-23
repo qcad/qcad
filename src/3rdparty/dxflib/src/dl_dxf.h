@@ -52,7 +52,7 @@ class DL_CreationInterface;
 class DL_WriterA;
 
 
-#define DL_VERSION "3.1.0"
+#define DL_VERSION "3.1.0.0"
 
 #define DL_VERSION_MAJOR    3
 #define DL_VERSION_MINOR    1
@@ -144,7 +144,6 @@ public:
     void addLine(DL_CreationInterface* creationInterface);
     
     void addPolyline(DL_CreationInterface* creationInterface);
-    void addVertex(DL_CreationInterface* creationInterface);
     
     void addSpline(DL_CreationInterface* creationInterface);
     //void addKnot(DL_CreationInterface* creationInterface);
