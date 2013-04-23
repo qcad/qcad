@@ -146,8 +146,6 @@ public:
     void addPolyline(DL_CreationInterface* creationInterface);
     
     void addSpline(DL_CreationInterface* creationInterface);
-    //void addKnot(DL_CreationInterface* creationInterface);
-    //void addControlPoint(DL_CreationInterface* creationInterface);
     
     void addArc(DL_CreationInterface* creationInterface);
     void addCircle(DL_CreationInterface* creationInterface);
