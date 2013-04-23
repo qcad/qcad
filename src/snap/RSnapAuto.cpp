@@ -223,7 +223,6 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         return lastSnap;
     }
 
-    //return position;
     return RVector::invalid;
 }
 
