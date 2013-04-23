@@ -107,7 +107,13 @@
         getControlPointsWrapped
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        countControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasFitPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getKnotVector

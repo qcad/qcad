@@ -171,6 +171,18 @@ dir="./entity" filename="RPolylineData.h">
   </function>
   <function>
     <type>
+      <name>RPolyline</name>
+    </type>
+    <name>getPolylineShape</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>*
+    <name>this</name></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>void</name>
     </type>
     <name>clear</name>

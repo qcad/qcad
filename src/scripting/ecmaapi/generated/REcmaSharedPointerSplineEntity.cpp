@@ -112,7 +112,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getControlPointsWrapped, "getControlPointsWrapped");
             
+            REcmaHelper::registerFunction(&engine, proto, countControlPoints, "countControlPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, getFitPoints, "getFitPoints");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasFitPoints, "hasFitPoints");
             
             REcmaHelper::registerFunction(&engine, proto, getKnotVector, "getKnotVector");
             
@@ -1293,11 +1297,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'double'
-    double cppResult =
+    // return type 'int'
+    int cppResult =
         
                self->getDegree();
-        // return type: double
+        // return type: int
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1827,6 +1831,55 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerSplineEntity::countControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSplineEntity::countControlPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSplineEntity::countControlPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("countControlPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->countControlPoints();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.countControlPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSplineEntity::countControlPoints", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerSplineEntity::getFitPoints
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1873,6 +1926,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSplineEntity::getFitPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSplineEntity::hasFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSplineEntity::hasFitPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSplineEntity::hasFitPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("hasFitPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasFitPoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.hasFitPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSplineEntity::hasFitPoints", context, engine);
             return result;
         }
          QScriptValue

@@ -33,6 +33,7 @@
 class RMessageHandler;
 class RProgressHandler;
 class RLineEntity;
+class RSplineEntity;
 class RPolylineEntity;
 class RImageEntity;
 class RPointEntity;
@@ -68,6 +69,8 @@ public:
     void writePoint(const RPointEntity& p);
     void writeLine(const RLineEntity& l);
     void writePolyline(const RPolylineEntity& pl);
+    void writePolyline(const RPolyline& pl);
+    void writeSpline(const RSplineEntity& sp);
 
     void writeImageDef(const RImageEntity& img);
 

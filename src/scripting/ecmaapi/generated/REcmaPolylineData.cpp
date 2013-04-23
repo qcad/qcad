@@ -76,6 +76,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, castToShape, "castToShape");
             
+            REcmaHelper::registerFunction(&engine, proto, getPolylineShape, "getPolylineShape");
+            
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, normalize, "normalize");
@@ -569,6 +571,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::castToShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::getPolylineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::getPolylineShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::getPolylineShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("getPolylineShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->getPolylineShape();
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.getPolylineShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::getPolylineShape", context, engine);
             return result;
         }
          QScriptValue

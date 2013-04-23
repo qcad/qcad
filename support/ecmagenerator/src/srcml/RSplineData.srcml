@@ -538,6 +538,37 @@ dir="./entity" filename="RSplineData.h">
       </call>
     </expr>;</return>}</block>
   </function>
+  <function>
+    <type>
+      <name>RPolyline</name>
+    </type>
+    <name>toPolyline</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>int</name>
+        </type>
+        <name>segments</name>
+      </decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RSpline</name>::
+        <name>toPolyline</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>segments</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <comment type="line">//RSpline getSubSpline(double d1, double d2)
   const {</comment>
   <comment type="line">// return RSpline::getSubSpline(d1,

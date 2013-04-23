@@ -423,6 +423,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="toPolyline" cppName="toPolyline"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false">
+        <arg type="int" typeName="int" name="segments"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getExploded" cppName="getExploded"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

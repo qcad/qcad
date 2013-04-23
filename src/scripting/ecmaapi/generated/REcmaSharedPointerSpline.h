@@ -260,6 +260,9 @@
         trimEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

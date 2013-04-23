@@ -85,7 +85,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getDegree" cppName="getDegree" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
+      <variant returnType="int" isPureVirtual="false" />
     </method>
     <method name="getDirection1" cppName="getDirection1"
     specifier="public" isStatic="false" isVirtual="false"
@@ -144,11 +144,21 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="countControlPoints" cppName="countControlPoints"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="getFitPoints" cppName="getFitPoints"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false" />
+    </method>
+    <method name="hasFitPoints" cppName="hasFitPoints"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getKnotVector" cppName="getKnotVector"
     specifier="public" isStatic="false" isVirtual="false"

@@ -98,9 +98,7 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     RImporter::startImport();
 
     DL_Dxf dxflib;
-    qDebug() << "dxflib.in";
     bool success = dxflib.in((const char*)fileName.toUtf8(), this);
-    qDebug() << "dxflib.in: OK";
 
     if (success==false) {
         qWarning() << "Cannot open DXF file: " << fileName;
@@ -256,13 +254,19 @@ void RDxfImporter::endEntity() {
 //        }
 
         QList<RVector> fitPoints = spline.getFitPoints();
-        if (!fitPoints.isEmpty()) {
+        if (!fitPoints.isEmpty() && spline.isPeriodic()) {
             // TODO: check for start / end tangent equality if given:
             if (fitPoints.first().getDistanceTo(fitPoints.last()) < RS::PointTolerance) {
                 spline.setPeriodic(true);
                 //fitPoints.removeLast();
                 spline.removeLastFitPoint();
             }
+            else {
+                spline.setPeriodic(false);
+            }
+        }
+        else {
+            spline.setPeriodic(false);
         }
 
         QList<double> kv = spline.getKnotVector();
@@ -432,8 +436,8 @@ void RDxfImporter::addSpline(const DL_SplineData& data) {
     }
 
     spline.setDegree(data.degree);
-//    spline.setPeriodic(data.flags&0x2);
-    spline.setPeriodic(false);
+    spline.setPeriodic(data.flags&0x2);
+//    spline.setPeriodic(false);
     RVector tanS(data.tangentStartX, data.tangentStartY, data.tangentStartZ);
     RVector tanE(data.tangentEndX, data.tangentEndY, data.tangentEndZ);
     if (tanS.getMagnitude()>RS::PointTolerance) {

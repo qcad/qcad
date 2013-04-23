@@ -58,6 +58,10 @@ public:
         return this;
     }
 
+    RPolyline getPolylineShape() const {
+        return *this;
+    }
+
     void clear() {
         RPolyline::clear();
     }

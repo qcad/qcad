@@ -73,6 +73,9 @@
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPolylineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -26,9 +26,11 @@
 #include "RDxfExporter.h"
 #include "RLinetypePatternMap.h"
 #include "RLineEntity.h"
+#include "RSplineEntity.h"
 #include "RPolylineEntity.h"
 #include "RImageEntity.h"
 #include "RPointEntity.h"
+#include "RSettings.h"
 #include "RStorage.h"
 
 RDxfExporter::RDxfExporter(RDocument& document,
@@ -50,11 +52,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         exportVersion = DL_Codes::AC1015;
     }
 
-    qDebug() << "RDxfExporter::exportFile: 001";
-
     dw = dxf.out((const char*)QFile::encodeName(fileName), exportVersion);
-
-    qDebug() << "RDxfExporter::exportFile: 002";
 
     if (dw==NULL) {
         qWarning() << "RS_FilterDxf::fileExport: cannot open file for writing";
@@ -410,10 +408,10 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityPolyline:
         writePolyline(dynamic_cast<const RPolylineEntity&>(e));
         break;
-        /*
     case RS::EntitySpline:
-        writeSpline(dynamic_cast<RS_Spline*>(e));
+        writeSpline(dynamic_cast<const RSplineEntity&>(e));
         break;
+        /*
     case RS::EntityCircle:
         writeCircle(dynamic_cast<RS_Circle*>(e));
         break;
@@ -497,92 +495,122 @@ void RDxfExporter::writeLine(const RLineEntity& l) {
  * Writes the given polyline entity to the file.
  */
 void RDxfExporter::writePolyline(const RPolylineEntity& pl) {
+    writePolyline(pl.getPolylineShape());
+}
 
+void RDxfExporter::writePolyline(const RPolyline& pl) {
     int count = pl.countVertices();
 
     dxf.writePolyline(
-        *dw,
-        DL_PolylineData(count,
-                        0, 0,
-                        pl.isClosed()*0x1),
-        attributes
-    );
-
-//    bool first = true;
+                *dw,
+                DL_PolylineData(count,
+                                0, 0,
+                                pl.isClosed()*0x1),
+                attributes
+                );
 
     for (int i=0; i<pl.countVertices(); i++) {
         RVector v = pl.getVertexAt(i);
         double bulge = pl.getBulgeAt(i);
 
-        //if (first) {
-            dxf.writeVertex(*dw,
-                            DL_VertexData(v.x,
-                                          v.y,
-                                          0.0,
-                                          bulge));
-//            first = false;
-//        }
-
-//        if (!pl.isClosed() || v!=lastEntity) {
-//            dxf.writeVertex(*dw,
-//                        DL_VertexData(ae->getEndpoint().x,
-//                                      ae->getEndpoint().y,
-//                                      0.0,
-//                                      bulge));
-//        }
+        dxf.writeVertex(*dw, DL_VertexData(v.x, v.y, 0.0, bulge));
     }
 
-
-    /*
-    RS_Entity* nextEntity = 0;
-    RS_AtomicEntity* ae = NULL;
-    RS_Entity* lastEntity = pl.lastEntity(RS2::ResolveNone);
-    for (RS_Entity* v=pl.firstEntity(RS2::ResolveNone);
-            v!=NULL;
-            v=nextEntity) {
-
-        nextEntity = pl.nextEntity(RS2::ResolveNone);
-
-        if (!v->isAtomic()) {
-            continue;
-        }
-
-        ae = dynamic_cast<RS_AtomicEntity*>(v);
-        double bulge=0.0;
-
-        // Write vertex:
-        if (first) {
-            if (v->rtti()==RS2::EntityArc) {
-                bulge = dynamic_cast<RS_Arc*>(v)->getBulge();
-            }
-            dxf.writeVertex(*dw,
-                            DL_VertexData(ae->getStartpoint().x,
-                                          ae->getStartpoint().y,
-                                          0.0,
-                                          bulge));
-            first = false;
-        }
-
-        if (nextEntity!=NULL) {
-            if (nextEntity->rtti()==RS2::EntityArc) {
-                bulge = dynamic_cast<RS_Arc*>(nextEntity)->getBulge();
-            }
-            else {
-                bulge = 0.0;
-            }
-        }
-
-        if (pl.isClosed()==false || v!=lastEntity) {
-            dxf.writeVertex(*dw,
-                        DL_VertexData(ae->getEndpoint().x,
-                                      ae->getEndpoint().y,
-                                      0.0,
-                                      bulge));
-        }
-    }
-    */
     dxf.writePolylineEnd(*dw);
 }
+
+/**
+ * Writes the given spline entity to the file.
+ */
+void RDxfExporter::writeSpline(const RSplineEntity& sp) {
+
+    // split spline into atomic entities for DXF R12:
+    if (dxf.getVersion()==DL_Codes::AC1009) {
+        int seg = RSettings::getIntValue("Explode/SplineSegments", 64);
+        writePolyline(sp.getData().toPolyline(seg));
+        return;
+    }
+
+    if (sp.countControlPoints() < sp.getDegree()+1) {
+        qWarning() << "RDxfExporter::writeSpline: "
+                   << "Discarding spline: not enough control points given.";
+        return;
+    }
+
+    // number of control points:
+    QList<RVector> cp = sp.getControlPointsWrapped();
+    int numCtrlPoints = cp.count();
+
+    // number of fit points:
+    QList<RVector> fp = sp.getFitPoints();
+    if (sp.isPeriodic() && !fp.isEmpty()) {
+        fp.append(fp.first());
+    }
+    int numFitPoints = fp.count();
+
+    // number of knots (= number of control points + spline degree + 1)
+    QList<double> knotVector = sp.getActualKnotVector();
+
+    // first and last knots are duplicated in DXF:
+    if (!knotVector.isEmpty()) {
+        knotVector.prepend(knotVector.first());
+        knotVector.append(knotVector.last());
+    }
+    //int numKnots = numCtrlPoints + sp.getDegree() + 1;
+    int numKnots = knotVector.count();
+
+    int flags;
+    if (sp.isClosed()) {
+        flags = 11;
+    } else {
+        flags = 8;
+    }
+
+    // write spline header:
+    dxf.writeSpline(
+        *dw,
+        DL_SplineData(sp.getDegree(), numKnots, numCtrlPoints, numFitPoints, flags),
+        attributes
+    );
+
+    // write spline knots:
+    DL_KnotData kd;
+    for (int i=0; i<numKnots; i++) {
+        kd = DL_KnotData(knotVector[i]);
+        dxf.writeKnot(*dw, kd);
+    }
+
+    // write spline control points:
+    for (int i=0; i<numCtrlPoints; i++) {
+        dxf.writeControlPoint(
+                    *dw,
+                    DL_ControlPointData(cp[i].x, cp[i].y, 0.0, 1.0)
+                    );
+    }
+
+    // write spline fit points (if any):
+    for (int i=0; i<numFitPoints; i++) {
+        dxf.writeFitPoint(*dw, DL_FitPointData(fp[i].x, fp[i].y, 0.0));
+    }
+}
+
+//void RDxfExporter::writeExplodedEntities(const REntity& entity) {
+//    const RShape* shape = entity.castToConstShape();
+//    if (shape==NULL) {
+//        qWarning() << "RDxfExporter::writeExplodedEntities: not a shape";
+//        return;
+//    }
+
+//    const RExplodable* explodable = dynamic_cast<RExplodable*>(&entity);
+//    if (explodable!=NULL) {
+//        QList<QSharedPointer<RShape> > segments = explodable->getExploded();
+//        for (int i=0; i<segments.count(); i++) {
+//            segments[i];
+//        }
+//    }
+
+
+//}
 
 /**
  * \return the entities attributes as a DL_Attributes object.

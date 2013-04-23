@@ -134,6 +134,10 @@ public:
         return RSpline::getWeights();
     }
 
+    RPolyline toPolyline(int segments) const {
+        return RSpline::toPolyline(segments);
+    }
+
     //RSpline getSubSpline(double d1, double d2) const {
     //    return RSpline::getSubSpline(d1, d2);
     //}

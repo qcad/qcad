@@ -1796,7 +1796,8 @@ dir="./core" filename="RDocument.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getLayerNames</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>QSet
@@ -1806,7 +1807,8 @@ dir="./core" filename="RDocument.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getViewNames</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>

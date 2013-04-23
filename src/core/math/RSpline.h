@@ -151,6 +151,8 @@ public:
     virtual void trimStartPoint(const RVector& p);
     virtual void trimEndPoint(const RVector& p);
 
+    RPolyline toPolyline(int segments) const;
+
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
 
     QList<RSpline> getBezierSegments() const;

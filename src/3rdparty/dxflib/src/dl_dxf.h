@@ -222,6 +222,8 @@ public:
                        const DL_Attributes& attrib);
     void writeControlPoint(DL_WriterA& dw,
                      const DL_ControlPointData& data);
+    void writeFitPoint(DL_WriterA& dw,
+                       const DL_FitPointData& data);
     void writeKnot(DL_WriterA& dw,
                      const DL_KnotData& data);
     void writeCircle(DL_WriterA& dw,

@@ -1464,6 +1464,7 @@ dir="./core" filename="RStorage.h">
       <name>blockName</name>
     </decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1530,6 +1531,7 @@ dir="./core" filename="RStorage.h">
       <name>viewName</name>
     </decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>

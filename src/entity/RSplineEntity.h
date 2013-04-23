@@ -101,7 +101,7 @@ public:
         return data.isValid();
     }
 
-    double getDegree() const {
+    int getDegree() const {
         return data.getDegree();
     }
 
@@ -145,8 +145,16 @@ public:
         return data.getControlPointsWrapped();
     }
 
+    int countControlPoints() const {
+        return data.countControlPoints();
+    }
+
     QList<RVector> getFitPoints() const {
         return data.getFitPoints();
+    }
+
+    bool hasFitPoints() const {
+        return data.hasFitPoints();
     }
 
     QList<double> getKnotVector() const {

@@ -602,6 +602,23 @@ void RSpline::updateTangentsPeriodic() {
     setTangents(t, t);
 }
 
+RPolyline RSpline::toPolyline(int segments) const {
+    RPolyline ret;
+
+    QList<QSharedPointer<RShape> > lineSegments = getExploded(segments);
+    for (int k=0; k<lineSegments.size(); k++) {
+        QSharedPointer<RDirected> dir = lineSegments[k].dynamicCast<RDirected>();
+        if (dir.isNull()) {
+            continue;
+        }
+        if (k==0) {
+            ret.appendVertex(dir->getStartPoint());
+        }
+        ret.appendVertex(dir->getEndPoint());
+    }
+    return ret;
+}
+
 /**
  * \return List of RLines describing this spline.
  */

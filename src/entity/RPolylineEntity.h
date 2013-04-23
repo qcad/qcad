@@ -88,6 +88,10 @@ public:
         return data;
     }
 
+    RPolyline getPolylineShape() const {
+        return data.getPolylineShape();
+    }
+
     void clear() {
         data.clear();
     }

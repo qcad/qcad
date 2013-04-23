@@ -111,6 +111,9 @@
         getWeights
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         castToShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

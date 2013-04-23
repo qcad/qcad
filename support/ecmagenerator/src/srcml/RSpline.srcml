@@ -923,6 +923,21 @@ dir="./core/math" filename="RSpline.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>RPolyline</name>
+  </type>
+  <name>toPolyline</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>segments</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
     <name>virtual</name>
     <name>QList
     <argument_list>&lt;

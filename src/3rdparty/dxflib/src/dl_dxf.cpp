@@ -2344,6 +2344,23 @@ void DL_Dxf::writeControlPoint(DL_WriterA& dw,
 
 
 /**
+ * Writes a single fit point of a spline to the file.
+ *
+ * @param dw DXF writer
+ * @param data Entity data from the file
+ * @param attrib Attributes
+ */
+void DL_Dxf::writeFitPoint(DL_WriterA& dw,
+                           const DL_FitPointData& data) {
+
+    dw.dxfReal(11, data.x);
+    dw.dxfReal(21, data.y);
+    dw.dxfReal(31, data.z);
+}
+
+
+
+/**
  * Writes a single knot of a spline to the file.
  *
  * @param dw DXF writer
