@@ -25,6 +25,7 @@
 
 #include "RDxfExporter.h"
 #include "RArcEntity.h"
+#include "REllipseEntity.h"
 #include "RCircleEntity.h"
 #include "RLinetypePatternMap.h"
 #include "RLineEntity.h"
@@ -419,10 +420,10 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityArc:
         writeArc(dynamic_cast<const RArcEntity&>(e));
         break;
-        /*
     case RS::EntityEllipse:
-        writeEllipse(dynamic_cast<RS_Ellipse*>(e));
+        writeEllipse(dynamic_cast<const REllipseEntity&>(e));
         break;
+        /*
     case RS::EntityBlockRef:
         writeInsert(dynamic_cast<RS_Insert*>(e));
         break;
@@ -525,6 +526,38 @@ void RDxfExporter::writeArc(const RArcEntity& a) {
                    0.0,
                    a.getRadius(),
                    a1, a2),
+        attributes);
+}
+
+void RDxfExporter::writeEllipse(const REllipseEntity& el) {
+    double angle1 = 0.0;
+    double angle2 = 0.0;
+
+    if (el.isFullEllipse()) {
+        angle1 = 0.0;
+        angle2 = 2.0*M_PI;
+    }
+    else {
+        if (el.isReversed()) {
+            angle1 = el.getEndAngle();
+            angle2 = el.getStartAngle();
+        } else {
+            angle1 = el.getStartAngle();
+            angle2 = el.getEndAngle();
+        }
+    }
+
+    dxf.writeEllipse(
+        *dw,
+        DL_EllipseData(el.getCenter().x,
+                       el.getCenter().y,
+                       0.0,
+                       el.getMajorPoint().x,
+                       el.getMajorPoint().y,
+                       0.0,
+                       el.getRatio(),
+                       angle1,
+                       angle2),
         attributes);
 }
 
