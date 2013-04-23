@@ -199,7 +199,16 @@ QPair<QVariant, RPropertyAttributes> RSolidEntity::getProperty(
 void RSolidEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);
 
-    e.exportPolyline(data);
+    // note that order of fourth and third vertex is swapped:
+    RPolyline pl;
+    pl.appendVertex(data.getVertexAt(0));
+    pl.appendVertex(data.getVertexAt(1));
+    if (data.countVertices()>3) {
+        pl.appendVertex(data.getVertexAt(3));
+    }
+    pl.appendVertex(data.getVertexAt(2));
+
+    e.exportPolyline(pl);
 }
 
 void RSolidEntity::print(QDebug dbg) const {
