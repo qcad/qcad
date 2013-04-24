@@ -25,6 +25,7 @@
 
 #include "RDxfExporter.h"
 #include "RArcEntity.h"
+#include "RTextEntity.h"
 #include "RBlockReferenceEntity.h"
 #include "REllipseEntity.h"
 #include "RCircleEntity.h"
@@ -427,11 +428,11 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityBlockRef:
         writeBlockReference(dynamic_cast<const RBlockReferenceEntity&>(e));
         break;
-        /*
     case RS::EntityText:
-        writeText(dynamic_cast<RS_Text*>(e));
+        writeText(dynamic_cast<const RTextEntity&>(e));
         break;
 
+        /*
     case RS::EntityDimAligned:
     case RS::EntityDimAngular:
     case RS::EntityDimLinear:
@@ -668,6 +669,109 @@ void RDxfExporter::writeSpline(const RSplineEntity& sp) {
     }
 }
 
+/**
+ * Writes the given spline entity to the file.
+ */
+void RDxfExporter::writeText(const RTextEntity& t) {
+    if (dxf.getVersion()==DL_Codes::AC1009) {
+        /*
+        if (t.getNumberOfLines()>1) {
+            // split up text into single lines:
+            RS_PtrList<RS_Entity> lineList;
+
+            RS_Modification modification(*currentContainer);
+            modification.explodeTextIntoLines(t, lineList);
+
+            for (int i=0; i<lineList.size(); ++i) {
+                if (lineList.at(i)->rtti()==RS2::EntityText) {
+                    writeText(dynamic_cast<RS_Text*>(lineList.at(i)));
+                }
+                else {
+                    RS_DEBUG->print(RS_Debug::D_ERROR,
+                        "RS_FilterDxf::writeText: "
+                        "non-text entity found after splitting "
+                        "text up into lines.");
+                }
+            }
+        }
+        else {
+            int hJust=0;
+            int vJust=0;
+            if (t->getHAlign()==RS2::HAlignLeft) {
+                hJust=0;
+            } else if (t->getHAlign()==RS2::HAlignCenter) {
+                hJust=1;
+            } else if (t->getHAlign()==RS2::HAlignRight) {
+                hJust=2;
+            }
+            if (t->getVAlign()==RS2::VAlignTop) {
+                vJust=3;
+            } else if (t->getVAlign()==RS2::VAlignMiddle) {
+                vJust=2;
+            } else if (t->getVAlign()==RS2::VAlignBottom) {
+                vJust=1;
+            }
+            dxf.writeText(
+                *dw,
+                DL_TextData(t->getInsertionPoint().x,
+                            t->getInsertionPoint().y,
+                            0.0,
+                            t->getInsertionPoint().x,
+                            t->getInsertionPoint().y,
+                            0.0,
+                            t->getHeight(),
+                            0.8,
+                            0,
+                            hJust, vJust,
+                            (const char*)toDxfString(
+                                t->getText(), formatType).toLatin1(),
+                            (const char*)t->getStyle().toLatin1(),
+                            t->getAngle()),
+                attributes);
+        }
+        */
+
+    } else {
+        int attachmentPoint=1;
+        if (t.getHAlign()==RS::HAlignLeft) {
+            attachmentPoint=1;
+        } else if (t.getHAlign()==RS::HAlignCenter) {
+            attachmentPoint=2;
+        } else if (t.getHAlign()==RS::HAlignRight) {
+            attachmentPoint=3;
+        }
+        if (t.getVAlign()==RS::VAlignTop) {
+            attachmentPoint+=0;
+        } else if (t.getVAlign()==RS::VAlignMiddle) {
+            attachmentPoint+=3;
+        } else if (t.getVAlign()==RS::VAlignBottom) {
+            attachmentPoint+=6;
+        }
+
+        dxf.writeMText(
+            *dw,
+            DL_MTextData(t.getPosition().x,
+                         t.getPosition().y,
+                         0.0,
+                         t.getAlignmentPoint().x,
+                         t.getAlignmentPoint().y,
+                         0.0,
+                         t.getHeight(),
+                         t.getWidth(),
+                         attachmentPoint,
+                         t.getDrawingDirection(),
+                         t.getLineSpacingStyle(),
+                         t.getLineSpacingFactor(),
+                         (const char*)t.getEscapedText().toLatin1(),
+                         (const char*)t.getFontName().toLatin1(),
+                         t.getAngle()),
+            attributes);
+    }
+}
+
+/**
+ * Writes the given block reference entity to the file.
+ */
 void RDxfExporter::writeBlockReference(const RBlockReferenceEntity& br) {
     QString blockName = br.getReferencedBlockName();
     if (dxf.getVersion()==DL_Codes::AC1009) {

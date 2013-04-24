@@ -40,6 +40,7 @@ class RSplineEntity;
 class RPolylineEntity;
 class RImageEntity;
 class RPointEntity;
+class RTextEntity;
 
 
 /**
@@ -77,6 +78,7 @@ public:
     void writePolyline(const RPolylineEntity& pl);
     void writePolyline(const RPolyline& pl);
     void writeSpline(const RSplineEntity& sp);
+    void writeText(const RTextEntity& t);
     void writeBlockReference(const RBlockReferenceEntity& br);
 
     void writeImageDef(const RImageEntity& img);
