@@ -4022,8 +4022,9 @@ void DL_Dxf::writeVPort(DL_WriterA& dw) {
 
 /**
  * Writes a style section. This section is needed in DL_VERSION_R13.
- * Note that this method currently only writes a faked STYLE section
- * to make the file readable by Aut*cad.
+ * Note that this method currently only writes a fake STYLE section
+ * to make the file readable by other software.
+ * TODO
  */
 void DL_Dxf::writeStyle(DL_WriterA& dw) {
     dw.dxfString(  0, "TABLE");
