@@ -325,7 +325,10 @@ public:
                        double dimgap, double dimtxt);
     void writeBlockRecord(DL_WriterA& dw);
     void writeBlockRecord(DL_WriterA& dw, const std::string& name);
-    void writeObjects(DL_WriterA& dw);
+    void writeObjects(DL_WriterA& dw, const std::string& appDictionaryName = "");
+    void writeAppDictionary(DL_WriterA& dw);
+    int writeDictionaryEntry(DL_WriterA& dw, const std::string& name);
+    void writeXRecord(DL_WriterA& dw, int handle, int value);
     void writeObjectsEnd(DL_WriterA& dw);
     
     void writeComment(DL_WriterA& dw, const std::string& comment);
@@ -472,6 +475,8 @@ private:
     DL_Attributes attrib;
     // library version. hex: 0x20003001 = 2.0.3.1
     int libVersion;
+    // app specific dictionary handle:
+    int appDictionaryHandle;
 };
 
 #endif

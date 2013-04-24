@@ -207,26 +207,15 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     if (exportVersion!=DL_Codes::AC1009) {
         qDebug() << "writing section OBJECTS...";
-        dxf.writeObjects(*dw);
+        dxf.writeObjects(*dw, "QCAD_OBJECTS");
+
+        // XRecords:
+        dxf.writeAppDictionary(*dw);
+        int handle = dxf.writeDictionaryEntry(*dw, "Blah");
+        dxf.writeXRecord(*dw, handle, 7777);
 
         // IMAGEDEF's from images in entities and images in blocks
         QStringList written;
-//        for (int i=0; i<blockNames.size(); ++i) {
-//            RS_Block* block = graphic->blockAt(i);
-//            for (RS_Entity* e=block->firstEntity(RS2::ResolveAll);
-//                    e!=NULL;
-//                    e=block->nextEntity(RS2::ResolveAll)) {
-
-//                if (e->rtti()==RS2::EntityImage) {
-//                    RS_Image* img = dynamic_cast<RS_Image*>(e);
-//                    if (written.contains(file)==0 && img->getHandle()!=0) {
-//                        writeImageDef(img);
-//                        written.append(img->getFile());
-//                    }
-//                }
-//            }
-//        }
-
         QSet<REntity::Id> ids = document->queryAllEntities(false, true);
         QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
         for (int i=0; i<list.size(); i++) {

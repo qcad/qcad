@@ -412,6 +412,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
             "QCoreApplication");
     classQCoreApplication.setProperty("arguments", engine->newFunction(
             ecmaArguments));
+    classQCoreApplication.setProperty("exit", engine->newFunction(ecmaExit));
 
     // *** do not change the order ***
     REcmaMath::init(*engine);
@@ -1115,6 +1116,26 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
 
     return context->throwError(QString("include: cannot read file '%1'").arg(
                                    context->argument(0).toString()));
+}
+
+QScriptValue RScriptHandlerEcma::ecmaExit(QScriptContext* context,
+                                           QScriptEngine* engine) {
+
+    qDebug() << "RScriptHandlerEcma::ecmaExit";
+
+    if (context->argumentCount() == 0) {
+        QCoreApplication::exit();
+    }
+    if (context->argumentCount() == 1) {
+        int ret = context->argument(0).toUInt32();
+        QCoreApplication::exit(ret);
+        exit(ret);
+    } else {
+        return throwError(
+                "Wrong number/types of arguments for exit().",
+                context);
+    }
+    return engine->undefinedValue();
 }
 
 QScriptValue RScriptHandlerEcma::ecmaPrint(QScriptContext* context,

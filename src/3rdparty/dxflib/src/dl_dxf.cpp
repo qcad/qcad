@@ -4297,35 +4297,40 @@ void DL_Dxf::writeBlockRecord(DL_WriterA& dw, const std::string& name) {
  * Note that this method currently only writes a faked OBJECTS section
  * to make the file readable by Aut*cad.
  */
-void DL_Dxf::writeObjects(DL_WriterA& dw) {
-    //int dicId, dicId2, dicId3, dicId4, dicId5;
-    //int dicId5;
-
+void DL_Dxf::writeObjects(DL_WriterA& dw, const std::string& appDictionaryName) {
     dw.dxfString(  0, "SECTION");
     dw.dxfString(  2, "OBJECTS");
+
+
     dw.dxfString(  0, "DICTIONARY");
-    dw.dxfHex(5, 0xC);                            // C
-    //dw.dxfHex(330, 0);
+    dw.dxfHex(5, 0xC);
     dw.dxfString(100, "AcDbDictionary");
     dw.dxfInt(280, 0);
     dw.dxfInt(281, 1);
     dw.dxfString(  3, "ACAD_GROUP");
-    //dw.dxfHex(350, dw.getNextHandle());          // D
-    dw.dxfHex(350, 0xD);          // D
+    dw.dxfHex(350, 0xD);
     dw.dxfString(  3, "ACAD_LAYOUT");
     dw.dxfHex(350, 0x1A);
-    //dw.dxfHex(350, dw.getNextHandle()+0);        // 1A
     dw.dxfString(  3, "ACAD_MLINESTYLE");
     dw.dxfHex(350, 0x17);
-    //dw.dxfHex(350, dw.getNextHandle()+1);        // 17
     dw.dxfString(  3, "ACAD_PLOTSETTINGS");
     dw.dxfHex(350, 0x19);
-    //dw.dxfHex(350, dw.getNextHandle()+2);        // 19
     dw.dxfString(  3, "ACAD_PLOTSTYLENAME");
     dw.dxfHex(350, 0xE);
-    //dw.dxfHex(350, dw.getNextHandle()+3);        // E
     dw.dxfString(  3, "AcDbVariableDictionary");
-    dw.dxfHex(350, dw.getNextHandle());        // 2C
+    int acDbVariableDictionaryHandle = dw.handle(350);
+    //int acDbVariableDictionaryHandle = dw.getNextHandle();
+    //dw.dxfHex(350, acDbVariableDictionaryHandle);
+    //dw.incHandle();
+
+    if (appDictionaryName.length()!=0) {
+        dw.dxfString(  3, appDictionaryName);
+        appDictionaryHandle = dw.handle(350);
+        //appDictionaryHandle = dw.getNextHandle();
+        //dw.dxfHex(350, appDictionaryHandle);
+        //dw.incHandle();
+    }
+
     dw.dxfString(  0, "DICTIONARY");
     dw.dxfHex(5, 0xD);
     //dw.handle();                                    // D
@@ -4333,6 +4338,8 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfString(100, "AcDbDictionary");
     dw.dxfInt(280, 0);
     dw.dxfInt(281, 1);
+
+
     dw.dxfString(  0, "ACDBDICTIONARYWDFLT");
     dw.dxfHex(5, 0xE);
     //dicId4 = dw.handle();                           // E
@@ -4345,10 +4352,14 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfString(100, "AcDbDictionaryWithDefault");
     dw.dxfHex(340, 0xF);
     //dw.dxfHex(340, dw.getNextHandle()+5);        // F
+
+
     dw.dxfString(  0, "ACDBPLACEHOLDER");
     dw.dxfHex(5, 0xF);
     //dw.handle();                                    // F
     //dw.dxfHex(330, dicId4);                      // E
+
+
     dw.dxfString(  0, "DICTIONARY");
     //dicId3 = dw.handle();                           // 17
     dw.dxfHex(5, 0x17);
@@ -4359,6 +4370,8 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfString(  3, "Standard");
     dw.dxfHex(350, 0x18);
     //dw.dxfHex(350, dw.getNextHandle()+5);        // 18
+
+
     dw.dxfString(  0, "MLINESTYLE");
     dw.dxfHex(5, 0x18);
     //dw.handle();                                    // 18
@@ -4377,6 +4390,8 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfReal( 49, -0.5);
     dw.dxfInt( 62, 256);
     dw.dxfString(  6, "BYLAYER");
+
+
     dw.dxfString(  0, "DICTIONARY");
     dw.dxfHex(5, 0x19);
     //dw.handle();                           // 17
@@ -4384,6 +4399,8 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfString(100, "AcDbDictionary");
     dw.dxfInt(280, 0);
     dw.dxfInt(281, 1);
+
+
     dw.dxfString(  0, "DICTIONARY");
     //dicId2 = dw.handle();                           // 1A
     dw.dxfHex(5, 0x1A);
@@ -4399,6 +4416,7 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfString(  3, "Model");
     dw.dxfHex(350, 0x22);
     //dw.dxfHex(350, dw.getNextHandle()+5);        // 22
+
 
     dw.dxfString(  0, "LAYOUT");
     dw.dxfHex(5, 0x1E);
@@ -4462,6 +4480,8 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfInt( 76, 0);
     //dw.dxfHex(330, dw.getPaperSpaceHandle());    // 1B
     dw.dxfHex(330, 0x1B);
+
+
     dw.dxfString(  0, "LAYOUT");
     dw.dxfHex(5, 0x22);
     //dw.handle();                                    // 22
@@ -4524,6 +4544,8 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfInt( 76, 0);
     //dw.dxfHex(330, dw.getModelSpaceHandle());    // 1F
     dw.dxfHex(330, 0x1F);
+
+
     dw.dxfString(  0, "LAYOUT");
     //dw.handle();                                    // 26
     dw.dxfHex(5, 0x26);
@@ -4586,10 +4608,12 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfInt( 76, 0);
     //dw.dxfHex(330, dw.getPaperSpace0Handle());   // 23
     dw.dxfHex(330, 0x23);
+
     dw.dxfString(  0, "DICTIONARY");
     //dw.dxfHex(5, 0x2C);
     //dicId5 =
-    dw.handle();                           // 2C
+    dw.dxfHex(5, acDbVariableDictionaryHandle);
+    //dw.handle();                           // 2C
     //dw.dxfHex(330, 0xC);                       // C
     dw.dxfString(100, "AcDbDictionary");
     dw.dxfInt(281, 1);
@@ -4599,6 +4623,8 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfString(  3, "HIDETEXT");
     //dw.dxfHex(350, 0x2E);
     dw.dxfHex(350, dw.getNextHandle());        // 2D
+
+
     dw.dxfString(  0, "DICTIONARYVAR");
     //dw.dxfHex(5, 0x2E);
     dw.handle();                                    // 2E
@@ -4606,6 +4632,8 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfString(100, "DictionaryVariables");
     dw.dxfInt(280, 0);
     dw.dxfInt(  1, 2);
+
+
     dw.dxfString(  0, "DICTIONARYVAR");
     //dw.dxfHex(5, 0x2D);
     dw.handle();                                    // 2D
@@ -4615,6 +4643,30 @@ void DL_Dxf::writeObjects(DL_WriterA& dw) {
     dw.dxfInt(  1, 1);
 }
 
+void DL_Dxf::writeAppDictionary(DL_WriterA& dw) {
+    dw.dxfString(  0, "DICTIONARY");
+    //dw.handle();
+    dw.dxfHex(5, appDictionaryHandle);
+    dw.dxfString(100, "AcDbDictionary");
+    dw.dxfInt(281, 1);
+}
+
+int DL_Dxf::writeDictionaryEntry(DL_WriterA& dw, const std::string& name) {
+    dw.dxfString(  3, name);
+    int handle = dw.getNextHandle();
+    dw.dxfHex(350, handle);
+    dw.incHandle();
+    return handle;
+}
+
+void DL_Dxf::writeXRecord(DL_WriterA& dw, int handle, int value) {
+    dw.dxfString(  0, "XRECORD");
+    dw.dxfHex(5, handle);
+    dw.dxfHex(330, appDictionaryHandle);
+    dw.dxfString(100, "AcDbXrecord");
+    dw.dxfInt(280, 1);
+    dw.dxfInt(90, value);
+}
 
 /**
  * Writes the end of the objects section. This section is needed in DL_VERSION_R13.
