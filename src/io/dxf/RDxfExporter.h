@@ -77,6 +77,7 @@ public:
     void writePolyline(const RPolylineEntity& pl);
     void writePolyline(const RPolyline& pl);
     void writeSpline(const RSplineEntity& sp);
+    void writeBlockReference(const RBlockReferenceEntity& br);
 
     void writeImageDef(const RImageEntity& img);
 

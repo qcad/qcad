@@ -25,6 +25,7 @@
 
 #include "RDxfExporter.h"
 #include "RArcEntity.h"
+#include "RBlockReferenceEntity.h"
 #include "REllipseEntity.h"
 #include "RCircleEntity.h"
 #include "RLinetypePatternMap.h"
@@ -423,10 +424,10 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityEllipse:
         writeEllipse(dynamic_cast<const REllipseEntity&>(e));
         break;
-        /*
     case RS::EntityBlockRef:
-        writeInsert(dynamic_cast<RS_Insert*>(e));
+        writeBlockReference(dynamic_cast<const RBlockReferenceEntity&>(e));
         break;
+        /*
     case RS::EntityText:
         writeText(dynamic_cast<RS_Text*>(e));
         break;
@@ -529,6 +530,9 @@ void RDxfExporter::writeArc(const RArcEntity& a) {
         attributes);
 }
 
+/**
+ * Writes the given ellipse entity to the file.
+ */
 void RDxfExporter::writeEllipse(const REllipseEntity& el) {
     double angle1 = 0.0;
     double angle2 = 0.0;
@@ -662,6 +666,29 @@ void RDxfExporter::writeSpline(const RSplineEntity& sp) {
     for (int i=0; i<numFitPoints; i++) {
         dxf.writeFitPoint(*dw, DL_FitPointData(fp[i].x, fp[i].y, 0.0));
     }
+}
+
+void RDxfExporter::writeBlockReference(const RBlockReferenceEntity& br) {
+    QString blockName = br.getReferencedBlockName();
+    if (dxf.getVersion()==DL_Codes::AC1009) {
+        if (blockName.at(0)=='*') {
+            blockName[0] = '_';
+        }
+    }
+
+    dxf.writeInsert(
+        *dw,
+        DL_InsertData((const char*)blockName.toLatin1(),
+                      br.getPosition().x,
+                      br.getPosition().y,
+                      0.0,
+                      br.getScaleFactors().x,
+                      br.getScaleFactors().y,
+                      0.0,
+                      RMath::rad2deg(br.getRotation()),
+                      1, 1,         // array col, row
+                      0.0, 0.0),    // col, row spacing
+        attributes);
 }
 
 //void RDxfExporter::writeExplodedEntities(const REntity& entity) {
