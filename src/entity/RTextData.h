@@ -155,8 +155,16 @@ public:
         this->drawingDirection = drawingDirection;
     }
 
+    RS::TextDrawingDirection getDrawingDirection() const {
+        return drawingDirection;
+    }
+
     void setLineSpacingStyle(RS::TextLineSpacingStyle lineSpacingStyle) {
         this->lineSpacingStyle = lineSpacingStyle;
+    }
+
+    RS::TextLineSpacingStyle getLineSpacingStyle() const {
+        return lineSpacingStyle;
     }
 
     void setLineSpacingFactor(double lineSpacingFactor) {

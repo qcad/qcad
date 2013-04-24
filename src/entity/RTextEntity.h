@@ -153,6 +153,46 @@ public:
         data.setFontName(fontName);
     }
 
+    void setDrawingDirection(RS::TextDrawingDirection drawingDirection) {
+        data.setDrawingDirection(drawingDirection);
+    }
+
+    RS::TextDrawingDirection getDrawingDirection() const {
+        return data.getDrawingDirection();
+    }
+
+    void setLineSpacingStyle(RS::TextLineSpacingStyle lineSpacingStyle) {
+        data.setLineSpacingStyle(lineSpacingStyle);
+    }
+
+    RS::TextLineSpacingStyle getLineSpacingStyle() const {
+        return data.getLineSpacingStyle();
+    }
+
+    void setLineSpacingFactor(double lineSpacingFactor) {
+        data.setLineSpacingFactor(lineSpacingFactor);
+    }
+
+    double getLineSpacingFactor() const {
+        return data.getLineSpacingFactor();
+    }
+
+    void setAngle(double angle) {
+        data.setAngle(angle);
+    }
+
+    double getAngle() const {
+        return data.getAngle();
+    }
+
+    void setSimple(bool on) {
+        data.setSimple(on);
+    }
+
+    bool isSimple() const {
+        return data.isSimple();
+    }
+
     QString getEscapedText() const {
         return data.getEscapedText();
     }
@@ -167,10 +207,6 @@ public:
 
     void setText(const QString& text) {
         data.setText(text);
-    }
-
-    bool isSimple() const {
-        return data.isSimple();
     }
 
 protected:
