@@ -385,10 +385,20 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
                                handle);                 // handle
         creationInterface->setAttributes(attrib);
 
+        int elevationGroupCode=30;
+        if (currentObjectType==DL_ENTITY_LWPOLYLINE ) {
+            // see lwpolyline group codes reference
+            elevationGroupCode=38;
+        }
+        else {
+            // see polyline group codes reference
+            elevationGroupCode=30;
+        }
+
         creationInterface->setExtrusion(getRealValue(210, 0.0),
                                         getRealValue(220, 0.0),
                                         getRealValue(230, 1.0),
-                                        getRealValue(30, 0.0));
+                                        getRealValue(elevationGroupCode, 0.0));
 
         // Add the previously parsed entity via creationInterface
         switch (currentObjectType) {
