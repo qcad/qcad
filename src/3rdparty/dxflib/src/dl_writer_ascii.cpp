@@ -94,8 +94,7 @@ void DL_WriterA::dxfReal(int gc, double value) const {
  * @param value Int value
  */
 void DL_WriterA::dxfInt(int gc, int value) const {
-    m_ofile << (gc<10 ? "  " : (gc<100 ? " " : "")) << gc << "\n"
-    << value << "\n";
+    m_ofile << (gc<10 ? "  " : (gc<100 ? " " : "")) << gc << "\n" << value << "\n";
 }
 
 

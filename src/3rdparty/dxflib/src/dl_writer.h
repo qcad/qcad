@@ -576,6 +576,17 @@ public:
     virtual void dxfInt(int gc, int value) const = 0;
 
     /**
+     * Can be overwritten by the implementing class to write a
+     * bool value to the file.
+     *
+     * @param gc Group code.
+     * @param value The bool value.
+     */
+    virtual void dxfBool(int gc, bool value) const {
+        dxfInt(gc, (int)value);
+    }
+
+    /**
      * Must be overwritten by the implementing class to write an
      * int value (hex) to the file.
      *

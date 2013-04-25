@@ -22,7 +22,9 @@
 #include "dxflib/src/dl_writer_ascii.h"
 
 #include <QFileInfo>
+#include <QFont>
 
+#include "RColor.h"
 #include "RDxfExporter.h"
 #include "RArcEntity.h"
 #include "RTextEntity.h"
@@ -211,8 +213,56 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
         // XRecords:
         dxf.writeAppDictionary(*dw);
-        int handle = dxf.writeDictionaryEntry(*dw, "Blah");
-        dxf.writeXRecord(*dw, handle, 7777);
+        QMap<QString, int> handles;
+
+        // export all QCAD specific document variables:
+        QStringList variables = document->getVariables();
+        variables.sort();
+        for (int i=0; i<variables.size(); i++) {
+            QString key = variables[i];
+            handles.insert(key, dxf.writeDictionaryEntry(*dw, std::string((const char*)key.toLatin1())));
+        }
+        for (int i=0; i<variables.size(); i++) {
+            QString key = variables[i];
+            QVariant value = document->getVariable(key);
+            if (handles.contains(key)) {
+                switch (value.type()) {
+                case QVariant::Int:
+                    qDebug() << "int";
+                    dxf.writeXRecord(*dw, handles.value(key), value.toInt());
+                    break;
+                case QVariant::Double:
+                    qDebug() << "double";
+                    dxf.writeXRecord(*dw, handles.value(key), value.toDouble());
+                    break;
+                case QVariant::Bool:
+                    qDebug() << "bool";
+                    dxf.writeXRecord(*dw, handles.value(key), value.toBool());
+                    break;
+                case QVariant::String:
+                    qDebug() << "string";
+                    dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)value.toString().toLatin1()));
+                    break;
+                case QVariant::Font:
+                    if (value.canConvert<QFont>()) {
+                        QFont f = value.value<QFont>();
+                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)f.toString().toLatin1()));
+                    }
+                    break;
+                case QVariant::UserType:
+                    if (value.canConvert<RColor>()) {
+                        RColor c = value.value<RColor>();
+                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)c.getName().toLatin1()));
+                    }
+                    break;
+                default:
+                    qWarning() << "RDxfExporter::exportFile: unsupported extension data type: " << value.type();
+                    Q_ASSERT(false);
+                    break;
+                }
+            }
+        }
+
 
         // IMAGEDEF's from images in entities and images in blocks
         QStringList written;

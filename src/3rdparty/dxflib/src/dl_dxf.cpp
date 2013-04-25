@@ -4660,12 +4660,43 @@ int DL_Dxf::writeDictionaryEntry(DL_WriterA& dw, const std::string& name) {
 }
 
 void DL_Dxf::writeXRecord(DL_WriterA& dw, int handle, int value) {
+    printf("writeXRecord: int\n");
     dw.dxfString(  0, "XRECORD");
     dw.dxfHex(5, handle);
     dw.dxfHex(330, appDictionaryHandle);
     dw.dxfString(100, "AcDbXrecord");
     dw.dxfInt(280, 1);
     dw.dxfInt(90, value);
+}
+
+void DL_Dxf::writeXRecord(DL_WriterA& dw, int handle, double value) {
+    printf("writeXRecord: double\n");
+    dw.dxfString(  0, "XRECORD");
+    dw.dxfHex(5, handle);
+    dw.dxfHex(330, appDictionaryHandle);
+    dw.dxfString(100, "AcDbXrecord");
+    dw.dxfInt(280, 1);
+    dw.dxfReal(40, value);
+}
+
+void DL_Dxf::writeXRecord(DL_WriterA& dw, int handle, bool value) {
+    printf("writeXRecord: bool\n");
+    dw.dxfString(  0, "XRECORD");
+    dw.dxfHex(5, handle);
+    dw.dxfHex(330, appDictionaryHandle);
+    dw.dxfString(100, "AcDbXrecord");
+    dw.dxfInt(280, 1);
+    dw.dxfBool(290, value);
+}
+
+void DL_Dxf::writeXRecord(DL_WriterA& dw, int handle, const std::string& value) {
+    printf("writeXRecord: string\n");
+    dw.dxfString(  0, "XRECORD");
+    dw.dxfHex(5, handle);
+    dw.dxfHex(330, appDictionaryHandle);
+    dw.dxfString(100, "AcDbXrecord");
+    dw.dxfInt(280, 1);
+    dw.dxfString(1000, value);
 }
 
 /**

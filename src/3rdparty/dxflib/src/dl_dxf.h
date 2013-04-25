@@ -329,6 +329,9 @@ public:
     void writeAppDictionary(DL_WriterA& dw);
     int writeDictionaryEntry(DL_WriterA& dw, const std::string& name);
     void writeXRecord(DL_WriterA& dw, int handle, int value);
+    void writeXRecord(DL_WriterA& dw, int handle, double value);
+    void writeXRecord(DL_WriterA& dw, int handle, bool value);
+    void writeXRecord(DL_WriterA& dw, int handle, const std::string& value);
     void writeObjectsEnd(DL_WriterA& dw);
     
     void writeComment(DL_WriterA& dw, const std::string& comment);

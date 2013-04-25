@@ -428,9 +428,10 @@ bool RExporter::exportDocument() {
 
 bool RExporter::exportDocumentSettings() {
     // export all QCAD specific document variables:
-    QListIterator<QString> it(document->getVariables());
-    while (it.hasNext()) {
-        QString key = it.next();
+    QStringList variables = document->getVariables();
+    variables.sort();
+    for (int i=0; i<variables.size(); i++) {
+        QString key = variables[i];
         QVariant value = document->getVariable(key);
         exportDocumentSetting(key, value);
     }
