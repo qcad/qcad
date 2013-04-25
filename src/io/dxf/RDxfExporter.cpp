@@ -228,19 +228,15 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
             if (handles.contains(key)) {
                 switch (value.type()) {
                 case QVariant::Int:
-                    qDebug() << "int";
                     dxf.writeXRecord(*dw, handles.value(key), value.toInt());
                     break;
                 case QVariant::Double:
-                    qDebug() << "double";
                     dxf.writeXRecord(*dw, handles.value(key), value.toDouble());
                     break;
                 case QVariant::Bool:
-                    qDebug() << "bool";
                     dxf.writeXRecord(*dw, handles.value(key), value.toBool());
                     break;
                 case QVariant::String:
-                    qDebug() << "string";
                     dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)value.toString().toLatin1()));
                     break;
                 case QVariant::Font:

@@ -1121,14 +1121,17 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
 QScriptValue RScriptHandlerEcma::ecmaExit(QScriptContext* context,
                                            QScriptEngine* engine) {
 
-    qDebug() << "RScriptHandlerEcma::ecmaExit";
+    qWarning() << "Exit called from script. Closing application.";
 
     if (context->argumentCount() == 0) {
-        QCoreApplication::exit();
+        // doesn't do anything:
+        //QCoreApplication::exit();
+        exit(ret);
     }
     if (context->argumentCount() == 1) {
         int ret = context->argument(0).toUInt32();
-        QCoreApplication::exit(ret);
+        // doesn't do anything:
+        //QCoreApplication::exit(ret);
         exit(ret);
     } else {
         return throwError(
