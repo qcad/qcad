@@ -1370,6 +1370,42 @@ struct DXFLIB_EXPORT DL_HatchEdgeData {
     }
 
     /**
+     * Constructor for a spline edge.
+     * Parameters: see member variables.
+     */
+    DL_HatchEdgeData(unsigned int degree,
+                     bool rational,
+                     bool periodic,
+                     unsigned int nKnots,
+                     unsigned int nControl,
+                     unsigned int nFit,
+                     const std::vector<double>& knots,
+                     const std::vector<std::vector<double> >& controlPoints,
+                     const std::vector<std::vector<double> >& fitPoints,
+                     const std::vector<double>& weights,
+                     double startTangentX,
+                     double startTangentY,
+                     double endTangentX,
+                     double endTangentY) :
+        defined(true),
+        type(4),
+        degree(degree),
+        rational(rational),
+        periodic(periodic),
+        nKnots(nKnots),
+        nControl(nControl),
+        nFit(nFit),
+        controlPoints(controlPoints),
+        knots(knots),
+        weights(weights),
+        fitPoints(fitPoints),
+        startTangentX(startTangentX),
+        startTangentY(startTangentY),
+        endTangentX(endTangentX),
+        endTangentY(endTangentY) {
+    }
+
+    /**
      * Set to true if this edge is fully defined.
      */
     bool defined;

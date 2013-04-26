@@ -1197,6 +1197,54 @@ void RDxfExporter::writeHatch(const RHatchEntity& h) {
                                              endAngle,
                                              !ellipse->isReversed()));
             }
+
+            // spline:
+            QSharedPointer<RSpline> spline = shape.dynamicCast<RSpline>();
+            if (!spline.isNull()) {
+                QList<double> knotVector = spline->getActualKnotVector();
+                std::vector<double> dxfKnotVector;
+                for (int i=0; i<knotVector.size(); i++) {
+                    dxfKnotVector.push_back(knotVector[i]);
+                }
+
+                std::vector<std::vector<double> > dxfControlPoints;
+                QList<RVector> controlPoints = spline->getControlPoints();
+                for (int i=0; i<controlPoints.size(); i++) {
+                    RVector cp = controlPoints[i];
+                    std::vector<double> dxfV;
+                    dxfV.push_back(cp.x);
+                    dxfV.push_back(cp.y);
+                    dxfControlPoints.push_back(dxfV);
+                }
+
+                std::vector<std::vector<double> > dxfFitPoints;
+                QList<RVector> fitPoints = spline->getFitPoints();
+                for (int i=0; i<fitPoints.size(); i++) {
+                    RVector fp = fitPoints[i];
+                    std::vector<double> dxfV;
+                    dxfV.push_back(fp.x);
+                    dxfV.push_back(fp.y);
+                    dxfFitPoints.push_back(dxfV);
+                }
+
+                dxf.writeHatchEdge(
+                            *dw,
+                            DL_HatchEdgeData(spline->getDegree(),
+                                             true,
+                                             spline->isPeriodic(),
+                                             knotVector.size(),
+                                             spline->countControlPoints(),
+                                             spline->countFitPoints(),
+                                             dxfKnotVector,
+                                             dxfControlPoints,
+                                             dxfFitPoints,
+                                             std::vector<double>(),
+                                             spline->getTangentAtStart().x,
+                                             spline->getTangentAtStart().y,
+                                             spline->getTangentAtEnd().x,
+                                             spline->getTangentAtEnd().y
+                                             ));
+            }
         }
         dxf.writeHatchLoop2(*dw, lData);
     }
