@@ -74,22 +74,22 @@ bool RDimAngularData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = false;
 
-    if (referencePoint.getDistanceTo(extensionLine1Start) < RS::PointTolerance) {
+    if (referencePoint.equals(extensionLine1Start)) {
         extensionLine1Start = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.getDistanceTo(extensionLine1End) < RS::PointTolerance) {
+    else if (referencePoint.equals(extensionLine1End)) {
         extensionLine1End = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.getDistanceTo(extensionLine2Start) < RS::PointTolerance) {
+    else if (referencePoint.equals(extensionLine2Start)) {
         extensionLine2Start = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.getDistanceTo(dimArcPosition) < RS::PointTolerance) {
+    else if (referencePoint.equals(dimArcPosition)) {
         dimArcPosition = targetPoint;
         autoTextPos = true;
         ret = true;

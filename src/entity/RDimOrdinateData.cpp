@@ -68,12 +68,12 @@ bool RDimOrdinateData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint);
 
-    if (referencePoint.getDistanceTo(leaderEndPoint) < RS::PointTolerance) {
+    if (referencePoint.equals(leaderEndPoint)) {
         leaderEndPoint = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.getDistanceTo(definingPoint) < RS::PointTolerance) {
+    else if (referencePoint.equals(definingPoint)) {
         definingPoint = targetPoint;
         autoTextPos = true;
         ret = true;

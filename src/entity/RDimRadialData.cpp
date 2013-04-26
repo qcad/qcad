@@ -63,7 +63,7 @@ bool RDimRadialData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = false;
 
-    if (referencePoint.getDistanceTo(chordPoint) < RS::PointTolerance) {
+    if (referencePoint.equals(chordPoint)) {
         double d = definitionPoint.getDistanceTo(chordPoint);
         double a = definitionPoint.getAngleTo(targetPoint);
 

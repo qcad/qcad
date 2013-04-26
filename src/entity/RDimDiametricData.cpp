@@ -63,7 +63,7 @@ bool RDimDiametricData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = false;
 
-    if (referencePoint.getDistanceTo(chordPoint) < RS::PointTolerance) {
+    if (referencePoint.equals(chordPoint)) {
         RVector c = (definitionPoint + chordPoint)/2.0;
         double d = c.getDistanceTo(chordPoint);
         double a = c.getAngleTo(targetPoint);
@@ -75,7 +75,7 @@ bool RDimDiametricData::moveReferencePoint(const RVector& referencePoint,
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.getDistanceTo(definitionPoint) < RS::PointTolerance) {
+    else if (referencePoint.equals(definitionPoint)) {
         RVector c = (definitionPoint + chordPoint)/2.0;
         double d = c.getDistanceTo(definitionPoint);
         double a = c.getAngleTo(targetPoint);

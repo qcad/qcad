@@ -70,7 +70,7 @@ bool RSolidData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
     for (int i=0; i<vertices.count(); i++) {
-        if (referencePoint.getDistanceTo(getVertexAt(i)) < RS::PointTolerance) {
+        if (referencePoint.equals(getVertexAt(i))) {
             setVertexAt(i, targetPoint);
             ret = true;
         }

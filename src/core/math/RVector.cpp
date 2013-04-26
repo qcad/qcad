@@ -202,6 +202,18 @@ bool RVector::isInside(const RBox& b) const {
 }
 
 /**
+ * \return True if this vector and the given vector are almost equal
+ * (see RS::PointTolerance).
+ *
+ * \param tol Tolerance in X, Y and Z.
+ */
+bool RVector::equals(const RVector& v, double tol) const {
+    return (qAbs(x-v.x)<tol &&
+            qAbs(y-v.y)<tol &&
+            qAbs(z-v.z)<tol);
+}
+
+/**
  * \return The distance between this and the given coordinate.
  */
 double RVector::getDistanceTo(const RVector& v) const {

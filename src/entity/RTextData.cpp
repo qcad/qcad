@@ -266,7 +266,7 @@ QList<RVector> RTextData::getReferencePoints(
 bool RTextData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
-    if (referencePoint.getDistanceTo(position) < RS::PointTolerance) {
+    if (referencePoint.equals(position)) {
         position = targetPoint;
         ret = true;
         update();

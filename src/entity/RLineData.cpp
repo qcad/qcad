@@ -99,11 +99,11 @@ bool RLineData::intersectsWith(const RTriangle& triangle) const {
 bool RLineData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
-    if (referencePoint.getDistanceTo(startPoint) < RS::PointTolerance) {
+    if (referencePoint.equals(startPoint)) {
         startPoint = targetPoint;
         ret = true;
     }
-    if (referencePoint.getDistanceTo(endPoint) < RS::PointTolerance) {
+    if (referencePoint.equals(endPoint)) {
         endPoint = targetPoint;
         ret = true;
     }

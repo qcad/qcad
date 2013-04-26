@@ -563,7 +563,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
 //                }
 
                 var gotGap = pl.countVertices()>0 &&
-                    pl.getEndPoint().getDistanceTo(seg.getStartPoint()) > RS.PointTolerance;
+                    !pl.getEndPoint().equals(seg.getStartPoint());
 
                 // s is a line or polyline that connets to the poyline we have:
                 if (!gotGap && (isLineShape(seg) || isPolylineShape(seg))) {

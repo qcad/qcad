@@ -159,7 +159,7 @@ Arc2PR.prototype.getArc2PR = function(preview) {
         return undefined;
     }
 
-    if (this.point1.getDistanceTo(this.point2)<RS.PointTolerance) {
+    if (this.point1.equals(this.point2)) {
         if (!preview) {
             this.error = qsTr("The two points are identical");
         }

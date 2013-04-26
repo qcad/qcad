@@ -264,11 +264,11 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
 
             QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
             if (!line.isNull()) {
-                if (referencePoint.getDistanceTo(line->getStartPoint()) < RS::PointTolerance) {
+                if (referencePoint.equals(line->getStartPoint())) {
                     line->setStartPoint(targetPoint);
                     ret = true;
                 }
-                if (referencePoint.getDistanceTo(line->getEndPoint()) < RS::PointTolerance) {
+                if (referencePoint.equals(line->getEndPoint())) {
                     line->setEndPoint(targetPoint);
                     ret = true;
                 }
@@ -276,11 +276,11 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
 
             QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
             if (!arc.isNull()) {
-                if (referencePoint.getDistanceTo(arc->getStartPoint()) < RS::PointTolerance) {
+                if (referencePoint.equals(arc->getStartPoint())) {
                     arc->moveStartPoint(targetPoint);
                     ret = true;
                 }
-                if (referencePoint.getDistanceTo(arc->getEndPoint()) < RS::PointTolerance) {
+                if (referencePoint.equals(arc->getEndPoint())) {
                     arc->moveEndPoint(targetPoint);
                     ret = true;
                 }
@@ -288,7 +288,7 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
 
             QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
             if (!circle.isNull()) {
-                if (referencePoint.getDistanceTo(circle->getCenter()) < RS::PointTolerance) {
+                if (referencePoint.equals(circle->getCenter())) {
                     circle->setCenter(targetPoint);
                     ret = true;
                 }
@@ -297,17 +297,17 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
             QSharedPointer<REllipse> ellipseArc = shape.dynamicCast<REllipse>();
             if (!ellipseArc.isNull()) {
                 if (ellipseArc->isFullEllipse()) {
-                    if (referencePoint.getDistanceTo(ellipseArc->getCenter()) < RS::PointTolerance) {
+                    if (referencePoint.equals(ellipseArc->getCenter())) {
                         ellipseArc->setCenter(targetPoint);
                         ret = true;
                     }
                 }
                 else {
-                    if (referencePoint.getDistanceTo(ellipseArc->getStartPoint()) < RS::PointTolerance) {
+                    if (referencePoint.equals(ellipseArc->getStartPoint())) {
                         ellipseArc->moveStartPoint(targetPoint, false);
                         ret = true;
                     }
-                    if (referencePoint.getDistanceTo(ellipseArc->getEndPoint()) < RS::PointTolerance) {
+                    if (referencePoint.equals(ellipseArc->getEndPoint())) {
                         ellipseArc->moveEndPoint(targetPoint, false);
                         ret = true;
                     }
@@ -334,7 +334,7 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
                     QList<RVector> controlPoints = spline->getControlPoints();
                     QList<RVector>::iterator it;
                     for (it=controlPoints.begin(); it!=controlPoints.end(); ++it) {
-                        if (referencePoint.getDistanceTo(*it) < RS::PointTolerance) {
+                        if (referencePoint.equals(*it)) {
                             (*it) = targetPoint;
                             ret = true;
                         }
@@ -473,7 +473,7 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
             QSharedPointer<RDirected> next = shape.dynamicCast<RDirected>();
             RVector sp = next->getStartPoint();
 
-            if (ep.getDistanceTo(sp) > RS::PointTolerance) {
+            if (!ep.equals(sp)) {
                 // inserting loop on the fly:
                 newLoop();
             }
@@ -777,7 +777,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                 }
                 else {
                     if (!cursor.isValid() ||
-                        cursor.getDistanceTo(line->getStartPoint()) > 0.001) {
+                        !cursor.equals(line->getStartPoint(), 0.001)) {
                         qWarning() << "RHatchData::getBoundaryPath: loop not closed: line does not connect: loop: " << i << " / element: " << k;
                         qWarning() << "RHatchData::getBoundaryPath: cursor: " << cursor;
                         qWarning() << "RHatchData::getBoundaryPath: " << *line;
@@ -801,7 +801,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                         qWarning() << "RHatchData::getBoundaryPath: loop not closed: invalid cursor before arc";
                         return RPainterPath();
                     }
-                    if (cursor.getDistanceTo(arc->getStartPoint()) > 0.001) {
+                    if (!cursor.equals(arc->getStartPoint(), 0.001)) {
                         qWarning() << "RHatchData::getBoundaryPath: loop not closed: arc does not connect";
                         qWarning() << "RHatchData::getBoundaryPath: cursor: " << cursor;
                         qWarning() << "RHatchData::getBoundaryPath: arc: " << *arc;
@@ -854,7 +854,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                             qWarning() << "RHatchData::getBoundaryPath: loop not closed: invalid cursor before ellipse arc";
                             return RPainterPath();
                         }
-                        if (cursor.getDistanceTo(ellipseCopy.getStartPoint()) > 0.001) {
+                        if (!cursor.equals(ellipseCopy.getStartPoint(), 0.001)) {
                             qWarning() << "RHatchData::getBoundaryPath: loop not closed: ellipse arc does not connect";
                             return RPainterPath();
                         }
@@ -883,7 +883,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                 // append ellipse arc to path:
                 RVector start = ePath.getStartPoint();
                 if (!cursor.isValid() ||
-                    cursor.getDistanceTo(start) > 0.001) {
+                    !cursor.equals(start, 0.001)) {
                     if (k!=0) {
                         qWarning() << "RHatchData::getBoundaryPath: loop not closed: ellipse arc does not connect";
                         return RPainterPath();
@@ -917,7 +917,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                     }
                     else {
                         if (!cursor.isValid() ||
-                                cursor.getDistanceTo(spline->getStartPoint()) > 0.001) {
+                            !cursor.getDistanceTo(spline->getStartPoint()) > 0.001) {
                             qWarning() << "RHatchData::getBoundaryPath: loop not closed: spline does not connect: loop: " << i << " / element: " << k;
                             qWarning() << "RHatchData::getBoundaryPath: cursor: " << cursor;
                             qWarning() << "RHatchData::getBoundaryPath: " << *spline;
@@ -949,7 +949,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
         }
 
         if (cursor.isValid() && loopStartPoint.isValid() &&
-                cursor.getDistanceTo(loopStartPoint) > 0.001) {
+            !cursor.equals(loopStartPoint, 0.001)) {
 
             qWarning() << "RHatchData::getBoundaryPath: loop not closed: "
                        << "end (" << cursor <<  ") does not connect to "

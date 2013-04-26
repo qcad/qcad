@@ -62,20 +62,20 @@ QList<RVector> RArcData::getReferencePoints(
 bool RArcData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
-    if (referencePoint.getDistanceTo(center) < RS::PointTolerance) {
+    if (referencePoint.equals(center)) {
         center = targetPoint;
         ret = true;
-    } else if (referencePoint.getDistanceTo(getStartPoint()) < RS::PointTolerance) {
+    } else if (referencePoint.equals(getStartPoint())) {
         moveStartPoint(targetPoint);
         ret = true;
-    } else if (referencePoint.getDistanceTo(getEndPoint()) < RS::PointTolerance) {
+    } else if (referencePoint.equals(getEndPoint())) {
         moveEndPoint(targetPoint);
         ret = true;
     }
-    else if (referencePoint.getDistanceTo(center + RVector(radius, 0)) < RS::PointTolerance ||
-             referencePoint.getDistanceTo(center + RVector(0, radius)) < RS::PointTolerance ||
-             referencePoint.getDistanceTo(center - RVector(radius, 0)) < RS::PointTolerance ||
-             referencePoint.getDistanceTo(center - RVector(0, radius)) < RS::PointTolerance) {
+    else if (referencePoint.equals(center + RVector(radius, 0)) ||
+             referencePoint.equals(center + RVector(0, radius)) ||
+             referencePoint.equals(center - RVector(radius, 0)) ||
+             referencePoint.equals(center - RVector(0, radius))) {
         radius = center.getDistanceTo(targetPoint);
         ret = true;
     }

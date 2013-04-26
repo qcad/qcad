@@ -159,7 +159,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         this.d2Model = event.getModelPosition();
         this.d2Screen = event.getScreenPosition();
         view = event.getGraphicsView();
-        if (this.d1Screen.getDistanceTo(this.d2Screen) > this.rangePixels / 2) {
+        if (!this.d1Screen.equals(this.d2Screen, this.rangePixels / 2)) {
             // if the dragging started on top of a reference point,
             // start moving the reference point:
             referencePoint = view.getClosestReferencePoint(this.d1Screen, this.rangePixels / 2);

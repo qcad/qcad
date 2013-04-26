@@ -718,7 +718,7 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
     RVector sol1 = c1 + u*s + v*t1;
     RVector sol2 = c1 + u*s + v*t2;
 
-    if (sol1.getDistanceTo(sol2) < 1.0e-4) {
+    if (sol1.equals(sol2, 1.0e-4)) {
         res.append(sol1);
         tangent = true;
     }
@@ -1388,8 +1388,8 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
                 bool sp = true;
                 bool ep = false;
                 if (cursor.isValid()) {
-                    sp = cursor.getDistanceTo(directed->getStartPoint()) < 0.001;
-                    ep = cursor.getDistanceTo(directed->getEndPoint()) < 0.001;
+                    sp = cursor.equals(directed->getStartPoint(), 0.001);
+                    ep = cursor.equals(directed->getEndPoint(), 0.001);
                     //qDebug() << "sp: " << sp << " (distance: " << cursor.getDistanceTo(directed->getStartPoint()) << ")";
                     //qDebug() << "ep: " << ep << " (distance: " << cursor.getDistanceTo(directed->getEndPoint()) << ")";
                 }
@@ -1437,7 +1437,7 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
         */
 
         if (cursor.isValid() && loopStartPoint.isValid() &&
-                cursor.getDistanceTo(loopStartPoint) > 0.001) {
+                !cursor.equals(loopStartPoint, 0.001)) {
 
             qWarning() << "RShape::order: loop not closed: "
                        << "end (cursor): " << cursor <<  " does not connect to "

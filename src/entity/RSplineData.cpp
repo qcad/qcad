@@ -60,29 +60,18 @@ bool RSplineData::moveReferencePoint(const RVector& referencePoint,
 
     QList<RVector>::iterator it;
     for (it=controlPoints.begin(); it!=controlPoints.end(); ++it) {
-        if (referencePoint.getDistanceTo(*it) < RS::PointTolerance) {
+        if (referencePoint.equals(*it)) {
             (*it) = targetPoint;
             ret = true;
         }
     }
 
     for (it=fitPoints.begin(); it!=fitPoints.end(); ++it) {
-        if (referencePoint.getDistanceTo(*it) < RS::PointTolerance) {
+        if (referencePoint.equals(*it)) {
             (*it) = targetPoint;
             ret = true;
         }
     }
-
-    /*
-    if (referencePoint.getDistanceTo(startPoint) < RS::PointTolerance) {
-        startPoint = targetPoint;
-        ret = true;
-    }
-    if (referencePoint.getDistanceTo(endPoint) < RS::PointTolerance) {
-        endPoint = targetPoint;
-        ret = true;
-    }
-    */
 
     if (ret) {
         //if (periodic) {

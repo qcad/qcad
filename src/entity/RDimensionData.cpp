@@ -143,14 +143,14 @@ bool RDimensionData::moveReferencePoint(const RVector& referencePoint,
 //    qDebug() << "    textPosition: " << textPositionCenter;
 //    qDebug() << "    referencePoint: " << referencePoint;
 
-    if (referencePoint.getDistanceTo(definitionPoint) < RS::PointTolerance) {
+    if (referencePoint.equals(definitionPoint)) {
         definitionPoint = targetPoint;
         autoTextPos = true;
         ret = true;
     }
     else {
         if (textPositionSide.isValid()) {
-            if (referencePoint.getDistanceTo(textPositionSide) < RS::PointTolerance) {
+            if (referencePoint.equals(textPositionSide)) {
                 textPositionCenter = targetPoint;
                 textPositionSide = RVector::invalid;
                 autoTextPos = false;
@@ -158,7 +158,7 @@ bool RDimensionData::moveReferencePoint(const RVector& referencePoint,
             }
         }
         else {
-            if (referencePoint.getDistanceTo(textPositionCenter) < RS::PointTolerance) {
+            if (referencePoint.equals(textPositionCenter)) {
                 textPositionCenter = targetPoint;
                 autoTextPos = false;
                 ret = true;

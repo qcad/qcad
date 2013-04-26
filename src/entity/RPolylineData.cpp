@@ -58,7 +58,7 @@ bool RPolylineData::moveReferencePoint(const RVector& referencePoint,
 
     QList<RVector>::iterator it;
     for (it=vertices.begin(); it!=vertices.end(); ++it) {
-        if (referencePoint.getDistanceTo(*it) < RS::PointTolerance) {
+        if (referencePoint.equals(*it)) {
             (*it) = targetPoint;
             ret = true;
         }
@@ -142,16 +142,16 @@ QList<RVector> RPolylineData::getIntersectionPoints(
                 if (!dir1.isNull() && !dir2.isNull()) {
                     // ignore polyline nodes:
                     for (int c=0; c<candidates.size(); c++) {
-                        if (candidates[c].getDistanceTo(dir1->getStartPoint()) < RS::PointTolerance) {
+                        if (candidates[c].equals(dir1->getStartPoint())) {
                             continue;
                         }
-                        if (candidates[c].getDistanceTo(dir1->getEndPoint()) < RS::PointTolerance) {
+                        if (candidates[c].equals(dir1->getEndPoint())) {
                             continue;
                         }
-                        if (candidates[c].getDistanceTo(dir2->getStartPoint()) < RS::PointTolerance) {
+                        if (candidates[c].equals(dir2->getStartPoint())) {
                             continue;
                         }
-                        if (candidates[c].getDistanceTo(dir2->getEndPoint()) < RS::PointTolerance) {
+                        if (candidates[c].equals(dir2->getEndPoint())) {
                             continue;
                         }
                         ret.append(candidates[c]);

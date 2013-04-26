@@ -207,7 +207,7 @@ bool RFont::load() {
                                     coords.at(3).toDouble()
                         );
 
-                        if (!pos.isValid() || pos.getDistanceTo(startPoint) > RS::PointTolerance) {
+                        if (!pos.isValid() || !pos.equals(startPoint)) {
                             glyph.moveTo(startPoint.x, startPoint.y);
                             glyphDraft.moveTo(startPoint.x, startPoint.y);
                         }
@@ -245,7 +245,7 @@ bool RFont::load() {
 
                         arc.mirror(RLine(RVector(cx, cy), RVector(cx+1.0, cy)));
 
-                        if (!pos.isValid() || pos.getDistanceTo(startPoint) > RS::PointTolerance) {
+                        if (!pos.isValid() || !pos.equals(startPoint)) {
                             glyph.moveTo(startPoint.x, startPoint.y);
                             glyphDraft.moveTo(startPoint.x, startPoint.y);
                         }

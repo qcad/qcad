@@ -85,7 +85,7 @@ void RPolyline::normalize() {
     for (int i=0; i<vertices.size(); i++) {
         RVector v = vertices.at(i);
         double b = bulges.at(i);
-        if (i==0 || v.getDistanceTo(vertices.at(i-1))>RS::PointTolerance) {
+        if (i==0 || !v.equals(vertices.at(i-1))) {
             newVertices.append(v);
             newBulges.append(b);
         }

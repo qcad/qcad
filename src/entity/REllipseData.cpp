@@ -63,40 +63,40 @@ bool REllipseData::moveReferencePoint(const RVector& referencePoint,
     RVector endPoint = getEndPoint();
 
     if (!isFullEllipse()) {
-        if (referencePoint.getDistanceTo(startPoint)<RS::PointTolerance) {
+        if (referencePoint.equals(startPoint)) {
             moveStartPoint(targetPoint, true);
             return true;
         }
-        if (referencePoint.getDistanceTo(endPoint)<RS::PointTolerance) {
+        if (referencePoint.equals(endPoint)) {
             moveEndPoint(targetPoint, true);
             return true;
         }
     }
 
-    if (referencePoint.getDistanceTo(center+majorPoint)<RS::PointTolerance) {
+    if (referencePoint.equals(center+majorPoint)) {
         double minorRadius = getMinorRadius();
         majorPoint = targetPoint-center;
         setRatio(minorRadius / getMajorRadius());
         return true;
     }
 
-    if (referencePoint.getDistanceTo(center-majorPoint)<RS::PointTolerance) {
+    if (referencePoint.equals(center-majorPoint)) {
         double minorRadius = getMinorRadius();
         majorPoint = -(targetPoint-center);
         setRatio(minorRadius / getMajorRadius());
         return true;
     }
 
-    if (referencePoint.getDistanceTo(center+getMinorPoint())<RS::PointTolerance) {
+    if (referencePoint.equals(center+getMinorPoint())) {
         setMinorPoint(targetPoint-center);
         return true;
     }
-    if (referencePoint.getDistanceTo(center-getMinorPoint())<RS::PointTolerance) {
+    if (referencePoint.equals(center-getMinorPoint())) {
         setMinorPoint(-(targetPoint-center));
         return true;
     }
 
-    if (referencePoint.getDistanceTo(center)<RS::PointTolerance) {
+    if (referencePoint.equals(center)) {
         center = targetPoint;
         return true;
     }
