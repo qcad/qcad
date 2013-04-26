@@ -327,7 +327,6 @@ bool RDocument::hasVariable(const QString& key) const {
 }
 
 void RDocument::setVariable(const QString& key, const QVariant& value) {
-    qDebug() << "RDocument::setVariable: " << key << ": " << value.toString();
     storage.setVariable(key, value);
 }
 
