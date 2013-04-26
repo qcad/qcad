@@ -51,7 +51,7 @@ public:
                    double lineSpacingFactor,
                    const QString& text,
                    const QString& fontName,
-                   double angle);
+                   double textAngle);
 
     virtual RBox getBoundingBox() const;
 
@@ -130,6 +130,18 @@ public:
     bool hasCustomTextPosition() const;
     void setCustomTextPosition(bool on);
 
+    RS::TextLineSpacingStyle getLineSpacingStyle() const {
+        return lineSpacingStyle;
+    }
+
+    double getLineSpacingFactor() const {
+        return lineSpacingFactor;
+    }
+
+    double getTextAngle() const {
+        return textAngle;
+    }
+
     QList<QSharedPointer<RShape> > getDimensionLineShapes(
         const RVector& p1, const RVector& p2,
         bool arrow1, bool arrow2) const;
@@ -141,7 +153,7 @@ public:
     virtual QString getMeasurement(bool resolveAutoMeasurement = true) const;
     virtual QString getAutoMeasurement() const { return ""; }
     QString formatLabel(double distance) const;
-    QString formatAngleLabel(double angle) const;
+    QString formatAngleLabel(double textAngle) const;
     //virtual void updateFromTextPosition() = 0;
 
     virtual void update() const;
@@ -151,6 +163,10 @@ protected:
     mutable RVector definitionPoint;
     /** Middle point of dimension text */
     mutable RVector textPositionCenter;
+    /**
+     * Middle point of dimension text when automatically moved to
+     * the side for lack of space
+     */
     mutable RVector textPositionSide;
     /** Vertical alignment */
     RS::VAlign valign;
@@ -175,7 +191,7 @@ protected:
 
     mutable double defaultAngle;
     /** Rotation angle of dimension text away from default orientation */
-    double angle;
+    double textAngle;
 
     mutable bool dirty;
     mutable RTextData textData;

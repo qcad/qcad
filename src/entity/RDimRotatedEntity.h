@@ -119,11 +119,11 @@ public:
         return data.getExtensionPoint2();
     }
 
-    void setAngle(double a) {
+    void setRotation(double a) {
         data.setRotation(a);
     }
 
-    double getAngle() const {
+    double getRotation() const {
         return data.getRotation();
     }
 

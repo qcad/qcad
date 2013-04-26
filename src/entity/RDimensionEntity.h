@@ -109,6 +109,10 @@ public:
         return getData().getText();
     }
 
+    QString getMeasurement(bool resolveAutoMeasurement = true) const {
+        return getData().getMeasurement(resolveAutoMeasurement);
+    }
+
     RTextData getTextData() const {
         return getData().getTextData();
     }
@@ -135,6 +139,18 @@ public:
 
     void setCustomTextPosition(bool on) {
         getData().setCustomTextPosition(on);
+    }
+
+    RS::TextLineSpacingStyle getLineSpacingStyle() const {
+        return getData().getLineSpacingStyle();
+    }
+
+    double getLineSpacingFactor() const {
+        return getData().getLineSpacingFactor();
+    }
+
+    double getTextAngle() const {
+        return getData().getTextAngle();
     }
 
 protected:

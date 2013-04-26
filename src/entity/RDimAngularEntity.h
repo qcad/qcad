@@ -109,6 +109,46 @@ public:
         return data;
     }
 
+    void setExtensionLine1Start(const RVector& p) {
+        getData().setExtensionLine1Start(p);
+    }
+
+    RVector getExtensionLine1Start() const {
+        return getData().getExtensionLine1Start();
+    }
+
+    void setExtensionLine1End(const RVector& p) {
+        getData().setExtensionLine1End(p);
+    }
+
+    RVector getExtensionLine1End() const {
+        return getData().getExtensionLine1End();
+    }
+
+    void setExtensionLine2Start(const RVector& p) {
+        getData().setExtensionLine2Start(p);
+    }
+
+    RVector getExtensionLine2Start() const {
+        return getData().getExtensionLine2Start();
+    }
+
+    void setExtensionLine2End(const RVector& p) {
+        getData().setExtensionLine2End(p);
+    }
+
+    RVector getExtensionLine2End() const {
+        return getData().getExtensionLine2End();
+    }
+
+    void setDimArcPosition(const RVector& p) {
+        getData().setDimArcPosition(p);
+    }
+
+    RVector getDimArcPosition() const {
+        return getData().getDimArcPosition();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

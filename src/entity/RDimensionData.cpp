@@ -30,7 +30,7 @@ RDimensionData::RDimensionData(RDocument* document) :
     lineSpacingStyle(RS::Exact),
     lineSpacingFactor(1.0),
     defaultAngle(RNANDOUBLE),
-    angle(0.0),
+    textAngle(0.0),
     dirty(true),
     dimLineLength(0.0),
     autoTextPos(true) {
@@ -79,7 +79,7 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       text(text),
       fontName(style),
       defaultAngle(RNANDOUBLE),
-      angle(angle),
+      textAngle(angle),
       dirty(true),
       dimLineLength(0.0),
       autoTextPos(true) {
@@ -189,7 +189,7 @@ bool RDimensionData::rotate(double rotation, const RVector& center) {
     if (textPositionSide.isValid()) {
         textPositionSide.rotate(rotation, center);
     }
-    angle = RMath::getNormalizedAngle(angle+rotation);
+    textAngle = RMath::getNormalizedAngle(textAngle+rotation);
     update();
     return true;
 }

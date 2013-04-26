@@ -119,6 +119,18 @@ public:
         return data.getDefiningPoint();
     }
 
+    void setMeasuringXAxis() {
+        data.setMeasuringXAxis();
+    }
+
+    void setMeasuringYAxis() {
+        data.setMeasuringYAxis();
+    }
+
+    bool isMeasuringXAxis() const {
+        return data.isMeasuringXAxis();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 
