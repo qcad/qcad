@@ -114,13 +114,31 @@
             
             REcmaHelper::registerFunction(&engine, proto, setFontName, "setFontName");
             
+            REcmaHelper::registerFunction(&engine, proto, setDrawingDirection, "setDrawingDirection");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDrawingDirection, "getDrawingDirection");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLineSpacingStyle, "setLineSpacingStyle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLineSpacingStyle, "getLineSpacingStyle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLineSpacingFactor, "setLineSpacingFactor");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLineSpacingFactor, "getLineSpacingFactor");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAngle, "setAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSimple, "setSimple");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSimple, "isSimple");
+            
             REcmaHelper::registerFunction(&engine, proto, getEscapedText, "getEscapedText");
             
             REcmaHelper::registerFunction(&engine, proto, getPlainText, "getPlainText");
             
             REcmaHelper::registerFunction(&engine, proto, setText, "setText");
-            
-            REcmaHelper::registerFunction(&engine, proto, isSimple, "isSimple");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RTextEntity*>(), *proto);
@@ -2010,6 +2028,526 @@
             return result;
         }
          QScriptValue
+        REcmaTextEntity::setDrawingDirection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::setDrawingDirection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::setDrawingDirection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("setDrawingDirection", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::TextDrawingDirection */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::TextDrawingDirection
+                    a0 =
+                    (RS::TextDrawingDirection)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDrawingDirection(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.setDrawingDirection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::setDrawingDirection", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::getDrawingDirection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::getDrawingDirection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::getDrawingDirection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("getDrawingDirection", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::TextDrawingDirection'
+    RS::TextDrawingDirection cppResult =
+        
+               self->getDrawingDirection();
+        // return type: RS::TextDrawingDirection
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.getDrawingDirection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::getDrawingDirection", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::setLineSpacingStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::setLineSpacingStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::setLineSpacingStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("setLineSpacingStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::TextLineSpacingStyle */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::TextLineSpacingStyle
+                    a0 =
+                    (RS::TextLineSpacingStyle)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLineSpacingStyle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.setLineSpacingStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::setLineSpacingStyle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::getLineSpacingStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::getLineSpacingStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::getLineSpacingStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("getLineSpacingStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::TextLineSpacingStyle'
+    RS::TextLineSpacingStyle cppResult =
+        
+               self->getLineSpacingStyle();
+        // return type: RS::TextLineSpacingStyle
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.getLineSpacingStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::getLineSpacingStyle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::setLineSpacingFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::setLineSpacingFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::setLineSpacingFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("setLineSpacingFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLineSpacingFactor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.setLineSpacingFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::setLineSpacingFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::getLineSpacingFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::getLineSpacingFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::getLineSpacingFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("getLineSpacingFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLineSpacingFactor();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.getLineSpacingFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::getLineSpacingFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::setAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::setAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::setAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("setAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.setAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::setAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::getAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::getAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("getAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.getAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::setSimple
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::setSimple", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::setSimple";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("setSimple", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSimple(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.setSimple().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::setSimple", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextEntity::isSimple
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextEntity::isSimple", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::isSimple";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("isSimple", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSimple();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.isSimple().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextEntity::isSimple", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTextEntity::getEscapedText
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2160,55 +2698,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextEntity::setText", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaTextEntity::isSimple
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaTextEntity::isSimple", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::isSimple";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RTextEntity* self = 
-                        getSelf("isSimple", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isSimple();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.isSimple().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaTextEntity::isSimple", context, engine);
             return result;
         }
          QScriptValue REcmaTextEntity::toString

@@ -399,6 +399,7 @@ dir="./entity" filename="RCircleEntity.h">
     </type>
     <name>getRadius</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>

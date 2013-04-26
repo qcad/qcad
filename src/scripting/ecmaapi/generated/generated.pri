@@ -53,6 +53,7 @@ HEADERS += \
     $$PWD/REcmaDockWidget.h \
     $$PWD/REcmaDocument.h \
     $$PWD/REcmaDocumentInterface.h \
+    $$PWD/REcmaDxfServices.h \
     $$PWD/REcmaEllipse.h \
     $$PWD/REcmaEllipseData.h \
     $$PWD/REcmaEllipseEntity.h \
@@ -336,6 +337,7 @@ SOURCES += \
     $$PWD/REcmaDockWidget.cpp \
     $$PWD/REcmaDocument.cpp \
     $$PWD/REcmaDocumentInterface.cpp \
+    $$PWD/REcmaDxfServices.cpp \
     $$PWD/REcmaEllipse.cpp \
     $$PWD/REcmaEllipseData.cpp \
     $$PWD/REcmaEllipseEntity.cpp \

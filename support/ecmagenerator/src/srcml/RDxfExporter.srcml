@@ -43,11 +43,19 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
   <class_decl>class 
+  <name>RDimensionEntity</name>;</class_decl>
+  <class_decl>class 
   <name>RMessageHandler</name>;</class_decl>
   <class_decl>class 
   <name>RProgressHandler</name>;</class_decl>
   <class_decl>class 
+  <name>RArcEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>REllipseEntity</name>;</class_decl>
+  <class_decl>class 
   <name>RLineEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RCircleEntity</name>;</class_decl>
   <class_decl>class 
   <name>RSplineEntity</name>;</class_decl>
   <class_decl>class 
@@ -56,6 +64,8 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <name>RImageEntity</name>;</class_decl>
   <class_decl>class 
   <name>RPointEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RTextEntity</name>;</class_decl>
   <comment type="block">/** * \brief Exporter for the DXF format,
   based on dxflib. * * \ingroup dxf */</comment>
   <class>class 
@@ -286,6 +296,48 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <type>
     <name>void</name>
   </type>
+  <name>writeCircle</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RCircleEntity</name>&amp;</type>
+      <name>c</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeArc</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RArcEntity</name>&amp;</type>
+      <name>a</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeEllipse</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>REllipseEntity</name>&amp;</type>
+      <name>el</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>writePolyline</name>
   <parameter_list>(
   <param>
@@ -322,6 +374,48 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <name>const</name>
       <name>RSplineEntity</name>&amp;</type>
       <name>sp</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeText</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RTextEntity</name>&amp;</type>
+      <name>t</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeDimension</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RDimensionEntity</name>&amp;</type>
+      <name>d</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeBlockReference</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RBlockReferenceEntity</name>&amp;</type>
+      <name>br</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>

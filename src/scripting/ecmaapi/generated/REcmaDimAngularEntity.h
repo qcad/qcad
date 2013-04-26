@@ -69,6 +69,36 @@
         ;static  QScriptValue
         setData
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setExtensionLine1Start
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExtensionLine1Start
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setExtensionLine1End
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExtensionLine1End
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setExtensionLine2Start
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExtensionLine2Start
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setExtensionLine2End
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExtensionLine2End
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimArcPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimArcPosition
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

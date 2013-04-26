@@ -210,6 +210,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getDrawingDirection"
+    cppName="getDrawingDirection" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::TextDrawingDirection"
+      isPureVirtual="false" />
+    </method>
     <method name="setLineSpacingStyle"
     cppName="setLineSpacingStyle" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -218,6 +224,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RS::TextLineSpacingStyle" name="lineSpacingStyle"
         isConst="false" />
       </variant>
+    </method>
+    <method name="getLineSpacingStyle"
+    cppName="getLineSpacingStyle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::TextLineSpacingStyle"
+      isPureVirtual="false" />
     </method>
     <method name="setLineSpacingFactor"
     cppName="setLineSpacingFactor" specifier="public"

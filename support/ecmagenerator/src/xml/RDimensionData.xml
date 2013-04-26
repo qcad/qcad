@@ -30,7 +30,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="QString &amp;" typeName="QString"
         name="fontName" isConst="true" />
-        <arg type="double" typeName="double" name="angle"
+        <arg type="double" typeName="double" name="textAngle"
         isConst="false" />
       </variant>
     </constructor>
@@ -222,6 +222,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getLineSpacingStyle"
+    cppName="getLineSpacingStyle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::TextLineSpacingStyle"
+      isPureVirtual="false" />
+    </method>
+    <method name="getLineSpacingFactor"
+    cppName="getLineSpacingFactor" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getTextAngle" cppName="getTextAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
     <method name="getDimensionLineShapes"
     cppName="getDimensionLineShapes" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -289,7 +305,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
-        <arg type="double" typeName="double" name="angle"
+        <arg type="double" typeName="double" name="textAngle"
         isConst="false" />
       </variant>
     </method>

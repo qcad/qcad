@@ -130,7 +130,13 @@
         setDrawingDirection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDrawingDirection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setLineSpacingStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLineSpacingStyle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setLineSpacingFactor

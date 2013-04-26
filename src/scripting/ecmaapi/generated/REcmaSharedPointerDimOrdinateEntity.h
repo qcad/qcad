@@ -83,6 +83,15 @@
         ;static  QScriptValue
         getDefiningPoint
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMeasuringXAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMeasuringYAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isMeasuringXAxis
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

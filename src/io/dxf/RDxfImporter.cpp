@@ -880,8 +880,8 @@ void RDxfImporter::addDimAngular3P(const DL_DimensionData& data,
 void RDxfImporter::addDimOrdinate(const DL_DimensionData& data,
                                const DL_DimOrdinateData& edata) {
     RDimensionData dimData = convDimensionData(data);
-    RVector definingPoint(edata.dpx1, edata.dpy1);
     RVector leaderEndPoint(edata.dpx2, edata.dpy2);
+    RVector definingPoint(edata.dpx1, edata.dpy1);
 
     RDimOrdinateData d(dimData, leaderEndPoint, definingPoint);
     if (edata.xtype) {

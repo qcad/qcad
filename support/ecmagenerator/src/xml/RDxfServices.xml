@@ -2,8 +2,231 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RDxfServices"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="false"
-  isScriptable="false" />
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="reset" cppName="reset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="fixBlockName" cppName="fixBlockName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="false" />
+      </variant>
+    </method>
+    <method name="fixLayerName" cppName="fixLayerName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="false" />
+      </variant>
+    </method>
+    <method name="fixFontName" cppName="fixFontName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fontName" isConst="true" />
+      </variant>
+    </method>
+    <method name="fixQCad2String" cppName="fixQCad2String"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="str"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="fixDimensionLabel" cppName="fixDimensionLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="uTol"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="lTol"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="detectQCad2Format" cppName="detectQCad2Format"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
+    </method>
+    <method name="hasDIMZIN" cppName="hasDIMZIN" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="hasDIMAZIN" cppName="hasDIMAZIN"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="hasInvalidEllipse" cppName="hasInvalidEllipse"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getQCad2Compatibility"
+    cppName="getQCad2Compatibility" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getQCad2LayerName" cppName="getQCad2LayerName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getQCad2BlockName" cppName="getQCad2BlockName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getQCad2Font" cppName="getQCad2Font"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="handle"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getQCad2DimensionLabel"
+    cppName="getQCad2DimensionLabel" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="handle"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="collectQCad2Info" cppName="collectQCad2Info"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getQCad2PatternAngle"
+    cppName="getQCad2PatternAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="patternName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getQCad2PatternScale"
+    cppName="getQCad2PatternScale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="scale"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="patternName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getQCad2PatternName"
+    cppName="getQCad2PatternName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="patternName" isConst="true" />
+      </variant>
+    </method>
+    <method name="fixQCad2HatchData" cppName="fixQCad2HatchData"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="patternName" isConst="false" />
+        <arg type="double &amp;" typeName="double" name="angle"
+        isConst="false" />
+        <arg type="double &amp;" typeName="double" name="scale"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="solid"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="attributesToColor" cppName="attributesToColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="int" typeName="int" name="color"
+        isConst="false" />
+        <arg type="int" typeName="int" name="color24"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="forLayer"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="numberToColor24" cppName="numberToColor24"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="int" typeName="int" name="num"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="numberToWeight" cppName="numberToWeight"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLineweight::Lineweight"
+      isPureVirtual="false">
+        <arg type="int" typeName="int" name="num"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="widthToNumber" cppName="widthToNumber"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RLineweight::Lineweight"
+        typeName="RLineweight::Lineweight" name="w"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="colorToNumber24" cppName="colorToNumber24"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="col"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="stringToVariable" cppName="stringToVariable"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RS::KnownVariable"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="variableToString" cppName="variableToString"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="v" isConst="false" />
+      </variant>
+    </method>
+  </class>
 </unit>

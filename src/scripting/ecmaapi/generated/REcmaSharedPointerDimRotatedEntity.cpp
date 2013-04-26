@@ -97,9 +97,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, getExtensionPoint2, "getExtensionPoint2");
             
-            REcmaHelper::registerFunction(&engine, proto, setAngle, "setAngle");
+            REcmaHelper::registerFunction(&engine, proto, setRotation, "setRotation");
             
-            REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
+            REcmaHelper::registerFunction(&engine, proto, getRotation, "getRotation");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RDimRotatedEntityPointer>(), *proto);
@@ -1350,19 +1350,19 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerDimRotatedEntity::setAngle
+        REcmaSharedPointerDimRotatedEntity::setRotation
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setAngle", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::setAngle";
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::setRotation";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimRotatedEntity* self = 
-                        getSelf("setAngle", context);
+                        getSelf("setRotation", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1392,32 +1392,32 @@
     // call C++ function:
     // return type 'void'
     
-               self->setAngle(a0);
+               self->setRotation(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.setAngle().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.setRotation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setRotation", context, engine);
             return result;
         }
          QScriptValue
-        REcmaSharedPointerDimRotatedEntity::getAngle
+        REcmaSharedPointerDimRotatedEntity::getRotation
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getAngle", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getAngle";
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getRotation";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimRotatedEntity* self = 
-                        getSelf("getAngle", context);
+                        getSelf("getRotation", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1437,7 +1437,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getAngle();
+               self->getRotation();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1447,10 +1447,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getAngle().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getRotation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getRotation", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerDimRotatedEntity::toString

@@ -121,6 +121,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCustomTextPosition, "setCustomTextPosition");
             
+            REcmaHelper::registerFunction(&engine, proto, getLineSpacingStyle, "getLineSpacingStyle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLineSpacingFactor, "getLineSpacingFactor");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTextAngle, "getTextAngle");
+            
             REcmaHelper::registerFunction(&engine, proto, getDimensionLineShapes, "getDimensionLineShapes");
             
             REcmaHelper::registerFunction(&engine, proto, getArrow, "getArrow");
@@ -2419,6 +2425,153 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::setCustomTextPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getLineSpacingStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getLineSpacingStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getLineSpacingStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getLineSpacingStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::TextLineSpacingStyle'
+    RS::TextLineSpacingStyle cppResult =
+        
+               self->getLineSpacingStyle();
+        // return type: RS::TextLineSpacingStyle
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getLineSpacingStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getLineSpacingStyle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getLineSpacingFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getLineSpacingFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getLineSpacingFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getLineSpacingFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLineSpacingFactor();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getLineSpacingFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getLineSpacingFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getTextAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getTextAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getTextAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getTextAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getTextAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getTextAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getTextAngle", context, engine);
             return result;
         }
          QScriptValue

@@ -84,10 +84,10 @@
         getExtensionPoint2
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setAngle
+        setRotation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getAngle
+        getRotation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

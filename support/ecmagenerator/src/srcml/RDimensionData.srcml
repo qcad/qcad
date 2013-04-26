@@ -168,7 +168,7 @@ dir="./entity" filename="RDimensionData.h">
       <type>
         <name>double</name>
       </type>
-      <name>angle</name>
+      <name>textAngle</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
   <function_decl>
@@ -654,6 +654,47 @@ dir="./entity" filename="RDimensionData.h">
       <name>on</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>TextLineSpacingStyle</name></name>
+    </type>
+    <name>getLineSpacingStyle</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>lineSpacingStyle</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getLineSpacingFactor</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>lineSpacingFactor</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getTextAngle</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>textAngle</name>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>QList
@@ -812,7 +853,7 @@ dir="./entity" filename="RDimensionData.h">
       <type>
         <name>double</name>
       </type>
-      <name>angle</name>
+      <name>textAngle</name>
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
@@ -846,6 +887,8 @@ dir="./entity" filename="RDimensionData.h">
     </type>
     <name>textPositionCenter</name>
   </decl>;</decl_stmt>
+  <comment type="block">/** * Middle point of dimension text when
+  automatically moved to * the side for lack of space */</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -941,7 +984,7 @@ dir="./entity" filename="RDimensionData.h">
     <type>
       <name>double</name>
     </type>
-    <name>angle</name>
+    <name>textAngle</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

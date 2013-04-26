@@ -87,6 +87,26 @@
             
             REcmaHelper::registerFunction(&engine, proto, setData, "setData");
             
+            REcmaHelper::registerFunction(&engine, proto, setExtensionLine1Start, "setExtensionLine1Start");
+            
+            REcmaHelper::registerFunction(&engine, proto, getExtensionLine1Start, "getExtensionLine1Start");
+            
+            REcmaHelper::registerFunction(&engine, proto, setExtensionLine1End, "setExtensionLine1End");
+            
+            REcmaHelper::registerFunction(&engine, proto, getExtensionLine1End, "getExtensionLine1End");
+            
+            REcmaHelper::registerFunction(&engine, proto, setExtensionLine2Start, "setExtensionLine2Start");
+            
+            REcmaHelper::registerFunction(&engine, proto, getExtensionLine2Start, "getExtensionLine2Start");
+            
+            REcmaHelper::registerFunction(&engine, proto, setExtensionLine2End, "setExtensionLine2End");
+            
+            REcmaHelper::registerFunction(&engine, proto, getExtensionLine2End, "getExtensionLine2End");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimArcPosition, "setDimArcPosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimArcPosition, "getDimArcPosition");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAngularEntity*>(), *proto);
 
@@ -1122,6 +1142,586 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAngularEntity::setData", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::setExtensionLine1Start
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::setExtensionLine1Start", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::setExtensionLine1Start";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("setExtensionLine1Start", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExtensionLine1Start(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.setExtensionLine1Start().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::setExtensionLine1Start", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::getExtensionLine1Start
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::getExtensionLine1Start", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::getExtensionLine1Start";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("getExtensionLine1Start", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getExtensionLine1Start();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.getExtensionLine1Start().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::getExtensionLine1Start", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::setExtensionLine1End
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::setExtensionLine1End", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::setExtensionLine1End";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("setExtensionLine1End", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExtensionLine1End(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.setExtensionLine1End().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::setExtensionLine1End", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::getExtensionLine1End
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::getExtensionLine1End", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::getExtensionLine1End";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("getExtensionLine1End", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getExtensionLine1End();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.getExtensionLine1End().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::getExtensionLine1End", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::setExtensionLine2Start
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::setExtensionLine2Start", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::setExtensionLine2Start";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("setExtensionLine2Start", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExtensionLine2Start(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.setExtensionLine2Start().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::setExtensionLine2Start", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::getExtensionLine2Start
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::getExtensionLine2Start", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::getExtensionLine2Start";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("getExtensionLine2Start", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getExtensionLine2Start();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.getExtensionLine2Start().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::getExtensionLine2Start", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::setExtensionLine2End
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::setExtensionLine2End", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::setExtensionLine2End";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("setExtensionLine2End", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExtensionLine2End(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.setExtensionLine2End().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::setExtensionLine2End", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::getExtensionLine2End
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::getExtensionLine2End", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::getExtensionLine2End";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("getExtensionLine2End", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getExtensionLine2End();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.getExtensionLine2End().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::getExtensionLine2End", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::setDimArcPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::setDimArcPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::setDimArcPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("setDimArcPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimArcPosition(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.setDimArcPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::setDimArcPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularEntity::getDimArcPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularEntity::getDimArcPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularEntity::getDimArcPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("getDimArcPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getDimArcPosition();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.getDimArcPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularEntity::getDimArcPosition", context, engine);
             return result;
         }
          QScriptValue REcmaDimAngularEntity::toString

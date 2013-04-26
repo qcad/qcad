@@ -27,12 +27,20 @@
 #include "RColor.h"
 #include "RDxfExporter.h"
 #include "RArcEntity.h"
+#include "RDimAlignedEntity.h"
+#include "RDimRotatedEntity.h"
+#include "RDimRadialEntity.h"
+#include "RDimDiametricEntity.h"
+#include "RDimOrdinateEntity.h"
+#include "RDimAngularEntity.h"
+#include "RDimensionEntity.h"
 #include "RTextEntity.h"
 #include "RBlockReferenceEntity.h"
 #include "REllipseEntity.h"
 #include "RCircleEntity.h"
 #include "RLinetypePatternMap.h"
 #include "RLineEntity.h"
+#include "RLeaderEntity.h"
 #include "RSplineEntity.h"
 #include "RPolylineEntity.h"
 #include "RImageEntity.h"
@@ -311,6 +319,59 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
  * Writes all known variable settings to the DXF file.
  */
 void RDxfExporter::writeVariables() {
+    for (RS::KnownVariable var=RS::ANGBASE; var<RS::MaxKnownVariable; var=(RS::KnownVariable)((int)var+1)) {
+        QString name = RDxfServices::variableToString(var);
+
+        // skip unsupported variables:
+        if (!DL_Dxf::checkVariable(name.toLatin1(), dxf.getVersion())) {
+            continue;
+        }
+
+        // skip undefined variables:
+        QVariant value = document->getKnownVariable(var);
+        if (!value.isValid()) {
+            continue;
+        }
+
+        int code = RDxfServices::getCodeForVariable(var);
+        if (code==-1) {
+            continue;
+        }
+
+        if (name=="ACADVER" || name=="HANDSEED") {
+            continue;
+        }
+
+        name = "$" + name;
+
+        switch (value.type()) {
+        case QVariant::Int:
+            dw->dxfString(9, (const char*)name.toLatin1());
+            dw->dxfInt(code, value.toInt());
+            break;
+        case QVariant::Double:
+            dw->dxfString(9, (const char*)name.toLatin1());
+            dw->dxfReal(code, value.toDouble());
+            break;
+        case QVariant::String:
+            dw->dxfString(9, (const char*)name.toLatin1());
+            dw->dxfString(code, (const char*)value.toString().toLatin1());
+            break;
+        case QVariant::UserType:
+            if (value.canConvert<RVector>()) {
+                RVector v = value.value<RVector>();
+                dw->dxfString(9, (const char*)name.toLatin1());
+                dw->dxfReal(code, v.x);
+                dw->dxfReal(code+10, v.y);
+                if (RDxfServices::isVariable2D(var)==false) {
+                    dw->dxfReal(code+20, v.z);
+                }
+            }
+            break;
+        default:
+            break;
+        }
+    }
     /*
     RS_Hash<RS_String, RS_Variable>::iterator it;
     (graphic->getVariableDict());
@@ -467,20 +528,21 @@ void RDxfExporter::writeEntity(const REntity& e) {
         writeText(dynamic_cast<const RTextEntity&>(e));
         break;
 
-        /*
     case RS::EntityDimAligned:
     case RS::EntityDimAngular:
-    case RS::EntityDimLinear:
+    case RS::EntityDimRotated:
     case RS::EntityDimRadial:
     case RS::EntityDimDiametric:
     case RS::EntityDimOrdinate:
-        writeDimension(dynamic_cast<RS_Dimension*>(e));
+        writeDimension(dynamic_cast<const RDimensionEntity&>(e));
         break;
-    case RS::EntityDimLeader:
-        writeLeader(dynamic_cast<RS_Leader*>(e));
+
+    case RS::EntityLeader:
+        writeLeader(dynamic_cast<const RLeaderEntity&>(e));
         break;
+        /*
     case RS::EntityHatch:
-        writeHatch(dynamic_cast<RS_Hatch*>(e));
+        writeHatch(dynamic_cast<const RHatchEntity&>(e));
         break;
     case RS::EntityImage:
         writeImage(dynamic_cast<RS_Image*>(e));
@@ -801,6 +863,220 @@ void RDxfExporter::writeText(const RTextEntity& t) {
                          (const char*)t.getFontName().toLatin1(),
                          t.getAngle()),
             attributes);
+    }
+}
+
+/**
+ * Writes the given dimension entity to the file.
+ */
+void RDxfExporter::writeDimension(const RDimensionEntity& d) {
+    // split dimension into simple entities:
+    if (dxf.getVersion()==DL_Codes::AC1009) {
+        // TODO:
+        //writeAtomicEntities(d, RS2::ResolveNone);
+        return;
+    }
+
+    int dimType;
+    int attachmentPoint=1;
+//    if (d.getHAlign()==RS2::HAlignLeft) {
+//        attachmentPoint=1;
+//    } else if (d.getHAlign()==RS2::HAlignCenter) {
+        attachmentPoint=2;
+//    } else if (d.getHAlign()==RS2::HAlignRight) {
+//        attachmentPoint=3;
+//    }
+//    if (d.getVAlign()==RS2::VAlignTop) {
+//        attachmentPoint+=0;
+//    } else if (d.getVAlign()==RS2::VAlignMiddle) {
+//        attachmentPoint+=3;
+//    } else if (d.getVAlign()==RS2::VAlignBottom) {
+        attachmentPoint+=6;
+//    }
+
+    switch (d.getType()) {
+    case RS::EntityDimAligned:
+        dimType = 1;
+        break;
+    case RS::EntityDimAngular:
+        dimType = 2;
+        break;
+    case RS::EntityDimRotated:
+        dimType = 0;
+        break;
+    case RS::EntityDimRadial:
+        dimType = 4;
+        break;
+    case RS::EntityDimDiametric:
+        dimType = 3;
+        break;
+    case RS::EntityDimOrdinate:
+        dimType = 6;
+        break;
+    default:
+        dimType = 0;
+        break;
+    }
+
+    if (d.hasCustomTextPosition()) {
+        dimType |= 0x80;
+    }
+
+    qDebug() << "dimType: " << dimType;
+    qDebug() << "text: " << d.getMeasurement(false);
+
+    DL_DimensionData dimData(d.getDefinitionPoint().x,
+                             d.getDefinitionPoint().y,
+                             0.0,
+                             d.getTextPosition().x,
+                             d.getTextPosition().y,
+                             0.0,
+                             dimType,
+                             attachmentPoint,
+                             d.getLineSpacingStyle(),
+                             d.getLineSpacingFactor(),
+                             (const char*)d.getMeasurement(false).toLatin1(),
+                             // TODO: dim style:
+                             (const char*)d.getFontName().toLatin1(),
+                             d.getTextAngle());
+
+    switch (d.getType()) {
+    case RS::EntityDimAligned: {
+        const RDimAlignedEntity* dim = dynamic_cast<const RDimAlignedEntity*>(&d);
+
+        DL_DimAlignedData dimAlignedData(dim->getExtensionPoint1().x,
+                                         dim->getExtensionPoint1().y,
+                                         0.0,
+                                         dim->getExtensionPoint2().x,
+                                         dim->getExtensionPoint2().y,
+                                         0.0);
+
+        dxf.writeDimAligned(*dw, dimData, dimAlignedData, attributes);
+        }
+        break;
+    case RS::EntityDimRotated: {
+        const RDimRotatedEntity* dim = dynamic_cast<const RDimRotatedEntity*>(&d);
+
+        DL_DimLinearData dimLinearData(dim->getExtensionPoint1().x,
+                                       dim->getExtensionPoint1().y,
+                                       0.0,
+                                       dim->getExtensionPoint2().x,
+                                       dim->getExtensionPoint2().y,
+                                       0.0,
+                                       dim->getRotation(),
+                                       0.0 // TODO: dl->getOblique()
+                                       );
+
+        dxf.writeDimLinear(*dw, dimData, dimLinearData, attributes);
+        }
+        break;
+    case RS::EntityDimRadial: {
+        const RDimRadialEntity* dim = dynamic_cast<const RDimRadialEntity*>(&d);
+
+        DL_DimRadialData dimRadialData(dim->getChordPoint().x,
+                                       dim->getChordPoint().y,
+                                       0.0,
+                                       0.0 // TODO: dr->getLeader()
+                                       );
+
+        dxf.writeDimRadial(*dw, dimData, dimRadialData, attributes);
+        }
+        break;
+    case RS::EntityDimDiametric: {
+        const RDimDiametricEntity* dim = dynamic_cast<const RDimDiametricEntity*>(&d);
+
+        DL_DimDiametricData dimDiametricData(dim->getChordPoint().x,
+                                             dim->getChordPoint().y,
+                                             0.0,
+                                             0.0 // TODO: dr->getLeader()
+                                             );
+
+        dxf.writeDimDiametric(*dw, dimData, dimDiametricData, attributes);
+        }
+        break;
+    case RS::EntityDimAngular: {
+        const RDimAngularEntity* dim = dynamic_cast<const RDimAngularEntity*>(&d);
+
+        DL_DimAngularData dimAngularData(dim->getExtensionLine1Start().x,
+                                         dim->getExtensionLine1Start().y,
+                                         0.0,
+                                         dim->getExtensionLine1End().x,
+                                         dim->getExtensionLine1End().y,
+                                         0.0,
+                                         dim->getExtensionLine2Start().x,
+                                         dim->getExtensionLine2Start().y,
+                                         0.0,
+                                         dim->getDimArcPosition().x,
+                                         dim->getDimArcPosition().y,
+                                         0.0);
+
+        dxf.writeDimAngular(*dw, dimData, dimAngularData, attributes);
+        }
+        break;
+    case RS::EntityDimOrdinate: {
+        const RDimOrdinateEntity* dim = dynamic_cast<const RDimOrdinateEntity*>(&d);
+
+        DL_DimOrdinateData dimOrdinateData(dim->getDefiningPoint().x,
+                                           dim->getDefiningPoint().y,
+                                           0.0,
+                                           dim->getLeaderEndPoint().x,
+                                           dim->getLeaderEndPoint().y,
+                                           0.0,
+                                           dim->isMeasuringXAxis());
+
+        dxf.writeDimOrdinate(*dw, dimData, dimOrdinateData, attributes);
+        }
+        break;
+    default:
+        break;
+    }
+}
+
+/**
+ * Writes the given leader entity to the file.
+ */
+void RDxfExporter::writeLeader(const RLeaderEntity& l) {
+    if (l.countSegments()>0) {
+        dxf.writeLeader(
+            *dw,
+            DL_LeaderData(l.hasArrowHead(),
+                          0,
+                          3,
+                          0,
+                          0,
+                          1.0,
+                          10.0,
+                          l.countVertices()),
+            attributes);
+        bool first = true;
+        for (int i=0; i<l.countSegments(); i++) {
+            QSharedPointer<RShape> seg = l.getSegmentAt(i);
+            if (seg.isNull()) {
+                continue;
+            }
+
+            QSharedPointer<RLine> line = seg.dynamicCast<RLine>();
+            if (line.isNull()) {
+                continue;
+            }
+
+            if (first) {
+                dxf.writeLeaderVertex(
+                    *dw,
+                    DL_LeaderVertexData(line->getStartPoint().x,
+                                        line->getStartPoint().y,
+                                        0.0));
+                first = false;
+            }
+            dxf.writeLeaderVertex(
+                *dw,
+                DL_LeaderVertexData(line->getEndPoint().x,
+                                    line->getEndPoint().y,
+                                    0.0));
+        }
+    } else {
+        qWarning() << "RDxfExporter::writeLeader: "
+            << "dropping leader without segments";
     }
 }
 

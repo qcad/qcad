@@ -93,6 +93,7 @@
 #include "REcmaDocument.h"
 #include "REcmaDocumentInterface.h"
 #include "REcmaDockWidget.h"
+#include "REcmaDxfServices.h"
 #include "REcmaEllipse.h"
 #include "REcmaEllipseData.h"
 #include "REcmaEllipseEntity.h"
@@ -720,7 +721,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaTextRenderer::init(*engine);
 
+    REcmaDxfServices::init(*engine);
+
     REcmaAutoLoadEcma::init(*engine);
+
 
     // *** end of "do not change the order" ***
 
@@ -1126,7 +1130,7 @@ QScriptValue RScriptHandlerEcma::ecmaExit(QScriptContext* context,
     if (context->argumentCount() == 0) {
         // doesn't do anything:
         //QCoreApplication::exit();
-        exit(ret);
+        exit(0);
     }
     if (context->argumentCount() == 1) {
         int ret = context->argument(0).toUInt32();

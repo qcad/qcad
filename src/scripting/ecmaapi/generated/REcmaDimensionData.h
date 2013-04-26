@@ -129,6 +129,15 @@
         setCustomTextPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLineSpacingStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLineSpacingFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTextAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimensionLineShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

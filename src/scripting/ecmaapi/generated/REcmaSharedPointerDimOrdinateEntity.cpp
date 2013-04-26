@@ -97,6 +97,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDefiningPoint, "getDefiningPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, setMeasuringXAxis, "setMeasuringXAxis");
+            
+            REcmaHelper::registerFunction(&engine, proto, setMeasuringYAxis, "setMeasuringYAxis");
+            
+            REcmaHelper::registerFunction(&engine, proto, isMeasuringXAxis, "isMeasuringXAxis");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimOrdinateEntityPointer>(), *proto);
       
@@ -1343,6 +1349,143 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimOrdinateEntity::getDefiningPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimOrdinateEntity::setMeasuringXAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimOrdinateEntity::setMeasuringXAxis", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimOrdinateEntity::setMeasuringXAxis";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimOrdinateEntity* self = 
+                        getSelf("setMeasuringXAxis", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMeasuringXAxis();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.setMeasuringXAxis().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimOrdinateEntity::setMeasuringXAxis", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimOrdinateEntity::setMeasuringYAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimOrdinateEntity::setMeasuringYAxis", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimOrdinateEntity::setMeasuringYAxis";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimOrdinateEntity* self = 
+                        getSelf("setMeasuringYAxis", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMeasuringYAxis();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.setMeasuringYAxis().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimOrdinateEntity::setMeasuringYAxis", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimOrdinateEntity::isMeasuringXAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimOrdinateEntity::isMeasuringXAxis", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimOrdinateEntity::isMeasuringXAxis";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimOrdinateEntity* self = 
+                        getSelf("isMeasuringXAxis", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isMeasuringXAxis();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.isMeasuringXAxis().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimOrdinateEntity::isMeasuringXAxis", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerDimOrdinateEntity::toString

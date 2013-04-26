@@ -113,6 +113,36 @@
         setFontName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDrawingDirection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDrawingDirection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLineSpacingStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLineSpacingStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLineSpacingFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLineSpacingFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSimple
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSimple
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEscapedText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -120,9 +150,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setText
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        isSimple
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

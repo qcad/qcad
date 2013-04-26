@@ -134,7 +134,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDrawingDirection, "setDrawingDirection");
             
+            REcmaHelper::registerFunction(&engine, proto, getDrawingDirection, "getDrawingDirection");
+            
             REcmaHelper::registerFunction(&engine, proto, setLineSpacingStyle, "setLineSpacingStyle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLineSpacingStyle, "getLineSpacingStyle");
             
             REcmaHelper::registerFunction(&engine, proto, setLineSpacingFactor, "setLineSpacingFactor");
             
@@ -2246,6 +2250,55 @@
             return result;
         }
          QScriptValue
+        REcmaTextData::getDrawingDirection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextData::getDrawingDirection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextData::getDrawingDirection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextData* self = 
+                        getSelf("getDrawingDirection", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::TextDrawingDirection'
+    RS::TextDrawingDirection cppResult =
+        
+               self->getDrawingDirection();
+        // return type: RS::TextDrawingDirection
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextData.getDrawingDirection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextData::getDrawingDirection", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTextData::setLineSpacingStyle
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2298,6 +2351,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextData::setLineSpacingStyle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextData::getLineSpacingStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextData::getLineSpacingStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextData::getLineSpacingStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextData* self = 
+                        getSelf("getLineSpacingStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::TextLineSpacingStyle'
+    RS::TextLineSpacingStyle cppResult =
+        
+               self->getLineSpacingStyle();
+        // return type: RS::TextLineSpacingStyle
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextData.getLineSpacingStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextData::getLineSpacingStyle", context, engine);
             return result;
         }
          QScriptValue

@@ -535,6 +535,52 @@ dir="./entity" filename="RDimOrdinateEntity.h">
       <name>getDefiningPoint</name>
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setMeasuringXAxis</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setMeasuringXAxis</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setMeasuringYAxis</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setMeasuringYAxis</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isMeasuringXAxis</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>isMeasuringXAxis</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function></public>
   <protected>protected: 
   <function_decl>

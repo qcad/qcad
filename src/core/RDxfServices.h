@@ -32,6 +32,8 @@
  * \brief DXF support tools, mainly for QCAD 2 DXF imports.
  *
  * \ingroup qcadcore
+ * \scriptable
+ * \copyable
  */
 class QCADCORE_EXPORT RDxfServices {
 public:
@@ -45,7 +47,6 @@ public:
 
     void fixQCad2String(QString& str) const;
     void fixDimensionLabel(QString& text, QString& uTol, QString& lTol);
-    RS::KnownVariable stringToVariable(const QString& s);
     void detectQCad2Format(const QString& fileName);
 
     bool hasDIMZIN() const {
@@ -75,13 +76,24 @@ public:
     void fixQCad2HatchData(QString& patternName, double& angle, double& scale, bool solid) const;
 
     static RColor attributesToColor(int color, int color24, bool forLayer=false);
+    /**
+     * \nonscriptable
+     */
     static RColor numberToColor(int num, const double dxfColors[][3], bool comp=false, bool forLayer=false);
     static RColor numberToColor24(int num);
     static RLineweight::Lineweight numberToWeight(int num);
 
     static int widthToNumber(RLineweight::Lineweight w);
     static int colorToNumber24(const RColor& col);
+    /**
+     * \nonscriptable
+     */
     static int colorToNumber(const RColor& col, const double dxfColors[][3]);
+
+    static RS::KnownVariable stringToVariable(const QString& s);
+    static QString variableToString(RS::KnownVariable v);
+    static int getCodeForVariable(RS::KnownVariable v);
+    static bool isVariable2D(RS::KnownVariable v);
 
 private:
     bool qcad2GotDIMZIN;
@@ -94,5 +106,8 @@ private:
     QMap<QString, QString> qcad2TextFonts;
     QMap<QString, QString> qcad2DimensionLabels;
 };
+
+Q_DECLARE_METATYPE(RDxfServices)
+Q_DECLARE_METATYPE(RDxfServices*)
 
 #endif

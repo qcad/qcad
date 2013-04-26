@@ -671,6 +671,65 @@ dir="./entity" filename="RDimensionEntity.h">
         </expr>
       </argument>)</argument_list>
     </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>TextLineSpacingStyle</name></name>
+    </type>
+    <name>getLineSpacingStyle</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>getLineSpacingStyle</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getLineSpacingFactor</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>getLineSpacingFactor</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getTextAngle</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>getTextAngle</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function></public>
   <protected>protected: 
   <function_decl>

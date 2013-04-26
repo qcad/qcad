@@ -36,7 +36,8 @@ dir="./core" filename="RDxfServices.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
   <comment type="block">/** * \brief DXF support tools, mainly for
-  QCAD 2 DXF imports. * * \ingroup qcadcore */</comment>
+  QCAD 2 DXF imports. * * \ingroup qcadcore * \scriptable *
+  \copyable */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
@@ -134,22 +135,6 @@ dir="./core" filename="RDxfServices.h">
       <type>
       <name>QString</name>&amp;</type>
       <name>lTol</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>RS</name>::
-    <name>KnownVariable</name></name>
-  </type>
-  <name>stringToVariable</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>s</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -424,6 +409,7 @@ dir="./core" filename="RDxfServices.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>static</name>
@@ -541,6 +527,7 @@ dir="./core" filename="RDxfServices.h">
       <name>col</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>static</name>
@@ -568,6 +555,40 @@ dir="./core" filename="RDxfServices.h">
         <index>[
         <expr>3</expr>]</index>
       </name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>
+    <name>RS</name>::
+    <name>KnownVariable</name></name>
+  </type>
+  <name>stringToVariable</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>s</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>variableToString</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>KnownVariable</name></name>
+      </type>
+      <name>v</name>
     </decl>
   </param>)</parameter_list>;</function_decl></public>
   <private>private: 
@@ -655,6 +676,16 @@ dir="./core" filename="RDxfServices.h">
     </type>
     <name>qcad2DimensionLabels</name>
   </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RDxfServices</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RDxfServices*</argument>)</argument_list>
+  </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

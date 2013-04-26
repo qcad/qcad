@@ -675,6 +675,21 @@ dir="./entity" filename="RTextData.h">
   </function>
   <function>
     <type>
+      <name>
+      <name>RS</name>::
+      <name>TextDrawingDirection</name></name>
+    </type>
+    <name>getDrawingDirection</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>drawingDirection</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>void</name>
     </type>
     <name>setLineSpacingStyle</name>
@@ -695,6 +710,21 @@ dir="./entity" filename="RTextData.h">
     <name>this</name>-&gt;
     <name>lineSpacingStyle</name>= 
     <name>lineSpacingStyle</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>TextLineSpacingStyle</name></name>
+    </type>
+    <name>getLineSpacingStyle</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>lineSpacingStyle</name>
+    </expr>;</return>}</block>
   </function>
   <function>
     <type>

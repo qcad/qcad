@@ -30,10 +30,12 @@
 #include "RDxfServices.h"
 #include "RFileExporter.h"
 
+class RDimensionEntity;
 class RMessageHandler;
 class RProgressHandler;
 class RArcEntity;
 class REllipseEntity;
+class RLeaderEntity;
 class RLineEntity;
 class RCircleEntity;
 class RSplineEntity;
@@ -79,6 +81,9 @@ public:
     void writePolyline(const RPolyline& pl);
     void writeSpline(const RSplineEntity& sp);
     void writeText(const RTextEntity& t);
+    void writeDimension(const RDimensionEntity& d);
+    void writeLeader(const RLeaderEntity& l);
+
     void writeBlockReference(const RBlockReferenceEntity& br);
 
     void writeImageDef(const RImageEntity& img);
