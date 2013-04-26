@@ -82,7 +82,7 @@ public:
 
     bool isInside(const RBox& b) const;
 
-    bool equals(const RVector& v, double tol = RS::PointTolerance) const;
+    bool equalsFuzzy(const RVector& v, double tol = RS::PointTolerance) const;
     double getDistanceTo(const RVector& v) const;
     double getDistanceTo2d(const RVector& v) const;
     void setAngle(double a);

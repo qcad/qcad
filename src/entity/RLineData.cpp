@@ -99,11 +99,11 @@ bool RLineData::intersectsWith(const RTriangle& triangle) const {
 bool RLineData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
-    if (referencePoint.equals(startPoint)) {
+    if (referencePoint.equalsFuzzy(startPoint)) {
         startPoint = targetPoint;
         ret = true;
     }
-    if (referencePoint.equals(endPoint)) {
+    if (referencePoint.equalsFuzzy(endPoint)) {
         endPoint = targetPoint;
         ret = true;
     }

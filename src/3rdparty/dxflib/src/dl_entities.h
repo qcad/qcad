@@ -527,20 +527,19 @@ struct DXFLIB_EXPORT DL_EllipseData {
      * Constructor.
      * Parameters: see member variables.
      */
-    DL_EllipseData(double ecx, double ecy, double ecz,
-                   double emx, double emy, double emz,
-                   double eRatio,
-                   double eAngle1, double eAngle2) {
-
-        cx = ecx;
-        cy = ecy;
-        cz = ecz;
-        mx = emx;
-        my = emy;
-        mz = emz;
-        ratio = eRatio;
-        angle1 = eAngle1;
-        angle2 = eAngle2;
+    DL_EllipseData(double cx, double cy, double cz,
+                   double mx, double my, double mz,
+                   double ratio,
+                   double angle1, double angle2)
+        : cx(cx),
+          cy(cy),
+          cz(cz),
+          mx(mx),
+          my(my),
+          mz(mz),
+          ratio(ratio),
+          angle1(angle1),
+          angle2(angle2) {
     }
 
     /*! X Coordinate of center point. */
@@ -1277,7 +1276,7 @@ struct DXFLIB_EXPORT DL_HatchData {
     bool solid;
     /*! Pattern scale or spacing */
     double scale;
-    /*! Pattern angle */
+    /*! Pattern angle in degrees */
     double angle;
     /*! Pattern name. */
     std::string pattern;
@@ -1321,43 +1320,66 @@ struct DXFLIB_EXPORT DL_HatchEdgeData {
      * Constructor for a line edge.
      * Parameters: see member variables.
      */
-    DL_HatchEdgeData(double lx1, double ly1,
-                     double lx2, double ly2) : defined(true) {
-
-        type = 1;
-        x1 = lx1;
-        y1 = ly1;
-        x2 = lx2;
-        y2 = ly2;
+    DL_HatchEdgeData(double x1, double y1,
+                     double x2, double y2) :
+        defined(true),
+        type(1),
+        x1(x1),
+        y1(y1),
+        x2(x2),
+        y2(y2) {
     }
 
     /**
      * Constructor for an arc edge.
      * Parameters: see member variables.
      */
-    DL_HatchEdgeData(double acx, double acy,
-                     double aRadius,
-                     double aAngle1, double aAngle2,
-                     bool aCcw) : defined(true) {
-
-        type = 2;
-        cx = acx;
-        cy = acy;
-        radius = aRadius;
-        angle1 = aAngle1;
-        angle2 = aAngle2;
-        ccw = aCcw;
+    DL_HatchEdgeData(double cx, double cy,
+                     double radius,
+                     double angle1, double angle2,
+                     bool ccw) :
+        defined(true),
+        type(2),
+        cx(cx),
+        cy(cy),
+        radius(radius),
+        angle1(angle1),
+        angle2(angle2),
+        ccw(ccw) {
     }
+
+    /**
+     * Constructor for an ellipse arc edge.
+     * Parameters: see member variables.
+     */
+    DL_HatchEdgeData(double cx, double cy,
+                     double mx, double my,
+                     double ratio,
+                     double angle1, double angle2,
+                     bool ccw) :
+        defined(true),
+        type(3),
+        cx(cx),
+        cy(cy),
+        angle1(angle1),
+        angle2(angle2),
+        ccw(ccw),
+        mx(mx),
+        my(my),
+        ratio(ratio) {
+    }
+
+    /**
+     * Set to true if this edge is fully defined.
+     */
+    bool defined;
 
     /**
      * Edge type. 1=line, 2=arc, 3=elliptic arc, 4=spline.
      */
     int type;
 
-    /**
-     * Set to true if this edge is fully defined.
-     */
-    bool defined;
+    // line edges:
 
     /*! Start point (X). */
     double x1;

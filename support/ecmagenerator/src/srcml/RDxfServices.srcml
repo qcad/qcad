@@ -590,6 +590,40 @@ dir="./core" filename="RDxfServices.h">
       </type>
       <name>v</name>
     </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
+  <name>getCodeForVariable</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>KnownVariable</name></name>
+      </type>
+      <name>v</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>isVariable2D</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>KnownVariable</name></name>
+      </type>
+      <name>v</name>
+    </decl>
   </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>

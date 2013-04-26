@@ -228,5 +228,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="v" isConst="false" />
       </variant>
     </method>
+    <method name="getCodeForVariable" cppName="getCodeForVariable"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="v" isConst="false" />
+      </variant>
+    </method>
+    <method name="isVariable2D" cppName="isVariable2D"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="v" isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>

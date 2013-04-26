@@ -264,11 +264,11 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
 
             QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
             if (!line.isNull()) {
-                if (referencePoint.equals(line->getStartPoint())) {
+                if (referencePoint.equalsFuzzy(line->getStartPoint())) {
                     line->setStartPoint(targetPoint);
                     ret = true;
                 }
-                if (referencePoint.equals(line->getEndPoint())) {
+                if (referencePoint.equalsFuzzy(line->getEndPoint())) {
                     line->setEndPoint(targetPoint);
                     ret = true;
                 }
@@ -276,11 +276,11 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
 
             QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
             if (!arc.isNull()) {
-                if (referencePoint.equals(arc->getStartPoint())) {
+                if (referencePoint.equalsFuzzy(arc->getStartPoint())) {
                     arc->moveStartPoint(targetPoint);
                     ret = true;
                 }
-                if (referencePoint.equals(arc->getEndPoint())) {
+                if (referencePoint.equalsFuzzy(arc->getEndPoint())) {
                     arc->moveEndPoint(targetPoint);
                     ret = true;
                 }
@@ -288,7 +288,7 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
 
             QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
             if (!circle.isNull()) {
-                if (referencePoint.equals(circle->getCenter())) {
+                if (referencePoint.equalsFuzzy(circle->getCenter())) {
                     circle->setCenter(targetPoint);
                     ret = true;
                 }
@@ -297,17 +297,17 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
             QSharedPointer<REllipse> ellipseArc = shape.dynamicCast<REllipse>();
             if (!ellipseArc.isNull()) {
                 if (ellipseArc->isFullEllipse()) {
-                    if (referencePoint.equals(ellipseArc->getCenter())) {
+                    if (referencePoint.equalsFuzzy(ellipseArc->getCenter())) {
                         ellipseArc->setCenter(targetPoint);
                         ret = true;
                     }
                 }
                 else {
-                    if (referencePoint.equals(ellipseArc->getStartPoint())) {
+                    if (referencePoint.equalsFuzzy(ellipseArc->getStartPoint())) {
                         ellipseArc->moveStartPoint(targetPoint, false);
                         ret = true;
                     }
-                    if (referencePoint.equals(ellipseArc->getEndPoint())) {
+                    if (referencePoint.equalsFuzzy(ellipseArc->getEndPoint())) {
                         ellipseArc->moveEndPoint(targetPoint, false);
                         ret = true;
                     }
@@ -334,7 +334,7 @@ bool RHatchData::moveReferencePoint(const RVector& referencePoint,
                     QList<RVector> controlPoints = spline->getControlPoints();
                     QList<RVector>::iterator it;
                     for (it=controlPoints.begin(); it!=controlPoints.end(); ++it) {
-                        if (referencePoint.equals(*it)) {
+                        if (referencePoint.equalsFuzzy(*it)) {
                             (*it) = targetPoint;
                             ret = true;
                         }
@@ -473,7 +473,7 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
             QSharedPointer<RDirected> next = shape.dynamicCast<RDirected>();
             RVector sp = next->getStartPoint();
 
-            if (!ep.equals(sp)) {
+            if (!ep.equalsFuzzy(sp)) {
                 // inserting loop on the fly:
                 newLoop();
             }
@@ -777,7 +777,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                 }
                 else {
                     if (!cursor.isValid() ||
-                        !cursor.equals(line->getStartPoint(), 0.001)) {
+                        !cursor.equalsFuzzy(line->getStartPoint(), 0.001)) {
                         qWarning() << "RHatchData::getBoundaryPath: loop not closed: line does not connect: loop: " << i << " / element: " << k;
                         qWarning() << "RHatchData::getBoundaryPath: cursor: " << cursor;
                         qWarning() << "RHatchData::getBoundaryPath: " << *line;
@@ -801,7 +801,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                         qWarning() << "RHatchData::getBoundaryPath: loop not closed: invalid cursor before arc";
                         return RPainterPath();
                     }
-                    if (!cursor.equals(arc->getStartPoint(), 0.001)) {
+                    if (!cursor.equalsFuzzy(arc->getStartPoint(), 0.001)) {
                         qWarning() << "RHatchData::getBoundaryPath: loop not closed: arc does not connect";
                         qWarning() << "RHatchData::getBoundaryPath: cursor: " << cursor;
                         qWarning() << "RHatchData::getBoundaryPath: arc: " << *arc;
@@ -854,7 +854,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                             qWarning() << "RHatchData::getBoundaryPath: loop not closed: invalid cursor before ellipse arc";
                             return RPainterPath();
                         }
-                        if (!cursor.equals(ellipseCopy.getStartPoint(), 0.001)) {
+                        if (!cursor.equalsFuzzy(ellipseCopy.getStartPoint(), 0.001)) {
                             qWarning() << "RHatchData::getBoundaryPath: loop not closed: ellipse arc does not connect";
                             return RPainterPath();
                         }
@@ -883,7 +883,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                 // append ellipse arc to path:
                 RVector start = ePath.getStartPoint();
                 if (!cursor.isValid() ||
-                    !cursor.equals(start, 0.001)) {
+                    !cursor.equalsFuzzy(start, 0.001)) {
                     if (k!=0) {
                         qWarning() << "RHatchData::getBoundaryPath: loop not closed: ellipse arc does not connect";
                         return RPainterPath();
@@ -917,7 +917,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
                     }
                     else {
                         if (!cursor.isValid() ||
-                            !cursor.getDistanceTo(spline->getStartPoint()) > 0.001) {
+                            !cursor.equalsFuzzy(spline->getStartPoint(), 0.001)) {
                             qWarning() << "RHatchData::getBoundaryPath: loop not closed: spline does not connect: loop: " << i << " / element: " << k;
                             qWarning() << "RHatchData::getBoundaryPath: cursor: " << cursor;
                             qWarning() << "RHatchData::getBoundaryPath: " << *spline;
@@ -949,7 +949,7 @@ RPainterPath RHatchData::getBoundaryPath() const {
         }
 
         if (cursor.isValid() && loopStartPoint.isValid() &&
-            !cursor.equals(loopStartPoint, 0.001)) {
+            !cursor.equalsFuzzy(loopStartPoint, 0.001)) {
 
             qWarning() << "RHatchData::getBoundaryPath: loop not closed: "
                        << "end (" << cursor <<  ") does not connect to "

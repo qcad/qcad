@@ -532,6 +532,22 @@ dir="./entity" filename="RHatchEntity.h">
   </function>
   <function>
     <type>
+      <name>int</name>
+    </type>
+    <name>getLoopCount</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getLoopCount</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>bool</name>
     </type>
     <name>isSolid</name>
@@ -548,9 +564,37 @@ dir="./entity" filename="RHatchEntity.h">
   </function>
   <function>
     <type>
-      <name>int</name>
+      <name>void</name>
     </type>
-    <name>getLoopCount</name>
+    <name>setSolid</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setSolid</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>on</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getScale</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -558,9 +602,125 @@ dir="./entity" filename="RHatchEntity.h">
     <expr>
     <name>data</name>.
     <call>
-      <name>getLoopCount</name>
+      <name>getScale</name>
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setScale</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>s</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setScale</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>s</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getAngle</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getAngle</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setAngle</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>a</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setAngle</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>a</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getPatternName</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getPatternName</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setPatternName</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>n</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setPatternName</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>n</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
   </function>
   <function>
     <type>

@@ -237,7 +237,7 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
 
                 // add first trimmed segment and bevel segment:
                 if (i==shapeIndex1) {
-                    if (trimmed1.getStartPoint().equals(bp1)) {
+                    if (trimmed1.getStartPoint().equalsFuzzy(bp1)) {
                         trimmed1.reverse();
                         trimmed1.setStartPoint(shape1.getStartPoint());
                     }
@@ -245,7 +245,7 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
 
                     trimmedPolyline.appendVertex(bp2);
 
-                    if (trimmed2.getEndPoint().equals(bp2)) {
+                    if (trimmed2.getEndPoint().equalsFuzzy(bp2)) {
                         trimmed2.reverse();
                         trimmed2.setEndPoint(shape2.getEndPoint());
                     }

@@ -270,8 +270,8 @@ Hatch.prototype.traverse = function(entity, entitySource, candidateIds) {
                     var sp = entity.getStartPoint();
                     var ep = entity.getEndPoint();
 
-                    var spConnects = this.connectionPoint.equals(sp, Hatch.Tolerance);
-                    var epConnects = this.connectionPoint.equals(ep, Hatch.Tolerance);
+                    var spConnects = this.connectionPoint.equalsFuzzy(sp, Hatch.Tolerance);
+                    var epConnects = this.connectionPoint.equalsFuzzy(ep, Hatch.Tolerance);
 
                     if (spConnects || epConnects) {
                         entitySource.traversed[entityId] = true;
@@ -288,7 +288,7 @@ Hatch.prototype.traverse = function(entity, entitySource, candidateIds) {
                 }
             } while(!done2);
 
-            if (!this.connectionPoint.equals(loopStartPoint, Hatch.Tolerance)) {
+            if (!this.connectionPoint.equalsFuzzy(loopStartPoint, Hatch.Tolerance)) {
                 this.errorPoint = this.connectionPoint;
                 return false;
             }

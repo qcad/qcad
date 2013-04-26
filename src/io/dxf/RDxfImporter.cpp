@@ -256,7 +256,7 @@ void RDxfImporter::endEntity() {
         QList<RVector> fitPoints = spline.getFitPoints();
         if (!fitPoints.isEmpty() && spline.isPeriodic()) {
             // TODO: check for start / end tangent equality if given:
-            if (fitPoints.first().equals(fitPoints.last())) {
+            if (fitPoints.first().equalsFuzzy(fitPoints.last())) {
                 spline.setPeriodic(true);
                 //fitPoints.removeLast();
                 spline.removeLastFitPoint();
@@ -504,7 +504,7 @@ void RDxfImporter::addSolid(const DL_SolidData& data) {
     RVector v4(data.x[3], data.y[3], data.z[3]);
 
     RSolidData d;
-    if (v3.equals(v4)) {
+    if (v3.equalsFuzzy(v4)) {
         // last two vertices identical: triangle:
         d = RSolidData(v1, v2, v3);
     }
@@ -940,6 +940,7 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
         } break;
 
     case 1:
+        qDebug() << "addHatchEdge: " << data.x1 << data.y1 << data.x2 << data.y2;
         shape = QSharedPointer<RShape>(
             new RLine(RVector(data.x1, data.y1),
                       RVector(data.x2, data.y2))
@@ -1014,7 +1015,7 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
 
         bool periodic = true;
         for (int i=0; i<data.degree; i++) {
-            if (!controlPoints.at(i).equals(controlPoints.at(controlPoints.size()-data.degree+i))) {
+            if (!controlPoints.at(i).equalsFuzzy(controlPoints.at(controlPoints.size()-data.degree+i))) {
                 periodic = false;
                 break;
             }

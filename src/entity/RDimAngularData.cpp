@@ -74,22 +74,22 @@ bool RDimAngularData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = false;
 
-    if (referencePoint.equals(extensionLine1Start)) {
+    if (referencePoint.equalsFuzzy(extensionLine1Start)) {
         extensionLine1Start = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.equals(extensionLine1End)) {
+    else if (referencePoint.equalsFuzzy(extensionLine1End)) {
         extensionLine1End = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.equals(extensionLine2Start)) {
+    else if (referencePoint.equalsFuzzy(extensionLine2Start)) {
         extensionLine2Start = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.equals(dimArcPosition)) {
+    else if (referencePoint.equalsFuzzy(dimArcPosition)) {
         dimArcPosition = targetPoint;
         autoTextPos = true;
         ret = true;

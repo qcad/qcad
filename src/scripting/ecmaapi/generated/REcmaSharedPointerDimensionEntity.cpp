@@ -94,6 +94,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getText, "getText");
             
+            REcmaHelper::registerFunction(&engine, proto, getMeasurement, "getMeasurement");
+            
             REcmaHelper::registerFunction(&engine, proto, getTextData, "getTextData");
             
             REcmaHelper::registerFunction(&engine, proto, setTextPosition, "setTextPosition");
@@ -1154,6 +1156,87 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimensionEntity::getMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::getMeasurement", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::getMeasurement";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("getMeasurement", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getMeasurement();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getMeasurement(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getMeasurement().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getMeasurement", context, engine);
             return result;
         }
          QScriptValue

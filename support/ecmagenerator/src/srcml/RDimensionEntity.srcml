@@ -505,6 +505,42 @@ dir="./entity" filename="RDimensionEntity.h">
   </function>
   <function>
     <type>
+      <name>QString</name>
+    </type>
+    <name>getMeasurement</name>
+    <parameter_list>(
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>resolveAutoMeasurement</name>=
+      <init>
+        <expr>
+          <name>true</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>getMeasurement</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>resolveAutoMeasurement</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>RTextData</name>
     </type>
     <name>getTextData</name>

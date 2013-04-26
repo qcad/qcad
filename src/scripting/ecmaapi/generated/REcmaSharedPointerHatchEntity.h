@@ -88,10 +88,31 @@
         addBoundary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLoopCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isSolid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getLoopCount
+        setSolid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPatternName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPatternName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLoopBoundary

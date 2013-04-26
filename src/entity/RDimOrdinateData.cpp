@@ -68,12 +68,12 @@ bool RDimOrdinateData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint);
 
-    if (referencePoint.equals(leaderEndPoint)) {
+    if (referencePoint.equalsFuzzy(leaderEndPoint)) {
         leaderEndPoint = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.equals(definingPoint)) {
+    else if (referencePoint.equalsFuzzy(definingPoint)) {
         definingPoint = targetPoint;
         autoTextPos = true;
         ret = true;

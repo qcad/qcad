@@ -105,12 +105,40 @@ public:
         data.addBoundary(shape);
     }
 
+    int getLoopCount() const {
+        return data.getLoopCount();
+    }
+
     bool isSolid() const {
         return data.isSolid();
     }
 
-    int getLoopCount() const {
-        return data.getLoopCount();
+    void setSolid(bool on) {
+        data.setSolid(on);
+    }
+
+    double getScale() const {
+        return data.getScale();
+    }
+
+    void setScale(double s) {
+        data.setScale(s);
+    }
+
+    double getAngle() const {
+        return data.getAngle();
+    }
+
+    void setAngle(double a) {
+        data.setAngle(a);
+    }
+
+    QString getPatternName() const {
+        return data.getPatternName();
+    }
+
+    void setPatternName(const QString& n) {
+        data.setPatternName(n);
     }
 
     QList<QSharedPointer<RShape> > getLoopBoundary(int index) const {

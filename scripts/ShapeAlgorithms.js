@@ -473,7 +473,7 @@ ShapeAlgorithms.createCircleFrom3Points = function(point1, point2, point3) {
         return new RLine(point1, point2);
     }
 
-    if (point1.equals(point2) || point2.equals(point3) || point3.equals(point1)) {
+    if (point1.equalsFuzzy(point2) || point2.equalsFuzzy(point3) || point3.equalsFuzzy(point1)) {
         ShapeAlgorithms.error = qsTr("At least two points are identical.");
         return undefined;
     }
@@ -502,7 +502,7 @@ ShapeAlgorithms.createArcFrom3Points = function(point1, point2, point3) {
         return new RLine(point1, point2);
     }
 
-    if (point1.equals(point2) || point2.equals(point3) || point3.equals(point1)) {
+    if (point1.equalsFuzzy(point2) || point2.equalsFuzzy(point3) || point3.equalsFuzzy(point1)) {
         ShapeAlgorithms.error = qsTr("At least two points are identical.");
         return undefined;
     }
@@ -823,7 +823,7 @@ ShapeAlgorithms.approximateEllipse = function(ellipse, segments) {
     } while(!done && counter<10);
 
     // close polyline
-    if (!normalizedEndPoint.equals(polyline.getEndPoint())) {
+    if (!normalizedEndPoint.equalsFuzzy(polyline.getEndPoint())) {
         if (ellipse.isFullEllipse()) {
             polyline.setClosed(true);
         }

@@ -122,14 +122,56 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="isSolid" cppName="isSolid" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
     <method name="getLoopCount" cppName="getLoopCount"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="isSolid" cppName="isSolid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setSolid" cppName="setSolid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getScale" cppName="getScale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setScale" cppName="setScale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAngle" cppName="getAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setAngle" cppName="setAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPatternName" cppName="getPatternName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setPatternName" cppName="setPatternName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="n"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getLoopBoundary" cppName="getLoopBoundary"
     specifier="public" isStatic="false" isVirtual="false"

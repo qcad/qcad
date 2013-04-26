@@ -93,6 +93,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getMeasurement" cppName="getMeasurement"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="bool" typeName="bool"
+        name="resolveAutoMeasurement" hasDefault="true"
+        default=" true" isConst="false" />
+      </variant>
+    </method>
     <method name="getTextData" cppName="getTextData"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

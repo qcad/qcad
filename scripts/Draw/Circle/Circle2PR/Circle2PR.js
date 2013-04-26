@@ -179,7 +179,7 @@ Circle2PR.prototype.getCircle2PR = function() {
         return undefined;
     }
 
-    if (this.point1.equals(this.point2)) {
+    if (this.point1.equalsFuzzy(this.point2)) {
         this.error = qsTr("The two points are identical");
         return undefined;
     }

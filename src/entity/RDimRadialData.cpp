@@ -63,7 +63,7 @@ bool RDimRadialData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = false;
 
-    if (referencePoint.equals(chordPoint)) {
+    if (referencePoint.equalsFuzzy(chordPoint)) {
         double d = definitionPoint.getDistanceTo(chordPoint);
         double a = definitionPoint.getAngleTo(targetPoint);
 

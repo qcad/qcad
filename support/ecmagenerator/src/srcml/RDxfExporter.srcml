@@ -43,27 +43,31 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
   <class_decl>class 
-  <name>RDimensionEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RMessageHandler</name>;</class_decl>
-  <class_decl>class 
-  <name>RProgressHandler</name>;</class_decl>
-  <class_decl>class 
   <name>RArcEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>REllipseEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RLineEntity</name>;</class_decl>
   <class_decl>class 
   <name>RCircleEntity</name>;</class_decl>
   <class_decl>class 
-  <name>RSplineEntity</name>;</class_decl>
+  <name>RDimensionEntity</name>;</class_decl>
   <class_decl>class 
-  <name>RPolylineEntity</name>;</class_decl>
+  <name>REllipseEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RHatchEntity</name>;</class_decl>
   <class_decl>class 
   <name>RImageEntity</name>;</class_decl>
   <class_decl>class 
+  <name>RLeaderEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RLineEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RMessageHandler</name>;</class_decl>
+  <class_decl>class 
   <name>RPointEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RPolylineEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RProgressHandler</name>;</class_decl>
+  <class_decl>class 
+  <name>RSplineEntity</name>;</class_decl>
   <class_decl>class 
   <name>RTextEntity</name>;</class_decl>
   <comment type="block">/** * \brief Exporter for the DXF format,
@@ -402,6 +406,34 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <name>const</name>
       <name>RDimensionEntity</name>&amp;</type>
       <name>d</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeLeader</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLeaderEntity</name>&amp;</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeHatch</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RHatchEntity</name>&amp;</type>
+      <name>h</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>

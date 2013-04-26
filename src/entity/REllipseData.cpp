@@ -63,40 +63,40 @@ bool REllipseData::moveReferencePoint(const RVector& referencePoint,
     RVector endPoint = getEndPoint();
 
     if (!isFullEllipse()) {
-        if (referencePoint.equals(startPoint)) {
+        if (referencePoint.equalsFuzzy(startPoint)) {
             moveStartPoint(targetPoint, true);
             return true;
         }
-        if (referencePoint.equals(endPoint)) {
+        if (referencePoint.equalsFuzzy(endPoint)) {
             moveEndPoint(targetPoint, true);
             return true;
         }
     }
 
-    if (referencePoint.equals(center+majorPoint)) {
+    if (referencePoint.equalsFuzzy(center+majorPoint)) {
         double minorRadius = getMinorRadius();
         majorPoint = targetPoint-center;
         setRatio(minorRadius / getMajorRadius());
         return true;
     }
 
-    if (referencePoint.equals(center-majorPoint)) {
+    if (referencePoint.equalsFuzzy(center-majorPoint)) {
         double minorRadius = getMinorRadius();
         majorPoint = -(targetPoint-center);
         setRatio(minorRadius / getMajorRadius());
         return true;
     }
 
-    if (referencePoint.equals(center+getMinorPoint())) {
+    if (referencePoint.equalsFuzzy(center+getMinorPoint())) {
         setMinorPoint(targetPoint-center);
         return true;
     }
-    if (referencePoint.equals(center-getMinorPoint())) {
+    if (referencePoint.equalsFuzzy(center-getMinorPoint())) {
         setMinorPoint(-(targetPoint-center));
         return true;
     }
 
-    if (referencePoint.equals(center)) {
+    if (referencePoint.equalsFuzzy(center)) {
         center = targetPoint;
         return true;
     }

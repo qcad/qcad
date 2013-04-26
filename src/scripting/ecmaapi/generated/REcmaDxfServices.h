@@ -123,6 +123,12 @@
         ;static  QScriptValue
         variableToString
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCodeForVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isVariable2D
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

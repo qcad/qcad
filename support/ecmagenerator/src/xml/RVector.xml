@@ -53,6 +53,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="equalsFuzzy" cppName="equalsFuzzy"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+        <arg type="double" typeName="double" name="tol"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getDistanceTo" cppName="getDistanceTo"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

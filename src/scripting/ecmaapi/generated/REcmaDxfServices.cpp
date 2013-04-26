@@ -118,6 +118,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, variableToString, "variableToString");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getCodeForVariable, "getCodeForVariable");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isVariable2D, "isVariable2D");
+            
 
     // static properties:
     
@@ -1837,6 +1841,106 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDxfServices::variableToString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::getCodeForVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getCodeForVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getCodeForVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RDxfServices::
+       getCodeForVariable(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getCodeForVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getCodeForVariable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::isVariable2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::isVariable2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::isVariable2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RDxfServices::
+       isVariable2D(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.isVariable2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::isVariable2D", context, engine);
             return result;
         }
          QScriptValue REcmaDxfServices::toString

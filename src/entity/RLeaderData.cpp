@@ -65,7 +65,7 @@ bool RLeaderData::moveReferencePoint(const RVector& referencePoint,
 
     QList<RVector>::iterator it;
     for (it=vertices.begin(); it!=vertices.end(); ++it) {
-        if (referencePoint.equals(*it)) {
+        if (referencePoint.equalsFuzzy(*it)) {
             (*it) = targetPoint;
             ret = true;
         }

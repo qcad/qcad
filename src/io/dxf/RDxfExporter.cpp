@@ -24,29 +24,30 @@
 #include <QFileInfo>
 #include <QFont>
 
-#include "RColor.h"
-#include "RDxfExporter.h"
 #include "RArcEntity.h"
+#include "RBlockReferenceEntity.h"
+#include "RCircleEntity.h"
+#include "RColor.h"
 #include "RDimAlignedEntity.h"
-#include "RDimRotatedEntity.h"
-#include "RDimRadialEntity.h"
+#include "RDimAngularEntity.h"
 #include "RDimDiametricEntity.h"
 #include "RDimOrdinateEntity.h"
-#include "RDimAngularEntity.h"
+#include "RDimRadialEntity.h"
+#include "RDimRotatedEntity.h"
 #include "RDimensionEntity.h"
-#include "RTextEntity.h"
-#include "RBlockReferenceEntity.h"
+#include "RDxfExporter.h"
 #include "REllipseEntity.h"
-#include "RCircleEntity.h"
-#include "RLinetypePatternMap.h"
-#include "RLineEntity.h"
-#include "RLeaderEntity.h"
-#include "RSplineEntity.h"
-#include "RPolylineEntity.h"
+#include "RHatchEntity.h"
 #include "RImageEntity.h"
+#include "RLeaderEntity.h"
+#include "RLineEntity.h"
+#include "RLinetypePatternMap.h"
 #include "RPointEntity.h"
+#include "RPolylineEntity.h"
 #include "RSettings.h"
+#include "RSplineEntity.h"
 #include "RStorage.h"
+#include "RTextEntity.h"
 
 RDxfExporter::RDxfExporter(RDocument& document,
     RMessageHandler* messageHandler,
@@ -540,10 +541,10 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityLeader:
         writeLeader(dynamic_cast<const RLeaderEntity&>(e));
         break;
-        /*
     case RS::EntityHatch:
         writeHatch(dynamic_cast<const RHatchEntity&>(e));
         break;
+        /*
     case RS::EntityImage:
         writeImage(dynamic_cast<RS_Image*>(e));
         break;
@@ -632,20 +633,20 @@ void RDxfExporter::writeArc(const RArcEntity& a) {
  * Writes the given ellipse entity to the file.
  */
 void RDxfExporter::writeEllipse(const REllipseEntity& el) {
-    double angle1 = 0.0;
-    double angle2 = 0.0;
+    double startParam = 0.0;
+    double endParam = 0.0;
 
     if (el.isFullEllipse()) {
-        angle1 = 0.0;
-        angle2 = 2.0*M_PI;
+        startParam = 0.0;
+        endParam = 2.0*M_PI;
     }
     else {
         if (el.isReversed()) {
-            angle1 = el.getEndAngle();
-            angle2 = el.getStartAngle();
+            startParam = el.getEndParam();
+            endParam = el.getStartParam();
         } else {
-            angle1 = el.getStartAngle();
-            angle2 = el.getEndAngle();
+            startParam = el.getStartParam();
+            endParam = el.getEndParam();
         }
     }
 
@@ -658,8 +659,8 @@ void RDxfExporter::writeEllipse(const REllipseEntity& el) {
                        el.getMajorPoint().y,
                        0.0,
                        el.getRatio(),
-                       angle1,
-                       angle2),
+                       startParam,
+                       endParam),
         attributes);
 }
 
@@ -1078,6 +1079,128 @@ void RDxfExporter::writeLeader(const RLeaderEntity& l) {
         qWarning() << "RDxfExporter::writeLeader: "
             << "dropping leader without segments";
     }
+}
+
+/**
+ * Writes the given hatch entity to the file.
+ */
+void RDxfExporter::writeHatch(const RHatchEntity& h) {
+    // split hatch into simple entities:
+    if (dxf.getVersion()==DL_Codes::AC1009) {
+        //writeAtomicEntities(h, RS2::ResolveAll);
+        return;
+    }
+
+    if (h.getLoopCount()==0) {
+        qWarning() << "RDxfExporter::writeHatch: skip hatch without loops";
+        return;
+    }
+
+    // check if all of the loops contain entities:
+//    for (RS_Entity* l=h->firstEntity(RS2::ResolveNone);
+//         l!=NULL;
+//         l=h->nextEntity(RS2::ResolveNone)) {
+
+//        if (l->isContainer() && !l->getFlag(RS2::FlagTemp)) {
+//            if (l->count()==0) {
+//                writeIt = false;
+//            }
+//        }
+//    }
+
+    DL_HatchData data(h.getLoopCount(),
+                      h.isSolid(),
+                      h.getScale(),
+                      RMath::rad2deg(h.getAngle()),
+                      (const char*)h.getPatternName().toLatin1());
+    dxf.writeHatch1(*dw, data, attributes);
+
+    for (int i=0; i<h.getLoopCount(); i++) {
+        QList<QSharedPointer<RShape> > loop = h.getLoopBoundary(i);
+        // Write hatch loops:
+        DL_HatchLoopData lData(loop.size());
+        dxf.writeHatchLoop1(*dw, lData);
+
+        // Write hatch loop edges:
+        for (int k=0; k<loop.size(); k++) {
+            QSharedPointer<RShape> shape = loop[k];
+
+            // line:
+            QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
+            if (!line.isNull()) {
+                dxf.writeHatchEdge(
+                            *dw,
+                            DL_HatchEdgeData(line->getStartPoint().x,
+                                             line->getStartPoint().y,
+                                             line->getEndPoint().x,
+                                             line->getEndPoint().y));
+            }
+
+            // arc:
+            QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+            if (!arc.isNull()) {
+                if (!arc->isReversed()) {
+                    dxf.writeHatchEdge(
+                                *dw,
+                                DL_HatchEdgeData(arc->getCenter().x,
+                                                 arc->getCenter().y,
+                                                 arc->getRadius(),
+                                                 arc->getStartAngle(),
+                                                 arc->getEndAngle(),
+                                                 true));
+                } else {
+                    dxf.writeHatchEdge(
+                                *dw,
+                                DL_HatchEdgeData(arc->getCenter().x,
+                                                 arc->getCenter().y,
+                                                 arc->getRadius(),
+                                                 2*M_PI-arc->getStartAngle(),
+                                                 2*M_PI-arc->getEndAngle(),
+                                                 false));
+                }
+            }
+
+            // full circle:
+            QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
+            if (!circle.isNull()) {
+                dxf.writeHatchEdge(
+                            *dw,
+                            DL_HatchEdgeData(circle->getCenter().x,
+                                             circle->getCenter().y,
+                                             circle->getRadius(),
+                                             0.0,
+                                             2*M_PI,
+                                             true));
+            }
+
+            // ellipse arc:
+            QSharedPointer<REllipse> ellipse = shape.dynamicCast<REllipse>();
+            if (!ellipse.isNull()) {
+                double startAngle = ellipse->getStartAngle();
+                double endAngle = ellipse->getEndAngle();
+                if (ellipse->isFullEllipse()) {
+                    startAngle = 0.0;
+                    endAngle = 2*M_PI;
+                }
+                else if (ellipse->isReversed()) {
+                    startAngle = 2*M_PI - RMath::getNormalizedAngle(startAngle);
+                    endAngle = 2*M_PI - RMath::getNormalizedAngle(endAngle);
+                }
+                dxf.writeHatchEdge(
+                            *dw,
+                            DL_HatchEdgeData(ellipse->getCenter().x,
+                                             ellipse->getCenter().y,
+                                             ellipse->getMajorPoint().x,
+                                             ellipse->getMajorPoint().y,
+                                             ellipse->getRatio(),
+                                             startAngle,
+                                             endAngle,
+                                             !ellipse->isReversed()));
+            }
+        }
+        dxf.writeHatchLoop2(*dw, lData);
+    }
+    dxf.writeHatch2(*dw, data, attributes);
 }
 
 /**

@@ -82,6 +82,9 @@
         getText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTextData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

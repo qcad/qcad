@@ -63,6 +63,9 @@
         isInside
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        equalsFuzzy
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

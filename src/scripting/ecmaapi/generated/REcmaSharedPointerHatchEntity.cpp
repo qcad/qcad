@@ -98,9 +98,23 @@
             
             REcmaHelper::registerFunction(&engine, proto, addBoundary, "addBoundary");
             
+            REcmaHelper::registerFunction(&engine, proto, getLoopCount, "getLoopCount");
+            
             REcmaHelper::registerFunction(&engine, proto, isSolid, "isSolid");
             
-            REcmaHelper::registerFunction(&engine, proto, getLoopCount, "getLoopCount");
+            REcmaHelper::registerFunction(&engine, proto, setSolid, "setSolid");
+            
+            REcmaHelper::registerFunction(&engine, proto, getScale, "getScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAngle, "setAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPatternName, "getPatternName");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPatternName, "setPatternName");
             
             REcmaHelper::registerFunction(&engine, proto, getLoopBoundary, "getLoopBoundary");
             
@@ -1598,6 +1612,55 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerHatchEntity::getLoopCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getLoopCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getLoopCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("getLoopCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getLoopCount();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getLoopCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getLoopCount", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerHatchEntity::isSolid
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1647,19 +1710,74 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerHatchEntity::getLoopCount
+        REcmaSharedPointerHatchEntity::setSolid
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getLoopCount", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getLoopCount";
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setSolid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setSolid";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RHatchEntity* self = 
-                        getSelf("getLoopCount", context);
+                        getSelf("setSolid", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSolid(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setSolid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setSolid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::getScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("getScale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1676,11 +1794,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'int'
-    int cppResult =
+    // return type 'double'
+    double cppResult =
         
-               self->getLoopCount();
-        // return type: int
+               self->getScale();
+        // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1689,10 +1807,273 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getLoopCount().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getLoopCount", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::setScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("setScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("getAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::setAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("setAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::getPatternName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getPatternName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getPatternName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("getPatternName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getPatternName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getPatternName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getPatternName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::setPatternName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setPatternName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setPatternName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("setPatternName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPatternName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setPatternName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setPatternName", context, engine);
             return result;
         }
          QScriptValue

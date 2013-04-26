@@ -3245,6 +3245,10 @@ void DL_Dxf::writeHatchLoop2(DL_WriterA& dw,
 void DL_Dxf::writeHatchEdge(DL_WriterA& dw,
                             const DL_HatchEdgeData& data) {
 
+    if (data.type<1 || data.type>4) {
+        printf("WARNING: unsupported hatch edge type: %d", data.type);
+    }
+
     dw.dxfInt(72, data.type);
 
     switch (data.type) {
@@ -3258,6 +3262,16 @@ void DL_Dxf::writeHatchEdge(DL_WriterA& dw,
         dw.dxfReal(10, data.cx);
         dw.dxfReal(20, data.cy);
         dw.dxfReal(40, data.radius);
+        dw.dxfReal(50, data.angle1/(2*M_PI)*360.0);
+        dw.dxfReal(51, data.angle2/(2*M_PI)*360.0);
+        dw.dxfInt(73, (int)(data.ccw));
+        break;
+    case 3:
+        dw.dxfReal(10, data.cx);
+        dw.dxfReal(20, data.cy);
+        dw.dxfReal(11, data.mx);
+        dw.dxfReal(21, data.my);
+        dw.dxfReal(40, data.ratio);
         dw.dxfReal(50, data.angle1/(2*M_PI)*360.0);
         dw.dxfReal(51, data.angle2/(2*M_PI)*360.0);
         dw.dxfInt(73, (int)(data.ccw));

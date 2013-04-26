@@ -47,7 +47,7 @@ QList<RVector> RPointData::getReferencePoints(
 bool RPointData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
-    if (referencePoint.equals(position)) {
+    if (referencePoint.equalsFuzzy(position)) {
         position = targetPoint;
         ret = true;
     }

@@ -60,14 +60,14 @@ bool RSplineData::moveReferencePoint(const RVector& referencePoint,
 
     QList<RVector>::iterator it;
     for (it=controlPoints.begin(); it!=controlPoints.end(); ++it) {
-        if (referencePoint.equals(*it)) {
+        if (referencePoint.equalsFuzzy(*it)) {
             (*it) = targetPoint;
             ret = true;
         }
     }
 
     for (it=fitPoints.begin(); it!=fitPoints.end(); ++it) {
-        if (referencePoint.equals(*it)) {
+        if (referencePoint.equalsFuzzy(*it)) {
             (*it) = targetPoint;
             ret = true;
         }

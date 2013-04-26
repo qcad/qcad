@@ -67,12 +67,12 @@ bool RDimAlignedData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = RDimLinearData::moveReferencePoint(referencePoint, targetPoint);
 
-    if (referencePoint.equals(refDefinitionPoint1)) {
+    if (referencePoint.equalsFuzzy(refDefinitionPoint1)) {
         definitionPoint = targetPoint;
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.equals(refDefinitionPoint2)) {
+    else if (referencePoint.equalsFuzzy(refDefinitionPoint2)) {
         definitionPoint = targetPoint;
         autoTextPos = true;
         ret = true;

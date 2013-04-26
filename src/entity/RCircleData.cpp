@@ -50,14 +50,14 @@ QList<RVector> RCircleData::getReferencePoints(
 bool RCircleData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
-    if (referencePoint.equals(center)) {
+    if (referencePoint.equalsFuzzy(center)) {
         center = targetPoint;
         ret = true;
     }
-    else if (referencePoint.equals(center + RVector(radius, 0)) ||
-             referencePoint.equals(center + RVector(0, radius)) ||
-             referencePoint.equals(center - RVector(radius, 0)) ||
-             referencePoint.equals(center - RVector(0, radius))) {
+    else if (referencePoint.equalsFuzzy(center + RVector(radius, 0)) ||
+             referencePoint.equalsFuzzy(center + RVector(0, radius)) ||
+             referencePoint.equalsFuzzy(center - RVector(radius, 0)) ||
+             referencePoint.equalsFuzzy(center - RVector(0, radius))) {
         radius = center.getDistanceTo(targetPoint);
         ret = true;
     }

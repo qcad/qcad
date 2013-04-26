@@ -58,7 +58,7 @@ bool RPolylineData::moveReferencePoint(const RVector& referencePoint,
 
     QList<RVector>::iterator it;
     for (it=vertices.begin(); it!=vertices.end(); ++it) {
-        if (referencePoint.equals(*it)) {
+        if (referencePoint.equalsFuzzy(*it)) {
             (*it) = targetPoint;
             ret = true;
         }
@@ -142,16 +142,16 @@ QList<RVector> RPolylineData::getIntersectionPoints(
                 if (!dir1.isNull() && !dir2.isNull()) {
                     // ignore polyline nodes:
                     for (int c=0; c<candidates.size(); c++) {
-                        if (candidates[c].equals(dir1->getStartPoint())) {
+                        if (candidates[c].equalsFuzzy(dir1->getStartPoint())) {
                             continue;
                         }
-                        if (candidates[c].equals(dir1->getEndPoint())) {
+                        if (candidates[c].equalsFuzzy(dir1->getEndPoint())) {
                             continue;
                         }
-                        if (candidates[c].equals(dir2->getStartPoint())) {
+                        if (candidates[c].equalsFuzzy(dir2->getStartPoint())) {
                             continue;
                         }
-                        if (candidates[c].equals(dir2->getEndPoint())) {
+                        if (candidates[c].equalsFuzzy(dir2->getEndPoint())) {
                             continue;
                         }
                         ret.append(candidates[c]);

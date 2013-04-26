@@ -821,7 +821,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
                 }
 
                 p2 = cursor + vp[i];
-                if (!p2.equals(line.startPoint, 1.0e-6)) {
+                if (!p2.equalsFuzzy(line.startPoint, 1.0e-6)) {
                     dashFound = true;
                 }
             }
