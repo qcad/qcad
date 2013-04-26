@@ -874,9 +874,9 @@ struct DXFLIB_EXPORT DL_DimensionData {
     /*! Dimension style (font name). */
     std::string style;
     /**
-    * Rotation angle of dimension text away from
+     * Rotation angle of dimension text away from
      * default orientation.
-    */
+     */
     double angle;
 };
 
@@ -920,7 +920,7 @@ struct DXFLIB_EXPORT DL_DimAlignedData {
 
 
 /**
- * Linear Dimension Data.
+ * Linear (rotated) Dimension Data.
  */
 struct DXFLIB_EXPORT DL_DimLinearData {
     /**

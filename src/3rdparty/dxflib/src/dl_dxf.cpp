@@ -2679,7 +2679,7 @@ void DL_Dxf::writeDimAligned(DL_WriterA& dw,
     dw.dxfReal(21, data.mpy);
     dw.dxfReal(31, 0.0);
 
-    dw.dxfInt(70, 1);
+    dw.dxfInt(70, data.type);
     if (version>DL_VERSION_R12) {
         dw.dxfInt(71, data.attachmentPoint);
         dw.dxfInt(72, data.lineSpacingStyle); // opt
@@ -2738,7 +2738,7 @@ void DL_Dxf::writeDimLinear(DL_WriterA& dw,
     dw.dxfReal(21, data.mpy);
     dw.dxfReal(31, 0.0);
 
-    dw.dxfInt(70, 0);
+    dw.dxfInt(70, data.type);
     if (version>DL_VERSION_R12) {
         dw.dxfInt(71, data.attachmentPoint);
         dw.dxfInt(72, data.lineSpacingStyle); // opt
@@ -2811,7 +2811,7 @@ void DL_Dxf::writeDimRadial(DL_WriterA& dw,
     dw.dxfReal(21, data.mpy);
     dw.dxfReal(31, 0.0);
 
-    dw.dxfInt(70, 4);
+    dw.dxfInt(70, data.type);
     if (version>DL_VERSION_R12) {
         dw.dxfInt(71, data.attachmentPoint);
         dw.dxfInt(72, data.lineSpacingStyle); // opt
@@ -2868,7 +2868,7 @@ void DL_Dxf::writeDimDiametric(DL_WriterA& dw,
     dw.dxfReal(21, data.mpy);
     dw.dxfReal(31, 0.0);
 
-    dw.dxfInt(70, 3);
+    dw.dxfInt(70, data.type);
     if (version>DL_VERSION_R12) {
         dw.dxfInt(71, data.attachmentPoint);
         dw.dxfInt(72, data.lineSpacingStyle); // opt
@@ -2925,7 +2925,7 @@ void DL_Dxf::writeDimAngular(DL_WriterA& dw,
     dw.dxfReal(21, data.mpy);
     dw.dxfReal(31, 0.0);
 
-    dw.dxfInt(70, 2);
+    dw.dxfInt(70, data.type);
     if (version>DL_VERSION_R12) {
         dw.dxfInt(71, data.attachmentPoint);
         dw.dxfInt(72, data.lineSpacingStyle); // opt
@@ -2992,7 +2992,7 @@ void DL_Dxf::writeDimAngular3P(DL_WriterA& dw,
     dw.dxfReal(21, data.mpy);
     dw.dxfReal(31, 0.0);
 
-    dw.dxfInt(70, 5);
+    dw.dxfInt(70, data.type);
     if (version>DL_VERSION_R12) {
         dw.dxfInt(71, data.attachmentPoint);
         dw.dxfInt(72, data.lineSpacingStyle); // opt
@@ -3056,9 +3056,9 @@ void DL_Dxf::writeDimOrdinate(DL_WriterA& dw,
     dw.dxfReal(21, data.mpy);
     dw.dxfReal(31, 0.0);
 
-    int type = 6;
+    int type = data.type;
     if (edata.xtype) {
-        type+=64;
+        type|=0x40;
     }
 
     dw.dxfInt(70, type);
