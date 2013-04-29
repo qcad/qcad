@@ -26,8 +26,6 @@ function DefaultNavigation(widget) {
     this.panning = false;
     this.savedCursor = undefined;
     this.panOrigin = new RVector();
-    this.wheelDelta = 0;
-    this.lastIgnoredDelta = undefined;
     if (!isNull(widget)) {
         this.hruler = widget.findChild("HorizontalRuler");
         this.vruler = widget.findChild("VerticalRuler");
@@ -39,18 +37,23 @@ function DefaultNavigation(widget) {
 
 DefaultNavigation.prototype = new RActionAdapter();
 
+DefaultNavigation.WheelBehavior = {
+    Zoom : 0,
+    Pan : 1
+};
+
 DefaultNavigation.getPreferencesCategory = function() {
     return [qsTr("Graphics View"), qsTr("Navigation")];
 };
 
 DefaultNavigation.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     var wheelCombo = pageWidget.findChild("Wheel");
-    wheelCombo.addItem(qsTr("Zoom (Wheel Mouse)"), 0);
-    wheelCombo.addItem(qsTr("Scroll (Trackpad, Multi-Touch Mouse)"), 1);
+    wheelCombo.addItem(qsTr("Zoom (Wheel Mouse)"), DefaultNavigation.WheelBehavior.Zoom);
+    wheelCombo.addItem(qsTr("Scroll (Trackpad, Multi-Touch Mouse)"), DefaultNavigation.WheelBehavior.Pan);
 };
 
 DefaultNavigation.applyPreferences = function(doc) {
-    DefaultNavigation.wheelBehavior = RSettings.getIntValue("GraphicsViewNavigation/Wheel", 0);
+    DefaultNavigation.wheelBehavior = RSettings.getIntValue("GraphicsViewNavigation/Wheel", DefaultNavigation.WheelBehavior.Zoom);
     DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
 };
 
@@ -153,48 +156,59 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
         return;
     }
 
-    this.wheelDelta = event.delta();
+    var wheelDelta = event.delta();
 
     switch (event.modifiers().valueOf()) {
     
     // scroll up / down:
     case Qt.ControlModifier.valueOf():
-        this.view.pan(new RVector(0, this.wheelDelta / 2));
+        this.view.pan(new RVector(0, wheelDelta / 2));
         this.view.simulateMouseMoveEvent();
         break;
 
     // scroll left / right:
     case Qt.ShiftModifier.valueOf():
-        this.view.pan(new RVector(this.wheelDelta / 2, 0));
+        this.view.pan(new RVector(wheelDelta / 2, 0));
         this.view.simulateMouseMoveEvent();
         break;
 
     // zoom in / out:
     case Qt.NoModifier.valueOf():
         // wheel behavior is "zoom":
-        if (DefaultNavigation.wheelBehavior===0) {
-            position = event.getModelPosition();
-            if (this.wheelDelta > 0) {
+        if (DefaultNavigation.wheelBehavior===DefaultNavigation.WheelBehavior.Zoom) {
+            var position = event.getModelPosition();
+            if (wheelDelta > 0) {
                 this.view.zoomIn(position);
-            } else if (this.wheelDelta < 0) {
+            } else if (wheelDelta < 0) {
                 this.view.zoomOut(position);
             }
         }
 
         // wheel behavior is "pan":
         else {
-            if (event.orientation()==Qt.Vertical) {
-                this.view.pan(new RVector(0, this.wheelDelta / 2));
+            if (isNull(this.panOffset)) {
+                this.panOffset = new RVector(0,0);
+            }
+
+            if (event.orientation()===Qt.Vertical) {
+                this.panOffset = this.panOffset.operator_add(new RVector(0, wheelDelta/2));
             }
             else {
-                this.view.pan(new RVector(this.wheelDelta / 2, 0));
+                this.panOffset = this.panOffset.operator_add(new RVector(wheelDelta/2, 0));
+            }
+
+            // TODO: limit check to wheel events if possible:
+            if (QCoreApplication.hasPendingEvents()) {
+                return;
+            }
+            else {
+                this.view.pan(this.panOffset);
+                this.panOffset = new RVector();
             }
         }
         this.view.simulateMouseMoveEvent();
         break;
     }
-
-    this.wheelDelta = 0;
 };
 
 DefaultNavigation.prototype.tabletEvent = function(event) {
