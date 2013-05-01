@@ -394,10 +394,10 @@ void RGraphicsView::startPan() {
  * Pans (scrolls) by the given amount \c delta which is a vector in screen
  * coordinates (pixels).
  */
-void RGraphicsView::pan(const RVector& delta) {
+void RGraphicsView::pan(const RVector& delta, bool regen) {
     double dx = mapDistanceFromView(delta.x);
     double dy = mapDistanceFromView(delta.y);
-    setOffset(offset + RVector(dx, -dy));
+    setOffset(offset + RVector(dx, -dy), regen);
     //regenerate();
     //viewportChangeEvent();
 }

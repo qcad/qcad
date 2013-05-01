@@ -149,7 +149,7 @@ public:
 
     virtual void centerToPoint(const RVector& point);
     virtual void centerToBox(const RBox& box);
-    virtual void pan(const RVector& delta);
+    virtual void pan(const RVector& delta, bool regen=true);
     void startPan();
 
     double getFactor(bool includeStepFactor=true) const;
