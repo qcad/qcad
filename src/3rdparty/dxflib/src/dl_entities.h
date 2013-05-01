@@ -133,7 +133,21 @@ struct DXFLIB_EXPORT DL_StyleData {
         textGenerationFlags(textGenerationFlags),
         lastHeightUsed(lastHeightUsed),
         primaryFontFile(primaryFontFile),
-        bigFontFile(bigFontFile) {
+        bigFontFile(bigFontFile),
+        bold(false),
+        italic(false) {
+    }
+
+    bool operator==(const DL_StyleData& other) {
+        // ignore lastHeightUsed:
+        return (name==other.name &&
+            flags==other.flags &&
+            fixedTextHeight==other.fixedTextHeight &&
+            widthFactor==other.widthFactor &&
+            obliqueAngle==other.obliqueAngle &&
+            textGenerationFlags==other.textGenerationFlags &&
+            primaryFontFile==other.primaryFontFile &&
+            bigFontFile==other.bigFontFile);
     }
 
     /** Style name */
@@ -154,6 +168,9 @@ struct DXFLIB_EXPORT DL_StyleData {
     std::string primaryFontFile;
     /** Big font file name */
     std::string bigFontFile;
+
+    bool bold;
+    bool italic;
 };
 
 /**

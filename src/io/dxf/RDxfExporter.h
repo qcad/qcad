@@ -108,11 +108,14 @@ public:
 
 private:
     DL_Attributes getEntityAttributes(const REntity& entity);
+    DL_StyleData getStyle(const RTextEntity& entity);
 
 private:
     DL_Dxf dxf;
     DL_WriterA* dw;
     DL_Attributes attributes;
+    int textStyleCounter;
+    QList<DL_StyleData> textStyles;
 };
 
 Q_DECLARE_METATYPE(RDxfExporter*)

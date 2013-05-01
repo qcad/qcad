@@ -7849,7 +7849,7 @@
         
     
       void REcmaShellGraphicsViewQt::pan(
-                const RVector & delta
+                const RVector & delta, bool regen
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewQt::pan", engine);
@@ -7862,7 +7862,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewQt::pan";
@@ -7875,7 +7875,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewQt::pan(
-                            delta
+                            delta, regen
                         );
 
                         // block recursion again:
@@ -7902,6 +7902,15 @@
         
             // const reference argument - make a new object:
             new RVector(delta)
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        regen
         )
       
                             )

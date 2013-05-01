@@ -317,7 +317,7 @@ public:
     void writeEndBlock(DL_WriterA& dw, const std::string& name);
 
     void writeVPort(DL_WriterA& dw);
-    void writeStyle(DL_WriterA& dw);
+    void writeStyle(DL_WriterA& dw, const DL_StyleData& style);
     void writeView(DL_WriterA& dw);
     void writeUcs(DL_WriterA& dw);
     void writeDimStyle(DL_WriterA& dw, 

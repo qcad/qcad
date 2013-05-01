@@ -96,6 +96,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, setData, "setData");
             
+            REcmaHelper::registerFunction(&engine, proto, isBold, "isBold");
+            
+            REcmaHelper::registerFunction(&engine, proto, setBold, "setBold");
+            
+            REcmaHelper::registerFunction(&engine, proto, isItalic, "isItalic");
+            
+            REcmaHelper::registerFunction(&engine, proto, setItalic, "setItalic");
+            
             REcmaHelper::registerFunction(&engine, proto, getPosition, "getPosition");
             
             REcmaHelper::registerFunction(&engine, proto, getAlignmentPoint, "getAlignmentPoint");
@@ -1530,6 +1538,214 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTextEntity::setData", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextEntity::isBold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextEntity::isBold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextEntity::isBold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("isBold", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isBold();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.isBold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextEntity::isBold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextEntity::setBold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextEntity::setBold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextEntity::setBold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("setBold", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setBold(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.setBold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextEntity::setBold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextEntity::isItalic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextEntity::isItalic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextEntity::isItalic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("isItalic", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isItalic();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.isItalic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextEntity::isItalic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextEntity::setItalic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextEntity::setItalic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextEntity::setItalic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextEntity* self = 
+                        getSelf("setItalic", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setItalic(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.setItalic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextEntity::setItalic", context, engine);
             return result;
         }
          QScriptValue

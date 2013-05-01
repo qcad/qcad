@@ -191,11 +191,16 @@ public:
      *   num
      * </pre>
      */
-    void table(const char* name, int num, int handle) const {
+    void table(const char* name, int num, int h=0) const {
         dxfString(0, "TABLE");
         dxfString(2, name);
         if (version>=DL_VERSION_2000) {
-            dxfHex(5, handle);
+            if (h==0) {
+                handle();
+            }
+            else {
+                dxfHex(5, h);
+            }
             dxfString(100, "AcDbSymbolTable");
         }
         dxfInt(70, num);
@@ -251,6 +256,23 @@ public:
      */
     void tableAppid(int num) const {
         table("APPID", num, 9);
+    }
+
+    /** Table for text style.
+     *
+     * @param num Number of text styles.
+     *
+     * <pre>
+     *   0
+     *  TABLE
+     *   2
+     *  STYLE
+     *   70
+     *      num
+     * </pre>
+     */
+    void tableStyle(int num) const {
+        table("STYLE", num, 3);
     }
 
     /**

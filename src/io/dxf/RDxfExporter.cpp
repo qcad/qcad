@@ -68,6 +68,8 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         exportVersion = DL_Codes::AC1015;
     }
 
+    textStyleCounter = 0;
+
     dw = dxf.out((const char*)QFile::encodeName(fileName), exportVersion);
 
     if (dw==NULL) {
@@ -128,7 +130,32 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     // STYLE:
     qDebug() << "writing styles...";
-    dxf.writeStyle(*dw);
+    // write one text style for each new, unique combination of font, size, etc:
+    QList<REntity::Id> styleIds = document->queryAllEntities(false, true).toList();
+    for (int i=0; i<styleIds.size(); i++) {
+        REntity::Id id = styleIds[i];
+        QSharedPointer<REntity> entity = document->queryEntityDirect(id);
+        QSharedPointer<RTextEntity> textEntity = entity.dynamicCast<RTextEntity>();
+        if (textEntity.isNull()) {
+            continue;
+        }
+
+        DL_StyleData style = getStyle(*textEntity);
+        style.bold = textEntity->isBold();
+        style.italic = textEntity->isItalic();
+        if (textStyles.contains(style)) {
+            continue;
+        }
+
+        textStyles.append(style);
+    }
+
+    dw->tableStyle(textStyles.size());
+    for (int i=0; i<textStyles.size(); i++) {
+        DL_StyleData style = textStyles[i];
+        dxf.writeStyle(*dw, style);
+    }
+    dw->tableEnd();
 
     // VIEW:
     qDebug() << "writing views...";
@@ -207,8 +234,8 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "writing section ENTITIES...";
     dw->sectionEntities();
 
-    QSet<REntity::Id> ids = document->queryBlockEntities(document->getModelSpaceBlockId());
-    QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
+    QSet<REntity::Id> blockEntityIds = document->queryBlockEntities(document->getModelSpaceBlockId());
+    QList<REntity::Id> list = document->getStorage().orderBackToFront(blockEntityIds);
 
     for (int i=0; i<list.size(); i++) {
         writeEntity(list[i]);
@@ -1202,6 +1229,10 @@ void RDxfExporter::writeHatch(const RHatchEntity& h) {
             QSharedPointer<RSpline> spline = shape.dynamicCast<RSpline>();
             if (!spline.isNull()) {
                 QList<double> knotVector = spline->getActualKnotVector();
+                if (knotVector.size()>0) {
+                    knotVector.prepend(knotVector.first());
+                    knotVector.append(knotVector.last());
+                }
                 std::vector<double> dxfKnotVector;
                 for (int i=0; i<knotVector.size(); i++) {
                     dxfKnotVector.push_back(knotVector[i]);
@@ -1319,6 +1350,20 @@ DL_Attributes RDxfExporter::getEntityAttributes(const REntity& entity) {
                          (const char*)lineType.toLatin1());
 
     return attrib;
+}
+
+DL_StyleData RDxfExporter::getStyle(const RTextEntity& entity) {
+    QString name = QString("textstyle%1").arg(textStyleCounter++);
+    return DL_StyleData((const char*)name.toLatin1(),
+        0,    // flags
+        0.0,  // fixed height (not fixed)
+        1.0,  // width factor
+        0.0,  // oblique angle
+        0,    // text generation flags
+        entity.getTextHeight(),  // last height used
+        (const char*)entity.getFontName().toLatin1(),    // primary font file
+        ""                       // big font file
+        );
 }
 
 /**

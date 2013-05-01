@@ -83,6 +83,18 @@
         setData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isBold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setBold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isItalic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setItalic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

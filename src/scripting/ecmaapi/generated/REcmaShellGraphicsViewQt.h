@@ -662,7 +662,8 @@
         
     
       void pan(
-                const RVector & delta
+                const RVector & delta, bool regen
+        =  true
             );
         
     

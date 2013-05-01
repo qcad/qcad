@@ -724,6 +724,18 @@ dir="./core" filename="RGraphicsView.h">
       <name>RVector</name>&amp;</type>
       <name>delta</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>regen</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

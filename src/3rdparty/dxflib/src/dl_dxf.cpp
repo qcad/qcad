@@ -2210,7 +2210,7 @@ void DL_Dxf::writePoint(DL_WriterA& dw,
         dw.dxfString(100, "AcDbPoint");
     }
     dw.entityAttributes(attrib);
-    dw.coord(DL_POINT_COORD_CODE, data.x, data.y);
+    dw.coord(DL_POINT_COORD_CODE, data.x, data.y, data.z);
 }
 
 
@@ -2231,8 +2231,8 @@ void DL_Dxf::writeLine(DL_WriterA& dw,
         dw.dxfString(100, "AcDbLine");
     }
     dw.entityAttributes(attrib);
-    dw.coord(DL_LINE_START_CODE, data.x1, data.y1);
-    dw.coord(DL_LINE_END_CODE, data.x2, data.y2);
+    dw.coord(DL_LINE_START_CODE, data.x1, data.y1, data.z1);
+    dw.coord(DL_LINE_END_CODE, data.x2, data.y2, data.z2);
 }
 
 
@@ -2261,7 +2261,7 @@ void DL_Dxf::writePolyline(DL_WriterA& dw,
         polylineLayer = attrib.getLayer();
         dw.dxfInt(66, 1);
         dw.dxfInt(70, data.flags);
-        dw.coord(DL_VERTEX_COORD_CODE, 0.0, 0.0);
+        dw.coord(DL_VERTEX_COORD_CODE, 0.0, 0.0, 0.0);
     }
 }
 
@@ -2331,7 +2331,7 @@ void DL_Dxf::writeSpline(DL_WriterA& dw,
     dw.dxfInt(71, data.degree);
     dw.dxfInt(72, data.nKnots);            // number of knots
     dw.dxfInt(73, data.nControl);          // number of control points
-    dw.dxfInt(74, 0);                      // number of fit points
+    dw.dxfInt(74, data.nFit);              // number of fit points
 }
 
 
@@ -2401,7 +2401,7 @@ void DL_Dxf::writeCircle(DL_WriterA& dw,
         dw.dxfString(100, "AcDbCircle");
     }
     dw.entityAttributes(attrib);
-    dw.coord(10, data.cx, data.cy);
+    dw.coord(10, data.cx, data.cy, data.cz);
     dw.dxfReal(40, data.radius);
 }
 
@@ -2425,7 +2425,7 @@ void DL_Dxf::writeArc(DL_WriterA& dw,
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbCircle");
     }
-    dw.coord(10, data.cx, data.cy);
+    dw.coord(10, data.cx, data.cy, data.cz);
     dw.dxfReal(40, data.radius);
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbArc");
@@ -2454,8 +2454,8 @@ void DL_Dxf::writeEllipse(DL_WriterA& dw,
             dw.dxfString(100, "AcDbEllipse");
         }
         dw.entityAttributes(attrib);
-        dw.coord(10, data.cx, data.cy);
-        dw.coord(11, data.mx, data.my);
+        dw.coord(10, data.cx, data.cy, data.cz);
+        dw.coord(11, data.mx, data.my, data.mz);
         dw.dxfReal(40, data.ratio);
         dw.dxfReal(41, data.angle1);
         dw.dxfReal(42, data.angle2);
@@ -2539,7 +2539,7 @@ void DL_Dxf::writeInsert(DL_WriterA& dw,
     dw.dxfString(2, data.name);
     dw.dxfReal(10, data.ipx);
     dw.dxfReal(20, data.ipy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.ipz);
     if (data.sx!=1.0 || data.sy!=1.0) {
         dw.dxfReal(41, data.sx);
         dw.dxfReal(42, data.sy);
@@ -2580,7 +2580,7 @@ void DL_Dxf::writeMText(DL_WriterA& dw,
     dw.entityAttributes(attrib);
     dw.dxfReal(10, data.ipx);
     dw.dxfReal(20, data.ipy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.ipz);
     dw.dxfReal(40, data.height);
     dw.dxfReal(41, data.width);
 
@@ -2630,7 +2630,7 @@ void DL_Dxf::writeText(DL_WriterA& dw,
     dw.entityAttributes(attrib);
     dw.dxfReal(10, data.ipx);
     dw.dxfReal(20, data.ipy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.ipz);
     dw.dxfReal(40, data.height);
     dw.dxfString(1, data.text);
     dw.dxfReal(50, data.angle/(2*M_PI)*360.0);
@@ -2642,7 +2642,7 @@ void DL_Dxf::writeText(DL_WriterA& dw,
 
     dw.dxfReal(11, data.apx);
     dw.dxfReal(21, data.apy);
-    dw.dxfReal(31, 0.0);
+    dw.dxfReal(31, data.apz);
 
     dw.dxfInt(73, data.vJustification);
 }
@@ -2673,7 +2673,7 @@ void DL_Dxf::writeDimAligned(DL_WriterA& dw,
 
     dw.dxfReal(10, data.dpx);
     dw.dxfReal(20, data.dpy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.dpz);
 
     dw.dxfReal(11, data.mpx);
     dw.dxfReal(21, data.mpy);
@@ -2732,7 +2732,7 @@ void DL_Dxf::writeDimLinear(DL_WriterA& dw,
 
     dw.dxfReal(10, data.dpx);
     dw.dxfReal(20, data.dpy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.dpz);
 
     dw.dxfReal(11, data.mpx);
     dw.dxfReal(21, data.mpy);
@@ -2805,7 +2805,7 @@ void DL_Dxf::writeDimRadial(DL_WriterA& dw,
 
     dw.dxfReal(10, data.dpx);
     dw.dxfReal(20, data.dpy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.dpz);
 
     dw.dxfReal(11, data.mpx);
     dw.dxfReal(21, data.mpy);
@@ -2862,7 +2862,7 @@ void DL_Dxf::writeDimDiametric(DL_WriterA& dw,
 
     dw.dxfReal(10, data.dpx);
     dw.dxfReal(20, data.dpy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.dpz);
 
     dw.dxfReal(11, data.mpx);
     dw.dxfReal(21, data.mpy);
@@ -2919,7 +2919,7 @@ void DL_Dxf::writeDimAngular(DL_WriterA& dw,
 
     dw.dxfReal(10, data.dpx);
     dw.dxfReal(20, data.dpy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.dpz);
 
     dw.dxfReal(11, data.mpx);
     dw.dxfReal(21, data.mpy);
@@ -2986,7 +2986,7 @@ void DL_Dxf::writeDimAngular3P(DL_WriterA& dw,
 
     dw.dxfReal(10, data.dpx);
     dw.dxfReal(20, data.dpy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.dpz);
 
     dw.dxfReal(11, data.mpx);
     dw.dxfReal(21, data.mpy);
@@ -3050,7 +3050,7 @@ void DL_Dxf::writeDimOrdinate(DL_WriterA& dw,
 
     dw.dxfReal(10, data.dpx);
     dw.dxfReal(20, data.dpy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.dpz);
 
     dw.dxfReal(11, data.mpx);
     dw.dxfReal(21, data.mpy);
@@ -3166,7 +3166,7 @@ void DL_Dxf::writeHatch1(DL_WriterA& dw,
         dw.dxfString(2, "SOLID");
     }
     dw.dxfInt(70, (int)data.solid);
-    dw.dxfInt(71, 0);                // associative
+    dw.dxfInt(71, 0);                // non-associative
     dw.dxfInt(91, data.numLoops);
 }
 
@@ -3289,18 +3289,18 @@ void DL_Dxf::writeHatchEdge(DL_WriterA& dw,
         dw.dxfBool(74, data.periodic);
         dw.dxfInt(95, data.nKnots);
         dw.dxfInt(96, data.nControl);
-        for (int i=0; i<data.knots.size(); i++) {
+        for (unsigned int i=0; i<data.knots.size(); i++) {
             dw.dxfReal(40, data.knots[i]);
         }
-        for (int i=0; i<data.controlPoints.size(); i++) {
+        for (unsigned int i=0; i<data.controlPoints.size(); i++) {
             dw.dxfReal(10, data.controlPoints[i][0]);
             dw.dxfReal(20, data.controlPoints[i][1]);
         }
-        for (int i=0; i<data.weights.size(); i++) {
+        for (unsigned int i=0; i<data.weights.size(); i++) {
             dw.dxfReal(42, data.weights[i]);
         }
         dw.dxfInt(97, data.nFit);
-        for (int i=0; i<data.fitPoints.size(); i++) {
+        for (unsigned int i=0; i<data.fitPoints.size(); i++) {
             dw.dxfReal(11, data.fitPoints[i][0]);
             dw.dxfReal(21, data.fitPoints[i][1]);
         }
@@ -3343,17 +3343,17 @@ int DL_Dxf::writeImage(DL_WriterA& dw,
     // insertion point
     dw.dxfReal(10, data.ipx);
     dw.dxfReal(20, data.ipy);
-    dw.dxfReal(30, 0.0);
+    dw.dxfReal(30, data.ipz);
 
     // vector along bottom side (1 pixel long)
     dw.dxfReal(11, data.ux);
     dw.dxfReal(21, data.uy);
-    dw.dxfReal(31, 0.0);
+    dw.dxfReal(31, data.uz);
 
     // vector along left side (1 pixel long)
     dw.dxfReal(12, data.vx);
     dw.dxfReal(22, data.vy);
-    dw.dxfReal(32, 0.0);
+    dw.dxfReal(32, data.vz);
 
     // image size in pixel
     dw.dxfReal(13, data.width);
@@ -3957,7 +3957,7 @@ void DL_Dxf::writeBlock(DL_WriterA& dw, const DL_BlockData& data) {
     }
     dw.dxfString(2, data.name);
     dw.dxfInt(70, 0);
-    dw.coord(10, data.bpx, data.bpy);
+    dw.coord(10, data.bpx, data.bpy, data.bpz);
     dw.dxfString(3, data.name);
     dw.dxfString(1, "");
 }
@@ -4074,20 +4074,21 @@ void DL_Dxf::writeVPort(DL_WriterA& dw) {
  * to make the file readable by other software.
  * TODO
  */
-void DL_Dxf::writeStyle(DL_WriterA& dw) {
-    dw.dxfString(  0, "TABLE");
-    dw.dxfString(  2, "STYLE");
-    if (version==DL_VERSION_2000) {
-        dw.dxfHex(5, 3);
-    }
+void DL_Dxf::writeStyle(DL_WriterA& dw, const DL_StyleData& style) {
+//    dw.dxfString(  0, "TABLE");
+//    dw.dxfString(  2, "STYLE");
+//    if (version==DL_VERSION_2000) {
+//        dw.dxfHex(5, 3);
+//    }
     //dw.dxfHex(330, 0);
-    if (version==DL_VERSION_2000) {
-        dw.dxfString(100, "AcDbSymbolTable");
-    }
-    dw.dxfInt( 70, 1);
+//    if (version==DL_VERSION_2000) {
+//        dw.dxfString(100, "AcDbSymbolTable");
+//    }
+//    dw.dxfInt( 70, 1);
     dw.dxfString(  0, "STYLE");
     if (version==DL_VERSION_2000) {
-        dw.dxfHex(5, 0x11);
+        //dw.dxfHex(5, 0x11);
+        dw.handle();
     }
     //styleHandleStd = dw.handle();
     //dw.dxfHex(330, 3);
@@ -4095,16 +4096,28 @@ void DL_Dxf::writeStyle(DL_WriterA& dw) {
         dw.dxfString(100, "AcDbSymbolTableRecord");
         dw.dxfString(100, "AcDbTextStyleTableRecord");
     }
-    dw.dxfString(  2, "Standard");
-    dw.dxfInt( 70, 0);
-    dw.dxfReal( 40, 0.0);
-    dw.dxfReal( 41, 0.75);
-    dw.dxfReal( 50, 0.0);
-    dw.dxfInt( 71, 0);
-    dw.dxfReal( 42, 2.5);
-    dw.dxfString(  3, "txt");
-    dw.dxfString(  4, "");
-    dw.dxfString(  0, "ENDTAB");
+    dw.dxfString(  2, style.name);
+    dw.dxfInt( 70, style.flags);
+    dw.dxfReal( 40, style.fixedTextHeight);
+    dw.dxfReal( 41, style.widthFactor);
+    dw.dxfReal( 50, style.obliqueAngle);
+    dw.dxfInt( 71, style.textGenerationFlags);
+    dw.dxfReal( 42, style.lastHeightUsed);
+    dw.dxfString(  3, style.primaryFontFile);
+    dw.dxfString(  4, style.bigFontFile);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(1001, "ACAD");
+        dw.dxfString(1000, style.name);
+        int xFlags = 0;
+        if (style.bold) {
+            xFlags = xFlags|0x2000000;
+        }
+        if (style.italic) {
+            xFlags = xFlags|0x1000000;
+        }
+        dw.dxfInt(1071, xFlags);
+    }
+    //dw.dxfString(  0, "ENDTAB");
 }
 
 
