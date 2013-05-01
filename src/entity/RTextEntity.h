@@ -114,6 +114,22 @@ public:
         return data;
     }
 
+    bool isBold() const {
+        return data.isBold();
+    }
+
+    void setBold(bool on) {
+        data.setBold(on);
+    }
+
+    bool isItalic() const {
+        return data.isItalic();
+    }
+
+    void setItalic(bool on) {
+        data.setItalic(on);
+    }
+
     RVector getPosition() const {
         return data.getPosition();
     }
