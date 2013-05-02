@@ -314,7 +314,7 @@ public:
     virtual bool hasLinetype(const QString& linetypeName) const;
 
     virtual QStringList getVariables() const = 0;
-    virtual void setVariable(const QString& key, const QVariant & value) = 0;
+    virtual void setVariable(const QString& key, const QVariant& value, bool overwrite=true) = 0;
     /**
      * \return The value of the given variable or an invalid variant if the
      *      variable does not exist.

@@ -250,7 +250,9 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     dbg.nospace() << "variables: \n";
 
     {
-        QListIterator<QString> i(s.getVariables());
+        QStringList vars = s.getVariables();
+        vars.sort();
+        QListIterator<QString> i(vars);
         while (i.hasNext()) {
             QString key = i.next();
             dbg.nospace() << "\t" << key << ": " << s.getVariable(key) << "\n";

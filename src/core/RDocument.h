@@ -255,7 +255,7 @@ public:
     RLineweight::Lineweight getMaxLineweight() const;
 
     QStringList getVariables() const;
-    void setVariable(const QString& key, const QVariant & value);
+    void setVariable(const QString& key, const QVariant& value, bool overwrite=true);
     QVariant getVariable(const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT, bool useSettings = false);
     bool hasVariable(const QString& key) const;
 
