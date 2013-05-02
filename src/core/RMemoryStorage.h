@@ -112,7 +112,7 @@ public:
     virtual int getMaxTransactionId();
 
     virtual QStringList getVariables() const;
-    virtual void setVariable(const QString& key, const QVariant & value);
+    virtual void setVariable(const QString& key, const QVariant& value, bool overwrite = true);
     virtual QVariant getVariable(const QString& key) const;
 
     virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value);

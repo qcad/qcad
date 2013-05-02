@@ -894,7 +894,11 @@ QStringList RMemoryStorage::getVariables() const {
     return variables.keys();
 }
 
-void RMemoryStorage::setVariable(const QString& key, const QVariant & value) {
+void RMemoryStorage::setVariable(const QString& key, const QVariant& value, bool overwrite) {
+    if (!overwrite && hasVariable(key)) {
+        return;
+    }
+
     if (variables.contains(key) && variables[key]==value) {
         // no change:
         return;
