@@ -1,8 +1,10 @@
 QCAD 3 source code is open source and distributed under GPL version 3
 with optional exceptions.
-See gpl-3.0.txt and gpl-3.0-exceptions.txt if available.
+See files:
+- gpl-3.0.txt
+- gpl-3.0-exceptions.txt (if available)
 
-3rd party libraries and plugins in src/3rdparty are distributed under 
+3rd party libraries and plug-ins in src/3rdparty are distributed under 
 their respective licenses:
 
 dxflib:             GPL version 2.0 or greater.
