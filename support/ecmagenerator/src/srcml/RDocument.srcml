@@ -2031,6 +2031,18 @@ dir="./core" filename="RDocument.h">
       <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>overwrite</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

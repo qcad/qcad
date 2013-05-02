@@ -530,7 +530,8 @@
             context->argument(1).isString() || 
             context->argument(1).isBool() || 
             context->argument(1).isArray() || 
-            context->argument(1).isNull()
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
         ) /* type: QVariant */
     
     ){
@@ -591,7 +592,8 @@
             context->argument(1).isString() || 
             context->argument(1).isBool() || 
             context->argument(1).isArray() || 
-            context->argument(1).isNull()
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
         ) /* type: QVariant */
      && (
             context->argument(2).isNumber()
@@ -665,7 +667,8 @@
             context->argument(1).isString() || 
             context->argument(1).isBool() || 
             context->argument(1).isArray() || 
-            context->argument(1).isNull()
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
         ) /* type: QVariant */
      && (
             context->argument(2).isNumber()
@@ -783,7 +786,8 @@
             context->argument(2).isString() || 
             context->argument(2).isBool() || 
             context->argument(2).isArray() || 
-            context->argument(2).isNull()
+            context->argument(2).isNull() || 
+            context->argument(2).isUndefined()
         ) /* type: QVariant */
     
     ){
@@ -857,7 +861,8 @@
             context->argument(2).isString() || 
             context->argument(2).isBool() || 
             context->argument(2).isArray() || 
-            context->argument(2).isNull()
+            context->argument(2).isNull() || 
+            context->argument(2).isUndefined()
         ) /* type: QVariant */
      && (
             context->argument(3).isNumber()

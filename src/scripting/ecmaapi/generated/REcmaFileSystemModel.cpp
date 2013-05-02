@@ -948,7 +948,8 @@
             context->argument(2).isString() || 
             context->argument(2).isBool() || 
             context->argument(2).isArray() || 
-            context->argument(2).isNull()
+            context->argument(2).isNull() || 
+            context->argument(2).isUndefined()
         ) /* type: QVariant */
     
     ){
@@ -1015,7 +1016,8 @@
             context->argument(2).isString() || 
             context->argument(2).isBool() || 
             context->argument(2).isArray() || 
-            context->argument(2).isNull()
+            context->argument(2).isNull() || 
+            context->argument(2).isUndefined()
         ) /* type: QVariant */
      && (
             context->argument(3).isNumber()

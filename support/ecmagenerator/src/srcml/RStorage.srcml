@@ -1714,6 +1714,18 @@ dir="./core" filename="RStorage.h">
       <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>overwrite</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
   <comment type="block">/** * \return The value of the given

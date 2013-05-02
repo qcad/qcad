@@ -351,14 +351,33 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QVariant& c
         return listToScriptValue(engine, res);
     }
 
+    switch (cppValue.type()) {
+    case QVariant::Double: {
+            double res = cppValue.toDouble();
+            return qScriptValueFromValue(engine, res);
+        }
+    case QVariant::LongLong:
+    case QVariant::ULongLong:
+    case QVariant::UInt:
+    case QVariant::Int: {
+            int res = cppValue.toInt();
+            return qScriptValueFromValue(engine, res);
+        }
+    case QVariant::String: {
+            QString res = cppValue.toString();
+            return qScriptValueFromValue(engine, res);
+        }
+    default:
+        return qScriptValueFromValue(engine, cppValue);
+        break;
+    }
+
     //if (cppValue.type()==QVariant::List) {
     //    qDebug() << "REcmaHelper::toScriptValue: list";
     //    QVariantList res = cppValue.toList();
     //    return qScriptValueFromValue(engine, res);
         //return listToScriptValue(engine, res);
     //}
-
-    return qScriptValueFromValue(engine, cppValue);
 }
 
 void REcmaHelper::registerFunction(QScriptEngine* engine, QScriptValue* proto,

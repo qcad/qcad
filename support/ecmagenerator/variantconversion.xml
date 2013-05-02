@@ -6,4 +6,5 @@
   <item>isBool()</item>
   <item>isArray()</item>
   <item>isNull()</item>
+  <item>isUndefined()</item>
 </list>

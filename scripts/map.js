@@ -14,10 +14,10 @@ Map.prototype.put = function(key, val) {
     }
 };
 
-Map.prototype.get = function(key) {
-    var result = null;
+Map.prototype.get = function(key, def) {
+    var result = def;
     var elementIndex = this.findKey(key);
-    if (elementIndex != (-1)) {
+    if (elementIndex !== (-1)) {
         result = this.valArray[elementIndex];
     }
     return result;
@@ -59,6 +59,10 @@ Map.prototype.toString = function() {
                 + "\n";
     }
     return result;
+};
+
+Map.prototype.hasKey = function(key) {
+    return this.findKey(key)!==-1;
 };
 
 Map.prototype.findKey = function(key) {

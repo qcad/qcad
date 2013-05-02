@@ -105,18 +105,18 @@ AddOn.prototype.initAddOn = function(splash, text) {
     var initFilePath = this.getInitFilePath();
     if (new QFileInfo(initFilePath).exists()) {
         include(initFilePath, className);
-        eval("init('" + includeBasePath + "');");
+        init(includeBasePath);
     }
     else {
-        eval("if (typeof(" + className + ")!='undefined' && isFunction(" + className + ".init)) {"
-             + className + ".init('" + includeBasePath + "', splash, text);"
-             + "}");
+        if (typeof(global[className])!=='undefined' && isFunction(global[className].init)) {
+            global[className].init(includeBasePath, splash, text);
+        }
     }
 
     includeBasePath = bak;
 
     // TODO: release add-on to free memory:
-    //eval(className + " = undefined;");
+    //global[className] = undefined;
 };
 
 /**
@@ -132,13 +132,12 @@ AddOn.prototype.postInitAddOn = function(splash, text) {
     var initFilePath = this.getPostInitFilePath();
     if (new QFileInfo(initFilePath).exists()) {
         include(initFilePath);
-        eval("postInit('" + includeBasePath + "');");
+        postInit(includeBasePath);
     }
     else {
-        eval("if (typeof(" + className + ")!='undefined' && isFunction(" + className + ".postInit)) {"
-             + className + ".postInit('" + includeBasePath + "', splash, text);"
-             + "}"
-             );
+        if (!isNull(global[className]) && isFunction(global[className].postInit)) {
+            global[className].postInit(includeBasePath, splash, text);
+        }
     }
 
     includeBasePath = bak;
@@ -146,7 +145,7 @@ AddOn.prototype.postInitAddOn = function(splash, text) {
 
 AddOn.prototype.uninit = function() {
     var className = this.getClassName();
-    eval(className + " = undefined;");
+    global[className] = undefined;
 };
 
 /**
@@ -220,9 +219,9 @@ AddOn.prototype.hasShortcuts = function() {
     var className = this.getClassName();
     try {
         var ret = true;
-        eval("if (typeof(" + className + ")!='undefined' && isFunction(" + className + ".hasShortcuts)) {"
-                + "ret = " + className + ".hasShortcuts();"
-                + "}");
+        if (!isNull(global[className]) && isFunction(global[className].hasShortcuts)) {
+            ret = global[className].hasShortcuts();
+        }
         return ret;
     } catch (e) {
         debugger;
@@ -300,9 +299,9 @@ AddOn.prototype.getParentTitle = function() {
 AddOn.getClassTitle = function(cn) {
     var title;
     try {
-        eval("if (typeof(" + cn + ") != 'undefined' && typeof(" + cn + ".getTitle) != 'undefined') {"
-            +"    title = " + cn + ".getTitle()"
-            +"}");
+        if (!isNull(global[cn]) && isFunction(global[cn].getTitle)) {
+            title = global[cn].getTitle();
+        }
     } catch (e) {
         qWarning("AddOn.js:", "getClassTitle(): Exception:", e);
     }

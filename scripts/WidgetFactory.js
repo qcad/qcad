@@ -147,6 +147,16 @@ WidgetFactory.getKey = function(group, obj) {
     return key;
 };
 
+WidgetFactory.getKeyString = function(group, obj) {
+    var keyTuple = WidgetFactory.getKey(group, obj);
+    if (keyTuple[0].length===0) {
+        return keyTuple[1];
+    }
+    else {
+        return keyTuple[0] + "/" + keyTuple[1];
+    }
+};
+
 /**
  * Saves the current state of the given \c widget and all its child widgets.
  *
@@ -197,8 +207,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             }
         }
 
-        var keyTuple = WidgetFactory.getKey(group, c);
-        var key = keyTuple[0] + "/" + keyTuple[1];
+        var key = WidgetFactory.getKeyString(group, c);
         value = undefined;
         if (isOfType(c, QLineEdit)) {
             value = c.text;
@@ -239,17 +248,17 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             var forceSaveText = false;
             var forceSaveIndex = false;
             if (typeof(c["ForceSaveText"]) != "undefined"
-                    && c["ForceSaveText"] == true) {
+                    && c["ForceSaveText"] === true) {
                 forceSaveText = true;
             }
             if (typeof(c["ForceSaveIndex"]) != "undefined"
-                    && c["ForceSaveIndex"] == true) {
+                    && c["ForceSaveIndex"] === true) {
                 forceSaveIndex = true;
             }
             if (forceSaveIndex == true) {
                 value = c.currentIndex;
             }
-            else if (forceSaveText == true || isNull(c.itemData(c.currentIndex))) {
+            else if (forceSaveText === true || isNull(c.itemData(c.currentIndex))) {
                 value = c.currentText;
             } else {
                 value = c.itemData(c.currentIndex);
@@ -308,7 +317,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         // widgets with dynamic property "RequiresRestart" trigger a
         // restart application warning after changing preferences:
         if (typeof(c["RequiresRestart"]) != "undefined"
-            && c["RequiresRestart"] == true) {
+            && c["RequiresRestart"] === true) {
             WidgetFactory.requiresRestart = true;
         }
 
@@ -316,7 +325,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         // "SaveContents" = false
         var saveContents = true;
         if (typeof(c["SaveContents"]) != "undefined"
-                && c["SaveContents"] == false) {
+                && c["SaveContents"] === false) {
             saveContents = false;
         }
 
@@ -346,12 +355,13 @@ WidgetFactory.saveState = function(widget, group, document, map) {
  *      designer (.ui file). \see resetState
  * \param document RDocument object to restore settings from or \c undefined
  *      to restore settings from RSettings (user scope, config file).
+ * \param map Map object to restore settings from.
  */
 WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, document, map) {
     var f, index, j, hasData;
     
     var topLevelSet = false;
-    if (typeof(WidgetFactory.topLevelWidget) == "undefined") {
+    if (isNull(WidgetFactory.topLevelWidget)) {
         widget.slotSettingChanged = function() {
             if (isFunction(this.settingChangedEvent)) {
                 this.settingChangedEvent();
@@ -382,14 +392,14 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
 
         // ignore Qt internal widgets:
-        if (c.objectName=="qt_toolbar_ext_button") {
+        if (c.objectName==="qt_toolbar_ext_button") {
             continue;
         }
 
         // skip children from other groups in this widget (for options toolbar):
         // but not if used from a test [map != undefined]
         if (isNull(map) && typeof (c["SettingsGroup"]) != "undefined"
-                && c["SettingsGroup"] != group) {
+                && c["SettingsGroup"] !== group) {
             continue;
         }
 
@@ -415,11 +425,10 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         
-        var keyTuple = WidgetFactory.getKey(group, c);
-        var key = keyTuple[0] + "/" + keyTuple[1];
+        var key = WidgetFactory.getKeyString(group, c);
         var value;
         if (reset && !isNull(c.defaultValue) && (typeof(c["SettingsGroup"])=="undefined" ||
-                c["SettingsGroup"]==group)) {
+                c["SettingsGroup"]===group)) {
             value = c.defaultValue;
         } else {
             if (!isNull(map)) {
@@ -448,8 +457,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
         }
 
-        // don't restore widgets that have been restored elsewhere (e.g. plugins
-        // might load widgets contents by themselves in initPreferences):
+        // don't restore widgets that have been restored elsewhere (e.g. script
+        // add-ons might load widgets contents by themselves in initPreferences):
         // [but always restore widgets if used from a test (map != undefined)]
         if (isNull(map) && !reset && typeof (c["Loaded"]) != "undefined"
                 && c["Loaded"] === true) {
@@ -468,6 +477,13 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         if (isOfType(c, QLabel)) {
             continue;
         }
+
+//        qDebug("restoring: ", c.objectName);
+//        qDebug("  value: ", value);
+
+//        if (c.objectName==="RampOn") {
+//            debugger;
+//        }
 
         if (isOfType(c, QLineEdit)) {
             WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
@@ -617,10 +633,11 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
             if (!isNull(value)) {
                 index = c.findText(value);
-                if (index != -1) {
+                if (index !== -1) {
                     c.currentIndex = index;
                     continue;
                 }
+                qDebug("setting text of " + c.objectName + " to: " + value);
                 c.setEditText(value);
             }
             continue;
@@ -764,7 +781,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 }
             }
 
-            if (reset==false) {
+            if (reset===false) {
                 // restore user data of selected row
                 hasData = false;
                 if (!isNull(c.item(0)) && !isNull(c.item(0).data(Qt.UserRole))) {
@@ -773,7 +790,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 if (hasData) {
                     var data;
                     var dataKey = key + ".data";
-                    if (document) {
+                    if (!isNull(document)) {
                         data = document.getVariable(dataKey);
                     }
                     // document has no value for key,

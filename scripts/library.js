@@ -23,11 +23,17 @@
 
 include("sprintf.js");
 
-if (isNull(Global)) {
-    Global = function() {};
-    Global.mainWindow = undefined;
-    Global.documentInterface = undefined;
+if (typeof(global)==="undefined") {
+    global = this;
+    global.mainWindow = undefined;
+    global.documentInterface = undefined;
 }
+
+//if (isNull(Global)) {
+//    Global = function() {};
+//    Global.mainWindow = undefined;
+//    Global.documentInterface = undefined;
+//}
 
 /**
  * \param file File path argument given on command line (might be absolute or relative).
@@ -675,7 +681,7 @@ function getWidgets(widget, ca) {
     }
 
     if (isNull(ca)) {
-        ca = new Array();
+        ca = new Object();
     }
     var children = widget.children();
     for (var i = 0; i < children.length; ++i) {
@@ -683,10 +689,10 @@ function getWidgets(widget, ca) {
         if (isDeleted(child)) {
             continue;
         }
-        if (!isNull(child.objectName) && child.objectName != "") {
+        if (!isNull(child.objectName) && child.objectName !== "") {
             ca[child.objectName] = child;
         }
-        if (!isNull(child.children) && child.children().length != 0) {
+        if (!isNull(child.children) && child.children().length !== 0) {
             getWidgets(child, ca);
         }
     }
@@ -1376,12 +1382,12 @@ function initFontComboBox(comboBox) {
 }
 
 function setMainWindow(w) {
-    Global.mainWindow = w;
+    global.mainWindow = w;
 }
 
 function getMainWindow() {
-    if (!isNull(Global.mainWindow)) {
-        return Global.mainWindow;
+    if (!isNull(global.mainWindow)) {
+        return global.mainWindow;
     }
 
     return RMainWindowQt.getMainWindow();

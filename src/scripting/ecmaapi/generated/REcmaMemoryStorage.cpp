@@ -3638,7 +3638,8 @@
             context->argument(1).isString() || 
             context->argument(1).isBool() || 
             context->argument(1).isArray() || 
-            context->argument(1).isNull()
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
         ) /* type: QVariant */
     
     ){
@@ -3671,6 +3672,69 @@
                self->setVariable(a0
         ,
     a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNumber() || 
+            context->argument(1).isString() || 
+            context->argument(1).isBool() || 
+            context->argument(1).isArray() || 
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
+        ) /* type: QVariant */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a1 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setVariable(a0
+        ,
+    a1
+        ,
+    a2);
     } else
 
 
@@ -3775,7 +3839,8 @@
             context->argument(1).isString() || 
             context->argument(1).isBool() || 
             context->argument(1).isArray() || 
-            context->argument(1).isNull()
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
         ) /* type: QVariant */
     
     ){

@@ -2358,7 +2358,8 @@
             context->argument(1).isString() || 
             context->argument(1).isBool() || 
             context->argument(1).isArray() || 
-            context->argument(1).isNull()
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
         ) /* type: QVariant */
     
     ){
@@ -2682,7 +2683,8 @@
             context->argument(1).isString() || 
             context->argument(1).isBool() || 
             context->argument(1).isArray() || 
-            context->argument(1).isNull()
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
         ) /* type: QVariant */
     
     ){
