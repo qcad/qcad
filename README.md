@@ -12,5 +12,5 @@ and the current version 3 (August 2011).
 License
 -------
 The QCAD 3 source code is available under the GPLv3 open source license. Additional script extensions and 
-plugins are available under their respective licenses.
+plug-ins are available under their respective licenses.
 
