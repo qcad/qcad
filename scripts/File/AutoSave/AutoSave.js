@@ -173,7 +173,7 @@ AutoSave.recoverUntitled = function() {
     }
     else {
         msg = qsTr("%1 'autosave' backup files for untitled drawings were found.\n" +
-            "Do you wish to recover them?");
+            "Do you wish to recover them?").arg(list.length);
     }
 
     var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
