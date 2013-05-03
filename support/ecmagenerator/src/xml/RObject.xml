@@ -133,11 +133,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getCustomProperties"
-    cppName="getCustomProperties" specifier="public"
+    <method name="getCustomPropertyKeys"
+    cppName="getCustomPropertyKeys" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QMap &lt; QString , QVariant &gt;"
-      isPureVirtual="false" />
+      <variant returnType="QStringList" isPureVirtual="false" />
     </method>
     <method name="getComplexity" cppName="getComplexity"
     specifier="public" isStatic="false" isVirtual="true"

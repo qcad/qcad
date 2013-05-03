@@ -85,7 +85,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, removeCustomProperty, "removeCustomProperty");
             
-            REcmaHelper::registerFunction(&engine, proto, getCustomProperties, "getCustomProperties");
+            REcmaHelper::registerFunction(&engine, proto, getCustomPropertyKeys, "getCustomPropertyKeys");
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
             
@@ -1370,19 +1370,19 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerObject::getCustomProperties
+        REcmaSharedPointerObject::getCustomPropertyKeys
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomProperties", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getCustomProperties";
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomPropertyKeys", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getCustomPropertyKeys";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RObject* self = 
-                        getSelf("getCustomProperties", context);
+                        getSelf("getCustomPropertyKeys", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1399,11 +1399,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < QString , QVariant >'
-    QMap < QString , QVariant > cppResult =
+    // return type 'QStringList'
+    QStringList cppResult =
         
-               self->getCustomProperties();
-        // return type: QMap < QString , QVariant >
+               self->getCustomPropertyKeys();
+        // return type: QStringList
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -1412,10 +1412,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomProperties().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomPropertyKeys().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomProperties", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomPropertyKeys", context, engine);
             return result;
         }
          QScriptValue

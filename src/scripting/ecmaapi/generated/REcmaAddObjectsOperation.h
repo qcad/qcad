@@ -47,6 +47,12 @@
 
     // public methods:
     static  QScriptValue
+        replaceObject
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getObject
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

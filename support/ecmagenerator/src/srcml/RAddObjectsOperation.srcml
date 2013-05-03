@@ -122,6 +122,59 @@ dir="./operations" filename="RAddObjectsOperation.h">
     <parameter_list>()</parameter_list>
     <block>{ }</block>
   </destructor>
+  <comment type="block">/** * Adds the given object to this
+  operation or replaces an object * already present with the same
+  ID. */</comment>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>replaceObject</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RObject</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>object</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>useCurrentAttributes</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RObject</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getObject</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RObject</name>::
+        <name>Id</name></name>
+      </type>
+      <name>id</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>

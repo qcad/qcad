@@ -201,7 +201,7 @@ uint qHash(RPropertyTypeId propertyTypeId) {
     }
 }
 
-QDebug operator<<(QDebug dbg, RPropertyTypeId& p) {
+QDebug operator<<(QDebug dbg, const RPropertyTypeId& p) {
     dbg.nospace()
         << "RPropertyTypeId("
         << p.getId() << ", "

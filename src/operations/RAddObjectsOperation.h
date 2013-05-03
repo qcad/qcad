@@ -47,6 +47,15 @@ public:
     virtual ~RAddObjectsOperation() {
     }
 
+    /**
+     * Adds the given object to this operation or replaces an object
+     * already present with the same ID.
+     */
+    void replaceObject(const QSharedPointer<RObject>& object,
+        bool useCurrentAttributes = true);
+
+    QSharedPointer<RObject> getObject(RObject::Id id);
+
     void addObject(const QSharedPointer<RObject>& object,
         bool useCurrentAttributes = true);
 

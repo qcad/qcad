@@ -118,7 +118,7 @@ private:
     static QMap<long int, QPair<QString, QString> > titleMap;
 };
 
-QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RPropertyTypeId& p);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RPropertyTypeId& p);
 
 QCADCORE_EXPORT uint qHash(RPropertyTypeId propertyTypeId);
 

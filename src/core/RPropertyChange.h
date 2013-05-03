@@ -42,7 +42,7 @@ public:
     QVariant newValue;
 };
 
-QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RPropertyChange& p);
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RPropertyChange& p);
 
 typedef QMap<int, QList<RPropertyChange> > _RMapIntPropertyChange;
 Q_DECLARE_METATYPE(_RMapIntPropertyChange*)

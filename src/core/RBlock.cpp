@@ -67,7 +67,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RBlock::getProperty(
         RPropertyTypeId propertyTypeId,
-        bool /*humanReadable*/, bool /*noAttributes*/) {
+        bool humanReadable, bool noAttributes) {
 
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(name), RPropertyAttributes());
@@ -76,7 +76,8 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(
         return qMakePair(QVariant(frozen), RPropertyAttributes());
     }
 
-    return qMakePair(QVariant(), RPropertyAttributes());
+    //return qMakePair(QVariant(), RPropertyAttributes());
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
 bool RBlock::isSelectedForPropertyEditing() {

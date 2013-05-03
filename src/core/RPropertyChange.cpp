@@ -84,7 +84,7 @@ RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldVal
     }
 }
 
-QDebug operator<<(QDebug dbg, RPropertyChange& p) {
+QDebug operator<<(QDebug dbg, const RPropertyChange& p) {
     dbg.nospace()
         << "RPropertyChange("
         << p.propertyTypeId << ", ";

@@ -373,6 +373,13 @@ void RObject::removeCustomProperty(const QString& key) {
 }
 
 /**
+ * \return List of custom property keys.
+ */
+QStringList RObject::getCustomPropertyKeys() const {
+    return customProperties.keys();
+}
+
+/**
  * \return Map of custom properties assigned to this object.
  */
 QMap<QString, QVariant> RObject::getCustomProperties() const {

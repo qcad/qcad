@@ -45,12 +45,12 @@ RLayer::~RLayer() {
 }
 
 void RLayer::init() {
-    RLayer::PropertyName.generateId(typeid(RLayer), "", "Name");
-    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", "Frozen");
-    RLayer::PropertyLocked.generateId(typeid(RLayer), "", "Locked");
-    RLayer::PropertyColor.generateId(typeid(RLayer), "", "Color");
-    RLayer::PropertyLinetype.generateId(typeid(RLayer), "", "Linetype");
-    RLayer::PropertyLineweight.generateId(typeid(RLayer), "", "Lineweight");
+    RLayer::PropertyName.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Name"));
+    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Frozen"));
+    RLayer::PropertyLocked.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Locked"));
+    RLayer::PropertyColor.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Color"));
+    RLayer::PropertyLinetype.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Linetype"));
+    RLayer::PropertyLineweight.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Lineweight"));
 }
 
 RLayer* RLayer::clone() const {
@@ -142,7 +142,8 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(
         return qMakePair(v, RPropertyAttributes());
     }
 
-    return qMakePair(QVariant(), RPropertyAttributes());
+    //return qMakePair(QVariant(), RPropertyAttributes());
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
 bool RLayer::isSelectedForPropertyEditing() {

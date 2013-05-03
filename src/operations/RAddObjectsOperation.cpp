@@ -34,6 +34,44 @@ RAddObjectsOperation::RAddObjectsOperation(
     }
 }
 
+void RAddObjectsOperation::replaceObject(const QSharedPointer<RObject>& object,
+        bool useCurrentAttributes) {
+
+    if (object.isNull()) {
+        return;
+    }
+
+    RObject::Id id = object->getId();
+
+    for (int i = 0; i < list.size(); ++i) {
+        if (list[i].first.isNull()) {
+            continue;
+        }
+
+        if (list[i].first->getId()==id) {
+            list[i].first = object;
+            list[i].second = useCurrentAttributes;
+            return;
+        }
+    }
+
+    addObject(object, useCurrentAttributes);
+}
+
+QSharedPointer<RObject> RAddObjectsOperation::getObject(RObject::Id id) {
+    for (int i = 0; i < list.size(); ++i) {
+        if (list[i].first.isNull()) {
+            continue;
+        }
+
+        if (list[i].first->getId()==id) {
+            return list[i].first;
+        }
+    }
+
+    return QSharedPointer<RObject>();
+}
+
 void RAddObjectsOperation::addObject(const QSharedPointer<RObject>& object,
     bool useCurrentAttributes) {
 

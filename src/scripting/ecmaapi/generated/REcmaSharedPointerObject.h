@@ -93,7 +93,7 @@
         removeCustomProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getCustomProperties
+        getCustomPropertyKeys
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getComplexity

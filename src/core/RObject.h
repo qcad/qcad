@@ -162,6 +162,11 @@ public:
     QVariant getCustomProperty(const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT);
     void setCustomProperty(const QString& key, const QVariant& value);
     void removeCustomProperty(const QString& key);
+    QStringList getCustomPropertyKeys() const;
+
+    /**
+     * \nonscriptable
+     */
     QMap<QString, QVariant> getCustomProperties() const;
 
     virtual int getComplexity() const {
@@ -239,7 +244,7 @@ protected:
     /**
      * \nonscriptable
      */
-    bool setMember(QList<double>& variable, const QVariant& value,
+    static bool setMember(QList<double>& variable, const QVariant& value,
            bool condition);
     /**
      * \nonscriptable

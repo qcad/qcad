@@ -428,6 +428,7 @@ dir="./core" filename="RPropertyTypeId.h">
   <param>
     <decl>
       <type>
+      <name>const</name>
       <name>RPropertyTypeId</name>&amp;</type>
       <name>p</name>
     </decl>
