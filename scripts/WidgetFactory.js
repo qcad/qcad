@@ -853,15 +853,24 @@ WidgetFactory.connect = function(sig, signalReceiver, objectName, isValue) {
     if (isNull(signalReceiver)) {
         return;
     }
+
+    // connect signal to given function:
+    if (isFunction(signalReceiver)) {
+        sig.connect(signalReceiver);
+        return;
+    }
+
+    // connect signal to automatically named slot of receiver object:
     var slot;
-    if (isValue==undefined || isValue==true) {
+    if (isNull(isValue) || isValue===true) {
         slot = "slot" + objectName + "Changed";
     }
     else {
         slot = "slot" + objectName;
     }
 
-    if (eval("signalReceiver." + slot) != undefined) {
+    //if (eval("signalReceiver." + slot) != undefined) {
+    if (!isNull(signalReceiver[slot])) {
         sig.connect(signalReceiver, slot);
     }
 };
