@@ -172,33 +172,32 @@ QString RDxfServices::collectQCad2Info(const QString& fileName) {
     QFileInfo fi(fileName);
     if (!fi.exists()) {
         qWarning() << "RDxfServices::collectQCad2Info: file does not exist: " << fileName;
-        return NULL;
+        return QString();
     }
 
     if (fi.size()==0) {
         qWarning() << "RDxfServices::collectQCad2Info: file size is zero: " << fileName;
-        return NULL;
+        return QString();
     }
 
     if (fi.suffix().toUpper()!="DXF") {
         qWarning() << "RDxfServices::collectQCad2Info: file is not a DXF file: " << fileName;
-        return NULL;
+        return QString();
     }
-
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
         qWarning() << "RDxfServices::collectQCad2Info: cannot read file: " << fileName;
-        return NULL;
+        return QString();
     }
 
     //QTemporaryFile* tmpFile = new QTemporaryFile("qcad_temp_XXXXXX.dxf");
     QTemporaryFile* tmpFile = new QTemporaryFile();
     if (!tmpFile->open()) {
-        qWarning() << "RDxfServices::collectQCad2Info: cannot write to file: " << tmpFile->fileName();
+        qWarning() << "RDxfServices::collectQCad2Info: cannot write to temporary file: " << tmpFile->fileName();
         delete tmpFile;
 
-        return NULL;
+        return QString();
     }
 
     QTextStream ts(&file);
