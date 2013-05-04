@@ -249,20 +249,20 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
             var className = this.getScriptClassName();
 
             // call init()
-            evalStr = "if (typeof(" + className + ")!='undefined' && isFunction(" + className + ".init)) {"
-                + className + ".init(undefined);"
-                + "}";
-            eval(evalStr);
+            if (!isNull(global[className]) && isFunction(global[className].init)) {
+                global[className].init(undefined);
+            }
 
             // call generatePreview
             var failed = false;
-            var operation;
-            evalStr = "if (typeof(" + className + ")!='undefined' && isFunction(" + className + ".generatePreview)) {"
-                + "operation = " + className + ".generatePreview(di, iconSize);"
-                + "} else {"
-                + "failed = true;"
-                + "}";
-            eval(evalStr);
+            var operation = undefined;
+
+            if (!isNull(global[className]) && isFunction(global[className].generatePreview)) {
+                operation = global[className].generatePreview(di, iconSize);
+            }
+            else {
+                failed = true;
+            }
 
             // no preview available for script item:
             if (failed) {

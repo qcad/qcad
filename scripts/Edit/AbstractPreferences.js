@@ -102,11 +102,11 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
         try {
             // include normally not needed
             var doInclude = false;
-            eval("if( typeof(" + className + ") == 'undefined' ) {"
-                +    "doInclude = true;"
-                + "}");
+            if (isNull(global[className])) {
+                doInclude = true;
+            }
             if(doInclude) {
-                eval("include('" + addOn.getFilePath() + "');");
+                include(addOn.getFilePath());
             }
         } catch (e1) {
             qWarning("AppPreferences.js: Exception: ", e1);
@@ -115,12 +115,10 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
         var cat;
         cat = undefined;
         try {
-            eval("if( typeof(" + className + ") != 'undefined' && "
-                    + className + ".getPreferencesCategory != undefined ) {"
-                    + "cat = " + className + ".getPreferencesCategory("
-                    + appPreferences + ");"
-                + "}");
-            if (cat == undefined) {
+            if (!isNull(global[className]) && isFunction(global[className].getPreferencesCategory)) {
+                cat = global[className].getPreferencesCategory(appPreferences);
+            }
+            if (isNull(cat)) {
                 continue;
             }
         } catch (e2) {
@@ -194,27 +192,27 @@ AbstractPreferences.prototype.apply = function() {
         try {
             // include normally not needed
             var doInclude = false;
-            eval("if( typeof(" + className + ") == 'undefined' ) {"
-                +    "doInclude = true;"
-                + "}");
+            if (isNull(global[className])) {
+                doInclude = true;
+            }
             if (doInclude) {
-                eval("include('" + addOn.getFilePath() + "');");
+                include(addOn.getFilePath());
             }
             
             // apply application settings globally:
             if (this.appPreferences) {
-                eval("if(typeof(" + className + ".applyPreferences) == 'function') {"
-                     + className + ".applyPreferences(undefined, undefined, widget);"
-                     + "}");
+                if (!isNull(global[className]) && isFunction(global[className].applyPreferences)) {
+                    global[className].applyPreferences(undefined, undefined, widget);
+                }
 
                 var mdiArea = EAction.getMdiArea();
                 var mdiChildren = mdiArea.subWindowList();
                 for (var j = 0; j < mdiChildren.length; ++j) {
                     mdiChild = mdiChildren[j];
                     document = mdiChild.getDocument();
-                    eval("if( typeof(" + className + ".applyPreferences) == 'function' ) {"
-                         + className + ".applyPreferences(document, mdiChild, widget);"
-                         + "}");
+                    if (!isNull(global[className]) && isFunction(global[className].applyPreferences)) {
+                        global[className].applyPreferences(document, mdiChild, widget);
+                    }
                 }
             }
 
@@ -222,9 +220,9 @@ AbstractPreferences.prototype.apply = function() {
             else {
                 mdiChild = EAction.getMdiChild();
                 document = EAction.getDocument();
-                eval("if( typeof(" + className + ".applyPreferences) == 'function' ) {"
-                     + className + ".applyPreferences(document, mdiChild, widget);"
-                     + "}");
+                if (!isNull(global[className]) && isFunction(global[className].applyPreferences)) {
+                    global[className].applyPreferences(document, mdiChild, widget);
+                }
             }
         } catch (e) {
             qWarning("AbstractPreferences.js:",
@@ -251,20 +249,14 @@ AbstractPreferences.prototype.load = function(addOn) {
     if (!this.appPreferences) {
         document = EAction.getDocument();
     }
-    try {
-        eval("if (isFunction(" + className + ".initPreferences)) {"
-                + className + ".initPreferences(widget, true, document, this);" + "}");
-    } catch (e) {
-        qWarning("AbstractPreferences.js:", "load(): exception:", e);
+    if (!isNull(global[className]) && isFunction(global[className].initPreferences)) {
+        global[className].initPreferences(widget, true, document, this);
     }
 
     WidgetFactory.restoreState(widget, undefined, undefined, false, document);
 
-    try {
-        eval("if (isFunction(" + className + ".postInitPreferences)) {"
-                + className + ".postInitPreferences(widget, true, document, this);" + "}");
-    } catch (e) {
-        qWarning("AbstractPreferences.js:", "load(): exception:", e);
+    if (!isNull(global[className]) && isFunction(global[className].postInitPreferences)) {
+        global[className].postInitPreferences(widget, true, document, this);
     }
 };
 
@@ -286,11 +278,8 @@ AbstractPreferences.prototype.save = function() {
             document = EAction.getDocument();
         }
 
-        try {
-            eval("if (isFunction(" + className + ".savePreferences)) {"
-                    + className + ".savePreferences(widget, true, document);" + "}");
-        } catch (e) {
-            qWarning("AbstractPreferences.js:", "save(): exception:", e);
+        if (!isNull(global[className]) && isFunction(global[className].savePreferences)) {
+            global[className].savePreferences(widget, true, document);
         }
         WidgetFactory.saveState(widget, undefined, document);
     }
@@ -450,13 +439,8 @@ AbstractPreferences.prototype.unitUpdated = function(unit) {
             continue;
         }
 
-        try {
-            eval("if(isFunction(" + className + ".updateUnit)) {"
-                    + className + ".updateUnit(unit);"
-                    + "}");
-        } catch (e) {
-            qWarning("AbstractPreferences.js:", "unitUpdated(): Exception:", e);
-            continue;
+        if (!isNull(global[className]) && isFunction(global[className].updateUnit)) {
+            global[className].updateUnit(unit);
         }
     }
 };
@@ -476,13 +460,8 @@ AbstractPreferences.prototype.paperUnitUpdated = function(unit) {
             continue;
         }
 
-        try {
-            eval("if(isFunction(" + className + ".updatePaperUnit)) {"
-                    + className + ".updatePaperUnit(unit);"
-                    + "}");
-        } catch (e) {
-            qWarning("AbstractPreferences.js:", "paperUnitUpdated(): Exception:", e);
-            continue;
+        if (!isNull(global[className]) && isFunction(global[className].updatePaperUnit)) {
+            global[className].updatePaperUnit(unit);
         }
     }
 };
@@ -498,13 +477,8 @@ AbstractPreferences.prototype.linearFormatUpdated = function(linearFormat) {
             continue;
         }
 
-        try {
-            eval("if(isFunction(" + className + ".updateLinearFormat)) {"
-                    + className + ".updateLinearFormat(linearFormat);"
-                    + "}");
-        } catch (e) {
-            qWarning("AbstractPreferences.js:", "linearFormatUpdated(): Exception:", e);
-            continue;
+        if (!isNull(global[className]) && isFunction(global[className].updateLinearFormat)) {
+            global[className].updateLinearFormat(linearFormat);
         }
     }
 };

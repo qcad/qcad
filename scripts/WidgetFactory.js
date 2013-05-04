@@ -414,13 +414,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             hasOwnReset = true;
         }
         if (reset && hasOwnReset) {
-            try {
-                eval("c.resetState()");
-            } catch (e) {
-                qWarning("WidgetFactory.js:",
-                        "restoreState(): exception in 'c.resetState()':", e);
-                qWarning("WidgetFactory.js:", "restoreState(): c.objectName:",
-                        c.objectName);
+            if (isFunction(c.resetState)) {
+                c.resetState();
             }
             continue;
         }

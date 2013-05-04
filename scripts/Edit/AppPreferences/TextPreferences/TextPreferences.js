@@ -48,6 +48,9 @@ TextPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docum
     lReducedList.addItems(families);
 
     var list = RSettings.getValue("Text/ReducedFontList", []);
+    if (isNull(list)) {
+        list = [];
+    }
 
     for (var row = 0; row<lReducedList.count; row++) {
         var item = lReducedList.item(row);

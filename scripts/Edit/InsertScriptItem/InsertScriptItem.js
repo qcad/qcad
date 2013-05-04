@@ -160,33 +160,21 @@ InsertScriptItem.evalInit = function(file) {
         }
     }
 
-    try {
-        // call init()
-        var evalStr = "if (isFunction(" + className + ".init)) {"
-            + className + ".init(formWidget);"
-            + "}";
-        eval(evalStr);
-    } catch (e) {
-        qCritical("InsertScriptItem.js:", "evalInit(): exception:", e);
-        debugger;
-    }   
+    // call init()
+    if (!isNull(global[className]) && isFunction(global[className].init)) {
+        global[className].init(formWidget);
+    }
 };
 
 InsertScriptItem.evalGenerate = function(di, file) {
-    var operation;
+    var operation = undefined;
     
     var className = new QFileInfo(file).completeBaseName();
-    try {       
-        // call generate of script item:
-        var evalStr = "if (" + className + ".generate != undefined) {"
-                + "operation = " + className + ".generate(di, file);"
-                + "}";
-        eval(evalStr);
-    } catch (e) {
-        qCritical("InsertScriptItem.js:", "evalGenerate(): exception:", e);
-        debugger;
+
+    if (!isNull(global[className]) && isFunction(global[className].generate)) {
+        operation = global[className].generate(di, file);
     }
-    
+
     return operation;
 };
 
