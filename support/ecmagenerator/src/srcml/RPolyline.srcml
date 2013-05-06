@@ -28,6 +28,9 @@ dir="./core/math" filename="RPolyline.h">
   <cpp:file>&lt;QPainterPath&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RDirected.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -926,32 +929,6 @@ dir="./core/math" filename="RPolyline.h">
     </init></decl>
   </param>)</parameter_list>;</function_decl></public>
   <protected>protected: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addToPainterPath</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainterPath</name>&amp;</type>
-      <name>pp</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RShape</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>shape</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>

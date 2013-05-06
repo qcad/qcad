@@ -191,6 +191,9 @@
         ;static  QScriptValue
         isEmpty
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addShapeToPainterPath
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

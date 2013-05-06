@@ -19,6 +19,7 @@
 #include "QPen"
 
 #include "RArc.h"
+#include "RCircle.h"
 #include "RBox.h"
 #include "RLine.h"
 #include "RMath.h"
@@ -414,4 +415,34 @@ QDebug operator<<(QDebug dbg, RPainterPath& p) {
     dbg.nospace() << (QPainterPath&)p;
     dbg.nospace() << ")";
     return dbg.space();
+}
+
+void RPainterPath::addShapeToPainterPath(QPainterPath& pp, QSharedPointer<RShape> shape) {
+    QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
+    if (!line.isNull()) {
+        pp.lineTo(line->endPoint.x, line->endPoint.y);
+        return;
+    }
+
+    QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+    if (!arc.isNull()) {
+        //RBox bb = arc->getBoundingBox();
+        RCircle c(arc->getCenter(), arc->getRadius());
+        RBox bb = c.getBoundingBox();
+
+//        qDebug() << "minimum: " << bb.getMinimum().x << "/" << bb.getMinimum().y;
+//        qDebug() << "size: " << bb.getSize().x << "/" << bb.getSize().y;
+//        qDebug() << "start angle: " << RMath::rad2deg(arc->getStartAngle());
+//        qDebug() << "sweep: " << RMath::rad2deg(arc->getSweep());
+
+        pp.arcTo(bb.getMinimum().x,
+                  bb.getMinimum().y,
+                  bb.getSize().x,
+                  bb.getSize().y,
+                  -RMath::rad2deg(arc->getStartAngle()),
+                  -RMath::rad2deg(arc->getSweep()));
+        return;
+    }
+
+    //qDebug() << "pp: " << pp;
 }

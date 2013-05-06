@@ -1165,6 +1165,33 @@ dir="./core" filename="RPainterPath.h">
   </type>
   <name>isEmpty</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>addShapeToPainterPath</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QPainterPath</name>&amp;</type>
+      <name>pp</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RShape</name>
+        </argument>&gt;</argument_list></name>
+      </type>
+      <name>shape</name>
+    </decl>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl></public>
   <private>private: 
   <decl_stmt>

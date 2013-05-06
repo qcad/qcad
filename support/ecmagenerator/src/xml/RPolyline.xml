@@ -397,17 +397,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="addToPainterPath" cppName="addToPainterPath"
-    specifier="protected" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainterPath &amp;" typeName="QPainterPath"
-        name="pp" isConst="false" />
-        <arg type="QSharedPointer &lt; RShape &gt;"
-        typeName="QSharedPointer &lt; RShape &gt;" name="shape"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="isLineSegment" cppName="isLineSegment"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

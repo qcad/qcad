@@ -27,14 +27,6 @@ if (typeof(PageSettings)=="undefined") {
  * or the default settings.
  */
 function Print(guiAction, document, view) {
-    if (isOfType(guiAction, RDocument)) {
-        qWarning("guiAction is not of type RGuiAction (API change from QCAD 3 Beta 3 to QCAD 3)");
-        File.call(this, undefined);
-        this.document = guiAction;
-        this.view = document;
-        return;
-    }
-
     File.call(this, guiAction);
 
     this.document = document;

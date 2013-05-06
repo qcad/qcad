@@ -23,6 +23,7 @@
 #include "../core_global.h"
 
 #include <QPainterPath>
+#include <QSharedPointer>
 
 #include "RDirected.h"
 #include "RExplodable.h"
@@ -137,7 +138,6 @@ public:
     bool simplify(double angleTolerance = RS::AngleTolerance);
 
 protected:
-    void addToPainterPath(QPainterPath& pp, QSharedPointer<RShape> shape) const;
     bool isLineSegment(int i) const;
 
     void print(QDebug dbg) const;

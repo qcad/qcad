@@ -22,6 +22,7 @@
 #include "RBox.h"
 #include "RCircle.h"
 #include "RLine.h"
+#include "RPainterPath.h"
 #include "RPolyline.h"
 
 /**
@@ -261,40 +262,10 @@ QPainterPath RPolyline::toPainterPath() const {
             break;
         }
         QSharedPointer<RShape> shape = getSegmentAt(i);
-        addToPainterPath(ret, shape);
+        RPainterPath::addShapeToPainterPath(ret, shape);
     }
 
     return ret;
-}
-
-void RPolyline::addToPainterPath(QPainterPath& pp, QSharedPointer<RShape> shape) const {
-    QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
-    if (!line.isNull()) {
-        pp.lineTo(line->endPoint.x, line->endPoint.y);
-        return;
-    }
-
-    QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
-    if (!arc.isNull()) {
-        //RBox bb = arc->getBoundingBox();
-        RCircle c(arc->getCenter(), arc->getRadius());
-        RBox bb = c.getBoundingBox();
-
-//        qDebug() << "minimum: " << bb.getMinimum().x << "/" << bb.getMinimum().y;
-//        qDebug() << "size: " << bb.getSize().x << "/" << bb.getSize().y;
-//        qDebug() << "start angle: " << RMath::rad2deg(arc->getStartAngle());
-//        qDebug() << "sweep: " << RMath::rad2deg(arc->getSweep());
-
-        pp.arcTo(bb.getMinimum().x,
-                  bb.getMinimum().y,
-                  bb.getSize().x,
-                  bb.getSize().y,
-                  -RMath::rad2deg(arc->getStartAngle()),
-                  -RMath::rad2deg(arc->getSweep()));
-        return;
-    }
-
-    qDebug() << "pp: " << pp;
 }
 
 /**

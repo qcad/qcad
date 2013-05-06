@@ -184,6 +184,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, addShapeToPainterPath, "addShapeToPainterPath");
+            
 
     // static properties:
     
@@ -3608,6 +3610,102 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::isEmpty", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::addShapeToPainterPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::addShapeToPainterPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addShapeToPainterPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainterPath */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QSharedPointer < RShape > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPainterPath*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPainterPath*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QPainterPath*.",
+                               context);                    
+                    }
+                    QPainterPath& a0 = *ap0;
+                
+                    // argument is SharedPointer
+                    QSharedPointer < RShape > 
+                    a1;
+
+                    // argument might be a simple pointer:
+                     RShape * o1 = 
+                    qscriptvalue_cast < RShape * > (context->argument(1));
+
+                    if (o1!=NULL) {
+                        a1 =
+                        QSharedPointer < RShape >(o1->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RShape >*
+                        p1;
+
+                        p1 =
+                        qscriptvalue_cast <QSharedPointer < RShape >* > (context->argument(1));
+
+                        if (p1==NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 1 is not of type  RShape .", context);                    
+                        }
+
+                        a1 = *p1;
+
+                           //return REcmaHelper::throwError("RPainterPath: Argument 1 is not of type  RShape .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RShape > 
+                    //a1 =
+                    //QSharedPointer < RShape >(o1->clone());
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPainterPath::
+       addShapeToPainterPath(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addShapeToPainterPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::addShapeToPainterPath", context, engine);
             return result;
         }
          QScriptValue REcmaPainterPath::toString

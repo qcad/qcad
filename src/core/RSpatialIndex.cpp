@@ -112,7 +112,7 @@ QMap<int, QSet<int> > RSpatialIndex::queryContained(const RBox& b,
 }
 
 /**
- * For scripts.
+ * Convenience implementation for scripts.
  */
 QPair<int, int> RSpatialIndex::queryNearestNeighbor(double x, double y, double z) {
     QMap<int, QSet<int> > res = queryNearestNeighbor(1, x, y, z);
