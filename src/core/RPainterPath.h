@@ -22,10 +22,11 @@
 
 #include "core_global.h"
 
-#include <QPainterPath>
-#include <QPen>
 #include <QBrush>
 #include <QFlags>
+#include <QPainterPath>
+#include <QPen>
+#include <QSharedPointer>
 
 #include "RVector.h"
 

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "QPen"
+#include <QPen>
 
 #include "RArc.h"
 #include "RCircle.h"
@@ -441,6 +441,16 @@ void RPainterPath::addShapeToPainterPath(QPainterPath& pp, QSharedPointer<RShape
                   bb.getSize().y,
                   -RMath::rad2deg(arc->getStartAngle()),
                   -RMath::rad2deg(arc->getSweep()));
+        return;
+    }
+
+    QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
+    if (!circle.isNull()) {
+        pp.addEllipse(
+            QPointF(circle->getCenter().x, circle->getCenter().y),
+            circle->getRadius(),
+            circle->getRadius()
+        );
         return;
     }
 
