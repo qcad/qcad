@@ -192,7 +192,7 @@
         isEmpty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        addShapeToPainterPath
+        addShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -176,7 +176,7 @@ public:
     QPainterPath::ElementType getTypeAt(int i) const;
     bool isEmpty() const;
 
-    static void addShapeToPainterPath(QPainterPath& pp, QSharedPointer<RShape> shape);
+    void addShape(QSharedPointer<RShape> shape);
 
 private:
     int zLevel;

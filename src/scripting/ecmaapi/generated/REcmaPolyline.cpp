@@ -3982,11 +3982,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QPainterPath'
-    QPainterPath cppResult =
+    // return type 'RPainterPath'
+    RPainterPath cppResult =
         
                self->toPainterPath();
-        // return type: QPainterPath
+        // return type: RPainterPath
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             

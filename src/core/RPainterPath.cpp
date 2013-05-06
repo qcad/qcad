@@ -21,9 +21,11 @@
 #include "RArc.h"
 #include "RCircle.h"
 #include "RBox.h"
+#include "REllipse.h"
 #include "RLine.h"
 #include "RMath.h"
 #include "RPainterPath.h"
+#include "RPainterPathExporter.h"
 #include "RSpline.h"
 
 RPainterPath::RPainterPath() :
@@ -417,10 +419,10 @@ QDebug operator<<(QDebug dbg, RPainterPath& p) {
     return dbg.space();
 }
 
-void RPainterPath::addShapeToPainterPath(QPainterPath& pp, QSharedPointer<RShape> shape) {
+void RPainterPath::addShape(QSharedPointer<RShape> shape) {
     QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
     if (!line.isNull()) {
-        pp.lineTo(line->endPoint.x, line->endPoint.y);
+        lineTo(line->endPoint.x, line->endPoint.y);
         return;
     }
 
@@ -435,7 +437,7 @@ void RPainterPath::addShapeToPainterPath(QPainterPath& pp, QSharedPointer<RShape
 //        qDebug() << "start angle: " << RMath::rad2deg(arc->getStartAngle());
 //        qDebug() << "sweep: " << RMath::rad2deg(arc->getSweep());
 
-        pp.arcTo(bb.getMinimum().x,
+        arcTo(bb.getMinimum().x,
                   bb.getMinimum().y,
                   bb.getSize().x,
                   bb.getSize().y,
@@ -446,7 +448,7 @@ void RPainterPath::addShapeToPainterPath(QPainterPath& pp, QSharedPointer<RShape
 
     QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
     if (!circle.isNull()) {
-        pp.addEllipse(
+        addEllipse(
             QPointF(circle->getCenter().x, circle->getCenter().y),
             circle->getRadius(),
             circle->getRadius()
@@ -454,5 +456,18 @@ void RPainterPath::addShapeToPainterPath(QPainterPath& pp, QSharedPointer<RShape
         return;
     }
 
-    //qDebug() << "pp: " << pp;
+    QSharedPointer<RSpline> spline = shape.dynamicCast<RSpline>();
+    if (!spline.isNull()) {
+        addSpline(*spline);
+        return;
+    }
+
+    QSharedPointer<REllipse> ellipse = shape.dynamicCast<REllipse>();
+    if (!ellipse.isNull()) {
+        RPainterPathExporter ex;
+        ex.exportEllipse(*ellipse);
+        RPainterPath pp = ex.getPainterPath();
+        addPath(pp);
+        return;
+    }
 }

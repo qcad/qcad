@@ -248,21 +248,21 @@ bool RPolyline::isLogicallyClosed() const {
 /**
  * \return A QPainterPath object that represents this polyline.
  */
-QPainterPath RPolyline::toPainterPath() const {
-    QPainterPath ret;
+RPainterPath RPolyline::toPainterPath() const {
+    RPainterPath ret;
 
     if (vertices.size()<=1) {
         return ret;
     }
 
-    ret.moveTo(vertices.at(0).x, vertices.at(0).y);
+    ret.moveTo(vertices.at(0));
 
     for (int i=0; i<vertices.size(); i++) {
         if (!closed && i==vertices.size()-1) {
             break;
         }
         QSharedPointer<RShape> shape = getSegmentAt(i);
-        RPainterPath::addShapeToPainterPath(ret, shape);
+        ret.addShape(shape);
     }
 
     return ret;

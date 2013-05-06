@@ -25,16 +25,19 @@ dir="./core" filename="RPainterPath.h">
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QBrush&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QFlags&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QPainterPath&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QPen&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QBrush&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QFlags&gt;</cpp:file></cpp:include>
+  <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
@@ -1168,18 +1171,10 @@ dir="./core" filename="RPainterPath.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
-    <name>static</name>
     <name>void</name>
   </type>
-  <name>addShapeToPainterPath</name>
+  <name>addShape</name>
   <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainterPath</name>&amp;</type>
-      <name>pp</name>
-    </decl>
-  </param>, 
   <param>
     <decl>
       <type>
@@ -1191,8 +1186,7 @@ dir="./core" filename="RPainterPath.h">
       </type>
       <name>shape</name>
     </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
+  </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>

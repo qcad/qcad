@@ -25,9 +25,6 @@ dir="./core/math" filename="RPolyline.h">
   <cpp:file>"../core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPainterPath&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -35,6 +32,9 @@ dir="./core/math" filename="RPolyline.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RExplodable.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RShape.h"</cpp:file></cpp:include>
@@ -903,7 +903,7 @@ dir="./core/math" filename="RPolyline.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>QPainterPath</name>
+    <name>RPainterPath</name>
   </type>
   <name>toPainterPath</name>
   <parameter_list>()</parameter_list>

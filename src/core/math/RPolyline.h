@@ -22,11 +22,11 @@
 
 #include "../core_global.h"
 
-#include <QPainterPath>
 #include <QSharedPointer>
 
 #include "RDirected.h"
 #include "RExplodable.h"
+#include "RPainterPath.h"
 #include "RShape.h"
 #include "RVector.h"
 
@@ -133,7 +133,7 @@ public:
 
     static bool isStraight(double bulge);
 
-    QPainterPath toPainterPath() const;
+    RPainterPath toPainterPath() const;
 
     bool simplify(double angleTolerance = RS::AngleTolerance);
 

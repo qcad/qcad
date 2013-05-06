@@ -332,7 +332,6 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         if (saveContents) {
             if (document) {
                 // save key / value pair to document:
-                qDebug('variable: ', key, ':', value);
                 document.setVariable(key, value);
             } else if (map) {
                 // save key / value pair to map:

@@ -387,7 +387,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="toPainterPath" cppName="toPainterPath"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QPainterPath" isPureVirtual="false" />
+      <variant returnType="RPainterPath" isPureVirtual="false" />
     </method>
     <method name="simplify" cppName="simplify" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

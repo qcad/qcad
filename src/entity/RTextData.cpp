@@ -395,6 +395,12 @@ QList<QSharedPointer<RShape> > RTextData::getExploded() const {
     QList<RPainterPath> paths = getPainterPaths();
     for (int i=0; i<paths.length(); i++) {
         RPainterPath path = paths[i];
+
+        // ignore bounding box rectangle:
+        if (path.getFeatureSize()<0.0) {
+            continue;
+        }
+
         shapes.append(path.getShapes());
     }
 

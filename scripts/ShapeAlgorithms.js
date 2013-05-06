@@ -530,7 +530,7 @@ ShapeAlgorithms.createArcFrom3Points = function(point1, point2, point3) {
  */
 ShapeAlgorithms.approximateEllipse = function(ellipse, segments) {
     ShapeAlgorithms.error = undefined;
-    segments = segments/4;
+    segments = Math.round(segments/4);
 
     if (segments<=0) {
         ShapeAlgorithms.error = 

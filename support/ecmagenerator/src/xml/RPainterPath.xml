@@ -387,12 +387,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="addShapeToPainterPath"
-    cppName="addShapeToPainterPath" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+    <method name="addShape" cppName="addShape" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainterPath &amp;" typeName="QPainterPath"
-        name="pp" isConst="false" />
         <arg type="QSharedPointer &lt; RShape &gt;"
         typeName="QSharedPointer &lt; RShape &gt;" name="shape"
         isConst="false" />
