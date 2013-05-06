@@ -32,6 +32,7 @@ Makefile.Release
 # MSVC:
 _CL_*
 *.tmp
+*.pdb
 
 # Output folders:
 debug
