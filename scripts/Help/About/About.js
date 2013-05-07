@@ -197,7 +197,8 @@ About.prototype.initAboutScripts = function(webView) {
             + "<h1>%1</h1>".arg(qsTr("Script Add-Ons"))
             + "<hr/>";
 
-    var addOns = AddOn.getAddOns();
+    //var addOns = AddOn.getAddOns();
+    var addOns = AddOn.addOns;
     var numAddOns = addOns.length;
 
     if (numAddOns===0) {
