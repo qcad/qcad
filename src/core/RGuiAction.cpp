@@ -429,7 +429,13 @@ void RGuiAction::setCommands(const QStringList& cmds) {
  */
 void RGuiAction::setScriptFile(const QString& sf, bool isSecondary) {
     QDir dir(".");
-    QString relSf = dir.relativeFilePath(sf);
+    QString relSf;
+    if (sf.startsWith(":")) {
+        relSf = sf;
+    }
+    else {
+        relSf = dir.relativeFilePath(sf);
+    }
     scriptFile = relSf;
     setObjectName(QFileInfo(sf).completeBaseName() + "Action");
 
@@ -534,7 +540,13 @@ bool RGuiAction::triggerByScriptFile(const QString& scriptFile) {
  */
 RGuiAction* RGuiAction::getByScriptFile(const QString& scriptFile) {
     QDir dir(".");
-    QString relFilePath = dir.relativeFilePath(scriptFile);
+    QString relFilePath;
+    if (scriptFile.startsWith(":")) {
+        relFilePath = scriptFile;
+    }
+    else {
+        relFilePath = dir.relativeFilePath(scriptFile);
+    }
 
     if (actionsByScriptFile.count(relFilePath) != 0
             && actionsByScriptFile[relFilePath] != NULL) {

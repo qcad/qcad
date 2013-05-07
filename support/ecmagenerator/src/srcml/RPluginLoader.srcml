@@ -89,6 +89,27 @@ dir="./core" filename="RPluginLoader.h">
       </call></expr>
     </argument>)</argument_list>
   </decl>;</decl_stmt>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>postInitPlugins</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>postInitPlugin</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QObject</name>*</type>
+      <name>plugin</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>

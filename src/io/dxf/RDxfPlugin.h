@@ -16,6 +16,7 @@ class RDxfPlugin : public QObject, public RPluginInterface
 
 public:
     virtual bool init();
+    virtual void postInit() {}
     virtual void initScriptExtensions(QScriptEngine&) {}
     virtual RPluginInfo getPluginInfo();
 };

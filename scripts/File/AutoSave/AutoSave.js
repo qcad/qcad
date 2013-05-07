@@ -118,7 +118,6 @@ AutoSave.autoSave = function() {
     qDebug("autosaving [" + AutoSave.getTimestamp() + "]: file: ", bakFileName);
 
     var fileVersion = "R2012 DXF";
-    qDebug("fileVersion: ", fileVersion);
 
     EAction.handleUserMessage("[" + AutoSave.getTimestamp() + "] "
         + qsTr("Autosaving to:") + " "

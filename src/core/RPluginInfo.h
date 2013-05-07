@@ -33,7 +33,9 @@
  */
 class QCADCORE_EXPORT RPluginInfo {
 public:
-    RPluginInfo() {}
+    RPluginInfo() {
+        qtVersionString = qVersion();
+    }
 
     QString getFileName() const {
         return fileName;
@@ -61,6 +63,10 @@ public:
 
     QString getVersionString() const {
         return versionString;
+    }
+
+    QString getQtVersionString() const {
+        return qtVersionString;
     }
 
     void setVersionString(const QString& vs) {
@@ -96,6 +102,7 @@ private:
     QString aboutString;
     QString description;
     QString versionString;
+    QString qtVersionString;
     QString errorString;
     QString license;
     QString url;

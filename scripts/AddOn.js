@@ -417,16 +417,23 @@ AddOn.getParentAddOn = function(addOns, addOn) {
 
 /**
  * \return Array of all AddOn objects found.
+ * \param rec True for recursive calls
  */
-AddOn.getAddOns = function(dir, ignores) {
+AddOn.getAddOns = function(dir) {
+    var topCall = isNull(dir);
+    if (topCall && !isNull(AddOn.addOns)) {
+        // return cached list (TODO: breaks app preferences on second call):
+        //return AddOn.addOns;
+    }
+
     var fileMenuList, i, k;
-    
+
     var addOns = new Array();
     var dirFilter = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs);
     var sortFlags = new QDir.SortFlags(QDir.NoSort);
     
     // first call without recursion:
-    if (isNull(dir)) {
+    if (topCall) {
         var args = QCoreApplication.arguments();
 
         dir = "scripts";
@@ -450,7 +457,9 @@ AddOn.getAddOns = function(dir, ignores) {
                 new QFileInfo("scripts/Window"),
                 new QFileInfo("scripts/Widgets"),
                 new QFileInfo("scripts/Examples"),
-                new QFileInfo("scripts/Local")
+                new QFileInfo("scripts/Local"),
+                new QFileInfo("scripts/Help"),
+                new QFileInfo(":scripts")
             ];
                 
         // append directories not in the list above:
@@ -489,7 +498,12 @@ AddOn.getAddOns = function(dir, ignores) {
             }
         }
 
-        addOns = addOns.concat(AddOn.getAddOns(dirInfo.filePath(), ignores));
+        addOns = addOns.concat(AddOn.getAddOns(dirInfo.filePath()));
+    }
+
+    if (topCall) {
+        // cache:
+        AddOn.addOns = addOns;
     }
 
     return addOns;

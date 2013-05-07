@@ -536,8 +536,8 @@ EAction.getStorage = function() {
 };
 
 EAction.prototype.getDocumentInterface = function() {
-    if (!isNull(global.documentInterface)) {
-        return global.documentInterface;
+    if (!isNull(global.gDocumentInterface)) {
+        return global.gDocumentInterface;
     }
 
     return RAction.prototype.getDocumentInterface.call(this);
@@ -547,8 +547,8 @@ EAction.prototype.getDocumentInterface = function() {
  * \return The current document interface or null.
  */
 EAction.getDocumentInterface = function() {
-    if (!isNull(global.documentInterface)) {
-        return global.documentInterface;
+    if (!isNull(global.gDocumentInterface)) {
+        return global.gDocumentInterface;
     }
 
     var appWin = EAction.getMainWindow();
@@ -563,8 +563,8 @@ EAction.getDocumentInterface = function() {
  * \return The current main window.
  */
 EAction.getMainWindow = function() {
-    if (!isNull(global.mainWindow)) {
-        return global.mainWindow;
+    if (!isNull(global.gMainWindow)) {
+        return global.gMainWindow;
     }
 
     return RMainWindowQt.getMainWindow();

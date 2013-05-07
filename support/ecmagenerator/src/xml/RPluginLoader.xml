@@ -10,6 +10,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="postInitPlugins" cppName="postInitPlugins"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="postInitPlugin" cppName="postInitPlugin"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="plugin"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="countPlugins" cppName="countPlugins"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

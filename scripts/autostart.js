@@ -685,6 +685,8 @@ function main() {
     var action = RGuiAction.getByScriptFile("scripts/View/ToggleStatusBar/ToggleStatusBar.js");
     action.setChecked(statusBar.visible);
 
+    RPluginLoader.postInitPlugins();
+
     if (!RSettings.hasQuitFlag()) {
         // start and enter the main application loop:
         QCoreApplication.exec();

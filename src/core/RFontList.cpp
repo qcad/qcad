@@ -25,8 +25,6 @@ RResourceList<RFont> RFontList::res;
  * objects, one for each font that could be found.
  */
 void RFontList::init() {
-    //res.init();
-
     QStringList fontFileList = RS::getFontList();
 
     for (int i=0; i<fontFileList.size(); i++) {

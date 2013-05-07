@@ -59,6 +59,10 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, loadPlugins, "loadPlugins");
             
+            REcmaHelper::registerFunction(&engine, &ctor, postInitPlugins, "postInitPlugins");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, postInitPlugin, "postInitPlugin");
+            
             REcmaHelper::registerFunction(&engine, &ctor, countPlugins, "countPlugins");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPluginInfo, "getPluginInfo");
@@ -187,6 +191,88 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginLoader::loadPlugins", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginLoader::postInitPlugins
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginLoader::postInitPlugins", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginLoader::postInitPlugins";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPluginLoader::
+       postInitPlugins();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginLoader.postInitPlugins().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginLoader::postInitPlugins", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginLoader::postInitPlugin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginLoader::postInitPlugin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginLoader::postInitPlugin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QObject * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPluginLoader::
+       postInitPlugin(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginLoader.postInitPlugin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginLoader::postInitPlugin", context, engine);
             return result;
         }
          QScriptValue

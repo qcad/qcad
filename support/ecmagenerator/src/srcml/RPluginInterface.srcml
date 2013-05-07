@@ -66,6 +66,14 @@ the GNU General Public License * along with QCAD. */</comment>
       <name>virtual</name>
       <name>void</name>
     </type>
+    <name>postInit</name>
+    <parameter_list>()</parameter_list>
+    <specifier>= 0</specifier>;</function_decl>
+    <function_decl>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
     <name>initScriptExtensions</name>
     <parameter_list>(
     <param>

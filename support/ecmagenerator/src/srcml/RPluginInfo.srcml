@@ -40,7 +40,14 @@ dir="./core" filename="RPluginInfo.h">
   <constructor>
     <name>RPluginInfo</name>
     <parameter_list>()</parameter_list>
-    <block>{}</block>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>qtVersionString</name>= 
+    <call>
+      <name>qVersion</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</expr_stmt>}</block>
   </constructor>
   <function>
     <type>
@@ -152,6 +159,19 @@ dir="./core" filename="RPluginInfo.h">
     <return>return 
     <expr>
       <name>versionString</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getQtVersionString</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>qtVersionString</name>
     </expr>;</return>}</block>
   </function>
   <function>
@@ -301,6 +321,13 @@ dir="./core" filename="RPluginInfo.h">
       <name>QString</name>
     </type>
     <name>versionString</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>qtVersionString</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

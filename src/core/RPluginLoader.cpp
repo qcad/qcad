@@ -81,9 +81,35 @@ void RPluginLoader::loadPlugin(QObject* plugin, const QString& fileName, const Q
         info.setFileName(fileName);
     }
 
-    //if (!info.getFileName().isEmpty()) {
-        pluginsInfo.append(info);
-    //}
+    pluginsInfo.append(info);
+}
+
+void RPluginLoader::postInitPlugins() {
+    QString pluginsPath = getPluginsPath();
+    if (pluginsPath.isNull()) {
+        return;
+    }
+
+    QDir pluginsDir = QDir(pluginsPath);
+
+    foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
+        QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
+        QObject* plugin = loader.instance();
+        postInitPlugin(plugin);
+    }
+
+    QObjectList staticPlugins = QPluginLoader::staticInstances();
+    for (int i=0; i<staticPlugins.size(); i++) {
+        QObject* plugin = staticPlugins[i];
+        postInitPlugin(plugin);
+    }
+}
+
+void RPluginLoader::postInitPlugin(QObject* plugin) {
+    RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+    if (p) {
+        p->postInit();
+    }
 }
 
 void RPluginLoader::initScriptExtensions(QScriptEngine& engine) {

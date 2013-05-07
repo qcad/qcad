@@ -64,6 +64,9 @@
         getVersionString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getQtVersionString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setVersionString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -25,15 +25,9 @@ include("sprintf.js");
 
 if (typeof(global)==="undefined") {
     global = this;
-    global.mainWindow = undefined;
-    global.documentInterface = undefined;
+    global.gMainWindow = undefined;
+    global.gDocumentInterface = undefined;
 }
-
-//if (isNull(Global)) {
-//    Global = function() {};
-//    Global.mainWindow = undefined;
-//    Global.documentInterface = undefined;
-//}
 
 /**
  * \param file File path argument given on command line (might be absolute or relative).
@@ -1382,12 +1376,12 @@ function initFontComboBox(comboBox) {
 }
 
 function setMainWindow(w) {
-    global.mainWindow = w;
+    global.gMainWindow = w;
 }
 
 function getMainWindow() {
-    if (!isNull(global.mainWindow)) {
-        return global.mainWindow;
+    if (!isNull(global.gMainWindow)) {
+        return global.gMainWindow;
     }
 
     return RMainWindowQt.getMainWindow();

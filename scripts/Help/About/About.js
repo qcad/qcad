@@ -135,6 +135,10 @@ About.prototype.initAboutPlugins = function(webView) {
             }
             html += this.getTableRow(qsTr("Version:"), text);
 
+            // Qt plugin version:
+            text = pluginInfo.getQtVersionString();
+            html += this.getTableRow(qsTr("Qt Version:"), text);
+
             // plugin license:
             text = pluginInfo.getLicense();
             if (text.length===0) {
@@ -207,7 +211,14 @@ About.prototype.initAboutScripts = function(webView) {
         var sorted = new Array();
         for (i=0; i<numAddOns; i++) {
             var addOn = addOns[i];
-            sorted.push([addOn.getClassName(), scriptsDir.relativeFilePath(addOn.getPath())]);
+            var path = addOn.getPath();
+            if (path.startsWith(":")) {
+                path = path.substring(1);
+            }
+            else {
+                path = scriptsDir.relativeFilePath(path);
+            }
+            sorted.push([addOn.getClassName(), path]);
         }
 
         sorted = sorted.sort(function(a,b) { return a[1].localeCompare(b[1]); });

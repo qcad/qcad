@@ -37,6 +37,7 @@ public:
     virtual ~RPluginInterface() {}
 
     virtual bool init() = 0;
+    virtual void postInit() = 0;
     virtual void initScriptExtensions(QScriptEngine& engine) = 0;
 
     virtual RPluginInfo getPluginInfo() = 0;
