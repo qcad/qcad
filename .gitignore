@@ -33,6 +33,7 @@ Makefile.Release
 _CL_*
 *.tmp
 *.pdb
+*.ilk
 
 # Output folders:
 debug

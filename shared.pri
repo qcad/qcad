@@ -9,6 +9,17 @@ CONFIG(debug, debug|release) {
     ROUTDIR = release
 }
 
+CONFIG(plugin, plugin) {
+    CONFIG(debug, debug|release) {
+        #win32 {
+        #    TARGET = $${TARGET}d
+        #}
+        #else {
+            TARGET = $${TARGET}_debug
+        #}
+    }
+}
+
 r_no_opennurbs {
     DEFINES += R_NO_OPENNURBS
 }

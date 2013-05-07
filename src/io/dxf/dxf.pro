@@ -1,4 +1,7 @@
+CONFIG += plugin
+TARGET = qcaddxf
 include( ../../../shared.pri )
+
 HEADERS = \
     RDxfExporter.h \
     RDxfExporterFactory.h \
@@ -12,9 +15,7 @@ SOURCES = \
     RDxfImporterFactory.cpp \
     RDxfPlugin.cpp
 TEMPLATE = lib
-CONFIG += plugin
 DEFINES += QCADDXF_LIBRARY
-TARGET = qcaddxf
 DESTDIR = ../../../plugins
 LIBS += -lqcadcore -lqcadentity -ldxflib -lqcadoperations
 

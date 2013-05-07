@@ -37,6 +37,7 @@ void RPluginLoader::loadPlugins() {
     QDir pluginsDir = QDir(pluginsPath);
 
     QStringList nameFilter;
+
 #if defined(Q_OS_WIN)
     nameFilter.append("*.dll");
 #else
@@ -48,6 +49,18 @@ void RPluginLoader::loadPlugins() {
 #endif
 
     foreach (QString fileName, pluginsDir.entryList(nameFilter, QDir::Files)) {
+        if (fileName.contains("_debug.")) {
+#ifndef QT_DEBUG
+            // debug plugin but built in release mode: skip:
+            continue;
+#endif
+        }
+        else {
+#ifdef QT_DEBUG
+            // release plugin but built in debug mode: skip:
+            continue;
+#endif
+        }
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
         QObject* plugin = loader.instance();
         loadPlugin(plugin, pluginsDir.absoluteFilePath(fileName), loader.errorString());

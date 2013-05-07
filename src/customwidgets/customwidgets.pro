@@ -1,4 +1,7 @@
+TARGET = qcadcustomwidgets
+CONFIG += designer plugin
 include( ../../shared.pri )
+
 SOURCES = RShortcutLineEditPlugin.cpp \
     RCharacterWidgetPlugin.cpp \
     RWebViewPlugin.cpp \
@@ -30,8 +33,6 @@ HEADERS = RShortcutLineEditPlugin.h \
     RGraphicsViewQtPlugin.h \
     RListViewPlugin.h
 TEMPLATE = lib
-CONFIG += designer plugin
 LIBS += -lqcadgui -lqcadcore
-TARGET = qcadcustomwidgets
 DESTDIR = ../../plugins/designer
 OTHER_FILES += customwidgets.dox
