@@ -24,7 +24,7 @@ RPluginInfo RDxfPlugin::getPluginInfo() {
         )
     );
     ret.setLicense("GPLv2");
-    ret.setUrl("http://www.ribbonsoft.com");
+    ret.setUrl("http://www.qcad.org");
     return ret;
 }
 
