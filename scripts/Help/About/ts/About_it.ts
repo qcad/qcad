@@ -13,55 +13,65 @@
         <translation>Informazioni su %1</translation>
     </message>
     <message>
-        <location filename="../About.js" line="86"/>
+        <location filename="../About.js" line="99"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location filename="../About.js" line="108"/>
+        <location filename="../About.js" line="121"/>
         <source>No information available</source>
         <translation>Nessuna informazione disponibile</translation>
     </message>
     <message>
-        <location filename="../About.js" line="110"/>
+        <location filename="../About.js" line="123"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="115"/>
+        <location filename="../About.js" line="128"/>
         <source>Description:</source>
         <translation>Descrizione:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="121"/>
-        <location filename="../About.js" line="128"/>
+        <location filename="../About.js" line="134"/>
+        <location filename="../About.js" line="145"/>
         <source>Unknown</source>
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../About.js" line="123"/>
+        <location filename="../About.js" line="136"/>
         <source>Version:</source>
         <translation>Versione:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="130"/>
+        <location filename="../About.js" line="140"/>
+        <source>Qt Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../About.js" line="147"/>
         <source>License:</source>
         <translation>Licenza:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="144"/>
+        <location filename="../About.js" line="161"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="157"/>
+        <location filename="../About.js" line="174"/>
         <source>File:</source>
         <translation>File:</translation>
     </message>
     <message>
-        <location filename="../About.js" line="163"/>
+        <location filename="../About.js" line="180"/>
         <source>Error:</source>
         <translation>Errore:</translation>
+    </message>
+    <message>
+        <location filename="../About.js" line="197"/>
+        <source>Script Add-Ons</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="2"/>
@@ -80,6 +90,7 @@
     <message>
         <location filename="../About.ui" line="97"/>
         <location filename="../About.ui" line="122"/>
+        <location filename="../About.ui" line="147"/>
         <source>about:blank</source>
         <translation>about:blank</translation>
     </message>
@@ -87,6 +98,11 @@
         <location filename="../About.ui" line="106"/>
         <source>About Plugins</source>
         <translation>Informazioni sui plugin</translation>
+    </message>
+    <message>
+        <location filename="../About.ui" line="131"/>
+        <source>About Script Add-Ons</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -4,13 +4,13 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="43"/>
+        <location filename="../DefaultNavigation.js" line="46"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Graphics View</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="43"/>
+        <location filename="../DefaultNavigation.js" line="46"/>
         <source>Navigation</source>
         <translatorcomment>--google--
 Pasek do nawigacji
@@ -18,13 +18,13 @@ Pasek do nawigacji
         <translation type="unfinished">Nawigacja</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="48"/>
+        <location filename="../DefaultNavigation.js" line="51"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zoom (Wheel Mouse)</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="49"/>
+        <location filename="../DefaultNavigation.js" line="52"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Scroll (Trackpad Multi-Touch Mouse)</translation>

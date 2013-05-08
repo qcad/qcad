@@ -33,7 +33,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation type="unfinished">Zachowaj jako</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="93"/>
+        <location filename="../SaveAs.js" line="95"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

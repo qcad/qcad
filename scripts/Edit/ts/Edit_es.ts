@@ -14,12 +14,12 @@
         <translation>Preferencias del dibujo</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="302"/>
+        <location filename="../AbstractPreferences.js" line="291"/>
         <source>Restart required</source>
         <translation>Se requiere reiniciar</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="305"/>
+        <location filename="../AbstractPreferences.js" line="294"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>Por favor, reiniciar QCAD

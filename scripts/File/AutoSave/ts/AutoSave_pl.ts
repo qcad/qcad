@@ -54,46 +54,46 @@ Do you wish to recover them?</source>
         <translation type="unfinished">Odzyskać pliki?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="192"/>
+        <location filename="../AutoSave.js" line="196"/>
         <source>Recovered</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odzyskane</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="239"/>
+        <location filename="../AutoSave.js" line="243"/>
         <source>Recover File?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odzyskaj plik?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="240"/>
+        <location filename="../AutoSave.js" line="244"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plik kopii zapasowej o &quot;autozapis&amp;quot; dla&apos;&amp;#39; istnieje. Czy chcesz je odzyskać?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="265"/>
-        <location filename="../AutoSave.js" line="276"/>
-        <location filename="../AutoSave.js" line="281"/>
+        <location filename="../AutoSave.js" line="269"/>
+        <location filename="../AutoSave.js" line="280"/>
+        <location filename="../AutoSave.js" line="285"/>
         <source>Cannot rename file:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie można zmienić nazwy pliku:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="268"/>
+        <location filename="../AutoSave.js" line="272"/>
         <source>Moved autosave backup file to:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przeniesiony plik kopii autozapisu do:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="284"/>
+        <location filename="../AutoSave.js" line="288"/>
         <source>Moved original file to:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przeniesiony oryginalnego pliku do:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="300"/>
+        <location filename="../AutoSave.js" line="304"/>
         <source>Cannot remove file:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie można usunąć plik:</translation>

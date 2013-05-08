@@ -89,7 +89,7 @@ Selecione Entidades singulares</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="303"/>
+        <location filename="../Viewport.js" line="314"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -99,7 +99,7 @@ Posicionamento na grade</translatorcomment>
         <translation>Grelha</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="306"/>
+        <location filename="../Viewport.js" line="317"/>
         <source>End</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -108,7 +108,7 @@ Indique o ângulo de fim ou [Ângulo/Comprimento da corda]</translatorcomment>
         <translation>Fim</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="309"/>
+        <location filename="../Viewport.js" line="320"/>
         <source>On Entity</source>
         <translatorcomment>--exact match--
 --file: SnapOnEntity_pt.ts--
@@ -118,7 +118,7 @@ Ponto de divisão não está contido na entidade.</translatorcomment>
         <translation>Na entidade</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="312"/>
+        <location filename="../Viewport.js" line="323"/>
         <source>Perpendicular</source>
         <translatorcomment>--exact match--
 --file: SnapPerpendicular_pt.ts--
@@ -128,7 +128,7 @@ Perpendicular
         <translation>Perpendicular</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="315"/>
+        <location filename="../Viewport.js" line="326"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -138,7 +138,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="318"/>
+        <location filename="../Viewport.js" line="329"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -148,7 +148,7 @@ Salta aos pontos de meio</translatorcomment>
         <translation>Meio</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="321"/>
+        <location filename="../Viewport.js" line="332"/>
         <source>Intersection</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -157,7 +157,7 @@ Selecione o primeiro ponto da linha de intersecção</translatorcomment>
         <translation>Intersecção</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="324"/>
+        <location filename="../Viewport.js" line="335"/>
         <source>Reference</source>
         <translatorcomment>--exact match--
 --file: SnapReference_pt.ts--

@@ -19,54 +19,73 @@
         <translation>Le fichier &apos;%1&apos; existe déjà. Est-ce que vous souhaitez le remplacer?</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="93"/>
+        <location filename="../Save.js" line="92"/>
+        <location filename="../Save.js" line="101"/>
+        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Save.js" line="98"/>
         <source>File Format Version Not Recommended</source>
         <translation>Version format de fichier non recommandé</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="94"/>
+        <location filename="../Save.js" line="99"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
         <translation>La version du format de fichier que vous utilisez n&apos;est pas recommandé : &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="95"/>
+        <location filename="../Save.js" line="100"/>
         <source>All black entities and layers will be saved as white.</source>
         <translation>Toutes les entités et les calques noires seront enregistrés en blanc.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="96"/>
-        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color. Proceed?</source>
-        <translation>Toutes les couleurs personnalisées seront &apos;arrondi&apos; à la couleur la plus proche fixe. Procéder?</translation>
+        <location filename="../Save.js" line="101"/>
+        <source>Proceed?</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Save.js" line="111"/>
+        <location filename="../Save.js" line="143"/>
+        <source>Saved drawing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Save.js" line="145"/>
+        <source>Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color. Proceed?</source>
+        <translation type="obsolete">Toutes les couleurs personnalisées seront &apos;arrondi&apos; à la couleur la plus proche fixe. Procéder?</translation>
+    </message>
+    <message>
+        <location filename="../Save.js" line="117"/>
         <source>Saving...</source>
         <translation>Enregistrement...</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="114"/>
+        <location filename="../Save.js" line="120"/>
         <source>Saving to file format version &apos;%1&apos;.</source>
         <translation>Enregistrement de déposer la version &apos;%1&apos; de format.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="115"/>
+        <location filename="../Save.js" line="121"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>Entités et les couches noires sont enregistrés en tant que blanc.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="116"/>
+        <location filename="../Save.js" line="122"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Les couleurs personnalisées sont &apos;arrondies&apos; à la couleur la plus proche fixe.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="122"/>
+        <location filename="../Save.js" line="128"/>
         <source>File %1 has not been saved.</source>
         <translation>Fichier %1 n&apos;a pas été sauvé.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="137"/>
         <source>Saved drawing: %1</source>
-        <translation>Dessin enregistré : %1</translation>
+        <translation type="obsolete">Dessin enregistré : %1</translation>
     </message>
     <message>
         <location filename="../SaveInit.js" line="2"/>

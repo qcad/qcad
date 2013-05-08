@@ -443,6 +443,39 @@ Colores
     </message>
 </context>
 <context>
+    <name>RLayer</name>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="48"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="49"/>
+        <source>Frozen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="50"/>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="51"/>
+        <source>Color</source>
+        <translation type="unfinished">Color</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="52"/>
+        <source>Linetype</source>
+        <translation type="unfinished">Tipo de línea</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="53"/>
+        <source>Lineweight</source>
+        <translation type="unfinished">Grosor de línea</translation>
+    </message>
+</context>
+<context>
     <name>RLinetype</name>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="46"/>

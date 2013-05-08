@@ -8,5 +8,15 @@
         <source>&amp;Auto</source>
         <translation>&amp;Automatico</translation>
     </message>
+    <message>
+        <location filename="../SnapAuto.js" line="29"/>
+        <source>Snap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SnapAuto.js" line="29"/>
+        <source>Auto Snap</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

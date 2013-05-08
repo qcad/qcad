@@ -226,7 +226,8 @@ HEADERS = \
     math/RVector.h
 TEMPLATE = lib
 CONFIG += plugin
-TARGET = qcadcore
+NAME = qcadcore
+TARGET = $${NAME}
 RESOURCES = resources/core.qrc
 OTHER_FILES += core.dox math/math.dox
 DEFINES += QCADCORE_LIBRARY

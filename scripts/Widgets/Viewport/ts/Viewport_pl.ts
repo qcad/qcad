@@ -88,7 +88,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="303"/>
+        <location filename="../Viewport.js" line="314"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -98,7 +98,7 @@ Pozycjonowanie siatki</translatorcomment>
         <translation type="unfinished">Siatka</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="306"/>
+        <location filename="../Viewport.js" line="317"/>
         <source>End</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -107,7 +107,7 @@ Wskaż kąt końcowy lub [kąt/długość cięciwy]</translatorcomment>
         <translation type="unfinished">End</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="309"/>
+        <location filename="../Viewport.js" line="320"/>
         <source>On Entity</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -117,13 +117,13 @@ Punkt cięcia nie jest na obiekcie.</translatorcomment>
         <translation type="unfinished">Na obiekcie</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="312"/>
+        <location filename="../Viewport.js" line="323"/>
         <source>Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Prostopadły</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="315"/>
+        <location filename="../Viewport.js" line="326"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -132,7 +132,7 @@ Wskaż środek
         <translation type="unfinished">Wyśrodkuj</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="318"/>
+        <location filename="../Viewport.js" line="329"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -142,7 +142,7 @@ Przyciągaj do punktów pośrednich</translatorcomment>
         <translation type="unfinished">Środek</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="321"/>
+        <location filename="../Viewport.js" line="332"/>
         <source>Intersection</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -151,7 +151,7 @@ Wybierz pierwszy punkt linii przecinającej</translatorcomment>
         <translation type="unfinished">Przecięcie</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="324"/>
+        <location filename="../Viewport.js" line="335"/>
         <source>Reference</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--

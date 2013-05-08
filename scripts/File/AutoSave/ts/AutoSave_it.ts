@@ -61,41 +61,41 @@ Do you wish to recover them?</source>
 Vuoi recuperarli?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="192"/>
+        <location filename="../AutoSave.js" line="196"/>
         <source>Recovered</source>
         <translation>Recuperati</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="239"/>
+        <location filename="../AutoSave.js" line="243"/>
         <source>Recover File?</source>
         <translation>Recuperare file?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="240"/>
+        <location filename="../AutoSave.js" line="244"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translation>Un file di backup &apos;autosave&apos; per &apos;%1&apos; è stato trovato.
 Vuoi recuperarlo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="265"/>
-        <location filename="../AutoSave.js" line="276"/>
-        <location filename="../AutoSave.js" line="281"/>
+        <location filename="../AutoSave.js" line="269"/>
+        <location filename="../AutoSave.js" line="280"/>
+        <location filename="../AutoSave.js" line="285"/>
         <source>Cannot rename file:</source>
         <translation>Impossibile rinominare il file:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="268"/>
+        <location filename="../AutoSave.js" line="272"/>
         <source>Moved autosave backup file to:</source>
         <translation>Ribattezzata file di salvataggio automatico:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="284"/>
+        <location filename="../AutoSave.js" line="288"/>
         <source>Moved original file to:</source>
         <translation>Spostato file originale a:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="300"/>
+        <location filename="../AutoSave.js" line="304"/>
         <source>Cannot remove file:</source>
         <translation>Impossibile eliminare il file:</translation>
     </message>

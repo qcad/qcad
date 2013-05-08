@@ -61,13 +61,28 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation type="unfinished">Proszę sprawdzić prawa dostępu, format pliku i rozszerzenie pliku.</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="194"/>
+        <location filename="../NewFile.js" line="110"/>
+        <source>File is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="119"/>
+        <source>Opened drawing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="121"/>
+        <source>Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="202"/>
         <source>Untitled %1</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Untitled</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="206"/>
+        <location filename="../NewFile.js" line="214"/>
         <source>read-only</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -77,13 +92,13 @@ Tylko do odczytu</translatorcomment>
         <translation type="unfinished">Tylko do odczytu</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="238"/>
+        <location filename="../NewFile.js" line="246"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Czy chcesz zapisać zmiany wprowadzone w &lt;br&gt; dokument?&apos;&amp;#39;</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="241"/>
+        <location filename="../NewFile.js" line="249"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Twoje zmiany zostaną utracone, jeśli nie je zapisać.</translation>

@@ -89,43 +89,43 @@ Points uniques</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="303"/>
+        <location filename="../Viewport.js" line="314"/>
         <source>Grid</source>
         <translation>Grille</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="306"/>
+        <location filename="../Viewport.js" line="317"/>
         <source>End</source>
         <translation>Fin</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="309"/>
+        <location filename="../Viewport.js" line="320"/>
         <source>On Entity</source>
         <translation>A l&apos;entité</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="312"/>
+        <location filename="../Viewport.js" line="323"/>
         <source>Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Perpendiculairement</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="315"/>
+        <location filename="../Viewport.js" line="326"/>
         <source>Center</source>
         <translation>Centre</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="318"/>
+        <location filename="../Viewport.js" line="329"/>
         <source>Middle</source>
         <translation>Milieu</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="321"/>
+        <location filename="../Viewport.js" line="332"/>
         <source>Intersection</source>
         <translation>Intersection</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="324"/>
+        <location filename="../Viewport.js" line="335"/>
         <source>Reference</source>
         <translation>Référence</translation>
     </message>

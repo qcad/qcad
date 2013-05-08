@@ -49,22 +49,37 @@
         <translation>S&apos;il vous plaît vérifiez vos droits d&apos;accès, le format de fichier et l&apos;extension de fichier.</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="194"/>
+        <location filename="../NewFile.js" line="110"/>
+        <source>File is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="119"/>
+        <source>Opened drawing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="121"/>
+        <source>Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="202"/>
         <source>Untitled %1</source>
         <translation>Sans titre %1</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="206"/>
+        <location filename="../NewFile.js" line="214"/>
         <source>read-only</source>
         <translation>Lecture seule</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="238"/>
+        <location filename="../NewFile.js" line="246"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Voulez-vous enregistrer les modifications que vous avez faites&lt;br&gt;dans le document &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="241"/>
+        <location filename="../NewFile.js" line="249"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
         <translation>Vos modifications seront perdues si vous ne les enregistrez pas.</translation>
     </message>

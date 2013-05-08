@@ -10,13 +10,13 @@
         <translation>Nenhum limite selecionado.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="84"/>
+        <location filename="../Hatch.js" line="85"/>
         <source>Loop not closed at point %1/%2.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Contorno não fechado na ponta %1/%2.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="149"/>
+        <location filename="../Hatch.js" line="150"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cada entidade de contorno deve ser uma linha, arco, círculo, elipse arco, elipse, polilinha ou spline. Encontrados:</translation>

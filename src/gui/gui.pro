@@ -50,7 +50,8 @@ HEADERS += \
 TEMPLATE = lib
 CONFIG += plugin
 LIBS += -lqcadcore -lqcadentity
-TARGET = qcadgui
+NAME = qcadgui
+TARGET = $${NAME}
 OTHER_FILES += gui.dox
 DEFINES += QCADGUI_LIBRARY
 !win32:include( ../../shared_ts.pri )

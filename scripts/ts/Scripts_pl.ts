@@ -55,14 +55,14 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="318"/>
-        <location filename="../EAction.js" line="422"/>
+        <location filename="../EAction.js" line="303"/>
+        <location filename="../EAction.js" line="407"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktywne narzędzia:</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="422"/>
+        <location filename="../EAction.js" line="407"/>
         <source>None</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -71,7 +71,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="778"/>
+        <location filename="../EAction.js" line="763"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -80,19 +80,19 @@ Opcje łuku</translatorcomment>
         <translation type="unfinished">Opcje</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="796"/>
+        <location filename="../EAction.js" line="781"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Opcje Zablokuj</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="806"/>
+        <location filename="../EAction.js" line="791"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Głównymi narzędziami</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="832"/>
+        <location filename="../EAction.js" line="817"/>
         <source>CAD Tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -100,55 +100,55 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1390"/>
+        <location filename="../EAction.js" line="1375"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1444"/>
+        <location filename="../EAction.js" line="1429"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie odniesienia do bloku jest.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1448"/>
+        <location filename="../EAction.js" line="1433"/>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie linii lub łuku.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1452"/>
+        <location filename="../EAction.js" line="1437"/>
         <source>Entity is not a line.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie jest wiersz.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1456"/>
+        <location filename="../EAction.js" line="1441"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie łuk lub okrąg.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1460"/>
+        <location filename="../EAction.js" line="1445"/>
         <source>Entity is not a line, arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie linia, łuk lub okrąg.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1464"/>
+        <location filename="../EAction.js" line="1449"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie łuk, okrąg lub elipsa jest.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1468"/>
+        <location filename="../EAction.js" line="1453"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie linia, łuk, okrąg lub elipsa jest.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1473"/>
+        <location filename="../EAction.js" line="1458"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie polilinia jest.</translation>
@@ -169,32 +169,32 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="480"/>
-        <location filename="../ShapeAlgorithms.js" line="512"/>
+        <location filename="../ShapeAlgorithms.js" line="477"/>
+        <location filename="../ShapeAlgorithms.js" line="506"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Co najmniej dwa punkty są identyczne.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="487"/>
+        <location filename="../ShapeAlgorithms.js" line="484"/>
         <source>No circle possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No koło możliwe.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="519"/>
+        <location filename="../ShapeAlgorithms.js" line="513"/>
         <source>No arc possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie można łuku.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="543"/>
+        <location filename="../ShapeAlgorithms.js" line="537"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowa liczba segmentów:.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="549"/>
+        <location filename="../ShapeAlgorithms.js" line="543"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowy elipsa major / minor: /.</translation>
@@ -203,7 +203,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="904"/>
+        <location filename="../WidgetFactory.js" line="926"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -211,7 +211,7 @@ Przywróć ustawienia</translatorcomment>
         <translation type="unfinished">Przywróć ustawienia</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="924"/>
+        <location filename="../WidgetFactory.js" line="946"/>
         <source>Insert Symbol</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -220,7 +220,7 @@ Wstaw symbol</translatorcomment>
         <translation type="unfinished">Wstaw symbol</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="927"/>
+        <location filename="../WidgetFactory.js" line="949"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -229,7 +229,7 @@ Przełącz znak średnicy
         <translation type="unfinished">Średnica</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="928"/>
+        <location filename="../WidgetFactory.js" line="950"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -238,23 +238,23 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Stopień</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="929"/>
+        <location filename="../WidgetFactory.js" line="951"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plus / Minus</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="930"/>
+        <location filename="../WidgetFactory.js" line="952"/>
         <source>Almost equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="931"/>
+        <location filename="../WidgetFactory.js" line="953"/>
         <source>Asymptotically equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="932"/>
+        <location filename="../WidgetFactory.js" line="954"/>
         <source>Pi</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -263,7 +263,7 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Pi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="933"/>
+        <location filename="../WidgetFactory.js" line="955"/>
         <source>Multiplication</source>
         <translatorcomment>--google--
 Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) jest niedozwolone.
@@ -271,7 +271,7 @@ Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) j
         <translation type="unfinished">Mnożenie</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="934"/>
+        <location filename="../WidgetFactory.js" line="956"/>
         <source>Division</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -280,25 +280,25 @@ Dzielenie (÷)</translatorcomment>
         <translation type="unfinished">Dzielenie</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="935"/>
+        <location filename="../WidgetFactory.js" line="957"/>
         <source>Square</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kwadrat</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="936"/>
+        <location filename="../WidgetFactory.js" line="958"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="937"/>
+        <location filename="../WidgetFactory.js" line="959"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Stacked tekst</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="942"/>
+        <location filename="../WidgetFactory.js" line="964"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zmierzona wartość</translation>
@@ -327,59 +327,59 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="342"/>
-        <source>Loading add-on translations ...</source>
+        <location filename="../autostart.js" line="335"/>
+        <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="380"/>
-        <source>Loading add-ons ...</source>
+        <location filename="../autostart.js" line="373"/>
+        <source>Loading add-ons...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="395"/>
-        <source>Initializing add-ons ...</source>
+        <location filename="../autostart.js" line="388"/>
+        <source>Initializing add-ons...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="406"/>
+        <location filename="../autostart.js" line="399"/>
         <source>Initializing add-ons:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="419"/>
-        <source>Post-initializing add-ons ...</source>
+        <location filename="../autostart.js" line="412"/>
+        <source>Post-initializing add-ons...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="549"/>
+        <location filename="../library.js" line="552"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">3dFaces</translation>
     </message>
     <message>
-        <location filename="../library.js" line="549"/>
+        <location filename="../library.js" line="552"/>
         <source>3dFace</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">3DFACE</translation>
     </message>
     <message>
-        <location filename="../library.js" line="551"/>
+        <location filename="../library.js" line="554"/>
         <source>Block References</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Referencje Zablokuj</translation>
     </message>
     <message>
-        <location filename="../library.js" line="551"/>
+        <location filename="../library.js" line="554"/>
         <source>Block Reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nazwa bloku</translation>
     </message>
     <message>
-        <location filename="../library.js" line="553"/>
+        <location filename="../library.js" line="556"/>
         <source>Arcs</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -388,7 +388,7 @@ Rysuj łuk z danymi 3 punktami</translatorcomment>
         <translation type="unfinished">Łuki</translation>
     </message>
     <message>
-        <location filename="../library.js" line="553"/>
+        <location filename="../library.js" line="556"/>
         <source>Arc</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -398,7 +398,7 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
         <translation type="unfinished">Łuk</translation>
     </message>
     <message>
-        <location filename="../library.js" line="555"/>
+        <location filename="../library.js" line="558"/>
         <source>Circles</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -407,7 +407,7 @@ Rysuj okręgi ze środkiem i punktem</translatorcomment>
         <translation type="unfinished">Okręgi</translation>
     </message>
     <message>
-        <location filename="../library.js" line="555"/>
+        <location filename="../library.js" line="558"/>
         <source>Circle</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -417,13 +417,13 @@ Obiekt nie jest okręgiem ani łukiem</translatorcomment>
         <translation type="unfinished">Okrąg</translation>
     </message>
     <message>
-        <location filename="../library.js" line="557"/>
+        <location filename="../library.js" line="560"/>
         <source>Aligned Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wyrównany Wymiary</translation>
     </message>
     <message>
-        <location filename="../library.js" line="557"/>
+        <location filename="../library.js" line="560"/>
         <source>Aligned Dimension</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -431,13 +431,13 @@ Wymiar wyrównany</translatorcomment>
         <translation type="unfinished">Wymiar wyrównany</translation>
     </message>
     <message>
-        <location filename="../library.js" line="559"/>
+        <location filename="../library.js" line="562"/>
         <source>Angular Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiary kątowe</translation>
     </message>
     <message>
-        <location filename="../library.js" line="559"/>
+        <location filename="../library.js" line="562"/>
         <source>Angular Dimension</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -445,13 +445,13 @@ Wymiar kątowy</translatorcomment>
         <translation type="unfinished">Wymiar kątowy</translation>
     </message>
     <message>
-        <location filename="../library.js" line="561"/>
+        <location filename="../library.js" line="564"/>
         <source>Diametric Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Diametric Wymiary</translation>
     </message>
     <message>
-        <location filename="../library.js" line="561"/>
+        <location filename="../library.js" line="564"/>
         <source>Diametric Dimension</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -459,13 +459,13 @@ Wymiar średnicowy</translatorcomment>
         <translation type="unfinished">Wymiar średnicowy</translation>
     </message>
     <message>
-        <location filename="../library.js" line="563"/>
+        <location filename="../library.js" line="566"/>
         <source>Ordinate Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rzędna Wymiary</translation>
     </message>
     <message>
-        <location filename="../library.js" line="563"/>
+        <location filename="../library.js" line="566"/>
         <source>Ordinate Dimension</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -473,25 +473,25 @@ Wymiar rzędnej</translatorcomment>
         <translation type="unfinished">Wymiar rzędnej</translation>
     </message>
     <message>
-        <location filename="../library.js" line="565"/>
+        <location filename="../library.js" line="568"/>
         <source>Rotated Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Obrócone Wymiary</translation>
     </message>
     <message>
-        <location filename="../library.js" line="565"/>
+        <location filename="../library.js" line="568"/>
         <source>Rotated Dimension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiar obracany</translation>
     </message>
     <message>
-        <location filename="../library.js" line="567"/>
+        <location filename="../library.js" line="570"/>
         <source>Radial Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiary promieniowe</translation>
     </message>
     <message>
-        <location filename="../library.js" line="567"/>
+        <location filename="../library.js" line="570"/>
         <source>Radial Dimension</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -500,7 +500,7 @@ Wymiar promieniowy</translatorcomment>
         <translation type="unfinished">Wymiar promienia</translation>
     </message>
     <message>
-        <location filename="../library.js" line="569"/>
+        <location filename="../library.js" line="572"/>
         <source>Ellipses</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -509,7 +509,7 @@ Elipsy</translatorcomment>
         <translation type="unfinished">Elipsy</translation>
     </message>
     <message>
-        <location filename="../library.js" line="569"/>
+        <location filename="../library.js" line="572"/>
         <source>Ellipse</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -519,7 +519,7 @@ Elipsa
         <translation type="unfinished">Elipsa</translation>
     </message>
     <message>
-        <location filename="../library.js" line="571"/>
+        <location filename="../library.js" line="574"/>
         <source>Hatches</source>
         <translatorcomment>--google--
 Rysuj kreskowanie i jednolite wypełnienia
@@ -527,7 +527,7 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
         <translation type="unfinished">Włazy</translation>
     </message>
     <message>
-        <location filename="../library.js" line="571"/>
+        <location filename="../library.js" line="574"/>
         <source>Hatch</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -536,7 +536,7 @@ Kreskowanie
         <translation type="unfinished">Kreskowanie</translation>
     </message>
     <message>
-        <location filename="../library.js" line="573"/>
+        <location filename="../library.js" line="576"/>
         <source>Images</source>
         <translatorcomment>--google--
 &lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;&amp;nbsp;Przeszukano od początku
@@ -545,7 +545,7 @@ Kreskowanie
         <translation type="unfinished">Obrazy</translation>
     </message>
     <message>
-        <location filename="../library.js" line="573"/>
+        <location filename="../library.js" line="576"/>
         <source>Image</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -554,13 +554,13 @@ Obraz</translatorcomment>
         <translation type="unfinished">Obraz</translation>
     </message>
     <message>
-        <location filename="../library.js" line="575"/>
+        <location filename="../library.js" line="578"/>
         <source>Leaders</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Liderzy</translation>
     </message>
     <message>
-        <location filename="../library.js" line="575"/>
+        <location filename="../library.js" line="578"/>
         <source>Leader</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -569,7 +569,7 @@ Odnośnik
         <translation type="unfinished">Odnośnik</translation>
     </message>
     <message>
-        <location filename="../library.js" line="577"/>
+        <location filename="../library.js" line="580"/>
         <source>Lines</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -578,7 +578,7 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
         <translation type="unfinished">Linie</translation>
     </message>
     <message>
-        <location filename="../library.js" line="577"/>
+        <location filename="../library.js" line="580"/>
         <source>Line</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -587,7 +587,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Linia</translation>
     </message>
     <message>
-        <location filename="../library.js" line="579"/>
+        <location filename="../library.js" line="582"/>
         <source>Points</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -596,7 +596,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Punkty</translation>
     </message>
     <message>
-        <location filename="../library.js" line="579"/>
+        <location filename="../library.js" line="582"/>
         <source>Point</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -606,7 +606,7 @@ Wskaż punkt odniesienia</translatorcomment>
         <translation type="unfinished">Punkt</translation>
     </message>
     <message>
-        <location filename="../library.js" line="581"/>
+        <location filename="../library.js" line="584"/>
         <source>Polylines</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -615,7 +615,7 @@ Dodaje wierzchołek do istniejącej łamanej</translatorcomment>
         <translation type="unfinished">Łamane</translation>
     </message>
     <message>
-        <location filename="../library.js" line="581"/>
+        <location filename="../library.js" line="584"/>
         <source>Polyline</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -624,13 +624,13 @@ Linia łamana</translatorcomment>
         <translation type="unfinished">Linia łamana</translation>
     </message>
     <message>
-        <location filename="../library.js" line="583"/>
+        <location filename="../library.js" line="586"/>
         <source>Solids</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Solids</translation>
     </message>
     <message>
-        <location filename="../library.js" line="583"/>
+        <location filename="../library.js" line="586"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -639,7 +639,7 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
         <translation type="unfinished">Jednolity</translation>
     </message>
     <message>
-        <location filename="../library.js" line="585"/>
+        <location filename="../library.js" line="588"/>
         <source>Splines</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -648,7 +648,7 @@ Rysuj krzywe składane (NURBS)</translatorcomment>
         <translation type="unfinished">Krzywe składane</translation>
     </message>
     <message>
-        <location filename="../library.js" line="585"/>
+        <location filename="../library.js" line="588"/>
         <source>Spline</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -657,7 +657,7 @@ Krzywa składana</translatorcomment>
         <translation type="unfinished">Krzywa składana</translation>
     </message>
     <message>
-        <location filename="../library.js" line="587"/>
+        <location filename="../library.js" line="590"/>
         <source>Texts</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -666,7 +666,7 @@ Jeśli zaznaczone, przeszukuje także komentarze i konteksty.</translatorcomment
         <translation type="unfinished">Teksty</translation>
     </message>
     <message>
-        <location filename="../library.js" line="587"/>
+        <location filename="../library.js" line="590"/>
         <source>Text</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -676,13 +676,13 @@ Wprowadź tekst</translatorcomment>
         <translation type="unfinished">Tekst</translation>
     </message>
     <message>
-        <location filename="../library.js" line="590"/>
+        <location filename="../library.js" line="593"/>
         <source>Unknown Entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieznany Podmioty</translation>
     </message>
     <message>
-        <location filename="../library.js" line="590"/>
+        <location filename="../library.js" line="593"/>
         <source>Unknown Entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Unknown Entity</translation>

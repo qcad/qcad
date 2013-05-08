@@ -4,22 +4,22 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="43"/>
+        <location filename="../DefaultNavigation.js" line="46"/>
         <source>Graphics View</source>
         <translation>Grafikansicht</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="43"/>
+        <location filename="../DefaultNavigation.js" line="46"/>
         <source>Navigation</source>
         <translation>Navigation</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="48"/>
+        <location filename="../DefaultNavigation.js" line="51"/>
         <source>Zoom (Wheel Mouse)</source>
         <translation>Ansicht vergrössern / verkleinern (Maus mit Rad)</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="49"/>
+        <location filename="../DefaultNavigation.js" line="52"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translation>Anischt verschieben (Trackpad, Multi-Touch Maus)</translation>
     </message>

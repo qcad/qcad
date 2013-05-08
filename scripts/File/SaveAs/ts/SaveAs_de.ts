@@ -14,7 +14,7 @@
         <translation>Speichern unter</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="93"/>
+        <location filename="../SaveAs.js" line="95"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

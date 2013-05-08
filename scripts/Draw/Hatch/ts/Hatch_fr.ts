@@ -9,12 +9,12 @@
         <translation>Pas de frontière sélectionnée.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="84"/>
+        <location filename="../Hatch.js" line="85"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Contour pas fermé au point %1/%2.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="149"/>
+        <location filename="../Hatch.js" line="150"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Chaque objet frontière doit être une ligne, arc, cercle, un arc elliptique, ellipse, polyligne ou une spline. Trouvés:</translation>
     </message>

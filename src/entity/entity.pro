@@ -87,7 +87,8 @@ HEADERS = \
 
 TEMPLATE = lib
 CONFIG += plugin
-TARGET = qcadentity
+NAME = qcadentity
+TARGET = $${NAME}
 OTHER_FILES += entity.dox
 DEFINES += QCADENTITY_LIBRARY
 LIBS += -lqcadcore -lopennurbs

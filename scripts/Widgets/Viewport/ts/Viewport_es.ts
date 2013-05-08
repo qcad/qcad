@@ -89,22 +89,22 @@ Selecciona entidades solas</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="303"/>
+        <location filename="../Viewport.js" line="314"/>
         <source>Grid</source>
         <translation>Rejilla</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="306"/>
+        <location filename="../Viewport.js" line="317"/>
         <source>End</source>
         <translation>Fin</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="309"/>
+        <location filename="../Viewport.js" line="320"/>
         <source>On Entity</source>
         <translation>En entidad</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="312"/>
+        <location filename="../Viewport.js" line="323"/>
         <source>Perpendicular</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -113,22 +113,22 @@ Perpendicular</translatorcomment>
         <translation>Perpendicular</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="315"/>
+        <location filename="../Viewport.js" line="326"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="318"/>
+        <location filename="../Viewport.js" line="329"/>
         <source>Middle</source>
         <translation>Medio</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="321"/>
+        <location filename="../Viewport.js" line="332"/>
         <source>Intersection</source>
         <translation>Intersección</translation>
     </message>
     <message>
-        <location filename="../Viewport.js" line="324"/>
+        <location filename="../Viewport.js" line="335"/>
         <source>Reference</source>
         <translation>Referencia</translation>
     </message>

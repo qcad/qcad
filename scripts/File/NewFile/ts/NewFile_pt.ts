@@ -56,23 +56,38 @@ Sem Título</translatorcomment>
         <translation>Por favor, verifique os seus direitos de acesso, o formato de arquivo e extensão do arquivo.</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="194"/>
+        <location filename="../NewFile.js" line="110"/>
+        <source>File is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="119"/>
+        <source>Opened drawing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="121"/>
+        <source>Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../NewFile.js" line="202"/>
         <source>Untitled %1</source>
         <translation>Sem título %1</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="206"/>
+        <location filename="../NewFile.js" line="214"/>
         <source>read-only</source>
         <translation>Apenas leitura</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="238"/>
+        <location filename="../NewFile.js" line="246"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Você deseja salvar as alterações feitas no&lt;br&gt;documento &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="241"/>
+        <location filename="../NewFile.js" line="249"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Suas alterações serão perdidas se você não salvá-los.</translation>
