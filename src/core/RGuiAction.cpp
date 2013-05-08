@@ -506,9 +506,10 @@ bool RGuiAction::isGroupDefault() {
  */
 bool RGuiAction::triggerByCommand(const QString& cmd) {
     QString cmdLower = cmd.toLower();
-    if (actionsByCommand.count(cmdLower) != 0 && actionsByCommand[cmdLower]
-            != NULL) {
-        actionsByCommand[cmdLower]->slotTrigger(cmd);
+    if (actionsByCommand.count(cmdLower)!=0 && actionsByCommand[cmdLower]!=NULL) {
+        if (actionsByCommand[cmdLower]->isEnabled()) {
+            actionsByCommand[cmdLower]->slotTrigger(cmd);
+        }
         return true;
     } else {
         return false;

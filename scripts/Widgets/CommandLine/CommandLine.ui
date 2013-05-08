@@ -113,7 +113,16 @@
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
         </property>
+        <property name="undoRedoEnabled">
+         <bool>false</bool>
+        </property>
         <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+        </property>
+        <property name="openExternalLinks">
          <bool>true</bool>
         </property>
        </widget>
@@ -170,7 +179,7 @@
   </customwidget>
   <customwidget>
    <class>RTextEdit</class>
-   <extends>QTextEdit</extends>
+   <extends>QTextBrowser</extends>
    <header>RTextEdit.h</header>
   </customwidget>
  </customwidgets>

@@ -22,13 +22,13 @@
 
 #include "gui_global.h"
 
-#include <QTextEdit>
+#include <QTextBrowser>
 #include <QtDesigner/QDesignerExportWidget>
 
 /**
  * \scriptable
  */
-class QCADGUI_EXPORT RTextEdit: public QTextEdit {
+class QCADGUI_EXPORT RTextEdit: public QTextBrowser {
 
 Q_OBJECT
 

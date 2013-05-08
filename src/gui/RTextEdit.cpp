@@ -24,7 +24,7 @@
 #include "RDebug.h"
 
 RTextEdit::RTextEdit(QWidget* parent) :
-    QTextEdit(parent) {
+    QTextBrowser(parent) {
 }
 
 QSize RTextEdit::sizeHint() const {
