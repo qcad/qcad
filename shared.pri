@@ -10,17 +10,13 @@ CONFIG(debug, debug|release) {
 }
 
 CONFIG(plugin, plugin) {
-    #CONFIG(debug, debug|release) {
-        #win32 {
-        #    TARGET = $${TARGET}d
-        #}
-        #else {
-        #    TARGET = $${TARGET}_debug
-        #}
-    #}
     build_pass:CONFIG(debug, debug|release) {
-      unix: TARGET = $$join(TARGET,,,_debug)
-      else: TARGET = $$join(TARGET,,,d)
+        TARGET = $$join(TARGET,,,_debug)
+
+        # Qt uses '_debug' for unix and 'd' for Windows
+        # which is not reliably detectable (e.g.: abcd.dll)
+        # unix: TARGET = $$join(TARGET,,,_debug)
+        # else: TARGET = $$join(TARGET,,,d)
     }
 }
 

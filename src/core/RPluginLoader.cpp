@@ -26,7 +26,7 @@
 QList<RPluginInfo> RPluginLoader::pluginsInfo;
 
 /**
- * TODO: should be done in a script library, called by the script that initializes the plugin
+ * Tries to loads all QCAD plugins located in ./plugins.
  */
 void RPluginLoader::loadPlugins() {
     QString pluginsPath = getPluginsPath();
@@ -40,12 +40,10 @@ void RPluginLoader::loadPlugins() {
 
 #if defined(Q_OS_WIN)
     nameFilter.append("*.dll");
-#else
-#   if defined(Q_OS_MAC)
+#elif defined(Q_OS_MAC)
     nameFilter.append("*.dylib");
-#   else
+#else
     nameFilter.append("*.so");
-#   endif
 #endif
 
     foreach (QString fileName, pluginsDir.entryList(nameFilter, QDir::Files)) {
