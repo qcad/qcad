@@ -286,22 +286,22 @@
     <message>
         <location filename="../autostart.js" line="335"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished">Chargement add-on traductions...</translation>
+        <translation>Chargement add-on traductions...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="373"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Chargement add-ons...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="388"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Initialisation des add-ons...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="412"/>
         <source>Post-initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Post-initialisation...</translation>
     </message>
     <message>
         <source>Loading add-on translations ...</source>

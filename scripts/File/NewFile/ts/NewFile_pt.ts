@@ -68,7 +68,7 @@ Sem Título</translatorcomment>
     <message>
         <location filename="../NewFile.js" line="121"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Formato:</translation>
     </message>
     <message>
         <location filename="../NewFile.js" line="202"/>

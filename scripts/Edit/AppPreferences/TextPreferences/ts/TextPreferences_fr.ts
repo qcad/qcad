@@ -29,12 +29,12 @@
     <message>
         <location filename="../TextPreferences.js" line="30"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>Dessin</translation>
     </message>
     <message>
         <location filename="../TextPreferences.js" line="30"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte</translation>
     </message>
 </context>
 </TS>

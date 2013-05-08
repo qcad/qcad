@@ -22,7 +22,7 @@
         <location filename="../Save.js" line="92"/>
         <location filename="../Save.js" line="101"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toutes les couleurs personnalisées seront &apos;arrondi&apos; à la couleur la plus proche fixe.</translation>
     </message>
     <message>
         <location filename="../Save.js" line="98"/>
@@ -42,17 +42,17 @@
     <message>
         <location filename="../Save.js" line="101"/>
         <source>Proceed?</source>
-        <translation type="unfinished"></translation>
+        <translation>Procéder?</translation>
     </message>
     <message>
         <location filename="../Save.js" line="143"/>
         <source>Saved drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dessin enregistré :</translation>
     </message>
     <message>
         <location filename="../Save.js" line="145"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format :</translation>
     </message>
     <message>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color. Proceed?</source>

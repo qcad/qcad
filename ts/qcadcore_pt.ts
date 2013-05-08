@@ -442,7 +442,7 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location filename="../src/core/RLayer.cpp" line="48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="49"/>
@@ -457,17 +457,17 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location filename="../src/core/RLayer.cpp" line="51"/>
         <source>Color</source>
-        <translation type="unfinished">Cor</translation>
+        <translation>Cor</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="52"/>
         <source>Linetype</source>
-        <translation type="unfinished">Tipo de linha</translation>
+        <translation>Tipo de linha</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="53"/>
         <source>Lineweight</source>
-        <translation type="unfinished">Peso da linha</translation>
+        <translation>Peso da linha</translation>
     </message>
 </context>
 <context>

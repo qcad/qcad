@@ -11,12 +11,12 @@
     <message>
         <location filename="../SnapAuto.js" line="29"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Accrochage</translation>
     </message>
     <message>
         <location filename="../SnapAuto.js" line="29"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Accrochage auto</translation>
     </message>
 </context>
 </TS>

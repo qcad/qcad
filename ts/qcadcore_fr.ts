@@ -441,7 +441,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location filename="../src/core/RLayer.cpp" line="48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="49"/>
@@ -456,17 +456,17 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location filename="../src/core/RLayer.cpp" line="51"/>
         <source>Color</source>
-        <translation type="unfinished">Couleur</translation>
+        <translation>Couleur</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="52"/>
         <source>Linetype</source>
-        <translation type="unfinished">Type de ligne</translation>
+        <translation>Type de ligne</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="53"/>
         <source>Lineweight</source>
-        <translation type="unfinished">Épaisseur de ligne</translation>
+        <translation>Épaisseur de ligne</translation>
     </message>
 </context>
 <context>

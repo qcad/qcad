@@ -46,7 +46,7 @@
     <message>
         <location filename="../About.js" line="140"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt Version :</translation>
     </message>
     <message>
         <location filename="../About.js" line="147"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../About.js" line="197"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>Script Add-Ons</translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="2"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../About.ui" line="131"/>
         <source>About Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>À propos des Script Add-Ons</translation>
     </message>
 </context>
 <context>

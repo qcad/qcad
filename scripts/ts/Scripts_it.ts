@@ -282,22 +282,22 @@
     <message>
         <location filename="../autostart.js" line="335"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished">Caricamento aggiuntivo traduzioni...</translation>
+        <translation>Caricamento aggiuntivo traduzioni...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="373"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Caricamento add-ons...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="388"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Inizializzazione add-ons...</translation>
     </message>
     <message>
         <location filename="../autostart.js" line="412"/>
         <source>Post-initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Post-inizializzazione...</translation>
     </message>
     <message>
         <source>Loading add-on translations ...</source>

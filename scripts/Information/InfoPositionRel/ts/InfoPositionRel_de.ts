@@ -6,12 +6,12 @@
     <message>
         <location filename="../InfoPositionRel.js" line="47"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt</translation>
     </message>
     <message>
         <location filename="../InfoPositionRelInit.js" line="2"/>
         <source>&amp;Relative Position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Relative Position</translation>
     </message>
 </context>
 </TS>

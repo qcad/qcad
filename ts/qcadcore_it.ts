@@ -456,7 +456,7 @@ Colore G&amp;riglia:</translatorcomment>
     <message>
         <location filename="../src/core/RLayer.cpp" line="48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="49"/>
@@ -471,17 +471,17 @@ Colore G&amp;riglia:</translatorcomment>
     <message>
         <location filename="../src/core/RLayer.cpp" line="51"/>
         <source>Color</source>
-        <translation type="unfinished">Colore</translation>
+        <translation>Colore</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="52"/>
         <source>Linetype</source>
-        <translation type="unfinished">Tipo di linea</translation>
+        <translation>Tipo di linea</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="53"/>
         <source>Lineweight</source>
-        <translation type="unfinished">Spessore di linea</translation>
+        <translation>Spessore di linea</translation>
     </message>
 </context>
 <context>
