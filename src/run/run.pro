@@ -74,9 +74,10 @@ else {
 
         for(FILE,FILES) {
             !exists("$$[QT_INSTALL_PLUGINS]\\$${FILE}") {
-                error("File $$[QT_INSTALL_PLUGINS]\\$${FILE} not found. This Qt plugins is required by QCAD.")
+                error("File $$[QT_INSTALL_PLUGINS]\\$${FILE} not found. This Qt plugin is required by QCAD.")
             }
             !exists("$${DESTDIR_WIN}\\..\\plugins\\$${FILE}") {
+		message(Copying $${FILE})
                 system(copy "$$[QT_INSTALL_PLUGINS]\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
             }
         }
