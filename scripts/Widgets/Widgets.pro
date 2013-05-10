@@ -13,6 +13,7 @@ SUBDIRS = \
     MouseDisplay \
     OptionsToolBar \
     PenToolBar \
+    PluginWarningDialog \
     ProgressBar \
     PropertyEditor \
     SelectionDisplay \

@@ -631,7 +631,6 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                     c.currentIndex = index;
                     continue;
                 }
-                qDebug("setting text of " + c.objectName + " to: " + value);
                 c.setEditText(value);
             }
             continue;

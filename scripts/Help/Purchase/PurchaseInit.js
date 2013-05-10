@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Purchase", "&Purchase %1 Pro").arg(qApp.applicationName),
+    var action = new RGuiAction(qsTranslate("Purchase", "&Purchase %1 Extensions").arg(qApp.applicationName),
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/Purchase.js");
