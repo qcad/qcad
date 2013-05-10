@@ -22,7 +22,14 @@
 
 #include "core_global.h"
 
+#include <QMap>
+#include <QString>
 #include <QMetaType>
+#include <QVariant>
+
+#ifndef RDEFAULT_QVARIANT
+#define RDEFAULT_QVARIANT QVariant()
+#endif
 
 /**
  * Information about a plugin. Ususally shown in an about dialog.
@@ -31,81 +38,22 @@
  * \scriptable
  * \copyable
  */
-class QCADCORE_EXPORT RPluginInfo {
+class QCADCORE_EXPORT RPluginInfo : public QMap<QString, QVariant> {
 public:
     RPluginInfo() {
-        qtVersionString = qVersion();
+        insert("QtVersion", qVersion());
     }
 
-    QString getFileName() const {
-        return fileName;
+    void set(const QString& key, const QVariant& value) {
+        insert(key, value);
     }
 
-    void setFileName(const QString& fn) {
-        fileName = fn;
+    QVariant get(const QString& key, const QVariant& def = RDEFAULT_QVARIANT) {
+        if (contains(key)) {
+            return value(key);
+        }
+        return def;
     }
-
-    QString getAboutString() const {
-        return aboutString;
-    }
-
-    void setAboutString(const QString& s) {
-        aboutString = s;
-    }
-
-    QString getDescription() const {
-        return description;
-    }
-
-    void setDescription(const QString& s) {
-        description = s;
-    }
-
-    QString getVersionString() const {
-        return versionString;
-    }
-
-    QString getQtVersionString() const {
-        return qtVersionString;
-    }
-
-    void setVersionString(const QString& vs) {
-        versionString = vs;
-    }
-
-    QString getErrorString() const {
-        return errorString;
-    }
-
-    void setErrorString(const QString& es) {
-        errorString = es;
-    }
-
-    QString getLicense() const {
-        return license;
-    }
-
-    void setLicense(const QString& l) {
-        license = l;
-    }
-
-    QString getUrl() const {
-        return url;
-    }
-
-    void setUrl(const QString& u) {
-        url = u;
-    }
-
-private:
-    QString fileName;
-    QString aboutString;
-    QString description;
-    QString versionString;
-    QString qtVersionString;
-    QString errorString;
-    QString license;
-    QString url;
 };
 
 Q_DECLARE_METATYPE(RPluginInfo)

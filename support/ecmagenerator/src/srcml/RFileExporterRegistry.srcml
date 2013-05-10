@@ -73,6 +73,20 @@ dir="./core" filename="RFileExporterRegistry.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>unregisterFileExporter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RFileExporterFactory</name>*</type>
+      <name>factory</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
   <name>static</name>
   <name>RFileExporter</name>*</type>
   <name>getFileExporter</name>

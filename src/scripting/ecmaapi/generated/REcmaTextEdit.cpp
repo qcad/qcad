@@ -23,10 +23,10 @@
     }
 
     
-        // primary base class QTextEdit:
+        // primary base class QTextBrowser:
         
             QScriptValue dpt = engine.defaultPrototype(
-                qMetaTypeId<QTextEdit*>());
+                qMetaTypeId<QTextBrowser*>());
 
             if (dpt.isValid()) {
                 proto->setPrototype(dpt);
@@ -46,8 +46,8 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
-        // conversion for base class QTextEdit
-        REcmaHelper::registerFunction(&engine, proto, getQTextEdit, "getQTextEdit");
+        // conversion for base class QTextBrowser
+        REcmaHelper::registerFunction(&engine, proto, getQTextBrowser, "getQTextBrowser");
         
 
     // get class name
@@ -170,11 +170,11 @@
     
 
     // conversion functions for base classes:
-     QScriptValue REcmaTextEdit::getQTextEdit(QScriptContext *context,
+     QScriptValue REcmaTextEdit::getQTextBrowser(QScriptContext *context,
             QScriptEngine *engine)
         
             {
-                QTextEdit* cppResult =
+                QTextBrowser* cppResult =
                     qscriptvalue_cast<RTextEdit*> (context->thisObject());
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
@@ -195,7 +195,7 @@
     {
         QStringList list;
         
-        list.append("QTextEdit");
+        list.append("QTextBrowser");
     
 
         return qScriptValueFromSequence(engine, list);

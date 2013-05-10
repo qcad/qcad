@@ -3,7 +3,6 @@
 #include "RDxfExporterFactory.h"
 #include "RDxfImporterFactory.h"
 #include "RDxfPlugin.h"
-#include "RPluginInfo.h"
 #include "RSettings.h"
 
 bool RDxfPlugin::init() {
@@ -15,16 +14,16 @@ bool RDxfPlugin::init() {
 
 RPluginInfo RDxfPlugin::getPluginInfo() {
     RPluginInfo ret;
-    ret.setVersionString(QString("%1 (dxflib %2)").arg(RSettings::getVersionString()).arg(DL_VERSION));
-    ret.setAboutString("DXF Plugin");
-    ret.setDescription(
+    ret.set("Version", QString("%1 (dxflib %2)").arg(RSettings::getVersionString()).arg(DL_VERSION));
+    ret.set("About", "DXF Plugin");
+    ret.set("Description",
         QString(
             "Import support for the DXF format. "
             "Based on dxflib."
         )
     );
-    ret.setLicense("GPLv2");
-    ret.setUrl("http://www.qcad.org");
+    ret.set("License", "GPLv2");
+    ret.set("URL", "http://www.qcad.org");
     return ret;
 }
 

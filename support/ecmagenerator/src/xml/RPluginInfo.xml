@@ -5,100 +5,27 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QMap&lt;QString,QVariant&gt;"
+    specifier="public" />
     <constructor>
       <variant />
     </constructor>
-    <method name="getFileName" cppName="getFileName"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
-    <method name="setFileName" cppName="setFileName"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="fn"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getAboutString" cppName="getAboutString"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
-    <method name="setAboutString" cppName="setAboutString"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="s"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getDescription" cppName="getDescription"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
-    <method name="setDescription" cppName="setDescription"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="s"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getVersionString" cppName="getVersionString"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
-    <method name="getQtVersionString" cppName="getQtVersionString"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
-    <method name="setVersionString" cppName="setVersionString"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="vs"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getErrorString" cppName="getErrorString"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
-    <method name="setErrorString" cppName="setErrorString"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="es"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getLicense" cppName="getLicense"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
-    <method name="setLicense" cppName="setLicense"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="l"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getUrl" cppName="getUrl" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
-    <method name="setUrl" cppName="setUrl" specifier="public"
+    <method name="set" cppName="set" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="u"
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="get" cppName="get" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="def"
+        hasDefault="true" default="RDEFAULT_QVARIANT"
         isConst="true" />
       </variant>
     </method>

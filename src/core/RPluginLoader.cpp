@@ -23,7 +23,7 @@
 #include "RPluginInterface.h"
 #include "RPluginLoader.h"
 
-QList<RPluginInfo> RPluginLoader::pluginsInfo;
+QList<RPluginInfo > RPluginLoader::pluginsInfo;
 
 /**
  * Tries to loads all QCAD plugins located in ./plugins.
@@ -85,11 +85,11 @@ void RPluginLoader::loadPlugin(QObject* plugin, const QString& fileName, const Q
         }
     }
     else {
-        info.setErrorString(errorString);
+        info.set("Error", errorString);
         qDebug() << "Plugin loader reported error: " << errorString;
     }
     if (!fileName.isEmpty()) {
-        info.setFileName(fileName);
+        info.set("FileName", fileName);
     }
 
     pluginsInfo.append(info);

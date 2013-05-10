@@ -69,6 +69,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, registerFileExporter, "registerFileExporter");
             
+            REcmaHelper::registerFunction(&engine, &ctor, unregisterFileExporter, "unregisterFileExporter");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getFileExporter, "getFileExporter");
             
             REcmaHelper::registerFunction(&engine, &ctor, getFilterStrings, "getFilterStrings");
@@ -213,6 +215,58 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaFileExporterRegistry::registerFileExporter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFileExporterRegistry::unregisterFileExporter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFileExporterRegistry::unregisterFileExporter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterRegistry::unregisterFileExporter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RFileExporterFactory * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RFileExporterFactory * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RFileExporterFactory >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RFileExporterRegistry: Argument 0 is not of type RFileExporterFactory *RFileExporterFactory *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RFileExporterRegistry::
+       unregisterFileExporter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterRegistry.unregisterFileExporter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFileExporterRegistry::unregisterFileExporter", context, engine);
             return result;
         }
          QScriptValue

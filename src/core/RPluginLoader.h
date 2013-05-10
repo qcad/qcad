@@ -26,8 +26,8 @@
 #include <QMetaType>
 #include <QScriptEngine>
 
-#include "RPluginInfo.h"
 #include "RPluginInterface.h"
+#include "RPluginInfo.h"
 
 /**
  * Loads and registeres plugins.

@@ -46,6 +46,9 @@
         registerFileExporter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        unregisterFileExporter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getFileExporter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -34,10 +34,10 @@ dir="./core" filename="RPluginLoader.h">
   <cpp:file>&lt;QScriptEngine&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
+  <cpp:file>"RPluginInterface.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPluginInterface.h"</cpp:file></cpp:include>
+  <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
   <comment type="block">/** * Loads and registeres plugins. * *
   \ingroup core * \scriptable */</comment>
   <class>class 

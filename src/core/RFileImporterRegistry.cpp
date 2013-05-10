@@ -44,6 +44,18 @@ void RFileImporterRegistry::registerFileImporter(RFileImporterFactory* factory) 
 }
 
 /**
+ * Unregisters a file importer.
+ *
+ * \param factoryFunction The function that can be used to instantiate
+ *      the importer.
+ * \param checkFunction The function tht can be used to check whether
+ *      the importer can import a given file.
+ */
+void RFileImporterRegistry::unregisterFileImporter(RFileImporterFactory* factory) {
+    factories.removeAll(factory);
+}
+
+/**
  * \return A new instance of the first file importer found that
  *      can handle the given file or NULL if no suitable importer 
  *      can be found.

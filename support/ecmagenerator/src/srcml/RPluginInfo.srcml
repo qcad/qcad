@@ -25,7 +25,25 @@ dir="./core" filename="RPluginInfo.h">
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDEFAULT_QVARIANT</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RDEFAULT_QVARIANT</name>
+  <name>QVariant</name>()</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
   <comment type="block">/** * Information about a plugin. Ususally
   shown in an about dialog. * * \ingroup core * \scriptable *
   \copyable */</comment>
@@ -34,6 +52,16 @@ dir="./core" filename="RPluginInfo.h">
     <name>QCADCORE_EXPORT</name>
   </macro>
   <name>RPluginInfo</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>QMap
+  <argument_list>&lt;
+  <argument>
+    <name>QString</name>
+  </argument>, 
+  <argument>
+    <name>QVariant</name>
+  </argument>&gt;</argument_list></name></super>
   <block>{
   <private type="default"></private>
   <public>public: 
@@ -43,313 +71,124 @@ dir="./core" filename="RPluginInfo.h">
     <block>{ 
     <expr_stmt>
     <expr>
-    <name>qtVersionString</name>= 
-    <call>
-      <name>qVersion</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</expr_stmt>}</block>
+      <call>
+        <name>insert</name>
+        <argument_list>(
+        <argument>
+          <expr>"QtVersion"</expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <call>
+              <name>qVersion</name>
+              <argument_list>()</argument_list>
+            </call>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</expr_stmt>}</block>
   </constructor>
   <function>
     <type>
-      <name>QString</name>
-    </type>
-    <name>getFileName</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>fileName</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
       <name>void</name>
     </type>
-    <name>setFileName</name>
+    <name>set</name>
     <parameter_list>(
     <param>
       <decl>
         <type>
         <name>const</name>
         <name>QString</name>&amp;</type>
-        <name>fn</name>
+        <name>key</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QVariant</name>&amp;</type>
+        <name>value</name>
       </decl>
     </param>)</parameter_list>
     <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>fileName</name>= 
-    <name>fn</name></expr>;</expr_stmt>}</block>
+    <constructor_decl>
+    <name>insert</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>key</name>
+        </type>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+          <name>value</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
-      <name>QString</name>
+      <name>QVariant</name>
     </type>
-    <name>getAboutString</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>aboutString</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAboutString</name>
+    <name>get</name>
     <parameter_list>(
     <param>
       <decl>
         <type>
         <name>const</name>
         <name>QString</name>&amp;</type>
-        <name>s</name>
+        <name>key</name>
       </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>aboutString</name>= 
-    <name>s</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getDescription</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>description</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setDescription</name>
-    <parameter_list>(
+    </param>, 
     <param>
       <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>s</name>
-      </decl>
+      <type>
+      <name>const</name>
+      <name>QVariant</name>&amp;</type>
+      <name>def</name>=
+      <init>
+        <expr>
+          <name>RDEFAULT_QVARIANT</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{ 
-    <expr_stmt>
+    <if>if 
+    <condition>(
     <expr>
-    <name>description</name>= 
-    <name>s</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getVersionString</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
+      <call>
+        <name>contains</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>key</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>)</condition>
+    <then>
+      <block>{ 
+      <return>return 
+      <expr>
+        <call>
+          <name>value</name>
+          <argument_list>(
+          <argument>
+            <expr>
+              <name>key</name>
+            </expr>
+          </argument>)</argument_list>
+        </call>
+      </expr>;</return>}</block>
+    </then></if>
     <return>return 
     <expr>
-      <name>versionString</name>
+      <name>def</name>
     </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getQtVersionString</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>qtVersionString</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setVersionString</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>vs</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>versionString</name>= 
-    <name>vs</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getErrorString</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>errorString</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setErrorString</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>es</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>errorString</name>= 
-    <name>es</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getLicense</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>license</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setLicense</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>l</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>license</name>= 
-    <name>l</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getUrl</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>url</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setUrl</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>u</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>url</name>= 
-    <name>u</name></expr>;</expr_stmt>}</block>
-  </function></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>fileName</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>aboutString</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>description</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>versionString</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>qtVersionString</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>errorString</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>license</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>url</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
+  </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

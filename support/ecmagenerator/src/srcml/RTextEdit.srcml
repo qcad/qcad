@@ -25,7 +25,7 @@ dir="./gui" filename="RTextEdit.h">
   <cpp:file>"gui_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QTextEdit&gt;</cpp:file></cpp:include>
+  <cpp:file>&lt;QTextBrowser&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>
@@ -38,7 +38,7 @@ dir="./gui" filename="RTextEdit.h">
   <name>RTextEdit</name>
   <super>: 
   <specifier>public</specifier>
-  <name>QTextEdit</name></super>
+  <name>QTextBrowser</name></super>
   <block>{
   <private type="default">
     <macro>

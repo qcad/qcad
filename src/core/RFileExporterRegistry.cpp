@@ -36,7 +36,12 @@ void RFileExporterRegistry::registerFileExporter(RFileExporterFactory* factory) 
     factories.append(factory);
 }
 
-
+/**
+ * Unregisters a file exporter.
+ */
+void RFileExporterRegistry::unregisterFileExporter(RFileExporterFactory* factory) {
+    factories.removeAll(factory);
+}
 
 /**
  * \return A new instance of the first file exporter found that

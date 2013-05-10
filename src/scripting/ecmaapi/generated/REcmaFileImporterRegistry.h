@@ -46,6 +46,9 @@
         registerFileImporter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        unregisterFileImporter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getFileImporter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

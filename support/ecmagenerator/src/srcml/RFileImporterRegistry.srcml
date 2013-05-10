@@ -73,6 +73,20 @@ dir="./core" filename="RFileImporterRegistry.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>unregisterFileImporter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RFileImporterFactory</name>*</type>
+      <name>factory</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
   <name>static</name>
   <name>RFileImporter</name>*</type>
   <name>getFileImporter</name>

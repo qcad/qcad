@@ -5,7 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <baseClass name="QTextEdit" specifier="public" />
+    <baseClass name="QTextBrowser" specifier="public" />
     <constructor>
       <variant>
         <arg type="QWidget *" typeName="QWidget *" name="parent"

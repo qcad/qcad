@@ -19,6 +19,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="unregisterFileImporter"
+    cppName="unregisterFileImporter" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RFileImporterFactory *"
+        typeName="RFileImporterFactory *" name="factory"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getFileImporter" cppName="getFileImporter"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

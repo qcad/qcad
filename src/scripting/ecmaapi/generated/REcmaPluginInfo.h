@@ -28,7 +28,9 @@
     ;
 
     // conversion functions for base classes:
-    
+    static  QScriptValue getQMap_QString_QVariant(QScriptContext *context,
+            QScriptEngine *engine)
+        ;
 
     // returns class name:
     static  QScriptValue getClassName(QScriptContext *context, QScriptEngine *engine) 
@@ -43,49 +45,10 @@
 
     // public methods:
     static  QScriptValue
-        getFileName
+        set
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setFileName
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getAboutString
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setAboutString
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDescription
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDescription
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getVersionString
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getQtVersionString
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setVersionString
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getErrorString
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setErrorString
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getLicense
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setLicense
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getUrl
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setUrl
+        get
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

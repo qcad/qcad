@@ -106,49 +106,39 @@ About.prototype.initAboutPlugins = function(webView) {
     }
     else {
         for (var i=0; i<numPlugins; i++) {
-            var pluginInfo = RPluginLoader.getPluginInfo(i);
-
-            //html += "<h2>%1</h2>".arg(pluginInfo.getFileName())
             html += "<table border='0' width='100%'>";
             html += "<col width='25%'/>";
             html += "<col width='90%'/>";
 
             var text, url;
 
+             var pluginInfo = RPluginLoader.getPluginInfo(i);
+
             // plugin about info:
-            text = pluginInfo.getAboutString();
-            if (text.length===0) {
-                text = qsTr("No information available");
-            }
+            text = pluginInfo.get("About", qsTr("No information available"));
             html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
 
             // description:
-            text = pluginInfo.getDescription();
-            if (text.length!==0) {
+            text = pluginInfo.get("Description");
+            if (!isNull(text)) {
                 html += this.getTableRow(qsTr("Description:"), text, false);
             }
 
             // plugin version:
-            text = pluginInfo.getVersionString();
-            if (text.length===0) {
-                text = qsTr("Unknown");
-            }
+            text = pluginInfo.get("Version", qsTr("Unknown"));
             html += this.getTableRow(qsTr("Version:"), text);
 
             // Qt plugin version:
-            text = pluginInfo.getQtVersionString();
+            text = pluginInfo.get("QtVersion", qsTr("Unknown"));
             html += this.getTableRow(qsTr("Qt Version:"), text);
 
             // plugin license:
-            text = pluginInfo.getLicense();
-            if (text.length===0) {
-                text = qsTr("Unknown");
-            }
+            text = pluginInfo.get("License", qsTr("Unknown"));
             html += this.getTableRow(qsTr("License:"), text);
 
             // plugin URL:
-            text = pluginInfo.getUrl();
-            if (text.length!==0) {
+            text = pluginInfo.get("URL");
+            if (!isNull(text)) {
                 url = new QUrl(text);
                 if (url.isValid()) {
     //                var opt = new QUrl.FormattingOption(
@@ -166,8 +156,8 @@ About.prototype.initAboutPlugins = function(webView) {
                 }
             }
 
-            text = pluginInfo.getFileName();
-            if (text.length!==0) {
+            text = pluginInfo.get("FileName");
+            if (!isNull(text)) {
                 var fi = new QFileInfo(text);
                 text = fi.fileName();
                 url = QUrl.fromLocalFile(fi.absolutePath());
@@ -175,9 +165,9 @@ About.prototype.initAboutPlugins = function(webView) {
             }
 
             // plugin error:
-            var err = pluginInfo.getErrorString();
-            if (err.length!==0) {
-                html += this.getTableRow(qsTr("Error:"), err);
+            text = pluginInfo.get("Error");
+            if (!isNull(text)) {
+                html += this.getTableRow(qsTr("Error:"), text);
             }
             html += "</table>";
             html += "<hr/>";

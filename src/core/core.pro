@@ -165,8 +165,8 @@ HEADERS = \
     RPatternListMetric.h \
     RPenListener.h \
     RPluginInterface.h \
-    RPluginLoader.h \
     RPluginInfo.h \
+    RPluginLoader.h \
     RProgressHandler.h \
     RPropertyAttributes.h \
     RPropertyChange.h \

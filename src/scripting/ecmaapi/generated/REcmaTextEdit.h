@@ -28,7 +28,7 @@
     ;
 
     // conversion functions for base classes:
-    static  QScriptValue getQTextEdit(QScriptContext *context,
+    static  QScriptValue getQTextBrowser(QScriptContext *context,
             QScriptEngine *engine)
         ;
 
