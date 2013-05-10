@@ -437,8 +437,9 @@ AddOn.getAddOns = function(dir) {
         var args = QCoreApplication.arguments();
 
         dir = "scripts";
+
         // fixed set of directories that will be scanned for add-ons first to 
-        // ensure fixed order of menus:
+        // ensure fixed order of menus and tool bars:
         fileMenuList = [
                 new QFileInfo("scripts/Reset"),
                 new QFileInfo("scripts/File"),
@@ -453,13 +454,12 @@ AddOn.getAddOns = function(dir) {
                 new QFileInfo("scripts/Layer"),
                 new QFileInfo("scripts/Block"),
                 new QFileInfo("scripts/Developer"),
-                new QFileInfo("scripts/Cam"),
                 new QFileInfo("scripts/Window"),
                 new QFileInfo("scripts/Widgets"),
                 new QFileInfo("scripts/Examples"),
                 new QFileInfo("scripts/Local"),
-                new QFileInfo("scripts/Help"),
-                new QFileInfo(":scripts")
+                new QFileInfo(":scripts"),       // scripts wrapped in plugins
+                new QFileInfo("scripts/Help")
             ];
                 
         // append directories not in the list above:
