@@ -1070,6 +1070,7 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
     QStringList list;
     list << engine->globalObject().property("includeBasePath").toString();
     list << QDir::currentPath();
+    list << ":";
 
     // remove duplicate paths:
     list = list.toSet().toList();
@@ -1083,7 +1084,12 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
         if (fi.isAbsolute()) {
             fileName = arg;
         } else {
-            fileName = basePath + QDir::separator() + arg;
+            if (basePath==":") {
+                fileName = basePath + arg;
+            }
+            else {
+                fileName = basePath + QDir::separator() + arg;
+            }
             fi = QFileInfo(fileName);
         }
 
