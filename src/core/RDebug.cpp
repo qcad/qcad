@@ -47,6 +47,8 @@ void RDebug::printBacktrace(const QString& prefix) {
     }
 
     free(strings);
+#else
+    Q_UNUSED(prefix)
 #endif
 }
 
