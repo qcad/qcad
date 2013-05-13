@@ -83,6 +83,9 @@
         exportPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportPolylineFill
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportSpline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

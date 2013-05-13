@@ -297,6 +297,20 @@ dir="./gui" filename="RGraphicsSceneQt.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>void</name>
+  </type>
+  <name>exportPolylineFill</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RPolyline</name>&amp;</type>
+      <name>polyline</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>virtual</name>
     <name>void</name>
   </type>
