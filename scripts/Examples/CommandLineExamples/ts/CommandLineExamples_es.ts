@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.0" language="es_ES">
 <context>
     <name>CommandLineExamples</name>
     <message>
         <location filename="../CommandLineExamples.js" line="51"/>
         <source>&amp;Command Line</source>
-        <translation>Ligne de &amp;commande</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

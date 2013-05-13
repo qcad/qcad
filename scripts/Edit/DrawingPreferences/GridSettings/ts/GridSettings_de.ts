@@ -4,80 +4,44 @@
 <context>
     <name>Grid</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="67"/>
-        <location filename="../PreferencesPage.ui" line="143"/>
-        <location filename="../PreferencesPage.ui" line="198"/>
-        <location filename="../PreferencesPage.ui" line="288"/>
-        <location filename="../PreferencesPage.ui" line="350"/>
-        <location filename="../PreferencesPage.ui" line="413"/>
-        <location filename="../PreferencesPage.ui" line="502"/>
-        <location filename="../PreferencesPage.ui" line="565"/>
         <source>X:</source>
-        <translation>X:</translation>
+        <translation type="obsolete">X:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="46"/>
-        <location filename="../PreferencesPage.ui" line="136"/>
-        <location filename="../PreferencesPage.ui" line="225"/>
-        <location filename="../PreferencesPage.ui" line="281"/>
-        <location filename="../PreferencesPage.ui" line="364"/>
-        <location filename="../PreferencesPage.ui" line="453"/>
-        <location filename="../PreferencesPage.ui" line="549"/>
-        <location filename="../PreferencesPage.ui" line="579"/>
         <source>Y:</source>
-        <translation>Y:</translation>
+        <translation type="obsolete">Y:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
         <source>View 1</source>
-        <translation>Ansicht 1</translation>
+        <translation type="obsolete">Ansicht 1</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="23"/>
-        <location filename="../PreferencesPage.ui" line="175"/>
-        <location filename="../PreferencesPage.ui" line="327"/>
-        <location filename="../PreferencesPage.ui" line="479"/>
         <source>Display Grid</source>
-        <translation>Raster anzeigen</translation>
+        <translation type="obsolete">Raster anzeigen</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="33"/>
-        <location filename="../PreferencesPage.ui" line="185"/>
-        <location filename="../PreferencesPage.ui" line="337"/>
-        <location filename="../PreferencesPage.ui" line="489"/>
         <source>Isometric Grid</source>
-        <translation>Isometrisches Raster</translation>
+        <translation type="obsolete">Isometrisches Raster</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="40"/>
-        <location filename="../PreferencesPage.ui" line="192"/>
-        <location filename="../PreferencesPage.ui" line="344"/>
-        <location filename="../PreferencesPage.ui" line="496"/>
         <source>Grid Spacing</source>
-        <translation>Rasterabstand</translation>
+        <translation type="obsolete">Rasterabstand</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="103"/>
-        <location filename="../PreferencesPage.ui" line="255"/>
-        <location filename="../PreferencesPage.ui" line="407"/>
-        <location filename="../PreferencesPage.ui" line="559"/>
         <source>Meta Grid Spacing</source>
-        <translation>Meta-Rasterabstand</translation>
+        <translation type="obsolete">Meta-Rasterabstand</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="169"/>
         <source>View 3</source>
-        <translation>Ansicht 3</translation>
+        <translation type="obsolete">Ansicht 3</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="321"/>
         <source>View 2</source>
-        <translation>Ansicht 2</translation>
+        <translation type="obsolete">Ansicht 2</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="473"/>
         <source>View 4</source>
-        <translation>Ansicht 4</translation>
+        <translation type="obsolete">Ansicht 4</translation>
     </message>
 </context>
 <context>
@@ -110,6 +74,85 @@
     <message>
         <source>Default Grid</source>
         <translation type="obsolete">Rastervorgabe</translation>
+    </message>
+</context>
+<context>
+    <name>scrollArea</name>
+    <message>
+        <location filename="../PreferencesPage.ui" line="29"/>
+        <source>View 1</source>
+        <translation type="unfinished">Ansicht 1</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="35"/>
+        <location filename="../PreferencesPage.ui" line="187"/>
+        <location filename="../PreferencesPage.ui" line="339"/>
+        <location filename="../PreferencesPage.ui" line="491"/>
+        <source>Display Grid</source>
+        <translation type="unfinished">Raster anzeigen</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="45"/>
+        <location filename="../PreferencesPage.ui" line="197"/>
+        <location filename="../PreferencesPage.ui" line="349"/>
+        <location filename="../PreferencesPage.ui" line="501"/>
+        <source>Isometric Grid</source>
+        <translation type="unfinished">Isometrisches Raster</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="52"/>
+        <location filename="../PreferencesPage.ui" line="204"/>
+        <location filename="../PreferencesPage.ui" line="356"/>
+        <location filename="../PreferencesPage.ui" line="508"/>
+        <source>Grid Spacing</source>
+        <translation type="unfinished">Rasterabstand</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="58"/>
+        <location filename="../PreferencesPage.ui" line="148"/>
+        <location filename="../PreferencesPage.ui" line="224"/>
+        <location filename="../PreferencesPage.ui" line="313"/>
+        <location filename="../PreferencesPage.ui" line="389"/>
+        <location filename="../PreferencesPage.ui" line="445"/>
+        <location filename="../PreferencesPage.ui" line="561"/>
+        <location filename="../PreferencesPage.ui" line="591"/>
+        <source>Y:</source>
+        <translation type="unfinished">Y:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="79"/>
+        <location filename="../PreferencesPage.ui" line="155"/>
+        <location filename="../PreferencesPage.ui" line="210"/>
+        <location filename="../PreferencesPage.ui" line="273"/>
+        <location filename="../PreferencesPage.ui" line="362"/>
+        <location filename="../PreferencesPage.ui" line="452"/>
+        <location filename="../PreferencesPage.ui" line="514"/>
+        <location filename="../PreferencesPage.ui" line="577"/>
+        <source>X:</source>
+        <translation type="unfinished">X:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="115"/>
+        <location filename="../PreferencesPage.ui" line="267"/>
+        <location filename="../PreferencesPage.ui" line="419"/>
+        <location filename="../PreferencesPage.ui" line="571"/>
+        <source>Meta Grid Spacing</source>
+        <translation type="unfinished">Meta-Rasterabstand</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="181"/>
+        <source>View 2</source>
+        <translation type="unfinished">Ansicht 2</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="333"/>
+        <source>View 3</source>
+        <translation type="unfinished">Ansicht 3</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="485"/>
+        <source>View 4</source>
+        <translation type="unfinished">Ansicht 4</translation>
     </message>
 </context>
 </TS>

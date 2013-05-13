@@ -4,99 +4,63 @@
 <context>
     <name>Grid</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
         <source>View 1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zobacz 1</translation>
+        <translation type="obsolete">Zobacz 1</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="23"/>
-        <location filename="../PreferencesPage.ui" line="175"/>
-        <location filename="../PreferencesPage.ui" line="327"/>
-        <location filename="../PreferencesPage.ui" line="479"/>
         <source>Display Grid</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wyświetlanie siatki</translation>
+        <translation type="obsolete">Wyświetlanie siatki</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="33"/>
-        <location filename="../PreferencesPage.ui" line="185"/>
-        <location filename="../PreferencesPage.ui" line="337"/>
-        <location filename="../PreferencesPage.ui" line="489"/>
         <source>Isometric Grid</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Siatka izometryczna</translation>
+        <translation type="obsolete">Siatka izometryczna</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="40"/>
-        <location filename="../PreferencesPage.ui" line="192"/>
-        <location filename="../PreferencesPage.ui" line="344"/>
-        <location filename="../PreferencesPage.ui" line="496"/>
         <source>Grid Spacing</source>
         <translatorcomment>--google--
 Minimalne odstępy siatki:
 Minimalne odstępy siatki
 Minimalny odstęp siatki (piksele):</translatorcomment>
-        <translation type="unfinished">Odstępy siatki</translation>
+        <translation type="obsolete">Odstępy siatki</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="46"/>
-        <location filename="../PreferencesPage.ui" line="136"/>
-        <location filename="../PreferencesPage.ui" line="225"/>
-        <location filename="../PreferencesPage.ui" line="281"/>
-        <location filename="../PreferencesPage.ui" line="364"/>
-        <location filename="../PreferencesPage.ui" line="453"/>
-        <location filename="../PreferencesPage.ui" line="549"/>
-        <location filename="../PreferencesPage.ui" line="579"/>
         <source>Y:</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Mnożnik Y:
 Mnożnik &amp;Y:</translatorcomment>
-        <translation type="unfinished">y:</translation>
+        <translation type="obsolete">y:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="67"/>
-        <location filename="../PreferencesPage.ui" line="143"/>
-        <location filename="../PreferencesPage.ui" line="198"/>
-        <location filename="../PreferencesPage.ui" line="288"/>
-        <location filename="../PreferencesPage.ui" line="350"/>
-        <location filename="../PreferencesPage.ui" line="413"/>
-        <location filename="../PreferencesPage.ui" line="502"/>
-        <location filename="../PreferencesPage.ui" line="565"/>
         <source>X:</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Mnożnik X:
 Mnożnik &amp;X:</translatorcomment>
-        <translation type="unfinished">x:</translation>
+        <translation type="obsolete">x:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="103"/>
-        <location filename="../PreferencesPage.ui" line="255"/>
-        <location filename="../PreferencesPage.ui" line="407"/>
-        <location filename="../PreferencesPage.ui" line="559"/>
         <source>Meta Grid Spacing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Odstępy siatki meta</translation>
+        <translation type="obsolete">Odstępy siatki meta</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="169"/>
         <source>View 3</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zobacz 3</translation>
+        <translation type="obsolete">Zobacz 3</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="321"/>
         <source>View 2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zobacz 2</translation>
+        <translation type="obsolete">Zobacz 2</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="473"/>
         <source>View 4</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zobacz 4</translation>
+        <translation type="obsolete">Zobacz 4</translation>
     </message>
 </context>
 <context>
@@ -142,6 +106,85 @@ General Punctuation</translatorcomment>
 Automatycznie
 Przyciąganie automatyczne</translatorcomment>
         <translation type="unfinished">Automatycznie</translation>
+    </message>
+</context>
+<context>
+    <name>scrollArea</name>
+    <message>
+        <location filename="../PreferencesPage.ui" line="29"/>
+        <source>View 1</source>
+        <translation type="unfinished">Zobacz 1</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="35"/>
+        <location filename="../PreferencesPage.ui" line="187"/>
+        <location filename="../PreferencesPage.ui" line="339"/>
+        <location filename="../PreferencesPage.ui" line="491"/>
+        <source>Display Grid</source>
+        <translation type="unfinished">Wyświetlanie siatki</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="45"/>
+        <location filename="../PreferencesPage.ui" line="197"/>
+        <location filename="../PreferencesPage.ui" line="349"/>
+        <location filename="../PreferencesPage.ui" line="501"/>
+        <source>Isometric Grid</source>
+        <translation type="unfinished">Siatka izometryczna</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="52"/>
+        <location filename="../PreferencesPage.ui" line="204"/>
+        <location filename="../PreferencesPage.ui" line="356"/>
+        <location filename="../PreferencesPage.ui" line="508"/>
+        <source>Grid Spacing</source>
+        <translation type="unfinished">Odstępy siatki</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="58"/>
+        <location filename="../PreferencesPage.ui" line="148"/>
+        <location filename="../PreferencesPage.ui" line="224"/>
+        <location filename="../PreferencesPage.ui" line="313"/>
+        <location filename="../PreferencesPage.ui" line="389"/>
+        <location filename="../PreferencesPage.ui" line="445"/>
+        <location filename="../PreferencesPage.ui" line="561"/>
+        <location filename="../PreferencesPage.ui" line="591"/>
+        <source>Y:</source>
+        <translation type="unfinished">y:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="79"/>
+        <location filename="../PreferencesPage.ui" line="155"/>
+        <location filename="../PreferencesPage.ui" line="210"/>
+        <location filename="../PreferencesPage.ui" line="273"/>
+        <location filename="../PreferencesPage.ui" line="362"/>
+        <location filename="../PreferencesPage.ui" line="452"/>
+        <location filename="../PreferencesPage.ui" line="514"/>
+        <location filename="../PreferencesPage.ui" line="577"/>
+        <source>X:</source>
+        <translation type="unfinished">x:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="115"/>
+        <location filename="../PreferencesPage.ui" line="267"/>
+        <location filename="../PreferencesPage.ui" line="419"/>
+        <location filename="../PreferencesPage.ui" line="571"/>
+        <source>Meta Grid Spacing</source>
+        <translation type="unfinished">Odstępy siatki meta</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="181"/>
+        <source>View 2</source>
+        <translation type="unfinished">Zobacz 2</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="333"/>
+        <source>View 3</source>
+        <translation type="unfinished">Zobacz 3</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="485"/>
+        <source>View 4</source>
+        <translation type="unfinished">Zobacz 4</translation>
     </message>
 </context>
 </TS>

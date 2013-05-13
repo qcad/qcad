@@ -14,28 +14,43 @@ Stile di flusso:</translatorcomment>
     </message>
 </context>
 <context>
-    <name>Styles</name>
+    <name>StylePreferences</name>
     <message>
-        <location filename="../Styles.js" line="23"/>
+        <location filename="../StylePreferences.js" line="26"/>
         <source>Layout</source>
-        <translation>Layout</translation>
+        <translation type="unfinished">Layout</translation>
     </message>
     <message>
-        <location filename="../Styles.js" line="23"/>
+        <location filename="../StylePreferences.js" line="26"/>
+        <source>Styles</source>
+        <translation type="unfinished">Stili</translation>
+    </message>
+    <message>
+        <location filename="../StylePreferences.js" line="48"/>
+        <location filename="../StylePreferences.js" line="49"/>
+        <location filename="../StylePreferences.js" line="78"/>
+        <location filename="../StylePreferences.js" line="100"/>
+        <source>None</source>
+        <translation type="unfinished">Niente</translation>
+    </message>
+</context>
+<context>
+    <name>Styles</name>
+    <message>
+        <source>Layout</source>
+        <translation type="obsolete">Layout</translation>
+    </message>
+    <message>
         <source>Styles</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
 Cambia foglio di stile…
 Esportazione e importazione di stili (nuova simbologia).</translatorcomment>
-        <translation>Stili</translation>
+        <translation type="obsolete">Stili</translation>
     </message>
     <message>
-        <location filename="../Styles.js" line="45"/>
-        <location filename="../Styles.js" line="46"/>
-        <location filename="../Styles.js" line="75"/>
-        <location filename="../Styles.js" line="97"/>
         <source>None</source>
-        <translation>Niente</translation>
+        <translation type="obsolete">Niente</translation>
     </message>
 </context>
 </TS>

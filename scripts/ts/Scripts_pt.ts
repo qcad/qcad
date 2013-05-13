@@ -206,7 +206,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="926"/>
+        <location filename="../WidgetFactory.js" line="925"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
@@ -215,7 +215,7 @@ Restaurar Predefinições</translatorcomment>
         <translation>Restaurar predefinições</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="946"/>
+        <location filename="../WidgetFactory.js" line="945"/>
         <source>Insert Symbol</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--
@@ -225,7 +225,7 @@ Insere Símbolo</translatorcomment>
         <translation>Insere símbolo</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="949"/>
+        <location filename="../WidgetFactory.js" line="948"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--
@@ -234,7 +234,7 @@ Diâmetro (ø)</translatorcomment>
         <translation>Diâmetro</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="950"/>
+        <location filename="../WidgetFactory.js" line="949"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--
@@ -243,7 +243,7 @@ Grau:</translatorcomment>
         <translation>Grau</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="951"/>
+        <location filename="../WidgetFactory.js" line="950"/>
         <source>Plus/Minus</source>
         <translatorcomment>--exact match--
 --file: Dimension_pt.ts--
@@ -251,17 +251,17 @@ Plus / Minus</translatorcomment>
         <translation>Plus / Minus</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="952"/>
+        <location filename="../WidgetFactory.js" line="951"/>
         <source>Almost equal to</source>
         <translation>Quase igual</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="953"/>
+        <location filename="../WidgetFactory.js" line="952"/>
         <source>Asymptotically equal to</source>
         <translation>Assintoticamente igual</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="954"/>
+        <location filename="../WidgetFactory.js" line="953"/>
         <source>Pi</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--
@@ -270,7 +270,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="955"/>
+        <location filename="../WidgetFactory.js" line="954"/>
         <source>Multiplication</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--
@@ -278,7 +278,7 @@ Multiplicação</translatorcomment>
         <translation>Multiplicação</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="956"/>
+        <location filename="../WidgetFactory.js" line="955"/>
         <source>Division</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -287,7 +287,7 @@ Divisão</translatorcomment>
         <translation>Divisão</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="957"/>
+        <location filename="../WidgetFactory.js" line="956"/>
         <source>Square</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -295,7 +295,7 @@ Quadrado</translatorcomment>
         <translation>Quadrado</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="958"/>
+        <location filename="../WidgetFactory.js" line="957"/>
         <source>Delta</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--
@@ -304,13 +304,13 @@ Delta X</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="959"/>
+        <location filename="../WidgetFactory.js" line="958"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Texto empilhado</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="964"/>
+        <location filename="../WidgetFactory.js" line="963"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valor medido</translation>

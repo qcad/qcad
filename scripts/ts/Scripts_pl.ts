@@ -203,7 +203,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="926"/>
+        <location filename="../WidgetFactory.js" line="925"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -211,7 +211,7 @@ Przywróć ustawienia</translatorcomment>
         <translation type="unfinished">Przywróć ustawienia</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="946"/>
+        <location filename="../WidgetFactory.js" line="945"/>
         <source>Insert Symbol</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -220,7 +220,7 @@ Wstaw symbol</translatorcomment>
         <translation type="unfinished">Wstaw symbol</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="949"/>
+        <location filename="../WidgetFactory.js" line="948"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -229,7 +229,7 @@ Przełącz znak średnicy
         <translation type="unfinished">Średnica</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="950"/>
+        <location filename="../WidgetFactory.js" line="949"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -238,23 +238,23 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Stopień</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="951"/>
+        <location filename="../WidgetFactory.js" line="950"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plus / Minus</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="952"/>
+        <location filename="../WidgetFactory.js" line="951"/>
         <source>Almost equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="953"/>
+        <location filename="../WidgetFactory.js" line="952"/>
         <source>Asymptotically equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="954"/>
+        <location filename="../WidgetFactory.js" line="953"/>
         <source>Pi</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -263,7 +263,7 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Pi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="955"/>
+        <location filename="../WidgetFactory.js" line="954"/>
         <source>Multiplication</source>
         <translatorcomment>--google--
 Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) jest niedozwolone.
@@ -271,7 +271,7 @@ Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) j
         <translation type="unfinished">Mnożenie</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="956"/>
+        <location filename="../WidgetFactory.js" line="955"/>
         <source>Division</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -280,25 +280,25 @@ Dzielenie (÷)</translatorcomment>
         <translation type="unfinished">Dzielenie</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="957"/>
+        <location filename="../WidgetFactory.js" line="956"/>
         <source>Square</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kwadrat</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="958"/>
+        <location filename="../WidgetFactory.js" line="957"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="959"/>
+        <location filename="../WidgetFactory.js" line="958"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Stacked tekst</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="964"/>
+        <location filename="../WidgetFactory.js" line="963"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zmierzona wartość</translation>

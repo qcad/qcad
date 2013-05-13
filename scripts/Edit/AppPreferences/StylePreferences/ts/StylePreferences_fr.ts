@@ -13,28 +13,43 @@ Style de flèche :</translatorcomment>
     </message>
 </context>
 <context>
-    <name>Styles</name>
+    <name>StylePreferences</name>
     <message>
-        <location filename="../Styles.js" line="23"/>
+        <location filename="../StylePreferences.js" line="26"/>
         <source>Layout</source>
-        <translation>Mise</translation>
+        <translation type="unfinished">Mise</translation>
     </message>
     <message>
-        <location filename="../Styles.js" line="23"/>
+        <location filename="../StylePreferences.js" line="26"/>
+        <source>Styles</source>
+        <translation type="unfinished">Styles</translation>
+    </message>
+    <message>
+        <location filename="../StylePreferences.js" line="48"/>
+        <location filename="../StylePreferences.js" line="49"/>
+        <location filename="../StylePreferences.js" line="78"/>
+        <location filename="../StylePreferences.js" line="100"/>
+        <source>None</source>
+        <translation type="unfinished">Aucun</translation>
+    </message>
+</context>
+<context>
+    <name>Styles</name>
+    <message>
+        <source>Layout</source>
+        <translation type="obsolete">Mise</translation>
+    </message>
+    <message>
         <source>Styles</source>
         <translatorcomment>--google--
 Modifier la feuille de style...
 Modifier la feuille de style
 Une fonction de feuille de style doit avoir un nom préfixé.</translatorcomment>
-        <translation>Styles</translation>
+        <translation type="obsolete">Styles</translation>
     </message>
     <message>
-        <location filename="../Styles.js" line="45"/>
-        <location filename="../Styles.js" line="46"/>
-        <location filename="../Styles.js" line="75"/>
-        <location filename="../Styles.js" line="97"/>
         <source>None</source>
-        <translation>Aucun</translation>
+        <translation type="obsolete">Aucun</translation>
     </message>
 </context>
 </TS>

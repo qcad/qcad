@@ -182,73 +182,73 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="926"/>
+        <location filename="../WidgetFactory.js" line="925"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="946"/>
+        <location filename="../WidgetFactory.js" line="945"/>
         <source>Insert Symbol</source>
         <translation>Inserisci Simbolo</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="949"/>
+        <location filename="../WidgetFactory.js" line="948"/>
         <source>Diameter</source>
         <translation>Diametro</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="950"/>
+        <location filename="../WidgetFactory.js" line="949"/>
         <source>Degree</source>
         <translation>Gradi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="951"/>
+        <location filename="../WidgetFactory.js" line="950"/>
         <source>Plus/Minus</source>
         <translation>Plus / minus</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="952"/>
+        <location filename="../WidgetFactory.js" line="951"/>
         <source>Almost equal to</source>
         <translation>Quasi uguale</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="953"/>
+        <location filename="../WidgetFactory.js" line="952"/>
         <source>Asymptotically equal to</source>
         <translation>Asintoticamente uguale</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="954"/>
+        <location filename="../WidgetFactory.js" line="953"/>
         <source>Pi</source>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="955"/>
+        <location filename="../WidgetFactory.js" line="954"/>
         <source>Multiplication</source>
         <translation>Moltiplicazione</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="956"/>
+        <location filename="../WidgetFactory.js" line="955"/>
         <source>Division</source>
         <translation>Divisione</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="957"/>
+        <location filename="../WidgetFactory.js" line="956"/>
         <source>Square</source>
         <translation>Quadrato</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="958"/>
+        <location filename="../WidgetFactory.js" line="957"/>
         <source>Delta</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="959"/>
+        <location filename="../WidgetFactory.js" line="958"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Testo impilato</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="964"/>
+        <location filename="../WidgetFactory.js" line="963"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valore misurato</translation>

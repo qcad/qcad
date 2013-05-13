@@ -1,4 +1,4 @@
 NAME = IsometricProjection
 TSDIR = .
-include(../../translations.pri)
+include(../../../translations.pri)
 SOURCES = ../IsometricProjection.js
