@@ -1,5 +1,3 @@
-exists($$PWD/../shared.pri)
-
 DEFINES += QCAD_DLL
 
 # output directory:
@@ -107,16 +105,13 @@ INCLUDEPATH += \
     $$PWD/src/grid \
     $$PWD/src/snap \
     $$PWD/src/gui \
-    $$PWD/src/gui/qgraphicsview \
     $$PWD/src/entity \
     $$PWD/src/operations \
-    $$PWD/src/storage/db \
     $$PWD/src/scripting \
     $$PWD/src/stemmer \
     $$PWD/src/scripting/ecmaapi \
     $$PWD/src/scripting/ecmaapi/generated \
     $$PWD/src/scripting/ecmaapi/adapters \
-    $$PWD/src/plugins/qt \
     $$PWD/src/io/dxf \
     $$PWD/src/spatialindex \
     $$PWD/src/3rdparty
