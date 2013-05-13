@@ -216,9 +216,46 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
 }
 
 void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, double offset) {
+    // filling:
+    bool created = beginPath();
+
+    //RGraphicsScene::exportPolyline(polyline, offset);
+
+    if (hasNormalView()) {
+        setDraftMode(false);
+        exportPolylineFill(polyline);
+    }
+    if (hasDraftView()) {
+        setDraftMode(true);
+        exportPolylineFill(polyline);
+    }
+
+    if (created) {
+        endPath();
+    }
+
+    // outline:
+    created = beginPath();
+
+    //RGraphicsScene::exportPolyline(polyline, offset);
+
+    if (hasNormalView()) {
+        setDraftMode(false);
+        RGraphicsScene::exportPolyline(polyline, offset);
+    }
+    if (hasDraftView()) {
+        setDraftMode(true);
+        RGraphicsScene::exportPolyline(polyline, offset);
+    }
+
+    if (created) {
+        endPath();
+    }
+}
+
+void RGraphicsSceneQt::exportPolylineFill(const RPolyline& polyline) {
     RPainterPath& path = draftMode ? currentPainterPathDraft : currentPainterPath;
 
-    // filling:
     if (currentBrush!=Qt::NoBrush) {
         bool created = beginPath();
 
@@ -236,21 +273,21 @@ void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, double offset) 
             endPath();
         }
     }
-
-    // outline:
-    bool created = beginPath();
-
-    RGraphicsScene::exportPolyline(polyline, offset);
-
-    if (created) {
-        endPath();
-    }
 }
 
 void RGraphicsSceneQt::exportSpline(const RSpline& spline, double offset) {
     bool created = beginPath();
 
-    RGraphicsScene::exportSpline(spline, offset);
+    //RGraphicsScene::exportSpline(spline, offset);
+
+    if (hasNormalView()) {
+        setDraftMode(false);
+        RGraphicsScene::exportSpline(spline, offset);
+    }
+    if (hasDraftView()) {
+        setDraftMode(true);
+        RGraphicsScene::exportSpline(spline, offset);
+    }
 
     if (created) {
         endPath();

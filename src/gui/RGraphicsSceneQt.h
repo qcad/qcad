@@ -74,6 +74,7 @@ public:
     virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
     virtual void exportPolyline(const RPolyline& polyline, double offset = RNANDOUBLE);
+    void exportPolylineFill(const RPolyline& polyline);
     virtual void exportSpline(const RSpline& spline, double offset = RNANDOUBLE);
 
     virtual void exportArcSegment(const RArc& arc);
