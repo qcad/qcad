@@ -344,22 +344,21 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="335"/>
         <source>Loading add-on translations...</source>
-        <translation>Carregar add-on traduções...</translation>
+        <translation type="obsolete">Carregar add-on traduções...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="376"/>
+        <location filename="../autostart.js" line="381"/>
         <source>Loading add-ons...</source>
         <translation>Carregando add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="391"/>
+        <location filename="../autostart.js" line="396"/>
         <source>Initializing add-ons...</source>
         <translation>Inicializar add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="415"/>
+        <location filename="../autostart.js" line="420"/>
         <source>Post-initializing add-ons...</source>
         <translation>Pós-inicialização...</translation>
     </message>
@@ -376,7 +375,7 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Inicializar add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="402"/>
+        <location filename="../autostart.js" line="407"/>
         <source>Initializing add-ons:</source>
         <translation>Inicializar add-ons:</translation>
     </message>
