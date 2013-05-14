@@ -541,6 +541,7 @@ bool RGuiAction::triggerByScriptFile(const QString& scriptFile) {
  */
 RGuiAction* RGuiAction::getByScriptFile(const QString& scriptFile) {
     QDir dir(".");
+
     QString relFilePath;
     if (scriptFile.startsWith(":")) {
         relFilePath = scriptFile;
@@ -549,13 +550,17 @@ RGuiAction* RGuiAction::getByScriptFile(const QString& scriptFile) {
         relFilePath = dir.relativeFilePath(scriptFile);
     }
 
-    if (actionsByScriptFile.count(relFilePath) != 0
-            && actionsByScriptFile[relFilePath] != NULL) {
+    if (actionsByScriptFile.count(relFilePath) != 0) {
         return actionsByScriptFile[relFilePath];
-    } else {
-        //qWarning() << "RGuiAction::getByScriptFile: no action found:" << scriptFile;
-        return NULL;
     }
+    
+    // look in scripts wrapped in plugins:
+    relFilePath = ":" + relFilePath;
+    if (actionsByScriptFile.count(relFilePath) != 0) {
+        return actionsByScriptFile[relFilePath];
+    }
+
+    return NULL;
 }
 
 /**
