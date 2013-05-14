@@ -6,7 +6,7 @@
     <message>
         <location filename="../OptionsToolBarFocusInit.js" line="2"/>
         <source>&amp;Focus on Options Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Foco para a barra de ferramentas opções</translation>
     </message>
 </context>
 </TS>

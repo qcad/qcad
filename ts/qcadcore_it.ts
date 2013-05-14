@@ -461,12 +461,12 @@ Colore G&amp;riglia:</translatorcomment>
     <message>
         <location filename="../src/core/RLayer.cpp" line="49"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascosto</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="50"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloccato</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="51"/>

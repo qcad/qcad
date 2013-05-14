@@ -447,12 +447,12 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location filename="../src/core/RLayer.cpp" line="49"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Oculto</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="50"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>Trancado</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="51"/>

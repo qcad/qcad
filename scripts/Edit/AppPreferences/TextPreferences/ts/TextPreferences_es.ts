@@ -6,22 +6,22 @@
     <message>
         <location filename="../PreferencesPage.ui" line="17"/>
         <source>Show font preview in font controls</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar vista previa de la fuente en los controles de fuente</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="27"/>
         <source>Use reduced selection of fonts:</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilice reducida selección de fuentes:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="41"/>
         <source>Uncheck all</source>
-        <translation type="unfinished"></translation>
+        <translation>Desmarcar todos</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="48"/>
         <source>Check all</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcar todas</translation>
     </message>
 </context>
 <context>

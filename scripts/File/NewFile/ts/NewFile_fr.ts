@@ -51,12 +51,12 @@
     <message>
         <location filename="../NewFile.js" line="110"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier est vide.</translation>
     </message>
     <message>
         <location filename="../NewFile.js" line="119"/>
         <source>Opened drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dessin ouvert :</translation>
     </message>
     <message>
         <location filename="../NewFile.js" line="121"/>

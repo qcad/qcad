@@ -279,7 +279,7 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="49"/>
         <source>Frozen</source>
-        <translation>Eingefroren</translation>
+        <translation>Versteckt</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="50"/>
