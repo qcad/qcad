@@ -31,7 +31,9 @@ function Print(guiAction, document, view) {
 
     this.document = document;
     this.view = view;
-    this.scene = view.getScene();
+    if (!isNull(view)) {
+        this.scene = view.getScene();
+    }
 }
 
 Print.prototype = new File();
