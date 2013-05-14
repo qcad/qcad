@@ -47,6 +47,7 @@ public:
     static void uninit();
 
     static QString getLocale();
+    static void loadTranslations(const QString& module, const QStringList& dirs = QStringList());
 
     static QStringList getOriginalArguments();
     static void setOriginalArguments(const QStringList& a);

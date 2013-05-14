@@ -292,7 +292,8 @@ function loadTranslations(addOns, splash) {
     var modules = ["qt", "assistant", "qt_help", "qcadcore", "qcadentity", "qcadgui"];
     for (var mi=0; mi<modules.length; ++mi) {
         var module = modules[mi];
-        translator = new QTranslator(qApp);
+        //translator = new QTranslator(qApp);
+        translator = new QTranslator();
         var success = false;
         for (i=0; i<translationsDirs.length; ++i) {
             if (translator.load(module + "_" + locale, translationsDirs[i])) {
@@ -331,6 +332,7 @@ function loadTranslations(addOns, splash) {
     */
 
     // install one QTranslator for each script add-on:
+    /*
     if (!isNull(splash)) {
         splash.showMessage(qsTr("Loading add-on translations...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
@@ -354,6 +356,8 @@ function loadTranslations(addOns, splash) {
             continue;
         }
 
+        qDebug("install translator for: ", addOn.getPath());
+
         translator = new QTranslator(qApp);
         if (translator.load(addOn.getClassName() + "_" + locale, addOn.getPath() + "/ts")) {
             QCoreApplication.installTranslator(translator);
@@ -363,6 +367,7 @@ function loadTranslations(addOns, splash) {
             qWarning("Directory: ", addOn.getPath() + "/ts");
         }
     }
+    */
 }
 
 /**
@@ -594,7 +599,7 @@ function main() {
     }
 
     // load add-on translations:
-    loadTranslations(addOns, splash);
+    //loadTranslations(addOns, splash);
 
     // create application window:
     var appWin = new RMainWindowQt();

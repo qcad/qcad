@@ -1,6 +1,6 @@
 TSDIR = ts
 
-RTS_DIR = $$PWD/qm
+#RTS_DIR = $$PWD/qm
 
 TRANSLATIONS = \
 	$$PWD/ts/$${NAME}_de.ts \

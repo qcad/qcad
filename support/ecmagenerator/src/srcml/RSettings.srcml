@@ -81,6 +81,31 @@ dir="./core" filename="RSettings.h">
   </type>
   <name>getLocale</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>void</name>
+    </type>
+    <name>loadTranslations</name>
+    <argument_list>(
+    <argument>
+      <expr>
+      <name>const</name>
+      <name>QString</name>&amp; 
+      <name>module</name></expr>
+    </argument>, 
+    <argument>
+      <expr>
+      <name>const</name>
+      <name>QStringList</name>&amp; 
+      <name>dirs</name>= 
+      <call>
+        <name>QStringList</name>
+        <argument_list>()</argument_list>
+      </call></expr>
+    </argument>)</argument_list>
+  </decl>;</decl_stmt>
   <function_decl>
   <type>
     <name>static</name>

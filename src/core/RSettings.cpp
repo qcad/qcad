@@ -22,6 +22,7 @@
 #include <QFileInfo>
 #include <QFontMetrics>
 #include <QStringList>
+#include <QTranslator>
 
 #include "RDebug.h"
 #include "RMath.h"
@@ -170,6 +171,41 @@ QString RSettings::getLocale() {
     }
 
     return RSettings::getStringValue("Language/UiLanguage", "en");
+}
+
+void RSettings::loadTranslations(const QString& module, const QStringList& dirs) {
+    QString locale = RSettings::getLocale();
+    if (locale == "en" || locale.toLower() == "en_us") {
+        return;
+    }
+
+    QStringList translationsDirs = dirs;
+    if (translationsDirs.isEmpty()) {
+        translationsDirs = RS::getDirectoryList("ts");
+    }
+
+    QTranslator* translator;
+
+//    QStringList modules;
+//    modules << "qt" << "assistant" << "qt_help"
+//            << "qcadcore" << "qcadentity" << "qcadgui";
+//    for (int mi=0; mi<modules.size(); ++mi) {
+//        QString module = modules[mi];
+        translator = new QTranslator(qApp);
+        bool success = false;
+        for (int i=0; i<translationsDirs.size(); ++i) {
+            if (translator->load(module + "_" + locale, translationsDirs[i])) {
+                QCoreApplication::installTranslator(translator);
+                success = true;
+                break;
+            }
+        }
+
+        if (!success) {
+            qWarning() << "Cannot load translation: " << module + "_" + locale;
+            qWarning() << "Directories: " << translationsDirs;
+        }
+//    }
 }
 
 QStringList RSettings::getAllKeys(const QString& group) {
