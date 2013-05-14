@@ -278,17 +278,17 @@
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="373"/>
+        <location filename="../autostart.js" line="376"/>
         <source>Loading add-ons...</source>
         <translation>Lade Add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="388"/>
+        <location filename="../autostart.js" line="391"/>
         <source>Initializing add-ons...</source>
         <translation>Initialisiere Add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="412"/>
+        <location filename="../autostart.js" line="415"/>
         <source>Post-initializing add-ons...</source>
         <translation>Post-Initialisierung von Add-ons...</translation>
     </message>
@@ -305,7 +305,7 @@
         <translation type="obsolete">Initialisiere Add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="399"/>
+        <location filename="../autostart.js" line="402"/>
         <source>Initializing add-ons:</source>
         <translation>Initialisiere Add-ons:</translation>
     </message>

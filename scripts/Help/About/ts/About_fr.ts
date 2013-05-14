@@ -13,64 +13,79 @@
         <translation>À propos de %1</translation>
     </message>
     <message>
-        <location filename="../About.js" line="99"/>
+        <location filename="../About.js" line="100"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location filename="../About.js" line="118"/>
+        <location filename="../About.js" line="119"/>
         <source>No information available</source>
         <translation>Pas d&apos;information disponible</translation>
     </message>
     <message>
-        <location filename="../About.js" line="119"/>
+        <location filename="../About.js" line="120"/>
         <source>Plugin:</source>
         <translation>Plugin :</translation>
     </message>
     <message>
-        <location filename="../About.js" line="124"/>
+        <location filename="../About.js" line="125"/>
         <source>Description:</source>
         <translation>Description :</translation>
     </message>
     <message>
-        <location filename="../About.js" line="128"/>
-        <location filename="../About.js" line="132"/>
-        <location filename="../About.js" line="136"/>
+        <location filename="../About.js" line="129"/>
+        <location filename="../About.js" line="133"/>
+        <location filename="../About.js" line="137"/>
         <source>Unknown</source>
         <translation>Inconnu</translation>
     </message>
     <message>
-        <location filename="../About.js" line="129"/>
+        <location filename="../About.js" line="130"/>
         <source>Version:</source>
         <translation>Version :</translation>
     </message>
     <message>
-        <location filename="../About.js" line="133"/>
+        <location filename="../About.js" line="134"/>
         <source>Qt Version:</source>
         <translation>Qt Version :</translation>
     </message>
     <message>
-        <location filename="../About.js" line="137"/>
+        <location filename="../About.js" line="138"/>
         <source>License:</source>
         <translation>Licence :</translation>
     </message>
     <message>
-        <location filename="../About.js" line="151"/>
+        <location filename="../About.js" line="146"/>
         <source>Internet:</source>
         <translation>Internet :</translation>
     </message>
     <message>
+        <location filename="../About.js" line="158"/>
+        <source>Active</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../About.js" line="161"/>
+        <source>Inactive (restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../About.js" line="164"/>
+        <source>Trial Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../About.js" line="174"/>
         <source>File:</source>
         <translation>Fichier :</translation>
     </message>
     <message>
-        <location filename="../About.js" line="170"/>
+        <location filename="../About.js" line="180"/>
         <source>Error:</source>
         <translation>Erreur :</translation>
     </message>
     <message>
-        <location filename="../About.js" line="187"/>
+        <location filename="../About.js" line="197"/>
         <source>Script Add-Ons</source>
         <translation>Script Add-Ons</translation>
     </message>
