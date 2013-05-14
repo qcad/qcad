@@ -343,16 +343,30 @@ function loadTranslations(addOns, splash) {
 
     for (i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
-
-        var fi = new QFileInfo(addOn.getPath() + "/ts");
-        if (!fi.exists()) {
-            // no ts dir:
+        if (isNull(addOn)) {
+            qWarning("Null add on found");
             continue;
         }
 
+        qDebug("add on: ", addOn.getPath());
+
+        var fi = new QFileInfo(addOn.getPath() + "/ts");
+        qDebug("fi: ", fi);
+        if (!fi.exists()) {
+            // no ts dir:
+            qDebug("fi does not exist");
+            continue;
+        }
+
+        qDebug("fi exists");
+
+        qDebug("trans");
         translator = new QTranslator(qApp);
+        qDebug("trans: OK");
         if (translator.load(addOn.getClassName() + "_" + locale, addOn.getPath() + "/ts")) {
+            qDebug("trans install");
             QCoreApplication.installTranslator(translator);
+            qDebug("trans install: OK");
         }
         else {
             qWarning("Cannot load translation: ", addOn.getClassName() + "_" + locale);
@@ -391,10 +405,12 @@ function initAddOns(addOns, splash) {
 
     var addOn;
     var i;
-    var text;
+    var text = "";
 
     for (i=0; i<addOns.length; ++i) {
         addOn = addOns[i];
+        qDebug("init add on: %1/%2".arg(i).arg(addOns.length));
+        qDebug("init add on: ", addOn.getFilePath());
         if (i%10===0 && !isNull(splash)) {
             text = qsTr("Initializing add-ons:") +
                 " %1%\n%2"
@@ -404,6 +420,7 @@ function initAddOns(addOns, splash) {
             QCoreApplication.processEvents();
         }
         addOn.init(splash, text);
+        qDebug("init add on: ", addOn.getClassName(), ": OK");
     }
 }
 
@@ -615,7 +632,9 @@ function main() {
     RDebug.stopTimer(0, "loading add-ons");
 
     RDebug.startTimer(0);
+    qDebug("init add ons");
     initAddOns(addOns, splash);
+    qDebug("init add ons: OK");
     RDebug.stopTimer(0, "initializing add-ons");
 
     appWin.updateGuiActions();
