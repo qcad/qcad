@@ -17,12 +17,12 @@ Style de flèche :</translatorcomment>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Layout</source>
-        <translation type="unfinished">Mise</translation>
+        <translation>Mise</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Styles</source>
-        <translation type="unfinished">Styles</translation>
+        <translation>Styles</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="48"/>
@@ -30,7 +30,7 @@ Style de flèche :</translatorcomment>
         <location filename="../StylePreferences.js" line="78"/>
         <location filename="../StylePreferences.js" line="100"/>
         <source>None</source>
-        <translation type="unfinished">Aucun</translation>
+        <translation>Aucun</translation>
     </message>
 </context>
 <context>

@@ -18,12 +18,12 @@ E_stilo: </translatorcomment>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Layout</source>
-        <translation type="unfinished">Arranjo</translation>
+        <translation>Arranjo</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Styles</source>
-        <translation type="unfinished">Estilos</translation>
+        <translation>Estilos</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="48"/>
@@ -31,7 +31,7 @@ E_stilo: </translatorcomment>
         <location filename="../StylePreferences.js" line="78"/>
         <location filename="../StylePreferences.js" line="100"/>
         <source>None</source>
-        <translation type="unfinished">Nenhum</translation>
+        <translation>Nenhum</translation>
     </message>
 </context>
 <context>

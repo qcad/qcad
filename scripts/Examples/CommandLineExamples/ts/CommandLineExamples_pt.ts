@@ -6,7 +6,7 @@
     <message>
         <location filename="../CommandLineExamples.js" line="51"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Linha de &amp;comando</translation>
     </message>
 </context>
 </TS>

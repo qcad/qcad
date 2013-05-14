@@ -14,12 +14,12 @@
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Layout</source>
-        <translation type="unfinished">Layout</translation>
+        <translation>Layout</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Styles</source>
-        <translation type="unfinished">Stile</translation>
+        <translation>Stile</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="48"/>
@@ -27,7 +27,7 @@
         <location filename="../StylePreferences.js" line="78"/>
         <location filename="../StylePreferences.js" line="100"/>
         <source>None</source>
-        <translation type="unfinished">Keiner</translation>
+        <translation>Keiner</translation>
     </message>
 </context>
 <context>

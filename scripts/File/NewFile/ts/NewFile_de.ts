@@ -35,7 +35,7 @@
     <message>
         <location filename="../NewFile.js" line="91"/>
         <source>Loading...</source>
-        <translation>Lade..</translation>
+        <translation>Lade...</translation>
     </message>
     <message>
         <location filename="../NewFile.js" line="95"/>

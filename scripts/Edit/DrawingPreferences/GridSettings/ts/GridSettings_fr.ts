@@ -81,7 +81,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="29"/>
         <source>View 1</source>
-        <translation type="unfinished">Affichage 1</translation>
+        <translation>Affichage 1</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="35"/>
@@ -89,7 +89,7 @@
         <location filename="../PreferencesPage.ui" line="339"/>
         <location filename="../PreferencesPage.ui" line="491"/>
         <source>Display Grid</source>
-        <translation type="unfinished">Afficher la grille</translation>
+        <translation>Afficher la grille</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="45"/>
@@ -97,7 +97,7 @@
         <location filename="../PreferencesPage.ui" line="349"/>
         <location filename="../PreferencesPage.ui" line="501"/>
         <source>Isometric Grid</source>
-        <translation type="unfinished">Grille isométrique</translation>
+        <translation>Grille isométrique</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="52"/>
@@ -105,7 +105,7 @@
         <location filename="../PreferencesPage.ui" line="356"/>
         <location filename="../PreferencesPage.ui" line="508"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished">Espacement de la grille</translation>
+        <translation>Espacement de la grille</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="58"/>
@@ -117,7 +117,7 @@
         <location filename="../PreferencesPage.ui" line="561"/>
         <location filename="../PreferencesPage.ui" line="591"/>
         <source>Y:</source>
-        <translation type="unfinished">Y :</translation>
+        <translation>Y :</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="79"/>
@@ -129,7 +129,7 @@
         <location filename="../PreferencesPage.ui" line="514"/>
         <location filename="../PreferencesPage.ui" line="577"/>
         <source>X:</source>
-        <translation type="unfinished">X :</translation>
+        <translation>X :</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="115"/>
@@ -137,22 +137,22 @@
         <location filename="../PreferencesPage.ui" line="419"/>
         <location filename="../PreferencesPage.ui" line="571"/>
         <source>Meta Grid Spacing</source>
-        <translation type="unfinished">Espacement de la métagrille</translation>
+        <translation>Espacement de la métagrille</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="181"/>
         <source>View 2</source>
-        <translation type="unfinished">Affichage 2</translation>
+        <translation>Affichage 2</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="333"/>
         <source>View 3</source>
-        <translation type="unfinished">Affichage 3</translation>
+        <translation>Affichage 3</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="485"/>
         <source>View 4</source>
-        <translation type="unfinished">Affichage 4</translation>
+        <translation>Affichage 4</translation>
     </message>
 </context>
 </TS>

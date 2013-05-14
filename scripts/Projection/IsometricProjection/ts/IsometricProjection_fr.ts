@@ -6,7 +6,7 @@
     <message>
         <location filename="../IsometricProjection.js" line="56"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Projection &amp;isométrique</translation>
     </message>
 </context>
 </TS>

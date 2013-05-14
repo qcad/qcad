@@ -18,12 +18,12 @@ Estilo:</translatorcomment>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Layout</source>
-        <translation type="unfinished">Diseño</translation>
+        <translation>Diseño</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Styles</source>
-        <translation type="unfinished">Estilos</translation>
+        <translation>Estilos</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="48"/>
@@ -31,7 +31,7 @@ Estilo:</translatorcomment>
         <location filename="../StylePreferences.js" line="78"/>
         <location filename="../StylePreferences.js" line="100"/>
         <source>None</source>
-        <translation type="unfinished">Ninguno</translation>
+        <translation>Ninguno</translation>
     </message>
 </context>
 <context>

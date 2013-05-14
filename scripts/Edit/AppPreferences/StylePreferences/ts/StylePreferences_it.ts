@@ -18,12 +18,12 @@ Stile di flusso:</translatorcomment>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Layout</source>
-        <translation type="unfinished">Layout</translation>
+        <translation>Layout</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="26"/>
         <source>Styles</source>
-        <translation type="unfinished">Stili</translation>
+        <translation>Stili</translation>
     </message>
     <message>
         <location filename="../StylePreferences.js" line="48"/>
@@ -31,7 +31,7 @@ Stile di flusso:</translatorcomment>
         <location filename="../StylePreferences.js" line="78"/>
         <location filename="../StylePreferences.js" line="100"/>
         <source>None</source>
-        <translation type="unfinished">Niente</translation>
+        <translation>Niente</translation>
     </message>
 </context>
 <context>

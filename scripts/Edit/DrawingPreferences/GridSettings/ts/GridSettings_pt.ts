@@ -112,7 +112,7 @@ Salta automaticamente</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="29"/>
         <source>View 1</source>
-        <translation type="unfinished">Exiba 1</translation>
+        <translation>Exiba 1</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="35"/>
@@ -120,7 +120,7 @@ Salta automaticamente</translatorcomment>
         <location filename="../PreferencesPage.ui" line="339"/>
         <location filename="../PreferencesPage.ui" line="491"/>
         <source>Display Grid</source>
-        <translation type="unfinished">Exibição de grade</translation>
+        <translation>Exibição de grade</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="45"/>
@@ -128,7 +128,7 @@ Salta automaticamente</translatorcomment>
         <location filename="../PreferencesPage.ui" line="349"/>
         <location filename="../PreferencesPage.ui" line="501"/>
         <source>Isometric Grid</source>
-        <translation type="unfinished">Grade isométrica</translation>
+        <translation>Grade isométrica</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="52"/>
@@ -136,7 +136,7 @@ Salta automaticamente</translatorcomment>
         <location filename="../PreferencesPage.ui" line="356"/>
         <location filename="../PreferencesPage.ui" line="508"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished">Espaçamento da grade</translation>
+        <translation>Espaçamento da grade</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="58"/>
@@ -148,7 +148,7 @@ Salta automaticamente</translatorcomment>
         <location filename="../PreferencesPage.ui" line="561"/>
         <location filename="../PreferencesPage.ui" line="591"/>
         <source>Y:</source>
-        <translation type="unfinished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="79"/>
@@ -160,7 +160,7 @@ Salta automaticamente</translatorcomment>
         <location filename="../PreferencesPage.ui" line="514"/>
         <location filename="../PreferencesPage.ui" line="577"/>
         <source>X:</source>
-        <translation type="unfinished">X:</translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="115"/>
@@ -168,22 +168,22 @@ Salta automaticamente</translatorcomment>
         <location filename="../PreferencesPage.ui" line="419"/>
         <location filename="../PreferencesPage.ui" line="571"/>
         <source>Meta Grid Spacing</source>
-        <translation type="unfinished">Espaçamento da meta grade</translation>
+        <translation>Espaçamento da meta grade</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="181"/>
         <source>View 2</source>
-        <translation type="unfinished">Exiba 2</translation>
+        <translation>Exiba 2</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="333"/>
         <source>View 3</source>
-        <translation type="unfinished">Exiba 3</translation>
+        <translation>Exiba 3</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="485"/>
         <source>View 4</source>
-        <translation type="unfinished">Exiba 4</translation>
+        <translation>Exiba 4</translation>
     </message>
 </context>
 </TS>

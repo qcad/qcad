@@ -279,12 +279,12 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="49"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Eingefroren</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="50"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesperrt</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="51"/>
