@@ -61,7 +61,6 @@ void RPluginLoader::loadPlugins(bool init) {
             continue;
 #endif
         }
-        qDebug() << "Loading plugin: " << fileName;
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
         QObject* plugin = loader.instance();
         loadPlugin(plugin, init, pluginsDir.absoluteFilePath(fileName), loader.errorString());
