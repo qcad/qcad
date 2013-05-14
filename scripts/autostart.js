@@ -348,32 +348,21 @@ function loadTranslations(addOns, splash) {
             continue;
         }
 
-        qDebug("add on: ", addOn.getPath());
-
         var fi = new QFileInfo(addOn.getPath() + "/ts");
-        qDebug("fi: ", fi);
         if (!fi.exists()) {
             // no ts dir:
-            qDebug("fi does not exist");
             continue;
         }
 
-        qDebug("fi exists");
-
-        qDebug("trans");
         translator = new QTranslator(qApp);
-        qDebug("trans: OK");
         if (translator.load(addOn.getClassName() + "_" + locale, addOn.getPath() + "/ts")) {
-            qDebug("trans install");
             QCoreApplication.installTranslator(translator);
-            qDebug("trans install: OK");
         }
         else {
             qWarning("Cannot load translation: ", addOn.getClassName() + "_" + locale);
             qWarning("Directory: ", addOn.getPath() + "/ts");
         }
     }
-
 }
 
 /**
@@ -409,8 +398,6 @@ function initAddOns(addOns, splash) {
 
     for (i=0; i<addOns.length; ++i) {
         addOn = addOns[i];
-        qDebug("init add on: %1/%2".arg(i).arg(addOns.length));
-        qDebug("init add on: ", addOn.getFilePath());
         if (i%10===0 && !isNull(splash)) {
             text = qsTr("Initializing add-ons:") +
                 " %1%\n%2"
@@ -420,7 +407,6 @@ function initAddOns(addOns, splash) {
             QCoreApplication.processEvents();
         }
         addOn.init(splash, text);
-        qDebug("init add on: ", addOn.getClassName(), ": OK");
     }
 }
 
@@ -482,8 +468,6 @@ function main() {
         version();
         return;
     }
-
-    var gotCamExtension = (new QFileInfo("scripts/Cam").exists() && !AddOn.isIgnored("scripts/Cam"));
 
     // in test mode, clean up first:
     qApp.applicationName = "QCAD";
@@ -632,9 +616,7 @@ function main() {
     RDebug.stopTimer(0, "loading add-ons");
 
     RDebug.startTimer(0);
-    qDebug("init add ons");
     initAddOns(addOns, splash);
-    qDebug("init add ons: OK");
     RDebug.stopTimer(0, "initializing add-ons");
 
     appWin.updateGuiActions();

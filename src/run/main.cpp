@@ -211,7 +211,7 @@ int main(int argc, char *argv[]) {
     RBlock::init();
     RView::init();
 
-    RPluginLoader::loadPlugins();
+    RPluginLoader::loadPlugins(true);
 
     // check for autostart option:
     QString autostartFile;

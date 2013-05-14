@@ -28,7 +28,9 @@ QList<RPluginInfo > RPluginLoader::pluginsInfo;
 /**
  * Tries to loads all QCAD plugins located in ./plugins.
  */
-void RPluginLoader::loadPlugins() {
+void RPluginLoader::loadPlugins(bool init) {
+    pluginsInfo.clear();
+
     QString pluginsPath = getPluginsPath();
     if (pluginsPath.isNull()) {
         return;
@@ -59,24 +61,27 @@ void RPluginLoader::loadPlugins() {
             continue;
 #endif
         }
+        qDebug() << "Loading plugin: " << fileName;
         QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
         QObject* plugin = loader.instance();
-        loadPlugin(plugin, pluginsDir.absoluteFilePath(fileName), loader.errorString());
+        loadPlugin(plugin, init, pluginsDir.absoluteFilePath(fileName), loader.errorString());
     }
 
     QObjectList staticPlugins = QPluginLoader::staticInstances();
     for (int i=0; i<staticPlugins.size(); i++) {
         QObject* plugin = staticPlugins[i];
-        loadPlugin(plugin);
+        loadPlugin(plugin, init);
     }
 }
 
-void RPluginLoader::loadPlugin(QObject* plugin, const QString& fileName, const QString& errorString) {
+void RPluginLoader::loadPlugin(QObject* plugin, bool init, const QString& fileName, const QString& errorString) {
     RPluginInfo info;
     if (plugin) {
         RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
         if (p) {
-            p->init();
+            if (init) {
+                p->init();
+            }
             info = p->getPluginInfo();
         }
         else {

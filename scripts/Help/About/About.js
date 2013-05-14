@@ -92,6 +92,7 @@ About.prototype.initAboutQCAD = function(webView) {
 };
 
 About.prototype.initAboutPlugins = function(webView) {
+    RPluginLoader.loadPlugins(false);
     var html =
             "<html>"
             + this.head
@@ -141,12 +142,6 @@ About.prototype.initAboutPlugins = function(webView) {
             if (!isNull(text)) {
                 url = new QUrl(text);
                 if (url.isValid()) {
-    //                var opt = new QUrl.FormattingOption(
-    //                    QUrl.RemoveScheme, QUrl.RemoveAuthority, QUrl.RemovePath,
-    //                    QUrl.RemoveQuery, QUrl.RemoveFragment,
-    //                    QUrl.StripTrailingSlash
-    //                );
-                    //debugger;
                     html += this.getTableRow(
                         qsTr("Internet:"),
                         "<a href='%2'>%3</a>"
@@ -156,6 +151,21 @@ About.prototype.initAboutPlugins = function(webView) {
                 }
             }
 
+            // trial:
+            var exp = pluginInfo.get("TrialExpired");
+            if (!isNull(exp)) {
+                var color = "green";
+                text = qsTr("Active");
+                if (exp) {
+                    color = "red";
+                    text = qsTr("Inactive (restart)");
+                }
+
+                html += this.getTableRow(qsTr("Trial Version:"),
+                    "<span style='color:" + color + "'>" + text + "</span>", false);
+            }
+
+            // file name:
             text = pluginInfo.get("FileName");
             if (!isNull(text)) {
                 var fi = new QFileInfo(text);
@@ -187,7 +197,6 @@ About.prototype.initAboutScripts = function(webView) {
             + "<h1>%1</h1>".arg(qsTr("Script Add-Ons"))
             + "<hr/>";
 
-    //var addOns = AddOn.getAddOns();
     var addOns = AddOn.addOns;
     var numAddOns = addOns.length;
 

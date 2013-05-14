@@ -6,7 +6,6 @@ SUBDIRS = \
     CheckForUpdates \
     FAQ \
     Forum \
-    Purchase \
     ReportBug \
     ReportTranslationError \
     ShowReadme \

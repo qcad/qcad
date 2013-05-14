@@ -37,8 +37,8 @@
  */
 class QCADCORE_EXPORT RPluginLoader {
 public:
-    static void loadPlugins();
-    static void loadPlugin(QObject* plugin, const QString& fileName = QString(), const QString& errorString = QString());
+    static void loadPlugins(bool init);
+    static void loadPlugin(QObject* plugin, bool init, const QString& fileName = QString(), const QString& errorString = QString());
 
     static void postInitPlugins();
     static void postInitPlugin(QObject* plugin);

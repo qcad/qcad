@@ -8,7 +8,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="loadPlugins" cppName="loadPlugins"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="init"
+        isConst="false" />
+      </variant>
     </method>
     <method name="postInitPlugins" cppName="postInitPlugins"
     specifier="public" isStatic="true" isVirtual="false"

@@ -54,7 +54,15 @@ dir="./core" filename="RPluginLoader.h">
     <name>void</name>
   </type>
   <name>loadPlugins</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>init</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <decl_stmt>
   <decl>
     <type>
@@ -67,6 +75,12 @@ dir="./core" filename="RPluginLoader.h">
       <expr>
       <name>QObject</name>* 
       <name>plugin</name></expr>
+    </argument>, 
+    <argument>
+      <expr>
+        <name>bool</name>
+        <name>init</name>
+      </expr>
     </argument>, 
     <argument>
       <expr>
