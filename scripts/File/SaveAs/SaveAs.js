@@ -50,6 +50,18 @@ SaveAs.initPreferences = function(pageWidget, calledByPrefDialog, document) {
 SaveAs.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
+    var nameFilters = RFileExporterRegistry.getFilterStrings();
+    if (nameFilters.length===0) {
+        var dlg = new QMessageBox(QMessageBox.Warning,
+                qsTr("No export filters"),
+                "",
+                QMessageBox.OK);
+        dlg.text = qsTr("No export filters have been found. Aborting...");
+        dlg.exec();
+        this.terminate();
+        return;
+    }
+
     var appWin = EAction.getMainWindow();
     var lastSaveAsFileDir = RSettings.getStringValue("SaveAs/Path", QDir.homePath());
     var defaultNameFilter = RSettings.getStringValue("SaveAs/Filter", "");
@@ -68,7 +80,6 @@ SaveAs.prototype.beginEvent = function() {
     else {
         fileDialog.setDirectory(lastSaveAsFileDir);
     }
-    var nameFilters = RFileExporterRegistry.getFilterStrings();
     fileDialog.setNameFilters(nameFilters);
 
     var suffix = fileInfo.suffix().toLowerCase();

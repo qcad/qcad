@@ -943,7 +943,7 @@ QString RDocumentInterface::getCorrectedFileName(const QString& fileName, const 
     RFileExporter* fileExporter = RFileExporterRegistry::getFileExporter(
             fileName, fileVersion, document);
     if (fileExporter == NULL) {
-        return QString();
+        return fileName;
     }
     QString ret = fileExporter->getCorrectedFileName(fileName, fileVersion);
     delete fileExporter;

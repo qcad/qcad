@@ -96,6 +96,12 @@ AutoSave.init = function(basePath) {
  * Called periodically to perform an auto save of the current document.
  */
 AutoSave.autoSave = function() {
+    var nameFilters = RFileExporterRegistry.getFilterStrings();
+    if (nameFilters.length===0) {
+        // don't attempt autosave if no filters are available to save:
+        return;
+    }
+
     var fi;
     var document = EAction.getDocument();
     var documentInterface = EAction.getDocumentInterface();

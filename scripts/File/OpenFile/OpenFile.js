@@ -37,6 +37,17 @@ OpenFile.prototype = new NewFile();
 OpenFile.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
+    var filters = RFileImporterRegistry.getFilterStrings();
+    if (filters.length===0) {
+        var dlg = new QMessageBox(QMessageBox.Warning,
+                qsTr("No import filters"),
+                "",
+                QMessageBox.OK);
+        dlg.text = qsTr("No import filters have been found. Aborting...");
+        dlg.exec();
+        return;
+    }
+
     if (!isNull(this.guiAction)) {
         var fileName = this.guiAction.data();
         if (!isNull(fileName)) {
@@ -50,7 +61,6 @@ OpenFile.prototype.beginEvent = function() {
             QDesktopServices.storageLocation(QDesktopServices.DocumentsLocation));
     var appWin = EAction.getMainWindow();
     var fileDialog = new QFileDialog(appWin, qsTr("Open Drawing"), lastOpenFileDir, "");
-    var filters = RFileImporterRegistry.getFilterStrings();
     var allFilter = filters[0];
     filters = new Array(qsTr("All Files") + " (*)").concat(filters);
     fileDialog.setNameFilters(filters);
