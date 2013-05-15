@@ -33,12 +33,12 @@ MirrorTest01.prototype.test00 = function() {
     qDebug('running MirrorTest01.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/Mirror/Tests/data/polyline.dxf');
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(43, 452), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(43, 452), Qt.LeftButton, 0, 0);
+    //var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    //this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(43, 452), Qt.LeftButton, 1, 0);
+    //var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    //this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(43, 452), Qt.LeftButton, 0, 0);
     this.setZoom(12, new RVector(1.08333, -7.18891, 0) );
-    var p = new RVector(12, 25.938906);
+    var p = new RVector(20, 30);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::ModifyMenuButton');

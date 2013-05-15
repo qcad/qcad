@@ -38,7 +38,7 @@ Rotate2Test03.prototype.test00 = function() {
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(60, 410), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Rotate2/Tests/data/ellipse.dxf');
     this.setZoom(19.176250917513833, new RVector(13.1934, 14.2118, 0) );
-    var p = new RVector(1.407992, -3);
+    var p = new RVector(0, -3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.triggerCommand('rotate2');
