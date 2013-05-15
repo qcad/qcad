@@ -64,6 +64,8 @@ public:
      * - 'Description' - Longer description of the plugin
      * - 'License' - Licensing information (e.g. 'GPLv3', 'proprietary', ...)
      * - 'URL' - URL where more information about the plugin can be found
+     *
+     * This is typically used by an about dialog or debugging / developer tools.
      */
     virtual RPluginInfo getPluginInfo() = 0;
 };
