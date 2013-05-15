@@ -36,10 +36,35 @@ class QCADCORE_EXPORT RPluginInterface {
 public:
     virtual ~RPluginInterface() {}
 
+    /**
+     * Called immediately after the plugin has been loaded, directly
+     * after starting the application. Implementations typically perform
+     * plugin initialization, registration of file importers, exporter, etc.
+     */
     virtual bool init() = 0;
+
+    /**
+     * Called after the application has been fully loaded, directly before
+     * entering the main event loop. Implementations typically perform
+     * initialization that depends on the application being up and running.
+     */
     virtual void postInit() = 0;
+
+    /**
+     * Called whenever a new script engine is instantiated.
+     * Implementations may register their own script extensions by making
+     * C / C++ code scriptable.
+     */
     virtual void initScriptExtensions(QScriptEngine& engine) = 0;
 
+    /**
+     * \return An RPluginInfo object with at least the following keys:
+     * - 'Version' - Version string
+     * - 'About' - Plugin name
+     * - 'Description' - Longer description of the plugin
+     * - 'License' - Licensing information (e.g. 'GPLv3', 'proprietary', ...)
+     * - 'URL' - URL where more information about the plugin can be found
+     */
     virtual RPluginInfo getPluginInfo() = 0;
 };
 
