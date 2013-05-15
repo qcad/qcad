@@ -5598,17 +5598,17 @@ nicht öffnen.
     <message>
         <location filename="../About.js" line="158"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiv</translation>
     </message>
     <message>
         <location filename="../About.js" line="161"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inaktiv (Neustart)</translation>
     </message>
     <message>
         <location filename="../About.js" line="164"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Testversion:</translation>
     </message>
     <message>
         <location filename="../About.js" line="174"/>

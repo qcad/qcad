@@ -6823,17 +6823,17 @@ O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translatorcomm
     <message>
         <location filename="../About.js" line="158"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Ativo</translation>
     </message>
     <message>
         <location filename="../About.js" line="161"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inativa (restart)</translation>
     </message>
     <message>
         <location filename="../About.js" line="164"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Versão de Avaliação:</translation>
     </message>
     <message>
         <location filename="../About.js" line="174"/>

@@ -5188,17 +5188,17 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
     <message>
         <location filename="../About.js" line="158"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Actif</translation>
     </message>
     <message>
         <location filename="../About.js" line="161"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactif (redémarrer)</translation>
     </message>
     <message>
         <location filename="../About.js" line="164"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Version d&apos;essai :</translation>
     </message>
     <message>
         <location filename="../About.js" line="174"/>

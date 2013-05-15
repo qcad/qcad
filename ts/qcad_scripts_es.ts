@@ -5191,17 +5191,17 @@ El archivo &apos;%1&apos; ya existe. ¿Desea sobreescribirlo?</translatorcomment
     <message>
         <location filename="../About.js" line="158"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Activo</translation>
     </message>
     <message>
         <location filename="../About.js" line="161"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactivo (reinicie)</translation>
     </message>
     <message>
         <location filename="../About.js" line="164"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Versión de prueba:</translation>
     </message>
     <message>
         <location filename="../About.js" line="174"/>
