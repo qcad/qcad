@@ -1094,6 +1094,9 @@ void RDxfImporter::addXRecord(const std::string& handle) {
     if (qcadDict.count(handle.c_str())==1) {
         variableKey = qcadDict[handle.c_str()];
     }
+    else {
+        variableKey = QString();
+    }
 }
 
 void RDxfImporter::addXRecordString(int code, const std::string& value) {
