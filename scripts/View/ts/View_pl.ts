@@ -4,16 +4,14 @@
 <context>
     <name>Form</name>
     <message>
-        <location filename="../ViewDialog.ui" line="14"/>
         <source>View Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wyświetl nazwę</translation>
+        <translation type="obsolete">Wyświetl nazwę</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.ui" line="24"/>
         <source>View Name:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wyświetl nazwę:</translation>
+        <translation type="obsolete">Wyświetl nazwę:</translation>
     </message>
 </context>
 <context>
@@ -31,28 +29,24 @@
 <context>
     <name>ViewDialog</name>
     <message>
-        <location filename="../ViewDialog.js" line="31"/>
         <source>View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Widok danych</translation>
+        <translation type="obsolete">Widok danych</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="33"/>
         <source>Enter View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wpisz widoku danych</translation>
+        <translation type="obsolete">Wpisz widoku danych</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="35"/>
         <source>Edit View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Edytuj Wyświetl dane</translation>
+        <translation type="obsolete">Edytuj Wyświetl dane</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="37"/>
         <source>Enter the name for the new view.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wprowadź nazwę nowego widoku.</translation>
+        <translation type="obsolete">Wprowadź nazwę nowego widoku.</translation>
     </message>
 </context>
 </TS>

@@ -7898,22 +7898,21 @@ Restringir &amp;verticalmente</translatorcomment>
         <translation type="obsolete">Después de la inicialización...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="335"/>
         <source>Loading add-on translations...</source>
-        <translation>Cargando complemento traducciones...</translation>
+        <translation type="obsolete">Cargando complemento traducciones...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="376"/>
+        <location filename="../autostart.js" line="381"/>
         <source>Loading add-ons...</source>
         <translation>Cargar add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="391"/>
+        <location filename="../autostart.js" line="396"/>
         <source>Initializing add-ons...</source>
         <translation>Inicialización de add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="415"/>
+        <location filename="../autostart.js" line="420"/>
         <source>Post-initializing add-ons...</source>
         <translation>Después de la inicialización...</translation>
     </message>
@@ -7930,7 +7929,7 @@ Restringir &amp;verticalmente</translatorcomment>
         <translation type="obsolete">Inicialización de add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="402"/>
+        <location filename="../autostart.js" line="407"/>
         <source>Initializing add-ons:</source>
         <translation>Inicialización de add-ons:</translation>
     </message>
@@ -8287,16 +8286,14 @@ en las líneas, los sólidos y los textos</translatorcomment>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../ViewDialog.ui" line="14"/>
         <source>View Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nombre de vista</translation>
+        <translation type="obsolete">Nombre de vista</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.ui" line="24"/>
         <source>View Name:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nombre de vista:</translation>
+        <translation type="obsolete">Nombre de vista:</translation>
     </message>
 </context>
 <context>
@@ -8310,28 +8307,24 @@ en las líneas, los sólidos y los textos</translatorcomment>
 <context>
     <name>ViewDialog</name>
     <message>
-        <location filename="../ViewDialog.js" line="31"/>
         <source>View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ver datos</translation>
+        <translation type="obsolete">Ver datos</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="33"/>
         <source>Enter View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Introduzca los datos de la vista</translation>
+        <translation type="obsolete">Introduzca los datos de la vista</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="35"/>
         <source>Edit View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Editar vista</translation>
+        <translation type="obsolete">Editar vista</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="37"/>
         <source>Enter the name for the new view.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Introduzca el nombre para la nueva vista.</translation>
+        <translation type="obsolete">Introduzca el nombre para la nueva vista.</translation>
     </message>
 </context>
 <context>

@@ -62,17 +62,17 @@
     <message>
         <location filename="../About.js" line="158"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Attivo</translation>
     </message>
     <message>
         <location filename="../About.js" line="161"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inattivo (riavviare)</translation>
     </message>
     <message>
         <location filename="../About.js" line="164"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione di prova:</translation>
     </message>
     <message>
         <location filename="../About.js" line="174"/>

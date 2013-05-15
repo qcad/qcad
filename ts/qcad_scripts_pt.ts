@@ -10089,22 +10089,21 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="335"/>
         <source>Loading add-on translations...</source>
-        <translation>Carregar add-on traduções...</translation>
+        <translation type="obsolete">Carregar add-on traduções...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="376"/>
+        <location filename="../autostart.js" line="381"/>
         <source>Loading add-ons...</source>
         <translation>Carregando add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="391"/>
+        <location filename="../autostart.js" line="396"/>
         <source>Initializing add-ons...</source>
         <translation>Inicializar add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="415"/>
+        <location filename="../autostart.js" line="420"/>
         <source>Post-initializing add-ons...</source>
         <translation>Pós-inicialização...</translation>
     </message>
@@ -10121,7 +10120,7 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Inicializar add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="402"/>
+        <location filename="../autostart.js" line="407"/>
         <source>Initializing add-ons:</source>
         <translation>Inicializar add-ons:</translation>
     </message>
@@ -10608,17 +10607,15 @@ Linhas de &amp;grade sólidas</translatorcomment>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../ViewDialog.ui" line="14"/>
         <source>View Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nome de vista</translation>
+        <translation type="obsolete">Nome de vista</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.ui" line="24"/>
         <source>View Name:</source>
         <translatorcomment>--ignored colon--
 --file: View_pt.ts--</translatorcomment>
-        <translation>Nome de vista:</translation>
+        <translation type="obsolete">Nome de vista:</translation>
     </message>
 </context>
 <context>
@@ -10636,28 +10633,24 @@ Linhas de &amp;grade sólidas</translatorcomment>
 <context>
     <name>ViewDialog</name>
     <message>
-        <location filename="../ViewDialog.js" line="31"/>
         <source>View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dados de vista</translation>
+        <translation type="obsolete">Dados de vista</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="33"/>
         <source>Enter View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inserir dados de vista</translation>
+        <translation type="obsolete">Inserir dados de vista</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="35"/>
         <source>Edit View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Editar vista</translation>
+        <translation type="obsolete">Editar vista</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="37"/>
         <source>Enter the name for the new view.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Digite o nome para a nova vista.</translation>
+        <translation type="obsolete">Digite o nome para a nova vista.</translation>
     </message>
 </context>
 <context>

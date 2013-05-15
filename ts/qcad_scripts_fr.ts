@@ -7873,22 +7873,21 @@ Restriction &amp;Verticale</translatorcomment>
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="335"/>
         <source>Loading add-on translations...</source>
-        <translation>Chargement add-on traductions...</translation>
+        <translation type="obsolete">Chargement add-on traductions...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="376"/>
+        <location filename="../autostart.js" line="381"/>
         <source>Loading add-ons...</source>
         <translation>Chargement add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="391"/>
+        <location filename="../autostart.js" line="396"/>
         <source>Initializing add-ons...</source>
         <translation>Initialisation des add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="415"/>
+        <location filename="../autostart.js" line="420"/>
         <source>Post-initializing add-ons...</source>
         <translation>Post-initialisation...</translation>
     </message>
@@ -7905,7 +7904,7 @@ Restriction &amp;Verticale</translatorcomment>
         <translation type="obsolete">Initialisation des add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="402"/>
+        <location filename="../autostart.js" line="407"/>
         <source>Initializing add-ons:</source>
         <translation>Initialisation des add-ons :</translation>
     </message>
@@ -8274,16 +8273,14 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
 <context>
     <name>Form</name>
     <message>
-        <location filename="../ViewDialog.ui" line="14"/>
         <source>View Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nom de l&apos;affichage</translation>
+        <translation type="obsolete">Nom de l&apos;affichage</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.ui" line="24"/>
         <source>View Name:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nom de l&apos;affichage :</translation>
+        <translation type="obsolete">Nom de l&apos;affichage :</translation>
     </message>
 </context>
 <context>
@@ -8297,28 +8294,24 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
 <context>
     <name>ViewDialog</name>
     <message>
-        <location filename="../ViewDialog.js" line="31"/>
         <source>View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Données de l&apos;affichage</translation>
+        <translation type="obsolete">Données de l&apos;affichage</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="33"/>
         <source>Enter View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entrez les données de l&apos;affichage</translation>
+        <translation type="obsolete">Entrez les données de l&apos;affichage</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="35"/>
         <source>Edit View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Modifiez les données de l&apos;affichage</translation>
+        <translation type="obsolete">Modifiez les données de l&apos;affichage</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="37"/>
         <source>Enter the name for the new view.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entrez le nom au nouvel affichage.</translation>
+        <translation type="obsolete">Entrez le nom au nouvel affichage.</translation>
     </message>
 </context>
 <context>

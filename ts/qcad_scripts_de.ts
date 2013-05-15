@@ -8212,22 +8212,21 @@ SelectionMode</translatorcomment>
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="335"/>
         <source>Loading add-on translations...</source>
-        <translation>Lade Add-on Übersetzungen...</translation>
+        <translation type="obsolete">Lade Add-on Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="376"/>
+        <location filename="../autostart.js" line="381"/>
         <source>Loading add-ons...</source>
         <translation>Lade Add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="391"/>
+        <location filename="../autostart.js" line="396"/>
         <source>Initializing add-ons...</source>
         <translation>Initialisiere Add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="415"/>
+        <location filename="../autostart.js" line="420"/>
         <source>Post-initializing add-ons...</source>
         <translation>Post-Initialisierung von Add-ons...</translation>
     </message>
@@ -8244,7 +8243,7 @@ SelectionMode</translatorcomment>
         <translation type="obsolete">Initialisiere Add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="402"/>
+        <location filename="../autostart.js" line="407"/>
         <source>Initializing add-ons:</source>
         <translation>Initialisiere Add-ons:</translation>
     </message>
@@ -8577,14 +8576,12 @@ SelectionMode</translatorcomment>
         <translation type="obsolete">Formular</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.ui" line="14"/>
         <source>View Name</source>
-        <translation>Ansichtsname</translation>
+        <translation type="obsolete">Ansichtsname</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.ui" line="24"/>
         <source>View Name:</source>
-        <translation>Ansichtsname:</translation>
+        <translation type="obsolete">Ansichtsname:</translation>
     </message>
 </context>
 <context>
@@ -8598,24 +8595,20 @@ SelectionMode</translatorcomment>
 <context>
     <name>ViewDialog</name>
     <message>
-        <location filename="../ViewDialog.js" line="31"/>
         <source>View Data</source>
-        <translation>Ansicht Daten</translation>
+        <translation type="obsolete">Ansicht Daten</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="33"/>
         <source>Enter View Data</source>
-        <translation>Ansicht Daten eingeben</translation>
+        <translation type="obsolete">Ansicht Daten eingeben</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="35"/>
         <source>Edit View Data</source>
-        <translation>Ansicht Daten bearbeiten</translation>
+        <translation type="obsolete">Ansicht Daten bearbeiten</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="37"/>
         <source>Enter the name for the new view.</source>
-        <translation>Name der neuen Ansicht eingeben.</translation>
+        <translation type="obsolete">Name der neuen Ansicht eingeben.</translation>
     </message>
 </context>
 <context>

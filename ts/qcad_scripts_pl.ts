@@ -9311,27 +9311,22 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="335"/>
-        <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../autostart.js" line="376"/>
+        <location filename="../autostart.js" line="381"/>
         <source>Loading add-ons...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="391"/>
+        <location filename="../autostart.js" line="396"/>
         <source>Initializing add-ons...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="402"/>
+        <location filename="../autostart.js" line="407"/>
         <source>Initializing add-ons:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="415"/>
+        <location filename="../autostart.js" line="420"/>
         <source>Post-initializing add-ons...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9800,16 +9795,14 @@ Ciągłe linie &amp;siatki</translatorcomment>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../ViewDialog.ui" line="14"/>
         <source>View Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wyświetl nazwę</translation>
+        <translation type="obsolete">Wyświetl nazwę</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.ui" line="24"/>
         <source>View Name:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wyświetl nazwę:</translation>
+        <translation type="obsolete">Wyświetl nazwę:</translation>
     </message>
 </context>
 <context>
@@ -9827,28 +9820,24 @@ Ciągłe linie &amp;siatki</translatorcomment>
 <context>
     <name>ViewDialog</name>
     <message>
-        <location filename="../ViewDialog.js" line="31"/>
         <source>View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Widok danych</translation>
+        <translation type="obsolete">Widok danych</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="33"/>
         <source>Enter View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wpisz widoku danych</translation>
+        <translation type="obsolete">Wpisz widoku danych</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="35"/>
         <source>Edit View Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Edytuj Wyświetl dane</translation>
+        <translation type="obsolete">Edytuj Wyświetl dane</translation>
     </message>
     <message>
-        <location filename="../ViewDialog.js" line="37"/>
         <source>Enter the name for the new view.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wprowadź nazwę nowego widoku.</translation>
+        <translation type="obsolete">Wprowadź nazwę nowego widoku.</translation>
     </message>
 </context>
 <context>
