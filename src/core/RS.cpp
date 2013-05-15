@@ -18,6 +18,7 @@
  */
 #include <QtGlobal>
 #include <QDir>
+#include <QFileInfo>
 #include <QHostInfo>
 #ifdef Q_OS_WIN32
 #include <Windows.h>
@@ -207,11 +208,13 @@ QStringList RS::getDirectoryList(const QString& subDirectory) {
 
     QStringList ret;
     for (int i=0; i<dirList.size(); i++) {
-        QString dir = dirList.at(i);
-        if (QFileInfo(dir).isDir() && !ret.contains(dir)) {
+        QFileInfo fi(dirList.at(i));
+        QString dir = fi.canonicalFilePath();
+        if (fi.isDir() && !ret.contains(dir)) {
             ret.append(dir);
         }
     }
+
     return ret;
 }
 
@@ -239,7 +242,8 @@ QStringList RS::getFileList(const QString& subDirectory,
             QStringList files =
                 dir.entryList(QStringList("*." + fileExtension), QDir::Files|QDir::Readable);
             for (int k=0; k<files.size(); ++k) {
-                fileList += path + QDir::separator() + files.at(k);
+                QString f = path + QDir::separator() + files.at(k);
+                fileList.append(f);
             }
         }
     }
