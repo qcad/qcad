@@ -93,6 +93,21 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     mtext = "";
     textStyles.clear();
 
+    // defaults, compatible with other DXF libraries:
+    document->setKnownVariable(RS::INSUNITS, RS::None);
+    document->setKnownVariable(RS::DIMASZ, 0.18);
+    document->setKnownVariable(RS::DIMAUNIT, 0);
+    document->setKnownVariable(RS::DIMAZIN, 0);
+    document->setKnownVariable(RS::DIMDEC, 4);
+    document->setKnownVariable(RS::DIMEXE, 0.18);
+    document->setKnownVariable(RS::DIMEXO, 0.0625);
+    document->setKnownVariable(RS::DIMGAP, 0.09);
+    document->setKnownVariable(RS::DIMLUNIT, 2);
+    document->setKnownVariable(RS::DIMTSZ, 0.0);
+    document->setKnownVariable(RS::DIMTXT, 0.18);
+    document->setKnownVariable(RS::DIMZIN, 0);
+    document->setKnownVariable(RS::LTSCALE, 1);
+
     setCurrentBlockId(document->getModelSpaceBlockId());
 
     RImporter::startImport();
