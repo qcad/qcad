@@ -4,7 +4,7 @@
 <context>
     <name>SnapPerpendicular</name>
     <message>
-        <location filename="../SnapPerpendicularInit.js" line="2"/>
+        <location filename="../SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Perpendiculairement</translation>

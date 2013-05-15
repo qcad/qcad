@@ -4,7 +4,7 @@
 <context>
     <name>HideAllBlocks</name>
     <message>
-        <location filename="../HideAllBlocksInit.js" line="3"/>
+        <location filename="../HideAllBlocksInit.js" line="+3"/>
         <source>&amp;Hide All</source>
         <translation>&amp;Bloquear todo</translation>
     </message>

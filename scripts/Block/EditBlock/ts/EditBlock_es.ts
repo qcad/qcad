@@ -4,12 +4,12 @@
 <context>
     <name>EditBlock</name>
     <message>
-        <location filename="../EditBlockInit.js" line="3"/>
+        <location filename="../EditBlockInit.js" line="+3"/>
         <source>&amp;Edit Block</source>
         <translation>&amp;Editar bloque</translation>
     </message>
     <message>
-        <location filename="../EditBlockInit.js" line="4"/>
+        <location line="+1"/>
         <source>Edit contents of selected block</source>
         <translation>Editar el contenido del bloque seleccionado</translation>
     </message>

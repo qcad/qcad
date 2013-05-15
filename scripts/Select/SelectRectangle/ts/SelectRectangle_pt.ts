@@ -4,7 +4,7 @@
 <context>
     <name>SelectRectangle</name>
     <message>
-        <location filename="../SelectRectangle.js" line="71"/>
+        <location filename="../SelectRectangle.js" line="+71"/>
         <source>First corner</source>
         <translatorcomment>--exact match--
 --file: Stretch_pt.ts--
@@ -13,7 +13,7 @@ Primeira ponto de canto</translatorcomment>
         <translation>Primeira ponto de canto</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.js" line="78"/>
+        <location line="+7"/>
         <source>Second corner</source>
         <translatorcomment>--exact match--
 --file: Stretch_pt.ts--
@@ -22,7 +22,7 @@ Segundo ponto de canto</translatorcomment>
         <translation>Segundo ponto de canto</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.js" line="79"/>
+        <location line="+1"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -37,18 +37,18 @@ lugares:\</translatorcomment>
         <translation type="obsolete">Selecione área &amp;retangular</translation>
     </message>
     <message>
-        <location filename="../SelectRectangleInit.js" line="2"/>
+        <location filename="../SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
         <translation>(De-)selecione área &amp;retangular</translation>
     </message>
     <message>
-        <location filename="../SelectRectangleInit.js" line="7"/>
+        <location line="+5"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)selecione todas as entidades dentro de um retângulo</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.ui" line="17"/>
+        <location filename="../SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -57,7 +57,7 @@ Modo:</translatorcomment>
         <translation>Modo:</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.ui" line="24"/>
+        <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
@@ -65,10 +65,10 @@ Substituir a seleção atual</translatorcomment>
         <translation>Substituir a seleção atual</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.ui" line="40"/>
-        <location filename="../SelectRectangle.ui" line="60"/>
-        <location filename="../SelectRectangle.ui" line="80"/>
-        <location filename="../SelectRectangle.ui" line="100"/>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
@@ -76,7 +76,7 @@ SelectionMode</translatorcomment>
         <translation>SelectionMode</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.ui" line="47"/>
+        <location line="-53"/>
         <source>Add to the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
@@ -84,7 +84,7 @@ Adicionar à seleção atual</translatorcomment>
         <translation>Adicionar à seleção atual</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.ui" line="67"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
@@ -92,7 +92,7 @@ Subtrair da seleção atual</translatorcomment>
         <translation>Subtrair da seleção atual</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.ui" line="87"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
@@ -100,7 +100,7 @@ Interseção com a seleção atual</translatorcomment>
         <translation>Interseção com a seleção atual</translation>
     </message>
     <message>
-        <location filename="../SelectRectangle.ui" line="114"/>
+        <location line="+27"/>
         <source>Cross Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Seleção de captura</translation>

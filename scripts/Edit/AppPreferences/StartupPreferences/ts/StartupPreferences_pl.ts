@@ -4,7 +4,7 @@
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Włącz ekran powitalny</translation>
@@ -13,7 +13,7 @@
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../StartupPreferences.js" line="24"/>
+        <location filename="../StartupPreferences.js" line="+24"/>
         <source>Startup</source>
         <translatorcomment>--google--
 Pokazuj to okno przy uruchamianiu</translatorcomment>

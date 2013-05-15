@@ -4,19 +4,19 @@
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../SnapCoordinatePolarInit.js" line="2"/>
+        <location filename="../SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Coordenada po&amp;lar</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinatePolar.ui" line="17"/>
+        <location filename="../SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;r:</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinatePolar.ui" line="33"/>
+        <location line="+16"/>
         <source>Radius (Distance)</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pt.ts--
@@ -24,13 +24,13 @@ Raio (distância)</translatorcomment>
         <translation>Raio (distância)</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinatePolar.ui" line="46"/>
+        <location line="+13"/>
         <source>&amp;&lt;:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;&lt;:</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinatePolar.ui" line="62"/>
+        <location line="+16"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -40,13 +40,13 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinatePolar.ui" line="75"/>
+        <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Coordenar relativa</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinatePolar.ui" line="78"/>
+        <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Relati&amp;vo</translation>

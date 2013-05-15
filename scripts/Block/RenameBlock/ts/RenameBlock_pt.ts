@@ -4,7 +4,7 @@
 <context>
     <name>RenameBlock</name>
     <message>
-        <location filename="../RenameBlockInit.js" line="2"/>
+        <location filename="../RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>R&amp;enomeie bloco</translation>

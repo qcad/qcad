@@ -4,19 +4,19 @@
 <context>
     <name>DimDiametric</name>
     <message>
-        <location filename="../DimDiametric.js" line="57"/>
+        <location filename="../DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz łuk lub okrąg encji</translation>
     </message>
     <message>
-        <location filename="../DimDiametric.js" line="65"/>
+        <location line="+8"/>
         <source>Dimension line location or angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Położenie linii wymiarowej lub kąt</translation>
     </message>
     <message>
-        <location filename="../DimDiametricInit.js" line="2"/>
+        <location filename="../DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -24,7 +24,7 @@
         <translation type="unfinished">Śre&amp;dnicowy</translation>
     </message>
     <message>
-        <location filename="../DimDiametricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw diametric dimension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Remis diametric wymiar</translation>

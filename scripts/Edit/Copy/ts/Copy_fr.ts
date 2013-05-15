@@ -4,7 +4,7 @@
 <context>
     <name>Copy</name>
     <message>
-        <location filename="../CopyInit.js" line="2"/>
+        <location filename="../CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copier</translation>
     </message>

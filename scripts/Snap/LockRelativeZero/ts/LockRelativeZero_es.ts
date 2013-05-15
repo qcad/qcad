@@ -8,7 +8,7 @@
         <translation type="obsolete">Bloquear el Cero relativo</translation>
     </message>
     <message>
-        <location filename="../LockRelativeZeroInit.js" line="2"/>
+        <location filename="../LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
         <translatorcomment>--google--
 (Des)bloquear el &amp;Cero relativo</translatorcomment>

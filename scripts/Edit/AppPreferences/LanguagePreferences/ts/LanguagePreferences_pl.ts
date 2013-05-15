@@ -4,7 +4,7 @@
 <context>
     <name>Language</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="20"/>
+        <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Język interfejsu użytkownika:</translation>
@@ -13,13 +13,13 @@
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="41"/>
+        <location filename="../LanguagePreferences.js" line="+41"/>
         <source>Language Settings</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Ustawienia językowe</translation>
     </message>
     <message>
-        <location filename="../LanguagePreferences.js" line="41"/>
+        <location line="+0"/>
         <source>Language</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

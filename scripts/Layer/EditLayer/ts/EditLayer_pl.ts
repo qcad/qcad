@@ -4,7 +4,7 @@
 <context>
     <name>EditLayer</name>
     <message>
-        <location filename="../EditLayerInit.js" line="2"/>
+        <location filename="../EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

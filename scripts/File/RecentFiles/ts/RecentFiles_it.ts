@@ -8,23 +8,23 @@
         <translation type="obsolete">Cancella elenco</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="47"/>
+        <location filename="../RecentFilesInit.js" line="+47"/>
         <source>&amp;Clear List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Cancella elenco</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="37"/>
+        <location filename="../RecentFiles.js" line="+37"/>
         <source>Load/Save</source>
         <translation>Carico/Salvare</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="37"/>
+        <location line="+0"/>
         <source>Recent Files</source>
         <translation>File recenti</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="55"/>
+        <location filename="../RecentFilesInit.js" line="+8"/>
         <source>Open &amp;Recent</source>
         <translation>Apri &amp;recenti</translation>
     </message>

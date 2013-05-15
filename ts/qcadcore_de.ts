@@ -4,107 +4,107 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="245"/>
+        <location filename="../src/core/RUnit.cpp" line="+245"/>
         <source>None</source>
         <translation>Keine</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="248"/>
+        <location line="+3"/>
         <source>Inch</source>
         <translation>Inch</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="251"/>
+        <location line="+3"/>
         <source>Foot</source>
         <translation>Fuss</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="254"/>
+        <location line="+3"/>
         <source>Mile</source>
         <translation>Meile</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="257"/>
+        <location line="+3"/>
         <source>Millimeter</source>
         <translation>Millimeter</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="260"/>
+        <location line="+3"/>
         <source>Centimeter</source>
         <translation>Zentimeter</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="263"/>
+        <location line="+3"/>
         <source>Meter</source>
         <translation>Meter</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="266"/>
+        <location line="+3"/>
         <source>Kilometer</source>
         <translation>Kilometer</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="269"/>
+        <location line="+3"/>
         <source>Microinch</source>
         <translation>Mikroinch</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="272"/>
+        <location line="+3"/>
         <source>Mil</source>
         <translation>Mil</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="275"/>
+        <location line="+3"/>
         <source>Yard</source>
         <translation>Yard</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="278"/>
+        <location line="+3"/>
         <source>Angstrom</source>
         <translation>Angstrom</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="281"/>
+        <location line="+3"/>
         <source>Nanometer</source>
         <translation>Nanometer</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="284"/>
+        <location line="+3"/>
         <source>Micron</source>
         <translation>Mikron</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="287"/>
+        <location line="+3"/>
         <source>Decimeter</source>
         <translation>Dezimeter</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="290"/>
+        <location line="+3"/>
         <source>Decameter</source>
         <translation>Dekameter</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="293"/>
+        <location line="+3"/>
         <source>Hectometer</source>
         <translation>Hektometer</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="296"/>
+        <location line="+3"/>
         <source>Gigameter</source>
         <translation>Gigameter</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="299"/>
+        <location line="+3"/>
         <source>Astro</source>
         <translation>Astro</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="302"/>
+        <location line="+3"/>
         <source>Lightyear</source>
         <translation>Lichtjahr</translation>
     </message>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="305"/>
+        <location line="+3"/>
         <source>Parsec</source>
         <translation>Parsec</translation>
     </message>
@@ -116,67 +116,67 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="411"/>
+        <location filename="../src/core/RColor.cpp" line="+411"/>
         <source>By Layer</source>
         <translation>Von Layer</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="412"/>
+        <location line="+1"/>
         <source>By Block</source>
         <translation>Von Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="413"/>
+        <location line="+1"/>
         <source>Red</source>
         <translation>Rot</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="414"/>
+        <location line="+1"/>
         <source>Yellow</source>
         <translation>Gelb</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="415"/>
+        <location line="+1"/>
         <source>Green</source>
         <translation>Grün</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="416"/>
+        <location line="+1"/>
         <source>Cyan</source>
         <translation>Cyan</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="417"/>
+        <location line="+1"/>
         <source>Blue</source>
         <translation>Blau</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="418"/>
+        <location line="+1"/>
         <source>Magenta</source>
         <translation>Magenta</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="420"/>
+        <location line="+2"/>
         <source>Black</source>
         <translation>Schwarz</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="421"/>
+        <location line="+1"/>
         <source>White</source>
         <translation>Weiss</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="422"/>
+        <location line="+1"/>
         <source>Gray</source>
         <translation>Grau</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="423"/>
+        <location line="+1"/>
         <source>Light Gray</source>
         <translation>Hellgrau</translation>
     </message>
     <message>
-        <location filename="../src/core/RColor.cpp" line="424"/>
+        <location line="+1"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -184,79 +184,79 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="44"/>
+        <location filename="../src/core/REntity.cpp" line="+44"/>
         <source>Block</source>
         <translation>Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="75"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Referenced Block</source>
         <translation>Referenzierter Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="76"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="79"/>
+        <location line="+1"/>
+        <location line="+3"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="76"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="77"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="78"/>
+        <location line="-3"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="77"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="80"/>
+        <location line="-1"/>
+        <location line="+3"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="78"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="81"/>
+        <location line="-2"/>
+        <location line="+3"/>
         <source>Z</source>
         <translation>Z</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="79"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="80"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="81"/>
+        <location line="-2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Scale</source>
         <translation>Skalierung</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="82"/>
+        <location line="+1"/>
         <source>Angle</source>
         <translation>Winkel</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="43"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="45"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translation>Layer</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="46"/>
+        <location line="+1"/>
         <source>Linetype</source>
         <translation>Linientyp</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="47"/>
+        <location line="+1"/>
         <source>Lineweight</source>
         <translation>Linienstärke</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="48"/>
+        <location line="+1"/>
         <source>Color</source>
         <translation>Farbe</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="49"/>
+        <location line="+1"/>
         <source>Draw Order</source>
         <translation>Reihenfolge</translation>
     </message>
@@ -264,7 +264,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="163"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+163"/>
         <source>Requires selection</source>
         <translation>Benötigt Selektion</translation>
     </message>
@@ -272,32 +272,32 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="48"/>
+        <location filename="../src/core/RLayer.cpp" line="+48"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="49"/>
+        <location line="+1"/>
         <source>Frozen</source>
         <translation>Versteckt</translation>
     </message>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="50"/>
+        <location line="+1"/>
         <source>Locked</source>
         <translation>Gesperrt</translation>
     </message>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="51"/>
+        <location line="+1"/>
         <source>Color</source>
         <translation>Farbe</translation>
     </message>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="52"/>
+        <location line="+1"/>
         <source>Linetype</source>
         <translation>Linientyp</translation>
     </message>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="53"/>
+        <location line="+1"/>
         <source>Lineweight</source>
         <translation>Linienstärke</translation>
     </message>
@@ -305,107 +305,107 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="46"/>
+        <location filename="../src/core/RLinetype.cpp" line="+46"/>
         <source>By Layer</source>
         <translation>Von Layer</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="47"/>
+        <location line="+1"/>
         <source>By Block</source>
         <translation>Von Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="48"/>
+        <location line="+1"/>
         <source>Continuous</source>
         <translation>Durchgehend</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="49"/>
+        <location line="+1"/>
         <source>Dot</source>
         <translation>Gepunktet</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="50"/>
+        <location line="+1"/>
         <source>Dot (small)</source>
         <translation>Gepunktet (klein)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="51"/>
+        <location line="+1"/>
         <source>Dot (large)</source>
         <translation>Gepunktet (gross)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="52"/>
+        <location line="+1"/>
         <source>Dash</source>
         <translation>Gestrichelt</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="53"/>
+        <location line="+1"/>
         <source>Dash (small)</source>
         <translation>Gestrichelt (klein)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="54"/>
+        <location line="+1"/>
         <source>Dash (large)</source>
         <translation>Gestrichelt (gross)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="55"/>
+        <location line="+1"/>
         <source>Dash Dot</source>
         <translation>Strich Punkt</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="56"/>
+        <location line="+1"/>
         <source>Dash Dot (small)</source>
         <translation>Strich Punkt (klein)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="57"/>
+        <location line="+1"/>
         <source>Dash Dot (large)</source>
         <translation>Strich Punkt (gross)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="58"/>
+        <location line="+1"/>
         <source>Divide</source>
         <translation>Trennen</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="59"/>
+        <location line="+1"/>
         <source>Divide (small)</source>
         <translation>Trennung (klein)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="60"/>
+        <location line="+1"/>
         <source>Divide (large)</source>
         <translation>Trennung (gross)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="61"/>
+        <location line="+1"/>
         <source>Center</source>
         <translation>Zentrum</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="62"/>
+        <location line="+1"/>
         <source>Center (small)</source>
         <translation>Mittellinie (klein)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="63"/>
+        <location line="+1"/>
         <source>Center (large)</source>
         <translation>Mittellinie (gross)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="64"/>
+        <location line="+1"/>
         <source>Border</source>
         <translation>Rahmen</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="65"/>
+        <location line="+1"/>
         <source>Border (small)</source>
         <translation>Rahmen (klein)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="66"/>
+        <location line="+1"/>
         <source>Border (large)</source>
         <translation>Rahmen (gross)</translation>
     </message>
@@ -413,137 +413,137 @@
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="34"/>
+        <location filename="../src/core/RLineweight.cpp" line="+34"/>
         <source>By Layer</source>
         <translation>Von Layer</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="35"/>
+        <location line="+1"/>
         <source>By Block</source>
         <translation>Von Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="36"/>
+        <location line="+1"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="37"/>
+        <location line="+1"/>
         <source>0.00mm</source>
         <translation>0.00mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="38"/>
+        <location line="+1"/>
         <source>0.05mm</source>
         <translation>0.05mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="39"/>
+        <location line="+1"/>
         <source>0.09mm</source>
         <translation>0.09mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="40"/>
+        <location line="+1"/>
         <source>0.13mm (ISO)</source>
         <translation>0.13mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="41"/>
+        <location line="+1"/>
         <source>0.15mm</source>
         <translation>0.15mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="42"/>
+        <location line="+1"/>
         <source>0.18mm (ISO)</source>
         <translation>0.18mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="43"/>
+        <location line="+1"/>
         <source>0.20mm</source>
         <translation>0.20mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="44"/>
+        <location line="+1"/>
         <source>0.25mm (ISO)</source>
         <translation>0.25mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="45"/>
+        <location line="+1"/>
         <source>0.30mm</source>
         <translation>0.30mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="46"/>
+        <location line="+1"/>
         <source>0.35mm (ISO)</source>
         <translation>0.35mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="47"/>
+        <location line="+1"/>
         <source>0.40mm</source>
         <translation>0.40mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="48"/>
+        <location line="+1"/>
         <source>0.50mm (ISO)</source>
         <translation>0.50mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="49"/>
+        <location line="+1"/>
         <source>0.53mm</source>
         <translation>0.53mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="50"/>
+        <location line="+1"/>
         <source>0.60mm</source>
         <translation>0.60mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="51"/>
+        <location line="+1"/>
         <source>0.70mm (ISO)</source>
         <translation>0.70mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="52"/>
+        <location line="+1"/>
         <source>0.80mm</source>
         <translation>0.80mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="53"/>
+        <location line="+1"/>
         <source>0.90mm</source>
         <translation>0.90mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="54"/>
+        <location line="+1"/>
         <source>1.00mm (ISO)</source>
         <translation>1.00mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="55"/>
+        <location line="+1"/>
         <source>1.06mm</source>
         <translation>1.06mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="56"/>
+        <location line="+1"/>
         <source>1.20mm</source>
         <translation>1.20mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="57"/>
+        <location line="+1"/>
         <source>1.40mm (ISO)</source>
         <translation>1.40mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="58"/>
+        <location line="+1"/>
         <source>1.58mm</source>
         <translation>1.58mm</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="59"/>
+        <location line="+1"/>
         <source>2.00mm (ISO)</source>
         <translation>2.00mm (ISO)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="60"/>
+        <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11mm</translation>
     </message>
@@ -551,12 +551,12 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="35"/>
+        <location filename="../src/core/RObject.cpp" line="+35"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
     <message>
-        <location filename="../src/core/RObject.cpp" line="36"/>
+        <location line="+1"/>
         <source>Handle</source>
         <translation>Handle</translation>
     </message>

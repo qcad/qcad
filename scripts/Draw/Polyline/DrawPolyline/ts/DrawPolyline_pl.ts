@@ -4,19 +4,19 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="63"/>
+        <location filename="../DrawPolyline.js" line="+63"/>
         <source>First vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pierwszy wierzchołek</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="73"/>
+        <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Następny wierzchołek</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="76"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -26,31 +26,31 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="23"/>
+        <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zamknij polilinia</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="43"/>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Cofnąć poprzedni segment</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="61"/>
+        <location line="+18"/>
         <source>Arc segment with radius:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odcinka łuku o promieniu:</translation>
     </message>
     <message>
-        <location filename="../DrawPolylineInit.js" line="2"/>
+        <location filename="../DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj łamaną</translation>
     </message>
     <message>
-        <location filename="../DrawPolylineInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj polilinię z segmentów linii i łuku</translation>

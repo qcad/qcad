@@ -4,58 +4,58 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="63"/>
+        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Choisissez une entité sur le calque</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="2"/>
+        <location filename="../SelectLayerInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
         <translation>(Dé-)sélectionner &amp;calque</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="7"/>
+        <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(Dé)sélectionner toutes les entités sur le même calque</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="17"/>
+        <location filename="../SelectLayer.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--google--
 Mode de couleur :</translatorcomment>
         <translation>Mode :</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="24"/>
+        <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Remplacer la sélection courante</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="40"/>
-        <location filename="../SelectLayer.ui" line="60"/>
-        <location filename="../SelectLayer.ui" line="80"/>
-        <location filename="../SelectLayer.ui" line="100"/>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>SelectionMode</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="47"/>
+        <location line="-53"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ajouter à la sélection courante</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="67"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Soustraire de la sélection courante</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="87"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Intersection avec la sélection courante</translation>

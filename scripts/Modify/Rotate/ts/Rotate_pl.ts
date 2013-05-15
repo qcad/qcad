@@ -4,14 +4,14 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="68"/>
+        <location filename="../Rotate.js" line="+68"/>
         <source>Center point</source>
         <translatorcomment>--google--
 Przyciągaj do punktów centralnych</translatorcomment>
         <translation type="unfinished">Srodek</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="78"/>
+        <location line="+10"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -20,14 +20,14 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="87"/>
+        <location line="+9"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>
         <translation type="unfinished">Punkt docelowy</translation>
     </message>
     <message>
-        <location filename="../RotateInit.js" line="2"/>
+        <location filename="../RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -38,7 +38,7 @@ Wskaż punkt docelowy</translatorcomment>
 <context>
     <name>RotateOptions</name>
     <message>
-        <location filename="../RotateDialog.ui" line="14"/>
+        <location filename="../RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -47,7 +47,7 @@ Opcje przesuwania/obracania</translatorcomment>
         <translation type="unfinished">Opcje obrotów</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Number of Copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -56,7 +56,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="unfinished">Liczba kopii</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="34"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -64,7 +64,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="unfinished">&amp;Usuń oryginał</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="44"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -72,7 +72,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="unfinished">&amp;Zachowaj oryginał</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="51"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -81,7 +81,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation type="unfinished">Kopie &amp;wielokrotne</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="161"/>
+        <location line="+110"/>
         <source>&amp;Angle (a):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -89,7 +89,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation type="unfinished">&amp;Kąt (a):</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="194"/>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>

@@ -4,13 +4,13 @@
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="47"/>
+        <location filename="../PreferencesPage.ui" line="+47"/>
         <source>Status Bar Font:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Font Status Bar:</translation>
     </message>
     <message>
-        <location filename="../StatusBar.js" line="27"/>
+        <location filename="../StatusBar.js" line="+27"/>
         <source>Widgets</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -19,7 +19,7 @@ Zastępcze widżety</translatorcomment>
         <translation type="unfinished">Widżety</translation>
     </message>
     <message>
-        <location filename="../StatusBar.js" line="27"/>
+        <location line="+0"/>
         <source>Status Bar</source>
         <translatorcomment>--google--
 Utwórz pasek stanu

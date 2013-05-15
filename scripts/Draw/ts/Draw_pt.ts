@@ -4,7 +4,7 @@
 <context>
     <name>Draw</name>
     <message>
-        <location filename="../Draw.js" line="56"/>
+        <location filename="../Draw.js" line="+56"/>
         <source>&amp;Draw</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

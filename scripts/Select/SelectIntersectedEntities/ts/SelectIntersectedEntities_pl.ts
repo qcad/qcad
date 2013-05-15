@@ -4,7 +4,7 @@
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
-        <location filename="../SelectIntersectedEntities.js" line="84"/>
+        <location filename="../SelectIntersectedEntities.js" line="+84"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.js" line="89"/>
+        <location line="+5"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Wskaż drugi punkt
@@ -22,52 +22,52 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.ui" line="17"/>
+        <location filename="../SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tryb:</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.ui" line="24"/>
+        <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zamień bieżące zaznaczenie</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.ui" line="40"/>
-        <location filename="../SelectIntersectedEntities.ui" line="60"/>
-        <location filename="../SelectIntersectedEntities.ui" line="80"/>
-        <location filename="../SelectIntersectedEntities.ui" line="100"/>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">SelectionMode</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.ui" line="47"/>
+        <location line="-53"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Dodać do wyboru bieżących</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.ui" line="67"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odejmij od bieżącego zaznaczenia</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntities.ui" line="87"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przecięcie z bieżącego zaznaczenia</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntitiesInit.js" line="2"/>
+        <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">(De-) Wybierz przecięte Podmioty</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntitiesInit.js" line="7"/>
+        <location line="+5"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">(De-) Wybierz wszystkie podmioty przecięte przez linię</translation>

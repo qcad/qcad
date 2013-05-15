@@ -4,21 +4,21 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangle.js" line="56"/>
+        <location filename="../LineRectangle.js" line="+56"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Wskaż pierwszy wierzchołek</translatorcomment>
         <translation type="unfinished">Pierwszy zakręt</translation>
     </message>
     <message>
-        <location filename="../LineRectangle.js" line="63"/>
+        <location line="+7"/>
         <source>Second corner</source>
         <translatorcomment>--google--
 Wskaż drugi wierzchołek</translatorcomment>
         <translation type="unfinished">Drugi narożnik</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="2"/>
+        <location filename="../LineRectangleInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -26,7 +26,7 @@ Wskaż drugi wierzchołek</translatorcomment>
         <translation type="unfinished">&amp;Prostokąt</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="8"/>
+        <location line="+6"/>
         <source>Draw rectangle from two corners</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj prostokąt od dwóch rogach</translation>

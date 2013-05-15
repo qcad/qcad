@@ -4,22 +4,22 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="46"/>
+        <location filename="../DefaultNavigation.js" line="+46"/>
         <source>Graphics View</source>
         <translation>Grafikansicht</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="46"/>
+        <location line="+0"/>
         <source>Navigation</source>
         <translation>Navigation</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="51"/>
+        <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
         <translation>Ansicht vergrössern / verkleinern (Maus mit Rad)</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="52"/>
+        <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translation>Anischt verschieben (Trackpad, Multi-Touch Maus)</translation>
     </message>
@@ -27,12 +27,12 @@
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Maus Rad / Zwei Finger Swipe:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="29"/>
+        <location line="+10"/>
         <source>Enable pan gesture</source>
         <translation>Bewegung zum Verschieben der Ansicht aktivieren</translation>
     </message>

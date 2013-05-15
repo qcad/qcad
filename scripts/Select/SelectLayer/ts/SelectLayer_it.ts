@@ -4,24 +4,24 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="63"/>
+        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Scegli entità sul layer</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="2"/>
+        <location filename="../SelectLayerInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
         <translation>(De)seleziona la&amp;yer</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="7"/>
+        <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)seleziona tutte le entità sullo stesso layer</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="17"/>
+        <location filename="../SelectLayer.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
@@ -30,7 +30,7 @@ Modalità:</translatorcomment>
         <translation>Modalità:</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="24"/>
+        <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
@@ -38,10 +38,10 @@ Sostituire la selezione corrente</translatorcomment>
         <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="40"/>
-        <location filename="../SelectLayer.ui" line="60"/>
-        <location filename="../SelectLayer.ui" line="80"/>
-        <location filename="../SelectLayer.ui" line="100"/>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
@@ -49,7 +49,7 @@ SelectionMode</translatorcomment>
         <translation>SelectionMode</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="47"/>
+        <location line="-53"/>
         <source>Add to the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
@@ -57,7 +57,7 @@ Aggiungere alla selezione corrente</translatorcomment>
         <translation>Aggiungere alla selezione corrente</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="67"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
@@ -65,7 +65,7 @@ Sottrai dalla selezione corrente</translatorcomment>
         <translation>Sottrai dalla selezione corrente</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="87"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--

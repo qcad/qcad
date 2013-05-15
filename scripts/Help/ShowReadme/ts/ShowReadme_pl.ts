@@ -4,13 +4,13 @@
 <context>
     <name>ReadmeDialog</name>
     <message>
-        <location filename="../ShowReadme.ui" line="14"/>
+        <location filename="../ShowReadme.ui" line="+14"/>
         <source>Readme</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Readme</translation>
     </message>
     <message>
-        <location filename="../ShowReadme.ui" line="29"/>
+        <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie wyświetlaj tego okna przy uruchamianiu</translation>
@@ -19,13 +19,13 @@
 <context>
     <name>ShowReadme</name>
     <message>
-        <location filename="../ShowReadme.js" line="45"/>
+        <location filename="../ShowReadme.js" line="+45"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">&apos;&amp;#39; Plik nie istnieje.</translation>
     </message>
     <message>
-        <location filename="../ShowReadmeInit.js" line="2"/>
+        <location filename="../ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Show Readme</translation>

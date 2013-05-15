@@ -4,13 +4,13 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="21"/>
+        <location filename="../PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rzutnie</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="35"/>
+        <location line="+14"/>
         <source>Preview</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -23,7 +23,7 @@ Pokazuje podgląd wydruku</translatorcomment>
 <context>
     <name>ViewportSettings</name>
     <message>
-        <location filename="../ViewportSettings.js" line="27"/>
+        <location filename="../ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -31,13 +31,13 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="27"/>
+        <location line="+0"/>
         <source>Layout - Viewports</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Layout - rzutnie</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="29"/>
+        <location line="+2"/>
         <source>Layout</source>
         <translatorcomment>--google--
 Usuń rozmieszczenie
@@ -46,7 +46,7 @@ Zmień geometrię elementu w rozmieszczeniu</translatorcomment>
         <translation type="unfinished">Układ</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="29"/>
+        <location line="+0"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rzutnie</translation>

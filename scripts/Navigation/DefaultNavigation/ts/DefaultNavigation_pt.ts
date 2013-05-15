@@ -4,13 +4,13 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="46"/>
+        <location filename="../DefaultNavigation.js" line="+46"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ver gráficos</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="46"/>
+        <location line="+0"/>
         <source>Navigation</source>
         <translatorcomment>--google--
 O seu tema não suporta menus de navegação ou de widgets.
@@ -19,13 +19,13 @@ Texto a mostrar</translatorcomment>
         <translation>Navegação</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="51"/>
+        <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zoom (roda do rato)</translation>
     </message>
     <message>
-        <location filename="../DefaultNavigation.js" line="52"/>
+        <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Deslocamento (Trackpad, Multi-Touch Mouse)</translation>
@@ -34,13 +34,13 @@ Texto a mostrar</translatorcomment>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Roda do mouse / dois simples toque de dedo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="29"/>
+        <location line="+10"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Habilitar gesto pan</translation>

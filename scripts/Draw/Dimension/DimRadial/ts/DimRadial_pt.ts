@@ -4,19 +4,19 @@
 <context>
     <name>DimRadial</name>
     <message>
-        <location filename="../DimRadial.js" line="57"/>
+        <location filename="../DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha arco ou círculo</translation>
     </message>
     <message>
-        <location filename="../DimRadial.js" line="65"/>
+        <location line="+8"/>
         <source>Dimension line location or angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Localização linha cota ou ângulo</translation>
     </message>
     <message>
-        <location filename="../DimRadialInit.js" line="2"/>
+        <location filename="../DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -24,7 +24,7 @@
         <translation>&amp;Radial</translation>
     </message>
     <message>
-        <location filename="../DimRadialInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw radial dimension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe cota radial</translation>

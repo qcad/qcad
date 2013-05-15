@@ -4,13 +4,13 @@
 <context>
     <name>FontPreferences</name>
     <message>
-        <location filename="../FontPreferences.js" line="24"/>
+        <location filename="../FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Graphics View</translation>
     </message>
     <message>
-        <location filename="../FontPreferences.js" line="24"/>
+        <location line="+0"/>
         <source>Fonts</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -23,19 +23,19 @@ Rozmiar czcionki</translatorcomment>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="41"/>
+        <location filename="../PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Font Ruler:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="57"/>
+        <location line="+16"/>
         <source>Snap Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Snap Font Label:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="70"/>
+        <location line="+13"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Font Label Info:</translation>

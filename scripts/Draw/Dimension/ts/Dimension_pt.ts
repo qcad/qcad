@@ -4,13 +4,13 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="65"/>
+        <location filename="../Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sem prefixo</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="66"/>
+        <location line="+1"/>
         <source>Radius</source>
         <translation>Raio</translation>
     </message>
@@ -19,12 +19,12 @@
         <translation type="obsolete">Métrica</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="67"/>
+        <location line="+1"/>
         <source>Metric screw</source>
         <translation>Métrica</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="68"/>
+        <location line="+1"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -33,23 +33,23 @@ Diâmetro (ø)</translatorcomment>
         <translation>Diâmetro</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="69"/>
+        <location line="+1"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Plus / Minus</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="70"/>
+        <location line="+1"/>
         <source>Almost equal to</source>
         <translation>Quase igual</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="71"/>
+        <location line="+1"/>
         <source>Asymptotically equal to</source>
         <translation>Assintoticamente igual</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="72"/>
+        <location line="+1"/>
         <source>Square</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -57,7 +57,7 @@ Quadras Em</translatorcomment>
         <translation>Quadrado</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="73"/>
+        <location line="+1"/>
         <source>Delta</source>
         <translatorcomment>--google--
 Delta X
@@ -65,25 +65,25 @@ Delta Y</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="114"/>
+        <location line="+41"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas cotas</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="119"/>
+        <location line="+5"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mostrar as ferramentas cotas</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="136"/>
+        <location line="+17"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>D&amp;imensão</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="29"/>
+        <location filename="../Dimension.ui" line="+29"/>
         <source>Label:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -91,7 +91,7 @@ Rótulo:</translatorcomment>
         <translation>Rótulo:</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="42"/>
+        <location line="+13"/>
         <source>Prefix</source>
         <translatorcomment>--google--
 &lt;strong&gt;ERRO&lt;/strong&gt;: O prefixo das tabelas só pode conter números, letras e underscores.
@@ -100,7 +100,7 @@ Prefixo de base de dados inválido</translatorcomment>
         <translation>Prefixo</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="61"/>
+        <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -108,7 +108,7 @@ Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translatorco
         <translation>Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="112"/>
+        <location line="+51"/>
         <source>Upper tolerance</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -116,7 +116,7 @@ Tolerância superior</translatorcomment>
         <translation>Tolerância superior</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="156"/>
+        <location line="+44"/>
         <source>Lower tolerance</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

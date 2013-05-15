@@ -4,21 +4,21 @@
 <context>
     <name>Stretch</name>
     <message>
-        <location filename="../Stretch.js" line="59"/>
+        <location filename="../Stretch.js" line="+59"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Wskaż pierwszy wierzchołek</translatorcomment>
         <translation type="unfinished">Pierwszy zakręt</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="69"/>
+        <location line="+10"/>
         <source>Second corner</source>
         <translatorcomment>--google--
 Wskaż drugi wierzchołek</translatorcomment>
         <translation type="unfinished">Drugi narożnik</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="78"/>
+        <location line="+9"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -27,14 +27,14 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="86"/>
+        <location line="+8"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>
         <translation type="unfinished">Punkt docelowy</translation>
     </message>
     <message>
-        <location filename="../StretchInit.js" line="2"/>
+        <location filename="../StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

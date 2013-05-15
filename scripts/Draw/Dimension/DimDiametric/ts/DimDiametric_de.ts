@@ -4,22 +4,22 @@
 <context>
     <name>DimDiametric</name>
     <message>
-        <location filename="../DimDiametric.js" line="57"/>
+        <location filename="../DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
         <translation>Bogen oder Kreis wählen</translation>
     </message>
     <message>
-        <location filename="../DimDiametric.js" line="65"/>
+        <location line="+8"/>
         <source>Dimension line location or angle</source>
         <translation>Position der Bemassungslinie oder Winkel</translation>
     </message>
     <message>
-        <location filename="../DimDiametricInit.js" line="2"/>
+        <location filename="../DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
         <translation>&amp;Durchmesser</translation>
     </message>
     <message>
-        <location filename="../DimDiametricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw diametric dimension</source>
         <translation>Durchmesserbemassung</translation>
     </message>

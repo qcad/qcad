@@ -23,12 +23,12 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="66"/>
+        <location filename="../InsertBlock.js" line="+66"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
     <message>
-        <location filename="../InsertBlockInit.js" line="2"/>
+        <location filename="../InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
         <translation>&amp;Insira bloco</translation>
     </message>
@@ -36,7 +36,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../InsertBlock.ui" line="17"/>
+        <location filename="../InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -44,13 +44,13 @@ _Rotação</translatorcomment>
         <translation>Rotação:</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="30"/>
+        <location line="+13"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Rodar bloco&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="127"/>
+        <location line="+97"/>
         <source>Scale X:</source>
         <translatorcomment>--ignored ...--
 --file: pt_PT.po--
@@ -58,13 +58,13 @@ _Rotação</translatorcomment>
         <translation>Escala X:</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="140"/>
+        <location line="+13"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escala bloco em X&lt;br&gt;por este fator</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="205"/>
+        <location line="+65"/>
         <source>Keep Proportions</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pt.ts--
@@ -72,7 +72,7 @@ Mantenha proporções</translatorcomment>
         <translation>Mantenha proporções</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="225"/>
+        <location line="+20"/>
         <source>Scale Y:</source>
         <translatorcomment>--ignored ...--
 --file: pt_PT.po--
@@ -80,19 +80,19 @@ Mantenha proporções</translatorcomment>
         <translation>Escala Y:</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="241"/>
+        <location line="+16"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escala bloco em Y&lt;br&gt;por este fator</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="313"/>
+        <location line="+72"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inverter bloco&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="324"/>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inverter bloco&lt;br&gt;verticalmente</translation>

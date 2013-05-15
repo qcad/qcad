@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="51"/>
+        <location filename="../InfoDistancePP.js" line="+51"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="58"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Wskaż drugi punkt
@@ -22,7 +22,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="61"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -32,7 +32,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="98"/>
+        <location line="+37"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -41,19 +41,19 @@ Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
         <translation type="unfinished">Odległość:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="102"/>
+        <location line="+4"/>
         <source>Delta X:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta X:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="103"/>
+        <location line="+1"/>
         <source>Delta Y:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta Y:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="104"/>
+        <location line="+1"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -62,7 +62,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished">Kąt:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePPInit.js" line="2"/>
+        <location filename="../InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Punkt Odległość do punktu</translation>

@@ -10,7 +10,7 @@ Restringir &amp;ortogonalmente</translatorcomment>
         <translation type="obsolete">Restringir &amp;ortogonalmente</translation>
     </message>
     <message>
-        <location filename="../RestrictOrthogonalInit.js" line="2"/>
+        <location filename="../RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
         <translation>Restringir &amp;ortogonalmente</translation>
     </message>

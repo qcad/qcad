@@ -4,7 +4,7 @@
 <context>
     <name>Website</name>
     <message>
-        <location filename="../WebsiteInit.js" line="2"/>
+        <location filename="../WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

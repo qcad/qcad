@@ -4,17 +4,17 @@
 <context>
     <name>ColorSettings</name>
     <message>
-        <location filename="../ColorSettings.js" line="25"/>
+        <location filename="../ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="25"/>
+        <location line="+0"/>
         <source>Printing - Colors</source>
         <translation>Imprimiendo - Colores</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="27"/>
+        <location line="+2"/>
         <source>Printing</source>
         <translation>Imprimiendo</translation>
     </message>
@@ -23,32 +23,32 @@
         <translation type="obsolete">Configuración por defecto de color</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="27"/>
+        <location line="+0"/>
         <source>Colors</source>
         <translation>Colores</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
         <translation>Color de fondo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="63"/>
+        <location line="+44"/>
         <source>Color Mode</source>
         <translation>Modo de color</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="69"/>
+        <location line="+6"/>
         <source>Full color</source>
         <translation>Color</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="89"/>
+        <location line="+20"/>
         <source>Grayscale</source>
         <translation>Escala de grises</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="106"/>
+        <location line="+17"/>
         <source>Black / white</source>
         <translation>Blanco / negro</translation>
     </message>

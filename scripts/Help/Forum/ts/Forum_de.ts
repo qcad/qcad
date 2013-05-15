@@ -8,7 +8,7 @@
         <translation type="obsolete">Benutzerforum</translation>
     </message>
     <message>
-        <location filename="../ForumInit.js" line="2"/>
+        <location filename="../ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
         <translation>Benutzer&amp;forum</translation>
     </message>

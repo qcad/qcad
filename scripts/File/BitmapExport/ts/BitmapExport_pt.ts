@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="88"/>
+        <location filename="../BitmapExport.js" line="+88"/>
         <source>Files</source>
         <translatorcomment>--exact match--
 --file: Image_pt.ts--
@@ -13,31 +13,31 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <translation>Arquivos</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="98"/>
+        <location line="+10"/>
         <source>Export as Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Exportação como bitmap</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="218"/>
+        <location line="+120"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Erro ao gerar arquivo Bitmap &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="223"/>
+        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arquivo bitmap tem sido exportado para &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../BitmapExportInit.js" line="2"/>
+        <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Exportar bitmap...</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="14"/>
+        <location filename="../BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
         <translatorcomment>--google--
 Exporte como Bitmap...
@@ -45,7 +45,7 @@ Cor e transparência do fundo da página (também usada para exportar bitmaps</t
         <translation>Exportar bitmap</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="27"/>
+        <location line="+13"/>
         <source>Size</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -54,7 +54,7 @@ Tamanho da seta:</translatorcomment>
         <translation>Tamanho</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="33"/>
+        <location line="+6"/>
         <source>Width:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -63,7 +63,7 @@ Largura:
         <translation>Largura:</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="56"/>
+        <location line="+23"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -72,23 +72,23 @@ Altura:
         <translation>Altura:</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="79"/>
+        <location line="+23"/>
         <source>Pixels per drawing unit:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Pixels por unidade de desenho:</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="151"/>
+        <location line="+72"/>
         <source>Margin:</source>
         <translation>Margem:</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="215"/>
+        <location line="+64"/>
         <source>px</source>
         <translation>px</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="227"/>
+        <location line="+12"/>
         <source>Background</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -98,7 +98,7 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation>Fundo</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="233"/>
+        <location line="+6"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -108,7 +108,7 @@ Branco</translatorcomment>
         <translation>Branco</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="243"/>
+        <location line="+10"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

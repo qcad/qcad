@@ -8,7 +8,7 @@
         <translation type="obsolete">Oft gestellte Fragen (online)</translation>
     </message>
     <message>
-        <location filename="../FAQInit.js" line="2"/>
+        <location filename="../FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
         <translation>Oft gestellte &amp;Fragen (online)</translation>
     </message>

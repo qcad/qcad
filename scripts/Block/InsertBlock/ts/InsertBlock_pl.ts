@@ -4,7 +4,7 @@
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="66"/>
+        <location filename="../InsertBlock.js" line="+66"/>
         <source>Position</source>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej lub wprowadź kąt:
@@ -13,7 +13,7 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Stanowisko</translation>
     </message>
     <message>
-        <location filename="../InsertBlockInit.js" line="2"/>
+        <location filename="../InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -24,7 +24,7 @@ Wskaż pozycje</translatorcomment>
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../InsertBlock.ui" line="17"/>
+        <location filename="../InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -32,25 +32,25 @@ Obracanie:</translatorcomment>
         <translation type="unfinished">Obracanie:</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="30"/>
+        <location line="+13"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Obróć blok &lt;br&gt; przez to kąt</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="127"/>
+        <location line="+97"/>
         <source>Scale X:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skala X:</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="140"/>
+        <location line="+13"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skala blok w X &lt;br&gt; tym czynnikiem</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="205"/>
+        <location line="+65"/>
         <source>Keep Proportions</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -58,25 +58,25 @@ Zachowaj proporcje</translatorcomment>
         <translation type="unfinished">Zachowaj proporcje</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="225"/>
+        <location line="+20"/>
         <source>Scale Y:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skala Y:</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="241"/>
+        <location line="+16"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Blok Skala w Y &lt;br&gt; tym czynnikiem</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="313"/>
+        <location line="+72"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odwróć blok &lt;br&gt; poziomo</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="324"/>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odwróć blok &lt;br&gt; pionowo</translation>

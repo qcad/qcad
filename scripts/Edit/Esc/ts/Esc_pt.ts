@@ -4,7 +4,7 @@
 <context>
     <name>Esc</name>
     <message>
-        <location filename="../EscInit.js" line="2"/>
+        <location filename="../EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Escapar</translation>

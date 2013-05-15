@@ -4,13 +4,13 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="56"/>
+        <location filename="../SelectionDisplay.js" line="+56"/>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>No hay entidades seleccionadas.</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="79"/>
+        <location line="+23"/>
         <source>Entities</source>
         <translatorcomment>--google--
 Crea un nuevo bloque de entidades existentes
@@ -28,12 +28,12 @@ El punto de corte no esta en la entidad.</translatorcomment>
         <translation type="obsolete">en</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="81"/>
+        <location line="+2"/>
         <source>on</source>
         <translation>en</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="83"/>
+        <location line="+2"/>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--
 Capa &apos;%1&apos; transformada con éxito
@@ -41,13 +41,13 @@ No se pudo transformar la capa &apos;%1&apos;</translatorcomment>
         <translation>Capa &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="85"/>
+        <location line="+2"/>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>%1 Capas</translation>
     </message>
     <message>
-        <location filename="../SelectionDisplay.js" line="88"/>
+        <location line="+3"/>
         <source>Selected entities:
 %1.</source>
         <translatorcomment>--google--</translatorcomment>

@@ -4,13 +4,13 @@
 <context>
     <name>SnapDistance</name>
     <message>
-        <location filename="../SnapDistance.ui" line="17"/>
+        <location filename="../SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Snap dystans:</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceInit.js" line="2"/>
+        <location filename="../SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
         <translatorcomment>--google--
 &amp;Odległość punkt - punkt

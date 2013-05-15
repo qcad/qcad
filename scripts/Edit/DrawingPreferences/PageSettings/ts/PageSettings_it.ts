@@ -4,72 +4,72 @@
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
         <translation>Orientamento</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="25"/>
+        <location line="+6"/>
         <source>Portrait</source>
         <translation>Verticale</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="35"/>
+        <location line="+10"/>
         <source>Landscape</source>
         <translation>Orizzontale</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="58"/>
+        <location line="+23"/>
         <source>Paper</source>
         <translation>Carta</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="64"/>
+        <location line="+6"/>
         <source>Paper size:</source>
         <translation>Dimensioni carta:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="78"/>
+        <location line="+14"/>
         <source>Paper width:</source>
         <translation>Larghezza Carta:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="85"/>
+        <location line="+7"/>
         <source>Paper height:</source>
         <translation>Altezza Carta:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="159"/>
+        <location line="+74"/>
         <source>Viewport</source>
         <translation>Viewport</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="167"/>
+        <location line="+8"/>
         <source>&amp;Scale:</source>
         <translation>&amp;Scala:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="184"/>
+        <location line="+17"/>
         <source>Offset X:</source>
         <translation>Offset X:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="208"/>
+        <location line="+24"/>
         <source>Offset Y:</source>
         <translation>Offset Y:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="249"/>
+        <location line="+41"/>
         <source>Zero-Point</source>
         <translation>Zero</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="274"/>
+        <location line="+25"/>
         <source>Miscellaneous</source>
         <translation>Varie</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="280"/>
+        <location line="+6"/>
         <source>Show paper borders</source>
         <translation>Mostra i bordi della pagina</translation>
     </message>
@@ -82,7 +82,7 @@
         <translation type="obsolete">Mostra riquadro di delimitazione</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="30"/>
+        <location filename="../PageSettings.js" line="+30"/>
         <source>Printing</source>
         <translation>Stampa</translation>
     </message>
@@ -91,22 +91,22 @@
         <translation type="obsolete">Impostazioni della pagina di default</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="28"/>
+        <location line="-2"/>
         <source>Defaults for New Drawings</source>
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="28"/>
+        <location line="+0"/>
         <source>Printing - Page</source>
         <translation>Stampa - Pagina</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="30"/>
+        <location line="+2"/>
         <source>Page</source>
         <translation>Pagina</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="38"/>
+        <location line="+8"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>

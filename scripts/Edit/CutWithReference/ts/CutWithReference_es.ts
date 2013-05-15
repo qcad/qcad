@@ -4,7 +4,7 @@
 <context>
     <name>CutWithReference</name>
     <message>
-        <location filename="../CutWithReferenceInit.js" line="2"/>
+        <location filename="../CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
         <translation>Cor&amp;tar con referencia</translation>
     </message>

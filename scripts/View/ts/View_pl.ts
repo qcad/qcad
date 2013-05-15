@@ -17,7 +17,7 @@
 <context>
     <name>View</name>
     <message>
-        <location filename="../View.js" line="41"/>
+        <location filename="../View.js" line="+41"/>
         <source>&amp;View</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

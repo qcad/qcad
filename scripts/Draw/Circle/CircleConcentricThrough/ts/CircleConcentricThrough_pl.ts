@@ -4,7 +4,7 @@
 <context>
     <name>CircleConcentricThrough</name>
     <message>
-        <location filename="../CircleConcentricThrough.ui" line="17"/>
+        <location filename="../CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13,13 +13,13 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Liczba:</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricThroughInit.js" line="2"/>
+        <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Koncentryczny (poprzez Point)</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricThroughInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric circle through point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Remis koncentryczny okrąg przez punkt</translation>

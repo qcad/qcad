@@ -4,12 +4,12 @@
 <context>
     <name>FontPreferences</name>
     <message>
-        <location filename="../FontPreferences.js" line="24"/>
+        <location filename="../FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translation>Grafikansicht</translation>
     </message>
     <message>
-        <location filename="../FontPreferences.js" line="24"/>
+        <location line="+0"/>
         <source>Fonts</source>
         <translation>Schriftarten</translation>
     </message>
@@ -28,17 +28,17 @@
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="41"/>
+        <location filename="../PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
         <translation>Massstab:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="57"/>
+        <location line="+16"/>
         <source>Snap Label Font:</source>
         <translation>Fang Beschriftung:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="70"/>
+        <location line="+13"/>
         <source>Info Label Font:</source>
         <translation>Info Beschriftung:</translation>
     </message>

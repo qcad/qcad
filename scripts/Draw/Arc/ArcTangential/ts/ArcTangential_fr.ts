@@ -11,12 +11,12 @@
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../ArcTangential.js" line="63"/>
+        <location filename="../ArcTangential.js" line="+63"/>
         <source>Choose base line or base arc</source>
         <translation>Choisissez une ligne de base ou un arc de base</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.js" line="69"/>
+        <location line="+6"/>
         <source>Choose end point of arc</source>
         <translation>Sélectionnez le point de fin de l&apos;arc</translation>
     </message>
@@ -25,17 +25,17 @@
         <translation type="obsolete">&amp;Continue</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="2"/>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
         <translation>Relié &amp;tangentiellement</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Tracer un arc tangentielle à une entité de base</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.ui" line="17"/>
+        <location filename="../ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Rayon :</translation>
     </message>

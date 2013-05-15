@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="51"/>
+        <location filename="../InfoDistanceEP.js" line="+51"/>
         <source>Specify entity</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -13,7 +13,7 @@ Wskaż obiekt do cięcia</translatorcomment>
         <translation type="unfinished">Wprowadź obiekt</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="59"/>
+        <location line="+8"/>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -21,7 +21,7 @@ Wskaż punkt</translatorcomment>
         <translation type="unfinished">Wskaż punkt</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="62"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -31,7 +31,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="124"/>
+        <location line="+62"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -40,7 +40,7 @@ Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
         <translation type="unfinished">Odległość:</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEPInit.js" line="2"/>
+        <location filename="../InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Podmiot odległość do punktu</translation>

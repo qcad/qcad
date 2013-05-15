@@ -4,13 +4,13 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="14"/>
+        <location filename="../AddCustomProperty.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location filename="../AddCustomProperty.ui" line="26"/>
+        <location line="+12"/>
         <source>Name:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -19,7 +19,7 @@ Nazwa warstwy:</translatorcomment>
         <translation type="unfinished">Nazwa:</translation>
     </message>
     <message>
-        <location filename="../AddCustomProperty.ui" line="36"/>
+        <location line="+10"/>
         <source>Type:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -31,13 +31,13 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="187"/>
+        <location filename="../PropertyEditor.js" line="+187"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">* Różni *</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="191"/>
+        <location line="+4"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -46,13 +46,13 @@ Wersja: </translatorcomment>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="322"/>
+        <location line="+131"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No Selection</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="338"/>
+        <location line="+16"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -61,7 +61,7 @@ Edytuj geometrię obiektu</translatorcomment>
         <translation type="unfinished">Geometria</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="352"/>
+        <location line="+14"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -71,7 +71,7 @@ Własne filtry</translatorcomment>
         <translation type="unfinished">Niestandardowy</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="472"/>
+        <location line="+120"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -80,7 +80,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
         <translation type="unfinished">Indeks</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="549"/>
+        <location line="+77"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -91,13 +91,13 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="569"/>
+        <location line="+20"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="607"/>
+        <location line="+38"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -106,7 +106,7 @@ Góra - lewo
         <translation type="unfinished">Lewo</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="607"/>
+        <location line="+0"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -115,7 +115,7 @@ Wskaż środek
         <translation type="unfinished">Wyśrodkuj</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="607"/>
+        <location line="+0"/>
         <source>Right</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -124,7 +124,7 @@ Góra - prawo
         <translation type="unfinished">Prawo</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="608"/>
+        <location line="+1"/>
         <source>Aligned</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -133,8 +133,8 @@ Wyrównany
         <translation type="unfinished">Wyrównany</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="608"/>
-        <location filename="../PropertyEditor.js" line="617"/>
+        <location line="+0"/>
+        <location line="+9"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -144,7 +144,7 @@ Przyciągaj do punktów pośrednich</translatorcomment>
         <translation type="unfinished">Środek</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="608"/>
+        <location line="-9"/>
         <source>Fit</source>
         <translatorcomment>--google--
 Rozmieść na stronie
@@ -153,7 +153,7 @@ Dopasuj stronę</translatorcomment>
         <translation type="unfinished">Dopasować</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="617"/>
+        <location line="+9"/>
         <source>Top</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -162,7 +162,7 @@ Góra - prawo</translatorcomment>
         <translation type="unfinished">Do góry</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="617"/>
+        <location line="+0"/>
         <source>Base</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -171,7 +171,7 @@ Zaznacz obiekt podstawowy</translatorcomment>
         <translation type="unfinished">Podstawa</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="617"/>
+        <location line="+0"/>
         <source>Bottom</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -180,7 +180,7 @@ Dół - prawo</translatorcomment>
         <translation type="unfinished">W dół</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="700"/>
+        <location line="+83"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -190,13 +190,13 @@ Przyciąganie automatyczne</translatorcomment>
         <translation type="unfinished">Automatycznie</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="819"/>
+        <location line="+119"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Użyj automatycznego pomiaru</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="851"/>
+        <location line="+32"/>
         <source>Yes</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -205,7 +205,7 @@ Tak
         <translation type="unfinished">Tak</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="852"/>
+        <location line="+1"/>
         <source>No</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -215,8 +215,8 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="1163"/>
-        <location filename="../PropertyEditor.js" line="1175"/>
+        <location line="+311"/>
+        <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -225,14 +225,14 @@ Skonfiguruj edytor właściwości</translatorcomment>
         <translation type="unfinished">Edytor właściwości</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.ui" line="40"/>
+        <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--</translatorcomment>
         <translation type="unfinished">Wybrane strony:</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.ui" line="71"/>
+        <location line="+31"/>
         <source>General</source>
         <translatorcomment>--google--
 Ogólne ustawienia aplikacji
@@ -241,13 +241,13 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.ui" line="234"/>
+        <location line="+163"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przenieś zaznaczenie do nowej warstwy</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.ui" line="254"/>
+        <location line="+20"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Uchwyt:</translation>

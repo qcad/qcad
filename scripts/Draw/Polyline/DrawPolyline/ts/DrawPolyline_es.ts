@@ -4,27 +4,27 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="73"/>
+        <location filename="../DrawPolyline.js" line="+73"/>
         <source>Next vertex</source>
         <translation>Siguiente vértice</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="76"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="63"/>
+        <location line="-13"/>
         <source>First vertex</source>
         <translation>Primer vértice</translation>
     </message>
     <message>
-        <location filename="../DrawPolylineInit.js" line="2"/>
+        <location filename="../DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
         <translation>Dibujar &amp;polilínea</translation>
     </message>
     <message>
-        <location filename="../DrawPolylineInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Dibuje una polilínea con segmentos de línea y de arco</translation>
     </message>
@@ -33,17 +33,17 @@
         <translation type="obsolete">Cerrar la polilínea</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="23"/>
+        <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
         <translation>Cerrar la polilínea</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="43"/>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translation>Deshacer segmento anterior</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="61"/>
+        <location line="+18"/>
         <source>Arc segment with radius:</source>
         <translation>Segmento de arco con radio:</translation>
     </message>

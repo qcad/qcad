@@ -8,7 +8,7 @@
         <translation type="obsolete">Visiter le site &amp;Web</translation>
     </message>
     <message>
-        <location filename="../WebsiteInit.js" line="2"/>
+        <location filename="../WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
         <translation>Visiter le site &amp;Web</translation>
     </message>

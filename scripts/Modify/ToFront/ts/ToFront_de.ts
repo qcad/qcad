@@ -4,7 +4,7 @@
 <context>
     <name>ToFront</name>
     <message>
-        <location filename="../ToFrontInit.js" line="2"/>
+        <location filename="../ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
         <translation>In den &amp;Vordergrund</translation>
     </message>

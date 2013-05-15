@@ -4,7 +4,7 @@
 <context>
     <name>LineOrthogonal</name>
     <message>
-        <location filename="../LineOrthogonalInit.js" line="2"/>
+        <location filename="../LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -13,13 +13,13 @@ Restrinja &amp;Ortogonal</translatorcomment>
         <translation>&amp;Ortogonal</translation>
     </message>
     <message>
-        <location filename="../LineOrthogonalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw line orthogonal to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar linha ortogonal à entidade de base</translation>
     </message>
     <message>
-        <location filename="../LineOrthogonal.ui" line="17"/>
+        <location filename="../LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>

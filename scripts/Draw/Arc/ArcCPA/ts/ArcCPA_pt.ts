@@ -4,7 +4,7 @@
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../ArcCPA.js" line="66"/>
+        <location filename="../ArcCPA.js" line="+66"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -14,19 +14,19 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="73"/>
+        <location line="+7"/>
         <source>Point on arc or radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto no arco ou raio</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="74"/>
+        <location line="+1"/>
         <source>Point on arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto no arco</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="79"/>
+        <location line="+5"/>
         <source>Start angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -35,7 +35,7 @@ Indique o ângulo de início</translatorcomment>
         <translation>Ângulo de início</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.js" line="86"/>
+        <location line="+7"/>
         <source>End angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -44,7 +44,7 @@ Indique o ângulo de término</translatorcomment>
         <translation>Ângulo de término</translation>
     </message>
     <message>
-        <location filename="../ArcCPAInit.js" line="2"/>
+        <location filename="../ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -52,13 +52,13 @@ Indique o ângulo de término</translatorcomment>
         <translation>&amp;Centro, ponto, ângulos</translation>
     </message>
     <message>
-        <location filename="../ArcCPAInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar arco de centro, ponto no arco e ângulos</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.ui" line="17"/>
+        <location filename="../ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -67,14 +67,14 @@ Descrição:</translatorcomment>
         <translation>Descrição:</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.ui" line="24"/>
+        <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Anti-Horário (positivo)</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.ui" line="37"/>
-        <location filename="../ArcCPA.ui" line="54"/>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -84,7 +84,7 @@ LTR</translatorcomment>
         <translation>Descrição</translation>
     </message>
     <message>
-        <location filename="../ArcCPA.ui" line="44"/>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Horário (negativo)</translation>

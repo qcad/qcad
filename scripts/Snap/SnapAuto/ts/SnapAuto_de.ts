@@ -4,17 +4,17 @@
 <context>
     <name>SnapAuto</name>
     <message>
-        <location filename="../SnapAutoInit.js" line="2"/>
+        <location filename="../SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
         <translation>&amp;Auto</translation>
     </message>
     <message>
-        <location filename="../SnapAuto.js" line="29"/>
+        <location filename="../SnapAuto.js" line="+29"/>
         <source>Snap</source>
         <translation>Fang</translation>
     </message>
     <message>
-        <location filename="../SnapAuto.js" line="29"/>
+        <location line="+0"/>
         <source>Auto Snap</source>
         <translation>Auto Fang</translation>
     </message>

@@ -4,17 +4,17 @@
 <context>
     <name>Arc</name>
     <message>
-        <location filename="../Arc.js" line="67"/>
+        <location filename="../Arc.js" line="+67"/>
         <source>Arc Tools</source>
         <translation>Menú arcos</translation>
     </message>
     <message>
-        <location filename="../Arc.js" line="72"/>
+        <location line="+5"/>
         <source>Show arc tools</source>
         <translation>Mostrar menú &quot;Arcos&quot;</translation>
     </message>
     <message>
-        <location filename="../Arc.js" line="85"/>
+        <location line="+13"/>
         <source>&amp;Arc</source>
         <translation>&amp;Arco</translation>
     </message>

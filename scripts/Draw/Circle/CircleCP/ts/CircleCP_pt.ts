@@ -4,7 +4,7 @@
 <context>
     <name>CircleCP</name>
     <message>
-        <location filename="../CircleCP.js" line="56"/>
+        <location filename="../CircleCP.js" line="+56"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -14,7 +14,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../CircleCP.js" line="63"/>
+        <location line="+7"/>
         <source>Point on circle or radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto no círculo ou raio</translation>
@@ -25,12 +25,12 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation type="obsolete">Círculo (&amp;centro, ponto)</translation>
     </message>
     <message>
-        <location filename="../CircleCPInit.js" line="2"/>
+        <location filename="../CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
         <translation>&amp;Centro, ponto</translation>
     </message>
     <message>
-        <location filename="../CircleCPInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar círculo do centro e ponto no círculo</translation>

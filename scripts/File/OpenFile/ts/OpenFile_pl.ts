@@ -4,7 +4,17 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="+43"/>
+        <source>No import filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No import filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Open Drawing</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -12,7 +22,7 @@ Otwórz rysunek</translatorcomment>
         <translation type="unfinished">Otwórz rysunek</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="55"/>
+        <location line="+2"/>
         <source>All Files</source>
         <translatorcomment>--google--
 Wszystkie pliki (*.*)
@@ -30,7 +40,7 @@ Format:</translatorcomment>
         <translation type="obsolete">Format:</translation>
     </message>
     <message>
-        <location filename="../OpenFileInit.js" line="2"/>
+        <location filename="../OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -39,7 +49,7 @@ Format:</translatorcomment>
         <translation type="unfinished">&amp;Otwórz</translation>
     </message>
     <message>
-        <location filename="../OpenFileInit.js" line="8"/>
+        <location line="+6"/>
         <source>Open an existing drawing</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Otwórz istniejący rysunek</translation>

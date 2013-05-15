@@ -4,7 +4,17 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="+43"/>
+        <source>No import filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No import filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Open Drawing</source>
         <translatorcomment>--exact match--
 --file: Compare_pt.ts--
@@ -12,7 +22,7 @@ Abra desenho</translatorcomment>
         <translation>Abra desenho</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="55"/>
+        <location line="+2"/>
         <source>All Files</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -71,7 +81,7 @@ Apenas Leitura</translatorcomment>
         <translation type="obsolete">Apenas leitura</translation>
     </message>
     <message>
-        <location filename="../OpenFileInit.js" line="2"/>
+        <location filename="../OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -80,7 +90,7 @@ Apenas Leitura</translatorcomment>
         <translation>&amp;Abrir</translation>
     </message>
     <message>
-        <location filename="../OpenFileInit.js" line="8"/>
+        <location line="+6"/>
         <source>Open an existing drawing</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Abrir um desenho existente</translation>

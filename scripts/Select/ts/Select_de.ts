@@ -4,17 +4,17 @@
 <context>
     <name>Select</name>
     <message>
-        <location filename="../Select.js" line="64"/>
+        <location filename="../Select.js" line="+64"/>
         <source>Selection Tools</source>
         <translation>Selektionswerkzeuge</translation>
     </message>
     <message>
-        <location filename="../Select.js" line="69"/>
+        <location line="+5"/>
         <source>Show selection tools</source>
         <translation>Selektionswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location filename="../Select.js" line="77"/>
+        <location line="+8"/>
         <source>Selection Tools Panel</source>
         <translation>Selektionswerkzeuge</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation type="obsolete">Selektionswerkzeuge Panel</translation>
     </message>
     <message>
-        <location filename="../Select.js" line="223"/>
+        <location line="+146"/>
         <source>&amp;Select</source>
         <translation>&amp;Selektion</translation>
     </message>

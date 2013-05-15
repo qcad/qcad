@@ -4,12 +4,12 @@
 <context>
     <name>RemoveBlock</name>
     <message>
-        <location filename="../RemoveBlockInit.js" line="2"/>
+        <location filename="../RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
         <translation>&amp;Cancella Blocco</translation>
     </message>
     <message>
-        <location filename="../RemoveBlockInit.js" line="3"/>
+        <location line="+1"/>
         <source>Delete selected block</source>
         <translation>Eliminare blocco selezionato</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../PageSettings.js" line="28"/>
+        <location filename="../PageSettings.js" line="+28"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -12,13 +12,13 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="28"/>
+        <location line="+0"/>
         <source>Printing - Page</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Drukowanie - Page</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="30"/>
+        <location line="+2"/>
         <source>Printing</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -28,7 +28,7 @@ Drukowanie zakończone</translatorcomment>
         <translation type="unfinished">Drukowanie</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="30"/>
+        <location line="+0"/>
         <source>Page</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -38,7 +38,7 @@ Wycentruj na stronie</translatorcomment>
         <translation type="unfinished">Strona</translation>
     </message>
     <message>
-        <location filename="../PageSettings.js" line="38"/>
+        <location line="+8"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -48,13 +48,13 @@ Własne filtry</translatorcomment>
         <translation type="unfinished">Niestandardowy</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Orientacja strony</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="25"/>
+        <location line="+6"/>
         <source>Portrait</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -64,7 +64,7 @@ VGA portret (480x640)</translatorcomment>
         <translation type="unfinished">Portret</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="35"/>
+        <location line="+10"/>
         <source>Landscape</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -74,7 +74,7 @@ QVGA pejzaż (320x240)</translatorcomment>
         <translation type="unfinished">Pejzaż</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="58"/>
+        <location line="+23"/>
         <source>Paper</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -83,13 +83,13 @@ Format papieru
         <translation type="unfinished">Papier</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="64"/>
+        <location line="+6"/>
         <source>Paper size:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rozmiar papieru:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="78"/>
+        <location line="+14"/>
         <source>Paper width:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -97,7 +97,7 @@ Szerokość papieru:</translatorcomment>
         <translation type="unfinished">Szerokość papieru:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="85"/>
+        <location line="+7"/>
         <source>Paper height:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -105,38 +105,38 @@ Wysokość papieru:</translatorcomment>
         <translation type="unfinished">Wysokość papieru:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="159"/>
+        <location line="+74"/>
         <source>Viewport</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rzutnia</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="167"/>
+        <location line="+8"/>
         <source>&amp;Scale:</source>
         <translatorcomment>--ignored colon--
 --file: qcadguiqt_pl.ts--</translatorcomment>
         <translation type="unfinished">&amp;Skaluj:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="184"/>
+        <location line="+17"/>
         <source>Offset X:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przesunięcie X:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="208"/>
+        <location line="+24"/>
         <source>Offset Y:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przesunięcie Y:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="249"/>
+        <location line="+41"/>
         <source>Zero-Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zero-Point</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="274"/>
+        <location line="+25"/>
         <source>Miscellaneous</source>
         <translatorcomment>--google--
 [2300-23FF] Miscellaneous Technical
@@ -145,7 +145,7 @@ Wysokość papieru:</translatorcomment>
         <translation type="unfinished">Różny</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="280"/>
+        <location line="+6"/>
         <source>Show paper borders</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż granice papieru</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>LockRelativeZero</name>
     <message>
-        <location filename="../LockRelativeZeroInit.js" line="2"/>
+        <location filename="../LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
         <translatorcomment>--google--
 &amp;(Des)Trave Zero Relativo</translatorcomment>

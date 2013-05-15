@@ -4,7 +4,7 @@
 <context>
     <name>IsometricGridOff</name>
     <message>
-        <location filename="../IsometricGridOff.js" line="35"/>
+        <location filename="../IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Siatka izometryczna Off</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="88"/>
+        <location filename="../BitmapExport.js" line="+88"/>
         <source>Files</source>
         <translatorcomment>--exact match--
 --file: assistant_pl.ts--
@@ -13,32 +13,32 @@ Wszystkie pliki (*.*)</translatorcomment>
         <translation type="unfinished">Pliki</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="98"/>
+        <location line="+10"/>
         <source>Export as Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Eksportuj jako bitmapę</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="218"/>
+        <location line="+120"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Błąd podczas generowania pliku bitmapy&apos;&amp;#39;:</translation>
     </message>
     <message>
-        <location filename="../BitmapExport.js" line="223"/>
+        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Bitmap file został wywieziony do&apos;&amp;#39;</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="14"/>
+        <location filename="../BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
         <translatorcomment>--google--
 Eksportuj bitmapę...</translatorcomment>
         <translation type="unfinished">Export Bitmap</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="27"/>
+        <location line="+13"/>
         <source>Size</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -48,7 +48,7 @@ Zmienia rozmiar okna aplikacji</translatorcomment>
         <translation type="unfinished">Rozmiar</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="33"/>
+        <location line="+6"/>
         <source>Width:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -57,7 +57,7 @@ Szerokość:
         <translation type="unfinished">Szerokość:</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="56"/>
+        <location line="+23"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -66,13 +66,13 @@ Wysokość tekstu:</translatorcomment>
         <translation type="unfinished">Wysokość:</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="79"/>
+        <location line="+23"/>
         <source>Pixels per drawing unit:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pikseli na jednostkę rysunku:</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="151"/>
+        <location line="+72"/>
         <source>Margin:</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -81,7 +81,7 @@ Marginesy:</translatorcomment>
         <translation type="unfinished">Marginesy:</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="215"/>
+        <location line="+64"/>
         <source>px</source>
         <translatorcomment>--google--
 Minimalny odstęp siatki (piksele):
@@ -89,7 +89,7 @@ Minimalny odstęp siatki (piksele)</translatorcomment>
         <translation type="unfinished">px</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="227"/>
+        <location line="+12"/>
         <source>Background</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -99,7 +99,7 @@ Tło rysunku:</translatorcomment>
         <translation type="unfinished">Tło</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="233"/>
+        <location line="+6"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -108,7 +108,7 @@ Biały</translatorcomment>
         <translation type="unfinished">Biały</translation>
     </message>
     <message>
-        <location filename="../BitmapExportDialog.ui" line="243"/>
+        <location line="+10"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -117,7 +117,7 @@ Bardzo gruby</translatorcomment>
         <translation type="unfinished">Bardzo gruby</translation>
     </message>
     <message>
-        <location filename="../BitmapExportInit.js" line="2"/>
+        <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Bitmap Export ...</translation>

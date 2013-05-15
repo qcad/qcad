@@ -4,7 +4,7 @@
 <context>
     <name>ZoomOut</name>
     <message>
-        <location filename="../ZoomOutInit.js" line="2"/>
+        <location filename="../ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

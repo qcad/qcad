@@ -4,29 +4,29 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="64"/>
+        <location filename="../InfoArea.js" line="+64"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Spécifiez le point d&apos;angle prochaine de polygone</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="70"/>
+        <location line="+6"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="194"/>
+        <location line="+124"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Superficie du polygone:</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="195"/>
+        <location line="+1"/>
         <source>circumference:</source>
         <translation>circonférence :</translation>
     </message>
     <message>
-        <location filename="../InfoAreaInit.js" line="2"/>
+        <location filename="../InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
         <translation>Aire &amp;polygonale</translation>
     </message>
@@ -35,13 +35,13 @@
         <translation type="obsolete">Aire polygonale</translation>
     </message>
     <message>
-        <location filename="../InfoArea.ui" line="17"/>
+        <location filename="../InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Calculer la longueur et fermer l&apos;outil.</translation>
     </message>
     <message>
-        <location filename="../InfoArea.ui" line="31"/>
+        <location line="+14"/>
         <source>Close Tool.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Fermer l&apos;outil.</translation>

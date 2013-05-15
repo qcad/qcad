@@ -4,7 +4,7 @@
 <context>
     <name>Dialog</name>
     <message>
-        <location filename="../ExplodeDialog.ui" line="14"/>
+        <location filename="../ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -13,25 +13,25 @@ Abre diálogo de cores</translatorcomment>
         <translation>Diálogo</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="22"/>
+        <location line="+8"/>
         <source>Arcs and Circles</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arcos e círculos</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="30"/>
+        <location line="+8"/>
         <source>into line segments (fixed length)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>em segmentos de linha (comprimento fixo)</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="35"/>
+        <location line="+5"/>
         <source>into line segments (fixed angle)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>em segmentos de linha (ângulo fixo)</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="46"/>
+        <location line="+11"/>
         <source>Ellipses</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -40,20 +40,20 @@ Exibe o menu &quot;Elipse&quot;</translatorcomment>
         <translation>Elipses</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="54"/>
+        <location line="+8"/>
         <source>into polyline with arc segments</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>em polyline com segmentos de arco</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="59"/>
-        <location filename="../ExplodeDialog.ui" line="75"/>
+        <location line="+5"/>
+        <location line="+16"/>
         <source>into polyline with line segments</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>em polyline com segmentos de linha</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="67"/>
+        <location line="-8"/>
         <source>Splines</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -62,7 +62,7 @@ Desenha chavetas</translatorcomment>
         <translation>Chaveta</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="83"/>
+        <location line="+16"/>
         <source>Dimensions</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -71,13 +71,13 @@ Exibe o menu &quot;Dimensão&quot;
         <translation>Cotas</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="91"/>
+        <location line="+8"/>
         <source>into lines, solids and texts</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>em linhas, sólidos e textos</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="99"/>
+        <location line="+8"/>
         <source>Hatches</source>
         <translatorcomment>--google--
 Desenhe hachurados e preenchimentos sólidos
@@ -86,13 +86,13 @@ Hachuras / preenchimentos sólidos
         <translation>Escotilhas</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="107"/>
+        <location line="+8"/>
         <source>into lines</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>em linhas</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="115"/>
+        <location line="+8"/>
         <source>Blocks</source>
         <translatorcomment>--exact match--
 --file: BlockExamples_pt.ts--
@@ -101,7 +101,7 @@ Oculte (congele) todos os carimbos</translatorcomment>
         <translation>Blocos</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="123"/>
+        <location line="+8"/>
         <source>into entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>em entidades</translation>
@@ -110,7 +110,7 @@ Oculte (congele) todos os carimbos</translatorcomment>
 <context>
     <name>Explode</name>
     <message>
-        <location filename="../ExplodeInit.js" line="2"/>
+        <location filename="../ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -119,22 +119,22 @@ Oculte (congele) todos os carimbos</translatorcomment>
         <translation>&amp;Explodir</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="31"/>
+        <location filename="../Explode.js" line="+31"/>
         <source>Modify</source>
         <translation>Modifique</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="31"/>
+        <location line="+0"/>
         <source>Explode</source>
         <translation>Fragmente</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Spline segments:</source>
         <translation>Segmentos de spline:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="83"/>
+        <location line="+64"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmentos de elipse:</translation>
     </message>

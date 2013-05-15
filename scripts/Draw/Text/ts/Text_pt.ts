@@ -4,7 +4,7 @@
 <context>
     <name>Dialog</name>
     <message>
-        <location filename="../TextDialog/CharacterMapDialog.ui" line="14"/>
+        <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mapa de caracteres</translation>
@@ -13,7 +13,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="81"/>
+        <location filename="../Text.js" line="+81"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -23,7 +23,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Posição</translation>
     </message>
     <message>
-        <location filename="../TextInit.js" line="2"/>
+        <location filename="../TextInit.js" line="+2"/>
         <source>&amp;Text</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -31,20 +31,20 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>&amp;Texto</translation>
     </message>
     <message>
-        <location filename="../TextInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw text</source>
         <translatorcomment>--google--
 Desenhe entidades de texto</translatorcomment>
         <translation>Desenhar texto</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="17"/>
+        <location filename="../Text.ui" line="+17"/>
         <source>Contents:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Conteúdo:</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="31"/>
+        <location line="+14"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -53,7 +53,7 @@ Altura:
         <translation>Altura:</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="51"/>
+        <location line="+20"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -65,7 +65,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="351"/>
+        <location filename="../TextDialog/TextDialog.js" line="+351"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -73,7 +73,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>&amp;Desfazer</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="355"/>
+        <location line="+4"/>
         <source>&amp;Redo</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -81,7 +81,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>&amp;Refazer</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="359"/>
+        <location line="+4"/>
         <source>Cu&amp;t</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -90,7 +90,7 @@ Cor&amp;te com referência </translatorcomment>
         <translation>Cor&amp;tar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="363"/>
+        <location line="+4"/>
         <source>&amp;Copy</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -99,7 +99,7 @@ Cor&amp;te com referência </translatorcomment>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="367"/>
+        <location line="+4"/>
         <source>&amp;Paste</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -107,50 +107,50 @@ Co&amp;lar</translatorcomment>
         <translation>Co&amp;lar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="375"/>
+        <location line="+8"/>
         <source>&amp;Bold</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Negrito</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="384"/>
+        <location line="+9"/>
         <source>&amp;Italic</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Itálico</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="404"/>
+        <location line="+20"/>
         <source>&amp;Subscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Subscrito</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="410"/>
+        <location line="+6"/>
         <source>&amp;Superscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>So&amp;brescrito</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="428"/>
+        <location line="+18"/>
         <source>&amp;Color...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Cor...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="434"/>
+        <location line="+6"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Caracteres especiais...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="734"/>
+        <location line="+300"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
         <translation>Outras...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="862"/>
+        <location line="+128"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: SplineControlPoints_pt.ts--
@@ -159,13 +159,13 @@ Grau:</translatorcomment>
         <translation>Grau</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="863"/>
+        <location line="+1"/>
         <source>Plus-Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Plus-minus</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="865"/>
+        <location line="+2"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: Dimension_pt.ts--
@@ -174,19 +174,19 @@ Diâmetro (ø)</translatorcomment>
         <translation>Diâmetro</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="866"/>
+        <location line="+1"/>
         <source>Almost equal</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Quase igual</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="867"/>
+        <location line="+1"/>
         <source>Multiplication</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Multiplicação</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="868"/>
+        <location line="+1"/>
         <source>Division</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -195,7 +195,7 @@ Divisão</translatorcomment>
         <translation>Divisão</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="869"/>
+        <location line="+1"/>
         <source>Delta</source>
         <translatorcomment>--exact match--
 --file: Dimension_pt.ts--
@@ -204,7 +204,7 @@ Delta X</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="870"/>
+        <location line="+1"/>
         <source>Pi</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -213,7 +213,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="871"/>
+        <location line="+1"/>
         <source>Identity</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -222,37 +222,37 @@ identidade</translatorcomment>
         <translation>Identidade</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="872"/>
+        <location line="+1"/>
         <source>Not equal</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não igual</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="873"/>
+        <location line="+1"/>
         <source>Ohm</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ohm</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="874"/>
+        <location line="+1"/>
         <source>Omega</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ómega</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="875"/>
+        <location line="+1"/>
         <source>Squared</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Quadrado</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="876"/>
+        <location line="+1"/>
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cubado</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="14"/>
+        <location filename="../TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -262,13 +262,13 @@ Insira o texto de dimensão
         <translation>Texto</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Main Font</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Fonte principal</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="52"/>
+        <location line="+24"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -277,14 +277,14 @@ Altura:
         <translation>Altura:</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="59"/>
+        <location line="+7"/>
         <source>Text Height in Drawing Units</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Altura texto em unidades de desenho</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="77"/>
-        <location filename="../TextDialog/TextDialog.ui" line="290"/>
+        <location line="+18"/>
+        <location line="+213"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -293,8 +293,8 @@ Al_ternar</translatorcomment>
         <translation>Negrito</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="84"/>
-        <location filename="../TextDialog/TextDialog.ui" line="303"/>
+        <location line="-206"/>
+        <location line="+219"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -303,20 +303,20 @@ Itálico</translatorcomment>
         <translation>Itálico</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="101"/>
+        <location line="-202"/>
         <source>Simple text
 (one line, no formatting)</source>
         <translation>Texto simples</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="122"/>
+        <location line="+21"/>
         <source>Rich Text</source>
         <translatorcomment>--google--
 Área de texto rico</translatorcomment>
         <translation>Texto rico</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="98"/>
+        <location line="-24"/>
         <source>Text fits on one line and has no formatting</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Texto se encaixa em uma linha e não tem nenhuma formatação</translation>
@@ -327,7 +327,7 @@ Itálico</translatorcomment>
         <translation type="obsolete">Texto simples</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="158"/>
+        <location line="+60"/>
         <source>Cut</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -337,7 +337,7 @@ Corte com referência </translatorcomment>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="168"/>
+        <location line="+10"/>
         <source>Copy</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -347,7 +347,7 @@ Copiar
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="178"/>
+        <location line="+10"/>
         <source>Paste</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -357,26 +357,26 @@ Cole o conteúdo da área de transferência</translatorcomment>
         <translation>Colar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="293"/>
+        <location line="+115"/>
         <source>Ctrl+B</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="306"/>
+        <location line="+13"/>
         <source>Ctrl+I</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="346"/>
+        <location line="+40"/>
         <source>Insert Symbol...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
         <translation>Insere símbolo...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="389"/>
+        <location line="+43"/>
         <source>Source</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -385,19 +385,19 @@ Fonte papel:</translatorcomment>
         <translation>Fonte</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="421"/>
+        <location line="+32"/>
         <source>Text Geometry</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Geometria texto</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="427"/>
+        <location line="+6"/>
         <source>Line spacing factor:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Fator de espaçamento entre linhas:</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="440"/>
+        <location line="+13"/>
         <source>Line Spacing Factor</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -405,7 +405,7 @@ Fator de Espaçamento de Linhas</translatorcomment>
         <translation>Fator de espaçamento de linhas</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="456"/>
+        <location line="+16"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -414,7 +414,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo:</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="469"/>
+        <location line="+13"/>
         <source>Rotation Angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -424,7 +424,7 @@ Entre o ângulo de rotação
         <translation>Ângulo de rotação</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="494"/>
+        <location line="+25"/>
         <source>Alignment</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -433,7 +433,7 @@ Alinhamento|Vertical</translatorcomment>
         <translation>Alinhamento</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="515"/>
+        <location line="+21"/>
         <source>Top Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -441,7 +441,7 @@ Centro Acima</translatorcomment>
         <translation>Centro acima</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="547"/>
+        <location line="+32"/>
         <source>Top Left</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -451,7 +451,7 @@ Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</tr
         <translation>Esquerda acima</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="582"/>
+        <location line="+35"/>
         <source>Top Right</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -460,7 +460,7 @@ Em cima à direita</translatorcomment>
         <translation>Direita acima</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="614"/>
+        <location line="+32"/>
         <source>Bottom Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -468,7 +468,7 @@ Centro Abaixo</translatorcomment>
         <translation>Centro abaixo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="646"/>
+        <location line="+32"/>
         <source>Middle Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -476,7 +476,7 @@ Esquerda ao Meio</translatorcomment>
         <translation>Esquerda ao meio</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="678"/>
+        <location line="+32"/>
         <source>Middle Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -484,7 +484,7 @@ Centro ao Meio</translatorcomment>
         <translation>Centro ao meio</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="710"/>
+        <location line="+32"/>
         <source>Middle Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -492,7 +492,7 @@ Direita ao Meio</translatorcomment>
         <translation>Direita ao meio</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="742"/>
+        <location line="+32"/>
         <source>Bottom Left</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -501,7 +501,7 @@ Em baixo à esquerda</translatorcomment>
         <translation>Esquerda abaixo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="774"/>
+        <location line="+32"/>
         <source>Bottom Right</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -510,7 +510,7 @@ Em baixo à direita</translatorcomment>
         <translation>Direita abaixo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="833"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -519,7 +519,7 @@ Cancelar
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="846"/>
+        <location line="+13"/>
         <source>OK</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

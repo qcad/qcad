@@ -4,7 +4,7 @@
 <context>
     <name>SnapReference</name>
     <message>
-        <location filename="../SnapReferenceInit.js" line="2"/>
+        <location filename="../SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
         <translation>&amp;Référence</translation>
     </message>

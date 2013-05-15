@@ -4,7 +4,7 @@
 <context>
     <name>EditMainDrawing</name>
     <message>
-        <location filename="../EditMainDrawingInit.js" line="3"/>
+        <location filename="../EditMainDrawingInit.js" line="+3"/>
         <source>&amp;Return to Main Drawing</source>
         <translation>&amp;Zurück zur Hauptzeichnung</translation>
     </message>

@@ -4,25 +4,25 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="68"/>
+        <location filename="../Rotate.js" line="+68"/>
         <source>Center point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Point central</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="78"/>
+        <location line="+10"/>
         <source>Reference point</source>
         <translation>Point de référence</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="87"/>
+        <location line="+9"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Indiquer le point cible</translatorcomment>
         <translation>Point cible</translation>
     </message>
     <message>
-        <location filename="../RotateInit.js" line="2"/>
+        <location filename="../RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Rotation</translation>
     </message>
@@ -30,37 +30,37 @@ Indiquer le point cible</translatorcomment>
 <context>
     <name>RotateOptions</name>
     <message>
-        <location filename="../RotateDialog.ui" line="14"/>
+        <location filename="../RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
         <translation>Options de rotation</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Number of Copies</source>
         <translation>Nombre de copies</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="34"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Supprimer original</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="44"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="51"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>Copies &amp;multiples</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="161"/>
+        <location line="+110"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angle (a) :</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="194"/>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utiliser calque et &amp;attributs actuel</translation>

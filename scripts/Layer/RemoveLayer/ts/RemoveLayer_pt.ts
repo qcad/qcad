@@ -4,7 +4,7 @@
 <context>
     <name>RemoveLayer</name>
     <message>
-        <location filename="../RemoveLayerInit.js" line="2"/>
+        <location filename="../RemoveLayerInit.js" line="+2"/>
         <source>&amp;Remove Layer</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

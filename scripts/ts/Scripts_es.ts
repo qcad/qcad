@@ -4,31 +4,31 @@
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../DefaultAction.js" line="82"/>
+        <location filename="../DefaultAction.js" line="+82"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Seleccione la entidad o región</translation>
     </message>
     <message>
-        <location filename="../DefaultAction.js" line="84"/>
+        <location line="+2"/>
         <source>Move entity or reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mover una entidad o un punto de referencia</translation>
     </message>
     <message>
-        <location filename="../DefaultAction.js" line="95"/>
+        <location line="+11"/>
         <source>Set second corner</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Segunda punto de esquina</translation>
     </message>
     <message>
-        <location filename="../DefaultAction.js" line="101"/>
+        <location line="+6"/>
         <source>Specify target point of reference point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Especificar el punto de destino</translation>
     </message>
     <message>
-        <location filename="../DefaultAction.js" line="108"/>
+        <location line="+7"/>
         <source>Specify target point of selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Especifique punto de destino</translation>
@@ -37,18 +37,18 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="56"/>
+        <location filename="../EAction.js" line="+56"/>
         <source>Back</source>
         <translation>Atrás</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="57"/>
+        <location line="+1"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="303"/>
-        <location filename="../EAction.js" line="407"/>
+        <location line="+246"/>
+        <location line="+104"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
     </message>
@@ -58,81 +58,81 @@
         <translation type="obsolete">Herramienta activa: %1</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="407"/>
+        <location line="+0"/>
         <source>None</source>
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="763"/>
+        <location line="+356"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="781"/>
+        <location line="+18"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Opciones de bloque</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="791"/>
+        <location line="+10"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Herramientas principales</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="817"/>
+        <location line="+26"/>
         <source>CAD Tools</source>
         <translation>Herramientas CAD</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1375"/>
+        <location line="+558"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad está en una capa bloqueada.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1429"/>
+        <location line="+54"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una referencia a bloque.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1433"/>
+        <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una línea o un arco.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1437"/>
+        <location line="+4"/>
         <source>Entity is not a line.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una línea.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1441"/>
+        <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es un arco o círculo.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1445"/>
+        <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una línea, arco o círculo.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1449"/>
+        <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es un arco, círculo o una elipse.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1453"/>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translation>Entidad no es una línea, un arco, círculo o una elipse.</translation>
     </message>
     <message>
-        <location filename="../EAction.js" line="1458"/>
+        <location line="+5"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una polilínea.</translation>
@@ -141,43 +141,43 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="113"/>
+        <location filename="../ShapeAlgorithms.js" line="+113"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Radio caído por debajo de 0,0 después %1 de círculos concéntricos.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="118"/>
+        <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="477"/>
-        <location filename="../ShapeAlgorithms.js" line="506"/>
+        <location line="+359"/>
+        <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Por lo menos dos puntos son idénticos.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="484"/>
+        <location line="-22"/>
         <source>No circle possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ningún círculo es posible.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="513"/>
+        <location line="+29"/>
         <source>No arc possible.</source>
         <translation>Ningún arco es posible.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="537"/>
+        <location line="+24"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>No válido número de segmentos:.%1.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="543"/>
+        <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inválida elipse mayor / menor: %1 / %2.</translation>
@@ -186,73 +186,73 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="925"/>
+        <location filename="../WidgetFactory.js" line="+925"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="945"/>
+        <location line="+20"/>
         <source>Insert Symbol</source>
         <translation>Insertar símbolo</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="948"/>
+        <location line="+3"/>
         <source>Diameter</source>
         <translation>Diámetro</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="949"/>
+        <location line="+1"/>
         <source>Degree</source>
         <translation>Grados</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="950"/>
+        <location line="+1"/>
         <source>Plus/Minus</source>
         <translation>Más / menos</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="951"/>
+        <location line="+1"/>
         <source>Almost equal to</source>
         <translation>Casi igual</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="952"/>
+        <location line="+1"/>
         <source>Asymptotically equal to</source>
         <translation>Asintóticamente igual</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="953"/>
+        <location line="+1"/>
         <source>Pi</source>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="954"/>
+        <location line="+1"/>
         <source>Multiplication</source>
         <translation>Multiplicación</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="955"/>
+        <location line="+1"/>
         <source>Division</source>
         <translation>Dividir</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="956"/>
+        <location line="+1"/>
         <source>Square</source>
         <translation>Cuadrado</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="957"/>
+        <location line="+1"/>
         <source>Delta</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="958"/>
+        <location line="+1"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Texto apilado</translation>
     </message>
     <message>
-        <location filename="../WidgetFactory.js" line="963"/>
+        <location line="+5"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valor medido</translation>
@@ -288,17 +288,17 @@
         <translation type="obsolete">Cargando complemento traducciones...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="381"/>
+        <location filename="../autostart.js" line="+381"/>
         <source>Loading add-ons...</source>
         <translation>Cargar add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="396"/>
+        <location line="+15"/>
         <source>Initializing add-ons...</source>
         <translation>Inicialización de add-ons...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="420"/>
+        <location line="+24"/>
         <source>Post-initializing add-ons...</source>
         <translation>Después de la inicialización...</translation>
     </message>
@@ -315,7 +315,7 @@
         <translation type="obsolete">Inicialización de add-ons ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="407"/>
+        <location line="-13"/>
         <source>Initializing add-ons:</source>
         <translation>Inicialización de add-ons:</translation>
     </message>
@@ -327,25 +327,25 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="552"/>
+        <location filename="../library.js" line="+552"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>3dFaces</translation>
     </message>
     <message>
-        <location filename="../library.js" line="552"/>
+        <location line="+0"/>
         <source>3dFace</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>3dFace</translation>
     </message>
     <message>
-        <location filename="../library.js" line="554"/>
+        <location line="+2"/>
         <source>Block References</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Referencias de bloque</translation>
     </message>
     <message>
-        <location filename="../library.js" line="554"/>
+        <location line="+0"/>
         <source>Block Reference</source>
         <translatorcomment>--google--
 Elija la referencia a bloque
@@ -353,108 +353,108 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
         <translation>Referencia de bloque</translation>
     </message>
     <message>
-        <location filename="../library.js" line="556"/>
+        <location line="+2"/>
         <source>Arcs</source>
         <translation>Arcos</translation>
     </message>
     <message>
-        <location filename="../library.js" line="556"/>
+        <location line="+0"/>
         <source>Arc</source>
         <translation>Arco</translation>
     </message>
     <message>
-        <location filename="../library.js" line="558"/>
+        <location line="+2"/>
         <source>Circles</source>
         <translation>Círculos</translation>
     </message>
     <message>
-        <location filename="../library.js" line="558"/>
+        <location line="+0"/>
         <source>Circle</source>
         <translation>Círculo</translation>
     </message>
     <message>
-        <location filename="../library.js" line="560"/>
+        <location line="+2"/>
         <source>Aligned Dimension</source>
         <translation>Cota alineada</translation>
     </message>
     <message>
-        <location filename="../library.js" line="560"/>
+        <location line="+0"/>
         <source>Aligned Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cotas alineados</translation>
     </message>
     <message>
-        <location filename="../library.js" line="562"/>
+        <location line="+2"/>
         <source>Angular Dimension</source>
         <translation>Cota angular</translation>
     </message>
     <message>
-        <location filename="../library.js" line="562"/>
+        <location line="+0"/>
         <source>Angular Dimensions</source>
         <translation>Cotas angular</translation>
     </message>
     <message>
-        <location filename="../library.js" line="564"/>
+        <location line="+2"/>
         <source>Diametric Dimension</source>
         <translation>Cota diametral</translation>
     </message>
     <message>
-        <location filename="../library.js" line="564"/>
+        <location line="+0"/>
         <source>Diametric Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cotas diametral</translation>
     </message>
     <message>
-        <location filename="../library.js" line="566"/>
+        <location line="+2"/>
         <source>Ordinate Dimension</source>
         <translation>Cota ordinal</translation>
     </message>
     <message>
-        <location filename="../library.js" line="566"/>
+        <location line="+0"/>
         <source>Ordinate Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cotas ordinal</translation>
     </message>
     <message>
-        <location filename="../library.js" line="568"/>
+        <location line="+2"/>
         <source>Rotated Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cotas girado</translation>
     </message>
     <message>
-        <location filename="../library.js" line="568"/>
+        <location line="+0"/>
         <source>Rotated Dimension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cota girado</translation>
     </message>
     <message>
-        <location filename="../library.js" line="570"/>
+        <location line="+2"/>
         <source>Radial Dimension</source>
         <translation>Cota radial</translation>
     </message>
     <message>
-        <location filename="../library.js" line="570"/>
+        <location line="+0"/>
         <source>Radial Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cotas radiales</translation>
     </message>
     <message>
-        <location filename="../library.js" line="572"/>
+        <location line="+2"/>
         <source>Ellipses</source>
         <translation>Elipses</translation>
     </message>
     <message>
-        <location filename="../library.js" line="572"/>
+        <location line="+0"/>
         <source>Ellipse</source>
         <translation>Elipse</translation>
     </message>
     <message>
-        <location filename="../library.js" line="574"/>
+        <location line="+2"/>
         <source>Hatch</source>
         <translation>Rayado</translation>
     </message>
     <message>
-        <location filename="../library.js" line="574"/>
+        <location line="+0"/>
         <source>Hatches</source>
         <translatorcomment>--exact match--
 --file: Explode_es.ts--
@@ -464,12 +464,12 @@ Sombreado/Relleno</translatorcomment>
         <translation>Rayados</translation>
     </message>
     <message>
-        <location filename="../library.js" line="576"/>
+        <location line="+2"/>
         <source>Image</source>
         <translation>Imagen</translation>
     </message>
     <message>
-        <location filename="../library.js" line="576"/>
+        <location line="+0"/>
         <source>Images</source>
         <translatorcomment>--exact match--
 --file: grassmods_es.po--
@@ -478,86 +478,86 @@ Imgenes</translatorcomment>
         <translation>Imgenes</translation>
     </message>
     <message>
-        <location filename="../library.js" line="578"/>
+        <location line="+2"/>
         <source>Leader</source>
         <translation>Directriz</translation>
     </message>
     <message>
-        <location filename="../library.js" line="578"/>
+        <location line="+0"/>
         <source>Leaders</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Directrizes</translation>
     </message>
     <message>
-        <location filename="../library.js" line="580"/>
+        <location line="+2"/>
         <source>Lines</source>
         <translation>Líneas</translation>
     </message>
     <message>
-        <location filename="../library.js" line="580"/>
+        <location line="+0"/>
         <source>Line</source>
         <translation>Línea</translation>
     </message>
     <message>
-        <location filename="../library.js" line="582"/>
+        <location line="+2"/>
         <source>Points</source>
         <translation>Puntos</translation>
     </message>
     <message>
-        <location filename="../library.js" line="582"/>
+        <location line="+0"/>
         <source>Point</source>
         <translation>Punto</translation>
     </message>
     <message>
-        <location filename="../library.js" line="584"/>
+        <location line="+2"/>
         <source>Polylines</source>
         <translation>Polilíneas</translation>
     </message>
     <message>
-        <location filename="../library.js" line="584"/>
+        <location line="+0"/>
         <source>Polyline</source>
         <translation>Polilínea</translation>
     </message>
     <message>
-        <location filename="../library.js" line="586"/>
+        <location line="+2"/>
         <source>Solid</source>
         <translation>Sólido</translation>
     </message>
     <message>
-        <location filename="../library.js" line="586"/>
+        <location line="+0"/>
         <source>Solids</source>
         <translatorcomment>--google--
 en las líneas, los sólidos y los textos</translatorcomment>
         <translation>Sólidos</translation>
     </message>
     <message>
-        <location filename="../library.js" line="588"/>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
     <message>
-        <location filename="../library.js" line="588"/>
+        <location line="+0"/>
         <source>Spline</source>
         <translation>Spline</translation>
     </message>
     <message>
-        <location filename="../library.js" line="590"/>
+        <location line="+2"/>
         <source>Texts</source>
         <translation>Textos</translation>
     </message>
     <message>
-        <location filename="../library.js" line="590"/>
+        <location line="+0"/>
         <source>Text</source>
         <translation>Texto</translation>
     </message>
     <message>
-        <location filename="../library.js" line="593"/>
+        <location line="+3"/>
         <source>Unknown Entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidades desconocido</translation>
     </message>
     <message>
-        <location filename="../library.js" line="593"/>
+        <location line="+0"/>
         <source>Unknown Entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad desconocida</translation>

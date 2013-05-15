@@ -4,19 +4,19 @@
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../Leader.js" line="59"/>
+        <location filename="../Leader.js" line="+59"/>
         <source>Arrow position</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pozycja główna</translation>
     </message>
     <message>
-        <location filename="../Leader.js" line="69"/>
+        <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Następny wierzchołek</translation>
     </message>
     <message>
-        <location filename="../Leader.js" line="72"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -26,7 +26,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location filename="../LeaderInit.js" line="2"/>
+        <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -34,7 +34,7 @@ Zrobione
         <translation type="unfinished">&amp;Odnośnik</translation>
     </message>
     <message>
-        <location filename="../LeaderInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Remis lidera (sekwencja linia ze strzałką)</translation>

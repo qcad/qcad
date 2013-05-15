@@ -4,7 +4,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="72"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+72"/>
         <source>File</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -14,15 +14,15 @@ Caricamento File %1
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="74"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="75"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="76"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="56"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="57"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="58"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="67"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="68"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="69"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+56"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTextEntity.cpp" line="+67"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -32,19 +32,19 @@ Specificare la posizione</translatorcomment>
         <translation>Posizione</translation>
     </message>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="78"/>
+        <location line="+2"/>
         <source>Width Factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Fattore di larghezza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="79"/>
+        <location line="+1"/>
         <source>Height Factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Fattore di altezza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="81"/>
+        <location line="+2"/>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: wp-geo-it_IT.po--
@@ -54,8 +54,8 @@ Larghezza
         <translation>Larghezza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="82"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="72"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: wp-geo-it_IT.po--
@@ -65,49 +65,49 @@ Altezza Testo:</translatorcomment>
         <translation>Altezza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="71"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="62"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="75"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="83"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="87"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="91"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="95"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="99"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="103"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="75"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="75"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="82"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="84"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="87"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="73"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="77"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="83"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="87"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="72"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="75"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="74"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="77"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="87"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="90"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="79"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="74"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="58"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="68"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="71"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="56"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="65"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="69"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="72"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="75"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="78"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="63"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="66"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="67"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+71"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+62"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+75"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+87"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+75"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+75"/>
+        <location line="+4"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+79"/>
+        <location line="+5"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+73"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+79"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+72"/>
+        <location line="+3"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+74"/>
+        <location line="+3"/>
+        <location line="+10"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+58"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+68"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+65"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+69"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RTextEntity.cpp" line="-5"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: default.po--
@@ -117,18 +117,18 @@ Esportazione Disegno...</translatorcomment>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="71"/>
-        <location filename="../src/entity/RArcEntity.cpp" line="72"/>
-        <location filename="../src/entity/RArcEntity.cpp" line="73"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="62"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="63"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="64"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="73"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="74"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="75"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="74"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="75"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="76"/>
+        <location line="+0"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+0"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="-4"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="-16"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -138,49 +138,49 @@ Arco: Centro, Punto, Angoli
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="72"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="63"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="76"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="84"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="88"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="92"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="96"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="100"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="104"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="76"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="76"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="83"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="85"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="88"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="74"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="78"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="84"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="88"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="73"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="76"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="75"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="78"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="88"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="91"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="80"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="75"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="59"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="69"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="72"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="57"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="66"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="70"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="73"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="76"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="79"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="64"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="67"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="68"/>
+        <location line="-1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="-7"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-15"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="-6"/>
+        <location line="+4"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-7"/>
+        <location line="+5"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="-1"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="-7"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
+        <location line="+3"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="-1"/>
+        <location line="+3"/>
+        <location line="+10"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="-8"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -190,49 +190,49 @@ Caricamento indirizzi delle librerie
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="73"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="64"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="77"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="81"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="85"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="89"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="93"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="97"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="101"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="105"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="77"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="81"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="77"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="81"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="84"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="81"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="86"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="89"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="75"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="81"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="85"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="89"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="74"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="77"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="76"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="79"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="89"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="92"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="81"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="76"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="60"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="70"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="73"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="58"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="67"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="71"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="74"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="77"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="80"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="65"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="68"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="69"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="-7"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-15"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="-6"/>
+        <location line="+4"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-7"/>
+        <location line="+5"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="-3"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="-7"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
+        <location line="+3"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="-15"/>
+        <location line="+3"/>
+        <location line="+10"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="-8"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
         <source>Z</source>
         <translatorcomment>--exact match--
 --file: src_shell_data_translations_ktoon_it.ts--
@@ -242,8 +242,8 @@ Congela tutto</translatorcomment>
         <translation>Z</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="74"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="65"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -252,8 +252,8 @@ Arco tangente alla base dell&apos;oggetto con raggio</translatorcomment>
         <translation>Raggio</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="75"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="83"/>
+        <location line="+1"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
@@ -262,8 +262,8 @@ Angolo iniziale</translatorcomment>
         <translation>Angolo iniziale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="76"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="84"/>
+        <location line="+1"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
@@ -272,8 +272,8 @@ Angolo finale</translatorcomment>
         <translation>Angolo finale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="77"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="85"/>
+        <location line="+1"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
         <translatorcomment>--exact match--
 --file: qcadlib_it.ts--
@@ -281,10 +281,10 @@ Arcocomplementare</translatorcomment>
         <translation>Arcocomplementare</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="80"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="94"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="76"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="83"/>
+        <location line="+3"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+3"/>
         <source>Length</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -293,7 +293,7 @@ Angolo finale o [Angolo/Lunghezza corda]</translatorcomment>
         <translation>Lunghezza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="70"/>
+        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
         <source>Contents</source>
         <translatorcomment>--exact match--
 --file: assistant_it.ts--
@@ -302,7 +302,7 @@ Modificare il contenuto del blocco selezionato</translatorcomment>
         <translation>Contenuti</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="73"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -312,9 +312,9 @@ Tratteggi / Riempimenti</translatorcomment>
         <translation>Solido</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="75"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="76"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="77"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Pattern</source>
         <translatorcomment>--exact match--
 --file: Hatch_it.ts--
@@ -323,7 +323,7 @@ Modelli di Tratteggio:</translatorcomment>
         <translation>Modello</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="75"/>
+        <location line="-2"/>
         <source>Name</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -333,11 +333,11 @@ Salva Disegno con Nuovo Nome</translatorcomment>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="76"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="84"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="75"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="82"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="73"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -347,7 +347,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Angolo</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="77"/>
+        <location line="+1"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -355,7 +355,7 @@ Scala</translatorcomment>
         <translation>Scala</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="66"/>
+        <location filename="../src/entity/RTextEntity.cpp" line="-7"/>
         <source>Simple</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -364,13 +364,13 @@ Esplode gli oggetti selezionati in oggetti piú semplice, o sottrae le facce</tr
         <translation>Semplice</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="71"/>
+        <location line="+5"/>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nome del font</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="74"/>
+        <location line="+3"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: it3.po--
@@ -380,7 +380,7 @@ grassetto</translatorcomment>
         <translation>Grassetto</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="75"/>
+        <location line="+1"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: it3.po--
@@ -389,7 +389,7 @@ Cors&amp;ivo</translatorcomment>
         <translation>Italico</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="76"/>
+        <location line="+1"/>
         <source>Line Spacing</source>
         <translatorcomment>--google--
 Interasse linee:
@@ -399,8 +399,8 @@ Interlinea</translatorcomment>
         <translation>Interasse linee</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="77"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="78"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Alignment</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -409,7 +409,7 @@ Allineamento|Verticale</translatorcomment>
         <translation>Allineamento</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="77"/>
+        <location line="-1"/>
         <source>Horizontal</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -419,7 +419,7 @@ Affianca Orizzontalmente
         <translation>Orizzontale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="78"/>
+        <location line="+1"/>
         <source>Vertical</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -428,8 +428,8 @@ Verticale
         <translation>Verticale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="79"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="67"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: Scripts_it.ts--
@@ -438,7 +438,7 @@ Mostra simbolo diametro
         <translation>Diametro</translation>
     </message>
     <message>
-        <location filename="../src/entity/RCircleEntity.cpp" line="68"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Circumference</source>
         <translatorcomment>--google--
 Circonferenza:%1
@@ -447,8 +447,8 @@ Area/circonferenza</translatorcomment>
         <translation>Circonferenza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="81"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="69"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Area</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -458,9 +458,9 @@ Area Poligonale</translatorcomment>
         <translation>Area</translation>
     </message>
     <message>
-        <location filename="../src/entity/REllipseEntity.cpp" line="77"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="78"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="79"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Major Point</source>
         <translatorcomment>--google--
 Punto principale|X
@@ -469,7 +469,7 @@ Punto di maggiore dell&apos;ellisse o raggio principale</translatorcomment>
         <translation>Punto di maggiore</translation>
     </message>
     <message>
-        <location filename="../src/entity/REllipseEntity.cpp" line="80"/>
+        <location line="+1"/>
         <source>Ratio</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -478,7 +478,7 @@ Disegnare un arco ellittico dal centro, punto principale, il proporzione e gli a
         <translation>Rapporto</translation>
     </message>
     <message>
-        <location filename="../src/entity/REllipseEntity.cpp" line="81"/>
+        <location line="+1"/>
         <source>Start Parameter</source>
         <translatorcomment>--ignored case--
 --file: EllipseArcCPPA_it.ts--
@@ -486,7 +486,7 @@ Parametro di partenza</translatorcomment>
         <translation>Parametro iniziale</translation>
     </message>
     <message>
-        <location filename="../src/entity/REllipseEntity.cpp" line="82"/>
+        <location line="+1"/>
         <source>End Parameter</source>
         <translatorcomment>--ignored case--
 --file: EllipseArcCPPA_it.ts--
@@ -494,12 +494,12 @@ Parametro finale</translatorcomment>
         <translation>Parametro finale</translation>
     </message>
     <message>
-        <location filename="../src/entity/REllipseEntity.cpp" line="87"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="88"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="89"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="68"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="69"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="70"/>
+        <location line="+5"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Start Point</source>
         <translatorcomment>--ignored case--
 --file: it.po--
@@ -509,12 +509,12 @@ Punto iniziale (x):</translatorcomment>
         <translation>Punto iniziale</translation>
     </message>
     <message>
-        <location filename="../src/entity/REllipseEntity.cpp" line="90"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="91"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="92"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="71"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="72"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="73"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>End Point</source>
         <translatorcomment>--ignored case--
 --file: dia.master.it.po--
@@ -524,7 +524,7 @@ Punto finale (y):</translatorcomment>
         <translation>Punto finale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="64"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-3"/>
         <source>Closed</source>
         <translatorcomment>--exact match--
 --file: SplineControlPoints_it.ts--
@@ -534,16 +534,16 @@ Impossibile connettere alla polilinea chiusa.</translatorcomment>
         <translation>Chiuso</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="79"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="80"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="81"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="58"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="59"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="60"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="65"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="66"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="67"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="68"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Vertex</source>
         <translatorcomment>--google--
 Prossimo vertice
@@ -552,18 +552,18 @@ Aggiungi vertice</translatorcomment>
         <translation>Vertice</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="68"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+0"/>
         <source>Bulge</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bulge</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="61"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
         <source>Closed Periodic</source>
         <translation>Chiuso periodica</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="62"/>
+        <location line="+1"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: Scripts_it.ts--
@@ -573,9 +573,9 @@ Gradi decimali</translatorcomment>
         <translation>Gradi</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="63"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="64"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="65"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Control Point</source>
         <translatorcomment>--google--
 Primo punto
@@ -584,9 +584,9 @@ Punto successivo</translatorcomment>
         <translation>Punto di controllo</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="66"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="67"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="68"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Fit Point</source>
         <translatorcomment>--google--
 Primo punto di adattamento
@@ -595,15 +595,15 @@ Punto di adattamento successivo
         <translation>Punto di adattamento</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="75"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="76"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="77"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="75"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="76"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="77"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="81"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="-10"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="-9"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="-10"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Dimension Line</source>
         <translatorcomment>--google--
 Definisci posizione linea di quota
@@ -612,15 +612,15 @@ Inserisci l&apos;angolo della linea di quota</translatorcomment>
         <translation>Linea di quota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="81"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="81"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="83"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="84"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="85"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Extension Point 1</source>
         <translatorcomment>--google--
 Punto estensione 1|X
@@ -628,15 +628,15 @@ Punto estensione 1|Y</translatorcomment>
         <translation>Punto di estensione 1</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="83"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="84"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="85"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="82"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="83"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="84"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="87"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="88"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="89"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Extension Point 2</source>
         <translatorcomment>--google--
 Punto estensione 2|X
@@ -644,41 +644,41 @@ Punto estensione 2|Y</translatorcomment>
         <translation>Punto di estensione 2</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="87"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="88"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="89"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-18"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Line 1 Start</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linea 1 inizio</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="91"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="92"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="93"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Line 1 End</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linea 1 fine</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="95"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="96"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="97"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Line 2 Start</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linea 2 inizio</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="99"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="100"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="101"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Line 2 End</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linea 2 fine</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="103"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="104"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="105"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Dimension Arc</source>
         <translatorcomment>--google--
 Posizione dell&apos;arco di quota
@@ -686,28 +686,28 @@ Posizione di arco di quota</translatorcomment>
         <translation>Arco di quota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="75"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="76"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="77"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="77"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="78"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="79"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Chord Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Punto di corda</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="81"/>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Far Chord Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Lontano punto di corda</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="79"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="80"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="81"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Origin</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -716,7 +716,7 @@ Origine della seconda linea di estensione</translatorcomment>
         <translation>Origine</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="83"/>
+        <location line="+2"/>
         <source>Ordinate</source>
         <translatorcomment>--exact match--
 --file: qcadactions_it.ts--
@@ -726,29 +726,29 @@ Valore dell&apos;ordinata</translatorcomment>
         <translation>Ordinate</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="84"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="85"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="86"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Defining Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Punto di definizione</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="87"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="88"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="89"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Leader End Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Direttrice punto finale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="91"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+2"/>
         <source>Dimension Angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Angolo di quota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="69"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -758,8 +758,8 @@ Inserisci una etichetta fissa o lascia vuoto per etichettatura automatica</trans
         <translation>Etichetta</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="70"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="71"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Tolerance</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -768,7 +768,7 @@ Tolleranza inferiore</translatorcomment>
         <translation>Tolleranza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="70"/>
+        <location line="-1"/>
         <source>Upper Limit</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -776,7 +776,7 @@ Limite superiore</translatorcomment>
         <translation>Limite superiore</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="71"/>
+        <location line="+1"/>
         <source>Lower Limit</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -784,29 +784,29 @@ Limite inferiore</translatorcomment>
         <translation>Limite inferiore</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="72"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="73"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="74"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Definition Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Punto di definizione</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="75"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="76"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="77"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Text Position</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Posizione del testo</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="85"/>
+        <location line="+8"/>
         <source>Measured Value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valore misurato</translation>
     </message>
     <message>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="57"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>
         <source>Arrow</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -815,9 +815,9 @@ Dimensione Freccia:</translatorcomment>
         <translation>Freccia</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSolidEntity.cpp" line="69"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="70"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="71"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Point 1</source>
         <translatorcomment>--google--
 Punto estensione 1|X
@@ -826,9 +826,9 @@ Punto 1|X</translatorcomment>
         <translation>Punto 1</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSolidEntity.cpp" line="72"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="73"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="74"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Point 2</source>
         <translatorcomment>--google--
 Punto estensione 2|X
@@ -837,9 +837,9 @@ Punto 2|X</translatorcomment>
         <translation>Punto 2</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSolidEntity.cpp" line="75"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="76"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="77"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Point 3</source>
         <translatorcomment>--google--
 Punto 3|X
@@ -847,9 +847,9 @@ Punto 3|Y</translatorcomment>
         <translation>Punto 3</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSolidEntity.cpp" line="78"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="79"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="80"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Point 4</source>
         <translatorcomment>--google--
 Punto 4|X

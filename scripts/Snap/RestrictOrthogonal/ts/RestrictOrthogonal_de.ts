@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Orthogonal einschränken</translation>
     </message>
     <message>
-        <location filename="../RestrictOrthogonalInit.js" line="2"/>
+        <location filename="../RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
         <translation>&amp;Orthogonal einschränken</translation>
     </message>

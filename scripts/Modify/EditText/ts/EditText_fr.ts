@@ -4,18 +4,18 @@
 <context>
     <name>EditText</name>
     <message>
-        <location filename="../EditText.js" line="61"/>
+        <location filename="../EditText.js" line="+61"/>
         <source>Choose text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Choisissez le texte</translation>
     </message>
     <message>
-        <location filename="../EditTextInit.js" line="2"/>
+        <location filename="../EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
         <translation>Éditer le te&amp;xte</translation>
     </message>
     <message>
-        <location filename="../EditTextInit.js" line="7"/>
+        <location line="+5"/>
         <source>Edit text</source>
         <translation>Éditer le texte</translation>
     </message>

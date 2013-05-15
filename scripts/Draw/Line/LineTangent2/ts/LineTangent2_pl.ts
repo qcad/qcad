@@ -4,31 +4,31 @@
 <context>
     <name>LineTangent2</name>
     <message>
-        <location filename="../LineTangent2.js" line="67"/>
+        <location filename="../LineTangent2.js" line="+67"/>
         <source>Choose first circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz pierwszego okręgu lub łuku</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="78"/>
+        <location line="+11"/>
         <source>Choose second circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz sekundy okrąg lub łuk</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="216"/>
+        <location line="+138"/>
         <source>No tangent possible</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No styczna możliwe</translation>
     </message>
     <message>
-        <location filename="../LineTangent2Init.js" line="2"/>
+        <location filename="../LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tangent (dwa koła)</translation>
     </message>
     <message>
-        <location filename="../LineTangent2Init.js" line="7"/>
+        <location line="+5"/>
         <source>Draw tangent (circle, circle)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

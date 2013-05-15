@@ -4,19 +4,19 @@
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../Leader.js" line="59"/>
+        <location filename="../Leader.js" line="+59"/>
         <source>Arrow position</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Posição da seta</translation>
     </message>
     <message>
-        <location filename="../Leader.js" line="69"/>
+        <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Próximo vértice</translation>
     </message>
     <message>
-        <location filename="../Leader.js" line="72"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -26,7 +26,7 @@ Traçado: Terminado. %ld nós criados</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location filename="../LeaderInit.js" line="2"/>
+        <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -34,7 +34,7 @@ Traçado: Terminado. %ld nós criados</translatorcomment>
         <translation>&amp;Conduza</translation>
     </message>
     <message>
-        <location filename="../LeaderInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar conduza (seqüência de linha com a seta)</translation>

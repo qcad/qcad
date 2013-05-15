@@ -4,14 +4,14 @@
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../CheckForUpdates.js" line="58"/>
-        <location filename="../CheckForUpdatesDialog.ui" line="14"/>
+        <location filename="../CheckForUpdates.js" line="+58"/>
+        <location filename="../CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Vérification des mises à jour...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesInit.js" line="7"/>
+        <location filename="../CheckForUpdatesInit.js" line="+7"/>
         <source>Check for &amp;Updates...</source>
         <translation>Rechercher &amp;mises à jour...</translation>
     </message>
@@ -21,14 +21,14 @@
         <translation type="obsolete">Rechercher mises à jour...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesDialog.ui" line="24"/>
+        <location filename="../CheckForUpdatesDialog.ui" line="+10"/>
         <source>about:blank</source>
         <translatorcomment>--google--
 &lt;title&gt;about:blank&lt;/title&gt;</translatorcomment>
         <translation>about:blank</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesDialog.ui" line="32"/>
+        <location line="+8"/>
         <source>Automatically check for updates</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Vérifier automatiquement les mises à jour</translation>

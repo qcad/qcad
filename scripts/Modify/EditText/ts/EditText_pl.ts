@@ -4,19 +4,19 @@
 <context>
     <name>EditText</name>
     <message>
-        <location filename="../EditText.js" line="61"/>
+        <location filename="../EditText.js" line="+61"/>
         <source>Choose text</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz tekst</translation>
     </message>
     <message>
-        <location filename="../EditTextInit.js" line="2"/>
+        <location filename="../EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Edytuj tekst</translation>
     </message>
     <message>
-        <location filename="../EditTextInit.js" line="7"/>
+        <location line="+5"/>
         <source>Edit text</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--

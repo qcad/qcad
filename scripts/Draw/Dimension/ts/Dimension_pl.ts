@@ -4,14 +4,14 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="65"/>
+        <location filename="../Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translatorcomment>--google--
 &lt;brak przedrostka&gt;</translatorcomment>
         <translation type="unfinished">Bez prefiksu</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="66"/>
+        <location line="+1"/>
         <source>Radius</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -20,13 +20,13 @@ Wskaż promień
         <translation type="unfinished">Promień</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="67"/>
+        <location line="+1"/>
         <source>Metric screw</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wkręt metryczny</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="68"/>
+        <location line="+1"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -35,53 +35,53 @@ Przełącz znak średnicy
         <translation type="unfinished">Średnica</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="69"/>
+        <location line="+1"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plus / Minus</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="70"/>
+        <location line="+1"/>
         <source>Almost equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="71"/>
+        <location line="+1"/>
         <source>Asymptotically equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="72"/>
+        <location line="+1"/>
         <source>Square</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kwadrat</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="73"/>
+        <location line="+1"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="114"/>
+        <location line="+41"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia wymiarowe</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="119"/>
+        <location line="+5"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż narzędzia rozmiarom</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="136"/>
+        <location line="+17"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiar</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="29"/>
+        <location filename="../Dimension.ui" line="+29"/>
         <source>Label:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -90,7 +90,7 @@ Etykieta wymiarowania:</translatorcomment>
         <translation type="unfinished">Etykieta:</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="42"/>
+        <location line="+13"/>
         <source>Prefix</source>
         <translatorcomment>--google--
 Przedrostek globalny:
@@ -99,7 +99,7 @@ Wywiedź przedrostek z nazw plików</translatorcomment>
         <translation type="unfinished">Prefiks</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="61"/>
+        <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -107,7 +107,7 @@ Wprowadź stałą etykietę lub pozostaw puste aby otrzymać etykietę automatyc
         <translation type="unfinished">Wprowadź stałą etykietę lub pozostaw puste aby otrzymać etykietę automatyczną</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="112"/>
+        <location line="+51"/>
         <source>Upper tolerance</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -115,7 +115,7 @@ Górna tolerancja</translatorcomment>
         <translation type="unfinished">Górna tolerancja</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="156"/>
+        <location line="+44"/>
         <source>Lower tolerance</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

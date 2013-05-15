@@ -4,7 +4,7 @@
 <context>
     <name>Forum</name>
     <message>
-        <location filename="../ForumInit.js" line="2"/>
+        <location filename="../ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Forum</translation>

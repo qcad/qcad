@@ -4,13 +4,13 @@
 <context>
     <name>Divide</name>
     <message>
-        <location filename="../Divide.js" line="67"/>
+        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc or circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz linię, łuk lub okrąg</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="77"/>
+        <location line="+10"/>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -18,7 +18,7 @@ Wskaż punkt</translatorcomment>
         <translation type="unfinished">Wskaż punkt</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="85"/>
+        <location line="+8"/>
         <source>Specify second point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -27,7 +27,7 @@ Wskaż dugi punkt odległości</translatorcomment>
         <translation type="unfinished">Wskaż drugi punkt</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="278"/>
+        <location line="+193"/>
         <source>Cutting point is not on entity.</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -35,7 +35,7 @@ Punkt cięcia nie jest na obiekcie.</translatorcomment>
         <translation type="unfinished">Punkt cięcia nie jest na obiekcie.</translation>
     </message>
     <message>
-        <location filename="../DivideInit.js" line="2"/>
+        <location filename="../DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

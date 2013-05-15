@@ -4,12 +4,12 @@
 <context>
     <name>ColorPreferences</name>
     <message>
-        <location filename="../ColorPreferences.js" line="24"/>
+        <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translation>Grafikansicht</translation>
     </message>
     <message>
-        <location filename="../ColorPreferences.js" line="24"/>
+        <location line="+0"/>
         <source>Colors</source>
         <translation>Farben</translation>
     </message>
@@ -28,12 +28,12 @@
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="258"/>
+        <location filename="../PreferencesPage.ui" line="+258"/>
         <source>Selection:</source>
         <translation>Auswahl:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="35"/>
+        <location line="-223"/>
         <source>Background:</source>
         <translation>Hintergrund:</translation>
     </message>
@@ -54,77 +54,77 @@
         <translation type="obsolete">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="62"/>
+        <location line="+27"/>
         <source>Crosshairs:</source>
         <translation>Fadenkreuz:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="69"/>
+        <location line="+7"/>
         <source>Inactive Crosshairs:</source>
         <translation>Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="96"/>
+        <location line="+27"/>
         <source>Origin:</source>
         <translation>Nullpunkt:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="123"/>
+        <location line="+27"/>
         <source>Relative Zero:</source>
         <translation>Relativer Nullpunkt:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="150"/>
+        <location line="+27"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="177"/>
+        <location line="+27"/>
         <source>Grid:</source>
         <translation>Raster:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="207"/>
+        <location line="+30"/>
         <source>Meta Grid:</source>
         <translation>Meta Raster:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="234"/>
+        <location line="+27"/>
         <source>Zoom Box:</source>
         <translation>Zoombox:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="285"/>
+        <location line="+51"/>
         <source>Selection Box Border:</source>
         <translation>Auswahlbox (Rand):</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="309"/>
+        <location line="+24"/>
         <source>Selection Box:</source>
         <translation>Auswahlbox:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="336"/>
+        <location line="+27"/>
         <source>Cross Selection Box:</source>
         <translation>Kreuzende Auswahlbox:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="363"/>
+        <location line="+27"/>
         <source>Auxiliary Shapes:</source>
         <translation>Hilfsobjekte:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="430"/>
+        <location line="+67"/>
         <source>Info Label Background:</source>
         <translation>Hintergrund Info Beschriftung:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="457"/>
+        <location line="+27"/>
         <source>Info Label Font:</source>
         <translation>Schrift Info Beschriftung:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="464"/>
+        <location line="+7"/>
         <source>Measurement Tools:</source>
         <translation>Messwerkzeuge:</translation>
     </message>

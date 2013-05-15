@@ -4,13 +4,13 @@
 <context>
     <name>EllipseCPP</name>
     <message>
-        <location filename="../EllipseCPPInit.js" line="2"/>
+        <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pełna elipsa</translation>
     </message>
     <message>
-        <location filename="../EllipseCPPInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Remis pełną elipsę od centrum, punkt główny i współczynnika</translation>

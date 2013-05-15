@@ -4,7 +4,7 @@
 <context>
     <name>NextWindow</name>
     <message>
-        <location filename="../NextWindowInit.js" line="2"/>
+        <location filename="../NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

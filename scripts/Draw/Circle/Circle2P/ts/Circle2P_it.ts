@@ -4,27 +4,27 @@
 <context>
     <name>Circle2P</name>
     <message>
-        <location filename="../Circle2P.js" line="58"/>
+        <location filename="../Circle2P.js" line="+58"/>
         <source>First point</source>
         <translation>Primo punto</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="65"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translation>Secondo punto</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="147"/>
+        <location line="+82"/>
         <source>The two points are identical</source>
         <translation>I due punti sono identici</translation>
     </message>
     <message>
-        <location filename="../Circle2PInit.js" line="2"/>
+        <location filename="../Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
         <translation>&amp;2 Punti</translation>
     </message>
     <message>
-        <location filename="../Circle2PInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Disegnare un cerchio da due punti diametralmente opposti</translation>
     </message>

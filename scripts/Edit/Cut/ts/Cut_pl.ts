@@ -4,7 +4,7 @@
 <context>
     <name>Cut</name>
     <message>
-        <location filename="../CutInit.js" line="2"/>
+        <location filename="../CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

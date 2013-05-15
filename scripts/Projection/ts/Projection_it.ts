@@ -4,27 +4,27 @@
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../Projection.js" line="75"/>
+        <location filename="../Projection.js" line="+75"/>
         <source>Projection Tools</source>
         <translation>Strumenti di proiezione</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="80"/>
+        <location line="+5"/>
         <source>Show projection tools</source>
         <translation>Strumenti di proiezione</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="93"/>
+        <location line="+13"/>
         <source>&amp;Projection</source>
         <translation>&amp;Proiezione</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="128"/>
+        <location line="+35"/>
         <source>Reference point</source>
         <translation>Punto di riferimento</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="135"/>
+        <location line="+7"/>
         <source>Target point</source>
         <translation>Obiettivo punto</translation>
     </message>

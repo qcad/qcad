@@ -4,22 +4,22 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="70"/>
+        <location filename="../InfoArea.js" line="+70"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="194"/>
+        <location line="+124"/>
         <source>Polygon area:</source>
         <translation>Polygonfläche:</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="195"/>
+        <location line="+1"/>
         <source>circumference:</source>
         <translation>Umfang:</translation>
     </message>
     <message>
-        <location filename="../InfoAreaInit.js" line="2"/>
+        <location filename="../InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
         <translation>&amp;Polygon Fläche</translation>
     </message>
@@ -32,17 +32,17 @@
         <translation type="obsolete">Polygonfläche</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="64"/>
+        <location filename="../InfoArea.js" line="-131"/>
         <source>Set next polygon corner</source>
         <translation>Nächsten Eckpunkt setzen</translation>
     </message>
     <message>
-        <location filename="../InfoArea.ui" line="17"/>
+        <location filename="../InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
         <translation>Länge berechnen und Werkzeug beenden.</translation>
     </message>
     <message>
-        <location filename="../InfoArea.ui" line="31"/>
+        <location line="+14"/>
         <source>Close Tool.</source>
         <translation>Werkzeug beenden.</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Lengthen</name>
     <message>
-        <location filename="../Lengthen.js" line="60"/>
+        <location filename="../Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Choisissez ligne ou arc</translation>
@@ -14,18 +14,18 @@
         <translation type="obsolete">A&amp;llonger</translation>
     </message>
     <message>
-        <location filename="../Lengthen.ui" line="17"/>
+        <location filename="../Lengthen.ui" line="+17"/>
         <source>Amount:</source>
         <translation>Valeur :</translation>
     </message>
     <message>
-        <location filename="../Lengthen.ui" line="27"/>
+        <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Montant pour allonger ou raccourcir (négatif)</translation>
     </message>
     <message>
-        <location filename="../LengthenInit.js" line="2"/>
+        <location filename="../LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
         <translation>A&amp;llonger / raccourcir</translation>
     </message>

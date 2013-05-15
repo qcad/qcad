@@ -4,7 +4,7 @@
 <context>
     <name>PanZoom</name>
     <message>
-        <location filename="../PanZoomInit.js" line="2"/>
+        <location filename="../PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
         <translation>Zoom &amp;panoramique</translation>
     </message>

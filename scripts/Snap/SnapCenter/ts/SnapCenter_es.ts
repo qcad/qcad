@@ -4,7 +4,7 @@
 <context>
     <name>SnapCenter</name>
     <message>
-        <location filename="../SnapCenterInit.js" line="2"/>
+        <location filename="../SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
         <translation>&amp;Centro</translation>
     </message>

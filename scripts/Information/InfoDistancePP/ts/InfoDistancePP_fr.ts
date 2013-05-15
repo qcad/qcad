@@ -4,44 +4,44 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="51"/>
+        <location filename="../InfoDistancePP.js" line="+51"/>
         <source>First point</source>
         <translation>Premier point</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="58"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translation>Deuxième point</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="61"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="98"/>
+        <location line="+37"/>
         <source>Distance:</source>
         <translation>Distance :</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="102"/>
+        <location line="+4"/>
         <source>Delta X:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Delta X:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="103"/>
+        <location line="+1"/>
         <source>Delta Y:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Delta Y:</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePP.js" line="104"/>
+        <location line="+1"/>
         <source>Angle:</source>
         <translation>Angle :</translation>
     </message>
     <message>
-        <location filename="../InfoDistancePPInit.js" line="2"/>
+        <location filename="../InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translation>Distance d&apos;un &amp;point à un point</translation>
     </message>

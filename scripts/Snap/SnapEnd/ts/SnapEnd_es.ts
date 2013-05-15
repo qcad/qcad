@@ -4,7 +4,7 @@
 <context>
     <name>SnapEnd</name>
     <message>
-        <location filename="../SnapEndInit.js" line="2"/>
+        <location filename="../SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
         <translation>&amp;Fin</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Stretch</name>
     <message>
-        <location filename="../Stretch.js" line="59"/>
+        <location filename="../Stretch.js" line="+59"/>
         <source>First corner</source>
         <translatorcomment>--exact match--
 --file: LineRectangle_pt.ts--
@@ -13,7 +13,7 @@ Primeira ponto de canto</translatorcomment>
         <translation>Primeira ponto de canto</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="69"/>
+        <location line="+10"/>
         <source>Second corner</source>
         <translatorcomment>--exact match--
 --file: LineRectangle_pt.ts--
@@ -22,7 +22,7 @@ Segundo ponto de canto</translatorcomment>
         <translation>Segundo ponto de canto</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="78"/>
+        <location line="+9"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -31,7 +31,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Ponto de referência</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="86"/>
+        <location line="+8"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -40,7 +40,7 @@ Ponto de destino</translatorcomment>
         <translation>Ponto de destino</translation>
     </message>
     <message>
-        <location filename="../StretchInit.js" line="2"/>
+        <location filename="../StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

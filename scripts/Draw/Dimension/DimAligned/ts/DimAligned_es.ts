@@ -4,27 +4,27 @@
 <context>
     <name>DimAligned</name>
     <message>
-        <location filename="../DimAligned.js" line="60"/>
+        <location filename="../DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
         <translation>Origen de la primera línea de la extensión</translation>
     </message>
     <message>
-        <location filename="../DimAligned.js" line="69"/>
+        <location line="+9"/>
         <source>Second extension line origin</source>
         <translation>Origen de la segundo línea de la extensión</translation>
     </message>
     <message>
-        <location filename="../DimAligned.js" line="77"/>
+        <location line="+8"/>
         <source>Dimension line location</source>
         <translation>Posición de la línea de dimensión</translation>
     </message>
     <message>
-        <location filename="../DimAlignedInit.js" line="2"/>
+        <location filename="../DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
         <translation>&amp;Alineado</translation>
     </message>
     <message>
-        <location filename="../DimAlignedInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw aligned dimension</source>
         <translation>Dimensión alineada</translation>
     </message>

@@ -4,13 +4,13 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="21"/>
+        <location filename="../PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Viewports</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="35"/>
+        <location line="+14"/>
         <source>Preview</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -23,17 +23,17 @@ Exibe uma prévia da impressão</translatorcomment>
 <context>
     <name>ViewportSettings</name>
     <message>
-        <location filename="../ViewportSettings.js" line="27"/>
+        <location filename="../ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation>Padrões para novos desenhos</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="27"/>
+        <location line="+0"/>
         <source>Layout - Viewports</source>
         <translation>Arranjo - Viewports</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="29"/>
+        <location line="+2"/>
         <source>Layout</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -47,7 +47,7 @@ Arranjo</translatorcomment>
         <translation type="obsolete">Configurações viewport padrão</translation>
     </message>
     <message>
-        <location filename="../ViewportSettings.js" line="29"/>
+        <location line="+0"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Viewports</translation>

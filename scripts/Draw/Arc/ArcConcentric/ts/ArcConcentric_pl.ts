@@ -4,7 +4,7 @@
 <context>
     <name>ArcConcentric</name>
     <message>
-        <location filename="../ArcConcentric.ui" line="17"/>
+        <location filename="../ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13,7 +13,7 @@ Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
         <translation type="unfinished">Odległość:</translation>
     </message>
     <message>
-        <location filename="../ArcConcentric.ui" line="37"/>
+        <location line="+20"/>
         <source>Number:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -22,13 +22,13 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Liczba:</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricInit.js" line="2"/>
+        <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Koncentryczny (z Distance)</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj łuk koncentryczny</translation>

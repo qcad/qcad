@@ -4,12 +4,12 @@
 <context>
     <name>InvertSelection</name>
     <message>
-        <location filename="../InvertSelectionInit.js" line="2"/>
+        <location filename="../InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
         <translation>&amp;Inverti Selezione</translation>
     </message>
     <message>
-        <location filename="../InvertSelectionInit.js" line="7"/>
+        <location line="+5"/>
         <source>Invert the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Invertire la selezione corrente</translation>

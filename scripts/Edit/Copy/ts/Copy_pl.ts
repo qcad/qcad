@@ -4,7 +4,7 @@
 <context>
     <name>Copy</name>
     <message>
-        <location filename="../CopyInit.js" line="2"/>
+        <location filename="../CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

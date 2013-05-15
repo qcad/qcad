@@ -4555,65 +4555,65 @@ Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment
         <translation>Salvataggio automatico</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="143"/>
+        <location filename="../AutoSave.js" line="149"/>
         <source>Autosave failed:</source>
         <translation>Autosave fallito:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="149"/>
+        <location filename="../AutoSave.js" line="155"/>
         <source>Autosave complete.</source>
         <translation>Salvataggio automatico è stato completato.</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="170"/>
+        <location filename="../AutoSave.js" line="176"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translation>Un file di backup &apos;autosave&apos; per un disegno senza titolo è stato trovato.
 Vuoi recuperarlo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="174"/>
+        <location filename="../AutoSave.js" line="180"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
         <translation>%1 file di backup &apos;autosave&apos; per disegni senza titolo sono stati trovati.
 Vuoi recuperarli?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="196"/>
+        <location filename="../AutoSave.js" line="202"/>
         <source>Recovered</source>
         <translation>Recuperati</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="243"/>
+        <location filename="../AutoSave.js" line="249"/>
         <source>Recover File?</source>
         <translation>Recuperare file?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="244"/>
+        <location filename="../AutoSave.js" line="250"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translation>Un file di backup &apos;autosave&apos; per &apos;%1&apos; è stato trovato.
 Vuoi recuperarlo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="269"/>
-        <location filename="../AutoSave.js" line="280"/>
-        <location filename="../AutoSave.js" line="285"/>
+        <location filename="../AutoSave.js" line="275"/>
+        <location filename="../AutoSave.js" line="286"/>
+        <location filename="../AutoSave.js" line="291"/>
         <source>Cannot rename file:</source>
         <translation>Impossibile rinominare il file:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="272"/>
+        <location filename="../AutoSave.js" line="278"/>
         <source>Moved autosave backup file to:</source>
         <translation>Ribattezzata file di salvataggio automatico:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="288"/>
+        <location filename="../AutoSave.js" line="294"/>
         <source>Moved original file to:</source>
         <translation>Spostato file originale a:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="304"/>
+        <location filename="../AutoSave.js" line="310"/>
         <source>Cannot remove file:</source>
         <translation>Impossibile eliminare il file:</translation>
     </message>
@@ -4630,7 +4630,7 @@ Vuoi recuperarlo?</translation>
         <translation type="obsolete">Ribattezzata file di salvataggio automatico:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="180"/>
+        <location filename="../AutoSave.js" line="186"/>
         <source>Recover Files?</source>
         <translation>Recuperare i file?</translation>
     </message>
@@ -4639,7 +4639,7 @@ Vuoi recuperarlo?</translation>
         <translation type="obsolete">Scegli directory per salvataggio automatico</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="123"/>
+        <location filename="../AutoSave.js" line="129"/>
         <source>Autosaving to:</source>
         <translation>Salvataggio automatico per:</translation>
     </message>
@@ -4840,12 +4840,22 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="43"/>
+        <source>No import filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenFile.js" line="46"/>
+        <source>No import filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenFile.js" line="63"/>
         <source>Open Drawing</source>
         <translation>Apri il Disegno</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="55"/>
+        <location filename="../OpenFile.js" line="65"/>
         <source>All Files</source>
         <translation>Tutti i file</translation>
     </message>
@@ -5048,7 +5058,17 @@ Vuoi recuperarlo?</translation>
         <translation>Salva come</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="95"/>
+        <location filename="../SaveAs.js" line="56"/>
+        <source>No export filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SaveAs.js" line="59"/>
+        <source>No export filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SaveAs.js" line="106"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

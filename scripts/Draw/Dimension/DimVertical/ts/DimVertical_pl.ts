@@ -4,7 +4,7 @@
 <context>
     <name>DimVertical</name>
     <message>
-        <location filename="../DimVerticalInit.js" line="2"/>
+        <location filename="../DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13,7 +13,7 @@ Ograniczenie &amp;pionowo</translatorcomment>
         <translation type="unfinished">&amp;Pionowa</translation>
     </message>
     <message>
-        <location filename="../DimVerticalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw vertical dimension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj wymiar pionowy</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>DimensionSettings</name>
     <message>
-        <location filename="../DimensionSettings.js" line="29"/>
+        <location filename="../DimensionSettings.js" line="+29"/>
         <source>Dimension</source>
         <translation>Quota</translation>
     </message>
@@ -13,170 +13,170 @@
         <translation type="obsolete">Impostazioni predefinite quota</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="27"/>
-        <location filename="../DimensionSettings.js" line="29"/>
+        <location line="-2"/>
+        <location line="+2"/>
         <source>Dimension Settings</source>
         <translation>Impostazioni quota</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="27"/>
+        <location line="-2"/>
         <source>Defaults for New Drawings</source>
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="114"/>
+        <location line="+87"/>
         <source>Scientific</source>
         <translation>Scientifica</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="115"/>
+        <location line="+1"/>
         <source>Decimal</source>
         <translation>Decimale</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="116"/>
+        <location line="+1"/>
         <source>Engineering</source>
         <translation>Ingegneristica</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="117"/>
+        <location line="+1"/>
         <source>Architectural</source>
         <translation>Architettonica</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="118"/>
+        <location line="+1"/>
         <source>Fractional</source>
         <translation>Frazionale</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="146"/>
+        <location line="+28"/>
         <source>Decimal Degrees</source>
         <translation>Gradi Decimali</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="147"/>
+        <location line="+1"/>
         <source>Deg/min/sec</source>
         <translation>Grad/min/sec</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="148"/>
+        <location line="+1"/>
         <source>Gradians</source>
         <translation>Centesimali</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="149"/>
+        <location line="+1"/>
         <source>Radians</source>
         <translation>Radianti</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="150"/>
+        <location line="+1"/>
         <source>Surveyor&apos;s units</source>
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="286"/>
+        <location line="+136"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="287"/>
+        <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translation>L&apos;unità di disegno deve essere &apos;Inch&apos; per visualizzare le etichette in formati di dimensione &apos;architettonica&apos; o &apos;Engineering&apos;. Formato cambiato in &apos;decimale&apos;.</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="20"/>
+        <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Sizes</source>
         <translation>Misure</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="29"/>
+        <location line="+9"/>
         <source>Keep proportions</source>
         <translation>Mantiene proporzioni</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="41"/>
+        <location line="+12"/>
         <source>Text height:</source>
         <translation>Altezza Testo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="58"/>
+        <location line="+17"/>
         <source>Extension line offset:</source>
         <translation>Offset della linea di estensione:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="75"/>
+        <location line="+17"/>
         <source>Extension line extension:</source>
         <translation>Estensione della linea di estensione:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="92"/>
+        <location line="+17"/>
         <source>Dimension line gap:</source>
         <translation>Distanza del testo dalla linea:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="116"/>
+        <location line="+24"/>
         <source>Arrow size:</source>
         <translation>Dimensione Freccia:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="205"/>
+        <location line="+89"/>
         <source>Arrow Style</source>
         <translation>Stile freccia</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="217"/>
+        <location line="+12"/>
         <source>Arrow</source>
         <translation>Freccia</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="227"/>
+        <location line="+10"/>
         <source>Architectural Tick</source>
         <translation>Architettonica Tick</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="250"/>
+        <location line="+23"/>
         <source>Label Format</source>
         <translation>Formato etichetta</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="256"/>
+        <location line="+6"/>
         <source>Linear Dimensions</source>
         <translation>Quota Lineare</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="264"/>
+        <location line="+8"/>
         <source>&amp;Format:</source>
         <translation>&amp;Formato:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="274"/>
+        <location line="+10"/>
         <source>P&amp;recision:</source>
         <translation>&amp;Precisione:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="292"/>
-        <location filename="../PreferencesPage.ui" line="354"/>
+        <location line="+18"/>
+        <location line="+62"/>
         <source>Show trailing zeros</source>
         <translation>Mostra zeri finali</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="318"/>
+        <location line="-36"/>
         <source>Angular Dimensions</source>
         <translation>Quota angolare</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="326"/>
+        <location line="+8"/>
         <source>F&amp;ormat:</source>
         <translation>&amp;Formato:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="339"/>
+        <location line="+13"/>
         <source>Pre&amp;cision:</source>
         <translation>&amp;Precisione:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="380"/>
-        <location filename="../PreferencesPage.ui" line="399"/>
+        <location line="+41"/>
+        <location line="+19"/>
         <source>Preview</source>
         <translation>Anteprima</translation>
     </message>

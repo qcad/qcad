@@ -4,7 +4,7 @@
 <context>
     <name>Translate</name>
     <message>
-        <location filename="../Translate.js" line="62"/>
+        <location filename="../Translate.js" line="+62"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -13,7 +13,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Ponto de referência</translation>
     </message>
     <message>
-        <location filename="../Translate.js" line="70"/>
+        <location line="+8"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -22,7 +22,7 @@ Ponto de destino</translatorcomment>
         <translation>Ponto de destino</translation>
     </message>
     <message>
-        <location filename="../TranslateInit.js" line="2"/>
+        <location filename="../TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -30,7 +30,7 @@ Ponto de destino</translatorcomment>
         <translation>&amp;Mova / copie</translation>
     </message>
     <message>
-        <location filename="../TranslateInit.js" line="8"/>
+        <location line="+6"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mover ou copiar entidades uma vez ou múltiplas vezes</translation>
@@ -87,32 +87,32 @@ Use camada e &amp;atributos atual</translatorcomment>
 <context>
     <name>TranslateOptions</name>
     <message>
-        <location filename="../TranslateDialog.ui" line="14"/>
+        <location filename="../TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
         <translation>Opções mova / copie</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Number of Copies</source>
         <translation>Número de cópias</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="34"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Apague o original</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="44"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="51"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="159"/>
+        <location line="+108"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use camada e &amp;atributos atual</translation>
     </message>

@@ -4,13 +4,13 @@
 <context>
     <name>LineVertical</name>
     <message>
-        <location filename="../LineVerticalInit.js" line="2"/>
+        <location filename="../LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linha &amp;vertical</translation>
     </message>
     <message>
-        <location filename="../LineVerticalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw vertical line</source>
         <translatorcomment>--google--
 Desenhe linhas verticais</translatorcomment>

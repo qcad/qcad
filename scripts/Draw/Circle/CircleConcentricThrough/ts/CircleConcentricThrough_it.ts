@@ -4,17 +4,17 @@
 <context>
     <name>CircleConcentricThrough</name>
     <message>
-        <location filename="../CircleConcentricThrough.ui" line="17"/>
+        <location filename="../CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Numero:</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricThroughInit.js" line="2"/>
+        <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
         <translation>&amp;Concentrico (attraverso un punto)</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricThroughInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric circle through point</source>
         <translation>Disegnare un cerchio concentrico attraverso un punto</translation>
     </message>

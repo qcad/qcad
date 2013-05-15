@@ -13,7 +13,7 @@
 <context>
     <name>PreviousWindow</name>
     <message>
-        <location filename="../PreviousWindowInit.js" line="2"/>
+        <location filename="../PreviousWindowInit.js" line="+2"/>
         <source>&amp;Previous</source>
         <translation>&amp;Anterior</translation>
     </message>

@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Capa</translation>
     </message>
     <message>
-        <location filename="../ModifyExamples.js" line="51"/>
+        <location filename="../ModifyExamples.js" line="+51"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificar</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../AddLayerInit.js" line="2"/>
+        <location filename="../AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
         <translation>Aggiungi Layer</translation>
     </message>

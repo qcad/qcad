@@ -4,12 +4,12 @@
 <context>
     <name>ZoomToSelection</name>
     <message>
-        <location filename="../ZoomToSelection.js" line="31"/>
+        <location filename="../ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
         <translation>Keine Selektion gefunden.</translation>
     </message>
     <message>
-        <location filename="../ZoomToSelectionInit.js" line="2"/>
+        <location filename="../ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
         <translation>Ansicht auf &amp;Selektion</translation>
     </message>

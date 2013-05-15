@@ -4,19 +4,19 @@
 <context>
     <name>LineTangent2</name>
     <message>
-        <location filename="../LineTangent2.js" line="67"/>
+        <location filename="../LineTangent2.js" line="+67"/>
         <source>Choose first circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha primeiro círculo ou arco</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="78"/>
+        <location line="+11"/>
         <source>Choose second circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha segundo círculo ou arco</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="216"/>
+        <location line="+138"/>
         <source>No tangent possible</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tangent não é possível</translation>
@@ -29,12 +29,12 @@ Tan&amp;gente (C,C)</translatorcomment>
         <translation type="obsolete">Tan&amp;gente (C,C)</translation>
     </message>
     <message>
-        <location filename="../LineTangent2Init.js" line="2"/>
+        <location filename="../LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
         <translation>Tan&amp;gente (C,C)</translation>
     </message>
     <message>
-        <location filename="../LineTangent2Init.js" line="7"/>
+        <location line="+5"/>
         <source>Draw tangent (circle, circle)</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

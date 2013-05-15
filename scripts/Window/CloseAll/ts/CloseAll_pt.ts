@@ -4,7 +4,7 @@
 <context>
     <name>CloseAll</name>
     <message>
-        <location filename="../CloseAllInit.js" line="2"/>
+        <location filename="../CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Fecha &amp;todos</translation>

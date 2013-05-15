@@ -4,7 +4,7 @@
 <context>
     <name>WindowZoom</name>
     <message>
-        <location filename="../WindowZoomInit.js" line="2"/>
+        <location filename="../WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

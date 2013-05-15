@@ -8,12 +8,12 @@
         <translation type="obsolete">Quota &amp;orizzontale</translation>
     </message>
     <message>
-        <location filename="../DimHorizontalInit.js" line="2"/>
+        <location filename="../DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
         <translation>&amp;Orizzontale</translation>
     </message>
     <message>
-        <location filename="../DimHorizontalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw horizontal dimension</source>
         <translation>Quota orizzontale</translation>
     </message>

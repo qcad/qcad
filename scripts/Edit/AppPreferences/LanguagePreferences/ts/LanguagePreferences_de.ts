@@ -12,7 +12,7 @@
         <translation type="obsolete">Sprache</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="20"/>
+        <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
         <translation>Sprache Benutzeroberfläche:</translation>
     </message>
@@ -20,12 +20,12 @@
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="41"/>
+        <location filename="../LanguagePreferences.js" line="+41"/>
         <source>Language Settings</source>
         <translation>Spracheinstellungen</translation>
     </message>
     <message>
-        <location filename="../LanguagePreferences.js" line="41"/>
+        <location line="+0"/>
         <source>Language</source>
         <translation>Sprache</translation>
     </message>

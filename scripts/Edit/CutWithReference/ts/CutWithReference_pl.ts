@@ -4,7 +4,7 @@
 <context>
     <name>CutWithReference</name>
     <message>
-        <location filename="../CutWithReferenceInit.js" line="2"/>
+        <location filename="../CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wytnij z odniesieniem</translation>

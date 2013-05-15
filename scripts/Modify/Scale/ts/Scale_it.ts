@@ -4,18 +4,18 @@
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../Scale.js" line="70"/>
+        <location filename="../Scale.js" line="+70"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Punto focale</translation>
     </message>
     <message>
-        <location filename="../Scale.js" line="81"/>
+        <location line="+11"/>
         <source>Reference point</source>
         <translation>Punto di riferimento</translation>
     </message>
     <message>
-        <location filename="../Scale.js" line="91"/>
+        <location line="+10"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_it.ts--
@@ -24,7 +24,7 @@ Obiettivo punto</translatorcomment>
         <translation>Obiettivo punto</translation>
     </message>
     <message>
-        <location filename="../ScaleInit.js" line="2"/>
+        <location filename="../ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
         <translation>&amp;Scala</translation>
     </message>
@@ -70,42 +70,42 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
 <context>
     <name>ScaleOptions</name>
     <message>
-        <location filename="../ScaleDialog.ui" line="14"/>
+        <location filename="../ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
         <translation>Opzioni scala</translation>
     </message>
     <message>
-        <location filename="../ScaleDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Number of Copies</source>
         <translation>Numero di copie</translation>
     </message>
     <message>
-        <location filename="../ScaleDialog.ui" line="34"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Cancella originali</translation>
     </message>
     <message>
-        <location filename="../ScaleDialog.ui" line="44"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location filename="../ScaleDialog.ui" line="51"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>Copie &amp;multiple</translation>
     </message>
     <message>
-        <location filename="../ScaleDialog.ui" line="170"/>
+        <location line="+119"/>
         <source>Factor &amp;x:</source>
         <translation>Fattore &amp;x:</translation>
     </message>
     <message>
-        <location filename="../ScaleDialog.ui" line="216"/>
+        <location line="+46"/>
         <source>Factor &amp;y:</source>
         <translation>Fattore &amp;y:</translation>
     </message>
     <message>
-        <location filename="../ScaleDialog.ui" line="273"/>
+        <location line="+57"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa layer e gli &amp;attributi corrente</translation>
     </message>

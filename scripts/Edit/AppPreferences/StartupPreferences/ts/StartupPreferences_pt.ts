@@ -21,7 +21,7 @@ Indique o ponto de início ou [Centro]</translatorcomment>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
         <translation>Habilitar splash screen</translation>
     </message>
@@ -29,7 +29,7 @@ Indique o ponto de início ou [Centro]</translatorcomment>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../StartupPreferences.js" line="24"/>
+        <location filename="../StartupPreferences.js" line="+24"/>
         <source>Startup</source>
         <translation>Início</translation>
     </message>

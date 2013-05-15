@@ -8,12 +8,12 @@
         <translation type="obsolete">Dimensión &amp;vertical</translation>
     </message>
     <message>
-        <location filename="../DimVerticalInit.js" line="2"/>
+        <location filename="../DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
         <translation>&amp;Vertical</translation>
     </message>
     <message>
-        <location filename="../DimVerticalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw vertical dimension</source>
         <translation>Dimensión vertical</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Image</name>
     <message>
-        <location filename="../Image.js" line="118"/>
+        <location filename="../Image.js" line="+118"/>
         <source>Files</source>
         <translatorcomment>--exact match--
 --file: assistant_pl.ts--
@@ -13,7 +13,7 @@ Wszystkie pliki (*.*)</translatorcomment>
         <translation type="unfinished">Pliki</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="135"/>
+        <location line="+17"/>
         <source>All Image Files (%1)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -21,7 +21,7 @@ Wszystkie pliki obrazów (%1)</translatorcomment>
         <translation type="unfinished">Wszystkie pliki obrazów (%1)</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="137"/>
+        <location line="+2"/>
         <source>All Files</source>
         <translatorcomment>--google--
 Wszystkie pliki (*.*)
@@ -31,13 +31,13 @@ Wszystkie pliki (*)</translatorcomment>
         <translation type="unfinished">Wszystkie pliki</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="145"/>
+        <location line="+8"/>
         <source>Import Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Bitmap import</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="150"/>
+        <location line="+5"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -46,7 +46,7 @@ Format:</translatorcomment>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="175"/>
+        <location line="+25"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -56,7 +56,7 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Położenie</translation>
     </message>
     <message>
-        <location filename="../Image.ui" line="17"/>
+        <location filename="../Image.ui" line="+17"/>
         <source>Width:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -65,7 +65,7 @@ Szerokość:
         <translation type="unfinished">Szerokość:</translation>
     </message>
     <message>
-        <location filename="../Image.ui" line="37"/>
+        <location line="+20"/>
         <source>Keep proportions</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -73,7 +73,7 @@ Zachowaj proporcje</translatorcomment>
         <translation type="unfinished">Zachowaj proporcje</translation>
     </message>
     <message>
-        <location filename="../Image.ui" line="54"/>
+        <location line="+17"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -82,7 +82,7 @@ Wysokość tekstu:</translatorcomment>
         <translation type="unfinished">Wysokość:</translation>
     </message>
     <message>
-        <location filename="../Image.ui" line="81"/>
+        <location line="+27"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -91,7 +91,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished">Kąt:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="2"/>
+        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wstaw bitmapę</translation>

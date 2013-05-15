@@ -4,12 +4,12 @@
 <context>
     <name>BreakOut</name>
     <message>
-        <location filename="../BreakOut.ui" line="17"/>
+        <location filename="../BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
         <translation>Segment entfernen</translation>
     </message>
     <message>
-        <location filename="../BreakOutInit.js" line="2"/>
+        <location filename="../BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
         <translation>&amp;Segment heraustrennen</translation>
     </message>
@@ -18,12 +18,12 @@
         <translation type="obsolete">Linie, Bogen oder Kreis wählen</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="58"/>
+        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
         <translation>Linie, Bogen, Kreis oder Ellipse zum Trimmen wählen</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="61"/>
+        <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
         <translation>Linien-, Bogen-, Kreis- oder Ellipsensegment wählen</translation>
     </message>

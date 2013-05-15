@@ -9,7 +9,7 @@
         <translation type="obsolete">&amp;Aucune restriction</translation>
     </message>
     <message>
-        <location filename="../RestrictOffInit.js" line="2"/>
+        <location filename="../RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
         <translation>&amp;Aucune restriction</translation>
     </message>

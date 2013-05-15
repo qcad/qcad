@@ -4,37 +4,37 @@
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../SnapCoordinate.ui" line="33"/>
+        <location filename="../SnapCoordinate.ui" line="+33"/>
         <source>X Coordinate</source>
         <translation>X Koordinate</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinate.ui" line="62"/>
+        <location line="+29"/>
         <source>Y Coordinate</source>
         <translation>Y Koordinate</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinate.ui" line="75"/>
+        <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Relative Koordinate</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinate.js" line="80"/>
+        <location filename="../SnapCoordinate.js" line="+80"/>
         <source>Set coordinate</source>
         <translation>Koordinate setzen</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinateInit.js" line="5"/>
+        <location filename="../SnapCoordinateInit.js" line="+5"/>
         <source>&amp;Coordinate</source>
         <translation>&amp;Koordinate</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinate.ui" line="17"/>
+        <location filename="../SnapCoordinate.ui" line="-58"/>
         <source>&amp;x:</source>
         <translation>&amp;x:</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinate.ui" line="46"/>
+        <location line="+29"/>
         <source>&amp;y:</source>
         <translation>&amp;y:</translation>
     </message>
@@ -43,7 +43,7 @@
         <translation type="obsolete">Relative Koordinate</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinate.ui" line="78"/>
+        <location line="+32"/>
         <source>Relati&amp;ve</source>
         <translation>Relati&amp;v</translation>
     </message>

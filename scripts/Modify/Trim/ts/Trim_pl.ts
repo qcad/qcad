@@ -4,25 +4,25 @@
 <context>
     <name>Trim</name>
     <message>
-        <location filename="../Trim.js" line="70"/>
+        <location filename="../Trim.js" line="+70"/>
         <source>Choose limiting entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz ograniczenie podmiotu</translation>
     </message>
     <message>
-        <location filename="../Trim.js" line="79"/>
+        <location line="+9"/>
         <source>Choose entity to trim</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz jednostkę do wykończenia</translation>
     </message>
     <message>
-        <location filename="../Trim.js" line="193"/>
+        <location line="+114"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Oba podmioty nie przecinają się, ani nie są obecnie obsługiwane przez przycinanie.</translation>
     </message>
     <message>
-        <location filename="../TrimInit.js" line="2"/>
+        <location filename="../TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

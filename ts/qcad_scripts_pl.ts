@@ -5648,84 +5648,84 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
         <translation type="unfinished">Autozapis</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="123"/>
+        <location filename="../AutoSave.js" line="129"/>
         <source>Autosaving to:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Autozapis do:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="143"/>
+        <location filename="../AutoSave.js" line="149"/>
         <source>Autosave failed:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Automatyczne zapisywanie nie powiodło się:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="149"/>
+        <location filename="../AutoSave.js" line="155"/>
         <source>Autosave complete.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Autozapis zakończyć.</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="170"/>
+        <location filename="../AutoSave.js" line="176"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plik kopii zapasowej o &quot;autozapis&amp;quot; dla bez tytułu rysunku został znaleziony. Czy chcesz je odzyskać?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="174"/>
+        <location filename="../AutoSave.js" line="180"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pliki kopii zapasowej &quot;autozapis&amp;quot; dla untitled rysunków znalazła. Czy chcesz je odzyskać?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="180"/>
+        <location filename="../AutoSave.js" line="186"/>
         <source>Recover Files?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odzyskać pliki?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="196"/>
+        <location filename="../AutoSave.js" line="202"/>
         <source>Recovered</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odzyskane</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="243"/>
+        <location filename="../AutoSave.js" line="249"/>
         <source>Recover File?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odzyskaj plik?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="244"/>
+        <location filename="../AutoSave.js" line="250"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plik kopii zapasowej o &quot;autozapis&amp;quot; dla&apos;&amp;#39; istnieje. Czy chcesz je odzyskać?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="269"/>
-        <location filename="../AutoSave.js" line="280"/>
-        <location filename="../AutoSave.js" line="285"/>
+        <location filename="../AutoSave.js" line="275"/>
+        <location filename="../AutoSave.js" line="286"/>
+        <location filename="../AutoSave.js" line="291"/>
         <source>Cannot rename file:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie można zmienić nazwy pliku:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="272"/>
+        <location filename="../AutoSave.js" line="278"/>
         <source>Moved autosave backup file to:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przeniesiony plik kopii autozapisu do:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="288"/>
+        <location filename="../AutoSave.js" line="294"/>
         <source>Moved original file to:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przeniesiony oryginalnego pliku do:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="304"/>
+        <location filename="../AutoSave.js" line="310"/>
         <source>Cannot remove file:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie można usunąć plik:</translation>
@@ -6001,7 +6001,17 @@ Nowy &amp;formularz</translatorcomment>
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="43"/>
+        <source>No import filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenFile.js" line="46"/>
+        <source>No import filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenFile.js" line="63"/>
         <source>Open Drawing</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -6009,7 +6019,7 @@ Otwórz rysunek</translatorcomment>
         <translation type="unfinished">Otwórz rysunek</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="55"/>
+        <location filename="../OpenFile.js" line="65"/>
         <source>All Files</source>
         <translatorcomment>--google--
 Wszystkie pliki (*.*)
@@ -6237,7 +6247,17 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation type="unfinished">Zachowaj jako</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="95"/>
+        <location filename="../SaveAs.js" line="56"/>
+        <source>No export filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SaveAs.js" line="59"/>
+        <source>No export filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SaveAs.js" line="106"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

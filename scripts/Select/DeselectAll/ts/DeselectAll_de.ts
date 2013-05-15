@@ -4,12 +4,12 @@
 <context>
     <name>DeselectAll</name>
     <message>
-        <location filename="../DeselectAllInit.js" line="2"/>
+        <location filename="../DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
         <translation>Alle &amp;deselektieren</translation>
     </message>
     <message>
-        <location filename="../DeselectAllInit.js" line="7"/>
+        <location line="+5"/>
         <source>Deselect all entities</source>
         <translation>Alle Objekte deselektieren</translation>
     </message>

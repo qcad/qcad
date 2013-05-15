@@ -4,14 +4,14 @@
 <context>
     <name>Polyline</name>
     <message>
-        <location filename="../Polyline.js" line="73"/>
+        <location filename="../Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
         <translatorcomment>--google--
 Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation type="unfinished">Narzędzia polilinii</translation>
     </message>
     <message>
-        <location filename="../Polyline.js" line="78"/>
+        <location line="+5"/>
         <source>Show polyline tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -19,7 +19,7 @@ Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Łamane&quot;</translation>
     </message>
     <message>
-        <location filename="../Polyline.js" line="95"/>
+        <location line="+17"/>
         <source>&amp;Polyline</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

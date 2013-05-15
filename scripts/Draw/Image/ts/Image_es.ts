@@ -4,57 +4,57 @@
 <context>
     <name>Image</name>
     <message>
-        <location filename="../Image.js" line="118"/>
+        <location filename="../Image.js" line="+118"/>
         <source>Files</source>
         <translation>Archivos</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="135"/>
+        <location line="+17"/>
         <source>All Image Files (%1)</source>
         <translation>Todos los archivos de imágen (%1)</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="137"/>
+        <location line="+2"/>
         <source>All Files</source>
         <translation>Todos los archivos</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="145"/>
+        <location line="+8"/>
         <source>Import Bitmap</source>
         <translation>Importación bitmap</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="150"/>
+        <location line="+5"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location filename="../Image.js" line="175"/>
+        <location line="+25"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="2"/>
+        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
         <translation>Insertar Bitmap</translation>
     </message>
     <message>
-        <location filename="../Image.ui" line="17"/>
+        <location filename="../Image.ui" line="+17"/>
         <source>Width:</source>
         <translation>Anchura:</translation>
     </message>
     <message>
-        <location filename="../Image.ui" line="37"/>
+        <location line="+20"/>
         <source>Keep proportions</source>
         <translation>Mantener proporciones</translation>
     </message>
     <message>
-        <location filename="../Image.ui" line="54"/>
+        <location line="+17"/>
         <source>Height:</source>
         <translation>Altura:</translation>
     </message>
     <message>
-        <location filename="../Image.ui" line="81"/>
+        <location line="+27"/>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>DimensionSettings</name>
     <message>
-        <location filename="../DimensionSettings.js" line="27"/>
+        <location filename="../DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -12,14 +12,14 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="27"/>
-        <location filename="../DimensionSettings.js" line="29"/>
+        <location line="+0"/>
+        <location line="+2"/>
         <source>Dimension Settings</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Ustawienia wymiarowe</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="29"/>
+        <location line="+0"/>
         <source>Dimension</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -29,7 +29,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation type="unfinished">Wymiar</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="114"/>
+        <location line="+85"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -37,7 +37,7 @@ Naukowy</translatorcomment>
         <translation type="unfinished">Naukowy</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="115"/>
+        <location line="+1"/>
         <source>Decimal</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -46,7 +46,7 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Dziesiętny</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="116"/>
+        <location line="+1"/>
         <source>Engineering</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -55,7 +55,7 @@ Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,j
         <translation type="unfinished">Inżynierski</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="117"/>
+        <location line="+1"/>
         <source>Architectural</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -64,7 +64,7 @@ Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,j
         <translation type="unfinished">Architektoniczny</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="118"/>
+        <location line="+1"/>
         <source>Fractional</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -72,7 +72,7 @@ Ułamkowy</translatorcomment>
         <translation type="unfinished">Ułamkowy</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="146"/>
+        <location line="+28"/>
         <source>Decimal Degrees</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -80,7 +80,7 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Stopnie dziesiętne</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="147"/>
+        <location line="+1"/>
         <source>Deg/min/sec</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -88,7 +88,7 @@ Stopnie/minuty/sekundy</translatorcomment>
         <translation type="unfinished">Stopnie/minuty/sekundy</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="148"/>
+        <location line="+1"/>
         <source>Gradians</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -96,7 +96,7 @@ Gradusy</translatorcomment>
         <translation type="unfinished">Gradusy</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="149"/>
+        <location line="+1"/>
         <source>Radians</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -105,7 +105,7 @@ Gradusy</translatorcomment>
         <translation type="unfinished">Radiany</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="150"/>
+        <location line="+1"/>
         <source>Surveyor&apos;s units</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -113,19 +113,19 @@ Jednostki geometryczne</translatorcomment>
         <translation type="unfinished">Jednostki geometryczne</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="286"/>
+        <location line="+136"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka / Format</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="287"/>
+        <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka rysunek musi być &quot;Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="20"/>
+        <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Sizes</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -134,7 +134,7 @@ Rozmiary</translatorcomment>
         <translation type="unfinished">Rozmiary</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="29"/>
+        <location line="+9"/>
         <source>Keep proportions</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -142,7 +142,7 @@ Zachowaj proporcje</translatorcomment>
         <translation type="unfinished">Zachowaj proporcje</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="41"/>
+        <location line="+12"/>
         <source>Text height:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -150,7 +150,7 @@ Wysokość tekstu:</translatorcomment>
         <translation type="unfinished">Wysokość tekstu:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="58"/>
+        <location line="+17"/>
         <source>Extension line offset:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -158,7 +158,7 @@ Przesunięcie linii rozszerzenia:</translatorcomment>
         <translation type="unfinished">Przesunięcie linii rozszerzenia:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="75"/>
+        <location line="+17"/>
         <source>Extension line extension:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -166,7 +166,7 @@ Rozszerzenie linii rozszerzenia:</translatorcomment>
         <translation type="unfinished">Rozszerzenie linii rozszerzenia:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="92"/>
+        <location line="+17"/>
         <source>Dimension line gap:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -174,7 +174,7 @@ Przerwa linii wymiarowej:</translatorcomment>
         <translation type="unfinished">Przerwa linii wymiarowej:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="116"/>
+        <location line="+24"/>
         <source>Arrow size:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -182,7 +182,7 @@ Rozmiar strzałki:</translatorcomment>
         <translation type="unfinished">Rozmiar strzałki:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="205"/>
+        <location line="+89"/>
         <source>Arrow Style</source>
         <translatorcomment>--google--
 Styl strzałki:
@@ -190,7 +190,7 @@ Styl strzałki</translatorcomment>
         <translation type="unfinished">Styl strzałki</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="217"/>
+        <location line="+12"/>
         <source>Arrow</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -199,7 +199,7 @@ Rozmiar strzałki:</translatorcomment>
         <translation type="unfinished">Strzałka</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="227"/>
+        <location line="+10"/>
         <source>Architectural Tick</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -207,19 +207,19 @@ Strzałka architektoniczna</translatorcomment>
         <translation type="unfinished">Strzałka architektoniczna</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="250"/>
+        <location line="+23"/>
         <source>Label Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Format etykiet</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="256"/>
+        <location line="+6"/>
         <source>Linear Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiarów liniowych</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="264"/>
+        <location line="+8"/>
         <source>&amp;Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -227,7 +227,7 @@ Strzałka architektoniczna</translatorcomment>
         <translation type="unfinished">&amp;Format:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="274"/>
+        <location line="+10"/>
         <source>P&amp;recision:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -235,8 +235,8 @@ Strzałka architektoniczna</translatorcomment>
         <translation type="unfinished">&amp;Dokładność:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="292"/>
-        <location filename="../PreferencesPage.ui" line="354"/>
+        <location line="+18"/>
+        <location line="+62"/>
         <source>Show trailing zeros</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -244,13 +244,13 @@ Pokaż końcowe zera</translatorcomment>
         <translation type="unfinished">Pokaż końcowe zera</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="318"/>
+        <location line="-36"/>
         <source>Angular Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiary kątowe</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="326"/>
+        <location line="+8"/>
         <source>F&amp;ormat:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -258,7 +258,7 @@ F&amp;ormat:</translatorcomment>
         <translation type="unfinished">F&amp;ormat:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="339"/>
+        <location line="+13"/>
         <source>Pre&amp;cision:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -266,8 +266,8 @@ F&amp;ormat:</translatorcomment>
         <translation type="unfinished">&amp;Dokładność:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="380"/>
-        <location filename="../PreferencesPage.ui" line="399"/>
+        <location line="+41"/>
+        <location line="+19"/>
         <source>Preview</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--

@@ -4,25 +4,25 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="55"/>
+        <location filename="../Hatch.js" line="+55"/>
         <source>No boundary selected.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nenhum limite selecionado.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="85"/>
+        <location line="+30"/>
         <source>Loop not closed at point %1/%2.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Contorno não fechado na ponta %1/%2.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="150"/>
+        <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cada entidade de contorno deve ser uma linha, arco, círculo, elipse arco, elipse, polilinha ou spline. Encontrados:</translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="2"/>
+        <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -31,7 +31,7 @@ Padrões de &amp;Hachura:</translatorcomment>
         <translation>&amp;Hachura</translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw hatch or solid fill</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe hachura ou preenchimento sólido</translation>
@@ -40,7 +40,7 @@ Padrões de &amp;Hachura:</translatorcomment>
 <context>
     <name>HatchDialog</name>
     <message>
-        <location filename="../HatchDialog.ui" line="17"/>
+        <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -50,7 +50,7 @@ Desenhe hachurados e preenchimentos sólidos</translatorcomment>
         <translation>Hachura</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="29"/>
+        <location line="+12"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -60,7 +60,7 @@ Tipo Ordinal</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="35"/>
+        <location line="+6"/>
         <source>Solid Fill</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -69,7 +69,7 @@ Hachuras / preenchimentos sólidos</translatorcomment>
         <translation>Preenchimento sólido</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="45"/>
+        <location line="+10"/>
         <source>Hatch Pattern</source>
         <translatorcomment>--google--
 Padrões de Hachura:
@@ -77,7 +77,7 @@ Padrões de Hachura</translatorcomment>
         <translation>Padrão hachura</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="61"/>
+        <location line="+16"/>
         <source>Preview</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -87,7 +87,7 @@ Exibe uma prévia da impressão</translatorcomment>
         <translation>Pré-visualizar</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="69"/>
+        <location line="+8"/>
         <source>Pattern</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -96,7 +96,7 @@ Padrões de Hachura:</translatorcomment>
         <translation>Padrão</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="83"/>
+        <location line="+14"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -105,7 +105,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo:</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="90"/>
+        <location line="+7"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

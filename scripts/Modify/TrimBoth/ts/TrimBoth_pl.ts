@@ -4,7 +4,7 @@
 <context>
     <name>TrimBoth</name>
     <message>
-        <location filename="../TrimBothInit.js" line="2"/>
+        <location filename="../TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tapicerka Zarówno</translation>

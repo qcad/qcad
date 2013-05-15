@@ -4,19 +4,19 @@
 <context>
     <name>LineFreehand</name>
     <message>
-        <location filename="../LineFreehand.js" line="55"/>
+        <location filename="../LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Naciśnij przycisk, aby rozpocząć rysowanie</translation>
     </message>
     <message>
-        <location filename="../LineFreehand.js" line="63"/>
+        <location line="+8"/>
         <source>Release to stop drawing</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zwolnij, aby przestać rysować</translation>
     </message>
     <message>
-        <location filename="../LineFreehandInit.js" line="2"/>
+        <location filename="../LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -24,7 +24,7 @@
         <translation type="unfinished">&amp;Odręczna linia</translation>
     </message>
     <message>
-        <location filename="../LineFreehandInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw freehand line</source>
         <translatorcomment>--google--
 Rysuj linie odręczne</translatorcomment>

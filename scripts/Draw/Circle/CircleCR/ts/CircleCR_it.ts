@@ -4,12 +4,12 @@
 <context>
     <name>CircleCR</name>
     <message>
-        <location filename="../CircleCR.js" line="56"/>
+        <location filename="../CircleCR.js" line="+56"/>
         <source>Center or radius</source>
         <translation>Centro o raggio</translation>
     </message>
     <message>
-        <location filename="../CircleCR.js" line="57"/>
+        <location line="+1"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
@@ -18,17 +18,17 @@
         <translation type="obsolete">Circle (centro, &amp;raggio)</translation>
     </message>
     <message>
-        <location filename="../CircleCRInit.js" line="2"/>
+        <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
         <translation>Centro, &amp;raggio</translation>
     </message>
     <message>
-        <location filename="../CircleCRInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw circle from center and radius</source>
         <translation>Disegnare un cerchio dal suo centro e raggio</translation>
     </message>
     <message>
-        <location filename="../CircleCR.ui" line="17"/>
+        <location filename="../CircleCR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Raggio:</translation>
     </message>

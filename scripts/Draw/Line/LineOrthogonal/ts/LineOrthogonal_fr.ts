@@ -4,17 +4,17 @@
 <context>
     <name>LineOrthogonal</name>
     <message>
-        <location filename="../LineOrthogonalInit.js" line="2"/>
+        <location filename="../LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
         <translation>&amp;Orthogonale</translation>
     </message>
     <message>
-        <location filename="../LineOrthogonalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Tracez une ligne orthogonale à un objet de base</translation>
     </message>
     <message>
-        <location filename="../LineOrthogonal.ui" line="17"/>
+        <location filename="../LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
         <translation>Longueur :</translation>
     </message>

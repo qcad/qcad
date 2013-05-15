@@ -4,7 +4,7 @@
 <context>
     <name>Circle3P</name>
     <message>
-        <location filename="../Circle3P.js" line="63"/>
+        <location filename="../Circle3P.js" line="+63"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location filename="../Circle3P.js" line="72"/>
+        <location line="+9"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Wskaż drugi punkt
@@ -22,14 +22,14 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location filename="../Circle3P.js" line="80"/>
+        <location line="+8"/>
         <source>Third point</source>
         <translatorcomment>--google--
 Wskaż trzeci punkt</translatorcomment>
         <translation type="unfinished">Trzeci punkt</translation>
     </message>
     <message>
-        <location filename="../Circle3PInit.js" line="2"/>
+        <location filename="../Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -37,7 +37,7 @@ Wskaż trzeci punkt</translatorcomment>
         <translation type="unfinished">&amp;3 Punkty</translation>
     </message>
     <message>
-        <location filename="../Circle3PInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw circle from 3 points</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj koło z 3 punktów</translation>

@@ -4,21 +4,21 @@
 <context>
     <name>Mirror</name>
     <message>
-        <location filename="../Mirror.js" line="62"/>
+        <location filename="../Mirror.js" line="+62"/>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Pierwszy punkt osi symetrii</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="69"/>
+        <location line="+7"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--
 Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Drugi punkt osi symetrii</translation>
     </message>
     <message>
-        <location filename="../MirrorInit.js" line="2"/>
+        <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -29,7 +29,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
 <context>
     <name>MirrorOptions</name>
     <message>
-        <location filename="../MirrorDialog.ui" line="14"/>
+        <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -37,7 +37,7 @@ Opcje odbić</translatorcomment>
         <translation type="unfinished">Opcje odbić</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="24"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -46,7 +46,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="unfinished">Liczba kopii</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="30"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -54,7 +54,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="unfinished">&amp;Usuń oryginał</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="40"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -62,7 +62,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="unfinished">&amp;Zachowaj oryginał</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="135"/>
+        <location line="+95"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>

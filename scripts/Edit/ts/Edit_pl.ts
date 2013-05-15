@@ -4,7 +4,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="41"/>
+        <location filename="../AbstractPreferences.js" line="+41"/>
         <source>Application Preferences</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -14,7 +14,7 @@ Ogólne ustawienia aplikacji</translatorcomment>
         <translation type="unfinished">Preferencje aplikacji</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="43"/>
+        <location line="+2"/>
         <source>Drawing Preferences</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -23,13 +23,13 @@ Preferencje bieżącego rysunku
         <translation type="unfinished">Preferencje rysowania</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="291"/>
+        <location line="+248"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymaga ponownego uruchomienia</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.js" line="294"/>
+        <location line="+3"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -39,7 +39,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="41"/>
+        <location filename="../ClipboardOperation.js" line="+41"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -51,7 +51,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="52"/>
+        <location filename="../Edit.js" line="+52"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -63,9 +63,9 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 <context>
     <name>PreferencesDialog</name>
     <message>
-        <location filename="../AbstractPreferences.ui" line="14"/>
-        <location filename="../AbstractPreferences.ui" line="99"/>
-        <location filename="../AbstractPreferences.ui" line="120"/>
+        <location filename="../AbstractPreferences.ui" line="+14"/>
+        <location line="+85"/>
+        <location line="+21"/>
         <source>Preferences</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -75,7 +75,7 @@ Preferencje &amp;aplikacji</translatorcomment>
         <translation type="unfinished">Preferencje…</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.ui" line="32"/>
+        <location line="-88"/>
         <source>Filter</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -85,25 +85,25 @@ Brak argumentu dla filtru.</translatorcomment>
         <translation type="unfinished">Filtr</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.ui" line="39"/>
+        <location line="+7"/>
         <source>Clear Search</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wyczyść wyszukiwanie</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.ui" line="56"/>
+        <location line="+17"/>
         <source>Expand Tree</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rozwiń drzewo</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.ui" line="73"/>
+        <location line="+17"/>
         <source>Collapse Tree</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Drzewo Collapse</translation>
     </message>
     <message>
-        <location filename="../AbstractPreferences.ui" line="140"/>
+        <location line="+67"/>
         <source>Restore to Default Values</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przywrócić do wartości domyślnych</translation>

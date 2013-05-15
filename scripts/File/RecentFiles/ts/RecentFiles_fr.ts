@@ -8,22 +8,22 @@
         <translation type="obsolete">Effacer la liste</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="47"/>
+        <location filename="../RecentFilesInit.js" line="+47"/>
         <source>&amp;Clear List</source>
         <translation>&amp;Effacer la liste</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="37"/>
+        <location filename="../RecentFiles.js" line="+37"/>
         <source>Load/Save</source>
         <translation>Charger/Enregistrer</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="37"/>
+        <location line="+0"/>
         <source>Recent Files</source>
         <translation>Fichiers récents</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="55"/>
+        <location filename="../RecentFilesInit.js" line="+8"/>
         <source>Open &amp;Recent</source>
         <translation>Ouvrir fichiers &amp;récents</translation>
     </message>

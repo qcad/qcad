@@ -4,7 +4,7 @@
 <context>
     <name>IsoProject</name>
     <message>
-        <location filename="../IsoProject.ui" line="17"/>
+        <location filename="../IsoProject.ui" line="+17"/>
         <source>Top</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -13,7 +13,7 @@ Góra - prawo</translatorcomment>
         <translation type="unfinished">Do góry</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="37"/>
+        <location line="+20"/>
         <source>Bottom</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -22,7 +22,7 @@ Dół - prawo</translatorcomment>
         <translation type="unfinished">W dół</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="61"/>
+        <location line="+24"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -31,13 +31,13 @@ Góra - lewo
         <translation type="unfinished">Lewo</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="78"/>
+        <location line="+17"/>
         <source>Left back</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Left back</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="102"/>
+        <location line="+24"/>
         <source>Right</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -46,37 +46,37 @@ Góra - prawo
         <translation type="unfinished">Prawo</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="119"/>
+        <location line="+17"/>
         <source>Right back</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Z powrotem</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="143"/>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Obróć zaznaczenie w lewo przed projekcją</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="154"/>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Obróć wybrane prawo przed projekcją</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="172"/>
+        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skala projekcji do oryginalnego rozmiaru (&quot;izometryczny rysunek&amp;quot;)</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="175"/>
+        <location line="+3"/>
         <source>True scale</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Prawdziwa skala</translation>
     </message>
     <message>
-        <location filename="../IsoProjectInit.js" line="2"/>
+        <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

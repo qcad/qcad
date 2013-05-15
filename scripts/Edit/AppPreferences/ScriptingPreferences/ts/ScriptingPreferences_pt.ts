@@ -17,7 +17,7 @@ Script</translatorcomment>
         <translation type="obsolete">Script</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
         <translation>Reanalisar pasta de scripts na inicialização</translation>
     </message>
@@ -25,7 +25,7 @@ Script</translatorcomment>
 <context>
     <name>ScriptingPreferences</name>
     <message>
-        <location filename="../ScriptingPreferences.js" line="24"/>
+        <location filename="../ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
         <translation>Script</translation>
     </message>

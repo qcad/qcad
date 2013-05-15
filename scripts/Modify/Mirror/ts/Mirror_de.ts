@@ -4,17 +4,17 @@
 <context>
     <name>Mirror</name>
     <message>
-        <location filename="../MirrorInit.js" line="2"/>
+        <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
         <translation>S&amp;piegeln</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="62"/>
+        <location filename="../Mirror.js" line="+62"/>
         <source>First point of symmetry axis</source>
         <translation>Erster Punkt der Symmetrieachse</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="69"/>
+        <location line="+7"/>
         <source>Second point of symmetry axis</source>
         <translation>Zweiter Punkt der Symmetrieachse</translation>
     </message>
@@ -45,27 +45,27 @@
 <context>
     <name>MirrorOptions</name>
     <message>
-        <location filename="../MirrorDialog.ui" line="14"/>
+        <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
         <translation>Spiegeln Optionen</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="24"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Anzahl Kopien</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="30"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>Original &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="40"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="135"/>
+        <location line="+95"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Aktueller Layer / &amp;Attribute</translation>
     </message>

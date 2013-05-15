@@ -4,58 +4,58 @@
 <context>
     <name>Circle2PR</name>
     <message>
-        <location filename="../Circle2PR.ui" line="17"/>
+        <location filename="../Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Rayon :</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="41"/>
+        <location line="+24"/>
         <source>Solution:</source>
         <translation>Solution :</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="48"/>
+        <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
         <translation>Center est à gauche de la ligne P1-P2</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="61"/>
-        <location filename="../Circle2PR.ui" line="78"/>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Solution</source>
         <translation>Solution</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="68"/>
+        <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Center est à droite de la ligne P1-P2</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="65"/>
+        <location filename="../Circle2PR.js" line="+65"/>
         <source>First point</source>
         <translation>Premier point</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="72"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translation>Deuxième point</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="178"/>
+        <location line="+106"/>
         <source>Invalid radius</source>
         <translation>Rayon invalide</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="183"/>
+        <location line="+5"/>
         <source>The two points are identical</source>
         <translation>Les deux points sont identiques</translation>
     </message>
     <message>
-        <location filename="../Circle2PRInit.js" line="2"/>
+        <location filename="../Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
         <translation>&amp;2 points et rayon</translation>
     </message>
     <message>
-        <location filename="../Circle2PRInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Tracez un cercle de deux points et le rayon</translation>
     </message>

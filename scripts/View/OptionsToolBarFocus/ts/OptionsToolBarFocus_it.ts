@@ -4,7 +4,7 @@
 <context>
     <name>OptionsToolBarFocus</name>
     <message>
-        <location filename="../OptionsToolBarFocusInit.js" line="2"/>
+        <location filename="../OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Fuoco per opzioni barra degli strumenti</translation>
     </message>

@@ -10,7 +10,7 @@ Restringir &amp;verticalmente</translatorcomment>
         <translation type="obsolete">Restringir Vertical</translation>
     </message>
     <message>
-        <location filename="../RestrictVerticalInit.js" line="2"/>
+        <location filename="../RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
         <translation>Restringir &amp;verticalmente</translation>
     </message>

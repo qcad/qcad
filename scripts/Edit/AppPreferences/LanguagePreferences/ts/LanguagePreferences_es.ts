@@ -13,7 +13,7 @@
         <translation type="obsolete">Configuración de idioma</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="20"/>
+        <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Idioma de la interfaz de usuario:</translation>
@@ -22,12 +22,12 @@
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="41"/>
+        <location filename="../LanguagePreferences.js" line="+41"/>
         <source>Language Settings</source>
         <translation>Configuración de idioma</translation>
     </message>
     <message>
-        <location filename="../LanguagePreferences.js" line="41"/>
+        <location line="+0"/>
         <source>Language</source>
         <translation>Idioma</translation>
     </message>

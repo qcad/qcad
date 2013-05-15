@@ -4,12 +4,12 @@
 <context>
     <name>LineAngle</name>
     <message>
-        <location filename="../LineAngle.js" line="64"/>
+        <location filename="../LineAngle.js" line="+64"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../LineAngle.js" line="65"/>
+        <location line="+1"/>
         <source>Specify position</source>
         <translation>Position angeben</translation>
     </message>
@@ -22,42 +22,42 @@
         <translation type="obsolete">100</translation>
     </message>
     <message>
-        <location filename="../LineAngle.ui" line="77"/>
+        <location filename="../LineAngle.ui" line="+77"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="../LineAngle.ui" line="82"/>
+        <location line="+5"/>
         <source>Middle</source>
         <translation>Mittelpunkt</translation>
     </message>
     <message>
-        <location filename="../LineAngle.ui" line="87"/>
+        <location line="+5"/>
         <source>End</source>
         <translation>Ende</translation>
     </message>
     <message>
-        <location filename="../LineAngleInit.js" line="2"/>
+        <location filename="../LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
         <translation>Linie mit &amp;Winkel</translation>
     </message>
     <message>
-        <location filename="../LineAngleInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Linie mit gegebenem absolutem Winkel</translation>
     </message>
     <message>
-        <location filename="../LineAngle.ui" line="17"/>
+        <location filename="../LineAngle.ui" line="-70"/>
         <source>&amp;Angle:</source>
         <translation>&amp;Winkel:</translation>
     </message>
     <message>
-        <location filename="../LineAngle.ui" line="43"/>
+        <location line="+26"/>
         <source>&amp;Length:</source>
         <translation>&amp;Länge:</translation>
     </message>
     <message>
-        <location filename="../LineAngle.ui" line="66"/>
+        <location line="+23"/>
         <source>&amp;Reference Point:</source>
         <translation>&amp;Referenzpunkt:</translation>
     </message>

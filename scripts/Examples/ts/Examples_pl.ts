@@ -4,7 +4,7 @@
 <context>
     <name>Examples</name>
     <message>
-        <location filename="../Examples.js" line="56"/>
+        <location filename="../Examples.js" line="+56"/>
         <source>&amp;Examples</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przykłady</translation>

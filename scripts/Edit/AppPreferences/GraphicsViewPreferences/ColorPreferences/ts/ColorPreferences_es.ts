@@ -4,12 +4,12 @@
 <context>
     <name>ColorPreferences</name>
     <message>
-        <location filename="../ColorPreferences.js" line="24"/>
+        <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translation>Ver gráficos</translation>
     </message>
     <message>
-        <location filename="../ColorPreferences.js" line="24"/>
+        <location line="+0"/>
         <source>Colors</source>
         <translation>Colores</translation>
     </message>
@@ -31,25 +31,25 @@ Ver gráficos</translatorcomment>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="35"/>
+        <location filename="../PreferencesPage.ui" line="+35"/>
         <source>Background:</source>
         <translation>Fondo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="62"/>
+        <location line="+27"/>
         <source>Crosshairs:</source>
         <translatorcomment>--ignored colon--
 --file: sketch_es.po--</translatorcomment>
         <translation>Retículo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="69"/>
+        <location line="+7"/>
         <source>Inactive Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Retículo inactivo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="96"/>
+        <location line="+27"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -57,18 +57,18 @@ Origen:</translatorcomment>
         <translation>Origen:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="123"/>
+        <location line="+27"/>
         <source>Relative Zero:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cero relativo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="150"/>
+        <location line="+27"/>
         <source>Reference Point:</source>
         <translation>Punto de referencia:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="177"/>
+        <location line="+27"/>
         <source>Grid:</source>
         <translatorcomment>--ignored colon--
 --file: sketch_es.po--
@@ -77,61 +77,61 @@ Meta cuadrícula
         <translation>Rejilla:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="207"/>
+        <location line="+30"/>
         <source>Meta Grid:</source>
         <translation>Meta rejilla:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="234"/>
+        <location line="+27"/>
         <source>Zoom Box:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cuadro de zoom:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="258"/>
+        <location line="+24"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: grassmods_es.po--</translatorcomment>
         <translation>Selección:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="285"/>
+        <location line="+27"/>
         <source>Selection Box Border:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Borde del cuadro de selección:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="309"/>
+        <location line="+24"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cuadro de selección:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="336"/>
+        <location line="+27"/>
         <source>Cross Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cuadro de selección de captura:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="363"/>
+        <location line="+27"/>
         <source>Auxiliary Shapes:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Formas auxiliares:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="430"/>
+        <location line="+67"/>
         <source>Info Label Background:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Fondo de la etiqueta Información:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="457"/>
+        <location line="+27"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Fuente de la etiqueta Información:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="464"/>
+        <location line="+7"/>
         <source>Measurement Tools:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Herramientas de medición:</translation>

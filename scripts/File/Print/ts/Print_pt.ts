@@ -4,7 +4,7 @@
 <context>
     <name>Print</name>
     <message>
-        <location filename="../PrintInit.js" line="2"/>
+        <location filename="../PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -13,7 +13,7 @@
         <translation>&amp;Imprima</translation>
     </message>
     <message>
-        <location filename="../PrintInit.js" line="8"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Imprimir desenho atual</translation>

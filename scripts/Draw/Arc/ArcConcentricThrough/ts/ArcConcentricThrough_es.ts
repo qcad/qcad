@@ -4,17 +4,17 @@
 <context>
     <name>ArcConcentricThrough</name>
     <message>
-        <location filename="../ArcConcentricThrough.ui" line="17"/>
+        <location filename="../ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Número:</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricThroughInit.js" line="2"/>
+        <location filename="../ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
         <translation>&amp;Concéntrico (a través de un punto)</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricThroughInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric arc through point</source>
         <translation>Dibujar un arco concéntricos a través de un punto</translation>
     </message>

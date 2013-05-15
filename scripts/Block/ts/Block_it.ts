@@ -4,7 +4,7 @@
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="49"/>
+        <location filename="../Block.js" line="+49"/>
         <source>&amp;Block</source>
         <translation>&amp;Blocco</translation>
     </message>
@@ -12,27 +12,27 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.ui" line="17"/>
+        <location filename="../BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
         <translation>Dati del blocco</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.ui" line="29"/>
+        <location line="+12"/>
         <source>Block name:</source>
         <translation>Nome del Blocco:</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.ui" line="36"/>
+        <location line="+7"/>
         <source>block 1</source>
         <translation>block 1</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.js" line="92"/>
+        <location filename="../BlockDialog.js" line="+92"/>
         <source>Block name is empty.</source>
         <translation>Nome del blocco è vuoto.</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.js" line="99"/>
+        <location line="+7"/>
         <source>Block already exists.</source>
         <translation>Blocco già esistente.</translation>
     </message>

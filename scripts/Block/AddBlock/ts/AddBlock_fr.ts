@@ -4,12 +4,12 @@
 <context>
     <name>AddBlock</name>
     <message>
-        <location filename="../AddBlockInit.js" line="2"/>
+        <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Block</source>
         <translation>&amp;Ajouter Bloc</translation>
     </message>
     <message>
-        <location filename="../AddBlockInit.js" line="8"/>
+        <location line="+6"/>
         <source>Add new empty block</source>
         <translation>Ajouter un nouveau bloc vide</translation>
     </message>

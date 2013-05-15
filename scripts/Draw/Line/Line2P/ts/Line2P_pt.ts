@@ -4,7 +4,7 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="60"/>
+        <location filename="../Line2P.js" line="+60"/>
         <source>First point</source>
         <translatorcomment>--exact match--
 --file: Circle3P_pt.ts--
@@ -13,7 +13,7 @@ Especifique o primeiro ponto do polígono</translatorcomment>
         <translation>Primeiro ponto</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="68"/>
+        <location line="+8"/>
         <source>Next point</source>
         <translatorcomment>--google--
 Indique o próximo ponto
@@ -22,7 +22,7 @@ Especifique o próximo ponto do polígono</translatorcomment>
         <translation>Próximo ponto</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="71"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -32,19 +32,19 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location filename="../Line2PInit.js" line="2"/>
+        <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linha &amp;2 Pontos</translation>
     </message>
     <message>
-        <location filename="../Line2PInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe única linha ou seqüência de linhas</translation>
     </message>
     <message>
-        <location filename="../Line2P.ui" line="23"/>
+        <location filename="../Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
         <translatorcomment>--google--
 Não é possível fechar a seqüência de linhas: Ainda não há suficientes entidades definidas.
@@ -52,7 +52,7 @@ Não é possível fechar a seqüência de linhas: Ainda não há suficientes ent
         <translation>Fechar a seqüência</translation>
     </message>
     <message>
-        <location filename="../Line2P.ui" line="40"/>
+        <location line="+17"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desfazer segmento anterior</translation>

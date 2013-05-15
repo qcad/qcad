@@ -4,7 +4,7 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="68"/>
+        <location filename="../Rotate.js" line="+68"/>
         <source>Center point</source>
         <translatorcomment>--google--
 Salta aos pontos de centro
@@ -12,7 +12,7 @@ Fazer espiral com bitmap(s) seleccionado(s) em redor de um ponto central</transl
         <translation>Ponto central</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="78"/>
+        <location line="+10"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -21,7 +21,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Ponto de referência</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="87"/>
+        <location line="+9"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -30,7 +30,7 @@ Ponto de destino</translatorcomment>
         <translation>Ponto de destino</translation>
     </message>
     <message>
-        <location filename="../RotateInit.js" line="2"/>
+        <location filename="../RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -42,7 +42,7 @@ Ponto de destino</translatorcomment>
 <context>
     <name>RotateOptions</name>
     <message>
-        <location filename="../RotateDialog.ui" line="14"/>
+        <location filename="../RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -51,7 +51,7 @@ Opções de Rotacione</translatorcomment>
         <translation>Opções de rotacione</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Number of Copies</source>
         <translatorcomment>--exact match--
 --file: Mirror_pt.ts--
@@ -60,7 +60,7 @@ Entre o número de cópias</translatorcomment>
         <translation>Número de cópias</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="34"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translatorcomment>--exact match--
 --file: Mirror_pt.ts--
@@ -69,7 +69,7 @@ Entre o número de cópias</translatorcomment>
         <translation>&amp;Apague o original</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="44"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: Mirror_pt.ts--
@@ -78,7 +78,7 @@ Entre o número de cópias</translatorcomment>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="51"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -86,7 +86,7 @@ Cópias &amp;Múltiplas</translatorcomment>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="161"/>
+        <location line="+110"/>
         <source>&amp;Angle (a):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -94,7 +94,7 @@ Cópias &amp;Múltiplas</translatorcomment>
         <translation>Â&amp;ngulo (a):</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="194"/>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--exact match--
 --file: Mirror_pt.ts--

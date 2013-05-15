@@ -4,17 +4,17 @@
 <context>
     <name>Polyline</name>
     <message>
-        <location filename="../Polyline.js" line="73"/>
+        <location filename="../Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
         <translation>Herramientas polilínea</translation>
     </message>
     <message>
-        <location filename="../Polyline.js" line="78"/>
+        <location line="+5"/>
         <source>Show polyline tools</source>
         <translation>Mostrar menú &quot;Polilíneas&quot;</translation>
     </message>
     <message>
-        <location filename="../Polyline.js" line="95"/>
+        <location line="+17"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polilínea</translation>
     </message>

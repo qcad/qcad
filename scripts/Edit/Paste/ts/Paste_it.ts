@@ -4,72 +4,72 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.ui" line="17"/>
+        <location filename="../Paste.ui" line="+17"/>
         <source>Rotation:</source>
         <translation>Rotazione:</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="30"/>
+        <location line="+13"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Ruotare le entità incollato&lt;br&gt;da questa angolazione</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="120"/>
+        <location line="+90"/>
         <source>Scale:</source>
         <translation>Scala:</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="133"/>
+        <location line="+13"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Scala entità incollate&lt;br&gt;da questo fattore</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="198"/>
+        <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Rifletti entità&lt;br&gt;incollate orizzontalmente</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="212"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Rifletti entità&lt;br&gt;incollate verticalmente</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="226"/>
+        <location line="+14"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>Incolla tutte le entità&lt;br&gt;al layer corrente al&lt;br&gt;posto del layer originale</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="229"/>
+        <location line="+3"/>
         <source>To current layer</source>
         <translation>Al layer attuale</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="236"/>
+        <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Sovrascrivere eventuali layer&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli layer di appunti</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="239"/>
+        <location line="+3"/>
         <source>Overwrite layers</source>
         <translation>Sovrascrivere layer</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="246"/>
+        <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Sovrascrivere i blocchi&lt;br&gt;esistenti in blocchi&lt;br&gt;da disegno con appunti</translation>
     </message>
     <message>
-        <location filename="../Paste.ui" line="249"/>
+        <location line="+3"/>
         <source>Overwrite blocks</source>
         <translation>Sovrascrivere i blocchi</translation>
     </message>
     <message>
-        <location filename="../Paste.js" line="62"/>
+        <location filename="../Paste.js" line="+62"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>
     <message>
-        <location filename="../PasteInit.js" line="2"/>
+        <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
         <translation>&amp;Incolla</translation>
     </message>

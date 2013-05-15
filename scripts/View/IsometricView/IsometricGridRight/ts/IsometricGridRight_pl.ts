@@ -4,7 +4,7 @@
 <context>
     <name>IsometricGridRight</name>
     <message>
-        <location filename="../IsometricGridRight.js" line="35"/>
+        <location filename="../IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Prawo Projection</translation>

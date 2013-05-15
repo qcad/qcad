@@ -4,7 +4,7 @@
 <context>
     <name>Redo</name>
     <message>
-        <location filename="../RedoInit.js" line="2"/>
+        <location filename="../RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
         <translation>&amp;Ripeti</translation>
     </message>

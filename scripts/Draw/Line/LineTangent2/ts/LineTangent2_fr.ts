@@ -8,27 +8,27 @@
         <translation type="obsolete">&amp;Tangente (C,C)</translation>
     </message>
     <message>
-        <location filename="../LineTangent2Init.js" line="2"/>
+        <location filename="../LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
         <translation>&amp;Tangente (deux cercles)</translation>
     </message>
     <message>
-        <location filename="../LineTangent2Init.js" line="7"/>
+        <location line="+5"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Dessine une tangente (cercle, cercle)</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="67"/>
+        <location filename="../LineTangent2.js" line="+67"/>
         <source>Choose first circle or arc</source>
         <translation>Choisissez premier cercle ou arc</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="78"/>
+        <location line="+11"/>
         <source>Choose second circle or arc</source>
         <translation>Choisissez deuxième cercle ou arc</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="216"/>
+        <location line="+138"/>
         <source>No tangent possible</source>
         <translation>Aucune tangentes sont possibles</translation>
     </message>

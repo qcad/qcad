@@ -4,7 +4,7 @@
 <context>
     <name>Dialog</name>
     <message>
-        <location filename="../TextDialog/CharacterMapDialog.ui" line="14"/>
+        <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tablica znaków</translation>
@@ -13,7 +13,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="81"/>
+        <location filename="../Text.js" line="+81"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -23,7 +23,7 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Położenie</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="17"/>
+        <location filename="../Text.ui" line="+17"/>
         <source>Contents:</source>
         <translatorcomment>--ignored colon--
 --file: assistant_pl.ts--
@@ -32,7 +32,7 @@ Błąd podczas wklejania zawartości schowka: Brak głównego elementu &lt;ui&gt
         <translation type="unfinished">Spis treści:</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="31"/>
+        <location line="+14"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -41,7 +41,7 @@ Wysokość tekstu:</translatorcomment>
         <translation type="unfinished">Wysokość:</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="51"/>
+        <location line="+20"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -50,7 +50,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished">Kąt:</translation>
     </message>
     <message>
-        <location filename="../TextInit.js" line="2"/>
+        <location filename="../TextInit.js" line="+2"/>
         <source>&amp;Text</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -59,7 +59,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished">&amp;Tekst</translation>
     </message>
     <message>
-        <location filename="../TextInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw text</source>
         <translatorcomment>--google--
 Rysuj obiekty tekstowe</translatorcomment>
@@ -69,7 +69,7 @@ Rysuj obiekty tekstowe</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="351"/>
+        <location filename="../TextDialog/TextDialog.js" line="+351"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -77,7 +77,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation type="unfinished">&amp;Cofnij</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="355"/>
+        <location line="+4"/>
         <source>&amp;Redo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -85,7 +85,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation type="unfinished">&amp;Przywróć</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="359"/>
+        <location line="+4"/>
         <source>Cu&amp;t</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -94,7 +94,7 @@ Wy&amp;tnij z punktem odniesienia</translatorcomment>
         <translation type="unfinished">W&amp;ytnij</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="363"/>
+        <location line="+4"/>
         <source>&amp;Copy</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -103,7 +103,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">S&amp;kopiuj</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="367"/>
+        <location line="+4"/>
         <source>&amp;Paste</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -111,50 +111,50 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">&amp;Wklej</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="375"/>
+        <location line="+8"/>
         <source>&amp;Bold</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Śmiały</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="384"/>
+        <location line="+9"/>
         <source>&amp;Italic</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Italic</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="404"/>
+        <location line="+20"/>
         <source>&amp;Subscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Indeks</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="410"/>
+        <location line="+6"/>
         <source>&amp;Superscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Napisany u góry</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="428"/>
+        <location line="+18"/>
         <source>&amp;Color...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kolor ...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="434"/>
+        <location line="+6"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Znaki specjalne ...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="734"/>
+        <location line="+300"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
         <translation type="unfinished">Inne...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="862"/>
+        <location line="+128"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -163,13 +163,13 @@ Stopnie dziesiętne</translatorcomment>
         <translation type="unfinished">Stopień</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="863"/>
+        <location line="+1"/>
         <source>Plus-Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Plus-Minus</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="865"/>
+        <location line="+2"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -178,13 +178,13 @@ Przełącz znak średnicy
         <translation type="unfinished">Średnica</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="866"/>
+        <location line="+1"/>
         <source>Almost equal</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Prawie równe</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="867"/>
+        <location line="+1"/>
         <source>Multiplication</source>
         <translatorcomment>--google--
 Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) jest niedozwolone.
@@ -192,7 +192,7 @@ Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) j
         <translation type="unfinished">Mnożenie</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="868"/>
+        <location line="+1"/>
         <source>Division</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -201,13 +201,13 @@ Dzielenie (÷)</translatorcomment>
         <translation type="unfinished">Dzielenie</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="869"/>
+        <location line="+1"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="870"/>
+        <location line="+1"/>
         <source>Pi</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -216,7 +216,7 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Pi</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="871"/>
+        <location line="+1"/>
         <source>Identity</source>
         <translatorcomment>--google--
 Selektor narzucenia niepowtarzalności W3C XML Schema
@@ -225,37 +225,37 @@ Pole narzucenia niepowtarzalności W3C XML Schema
         <translation type="unfinished">Tożsamość</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="872"/>
+        <location line="+1"/>
         <source>Not equal</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie równa</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="873"/>
+        <location line="+1"/>
         <source>Ohm</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Om</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="874"/>
+        <location line="+1"/>
         <source>Omega</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Omega</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="875"/>
+        <location line="+1"/>
         <source>Squared</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Squared</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="876"/>
+        <location line="+1"/>
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Cubed</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="14"/>
+        <location filename="../TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -265,13 +265,13 @@ Wprowadź tekst</translatorcomment>
         <translation type="unfinished">Tekst</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Main Font</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Główne Font</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="52"/>
+        <location line="+24"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -280,14 +280,14 @@ Wysokość tekstu:</translatorcomment>
         <translation type="unfinished">Wysokość:</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="59"/>
+        <location line="+7"/>
         <source>Text Height in Drawing Units</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wysokość tekstu w jednostkach rysunku</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="77"/>
-        <location filename="../TextDialog/TextDialog.ui" line="290"/>
+        <location line="+18"/>
+        <location line="+213"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -296,8 +296,8 @@ Na wpół pogrubiony</translatorcomment>
         <translation type="unfinished">Pogrubiony</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="84"/>
-        <location filename="../TextDialog/TextDialog.ui" line="303"/>
+        <location line="-206"/>
+        <location line="+219"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -306,20 +306,20 @@ Old Italic</translatorcomment>
         <translation type="unfinished">Kursywa</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="98"/>
+        <location line="-205"/>
         <source>Text fits on one line and has no formatting</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tekst wpisuje się w jednej linii i nie ma formatowania</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="101"/>
+        <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Prosty tekst (jeden wiersz, nie formatowanie)</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="122"/>
+        <location line="+21"/>
         <source>Rich Text</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -329,7 +329,7 @@ Rich Text</translatorcomment>
         <translation type="unfinished">Rich Text</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="158"/>
+        <location line="+36"/>
         <source>Cut</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -338,7 +338,7 @@ Wytnij obiekty do schowka</translatorcomment>
         <translation type="unfinished">Wytnij</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="168"/>
+        <location line="+10"/>
         <source>Copy</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -347,7 +347,7 @@ S&amp;kopiuj</translatorcomment>
         <translation type="unfinished">Skopiuj</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="178"/>
+        <location line="+10"/>
         <source>Paste</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -356,7 +356,7 @@ Wklej
         <translation type="unfinished">Wklej</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="293"/>
+        <location line="+115"/>
         <source>Ctrl+B</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -365,7 +365,7 @@ Ctrl+B</translatorcomment>
         <translation type="unfinished">Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="306"/>
+        <location line="+13"/>
         <source>Ctrl+I</source>
         <translatorcomment>--ignored case--
 --file: designer_pl.ts--
@@ -373,14 +373,14 @@ CTRL+I</translatorcomment>
         <translation type="unfinished">CTRL+I</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="346"/>
+        <location line="+40"/>
         <source>Insert Symbol...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
         <translation type="unfinished">Wstaw symbol...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="389"/>
+        <location line="+43"/>
         <source>Source</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -390,19 +390,19 @@ CTRL+I</translatorcomment>
         <translation type="unfinished">Źródło</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="421"/>
+        <location line="+32"/>
         <source>Text Geometry</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Geometria Text</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="427"/>
+        <location line="+6"/>
         <source>Line spacing factor:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Współczynnik interlinia:</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="440"/>
+        <location line="+13"/>
         <source>Line Spacing Factor</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -410,7 +410,7 @@ Współczynnik odstępu między liniami</translatorcomment>
         <translation type="unfinished">Współczynnik odstępu między liniami</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="456"/>
+        <location line="+16"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -419,7 +419,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished">Kąt:</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="469"/>
+        <location line="+13"/>
         <source>Rotation Angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -429,7 +429,7 @@ Kąt obracania</translatorcomment>
         <translation type="unfinished">Kąt obracania</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="494"/>
+        <location line="+25"/>
         <source>Alignment</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -438,7 +438,7 @@ Wyrównanie|Pionowe</translatorcomment>
         <translation type="unfinished">Wyrównanie</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="515"/>
+        <location line="+21"/>
         <source>Top Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -446,7 +446,7 @@ Góra - środek</translatorcomment>
         <translation type="unfinished">Góra - środek</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="547"/>
+        <location line="+32"/>
         <source>Top Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -454,7 +454,7 @@ Góra - lewo</translatorcomment>
         <translation type="unfinished">Góra - lewo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="582"/>
+        <location line="+35"/>
         <source>Top Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -462,7 +462,7 @@ Góra - prawo</translatorcomment>
         <translation type="unfinished">Góra - prawo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="614"/>
+        <location line="+32"/>
         <source>Bottom Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -470,7 +470,7 @@ Dół - środek</translatorcomment>
         <translation type="unfinished">Dół - środek</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="646"/>
+        <location line="+32"/>
         <source>Middle Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -478,7 +478,7 @@ Dół - środek</translatorcomment>
         <translation type="unfinished">Środek - lewo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="678"/>
+        <location line="+32"/>
         <source>Middle Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -486,7 +486,7 @@ Dół - środek</translatorcomment>
         <translation type="unfinished">Środek - środek</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="710"/>
+        <location line="+32"/>
         <source>Middle Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -494,7 +494,7 @@ Dół - środek</translatorcomment>
         <translation type="unfinished">Środek - prawo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="742"/>
+        <location line="+32"/>
         <source>Bottom Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -502,7 +502,7 @@ Dół - lewo</translatorcomment>
         <translation type="unfinished">Dół - lewo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="774"/>
+        <location line="+32"/>
         <source>Bottom Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -510,7 +510,7 @@ Dół - prawo</translatorcomment>
         <translation type="unfinished">Dół - prawo</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="833"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -519,7 +519,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="846"/>
+        <location line="+13"/>
         <source>OK</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--

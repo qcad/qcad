@@ -4,7 +4,7 @@
 <context>
     <name>RestrictVertical</name>
     <message>
-        <location filename="../RestrictVerticalInit.js" line="2"/>
+        <location filename="../RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

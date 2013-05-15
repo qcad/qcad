@@ -20,7 +20,7 @@ Usar sólo los puntos objetiva más cercanos (k):</translatorcomment>
         <translation type="obsolete">Punto objetivo</translation>
     </message>
     <message>
-        <location filename="../IsoProjectInit.js" line="2"/>
+        <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
         <translatorcomment>--exact match--
 --file: qcadactions_es.ts--
@@ -32,7 +32,7 @@ Proyección &amp;Isométrica</translatorcomment>
         <translation type="obsolete">Proyección &amp;Isométrica</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="17"/>
+        <location filename="../IsoProject.ui" line="+17"/>
         <source>Top</source>
         <translation>Parte superior</translation>
     </message>
@@ -42,32 +42,32 @@ Proyección &amp;Isométrica</translatorcomment>
         <translation type="obsolete">ProjectionType</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="37"/>
+        <location line="+20"/>
         <source>Bottom</source>
         <translation>Parte inferior</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="78"/>
+        <location line="+41"/>
         <source>Left back</source>
         <translation>Izquierda trasera</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="102"/>
+        <location line="+24"/>
         <source>Right</source>
         <translation>Derecha</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="119"/>
+        <location line="+17"/>
         <source>Right back</source>
         <translation>Derecha trasera</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="143"/>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translation>Rotar contador dirección reloj antes de la proyección</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="154"/>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation>Girar hacia la derecha antes de la proyección</translation>
     </message>
@@ -80,17 +80,17 @@ Proyección &amp;Isométrica</translatorcomment>
         <translation type="obsolete">Rotar dirección reloj</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="172"/>
+        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
         <translation>Proyección escala con el tamaño original</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="175"/>
+        <location line="+3"/>
         <source>True scale</source>
         <translation>Escala real</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="61"/>
+        <location line="-114"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>

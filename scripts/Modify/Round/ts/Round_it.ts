@@ -4,13 +4,13 @@
 <context>
     <name>Round</name>
     <message>
-        <location filename="../Round.js" line="56"/>
+        <location filename="../Round.js" line="+56"/>
         <source>The two entities cannot be rounded.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Le due entità non possono essere arrotondati.</translation>
     </message>
     <message>
-        <location filename="../Round.js" line="271"/>
+        <location line="+215"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--exact match--
 --file: Bevel_it.ts--
@@ -18,7 +18,7 @@ Prima entità non può essere tagliato.</translatorcomment>
         <translation>Prima entità non può essere tagliato.</translation>
     </message>
     <message>
-        <location filename="../Round.js" line="281"/>
+        <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--exact match--
 --file: Bevel_it.ts--
@@ -26,17 +26,17 @@ Seconda entità non può essere tagliato.</translatorcomment>
         <translation>Seconda entità non può essere tagliato.</translation>
     </message>
     <message>
-        <location filename="../RoundInit.js" line="2"/>
+        <location filename="../RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
         <translation>A&amp;rrotonda</translation>
     </message>
     <message>
-        <location filename="../Round.ui" line="17"/>
+        <location filename="../Round.ui" line="+17"/>
         <source>Trim</source>
         <translation>Raccorda</translation>
     </message>
     <message>
-        <location filename="../Round.ui" line="34"/>
+        <location line="+17"/>
         <source>Radius:</source>
         <translation>Raggio:</translation>
     </message>

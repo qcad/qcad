@@ -4,55 +4,55 @@
 <context>
     <name>Input</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przecinku:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="29"/>
+        <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Separator współrzędnych kartezjański:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="39"/>
+        <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Polar Separator współrzędnych:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="49"/>
+        <location line="+10"/>
         <source>Relative Coordinate Prefix:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Względna Prefiks współrzędnych:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="61"/>
+        <location line="+12"/>
         <source>Examples</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przykłady</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="67"/>
+        <location line="+6"/>
         <source>Absolute Cartesian Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Absolute kartezjańskich współrzędnych:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="81"/>
+        <location line="+14"/>
         <source>Absolute Polar Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Absolute Polar współrzędnych:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="95"/>
+        <location line="+14"/>
         <source>Relative Cartesian Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Względna współrzędnych kartezjańskich:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="116"/>
+        <location line="+21"/>
         <source>Relative Polar Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Względna Polar współrzędnych:</translation>
@@ -61,7 +61,7 @@
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../InputPreferences.js" line="32"/>
+        <location filename="../InputPreferences.js" line="+32"/>
         <source>General</source>
         <translatorcomment>--google--
 Ogólne ustawienia aplikacji
@@ -70,14 +70,14 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="32"/>
+        <location line="+0"/>
         <source>Coordinate Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Format współrzędnych</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="47"/>
-        <location filename="../InputPreferences.js" line="73"/>
+        <location line="+15"/>
+        <location line="+26"/>
         <source>Comma</source>
         <translatorcomment>--google--
 Aktywuj linię poleceń
@@ -86,10 +86,10 @@ Linia poleceń</translatorcomment>
         <translation type="unfinished">Przecinek</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="47"/>
-        <location filename="../InputPreferences.js" line="53"/>
-        <location filename="../InputPreferences.js" line="57"/>
-        <location filename="../InputPreferences.js" line="72"/>
+        <location line="-26"/>
+        <location line="+6"/>
+        <location line="+4"/>
+        <location line="+15"/>
         <source>(Default)</source>
         <translatorcomment>--google--
 Automatyczny (domyślnie)
@@ -97,13 +97,13 @@ Ustawienia pulpitu (domyślne)</translatorcomment>
         <translation type="unfinished">(Default)</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="48"/>
+        <location line="-24"/>
         <source>Semicolon</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Średnik</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="53"/>
+        <location line="+5"/>
         <source>Less Than</source>
         <translatorcomment>--google--
 Wartość aspektu %1 musi być mniejsza od lub równa wartości aspektu %2 typu podstawowego.
@@ -114,7 +114,7 @@ Wartość aspektu %1 musi być mniejsza od wartości aspektu %2 typu podstawoweg
         <translation type="unfinished">Mniej niż</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="57"/>
+        <location line="+4"/>
         <source>At</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -123,13 +123,13 @@ Tworzenie nowego pliku...</translatorcomment>
         <translation type="unfinished">przy</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="58"/>
+        <location line="+1"/>
         <source>Percentage</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odsetek</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="59"/>
+        <location line="+1"/>
         <source>Dollar</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -138,7 +138,7 @@ Dolar</translatorcomment>
         <translation type="unfinished">Dolar</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="60"/>
+        <location line="+1"/>
         <source>Hash</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -147,7 +147,7 @@ Hash</translatorcomment>
         <translation type="unfinished">Hash</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="72"/>
+        <location line="+12"/>
         <source>Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

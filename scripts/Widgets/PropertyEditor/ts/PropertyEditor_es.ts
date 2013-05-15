@@ -4,13 +4,13 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="14"/>
+        <location filename="../AddCustomProperty.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Añadir propiedad personalizada</translation>
     </message>
     <message>
-        <location filename="../AddCustomProperty.ui" line="26"/>
+        <location line="+12"/>
         <source>Name:</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -19,7 +19,7 @@ Nombre de capa:</translatorcomment>
         <translation>Nombre:</translation>
     </message>
     <message>
-        <location filename="../AddCustomProperty.ui" line="36"/>
+        <location line="+10"/>
         <source>Type:</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -30,49 +30,49 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="338"/>
+        <location filename="../PropertyEditor.js" line="+338"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="607"/>
+        <location line="+269"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="607"/>
+        <location line="+0"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="607"/>
+        <location line="+0"/>
         <source>Right</source>
         <translation>Derecha</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="608"/>
+        <location line="+1"/>
         <source>Aligned</source>
         <translation>Alineado</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="617"/>
+        <location line="+9"/>
         <source>Top</source>
         <translation>Parte superior</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="608"/>
-        <location filename="../PropertyEditor.js" line="617"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Middle</source>
         <translation>Medio</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="187"/>
+        <location line="-430"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="191"/>
+        <location line="+4"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -81,7 +81,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="322"/>
+        <location line="+131"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -90,12 +90,12 @@ Seleccin nula</translatorcomment>
         <translation>Seleccin nula</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="352"/>
+        <location line="+30"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="472"/>
+        <location line="+120"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--
@@ -104,7 +104,7 @@ Valor indexado</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="549"/>
+        <location line="+77"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -115,13 +115,13 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="569"/>
+        <location line="+20"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Añadir propiedad personalizada</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="608"/>
+        <location line="+39"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -130,12 +130,12 @@ Primer punto de ajuste</translatorcomment>
         <translation>Ajuste</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="617"/>
+        <location line="+9"/>
         <source>Bottom</source>
         <translation>Parte inferior</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="617"/>
+        <location line="+0"/>
         <source>Base</source>
         <translatorcomment>--google--
 Dibuje arcos tangenciales a su base
@@ -144,52 +144,52 @@ Seleccione entidad base</translatorcomment>
         <translation>Base</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="700"/>
+        <location line="+83"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="819"/>
+        <location line="+119"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utilizar la medición automática</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="851"/>
+        <location line="+32"/>
         <source>Yes</source>
         <translation>Sí</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="852"/>
+        <location line="+1"/>
         <source>No</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="1163"/>
-        <location filename="../PropertyEditor.js" line="1175"/>
+        <location line="+311"/>
+        <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.ui" line="40"/>
+        <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: grassmods_es.po--</translatorcomment>
         <translation>Selección:</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.ui" line="71"/>
+        <location line="+31"/>
         <source>General</source>
         <translation>General</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.ui" line="234"/>
+        <location line="+163"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mueve la selección a una nueva capa</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.ui" line="254"/>
+        <location line="+20"/>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: es.po--</translatorcomment>

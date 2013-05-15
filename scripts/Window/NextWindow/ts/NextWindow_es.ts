@@ -11,7 +11,7 @@
 <context>
     <name>NextWindow</name>
     <message>
-        <location filename="../NextWindowInit.js" line="2"/>
+        <location filename="../NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
         <translation>Siguie&amp;nte</translation>
     </message>

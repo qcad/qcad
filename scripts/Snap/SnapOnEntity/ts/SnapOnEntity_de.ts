@@ -4,7 +4,7 @@
 <context>
     <name>SnapOnEntity</name>
     <message>
-        <location filename="../SnapOnEntityInit.js" line="2"/>
+        <location filename="../SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
         <translation>&amp;Auf Objekt</translation>
     </message>

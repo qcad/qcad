@@ -9,7 +9,7 @@
         <translation type="obsolete">Restringir &amp;off</translation>
     </message>
     <message>
-        <location filename="../RestrictOffInit.js" line="2"/>
+        <location filename="../RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
         <translation>Restrições &amp;desativado</translation>
     </message>

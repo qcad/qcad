@@ -8,7 +8,7 @@
         <translation type="obsolete">Internet Seite</translation>
     </message>
     <message>
-        <location filename="../WebsiteInit.js" line="2"/>
+        <location filename="../WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
         <translation>Internet&amp;seite</translation>
     </message>

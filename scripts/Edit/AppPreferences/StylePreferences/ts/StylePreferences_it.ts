@@ -4,7 +4,7 @@
 <context>
     <name>Style</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="20"/>
+        <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Style:</source>
         <translatorcomment>--ignored colon--
 --file: dia.master.it.po--
@@ -16,20 +16,20 @@ Stile di flusso:</translatorcomment>
 <context>
     <name>StylePreferences</name>
     <message>
-        <location filename="../StylePreferences.js" line="26"/>
+        <location filename="../StylePreferences.js" line="+26"/>
         <source>Layout</source>
         <translation>Layout</translation>
     </message>
     <message>
-        <location filename="../StylePreferences.js" line="26"/>
+        <location line="+0"/>
         <source>Styles</source>
         <translation>Stili</translation>
     </message>
     <message>
-        <location filename="../StylePreferences.js" line="48"/>
-        <location filename="../StylePreferences.js" line="49"/>
-        <location filename="../StylePreferences.js" line="78"/>
-        <location filename="../StylePreferences.js" line="100"/>
+        <location line="+22"/>
+        <location line="+1"/>
+        <location line="+29"/>
+        <location line="+22"/>
         <source>None</source>
         <translation>Niente</translation>
     </message>

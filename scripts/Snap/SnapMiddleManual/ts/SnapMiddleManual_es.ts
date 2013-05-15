@@ -4,7 +4,7 @@
 <context>
     <name>SnapMiddleManual</name>
     <message>
-        <location filename="../SnapMiddleManualInit.js" line="2"/>
+        <location filename="../SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Medio manual</translation>

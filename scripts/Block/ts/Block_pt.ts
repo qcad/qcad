@@ -4,7 +4,7 @@
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="49"/>
+        <location filename="../Block.js" line="+49"/>
         <source>&amp;Block</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
@@ -15,25 +15,25 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="92"/>
+        <location filename="../BlockDialog.js" line="+92"/>
         <source>Block name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nome do bloco está vazio.</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.js" line="99"/>
+        <location line="+7"/>
         <source>Block already exists.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bloco já existe.</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.ui" line="17"/>
+        <location filename="../BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Dados bloco</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.ui" line="29"/>
+        <location line="+12"/>
         <source>Block name:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -41,7 +41,7 @@ Nome do Bloco:</translatorcomment>
         <translation>Nome do bloco:</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.ui" line="36"/>
+        <location line="+7"/>
         <source>block 1</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>bloco 1</translation>

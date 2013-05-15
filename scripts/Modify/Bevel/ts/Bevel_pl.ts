@@ -4,25 +4,25 @@
 <context>
     <name>Bevel</name>
     <message>
-        <location filename="../Bevel.js" line="53"/>
+        <location filename="../Bevel.js" line="+53"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Te dwa podmioty nie mogą być frezowane.</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="273"/>
+        <location line="+220"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pierwszy podmiot nie może być przycięte.</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="281"/>
+        <location line="+8"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Druga jednostka nie może być przycięte.</translation>
     </message>
     <message>
-        <location filename="../Bevel.ui" line="17"/>
+        <location filename="../Bevel.ui" line="+17"/>
         <source>Trim</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -31,7 +31,7 @@ Zaznacz drugi obiekt do przycięcia</translatorcomment>
         <translation type="unfinished">Przytnij</translation>
     </message>
     <message>
-        <location filename="../Bevel.ui" line="34"/>
+        <location line="+17"/>
         <source>Length 1:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -40,7 +40,7 @@ Długość 1:</translatorcomment>
         <translation type="unfinished">Długość 1:</translation>
     </message>
     <message>
-        <location filename="../Bevel.ui" line="51"/>
+        <location line="+17"/>
         <source>Length 2:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -49,7 +49,7 @@ Długość 2:</translatorcomment>
         <translation type="unfinished">Długość 2:</translation>
     </message>
     <message>
-        <location filename="../BevelInit.js" line="2"/>
+        <location filename="../BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

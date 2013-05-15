@@ -9,7 +9,7 @@
         <translation type="obsolete">Forum</translation>
     </message>
     <message>
-        <location filename="../ForumInit.js" line="2"/>
+        <location filename="../ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
         <translation>&amp;Forum</translation>
     </message>

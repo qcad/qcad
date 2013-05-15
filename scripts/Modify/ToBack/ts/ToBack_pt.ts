@@ -4,7 +4,7 @@
 <context>
     <name>ToBack</name>
     <message>
-        <location filename="../ToBackInit.js" line="2"/>
+        <location filename="../ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

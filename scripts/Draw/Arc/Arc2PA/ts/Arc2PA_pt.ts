@@ -4,7 +4,7 @@
 <context>
     <name>Arc2PA</name>
     <message>
-        <location filename="../Arc2PA.js" line="65"/>
+        <location filename="../Arc2PA.js" line="+65"/>
         <source>Start point</source>
         <translatorcomment>--google--
 Ponto inicial (x):
@@ -13,7 +13,7 @@ Ponto inicial (y):</translatorcomment>
         <translation>Ponto de início</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="72"/>
+        <location line="+7"/>
         <source>End point</source>
         <translatorcomment>--google--
 Ponto final (y):
@@ -22,31 +22,31 @@ Ponto final (x):</translatorcomment>
         <translation>Ponto final</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="156"/>
+        <location line="+84"/>
         <source>Invalid angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inválido ângulo</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.js" line="161"/>
+        <location line="+5"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Os dois pontos são idênticos</translation>
     </message>
     <message>
-        <location filename="../Arc2PAInit.js" line="2"/>
+        <location filename="../Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;2 Pontos e Ângulo</translation>
     </message>
     <message>
-        <location filename="../Arc2PAInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar arco de 2 pontos e ângulo</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.ui" line="17"/>
+        <location filename="../Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -55,7 +55,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo:</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.ui" line="44"/>
+        <location line="+27"/>
         <source>Direction:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -64,14 +64,14 @@ Descrição:</translatorcomment>
         <translation>Descrição:</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.ui" line="51"/>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Anti-horário (positivo)</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.ui" line="64"/>
-        <location filename="../Arc2PA.ui" line="81"/>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -81,7 +81,7 @@ LTR</translatorcomment>
         <translation>Descrição</translation>
     </message>
     <message>
-        <location filename="../Arc2PA.ui" line="71"/>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Horário (negativo)</translation>

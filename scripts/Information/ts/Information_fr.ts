@@ -4,19 +4,19 @@
 <context>
     <name>Information</name>
     <message>
-        <location filename="../Information.js" line="209"/>
+        <location filename="../Information.js" line="+209"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Outils d&apos;information</translation>
     </message>
     <message>
-        <location filename="../Information.js" line="214"/>
+        <location line="+5"/>
         <source>Show information tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Montrer les outils d&apos;information</translation>
     </message>
     <message>
-        <location filename="../Information.js" line="231"/>
+        <location line="+17"/>
         <source>&amp;Info</source>
         <translation>&amp;Infos</translation>
     </message>

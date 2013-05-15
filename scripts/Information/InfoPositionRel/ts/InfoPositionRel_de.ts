@@ -4,12 +4,12 @@
 <context>
     <name>InfoPositionRel</name>
     <message>
-        <location filename="../InfoPositionRel.js" line="47"/>
+        <location filename="../InfoPositionRel.js" line="+47"/>
         <source>Point</source>
         <translation>Punkt</translation>
     </message>
     <message>
-        <location filename="../InfoPositionRelInit.js" line="2"/>
+        <location filename="../InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
         <translation>&amp;Relative Position</translation>
     </message>

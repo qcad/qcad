@@ -4,13 +4,13 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="63"/>
+        <location filename="../DrawPolyline.js" line="+63"/>
         <source>First vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primeiro vértice</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="73"/>
+        <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--exact match--
 --file: Leader_pt.ts--
@@ -18,7 +18,7 @@ Próximo vértice</translatorcomment>
         <translation>Próximo vértice</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.js" line="76"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -28,13 +28,13 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location filename="../DrawPolylineInit.js" line="2"/>
+        <location filename="../DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe &amp;polilinha</translation>
     </message>
     <message>
-        <location filename="../DrawPolylineInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe uma polilinha com segmentos de linha e arco</translation>
@@ -45,12 +45,12 @@ lugares:\</translatorcomment>
         <translation type="obsolete">Fechar a polilinha</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="23"/>
+        <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
         <translation>Fechar a polilinha</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="43"/>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--exact match--
 --file: Line2P_pt.ts--
@@ -58,7 +58,7 @@ Desfazer segmento anterior</translatorcomment>
         <translation>Desfazer segmento anterior</translation>
     </message>
     <message>
-        <location filename="../DrawPolyline.ui" line="61"/>
+        <location line="+18"/>
         <source>Arc segment with radius:</source>
         <translation>Segmento de arco com raio:</translation>
     </message>

@@ -4,12 +4,12 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="65"/>
+        <location filename="../Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Aucun préfixe</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="66"/>
+        <location line="+1"/>
         <source>Radius</source>
         <translation>Rayon</translation>
     </message>
@@ -18,77 +18,77 @@
         <translation type="obsolete">Métrique</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="67"/>
+        <location line="+1"/>
         <source>Metric screw</source>
         <translation>Métrique</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="68"/>
+        <location line="+1"/>
         <source>Diameter</source>
         <translation>Diamètre</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="69"/>
+        <location line="+1"/>
         <source>Plus/Minus</source>
         <translation>Plus / minus</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="70"/>
+        <location line="+1"/>
         <source>Almost equal to</source>
         <translation>Presque égale</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="71"/>
+        <location line="+1"/>
         <source>Asymptotically equal to</source>
         <translation>Asymptotiquement égal</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="72"/>
+        <location line="+1"/>
         <source>Square</source>
         <translation>Carré</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="73"/>
+        <location line="+1"/>
         <source>Delta</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="114"/>
+        <location line="+41"/>
         <source>Dimension Tools</source>
         <translation>Outils dimension</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="119"/>
+        <location line="+5"/>
         <source>Show dimension tools</source>
         <translation>Outils dimension</translation>
     </message>
     <message>
-        <location filename="../Dimension.js" line="136"/>
+        <location line="+17"/>
         <source>D&amp;imension</source>
         <translation>&amp;Cotation</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="29"/>
+        <location filename="../Dimension.ui" line="+29"/>
         <source>Label:</source>
         <translation>Etiquette :</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="42"/>
+        <location line="+13"/>
         <source>Prefix</source>
         <translation>Préfixe</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="61"/>
+        <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
         <translation>Indiquer l&apos;étiquette fixe ou laisser vide pour l&apos;étiquette automatique</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="112"/>
+        <location line="+51"/>
         <source>Upper tolerance</source>
         <translation>Tolérance supérieure</translation>
     </message>
     <message>
-        <location filename="../Dimension.ui" line="156"/>
+        <location line="+44"/>
         <source>Lower tolerance</source>
         <translation>Tolérance inférieure</translation>
     </message>

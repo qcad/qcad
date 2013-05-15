@@ -4,27 +4,27 @@
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../Leader.js" line="59"/>
+        <location filename="../Leader.js" line="+59"/>
         <source>Arrow position</source>
         <translation>Posizione della freccia</translation>
     </message>
     <message>
-        <location filename="../Leader.js" line="69"/>
+        <location line="+10"/>
         <source>Next vertex</source>
         <translation>Prossimo vertice</translation>
     </message>
     <message>
-        <location filename="../Leader.js" line="72"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location filename="../LeaderInit.js" line="2"/>
+        <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
         <translation>&amp;Principale</translation>
     </message>
     <message>
-        <location filename="../LeaderInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Principale (linea con freccia)</translation>
     </message>

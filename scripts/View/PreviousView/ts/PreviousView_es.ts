@@ -4,7 +4,7 @@
 <context>
     <name>PreviousView</name>
     <message>
-        <location filename="../PreviousViewInit.js" line="2"/>
+        <location filename="../PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
         <translation>Vista &amp;anterior</translation>
     </message>

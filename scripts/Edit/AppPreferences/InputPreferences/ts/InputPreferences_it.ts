@@ -66,54 +66,54 @@ Percentuale di elementi
         <translation type="obsolete">Puntinata</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Punto decimale:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="29"/>
+        <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Separatore per le coordinate cartesiane:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="39"/>
+        <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Separatore per coordinate polari:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="49"/>
+        <location line="+10"/>
         <source>Relative Coordinate Prefix:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Prefisso di coordinate relativo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="61"/>
+        <location line="+12"/>
         <source>Examples</source>
         <translation>Esempi</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="67"/>
+        <location line="+6"/>
         <source>Absolute Cartesian Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Coordinate cartesiane assolute:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="81"/>
+        <location line="+14"/>
         <source>Absolute Polar Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Coordinate polari assolute:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="95"/>
+        <location line="+14"/>
         <source>Relative Cartesian Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Coordinate cartesiane relativo:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="116"/>
+        <location line="+21"/>
         <source>Relative Polar Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Coordinate polari relativo:</translation>
@@ -122,61 +122,61 @@ Percentuale di elementi
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../InputPreferences.js" line="32"/>
+        <location filename="../InputPreferences.js" line="+32"/>
         <source>General</source>
         <translation>Generale</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="32"/>
+        <location line="+0"/>
         <source>Coordinate Format</source>
         <translation>Formato delle coordinate</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="47"/>
-        <location filename="../InputPreferences.js" line="73"/>
+        <location line="+15"/>
+        <location line="+26"/>
         <source>Comma</source>
         <translation>Virgola</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="47"/>
-        <location filename="../InputPreferences.js" line="53"/>
-        <location filename="../InputPreferences.js" line="57"/>
-        <location filename="../InputPreferences.js" line="72"/>
+        <location line="-26"/>
+        <location line="+6"/>
+        <location line="+4"/>
+        <location line="+15"/>
         <source>(Default)</source>
         <translation>(Predefinito)</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="48"/>
+        <location line="-24"/>
         <source>Semicolon</source>
         <translation>Punto e virgola</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="53"/>
+        <location line="+5"/>
         <source>Less Than</source>
         <translation>Minore di</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="57"/>
+        <location line="+4"/>
         <source>At</source>
         <translation>At</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="58"/>
+        <location line="+1"/>
         <source>Percentage</source>
         <translation>Percentuale</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="59"/>
+        <location line="+1"/>
         <source>Dollar</source>
         <translation>Dollaro</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="60"/>
+        <location line="+1"/>
         <source>Hash</source>
         <translation>Cancelletto</translation>
     </message>
     <message>
-        <location filename="../InputPreferences.js" line="72"/>
+        <location line="+12"/>
         <source>Dot</source>
         <translation>Puntinata</translation>
     </message>

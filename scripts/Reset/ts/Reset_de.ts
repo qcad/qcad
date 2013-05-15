@@ -8,13 +8,13 @@
         <translation type="obsolete">&amp;Zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../ResetInit.js" line="5"/>
-        <location filename="../ResetPostInit.js" line="11"/>
+        <location filename="../ResetInit.js" line="+5"/>
+        <location filename="../ResetPostInit.js" line="+11"/>
         <source>Reset</source>
         <translation>Zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../ResetPostInit.js" line="2"/>
+        <location filename="../ResetPostInit.js" line="-9"/>
         <source>&amp;Reset / Idle</source>
         <translation>&amp;Zurücksetzen / Neutral</translation>
     </message>

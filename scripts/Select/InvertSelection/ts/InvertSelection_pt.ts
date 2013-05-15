@@ -4,7 +4,7 @@
 <context>
     <name>InvertSelection</name>
     <message>
-        <location filename="../InvertSelectionInit.js" line="2"/>
+        <location filename="../InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -12,7 +12,7 @@
         <translation>&amp;Inverte seleção</translation>
     </message>
     <message>
-        <location filename="../InvertSelectionInit.js" line="7"/>
+        <location line="+5"/>
         <source>Invert the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inverter a seleção atual</translation>

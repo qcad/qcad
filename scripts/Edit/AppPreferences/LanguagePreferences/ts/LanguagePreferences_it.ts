@@ -15,7 +15,7 @@ Per favore riavvia Photivo per cambiare le impostazioni della lingua</translator
         <translation type="obsolete">Impostazioni della lingua</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="20"/>
+        <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Lingua dell&apos;interfaccia utente:</translation>
@@ -24,12 +24,12 @@ Per favore riavvia Photivo per cambiare le impostazioni della lingua</translator
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="41"/>
+        <location filename="../LanguagePreferences.js" line="+41"/>
         <source>Language Settings</source>
         <translation>Impostazioni della lingua</translation>
     </message>
     <message>
-        <location filename="../LanguagePreferences.js" line="41"/>
+        <location line="+0"/>
         <source>Language</source>
         <translation>Lingua</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Arc3P</name>
     <message>
-        <location filename="../Arc3P.js" line="62"/>
+        <location filename="../Arc3P.js" line="+62"/>
         <source>Start point</source>
         <translatorcomment>--google--
 Ponto inicial (x):
@@ -13,13 +13,13 @@ Ponto inicial (y):</translatorcomment>
         <translation>Ponto de início</translation>
     </message>
     <message>
-        <location filename="../Arc3P.js" line="70"/>
+        <location line="+8"/>
         <source>Point on arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto no arco</translation>
     </message>
     <message>
-        <location filename="../Arc3P.js" line="77"/>
+        <location line="+7"/>
         <source>End point</source>
         <translatorcomment>--google--
 Ponto final (y):
@@ -33,7 +33,7 @@ Ponto final (x):</translatorcomment>
         <translation type="obsolete">Pelo menos dois pontos são idênticos</translation>
     </message>
     <message>
-        <location filename="../Arc3PInit.js" line="2"/>
+        <location filename="../Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -41,7 +41,7 @@ Ponto final (x):</translatorcomment>
         <translation>&amp;3 Pontos</translation>
     </message>
     <message>
-        <location filename="../Arc3PInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw arc from 3 points</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar arco de 3 pontos</translation>

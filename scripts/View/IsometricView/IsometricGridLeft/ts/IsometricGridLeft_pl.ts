@@ -4,7 +4,7 @@
 <context>
     <name>IsometricGridLeft</name>
     <message>
-        <location filename="../IsometricGridLeft.js" line="35"/>
+        <location filename="../IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Lewy Projection</translation>

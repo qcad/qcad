@@ -4,27 +4,27 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="51"/>
+        <location filename="../InfoDistanceEP.js" line="+51"/>
         <source>Specify entity</source>
         <translation>Scegli entità</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="59"/>
+        <location line="+8"/>
         <source>Specify point</source>
         <translation>Punto</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="62"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEP.js" line="124"/>
+        <location line="+62"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEPInit.js" line="2"/>
+        <location filename="../InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
         <translation>Distanza da &amp;entità a punto</translation>
     </message>

@@ -18,7 +18,7 @@ Indique o ponto de destino</translatorcomment>
         <translation type="obsolete">Ponto de destino</translation>
     </message>
     <message>
-        <location filename="../IsoProjectInit.js" line="2"/>
+        <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -26,7 +26,7 @@ Projeção &amp;Isométrica</translatorcomment>
         <translation>Projeção &amp;isométrica</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="17"/>
+        <location filename="../IsoProject.ui" line="+17"/>
         <source>Top</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -40,7 +40,7 @@ Centro acima</translatorcomment>
         <translation type="obsolete">ProjectionType</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="37"/>
+        <location line="+20"/>
         <source>Bottom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -50,12 +50,12 @@ Centro abaixo</translatorcomment>
         <translation>Fundo</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="78"/>
+        <location line="+41"/>
         <source>Left back</source>
         <translation>Esquerda trás</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="102"/>
+        <location line="+24"/>
         <source>Right</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -65,17 +65,17 @@ Em baixo à direita</translatorcomment>
         <translation>Direita</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="119"/>
+        <location line="+17"/>
         <source>Right back</source>
         <translation>Direita trás</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="143"/>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translation>Rotacione anti-horário antes de projeção</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="154"/>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation>Rotacione no sentido horário antes de projeção</translation>
     </message>
@@ -88,17 +88,17 @@ Em baixo à direita</translatorcomment>
         <translation type="obsolete">Rotacione horário</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="172"/>
+        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
         <translation>Projeção escala para o tamanho original</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="175"/>
+        <location line="+3"/>
         <source>True scale</source>
         <translation>Escala verdadeira</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="61"/>
+        <location line="-114"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

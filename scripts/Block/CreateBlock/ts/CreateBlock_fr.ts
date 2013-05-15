@@ -4,7 +4,7 @@
 <context>
     <name>CreateBlock</name>
     <message>
-        <location filename="../CreateBlock.js" line="47"/>
+        <location filename="../CreateBlock.js" line="+47"/>
         <source>Reference Point</source>
         <translation>Point de référence</translation>
     </message>
@@ -17,7 +17,7 @@
         <translation type="obsolete">Créer un bloc de la sélection</translation>
     </message>
     <message>
-        <location filename="../CreateBlockInit.js" line="3"/>
+        <location filename="../CreateBlockInit.js" line="+3"/>
         <source>&amp;Create Block from Selection</source>
         <translation>&amp;Créer un bloc de la sélection</translation>
     </message>

@@ -4,22 +4,22 @@
 <context>
     <name>CreateLibraryItem</name>
     <message>
-        <location filename="../CreateLibraryItem.js" line="49"/>
+        <location filename="../CreateLibraryItem.js" line="+49"/>
         <source>Reference Point</source>
         <translation>Referenzpunkt</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItem.js" line="74"/>
+        <location line="+25"/>
         <source>Save library item as...</source>
         <translation>Bibliothekeintrag speichern unter...</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="3"/>
+        <location filename="../CreateLibraryItemInit.js" line="+3"/>
         <source>&amp;Create Library Item</source>
         <translation>Bibliothekeintrag &amp;erstellen</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="4"/>
+        <location line="+1"/>
         <source>Create library item from selection</source>
         <translation>Bibliothekeintrag aus Selektion erstellen</translation>
     </message>

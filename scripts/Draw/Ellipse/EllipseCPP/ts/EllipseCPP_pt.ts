@@ -4,12 +4,12 @@
 <context>
     <name>EllipseCPP</name>
     <message>
-        <location filename="../EllipseCPPInit.js" line="2"/>
+        <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse</source>
         <translation>&amp;Elipse</translation>
     </message>
     <message>
-        <location filename="../EllipseCPPInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Desenhe uma elipse do ponto de centro, punto maior e razão</translation>
     </message>

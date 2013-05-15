@@ -4,19 +4,19 @@
 <context>
     <name>EditFromReference</name>
     <message>
-        <location filename="../EditFromReference.js" line="55"/>
+        <location filename="../EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha referência de bloco</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="3"/>
+        <location filename="../EditFromReferenceInit.js" line="+3"/>
         <source>E&amp;dit Block from Reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>E&amp;dite bloco o de referência</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="4"/>
+        <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Editar bloco baseado em referência de bloco</translation>

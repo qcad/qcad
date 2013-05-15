@@ -4,7 +4,7 @@
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="52"/>
+        <location filename="../File.js" line="+52"/>
         <source>&amp;File</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
@@ -12,7 +12,7 @@
         <translation>&amp;Arquivo</translation>
     </message>
     <message>
-        <location filename="../File.js" line="103"/>
+        <location line="+51"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -21,7 +21,7 @@ Formato:</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location filename="../File.js" line="139"/>
+        <location line="+36"/>
         <source>Overwrite File?</source>
         <translatorcomment>--exact match--
 --file: Save_pt.ts--
@@ -32,7 +32,7 @@ Substituir arquivo?</translatorcomment>
         <translation>Substituir arquivo?</translation>
     </message>
     <message>
-        <location filename="../File.js" line="140"/>
+        <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--exact match--
 --file: Save_pt.ts--

@@ -4,25 +4,25 @@
 <context>
     <name>RecentFiles</name>
     <message>
-        <location filename="../RecentFiles.js" line="37"/>
+        <location filename="../RecentFiles.js" line="+37"/>
         <source>Load/Save</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Load / Save</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="37"/>
+        <location line="+0"/>
         <source>Recent Files</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nowe pliki</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="47"/>
+        <location filename="../RecentFilesInit.js" line="+47"/>
         <source>&amp;Clear List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wyczyść listę</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="55"/>
+        <location line="+8"/>
         <source>Open &amp;Recent</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Otwórz Najnowsze</translation>

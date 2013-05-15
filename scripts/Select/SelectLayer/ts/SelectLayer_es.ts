@@ -4,24 +4,24 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="63"/>
+        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Elija la entidad en la capa</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="2"/>
+        <location filename="../SelectLayerInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
         <translation>(De-)seleccionar ca&amp;pa</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="7"/>
+        <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)seleccionar todas las entidades en la misma capa</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="17"/>
+        <location filename="../SelectLayer.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -30,34 +30,34 @@ Modo de búsqueda:</translatorcomment>
         <translation>Modo:</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="24"/>
+        <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Reemplazar la selección actual</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="40"/>
-        <location filename="../SelectLayer.ui" line="60"/>
-        <location filename="../SelectLayer.ui" line="80"/>
-        <location filename="../SelectLayer.ui" line="100"/>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>SelectionMode</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="47"/>
+        <location line="-53"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Añadir a la selección actual</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="67"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Restar de la selección actual</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="87"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Se cruzan con la selección actual</translation>

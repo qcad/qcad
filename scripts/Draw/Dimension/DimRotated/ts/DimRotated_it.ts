@@ -4,32 +4,32 @@
 <context>
     <name>DimRotated</name>
     <message>
-        <location filename="../DimRotated.ui" line="17"/>
+        <location filename="../DimRotated.ui" line="+17"/>
         <source>Angle:</source>
         <translation>Angolo:</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="60"/>
+        <location filename="../DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
         <translation>Origine della prima linea di estensione</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="69"/>
+        <location line="+9"/>
         <source>Second extension line origin</source>
         <translation>Origine della secondo linea di estensione</translation>
     </message>
     <message>
-        <location filename="../DimRotated.js" line="77"/>
+        <location line="+8"/>
         <source>Dimension line location</source>
         <translation>Dimensione linea posizione</translation>
     </message>
     <message>
-        <location filename="../DimRotatedInit.js" line="2"/>
+        <location filename="../DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
         <translation>&amp;Lineare</translation>
     </message>
     <message>
-        <location filename="../DimRotatedInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Quota Lineare</translation>
     </message>

@@ -4,12 +4,12 @@
 <context>
     <name>SetRelativeZero</name>
     <message>
-        <location filename="../SetRelativeZero.js" line="50"/>
+        <location filename="../SetRelativeZero.js" line="+50"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
     <message>
-        <location filename="../SetRelativeZeroInit.js" line="2"/>
+        <location filename="../SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ajuste cero &amp;relativo</translation>

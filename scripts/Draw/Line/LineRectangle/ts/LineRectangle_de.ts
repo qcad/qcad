@@ -4,22 +4,22 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangleInit.js" line="2"/>
+        <location filename="../LineRectangleInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
         <translation>&amp;Rechteck</translation>
     </message>
     <message>
-        <location filename="../LineRectangle.js" line="56"/>
+        <location filename="../LineRectangle.js" line="+56"/>
         <source>First corner</source>
         <translation>Erster Eckpunkt</translation>
     </message>
     <message>
-        <location filename="../LineRectangle.js" line="63"/>
+        <location line="+7"/>
         <source>Second corner</source>
         <translation>Zweiter Eckpunkt</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="8"/>
+        <location filename="../LineRectangleInit.js" line="+6"/>
         <source>Draw rectangle from two corners</source>
         <translation>Rechteck von zwei Eckpunkten</translation>
     </message>

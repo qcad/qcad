@@ -4,7 +4,7 @@
 <context>
     <name>AppPreferences</name>
     <message>
-        <location filename="../AppPreferences.js" line="62"/>
+        <location filename="../AppPreferences.js" line="+62"/>
         <source>Application &amp;Preferences</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Preferencje aplikacji</translation>

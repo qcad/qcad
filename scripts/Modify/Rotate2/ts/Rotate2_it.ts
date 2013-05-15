@@ -4,19 +4,19 @@
 <context>
     <name>Rotate2</name>
     <message>
-        <location filename="../Rotate2.js" line="67"/>
+        <location filename="../Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Centro di rotazione primario</translation>
     </message>
     <message>
-        <location filename="../Rotate2.js" line="74"/>
+        <location line="+7"/>
         <source>Center of secondary rotation</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Centro di rotazione secondario</translation>
     </message>
     <message>
-        <location filename="../Rotate2Init.js" line="2"/>
+        <location filename="../Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
         <translation>Doppia &amp;rotazione</translation>
     </message>
@@ -69,42 +69,42 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
 <context>
     <name>Rotate2Options</name>
     <message>
-        <location filename="../Rotate2Dialog.ui" line="14"/>
+        <location filename="../Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
         <translation>Opzioni Doppia Rotazione</translation>
     </message>
     <message>
-        <location filename="../Rotate2Dialog.ui" line="24"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Numero di copie</translation>
     </message>
     <message>
-        <location filename="../Rotate2Dialog.ui" line="30"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Cancella originali</translation>
     </message>
     <message>
-        <location filename="../Rotate2Dialog.ui" line="40"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location filename="../Rotate2Dialog.ui" line="47"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>Copie &amp;multiple</translation>
     </message>
     <message>
-        <location filename="../Rotate2Dialog.ui" line="157"/>
+        <location line="+110"/>
         <source>Angle (&amp;a):</source>
         <translation>Angolo (&amp;a):</translation>
     </message>
     <message>
-        <location filename="../Rotate2Dialog.ui" line="177"/>
+        <location line="+20"/>
         <source>Angle (&amp;b):</source>
         <translation>Angolo (&amp;b):</translation>
     </message>
     <message>
-        <location filename="../Rotate2Dialog.ui" line="199"/>
+        <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa layer e gli &amp;attributi corrente</translation>
     </message>
@@ -112,19 +112,19 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="17"/>
+        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Angolo primaria:</translation>
     </message>
     <message>
-        <location filename="../Rotate2.ui" line="37"/>
+        <location line="+20"/>
         <source>Secondary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Angolo secondario:</translation>
     </message>
     <message>
-        <location filename="../Rotate2.ui" line="54"/>
+        <location line="+17"/>
         <source>Copies:</source>
         <translation>Copie:</translation>
     </message>

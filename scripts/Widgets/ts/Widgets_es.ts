@@ -4,12 +4,12 @@
 <context>
     <name>Dialog</name>
     <message>
-        <location filename="../Dialog.ui" line="94"/>
+        <location filename="../Dialog.ui" line="+94"/>
         <source>OK</source>
         <translation>Aceptar</translation>
     </message>
     <message>
-        <location filename="../Dialog.ui" line="101"/>
+        <location line="+7"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -17,7 +17,7 @@
 <context>
     <name>Widgets</name>
     <message>
-        <location filename="../Widgets.js" line="48"/>
+        <location filename="../Widgets.js" line="+48"/>
         <source>&amp;Widgets</source>
         <translation>&amp;Widgets</translation>
     </message>

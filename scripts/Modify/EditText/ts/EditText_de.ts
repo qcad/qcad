@@ -4,17 +4,17 @@
 <context>
     <name>EditText</name>
     <message>
-        <location filename="../EditTextInit.js" line="7"/>
+        <location filename="../EditTextInit.js" line="+7"/>
         <source>Edit text</source>
         <translation>Text editieren</translation>
     </message>
     <message>
-        <location filename="../EditTextInit.js" line="2"/>
+        <location line="-5"/>
         <source>Edit Te&amp;xt</source>
         <translation>Te&amp;xt editieren</translation>
     </message>
     <message>
-        <location filename="../EditText.js" line="61"/>
+        <location filename="../EditText.js" line="+61"/>
         <source>Choose text</source>
         <translation>Text wählen</translation>
     </message>

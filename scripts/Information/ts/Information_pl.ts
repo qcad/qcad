@@ -4,19 +4,19 @@
 <context>
     <name>Information</name>
     <message>
-        <location filename="../Information.js" line="209"/>
+        <location filename="../Information.js" line="+209"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzi informacyjnych</translation>
     </message>
     <message>
-        <location filename="../Information.js" line="214"/>
+        <location line="+5"/>
         <source>Show information tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż narzędzi informacyjnych</translation>
     </message>
     <message>
-        <location filename="../Information.js" line="231"/>
+        <location line="+17"/>
         <source>&amp;Info</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

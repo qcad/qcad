@@ -4,31 +4,31 @@
 <context>
     <name>Bevel</name>
     <message>
-        <location filename="../Bevel.js" line="53"/>
+        <location filename="../Bevel.js" line="+53"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>As duas entidades não podem ser chanfradas.</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="273"/>
+        <location line="+220"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primeira entidade não pode ser aparada.</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="281"/>
+        <location line="+8"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Segunda entidade não pode ser aparada.</translation>
     </message>
     <message>
-        <location filename="../BevelInit.js" line="2"/>
+        <location filename="../BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Chanfro / bisel</translation>
     </message>
     <message>
-        <location filename="../Bevel.ui" line="17"/>
+        <location filename="../Bevel.ui" line="+17"/>
         <source>Trim</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -38,7 +38,7 @@ Apare ou estique entidades para encontrar outras entidades</translatorcomment>
         <translation>Apare</translation>
     </message>
     <message>
-        <location filename="../Bevel.ui" line="34"/>
+        <location line="+17"/>
         <source>Length 1:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -47,7 +47,7 @@ Distância 1:</translatorcomment>
         <translation>Distância 1:</translation>
     </message>
     <message>
-        <location filename="../Bevel.ui" line="51"/>
+        <location line="+17"/>
         <source>Length 2:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

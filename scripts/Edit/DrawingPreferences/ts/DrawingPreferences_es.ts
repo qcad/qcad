@@ -4,7 +4,7 @@
 <context>
     <name>DrawingPreferences</name>
     <message>
-        <location filename="../DrawingPreferences.js" line="43"/>
+        <location filename="../DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
         <translation>&amp;Preferencias del dibujo</translation>
     </message>

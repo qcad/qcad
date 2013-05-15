@@ -4,7 +4,7 @@
 <context>
     <name>EditBlock</name>
     <message>
-        <location filename="../EditBlockInit.js" line="3"/>
+        <location filename="../EditBlockInit.js" line="+3"/>
         <source>&amp;Edit Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13,7 +13,7 @@ Edytuj blok z &amp;insertu</translatorcomment>
         <translation type="unfinished">&amp;Edytuj blok</translation>
     </message>
     <message>
-        <location filename="../EditBlockInit.js" line="4"/>
+        <location line="+1"/>
         <source>Edit contents of selected block</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Edytować zawartość wybranego bloku</translation>

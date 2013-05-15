@@ -4,7 +4,7 @@
 <context>
     <name>CopyWithReference</name>
     <message>
-        <location filename="../CopyWithReferenceInit.js" line="2"/>
+        <location filename="../CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
         <translation>&amp;Copier avec référence</translation>
     </message>

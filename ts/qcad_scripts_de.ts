@@ -4925,65 +4925,65 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Auto Speichern</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="143"/>
+        <location filename="../AutoSave.js" line="149"/>
         <source>Autosave failed:</source>
         <translation>Autosave fehlgeschlagen:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="149"/>
+        <location filename="../AutoSave.js" line="155"/>
         <source>Autosave complete.</source>
         <translation>Autosave abgeschlossen.</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="170"/>
+        <location filename="../AutoSave.js" line="176"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translation>Eine &apos;autosave&apos; Backup Datei für eine unbenannte Zeichnung wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="174"/>
+        <location filename="../AutoSave.js" line="180"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
         <translation>%1 &apos;autosave&apos; Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="196"/>
+        <location filename="../AutoSave.js" line="202"/>
         <source>Recovered</source>
         <translation>Wiederhergestellt</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="243"/>
+        <location filename="../AutoSave.js" line="249"/>
         <source>Recover File?</source>
         <translation>Datei wiederherstellen?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="244"/>
+        <location filename="../AutoSave.js" line="250"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translation>Eine &apos;autosave&apos; Backup Datei für &apos;%1&apos; wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="269"/>
-        <location filename="../AutoSave.js" line="280"/>
-        <location filename="../AutoSave.js" line="285"/>
+        <location filename="../AutoSave.js" line="275"/>
+        <location filename="../AutoSave.js" line="286"/>
+        <location filename="../AutoSave.js" line="291"/>
         <source>Cannot rename file:</source>
         <translation>Kann Fatei nicht umbenennen:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="272"/>
+        <location filename="../AutoSave.js" line="278"/>
         <source>Moved autosave backup file to:</source>
         <translation>Autosave Datei umbenannt in:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="288"/>
+        <location filename="../AutoSave.js" line="294"/>
         <source>Moved original file to:</source>
         <translation>Originaldatei verschoben nach:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="304"/>
+        <location filename="../AutoSave.js" line="310"/>
         <source>Cannot remove file:</source>
         <translation>Kann Datei nicht löschen:</translation>
     </message>
@@ -5000,7 +5000,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Autosave Datei umbenannt in: </translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="180"/>
+        <location filename="../AutoSave.js" line="186"/>
         <source>Recover Files?</source>
         <translation>Dateien wiederherstellen?</translation>
     </message>
@@ -5013,7 +5013,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Verzeichnis für automatisches Speichern wählen</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="123"/>
+        <location filename="../AutoSave.js" line="129"/>
         <source>Autosaving to:</source>
         <translation>Automatisches Speichern in:</translation>
     </message>
@@ -5235,12 +5235,22 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="43"/>
+        <source>No import filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenFile.js" line="46"/>
+        <source>No import filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenFile.js" line="63"/>
         <source>Open Drawing</source>
         <translation>Zeichnung öffnen</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="55"/>
+        <location filename="../OpenFile.js" line="65"/>
         <source>All Files</source>
         <translation>Alle Dateien</translation>
     </message>
@@ -5455,7 +5465,17 @@ nicht öffnen.
         <translation>Speichern unter</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="95"/>
+        <location filename="../SaveAs.js" line="56"/>
+        <source>No export filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SaveAs.js" line="59"/>
+        <source>No export filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SaveAs.js" line="106"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

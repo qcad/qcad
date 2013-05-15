@@ -4,7 +4,7 @@
 <context>
     <name>SnapDistance</name>
     <message>
-        <location filename="../SnapDistanceInit.js" line="2"/>
+        <location filename="../SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
         <translatorcomment>--google--
 Distância de &amp;Ponto a Ponto
@@ -13,7 +13,7 @@ Distância de &amp;Entidade a Ponto
         <translation>&amp;Distância</translation>
     </message>
     <message>
-        <location filename="../SnapDistance.ui" line="17"/>
+        <location filename="../SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Distância ao ponto de término:</translation>

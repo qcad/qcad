@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="33"/>
+        <location filename="../About.js" line="+33"/>
         <source>About %1</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -13,84 +13,84 @@
         <translation type="unfinished">%1…</translation>
     </message>
     <message>
-        <location filename="../About.js" line="100"/>
+        <location line="+67"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="119"/>
+        <location line="+19"/>
         <source>No information available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="120"/>
+        <location line="+1"/>
         <source>Plugin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="125"/>
+        <location line="+5"/>
         <source>Description:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="129"/>
-        <location filename="../About.js" line="133"/>
-        <location filename="../About.js" line="137"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="130"/>
+        <location line="-7"/>
         <source>Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="134"/>
+        <location line="+4"/>
         <source>Qt Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="138"/>
+        <location line="+4"/>
         <source>License:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="146"/>
+        <location line="+8"/>
         <source>Internet:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="158"/>
+        <location line="+12"/>
         <source>Active</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="161"/>
+        <location line="+3"/>
         <source>Inactive (restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="164"/>
+        <location line="+3"/>
         <source>Trial Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="174"/>
+        <location line="+10"/>
         <source>File:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="180"/>
+        <location line="+6"/>
         <source>Error:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.js" line="197"/>
+        <location line="+17"/>
         <source>Script Add-Ons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../AboutInit.js" line="2"/>
+        <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
@@ -101,24 +101,24 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../About.ui" line="81"/>
+        <location filename="../About.ui" line="+81"/>
         <source>About QCAD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.ui" line="97"/>
-        <location filename="../About.ui" line="122"/>
-        <location filename="../About.ui" line="147"/>
+        <location line="+16"/>
+        <location line="+25"/>
+        <location line="+25"/>
         <source>about:blank</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.ui" line="106"/>
+        <location line="-41"/>
         <source>About Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../About.ui" line="131"/>
+        <location line="+25"/>
         <source>About Script Add-Ons</source>
         <translation type="unfinished"></translation>
     </message>

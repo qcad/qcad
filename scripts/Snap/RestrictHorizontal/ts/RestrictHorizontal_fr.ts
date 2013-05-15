@@ -10,7 +10,7 @@ Restriction &amp;Horizontale</translatorcomment>
         <translation type="obsolete">Restriction &amp;horizontale</translation>
     </message>
     <message>
-        <location filename="../RestrictHorizontalInit.js" line="2"/>
+        <location filename="../RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
         <translation>Restreindre &amp;horizontalement</translation>
     </message>

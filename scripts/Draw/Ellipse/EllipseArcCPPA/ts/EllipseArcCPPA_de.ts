@@ -4,22 +4,22 @@
 <context>
     <name>EllipseArcCPPA</name>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="74"/>
+        <location filename="../EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
         <translation>Zentrum</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="81"/>
+        <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
         <translation>Hauptscheitelpunkt der Ellipse oder Hauptachsenradius</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="82"/>
+        <location line="+1"/>
         <source>Major point of ellipse</source>
         <translation>Hauptscheitelpunkt der Ellipse</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="87"/>
+        <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
         <translation>Nebenscheitelpunkt der Ellipse oder Nebenachsenradius</translation>
     </message>
@@ -28,52 +28,52 @@
         <translation type="obsolete">Nebenachsenradius der Ellipse</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="88"/>
+        <location line="+1"/>
         <source>Minor point of ellipse</source>
         <translation>Nebenscheitelpunkt der Ellipse</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="93"/>
+        <location line="+5"/>
         <source>Rotation angle</source>
         <translation>Rotationswinkel</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="100"/>
+        <location line="+7"/>
         <source>Start parameter</source>
         <translation>Startparameter</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="107"/>
+        <location line="+7"/>
         <source>End parameter</source>
         <translation>Endparameter</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="371"/>
+        <location line="+264"/>
         <source>Invalid major radius.</source>
         <translation>Ungültiger Hauptachsenradius.</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="381"/>
+        <location line="+10"/>
         <source>Major radius:</source>
         <translation>Hauptachsenradius:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="397"/>
+        <location line="+16"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="410"/>
+        <location line="+13"/>
         <source>Minor radius:</source>
         <translation>Nebenachsenradius:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="435"/>
+        <location line="+25"/>
         <source>Start angle:</source>
         <translation>Startwinkel:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.js" line="451"/>
+        <location line="+16"/>
         <source>End angle:</source>
         <translation>Endwinkel:</translation>
     </message>
@@ -98,33 +98,33 @@
         <translation type="obsolete">Endwinkel:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPAInit.js" line="2"/>
+        <location filename="../EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
         <translation>&amp;Ellipsenbogen</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPAInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Ellipsenbogen von Zentrum, Hauptscheitelpunkt, Achsenverhältnis und Winkel</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.ui" line="17"/>
+        <location filename="../EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
         <translation>Richtung:</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.ui" line="24"/>
+        <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.ui" line="37"/>
-        <location filename="../EllipseArcCPPA.ui" line="54"/>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
         <translation>Richtung</translation>
     </message>
     <message>
-        <location filename="../EllipseArcCPPA.ui" line="44"/>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
     </message>

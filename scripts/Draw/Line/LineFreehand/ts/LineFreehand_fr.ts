@@ -4,22 +4,22 @@
 <context>
     <name>LineFreehand</name>
     <message>
-        <location filename="../LineFreehand.js" line="55"/>
+        <location filename="../LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
         <translation>Appuyez pour commencer à dessiner</translation>
     </message>
     <message>
-        <location filename="../LineFreehand.js" line="63"/>
+        <location line="+8"/>
         <source>Release to stop drawing</source>
         <translation>Laissez aller pour arrêter de dessiner</translation>
     </message>
     <message>
-        <location filename="../LineFreehandInit.js" line="2"/>
+        <location filename="../LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
         <translation>Ligne à main le&amp;vée</translation>
     </message>
     <message>
-        <location filename="../LineFreehandInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw freehand line</source>
         <translation>Ligne à main levée</translation>
     </message>

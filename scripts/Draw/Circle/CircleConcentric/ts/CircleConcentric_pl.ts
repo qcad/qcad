@@ -4,7 +4,7 @@
 <context>
     <name>CircleConcentric</name>
     <message>
-        <location filename="../CircleConcentric.ui" line="17"/>
+        <location filename="../CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13,7 +13,7 @@ Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
         <translation type="unfinished">Odległość:</translation>
     </message>
     <message>
-        <location filename="../CircleConcentric.ui" line="37"/>
+        <location line="+20"/>
         <source>Number:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -22,13 +22,13 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Liczba:</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricInit.js" line="2"/>
+        <location filename="../CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Koncentryczny (z Distance)</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj okrąg koncentryczny</translation>

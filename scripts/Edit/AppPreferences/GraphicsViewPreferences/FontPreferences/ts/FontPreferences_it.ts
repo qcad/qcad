@@ -4,12 +4,12 @@
 <context>
     <name>FontPreferences</name>
     <message>
-        <location filename="../FontPreferences.js" line="24"/>
+        <location filename="../FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translation>Visualizzazione grafica</translation>
     </message>
     <message>
-        <location filename="../FontPreferences.js" line="24"/>
+        <location line="+0"/>
         <source>Fonts</source>
         <translation>Tipi di carattere</translation>
     </message>
@@ -31,19 +31,19 @@ Visualizzazione grafica</translatorcomment>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="41"/>
+        <location filename="../PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Righello carattere:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="57"/>
+        <location line="+16"/>
         <source>Snap Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Snap etichetta carattere:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="70"/>
+        <location line="+13"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Info etichetta carattere:</translation>

@@ -8,32 +8,32 @@
         <translation type="obsolete">Insérer bloc</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="17"/>
+        <location filename="../InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
         <translation>Rotation :</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="30"/>
+        <location line="+13"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Pivoter les entités&lt;br&gt;collées par cet angle</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="120"/>
+        <location line="+90"/>
         <source>Scale:</source>
         <translation>Echelle :</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="133"/>
+        <location line="+13"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Échelle des entités&lt;br&gt;collées par ce facteur</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="198"/>
+        <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Retourner les entités&lt;br&gt;collé horizontalement</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="212"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Retourner les entités&lt;br&gt;collées verticalement</translation>
     </message>
@@ -46,37 +46,37 @@
         <translation type="obsolete">Vers le calque courant</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="226"/>
+        <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Ecraser les calques existantes&lt;br&gt;dans le dessin avec les&lt;br&gt;calques du presse-papiers</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="229"/>
+        <location line="+3"/>
         <source>Overwrite layers</source>
         <translation>Ecraser les calques</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="236"/>
+        <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Ecraser les blocs existants&lt;br&gt;dans le dessin avec des&lt;br&gt;blocs du presse-papiers</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="239"/>
+        <location line="+3"/>
         <source>Overwrite blocks</source>
         <translation>Ecraser les blocs</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="87"/>
+        <location filename="../InsertBlockItem.js" line="+87"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajusté nom de bloc invalide &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="100"/>
+        <location line="+13"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItemInit.js" line="2"/>
+        <location filename="../InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
         <translation>&amp;Insérer bloc</translation>
     </message>

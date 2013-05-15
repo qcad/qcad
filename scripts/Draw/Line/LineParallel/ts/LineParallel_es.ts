@@ -12,27 +12,27 @@
         <translation type="obsolete">Número:</translation>
     </message>
     <message>
-        <location filename="../LineParallel.js" line="68"/>
+        <location filename="../LineParallel.js" line="+68"/>
         <source>Choose line, arc or circle</source>
         <translation>Elija una línea, un arco o un círculo</translation>
     </message>
     <message>
-        <location filename="../LineParallelInit.js" line="2"/>
+        <location filename="../LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
         <translation>Para&amp;lelas (con la distancia)</translation>
     </message>
     <message>
-        <location filename="../LineParallelInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Dibujar un paralelo a una línea existente o un arco o círculo concéntrico</translation>
     </message>
     <message>
-        <location filename="../LineParallel.ui" line="17"/>
+        <location filename="../LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
         <translation>&amp;Distancia:</translation>
     </message>
     <message>
-        <location filename="../LineParallel.ui" line="40"/>
+        <location line="+23"/>
         <source>&amp;Number:</source>
         <translation>&amp;Número:</translation>
     </message>

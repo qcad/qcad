@@ -46,7 +46,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="126"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="+126"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

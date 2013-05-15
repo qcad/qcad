@@ -4,17 +4,17 @@
 <context>
     <name>ColorSettings</name>
     <message>
-        <location filename="../ColorSettings.js" line="25"/>
+        <location filename="../ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="25"/>
+        <location line="+0"/>
         <source>Printing - Colors</source>
         <translation>Drucken - Farben</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="27"/>
+        <location line="+2"/>
         <source>Printing</source>
         <translation>Drucken</translation>
     </message>
@@ -23,32 +23,32 @@
         <translation type="obsolete">Standard Farben</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="27"/>
+        <location line="+0"/>
         <source>Colors</source>
         <translation>Farben</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
         <translation>Hintergrundfarbe:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="63"/>
+        <location line="+44"/>
         <source>Color Mode</source>
         <translation>Farb Modus</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="69"/>
+        <location line="+6"/>
         <source>Full color</source>
         <translation>Vollfarben</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="89"/>
+        <location line="+20"/>
         <source>Grayscale</source>
         <translation>Graustufen</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="106"/>
+        <location line="+17"/>
         <source>Black / white</source>
         <translation>Schwarz / Weiss</translation>
     </message>

@@ -16,32 +16,32 @@
         <translation type="obsolete">64</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="88"/>
+        <location filename="../PreferencesPage.ui" line="+88"/>
         <source>Pixel</source>
         <translation>Pixel</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="91"/>
+        <location line="+3"/>
         <source>px</source>
         <translation>px</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="100"/>
+        <location line="+9"/>
         <source>Columns:</source>
         <translation>Spalten:</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="49"/>
+        <location filename="../CadToolBar.js" line="+49"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="49"/>
+        <location line="+0"/>
         <source>CAD Toolbar</source>
         <translation>CAD Werkzeugleiste</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="80"/>
+        <location line="+31"/>
         <source>Toggle Title Bar</source>
         <translation>Titelleiste anzeigen</translation>
     </message>
@@ -50,7 +50,7 @@
         <translation type="obsolete">CAD Werkzeugleiste</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
+        <location filename="../PreferencesPage.ui" line="-83"/>
         <source>Icon Size:</source>
         <translation>Symbolgrösse:</translation>
     </message>
@@ -90,7 +90,7 @@
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="76"/>
+        <location filename="../CadToolBarPanel.js" line="+76"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Circle2P</name>
     <message>
-        <location filename="../Circle2P.js" line="58"/>
+        <location filename="../Circle2P.js" line="+58"/>
         <source>First point</source>
         <translatorcomment>--google--
 Especifique o ponto inicial
@@ -13,7 +13,7 @@ Especifique o primeiro ponto de distância</translatorcomment>
         <translation>Primeiro ponto</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="65"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Indique o segundo ponto
@@ -22,7 +22,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location filename="../Circle2P.js" line="147"/>
+        <location line="+82"/>
         <source>The two points are identical</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
@@ -30,7 +30,7 @@ Os dois pontos são idênticos</translatorcomment>
         <translation>Os dois pontos são idênticos</translation>
     </message>
     <message>
-        <location filename="../Circle2PInit.js" line="2"/>
+        <location filename="../Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -39,7 +39,7 @@ Os dois pontos são idênticos</translatorcomment>
         <translation>&amp;2 Pontos</translation>
     </message>
     <message>
-        <location filename="../Circle2PInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar círculo de 2 pontos opostos diametralmente</translation>

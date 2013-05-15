@@ -4,14 +4,14 @@
 <context>
     <name>Circle</name>
     <message>
-        <location filename="../Circle.js" line="67"/>
+        <location filename="../Circle.js" line="+67"/>
         <source>Circle Tools</source>
         <translatorcomment>--google--
 Pokaż menu &quot;Okręgi&quot;</translatorcomment>
         <translation type="unfinished">Narzędzia okrąg</translation>
     </message>
     <message>
-        <location filename="../Circle.js" line="72"/>
+        <location line="+5"/>
         <source>Show circle tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -19,7 +19,7 @@ Pokaż menu &quot;Okręgi&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Okręgi&quot;</translation>
     </message>
     <message>
-        <location filename="../Circle.js" line="85"/>
+        <location line="+13"/>
         <source>&amp;Circle</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

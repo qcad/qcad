@@ -4,17 +4,27 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../SaveAs.js" line="32"/>
+        <location filename="../SaveAs.js" line="+32"/>
         <source>Load/Save</source>
         <translation>Carregar/Guardar</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="32"/>
+        <location line="+0"/>
         <source>Save as</source>
         <translation>Guardar como</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="95"/>
+        <location line="+24"/>
+        <source>No export filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No export filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -23,7 +33,7 @@ Formato:</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location filename="../SaveAsInit.js" line="2"/>
+        <location filename="../SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
         <translatorcomment>--ignored case--
 --file: qcadactions_pt.ts--
@@ -31,12 +41,12 @@ Salve &amp;Como...</translatorcomment>
         <translation>Guardar &amp;como...</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="32"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Default format:</source>
         <translation>Formato padrão:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="82"/>
+        <location line="+50"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Mostrar aviso ao salvar em um formato de arquivo que não suporta cores 24bit</translation>
     </message>

@@ -4,12 +4,12 @@
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../TranslateRotateInit.js" line="2"/>
+        <location filename="../TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
         <translation>S&amp;posta e ruota</translation>
     </message>
     <message>
-        <location filename="../TranslateRotate.ui" line="17"/>
+        <location filename="../TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
         <translation>Angolo:</translation>
     </message>
@@ -51,37 +51,37 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
 <context>
     <name>TranslateRotateOptions</name>
     <message>
-        <location filename="../TranslateRotateDialog.ui" line="14"/>
+        <location filename="../TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
         <translation>Opzioni Sposta e Ruota</translation>
     </message>
     <message>
-        <location filename="../TranslateRotateDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Number of Copies</source>
         <translation>Numero di copie</translation>
     </message>
     <message>
-        <location filename="../TranslateRotateDialog.ui" line="34"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Cancella Originali</translation>
     </message>
     <message>
-        <location filename="../TranslateRotateDialog.ui" line="44"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni Originali</translation>
     </message>
     <message>
-        <location filename="../TranslateRotateDialog.ui" line="51"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>Copie &amp;Multiple</translation>
     </message>
     <message>
-        <location filename="../TranslateRotateDialog.ui" line="161"/>
+        <location line="+110"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angolo (a):</translation>
     </message>
     <message>
-        <location filename="../TranslateRotateDialog.ui" line="183"/>
+        <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa layer e gli &amp;attributi corrente</translation>
     </message>

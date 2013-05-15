@@ -4,7 +4,7 @@
 <context>
     <name>IsometricView</name>
     <message>
-        <location filename="../IsometricView.js" line="44"/>
+        <location filename="../IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
         <translation>&amp;Isometrische Ansicht</translation>
     </message>

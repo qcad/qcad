@@ -4,7 +4,7 @@
 <context>
     <name>ModifyExamples</name>
     <message>
-        <location filename="../ModifyExamples.js" line="51"/>
+        <location filename="../ModifyExamples.js" line="+51"/>
         <source>&amp;Modify</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

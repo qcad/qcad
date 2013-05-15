@@ -4,7 +4,7 @@
 <context>
     <name>Point1P</name>
     <message>
-        <location filename="../Point1P.js" line="50"/>
+        <location filename="../Point1P.js" line="+50"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -14,13 +14,13 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Położenie</translation>
     </message>
     <message>
-        <location filename="../Point1PInit.js" line="2"/>
+        <location filename="../Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Single Point</translation>
     </message>
     <message>
-        <location filename="../Point1PInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw single point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj jeden punkt</translation>

@@ -4,12 +4,12 @@
 <context>
     <name>EditFromReference</name>
     <message>
-        <location filename="../EditFromReference.js" line="55"/>
+        <location filename="../EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
         <translation>Block Referenz wählen</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="4"/>
+        <location filename="../EditFromReferenceInit.js" line="+4"/>
         <source>Edit block based on chosen block reference</source>
         <translation>Block basierend auf Block Referenz bearbeiten</translation>
     </message>
@@ -22,7 +22,7 @@
         <translation type="obsolete">Objekt ist keine Block</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="3"/>
+        <location line="-1"/>
         <source>E&amp;dit Block from Reference</source>
         <translation>Block e&amp;ditieren von Referenz</translation>
     </message>

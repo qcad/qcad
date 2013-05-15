@@ -4,7 +4,7 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="60"/>
+        <location filename="../Line2P.js" line="+60"/>
         <source>First point</source>
         <translation>Erster Punkt</translation>
     </message>
@@ -13,22 +13,22 @@
         <translation type="obsolete">Abbrechen</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="68"/>
+        <location line="+8"/>
         <source>Next point</source>
         <translation>Nächster Punkt</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="71"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../Line2PInit.js" line="2"/>
+        <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
         <translation>Linie von &amp;2 Punkten</translation>
     </message>
     <message>
-        <location filename="../Line2PInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Einzelne Linie oder Liniensequenz</translation>
     </message>
@@ -53,12 +53,12 @@
         <translation type="obsolete">Rückgängig</translation>
     </message>
     <message>
-        <location filename="../Line2P.ui" line="23"/>
+        <location filename="../Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
         <translation>Sequenz schliessen</translation>
     </message>
     <message>
-        <location filename="../Line2P.ui" line="40"/>
+        <location line="+17"/>
         <source>Undo Previous Segment</source>
         <translation>Letztes Segment rückgängig</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>ToggleLayerVisibility</name>
     <message>
-        <location filename="../ToggleLayerVisibilityInit.js" line="3"/>
+        <location filename="../ToggleLayerVisibilityInit.js" line="+3"/>
         <source>&amp;Toggle Visibility</source>
         <translatorcomment>--exact match--
 --file: ToggleBlockVisibility_pt.ts--

@@ -4,7 +4,7 @@
 <context>
     <name>ToggleStatusBar</name>
     <message>
-        <location filename="../ToggleStatusBarInit.js" line="2"/>
+        <location filename="../ToggleStatusBarInit.js" line="+2"/>
         <source>&amp;Status Bar</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>La barra de &amp;estado</translation>

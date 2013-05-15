@@ -4,7 +4,7 @@
 <context>
     <name>ZoomIn</name>
     <message>
-        <location filename="../ZoomInInit.js" line="2"/>
+        <location filename="../ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
         <translation>Ansicht ver&amp;grössern</translation>
     </message>

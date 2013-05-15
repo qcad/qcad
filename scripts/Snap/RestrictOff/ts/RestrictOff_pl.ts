@@ -4,7 +4,7 @@
 <context>
     <name>RestrictOff</name>
     <message>
-        <location filename="../RestrictOffInit.js" line="2"/>
+        <location filename="../RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Ograniczenia Off</translation>

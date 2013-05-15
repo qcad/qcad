@@ -4,102 +4,102 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="32"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Rulers and Scrollbars</source>
         <translation>Réguas e barras de rolagem</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="38"/>
+        <location line="+6"/>
         <source>Show rulers</source>
         <translation>Exiba réguas</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="48"/>
+        <location line="+10"/>
         <source>Show scrollbars</source>
         <translation>Mostrar barras de rolagem</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="61"/>
+        <location line="+13"/>
         <source>Cursor</source>
         <translation>Cursor</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="67"/>
+        <location line="+6"/>
         <source>Show crosshairs</source>
         <translation>Mostrar mira</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="77"/>
+        <location line="+10"/>
         <source>Show large crosshairs</source>
         <translation>Exiba mira grande</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="90"/>
+        <location line="+13"/>
         <source>Grid</source>
         <translation>Grade</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="96"/>
+        <location line="+6"/>
         <source>Automatically scale grid</source>
         <translation>Grade escalonada automaticamente</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="106"/>
+        <location line="+10"/>
         <source>Solid grid lines</source>
         <translation>Grade linhas de sólidas</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="113"/>
+        <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
         <translation>Espaçamento mínimo da grade (px):</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="174"/>
+        <location line="+61"/>
         <source>Auto Zoom</source>
         <translation>Close automático</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="180"/>
+        <location line="+6"/>
         <source>Margin (px):</source>
         <translation>Margem (px):</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="237"/>
+        <location line="+57"/>
         <source>Color Adjustment</source>
         <translation>Ajuste de cor</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="243"/>
+        <location line="+6"/>
         <source>Prevent white on white / black on black display</source>
         <translation>Auto corrigir as cores preto e branco</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="269"/>
+        <location line="+26"/>
         <source>Color lightness threshold:</source>
         <translation>Limiar para a luminosidade da cor:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="305"/>
+        <location line="+36"/>
         <source>Performance</source>
         <translation>Desempenho</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="314"/>
+        <location line="+9"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades de prévia:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="372"/>
+        <location line="+58"/>
         <source>Text height display threshold:</source>
         <translation>Mostrar limite para o texto:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="388"/>
+        <location line="+16"/>
         <source>Selection</source>
         <translation>Selecção</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="394"/>
+        <location line="+6"/>
         <source>Persistent Selection</source>
         <translation>Seleção persistente</translation>
     </message>
@@ -107,7 +107,7 @@
 <context>
     <name>GraphicsViewPreferences</name>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="24"/>
+        <location filename="../GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translatorcomment>--exact match--
 --file: DefaultNavigation_pt.ts--
@@ -115,7 +115,7 @@ Ver gráficos</translatorcomment>
         <translation>Ver gráficos</translation>
     </message>
     <message>
-        <location filename="../GraphicsViewPreferences.js" line="24"/>
+        <location line="+0"/>
         <source>Appearance</source>
         <translation>Apresentação</translation>
     </message>

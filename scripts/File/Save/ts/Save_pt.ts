@@ -4,50 +4,50 @@
 <context>
     <name>Save</name>
     <message>
-        <location filename="../Save.js" line="77"/>
+        <location filename="../Save.js" line="+77"/>
         <source>Overwrite File?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Substituir arquivo?</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="78"/>
+        <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="92"/>
-        <location filename="../Save.js" line="101"/>
+        <location line="+14"/>
+        <location line="+9"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Todas as cores personalizadas serão &apos;arredondado&apos; para a cor mais próxima fixo.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="98"/>
+        <location line="-3"/>
         <source>File Format Version Not Recommended</source>
         <translation>Version file formato não recomendado</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="99"/>
+        <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
         <translation>A versão de formato de arquivo que você está usando não é recomendado: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="100"/>
+        <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
         <translation>Todas as entidades e camadas negras serão salvas como branco.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="101"/>
+        <location line="+1"/>
         <source>Proceed?</source>
         <translation>Proceder?</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="143"/>
+        <location line="+42"/>
         <source>Saved drawing:</source>
         <translation>Desenho guardado:</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="145"/>
+        <location line="+2"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
@@ -56,7 +56,7 @@
         <translation type="obsolete">Todas as cores personalizadas serão &apos;arredondado&apos; para a cor mais próxima fixo. Proceder?</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="117"/>
+        <location line="-28"/>
         <source>Saving...</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -64,22 +64,22 @@ A guardar...</translatorcomment>
         <translation>A guardar...</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="120"/>
+        <location line="+3"/>
         <source>Saving to file format version &apos;%1&apos;.</source>
         <translation>Salvando em arquivo formato versão &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="121"/>
+        <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>Entidades e camadas negras são salvos como branco.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="122"/>
+        <location line="+1"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>As cores personalizadas são &apos;arredondado&apos; para a cor mais próxima fixo.</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="128"/>
+        <location line="+6"/>
         <source>File %1 has not been saved.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arquivo &apos;%1&apos; não foi guardado.</translation>
@@ -92,7 +92,7 @@ Desenho salvo: %1</translatorcomment>
         <translation type="obsolete">Desenho guardado: %1</translation>
     </message>
     <message>
-        <location filename="../SaveInit.js" line="2"/>
+        <location filename="../SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--

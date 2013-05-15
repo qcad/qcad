@@ -12,7 +12,7 @@
         <translation type="obsolete">Skript</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
         <translation>Skriptordner neu lesen beim Start</translation>
     </message>
@@ -20,7 +20,7 @@
 <context>
     <name>ScriptingPreferences</name>
     <message>
-        <location filename="../ScriptingPreferences.js" line="24"/>
+        <location filename="../ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
         <translation>Skript</translation>
     </message>

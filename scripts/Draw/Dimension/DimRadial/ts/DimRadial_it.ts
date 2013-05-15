@@ -4,22 +4,22 @@
 <context>
     <name>DimRadial</name>
     <message>
-        <location filename="../DimRadial.js" line="57"/>
+        <location filename="../DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
         <translation>Scegli un arco o un cerchio</translation>
     </message>
     <message>
-        <location filename="../DimRadial.js" line="65"/>
+        <location line="+8"/>
         <source>Dimension line location or angle</source>
         <translation>Posizione della linea di quota o l&apos;angolo</translation>
     </message>
     <message>
-        <location filename="../DimRadialInit.js" line="2"/>
+        <location filename="../DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
         <translation>&amp;Radiale</translation>
     </message>
     <message>
-        <location filename="../DimRadialInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw radial dimension</source>
         <translation>Quota Radiale</translation>
     </message>

@@ -4,8 +4,8 @@
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../BlockList.js" line="269"/>
-        <location filename="../BlockList.js" line="303"/>
+        <location filename="../BlockList.js" line="+269"/>
+        <location line="+34"/>
         <source>Block List</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

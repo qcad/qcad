@@ -4,73 +4,73 @@
 <context>
     <name>Dialog</name>
     <message>
-        <location filename="../ExplodeDialog.ui" line="14"/>
+        <location filename="../ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation>Dialog</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="46"/>
+        <location line="+32"/>
         <source>Ellipses</source>
         <translation>Ellipsen</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="67"/>
+        <location line="+21"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="83"/>
+        <location line="+16"/>
         <source>Dimensions</source>
         <translation>Bemassungen</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="99"/>
+        <location line="+16"/>
         <source>Hatches</source>
         <translation>Schraffuren</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="22"/>
+        <location line="-77"/>
         <source>Arcs and Circles</source>
         <translation>Bögen und Kreise</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="30"/>
+        <location line="+8"/>
         <source>into line segments (fixed length)</source>
         <translation>in Liniensegmente (fixe Länge)</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="35"/>
+        <location line="+5"/>
         <source>into line segments (fixed angle)</source>
         <translation>in Liniensegmente (fixer Winkel)</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="54"/>
+        <location line="+19"/>
         <source>into polyline with arc segments</source>
         <translation>in Polylinien mit Bogensegmenten</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="59"/>
-        <location filename="../ExplodeDialog.ui" line="75"/>
+        <location line="+5"/>
+        <location line="+16"/>
         <source>into polyline with line segments</source>
         <translation>in Polylinien mit Liniensegmenten</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="91"/>
+        <location line="+16"/>
         <source>into lines, solids and texts</source>
         <translation>in Linien, Füllungen und Texte</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="107"/>
+        <location line="+16"/>
         <source>into lines</source>
         <translation>in Linien</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="115"/>
+        <location line="+8"/>
         <source>Blocks</source>
         <translation>Blöcke</translation>
     </message>
     <message>
-        <location filename="../ExplodeDialog.ui" line="123"/>
+        <location line="+8"/>
         <source>into entities</source>
         <translation>in Objekte</translation>
     </message>
@@ -78,27 +78,27 @@
 <context>
     <name>Explode</name>
     <message>
-        <location filename="../ExplodeInit.js" line="2"/>
+        <location filename="../ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
         <translation>&amp;Aufbrechen</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="31"/>
+        <location filename="../Explode.js" line="+31"/>
         <source>Modify</source>
         <translation>Modifizieren</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="31"/>
+        <location line="+0"/>
         <source>Explode</source>
         <translation>Aufbrechen</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Spline segments:</source>
         <translation>Splinesegmente:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="83"/>
+        <location line="+64"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Ellipsensegmente (Vollellipse):</translation>
     </message>

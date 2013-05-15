@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Horizontal einschränken</translation>
     </message>
     <message>
-        <location filename="../RestrictHorizontalInit.js" line="2"/>
+        <location filename="../RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
         <translation>&amp;Horizontal einschränken</translation>
     </message>

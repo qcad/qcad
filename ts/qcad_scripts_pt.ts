@@ -6053,65 +6053,65 @@ Administrar efeitos de filtro SVG</translatorcomment>
         <translation>Gravação automática</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="143"/>
+        <location filename="../AutoSave.js" line="149"/>
         <source>Autosave failed:</source>
         <translation>Gravação automática falhou:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="149"/>
+        <location filename="../AutoSave.js" line="155"/>
         <source>Autosave complete.</source>
         <translation>Gravação automática foi concluída.</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="170"/>
+        <location filename="../AutoSave.js" line="176"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translation>Um arquivo de backup &apos;autosave&apos; para um desenho sem título foi encontrado.
 Você deseja recuperá-lo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="174"/>
+        <location filename="../AutoSave.js" line="180"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
         <translation>%1 arquivos de backup &apos;autosave&apos; para um desenhos sem título foram encontrados.
 Você deseja recuperá-los?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="196"/>
+        <location filename="../AutoSave.js" line="202"/>
         <source>Recovered</source>
         <translation>Recuperado</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="243"/>
+        <location filename="../AutoSave.js" line="249"/>
         <source>Recover File?</source>
         <translation>Recuperar arquivo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="244"/>
+        <location filename="../AutoSave.js" line="250"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translation>Um arquivo de backup &apos;autosave&apos; para &apos;%1&apos; foi encontrado.
 Você deseja recuperá-lo?</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="269"/>
-        <location filename="../AutoSave.js" line="280"/>
-        <location filename="../AutoSave.js" line="285"/>
+        <location filename="../AutoSave.js" line="275"/>
+        <location filename="../AutoSave.js" line="286"/>
+        <location filename="../AutoSave.js" line="291"/>
         <source>Cannot rename file:</source>
         <translation>Não é possível renomear o arquivo:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="272"/>
+        <location filename="../AutoSave.js" line="278"/>
         <source>Moved autosave backup file to:</source>
         <translation>Renomeado arquivo gravação automática:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="288"/>
+        <location filename="../AutoSave.js" line="294"/>
         <source>Moved original file to:</source>
         <translation>Movido arquivo original para:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="304"/>
+        <location filename="../AutoSave.js" line="310"/>
         <source>Cannot remove file:</source>
         <translation>Não é possível excluir arquivo:</translation>
     </message>
@@ -6128,7 +6128,7 @@ Você deseja recuperá-lo?</translation>
         <translation type="obsolete">Renomeado arquivo gravação automática:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="180"/>
+        <location filename="../AutoSave.js" line="186"/>
         <source>Recover Files?</source>
         <translation>Recuperar arquivos?</translation>
     </message>
@@ -6138,7 +6138,7 @@ Você deseja recuperá-lo?</translation>
         <translation type="obsolete">Escolha diretório gravação automática</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="123"/>
+        <location filename="../AutoSave.js" line="129"/>
         <source>Autosaving to:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Gravação automática para:</translation>
@@ -6411,7 +6411,17 @@ Sem Título</translatorcomment>
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="43"/>
+        <source>No import filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenFile.js" line="46"/>
+        <source>No import filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OpenFile.js" line="63"/>
         <source>Open Drawing</source>
         <translatorcomment>--exact match--
 --file: Compare_pt.ts--
@@ -6419,7 +6429,7 @@ Abra desenho</translatorcomment>
         <translation>Abra desenho</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="55"/>
+        <location filename="../OpenFile.js" line="65"/>
         <source>All Files</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -6661,7 +6671,17 @@ Desenho salvo: %1</translatorcomment>
         <translation>Guardar como</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="95"/>
+        <location filename="../SaveAs.js" line="56"/>
+        <source>No export filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SaveAs.js" line="59"/>
+        <source>No export filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SaveAs.js" line="106"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

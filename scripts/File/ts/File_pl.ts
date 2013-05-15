@@ -4,7 +4,7 @@
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="52"/>
+        <location filename="../File.js" line="+52"/>
         <source>&amp;File</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -13,7 +13,7 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
         <translation type="unfinished">&amp;Plik</translation>
     </message>
     <message>
-        <location filename="../File.js" line="103"/>
+        <location line="+51"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -22,13 +22,13 @@ Format:</translatorcomment>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location filename="../File.js" line="139"/>
+        <location line="+36"/>
         <source>Overwrite File?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nadpisz plik?</translation>
     </message>
     <message>
-        <location filename="../File.js" line="140"/>
+        <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">&apos;&amp;#39; Plik już istnieje. Czy chcesz go zastąpić?</translation>

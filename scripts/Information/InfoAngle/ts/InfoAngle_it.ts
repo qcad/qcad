@@ -4,27 +4,27 @@
 <context>
     <name>InfoAngle</name>
     <message>
-        <location filename="../InfoAngle.js" line="59"/>
+        <location filename="../InfoAngle.js" line="+59"/>
         <source>Specify first line</source>
         <translation>Prima linea</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="68"/>
+        <location line="+9"/>
         <source>Specify second line</source>
         <translation>Seconda linea</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="71"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="151"/>
+        <location line="+80"/>
         <source>Angle:</source>
         <translation>Angolo:</translation>
     </message>
     <message>
-        <location filename="../InfoAngleInit.js" line="2"/>
+        <location filename="../InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
         <translatorcomment>--exact match--
 --file: LineAngle_it.ts--

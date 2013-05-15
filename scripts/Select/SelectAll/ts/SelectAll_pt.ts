@@ -4,12 +4,12 @@
 <context>
     <name>SelectAll</name>
     <message>
-        <location filename="../SelectAllInit.js" line="2"/>
+        <location filename="../SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
         <translation>Selecionar &amp;todos</translation>
     </message>
     <message>
-        <location filename="../SelectAllInit.js" line="7"/>
+        <location line="+5"/>
         <source>Select all visible entities</source>
         <translation>Selecionar todas as entidades visíveis</translation>
     </message>

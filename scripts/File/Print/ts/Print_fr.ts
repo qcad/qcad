@@ -4,12 +4,12 @@
 <context>
     <name>Print</name>
     <message>
-        <location filename="../PrintInit.js" line="2"/>
+        <location filename="../PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
         <translation>&amp;Imprimer</translation>
     </message>
     <message>
-        <location filename="../PrintInit.js" line="8"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Imprimer dessin courant</translation>
     </message>

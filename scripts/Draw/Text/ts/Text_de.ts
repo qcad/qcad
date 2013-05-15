@@ -8,7 +8,7 @@
         <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/CharacterMapDialog.ui" line="14"/>
+        <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
         <translation>Zeichentabelle</translation>
     </message>
@@ -16,17 +16,17 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="81"/>
+        <location filename="../Text.js" line="+81"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../TextInit.js" line="2"/>
+        <location filename="../TextInit.js" line="+2"/>
         <source>&amp;Text</source>
         <translation>&amp;Text</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="31"/>
+        <location filename="../Text.ui" line="+31"/>
         <source>Height:</source>
         <translation>Höhe:</translation>
     </message>
@@ -35,7 +35,7 @@
         <translation type="obsolete">10</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="51"/>
+        <location line="+20"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
@@ -44,12 +44,12 @@
         <translation type="obsolete">0</translation>
     </message>
     <message>
-        <location filename="../TextInit.js" line="6"/>
+        <location filename="../TextInit.js" line="+4"/>
         <source>Draw text</source>
         <translation>Text einfügen</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="17"/>
+        <location filename="../Text.ui" line="-34"/>
         <source>Contents:</source>
         <translation>Inhalt:</translation>
     </message>
@@ -57,109 +57,109 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="351"/>
+        <location filename="../TextDialog/TextDialog.js" line="+351"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="355"/>
+        <location line="+4"/>
         <source>&amp;Redo</source>
         <translation>&amp;Wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="359"/>
+        <location line="+4"/>
         <source>Cu&amp;t</source>
         <translation>Aus&amp;schneiden</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="363"/>
+        <location line="+4"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopieren</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="367"/>
+        <location line="+4"/>
         <source>&amp;Paste</source>
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="862"/>
+        <location line="+495"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="865"/>
+        <location line="+3"/>
         <source>Diameter</source>
         <translation>Durchmesser</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="866"/>
+        <location line="+1"/>
         <source>Almost equal</source>
         <translation>Fast gleich</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="867"/>
+        <location line="+1"/>
         <source>Multiplication</source>
         <translation>Multiplikation</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="868"/>
+        <location line="+1"/>
         <source>Division</source>
         <translation>Division</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="869"/>
+        <location line="+1"/>
         <source>Delta</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="870"/>
+        <location line="+1"/>
         <source>Pi</source>
         <translation>Pi</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="14"/>
+        <location filename="../TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="52"/>
+        <location line="+38"/>
         <source>Height:</source>
         <translation>Höhe:</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="101"/>
+        <location line="+49"/>
         <source>Simple text
 (one line, no formatting)</source>
         <translation>Einfacher Text
 (Eine Linie, keine Formatierung)</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="158"/>
+        <location line="+57"/>
         <source>Cut</source>
         <translation>Ausschneiden</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="168"/>
+        <location line="+10"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="178"/>
+        <location line="+10"/>
         <source>Paste</source>
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="440"/>
+        <location line="+262"/>
         <source>Line Spacing Factor</source>
         <translation>Linienabstand Faktor</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="456"/>
+        <location line="+16"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="469"/>
+        <location line="+13"/>
         <source>Rotation Angle</source>
         <translation>Rotationswinkel</translation>
     </message>
@@ -168,102 +168,102 @@
         <translation type="obsolete">0</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="494"/>
+        <location line="+25"/>
         <source>Alignment</source>
         <translation>Ausrichtung</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="515"/>
+        <location line="+21"/>
         <source>Top Center</source>
         <translation>Oben zentriert</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="547"/>
+        <location line="+32"/>
         <source>Top Left</source>
         <translation>Open links</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="582"/>
+        <location line="+35"/>
         <source>Top Right</source>
         <translation>Oben rechts</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="614"/>
+        <location line="+32"/>
         <source>Bottom Center</source>
         <translation>Unten zentriert</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="646"/>
+        <location line="+32"/>
         <source>Middle Left</source>
         <translation>Mitte links</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="678"/>
+        <location line="+32"/>
         <source>Middle Center</source>
         <translation>Mitte zentriert</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="710"/>
+        <location line="+32"/>
         <source>Middle Right</source>
         <translation>Mitte rechts</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="742"/>
+        <location line="+32"/>
         <source>Bottom Left</source>
         <translation>Unten links</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="774"/>
+        <location line="+32"/>
         <source>Bottom Right</source>
         <translation>Unten rechts</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="833"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="846"/>
+        <location line="+13"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="375"/>
+        <location filename="../TextDialog/TextDialog.js" line="-495"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="384"/>
+        <location line="+9"/>
         <source>&amp;Italic</source>
         <translation>&amp;Kursiv</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="404"/>
+        <location line="+20"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Tiefgestellt</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="410"/>
+        <location line="+6"/>
         <source>&amp;Superscript</source>
         <translation>&amp;Hochgestellt</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="428"/>
+        <location line="+18"/>
         <source>&amp;Color...</source>
         <translation>&amp;Farbe...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="434"/>
+        <location line="+6"/>
         <source>&amp;Special Characters...</source>
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="734"/>
+        <location line="+300"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="863"/>
+        <location line="+129"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>
@@ -272,42 +272,42 @@
         <translation type="obsolete">Fast gleich</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="871"/>
+        <location line="+8"/>
         <source>Identity</source>
         <translation>Identität</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="872"/>
+        <location line="+1"/>
         <source>Not equal</source>
         <translation>Ungleich</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="873"/>
+        <location line="+1"/>
         <source>Ohm</source>
         <translation>Ohm</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="874"/>
+        <location line="+1"/>
         <source>Omega</source>
         <translation>Omega</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="875"/>
+        <location line="+1"/>
         <source>Squared</source>
         <translation>Quadrat</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="876"/>
+        <location line="+1"/>
         <source>Cubed</source>
         <translation>Kubik</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="28"/>
+        <location filename="../TextDialog/TextDialog.ui" line="-818"/>
         <source>Main Font</source>
         <translation>Hauptschriftart</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="59"/>
+        <location line="+31"/>
         <source>Text Height in Drawing Units</source>
         <translation>Texthöhe</translation>
     </message>
@@ -316,14 +316,14 @@
         <translation type="obsolete">1.0</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="77"/>
-        <location filename="../TextDialog/TextDialog.ui" line="290"/>
+        <location line="+18"/>
+        <location line="+213"/>
         <source>Bold</source>
         <translation>Fett</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="84"/>
-        <location filename="../TextDialog/TextDialog.ui" line="303"/>
+        <location line="-206"/>
+        <location line="+219"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: qt_de.ts--
@@ -332,12 +332,12 @@ Kursiv
         <translation>Kursiv</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="122"/>
+        <location line="-181"/>
         <source>Rich Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="98"/>
+        <location line="-24"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Test passt auf eine Zeile und hat keine Formatierungen</translation>
     </message>
@@ -390,32 +390,32 @@ Kursiv
         <translation type="obsolete">20.0</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="293"/>
+        <location line="+195"/>
         <source>Ctrl+B</source>
         <translation>Ctrl-F</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="306"/>
+        <location line="+13"/>
         <source>Ctrl+I</source>
         <translation>Ctrl-I</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="346"/>
+        <location line="+40"/>
         <source>Insert Symbol...</source>
         <translation>Symbol einfügen...</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="389"/>
+        <location line="+43"/>
         <source>Source</source>
         <translation>Quelltext</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="421"/>
+        <location line="+32"/>
         <source>Text Geometry</source>
         <translation>Textgeometrie</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="427"/>
+        <location line="+6"/>
         <source>Line spacing factor:</source>
         <translation>Linienabstand:</translation>
     </message>

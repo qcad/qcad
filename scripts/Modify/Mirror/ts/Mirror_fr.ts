@@ -4,21 +4,21 @@
 <context>
     <name>Mirror</name>
     <message>
-        <location filename="../Mirror.js" line="62"/>
+        <location filename="../Mirror.js" line="+62"/>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Indiquer le premier point de l&apos;axe de symétrie</translatorcomment>
         <translation>Premier point de l&apos;axe de symétrie</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="69"/>
+        <location line="+7"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--
 Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Deuxième point de l&apos;axe de symétrie</translation>
     </message>
     <message>
-        <location filename="../MirrorInit.js" line="2"/>
+        <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
         <translation>&amp;Symétrie</translation>
     </message>
@@ -50,27 +50,27 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
 <context>
     <name>MirrorOptions</name>
     <message>
-        <location filename="../MirrorDialog.ui" line="14"/>
+        <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
         <translation>Options de symétrie</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="24"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Nombre de copies</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="30"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Supprimer original</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="40"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="135"/>
+        <location line="+95"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>

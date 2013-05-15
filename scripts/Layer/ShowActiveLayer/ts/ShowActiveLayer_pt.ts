@@ -4,7 +4,7 @@
 <context>
     <name>ShowActiveLayer</name>
     <message>
-        <location filename="../ShowActiveLayerInit.js" line="2"/>
+        <location filename="../ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Só mostrar atividade</translation>

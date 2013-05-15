@@ -4,7 +4,7 @@
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../LineBisector.js" line="62"/>
+        <location filename="../LineBisector.js" line="+62"/>
         <source>First line</source>
         <translatorcomment>--google--
 Zaznacz pierwszą linię
@@ -13,7 +13,7 @@ Wskaż pierwszą linie</translatorcomment>
         <translation type="unfinished">Pierwsza linia</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="66"/>
+        <location line="+4"/>
         <source>Second line</source>
         <translatorcomment>--google--
 Zaznacz drugą linię
@@ -22,13 +22,13 @@ Wskaż drugą linie</translatorcomment>
         <translation type="unfinished">Druga linia</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="141"/>
+        <location line="+75"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Linie nie przecinają się.</translation>
     </message>
     <message>
-        <location filename="../LineBisector.ui" line="17"/>
+        <location filename="../LineBisector.ui" line="+17"/>
         <source>Length:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -37,7 +37,7 @@ Wprowadź długość:</translatorcomment>
         <translation type="unfinished">Długość:</translation>
     </message>
     <message>
-        <location filename="../LineBisector.ui" line="37"/>
+        <location line="+20"/>
         <source>Number:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -46,13 +46,13 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Liczba:</translation>
     </message>
     <message>
-        <location filename="../LineBisectorInit.js" line="2"/>
+        <location filename="../LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kąt Dwusieczna</translation>
     </message>
     <message>
-        <location filename="../LineBisectorInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj kąt bisector, trisector ...</translation>

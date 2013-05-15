@@ -4,7 +4,7 @@
 <context>
     <name>CloseAll</name>
     <message>
-        <location filename="../CloseAllInit.js" line="2"/>
+        <location filename="../CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
         <translation>Cerr&amp;ar todo</translation>
     </message>

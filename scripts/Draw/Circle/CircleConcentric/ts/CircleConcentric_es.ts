@@ -4,12 +4,12 @@
 <context>
     <name>CircleConcentric</name>
     <message>
-        <location filename="../CircleConcentric.ui" line="17"/>
+        <location filename="../CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
         <translation>Distancia:</translation>
     </message>
     <message>
-        <location filename="../CircleConcentric.ui" line="37"/>
+        <location line="+20"/>
         <source>Number:</source>
         <translation>Número:</translation>
     </message>
@@ -18,12 +18,12 @@
         <translation type="obsolete">&amp;Concéntrico (Distancia)</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricInit.js" line="2"/>
+        <location filename="../CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translation>&amp;Concéntrico (Distancia)</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric circle</source>
         <translation>Dibuja un círculo concéntrico</translation>
     </message>

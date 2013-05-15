@@ -4,7 +4,7 @@
 <context>
     <name>Circle2PR</name>
     <message>
-        <location filename="../Circle2PR.js" line="65"/>
+        <location filename="../Circle2PR.js" line="+65"/>
         <source>First point</source>
         <translatorcomment>--google--
 Especifique o ponto inicial
@@ -13,7 +13,7 @@ Especifique o primeiro ponto de distância</translatorcomment>
         <translation>Primeiro ponto</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="72"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Indique o segundo ponto
@@ -22,7 +22,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="178"/>
+        <location line="+106"/>
         <source>Invalid radius</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
@@ -30,7 +30,7 @@ Inválido raio</translatorcomment>
         <translation>Inválido raio</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.js" line="183"/>
+        <location line="+5"/>
         <source>The two points are identical</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
@@ -38,7 +38,7 @@ Os dois pontos são idênticos</translatorcomment>
         <translation>Os dois pontos são idênticos</translation>
     </message>
     <message>
-        <location filename="../Circle2PRInit.js" line="2"/>
+        <location filename="../Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
@@ -46,13 +46,13 @@ Os dois pontos são idênticos</translatorcomment>
         <translation>&amp;2 pontos e raio</translation>
     </message>
     <message>
-        <location filename="../Circle2PRInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar círculo de 2 pontos e raio</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="17"/>
+        <location filename="../Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -61,7 +61,7 @@ Raio</translatorcomment>
         <translation>Raio:</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="41"/>
+        <location line="+24"/>
         <source>Solution:</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
@@ -70,14 +70,14 @@ Solução:</translatorcomment>
         <translation>Solução:</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="48"/>
+        <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Centro esquerda de Linha P1 - P2</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="61"/>
-        <location filename="../Circle2PR.ui" line="78"/>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Solution</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
@@ -87,7 +87,7 @@ Solução:</translatorcomment>
         <translation>Solução</translation>
     </message>
     <message>
-        <location filename="../Circle2PR.ui" line="68"/>
+        <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Centro é o direito da linha P1-P2</translation>

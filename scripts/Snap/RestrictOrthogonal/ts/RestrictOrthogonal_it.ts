@@ -4,7 +4,7 @@
 <context>
     <name>RestrictOrthogonal</name>
     <message>
-        <location filename="../RestrictOrthogonalInit.js" line="2"/>
+        <location filename="../RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--

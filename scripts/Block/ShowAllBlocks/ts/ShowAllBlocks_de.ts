@@ -4,7 +4,7 @@
 <context>
     <name>ShowAllBlocks</name>
     <message>
-        <location filename="../ShowAllBlocksInit.js" line="2"/>
+        <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show all</source>
         <translation>Alle &amp;anzeigen</translation>
     </message>

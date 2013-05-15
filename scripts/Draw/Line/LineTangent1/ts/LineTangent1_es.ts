@@ -8,32 +8,32 @@
         <translation type="obsolete">&amp;Tangente (P,C)</translation>
     </message>
     <message>
-        <location filename="../LineTangent1Init.js" line="2"/>
+        <location filename="../LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
         <translation>&amp;Tangente (P,C)</translation>
     </message>
     <message>
-        <location filename="../LineTangent1Init.js" line="7"/>
+        <location line="+5"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Dibujar tangente (punto, círculo)</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="62"/>
+        <location filename="../LineTangent1.js" line="+62"/>
         <source>Choose start point of tangent</source>
         <translation>Elija el punto de inicio de la tangencia</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="72"/>
+        <location line="+10"/>
         <source>Choose circle, arc or ellipse</source>
         <translation>Elija un círculo, un arco o una elipse</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="155"/>
+        <location line="+83"/>
         <source>No tangent possible.</source>
         <translation>No tangente es posible.</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="211"/>
+        <location line="+56"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>No se puede trazar una tangente desde un punto dentro de un círculo con el círculo</translation>
     </message>

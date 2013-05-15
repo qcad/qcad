@@ -14,17 +14,17 @@
         <translation type="obsolete">Montrer modifier les outils</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="104"/>
+        <location filename="../Modify.js" line="+104"/>
         <source>Modification Tools</source>
         <translation>Outils de modification</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="109"/>
+        <location line="+5"/>
         <source>Show modification tools</source>
         <translation>Montrer les outils de modification</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="126"/>
+        <location line="+17"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifier</translation>
     </message>
@@ -32,13 +32,13 @@
 <context>
     <name>ModifyCorner</name>
     <message>
-        <location filename="../ModifyCorner.js" line="69"/>
+        <location filename="../ModifyCorner.js" line="+69"/>
         <source>Choose first entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Choisissez première entité</translation>
     </message>
     <message>
-        <location filename="../ModifyCorner.js" line="79"/>
+        <location line="+10"/>
         <source>Choose second entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Choisissez seconde entité</translation>
@@ -47,7 +47,7 @@
 <context>
     <name>Transform</name>
     <message>
-        <location filename="../Transform.js" line="38"/>
+        <location filename="../Transform.js" line="+38"/>
         <source>This tool requires a selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cet outil nécessite une sélection</translation>

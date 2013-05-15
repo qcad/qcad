@@ -8,22 +8,22 @@
         <translation type="obsolete">Formular</translation>
     </message>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="69"/>
+        <location filename="../CoordinateDisplay.ui" line="+69"/>
         <source>Absolute Cartesian Coordinate</source>
         <translation>Absolute Kartesische Koordinate</translation>
     </message>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="96"/>
+        <location line="+27"/>
         <source>Absolute Polar Coordinate</source>
         <translation>Absolute polare Koordinate</translation>
     </message>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="123"/>
+        <location line="+27"/>
         <source>Relative Cartesian Coordinate</source>
         <translation>Relative Kartesische Koordinate</translation>
     </message>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="150"/>
+        <location line="+27"/>
         <source>Relative Polar Coordinate</source>
         <translation>Relative polare Koordinate</translation>
     </message>

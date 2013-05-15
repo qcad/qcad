@@ -4,32 +4,32 @@
 <context>
     <name>LinePolygonCP</name>
     <message>
-        <location filename="../LinePolygonCP.js" line="58"/>
+        <location filename="../LinePolygonCP.js" line="+58"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.js" line="65"/>
+        <location line="+7"/>
         <source>Corner point</source>
         <translation>Punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.js" line="68"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCPInit.js" line="2"/>
+        <location filename="../LinePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
         <translation>Pol&amp;igono (centro, punto)</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCPInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Disegnare un poligono regolare dal punto centrale e un punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.ui" line="17"/>
+        <location filename="../LinePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Punti dell&apos;angolo:</translation>
     </message>

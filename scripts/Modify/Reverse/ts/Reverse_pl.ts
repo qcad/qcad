@@ -4,7 +4,7 @@
 <context>
     <name>Reverse</name>
     <message>
-        <location filename="../ReverseInit.js" line="2"/>
+        <location filename="../ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odwracać</translation>

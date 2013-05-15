@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Vertikal einschränken</translation>
     </message>
     <message>
-        <location filename="../RestrictVerticalInit.js" line="2"/>
+        <location filename="../RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
         <translation>&amp;Vertikal einschränken</translation>
     </message>

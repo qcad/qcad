@@ -4,12 +4,22 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="52"/>
+        <location filename="../OpenFile.js" line="+43"/>
+        <source>No import filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No import filters have been found. Aborting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Open Drawing</source>
         <translation>Apri il Disegno</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="55"/>
+        <location line="+2"/>
         <source>All Files</source>
         <translation>Tutti i file</translation>
     </message>
@@ -48,12 +58,12 @@
         <translation type="obsolete">Sola lettura</translation>
     </message>
     <message>
-        <location filename="../OpenFileInit.js" line="2"/>
+        <location filename="../OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
         <translation>&amp;Apri</translation>
     </message>
     <message>
-        <location filename="../OpenFileInit.js" line="8"/>
+        <location line="+6"/>
         <source>Open an existing drawing</source>
         <translation>Aprire un disegno esistente</translation>
     </message>

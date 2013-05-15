@@ -4,7 +4,7 @@
 <context>
     <name>SnapGrid</name>
     <message>
-        <location filename="../SnapGridInit.js" line="2"/>
+        <location filename="../SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
         <translation>Grille</translation>
     </message>

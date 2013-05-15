@@ -8,12 +8,12 @@
         <translation type="obsolete">Cotation &amp;horizontale</translation>
     </message>
     <message>
-        <location filename="../DimHorizontalInit.js" line="2"/>
+        <location filename="../DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
         <translation>&amp;Horizontale</translation>
     </message>
     <message>
-        <location filename="../DimHorizontalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw horizontal dimension</source>
         <translation>Cotation horizontale</translation>
     </message>

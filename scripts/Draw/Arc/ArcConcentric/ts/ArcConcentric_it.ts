@@ -4,12 +4,12 @@
 <context>
     <name>ArcConcentric</name>
     <message>
-        <location filename="../ArcConcentric.ui" line="17"/>
+        <location filename="../ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>
     <message>
-        <location filename="../ArcConcentric.ui" line="37"/>
+        <location line="+20"/>
         <source>Number:</source>
         <translation>Numero:</translation>
     </message>
@@ -18,12 +18,12 @@
         <translation type="obsolete">&amp;Concentrico (Distanza)</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricInit.js" line="2"/>
+        <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translation>&amp;Concentrico (Distanza)</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric arc</source>
         <translation>Disegnare un arco concentrico</translation>
     </message>

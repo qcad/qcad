@@ -4,7 +4,7 @@
 <context>
     <name>AddBlock</name>
     <message>
-        <location filename="../AddBlockInit.js" line="2"/>
+        <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Block</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -12,7 +12,7 @@
         <translation>&amp;Adicione Bloco</translation>
     </message>
     <message>
-        <location filename="../AddBlockInit.js" line="8"/>
+        <location line="+6"/>
         <source>Add new empty block</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Adicionar novo bloco vazio</translation>

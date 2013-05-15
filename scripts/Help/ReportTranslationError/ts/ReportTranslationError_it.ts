@@ -4,7 +4,7 @@
 <context>
     <name>ReportTranslationError</name>
     <message>
-        <location filename="../ReportTranslationErrorInit.js" line="3"/>
+        <location filename="../ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
         <translation>Segnala errore di &amp;traduzione</translation>
     </message>

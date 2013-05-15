@@ -4,7 +4,7 @@
 <context>
     <name>ZoomIn</name>
     <message>
-        <location filename="../ZoomInInit.js" line="2"/>
+        <location filename="../ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

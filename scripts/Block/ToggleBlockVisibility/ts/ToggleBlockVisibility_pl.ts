@@ -4,7 +4,7 @@
 <context>
     <name>ToggleBlockVisibility</name>
     <message>
-        <location filename="../ToggleBlockVisibilityInit.js" line="2"/>
+        <location filename="../ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

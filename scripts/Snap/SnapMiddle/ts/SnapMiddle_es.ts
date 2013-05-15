@@ -4,7 +4,7 @@
 <context>
     <name>SnapMiddle</name>
     <message>
-        <location filename="../SnapMiddleInit.js" line="2"/>
+        <location filename="../SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
         <translation>Punto &amp;medio</translation>
     </message>

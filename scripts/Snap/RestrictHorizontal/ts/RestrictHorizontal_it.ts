@@ -4,7 +4,7 @@
 <context>
     <name>RestrictHorizontal</name>
     <message>
-        <location filename="../RestrictHorizontalInit.js" line="2"/>
+        <location filename="../RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--

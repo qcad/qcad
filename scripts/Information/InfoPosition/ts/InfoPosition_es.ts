@@ -4,12 +4,12 @@
 <context>
     <name>InfoPosition</name>
     <message>
-        <location filename="../InfoPosition.js" line="47"/>
+        <location filename="../InfoPosition.js" line="+47"/>
         <source>Point</source>
         <translation>Punto</translation>
     </message>
     <message>
-        <location filename="../InfoPositionInit.js" line="2"/>
+        <location filename="../InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
         <translation>&amp;Posición</translation>
     </message>

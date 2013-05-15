@@ -4,19 +4,19 @@
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../ArcTangential.js" line="63"/>
+        <location filename="../ArcTangential.js" line="+63"/>
         <source>Choose base line or base arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz linię bazową lub łuku bazowego</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.js" line="69"/>
+        <location line="+6"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz punkt końcowy łuku</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.ui" line="17"/>
+        <location filename="../ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -25,13 +25,13 @@ Promień:</translatorcomment>
         <translation type="unfinished">Promień:</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="2"/>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Stycznie podłączony</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw arc tangential to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj łuk styczny do jednostki bazowej</translation>

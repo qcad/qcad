@@ -4,7 +4,7 @@
 <context>
     <name>SnapIntersectionManual</name>
     <message>
-        <location filename="../SnapIntersectionManualInit.js" line="2"/>
+        <location filename="../SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Instrukcja Intersection</translation>

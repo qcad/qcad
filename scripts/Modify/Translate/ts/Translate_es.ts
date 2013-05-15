@@ -4,12 +4,12 @@
 <context>
     <name>Translate</name>
     <message>
-        <location filename="../Translate.js" line="62"/>
+        <location filename="../Translate.js" line="+62"/>
         <source>Reference point</source>
         <translation>Punto de referencia</translation>
     </message>
     <message>
-        <location filename="../Translate.js" line="70"/>
+        <location line="+8"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_es.ts--
@@ -18,12 +18,12 @@ Punto objetivo</translatorcomment>
         <translation>Punto objetivo</translation>
     </message>
     <message>
-        <location filename="../TranslateInit.js" line="2"/>
+        <location filename="../TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
         <translation>&amp;Mover / copiar</translation>
     </message>
     <message>
-        <location filename="../TranslateInit.js" line="8"/>
+        <location line="+6"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mover o copiar entidades una vez o varias veces</translation>
@@ -62,32 +62,32 @@ Usar capa y los &amp;atributos actual</translatorcomment>
 <context>
     <name>TranslateOptions</name>
     <message>
-        <location filename="../TranslateDialog.ui" line="14"/>
+        <location filename="../TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
         <translation>Opciones de mover / copiar</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Number of Copies</source>
         <translation>Número de copias</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="34"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Eliminar original</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="44"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="51"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location filename="../TranslateDialog.ui" line="159"/>
+        <location line="+108"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usar capa y los &amp;atributos actual</translation>
     </message>

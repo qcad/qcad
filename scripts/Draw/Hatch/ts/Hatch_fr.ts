@@ -4,27 +4,27 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="55"/>
+        <location filename="../Hatch.js" line="+55"/>
         <source>No boundary selected.</source>
         <translation>Pas de frontière sélectionnée.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="85"/>
+        <location line="+30"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Contour pas fermé au point %1/%2.</translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="150"/>
+        <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Chaque objet frontière doit être une ligne, arc, cercle, un arc elliptique, ellipse, polyligne ou une spline. Trouvés:</translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="2"/>
+        <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Hachure</translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw hatch or solid fill</source>
         <translation>Dessinez une hachure ou un remplissage uni</translation>
     </message>
@@ -32,42 +32,42 @@
 <context>
     <name>HatchDialog</name>
     <message>
-        <location filename="../HatchDialog.ui" line="17"/>
+        <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
         <translation>Hachure</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="29"/>
+        <location line="+12"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="35"/>
+        <location line="+6"/>
         <source>Solid Fill</source>
         <translation>Remplissage uni</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="45"/>
+        <location line="+10"/>
         <source>Hatch Pattern</source>
         <translation>Motif hachure</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="61"/>
+        <location line="+16"/>
         <source>Preview</source>
         <translation>Prévisualisation</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="69"/>
+        <location line="+8"/>
         <source>Pattern</source>
         <translation>Motif</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="83"/>
+        <location line="+14"/>
         <source>Angle:</source>
         <translation>Angle :</translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="90"/>
+        <location line="+7"/>
         <source>Scale:</source>
         <translation>Echelle :</translation>
     </message>

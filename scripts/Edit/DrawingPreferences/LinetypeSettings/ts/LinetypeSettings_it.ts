@@ -4,12 +4,12 @@
 <context>
     <name>LinetypeSettings</name>
     <message>
-        <location filename="../LinetypeSettings.js" line="25"/>
+        <location filename="../LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location filename="../LinetypeSettings.js" line="27"/>
+        <location line="+2"/>
         <source>General</source>
         <translation>Generale</translation>
     </message>
@@ -18,13 +18,13 @@
         <translation type="obsolete">Tipo di linea di default</translation>
     </message>
     <message>
-        <location filename="../LinetypeSettings.js" line="25"/>
-        <location filename="../LinetypeSettings.js" line="27"/>
+        <location line="-2"/>
+        <location line="+2"/>
         <source>Linetype</source>
         <translation>Tipo di linea</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
         <translation>Tipo di linea scala globale:</translation>
     </message>

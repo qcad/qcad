@@ -4,7 +4,7 @@
 <context>
     <name>CloseFile</name>
     <message>
-        <location filename="../CloseFileInit.js" line="2"/>
+        <location filename="../CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--

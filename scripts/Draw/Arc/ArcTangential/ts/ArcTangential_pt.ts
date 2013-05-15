@@ -15,13 +15,13 @@ Raio</translatorcomment>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../ArcTangential.js" line="63"/>
+        <location filename="../ArcTangential.js" line="+63"/>
         <source>Choose base line or base arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha linha de base ou arco de base</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.js" line="69"/>
+        <location line="+6"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolham o ponto final do arco</translation>
@@ -32,18 +32,18 @@ Raio</translatorcomment>
         <translation type="obsolete">Co&amp;ntinuar</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="2"/>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
         <translation>&amp;Tangencialmente ligado</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw arc tangential to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar arco tangente à entidade de base</translation>
     </message>
     <message>
-        <location filename="../ArcTangential.ui" line="17"/>
+        <location filename="../ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Raio:</translation>
     </message>

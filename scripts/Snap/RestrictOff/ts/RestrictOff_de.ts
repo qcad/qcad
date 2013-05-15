@@ -8,7 +8,7 @@
         <translation type="obsolete">Einschränkungen &amp;aufheben</translation>
     </message>
     <message>
-        <location filename="../RestrictOffInit.js" line="2"/>
+        <location filename="../RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
         <translation>Einschränkungen &amp;aufheben</translation>
     </message>

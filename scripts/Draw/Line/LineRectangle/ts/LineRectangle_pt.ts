@@ -4,21 +4,21 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangle.js" line="56"/>
+        <location filename="../LineRectangle.js" line="+56"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Indique o primeiro vértice</translatorcomment>
         <translation>Primeira ponto de canto</translation>
     </message>
     <message>
-        <location filename="../LineRectangle.js" line="63"/>
+        <location line="+7"/>
         <source>Second corner</source>
         <translatorcomment>--google--
 Indique o segundo vértice</translatorcomment>
         <translation>Segundo ponto de canto</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="2"/>
+        <location filename="../LineRectangleInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -26,7 +26,7 @@ Indique o segundo vértice</translatorcomment>
         <translation>&amp;Retângulo</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="8"/>
+        <location line="+6"/>
         <source>Draw rectangle from two corners</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar retângulo de dois cantos</translation>

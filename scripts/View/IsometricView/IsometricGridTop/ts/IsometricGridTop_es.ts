@@ -4,7 +4,7 @@
 <context>
     <name>IsometricGridTop</name>
     <message>
-        <location filename="../IsometricGridTop.js" line="143"/>
+        <location filename="../IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
         <translation>Proyección &amp;superior</translation>
     </message>

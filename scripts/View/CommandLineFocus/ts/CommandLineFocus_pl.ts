@@ -4,7 +4,7 @@
 <context>
     <name>CommandLineFocus</name>
     <message>
-        <location filename="../CommandLineFocusInit.js" line="2"/>
+        <location filename="../CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skoncentruj się na linii poleceń</translation>

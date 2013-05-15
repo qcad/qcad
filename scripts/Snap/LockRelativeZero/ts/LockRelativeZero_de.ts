@@ -8,7 +8,7 @@
         <translation type="obsolete">Relativen Nullpunkt festhalten</translation>
     </message>
     <message>
-        <location filename="../LockRelativeZeroInit.js" line="2"/>
+        <location filename="../LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
         <translation>Relativen Nullpunkt &amp;fixieren</translation>
     </message>

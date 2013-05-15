@@ -4,37 +4,37 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="60"/>
+        <location filename="../Line2P.js" line="+60"/>
         <source>First point</source>
         <translation>Premier point</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="68"/>
+        <location line="+8"/>
         <source>Next point</source>
         <translation>Point suivant</translation>
     </message>
     <message>
-        <location filename="../Line2P.js" line="71"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location filename="../Line2PInit.js" line="2"/>
+        <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
         <translation>Ligne de &amp;2 points</translation>
     </message>
     <message>
-        <location filename="../Line2PInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Tracez une ligne unique ou d&apos;une séquence de lignes</translation>
     </message>
     <message>
-        <location filename="../Line2P.ui" line="23"/>
+        <location filename="../Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
         <translation>Fermer la séquence</translation>
     </message>
     <message>
-        <location filename="../Line2P.ui" line="40"/>
+        <location line="+17"/>
         <source>Undo Previous Segment</source>
         <translation>Annuler dernier segment</translation>
     </message>

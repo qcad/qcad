@@ -13,7 +13,7 @@ Insira um bloco</translatorcomment>
         <translation type="obsolete">Insira bloco</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="17"/>
+        <location filename="../InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -21,13 +21,13 @@ _Rotação</translatorcomment>
         <translation>Rotação:</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="30"/>
+        <location line="+13"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Girar entidades colado&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="120"/>
+        <location line="+90"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -36,19 +36,19 @@ Escala da Superfície</translatorcomment>
         <translation>Ampliar:</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="133"/>
+        <location line="+13"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escala entidades colado&lt;br&gt;por este factor</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="198"/>
+        <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inverter entidades colada&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="212"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inverter entidades colada&lt;br&gt;verticalmente</translation>
@@ -67,41 +67,41 @@ Utilize a camada atual</translatorcomment>
         <translation type="obsolete">Para camada atual</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="226"/>
+        <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Substituir camadas&lt;br&gt;existentes no desenho com&lt;br&gt;camadas da área de transferência</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="229"/>
+        <location line="+3"/>
         <source>Overwrite layers</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Substituir camadas</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="236"/>
+        <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área de transferência</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.ui" line="239"/>
+        <location line="+3"/>
         <source>Overwrite blocks</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sobrescrever blocos</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="87"/>
+        <location filename="../InsertBlockItem.js" line="+87"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajustado nome do bloco inválido &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="100"/>
+        <location line="+13"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItemInit.js" line="2"/>
+        <location filename="../InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
         <translatorcomment>--exact match--
 --file: Insert_pt.ts--

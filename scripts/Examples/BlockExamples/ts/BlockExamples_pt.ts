@@ -4,7 +4,7 @@
 <context>
     <name>BlockExamples</name>
     <message>
-        <location filename="../BlockExamples.js" line="52"/>
+        <location filename="../BlockExamples.js" line="+52"/>
         <source>&amp;Blocks</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Blocos</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>AutoTrim</name>
     <message>
-        <location filename="../AutoTrimInit.js" line="2"/>
+        <location filename="../AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
         <translation>Ajustement &amp;automatique</translation>
     </message>

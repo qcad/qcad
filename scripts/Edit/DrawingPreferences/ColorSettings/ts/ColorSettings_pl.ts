@@ -4,7 +4,7 @@
 <context>
     <name>ColorSettings</name>
     <message>
-        <location filename="../ColorSettings.js" line="25"/>
+        <location filename="../ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -12,13 +12,13 @@ Domyślne dla nowych rysunków</translatorcomment>
         <translation type="unfinished">Domyślne dla nowych rysunków</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="25"/>
+        <location line="+0"/>
         <source>Printing - Colors</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Drukowanie - Colors</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="27"/>
+        <location line="+2"/>
         <source>Printing</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -28,7 +28,7 @@ Drukowanie zakończone</translatorcomment>
         <translation type="unfinished">Drukowanie</translation>
     </message>
     <message>
-        <location filename="../ColorSettings.js" line="27"/>
+        <location line="+0"/>
         <source>Colors</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -37,13 +37,13 @@ Kolory
         <translation type="unfinished">Kolory</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="19"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Kolor tła:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="63"/>
+        <location line="+44"/>
         <source>Color Mode</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -51,13 +51,13 @@ Tryb koloru</translatorcomment>
         <translation type="unfinished">Tryb koloru</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="69"/>
+        <location line="+6"/>
         <source>Full color</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pełny kolor</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="89"/>
+        <location line="+20"/>
         <source>Grayscale</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -67,7 +67,7 @@ Skala szarości
         <translation type="unfinished">Skala szarości</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="106"/>
+        <location line="+17"/>
         <source>Black / white</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--

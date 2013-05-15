@@ -4,7 +4,7 @@
 <context>
     <name>SnapIntersection</name>
     <message>
-        <location filename="../SnapIntersectionInit.js" line="2"/>
+        <location filename="../SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

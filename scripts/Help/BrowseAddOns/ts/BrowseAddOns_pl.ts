@@ -4,7 +4,7 @@
 <context>
     <name>BrowseAddOns</name>
     <message>
-        <location filename="../BrowseAddOnsInit.js" line="2"/>
+        <location filename="../BrowseAddOnsInit.js" line="+2"/>
         <source>Browse for Add-ons</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Znajdź dodatków</translation>

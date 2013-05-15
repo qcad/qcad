@@ -4,25 +4,25 @@
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../Projection.js" line="75"/>
+        <location filename="../Projection.js" line="+75"/>
         <source>Projection Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia projekcyjne</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="80"/>
+        <location line="+5"/>
         <source>Show projection tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż narzędzi projekcyjnych</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="93"/>
+        <location line="+13"/>
         <source>&amp;Projection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Projekcja</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="128"/>
+        <location line="+35"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -31,7 +31,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../Projection.js" line="135"/>
+        <location line="+7"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>

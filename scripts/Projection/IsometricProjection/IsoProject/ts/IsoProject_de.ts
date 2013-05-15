@@ -8,7 +8,7 @@
         <translation type="obsolete">Referenzpunkt</translation>
     </message>
     <message>
-        <location filename="../IsoProjectInit.js" line="2"/>
+        <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
         <translation>&amp;Isometrische Projektion</translation>
     </message>
@@ -17,37 +17,37 @@
         <translation type="obsolete">Hinten</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="17"/>
+        <location filename="../IsoProject.ui" line="+17"/>
         <source>Top</source>
         <translation>Oben</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="37"/>
+        <location line="+20"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="78"/>
+        <location line="+41"/>
         <source>Left back</source>
         <translation>Links hinten</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="102"/>
+        <location line="+24"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="119"/>
+        <location line="+17"/>
         <source>Right back</source>
         <translation>Rechts hinten</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="143"/>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translation>Im Gegenuhrzeigersinn rotieren vor Projektion</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="154"/>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation>Im Uhrzeigersinn rotieren vor Projektion</translation>
     </message>
@@ -60,17 +60,17 @@
         <translation type="obsolete">Im Uhrzeigersinn rotieren</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="172"/>
+        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
         <translation>Projektion in Originalgrösse (&apos;Isometrische Zeichnung&apos;)</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="175"/>
+        <location line="+3"/>
         <source>True scale</source>
         <translation>Wahre Skalierung</translation>
     </message>
     <message>
-        <location filename="../IsoProject.ui" line="61"/>
+        <location line="-114"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>

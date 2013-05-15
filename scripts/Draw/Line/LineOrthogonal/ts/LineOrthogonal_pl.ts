@@ -4,7 +4,7 @@
 <context>
     <name>LineOrthogonal</name>
     <message>
-        <location filename="../LineOrthogonal.ui" line="17"/>
+        <location filename="../LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13,7 +13,7 @@ Wprowadź długość:</translatorcomment>
         <translation type="unfinished">Długość:</translation>
     </message>
     <message>
-        <location filename="../LineOrthogonalInit.js" line="2"/>
+        <location filename="../LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -22,7 +22,7 @@ Ograniczaj &amp;prostopadle</translatorcomment>
         <translation type="unfinished">&amp;Prostopadła</translation>
     </message>
     <message>
-        <location filename="../LineOrthogonalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw line orthogonal to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rysowanie linii prostopadłych do jednostki bazowej</translation>

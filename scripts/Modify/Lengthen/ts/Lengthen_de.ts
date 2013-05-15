@@ -8,12 +8,12 @@
         <translation type="obsolete">&amp;Verlängern</translation>
     </message>
     <message>
-        <location filename="../Lengthen.ui" line="17"/>
+        <location filename="../Lengthen.ui" line="+17"/>
         <source>Amount:</source>
         <translation>Betrag:</translation>
     </message>
     <message>
-        <location filename="../Lengthen.ui" line="27"/>
+        <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translation>Betrag um zu verlängern oder verkürzen (negativ)</translation>
     </message>
@@ -22,7 +22,7 @@
         <translation type="obsolete">10</translation>
     </message>
     <message>
-        <location filename="../Lengthen.js" line="60"/>
+        <location filename="../Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
         <translation>Linie oder Bogen wählen</translation>
     </message>
@@ -31,7 +31,7 @@
         <translation type="obsolete">Betrag um zu verlängern oder verkürzen (negativ)</translation>
     </message>
     <message>
-        <location filename="../LengthenInit.js" line="2"/>
+        <location filename="../LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
         <translation>&amp;Verlängern / Verkürzen</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="68"/>
+        <location filename="../Rotate.js" line="+68"/>
         <source>Center point</source>
         <translatorcomment>--google--
 Forzar al centro
@@ -13,12 +13,12 @@ Arremolinar los mapas de bits seleccionados alrededor de un punto central</trans
         <translation>Punto central</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="78"/>
+        <location line="+10"/>
         <source>Reference point</source>
         <translation>Punto de referencia</translation>
     </message>
     <message>
-        <location filename="../Rotate.js" line="87"/>
+        <location line="+9"/>
         <source>Target point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_es.ts--
@@ -27,7 +27,7 @@ Punto objetivo</translatorcomment>
         <translation>Punto objetivo</translation>
     </message>
     <message>
-        <location filename="../RotateInit.js" line="2"/>
+        <location filename="../RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Rotar</translation>
     </message>
@@ -35,37 +35,37 @@ Punto objetivo</translatorcomment>
 <context>
     <name>RotateOptions</name>
     <message>
-        <location filename="../RotateDialog.ui" line="14"/>
+        <location filename="../RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
         <translation>Opciones de rotación</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="28"/>
+        <location line="+14"/>
         <source>Number of Copies</source>
         <translation>Número de copias</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="34"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Eliminar original</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="44"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="51"/>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="161"/>
+        <location line="+110"/>
         <source>&amp;Angle (a):</source>
         <translation>Á&amp;ngulo (a):</translation>
     </message>
     <message>
-        <location filename="../RotateDialog.ui" line="194"/>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--exact match--
 --file: Mirror_es.ts--

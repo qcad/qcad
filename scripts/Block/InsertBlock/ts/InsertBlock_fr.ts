@@ -15,12 +15,12 @@
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="66"/>
+        <location filename="../InsertBlock.js" line="+66"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../InsertBlockInit.js" line="2"/>
+        <location filename="../InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
         <translation>&amp;Insérer bloc</translation>
     </message>
@@ -28,47 +28,47 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../InsertBlock.ui" line="17"/>
+        <location filename="../InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
         <translation>Rotation :</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="30"/>
+        <location line="+13"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translation>Faire pivoter le&lt;br&gt;bloc par cet angle</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="127"/>
+        <location line="+97"/>
         <source>Scale X:</source>
         <translation>Echelle X:</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="140"/>
+        <location line="+13"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translation>Échelle du bloc en X&lt;br&gt;par ce facteur</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="205"/>
+        <location line="+65"/>
         <source>Keep Proportions</source>
         <translation>Garder les proportions</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="225"/>
+        <location line="+20"/>
         <source>Scale Y:</source>
         <translation>Echelle Y:</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="241"/>
+        <location line="+16"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
         <translation>Échelle du bloc en Y&lt;br&gt;par ce facteur</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="313"/>
+        <location line="+72"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translation>Retourner bloc&lt;br&gt;horizontalement</translation>
     </message>
     <message>
-        <location filename="../InsertBlock.ui" line="324"/>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Retourner bloc&lt;br&gt;verticalement</translation>
     </message>

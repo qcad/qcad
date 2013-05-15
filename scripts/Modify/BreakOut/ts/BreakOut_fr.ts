@@ -9,22 +9,22 @@
         <translation type="obsolete">Choisissez ligne, arc ou cercle segment</translation>
     </message>
     <message>
-        <location filename="../BreakOutInit.js" line="2"/>
+        <location filename="../BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
         <translation>&amp;Suppression de segments</translation>
     </message>
     <message>
-        <location filename="../BreakOut.ui" line="17"/>
+        <location filename="../BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
         <translation>Supprimer le segment</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="58"/>
+        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
         <translation>Choisissez ligne, arc, cercle ou ellipse pour ajuster</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="61"/>
+        <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
         <translation>Choisissez segment de ligne, arc, cercle ou ellipse</translation>
     </message>

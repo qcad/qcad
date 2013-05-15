@@ -8,7 +8,7 @@
         <translation type="obsolete">Visita el sitio &amp;Web</translation>
     </message>
     <message>
-        <location filename="../WebsiteInit.js" line="2"/>
+        <location filename="../WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
         <translatorcomment>--exact match--
 --file: qcad_es.ts--

@@ -4,7 +4,7 @@
 <context>
     <name>InfoAngle</name>
     <message>
-        <location filename="../InfoAngle.js" line="59"/>
+        <location filename="../InfoAngle.js" line="+59"/>
         <source>Specify first line</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -12,7 +12,7 @@ Wskaż pierwszą linie</translatorcomment>
         <translation type="unfinished">Wskaż pierwszą linie</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="68"/>
+        <location line="+9"/>
         <source>Specify second line</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -20,7 +20,7 @@ Wskaż drugą linie</translatorcomment>
         <translation type="unfinished">Wskaż drugą linie</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="71"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -30,7 +30,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location filename="../InfoAngle.js" line="151"/>
+        <location line="+80"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -39,7 +39,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished">Kąt:</translation>
     </message>
     <message>
-        <location filename="../InfoAngleInit.js" line="2"/>
+        <location filename="../InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

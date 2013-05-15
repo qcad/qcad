@@ -4,7 +4,7 @@
 <context>
     <name>LinePolygonCP</name>
     <message>
-        <location filename="../LinePolygonPP.ui" line="17"/>
+        <location filename="../LinePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -15,20 +15,20 @@ Cantos:</translatorcomment>
 <context>
     <name>LinePolygonPP</name>
     <message>
-        <location filename="../LinePolygonPP.js" line="58"/>
+        <location filename="../LinePolygonPP.js" line="+58"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Indique o primeiro vértice</translatorcomment>
         <translation>Primeira ponto de canto:</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPP.js" line="65"/>
+        <location line="+7"/>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ponto de canto</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPP.js" line="68"/>
+        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -38,13 +38,13 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPPInit.js" line="2"/>
+        <location filename="../LinePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Polygo&amp;n (dois cantos)</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPPInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw regular polygon from two corner points</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar polígono regular a partir de dois pontos de canto</translation>

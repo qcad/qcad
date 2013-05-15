@@ -8,22 +8,22 @@
         <translation type="obsolete">&amp;Konzentrisch (Distanz)</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricInit.js" line="2"/>
+        <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translation>&amp;Konzentrisch (Distanz)</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric arc</source>
         <translation>Konzentrischen Bogen zeichnen</translation>
     </message>
     <message>
-        <location filename="../ArcConcentric.ui" line="17"/>
+        <location filename="../ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
         <translation>Abstand:</translation>
     </message>
     <message>
-        <location filename="../ArcConcentric.ui" line="37"/>
+        <location line="+20"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
     </message>

@@ -4,21 +4,21 @@
 <context>
     <name>Mirror</name>
     <message>
-        <location filename="../Mirror.js" line="62"/>
+        <location filename="../Mirror.js" line="+62"/>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Indique o primeiro ponto ou linha de espelhamento</translatorcomment>
         <translation>Primeiro ponto do eixo de simetria</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="69"/>
+        <location line="+7"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--
 Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translation>Segundo ponto do eixo de simetria</translation>
     </message>
     <message>
-        <location filename="../MirrorInit.js" line="2"/>
+        <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -66,27 +66,27 @@ Entre o número de cópias</translatorcomment>
 <context>
     <name>MirrorOptions</name>
     <message>
-        <location filename="../MirrorDialog.ui" line="14"/>
+        <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
         <translation>Opções espelho</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="24"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Número de cópias</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="30"/>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
         <translation>&amp;Apague o original</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="40"/>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location filename="../MirrorDialog.ui" line="135"/>
+        <location line="+95"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use camada e &amp;atributos atual</translation>
     </message>

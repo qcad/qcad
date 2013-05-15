@@ -4,7 +4,7 @@
 <context>
     <name>DimHorizontal</name>
     <message>
-        <location filename="../DimHorizontalInit.js" line="2"/>
+        <location filename="../DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13,7 +13,7 @@
         <translation type="unfinished">&amp;Poziomo</translation>
     </message>
     <message>
-        <location filename="../DimHorizontalInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw horizontal dimension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj wymiar horyzontalny</translation>

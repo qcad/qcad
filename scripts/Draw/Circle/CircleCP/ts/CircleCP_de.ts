@@ -4,12 +4,12 @@
 <context>
     <name>CircleCP</name>
     <message>
-        <location filename="../CircleCP.js" line="56"/>
+        <location filename="../CircleCP.js" line="+56"/>
         <source>Center</source>
         <translation>Zentrum</translation>
     </message>
     <message>
-        <location filename="../CircleCP.js" line="63"/>
+        <location line="+7"/>
         <source>Point on circle or radius</source>
         <translation>Punkt auf Kreis oder Radius</translation>
     </message>
@@ -18,12 +18,12 @@
         <translation type="obsolete">Kreis (&amp;Zentrum, Punkt)</translation>
     </message>
     <message>
-        <location filename="../CircleCPInit.js" line="2"/>
+        <location filename="../CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
         <translation>&amp;Zentrum, Punkt</translation>
     </message>
     <message>
-        <location filename="../CircleCPInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Kreis von Zentrum und Punkt auf Kreis</translation>
     </message>

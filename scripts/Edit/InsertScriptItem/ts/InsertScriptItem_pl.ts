@@ -4,7 +4,7 @@
 <context>
     <name>InsertScriptItem</name>
     <message>
-        <location filename="../InsertScriptItem.js" line="65"/>
+        <location filename="../InsertScriptItem.js" line="+65"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -14,7 +14,7 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Położenie</translation>
     </message>
     <message>
-        <location filename="../InsertScriptItemInit.js" line="2"/>
+        <location filename="../InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wstawianie skryptu</translation>

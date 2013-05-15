@@ -4,19 +4,19 @@
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../DimRegen.js" line="63"/>
+        <location filename="../DimRegen.js" line="+63"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Brak podmiotów wymiar z niestandardowych pozycjach etykiet wybrane.</translation>
     </message>
     <message>
-        <location filename="../DimRegen.js" line="66"/>
+        <location line="+3"/>
         <source>Reset label position of %1 dimension(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zresetować pozycję etykiet wymiaru (ów).</translation>
     </message>
     <message>
-        <location filename="../DimRegenInit.js" line="2"/>
+        <location filename="../DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zresetować pozycję etykiet</translation>

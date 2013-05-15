@@ -4,7 +4,7 @@
 <context>
     <name>AutoZoom</name>
     <message>
-        <location filename="../AutoZoomInit.js" line="2"/>
+        <location filename="../AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
         <translation>Zoom &amp;automático</translation>
     </message>

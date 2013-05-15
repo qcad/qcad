@@ -4,17 +4,17 @@
 <context>
     <name>Arc3P</name>
     <message>
-        <location filename="../Arc3P.js" line="62"/>
+        <location filename="../Arc3P.js" line="+62"/>
         <source>Start point</source>
         <translation>Point de départ</translation>
     </message>
     <message>
-        <location filename="../Arc3P.js" line="70"/>
+        <location line="+8"/>
         <source>Point on arc</source>
         <translation>Point sur l&apos;arc</translation>
     </message>
     <message>
-        <location filename="../Arc3P.js" line="77"/>
+        <location line="+7"/>
         <source>End point</source>
         <translation>Point final</translation>
     </message>
@@ -23,12 +23,12 @@
         <translation type="obsolete">Au moins deux points sont identiques</translation>
     </message>
     <message>
-        <location filename="../Arc3PInit.js" line="2"/>
+        <location filename="../Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
         <translation>&amp;3 points</translation>
     </message>
     <message>
-        <location filename="../Arc3PInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw arc from 3 points</source>
         <translation>Tracer un arc de trois points</translation>
     </message>

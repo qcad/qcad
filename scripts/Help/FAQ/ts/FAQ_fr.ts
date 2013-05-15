@@ -9,7 +9,7 @@
         <translation type="obsolete">FAQ (en ligne)</translation>
     </message>
     <message>
-        <location filename="../FAQInit.js" line="2"/>
+        <location filename="../FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
         <translation>FA&amp;Q (en ligne)</translation>
     </message>

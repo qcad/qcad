@@ -4,17 +4,17 @@
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../SvgImport.js" line="38"/>
+        <location filename="../SvgImport.js" line="+38"/>
         <source>Import SVG</source>
         <translation>SVG Import</translation>
     </message>
     <message>
-        <location filename="../SvgImport.js" line="39"/>
+        <location line="+1"/>
         <source>SVG Files</source>
         <translation>SVG Dateien</translation>
     </message>
     <message>
-        <location filename="../SvgImport.js" line="39"/>
+        <location line="+0"/>
         <source>All Files</source>
         <translation>Alle Dateien</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation type="obsolete">SVG Dateien (*.svg);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="../SvgImportInit.js" line="2"/>
+        <location filename="../SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
         <translation>SVG &amp;Import...</translation>
     </message>

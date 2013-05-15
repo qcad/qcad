@@ -47,27 +47,27 @@
 <context>
     <name>GridSettings</name>
     <message>
-        <location filename="../GridSettings.js" line="27"/>
+        <location filename="../GridSettings.js" line="+27"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="25"/>
-        <location filename="../GridSettings.js" line="27"/>
+        <location line="-2"/>
+        <location line="+2"/>
         <source>Grid</source>
         <translation>Raster</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="25"/>
+        <location line="-2"/>
         <source>Defaults for New Drawings</source>
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="108"/>
-        <location filename="../GridSettings.js" line="211"/>
-        <location filename="../GridSettings.js" line="212"/>
-        <location filename="../GridSettings.js" line="234"/>
-        <location filename="../GridSettings.js" line="235"/>
+        <location line="+83"/>
+        <location line="+103"/>
+        <location line="+1"/>
+        <location line="+22"/>
+        <location line="+1"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -79,78 +79,78 @@
 <context>
     <name>scrollArea</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="29"/>
+        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>View 1</source>
         <translation>Ansicht 1</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="35"/>
-        <location filename="../PreferencesPage.ui" line="187"/>
-        <location filename="../PreferencesPage.ui" line="339"/>
-        <location filename="../PreferencesPage.ui" line="491"/>
+        <location line="+6"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Display Grid</source>
         <translation>Raster anzeigen</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="45"/>
-        <location filename="../PreferencesPage.ui" line="197"/>
-        <location filename="../PreferencesPage.ui" line="349"/>
-        <location filename="../PreferencesPage.ui" line="501"/>
+        <location line="-446"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Isometric Grid</source>
         <translation>Isometrisches Raster</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="52"/>
-        <location filename="../PreferencesPage.ui" line="204"/>
-        <location filename="../PreferencesPage.ui" line="356"/>
-        <location filename="../PreferencesPage.ui" line="508"/>
+        <location line="-449"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Grid Spacing</source>
         <translation>Rasterabstand</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="58"/>
-        <location filename="../PreferencesPage.ui" line="148"/>
-        <location filename="../PreferencesPage.ui" line="224"/>
-        <location filename="../PreferencesPage.ui" line="313"/>
-        <location filename="../PreferencesPage.ui" line="389"/>
-        <location filename="../PreferencesPage.ui" line="445"/>
-        <location filename="../PreferencesPage.ui" line="561"/>
-        <location filename="../PreferencesPage.ui" line="591"/>
+        <location line="-450"/>
+        <location line="+90"/>
+        <location line="+76"/>
+        <location line="+89"/>
+        <location line="+76"/>
+        <location line="+56"/>
+        <location line="+116"/>
+        <location line="+30"/>
         <source>Y:</source>
         <translation>Y:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="79"/>
-        <location filename="../PreferencesPage.ui" line="155"/>
-        <location filename="../PreferencesPage.ui" line="210"/>
-        <location filename="../PreferencesPage.ui" line="273"/>
-        <location filename="../PreferencesPage.ui" line="362"/>
-        <location filename="../PreferencesPage.ui" line="452"/>
-        <location filename="../PreferencesPage.ui" line="514"/>
-        <location filename="../PreferencesPage.ui" line="577"/>
+        <location line="-512"/>
+        <location line="+76"/>
+        <location line="+55"/>
+        <location line="+63"/>
+        <location line="+89"/>
+        <location line="+90"/>
+        <location line="+62"/>
+        <location line="+63"/>
         <source>X:</source>
         <translation>X:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="115"/>
-        <location filename="../PreferencesPage.ui" line="267"/>
-        <location filename="../PreferencesPage.ui" line="419"/>
-        <location filename="../PreferencesPage.ui" line="571"/>
+        <location line="-462"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Meta Grid Spacing</source>
         <translation>Meta-Rasterabstand</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="181"/>
+        <location line="-390"/>
         <source>View 2</source>
         <translation>Ansicht 2</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="333"/>
+        <location line="+152"/>
         <source>View 3</source>
         <translation>Ansicht 3</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="485"/>
+        <location line="+152"/>
         <source>View 4</source>
         <translation>Ansicht 4</translation>
     </message>

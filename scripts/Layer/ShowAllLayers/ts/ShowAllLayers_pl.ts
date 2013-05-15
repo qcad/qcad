@@ -4,7 +4,7 @@
 <context>
     <name>ShowAllLayers</name>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="2"/>
+        <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show all Layers</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż wszystkie warstwy</translation>

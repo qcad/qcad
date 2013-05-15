@@ -8,17 +8,17 @@
         <translation type="obsolete">&amp;Konzentrisch (Distanz)</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricInit.js" line="2"/>
+        <location filename="../CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translation>&amp;Konzentrisch (Distanz)</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric circle</source>
         <translation>Konzentrischer Kreis</translation>
     </message>
     <message>
-        <location filename="../CircleConcentric.ui" line="17"/>
+        <location filename="../CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
         <translation>Distanz:</translation>
     </message>
@@ -27,7 +27,7 @@
         <translation type="obsolete">1</translation>
     </message>
     <message>
-        <location filename="../CircleConcentric.ui" line="37"/>
+        <location line="+20"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
     </message>

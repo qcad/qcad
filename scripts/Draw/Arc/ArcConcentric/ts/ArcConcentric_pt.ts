@@ -9,18 +9,18 @@
         <translation type="obsolete">&amp;Concêntricos (distância)</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricInit.js" line="2"/>
+        <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translation>&amp;Concêntricos (distância)</translation>
     </message>
     <message>
-        <location filename="../ArcConcentricInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw concentric arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar arco concêntricos</translation>
     </message>
     <message>
-        <location filename="../ArcConcentric.ui" line="17"/>
+        <location filename="../ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -29,7 +29,7 @@ Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
         <translation>Distância:</translation>
     </message>
     <message>
-        <location filename="../ArcConcentric.ui" line="37"/>
+        <location line="+20"/>
         <source>Number:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

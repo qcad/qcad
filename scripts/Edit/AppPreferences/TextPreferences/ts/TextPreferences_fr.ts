@@ -4,22 +4,22 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Show font preview in font controls</source>
         <translation>Afficher l&apos;aperçu de police dans les contrôles de police</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="27"/>
+        <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
         <translation>Utilisez réduit sélection de polices :</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="41"/>
+        <location line="+14"/>
         <source>Uncheck all</source>
         <translation>Décocher tout</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="48"/>
+        <location line="+7"/>
         <source>Check all</source>
         <translation>Cocher toutes</translation>
     </message>
@@ -27,12 +27,12 @@
 <context>
     <name>TextPreferences</name>
     <message>
-        <location filename="../TextPreferences.js" line="30"/>
+        <location filename="../TextPreferences.js" line="+30"/>
         <source>Draw</source>
         <translation>Dessin</translation>
     </message>
     <message>
-        <location filename="../TextPreferences.js" line="30"/>
+        <location line="+0"/>
         <source>Text</source>
         <translation>Texte</translation>
     </message>
