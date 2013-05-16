@@ -57,7 +57,26 @@ else {
         }
     }
 
-    win32 {
+    else:unix {
+        FILES = \
+            designer/libqwebview.so \
+            imageformats/libqgif.so \
+            imageformats/libqico.so \
+            imageformats/libqjpeg.so \
+            imageformats/libqmng.so \
+            imageformats/libqsvg.so \
+            imageformats/libqtga.so \
+            imageformats/libqtiff.so \
+            sqldrivers/libqsqlite.so
+
+        for(FILE,FILES) {
+            !exists("$${DESTDIR}/../plugins/$${FILE}") {
+                system(cp "$$[QT_INSTALL_PLUGINS]/$${FILE}" "$${DESTDIR}/../plugins/$${FILE}")
+            }
+        }
+    }
+
+    else:win32 {
         FILES = \
             designer\\qwebview.dll \
             imageformats\\qgif4.dll \
