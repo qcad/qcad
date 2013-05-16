@@ -35,26 +35,29 @@ QString RScriptHandler::autostartScriptName = "autostart";
 void RScriptHandler::init(const QString& autostartFile,
     const QStringList& arguments) {
 
-    QList<QString> extensions = getSupportedFileExtensions();
-    QList<QString>::iterator it;
-    for (it = extensions.begin(); it != extensions.end(); ++it) {
-        QString scriptFile;
-        if (autostartFile.isEmpty()) {
-            scriptFile = "scripts" + QString(QDir::separator())
-                    + autostartScriptName + "." + (*it);
-        }
-        else {
-            scriptFile = autostartFile;
-        }
-
-        if (QFileInfo(scriptFile).exists()) {
-            doScript(scriptFile, arguments);
-        }
-        else {
-            qWarning() << "Autostart script not found at: '"
-                       << scriptFile << "'";
+    QStringList triedLocations;
+    if (!autostartFile.isEmpty()) {
+        triedLocations << autostartFile;
+        triedLocations << ":" + autostartFile;
+    }
+    else {
+        QStringList extensions = getSupportedFileExtensions();
+        QStringList::iterator it;
+        for (it = extensions.begin(); it != extensions.end(); ++it) {
+            QString scriptFile = "scripts" + QString(QDir::separator()) + autostartScriptName + "." + (*it);
+            triedLocations << scriptFile;
+            triedLocations << ":" + scriptFile;
         }
     }
+
+    for (int i=0; i<triedLocations.size(); i++) {
+        if (QFileInfo(triedLocations[i]).exists()) {
+            doScript(triedLocations[i], arguments);
+            return;
+        }
+    }
+
+    qWarning() << "Autostart script not found at: \n" << triedLocations.join("\n");
 }
 
 /**
