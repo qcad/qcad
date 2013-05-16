@@ -38,22 +38,25 @@
  * \scriptable
  * \copyable
  */
-class QCADCORE_EXPORT RPluginInfo : public QMap<QString, QVariant> {
+class QCADCORE_EXPORT RPluginInfo {
 public:
     RPluginInfo() {
-        insert("QtVersion", qVersion());
+        map.insert("QtVersion", qVersion());
     }
 
     void set(const QString& key, const QVariant& value) {
-        insert(key, value);
+        map.insert(key, value);
     }
 
     QVariant get(const QString& key, const QVariant& def = RDEFAULT_QVARIANT) {
-        if (contains(key)) {
-            return value(key);
+        if (map.contains(key)) {
+            return map.value(key);
         }
         return def;
     }
+
+private:
+    QVariantMap map;
 };
 
 Q_DECLARE_METATYPE(RPluginInfo)
