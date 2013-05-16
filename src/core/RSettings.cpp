@@ -480,6 +480,7 @@ RColor RSettings::getColor(const QString& key, const RColor& defaultValue) {
     QVariant v;
     v.setValue(ret);
     cache[key] = v;
+
     return ret;
 }
 
@@ -492,11 +493,23 @@ QVariant RSettings::getValue(const QString& key, const QVariant& defaultValue) {
     }
 
     // slow operation:
-    QVariant ret = getQSettings()->value(key, defaultValue);
-    //if (defaultValue.isValid()) {
-        //ret.convert(defaultValue.type());
-    //}
-    cache[key] = ret;
+    QVariant ret = getQSettings()->value(key);
+    if (!ret.isValid()) {
+        return defaultValue;
+    }
+    if (ret.canConvert<RColor>()) {
+        RColor col = ret.value<RColor>();
+        QVariant v;
+        v.setValue(col);
+        cache[key] = v;
+    }
+    else {
+        //if (defaultValue.isValid()) {
+            //ret.convert(defaultValue.type());
+        //}
+        cache[key] = ret;
+    }
+
     return ret;
 }
 
