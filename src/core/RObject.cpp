@@ -342,7 +342,7 @@ bool RObject::setMember(QList<double>& variable, const QVariant& value,
 QSet<RPropertyTypeId> RObject::getPropertyTypeIds() const {
     QSet<RPropertyTypeId> ret = RPropertyTypeId::getPropertyTypeIds(typeid(*this));
 
-    QMap<QString, QVariant>::const_iterator it;
+    QVariantMap::const_iterator it;
     for (it=customProperties.begin(); it!=customProperties.end(); it++) {
         QString name = it.key();
         ret.insert(RPropertyTypeId(name));
@@ -382,7 +382,7 @@ QStringList RObject::getCustomPropertyKeys() const {
 /**
  * \return Map of custom properties assigned to this object.
  */
-QMap<QString, QVariant> RObject::getCustomProperties() const {
+QVariantMap RObject::getCustomProperties() const {
     return customProperties;
 }
 
@@ -399,7 +399,7 @@ void RObject::print(QDebug dbg) const {
 
     if (!customProperties.isEmpty()) {
         dbg.nospace() << "\nCustom Properties:\n";
-        QMap<QString, QVariant>::const_iterator it;
+        QVariantMap::const_iterator it;
         for (it=customProperties.begin(); it!=customProperties.end(); it++) {
             dbg.nospace() << it.key() << ": " << it.value() << "\n";
         }

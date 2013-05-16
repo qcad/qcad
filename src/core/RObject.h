@@ -167,7 +167,7 @@ public:
     /**
      * \nonscriptable
      */
-    QMap<QString, QVariant> getCustomProperties() const;
+    QVariantMap getCustomProperties() const;
 
     virtual int getComplexity() const {
         return 0;

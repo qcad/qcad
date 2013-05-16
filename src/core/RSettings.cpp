@@ -29,7 +29,7 @@
 #include "RSettings.h"
 #include "RVersion.h"
 
-QMap<QString, QVariant> RSettings::cache;
+QVariantMap RSettings::cache;
 
 QString RSettings::launchPath;
 
