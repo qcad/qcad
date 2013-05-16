@@ -28,9 +28,7 @@
     ;
 
     // conversion functions for base classes:
-    static  QScriptValue getQMap_QString_QVariant(QScriptContext *context,
-            QScriptEngine *engine)
-        ;
+    
 
     // returns class name:
     static  QScriptValue getClassName(QScriptContext *context, QScriptEngine *engine) 

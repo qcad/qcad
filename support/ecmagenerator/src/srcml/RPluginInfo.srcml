@@ -52,16 +52,6 @@ dir="./core" filename="RPluginInfo.h">
     <name>QCADCORE_EXPORT</name>
   </macro>
   <name>RPluginInfo</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QMap
-  <argument_list>&lt;
-  <argument>
-    <name>QString</name>
-  </argument>, 
-  <argument>
-    <name>QVariant</name>
-  </argument>&gt;</argument_list></name></super>
   <block>{
   <private type="default"></private>
   <public>public: 
@@ -71,22 +61,22 @@ dir="./core" filename="RPluginInfo.h">
     <block>{ 
     <expr_stmt>
     <expr>
-      <call>
-        <name>insert</name>
-        <argument_list>(
-        <argument>
-          <expr>"QtVersion"</expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <call>
-              <name>qVersion</name>
-              <argument_list>()</argument_list>
-            </call>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</expr_stmt>}</block>
+    <name>map</name>.
+    <call>
+      <name>insert</name>
+      <argument_list>(
+      <argument>
+        <expr>"QtVersion"</expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <call>
+            <name>qVersion</name>
+            <argument_list>()</argument_list>
+          </call>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
   </constructor>
   <function>
     <type>
@@ -111,23 +101,23 @@ dir="./core" filename="RPluginInfo.h">
       </decl>
     </param>)</parameter_list>
     <block>{ 
-    <constructor_decl>
-    <name>insert</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
+    <expr_stmt>
+    <expr>
+    <name>map</name>.
+    <call>
+      <name>insert</name>
+      <argument_list>(
+      <argument>
+        <expr>
           <name>key</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
           <name>value</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
   </function>
   <function>
     <type>
@@ -159,36 +149,44 @@ dir="./core" filename="RPluginInfo.h">
     <if>if 
     <condition>(
     <expr>
+    <name>map</name>.
+    <call>
+      <name>contains</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>key</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>)</condition>
+    <then>
+      <block>{ 
+      <return>return 
+      <expr>
+      <name>map</name>.
       <call>
-        <name>contains</name>
+        <name>value</name>
         <argument_list>(
         <argument>
           <expr>
             <name>key</name>
           </expr>
         </argument>)</argument_list>
-      </call>
-    </expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <call>
-          <name>value</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>key</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>;</return>}</block>
+      </call></expr>;</return>}</block>
     </then></if>
     <return>return 
     <expr>
       <name>def</name>
     </expr>;</return>}</block>
-  </function></public>}</block>;</class>
+  </function></public>
+  <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QVariantMap</name>
+    </type>
+    <name>map</name>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

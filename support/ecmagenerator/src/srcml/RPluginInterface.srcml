@@ -53,6 +53,10 @@ the GNU General Public License * along with QCAD. */</comment>
       <parameter_list>()</parameter_list>
       <block>{}</block>
     </destructor>
+    <comment type="block">/** * Called immediately after the plugin
+    has been loaded, directly * after starting the application.
+    Implementations typically perform * plugin initialization,
+    registration of file importers, exporter, etc. */</comment>
     <function_decl>
     <type>
       <name>virtual</name>
@@ -61,6 +65,10 @@ the GNU General Public License * along with QCAD. */</comment>
     <name>init</name>
     <parameter_list>()</parameter_list>
     <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/** * Called after the application has
+    been fully loaded, directly before * entering the main event
+    loop. Implementations typically perform * initialization that
+    depends on the application being up and running. */</comment>
     <function_decl>
     <type>
       <name>virtual</name>
@@ -69,6 +77,10 @@ the GNU General Public License * along with QCAD. */</comment>
     <name>postInit</name>
     <parameter_list>()</parameter_list>
     <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/** * Called whenever a new script engine
+    is instantiated. * Implementations may register their own
+    script extensions by making * C / C++ code scriptable.
+    */</comment>
     <function_decl>
     <type>
       <name>virtual</name>
@@ -84,6 +96,13 @@ the GNU General Public License * along with QCAD. */</comment>
       </decl>
     </param>)</parameter_list>
     <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/** * \return An RPluginInfo object with
+    at least the following keys: * - 'Version' - Version string * -
+    'About' - Plugin name * - 'Description' - Longer description of
+    the plugin * - 'License' - Licensing information (e.g. 'GPLv3',
+    'proprietary', ...) * - 'URL' - URL where more information
+    about the plugin can be found * * This is typically used by an
+    about dialog or debugging / developer tools. */</comment>
     <function_decl>
     <type>
       <name>virtual</name>

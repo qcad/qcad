@@ -5,8 +5,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <baseClass name="QMap&lt;QString,QVariant&gt;"
-    specifier="public" />
     <constructor>
       <variant />
     </constructor>

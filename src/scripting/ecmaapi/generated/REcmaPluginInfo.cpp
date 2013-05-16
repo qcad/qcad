@@ -23,19 +23,6 @@
     }
 
     
-        // primary base class QMap<QString,QVariant>:
-        
-            QScriptValue dpt = engine.defaultPrototype(
-                qMetaTypeId<QMap<QString,QVariant>*>());
-
-            if (dpt.isValid()) {
-                proto->setPrototype(dpt);
-            }
-          
-        /*
-        
-        */
-    
 
     QScriptValue fun;
 
@@ -49,9 +36,6 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
-        // conversion for base class QMap<QString,QVariant>
-        REcmaHelper::registerFunction(&engine, proto, getQMap_QString_QVariant, "getQMap_QString_QVariant");
-        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -146,16 +130,7 @@
     
 
     // conversion functions for base classes:
-     QScriptValue REcmaPluginInfo::getQMap_QString_QVariant(QScriptContext *context,
-            QScriptEngine *engine)
-        
-            {
-                QMap<QString,QVariant>* cppResult =
-                    qscriptvalue_cast<RPluginInfo*> (context->thisObject());
-                QScriptValue result = qScriptValueFromValue(engine, cppResult);
-                return result;
-            }
-            
+    
 
     // returns class name:
      QScriptValue REcmaPluginInfo::getClassName(QScriptContext *context, QScriptEngine *engine) 
@@ -171,8 +146,6 @@
     {
         QStringList list;
         
-        list.append("QMap<QString,QVariant>");
-    
 
         return qScriptValueFromSequence(engine, list);
     }
