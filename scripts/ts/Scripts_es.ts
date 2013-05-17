@@ -289,7 +289,7 @@
         <translation type="unfinished">Cargando complemento traducciones...</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+48"/>
         <source>Loading add-ons...</source>
         <translation>Cargar add-ons...</translation>
     </message>

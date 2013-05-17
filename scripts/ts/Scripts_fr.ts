@@ -289,7 +289,7 @@
         <translation type="unfinished">Chargement add-on traductions...</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+48"/>
         <source>Loading add-ons...</source>
         <translation>Chargement add-ons...</translation>
     </message>

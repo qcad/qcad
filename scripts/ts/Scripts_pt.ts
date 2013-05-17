@@ -349,7 +349,7 @@ Carregando plugins...</translatorcomment>
         <translation type="unfinished">Carregar add-on traduções...</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+48"/>
         <source>Loading add-ons...</source>
         <translation>Carregando add-ons...</translation>
     </message>

@@ -278,7 +278,7 @@
         <translation type="unfinished">Lade Add-on Übersetzungen...</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+48"/>
         <source>Loading add-ons...</source>
         <translation>Lade Add-ons ...</translation>
     </message>

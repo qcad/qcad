@@ -285,7 +285,7 @@
         <translation type="unfinished">Caricamento aggiuntivo traduzioni...</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+48"/>
         <source>Loading add-ons...</source>
         <translation>Caricamento add-ons...</translation>
     </message>
