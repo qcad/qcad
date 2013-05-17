@@ -6,8 +6,6 @@ CONFIG -= warn_on
 CONFIG += warn_off
 OTHER_FILES += ecmaapi.dox
 DEFINES += QCADECMAAPI_LIBRARY
-include(adapters/adapters.pri)
-include(generated/generated.pri)
 HEADERS += \
     RAutoLoadEcma.h \
     REcmaHelper.h \
@@ -16,6 +14,8 @@ SOURCES += \
     RAutoLoadEcma.cpp \
     REcmaHelper.cpp \
     RScriptHandlerEcma.cpp
+include(adapters/adapters.pri)
+include(generated/generated.pri)
 LIBS += \
     -lqcadcore \
     -lqcadentity \

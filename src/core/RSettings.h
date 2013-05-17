@@ -137,7 +137,7 @@ private:
 
 private:
     // cache for faster access:
-    static QMap<QString, QVariant> cache;
+    static QVariantMap cache;
 
     // variables for very fast access:
     static QFont* rulerFont;
