@@ -16,12 +16,12 @@
     <message>
         <location line="+24"/>
         <source>No export filters</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de filtres d&apos;exportation</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de filtres d&apos;exportation ont été trouvés. Abandon...</translation>
     </message>
     <message>
         <location line="+47"/>

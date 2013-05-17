@@ -346,7 +346,7 @@ Carregando plugins...</translatorcomment>
     <message>
         <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished">Carregar add-on traduções...</translation>
+        <translation>Carregar add-on traduções...</translation>
     </message>
     <message>
         <location line="+48"/>

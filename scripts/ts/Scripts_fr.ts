@@ -286,7 +286,7 @@
     <message>
         <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished">Chargement add-on traductions...</translation>
+        <translation>Chargement add-on traductions...</translation>
     </message>
     <message>
         <location line="+48"/>
