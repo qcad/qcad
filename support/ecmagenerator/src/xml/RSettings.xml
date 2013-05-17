@@ -13,6 +13,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="loadTranslations" cppName="loadTranslations"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="module"
+        isConst="true" />
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="dirs" hasDefault="true"
+        default="RDEFAULT_QSTRINGLIST" isConst="true" />
+      </variant>
+    </method>
     <method name="getOriginalArguments"
     cppName="getOriginalArguments" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

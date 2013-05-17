@@ -57,6 +57,15 @@ dir="./core" filename="RSettings.h">
   <name>QVariant</name>()</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDEFAULT_QSTRINGLIST</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RDEFAULT_QSTRINGLIST</name>
+  <name>QStringList</name>()</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
   <comment type="block">/** * \ingroup core * \scriptable
   */</comment>
   <class>class 
@@ -81,31 +90,33 @@ dir="./core" filename="RSettings.h">
   </type>
   <name>getLocale</name>
   <parameter_list>()</parameter_list>;</function_decl>
-  <decl_stmt>
-  <decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>loadTranslations</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>module</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
     <type>
-      <name>static</name>
-      <name>void</name>
-    </type>
-    <name>loadTranslations</name>
-    <argument_list>(
-    <argument>
+    <name>const</name>
+    <name>QStringList</name>&amp;</type>
+    <name>dirs</name>=
+    <init>
       <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>module</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QStringList</name>&amp; 
-      <name>dirs</name>= 
-      <call>
-        <name>QStringList</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
+        <name>RDEFAULT_QSTRINGLIST</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>static</name>

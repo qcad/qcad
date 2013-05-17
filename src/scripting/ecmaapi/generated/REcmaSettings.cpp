@@ -61,6 +61,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getLocale, "getLocale");
             
+            REcmaHelper::registerFunction(&engine, &ctor, loadTranslations, "loadTranslations");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getOriginalArguments, "getOriginalArguments");
             
             REcmaHelper::registerFunction(&engine, &ctor, setOriginalArguments, "setOriginalArguments");
@@ -340,6 +342,92 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getLocale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::loadTranslations
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::loadTranslations", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::loadTranslations";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       loadTranslations(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isArray
+                    QStringList
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       loadTranslations(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.loadTranslations().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::loadTranslations", context, engine);
             return result;
         }
          QScriptValue

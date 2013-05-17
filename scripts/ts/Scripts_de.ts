@@ -273,11 +273,12 @@
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
-        <translation type="obsolete">Lade Add-on Übersetzungen...</translation>
+        <translation type="unfinished">Lade Add-on Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+381"/>
+        <location line="+50"/>
         <source>Loading add-ons...</source>
         <translation>Lade Add-ons ...</translation>
     </message>

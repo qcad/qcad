@@ -49,6 +49,9 @@
         getLocale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        loadTranslations
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getOriginalArguments
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

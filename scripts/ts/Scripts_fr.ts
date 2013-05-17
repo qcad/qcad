@@ -284,11 +284,12 @@
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
-        <translation type="obsolete">Chargement add-on traductions...</translation>
+        <translation type="unfinished">Chargement add-on traductions...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+381"/>
+        <location line="+50"/>
         <source>Loading add-ons...</source>
         <translation>Chargement add-ons...</translation>
     </message>

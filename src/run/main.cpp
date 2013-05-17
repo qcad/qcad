@@ -78,41 +78,6 @@ void catchSigPipe(int /*s*/){
 }
 #endif
 
-/**
- * Loads translations of C++ modules.
- */
-void loadTranslations() {
-//    QString locale = RSettings::getLocale();
-//    if (locale == "en" || locale.toLower() == "en_us") {
-//        return;
-//    }
-
-//    QStringList translationsDirs = RS::getDirectoryList("ts");
-//    QTranslator* translator;
-
-    QStringList modules;
-    modules << "qt" << "assistant" << "qt_help"
-            << "qcadcore" << "qcadentity" << "qcadgui" << "qcad_scripts";
-    for (int mi=0; mi<modules.size(); ++mi) {
-        QString module = modules[mi];
-        RSettings::loadTranslations(module);
-//        translator = new QTranslator(qApp);
-//        bool success = false;
-//        for (int i=0; i<translationsDirs.size(); ++i) {
-//            if (translator->load(module + "_" + locale, translationsDirs[i])) {
-//                QCoreApplication::installTranslator(translator);
-//                success = true;
-//                break;
-//            }
-//        }
-
-//        if (!success) {
-//            qWarning() << "Cannot load translation: " << module + "_" + locale;
-//            qWarning() << "Directories: " << translationsDirs;
-//        }
-    }
-}
-
 int main(int argc, char *argv[]) {
 
     // 20130418 (experimental):
@@ -246,8 +211,6 @@ int main(int argc, char *argv[]) {
     RView::init();
 
     RPluginLoader::loadPlugins(true);
-
-    loadTranslations();
 
     // check for autostart option:
     QString autostartFile;

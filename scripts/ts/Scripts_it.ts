@@ -280,11 +280,12 @@
         <translation type="obsolete">Post-inizializzazione...</translation>
     </message>
     <message>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
-        <translation type="obsolete">Caricamento aggiuntivo traduzioni...</translation>
+        <translation type="unfinished">Caricamento aggiuntivo traduzioni...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+381"/>
+        <location line="+50"/>
         <source>Loading add-ons...</source>
         <translation>Caricamento add-ons...</translation>
     </message>

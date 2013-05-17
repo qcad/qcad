@@ -38,6 +38,10 @@
 #define RDEFAULT_QVARIANT QVariant()
 #endif
 
+#ifndef RDEFAULT_QSTRINGLIST
+#define RDEFAULT_QSTRINGLIST QStringList()
+#endif
+
 /**
  * \ingroup core
  * \scriptable
@@ -47,7 +51,7 @@ public:
     static void uninit();
 
     static QString getLocale();
-    static void loadTranslations(const QString& module, const QStringList& dirs = QStringList());
+    static void loadTranslations(const QString& module, const QStringList& dirs = RDEFAULT_QSTRINGLIST);
 
     static QStringList getOriginalArguments();
     static void setOriginalArguments(const QStringList& a);

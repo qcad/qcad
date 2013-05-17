@@ -184,28 +184,20 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
         translationsDirs = RS::getDirectoryList("ts");
     }
 
-    QTranslator* translator;
-
-//    QStringList modules;
-//    modules << "qt" << "assistant" << "qt_help"
-//            << "qcadcore" << "qcadentity" << "qcadgui";
-//    for (int mi=0; mi<modules.size(); ++mi) {
-//        QString module = modules[mi];
-        translator = new QTranslator(qApp);
-        bool success = false;
-        for (int i=0; i<translationsDirs.size(); ++i) {
-            if (translator->load(module + "_" + locale, translationsDirs[i])) {
-                QCoreApplication::installTranslator(translator);
-                success = true;
-                break;
-            }
+    QTranslator* translator = new QTranslator(qApp);
+    bool success = false;
+    for (int i=0; i<translationsDirs.size(); ++i) {
+        if (translator->load(module + "_" + locale, translationsDirs[i])) {
+            QCoreApplication::installTranslator(translator);
+            success = true;
+            break;
         }
+    }
 
-        if (!success) {
-            qWarning() << "Cannot load translation: " << module + "_" + locale;
-            qWarning() << "Directories: " << translationsDirs;
-        }
-//    }
+    if (!success) {
+        qWarning() << "Cannot load translation: " << module + "_" + locale;
+        qWarning() << "Directories: " << translationsDirs;
+    }
 }
 
 QStringList RSettings::getAllKeys(const QString& group) {
