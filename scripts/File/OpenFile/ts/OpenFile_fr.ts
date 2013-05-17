@@ -6,12 +6,12 @@
     <message>
         <location filename="../OpenFile.js" line="+43"/>
         <source>No import filters</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de filtres d&apos;importation</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de filtres d&apos;importation ont été trouvés. Abandon...</translation>
     </message>
     <message>
         <location line="+17"/>
