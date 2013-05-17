@@ -3,8 +3,11 @@ include (shared.pri)
 TEMPLATE = subdirs
 SUBDIRS = \
     src \
-    ts \
-    support
+    ts
+
+exists(support) {
+    SUBDIRS += support
+}
 
 # DO NOT REMOVE
 # used by translation (lrelease, lupdate)
