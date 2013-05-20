@@ -88,11 +88,6 @@ UI_DIR = .ui
 
 LIBS += -L$$PWD/$$ROUTDIR
 
-macx {
-    # required since Teigha 3.8.2:
-    LIBS += -lc++
-}
-
 CONFIG(debug, debug|release) {
     !win32 {
         QMAKE_LFLAGS += -rdynamic
