@@ -69,6 +69,8 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     }
 
     textStyleCounter = 0;
+    imageHandles.clear();
+    textStyles.clear();
 
     dw = dxf.out((const char*)QFile::encodeName(fileName), exportVersion);
 
@@ -571,10 +573,10 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityHatch:
         writeHatch(dynamic_cast<const RHatchEntity&>(e));
         break;
-        /*
     case RS::EntityImage:
-        writeImage(dynamic_cast<RS_Image*>(e));
+        writeImage(dynamic_cast<const RImageEntity&>(e));
         break;
+        /*
     case RS::EntitySolid:
         writeSolid(dynamic_cast<RS_Solid*>(e));
         break;
@@ -795,10 +797,10 @@ void RDxfExporter::writeSpline(const RSplineEntity& sp) {
 }
 
 /**
- * Writes the given spline entity to the file.
+ * Writes the given text entity to the file.
  */
 void RDxfExporter::writeText(const RTextEntity& t) {
-    if (dxf.getVersion()==DL_Codes::AC1009) {
+    //if (dxf.getVersion()==DL_Codes::AC1009) {
         /*
         if (t.getNumberOfLines()>1) {
             // split up text into single lines:
@@ -854,9 +856,64 @@ void RDxfExporter::writeText(const RTextEntity& t) {
                             t->getAngle()),
                 attributes);
         }
-        */
+        return;
+    }
+    */
 
-    } else {
+    if (t.isSimple()) {
+        DL_TextData data(
+                    t.getPosition().x,
+                    t.getPosition().y,
+                    0.0,
+                    t.getAlignmentPoint().x,
+                    t.getAlignmentPoint().y,
+                    0.0,
+                    t.getHeight(),
+                    1.0,  // x scale factor
+                    0,    // text gen flags
+                    0,    // h just
+                    0,    // v just
+                    (const char*)t.getEscapedText().toLatin1(),
+                    (const char*)t.getFontName().toLatin1(),
+                    t.getAngle());
+
+        if (t.getHAlign()==RS::HAlignAlign && t.getVAlign()==RS::VAlignBottom) {
+            data.vJustification = 0;
+            data.hJustification = 0;
+        }
+        else {
+            switch (t.getHAlign()) {
+            default:
+            case RS::HAlignLeft:
+                data.hJustification = 0;
+                break;
+            case RS::HAlignCenter:
+                data.hJustification = 1;
+                break;
+            case RS::HAlignRight:
+                data.hJustification = 2;
+                break;
+            }
+            switch (t.getVAlign()) {
+            default:
+            case RS::VAlignBase:
+                data.vJustification = 0;
+                break;
+            case RS::VAlignBottom:
+                data.vJustification = 1;
+                break;
+            case RS::VAlignMiddle:
+                data.vJustification = 2;
+                break;
+            case RS::VAlignTop:
+                data.vJustification = 3;
+                break;
+            }
+        }
+
+        dxf.writeText(*dw, data, attributes);
+    }
+    else {
         int attachmentPoint=1;
         if (t.getHAlign()==RS::HAlignLeft) {
             attachmentPoint=1;
@@ -1282,6 +1339,57 @@ void RDxfExporter::writeHatch(const RHatchEntity& h) {
     dxf.writeHatch2(*dw, data, attributes);
 }
 
+void RDxfExporter::writeImage(const RImageEntity& img) {
+    int handle = dxf.writeImage(
+                     *dw,
+                     DL_ImageData(std::string(""),
+                                  img.getInsertionPoint().x,
+                                  img.getInsertionPoint().y,
+                                  0.0,
+                                  img.getUVector().x,
+                                  img.getUVector().y,
+                                  0.0,
+                                  img.getVVector().x,
+                                  img.getVVector().y,
+                                  0.0,
+                                  img.getWidth(),
+                                  img.getHeight(),
+                                  img.getBrightness(),
+                                  img.getContrast(),
+                                  img.getFade()),
+                     attributes);
+    imageHandles.insert(img.getId(), handle);
+}
+
+/**
+ * Writes an IMAGEDEF object into an OBJECT section.
+ */
+void RDxfExporter::writeImageDef(const RImageEntity& img) {
+    if (!imageHandles.contains(img.getId())) {
+        qWarning() << "RDxfExporter::writeImageDef: no handle for given image";
+        return;
+    }
+    int handle = imageHandles.value(img.getId());
+    dxf.writeImageDef(
+        *dw,
+        handle,
+        DL_ImageData((const char*)img.getFileName().toLatin1(),
+                     img.getInsertionPoint().x,
+                     img.getInsertionPoint().y,
+                     0.0,
+                     img.getUVector().x,
+                     img.getUVector().y,
+                     0.0,
+                     img.getVVector().x,
+                     img.getVVector().y,
+                     0.0,
+                     img.getWidth(),
+                     img.getHeight(),
+                     img.getBrightness(),
+                     img.getContrast(),
+                     img.getFade()));
+}
+
 /**
  * Writes the given block reference entity to the file.
  */
@@ -1366,26 +1474,3 @@ DL_StyleData RDxfExporter::getStyle(const RTextEntity& entity) {
         );
 }
 
-/**
- * Writes an IMAGEDEF object into an OBJECT section.
- */
-void RDxfExporter::writeImageDef(const RImageEntity& img) {
-    dxf.writeImageDef(
-        *dw,
-        img.getHandle(),
-        DL_ImageData((const char*)img.getFileName().toLatin1(),
-                     img.getInsertionPoint().x,
-                     img.getInsertionPoint().y,
-                     0.0,
-                     img.getUVector().x,
-                     img.getUVector().y,
-                     0.0,
-                     img.getVVector().x,
-                     img.getVVector().y,
-                     0.0,
-                     img.getWidth(),
-                     img.getHeight(),
-                     img.getBrightness(),
-                     img.getContrast(),
-                     img.getFade()));
-}

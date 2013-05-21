@@ -656,7 +656,7 @@ void RDxfImporter::addMText(const DL_MTextData& data) {
 void RDxfImporter::addText(const DL_TextData& data) {
     RS::VAlign valign;
     RS::HAlign halign;
-    RVector refPoint;
+    //RVector refPoint;
     double angle = data.angle;
 
     RDxfTextStyle s = textStyles.value(data.style.c_str(), RDxfTextStyle());
@@ -666,41 +666,45 @@ void RDxfImporter::addText(const DL_TextData& data) {
         s.font = data.style.c_str();
     }
 
-    // baseline has 5 vertical alignment modes:
+    RVector alignmentPoint(data.apx, data.apy);
+    RVector position(data.ipx, data.ipy);
+
     if (data.vJustification!=0 || data.hJustification!=0) {
+
+        // 5 vertical alignment modes:
         switch (data.hJustification) {
         default:
         case 0: // left aligned
             halign = RS::HAlignLeft;
-            refPoint = RVector(data.apx, data.apy);
+            //refPoint = alignmentPoint;
             break;
         case 1: // centered
             halign = RS::HAlignCenter;
-            refPoint = RVector(data.apx, data.apy);
+            //refPoint = alignmentPoint;
             break;
         case 2: // right aligned
             halign = RS::HAlignRight;
-            refPoint = RVector(data.apx, data.apy);
+            //refPoint = RVector(data.apx, data.apy);
             break;
         case 3: // aligned (TODO)
             halign = RS::HAlignCenter;
-            refPoint = RVector((data.ipx+data.apx)/2.0,
-                                 (data.ipy+data.apy)/2.0);
-            angle =
-                RVector(data.ipx, data.ipy).getAngleTo(
-                    RVector(data.apx, data.apy));
+            //refPoint = RVector((data.ipx+data.apx)/2.0,
+            //                     (data.ipy+data.apy)/2.0);
+            //angle =
+            //    RVector(data.ipx, data.ipy).getAngleTo(
+            //        RVector(data.apx, data.apy));
             break;
         case 4: // Middle (TODO)
             halign = RS::HAlignCenter;
-            refPoint = RVector(data.apx, data.apy);
+            //refPoint = RVector(data.apx, data.apy);
             break;
         case 5: // fit (TODO)
             halign = RS::HAlignCenter;
-            refPoint = RVector((data.ipx+data.apx)/2.0,
-                                 (data.ipy+data.apy)/2.0);
-            angle =
-                RVector(data.ipx, data.ipy).getAngleTo(
-                    RVector(data.apx, data.apy));
+//            refPoint = RVector((data.ipx+data.apx)/2.0,
+//                                 (data.ipy+data.apy)/2.0);
+//            angle =
+//                RVector(data.ipx, data.ipy).getAngleTo(
+//                    RVector(data.apx, data.apy));
             break;
         }
 
@@ -725,26 +729,44 @@ void RDxfImporter::addText(const DL_TextData& data) {
     } else {
         halign = RS::HAlignLeft;
         valign = RS::VAlignBottom;
-        refPoint = RVector(data.ipx, data.ipy);
+        //refPoint = RVector(data.ipx, data.ipy);
     }
 
     //int drawingDirection = 5;
     double width = 100.0;
 
-    RTextData d(
-        RVector::invalid, refPoint,
+    RTextData textData(
+        RVector::invalid, RVector::invalid,
+//        refPoint, refPoint,
         data.height, width,
         valign, halign,
         RS::LeftToRight, RS::Exact,
         1.0,
-        data.text.c_str(), s.font,
+        data.text.c_str(),
+        s.font,
         s.bold,                      // bold
         s.italic,                    // italic
         data.angle,
         true                         // simple
     );
 
-    QSharedPointer<RTextEntity> entity(new RTextEntity(document, d));
+    textData.setPosition(position);
+
+    // if alignment is left / base, alignment point is omitted (same as position).
+    if (textData.getHAlign()==RS::HAlignLeft && textData.getVAlign()==RS::VAlignBase) {
+        textData.setAlignmentPoint(position);
+    }
+    else {
+        // QCAD 1 compatibility:
+        if (s.font=="txt" && qAbs(alignmentPoint.x)<RS::PointTolerance && qAbs(alignmentPoint.y)<RS::PointTolerance) {
+            textData.setAlignmentPoint(position);
+        }
+        else {
+            textData.setAlignmentPoint(alignmentPoint);
+        }
+    }
+
+    QSharedPointer<RTextEntity> entity(new RTextEntity(document, textData));
     importEntity(entity);
 }
 

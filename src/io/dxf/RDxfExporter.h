@@ -85,6 +85,7 @@ public:
     void writeDimension(const RDimensionEntity& d);
     void writeLeader(const RLeaderEntity& l);
     void writeHatch(const RHatchEntity& h);
+    void writeImage(const RImageEntity& img);
 
     void writeBlockReference(const RBlockReferenceEntity& br);
 
@@ -116,6 +117,8 @@ private:
     DL_Attributes attributes;
     int textStyleCounter;
     QList<DL_StyleData> textStyles;
+    // maps image entity IDs to handles:
+    QMap<int, int> imageHandles;
 };
 
 Q_DECLARE_METATYPE(RDxfExporter*)

@@ -838,7 +838,8 @@ QDebug operator<<(QDebug dbg, const RVector& v) {
     } else {
         dbg.nospace() << "RVector(invalid)";
     }
-    return dbg.space();
+    return dbg;
+    //return dbg.space();
 }
 
 /**
