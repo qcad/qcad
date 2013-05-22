@@ -17,7 +17,7 @@ RPluginInfo RExamplePlugin::getPluginInfo() {
     ret.set("Version", R_QCAD_VERSION_STRING);
     ret.set("About", "Example Plugin");
     ret.set("License", "GPLv3");
-    ret.set("URL", "http://QCAD.org");
+    ret.set("URL", "http://qcad.org");
     return ret;
 }
 
