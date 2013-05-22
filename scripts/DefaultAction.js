@@ -146,11 +146,11 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         var screenPosition = event.getScreenPosition();
         referencePoint = view.getClosestReferencePoint(screenPosition, this.rangePixels / 2);
         if (referencePoint.isValid()) {
-            this.di.highlightReferencePoint(referencePoint);
+            this.highlightReferencePoint(referencePoint);
         } else {
             entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
             if (entityId !== RObject.INVALID_ID && this.document.isEntityEditable(entityId)) {
-                this.di.highlightEntity(entityId);
+                this.highlightEntity(entityId);
             }
         }
         break;
@@ -160,7 +160,6 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         this.d2Screen = event.getScreenPosition();
         view = event.getGraphicsView();
         if (!this.d1Screen.equalsFuzzy(this.d2Screen, this.rangePixels / 2)) {
-        //if (this.d1Screen.getDistanceTo(this.d2Screen) > this.rangePixels / 2) {
             // if the dragging started on top of a reference point,
             // start moving the reference point:
             referencePoint = view.getClosestReferencePoint(this.d1Screen, this.rangePixels / 2);
@@ -205,6 +204,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
     }
 };
 
+
 DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
 
@@ -224,10 +224,10 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             var entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
             if (entityId !== -1) {
                 if (add && this.document.isSelected(entityId)) {
-                    this.di.deselectEntity(entityId);
+                    this.deselectEntity(entityId);
                 }
                 else {
-                    this.di.selectEntity(entityId, add);
+                    this.selectEntity(entityId, add);
                 }
             } else {
                 if (!add) {
@@ -295,10 +295,7 @@ DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
             return;
         }
 
-        var entity = this.document.queryEntity(entityId);
-
-        include("scripts/Modify/EditText/EditText.js");
-        EditText.editText(entity);
+        this.entityDoubleClicked(entityId);
     }
 };
 
@@ -361,4 +358,62 @@ DefaultAction.prototype.coordinateEventPreview = function(event) {
     default:
         break;
     }
+};
+
+
+/**
+ * Called when the mouse cursor hovers over an entity.
+ */
+DefaultAction.prototype.highlightEntity = function(entityId) {
+    if (isNull(this.di)) {
+        return;
+    }
+
+    this.di.highlightEntity(entityId);
+};
+
+/**
+ * Called when the mouse cursor hovers over a reference point.
+ */
+DefaultAction.prototype.highlightReferencePoint = function(referencePoint) {
+    if (isNull(this.di)) {
+        return;
+    }
+
+    this.di.highlightReferencePoint(referencePoint);
+};
+
+/**
+ * Called when the user deselects a single entity.
+ */
+DefaultAction.prototype.deselectEntity = function(entityId) {
+    if (isNull(this.di)) {
+        return;
+    }
+
+    this.di.deselectEntity(entityId);
+};
+
+/**
+ * Called when the user selects a single entity.
+ */
+DefaultAction.prototype.selectEntity = function(entityId, add) {
+    if (isNull(this.di)) {
+        return;
+    }
+
+    this.di.selectEntity(entityId, add);
+};
+
+/**
+ * Called when the user selects a single entity.
+ */
+DefaultAction.prototype.entityDoubleClicked = function(entityId) {
+    if (isNull(this.document)) {
+        return;
+    }
+
+    var entity = this.document.queryEntity(entityId);
+    include("scripts/Modify/EditText/EditText.js");
+    EditText.editText(entity);
 };
