@@ -155,6 +155,8 @@ void RTextEntity::print(QDebug dbg) const {
     dbg.nospace() << ", alignmentPoint: " << getAlignmentPoint()
                   << ", position: " << getPosition()
                   << ", text: " << getPlainText()
+                  << ", textHeight: " << getTextHeight()
+                  << ", textWidth: " << getTextWidth()
                   << ", drawingDirection: " << getDrawingDirection()
                   << ")";
 }

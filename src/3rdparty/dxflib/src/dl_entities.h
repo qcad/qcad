@@ -722,31 +722,24 @@ struct DXFLIB_EXPORT DL_TextData {
      * Constructor.
      * Parameters: see member variables.
      */
-    DL_TextData(double tipx, double tipy, double tipz,
-                double tapx, double tapy, double tapz,
-                double tHeight, double tXScaleFactor,
-                int tTextGenerationFlags,
-                int tHJustification,
-                int tVJustification,
-                const std::string& tText,
-                const std::string& tStyle,
-                double tAngle) {
-        ipx = tipx;
-        ipy = tipy;
-        ipz = tipz;
-
-        apx = tapx;
-        apy = tapy;
-        apz = tapz;
-
-        height = tHeight;
-        xScaleFactor = tXScaleFactor;
-        textGenerationFlags = tTextGenerationFlags;
-        hJustification = tHJustification;
-        vJustification = tVJustification;
-        text = tText;
-        style = tStyle;
-        angle = tAngle;
+    DL_TextData(double ipx, double ipy, double ipz,
+                double apx, double apy, double apz,
+                double height, double xScaleFactor,
+                int textGenerationFlags,
+                int hJustification,
+                int vJustification,
+                const std::string& text,
+                const std::string& style,
+                double angle)
+        : ipx(ipx), ipy(ipy), ipz(ipz),
+          apx(apx), apy(apy), apz(apz),
+          height(height), xScaleFactor(xScaleFactor),
+          textGenerationFlags(textGenerationFlags),
+          hJustification(hJustification),
+          vJustification(vJustification),
+          text(text),
+          style(style),
+          angle(angle) {
     }
 
     /*! X Coordinate of insertion point. */

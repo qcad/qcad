@@ -18,9 +18,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <enum name="IoErrorCode">
       <value name="IoErrorNoError" />
       <value name="IoErrorNoImporterFound" />
+      <value name="IoErrorZeroSize" />
+      <value name="IoErrorNotFound" />
+      <value name="IoErrorPermission" />
       <value name="IoErrorGeneralImportError" />
       <value name="IoErrorGeneralImportUrlError" />
-      <value name="IoErrorZeroSize" />
     </enum>
     <constructor>
       <variant>

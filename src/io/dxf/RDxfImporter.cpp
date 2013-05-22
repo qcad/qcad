@@ -657,7 +657,7 @@ void RDxfImporter::addText(const DL_TextData& data) {
     RS::VAlign valign;
     RS::HAlign halign;
     //RVector refPoint;
-    double angle = data.angle;
+    //double angle = data.angle;
 
     RDxfTextStyle s = textStyles.value(data.style.c_str(), RDxfTextStyle());
 
@@ -733,7 +733,8 @@ void RDxfImporter::addText(const DL_TextData& data) {
     }
 
     //int drawingDirection = 5;
-    double width = 100.0;
+    //double width = 100.0;
+    double width = 0.0;
 
     RTextData textData(
         RVector::invalid, RVector::invalid,

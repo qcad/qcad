@@ -332,6 +332,21 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("IoErrorZeroSize",
+    QScriptValue(RDocumentInterface::IoErrorZeroSize),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("IoErrorNotFound",
+    QScriptValue(RDocumentInterface::IoErrorNotFound),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("IoErrorPermission",
+    QScriptValue(RDocumentInterface::IoErrorPermission),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("IoErrorGeneralImportError",
     QScriptValue(RDocumentInterface::IoErrorGeneralImportError),
     QScriptValue::ReadOnly);
@@ -339,11 +354,6 @@
 
     ctor.setProperty("IoErrorGeneralImportUrlError",
     QScriptValue(RDocumentInterface::IoErrorGeneralImportUrlError),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("IoErrorZeroSize",
-    QScriptValue(RDocumentInterface::IoErrorZeroSize),
     QScriptValue::ReadOnly);
 
 

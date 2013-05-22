@@ -120,7 +120,8 @@ private:
     DL_WriterA* dw;
     DL_Attributes attributes;
     int textStyleCounter;
-    QList<DL_StyleData> textStyles;
+    QMap<int, QString> textStyles;
+    //QList<DL_StyleData> textStyles;
     // maps image entity IDs to handles:
     QMap<int, int> imageHandles;
 };

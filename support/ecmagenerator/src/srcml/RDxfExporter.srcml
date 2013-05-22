@@ -67,6 +67,8 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <class_decl>class 
   <name>RProgressHandler</name>;</class_decl>
   <class_decl>class 
+  <name>RSolidEntity</name>;</class_decl>
+  <class_decl>class 
   <name>RSplineEntity</name>;</class_decl>
   <class_decl>class 
   <name>RTextEntity</name>;</class_decl>
@@ -398,6 +400,34 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <type>
     <name>void</name>
   </type>
+  <name>writeSimpleText</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RTextEntity</name>&amp;</type>
+      <name>t</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeMText</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RTextEntity</name>&amp;</type>
+      <name>t</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>writeDimension</name>
   <parameter_list>(
   <param>
@@ -434,6 +464,34 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <name>const</name>
       <name>RHatchEntity</name>&amp;</type>
       <name>h</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeImage</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RImageEntity</name>&amp;</type>
+      <name>img</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeSolid</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RSolidEntity</name>&amp;</type>
+      <name>sol</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -619,6 +677,22 @@ dir="./io/dxf" filename="RDxfExporter.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>textStyles</name>
+  </decl>;</decl_stmt>
+  <comment type="line">// maps image entity IDs to
+  handles:</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>int</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>imageHandles</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

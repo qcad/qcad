@@ -383,16 +383,13 @@ dir="./core" filename="RS.h">
   <name>TextDrawingDirection</name>
   <block>{ 
   <expr>
-    <name>LeftToRight</name>
-  </expr>, 
+  <name>LeftToRight</name>= 1</expr>, 
   <comment type="block">/**&lt; Left to right */</comment>
   <expr>
-    <name>TopToBottom</name>
-  </expr>, 
+  <name>TopToBottom</name>= 3</expr>, 
   <comment type="block">/**&lt; Top to bottom */</comment>
   <expr>
-    <name>ByStyle</name>
-  </expr>
+  <name>ByStyle</name>= 5</expr>
   <comment type="block">/**&lt; Inherited from associated text
   style */</comment>}</block>;</enum>
   <comment type="block">/** * Line spacing style for texts.
@@ -401,13 +398,11 @@ dir="./core" filename="RS.h">
   <name>TextLineSpacingStyle</name>
   <block>{ 
   <expr>
-    <name>AtLeast</name>
-  </expr>, 
+  <name>AtLeast</name>= 1</expr>, 
   <comment type="block">/**&lt; Taller characters will override
   */</comment>
   <expr>
-    <name>Exact</name>
-  </expr>
+  <name>Exact</name>= 2</expr>
   <comment type="block">/**&lt; Taller characters will not override
   */</comment>}</block>;</enum>
   <comment type="block">/** * End used to specify from which end of

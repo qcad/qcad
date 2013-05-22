@@ -147,6 +147,19 @@ dir="./core" filename="RDocumentInterface.h">
   <expr>
     <name>IoErrorNoImporterFound</name>
   </expr>, 
+  <comment type="block">/** * File size is zero bytes. */</comment>
+  <expr>
+    <name>IoErrorZeroSize</name>
+  </expr>, 
+  <comment type="block">/** * File not found. */</comment>
+  <expr>
+    <name>IoErrorNotFound</name>
+  </expr>, 
+  <comment type="block">/** * No permissions to read file.
+  */</comment>
+  <expr>
+    <name>IoErrorPermission</name>
+  </expr>, 
   <comment type="block">/** * General import error, i.e. non of the
   errors above. */</comment>
   <expr>
@@ -156,10 +169,6 @@ dir="./core" filename="RDocumentInterface.h">
   given, i.e. non of the errors above. */</comment>
   <expr>
     <name>IoErrorGeneralImportUrlError</name>
-  </expr>, 
-  <comment type="block">/** * File size is zero bytes. */</comment>
-  <expr>
-    <name>IoErrorZeroSize</name>
   </expr>}</block>;</enum></public>
   <public>public: 
   <constructor_decl>

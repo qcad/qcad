@@ -771,14 +771,7 @@ dir="./core" filename="RSettings.h">
   <decl>
     <type>
       <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QVariant</name>
-      </argument>&gt;</argument_list></name>
+      <name>QVariantMap</name>
     </type>
     <name>cache</name>
   </decl>;</decl_stmt>

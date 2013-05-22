@@ -13,6 +13,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RPointEntity" />
   <class_decl name="RPolylineEntity" />
   <class_decl name="RProgressHandler" />
+  <class_decl name="RSolidEntity" />
   <class_decl name="RSplineEntity" />
   <class_decl name="RTextEntity" />
   <class name="RDxfExporter"

@@ -91,17 +91,25 @@ public:
          */
         IoErrorNoImporterFound,
         /**
+         * File size is zero bytes.
+         */
+        IoErrorZeroSize,
+        /**
+         * File not found.
+         */
+        IoErrorNotFound,
+        /**
+         * No permissions to read file.
+         */
+        IoErrorPermission,
+        /**
          * General import error, i.e. non of the errors above.
          */
         IoErrorGeneralImportError,
         /**
          * General import error if an URL was given, i.e. non of the errors above.
          */
-        IoErrorGeneralImportUrlError,
-        /**
-         * File size is zero bytes.
-         */
-        IoErrorZeroSize
+        IoErrorGeneralImportUrlError
     };
 
 public:

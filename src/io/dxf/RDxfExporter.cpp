@@ -133,29 +133,34 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     // STYLE:
     qDebug() << "writing styles...";
+    QList<DL_StyleData> uniqueTextStyles;
     // write one text style for each new, unique combination of font, size, etc:
-    QList<REntity::Id> styleIds = document->queryAllEntities(false, true).toList();
-    for (int i=0; i<styleIds.size(); i++) {
-        REntity::Id id = styleIds[i];
+    QList<REntity::Id> entityIds = document->queryAllEntities(false, true).toList();
+    for (int i=0; i<entityIds.size(); i++) {
+        REntity::Id id = entityIds[i];
         QSharedPointer<REntity> entity = document->queryEntityDirect(id);
         QSharedPointer<RTextEntity> textEntity = entity.dynamicCast<RTextEntity>();
         if (textEntity.isNull()) {
             continue;
         }
 
+        // getStyle assignes a new, unique name for the style:
         DL_StyleData style = getStyle(*textEntity);
         style.bold = textEntity->isBold();
         style.italic = textEntity->isItalic();
-        if (textStyles.contains(style)) {
+        if (uniqueTextStyles.contains(style)) {
+            textStyleCounter--;
             continue;
         }
 
-        textStyles.append(style);
+        textStyles.insert(id, style.name.c_str());
+
+        uniqueTextStyles.append(style);
     }
 
-    dw->tableStyle(textStyles.size());
-    for (int i=0; i<textStyles.size(); i++) {
-        DL_StyleData style = textStyles[i];
+    dw->tableStyle(uniqueTextStyles.size());
+    for (int i=0; i<uniqueTextStyles.size(); i++) {
+        DL_StyleData style = uniqueTextStyles[i];
         dxf.writeStyle(*dw, style);
     }
     dw->tableEnd();
@@ -870,6 +875,13 @@ void RDxfExporter::writeText(const RTextEntity& t) {
 }
 
 void RDxfExporter::writeSimpleText(const RTextEntity& t) {
+    REntity::Id id = t.getId();
+    if (!textStyles.contains(id)) {
+        qWarning() << "RDxfExporter::writeSimpleText: "
+            << "no style for entity with ID: " << id;
+        return;
+    }
+    QString styleName = textStyles.value(t.getId());
     DL_TextData data(
                 t.getPosition().x,
                 t.getPosition().y,
@@ -877,13 +889,13 @@ void RDxfExporter::writeSimpleText(const RTextEntity& t) {
                 t.getAlignmentPoint().x,
                 t.getAlignmentPoint().y,
                 0.0,
-                t.getHeight(),
+                t.getTextHeight(),
                 1.0,  // x scale factor
                 0,    // text gen flags
                 0,    // h just
                 0,    // v just
                 (const char*)t.getEscapedText().toLatin1(),
-                (const char*)t.getFontName().toLatin1(),
+                (const char*)styleName.toLatin1(),
                 t.getAngle());
 
     if (t.getHAlign()==RS::HAlignAlign && t.getVAlign()==RS::VAlignBottom) {
@@ -924,6 +936,14 @@ void RDxfExporter::writeSimpleText(const RTextEntity& t) {
 }
 
 void RDxfExporter::writeMText(const RTextEntity& t) {
+    REntity::Id id = t.getId();
+    if (!textStyles.contains(id)) {
+        qWarning() << "RDxfExporter::writeMText: "
+            << "no style for entity with ID: " << id;
+        return;
+    }
+    QString styleName = textStyles.value(t.getId());
+
     int attachmentPoint=1;
     switch (t.getHAlign()) {
     default:
@@ -988,14 +1008,14 @@ void RDxfExporter::writeMText(const RTextEntity& t) {
                              0.0,
                              0.0,
                              0.0,
-                             t.getHeight(),
-                             t.getWidth(),
+                             t.getTextHeight(),
+                             t.getTextWidth(),
                              attachmentPoint,
                              drawingDirection,
                              lineSpacingStyle,
                              t.getLineSpacingFactor(),
                              (const char*)t.getEscapedText().toLatin1(),
-                             (const char*)t.getFontName().toLatin1(),
+                             (const char*)styleName.toLatin1(),
                              t.getAngle()),
                 attributes);
 }

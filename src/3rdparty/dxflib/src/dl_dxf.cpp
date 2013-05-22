@@ -1152,7 +1152,7 @@ void DL_Dxf::addMText(DL_CreationInterface* creationInterface) {
         // height
         getRealValue(40, 2.5),
         // width
-        getRealValue(41, 100.0),
+        getRealValue(41, 0.0),
         // attachment point
         getIntValue(71, 1),
         // drawing direction
