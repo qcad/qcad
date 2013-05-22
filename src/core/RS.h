@@ -157,17 +157,17 @@ public:
      * Text drawing direction.
      */
     enum TextDrawingDirection {
-        LeftToRight,     /**< Left to right */
-        TopToBottom,     /**< Top to bottom */
-        ByStyle          /**< Inherited from associated text style */
+        LeftToRight = 1,     /**< Left to right */
+        TopToBottom = 3,     /**< Top to bottom */
+        ByStyle = 5          /**< Inherited from associated text style */
     };
 
     /**
      * Line spacing style for texts.
      */
     enum TextLineSpacingStyle {
-        AtLeast,        /**< Taller characters will override */
-        Exact           /**< Taller characters will not override */
+        AtLeast = 1,        /**< Taller characters will override */
+        Exact = 2           /**< Taller characters will not override */
     };
 
     /**

@@ -207,6 +207,7 @@ void RSolidEntity::exportEntity(RExporter& e, bool preview) const {
         pl.appendVertex(data.getVertexAt(3));
     }
     pl.appendVertex(data.getVertexAt(2));
+    pl.setClosed(true);
 
     e.exportPolyline(pl);
 }

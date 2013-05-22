@@ -1192,12 +1192,14 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
         if (!line.isNull()) {
             exportLine(*line.data(), offset);
             offset -= line->getLength();
+            continue;
         }
 
         QSharedPointer<RArc> arc = (*it).dynamicCast<RArc>();
         if (!arc.isNull()) {
             exportArc(*arc.data(), offset);
             offset -= arc->getLength();
+            continue;
         }
     }
 }

@@ -42,6 +42,7 @@ class RMessageHandler;
 class RPointEntity;
 class RPolylineEntity;
 class RProgressHandler;
+class RSolidEntity;
 class RSplineEntity;
 class RTextEntity;
 
@@ -82,10 +83,13 @@ public:
     void writePolyline(const RPolyline& pl);
     void writeSpline(const RSplineEntity& sp);
     void writeText(const RTextEntity& t);
+    void writeSimpleText(const RTextEntity& t);
+    void writeMText(const RTextEntity& t);
     void writeDimension(const RDimensionEntity& d);
     void writeLeader(const RLeaderEntity& l);
     void writeHatch(const RHatchEntity& h);
     void writeImage(const RImageEntity& img);
+    void writeSolid(const RSolidEntity& sol);
 
     void writeBlockReference(const RBlockReferenceEntity& br);
 

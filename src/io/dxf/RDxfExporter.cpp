@@ -45,6 +45,7 @@
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
 #include "RSettings.h"
+#include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RStorage.h"
 #include "RTextEntity.h"
@@ -576,10 +577,10 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityImage:
         writeImage(dynamic_cast<const RImageEntity&>(e));
         break;
-        /*
     case RS::EntitySolid:
-        writeSolid(dynamic_cast<RS_Solid*>(e));
+        writeSolid(dynamic_cast<const RSolidEntity&>(e));
         break;
+        /*
     case RS::Entity3dFace:
         write3dFace(dynamic_cast<RS_3dFace*>(e));
         break;
@@ -861,94 +862,142 @@ void RDxfExporter::writeText(const RTextEntity& t) {
     */
 
     if (t.isSimple()) {
-        DL_TextData data(
-                    t.getPosition().x,
-                    t.getPosition().y,
-                    0.0,
-                    t.getAlignmentPoint().x,
-                    t.getAlignmentPoint().y,
-                    0.0,
-                    t.getHeight(),
-                    1.0,  // x scale factor
-                    0,    // text gen flags
-                    0,    // h just
-                    0,    // v just
-                    (const char*)t.getEscapedText().toLatin1(),
-                    (const char*)t.getFontName().toLatin1(),
-                    t.getAngle());
-
-        if (t.getHAlign()==RS::HAlignAlign && t.getVAlign()==RS::VAlignBottom) {
-            data.vJustification = 0;
-            data.hJustification = 0;
-        }
-        else {
-            switch (t.getHAlign()) {
-            default:
-            case RS::HAlignLeft:
-                data.hJustification = 0;
-                break;
-            case RS::HAlignCenter:
-                data.hJustification = 1;
-                break;
-            case RS::HAlignRight:
-                data.hJustification = 2;
-                break;
-            }
-            switch (t.getVAlign()) {
-            default:
-            case RS::VAlignBase:
-                data.vJustification = 0;
-                break;
-            case RS::VAlignBottom:
-                data.vJustification = 1;
-                break;
-            case RS::VAlignMiddle:
-                data.vJustification = 2;
-                break;
-            case RS::VAlignTop:
-                data.vJustification = 3;
-                break;
-            }
-        }
-
-        dxf.writeText(*dw, data, attributes);
+        writeSimpleText(t);
     }
     else {
-        int attachmentPoint=1;
-        if (t.getHAlign()==RS::HAlignLeft) {
-            attachmentPoint=1;
-        } else if (t.getHAlign()==RS::HAlignCenter) {
-            attachmentPoint=2;
-        } else if (t.getHAlign()==RS::HAlignRight) {
-            attachmentPoint=3;
-        }
-        if (t.getVAlign()==RS::VAlignTop) {
-            attachmentPoint+=0;
-        } else if (t.getVAlign()==RS::VAlignMiddle) {
-            attachmentPoint+=3;
-        } else if (t.getVAlign()==RS::VAlignBottom) {
-            attachmentPoint+=6;
-        }
-
-        dxf.writeMText(
-            *dw,
-            DL_MTextData(t.getPosition().x,
-                         t.getPosition().y,
-                         0.0,
-                         t.getAlignmentPoint().x,
-                         t.getAlignmentPoint().y,
-                         0.0,
-                         t.getHeight(),
-                         t.getWidth(),
-                         attachmentPoint,
-                         t.getDrawingDirection(),
-                         t.getLineSpacingStyle(),
-                         t.getLineSpacingFactor(),
-                         (const char*)t.getEscapedText().toLatin1(),
-                         (const char*)t.getFontName().toLatin1(),
-                         t.getAngle()),
-            attributes);
+        writeMText(t);
     }
+}
+
+void RDxfExporter::writeSimpleText(const RTextEntity& t) {
+    DL_TextData data(
+                t.getPosition().x,
+                t.getPosition().y,
+                0.0,
+                t.getAlignmentPoint().x,
+                t.getAlignmentPoint().y,
+                0.0,
+                t.getHeight(),
+                1.0,  // x scale factor
+                0,    // text gen flags
+                0,    // h just
+                0,    // v just
+                (const char*)t.getEscapedText().toLatin1(),
+                (const char*)t.getFontName().toLatin1(),
+                t.getAngle());
+
+    if (t.getHAlign()==RS::HAlignAlign && t.getVAlign()==RS::VAlignBottom) {
+        data.vJustification = 0;
+        data.hJustification = 0;
+    }
+    else {
+        switch (t.getHAlign()) {
+        default:
+        case RS::HAlignLeft:
+            data.hJustification = 0;
+            break;
+        case RS::HAlignCenter:
+            data.hJustification = 1;
+            break;
+        case RS::HAlignRight:
+            data.hJustification = 2;
+            break;
+        }
+        switch (t.getVAlign()) {
+        default:
+        case RS::VAlignBase:
+            data.vJustification = 0;
+            break;
+        case RS::VAlignBottom:
+            data.vJustification = 1;
+            break;
+        case RS::VAlignMiddle:
+            data.vJustification = 2;
+            break;
+        case RS::VAlignTop:
+            data.vJustification = 3;
+            break;
+        }
+    }
+
+    dxf.writeText(*dw, data, attributes);
+}
+
+void RDxfExporter::writeMText(const RTextEntity& t) {
+    int attachmentPoint=1;
+    switch (t.getHAlign()) {
+    default:
+    case RS::HAlignLeft:
+        attachmentPoint=1;
+        break;
+    case RS::HAlignCenter:
+        attachmentPoint=2;
+        break;
+    case RS::HAlignRight:
+        attachmentPoint=3;
+        break;
+    }
+
+    switch (t.getVAlign()) {
+    default:
+    case RS::VAlignTop:
+        attachmentPoint+=0;
+        break;
+    case RS::VAlignMiddle:
+        attachmentPoint+=3;
+        break;
+    case RS::VAlignBottom:
+        attachmentPoint+=6;
+        break;
+    }
+
+    int drawingDirection = 1;
+    switch (t.getDrawingDirection()) {
+    default:
+    case RS::LeftToRight:
+        drawingDirection = 1;
+        break;
+    case RS::TopToBottom:
+        drawingDirection = 3;
+        break;
+    case RS::ByStyle:
+        drawingDirection = 5;
+        break;
+    }
+
+    int lineSpacingStyle = 2;
+    switch (t.getLineSpacingStyle()) {
+    case RS::AtLeast:
+        lineSpacingStyle = 1;
+        break;
+    default:
+    case RS::Exact:
+        lineSpacingStyle = 2;
+        break;
+    }
+
+    dxf.writeMText(
+                *dw,
+                DL_MTextData(//t.getPosition().x,
+                             //t.getPosition().y,
+                             t.getAlignmentPoint().x,
+                             t.getAlignmentPoint().y,
+                             0.0,
+                             //t.getAlignmentPoint().x,
+                             //t.getAlignmentPoint().y,
+                             0.0,
+                             0.0,
+                             0.0,
+                             t.getHeight(),
+                             t.getWidth(),
+                             attachmentPoint,
+                             drawingDirection,
+                             lineSpacingStyle,
+                             t.getLineSpacingFactor(),
+                             (const char*)t.getEscapedText().toLatin1(),
+                             (const char*)t.getFontName().toLatin1(),
+                             t.getAngle()),
+                attributes);
 }
 
 /**
@@ -1339,6 +1388,9 @@ void RDxfExporter::writeHatch(const RHatchEntity& h) {
     dxf.writeHatch2(*dw, data, attributes);
 }
 
+/**
+ * Writes the given image entity to the file.
+ */
 void RDxfExporter::writeImage(const RImageEntity& img) {
     int handle = dxf.writeImage(
                      *dw,
@@ -1359,6 +1411,28 @@ void RDxfExporter::writeImage(const RImageEntity& img) {
                                   img.getFade()),
                      attributes);
     imageHandles.insert(img.getId(), handle);
+}
+
+/**
+ * Writes the given solid entity to the file.
+ */
+void RDxfExporter::writeSolid(const RSolidEntity& sol) {
+    RVector c1 = sol.getVertexAt(0);
+    RVector c2 = sol.getVertexAt(1);
+    RVector c3 = sol.getVertexAt(2);
+    RVector c4 = c3;
+
+    if (sol.countVertices()>3) {
+        c4 = sol.getVertexAt(3);
+    }
+
+    dxf.writeSolid(*dw,
+        DL_SolidData(c1.x, c1.y, c1.z,
+                     c2.x, c2.y, c2.z,
+                     c3.x, c3.y, c3.z,
+                     c4.x, c4.y, c4.z,
+                     0),
+        attributes);
 }
 
 /**
