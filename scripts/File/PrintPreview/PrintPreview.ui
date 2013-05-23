@@ -47,6 +47,9 @@
    </item>
    <item>
     <widget class="QToolButton" name="PdfExport">
+     <property name="toolTip">
+      <string>Export as PDF...</string>
+     </property>
      <property name="icon">
       <iconset>
        <normaloff>PdfExport.svg</normaloff>PdfExport.svg</iconset>

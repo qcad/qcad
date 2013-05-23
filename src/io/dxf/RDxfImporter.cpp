@@ -186,7 +186,7 @@ void RDxfImporter::addLayer(const DL_LayerData& data) {
         lockedLayers.append(layerName);
     }
 
-    importObject(layer);
+    importObjectP(layer);
 }
 
 void RDxfImporter::addBlock(const DL_BlockData& data) {
@@ -226,7 +226,7 @@ void RDxfImporter::addBlock(const DL_BlockData& data) {
                     )
                 );
 
-    importObject(block);
+    importObjectP(block);
     setCurrentBlockId(block->getId());
 }
 
@@ -374,7 +374,7 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
         //importXData(odEntity, entity);
     }
 
-    importObject(entity);
+    importObjectP(entity);
 }
 
 void RDxfImporter::addPoint(const DL_PointData& data) {
@@ -1122,7 +1122,7 @@ void RDxfImporter::linkImage(const DL_ImageDefData& data) {
         }
         //image->setFileName(fi.absoluteFilePath());
         image->setFileName(filePath);
-        importObject(image);
+        importObjectP(image);
     }
 
     images.remove(handle);

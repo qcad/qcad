@@ -104,12 +104,13 @@ dir="./core" filename="RImporter.h">
   </type>
   <name>endImport</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>virtual</name>
     <name>void</name>
   </type>
-  <name>importObject</name>
+  <name>importObjectP</name>
   <parameter_list>(
   <param>
     <decl>
@@ -120,6 +121,20 @@ dir="./core" filename="RImporter.h">
           <name>RObject</name>
         </argument>&gt;</argument_list></name>
       </type>
+      <name>object</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>importObject</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RObject</name>*</type>
       <name>object</name>
     </decl>
   </param>)</parameter_list>;</function_decl>

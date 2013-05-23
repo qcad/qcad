@@ -293,7 +293,7 @@
         
     
       void REcmaShellFileImporterAdapter::importObject(
-                QSharedPointer < RObject > object
+                RObject * object
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileImporterAdapter::importObject", engine);
@@ -340,7 +340,7 @@
 
 
 
-    // type: QSharedPointer < RObject >, copyable: false
+    // type: RObject *, copyable: false
         << qScriptValueFromValue(engine, 
 
         object

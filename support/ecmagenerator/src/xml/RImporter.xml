@@ -36,8 +36,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSharedPointer &lt; RObject &gt;"
-        typeName="QSharedPointer &lt; RObject &gt;" name="object"
+        <arg type="RObject *" typeName="RObject *" name="object"
         isConst="false" />
       </variant>
     </method>

@@ -21,6 +21,7 @@
 #include "RDocument.h"
 #include "REntity.h"
 #include "RObject.h"
+#include "RStorage.h"
 
 RImporter::RImporter() :
     document(NULL),
@@ -54,8 +55,17 @@ void RImporter::startImport() {
 /**
  * Imports an entity into the document.
  */
-void RImporter::importObject(QSharedPointer<RObject> object) {
+void RImporter::importObjectP(QSharedPointer<RObject> object) {
     transaction.addObject(object, false);
+}
+
+/**
+ * Provided for script importers as importObjectP will loose the object ID.
+ */
+void RImporter::importObject(RObject* object) {
+    QSharedPointer<RObject> shp = QSharedPointer<RObject>(object->clone());
+    transaction.addObject(shp, false);
+    *object = *shp.data();
 }
 
 /**

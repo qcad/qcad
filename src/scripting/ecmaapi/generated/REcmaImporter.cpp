@@ -550,44 +550,23 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QSharedPointer < RObject > */
+        ) /* type: RObject * */
     
     ){
     // prepare arguments:
     
-                    // argument is SharedPointer
-                    QSharedPointer < RObject > 
-                    a0;
+                    // argument is pointer
+                    RObject * a0 = NULL;
 
-                    // argument might be a simple pointer:
-                     RObject * o0 = 
-                    qscriptvalue_cast < RObject * > (context->argument(0));
-
-                    if (o0!=NULL) {
-                        a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RObject >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RImporter: Argument 0 is not of type RObject *RObject *.", context);                    
                     }
-                    else {
-                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
-                        QSharedPointer < RObject >*
-                        p0;
-
-                        p0 =
-                        qscriptvalue_cast <QSharedPointer < RObject >* > (context->argument(0));
-
-                        if (p0==NULL) {
-                           return REcmaHelper::throwError("RImporter: Argument 0 is not of type  RObject .", context);                    
-                        }
-
-                        a0 = *p0;
-
-                           //return REcmaHelper::throwError("RImporter: Argument 0 is not of type  RObject .",
-                           //    context);                    
-                    }
-
-                    //QSharedPointer < RObject > 
-                    //a0 =
-                    //QSharedPointer < RObject >(o0->clone());
                 
     // end of arguments
 

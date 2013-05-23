@@ -51,7 +51,12 @@ public:
     virtual void startImport();
     virtual void endImport();
 
-    virtual void importObject(QSharedPointer<RObject> object);
+    /**
+     * \nonscriptable
+     */
+    virtual void importObjectP(QSharedPointer<RObject> object);
+
+    virtual void importObject(RObject* object);
 
     virtual void setCurrentBlockId(RBlock::Id id);
     virtual RBlock::Id getCurrentBlockId();

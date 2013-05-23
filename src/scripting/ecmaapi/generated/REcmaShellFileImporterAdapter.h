@@ -65,7 +65,7 @@
         
     
       void importObject(
-                QSharedPointer < RObject > object
+                RObject * object
             );
         
     
