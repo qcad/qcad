@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PrintPreview</class>
+ <widget class="QWidget" name="PrintPreview">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>766</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QToolButton" name="Done">
+     <property name="toolTip">
+      <string>Close Print Preview</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Close.svg</normaloff>Close.svg</iconset>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonIconOnly</enum>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Print">
+     <property name="toolTip">
+      <string>Print...</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Print.svg</normaloff>Print.svg</iconset>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonIconOnly</enum>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="PdfExport">
+     <property name="icon">
+      <iconset>
+       <normaloff>PdfExport.svg</normaloff>PdfExport.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_5">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Scale:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="Scale">
+     <property name="minimumSize">
+      <size>
+       <width>90</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Drawing Scale</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string notr="true">1:1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Offset">
+     <property name="toolTip">
+      <string>Move Paper Position</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>CursorHand.svg</normaloff>CursorHand.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="AutoFitDrawing">
+     <property name="toolTip">
+      <string>Auto fit drawing to page(s)</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>AutoFitDrawing.svg</normaloff>AutoFitDrawing.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="AutoCenter">
+     <property name="toolTip">
+      <string>Auto Center</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>AutoCenter.svg</normaloff>AutoCenter.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Portrait">
+     <property name="toolTip">
+      <string>Portrait</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Portrait.svg</normaloff>Portrait.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">PageOrientation</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Landscape">
+     <property name="toolTip">
+      <string>Landscape</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Landscape.svg</normaloff>Landscape.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">PageOrientation</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_8">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="AutoZoomToPage">
+     <property name="toolTip">
+      <string>Auto zoom to page</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>AutoZoomToPage.svg</normaloff>AutoZoomToPage.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="FullColor">
+     <property name="toolTip">
+      <string>Full Color Mode</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>ColorModeFullColor.svg</normaloff>ColorModeFullColor.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ColorMode</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Grayscale">
+     <property name="toolTip">
+      <string>Grayscale Mode</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>ColorModeGrayscale.svg</normaloff>ColorModeGrayscale.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ColorMode</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="BlackWhite">
+     <property name="toolTip">
+      <string>Black / White Mode</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>ColorModeBlackWhite.svg</normaloff>ColorModeBlackWhite.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">ColorMode</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="ShowPaperBorders">
+     <property name="toolTip">
+      <string>Show Paper Borders</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>ShowPaperBorders.svg</normaloff>ShowPaperBorders.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="PrintCropMarks">
+     <property name="toolTip">
+      <string>Print Crop Marks</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>CropMarks.svg</normaloff>CropMarks.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="ShowMoreOptions">
+     <property name="toolTip">
+      <string>Show More Options</string>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="PageOrientation"/>
+  <buttongroup name="ColorMode"/>
+ </buttongroups>
+</ui>

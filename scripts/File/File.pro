@@ -8,6 +8,7 @@ SUBDIRS = \
     NewFile \
     OpenFile \
     Print \
+    PrintPreview \
     Quit \
     RecentFiles \
     Save \

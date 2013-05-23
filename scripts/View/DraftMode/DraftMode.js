@@ -77,6 +77,7 @@ DraftMode.init = function(basePath) {
     action.setIcon(basePath + "/DraftMode.svg");
     action.setDefaultShortcut(new QKeySequence("d,f"));
     action.setDefaultCommands(["draftmode", "df"]);
+    action.setNoState(true);
     action.setSortOrder(10);
 
     var appWin = EAction.getMainWindow();

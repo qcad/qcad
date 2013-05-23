@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="pl_PL">
+<context>
+    <name>Frame</name>
+    <message>
+        <location filename="../MultiplePages.ui" line="+47"/>
+        <source>Columns:</source>
+        <translatorcomment>--exact match--
+--file: qcadguiqt_pl.ts--
+Wprowadź kolumny:
+Kolumn:</translatorcomment>
+        <translation type="unfinished">Kolumn:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Rows:</source>
+        <translatorcomment>--exact match--
+--file: qcadguiqt_pl.ts--
+Wprowadź wiersze:
+Wierszy:</translatorcomment>
+        <translation type="unfinished">Wierszy:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Close</source>
+        <translatorcomment>--exact match--
+--file: qt_pl.ts--
+Czy chcesz zamknąć plik
+%1?
+Czy chcesz zamknąć rysunek?</translatorcomment>
+        <translation type="unfinished">Zamknij</translation>
+    </message>
+</context>
+<context>
+    <name>PrintPreview</name>
+    <message>
+        <location filename="../PrintPreview.js" line="+134"/>
+        <source>Drag to move paper</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Przeciągnij, aby przesunąć papier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Done</source>
+        <translatorcomment>--exact match--
+--file: qt_pl.ts--
+Zrobione.
+Zrobione
+&amp;Zrobione i do następnego</translatorcomment>
+        <translation type="unfinished">Zrobione</translation>
+    </message>
+    <message>
+        <location line="+424"/>
+        <source>Export to PDF</source>
+        <translatorcomment>--exact match--
+--file: qt_pl.ts--
+Wyeksportuj do PDF</translatorcomment>
+        <translation type="unfinished">Wyeksportuj do PDF</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Exporting to %1...</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Eksport do ...</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Export complete: %1</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Eksport wypełnić:</translation>
+    </message>
+    <message>
+        <location filename="../PrintPreview.ui" line="+17"/>
+        <source>Close Print Preview</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Zamknij podgląd wydruku</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Print...</source>
+        <translatorcomment>--exact match--
+--file: linguist_pl.ts--
+Wy&amp;drukuj...
+Wydrukuj...</translatorcomment>
+        <translation type="unfinished">Wydrukuj...</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Scale:</source>
+        <translatorcomment>--exact match--
+--file: qcadguiqt_pl.ts--
+Skala:</translatorcomment>
+        <translation type="unfinished">Skala:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Rysowanie Scale</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Move Paper Position</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Przesuń położenie papieru</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Auto fit drawing to page(s)</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Auto dopasowanie rysunku do strony (s)</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Auto fit pages to drawing</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Stron Aut.dop rysunku</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Auto Center</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Auto Center</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Portrait</source>
+        <translatorcomment>--exact match--
+--file: qt_pl.ts--
+Portret
+QVGA portret (240x320)
+VGA portret (480x640)</translatorcomment>
+        <translation type="unfinished">Portret</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+20"/>
+        <source>PageOrientation</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">PageOrientation</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>Landscape</source>
+        <translatorcomment>--exact match--
+--file: qt_pl.ts--
+&amp;Poziomo
+Pejzaż
+QVGA pejzaż (320x240)</translatorcomment>
+        <translation type="unfinished">Pejzaż</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Single Page</source>
+        <translatorcomment>--google--
+Pokaż pojedynczą stronę</translatorcomment>
+        <translation type="unfinished">Pojedyncza strona</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Multiple Pages</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Wiele stron</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Auto zoom to page(s)</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Auto-zoom do strony (s)</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Full Color Mode</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Full Color Mode</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <source>ColorMode</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">ColorMode</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <source>Grayscale Mode</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Skala szarości</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Black / White Mode</source>
+        <translatorcomment>--google--
+Przełącz tryb czarno-biały</translatorcomment>
+        <translation type="unfinished">Black / White Tryb</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Show Paper Borders</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Pokaż Obramowanie papieru</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Print Crop Marks</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Wydrukuj Znaki obcinania</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Show More Options</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Pokaż więcej opcji</translation>
+    </message>
+    <message>
+        <location filename="../PrintPreviewInit.js" line="+2"/>
+        <source>Print Pre&amp;view</source>
+        <translatorcomment>--exact match--
+--file: qcadguiqt_pl.ts--
+&amp;Podgląd wydruku</translatorcomment>
+        <translation type="unfinished">&amp;Podgląd wydruku</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Preview how current drawing would be printed</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="unfinished">Podgląd jak bieżący rysunek będzie drukowany</translation>
+    </message>
+</context>
+</TS>

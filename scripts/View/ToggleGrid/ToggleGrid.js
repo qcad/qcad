@@ -110,6 +110,7 @@ ToggleGrid.init = function(basePath) {
     action.setRequiresDocument(true);
     action.setIcon(basePath + "/ToggleGrid.svg");
     action.setDefaultShortcut(new QKeySequence("g,r"));
+    action.setNoState(true);
     action.setSortOrder(20);
 
     var appWin = EAction.getMainWindow();
