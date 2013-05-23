@@ -66,10 +66,9 @@ EditText.prototype.setState = function(state) {
 };
 
 EditText.prototype.pickEntity = function(event, preview) {
-    this.error = "";
     var doc = this.getDocument();
     var entityId = event.getEntityId();
-    entity = doc.queryEntity(entityId);
+    var entity = doc.queryEntity(entityId);
 
     if (isNull(entity)) {
         this.entity = undefined;

@@ -140,7 +140,9 @@ LineParallel.prototype.getOperation = function(preview) {
     }
 
     var parallels = ShapeAlgorithms.getOffsetShapes(this.shape, this.distance, this.number, this.pos);
-    this.error = ShapeAlgorithms.error;
+    if (!preview) {
+        this.error = ShapeAlgorithms.error;
+    }
 
     if (isNull(parallels)) {
         return undefined;

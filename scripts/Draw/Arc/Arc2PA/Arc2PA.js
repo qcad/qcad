@@ -120,13 +120,13 @@ Arc2PA.prototype.pickCoordinate = function(event, preview) {
         break;
     }
 
-    if (!preview && this.error.length!=0) {
+    if (!preview && this.error.length!==0) {
         EAction.handleUserWarning(this.error);
     }
 };
 
 Arc2PA.prototype.getOperation = function(preview) {
-    var shape = this.getArc2PA();
+    var shape = this.getArc2PA(preview);
 
     if (isNull(shape)) {
         return undefined;
@@ -147,18 +147,22 @@ Arc2PA.prototype.verifyAngle = function() {
     return !(this.angle >= Math.PI*2-RS.AngleTolerance || this.angle <= -Math.PI*2+RS.AngleTolerance)
 };
 
-Arc2PA.prototype.getArc2PA = function() {
+Arc2PA.prototype.getArc2PA = function(preview) {
     if (isNull(this.point1) || isNull(this.point2) || isNull(this.angle)) {
         return undefined;
     }
 
     if (!this.verifyAngle()) {
-        this.error = qsTr("Invalid angle");
+        if (!preview) {
+            this.error = qsTr("Invalid angle");
+        }
         return undefined;
     }
 
     if (this.point1.equalsFuzzy(this.point2)) {
-        this.error = qsTr("The two points are identical");
+        if (!preview) {
+            this.error = qsTr("The two points are identical");
+        }
         return undefined;
     }
 
@@ -184,7 +188,7 @@ Arc2PA.prototype.getArc2PA = function() {
 
     var ips = line1.getIntersectionPoints(line2, false);
 
-    if (ips.length==1) {
+    if (ips.length===1) {
         this.center = ips[0];
     }
     else {

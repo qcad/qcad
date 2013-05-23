@@ -114,13 +114,13 @@ Circle2P.prototype.pickCoordinate = function(event, preview) {
 
     }
 
-    if (!preview && this.error.length!=0) {
+    if (!preview && this.error.length!==0) {
         EAction.handleUserWarning(this.error);
     }
 };
 
 Circle2P.prototype.getOperation = function(preview) {
-    var shape = this.getCircle2P();
+    var shape = this.getCircle2P(preview);
 
     if (isNull(shape)) {
         return undefined;
@@ -137,14 +137,16 @@ Circle2P.prototype.getOperation = function(preview) {
     return new RAddObjectOperation(entity);
 };
 
-Circle2P.prototype.getCircle2P = function() {
+Circle2P.prototype.getCircle2P = function(preview) {
     if (isNull(this.point1) || isNull(this.point2)) {
         return undefined;
     }
 
     var distance = this.point1.getDistanceTo(this.point2);
     if (distance<RS.PointTolerance) {
-        this.error = qsTr("The two points are identical");
+        if (!preview) {
+            this.error = qsTr("The two points are identical");
+        }
         return undefined;
     }
 

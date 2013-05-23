@@ -131,7 +131,7 @@ ArcTangential.prototype.pickEntity = function(event, preview) {
         break;
     }
 
-    if (!preview && this.error.length!=0) {
+    if (!preview && this.error.length!==0) {
         EAction.handleUserWarning(this.error);
     }
 };
@@ -150,7 +150,7 @@ ArcTangential.prototype.pickCoordinate = function(event, preview) {
             var op = this.getOperation(false);
             if (!isNull(op)) {
                 di.applyOperation(op);
-                if (this.error.length==0) {
+                if (this.error.length===0) {
                     this.setState(ArcTangential.State.ChoosingBaseEntity);
                 }
             }

@@ -146,7 +146,9 @@ Arc3P.prototype.pickCoordinate = function(event, preview) {
 
 Arc3P.prototype.getOperation = function(preview) {
     var shape = ShapeAlgorithms.createArcFrom3Points(this.point1, this.point2, this.point3);
-    this.error = ShapeAlgorithms.error;
+    if (!preview) {
+        this.error = ShapeAlgorithms.error;
+    }
 
     if (isNull(shape)) {
         return undefined;

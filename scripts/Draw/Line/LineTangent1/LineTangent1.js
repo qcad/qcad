@@ -159,7 +159,7 @@ LineTangent1.prototype.pickEntity = function(event, preview) {
         break;
     }
 
-    if (!preview && this.error.length!=0) {
+    if (!preview && this.error.length!==0) {
         EAction.handleUserWarning(this.error);
     }
 };
@@ -177,7 +177,7 @@ LineTangent1.prototype.getOperation = function(preview) {
     if (isArcShape(this.shape) ||
         isCircleShape(this.shape)) {
 
-        tangent = this.getTangentArcOrCircle(this.shape);
+        tangent = this.getTangentArcOrCircle(this.shape, preview);
     }
     else if (isEllipseShape(this.shape)) {
         var tangents = this.shape.getTangents(this.pos1);
@@ -200,7 +200,7 @@ LineTangent1.prototype.getOperation = function(preview) {
     return op;
 };
 
-LineTangent1.prototype.getTangentArcOrCircle = function(arcOrCircle) {
+LineTangent1.prototype.getTangentArcOrCircle = function(arcOrCircle, preview) {
     var doc = this.getDocument();
 
     // create temporary thales circle:
@@ -208,7 +208,9 @@ LineTangent1.prototype.getTangentArcOrCircle = function(arcOrCircle) {
     var thalesRadius = this.pos1.getDistanceTo(thalesCenter);
 
     if (thalesRadius<arcOrCircle.getRadius()/2.0) {
-        this.error = qsTr("Cannot draw tangent from point inside circle to circle");
+        if (!preview) {
+            this.error = qsTr("Cannot draw tangent from point inside circle to circle");
+        }
         return undefined;
     }
 

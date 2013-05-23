@@ -146,13 +146,13 @@ Circle2PR.prototype.pickCoordinate = function(event, preview) {
 //        break;
     }
 
-    if (!preview && this.error.length!=0) {
+    if (!preview && this.error.length!==0) {
         EAction.handleUserWarning(this.error);
     }
 };
 
 Circle2PR.prototype.getOperation = function(preview) {
-    var shape = this.getCircle2PR();
+    var shape = this.getCircle2PR(preview);
 
     if (isNull(shape)) {
         return undefined;
@@ -169,18 +169,22 @@ Circle2PR.prototype.getOperation = function(preview) {
     return new RAddObjectOperation(entity);
 };
 
-Circle2PR.prototype.getCircle2PR = function() {
+Circle2PR.prototype.getCircle2PR = function(preview) {
     if (isNull(this.point1) || isNull(this.point2) || !isNumber(this.radius)) {
         return undefined;
     }
 
     if (this.radius <= 0.0 || this.radius > 1.0e6) {
-        this.error = qsTr("Invalid radius");
+        if (!preview) {
+            this.error = qsTr("Invalid radius");
+        }
         return undefined;
     }
 
     if (this.point1.equalsFuzzy(this.point2)) {
-        this.error = qsTr("The two points are identical");
+        if (!preview) {
+            this.error = qsTr("The two points are identical");
+        }
         return undefined;
     }
 
@@ -189,7 +193,7 @@ Circle2PR.prototype.getCircle2PR = function() {
 
     var ips = circle1.getIntersectionPoints(circle2, false);
 
-    if (ips.length==2) {
+    if (ips.length===2) {
         var ipRight, ipLeft;
         var line = new RLine(this.point1, this.point2);
         if (line.getSideOfPoint(ips[0])==RS.RightHand) {
@@ -230,7 +234,7 @@ Circle2PR.prototype.slotDirectionChanged = function(button) {
         return;
     }
 
-    if (button.objectName=="Clockwise") {
+    if (button.objectName==="Clockwise") {
         this.reversed = true;
     }
     else {
@@ -245,7 +249,7 @@ Circle2PR.prototype.slotSolutionChanged = function(button) {
         return;
     }
 
-    if (button.objectName=="Solution2") {
+    if (button.objectName==="Solution2") {
         this.alternativeSolution = true;
     }
     else {
@@ -262,7 +266,7 @@ Circle2PR.prototype.getAuxPreview = function() {
 
     var ret = new Array();
 
-    if (this.state==Circle2PR.State.SettingPoint2) {
+    if (this.state===Circle2PR.State.SettingPoint2) {
         ret.push(new RLine(this.point1, this.point2));
     }
 

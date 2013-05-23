@@ -152,7 +152,9 @@ Circle3P.prototype.pickCoordinate = function(event, preview) {
 
 Circle3P.prototype.getOperation = function(preview) {
     var shape = ShapeAlgorithms.createCircleFrom3Points(this.point1, this.point2, this.point3);
-    this.error = ShapeAlgorithms.error;
+    if (!preview) {
+        this.error = ShapeAlgorithms.error;
+    }
 
     if (isNull(shape)) {
         return undefined;

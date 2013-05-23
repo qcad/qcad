@@ -110,12 +110,13 @@ LineTangent2.prototype.pickEntity = function(event, preview) {
     if (isArcShape(shape) ||
         isCircleShape(shape)) {
 
-        if (this.state==LineTangent2.State.ChoosingEntity1) {
+        if (this.state===LineTangent2.State.ChoosingEntity1) {
             this.entity1 = entity;
             this.shape1 = shape;
             this.pos1 = pos;
             if (!preview) {
                 this.setState(LineTangent2.State.ChoosingEntity2);
+                return;
             }
         }
         else {
@@ -129,7 +130,7 @@ LineTangent2.prototype.pickEntity = function(event, preview) {
         if (!preview) {
             EAction.warnNotArcCircle();
         }
-        if (this.state==LineTangent2.State.ChoosingEntity1) {
+        if (this.state===LineTangent2.State.ChoosingEntity1) {
             this.entity1 = undefined;
             this.shape1 = undefined;
             this.pos1 = undefined;
@@ -145,18 +146,18 @@ LineTangent2.prototype.pickEntity = function(event, preview) {
         this.updatePreview();
     }
     else {
-        if (this.state==LineTangent2.State.ChoosingEntity2) {
-            var op = this.getOperation(false);
+        if (this.state===LineTangent2.State.ChoosingEntity2) {
+            var op = this.getOperation(preview);
             if (!isNull(op)) {
                 di.applyOperation(op);
-                if (this.error.length==0) {
+                if (this.error.length===0) {
                     this.setState(LineTangent2.State.ChoosingEntity1);
                 }
             }
         }
     }
 
-    if (!preview && this.error.length!=0) {
+    if (!preview && this.error.length!==0) {
         EAction.handleUserWarning(this.error);
     }
 };
@@ -213,7 +214,9 @@ LineTangent2.prototype.getOperation = function(preview) {
     var tangent = this.getTangent();
 
     if (isNull(tangent)) {
-        this.error = qsTr("No tangent possible");
+        if (!preview) {
+            this.error = qsTr("No tangent possible");
+        }
         return undefined;
     }
 
