@@ -62,8 +62,8 @@ RTransaction::RTransaction(
     int transactionId,
     const QString& text,
     const QList<RObject::Id>& affectedObjects,
-    const QMap<RObject::Id, QList<RPropertyChange> >& propertyChanges,
-    RTransaction* parent)
+    const QMap<RObject::Id, QList<RPropertyChange> >& propertyChanges)
+    //RTransaction* parent)
     : storage(&storage),
       transactionId(transactionId),
       text(text),
@@ -77,9 +77,9 @@ RTransaction::RTransaction(
       allowInvisible(false),
       spatialIndexDisabled(false) {
 
-    if (parent!=NULL) {
-        parent->appendChild(*this);
-    }
+//    if (parent!=NULL) {
+//        parent->appendChild(*this);
+//    }
 
 }
 
@@ -91,8 +91,8 @@ RTransaction::RTransaction(
 RTransaction::RTransaction(
     RStorage& storage,
     const QString& text,
-    bool undoable,
-    RTransaction* parent)
+    bool undoable)
+    //RTransaction* parent)
     : storage(&storage),
       transactionId(-1),
       text(text),
@@ -104,9 +104,9 @@ RTransaction::RTransaction(
       allowInvisible(false),
       spatialIndexDisabled(false) {
 
-    if (parent!=NULL) {
-        parent->appendChild(*this);
-    }
+//    if (parent!=NULL) {
+//        parent->appendChild(*this);
+//    }
 
     this->storage->beginTransaction();
 }
@@ -823,9 +823,9 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
  * Appends the given child to the list of child transactions of
  * this transaction. This transaction takes o
  */
-void RTransaction::appendChild(RTransaction& t) {
-    childTransactions.push_back(t);
-}
+//void RTransaction::appendChild(RTransaction& t) {
+//    childTransactions.push_back(t);
+//}
 
 /**
  * Stream operator for QDebug

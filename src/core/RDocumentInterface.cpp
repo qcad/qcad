@@ -998,7 +998,7 @@ void RDocumentInterface::undo() {
     objectChangeEvent(objectIds);
 
     if (RMainWindow::hasMainWindow()) {
-        RMainWindow::getMainWindow()->postTransactionEvent();
+        RMainWindow::getMainWindow()->postTransactionEvent(t);
     }
 }
 
@@ -1014,7 +1014,7 @@ void RDocumentInterface::redo() {
     objectChangeEvent(objectIds);
 
     if (RMainWindow::hasMainWindow()) {
-        RMainWindow::getMainWindow()->postTransactionEvent();
+        RMainWindow::getMainWindow()->postTransactionEvent(t);
     }
 }
 
@@ -1639,7 +1639,7 @@ RTransaction RDocumentInterface::applyOperation(const ROperation* operation) {
     objectChangeEvent(objectIds);
 
     if (RMainWindow::hasMainWindow() && !isClipboard()) {
-        RMainWindow::getMainWindow()->postTransactionEvent(
+        RMainWindow::getMainWindow()->postTransactionEvent(transaction,
                     transaction.hasOnlyChanges(), operation->getEntityTypeFilter());
     }
 

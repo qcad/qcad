@@ -66,6 +66,8 @@ dir="./core" filename="RMainWindow.h">
   <class_decl>class 
   <name>RSnapListener</name>;</class_decl>
   <class_decl>class 
+  <name>RTransaction</name>;</class_decl>
+  <class_decl>class 
   <name>RUcsListener</name>;</class_decl>
   <class_decl>class 
   <name>RVector</name>;</class_decl>
@@ -236,6 +238,13 @@ dir="./core" filename="RMainWindow.h">
   <parameter_list>( 
   <param>
     <decl>
+      <type>
+      <name>RTransaction</name>&amp;</type>
+      <name>t</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
     <type>
       <name>bool</name>
     </type>
@@ -384,6 +393,17 @@ dir="./core" filename="RMainWindow.h">
       <name>RDocument</name>*</type>
       <name>document</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

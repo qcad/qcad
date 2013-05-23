@@ -186,10 +186,10 @@ void RMainWindow::addTransactionListener(RTransactionListener* l) {
 /**
  * Notifies all transaction listeners.
  */
-void RMainWindow::notifyTransactionListeners(RDocument* document) {
+void RMainWindow::notifyTransactionListeners(RDocument* document, RTransaction* transaction) {
     QList<RTransactionListener*>::iterator it;
     for (it = transactionListeners.begin(); it != transactionListeners.end(); ++it) {
-        (*it)->updateTransactionListener(document);
+        (*it)->updateTransactionListener(document, transaction);
     }
 }
 

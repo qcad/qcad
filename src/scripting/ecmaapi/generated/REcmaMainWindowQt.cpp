@@ -1343,6 +1343,60 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+                    // argument is pointer
+                    RTransaction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyTransactionListeners(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.notifyTransactionListeners().",
                    context);
@@ -3310,36 +3364,32 @@
                 
     
     if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->postTransactionEvent();
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
     1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransaction */
     
     ){
     // prepare arguments:
     
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RMainWindowQt: Argument 0 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -3354,30 +3404,42 @@
     
     if( context->argumentCount() ==
     2 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransaction */
      && (
-            context->argument(1).isNumber()
-        ) /* type: RS::EntityType */
+            context->argument(1).isBool()
+        ) /* type: bool */
     
     ){
     // prepare arguments:
     
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RMainWindowQt: Argument 0 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a0 = 
+                    *ap0;
                 
                     // argument isStandardType
-                    RS::EntityType
+                    bool
                     a1 =
-                    (RS::EntityType)
-                    (int)
+                    (bool)
+                    
                     context->argument( 1 ).
-                    toNumber();
+                    toBool();
                 
     // end of arguments
 
@@ -3387,6 +3449,71 @@
                self->postTransactionEvent(a0
         ,
     a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransaction */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RMainWindowQt: Argument 0 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    RS::EntityType
+                    a2 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->postTransactionEvent(a0
+        ,
+    a1
+        ,
+    a2);
     } else
 
 

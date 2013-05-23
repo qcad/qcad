@@ -8,6 +8,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="QEvent" specifier="public" />
     <constructor>
       <variant>
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="t" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyChanges"
         hasDefault="true" default=" false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
@@ -24,6 +26,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getEntityTypeFilter" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="getTransaction" cppName="getTransaction"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RTransaction" isPureVirtual="false" />
     </method>
   </class>
 </unit>

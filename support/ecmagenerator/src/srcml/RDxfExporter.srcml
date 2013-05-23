@@ -670,14 +670,19 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>QList
+      <name>QMap
       <argument_list>&lt;
       <argument>
-        <name>DL_StyleData</name>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>QString</name>
       </argument>&gt;</argument_list></name>
     </type>
     <name>textStyles</name>
   </decl>;</decl_stmt>
+  <comment type="line">//QList&lt;DL_StyleData&gt;
+  textStyles;</comment>
   <comment type="line">// maps image entity IDs to
   handles:</comment>
   <decl_stmt>

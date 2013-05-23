@@ -77,6 +77,7 @@ public:
 
     virtual void postSelectionChangedEvent();
     virtual void postTransactionEvent(
+        RTransaction& t,
         bool onlyChanges=false,
         RS::EntityType entityTypeFilter = RS::EntityAll
     );

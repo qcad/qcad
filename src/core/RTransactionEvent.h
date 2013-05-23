@@ -25,6 +25,7 @@
 #include <QEvent>
 
 #include "RS.h"
+#include "RTransaction.h"
 
 /**
  * \brief Event that is posted whenever a transaction happened.
@@ -34,8 +35,8 @@
  */
 class QCADCORE_EXPORT RTransactionEvent : public QEvent {
 public:
-    RTransactionEvent(bool onlyChanges=false, RS::EntityType entityTypeFilter = RS::EntityAll) :
-        QEvent(QEvent::User), onlyChanges(onlyChanges), entityTypeFilter(entityTypeFilter) {}
+    RTransactionEvent(RTransaction& t, bool onlyChanges=false, RS::EntityType entityTypeFilter = RS::EntityAll) :
+        QEvent(QEvent::User), transaction(t), onlyChanges(onlyChanges), entityTypeFilter(entityTypeFilter) {}
     virtual ~RTransactionEvent() {}
 
     bool hasOnlyChanges() {
@@ -46,9 +47,14 @@ public:
         return entityTypeFilter;
     }
 
+    RTransaction getTransaction() const {
+        return transaction;
+    }
+
 private:
     bool onlyChanges;
     RS::EntityType entityTypeFilter;
+    RTransaction transaction;
 };
 
 Q_DECLARE_METATYPE(RTransactionEvent*)

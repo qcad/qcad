@@ -300,6 +300,13 @@ dir="./gui" filename="RMainWindowQt.h">
   <parameter_list>( 
   <param>
     <decl>
+      <type>
+      <name>RTransaction</name>&amp;</type>
+      <name>t</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
     <type>
       <name>bool</name>
     </type>

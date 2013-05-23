@@ -29,6 +29,9 @@ dir="./core" filename="RTransactionEvent.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RS.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
   <comment type="block">/** * \brief Event that is posted whenever
   a transaction happened. * * \ingroup core * \scriptable
   */</comment>
@@ -46,6 +49,13 @@ dir="./core" filename="RTransactionEvent.h">
   <constructor>
     <name>RTransactionEvent</name>
     <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>RTransaction</name>&amp;</type>
+        <name>t</name>
+      </decl>
+    </param>, 
     <param>
       <decl>
       <type>
@@ -83,6 +93,15 @@ dir="./core" filename="RTransactionEvent.h">
           <name>
           <name>QEvent</name>::
           <name>User</name></name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>transaction</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>t</name>
         </expr>
       </argument>)</argument_list>
     </call>, 
@@ -138,6 +157,19 @@ dir="./core" filename="RTransactionEvent.h">
     <expr>
       <name>entityTypeFilter</name>
     </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RTransaction</name>
+    </type>
+    <name>getTransaction</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>transaction</name>
+    </expr>;</return>}</block>
   </function></public>
   <private>private: 
   <decl_stmt>
@@ -155,6 +187,13 @@ dir="./core" filename="RTransactionEvent.h">
       <name>EntityType</name></name>
     </type>
     <name>entityTypeFilter</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>RTransaction</name>
+    </type>
+    <name>transaction</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

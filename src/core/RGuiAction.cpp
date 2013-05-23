@@ -318,7 +318,11 @@ void RGuiAction::addToWidget(QWidget* w) {
 
 
 
-void RGuiAction::updateTransactionListener(const RDocument* document) {
+void RGuiAction::updateTransactionListener(const RDocument* document,
+    const RTransaction* transaction) {
+
+    Q_UNUSED(transaction)
+
     bool enabled = true;
 
     if (requiresDocument && document==NULL) {

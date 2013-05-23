@@ -77,11 +77,11 @@ public:
     RTransaction(RStorage& storage, int transactionId, const QString& text,
             const QList<RObject::Id>& affectedObjects,
             //const QSet<RObject::Id>& affectedEntities,
-            const QMap<RObject::Id, QList<RPropertyChange> >& propertyChanges,
-            RTransaction* parent = NULL);
+            const QMap<RObject::Id, QList<RPropertyChange> >& propertyChanges);
+            //RTransaction* parent = NULL);
 
-    RTransaction(RStorage& storage, const QString& text, bool undoable = true,
-            RTransaction* parent = NULL);
+    RTransaction(RStorage& storage, const QString& text, bool undoable = true);
+            //RTransaction* parent = NULL);
 
     virtual ~RTransaction();
 
@@ -105,11 +105,11 @@ public:
      * \return True if this transaction should store undo / redo information
      *      for later undo / redo functionality.
      */
-    bool isUndoable() {
+    bool isUndoable() const {
         return undoable;
     }
 
-    bool isFailed() {
+    bool isFailed() const {
         return failed;
     }
 
@@ -146,14 +146,14 @@ public:
     /**
      * \return Unique ID of this transaction.
      */
-    int getId() {
+    int getId() const {
         return transactionId;
     }
 
     /**
      * \return Logged text for this transaction.
      */
-    QString getText() {
+    QString getText() const {
         return text;
     }
 
@@ -174,7 +174,7 @@ public:
      * \return Set of object IDs of objects that are affected by
      *      this transaction.
      */
-    QList<RObject::Id> getAffectedObjects() {
+    QList<RObject::Id> getAffectedObjects() const {
         return affectedObjects;
     }
 
@@ -182,15 +182,15 @@ public:
      * \return Set of object IDs of objects that have been created or
      *      deleted by this transaction.
      */
-    QSet<RObject::Id> getStatusChanges() {
+    QSet<RObject::Id> getStatusChanges() const {
         return statusChanges;
     }
 
-    QMap<RObject::Id, QList<RPropertyChange> > getPropertyChanges() {
+    QMap<RObject::Id, QList<RPropertyChange> > getPropertyChanges() const {
         return propertyChanges;
     }
 
-    bool hasOnlyChanges() {
+    bool hasOnlyChanges() const {
         return onlyChanges;
     }
 
@@ -198,7 +198,7 @@ public:
 
 protected:
     bool addPropertyChange(RObject::Id objectId, const RPropertyChange& propertyChange);
-    void appendChild(RTransaction& t);
+    //void appendChild(RTransaction& t);
 
     void commit();
     void rollback();
@@ -245,7 +245,7 @@ protected:
     /**
      * Child transactions of this transaction.
      */
-    QList<RTransaction> childTransactions;
+    //QList<RTransaction> childTransactions;
 
     /**
      * True if this transaction can be undone.

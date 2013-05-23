@@ -24,6 +24,7 @@
 
 class RDocument;
 class REntity;
+class RTransaction;
 
 
 
@@ -41,7 +42,8 @@ public:
     /**
      * Called by the document whenever the current transaction stack changes.
      */
-    virtual void updateTransactionListener(const RDocument* document) = 0;
+    virtual void updateTransactionListener(const RDocument* document,
+        const RTransaction* transaction=NULL) = 0;
 };
 
 Q_DECLARE_METATYPE(RTransactionListener*)

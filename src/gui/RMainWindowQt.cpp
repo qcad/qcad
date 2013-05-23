@@ -79,15 +79,12 @@ void RMainWindowQt::currentTabChanged(int index) {
     QList<QMdiSubWindow *> subWindows = mdiArea->subWindowList();
     if (index>=subWindows.size() || index<0) {
         qWarning() << "more tabs than documents";
-        //Q_ASSERT(false);
         return;
     }
 
     RMdiChildQt* mdiChild = dynamic_cast<RMdiChildQt*>(subWindows.at(index));
     mdiChild->showMaximized();
     mdiArea->setActiveSubWindow(mdiChild);
-
-    //QMdiSubWindow* subWindow = childWindows.at(index);
 }
 
 void RMainWindowQt::subWindowActivated(QMdiSubWindow* sw) {
@@ -96,11 +93,6 @@ void RMainWindowQt::subWindowActivated(QMdiSubWindow* sw) {
     notifyListenersSlot(sw);
     suspendAndResume(sw);
 }
-
-//void RMainWindowQt::objectDestroyed(QObject* obj) {
-//    qDebug() << "objectDestroyed: " << obj->objectName();
-//    objectWasDestroyed = true;
-//}
 
 void RMainWindowQt::handleUserMessage(const QString& message) {
     emit userMessage(message);
@@ -123,8 +115,8 @@ void RMainWindowQt::postSelectionChangedEvent() {
     QCoreApplication::postEvent(this, event);
 }
 
-void RMainWindowQt::postTransactionEvent(bool onlyChanges, RS::EntityType entityTypeFilter) {
-    RTransactionEvent* event = new RTransactionEvent(onlyChanges, entityTypeFilter);
+void RMainWindowQt::postTransactionEvent(RTransaction& t, bool onlyChanges, RS::EntityType entityTypeFilter) {
+    RTransactionEvent* event = new RTransactionEvent(t, onlyChanges, entityTypeFilter);
     QCoreApplication::postEvent(this, event);
 }
 
@@ -152,12 +144,7 @@ void RMainWindowQt::notifyListenersSlot(QMdiSubWindow* mdiChild) {
 }
 
 void RMainWindowQt::updateGuiActions(QMdiSubWindow*) {
-    //RMdiChildQt* mdi = getMdiChild();
-    //bool hasDocument = (mdi != NULL);
     RDocument* document = getDocument();
-    //bool hasDocument = (document != NULL);
-
-    //qDebug() << "RMainWindowQt::updateGuiActions: hasDocument: " << hasDocument;
 
     QList<RGuiAction*> actions = RGuiAction::getActions();
     for (int i = 0; i < actions.size(); ++i) {
@@ -230,14 +217,6 @@ void RMainWindowQt::suspendAndResume(QMdiSubWindow* mdiChild) {
     di->resume();
 
     emit(resumedTab(mdi));
-
-    //QString sep = " - ";
-    //QString appWinTitle = windowTitle();
-    //if (appWinTitle.contains(sep)) {
-    //    appWinTitle = appWinTitle.right(appWinTitle.length() - appWinTitle.lastIndexOf(sep) - sep.length());
-    //}
-    //appWinTitle
-    //setWindowTitle(mdi->windowTitle() + " - " + qApp->applicationName());
 }
 
 void RMainWindowQt::updateScenes(QMdiSubWindow* mdiChild) {
@@ -260,24 +239,6 @@ void RMainWindowQt::updateScenes(QMdiSubWindow* mdiChild) {
         lastMdiChild = mdiChild;
     }
 }
-
-//void RMainWindowQt::disableTabBar(QMdiSubWindow* mdiChild) {
-//    Q_UNUSED(mdiChild)
-
-//    QTabBar* tabBar = getTabBar();
-//    if (tabBar!=NULL) {
-//        tabBar->setEnabled(false);
-//    }
-//}
-
-//void RMainWindowQt::enableTabBar(QMdiSubWindow* mdiChild) {
-//    Q_UNUSED(mdiChild)
-
-//    QTabBar* tabBar = getTabBar();
-//    if (tabBar!=NULL) {
-//        tabBar->setEnabled(true);
-//    }
-//}
 
 void RMainWindowQt::closeEvent(QCloseEvent* e) {
     if (mdiArea==NULL) {
@@ -318,64 +279,6 @@ void RMainWindowQt::dragEnterEvent(QDragEnterEvent* event) {
 void RMainWindowQt::dropEvent(QDropEvent* event) {
     emit drop(event);
 }
-
-/*
-void RMainWindowQt::keyPressEvent(QKeyEvent* e) {
-    static QTime ts;
-    static QString firstKey;
-
-    switch (e->key()) {
-    case Qt::Key_Shift:
-    case Qt::Key_Control:
-    case Qt::Key_Alt:
-    case Qt::Key_AltGr:
-    case Qt::Key_CapsLock:
-    case Qt::Key_Meta:
-    case Qt::Key_Menu:
-    case Qt::Key_Space:
-    case Qt::Key_Return:
-        QMainWindow::keyPressEvent(e);
-        return;
-        break;
-    case Qt::Key_Escape:
-        firstKey = "";
-        QMainWindow::keyPressEvent(e);
-        return;
-        break;
-    default:
-        e->ignore();
-        break;
-    }
-
-    QString keyString = QKeySequence(e->key()).toString().toLower();
-    qDebug(QString("RMainWindowQt::keyPressEvent: keyString: '%1'").arg(keyString));
-    QTime now = QTime::currentTime();
-
-    if (ts.msecsTo(now) < 2000) {
-        QString code = firstKey + keyString;
-        qDebug(QString("RMainWindowQt::keyPressEvent: code: '%1'").arg(code));
-        if (RGuiAction::triggerByKeycode(code)) {
-            firstKey = "";
-            return;
-        } else {
-            ts = now;
-            firstKey = code;
-            if (code.length() >= 3) {
-                firstKey = "";
-                return;
-            }
-        }
-    } else {
-        ts = now;
-        firstKey = keyString;
-        if (RGuiAction::triggerByKeycode(firstKey)) {
-            firstKey = "";
-            return;
-        }
-    }
-    QMainWindow::keyPressEvent(e);
-}
-*/
 
 int RMainWindowQt::getWidth() {
     return width();
@@ -535,12 +438,8 @@ bool RMainWindowQt::readSettings() {
     if (bool(windowState() & Qt::WindowFullScreen) != fullScreen) {
         if (fullScreen) {
             setWindowState(windowState() | Qt::WindowFullScreen);
-            //statusBar()->hide();
-            //menuBar()->hide();
         } else {
             setWindowState(windowState() & ~Qt::WindowFullScreen);
-            //menuBar()->show();
-            //statusBar()->show();
         }
     }
 
@@ -574,23 +473,15 @@ bool RMainWindowQt::event(QEvent* e) {
         return true;
     }
 
-//    RPropertyEvent* pce = dynamic_cast<RPropertyEvent*>(e);
-//    if (pce!=NULL) {
-//        RDocumentInterface* documentInterface = getDocumentInterface();
-//        if (documentInterface == NULL) {
-//            return true;
-//        }
-
-//        documentInterface->propertyChangeEvent(*pce);
-//    }
-
     RTransactionEvent* te = dynamic_cast<RTransactionEvent*>(e);
     if (te!=NULL) {
-        // combined properties might have changed (delete):
+        // combined properties might have changed (deleted entities):
         notifyPropertyListeners(getDocument(), te->hasOnlyChanges(), te->getEntityTypeFilter());
-        // selection might have changed (delete):
+        // selection might have changed (deleted entities):
         notifySelectionListeners(getDocumentInterface());
-        notifyTransactionListeners(getDocument());
+        // notify transaction listeners:
+        RTransaction t = te->getTransaction();
+        notifyTransactionListeners(getDocument(), &t);
         return true;
     }
 
@@ -601,7 +492,6 @@ bool RMainWindowQt::event(QEvent* e) {
         }
 
         // workaround for QMdiArea bug: last window cannot be closed sometimes:
-//#ifndef Q_OS_WIN32
         if (mdiArea->activeSubWindow()==NULL) {
             QList<QMdiSubWindow *> subWindows = mdiArea->subWindowList();
             if (subWindows.size()==1) {
@@ -612,9 +502,6 @@ bool RMainWindowQt::event(QEvent* e) {
         else {
             mdiArea->closeActiveSubWindow();
         }
-//#else
-//        mdiArea->closeActiveSubWindow();
-//#endif
         return true;
     }
 

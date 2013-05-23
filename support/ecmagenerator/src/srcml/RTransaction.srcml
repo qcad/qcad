@@ -160,18 +160,8 @@ dir="./core" filename="RTransaction.h">
       </argument>&gt;</argument_list></name>&amp;</type>
       <name>propertyChanges</name>
     </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
   </param>)</parameter_list>;</constructor_decl>
+  <comment type="line">//RTransaction* parent = NULL);</comment>
   <constructor_decl>
   <name>RTransaction</name>
   <parameter_list>(
@@ -201,18 +191,8 @@ dir="./core" filename="RTransaction.h">
         <name>true</name>
       </expr>
     </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
   </param>)</parameter_list>;</constructor_decl>
+  <comment type="line">//RTransaction* parent = NULL);</comment>
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RTransaction</name>
@@ -306,6 +286,7 @@ dir="./core" filename="RTransaction.h">
     </type>
     <name>isUndoable</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -318,6 +299,7 @@ dir="./core" filename="RTransaction.h">
     </type>
     <name>isFailed</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -414,6 +396,7 @@ dir="./core" filename="RTransaction.h">
     </type>
     <name>getId</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -428,6 +411,7 @@ dir="./core" filename="RTransaction.h">
     </type>
     <name>getText</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -614,6 +598,7 @@ dir="./core" filename="RTransaction.h">
     </type>
     <name>getAffectedObjects</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -635,6 +620,7 @@ dir="./core" filename="RTransaction.h">
     </type>
     <name>getStatusChanges</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -660,6 +646,7 @@ dir="./core" filename="RTransaction.h">
     </type>
     <name>getPropertyChanges</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -672,6 +659,7 @@ dir="./core" filename="RTransaction.h">
     </type>
     <name>hasOnlyChanges</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -709,19 +697,8 @@ dir="./core" filename="RTransaction.h">
       <name>propertyChange</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>appendChild</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>t</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
+  <comment type="line">//void appendChild(RTransaction&amp;
+  t);</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -831,17 +808,8 @@ dir="./core" filename="RTransaction.h">
   </decl>;</decl_stmt>
   <comment type="block">/** * Child transactions of this
   transaction. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RTransaction</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>childTransactions</name>
-  </decl>;</decl_stmt>
+  <comment type="line">//QList&lt;RTransaction&gt;
+  childTransactions;</comment>
   <comment type="block">/** * True if this transaction can be
   undone. */</comment>
   <decl_stmt>

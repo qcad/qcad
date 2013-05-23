@@ -27,6 +27,8 @@ dir="./core" filename="RTransactionListener.h">
   <name>RDocument</name>;</class_decl>
   <class_decl>class 
   <name>REntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RTransaction</name>;</class_decl>
   <comment type="block">/** * \brief Abstract base class for
   classes that are interested in the current * transaction stack. *
   * \ingroup core * \scriptable */</comment>
@@ -60,6 +62,18 @@ dir="./core" filename="RTransactionListener.h">
       <name>RDocument</name>*</type>
       <name>document</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>const</name>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>=
   0</specifier>;</function_decl></public>}</block>;</class>

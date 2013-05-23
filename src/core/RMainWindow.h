@@ -42,6 +42,7 @@ class RPenListener;
 class RPropertyListener;
 class RSelectionListener;
 class RSnapListener;
+class RTransaction;
 class RUcsListener;
 class RVector;
 class RViewFocusListener;
@@ -92,6 +93,7 @@ public:
 
     virtual void postSelectionChangedEvent() = 0;
     virtual void postTransactionEvent(
+        RTransaction& t,
         bool onlyChanges=false,
         RS::EntityType entityTypeFilter = RS::EntityAll
     ) = 0;
@@ -112,7 +114,7 @@ public:
     void notifyPropertyListeners();
 
     void addTransactionListener(RTransactionListener* l);
-    void notifyTransactionListeners(RDocument* document);
+    void notifyTransactionListeners(RDocument* document, RTransaction* transaction = NULL);
 
     void addSnapListener(RSnapListener* l);
     void notifySnapListeners(RDocumentInterface* documentInterface);

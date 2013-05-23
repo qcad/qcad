@@ -13,6 +13,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RPropertyListener" />
   <class_decl name="RSelectionListener" />
   <class_decl name="RSnapListener" />
+  <class_decl name="RTransaction" />
   <class_decl name="RUcsListener" />
   <class_decl name="RVector" />
   <class_decl name="RViewFocusListener" />
@@ -110,6 +111,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="postTransactionEvent" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="true">
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="t" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyChanges"
         hasDefault="true" default=" false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
@@ -165,6 +168,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="addSnapListener" cppName="addSnapListener"

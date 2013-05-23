@@ -67,6 +67,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEntityTypeFilter, "getEntityTypeFilter");
             
+            REcmaHelper::registerFunction(&engine, proto, getTransaction, "getTransaction");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTransactionEvent*>(), *proto);
 
@@ -111,45 +113,44 @@
             // generate constructor variants:
             
     if( context->argumentCount() ==
-        0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // non-copyable class:
-            RTransactionEvent
-                    * cppResult =
-                    new
-                    RTransactionEvent
-                    ();
-                
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
-                
-    } else 
-
-    if( context->argumentCount() ==
         1
                 && (
                 
                         context->argument(
                         0
-                        ).isBool()
-                ) /* type: bool */
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RTransaction */
             
     ){
     // prepare arguments:
     
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTransactionEvent: Argument 0 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -175,33 +176,143 @@
                 
                         context->argument(
                         0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RTransaction */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isBool()
+                ) /* type: bool */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTransactionEvent: Argument 0 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RTransactionEvent
+                    * cppResult =
+                    new
+                    RTransactionEvent
+                    (
+                    a0
+        ,
+    a1
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    if( context->argumentCount() ==
+        3
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RTransaction */
+            
+                && (
+                
+                        context->argument(
+                        1
                         ).isBool()
                 ) /* type: bool */
             
                 && (
                 
                         context->argument(
-                        1
+                        2
                         ).isNumber()
                 ) /* type: RS::EntityType */
             
     ){
     // prepare arguments:
     
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTransactionEvent: Argument 0 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a0 = 
+                    *ap0;
+                
                     // argument isStandardType
                     bool
-                    a0 =
+                    a1 =
                     (bool)
                     
-                    context->argument( 0 ).
+                    context->argument( 1 ).
                     toBool();
                 
                     // argument isStandardType
                     RS::EntityType
-                    a1 =
+                    a2 =
                     (RS::EntityType)
                     (int)
-                    context->argument( 1 ).
+                    context->argument( 2 ).
                     toNumber();
                 
     // end of arguments
@@ -217,6 +328,8 @@
                     a0
         ,
     a1
+        ,
+    a2
                     );
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
@@ -367,6 +480,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTransactionEvent::getEntityTypeFilter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransactionEvent::getTransaction
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransactionEvent::getTransaction", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransactionEvent::getTransaction";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransactionEvent* self = 
+                        getSelf("getTransaction", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RTransaction'
+    RTransaction cppResult =
+        
+               self->getTransaction();
+        // return type: RTransaction
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransactionEvent.getTransaction().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransactionEvent::getTransaction", context, engine);
             return result;
         }
          QScriptValue REcmaTransactionEvent::toString
