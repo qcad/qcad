@@ -7,6 +7,7 @@ SUBDIRS = \
     CloseFile \
     NewFile \
     OpenFile \
+    PdfExport \
     Print \
     PrintPreview \
     Quit \
