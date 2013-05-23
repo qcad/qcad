@@ -28,7 +28,7 @@
         <translation>Choisissez deuxième cercle ou arc</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+140"/>
         <source>No tangent possible</source>
         <translation>Aucune tangentes sont possibles</translation>
     </message>

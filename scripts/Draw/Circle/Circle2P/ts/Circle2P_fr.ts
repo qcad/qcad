@@ -14,7 +14,7 @@
         <translation>Deuxième point</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+83"/>
         <source>The two points are identical</source>
         <translation>Les deux points sont identiques</translation>
     </message>

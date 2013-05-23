@@ -22,7 +22,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+83"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Te dwa punkty są identyczne</translation>

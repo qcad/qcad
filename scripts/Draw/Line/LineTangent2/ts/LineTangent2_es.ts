@@ -28,7 +28,7 @@
         <translation>Elija segundo círculo o arco</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+140"/>
         <source>No tangent possible</source>
         <translation>No tangente es posible</translation>
     </message>

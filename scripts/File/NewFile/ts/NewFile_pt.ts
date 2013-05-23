@@ -51,7 +51,7 @@ Sem Título</translatorcomment>
         <translation>Nenhum importador adequado encontrado. Por favor, verifique formato de arquivo e extensão.</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translation>Por favor, verifique os seus direitos de acesso, o formato de arquivo e extensão do arquivo.</translation>
     </message>

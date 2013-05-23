@@ -40,12 +40,12 @@
         <translation>Deuxième point</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+107"/>
         <source>Invalid radius</source>
         <translation>Rayon invalide</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>The two points are identical</source>
         <translation>Les deux points sont identiques</translation>
     </message>

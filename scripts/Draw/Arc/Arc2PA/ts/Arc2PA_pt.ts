@@ -22,13 +22,13 @@ Ponto final (x):</translatorcomment>
         <translation>Ponto final</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+85"/>
         <source>Invalid angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inválido ângulo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Os dois pontos são idênticos</translation>

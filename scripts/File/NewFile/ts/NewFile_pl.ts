@@ -55,7 +55,7 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation type="unfinished">Nie nadaje Importer znaleziono. Proszę sprawdzić format pliku i rozszerzenie.</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Proszę sprawdzić prawa dostępu, format pliku i rozszerzenie pliku.</translation>

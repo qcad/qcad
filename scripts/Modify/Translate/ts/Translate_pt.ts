@@ -30,7 +30,7 @@ Ponto de destino</translatorcomment>
         <translation>&amp;Mova / copie</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+11"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mover ou copiar entidades uma vez ou múltiplas vezes</translation>

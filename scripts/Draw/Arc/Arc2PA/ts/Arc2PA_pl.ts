@@ -22,13 +22,13 @@ Punkt końcowy (y):</translatorcomment>
         <translation type="unfinished">Punkt końcowy</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+85"/>
         <source>Invalid angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowy kąt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Te dwa punkty są identyczne</translation>

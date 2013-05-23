@@ -22,7 +22,7 @@
         <translation>Não tangente possível.</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+57"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não pode chamar a tangente do ponto dentro de círculo para círculo</translation>

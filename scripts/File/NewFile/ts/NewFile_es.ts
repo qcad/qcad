@@ -44,7 +44,7 @@
         <translation>Ningún importador adecuado encontrado. Por favor revise el formato de archivo y extensión.</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translation>Por favor, compruebe sus derechos de acceso, el formato de archivo y extensión de archivo.</translation>
     </message>

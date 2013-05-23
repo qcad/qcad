@@ -40,12 +40,12 @@
         <translation>Point final</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+85"/>
         <source>Invalid angle</source>
         <translation>Angle invalide</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>The two points are identical</source>
         <translation>Les deux points sont identiques</translation>
     </message>

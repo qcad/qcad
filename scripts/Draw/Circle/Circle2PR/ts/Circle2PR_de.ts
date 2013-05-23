@@ -14,12 +14,12 @@
         <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+107"/>
         <source>Invalid radius</source>
         <translation>Ungültiger Radius</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>The two points are identical</source>
         <translation>Die zwei Punkte sind identisch</translation>
     </message>

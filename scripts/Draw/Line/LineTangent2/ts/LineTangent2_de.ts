@@ -28,7 +28,7 @@
         <translation>Zweiter Kreis oder Bogen wählen</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+140"/>
         <source>No tangent possible</source>
         <translation>Keine Tangente möglich</translation>
     </message>

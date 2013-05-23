@@ -14,12 +14,12 @@
         <translation>Endpunkt</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+85"/>
         <source>Invalid angle</source>
         <translation>Ungültiger Winkel</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>The two points are identical</source>
         <translation>Die zwei Punkte sind identisch</translation>
     </message>

@@ -16,7 +16,7 @@
         <translation type="unfinished">Wybierz sekundy okrąg lub łuk</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+140"/>
         <source>No tangent possible</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No styczna możliwe</translation>

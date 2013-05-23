@@ -23,7 +23,7 @@ Obiettivo punto</translatorcomment>
         <translation>&amp;Sposta / Copia</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+11"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Spostare o copiare entità una volta o più volte</translation>

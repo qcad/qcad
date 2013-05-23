@@ -22,7 +22,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+107"/>
         <source>Invalid radius</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
@@ -30,7 +30,7 @@ Inválido raio</translatorcomment>
         <translation>Inválido raio</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>The two points are identical</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--

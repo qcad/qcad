@@ -16,7 +16,7 @@
         <translation>Escolha segundo círculo ou arco</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+140"/>
         <source>No tangent possible</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tangent não é possível</translation>

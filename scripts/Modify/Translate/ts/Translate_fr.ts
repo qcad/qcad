@@ -21,7 +21,7 @@ Indiquer le point cible</translatorcomment>
         <translation>&amp;Déplacer/Copier</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+11"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Déplacer ou copier des entités une fois ou plusieurs fois</translation>

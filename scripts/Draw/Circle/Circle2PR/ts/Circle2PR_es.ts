@@ -40,12 +40,12 @@
         <translation>Segundo punto</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+107"/>
         <source>Invalid radius</source>
         <translation>Radio no válido</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>The two points are identical</source>
         <translation>Los dos puntos son idénticos</translation>
     </message>

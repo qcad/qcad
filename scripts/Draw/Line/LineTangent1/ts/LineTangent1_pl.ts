@@ -22,7 +22,7 @@
         <translation type="unfinished">No styczna możliwe.</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+57"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nie można narysować styczną z punktu wewnątrz okręgu do okręgu</translation>

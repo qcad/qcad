@@ -65,7 +65,7 @@
         <translation>Kein geeigneter Importer gefunden. Bitte überprüfen Sie das Dateiformat und die Dateiendung.</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translation>Bitte überprüfen Sie die Zugriffsrechte, das Dateiformat und die Dateiendung.</translation>
     </message>

@@ -28,7 +28,7 @@
         <translation>Scegli secondo cerchio o arco</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+140"/>
         <source>No tangent possible</source>
         <translation>Nessuna tangente è possibile</translation>
     </message>
