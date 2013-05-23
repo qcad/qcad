@@ -3,6 +3,7 @@ SUBDIRS = \
     ts \
     About \
     BrowseAddOns \
+    BrowseUserManual \
     CheckForUpdates \
     FAQ \
     Forum \

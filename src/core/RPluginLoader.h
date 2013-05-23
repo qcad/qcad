@@ -37,6 +37,7 @@
  */
 class QCADCORE_EXPORT RPluginLoader {
 public:
+    static QStringList getPluginFiles();
     static void loadPlugins(bool init);
     static void loadPlugin(QObject* plugin, bool init, const QString& fileName = QString(), const QString& errorString = QString());
 
@@ -68,6 +69,7 @@ public:
 
 private:
     static QList<RPluginInfo> pluginsInfo;
+    static QStringList pluginFiles;
 };
 
 Q_DECLARE_METATYPE(RPluginLoader*)

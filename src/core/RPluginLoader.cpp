@@ -24,16 +24,17 @@
 #include "RPluginLoader.h"
 
 QList<RPluginInfo > RPluginLoader::pluginsInfo;
+QStringList RPluginLoader::pluginFiles;
 
-/**
- * Tries to loads all QCAD plugins located in ./plugins.
- */
-void RPluginLoader::loadPlugins(bool init) {
-    pluginsInfo.clear();
+
+QStringList RPluginLoader::getPluginFiles() {
+    if (!pluginFiles.isEmpty()) {
+        return pluginFiles;
+    }
 
     QString pluginsPath = getPluginsPath();
     if (pluginsPath.isNull()) {
-        return;
+        return pluginFiles;
     }
 
     QDir pluginsDir = QDir(pluginsPath);
@@ -61,9 +62,23 @@ void RPluginLoader::loadPlugins(bool init) {
             continue;
 #endif
         }
-        QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
+
+        pluginFiles.append(pluginsDir.absoluteFilePath(fileName));
+    }
+
+    return pluginFiles;
+}
+
+/**
+ * Tries to loads all QCAD plugins located in ./plugins.
+ */
+void RPluginLoader::loadPlugins(bool init) {
+    pluginsInfo.clear();
+
+    foreach (QString fileName, getPluginFiles()) {
+        QPluginLoader loader(fileName);
         QObject* plugin = loader.instance();
-        loadPlugin(plugin, init, pluginsDir.absoluteFilePath(fileName), loader.errorString());
+        loadPlugin(plugin, init, fileName, loader.errorString());
     }
 
     QObjectList staticPlugins = QPluginLoader::staticInstances();
@@ -100,15 +115,8 @@ void RPluginLoader::loadPlugin(QObject* plugin, bool init, const QString& fileNa
 }
 
 void RPluginLoader::postInitPlugins() {
-    QString pluginsPath = getPluginsPath();
-    if (pluginsPath.isNull()) {
-        return;
-    }
-
-    QDir pluginsDir = QDir(pluginsPath);
-
-    foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
-        QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
+    foreach (QString fileName, getPluginFiles()) {
+        QPluginLoader loader(fileName);
         QObject* plugin = loader.instance();
         postInitPlugin(plugin);
     }
@@ -116,6 +124,7 @@ void RPluginLoader::postInitPlugins() {
     QObjectList staticPlugins = QPluginLoader::staticInstances();
     for (int i=0; i<staticPlugins.size(); i++) {
         QObject* plugin = staticPlugins[i];
+        qDebug() << "postInitPlugin (static)";
         postInitPlugin(plugin);
     }
 }
@@ -128,15 +137,8 @@ void RPluginLoader::postInitPlugin(QObject* plugin) {
 }
 
 void RPluginLoader::initScriptExtensions(QScriptEngine& engine) {
-    QString pluginsPath = getPluginsPath();
-    if (pluginsPath.isNull()) {
-        return;
-    }
-
-    QDir pluginsDir = QDir(pluginsPath);
-
-    foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
-        QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
+    foreach (QString fileName, getPluginFiles()) {
+        QPluginLoader loader(fileName);
         QObject* plugin = loader.instance();
         initScriptExtensions(plugin, engine);
     }
