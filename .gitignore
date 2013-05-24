@@ -41,4 +41,6 @@ release
 
 # Misc:
 qcad_debug
+qcadpro_debug
 qcad_release
+qcadpro_release
