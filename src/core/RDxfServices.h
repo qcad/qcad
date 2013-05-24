@@ -75,7 +75,7 @@ public:
 
     void fixQCad2HatchData(QString& patternName, double& angle, double& scale, bool solid) const;
 
-    static RColor attributesToColor(int color, int color24, bool forLayer=false);
+    static RColor attributesToColor(int color, int color24, const double dxfColors[][3], bool forLayer=false);
     /**
      * \nonscriptable
      */

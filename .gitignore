@@ -39,5 +39,6 @@ _CL_*
 debug
 release
 
-# Misc
-shared_app_ext.pri
+# Misc:
+qcad_debug
+qcad_release

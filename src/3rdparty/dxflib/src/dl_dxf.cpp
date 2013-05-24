@@ -788,7 +788,7 @@ void DL_Dxf::addSetting(DL_CreationInterface* creationInterface) {
  * Adds a layer that was read from the file via the creation interface.
  */
 void DL_Dxf::addLayer(DL_CreationInterface* creationInterface) {
-    // correct some impossible attributes for layers:
+    // correct some invalid attributes for layers:
     attrib = creationInterface->getAttributes();
     if (attrib.getColor()==256 || attrib.getColor()==0) {
         attrib.setColor(7);
@@ -1845,7 +1845,7 @@ bool DL_Dxf::handleHatchData(DL_CreationInterface* creationInterface) {
     }
 
     // New hatch edge or new section / entity: add last hatch edge:
-    if (groupCode==72 || groupCode==0 || groupCode==78) {
+    if (groupCode==72 || groupCode==0 || groupCode==78 || groupCode==98) {
         // polyline boundaries use code 72 for bulge flag:
         if (groupCode!=72 || (getIntValue(92, 0)&2)==0) {
             addHatchEdge();

@@ -1886,13 +1886,13 @@ bool RDxfServices::isVariable2D(RS::KnownVariable v) {
 /**
  * @return Pen with the same attributes as 'attributes'.
  */
-RColor RDxfServices::attributesToColor(int color, int color24, bool forLayer) {
+RColor RDxfServices::attributesToColor(int color, int color24, const double dxfColors[][3], bool forLayer) {
     RColor ret;
     if (color24!=-1) {
         ret = numberToColor24(color24);
     }
     else {
-        ret = numberToColor(color, false, forLayer);
+        ret = numberToColor(color, dxfColors, false, forLayer);
     }
 
     return ret;

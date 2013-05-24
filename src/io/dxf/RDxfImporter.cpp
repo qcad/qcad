@@ -162,7 +162,8 @@ void RDxfImporter::addLayer(const DL_LayerData& data) {
     bool frozen = (attributes.getColor()<0 || data.flags&0x01);
     bool locked = data.flags&0x04;
     attributes.setColor(abs(attributes.getColor()));
-    RColor color = RDxfServices::attributesToColor(attributes.getColor(), attributes.getColor24(), true);
+    RColor color = RDxfServices::attributesToColor(
+        attributes.getColor(), attributes.getColor24(), dxfColors, true);
     RLinetype::Id linetypeId = RLinetype::INVALID_ID;
     linetypeId = document->getLinetypeId(attributes.getLineType().c_str());
     if (linetypeId == RLinetype::INVALID_ID) {
@@ -433,14 +434,12 @@ void RDxfImporter::addCircle(const DL_CircleData& data) {
 }
 
 void RDxfImporter::addPolyline(const DL_PolylineData& data) {
-    qDebug() << "RDxfImporter::addPolyline";
     polyline = RPolyline();
     polyline.setClosed(data.flags&0x1);
 }
 
 void RDxfImporter::addVertex(const DL_VertexData& data) {
     RVector v(data.x, data.y);
-    qDebug() << "RDxfImporter::addVertex: " << v << " / " << data.bulge;
     polyline.appendVertex(v, data.bulge);
 }
 
@@ -978,7 +977,6 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
         } break;
 
     case 1:
-        qDebug() << "addHatchEdge: " << data.x1 << data.y1 << data.x2 << data.y2;
         shape = QSharedPointer<RShape>(
             new RLine(RVector(data.x1, data.y1),
                       RVector(data.x2, data.y2))
