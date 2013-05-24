@@ -287,9 +287,11 @@ void RDxfImporter::endEntity() {
 
         QList<double> kv = spline.getKnotVector();
 
-        // remove historical, superfluous knots:
-        kv.removeFirst();
-        kv.removeLast();
+        if (kv.size()>=2) {
+            // remove historical, superfluous knots:
+            kv.removeFirst();
+            kv.removeLast();
+        }
 
         spline.setKnotVector(kv);
 
