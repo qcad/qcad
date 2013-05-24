@@ -43,13 +43,18 @@ SvgImport.prototype.beginEvent = function() {
     }
     RSettings.setValue("SvgImport/Path", new QFileInfo(fileName).absolutePath());
     
-    //this.importSvg(SvgImport.basePath + "/my.svg");
-    var svgImporter = new SvgImporter(EAction.getDocument());
+    var svgImporter = new SvgImporter(this.getDocument());
     svgImporter.importFile(fileName);
-    if (!isNull(EAction.getDocumentInterface())) {
-        EAction.getDocumentInterface().regenerateScenes();
+
+    var di = this.getDocumentInterface();
+    if (!isNull(di)) {
+        di.regenerateScenes();
     }
 
+    var appWin = EAction.getMainWindow();
+    if (!isNull(appWin)) {
+        appWin.notifyListeners();
+    }
     
     this.terminate();
 };
