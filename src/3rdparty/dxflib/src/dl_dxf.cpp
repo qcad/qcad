@@ -3299,15 +3299,21 @@ void DL_Dxf::writeHatchEdge(DL_WriterA& dw,
         for (unsigned int i=0; i<data.weights.size(); i++) {
             dw.dxfReal(42, data.weights[i]);
         }
-        dw.dxfInt(97, data.nFit);
-        for (unsigned int i=0; i<data.fitPoints.size(); i++) {
-            dw.dxfReal(11, data.fitPoints[i][0]);
-            dw.dxfReal(21, data.fitPoints[i][1]);
+        if (data.nFit>0) {
+            dw.dxfInt(97, data.nFit);
+            for (unsigned int i=0; i<data.fitPoints.size(); i++) {
+                dw.dxfReal(11, data.fitPoints[i][0]);
+                dw.dxfReal(21, data.fitPoints[i][1]);
+            }
         }
-        dw.dxfReal(12, data.startTangentX);
-        dw.dxfReal(22, data.startTangentY);
-        dw.dxfReal(13, data.endTangentX);
-        dw.dxfReal(23, data.endTangentY);
+        if (fabs(data.startTangentX)>1.0e-4 || fabs(data.startTangentY)>1.0e-4) {
+            dw.dxfReal(12, data.startTangentX);
+            dw.dxfReal(22, data.startTangentY);
+        }
+        if (fabs(data.endTangentX)>1.0e-4 || fabs(data.endTangentY)>1.0e-4) {
+            dw.dxfReal(13, data.endTangentX);
+            dw.dxfReal(23, data.endTangentY);
+        }
         break;
 
     default:

@@ -1387,7 +1387,7 @@ void RDxfExporter::writeHatch(const RHatchEntity& h) {
                 dxf.writeHatchEdge(
                             *dw,
                             DL_HatchEdgeData(spline->getDegree(),
-                                             true,
+                                             false,                    // rational
                                              spline->isPeriodic(),
                                              knotVector.size(),
                                              spline->countControlPoints(),
