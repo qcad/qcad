@@ -399,6 +399,20 @@ dir="./core" filename="RDxfServices.h">
   </param>, 
   <param>
     <decl>
+      <type>
+        <name>const</name>
+        <name>double</name>
+      </type>
+      <name>
+        <name>dxfColors</name>
+        <index>[]</index>
+        <index>[
+        <expr>3</expr>]</index>
+      </name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
     <type>
       <name>bool</name>
     </type>

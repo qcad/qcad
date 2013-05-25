@@ -1423,12 +1423,15 @@
             
     
     if( context->argumentCount() ==
-    2 && (
+    3 && (
             context->argument(0).isNumber()
         ) /* type: int */
      && (
             context->argument(1).isNumber()
         ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
     
     ){
     // prepare arguments:
@@ -1449,6 +1452,14 @@
                     context->argument( 1 ).
                     toNumber();
                 
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
@@ -1457,7 +1468,9 @@
         RDxfServices::
        attributesToColor(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
         // return type: RColor
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -1468,14 +1481,17 @@
         
     
     if( context->argumentCount() ==
-    3 && (
+    4 && (
             context->argument(0).isNumber()
         ) /* type: int */
      && (
             context->argument(1).isNumber()
         ) /* type: int */
      && (
-            context->argument(2).isBool()
+            context->argument(2).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(3).isBool()
         ) /* type: bool */
     
     ){
@@ -1498,11 +1514,19 @@
                     toNumber();
                 
                     // argument isStandardType
-                    bool
+                    double
                     a2 =
-                    (bool)
+                    (double)
                     
                     context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
                     toBool();
                 
     // end of arguments
@@ -1515,7 +1539,9 @@
         ,
     a1
         ,
-    a2);
+    a2
+        ,
+    a3);
         // return type: RColor
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
