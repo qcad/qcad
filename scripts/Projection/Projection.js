@@ -494,7 +494,6 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
     }
 
     if (isSplineShape(shape)) {
-        //debugger;
         shape = ShapeAlgorithms.splineToLineOrArc(shape, 0.01);
         if (!isSplineShape(shape)) {
             return this.projectShape(shape, preview, trim);
@@ -509,11 +508,6 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
             s = shapes[i];
             s = s.data();
             pls.appendShape(s);
-            //s = this.projectShape(s, preview, trim);
-            // s[0] is line or s is empty:
-            //if (s.length>0) {
-            //    ret.appendShape(s[0]);
-            //}
         }
         ret = this.projectShape(pls, preview, trim);
         this.segmentation = segmentation;
@@ -521,46 +515,22 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
     }
 
     if (isPolylineShape(shape)) {
-//        if (trim) {
-//            debugger;
-//        }
-//        if (!preview) {
-//            debugger;
-//        }
         // add polyline, split up at arcs that are projected into ellipses and
         // at gaps caused by trimming:
         ret = new Array();
         var pl = new RPolyline();
         var segmentCount = shape.countSegments();
+        var addPl = false;
 
         // project each segment individually:
         for (i=0; i<segmentCount; i++) {
-//            if (trim && i===segmentCount-1) {
-//                debugger;
-//            }
-
             s = shape.getSegmentAt(i);
             s = s.data();
-            //qDebug("polyline segment: ", s);
             s = this.projectShape(s, preview, trim);
-            //qDebug("projected polyline segment: ", s);
-
-            //if (s.length===0) {
-            //    continue;
-            //}
 
             // iterate through projected shapes (trimming might lead to gaps):
             for (k=0; k<s.length; k++) {
                 var seg = s[k];
-
-//                if (isPolylineShape(seg)) {
-//                    if (pl.countVertices()===0) {
-//                        pl = seg;
-//                    }
-//                    else {
-//                        pl.appendShape(seg);
-//                    }
-//                }
 
                 var gotGap = pl.countVertices()>0 &&
                     !pl.getEndPoint().equalsFuzzy(seg.getStartPoint());
@@ -582,6 +552,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
                     }
                     else if (pl.countVertices()>0) {
                         ret.push(pl);
+                        addPl = false;
                     }
 
                     if (gotEllipse) {
@@ -589,26 +560,18 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
                         pl = new RPolyline();
                     }
                     else if (gotGap){
-//                        if (pl.countVertices()>0) {
-//                            ret.push(pl);
-//                        }
-                        //ret.push(seg);
                         pl = new RPolyline();
                         pl.appendShape(seg);
-//                        if (i===segmentCount-1) {
-//                            ret.push(pl);
-//                        }
+                        addPl = true;
                     }
                 }
             }
         }
 
-        //qDebug("new polyline: ", pl);
-        if (pl.countVertices()>0) {
+        if (addPl && pl.countVertices()>0) {
             ret.push(pl);
         }
 
-        //qDebug("ret: ", ret);
         return ret;
     }
 
