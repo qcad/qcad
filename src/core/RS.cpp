@@ -22,6 +22,8 @@
 #include <QHostInfo>
 #ifdef Q_OS_WIN32
 #include <Windows.h>
+#else
+#include <unistd.h>
 #endif
 
 #include "RColor.h"
