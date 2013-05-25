@@ -22,7 +22,7 @@ RPluginInfo RDxfPlugin::getPluginInfo() {
             "Based on dxflib."
         )
     );
-    ret.set("License", "GPLv2");
+    ret.set("License", "GPLv2+");
     ret.set("URL", "http://www.qcad.org");
     return ret;
 }
