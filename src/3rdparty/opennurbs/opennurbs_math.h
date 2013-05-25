@@ -22,6 +22,12 @@ class ON_Line;
 class ON_Arc;
 class ON_Plane;
 
+// qcad: compile fix for gcc 4.7:
+class ON_Circle;
+class ON_Cylinder;
+class ON_Sphere;
+// qcad: end
+
 /*
 Description:
   Class for carefully adding long list of numbers.

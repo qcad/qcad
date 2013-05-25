@@ -38,6 +38,10 @@
 #pragma warning(disable:4211)
 #endif
 
+// qcad: compile fix for gcc 4.7:
+#include "opennurbs_math.h"
+// qcad: end
+
 // The main reason the definitions of the functions for the 
 // ON_SimpleArray and ON_ClassArray templates are in this separate
 // file is so that the Microsoft developer studio autocomplete
