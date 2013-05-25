@@ -88,10 +88,7 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
     if (!saveAs && noFullColor) {
         if (colorWarning) {
             // dxflib has no full color support:
-            if (fileVersion.contains("dxflib")) {
-                EAction.handleUserWarning(qsTr("All custom colors will be 'rounded' to the nearest fixed color."));
-            }
-            else {
+            if (!fileVersion.contains("dxflib")) {
                 buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
                 ret = QMessageBox.warning(
                             appWin,
