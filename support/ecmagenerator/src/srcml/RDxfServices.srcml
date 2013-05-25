@@ -374,6 +374,7 @@ dir="./core" filename="RDxfServices.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>static</name>

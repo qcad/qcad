@@ -165,20 +165,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="attributesToColor" cppName="attributesToColor"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="RColor" isPureVirtual="false">
-        <arg type="int" typeName="int" name="color"
-        isConst="false" />
-        <arg type="int" typeName="int" name="color24"
-        isConst="false" />
-        <arg type="double" typeName="double" name=""
-        isConst="true" />
-        <arg type="bool" typeName="bool" name="forLayer"
-        hasDefault="true" default=" false" isConst="false" />
-      </variant>
-    </method>
     <method name="numberToColor24" cppName="numberToColor24"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

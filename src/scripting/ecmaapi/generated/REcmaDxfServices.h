@@ -103,9 +103,6 @@
         fixQCad2HatchData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        attributesToColor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         numberToColor24
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
