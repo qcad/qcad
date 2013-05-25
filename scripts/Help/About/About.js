@@ -69,16 +69,21 @@ About.prototype.initAboutQCAD = function(webView) {
             + "<h1>%1</h1>".arg(qApp.applicationName)
             + "<br/>"
             + "<table border='0'><tr>"
-            + "<td><b>Version:</b> </td><td>%1</td>".arg(RSettings.getVersionString())
+            + "<td><b>Version:</b> </td><td>%1.%2.%3.%4 (%5)</td>"
+              .arg(RSettings.getMajorVersion())
+              .arg(RSettings.getMinorVersion())
+              .arg(RSettings.getRevisionVersion())
+              .arg(RSettings.getBuildVersion())
+              .arg(RSettings.getVersionString())
             + "</tr><tr>"
-            + "<td><b>Date:</b> </td><td>%1</td>".arg(RSettings.getReleaseDate())
+            + "<td><b>Build Date:</b> </td><td>%1</td>".arg(RSettings.getReleaseDate())
             + "</tr><tr>"
             + "<td><b>Qt Version:</b> </td><td>%4</td>".arg(RSettings.getQtVersion())
             + "</tr></table>"
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
             + "<p/>"
             + "<p>QCAD is free (open source) software.</p>"
-            + "<p>Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).</p>"
+            + "<p>Plugins and script add-ons are subject to their respective license (see 'About Plugins...' tab).</p>"
             + "<p/>"
             + "<p>Internet: <a href='http://%1'>%1</a></p>".arg(qApp.organizationDomain)
             + "<p/>"

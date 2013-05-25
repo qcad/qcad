@@ -68,6 +68,7 @@ bool RSettings::isDeployed() {
         // deployed (scripts inside app bundle):
         return appDir.cd("Resources/scripts");
     }
+    return false;
 #else
     return true;
 #endif
