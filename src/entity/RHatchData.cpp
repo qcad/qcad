@@ -453,7 +453,7 @@ void RHatchData::newLoop() {
 
 void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
     if (boundary.size()==0) {
-        qWarning("RHatchData::addBoundary: no loop found");
+        qWarning() << "RHatchData::addBoundary: no loops found";
         return;
     }
 
@@ -469,13 +469,18 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
         // if the current loop is not empty, check if entity connects:
         if (!boundary.last().isEmpty()) {
             QSharedPointer<RDirected> prev = boundary.last().last().dynamicCast<RDirected>();
-            RVector ep = prev->getEndPoint();
             QSharedPointer<RDirected> next = shape.dynamicCast<RDirected>();
-            RVector sp = next->getStartPoint();
+            if (!prev.isNull() && !next.isNull()) {
+                RVector ep = prev->getEndPoint();
+                RVector sp = next->getStartPoint();
 
-            if (!ep.equalsFuzzy(sp)) {
-                // inserting loop on the fly:
-                newLoop();
+                if (!ep.equalsFuzzy(sp)) {
+                    // inserting loop on the fly:
+                    newLoop();
+                }
+            }
+            else {
+                qWarning() << "RHatchData::addBoundary: unexpected boundary type";
             }
         }
         boundary.last().append(QList<QSharedPointer<RShape> >() << shape);

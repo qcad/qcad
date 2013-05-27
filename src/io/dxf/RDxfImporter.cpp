@@ -988,7 +988,12 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
     case 2:
         if (data.ccw && data.angle1<RS::AngleTolerance && data.angle2>2*M_PI-RS::AngleTolerance) {
             shape = QSharedPointer<RShape>(
-                new RCircle(RVector(data.cx, data.cy), data.radius)
+                //new RCircle(RVector(data.cx, data.cy), data.radius)
+                new RArc(RVector(data.cx, data.cy),
+                     data.radius,
+                     0.0,
+                     2*M_PI,
+                     false)
             );
         } else {
             if (data.ccw) {
