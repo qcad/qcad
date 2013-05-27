@@ -63,7 +63,7 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, compare, "compare");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getCPUCores, "getCPUCores");
+            REcmaHelper::registerFunction(&engine, &ctor, getCpuCores, "getCpuCores");
             
             REcmaHelper::registerFunction(&engine, &ctor, getHostId, "getHostId");
             
@@ -1741,12 +1741,12 @@
             return result;
         }
          QScriptValue
-        REcmaS::getCPUCores
+        REcmaS::getCpuCores
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getCPUCores", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaS::getCPUCores";
+            //REcmaHelper::functionStart("REcmaS::getCpuCores", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getCpuCores";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -1763,7 +1763,7 @@
     // return type 'int'
     int cppResult =
         RS::
-       getCPUCores();
+       getCpuCores();
         // return type: int
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1773,10 +1773,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getCPUCores().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getCpuCores().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getCPUCores", context, engine);
+            //REcmaHelper::functionEnd("REcmaS::getCpuCores", context, engine);
             return result;
         }
          QScriptValue

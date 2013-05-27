@@ -99,7 +99,7 @@ bool RS::compare(const QPair<QVariant, RPropertyAttributes>& p1, const QPair<
 /**
  * \return Number of CPU cores available.
  */
-int RS::getCPUCores() {
+int RS::getCpuCores() {
     static int cores = -1;
 
     if (cores!=-1) {

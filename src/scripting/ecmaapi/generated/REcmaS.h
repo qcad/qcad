@@ -46,7 +46,7 @@
         compare
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getCPUCores
+        getCpuCores
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getHostId
