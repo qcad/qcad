@@ -48,12 +48,13 @@ RVector RSnapEntityBase::snap(
 
     RBox queryBox(position, range);
 
-    //RDebug::startTimer(3);
     QSet<REntity::Id> ids =
             document->queryIntersectedEntitiesXY(
-                queryBox, true, true, RBlock::INVALID_ID,
-                QList<RS::EntityType>() << RS::EntityHatch);
-    //RDebug::stopTimer(3, "######### snap base query");
+                queryBox, true, true, RBlock::INVALID_ID
+                // 20130527: don't ignore hatches to snap to reference
+                // points of hatches:
+                //QList<RS::EntityType>() << RS::EntityHatch
+                );
 
     return snap(position, view, ids, queryBox);
 }
