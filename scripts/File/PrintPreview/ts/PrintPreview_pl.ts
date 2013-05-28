@@ -4,38 +4,35 @@
 <context>
     <name>Frame</name>
     <message>
-        <location filename="../MultiplePages.ui" line="+47"/>
         <source>Columns:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wprowadź kolumny:
 Kolumn:</translatorcomment>
-        <translation type="unfinished">Kolumn:</translation>
+        <translation type="obsolete">Kolumn:</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Rows:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wprowadź wiersze:
 Wierszy:</translatorcomment>
-        <translation type="unfinished">Wierszy:</translation>
+        <translation type="obsolete">Wierszy:</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Close</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Czy chcesz zamknąć plik
 %1?
 Czy chcesz zamknąć rysunek?</translatorcomment>
-        <translation type="unfinished">Zamknij</translation>
+        <translation type="obsolete">Zamknij</translation>
     </message>
 </context>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+134"/>
+        <location filename="../PrintPreview.js" line="+133"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przeciągnij, aby przesunąć papier</translation>
@@ -51,7 +48,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+359"/>
         <source>Export to PDF</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -86,7 +83,12 @@ Wydrukuj...</translatorcomment>
         <translation type="unfinished">Wydrukuj...</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+17"/>
+        <source>Export as PDF...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -112,13 +114,17 @@ Skala:</translatorcomment>
         <translation type="unfinished">Auto dopasowanie rysunku do strony (s)</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <source>Auto fit pages to drawing</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Stron Aut.dop rysunku</translation>
+        <location line="+76"/>
+        <source>Auto zoom to page</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <source>Auto fit pages to drawing</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Stron Aut.dop rysunku</translation>
+    </message>
+    <message>
+        <location line="-65"/>
         <source>Auto Center</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Auto Center</translation>
@@ -134,14 +140,12 @@ VGA portret (480x640)</translatorcomment>
         <translation type="unfinished">Portret</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+20"/>
         <source>PageOrientation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">PageOrientation</translation>
+        <translation type="obsolete">PageOrientation</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="+20"/>
         <source>Landscape</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -151,40 +155,34 @@ QVGA pejzaż (320x240)</translatorcomment>
         <translation type="unfinished">Pejzaż</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Single Page</source>
         <translatorcomment>--google--
 Pokaż pojedynczą stronę</translatorcomment>
-        <translation type="unfinished">Pojedyncza strona</translation>
+        <translation type="obsolete">Pojedyncza strona</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Multiple Pages</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wiele stron</translation>
+        <translation type="obsolete">Wiele stron</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Auto zoom to page(s)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Auto-zoom do strony (s)</translation>
+        <translation type="obsolete">Auto-zoom do strony (s)</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+45"/>
         <source>Full Color Mode</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Full Color Mode</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>ColorMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">ColorMode</translation>
+        <translation type="obsolete">ColorMode</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="+23"/>
         <source>Grayscale Mode</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skala szarości</translation>

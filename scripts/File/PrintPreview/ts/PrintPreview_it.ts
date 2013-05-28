@@ -4,25 +4,22 @@
 <context>
     <name>Frame</name>
     <message>
-        <location filename="../MultiplePages.ui" line="+47"/>
         <source>Columns:</source>
-        <translation>Colonne:</translation>
+        <translation type="obsolete">Colonne:</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Rows:</source>
-        <translation>Righe:</translation>
+        <translation type="obsolete">Righe:</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Close</source>
-        <translation>Chiudi</translation>
+        <translation type="obsolete">Chiudi</translation>
     </message>
 </context>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+134"/>
+        <location filename="../PrintPreview.js" line="+133"/>
         <source>Drag to move paper</source>
         <translation>Trascinare per spostare la carta</translation>
     </message>
@@ -32,7 +29,7 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+359"/>
         <source>Export to PDF</source>
         <translation>Esporta PDF</translation>
     </message>
@@ -62,7 +59,12 @@
         <translation>Chiudere l&apos;anteprima di stampa</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+34"/>
+        <source>Export as PDF...</source>
+        <translation>Esporta PDF...</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Scale:</source>
         <translation>Scala:</translation>
     </message>
@@ -82,12 +84,16 @@
         <translation>Adatta disegno alla pagina(s)</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <source>Auto fit pages to drawing</source>
-        <translation>Montare le pagine al disegno</translation>
+        <location line="+76"/>
+        <source>Auto zoom to page</source>
+        <translation>Zoom Automatico per pagina</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <source>Auto fit pages to drawing</source>
+        <translation type="obsolete">Montare le pagine al disegno</translation>
+    </message>
+    <message>
+        <location line="-65"/>
         <source>Auto Center</source>
         <translation>Auto centro</translation>
     </message>
@@ -97,45 +103,37 @@
         <translation>Verticale</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+20"/>
         <source>PageOrientation</source>
-        <translation>PageOrientation</translation>
+        <translation type="obsolete">PageOrientation</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="+20"/>
         <source>Landscape</source>
         <translation>Orizzontale</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Single Page</source>
-        <translation>Pagina singola</translation>
+        <translation type="obsolete">Pagina singola</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Multiple Pages</source>
-        <translation>Più pagine</translation>
+        <translation type="obsolete">Più pagine</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Auto zoom to page(s)</source>
-        <translation>Zoom Automatico per pagina(s)</translation>
+        <translation type="obsolete">Zoom Automatico per pagina(s)</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+45"/>
         <source>Full Color Mode</source>
         <translation>Colore</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>ColorMode</source>
-        <translation>ColorMode</translation>
+        <translation type="obsolete">ColorMode</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="+23"/>
         <source>Grayscale Mode</source>
         <translation>Scala di grigio</translation>
     </message>
@@ -160,7 +158,7 @@
         <translation>Mostra più opzioni</translation>
     </message>
     <message>
-        <location line="-327"/>
+        <location line="-291"/>
         <source>Print...</source>
         <translation>Stampa...</translation>
     </message>

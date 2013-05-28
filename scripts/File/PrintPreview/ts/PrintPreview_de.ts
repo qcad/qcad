@@ -4,25 +4,22 @@
 <context>
     <name>Frame</name>
     <message>
-        <location filename="../MultiplePages.ui" line="+47"/>
         <source>Columns:</source>
-        <translation>Spalten:</translation>
+        <translation type="obsolete">Spalten:</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Rows:</source>
-        <translation>Reihen:</translation>
+        <translation type="obsolete">Reihen:</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Close</source>
-        <translation>Schliessen</translation>
+        <translation type="obsolete">Schliessen</translation>
     </message>
 </context>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+135"/>
+        <location filename="../PrintPreview.js" line="+134"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -32,12 +29,12 @@
         <translation>Druck&amp;vorschau</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.ui" line="+66"/>
+        <location filename="../PrintPreview.ui" line="+69"/>
         <source>Scale:</source>
         <translation>Skalierung:</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+77"/>
         <source>Portrait</source>
         <translation>Hochformat</translation>
     </message>
@@ -47,22 +44,22 @@
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.js" line="+424"/>
+        <location filename="../PrintPreview.js" line="+359"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.ui" line="-140"/>
+        <location filename="../PrintPreview.ui" line="-132"/>
         <source>Print...</source>
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.js" line="-425"/>
+        <location filename="../PrintPreview.js" line="-360"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+434"/>
+        <location line="+369"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>
@@ -82,7 +79,12 @@
         <translation>Druckvorschau schliessen</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+34"/>
+        <source>Export as PDF...</source>
+        <translation>PDF exportieren...</translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>Drawing Scale</source>
         <translation>Zeichnungsskalierung</translation>
     </message>
@@ -97,50 +99,46 @@
         <translation>Automatisch Zeichnung auf Seite(n) anpassen</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <source>Auto fit pages to drawing</source>
-        <translation>Automatisch Seiten an Zeichnung anpassen</translation>
+        <location line="+76"/>
+        <source>Auto zoom to page</source>
+        <translation>Auto Ansicht auf Seite</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <source>Auto fit pages to drawing</source>
+        <translation type="obsolete">Automatisch Seiten an Zeichnung anpassen</translation>
+    </message>
+    <message>
+        <location line="-65"/>
         <source>Auto Center</source>
         <translation>Automatisch zentrieren</translation>
     </message>
     <message>
-        <location line="+31"/>
-        <location line="+20"/>
         <source>PageOrientation</source>
-        <translation>PageOrientation</translation>
+        <translation type="obsolete">PageOrientation</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Single Page</source>
-        <translation>Einzelne Seite</translation>
+        <translation type="obsolete">Einzelne Seite</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Multiple Pages</source>
-        <translation>Mehrere Seiten</translation>
+        <translation type="obsolete">Mehrere Seiten</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Auto zoom to page(s)</source>
-        <translation>Auto Ansicht auf Seite(n)</translation>
+        <translation type="obsolete">Auto Ansicht auf Seite(n)</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+83"/>
         <source>Full Color Mode</source>
         <translation>Vollfarben</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>ColorMode</source>
-        <translation>ColorMode</translation>
+        <translation type="obsolete">ColorMode</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="+23"/>
         <source>Grayscale Mode</source>
         <translation>Graustufen</translation>
     </message>

@@ -285,7 +285,6 @@ function loadTranslations(addOns, splash) {
     }
 
     // load C++ translations:
-    //var modules = ["qt", "assistant", "qt_help", "qcadcore", "qcadentity", "qcadgui", "qcad_scripts"];
     var modules = ["qt", "assistant", "qt_help", "qcadcore", "qcadentity", "qcadgui"];
     for (var mi=0; mi<modules.length; ++mi) {
         var module = modules[mi];
@@ -301,14 +300,8 @@ function loadTranslations(addOns, splash) {
     }
 
     RSettings.loadTranslations("Scripts_" + locale, ["scripts/ts"]);
-    /*
-    translator = new QTranslator(qApp);
-    if (translator.load("Scripts_" + locale, "scripts/ts")) {
-        QCoreApplication.installTranslator(translator);
-    }
-    */
 
-    for (i = 0; i < addOns.length; ++i) {
+    for (var i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
         if (isNull(addOn)) {
             qWarning("Null add on found");
@@ -321,18 +314,7 @@ function loadTranslations(addOns, splash) {
             continue;
         }
 
-        RSettings.loadTranslations(addOn.getClassName() + "_" + locale, [addOn.getPath() + "/ts"]);
-
-        /*
-        translator = new QTranslator(qApp);
-        if (translator.load(addOn.getClassName() + "_" + locale, addOn.getPath() + "/ts")) {
-            QCoreApplication.installTranslator(translator);
-        }
-        else {
-            qWarning("Cannot load translation: ", addOn.getClassName() + "_" + locale);
-            qWarning("Directory: ", addOn.getPath() + "/ts");
-        }
-        */
+        RSettings.loadTranslations(addOn.getClassName(), [addOn.getPath() + "/ts"]);
     }
 }
 

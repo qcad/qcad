@@ -13,7 +13,7 @@
         <translation>Acerca de %1</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+72"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>

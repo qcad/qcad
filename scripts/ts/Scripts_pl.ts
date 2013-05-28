@@ -327,12 +327,12 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+299"/>
+        <location filename="../autostart.js" line="+298"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+31"/>
         <source>Loading add-ons...</source>
         <translation type="unfinished"></translation>
     </message>

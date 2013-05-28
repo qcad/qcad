@@ -16,8 +16,7 @@
         <translation type="unfinished">&apos;&amp;#39; Plik już istnieje. Czy chcesz go zastąpić?</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <location line="+9"/>
+        <location line="+20"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation type="unfinished"></translation>
     </message>

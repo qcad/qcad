@@ -344,12 +344,12 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+299"/>
+        <location filename="../autostart.js" line="+298"/>
         <source>Loading add-on translations...</source>
         <translation>Carregar add-on traduções...</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+31"/>
         <source>Loading add-ons...</source>
         <translation>Carregando add-ons...</translation>
     </message>

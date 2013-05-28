@@ -13,7 +13,7 @@
         <translation type="unfinished">%1…</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+72"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>

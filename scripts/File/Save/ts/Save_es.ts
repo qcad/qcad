@@ -18,8 +18,7 @@
         <translation>El archivo &apos;%1&apos; ya existe. ¿Desea sobreescribirlo?</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <location line="+9"/>
+        <location line="+20"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Todos los colores personalizados se &apos;redondea&apos; con una precisión de color fijo.</translation>
     </message>

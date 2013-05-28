@@ -4,38 +4,35 @@
 <context>
     <name>Frame</name>
     <message>
-        <location filename="../MultiplePages.ui" line="+47"/>
         <source>Columns:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Entre as colunas:
 Colunas:</translatorcomment>
-        <translation>Colunas:</translation>
+        <translation type="obsolete">Colunas:</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Rows:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Entre as linhas:
 Linhas:</translatorcomment>
-        <translation>Linhas:</translation>
+        <translation type="obsolete">Linhas:</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Close</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Fecha &amp;Todos
 Fecha Todos
 Fecha todas as janelas</translatorcomment>
-        <translation>Fechar</translation>
+        <translation type="obsolete">Fechar</translation>
     </message>
 </context>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+134"/>
+        <location filename="../PrintPreview.js" line="+133"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arraste para mover o papel</translation>
@@ -51,7 +48,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+359"/>
         <source>Export to PDF</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Exportação para PDF</translation>
@@ -99,7 +96,12 @@ Im_primir...</translatorcomment>
         <translation>Imprima...</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+17"/>
+        <source>Export as PDF...</source>
+        <translation>Exportação para PDF...</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -126,13 +128,17 @@ Escala de tipo de linha global:</translatorcomment>
         <translation>Ajuste automático de desenho para a página(s)</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <source>Auto fit pages to drawing</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Auto ajustar as páginas para o desenho</translation>
+        <location line="+76"/>
+        <source>Auto zoom to page</source>
+        <translation>Zoom automático para a página</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <source>Auto fit pages to drawing</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Auto ajustar as páginas para o desenho</translation>
+    </message>
+    <message>
+        <location line="-65"/>
         <source>Auto Center</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Centro</translation>
@@ -147,14 +153,12 @@ _Retrato</translatorcomment>
         <translation>Retrato</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+20"/>
         <source>PageOrientation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>PageOrientation</translation>
+        <translation type="obsolete">PageOrientation</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="+20"/>
         <source>Landscape</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -163,39 +167,33 @@ Paisagem</translatorcomment>
         <translation>Paisagem</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Single Page</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Uma única página</translation>
+        <translation type="obsolete">Uma única página</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Multiple Pages</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Várias páginas</translation>
+        <translation type="obsolete">Várias páginas</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Auto zoom to page(s)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Zoom automático para a página(s)</translation>
+        <translation type="obsolete">Zoom automático para a página(s)</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+45"/>
         <source>Full Color Mode</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cor</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>ColorMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>ColorMode</translation>
+        <translation type="obsolete">ColorMode</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="+23"/>
         <source>Grayscale Mode</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escala de cinzas</translation>

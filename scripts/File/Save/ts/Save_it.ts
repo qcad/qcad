@@ -19,8 +19,7 @@
         <translation>Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <location line="+9"/>
+        <location line="+20"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Tutti i colori personalizzati verra &apos;arrotondato&apos; per il colore più vicino fisso.</translation>
     </message>

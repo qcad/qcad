@@ -16,8 +16,7 @@
         <translation>O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <location line="+9"/>
+        <location line="+20"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Todas as cores personalizadas serão &apos;arredondado&apos; para a cor mais próxima fixo.</translation>
     </message>
