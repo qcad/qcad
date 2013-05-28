@@ -1158,7 +1158,7 @@ dir="./core" filename="RS.h">
     <name>static</name>
     <name>int</name>
   </type>
-  <name>getCPUCores</name>
+  <name>getCpuCores</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>

@@ -15,7 +15,7 @@ bool RDxfPlugin::init() {
 RPluginInfo RDxfPlugin::getPluginInfo() {
     RPluginInfo ret;
     ret.set("Version", QString("%1 (dxflib %2)").arg(RSettings::getVersionString()).arg(DL_VERSION));
-    ret.set("About", "DXF Plugin");
+    ret.set("Name", "DXF Plugin");
     ret.set("Description",
         QString(
             "Import support for the DXF format. "

@@ -56,6 +56,22 @@ dir="./io/dxf" filename="RDxfPlugin.h">
       <name>virtual</name>
       <name>void</name>
     </type>
+    <name>uninit</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>
+    <block>{}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
     <name>postInit</name>
     <parameter_list>()</parameter_list>
     <block>{}</block>

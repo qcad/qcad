@@ -12,6 +12,7 @@ class RExamplePlugin : public QObject, public RPluginInterface
 
 public:
     virtual bool init();
+    virtual void uninit(bool) {}
     virtual void postInit() {}
     virtual void initScriptExtensions(QScriptEngine& engine);
     virtual RPluginInfo getPluginInfo();

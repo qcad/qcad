@@ -121,7 +121,7 @@ About.prototype.initAboutPlugins = function(webView) {
              var pluginInfo = RPluginLoader.getPluginInfo(i);
 
             // plugin about info:
-            text = pluginInfo.get("About", qsTr("No information available"));
+            text = pluginInfo.get("Name", qsTr("No information available"));
             html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
 
             // description:

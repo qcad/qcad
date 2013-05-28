@@ -65,6 +65,28 @@ the GNU General Public License * along with QCAD. */</comment>
     <name>init</name>
     <parameter_list>()</parameter_list>
     <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/** * Called before a plugin is removed /
+    unloaded. */</comment>
+    <function_decl>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>uninit</name>
+    <parameter_list>(
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>remove</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <specifier>= 0</specifier>;</function_decl>
     <comment type="block">/** * Called after the application has
     been fully loaded, directly before * entering the main event
     loop. Implementations typically perform * initialization that

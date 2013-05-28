@@ -61,6 +61,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, loadPlugins, "loadPlugins");
             
+            REcmaHelper::registerFunction(&engine, &ctor, unloadPlugin, "unloadPlugin");
+            
             REcmaHelper::registerFunction(&engine, &ctor, postInitPlugins, "postInitPlugins");
             
             REcmaHelper::registerFunction(&engine, &ctor, postInitPlugin, "postInitPlugin");
@@ -243,6 +245,91 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginLoader::loadPlugins", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginLoader::unloadPlugin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginLoader::unloadPlugin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginLoader::unloadPlugin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPluginLoader::
+       unloadPlugin(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPluginLoader::
+       unloadPlugin(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginLoader.unloadPlugin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginLoader::unloadPlugin", context, engine);
             return result;
         }
          QScriptValue

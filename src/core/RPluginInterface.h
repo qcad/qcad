@@ -44,6 +44,11 @@ public:
     virtual bool init() = 0;
 
     /**
+     * Called before a plugin is removed / unloaded.
+     */
+    virtual void uninit(bool remove = false) = 0;
+
+    /**
      * Called after the application has been fully loaded, directly before
      * entering the main event loop. Implementations typically perform
      * initialization that depends on the application being up and running.

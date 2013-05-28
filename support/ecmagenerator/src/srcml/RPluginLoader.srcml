@@ -115,6 +115,33 @@ dir="./core" filename="RPluginLoader.h">
     <name>static</name>
     <name>void</name>
   </type>
+  <name>unloadPlugin</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>fileName</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>remove</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
   <name>postInitPlugins</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>

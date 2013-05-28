@@ -317,7 +317,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="p2" isConst="true" />
       </variant>
     </method>
-    <method name="getCPUCores" cppName="getCPUCores"
+    <method name="getCpuCores" cppName="getCpuCores"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />

@@ -40,6 +40,7 @@ public:
     static QStringList getPluginFiles();
     static void loadPlugins(bool init);
     static void loadPlugin(QObject* plugin, bool init, const QString& fileName = QString(), const QString& errorString = QString());
+    static void unloadPlugin(const QString& fileName, bool remove = false);
 
     static void postInitPlugins();
     static void postInitPlugin(QObject* plugin);

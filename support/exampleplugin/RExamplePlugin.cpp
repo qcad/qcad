@@ -15,7 +15,7 @@ void RExamplePlugin::initScriptExtensions(QScriptEngine& engine) {
 RPluginInfo RExamplePlugin::getPluginInfo() {
     RPluginInfo ret;
     ret.set("Version", R_QCAD_VERSION_STRING);
-    ret.set("About", "Example Plugin");
+    ret.set("Name", "Example Plugin");
     ret.set("License", "GPLv3");
     ret.set("URL", "http://qcad.org");
     return ret;

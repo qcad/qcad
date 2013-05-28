@@ -73,6 +73,7 @@ QStringList RPluginLoader::getPluginFiles() {
  * Tries to loads all QCAD plugins located in ./plugins.
  */
 void RPluginLoader::loadPlugins(bool init) {
+    pluginFiles.clear();
     pluginsInfo.clear();
 
     foreach (QString fileName, getPluginFiles()) {
@@ -112,6 +113,18 @@ void RPluginLoader::loadPlugin(QObject* plugin, bool init, const QString& fileNa
     }
 
     pluginsInfo.append(info);
+}
+
+void RPluginLoader::unloadPlugin(const QString& fileName, bool remove) {
+    QPluginLoader loader(fileName);
+    QObject* plugin = loader.instance();
+    if (plugin) {
+        RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+        if (p) {
+            p->uninit(remove);
+        }
+    }
+    loader.unload();
 }
 
 void RPluginLoader::postInitPlugins() {
