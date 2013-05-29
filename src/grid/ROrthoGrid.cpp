@@ -445,11 +445,12 @@ double ROrthoGrid::inchAutoscale(double value, double idealSpacing, RS::Unit uni
 }
 
 void ROrthoGrid::paint() {
-    if (RSettings::getBoolValue("GraphicsView/SolidGridLines", false)) {
+    // experimental, not working for isometric grid yet:
+    if (!isometric && RSettings::getBoolValue("GraphicsView/SolidGridLines", false)) {
         RVector sp = spacing;
-        if (isometric) {
-            sp *= 2;
-        }
+        //if (isometric) {
+        //    sp *= 2;
+        //}
         paintGridLines(sp, gridBox, false);
     }
     else {
