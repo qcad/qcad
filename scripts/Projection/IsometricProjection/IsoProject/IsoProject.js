@@ -24,7 +24,7 @@ function IsoProject(guiAction) {
     Projection.call(this, guiAction);
 
     this.projection = RS.IsoTop;
-    this.trueScale = false;
+    this.trueScale = true;
 
     this.setUiOptions("IsoProject.ui");
 }

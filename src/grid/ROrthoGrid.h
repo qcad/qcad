@@ -48,6 +48,10 @@ public:
     virtual void update(bool force=false);
     virtual void paint();
     virtual void paintMetaGrid();
+
+    virtual void paintGridLines(const RVector& space, const RBox& box, bool meta);
+    virtual void paintGridPoints(const RVector& space, const RBox& box);
+
     virtual void paintCursor(const RVector& pos);
 
     virtual void paintRuler(RRuler& ruler);

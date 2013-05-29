@@ -445,23 +445,40 @@ double ROrthoGrid::inchAutoscale(double value, double idealSpacing, RS::Unit uni
 }
 
 void ROrthoGrid::paint() {
-    if (!spacing.isValid()) {
+    if (RSettings::getBoolValue("GraphicsView/SolidGridLines", false)) {
+        RVector sp = spacing;
+        if (isometric) {
+            sp *= 2;
+        }
+        paintGridLines(sp, gridBox, false);
+    }
+    else {
+        paintGridPoints(spacing, gridBox);
+    }
+}
+
+void ROrthoGrid::paintMetaGrid() {
+    paintGridLines(metaSpacing, metaGridBox, true);
+}
+
+void ROrthoGrid::paintGridPoints(const RVector& space, const RBox& box) {
+    if (!space.isValid()) {
         return;
     }
 
-    RVector min = gridBox.getCorner1();
-    RVector max = gridBox.getCorner2();
+    RVector min = box.getCorner1();
+    RVector max = box.getCorner2();
 
-    if ((max.x - min.x) / spacing.x > 1e3 || (max.y - min.y) / spacing.y > 1e3) {
+    if ((max.x - min.x) / space.x > 1e3 || (max.y - min.y) / space.y > 1e3) {
         return;
     }
 
     RVector gridPointUcs;
     int x, y;
-    for (gridPointUcs.x = min.x; gridPointUcs.x < max.x; gridPointUcs.x += spacing.x) {
-        x = RMath::mround(gridPointUcs.x/spacing.x);
-        for (gridPointUcs.y = min.y; gridPointUcs.y < max.y; gridPointUcs.y += spacing.y) {
-            y = RMath::mround(gridPointUcs.y/spacing.y);
+    for (gridPointUcs.x = min.x; gridPointUcs.x < max.x; gridPointUcs.x += space.x) {
+        x = RMath::mround(gridPointUcs.x/space.x);
+        for (gridPointUcs.y = min.y; gridPointUcs.y < max.y; gridPointUcs.y += space.y) {
+            y = RMath::mround(gridPointUcs.y/space.y);
             if (!isometric || (x+y)%2==0) {
                 view.paintGridPoint(gridPointUcs);
             }
@@ -469,8 +486,8 @@ void ROrthoGrid::paint() {
     }
 }
 
-void ROrthoGrid::paintMetaGrid() {
-    if (!metaSpacing.isValid()) {
+void ROrthoGrid::paintGridLines(const RVector& space, const RBox& box, bool meta) {
+    if (!space.isValid()) {
         return;
     }
 
@@ -478,13 +495,13 @@ void ROrthoGrid::paintMetaGrid() {
     getProjection();
     isIsometric();
 
-    RVector min = metaGridBox.getCorner1();
-    RVector max = metaGridBox.getCorner2();
+    RVector min = box.getCorner1();
+    RVector max = box.getCorner2();
 
     double deltaX = max.x - min.x;
     double deltaY = max.y - min.y;
 
-    if (deltaX / metaSpacing.x > 1e3 || deltaY / metaSpacing.y > 1e3) {
+    if (deltaX / space.x > 1e3 || deltaY / space.y > 1e3) {
         return;
     }
 
@@ -493,11 +510,12 @@ void ROrthoGrid::paintMetaGrid() {
         min.x -= dx;
         max.x += dx;
     }
-    for (double x=min.x; x<max.x; x+=metaSpacing.x) {
+    int c;
+    double x;
+    for (x=min.x, c=0; x<max.x; x+=space.x, c++) {
+        //int x2 = RMath::mround(x/space.x);
+        //if (!isometric || c%2==0) {
         if (isometric) {
-//            qDebug() << "painting isometr. meta grid: x: " << x;
-//            qDebug() << "painting isometr. meta grid: dx: " << dx;
-
             if (projection==RS::IsoTop || projection==RS::IsoRight) {
                 view.paintGridLine(RLine(RVector(x, min.y), RVector(x+dx, max.y)));
             }
@@ -505,22 +523,21 @@ void ROrthoGrid::paintMetaGrid() {
                 view.paintGridLine(RLine(RVector(x, min.y), RVector(x-dx, max.y)));
             }
 
-            // vertical meta grid lines:
+            // vertical grid lines:
             if (projection==RS::IsoRight || projection==RS::IsoLeft) {
                 view.paintGridLine(RLine(RVector(x, min.y), RVector(x, max.y)));
-                view.paintGridLine(RLine(RVector(x-metaSpacing.x/2, min.y), RVector(x-metaSpacing.x/2, max.y)));
+                view.paintGridLine(RLine(RVector(x-space.x/2, min.y), RVector(x-space.x/2, max.y)));
             }
         }
         else {
             view.paintGridLine(RLine(RVector(x, min.y), RVector(x, max.y)));
         }
+        //}
     }
 
-    for (double y=min.y; y<max.y; y+=metaSpacing.y) {
-        if (isometric) {
-
-        }
-        else {
+    // horizontal lines:
+    if (!isometric) {
+        for (double y=min.y; y<max.y; y+=space.y) {
             view.paintGridLine(RLine(RVector(min.x, y), RVector(max.x, y)));
         }
     }

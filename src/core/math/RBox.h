@@ -82,9 +82,9 @@ public:
         growToInclude(v);
     }
 
-    RVector getCorner1();
+    RVector getCorner1() const;
     void setCorner1(const RVector& v);
-    RVector getCorner2();
+    RVector getCorner2() const;
     void setCorner2(const RVector& v);
 
     QList<RVector> getCorners() const;

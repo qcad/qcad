@@ -115,7 +115,7 @@ RVector RBox::getMaximum() const {
 
 
 
-RVector RBox::getCorner1() {
+RVector RBox::getCorner1() const {
     return c1;
 }
 
@@ -123,7 +123,7 @@ void RBox::setCorner1(const RVector& v) {
     c1 = v;
 }
 
-RVector RBox::getCorner2() {
+RVector RBox::getCorner2() const {
     return c2;
 }
 
