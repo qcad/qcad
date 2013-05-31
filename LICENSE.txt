@@ -4,6 +4,10 @@ See files:
 - gpl-3.0.txt
 - gpl-3.0-exceptions.txt (if available)
 
+Hershey fonts are released under the terms described in fonts/hershey.readme.
+Other fonts in directory 'fonts' are released as public domain (all copyright
+is waived). 
+
 3rd party libraries and plug-ins in src/3rdparty are distributed under 
 their respective licenses:
 
