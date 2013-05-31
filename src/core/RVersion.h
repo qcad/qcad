@@ -23,7 +23,7 @@
 /**
  * Version number of the QCAD Application Framework.
  */
-#define R_QCAD_VERSION_STRING "3.1.0 Beta"
+#define R_QCAD_VERSION_STRING "3.1.0 Beta 3"
 
 #define R_QCAD_VERSION_MAJOR    3
 #define R_QCAD_VERSION_MINOR    1
