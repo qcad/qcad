@@ -48,6 +48,7 @@
 #include <QFocusFrame>
 #include <QFont>
 #include <QFontDatabase>
+#include <QFile>
 #include <QFileIconProvider>
 #include <QFileSystemModel>
 #include <QFrame>
@@ -154,6 +155,7 @@ Q_DECLARE_METATYPE(QDragMoveEvent*)
 Q_DECLARE_METATYPE(QDragLeaveEvent*)
 Q_DECLARE_METATYPE(QDropEvent*)
 Q_DECLARE_METATYPE(QEvent*)
+Q_DECLARE_METATYPE(QFile*)
 Q_DECLARE_METATYPE(QFileIconProvider*)
 Q_DECLARE_METATYPE(QFileSystemModel*)
 Q_DECLARE_METATYPE(QFocusEvent*)

@@ -405,6 +405,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQUrl.property("prototype").setProperty("queryItems",
             engine->newFunction(ecmaQUrlQueryItems));
 
+    QScriptValue classQFile = globalObject.property("QFile");
+    classQPrinter.property("prototype").setProperty("remove",
+            engine->newFunction(ecmaQFileRemove));
+
     QScriptValue classQt = globalObject.property("Qt");
     classQt.setProperty("escape",
             engine->newFunction(ecmaQtEscape));
@@ -1508,6 +1512,25 @@ QScriptValue RScriptHandlerEcma::ecmaQUrlQueryItems(QScriptContext* context, QSc
     } else {
         return throwError(
                 "Wrong number/types of arguments for QUrl.queryItems().",
+                context);
+    }
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQFileRemove(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    QFile* self = qscriptvalue_cast<QFile*> (context->thisObject());
+    if (self == NULL) {
+        return throwError("QFile.remove(): This object is not a QFile", context);
+    }
+
+    if (context->argumentCount() == 0) {
+        QFile* url = qscriptvalue_cast<QFile*> (context->argument(0));
+        bool cppResult = self->remove();
+        result = qScriptValueFromValue(engine, cppResult);
+    } else {
+        return throwError(
+                "Wrong number/types of arguments for QFile.remove().",
                 context);
     }
     return result;
