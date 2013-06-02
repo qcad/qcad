@@ -43,6 +43,28 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="paintGridLines" cppName="paintGridLines"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="space"
+        isConst="true" />
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="meta"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="paintGridPoints" cppName="paintGridPoints"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="space"
+        isConst="true" />
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="paintCursor" cppName="paintCursor"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

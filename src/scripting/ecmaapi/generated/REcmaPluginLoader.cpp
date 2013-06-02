@@ -57,6 +57,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, getPluginSuffix, "getPluginSuffix");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getPluginFiles, "getPluginFiles");
             
             REcmaHelper::registerFunction(&engine, &ctor, loadPlugins, "loadPlugins");
@@ -164,6 +166,45 @@
 
     // public methods:
      QScriptValue
+        REcmaPluginLoader::getPluginSuffix
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginLoader::getPluginSuffix", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginLoader::getPluginSuffix";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RPluginLoader::
+       getPluginSuffix();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginLoader.getPluginSuffix().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginLoader::getPluginSuffix", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPluginLoader::getPluginFiles
         (QScriptContext* context, QScriptEngine* engine) 
         

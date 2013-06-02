@@ -100,6 +100,9 @@ dir="./core" filename="RMetaTypes.h">
   <cpp:file>&lt;QFontDatabase&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QFile&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QFileIconProvider&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -477,6 +480,11 @@ dir="./core" filename="RMetaTypes.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>QEvent*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>QFile*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

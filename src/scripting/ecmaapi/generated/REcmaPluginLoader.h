@@ -43,6 +43,9 @@
 
     // public methods:
     static  QScriptValue
+        getPluginSuffix
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPluginFiles
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

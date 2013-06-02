@@ -384,7 +384,8 @@ dir="./core/math" filename="RBox.h">
     <name>RVector</name>
   </type>
   <name>getCorner1</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -404,7 +405,8 @@ dir="./core/math" filename="RBox.h">
     <name>RVector</name>
   </type>
   <name>getCorner2</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>

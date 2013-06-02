@@ -27,6 +27,16 @@ QList<RPluginInfo > RPluginLoader::pluginsInfo;
 QStringList RPluginLoader::pluginFiles;
 
 
+QString RPluginLoader::getPluginSuffix() {
+#if defined(Q_OS_WIN)
+    return "dll";
+#elif defined(Q_OS_MAC)
+    return "dylib";
+#else
+    return "so";
+#endif
+}
+
 QStringList RPluginLoader::getPluginFiles() {
     if (!pluginFiles.isEmpty()) {
         return pluginFiles;
@@ -41,13 +51,7 @@ QStringList RPluginLoader::getPluginFiles() {
 
     QStringList nameFilter;
 
-#if defined(Q_OS_WIN)
-    nameFilter.append("*.dll");
-#elif defined(Q_OS_MAC)
-    nameFilter.append("*.dylib");
-#else
-    nameFilter.append("*.so");
-#endif
+    nameFilter.append(QString("*.%1").arg(getPluginSuffix()));
 
     foreach (QString fileName, pluginsDir.entryList(nameFilter, QDir::Files)) {
         if (fileName.contains("_debug.")) {

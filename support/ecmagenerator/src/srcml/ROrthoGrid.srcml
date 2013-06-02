@@ -117,6 +117,60 @@ dir="./grid" filename="ROrthoGrid.h">
     <name>virtual</name>
     <name>void</name>
   </type>
+  <name>paintGridLines</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>space</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RBox</name>&amp;</type>
+      <name>box</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>meta</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>paintGridPoints</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>space</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RBox</name>&amp;</type>
+      <name>box</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
   <name>paintCursor</name>
   <parameter_list>(
   <param>

@@ -60,6 +60,12 @@
         paintMetaGrid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        paintGridLines
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paintGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         paintCursor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -79,6 +79,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, paintMetaGrid, "paintMetaGrid");
             
+            REcmaHelper::registerFunction(&engine, proto, paintGridLines, "paintGridLines");
+            
+            REcmaHelper::registerFunction(&engine, proto, paintGridPoints, "paintGridPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, paintCursor, "paintCursor");
             
             REcmaHelper::registerFunction(&engine, proto, paintRuler, "paintRuler");
@@ -518,6 +522,203 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaOrthoGrid::paintMetaGrid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOrthoGrid::paintGridLines
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOrthoGrid::paintGridLines", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::paintGridLines";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROrthoGrid* self = 
+                        getSelf("paintGridLines", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 1 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintGridLines(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paintGridLines().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::paintGridLines", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOrthoGrid::paintGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOrthoGrid::paintGridPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::paintGridPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROrthoGrid* self = 
+                        getSelf("paintGridPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 1 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintGridPoints(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paintGridPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::paintGridPoints", context, engine);
             return result;
         }
          QScriptValue

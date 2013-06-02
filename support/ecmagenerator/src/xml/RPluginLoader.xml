@@ -5,6 +5,11 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <method name="getPluginSuffix" cppName="getPluginSuffix"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getPluginFiles" cppName="getPluginFiles"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

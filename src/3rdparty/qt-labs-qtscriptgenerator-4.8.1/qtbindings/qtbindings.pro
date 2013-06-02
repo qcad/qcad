@@ -6,7 +6,6 @@ SUBDIRS = qtscript_core \
 	  qtscript_sql \
 	  qtscript_svg \
 	  qtscript_xml \
-	  qtscript_phonon \
 	  qtscript_webkit \
 	  qtscript_xmlpatterns \
 	  qtscript_uitools \
@@ -14,4 +13,8 @@ SUBDIRS = qtscript_core \
 
 !win32 {
     SUBDIRS += qtscript_network
+}
+
+!unix {
+    SUBDIRS += qtscript_phonon
 }
