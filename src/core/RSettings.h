@@ -82,6 +82,7 @@ public:
     static QFont getInfoLabelFont();
     static QFont getStatusBarFont();
 
+    static bool getAutoScaleGrid();
     static bool getAutoScalePatterns();
     static bool getColorCorrection();
     static int getColorThreshold();

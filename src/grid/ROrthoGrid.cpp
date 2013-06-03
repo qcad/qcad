@@ -132,7 +132,6 @@ void ROrthoGrid::update(bool force) {
         return;
     }
 
-
     RGraphicsScene* scene = view.getScene();
     if (scene==NULL) {
         qWarning() << "ROrthoGrid::update: scene is NULL";
@@ -151,17 +150,13 @@ void ROrthoGrid::update(bool force) {
     QString key;
 
     // backwards compatibility:
-    //QVariant isometricDefault = doc->getVariable("Grid/IsometricGrid", QVariant(), false);
-    //if (viewportNumber==0 && isometricDefault.isValid()) {
-    //
-    //}
     key = QString("Grid/IsometricGrid0%1").arg(viewportNumber);
     isometric = doc->getVariable(key, false, true).toBool();
 
     RS::Unit unit = doc->getUnit();
     RS::LinearFormat linearFormat = doc->getLinearFormat();
 
-    // init values for missing configurations and 'auto' settings:
+    // default values for missing configurations and 'auto' settings:
     minSpacing.valid = true;
     if (isFractionalFormat(linearFormat) && !RUnit::isMetric(unit)) {
         minSpacing.x = minSpacing.y = RUnit::convert(1.0, RS::Inch, unit) / 1024;
@@ -170,22 +165,10 @@ void ROrthoGrid::update(bool force) {
         minSpacing.x = minSpacing.y = 1.0e-6;
     }
 
-    QList<RVector> s = getIdealSpacing(minPixelSpacing, minSpacing);
-    autoSpacing = s.at(0);
-    autoMetaSpacing = s.at(1);
-    /*
-    if (isometric) {
-        autoSpacing.x = autoSpacing.y * 2.0 * sin(M_PI/3.0);
-        autoMetaSpacing.x = autoMetaSpacing.y * 2.0 * sin(M_PI/3.0);
-    }
-    */
-
     // backwards compatibility:
-    //QVariant strSxDefault = doc->getVariable("Grid/GridSpacingX", QVariant(), true);
     key = QString("Grid/GridSpacingX0%1").arg(viewportNumber);
     QVariant strSx = doc->getVariable(key, QVariant(), true);
     // backwards compatibility:
-    //QVariant strSyDefault = doc->getVariable("Grid/GridSpacingY", QVariant(), true);
     key = QString("Grid/GridSpacingY0%1").arg(viewportNumber);
     QVariant strSy = doc->getVariable(key, QVariant(), true);
 
@@ -199,14 +182,11 @@ void ROrthoGrid::update(bool force) {
             minSpacing.x = spacing.x = d;
         }
     }
-    else {
+    //else {
         // auto:
-        spacing.x = autoSpacing.x;
-    }
+        //spacing.x = autoSpacing.x;
+    //}
 
-    if (view.mapDistanceToView(spacing.x) < minPixelSpacing) {
-        spacing = RVector::invalid;
-    }
 
     // grid spacing y:
     if (strSy.isValid() && strSy.toString()!="auto") {
@@ -215,19 +195,17 @@ void ROrthoGrid::update(bool force) {
             minSpacing.y = spacing.y = d;
         }
     }
-    else {
+    //else {
         // auto:
-        spacing.y = autoSpacing.y;
-    }
+        //spacing.y = autoSpacing.y;
+    //}
 
-    if (view.mapDistanceToView(spacing.y) < minPixelSpacing) {
-        spacing = RVector::invalid;
-    }
 
-    //QVariant strMsxDefault = doc->getVariable("Grid/MetaGridSpacingX", QVariant(), true);
+
+
+    // meta grid:
     key = QString("Grid/MetaGridSpacingX0%1").arg(viewportNumber);
     QVariant strMsx = doc->getVariable(key, QVariant(), true);
-    //QVariant strMsyDefault = doc->getVariable("Grid/MetaGridSpacingY", QVariant(), true);
     key = QString("Grid/MetaGridSpacingY0%1").arg(viewportNumber);
     QVariant strMsy = doc->getVariable(key, QVariant(), true);
 
@@ -241,14 +219,11 @@ void ROrthoGrid::update(bool force) {
             metaSpacing.x = d;
         }
     }
-    else {
+    //else {
         // auto:
-        metaSpacing.x = autoMetaSpacing.x;
-    }
+        //metaSpacing.x = autoMetaSpacing.x;
+    //}
 
-    if (view.mapDistanceToView(metaSpacing.x) < minPixelSpacing) {
-        metaSpacing = RVector::invalid;
-    }
 
     // meta grid spacing y:
     if (strMsy.isValid() && strMsy.toString()!="auto") {
@@ -258,11 +233,29 @@ void ROrthoGrid::update(bool force) {
             metaSpacing.y = d;
         }
     }
-    else {
+    //else {
         // auto:
-        metaSpacing.y = autoMetaSpacing.y;
+        //metaSpacing.y = autoMetaSpacing.y;
+    //}
+
+
+    // auto scale grid:
+    if (RSettings::getAutoScaleGrid()) {
+        QList<RVector> s = getIdealSpacing(minPixelSpacing, minSpacing);
+        autoSpacing = spacing = s.at(0);
+        autoMetaSpacing = metaSpacing = s.at(1);
     }
 
+    // switch grid off below given pixel limit:
+    if (view.mapDistanceToView(spacing.x) < minPixelSpacing) {
+        spacing = RVector::invalid;
+    }
+    if (view.mapDistanceToView(metaSpacing.x) < minPixelSpacing) {
+        metaSpacing = RVector::invalid;
+    }
+    if (view.mapDistanceToView(spacing.y) < minPixelSpacing) {
+        spacing = RVector::invalid;
+    }
     if (view.mapDistanceToView(metaSpacing.y) < minPixelSpacing) {
         metaSpacing = RVector::invalid;
     }

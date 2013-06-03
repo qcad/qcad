@@ -334,6 +334,10 @@ QFont RSettings::getStatusBarFont() {
     return *statusBarFont;
 }
 
+bool RSettings::getAutoScaleGrid() {
+    return getValue("GraphicsView/AutoScaleGrid", true).toBool();
+}
+
 bool RSettings::getAutoScalePatterns() {
     return getValue("GraphicsView/AutoScalePatterns", true).toBool();
 }
