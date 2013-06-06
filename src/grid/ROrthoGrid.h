@@ -81,11 +81,18 @@ private:
     RBox viewBox;
     RBox gridBox;
     RBox metaGridBox;
+
+    // current grid spacing:
     RVector spacing;
+    // automatically calculated grid spacing based on minimum 
+    // grid spacing and minimum pixel spacing:
     RVector autoSpacing;
+    // minimum spacing:
     RVector minSpacing;
+
     RVector metaSpacing;
     RVector autoMetaSpacing;
+
     bool scaleGrid;
     int minPixelSpacing;
     QString infoText;

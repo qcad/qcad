@@ -338,6 +338,10 @@ bool RSettings::getAutoScaleGrid() {
     return getValue("GraphicsView/AutoScaleGrid", true).toBool();
 }
 
+bool RSettings::getAutoScaleMetaGrid() {
+    return getValue("GraphicsView/AutoScaleMetaGrid", true).toBool();
+}
+
 bool RSettings::getAutoScalePatterns() {
     return getValue("GraphicsView/AutoScalePatterns", true).toBool();
 }

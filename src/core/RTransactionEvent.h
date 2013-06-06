@@ -52,9 +52,9 @@ public:
     }
 
 private:
+    RTransaction transaction;
     bool onlyChanges;
     RS::EntityType entityTypeFilter;
-    RTransaction transaction;
 };
 
 Q_DECLARE_METATYPE(RTransactionEvent*)

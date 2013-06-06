@@ -149,7 +149,6 @@ void ROrthoGrid::update(bool force) {
 
     QString key;
 
-    // backwards compatibility:
     key = QString("Grid/IsometricGrid0%1").arg(viewportNumber);
     isometric = doc->getVariable(key, false, true).toBool();
 
@@ -165,10 +164,8 @@ void ROrthoGrid::update(bool force) {
         minSpacing.x = minSpacing.y = 1.0e-6;
     }
 
-    // backwards compatibility:
     key = QString("Grid/GridSpacingX0%1").arg(viewportNumber);
     QVariant strSx = doc->getVariable(key, QVariant(), true);
-    // backwards compatibility:
     key = QString("Grid/GridSpacingY0%1").arg(viewportNumber);
     QVariant strSy = doc->getVariable(key, QVariant(), true);
 
@@ -240,9 +237,11 @@ void ROrthoGrid::update(bool force) {
 
 
     // auto scale grid:
+    QList<RVector> s = getIdealSpacing(minPixelSpacing, minSpacing);
     if (RSettings::getAutoScaleGrid()) {
-        QList<RVector> s = getIdealSpacing(minPixelSpacing, minSpacing);
         autoSpacing = spacing = s.at(0);
+    }
+    if (RSettings::getAutoScaleMetaGrid()) {
         autoMetaSpacing = metaSpacing = s.at(1);
     }
 
@@ -603,21 +602,25 @@ void ROrthoGrid::paintRuler(RRuler& ruler) {
 
     // use grid spacing if available or auto grid spacing:
     RVector localSpacing = spacing;
-    if (!localSpacing.isValid() || autoSpacing.getMagnitude2d() < localSpacing.getMagnitude2d()) {
+    if (!localSpacing.isValid() ||
+        (autoSpacing.isValid() && autoSpacing.getMagnitude2d() < localSpacing.getMagnitude2d())) {
         localSpacing = autoSpacing;
     }
 
     // use meta grid spacing if available or auto meta grid spacing:
     RVector localMetaSpacing = metaSpacing;
-    if (!localMetaSpacing.isValid() || autoMetaSpacing.getMagnitude2d() < localMetaSpacing.getMagnitude2d()) {
-        localMetaSpacing = autoMetaSpacing;
+    if (!localMetaSpacing.isValid() ||
+        (autoMetaSpacing.isValid() && autoMetaSpacing.getMagnitude2d() < localMetaSpacing.getMagnitude2d())) {
+        //localMetaSpacing = autoMetaSpacing;
     }
 
-    if (!localMetaSpacing.isValid()) {
-        return;
-    }
+    //if (!localMetaSpacing.isValid()) {
+    //    qDebug() << "no local meta spacing";
+    //    return;
+    //}
 
     if (localSpacing.getMagnitude()<1.0e-6 || localMetaSpacing.getMagnitude()<1.0e-6)  {
+        //qDebug() << "local (meta) spacing too small";
         return;
     }
 
@@ -647,6 +650,8 @@ void ROrthoGrid::paintRuler(RRuler& ruler) {
             tickSpacing /= 2;
         }
     }
+
+    // ideal tick spacing in pixels:
     int pSpacing = (int) ceil(view.mapDistanceToView(tickSpacing));
 
     QString l1 = RUnit::getLabel(isHorizontal ? min.x : min.y, *doc, false, true);
@@ -654,24 +659,34 @@ void ROrthoGrid::paintRuler(RRuler& ruler) {
     int labelWidth = std::max(
             QFontMetrics(ruler.getFont()).boundingRect(l1).width(),
             QFontMetrics(ruler.getFont()).boundingRect(l2).width()) + 15;
-    int minLabelStep = labelWidth / pSpacing + 1;
+
+    // smallest displayable distance between labels in steps (ticks):
+    int minLabelStep = 1;
+    if (pSpacing>0) {
+        minLabelStep = labelWidth / pSpacing + 1;
+    }
 
     int labelStep = minLabelStep;
     //if (!RUnit::isMetric(doc->getUnit())) {
     if (isFractionalFormat(linearFormat) && !RUnit::isMetric(unit)) {
         // non metric
-        int f = 1;
+        double f = 1.0/128;
         do {
-            if (isHorizontal) {
-                labelStep = RMath::mround(localMetaSpacing.x / localSpacing.x) * f;
-            } else {
-                labelStep = RMath::mround(localMetaSpacing.y / localSpacing.y) * f;
+            if (localMetaSpacing.isValid()) {
+                if (isHorizontal) {
+                    labelStep = RMath::mround(localMetaSpacing.x / localSpacing.x) * f;
+                } else {
+                    labelStep = RMath::mround(localMetaSpacing.y / localSpacing.y) * f;
+                }
+            }
+            else {
+                labelStep = (int)f;
             }
             f = f * 2;
             if (f>65536) {
                 labelStep = -1;
             }
-        } while (labelStep < minLabelStep && labelStep>0);
+        } while (labelStep < minLabelStep && labelStep>=0);
     } else {
         // metric
         if (labelStep >= 3 && labelStep <= 4) {
@@ -687,6 +702,10 @@ void ROrthoGrid::paintRuler(RRuler& ruler) {
 
     if (labelStep<0) {
         return;
+    }
+
+    if (labelStep<1) {
+        labelStep = 1;
     }
 
     double minPos;
