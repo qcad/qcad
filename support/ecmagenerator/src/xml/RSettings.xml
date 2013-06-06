@@ -135,6 +135,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QFont" isPureVirtual="false" />
     </method>
+    <method name="getAutoScaleGrid" cppName="getAutoScaleGrid"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getAutoScaleMetaGrid"
+    cppName="getAutoScaleMetaGrid" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getAutoScalePatterns"
     cppName="getAutoScalePatterns" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

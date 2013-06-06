@@ -103,6 +103,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getStatusBarFont, "getStatusBarFont");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleGrid, "getAutoScaleGrid");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleMetaGrid, "getAutoScaleMetaGrid");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScalePatterns, "getAutoScalePatterns");
             
             REcmaHelper::registerFunction(&engine, &ctor, getColorCorrection, "getColorCorrection");
@@ -1248,6 +1252,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getStatusBarFont", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getAutoScaleGrid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getAutoScaleGrid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getAutoScaleGrid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getAutoScaleGrid();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getAutoScaleGrid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getAutoScaleGrid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getAutoScaleMetaGrid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getAutoScaleMetaGrid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getAutoScaleMetaGrid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getAutoScaleMetaGrid();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getAutoScaleMetaGrid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getAutoScaleMetaGrid", context, engine);
             return result;
         }
          QScriptValue

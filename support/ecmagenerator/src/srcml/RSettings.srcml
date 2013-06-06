@@ -299,6 +299,20 @@ dir="./core" filename="RSettings.h">
     <name>static</name>
     <name>bool</name>
   </type>
+  <name>getAutoScaleGrid</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>getAutoScaleMetaGrid</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
   <name>getAutoScalePatterns</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>

@@ -58,7 +58,7 @@ public:
 
     virtual QString getInfoText();
 
-    QList<RVector> getIdealSpacing(int minPixelSpacing, const RVector& minSpacing);
+    QList<RVector> getIdealSpacing(int minPixelSpacing, const RVector& minSpacing, const RVector& minMetaSpacing);
 
     // This is just an idea. This might update the grid for
     // an entity that is viewed as elevation view. This might be at
@@ -71,7 +71,7 @@ public:
     RS::IsoProjectionType getProjection() const;
     void setProjection(RS::IsoProjectionType p);
 
-    static QList<RVector> getIdealGridSpacing(RGraphicsView& view, int minPixelSpacing, const RVector& minSpacing);
+    static QList<RVector> getIdealGridSpacing(RGraphicsView& view, int minPixelSpacing, const RVector& minSpacing, const RVector& minMetaSpacing);
     static bool isFractionalFormat(RS::LinearFormat linearFormat);
 
 private:
@@ -92,6 +92,7 @@ private:
 
     RVector metaSpacing;
     RVector autoMetaSpacing;
+    RVector minMetaSpacing;
 
     bool scaleGrid;
     int minPixelSpacing;

@@ -227,6 +227,14 @@ dir="./grid" filename="ROrthoGrid.h">
       <name>RVector</name>&amp;</type>
       <name>minSpacing</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>minMetaSpacing</name>
+    </decl>
   </param>)</parameter_list>;</function_decl>
   <comment type="line">// This is just an idea. This might update
   the grid for</comment>
@@ -314,6 +322,14 @@ dir="./grid" filename="ROrthoGrid.h">
       <name>RVector</name>&amp;</type>
       <name>minSpacing</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>minMetaSpacing</name>
+    </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -388,6 +404,7 @@ dir="./grid" filename="ROrthoGrid.h">
     </type>
     <name>metaGridBox</name>
   </decl>;</decl_stmt>
+  <comment type="line">// current grid spacing:</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -395,6 +412,10 @@ dir="./grid" filename="ROrthoGrid.h">
     </type>
     <name>spacing</name>
   </decl>;</decl_stmt>
+  <comment type="line">// automatically calculated grid spacing
+  based on minimum</comment>
+  <comment type="line">// grid spacing and minimum pixel
+  spacing:</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -402,6 +423,7 @@ dir="./grid" filename="ROrthoGrid.h">
     </type>
     <name>autoSpacing</name>
   </decl>;</decl_stmt>
+  <comment type="line">// minimum spacing:</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -422,6 +444,13 @@ dir="./grid" filename="ROrthoGrid.h">
       <name>RVector</name>
     </type>
     <name>autoMetaSpacing</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>minMetaSpacing</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

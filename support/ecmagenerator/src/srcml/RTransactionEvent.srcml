@@ -175,6 +175,13 @@ dir="./core" filename="RTransactionEvent.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>RTransaction</name>
+    </type>
+    <name>transaction</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
       <name>bool</name>
     </type>
     <name>onlyChanges</name>
@@ -187,13 +194,6 @@ dir="./core" filename="RTransactionEvent.h">
       <name>EntityType</name></name>
     </type>
     <name>entityTypeFilter</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RTransaction</name>
-    </type>
-    <name>transaction</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

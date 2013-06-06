@@ -38,6 +38,7 @@ ROrthoGrid::ROrthoGrid(RGraphicsView &view)
     spacing(RVector::invalid),
     minSpacing(RVector::invalid),
     metaSpacing(RVector::invalid),
+    minMetaSpacing(RVector::invalid),
     scaleGrid(true),
     minPixelSpacing(10),
     isometric(-1),
@@ -157,11 +158,14 @@ void ROrthoGrid::update(bool force) {
 
     // default values for missing configurations and 'auto' settings:
     minSpacing.valid = true;
+    minMetaSpacing.valid = true;
     if (isFractionalFormat(linearFormat) && !RUnit::isMetric(unit)) {
         minSpacing.x = minSpacing.y = RUnit::convert(1.0, RS::Inch, unit) / 1024;
+        minMetaSpacing.x = minMetaSpacing.y = RUnit::convert(1.0, RS::Inch, unit) / 1024;
     }
     else {
         minSpacing.x = minSpacing.y = 1.0e-6;
+        minMetaSpacing.x = minMetaSpacing.y = 1.0e-6;
     }
 
     key = QString("Grid/GridSpacingX0%1").arg(viewportNumber);
@@ -213,7 +217,7 @@ void ROrthoGrid::update(bool force) {
         // fixed:
         double d = RMath::eval(strMsx.toString());
         if (d>RS::PointTolerance) {
-            metaSpacing.x = d;
+            minMetaSpacing.x = metaSpacing.x = d;
         }
     }
     //else {
@@ -227,7 +231,7 @@ void ROrthoGrid::update(bool force) {
         // fixed:
         double d = RMath::eval(strMsy.toString());
         if (d>RS::PointTolerance) {
-            metaSpacing.y = d;
+            minMetaSpacing.y = metaSpacing.y = d;
         }
     }
     //else {
@@ -237,7 +241,7 @@ void ROrthoGrid::update(bool force) {
 
 
     // auto scale grid:
-    QList<RVector> s = getIdealSpacing(minPixelSpacing, minSpacing);
+    QList<RVector> s = getIdealSpacing(minPixelSpacing, minSpacing, minMetaSpacing);
     if (RSettings::getAutoScaleGrid()) {
         autoSpacing = spacing = s.at(0);
     }
@@ -335,11 +339,11 @@ bool ROrthoGrid::isFractionalFormat(RS::LinearFormat linearFormat) {
     }
 }
 
-QList<RVector> ROrthoGrid::getIdealSpacing(int minPixelSpacing, const RVector& minSpacing) {
-    return ROrthoGrid::getIdealGridSpacing(view, minPixelSpacing, minSpacing);
+QList<RVector> ROrthoGrid::getIdealSpacing(int minPixelSpacing, const RVector& minSpacing, const RVector& minMetaSpacing) {
+    return ROrthoGrid::getIdealGridSpacing(view, minPixelSpacing, minSpacing, minMetaSpacing);
 }
 
-QList<RVector> ROrthoGrid::getIdealGridSpacing(RGraphicsView& view, int minPixelSpacing, const RVector& minSpacing) {
+QList<RVector> ROrthoGrid::getIdealGridSpacing(RGraphicsView& view, int minPixelSpacing, const RVector& minSpacing, const RVector& minMetaSpacing) {
     RS::Unit unit = view.getDocument()->getUnit();
     RS::LinearFormat linearFormat = view.getDocument()->getLinearFormat();
     QList<RVector> ret;
@@ -363,8 +367,15 @@ QList<RVector> ROrthoGrid::getIdealGridSpacing(RGraphicsView& view, int minPixel
         RVector metaSpacing = spacing; // RVector(1.0 / 64, 1.0 / 64, 1.0 / 64);
         metaSpacing.x = inchAutoscale(metaSpacing.x, idealInchSpacing * 4, unit);
         metaSpacing.y = inchAutoscale(metaSpacing.y, idealInchSpacing * 4, unit);
-
         metaSpacing = RUnit::convert(metaSpacing, RS::Inch, unit);
+
+        // never drop below min spacing:
+        if (metaSpacing.x<minMetaSpacing.x) {
+            metaSpacing.x = minMetaSpacing.x;
+        }
+        if (metaSpacing.y<minMetaSpacing.y) {
+            metaSpacing.y = minMetaSpacing.y;
+        }
 
         // foot: never show meta grid of < 1 foot:
         if (unit==RS::Foot) {
@@ -375,6 +386,10 @@ QList<RVector> ROrthoGrid::getIdealGridSpacing(RGraphicsView& view, int minPixel
                 metaSpacing.y = 1.0;
             }
         }
+
+//        if (metaSpacing.x < this->metaSpacing.x) {
+//            metaSpacing.x = this->metaSpacing.x;
+//        }
 
         ret.append(spacing);
         ret.append(metaSpacing);

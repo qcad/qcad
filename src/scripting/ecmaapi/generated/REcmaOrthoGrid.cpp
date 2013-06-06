@@ -925,13 +925,18 @@
                 
     
     if( context->argumentCount() ==
-    2 && (
+    3 && (
             context->argument(0).isNumber()
         ) /* type: int */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
         ) /* type: RVector */
     
     ){
@@ -963,6 +968,24 @@
                     a1 = 
                     *ap1;
                 
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 2 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a2 = 
+                    *ap2;
+                
     // end of arguments
 
     // call C++ function:
@@ -971,7 +994,9 @@
         
                self->getIdealSpacing(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
         // return type: QList < RVector >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
@@ -1208,7 +1233,7 @@
             
     
     if( context->argumentCount() ==
-    3 && (
+    4 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
@@ -1220,6 +1245,11 @@
             context->argument(2).isVariant() || 
             context->argument(2).isQObject() || 
             context->argument(2).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
         ) /* type: RVector */
     
     ){
@@ -1267,6 +1297,24 @@
                     a2 = 
                     *ap2;
                 
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap3 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        3
+                        )
+                    );
+                    if (ap3 == NULL) {
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 3 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a3 = 
+                    *ap3;
+                
     // end of arguments
 
     // call C++ function:
@@ -1277,7 +1325,9 @@
         ,
     a1
         ,
-    a2);
+    a2
+        ,
+    a3);
         // return type: QList < RVector >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);

@@ -95,6 +95,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RVector &amp;" typeName="RVector"
         name="minSpacing" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="minMetaSpacing" isConst="true" />
       </variant>
     </method>
     <method name="isIsometric" cppName="isIsometric"
@@ -136,6 +138,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RVector &amp;" typeName="RVector"
         name="minSpacing" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="minMetaSpacing" isConst="true" />
       </variant>
     </method>
     <method name="isFractionalFormat" cppName="isFractionalFormat"

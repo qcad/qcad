@@ -112,6 +112,12 @@
         getStatusBarFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAutoScaleGrid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAutoScaleMetaGrid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAutoScalePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
