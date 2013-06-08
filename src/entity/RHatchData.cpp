@@ -474,7 +474,7 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
                 RVector ep = prev->getEndPoint();
                 RVector sp = next->getStartPoint();
 
-                if (!ep.equalsFuzzy(sp)) {
+                if (!ep.equalsFuzzy(sp, 0.001)) {
                     // inserting loop on the fly:
                     newLoop();
                 }
