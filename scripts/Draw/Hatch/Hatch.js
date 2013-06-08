@@ -167,9 +167,7 @@ Hatch.prototype.isClosedCurve = function(entity) {
 
 Hatch.prototype.traverse = function(entity, entitySource, candidateIds) {
     var i;
-//    if (isNull(entitySource)) {
-//        entitySource = EAction.getDocument();
-//    }
+
     if (isNull(candidateIds)) {
         candidateIds = this.selectedIds;
     }
@@ -221,79 +219,73 @@ Hatch.prototype.traverse = function(entity, entitySource, candidateIds) {
 
     // handle 'loose' boundary elements:
 
-    //var done;
     var currentShape;
     var loopStartPoint;
 
     this.hatchData.newLoop();
     entitySource.traversed[entity.getId()] = true;
-    shape = entity.getData().castToShape().clone();
+    var shape = entity.getData().castToShape().clone();
     this.hatchData.addBoundary(shape);
     currentShape = shape;
     loopStartPoint = shape.getStartPoint();
-    //done = false;
-    //qDebug("Hatch: first loop shape: ", shape);
-
-    //do {
-        //done = true;
-
-        // find connected entities:
-        //if (!done) {
-            var done2 = true;
-            this.connectionPoint = undefined;
-            do {
-                done2 = true;
-                this.connectionPoint = currentShape.getEndPoint();
-                for (i = 0; i < candidateIds.length; i++) {
-                    entityId = candidateIds[i];
-                    if (entitySource.traversed[entityId]) {
-                        continue;
-                    }
-
-                    if (isFunction(entitySource.queryEntityDirect)) {
-                        // query entity from document:
-                        entity = entitySource.queryEntityDirect(entityId);
-                    }
-                    else {
-                        // query entity from block reference:
-                        entity = entitySource.queryEntity(entityId);
-                    }
-
-                    if (isBlockReferenceEntity(entity)) {
-                        continue;
-                    }
-
-                    if (this.isClosedCurve(entity) || this.isClosedPolyline(entity)) {
-                        continue;
-                    }
-
-                    var sp = entity.getStartPoint();
-                    var ep = entity.getEndPoint();
-
-                    var spConnects = this.connectionPoint.equalsFuzzy(sp, Hatch.Tolerance);
-                    var epConnects = this.connectionPoint.equalsFuzzy(ep, Hatch.Tolerance);
-
-                    if (spConnects || epConnects) {
-                        entitySource.traversed[entityId] = true;
-                        shape = entity.getData().castToShape().clone();
-                        if (epConnects) {
-                            shape.reverse();
-                        }
-                        this.hatchData.addBoundary(shape);
-                        currentShape = shape;
-                        done2 = false;
-                        //qDebug("Hatch: next loop shape: ", shape, epConnects ? " (reversed)" : "");
-                        break;
-                    }
-                }
-            } while(!done2);
-
-            if (!this.connectionPoint.equalsFuzzy(loopStartPoint, Hatch.Tolerance)) {
-                this.errorPoint = this.connectionPoint;
-                return false;
+    // find connected entities:
+    var done2 = true;
+    this.connectionPoint = undefined;
+    do {
+        done2 = true;
+        this.connectionPoint = currentShape.getEndPoint();
+        for (i = 0; i < candidateIds.length; i++) {
+            var entityId = candidateIds[i];
+            if (entitySource.traversed[entityId]) {
+                continue;
             }
-        //}
-    //} while(!done);
+
+            if (isFunction(entitySource.queryEntityDirect)) {
+                // query entity from document:
+                entity = entitySource.queryEntityDirect(entityId);
+            }
+            else {
+                // query entity from block reference:
+                entity = entitySource.queryEntity(entityId);
+            }
+
+            if (isBlockReferenceEntity(entity)) {
+                continue;
+            }
+
+            if (this.isClosedCurve(entity) || this.isClosedPolyline(entity)) {
+                continue;
+            }
+
+            var sp = entity.getStartPoint();
+            var ep = entity.getEndPoint();
+
+            var spConnects = this.connectionPoint.equalsFuzzy(sp, Hatch.Tolerance);
+            var epConnects = this.connectionPoint.equalsFuzzy(ep, Hatch.Tolerance);
+
+            if (spConnects || epConnects) {
+                entitySource.traversed[entityId] = true;
+                shape = entity.getData().castToShape().clone();
+                if (epConnects) {
+                    shape.reverse();
+                }
+                this.hatchData.addBoundary(shape);
+                currentShape = shape;
+                done2 = false;
+                //qDebug("Hatch: next loop shape: ", shape, epConnects ? " (reversed)" : "");
+                break;
+            }
+
+            //qDebug("gap sp: ", this.connectionPoint.getDistanceTo(sp));
+            //qDebug("gap ep: ", this.connectionPoint.getDistanceTo(ep));
+        }
+    } while(!done2);
+
+    if (!this.connectionPoint.equalsFuzzy(loopStartPoint, Hatch.Tolerance)) {
+        this.errorPoint = this.connectionPoint;
+        //qDebug("start does not connect to end by: ", this.connectionPoint.getDistanceTo(loopStartPoint));
+        return false;
+    }
 
     return true;
 };
