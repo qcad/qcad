@@ -83,7 +83,7 @@ About.prototype.initAboutQCAD = function(webView) {
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
             + "<p/>"
             + "<p>QCAD is free (open source) software.</p>"
-            + "<p>Plugins and script add-ons are subject to their respective license (see 'About Plugins...' tab).</p>"
+            + "<p>Plugins and script add-ons are subject to their respective license (see 'About Plugins' tab).</p>"
             + "<p/>"
             + "<p>Internet: <a href='http://%1'>%1</a></p>".arg(qApp.organizationDomain)
             + "<p/>"
