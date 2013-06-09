@@ -102,7 +102,9 @@ void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
             diLast = NULL;
         }
 
-        RMainWindowQt::getMainWindow()->notifyListeners(true);
+        // 20130510: leads to empty layer list, etc when
+        // closing background tab
+        //RMainWindowQt::getMainWindow()->notifyListeners(true);
 
         // make sure rulers don't try to access view anymore:
         QList<RRulerQt*> rulers = findChildren<RRulerQt*>();
