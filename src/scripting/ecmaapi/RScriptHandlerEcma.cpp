@@ -1088,7 +1088,14 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
                 fileName = basePath + arg;
             }
             else {
-                fileName = basePath + QDir::separator() + arg;
+                if (basePath.startsWith(":")) {
+                    // workaround for Qt 4.7.4 bug with resource paths 
+                    // containing both \ and /:
+                    fileName = basePath + "/" + arg;
+                }
+                else {
+                    fileName = basePath + QDir::separator() + arg;
+                }
             }
             fi = QFileInfo(fileName);
         }
@@ -1108,6 +1115,7 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
         contents.replace("QT_TR_NOOP(\"", QString("QT_TRANSLATE_NOOP('%1', \"").arg(trContext));
 
         QString includeBasePath = engine->globalObject().property("includeBasePath").toString();
+
         engine->globalObject().setProperty("includeBasePath", fi.absolutePath());
         context->setActivationObject(engine->globalObject());
         context->setThisObject(engine->globalObject());
