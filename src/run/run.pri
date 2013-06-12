@@ -45,10 +45,13 @@ else {
             imageformats/libqjpeg.dylib \
             imageformats/libqmng.dylib \
             imageformats/libqsvg.dylib \
-            imageformats/libqtga.dylib \
             imageformats/libqtiff.dylib \
             sqldrivers/libqsqlite.dylib \
             sqldrivers/libqsqlodbc.dylib
+
+        contains(QT_VERSION, ^4\\.8\\..*) {
+            FILES += imageformats/libqtga.dylib
+        }
 
         for(FILE,FILES) {
             !exists("$${DESTDIR}/../plugins/$${FILE}") {
@@ -65,9 +68,12 @@ else {
             imageformats/libqjpeg.so \
             imageformats/libqmng.so \
             imageformats/libqsvg.so \
-            imageformats/libqtga.so \
             imageformats/libqtiff.so \
             sqldrivers/libqsqlite.so
+
+        contains(QT_VERSION, ^4\\.8\\..*) {
+            FILES += imageformats/libqtga.so
+        }
 
         for(FILE,FILES) {
             !exists("$${DESTDIR}/../plugins/$${FILE}") {
@@ -84,9 +90,12 @@ else {
             imageformats\\qjpeg4.dll \
             imageformats\\qmng4.dll \
             imageformats\\qsvg4.dll \
-            imageformats\\qtga4.dll \
             imageformats\\qtiff4.dll \
             sqldrivers\\qsqlite4.dll
+
+        contains(QT_VERSION, ^4\\.8\\..*) {
+            FILES += imageformats\\qtga4.dll
+        }
 
         DESTDIR_WIN = $${DESTDIR}
         DESTDIR_WIN ~= s,/,\\,g
