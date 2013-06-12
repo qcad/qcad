@@ -348,6 +348,13 @@ dir="./core" filename="RSettings.h">
     <name>static</name>
     <name>QString</name>
   </type>
+  <name>getCompilerVersion</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
   <name>getReleaseDate</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>

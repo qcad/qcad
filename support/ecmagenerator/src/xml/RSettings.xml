@@ -170,6 +170,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getCompilerVersion" cppName="getCompilerVersion"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getReleaseDate" cppName="getReleaseDate"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
