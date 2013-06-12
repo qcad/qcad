@@ -78,7 +78,9 @@ About.prototype.initAboutQCAD = function(webView) {
             + "</tr><tr>"
             + "<td><b>Build Date:</b> </td><td>%1</td>".arg(RSettings.getReleaseDate())
             + "</tr><tr>"
-            + "<td><b>Qt Version:</b> </td><td>%4</td>".arg(RSettings.getQtVersion())
+            + "<td><b>Qt Version:</b> </td><td>%1</td>".arg(RSettings.getQtVersion())
+            + "</tr><tr>"
+            + "<td><b>Compiler:</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
             + "</tr></table>"
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
             + "<p/>"

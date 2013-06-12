@@ -362,6 +362,25 @@ QString RSettings::getQtVersion() {
     return qVersion();
 }
 
+QString RSettings::getCompilerVersion() {
+#if defined(Q_CC_GNU)
+    return QString("gcc %1.%2.%3").arg(__GNUC__).arg(__GNUC_MINOR__).arg(__GNUC_PATCHLEVEL__);
+#elif defined(Q_CC_MSVC)
+#   if _MSC_VER==1310
+        return "MSVC++ 7.1 (2003)";
+#   elif _MSC_VER==1400
+        return "MSVC++ 8.0 (2005)";
+#   elif _MSC_VER==1500
+        return "MSVC++ 9.0 (2008)";
+#   elif _MSC_VER==1600
+        return "MSVC++ 10.0 (2010)";
+#   elif _MSC_VER==1700
+        return "MSVC++ 11.0 (2012)";
+#   endif
+#endif
+    return "Unknown";
+}
+
 QString RSettings::getVersionString() {
     return R_QCAD_VERSION_STRING;
 }

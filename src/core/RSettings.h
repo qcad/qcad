@@ -89,6 +89,7 @@ public:
     static int getColorThreshold();
     static int getTextHeightThreshold();
     static QString getQtVersion();
+    static QString getCompilerVersion();
     static QString getReleaseDate();
     static QString getVersionString();
     static QString getNumericalVersionString();
