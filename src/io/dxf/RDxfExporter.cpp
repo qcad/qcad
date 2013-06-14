@@ -57,6 +57,18 @@ RDxfExporter::RDxfExporter(RDocument& document,
 
 }
 
+QString RDxfExporter::getCorrectedFileName(const QString& fileName, const QString& nameFilter) {
+
+    QString ret = fileName;
+    QString ext = QFileInfo(ret).suffix().toLower();
+
+    if (ext!="dxf") {
+        ret += ".dxf";
+    }
+
+    return ret;
+}
+
 bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter, bool setFileName) {
     qDebug() << "RDxfExporter::exportFile";
 

@@ -59,11 +59,7 @@ public:
         RProgressHandler* progressHandler = NULL);
     virtual ~RDxfExporter() {}
 
-    virtual QString getCorrectedFileName(const QString& fileName, const QString& nameFilter) {
-        Q_UNUSED(nameFilter)
-
-        return fileName;
-    }
+    virtual QString getCorrectedFileName(const QString& fileName, const QString& nameFilter);
 
     virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true);
 
