@@ -72,7 +72,7 @@ CONFIG += help \
 
 CONFIG -= warn_off
 CONFIG += warn_on
-CONFIG += debug_and_release ordered embed_manifest_dll
+CONFIG += debug_and_release ordered embed_manifest_dll embed_manifest_exe
 
 win32-msvc2010 {
     DEFINES += _CRT_SECURE_NO_WARNINGS
