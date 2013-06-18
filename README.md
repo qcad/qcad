@@ -15,3 +15,8 @@ License
 The QCAD 3 source code is released under the GPLv3 open source license. Script add-ons and C++ plugins 
 are released under their respective licenses.
 
+Compilation
+-----------
+Detailed compilation instructions for Windows, Mac OS X and Linux can be found on our web site at:
+
+http://www.qcad.org/en/component/content/article/78-qcad/111-qcad-compilation-from-sources
