@@ -38,6 +38,11 @@ bool RPainterPathEngine::end() {
 void RPainterPathEngine::updateState(const QPaintEngineState &state) {
     QPaintEngine::DirtyFlags flags = state.state();
 
+    // required for Qt >= 4.8.0 for texts with unicode characters:
+    if (flags & DirtyTransform) {
+        transform = state.transform();
+    }
+
     /*
     QPaintEngine::DirtyFlags flags = state.state();
     if (flags & DirtyPen) updatePen(state.pen());
@@ -72,6 +77,8 @@ void RPainterPathEngine::drawPath(const QPainterPath& qpath) {
     if (state->brush().color().isValid()) {
         path.setFixedBrushColor(true);
     }
+    // required for Qt >= 4.8.0 for texts with unicode characters:
+    path.transform(transform);
     paths.append(path);
 }
 

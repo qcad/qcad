@@ -596,6 +596,20 @@ QString RTextData::toEscapedText(const QTextDocument& textDocument, const RColor
             text.replace(RTextRenderer::chPlusMinus, RTextRenderer::escPlusMinus);
             // diameter:
             text.replace(RTextRenderer::chDiameter, RTextRenderer::escDiameter);
+            /*
+            // unicode:
+            QString t;
+            for (int k=0; k<text.length(); k++) {
+                unsigned short c = text[k].unicode();
+                if (c>255) {
+                    t.append(QString("\\U+%1").arg(c, 4, 16, QChar('0')));
+                }
+                else {
+                    t += text[k];
+                }
+            }
+            text = t;
+            */
             ret += text;
         }
     }

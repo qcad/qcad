@@ -55,6 +55,7 @@ public:
 
 private:
     QList<RPainterPath> paths;
+    QTransform transform;
 };
 
 #endif
