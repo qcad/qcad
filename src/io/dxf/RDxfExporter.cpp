@@ -906,7 +906,7 @@ void RDxfExporter::writeSimpleText(const RTextEntity& t) {
                 0,    // text gen flags
                 0,    // h just
                 0,    // v just
-                (const char*)t.getEscapedText().toLatin1(),
+                (const char*)t.getEscapedText(true).toLatin1(),
                 (const char*)styleName.toLatin1(),
                 t.getAngle());
 
@@ -1026,7 +1026,7 @@ void RDxfExporter::writeMText(const RTextEntity& t) {
                              drawingDirection,
                              lineSpacingStyle,
                              t.getLineSpacingFactor(),
-                             (const char*)t.getEscapedText().toLatin1(),
+                             (const char*)t.getEscapedText(true).toLatin1(),
                              (const char*)styleName.toLatin1(),
                              t.getAngle()),
                 attributes);
