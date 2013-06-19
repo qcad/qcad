@@ -209,8 +209,8 @@ public:
         return data.isSimple();
     }
 
-    QString getEscapedText() const {
-        return data.getEscapedText();
+    QString getEscapedText(bool escapeUnicode = false) const {
+        return data.getEscapedText(escapeUnicode);
     }
 
     //QString getHtmlText() const {

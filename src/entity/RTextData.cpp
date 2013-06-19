@@ -347,8 +347,23 @@ QString RTextData::getPlainText() const {
     return td.toPlainText();
 }
 
-QString RTextData::getEscapedText() const {
-    return text;
+QString RTextData::getEscapedText(bool escapeUnicode) const {
+    if (escapeUnicode) {
+        QString ret;
+        for (int i=0; i<text.length(); i++) {
+            ushort ch = text.at(i).unicode();
+            if (ch>255) {
+                ret+=QString("\\U+%1").arg(ch, 4, 16, QChar('0'));
+            }
+            else {
+                ret+=text.at(i);
+            }
+        }
+        return ret;
+    }
+    else {
+        return text;
+    }
 }
 
 // "lo\C4;\H2.5;rem\P\C1;\fBaskerville|b0|i0|c0|p34;backslash:\FAPNORM.SHX|c0;\\semicolon:;\Pdolor\Psit\~amet\Plorem \Sipsum/dolor; sit\~amet"

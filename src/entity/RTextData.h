@@ -205,7 +205,7 @@ public:
     bool flipVertical();
 
     QString getPlainText() const;
-    QString getEscapedText() const;
+    QString getEscapedText(bool escapeUnicode = false) const;
     QFont getMainFont() const;
 
     virtual void update() const;
