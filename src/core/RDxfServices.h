@@ -75,6 +75,14 @@ public:
 
     void fixQCad2HatchData(QString& patternName, double& angle, double& scale, bool solid) const;
 
+    QTextCodec* getCodec() const {
+        return codec;
+    }
+
+    void setCodec(QTextCodec* codec) {
+        this->codec = codec;
+    }
+
     /**
      * \nonscriptable
      */
@@ -108,6 +116,8 @@ private:
     QMap<QString, QString> qcad2LayerMapping;
     QMap<QString, QString> qcad2TextFonts;
     QMap<QString, QString> qcad2DimensionLabels;
+
+    QTextCodec* codec;
 };
 
 Q_DECLARE_METATYPE(RDxfServices)
