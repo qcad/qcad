@@ -160,12 +160,16 @@ void ROrthoGrid::update(bool force) {
     minSpacing.valid = true;
     minMetaSpacing.valid = true;
     if (isFractionalFormat(linearFormat) && !RUnit::isMetric(unit)) {
+        //minSpacing.x = minSpacing.y = RNANDOUBLE;
+        //minMetaSpacing.x = minMetaSpacing.y = RNANDOUBLE;
         minSpacing.x = minSpacing.y = RUnit::convert(1.0, RS::Inch, unit) / 1024;
         minMetaSpacing.x = minMetaSpacing.y = RUnit::convert(1.0, RS::Inch, unit) / 1024;
     }
     else {
         minSpacing.x = minSpacing.y = 1.0e-6;
-        minMetaSpacing.x = minMetaSpacing.y = 1.0e-6;
+        minMetaSpacing.x = minMetaSpacing.y = RNANDOUBLE;
+        //minSpacing.x = minSpacing.y = RNANDOUBLE;
+        //minMetaSpacing.x = minMetaSpacing.y = 1.0e-6;
     }
 
     key = QString("Grid/GridSpacingX0%1").arg(viewportNumber);
@@ -175,31 +179,25 @@ void ROrthoGrid::update(bool force) {
 
     spacing.valid = true;
 
+    bool autoX = !strSx.isValid() || strSx.toString()=="auto";
+    bool autoY = !strSy.isValid() || strSy.toString()=="auto";
+
     // grid spacing x:
-    if (strSx.isValid() && strSx.toString()!="auto") {
+    if (!autoX) {
         // fixed:
         double d = RMath::eval(strSx.toString());
         if (!RMath::hasError() && d>RS::PointTolerance) {
             minSpacing.x = spacing.x = d;
         }
     }
-    //else {
-        // auto:
-        //spacing.x = autoSpacing.x;
-    //}
-
 
     // grid spacing y:
-    if (strSy.isValid() && strSy.toString()!="auto") {
+    if (!autoY) {
         double d = RMath::eval(strSy.toString());
         if (!RMath::hasError() && d>RS::PointTolerance) {
             minSpacing.y = spacing.y = d;
         }
     }
-    //else {
-        // auto:
-        //spacing.y = autoSpacing.y;
-    //}
 
 
 
@@ -212,33 +210,26 @@ void ROrthoGrid::update(bool force) {
 
     metaSpacing.valid = true;
 
+    bool metaAutoX = !strMsx.isValid() || strMsx.toString()=="auto";
+    bool metaAutoY = !strMsy.isValid() || strMsy.toString()=="auto";
+
     // meta grid spacing x:
-    if (strMsx.isValid() && strMsx.toString()!="auto") {
+    if (!metaAutoX) {
         // fixed:
         double d = RMath::eval(strMsx.toString());
         if (d>RS::PointTolerance) {
             minMetaSpacing.x = metaSpacing.x = d;
         }
     }
-    //else {
-        // auto:
-        //metaSpacing.x = autoMetaSpacing.x;
-    //}
-
 
     // meta grid spacing y:
-    if (strMsy.isValid() && strMsy.toString()!="auto") {
+    if (!metaAutoY) {
         // fixed:
         double d = RMath::eval(strMsy.toString());
         if (d>RS::PointTolerance) {
             minMetaSpacing.y = metaSpacing.y = d;
         }
     }
-    //else {
-        // auto:
-        //metaSpacing.y = autoMetaSpacing.y;
-    //}
-
 
     // auto scale grid:
     QList<RVector> s = getIdealSpacing(minPixelSpacing, minSpacing, minMetaSpacing);
@@ -418,8 +409,34 @@ QList<RVector> ROrthoGrid::getIdealGridSpacing(RGraphicsView& view, int minPixel
             factor.y = 1.0;
         }
 
-        ret.append(RVector(minSpacing.x * factor.x, minSpacing.y * factor.y));
-        ret.append(ret.at(0) * 10);
+        // grid spacing:
+        double x, y;
+        x = minSpacing.x * factor.x;
+        y = minSpacing.y * factor.y;
+        ret.append(RVector(x,y));
+
+        // meta grid spacing:
+        double mx, my;
+        if (RMath::isNaN(minMetaSpacing.x)) {
+            mx = x * 10;
+        }
+        else {
+            //mx = minMetaSpacing.x * factor.x;
+            mx = minMetaSpacing.x;
+        }
+
+        if (RMath::isNaN(minMetaSpacing.y)) {
+            my = y * 10;
+        }
+        else {
+            //my = minMetaSpacing.y * factor.y;
+            my = minMetaSpacing.y;
+        }
+        ret.append(RVector(mx, my));
+
+        //ret.append(RVector(minSpacing.x * factor.x, minSpacing.y * factor.y));
+        //ret.append(RVector(minMetaSpacing.x * factor.x, minMetaSpacing.y * factor.y));
+        //ret.append(ret.at(0) * 10);
 
         return ret;
     }
@@ -751,7 +768,7 @@ void ROrthoGrid::paintRuler(RRuler& ruler) {
         } else {
             v = view.mapToView(RVector(0, p)).y;
         }
-        ruler.paintTick(v, hasLabel, hasLabel ? RUnit::getLabel(p, *doc, false, true) : QString());
+        ruler.paintTick(v, hasLabel, hasLabel ? RUnit::getLabel(p, *doc, false, true, true) : QString());
     }
 }
 

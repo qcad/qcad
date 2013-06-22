@@ -31,7 +31,8 @@
  * \see RSettings::getNumberLocale()
  */
 QString RUnit::getLabel(double v, RDocument& document,
-                        bool forceMaxPrecision, bool forceSuppressTrailingZeroes) {
+                        bool forceMaxPrecision, bool forceSuppressTrailingZeroes,
+                        bool onlyPreciseResult) {
 
     if (fabs(v) < 1e-6) {
         v = 0.0;
@@ -42,7 +43,8 @@ QString RUnit::getLabel(double v, RDocument& document,
                 forceMaxPrecision ? 8 : document.getLinearPrecision(),
                 false,
                 document.showLeadingZeroes(),
-                forceSuppressTrailingZeroes ? false : document.showTrailingZeroes());
+                forceSuppressTrailingZeroes ? false : document.showTrailingZeroes(),
+                onlyPreciseResult);
 
     //QLocale locale = RSettings::getNumberLocale();
     //return locale.toString(v, 'g', 6);
@@ -326,39 +328,40 @@ QString RUnit::unitToName(RS::Unit unit, bool tr) {
  & \param showUnit Append unit to the value.
  */
 QString RUnit::formatLinear(double length, RS::Unit unit,
-                                 RS::LinearFormat format,
-                                 int prec, bool showUnit,
-                                 bool showLeadingZeroes, 
-                                 bool showTrailingZeroes) {
+                            RS::LinearFormat format,
+                            int prec, bool showUnit,
+                            bool showLeadingZeroes, 
+                            bool showTrailingZeroes,
+                            bool onlyPreciseResult) {
     QString ret;
 
     // imperial display: show as fraction:
     switch (format) {
     case RS::Scientific:
         ret = formatScientific(length, unit, prec, showUnit, 
-            showLeadingZeroes, showTrailingZeroes);
+            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     case RS::Decimal:
         ret = formatDecimal(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes);
+            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     case RS::Engineering:
         ret = formatEngineering(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes);
+            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     case RS::Architectural:
     case RS::ArchitecturalStacked:
         ret = formatArchitectural(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes);
+            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     case RS::Fractional:
     case RS::FractionalStacked:
         ret = formatFractional(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes);
+            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     default:
@@ -380,8 +383,9 @@ QString RUnit::formatLinear(double length, RS::Unit unit,
  & \param showUnit Append unit to the value.
  */
 QString RUnit::formatScientific(double length, RS::Unit unit,
-                                     int prec, bool showUnit,
-                                     bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/) {
+                                int prec, bool showUnit,
+                                bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/,
+                                bool /*onlyPreciseResult*/) {
     QString ret;
 
     // negative prec crashes sprintf:
@@ -412,8 +416,9 @@ QString RUnit::formatScientific(double length, RS::Unit unit,
  & \param showUnit Append unit to the value.
  */
 QString RUnit::formatDecimal(double length, RS::Unit unit,
-                                  int prec, bool showUnit,
-                                  bool showLeadingZeroes, bool showTrailingZeroes) {
+                             int prec, bool showUnit,
+                             bool showLeadingZeroes, bool showTrailingZeroes,
+                             bool /*onlyPreciseResult*/) {
 
     QString ret;
     
@@ -439,8 +444,9 @@ QString RUnit::formatDecimal(double length, RS::Unit unit,
  & \param showUnit Append unit to the value.
  */
 QString RUnit::formatEngineering(double length, RS::Unit unit,
-                                      int prec, bool /*showUnit*/,
-                                      bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/) {
+                                 int prec, bool /*showUnit*/,
+                                 bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/,
+                                 bool /*onlyPreciseResult*/) {
 
     if (unit!=RS::Inch) {
         qWarning() << "RUnit::formatEngineering:"
@@ -485,7 +491,8 @@ QString RUnit::formatEngineering(double length, RS::Unit unit,
  */
 QString RUnit::formatArchitectural(double length, RS::Unit unit,
                                    int prec, bool showUnit,
-                                   bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/) {
+                                   bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/,
+                                   bool /*onlyPreciseResult*/) {
     if (unit!=RS::Inch) {
         qWarning() << "RUnit::formatArchitectural:"
                    << "Unit must be set to 'Inch' for architectural format";
@@ -536,9 +543,8 @@ QString RUnit::formatArchitectural(double length, RS::Unit unit,
  */
 QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
                                 int prec, bool /*showUnit*/,
-                                bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/) {
-
-    QString ret;
+                                bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/,
+                                bool onlyPreciseResult) {
 
     int num;            // number of complete inches (num' 7/128")
     int nominator;      // number of fractions (nominator/128)
@@ -555,6 +561,7 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
 
     denominator = (int)RMath::pow(2, prec);
     nominator = RMath::mround((length-num)*denominator);
+
 
     // fraction rounds up to 1:
     if (nominator==denominator) {
@@ -576,7 +583,16 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
         }
     }
 
-    if( num!=0 && nominator!=0 ) {
+    if (onlyPreciseResult) {
+        double res = (double)num + (double)nominator / (double)denominator;
+        if (!RMath::fuzzyCompare(res, length)) {
+            return "";
+        }
+    }
+
+    QString ret;
+
+    if (num!=0 && nominator!=0 ) {
         ret.sprintf("%s%d %d/%d",
                     (const char*)neg.toLatin1(), num,
                     nominator, denominator);

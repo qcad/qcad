@@ -40,27 +40,33 @@ public:
                                   RS::LinearFormat format,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
-                                  bool showTrailingZeroes=false);
+                                  bool showTrailingZeroes=false,
+                                  bool onlyPreciseResult=false);
     static QString formatScientific(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
-                                  bool showTrailingZeroes=false);
+                                  bool showTrailingZeroes=false,
+                                  bool onlyPreciseResult=false);
     static QString formatDecimal(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
-                                  bool showTrailingZeroes=false);
+                                  bool showTrailingZeroes=false,
+                                  bool onlyPreciseResult=false);
     static QString formatEngineering(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
-                                  bool showTrailingZeroes=false);
+                                  bool showTrailingZeroes=false,
+                                  bool onlyPreciseResult=false);
     static QString formatArchitectural(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
-                                  bool showTrailingZeroes=false);
+                                  bool showTrailingZeroes=false,
+                                  bool onlyPreciseResult=false);
     static QString formatFractional(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
-                                  bool showTrailingZeroes=false);
+                                  bool showTrailingZeroes=false,
+                                  bool onlyPreciseResult=false);
     static QString trimTrailingZeroes(const QString& s);
 
     static QString formatAngle(double angle, RS::AngleFormat format,
@@ -84,7 +90,8 @@ public:
     static QString unitToName(RS::Unit unit, bool tr=true);
     static QString getLabel(double v, RDocument& document,
                             bool maxPrecision=false,
-                            bool forceSuppressTrailingZeroes=false);
+                            bool forceSuppressTrailingZeroes=false,
+                            bool onlyPreciseResult=false);
 
     static QString doubleToString(double value, double prec,
         bool showLeadingZeroes=true, bool showTrailingZeroes=false);
