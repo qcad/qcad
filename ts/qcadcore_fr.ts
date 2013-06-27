@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+245"/>
+        <location filename="../src/core/RUnit.cpp" line="+247"/>
         <source>None</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--

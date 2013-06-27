@@ -54,7 +54,12 @@
         <translation>Minimaler Rasterabstand (pix):</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+58"/>
+        <source>Automatically scale meta grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Auto Zoom</source>
         <translation>Auto Ansicht</translation>
     </message>

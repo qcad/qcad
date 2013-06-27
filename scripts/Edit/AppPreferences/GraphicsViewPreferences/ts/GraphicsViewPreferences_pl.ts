@@ -82,7 +82,12 @@ Minimalny odstęp siatki (piksele):</translatorcomment>
         <translation type="unfinished">Minimalny odstęp siatki (piksele):</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+58"/>
+        <source>Automatically scale meta grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Auto Zoom</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
