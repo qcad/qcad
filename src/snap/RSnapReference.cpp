@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RSnapReference.h"
+#include "RBlockReferenceEntity.h"
 
 QList<RVector> RSnapReference::snapEntity(QSharedPointer<REntity> entity,
                                           const RVector& point,
@@ -26,5 +27,10 @@ QList<RVector> RSnapReference::snapEntity(QSharedPointer<REntity> entity,
     Q_UNUSED(queryBox);
     Q_UNUSED(view);
 
-    return entity->getInternalReferencePoints();
+    QList<RVector> ret = entity->getInternalReferencePoints();
+    QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+    if (!blockRef.isNull()) {
+        ret.append(entity->getReferencePoints());
+    }
+    return ret;
 }
