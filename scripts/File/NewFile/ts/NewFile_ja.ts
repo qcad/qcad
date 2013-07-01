@@ -6,7 +6,7 @@
     <message>
         <location filename="../CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished"></translation>
+        <translation>図面を閉じています...</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>無題</translation>
     </message>
 </context>
 <context>
@@ -22,67 +22,67 @@
     <message>
         <location filename="../NewFile.js" line="+91"/>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>読込中...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import Error</source>
-        <translation type="unfinished"></translation>
+        <translation>インポートエラー</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot open file</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルを開けません</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>適切なインポーターがみつかりません。ファイルフォーマットと拡張子をチェックしてください。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>アクセス権、ファイルフォーマット、拡張子をチェックしてください。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルは空です。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Opened drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>オープンされた図面:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>フォーマット:</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Untitled %1</source>
-        <translation type="unfinished"></translation>
+        <translation>無題%1</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation>読み込み専用</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>このドキュメントへの変更を保存しますか？&lt;br&gt;&apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation type="unfinished"></translation>
+        <translation>保存しなければ変更は失われます。</translation>
     </message>
     <message>
         <location filename="../NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;N 新規作成</translation>
     </message>
 </context>
 </TS>

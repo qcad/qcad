@@ -6,22 +6,22 @@
     <message>
         <location filename="../Trim.js" line="+70"/>
         <source>Choose limiting entity</source>
-        <translation type="unfinished"></translation>
+        <translation>制限エッジを選択</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Choose entity to trim</source>
-        <translation type="unfinished"></translation>
+        <translation>トリム対象を選択</translation>
     </message>
     <message>
         <location line="+114"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation type="unfinished"></translation>
+        <translation>２つのエンティティは交差していないか、現在トリムをサポートされていません。</translation>
     </message>
     <message>
         <location filename="../TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;T トリムと伸長</translation>
     </message>
 </context>
 </TS>

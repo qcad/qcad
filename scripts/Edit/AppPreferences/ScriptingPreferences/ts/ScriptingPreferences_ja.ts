@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>スタートアップ時にスクリプトフォルダを再スキャン</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation type="unfinished"></translation>
+        <translation>スクリプティング</translation>
     </message>
 </context>
 </TS>

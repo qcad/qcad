@@ -6,22 +6,22 @@
     <message>
         <location filename="../DefaultNavigation.js" line="+46"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>グラフィックビュー</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>ナビゲーション</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>ズーム（ホイールマウス）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>スクロール（トラックパッド、マルチタッチマウス）</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="unfinished"></translation>
+        <translation>マウスホイール/2本指スワイプ:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable pan gesture</source>
-        <translation type="unfinished"></translation>
+        <translation>パンゼスチャを有効にする</translation>
     </message>
 </context>
 </TS>

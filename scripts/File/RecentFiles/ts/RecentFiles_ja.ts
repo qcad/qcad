@@ -6,22 +6,22 @@
     <message>
         <location filename="../RecentFiles.js" line="+37"/>
         <source>Load/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>ロード/セーブ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>最近使ったファイル</translation>
     </message>
     <message>
         <location filename="../RecentFilesInit.js" line="+47"/>
         <source>&amp;Clear List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;C リストをクリア</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Open &amp;Recent</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;R 最近使ったファイルを開く</translation>
     </message>
 </context>
 </TS>

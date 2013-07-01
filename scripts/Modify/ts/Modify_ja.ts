@@ -6,17 +6,17 @@
     <message>
         <location filename="../Modify.js" line="+104"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>修正ツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show modification tools</source>
-        <translation type="unfinished"></translation>
+        <translation>修正ツールを表示</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;M 修正</translation>
     </message>
 </context>
 <context>
@@ -24,12 +24,12 @@
     <message>
         <location filename="../ModifyCorner.js" line="+69"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>第1エンティティを選択してください</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>第2エンティティを選択してください</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../Transform.js" line="+38"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>このツールは選択した状態で使用してください</translation>
     </message>
 </context>
 </TS>

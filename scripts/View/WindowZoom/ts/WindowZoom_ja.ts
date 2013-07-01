@@ -6,7 +6,7 @@
     <message>
         <location filename="../WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;W 座標を指定してズーム</translation>
     </message>
 </context>
 </TS>

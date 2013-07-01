@@ -6,107 +6,107 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>定規及びスクロールバー</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished"></translation>
+        <translation>定規を表示</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>スクロールバーを表示</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>カーソル</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>十字線を表示</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>大きな十字線を表示</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>グリッド</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically scale grid</source>
-        <translation type="unfinished"></translation>
+        <translation>自動スケールグリッド</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation type="unfinished"></translation>
+        <translation>ソリッドグリッドライン</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>最小グリッド間隔（ピクセル）:</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Automatically scale meta grid</source>
-        <translation type="unfinished"></translation>
+        <translation>自動スケールメタグリッド</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>オートズーム</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Margin (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>マージン（ピクセル）:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Color Adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation>色調節</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="unfinished"></translation>
+        <translation>白に白/黒に黒の表示を防ぐ</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation>色の明るさ閾値:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>パフォーマンス</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Number of preview entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>プレビューエンティティの数:</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Text height display threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation>テキスト高さの表示閾値:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>選択</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>選択を持続</translation>
     </message>
 </context>
 <context>
@@ -114,12 +114,12 @@
     <message>
         <location filename="../GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>グラフィックビュー</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>外見</translation>
     </message>
 </context>
 </TS>

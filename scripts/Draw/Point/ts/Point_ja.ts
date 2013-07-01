@@ -6,17 +6,17 @@
     <message>
         <location filename="../Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>点ツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show point tools</source>
-        <translation type="unfinished"></translation>
+        <translation>点ツールを表示</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;P 点</translation>
     </message>
 </context>
 </TS>

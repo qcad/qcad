@@ -7,22 +7,22 @@
         <location filename="../CheckForUpdates.js" line="+58"/>
         <location filename="../CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation type="unfinished"></translation>
+        <translation>アップデートを確認しています...</translation>
     </message>
     <message>
         <location filename="../CheckForUpdatesDialog.ui" line="+10"/>
         <source>about:blank</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Automatically check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>アップデートの確認を自動的に行う</translation>
     </message>
     <message>
         <location filename="../CheckForUpdatesInit.js" line="+7"/>
         <source>Check for &amp;Updates...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;U アップデート確認...</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;F フリー</translation>
     </message>
 </context>
 </TS>

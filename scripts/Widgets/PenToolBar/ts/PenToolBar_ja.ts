@@ -6,12 +6,12 @@
     <message>
         <location filename="../PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation type="unfinished"></translation>
+        <translation>ペン</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>Reset to Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>初期値に戻す</translation>
     </message>
 </context>
 </TS>

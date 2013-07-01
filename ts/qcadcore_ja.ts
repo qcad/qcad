@@ -6,107 +6,107 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+247"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>なし</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>インチ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation>フィート</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation type="unfinished"></translation>
+        <translation>マイル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>ミリメートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>センチメートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>メートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translation type="unfinished"></translation>
+        <translation>キロメートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation>マイクロインチ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished"></translation>
+        <translation>ミル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation>ヤード</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation>オングストローム</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nanometer</source>
-        <translation type="unfinished"></translation>
+        <translation>ナノメートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation>ミクロン</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>デシメートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation>デカメートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translation type="unfinished"></translation>
+        <translation>ヘクトメートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation>ギガメートル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation>アストロ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation>光年</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation>パーセク</translation>
     </message>
 </context>
 <context>
@@ -114,67 +114,67 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+411"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>画層による</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロックによる</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished"></translation>
+        <translation>赤</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>黄</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation type="unfinished"></translation>
+        <translation>緑</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>シアン</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>青</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>マゼンタ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>黒</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>白</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>灰色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>明るい灰色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>その他...</translation>
     </message>
 </context>
 <context>
@@ -182,79 +182,79 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Referenced Block</source>
-        <translation type="unfinished"></translation>
+        <translation>参照ブロック</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>スケール</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+43"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>タイプ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインタイプ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインの太さ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>描画順序</translation>
     </message>
 </context>
 <context>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+163"/>
         <source>Requires selection</source>
-        <translation type="unfinished"></translation>
+        <translation>選択が必要です</translation>
     </message>
 </context>
 <context>
@@ -270,32 +270,32 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>画層名</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>凍結</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>ロック</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインタイプ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインの太さ</translation>
     </message>
 </context>
 <context>
@@ -303,107 +303,107 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+46"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>画層による</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロックによる</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished"></translation>
+        <translation>連続</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished"></translation>
+        <translation>点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dot (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>点（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dot (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>点（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ダッシュ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>ダッシュ（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>ダッシュ（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash Dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ダッシュドット</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash Dot (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>ダッシュドット（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash Dot (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>ダッシュドット（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished"></translation>
+        <translation>分割</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Divide (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>分割（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Divide (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>分割（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>センター</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>センター（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>センター（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished"></translation>
+        <translation>ボーダー</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Border (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>ボーダー（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Border (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>ボーダー（大）</translation>
     </message>
 </context>
 <context>
@@ -411,137 +411,137 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+34"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>画層による</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロックによる</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>デフォルト</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -549,12 +549,12 @@
     <message>
         <location filename="../src/core/RObject.cpp" line="+35"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>カスタム</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>ハンドル</translation>
     </message>
 </context>
 </TS>

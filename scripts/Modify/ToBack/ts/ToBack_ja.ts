@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;k 背面に移動</translation>
     </message>
 </context>
 </TS>

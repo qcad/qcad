@@ -6,7 +6,7 @@
     <message>
         <location filename="../DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D 削除</translation>
     </message>
 </context>
 </TS>

@@ -6,23 +6,24 @@
     <message>
         <location filename="../AbstractPreferences.js" line="+41"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>アプリケーション設定</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>図面設定</translation>
     </message>
     <message>
         <location line="+248"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>再起動が必要</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>設定の変更を反映するには
+QCADを再起動してください。</translation>
     </message>
 </context>
 <context>
@@ -30,7 +31,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../ClipboardOperation.js" line="+41"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>基準点</translation>
     </message>
 </context>
 <context>
@@ -38,7 +39,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../Edit.js" line="+52"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;E 編集</translation>
     </message>
 </context>
 <context>
@@ -48,32 +49,32 @@ the preference changes to take effect.</source>
         <location line="+85"/>
         <location line="+21"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>設定</translation>
     </message>
     <message>
         <location line="-88"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>フィルタ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Clear Search</source>
-        <translation type="unfinished"></translation>
+        <translation>検索結果をクリア</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Expand Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>ツリーを広げる</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>ツリーを折りたたむ</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation type="unfinished"></translation>
+        <translation>初期値に置き換える</translation>
     </message>
 </context>
 </TS>

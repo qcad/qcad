@@ -6,47 +6,47 @@
     <message>
         <location filename="../ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>新規図面へのデフォルト</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>印刷 - 色</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation>印刷</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>色</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>背景色:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Color Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>色モード</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
-        <translation type="unfinished"></translation>
+        <translation>フルカラー</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation type="unfinished"></translation>
+        <translation>グレースケール</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation type="unfinished"></translation>
+        <translation>白黒</translation>
     </message>
 </context>
 </TS>

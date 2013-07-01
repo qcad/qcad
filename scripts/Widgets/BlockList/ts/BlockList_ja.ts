@@ -7,7 +7,7 @@
         <location filename="../BlockList.js" line="+269"/>
         <location line="+34"/>
         <source>Block List</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロックリスト</translation>
     </message>
 </context>
 </TS>

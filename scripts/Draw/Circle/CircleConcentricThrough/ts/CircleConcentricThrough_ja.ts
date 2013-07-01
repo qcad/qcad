@@ -6,17 +6,17 @@
     <message>
         <location filename="../CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>数:</translation>
     </message>
     <message>
         <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;t 同心円（通過点指定）</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric circle through point</source>
-        <translation type="unfinished"></translation>
+        <translation>通過点を指定して同心円を描画</translation>
     </message>
 </context>
 </TS>

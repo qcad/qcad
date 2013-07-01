@@ -6,22 +6,22 @@
     <message>
         <location filename="../Rotate.js" line="+68"/>
         <source>Center point</source>
-        <translation type="unfinished"></translation>
+        <translation>中心点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>基準点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>ターゲット点</translation>
     </message>
     <message>
         <location filename="../RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;R 回転</translation>
     </message>
 </context>
 <context>
@@ -29,37 +29,37 @@
     <message>
         <location filename="../RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation type="unfinished"></translation>
+        <translation>回転オプション</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;A 角度(a):</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
 </context>
 </TS>

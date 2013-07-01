@@ -6,42 +6,42 @@
     <message>
         <location filename="../SnapCoordinate.js" line="+80"/>
         <source>Set coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>座標セット</translation>
     </message>
     <message>
         <location filename="../SnapCoordinate.ui" line="+17"/>
         <source>&amp;x:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+16"/>
         <source>X Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>X座標</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Y Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Y座標</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>相対座標の場合チェック</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;v 相対座標</translation>
     </message>
     <message>
         <location filename="../SnapCoordinateInit.js" line="+5"/>
         <source>&amp;Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;C 座標</translation>
     </message>
 </context>
 </TS>

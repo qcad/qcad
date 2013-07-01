@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;R 基準点</translation>
     </message>
 </context>
 </TS>

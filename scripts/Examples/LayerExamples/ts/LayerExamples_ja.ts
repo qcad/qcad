@@ -6,7 +6,7 @@
     <message>
         <location filename="../LayerExamples.js" line="+51"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;L 画層</translation>
     </message>
 </context>
 </TS>

@@ -6,42 +6,42 @@
     <message>
         <location filename="../DrawPolyline.js" line="+63"/>
         <source>First vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>最初の頂点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>次の頂点</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>ポリラインを閉じる</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>前のセグメントを取り消し</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Arc segment with radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>半径を指定の弧:</translation>
     </message>
     <message>
         <location filename="../DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D ポリライン描画</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation>線分と弧でポリラインを描画</translation>
     </message>
 </context>
 </TS>

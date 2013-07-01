@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;C 中心</translation>
     </message>
 </context>
 </TS>

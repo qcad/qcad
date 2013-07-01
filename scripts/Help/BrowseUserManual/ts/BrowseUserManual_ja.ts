@@ -6,7 +6,7 @@
     <message>
         <location filename="../BrowseUserManualInit.js" line="+2"/>
         <source>Browse User Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>ユーザマニュアルの閲覧</translation>
     </message>
 </context>
 </TS>

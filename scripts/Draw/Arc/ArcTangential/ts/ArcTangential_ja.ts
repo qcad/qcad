@@ -6,27 +6,27 @@
     <message>
         <location filename="../ArcTangential.js" line="+63"/>
         <source>Choose base line or base arc</source>
-        <translation type="unfinished"></translation>
+        <translation>ベースとなる線分または弧を選択してください</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Choose end point of arc</source>
-        <translation type="unfinished"></translation>
+        <translation>弧の終了点を選択してください</translation>
     </message>
     <message>
         <location filename="../ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>半径:</translation>
     </message>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;T 接線的接続</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw arc tangential to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>ベースエントリから接線的接続の弧を描画</translation>
     </message>
 </context>
 </TS>

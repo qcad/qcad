@@ -6,27 +6,27 @@
     <message>
         <location filename="../InfoDistanceEP.js" line="+51"/>
         <source>Specify entity</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティを指定</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>点を指定</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>距離:</translation>
     </message>
     <message>
         <location filename="../InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;E エンティティと点の距離</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;n ブロックをリネーム</translation>
     </message>
 </context>
 </TS>

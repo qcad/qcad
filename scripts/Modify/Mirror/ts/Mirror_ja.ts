@@ -6,17 +6,17 @@
     <message>
         <location filename="../Mirror.js" line="+62"/>
         <source>First point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>対称軸の第１点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>対称軸の第２点</translation>
     </message>
     <message>
         <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;M 鏡像反転</translation>
     </message>
 </context>
 <context>
@@ -24,27 +24,27 @@
     <message>
         <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="unfinished"></translation>
+        <translation>鏡像反転オプション</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
 </context>
 </TS>

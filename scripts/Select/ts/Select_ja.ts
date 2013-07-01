@@ -6,22 +6,22 @@
     <message>
         <location filename="../Select.js" line="+64"/>
         <source>Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>選択ツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show selection tools</source>
-        <translation type="unfinished"></translation>
+        <translation>選択ツールを表示</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Selection Tools Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>選択ツールパネル</translation>
     </message>
     <message>
         <location line="+146"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;S 選択</translation>
     </message>
 </context>
 </TS>

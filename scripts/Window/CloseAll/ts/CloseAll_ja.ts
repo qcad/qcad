@@ -6,7 +6,7 @@
     <message>
         <location filename="../CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;C 全て閉じる</translation>
     </message>
 </context>
 </TS>

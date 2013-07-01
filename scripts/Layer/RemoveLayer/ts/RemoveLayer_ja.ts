@@ -6,7 +6,7 @@
     <message>
         <location filename="../RemoveLayerInit.js" line="+2"/>
         <source>&amp;Remove Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;R 画層削除</translation>
     </message>
 </context>
 </TS>

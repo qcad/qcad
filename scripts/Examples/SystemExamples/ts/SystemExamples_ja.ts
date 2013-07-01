@@ -6,7 +6,7 @@
     <message>
         <location filename="../SystemExamples.js" line="+51"/>
         <source>&amp;System</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;S システム</translation>
     </message>
 </context>
 </TS>

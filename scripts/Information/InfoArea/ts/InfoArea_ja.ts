@@ -6,37 +6,37 @@
     <message>
         <location filename="../InfoArea.js" line="+64"/>
         <source>Set next polygon corner</source>
-        <translation type="unfinished"></translation>
+        <translation>次のポリゴン頂点を設定</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location line="+124"/>
         <source>Polygon area:</source>
-        <translation type="unfinished"></translation>
+        <translation>ポリゴンエリア（面積）:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>外周（長さ）:</translation>
     </message>
     <message>
         <location filename="../InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>長さを計算してツールを閉じます。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>ツールを閉じます。</translation>
     </message>
     <message>
         <location filename="../InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;y 多角形エリア</translation>
     </message>
 </context>
 </TS>

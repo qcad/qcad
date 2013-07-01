@@ -6,7 +6,7 @@
     <message>
         <location filename="../IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;T 上方投影</translation>
     </message>
 </context>
 </TS>

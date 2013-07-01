@@ -6,27 +6,27 @@
     <message>
         <location filename="../InfoAngle.js" line="+59"/>
         <source>Specify first line</source>
-        <translation type="unfinished"></translation>
+        <translation>第１線を指定</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation type="unfinished"></translation>
+        <translation>第２線を指定</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>角度:</translation>
     </message>
     <message>
         <location filename="../InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;A 角度</translation>
     </message>
 </context>
 </TS>

@@ -8,12 +8,14 @@
         <source>The folder
 &apos;%1&apos;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>フォルダ
+&apos;%1&apos;
+は、既にリストに存在します。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Folder not added</source>
-        <translation type="unfinished"></translation>
+        <translation>フォルダは追加されませんでした</translation>
     </message>
 </context>
 </TS>

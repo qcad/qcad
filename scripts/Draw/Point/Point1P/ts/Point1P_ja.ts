@@ -6,17 +6,17 @@
     <message>
         <location filename="../Point1P.js" line="+50"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;P 単一の点</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
-        <translation type="unfinished"></translation>
+        <translation>単一の点を描画</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../View.js" line="+41"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;V ビュー</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../BrowseAddOnsInit.js" line="+2"/>
         <source>Browse for Add-ons</source>
-        <translation type="unfinished"></translation>
+        <translation>アドオンの閲覧</translation>
     </message>
 </context>
 </TS>

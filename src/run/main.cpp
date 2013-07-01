@@ -79,7 +79,6 @@ void catchSigPipe(int /*s*/){
 #endif
 
 int main(int argc, char *argv[]) {
-
     // 20130418 (experimental):
     // For correct Unicode translation, apply the current system locale:
     setlocale(LC_ALL, "");

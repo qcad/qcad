@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translation type="unfinished"></translation>
+        <translation>ユーザインターフェースの言語:</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../LanguagePreferences.js" line="+41"/>
         <source>Language Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>言語設定</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>言語</translation>
     </message>
 </context>
 </TS>

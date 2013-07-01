@@ -6,27 +6,27 @@
     <message>
         <location filename="../DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>第１延長線の起点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>第２延長線の起点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation type="unfinished"></translation>
+        <translation>寸法線の位置</translation>
     </message>
     <message>
         <location filename="../DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;A 位置合わせ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw aligned dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>位置合わせ寸法の描画</translation>
     </message>
 </context>
 </TS>

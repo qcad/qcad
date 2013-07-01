@@ -6,89 +6,89 @@
     <message>
         <location filename="../About.js" line="+33"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1について</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>プラグイン</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>利用可能な情報がありません</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>プラグイン:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>記述:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>不明</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>バージョン:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qtバージョン:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>ライセンス:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>インターネット:</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>アクティブ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>機能停止（リスタート）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>体験版:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>エラー:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>スクリプトアドオン</translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -96,24 +96,24 @@
     <message>
         <location filename="../About.ui" line="+81"/>
         <source>About QCAD</source>
-        <translation type="unfinished"></translation>
+        <translation>QCADについて</translation>
     </message>
     <message>
         <location line="+16"/>
         <location line="+25"/>
         <location line="+25"/>
         <source>about:blank</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-41"/>
         <source>About Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>プラグインについて</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>About Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>スクリプトアドオンについて</translation>
     </message>
 </context>
 </TS>

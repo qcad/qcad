@@ -6,7 +6,7 @@
     <message>
         <location filename="../Block.js" line="+49"/>
         <source>&amp;Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;B ブロック</translation>
     </message>
 </context>
 <context>
@@ -14,27 +14,27 @@
     <message>
         <location filename="../BlockDialog.js" line="+92"/>
         <source>Block name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック名が空です。</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Block already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロックは既に存在します。</translation>
     </message>
     <message>
         <location filename="../BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロックデータ</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Block name:</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック名:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>block 1</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック１</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;A 画層追加</translation>
     </message>
 </context>
 </TS>

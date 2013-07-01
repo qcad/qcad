@@ -6,22 +6,22 @@
     <message>
         <location filename="../LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>描画を開始するにはマウスのボタンを押します</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>描画を終了するにはマウスのボタンを放します</translation>
     </message>
     <message>
         <location filename="../LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;F フリーハンド</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw freehand line</source>
-        <translation type="unfinished"></translation>
+        <translation>フリーハンドで描画</translation>
     </message>
 </context>
 </TS>

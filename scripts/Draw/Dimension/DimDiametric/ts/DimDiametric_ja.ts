@@ -6,22 +6,22 @@
     <message>
         <location filename="../DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation type="unfinished"></translation>
+        <translation>弧または円を選択</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>寸法線の位置または角度</translation>
     </message>
     <message>
         <location filename="../DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D 直径</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>直径寸法の描画</translation>
     </message>
 </context>
 </TS>

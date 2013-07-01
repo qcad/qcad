@@ -6,7 +6,7 @@
     <message>
         <location filename="../CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;C コピー</translation>
     </message>
 </context>
 </TS>

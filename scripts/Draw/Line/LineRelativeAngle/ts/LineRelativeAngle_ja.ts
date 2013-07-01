@@ -6,32 +6,32 @@
     <message>
         <location filename="../LineRelativeAngle.js" line="+63"/>
         <source>Choose base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>基礎エントリーを選択</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>位置を指定</translation>
     </message>
     <message>
         <location filename="../LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>相対角度:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>長さ:</translation>
     </message>
     <message>
         <location filename="../LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;e 相対角度</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>基礎エントリーとの相対角度で線分を描画</translation>
     </message>
 </context>
 </TS>

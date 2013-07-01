@@ -6,17 +6,17 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Icon Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>アイコンサイズ:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation>ピクセル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -24,12 +24,12 @@
     <message>
         <location filename="../ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィジェット</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>ツールバー</translation>
     </message>
 </context>
 </TS>

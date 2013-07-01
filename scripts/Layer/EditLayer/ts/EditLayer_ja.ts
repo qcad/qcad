@@ -6,7 +6,7 @@
     <message>
         <location filename="../EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;E 画層編集</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation type="unfinished"></translation>
+        <translation>メイン位置</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation type="unfinished"></translation>
+        <translation>引出線の終端</translation>
     </message>
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;O 縦座標（X/Y）</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>縦座標寸法の描画</translation>
     </message>
 </context>
 </TS>

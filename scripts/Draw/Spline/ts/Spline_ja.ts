@@ -6,17 +6,17 @@
     <message>
         <location filename="../Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>スプラインツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show spline tools</source>
-        <translation type="unfinished"></translation>
+        <translation>スプラインツールを表示</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;S スプライン</translation>
     </message>
 </context>
 </TS>

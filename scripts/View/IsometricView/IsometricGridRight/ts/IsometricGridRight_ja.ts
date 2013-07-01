@@ -6,7 +6,7 @@
     <message>
         <location filename="../IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;R 右方投影</translation>
     </message>
 </context>
 </TS>

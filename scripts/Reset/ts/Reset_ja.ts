@@ -7,12 +7,12 @@
         <location filename="../ResetInit.js" line="+5"/>
         <location filename="../ResetPostInit.js" line="+11"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>リセット</translation>
     </message>
     <message>
         <location filename="../ResetPostInit.js" line="-9"/>
         <source>&amp;Reset / Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;R リセット/待ち状態</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;M 中央</translation>
     </message>
 </context>
 </TS>

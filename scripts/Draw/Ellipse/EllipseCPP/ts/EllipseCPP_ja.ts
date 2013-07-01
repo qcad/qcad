@@ -6,12 +6,12 @@
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;F 楕円弧</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>中心、長軸点と比率から楕円を描画</translation>
     </message>
 </context>
 </TS>

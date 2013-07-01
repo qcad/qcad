@@ -6,7 +6,7 @@
     <message>
         <location filename="../Draw.js" line="+56"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D 描画</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;O アクティブな画層のみ表示</translation>
     </message>
 </context>
 </TS>

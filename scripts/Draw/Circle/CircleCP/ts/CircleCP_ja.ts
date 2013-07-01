@@ -6,22 +6,22 @@
     <message>
         <location filename="../CircleCP.js" line="+56"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on circle or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>円城の点または半径</translation>
     </message>
     <message>
         <location filename="../CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;C 中心、点</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation>中心と円上の点から円を描画</translation>
     </message>
 </context>
 </TS>

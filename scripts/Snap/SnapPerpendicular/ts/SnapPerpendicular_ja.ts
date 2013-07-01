@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;P 垂線</translation>
     </message>
 </context>
 </TS>

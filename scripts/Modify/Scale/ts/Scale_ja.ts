@@ -6,22 +6,22 @@
     <message>
         <location filename="../Scale.js" line="+70"/>
         <source>Focus point</source>
-        <translation type="unfinished"></translation>
+        <translation>中心点</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>基準点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>ターゲット点</translation>
     </message>
     <message>
         <location filename="../ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;S 縮尺</translation>
     </message>
 </context>
 <context>
@@ -29,42 +29,42 @@
     <message>
         <location filename="../ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation type="unfinished"></translation>
+        <translation>縮尺オプション</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
         <location line="+119"/>
         <source>Factor &amp;x:</source>
-        <translation type="unfinished"></translation>
+        <translation>係数&amp;x:</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Factor &amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation>係数&amp;y:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>
 </context>
 </TS>

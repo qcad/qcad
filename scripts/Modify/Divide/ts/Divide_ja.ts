@@ -6,27 +6,27 @@
     <message>
         <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>線分、弧、円を選択してください</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>点を指定</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify second point</source>
-        <translation type="unfinished"></translation>
+        <translation>第２点を指定</translation>
     </message>
     <message>
         <location line="+193"/>
         <source>Cutting point is not on entity.</source>
-        <translation type="unfinished"></translation>
+        <translation>切り取り点はエンティティ上にありません。</translation>
     </message>
     <message>
         <location filename="../DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D 分割</translation>
     </message>
 </context>
 </TS>

@@ -6,73 +6,73 @@
     <message>
         <location filename="../ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ダイアログ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>弧と円</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation type="unfinished"></translation>
+        <translation>線分情報（長さ固定）</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation type="unfinished"></translation>
+        <translation>線分情報（角度固定）</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>弧</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation>弧のポリライン情報</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation>線分のポリライン情報</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation>スプライン</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>寸法</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation type="unfinished"></translation>
+        <translation>線分、ソリッド及びテキスト情報</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation>ハッチング</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation type="unfinished"></translation>
+        <translation>線分情報</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティ情報</translation>
     </message>
 </context>
 <context>
@@ -80,27 +80,27 @@
     <message>
         <location filename="../Explode.js" line="+31"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>修正</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation>分解</translation>
     </message>
     <message>
         <location filename="../ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;E 分解</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Spline segments:</source>
-        <translation type="unfinished"></translation>
+        <translation>スプラインセグメント:</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation type="unfinished"></translation>
+        <translation>弧セグメント（楕円あたり）:</translation>
     </message>
 </context>
 </TS>

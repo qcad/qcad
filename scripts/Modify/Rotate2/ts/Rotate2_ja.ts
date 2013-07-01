@@ -6,17 +6,17 @@
     <message>
         <location filename="../Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>主要な回転の中心</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>２つ目の回転の中心</translation>
     </message>
     <message>
         <location filename="../Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;w 回転２</translation>
     </message>
 </context>
 <context>
@@ -24,42 +24,42 @@
     <message>
         <location filename="../Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation type="unfinished"></translation>
+        <translation>回転２オプション</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Angle (&amp;a):</source>
-        <translation type="unfinished"></translation>
+        <translation>角度(&amp;a):</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle (&amp;b):</source>
-        <translation type="unfinished"></translation>
+        <translation>角度(&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
 </context>
 <context>
@@ -67,17 +67,17 @@
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>主要な角度:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>２つ目の角度:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>コピー:</translation>
     </message>
 </context>
 </TS>

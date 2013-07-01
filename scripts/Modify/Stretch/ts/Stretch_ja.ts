@@ -6,27 +6,27 @@
     <message>
         <location filename="../Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>第１角</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>第２角</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>基準点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>ターゲット点</translation>
     </message>
     <message>
         <location filename="../StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;S ストレッチ</translation>
     </message>
 </context>
 </TS>

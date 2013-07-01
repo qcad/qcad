@@ -6,87 +6,87 @@
     <message>
         <location filename="../Dimension.js" line="+65"/>
         <source>No prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>接頭辞なし</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>半径</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation type="unfinished"></translation>
+        <translation>メートルねじ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>直径</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>プラス/マイナス</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>ほぼ同一</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>漸近的に同一</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>四角</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>デルタ</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Dimension Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>寸法ツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation type="unfinished"></translation>
+        <translation>寸法ツールを表示</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>D&amp;imension</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;i 寸法</translation>
     </message>
     <message>
         <location filename="../Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation type="unfinished"></translation>
+        <translation>ラベル:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>接頭辞</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="unfinished"></translation>
+        <translation>固定ラベルを入力または自動ラベルを削除</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Upper tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>許容誤差の上限</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Lower tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>許容誤差の下限</translation>
     </message>
 </context>
 </TS>

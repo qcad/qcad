@@ -6,22 +6,22 @@
     <message>
         <location filename="../File.js" line="+52"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;F ファイル</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>フォーマット:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Overwrite File?</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルを上書きしますか?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル&apos;%1&apos;は既に存在します。 上書きしますか?</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>スプラッシュスクリーンを表示</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation type="unfinished"></translation>
+        <translation>スタートアップ</translation>
     </message>
 </context>
 </TS>

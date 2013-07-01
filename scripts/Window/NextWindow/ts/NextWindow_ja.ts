@@ -6,7 +6,7 @@
     <message>
         <location filename="../NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;N 次へ</translation>
     </message>
 </context>
 </TS>

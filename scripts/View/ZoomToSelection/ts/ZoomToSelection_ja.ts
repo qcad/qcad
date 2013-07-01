@@ -6,12 +6,12 @@
     <message>
         <location filename="../ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation type="unfinished"></translation>
+        <translation>何も選択されていません。</translation>
     </message>
     <message>
         <location filename="../ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;S 選択部品にあわせてズーム</translation>
     </message>
 </context>
 </TS>

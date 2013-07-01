@@ -6,7 +6,7 @@
     <message>
         <location filename="../LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;L 相対ゼロ点のロック</translation>
     </message>
 </context>
 </TS>

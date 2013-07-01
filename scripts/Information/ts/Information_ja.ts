@@ -6,17 +6,17 @@
     <message>
         <location filename="../Information.js" line="+209"/>
         <source>Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>情報ツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show information tools</source>
-        <translation type="unfinished"></translation>
+        <translation>情報ツールを表示</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;I 情報</translation>
     </message>
 </context>
 </TS>

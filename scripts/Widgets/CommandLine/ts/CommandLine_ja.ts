@@ -6,88 +6,88 @@
     <message>
         <location filename="../CommandLine.js" line="+56"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;C コマンドライン</translation>
     </message>
     <message>
         <location line="+19"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>コマンドライン</translation>
     </message>
     <message>
         <location line="+108"/>
         <source>Invalid coordinate &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>無効な座標 &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>不明なコマンドまたは無効な座標もしくは値: &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>数値が&apos;%1&apos;として入力されました</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
-        <translation type="unfinished"></translation>
+        <translation>座標が&apos;%1&apos; (絶対座標) or &apos;%2&apos; (相対座標) or &apos;%3&apos; (極座標) or &apos;%4&apos; (相対極座標)として入力されました</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>数値/座標のフォーマットをアプリケーション設定で変更できます。</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
-        <translation type="unfinished"></translation>
+        <translation>ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>警告</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>情報</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>座標</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>コマンド</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>コマンド:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>ヒストリサイズ:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ダイアログとして警告を表示</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ダイアログとして情報を表示</translation>
     </message>
 </context>
 </TS>

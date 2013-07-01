@@ -6,17 +6,17 @@
     <message>
         <location filename="../SnapAuto.js" line="+29"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>スナップ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>自動スナップ</translation>
     </message>
     <message>
         <location filename="../SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;A 自動</translation>
     </message>
 </context>
 </TS>

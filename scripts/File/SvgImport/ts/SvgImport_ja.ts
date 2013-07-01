@@ -6,22 +6,22 @@
     <message>
         <location filename="../SvgImport.js" line="+38"/>
         <source>Import SVG</source>
-        <translation type="unfinished"></translation>
+        <translation>SVGインポート</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished"></translation>
+        <translation>SVGファイル</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのファイル</translation>
     </message>
     <message>
         <location filename="../SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;I SVGインポート...</translation>
     </message>
 </context>
 </TS>

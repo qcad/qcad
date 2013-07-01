@@ -17,7 +17,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -64,7 +64,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RTextEntity.cpp" line="+67"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -111,7 +111,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -158,37 +158,37 @@
         <location line="+3"/>
         <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>半径</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>開始角度</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>終了角度</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>反転</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>直径</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -196,18 +196,18 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+3"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>長さ</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>エリア</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>外周</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-10"/>
@@ -220,7 +220,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation type="unfinished"></translation>
+        <translation>寸法線</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -233,7 +233,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>拡張点1</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -246,42 +246,42 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>拡張点2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-18"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation type="unfinished"></translation>
+        <translation>ライン１開始</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation type="unfinished"></translation>
+        <translation>ライン１終了</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation type="unfinished"></translation>
+        <translation>ライン２開始</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation type="unfinished"></translation>
+        <translation>ライン２終了</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>円弧寸法</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -291,107 +291,107 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation type="unfinished"></translation>
+        <translation>弦長点</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation type="unfinished"></translation>
+        <translation>遠くの弦長点</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>原点</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>縦座標</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation type="unfinished"></translation>
+        <translation>定義点</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished"></translation>
+        <translation>引出線終端</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+2"/>
         <source>Dimension Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>角度寸法</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation>ラベル</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>許容誤差</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>上限</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>下限</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation type="unfinished"></translation>
+        <translation>定義点</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished"></translation>
+        <translation>テキスト位置</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Measured Value</source>
-        <translation type="unfinished"></translation>
+        <translation>測定値</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation type="unfinished"></translation>
+        <translation>重大な点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>比率</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>開始パラメータ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>終了パラメータ</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -401,7 +401,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation type="unfinished"></translation>
+        <translation>開始点</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -411,24 +411,24 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation type="unfinished"></translation>
+        <translation>終了点</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation>ソリッド</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>パターン</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名称</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -437,12 +437,12 @@
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
         <location filename="../src/entity/RTextEntity.cpp" line="+4"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>スケール</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -456,12 +456,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>頂点</translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -474,141 +474,141 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>幅係数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>高さ係数</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>幅</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>高さ</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>矢印</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
         <source>Closed</source>
-        <translation type="unfinished"></translation>
+        <translation>クローズド</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Bulge</source>
-        <translation type="unfinished"></translation>
+        <translation>膨らみ</translation>
     </message>
     <message>
         <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
         <source>Closed Periodic</source>
-        <translation type="unfinished"></translation>
+        <translation>閉じた連続</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation type="unfinished"></translation>
+        <translation>基準点</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished"></translation>
+        <translation>適合点</translation>
     </message>
     <message>
         <location filename="../src/entity/RTextEntity.cpp" line="-6"/>
         <source>Simple</source>
-        <translation type="unfinished"></translation>
+        <translation>シンプル</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>内容</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished"></translation>
+        <translation>フォント名</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>太字</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>斜体</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>行間隔</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>位置合わせ</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>水平</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直</translation>
     </message>
 </context>
 </TS>

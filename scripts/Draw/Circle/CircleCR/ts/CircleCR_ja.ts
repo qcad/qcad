@@ -6,27 +6,27 @@
     <message>
         <location filename="../CircleCR.js" line="+56"/>
         <source>Center or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>中心または半径</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>半径:</translation>
     </message>
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;R 中心、半径</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>中心及び半径半径から円を描画</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+47"/>
         <source>Status Bar Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>ステータスバーフォント:</translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+27"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィジェット</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>ステータスバー</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;P 図面設定</translation>
     </message>
 </context>
 </TS>

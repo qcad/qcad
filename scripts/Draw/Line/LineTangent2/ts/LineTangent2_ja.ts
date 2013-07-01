@@ -6,27 +6,27 @@
     <message>
         <location filename="../LineTangent2.js" line="+67"/>
         <source>Choose first circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>第１の円または弧を選択</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>第２の円または弧を選択</translation>
     </message>
     <message>
         <location line="+140"/>
         <source>No tangent possible</source>
-        <translation type="unfinished"></translation>
+        <translation>接線を描画できません</translation>
     </message>
     <message>
         <location filename="../LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;g 接線（２つの円）</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>接線（２つの円）を描画</translation>
     </message>
 </context>
 </TS>
