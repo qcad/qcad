@@ -30,8 +30,12 @@ BrowseUserManual.prototype.beginEvent = function() {
 
     var locale = new QLocale(RSettings.getLocale());
     var dir = "en";
+
     if (locale.language()===QLocale.German) {
         dir = "de"
+    }
+    else if (locale.language()===QLocale.Japanese) {
+        dir = "ja"
     }
 
     Help.openUrl(
