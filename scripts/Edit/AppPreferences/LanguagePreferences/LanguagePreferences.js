@@ -30,6 +30,8 @@ LanguagePreferences.localLanguageName["pt"] = "Português";
 LanguagePreferences.localLanguageName["pt_BR"] = "Português Brasileiro";
 LanguagePreferences.localLanguageName["es"] = "Español";
 LanguagePreferences.localLanguageName["it"] = "Italiano";
+LanguagePreferences.localLanguageName["ja"] = "日本語";
+LanguagePreferences.localLanguageName["pl"] = "Polski";
 
 function LanguagePreferences(guiAction) {
     EAction.call(this, guiAction);
