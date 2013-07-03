@@ -123,7 +123,18 @@ Information.prototype.addInfoLine = function(point1, point2) {
 };
 
 Information.prototype.addGridTickers = function(view, point1, point2) {
-    var spacings = ROrthoGrid.getIdealGridSpacing(view, 10, new RVector(0.001, 0.001), new RVector(0.001, 0.001));
+    var doc = this.getDocument();
+    var minV = new RVector(0.001, 0.001);
+    if (!isNull(doc)) {
+        var linearFormat = doc.getLinearFormat();
+        if (linearFormat==RS.ArchitecturalStacked ||
+            linearFormat==RS.FractionalStacked ||
+            linearFormat==RS.Architectural ||
+            linearFormat==RS.Fractional) {
+        }
+        minV = new RVector(1.0/128, 1.0/128);
+    }
+    var spacings = ROrthoGrid.getIdealGridSpacing(view, 10, minV, new RVector(Number.NaN, Number.NaN));
     var gridSpacing = spacings[0];
     var metaGridSpacing = spacings[1];
     
