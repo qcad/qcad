@@ -595,9 +595,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="-125.20521"
-     inkscape:cy="244.18344"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="253.80403"
+     inkscape:cy="253.37583"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -640,9 +640,9 @@
        sodipodi:nodetypes="cc"
        id="path2816"
        d="m 360,-244 112,0"
-       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:none;stroke:#000000;stroke-width:24;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:24;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 40,-244 112,0"
        id="path3173"
        sodipodi:nodetypes="cc" />
@@ -681,5 +681,17 @@
        id="path3171"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        sodipodi:type="arc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 280,216 -64,64"
+       id="path3865"
+       inkscape:connector-curvature="0"
+       transform="translate(0,-492)" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 216,216 64,64"
+       id="path3867"
+       inkscape:connector-curvature="0"
+       transform="translate(0,-492)" />
   </g>
 </svg>
