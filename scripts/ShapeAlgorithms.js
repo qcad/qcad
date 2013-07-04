@@ -149,6 +149,8 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 
     var res = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
 
+    //qDebug("intersection points: ", res);
+
     var cutPos1 = undefined;
     var cutPos2 = undefined;
 
@@ -156,8 +158,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         cutPos1 = res[0];
         cutPos2 = res[1];
     }
-
-    //if (isNull(cutPos1))
 
     if (!isCircleShape(shape) && !isFullEllipseShape(shape)) {
         if (!isValidVector(cutPos1) || !isValidVector(cutPos2)) {
@@ -373,6 +373,9 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
     }
     else if (isArcShape(shape) || isCircleShape(shape) || isEllipseShape(shape)) {
         orthoLine = new RLine(shape.getCenter(), position);
+        if (shape.isReversed()) {
+            shape.reverse();
+        }
     }
 
     if (isNull(orthoLine)) {
@@ -386,9 +389,6 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
         intersections.push(shape.getEndPoint());
     }
 
-    //qDebug("otherShapes: ", otherShapes);
-    //debugger;
-
     for (var i=0; i<otherShapes.length; i++) {
         //qDebug("otherShapes[" + i + "]: ", otherShapes[i]);
         var sol = shape.getIntersectionPoints(otherShapes[i].data(), onShape);
@@ -398,6 +398,8 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
             }
         }
     }
+
+    //qDebug("intersection candidates: ", intersections);
 
     var cutPos1 = RVector.invalid;
     var distRight = undefined;
@@ -417,9 +419,11 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
             continue;
         }
 
+        var s;
+        var dist;
         if (isLineShape(shape)) {
-            var s = orthoLine.getSideOfPoint(inters);
-            var dist = inters.getDistanceTo(position);
+            s = orthoLine.getSideOfPoint(inters);
+            dist = inters.getDistanceTo(position);
 
             if (s===RS.RightHand) {
                 if (isNull(distRight) || dist<distRight) {
@@ -435,7 +439,30 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
             }
         }
         else if (isArcShape(shape) || isCircleShape(shape) || isEllipseShape(shape)) {
-            var dist = RMath.getAngleDifference(orthoLine.getAngle(), shape.getCenter().getAngleTo(inters));
+            //dist = RMath.getAngleDifference(orthoLine.getAngle(), shape.getCenter().getAngleTo(inters));
+            dist = RMath.getRelativeAngle(shape.getCenter().getAngleTo(inters), orthoLine.getAngle());
+            if (dist<0) {
+                s = RS.LeftHand;
+            }
+            else {
+                s = RS.RightHand;
+            }
+            dist = Math.abs(dist);
+
+            if (s===RS.RightHand) {
+                if (isNull(distRight) || dist<distRight) {
+                    cutPos1 = inters;
+                    distRight = dist;
+                }
+            }
+            else if (s===RS.LeftHand) {
+                if (isNull(distLeft) || dist<distLeft) {
+                    cutPos2 = inters;
+                    distLeft = dist;
+                }
+            }
+
+            /*
             if (isNull(distRight) || dist<distRight) {
                 cutPos1 = inters;
                 distRight = dist;
@@ -444,6 +471,7 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
                 cutPos2 = inters;
                 distLeft = dist;
             }
+            */
         }
     }
 
