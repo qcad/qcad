@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDebug>
 #include <QSize>
 
 #include "RDebug.h"
@@ -49,8 +50,7 @@ void RLineweightCombo::init() {
     while (it.hasNext()) {
         QPair<QString, RLineweight::Lineweight> p = it.next();
         v.setValue<RLineweight::Lineweight> (p.second);
-        addItem(RLineweight::getIcon(p.second), RLineweight::tr(
-                (const char*) p.first.toUtf8()), v);
+        addItem(RLineweight::getIcon(p.second), p.first, v);
     }
 
     if (!onlyFixed) {
