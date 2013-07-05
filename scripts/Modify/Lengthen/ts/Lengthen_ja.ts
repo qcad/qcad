@@ -11,17 +11,17 @@
     <message>
         <location filename="../Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>総量:</translation>
+        <translation>増分:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>伸長または縮小（負）の結果の総量</translation>
+        <translation>伸長または縮小（負）の増分</translation>
     </message>
     <message>
         <location filename="../LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>&amp;L 長さ指定</translation>
+        <translation>&amp;L 伸長/縮小</translation>
     </message>
 </context>
 </TS>
