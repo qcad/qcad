@@ -32,6 +32,7 @@ function LineRelativeAngle(guiAction) {
     this.pos = undefined;
     this.angle = Math.PI/2.0;
     this.length = 100.0;
+    this.referencePoint = undefined;
 
     if (!isNull(guiAction)) {
         this.setUiOptions("LineRelativeAngle.ui");
@@ -43,6 +44,12 @@ LineRelativeAngle.prototype = new Line();
 LineRelativeAngle.State = {
     ChoosingEntity : 0,
     SettingPos : 1
+};
+
+LineRelativeAngle.ReferencePoint = {
+    Start  : 0,
+    Middle : 1,
+    End    : 2
 };
 
 LineRelativeAngle.prototype.beginEvent = function() {
@@ -161,7 +168,7 @@ LineRelativeAngle.prototype.getHighlightedEntities = function() {
 };
 
 LineRelativeAngle.prototype.getOperation = function(preview) {
-    if (isNull(this.pos) || isNull(this.entity)) {
+    if (isNull(this.pos) || isNull(this.entity) || isNull(this.referencePoint)) {
         return undefined;
     }
 
@@ -182,13 +189,40 @@ LineRelativeAngle.prototype.getLine = function() {
     var doc = this.getDocument();
 
     // check given entity / coord:
-    if (isNull(this.shape) || isNull(this.pos)) {
+    if (isNull(this.shape) || isNull(this.pos) || isNull(this.referencePoint)) {
         return undefined;
     }
 
-    var v1 = RVector.createPolar(this.length/2.0, this.getAbsoluteAngle());
+    //var v1 = RVector.createPolar(this.length/2.0, this.getAbsoluteAngle());
+    var angle = this.getAbsoluteAngle();
 
-    return new RLine(this.pos.operator_subtract(v1), this.pos.operator_add(v1));
+    switch(this.referencePoint) {
+    case LineRelativeAngle.ReferencePoint.Start:
+        p1 = this.pos;
+        p2 = this.pos.operator_add(
+            RVector.createPolar(+this.length, angle)
+        );
+        break;
+    case LineRelativeAngle.ReferencePoint.Middle:
+        p1 = this.pos.operator_add(
+            RVector.createPolar(-this.length/2, angle)
+        );
+        p2 = this.pos.operator_add(
+            RVector.createPolar(+this.length/2, angle)
+        );
+        break;
+    case LineRelativeAngle.ReferencePoint.End:
+        p1 = this.pos.operator_add(
+            RVector.createPolar(-this.length, angle)
+        );
+        p2 = this.pos;
+        break;
+    default:
+        return undefined;
+    }
+
+    return new RLine(p1, p2);
+    //return new RLine(this.pos.operator_subtract(v1), this.pos.operator_add(v1));
 };
 
 LineRelativeAngle.prototype.getAbsoluteAngle = function() {
@@ -216,3 +250,7 @@ LineRelativeAngle.prototype.slotLengthChanged  = function(value) {
     this.updatePreview(true);
 };
 
+LineRelativeAngle.prototype.slotReferencePointChanged = function(value) {
+    this.referencePoint = value;
+    this.updatePreview(true);
+};

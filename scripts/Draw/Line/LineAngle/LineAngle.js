@@ -87,10 +87,10 @@ LineAngle.prototype.coordinateEventPreview = function(event) {
 
 LineAngle.prototype.getOperation = function(preview) {
 
-    if (this.pos==undefined ||
-        this.angle==undefined ||
-        this.length==undefined ||
-        this.referencePoint==undefined) {
+    if (isNull(this.pos) ||
+        isNull(this.angle) ||
+        isNull(this.length) ||
+        isNull(this.referencePoint)) {
         return undefined;
     }
 
