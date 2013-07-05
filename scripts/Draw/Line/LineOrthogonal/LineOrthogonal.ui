@@ -31,6 +31,35 @@
      </property>
     </widget>
    </item>
+   <item>
+    <widget class="QLabel" name="labelReferencePoint">
+     <property name="text">
+      <string>&amp;Reference Point:</string>
+     </property>
+     <property name="buddy">
+      <cstring>ReferencePoint</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="ReferencePoint">
+     <item>
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Middle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>End</string>
+      </property>
+     </item>
+    </widget>
+   </item>
   </layout>
  </widget>
  <customwidgets>
