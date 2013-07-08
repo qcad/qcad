@@ -741,22 +741,23 @@ bool ON_IsValidKnotVector( int order, int cv_count, const double* knot, ON_TextL
   }
 
   // must have knot[i+order-1] > knot[i]
-  k0 = knot;
-  k1 = knot + order - 1;
-  i = cv_count-1;
-  while(i--) {
-    if ( k0[0] >= k1[0] )
-    {
-      if ( text_log )
-      {
-        text_log->Print("Knot vector order = %d but knot[%d]=%g >= knot[%d]=%g\n",
-                         order, cv_count-2-i, k0[0], cv_count-1-i, k1[0] );
-      }
-      return false;
-    }
-    k0++;
-    k1++;
-  }
+// andrew: test is bogus: returns false for valid splines
+//  k0 = knot;
+//  k1 = knot + order - 1;
+//  i = cv_count-1;
+//  while(i--) {
+//    if ( k0[0] >= k1[0] )
+//    {
+//      if ( text_log )
+//      {
+//        text_log->Print("Knot vector order = %d but knot[%d]=%g >= knot[%d]=%g\n",
+//                         order, cv_count-2-i, k0[0], cv_count-1-i, k1[0] );
+//      }
+//      return false;
+//    }
+//    k0++;
+//    k1++;
+//  }
 
   return true;
 }

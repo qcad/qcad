@@ -907,21 +907,34 @@ bool RSpline::reverse() {
 bool RSpline::isValid() const {
     if (!dirty) {
 #ifndef R_NO_OPENNURBS
+        ON_wString s;
+        ON_TextLog log(s);
+        if (!curve.IsValid(&log)) {
+            qDebug() << "RSpline::isValid: spline curve is not valid:";
+            QString qs;
+            for (int i=0; i<s.Length(); i++) {
+                qs.append(QChar(s.GetAt(i)));
+            }
+            qDebug() << qs;
+        }
         return curve.IsValid();
 #endif
     }
 
     if (degree<1 || degree>3) {
+        qDebug() << "RSpline::isValid: spline not valid: degree: " << degree;
         return false;
     }
     if (hasFitPoints()) {
         if (fitPoints.count() < 3) {
+            qDebug() << "RSpline::isValid: spline not valid: less than 3 fit points";
             return false;
         }
         return true;
     }
     else {
         if (controlPoints.count() < degree+1) {
+            qDebug() << "RSpline::isValid: spline not valid: less than " << degree+1 << " control points";
             return false;
         }
         return true;
