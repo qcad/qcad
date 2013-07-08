@@ -483,11 +483,11 @@ TextDialog.prototype.mainFontChanged = function() {
     var document = this.textEdit.document();
     var html = document.toHtml();
 
-    qDebug("\n\nmainFontChanged: html before fix: ", html, "\n\n");
+//    qDebug("\n\nmainFontChanged: html before fix: ", html, "\n\n");
 
     html = this.fixHtml(html);
 
-    qDebug("\n\nmainFontChanged: html after fix: ", html, "\n\n");
+//    qDebug("\n\nmainFontChanged: html after fix: ", html, "\n\n");
 
     var previousMainFont = this.mainFont;
     this.mainFont = font;
@@ -510,11 +510,11 @@ TextDialog.prototype.mainFontChanged = function() {
                      "font-family:'%1';".arg(font.family()));
     }
 
-    qDebug("\n\nmainFontChanged: html after font replace: ", html, "\n\n");
+//    qDebug("\n\nmainFontChanged: html after font replace: ", html, "\n\n");
 
     this.textEdit.setHtml(html);
 
-    qDebug("\n\nnew html: ", this.textEdit.document().toHtml(), "\n\n");
+//    qDebug("\n\nnew html: ", this.textEdit.document().toHtml(), "\n\n");
 
     this.updateSource(true);
 
@@ -848,9 +848,9 @@ TextDialog.prototype.updateRichText = function(force) {
     if (this.sourceEdit.document().modified || force===true) {
         var source = this.sourceEdit.plainText;
         var richText = RTextData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
-        qDebug("HTML: \n\n", richText, "\n\n");
+//        qDebug("HTML: \n\n", richText, "\n\n");
         this.textEdit.setHtml(richText);
-        qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");
+//        qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");
         this.sourceEdit.document().modified = false;
     }
 };
