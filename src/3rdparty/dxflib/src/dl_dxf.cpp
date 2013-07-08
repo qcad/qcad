@@ -4109,11 +4109,12 @@ void DL_Dxf::writeStyle(DL_WriterA& dw, const DL_StyleData& style) {
     dw.dxfReal( 50, style.obliqueAngle);
     dw.dxfInt( 71, style.textGenerationFlags);
     dw.dxfReal( 42, style.lastHeightUsed);
-    dw.dxfString(  3, style.primaryFontFile);
-    dw.dxfString(  4, style.bigFontFile);
     if (version==DL_VERSION_2000) {
+        dw.dxfString(  3, "");
+        dw.dxfString(  4, "");
         dw.dxfString(1001, "ACAD");
-        dw.dxfString(1000, style.name);
+        //dw.dxfString(1000, style.name);
+        dw.dxfString(1000, style.primaryFontFile);
         int xFlags = 0;
         if (style.bold) {
             xFlags = xFlags|0x2000000;
@@ -4122,6 +4123,10 @@ void DL_Dxf::writeStyle(DL_WriterA& dw, const DL_StyleData& style) {
             xFlags = xFlags|0x1000000;
         }
         dw.dxfInt(1071, xFlags);
+    }
+    else {
+        dw.dxfString(  3, style.primaryFontFile);
+        dw.dxfString(  4, style.bigFontFile);
     }
     //dw.dxfString(  0, "ENDTAB");
 }

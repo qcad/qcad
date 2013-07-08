@@ -61,6 +61,9 @@ public:
     bool getQCad2Compatibility() const {
         return qcad2Compatibility;
     }
+    bool getQCad3Compatibility() const {
+        return qcad3Compatibility;
+    }
 
     QString getQCad2LayerName(const QString& layerName) const;
     QString getQCad2BlockName(const QString& blockName) const;
@@ -111,6 +114,7 @@ private:
     bool qcad2GotDIMAZIN;
     bool qcad2GotInvalidEllipse;
     bool qcad2Compatibility;
+    bool qcad3Compatibility;
 
     QMap<QString, QString> qcad2BlockMapping;
     QMap<QString, QString> qcad2LayerMapping;

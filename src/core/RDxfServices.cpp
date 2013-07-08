@@ -27,7 +27,8 @@ RDxfServices::RDxfServices() :
     qcad2GotDIMZIN(false),
     qcad2GotDIMAZIN(false),
     qcad2GotInvalidEllipse(false),
-    qcad2Compatibility(false) {
+    qcad2Compatibility(false),
+    qcad3Compatibility(false) {
 
 }
 
@@ -64,6 +65,7 @@ void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol
 
 void RDxfServices::detectQCad2Format(const QString& fileName) {
     qcad2Compatibility = false;
+    qcad3Compatibility = false;
     QFileInfo fi(fileName);
     if (!fi.exists()) {
         return;
@@ -80,7 +82,6 @@ void RDxfServices::detectQCad2Format(const QString& fileName) {
     qcad2GotDIMZIN = false;
     qcad2GotDIMAZIN = false;
     qcad2GotInvalidEllipse = false;
-    qcad2Compatibility = false;
     QFile file(fileName);
     if (file.open(QIODevice::ReadOnly)) {
         QTextStream ts(&file);
@@ -89,6 +90,9 @@ void RDxfServices::detectQCad2Format(const QString& fileName) {
             QString comment = ts.readLine(75).trimmed();
             if (comment.startsWith("dxflib 2.")) {
                 qcad2Compatibility = true;
+            }
+            if (comment.startsWith("dxflib 3.")) {
+                qcad3Compatibility = true;
             }
         }
 
