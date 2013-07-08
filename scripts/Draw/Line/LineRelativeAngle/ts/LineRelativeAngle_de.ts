@@ -28,7 +28,7 @@
         <translation>R&amp;elativer Winkel</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngle.js" line="+63"/>
+        <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
         <translation>Basisobjekt wählen</translation>
     </message>
@@ -51,6 +51,26 @@
         <location line="+20"/>
         <source>Length:</source>
         <translation>Länge:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Reference Point:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>End</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

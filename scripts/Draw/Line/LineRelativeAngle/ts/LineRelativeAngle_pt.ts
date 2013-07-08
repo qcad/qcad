@@ -4,7 +4,7 @@
 <context>
     <name>LineRelativeAngle</name>
     <message>
-        <location filename="../LineRelativeAngle.js" line="+63"/>
+        <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha entidade de base</translation>
@@ -46,6 +46,26 @@ Indique a posição do ponto de Zero Relativo</translatorcomment>
 Indique o comprimento da corda:
 Entre o Comprimento:</translatorcomment>
         <translation>Comprimento:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Reference Point:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>End</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

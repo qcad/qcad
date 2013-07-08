@@ -23,6 +23,26 @@ Restrinja &amp;Ortogonal</translatorcomment>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Reference Point:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>End</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LineParallel</name>

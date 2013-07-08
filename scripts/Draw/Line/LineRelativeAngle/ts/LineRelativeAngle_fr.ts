@@ -14,7 +14,27 @@
         <translation>Longueur :</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngle.js" line="+63"/>
+        <location line="+20"/>
+        <source>&amp;Reference Point:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>End</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
         <translation>Choisissez l&apos;entité de base</translation>
     </message>
@@ -29,7 +49,7 @@
         <translation>Dessine une ligne avec un angle relatif</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngle.ui" line="-20"/>
+        <location filename="../LineRelativeAngle.ui" line="-61"/>
         <source>Relative Angle:</source>
         <translation>Angle relatif :</translation>
     </message>

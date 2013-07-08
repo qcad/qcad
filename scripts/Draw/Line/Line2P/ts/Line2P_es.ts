@@ -31,7 +31,7 @@
     <message>
         <location filename="../Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Cerca de la secuencia</translation>
+        <translation>Cierra la secuencia</translation>
     </message>
     <message>
         <location line="+17"/>

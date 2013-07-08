@@ -169,7 +169,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location line="+359"/>
+        <location line="+387"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

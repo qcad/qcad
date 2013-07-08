@@ -135,7 +135,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+366"/>
+        <location line="+394"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>

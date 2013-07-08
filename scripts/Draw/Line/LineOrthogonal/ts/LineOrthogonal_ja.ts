@@ -9,6 +9,26 @@
         <translation>長さ:</translation>
     </message>
     <message>
+        <location line="+20"/>
+        <source>&amp;Reference Point:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>End</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
         <translation>&amp;O 直交線</translation>
