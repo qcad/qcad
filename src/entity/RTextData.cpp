@@ -656,7 +656,9 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
     textData.setBold(mainFont.weight()>QFont::Normal);
     textData.setItalic(mainFont.italic());
     textData.setTextHeight(mainFont.pointSizeF());
-    textData.setText(Qt::escape(escapedText).replace(' ', "&nbsp;"));
+    //textData.setText(Qt::escape(escapedText).replace(' ', "&nbsp;"));
+    //textData.setText(Qt::escape(escapedText));
+    textData.setText(escapedText);
     RTextRenderer renderer(textData, false, RTextRenderer::RichText, fontHeightFactor);
 
     QString ret;
@@ -664,10 +666,10 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
     QString fontFamily = mainFont.family();
 
     // workaround for QTextEdit which replaces 'bold' with '12' in all font names:
-    fontFamily = fontFamily.replace("bold", "bol&#64;", Qt::CaseInsensitive);
+    fontFamily.replace("bold", "bol&#64;", Qt::CaseInsensitive);
 
     ret += "<html>";
-    ret += QString("<body style=\"font-family:%1; font-size:%2pt; font-weight:%3; font-style:%4; \">")
+    ret += QString("<body style=\"font-family:'%1'; font-size:%2pt; font-weight:%3; font-style:%4; \">")
             .arg(fontFamily)
             .arg(mainFont.pointSizeF() * fontHeightFactor)
             .arg(mainFont.weight()>QFont::Normal ? "bold" : "normal")

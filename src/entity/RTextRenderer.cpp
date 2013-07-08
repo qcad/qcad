@@ -466,8 +466,7 @@ void RTextRenderer::render() {
                 }
 
                 if (target==RichText) {
-                    richText += getRichTextForBlock(
-                                   textBlock, formats);
+                    richText += getRichTextForBlock(textBlock, formats);
                 }
 
                 if (target==PainterPaths) {
@@ -1291,5 +1290,6 @@ QString RTextRenderer::getRichTextForBlock(
 
     Q_UNUSED(formats)
 
-    return blockText;
+    return Qt::escape(blockText).replace(' ', "&nbsp;");
+    //return blockText;
 }
