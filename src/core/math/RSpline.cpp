@@ -907,16 +907,17 @@ bool RSpline::reverse() {
 bool RSpline::isValid() const {
     if (!dirty) {
 #ifndef R_NO_OPENNURBS
-        ON_wString s;
-        ON_TextLog log(s);
-        if (!curve.IsValid(&log)) {
-            qDebug() << "RSpline::isValid: spline curve is not valid:";
-            QString qs;
-            for (int i=0; i<s.Length(); i++) {
-                qs.append(QChar(s.GetAt(i)));
-            }
-            qDebug() << qs;
-        }
+//        enable for opennurbs debugging:
+//        ON_wString s;
+//        ON_TextLog log(s);
+//        if (!curve.IsValid(&log)) {
+//            qDebug() << "RSpline::isValid: spline curve is not valid:";
+//            QString qs;
+//            for (int i=0; i<s.Length(); i++) {
+//                qs.append(QChar(s.GetAt(i)));
+//            }
+//            qDebug() << qs;
+//        }
         return curve.IsValid();
 #endif
     }
