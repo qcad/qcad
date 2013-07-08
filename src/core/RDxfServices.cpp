@@ -91,7 +91,7 @@ void RDxfServices::detectQCad2Format(const QString& fileName) {
             if (comment.startsWith("dxflib 2.")) {
                 qcad2Compatibility = true;
             }
-            if (comment.startsWith("dxflib 3.")) {
+            if (comment.startsWith("dxflib 3.0") || comment.startsWith("dxflib 3.1.0")) {
                 qcad3Compatibility = true;
             }
         }
