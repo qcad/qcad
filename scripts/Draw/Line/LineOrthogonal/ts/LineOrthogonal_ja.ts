@@ -11,22 +11,22 @@
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;R 基準点:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>開始</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>中央</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>終端</translation>
     </message>
     <message>
         <location filename="../LineOrthogonalInit.js" line="+2"/>
