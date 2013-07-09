@@ -428,9 +428,18 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         return false;
     }
 
+    // if object is an existing hatch, delete original and add new:
+    QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+    if (!entity.isNull() && entity->getType()==RS::EntityHatch && entity->getId()!=REntity::INVALID_ID) {
+        QSharedPointer<REntity> clone = QSharedPointer<REntity>(entity->clone());
+        objectStorage->setObjectId(*clone, REntity::INVALID_ID);
+        addObject(clone);
+        deleteObject(entity, entity->getDocument());
+        return true;
+    }
+
     // if object is an entity,
     // place entity on current layer / block, set current pen attributes:
-    QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
     if (!entity.isNull()) {
         if (useCurrentAttributes || entity->getLayerId()==RLayer::INVALID_ID) {
             entity->setLayerId(object->getDocument()->getCurrentLayerId());

@@ -81,8 +81,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyVertexNZ.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"));
 }
 
-bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
+bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value) {
 
     bool ret = REntity::setProperty(propertyTypeId, value);
 
@@ -238,6 +237,7 @@ RVector RHatchEntity::setComponent(const RVector& p, double v, RObject::XYZ xyz)
 
 QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+
     if (propertyTypeId == PropertyType) {
         return qMakePair(QVariant(RS::EntityHatch), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertySolid) {
@@ -266,7 +266,6 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
         QList<double> list;
 
         // add x,y or z of all reference points along the boundary to list of doubles:
-        //int indexCounter = 0;
         for (int i=0; i<data.boundary.size(); ++i) {
             QList<QSharedPointer<RShape> > loop = data.boundary.at(i);
             for (int k=0; k<loop.size(); ++k) {
