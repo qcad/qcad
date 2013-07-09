@@ -626,6 +626,12 @@ bool RPolyline::scale(const RVector& scaleFactors, const RVector& center) {
     for (int i=0; i<vertices.size(); i++) {
         vertices[i].scale(scaleFactors, center);
     }
+    // factor in x or in y is negative -> mirror:
+    if ((scaleFactors.x<0) != (scaleFactors.y<0)) {
+        for (int i=0; i<bulges.size(); i++) {
+            bulges[i] *= -1;
+        }
+    }
     return true;
 }
 
