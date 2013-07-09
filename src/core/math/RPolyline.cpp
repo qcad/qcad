@@ -298,11 +298,7 @@ QList<QSharedPointer<RShape> > RPolyline::getExploded(int segments) const {
         return ret;
     }
 
-    //qDebug() << "shapes: ";
     for (int i=0; i<vertices.size(); i++) {
-
-        //qDebug() << "vertex[" << i << "]: " << vertices.at(i) << ", bulge: " << bulges.at(i);
-
         if (!closed && i==vertices.size()-1) {
             break;
         }
@@ -313,7 +309,6 @@ QList<QSharedPointer<RShape> > RPolyline::getExploded(int segments) const {
         }
 
         ret.append(subShape);
-        //qDebug() << "shape: " << *getSubShapeAt(i);
     }
 
     return ret;
@@ -345,16 +340,11 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
     RVector p1 = vertices.at(i);
     RVector p2 = vertices.at((i+1) % vertices.size());
 
-    //qDebug() << "RPolyline::getSubShapeAt(" << i << "): " << p1 << " / " << p2 << ", bulge: " << bulges.at(i);
-
     if (RPolyline::isStraight(bulges.at(i))) {
-        //qDebug() << "RPolyline::getSubShapeAt(" << i << "): line";
         return QSharedPointer<RShape>(new RLine(p1, p2));
     }
 
     else {
-        //qDebug() << "RPolyline::getSubShapeAt(" << i << "): arc";
-
         double bulge = bulges.at(i);
         bool reversed = bulge<0.0;
         double alpha = atan(bulge)*4.0;
@@ -369,16 +359,9 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
         double dist;
         double angle;
 
-        //if (prepend==false) {
-            middle = (p1+p2)/2.0;
-            dist = p1.getDistanceTo(p2)/2.0;
-            angle = p1.getAngleTo(p2);
-        //}
-        //else {
-        //    middle = (data.startpoint+v)/2.0;
-        //    dist = data.startpoint.distanceTo(v)/2.0;
-        //    angle = v.angleTo(data.startpoint);
-        //}
+        middle = (p1+p2)/2.0;
+        dist = p1.getDistanceTo(p2)/2.0;
+        angle = p1.getAngleTo(p2);
 
         // alpha can't be 0.0 at this point
         radius = fabs(dist / sin(alpha/2.0));
@@ -402,14 +385,8 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
         double a1;
         double a2;
 
-        //if (prepend==false) {
-            a1 = center.getAngleTo(p1);
-            a2 = center.getAngleTo(p2);
-        //}
-        //else {
-        //    a1 = center.angleTo(v);
-        //    a2 = center.angleTo(data.startpoint);
-        //}
+        a1 = center.getAngleTo(p1);
+        a2 = center.getAngleTo(p2);
 
         return QSharedPointer<RShape>(new RArc(center, radius, a1, a2, reversed));
     }
