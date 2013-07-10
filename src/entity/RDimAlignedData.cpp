@@ -160,5 +160,6 @@ QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox) 
 
 QString RDimAlignedData::getAutoMeasurement() const {
     double distance = extensionPoint1.getDistanceTo(extensionPoint2);
+    distance *= linearFactor;
     return formatLabel(distance);
 }

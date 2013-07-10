@@ -58,6 +58,8 @@ public:
     static RPropertyTypeId PropertyUpperTolerance;
     static RPropertyTypeId PropertyLowerTolerance;
 
+    static RPropertyTypeId PropertyLinearFactor;
+
     static RPropertyTypeId PropertyChordPointX;
     static RPropertyTypeId PropertyChordPointY;
     static RPropertyTypeId PropertyChordPointZ;

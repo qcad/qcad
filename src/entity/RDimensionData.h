@@ -107,6 +107,14 @@ public:
         return fontName;
     }
 
+    double getLinearFactor() const {
+        return linearFactor;
+    }
+
+    void setLinearFactor(double f) {
+        linearFactor = f;
+    }
+
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false) const;
     virtual bool intersectsWith(const RShape& shape) const;
 
@@ -192,6 +200,8 @@ protected:
     mutable double defaultAngle;
     /** Rotation angle of dimension text away from default orientation */
     double textAngle;
+
+    double linearFactor;
 
     mutable bool dirty;
     mutable RTextData textData;

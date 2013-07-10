@@ -59,6 +59,7 @@ public:
     static RPropertyTypeId PropertyText;
     static RPropertyTypeId PropertyUpperTolerance;
     static RPropertyTypeId PropertyLowerTolerance;
+    static RPropertyTypeId PropertyLinearFactor;
     //static RPropertyTypeId PropertyFontName;
     //static RPropertyTypeId PropertyHeight;
     //static RPropertyTypeId PropertyAngle;
@@ -151,6 +152,14 @@ public:
 
     double getTextAngle() const {
         return getData().getTextAngle();
+    }
+
+    double getLinearFactor() const {
+        return getData().getLinearFactor();
+    }
+
+    void setLinearFactor(double f) {
+        getData().setLinearFactor(f);
     }
 
 protected:

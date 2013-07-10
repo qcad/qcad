@@ -36,6 +36,8 @@ RPropertyTypeId RDimRotatedEntity::PropertyText;
 RPropertyTypeId RDimRotatedEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimRotatedEntity::PropertyLowerTolerance;
 
+RPropertyTypeId RDimRotatedEntity::PropertyLinearFactor;
+
 RPropertyTypeId RDimRotatedEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimRotatedEntity::PropertyDimensionLinePosY;
 RPropertyTypeId RDimRotatedEntity::PropertyDimensionLinePosZ;
@@ -75,6 +77,8 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyText.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyText);
     RDimRotatedEntity::PropertyUpperTolerance.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimRotatedEntity::PropertyLowerTolerance.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLowerTolerance);
+
+    RDimRotatedEntity::PropertyLinearFactor.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLinearFactor);
 
     RDimRotatedEntity::PropertyDimensionLinePosX.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimRotatedEntity::PropertyDimensionLinePosY.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));

@@ -38,6 +38,7 @@ RPropertyTypeId RDimensionEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimensionEntity::PropertyText;
 RPropertyTypeId RDimensionEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLowerTolerance;
+RPropertyTypeId RDimensionEntity::PropertyLinearFactor;
 //RPropertyTypeId RDimensionEntity::PropertyFontName;
 //RPropertyTypeId RDimensionEntity::PropertyHeight;
 //RPropertyTypeId RDimensionEntity::PropertyAngle;
@@ -83,6 +84,7 @@ void RDimensionEntity::init() {
 //    RDimensionEntity::PropertyVAlign.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
 
     RDimensionEntity::PropertyMeasuredValue.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
+    RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
 }
 
 bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -113,6 +115,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().text, value, PropertyText == propertyTypeId);
     ret = ret || RObject::setMember(getData().upperTolerance, value, PropertyUpperTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().lowerTolerance, value, PropertyLowerTolerance == propertyTypeId);
+    ret = ret || RObject::setMember(getData().linearFactor, value, PropertyLinearFactor == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
@@ -177,6 +180,8 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
             return qMakePair(QVariant(getData().getAutoMeasurement()),
                              RPropertyAttributes(RPropertyAttributes::ReadOnly));
         }
+    } else if (propertyTypeId == PropertyLinearFactor) {
+        return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes());
     }
 
     /*else if (propertyTypeId == PropertyFontName) {

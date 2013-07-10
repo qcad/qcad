@@ -35,6 +35,7 @@ RPropertyTypeId RDimAlignedEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimAlignedEntity::PropertyText;
 RPropertyTypeId RDimAlignedEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimAlignedEntity::PropertyLowerTolerance;
+RPropertyTypeId RDimAlignedEntity::PropertyLinearFactor;
 
 RPropertyTypeId RDimAlignedEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimAlignedEntity::PropertyDimensionLinePosY;
@@ -71,6 +72,8 @@ void RDimAlignedEntity::init() {
     RDimAlignedEntity::PropertyText.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyText);
     RDimAlignedEntity::PropertyUpperTolerance.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimAlignedEntity::PropertyLowerTolerance.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyLowerTolerance);
+
+    RDimAlignedEntity::PropertyLinearFactor.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyLinearFactor);
 
     RDimAlignedEntity::PropertyDimensionLinePosX.generateId(typeid(RDimAlignedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimAlignedEntity::PropertyDimensionLinePosY.generateId(typeid(RDimAlignedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));

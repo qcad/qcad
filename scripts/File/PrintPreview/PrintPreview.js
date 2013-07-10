@@ -551,13 +551,6 @@ PrintPreview.setScaleString = function(document, scaleString) {
     Print.setScaleString(document, scaleString);
 
     PrintPreview.updateScaleString(document);
-//    var optionsToolBar = EAction.getOptionsToolBar();
-//    var scaleCombo = optionsToolBar.findChild("Scale");
-//    if (Print.getScale(document) != RMath.parseScale(scaleCombo.currentText)) {
-//        scaleCombo.blockSignals(true);
-//        scaleCombo.setEditText(scaleString);
-//        scaleCombo.blockSignals(false);
-//    }
 };
 
 PrintPreview.updateScaleString = function(document) {
@@ -662,57 +655,12 @@ PrintPreview.prototype.slotPrintCropMarksChanged = function(checked) {
 PrintPreview.prototype.slotAutoFitDrawing = function() {
     var document = this.getDocument();
     Print.autoFitDrawing(document);
-    /*
-    var document = this.getDocument();
-    var paperUnit = Print.getPaperUnit(document);
-
-    // drawing bounding box in drawing units:
-    var bBox = document.getBoundingBox();
-
-    // paper bounding box in drawing units, multiplied by scale:
-    var pBox = this.getPaperBox();
-
-    var scale = Print.getScale(document);
-
-    // margins in paper unit:
-    var glueWidth = Print.getGlueMarginLeft(document) + Print.getGlueMarginRight(document);
-    var glueHeight = Print.getGlueMarginTop(document) + Print.getGlueMarginBottom(document);
-    glueWidth = RUnit.convert(glueWidth, paperUnit, document.getUnit());
-    glueHeight = RUnit.convert(glueHeight, paperUnit, document.getUnit());
-
-    var wf = undefined;
-    var hf = undefined;
-    if (bBox.getWidth()>1.0e-6) {
-        wf = (pBox.getWidth() * scale - glueWidth) / bBox.getWidth();
-    }
-    if (bBox.getHeight()>1.0e-6) {
-        hf = (pBox.getHeight() * scale - glueHeight) / bBox.getHeight();
-    }
-    var f = 1.0;
-    if (!isNull(wf) && !isNull(hf)) {
-        f = Math.min(wf, hf);
-    }
-    else if (!isNull(wf)) {
-        f = wf;
-    }
-    else if (!isNull(hf)) {
-        f = hf;
-    }
-
-    if (f<0) {
-        f = 1.0;
-    }
-
-    */
-
-    //PrintPreview.setScale(document, f);
     PrintPreview.updateScaleString(document);
 
     // needed to update pattern scaling according to drawing scale:
     var di = this.getDocumentInterface();
     di.regenerateScenes();
 
-    //this.slotAutoCenter();
     this.updateBackgroundTransform();
     this.slotAutoZoomToPage();
     this.updateBackgroundDecoration();
@@ -720,38 +668,6 @@ PrintPreview.prototype.slotAutoFitDrawing = function() {
 
 PrintPreview.prototype.slotAutoCenter = function() {
     Print.autoCenter(this.getDocument());
-    /*
-    var document = this.getDocument();
-    var paperUnit = Print.getPaperUnit(document);
-
-    var glueLeft = Print.getGlueMarginLeft(document);
-    glueLeft = RUnit.convert(glueLeft, paperUnit, document.getUnit());
-    var glueRight = Print.getGlueMarginRight(document);
-    glueRight = RUnit.convert(glueRight, paperUnit, document.getUnit());
-    var glueTop = Print.getGlueMarginTop(document);
-    glueTop = RUnit.convert(glueTop, paperUnit, document.getUnit());
-    var glueBottom = Print.getGlueMarginBottom(document);
-    glueBottom = RUnit.convert(glueBottom, paperUnit, document.getUnit());
-
-    var glueWidth = glueLeft + glueRight;
-    var glueHeight = glueTop + glueBottom;
-
-    var bBox = document.getBoundingBox(false);
-    if (!bBox.isValid()) {
-        return;
-    }
-
-    var pBox = this.getPaperBox();
-    var scale = Print.getScale(document);
-
-    var w2 = (pBox.getWidth() - bBox.getWidth()) / 2;
-    var h2 = (pBox.getHeight() - bBox.getHeight()) / 2;
-    var dw = (glueRight - glueLeft) / scale;
-    var dh = (glueTop - glueBottom) / scale;
-    offset = bBox.getMinimum().operator_subtract(new RVector(w2, h2));
-    offset = offset.operator_add(new RVector(dw/2, dh/2));
-    Print.setOffset(document, offset);
-    */
 
     this.updateBackgroundTransform();
     this.slotAutoZoomToPage();
@@ -785,24 +701,6 @@ PrintPreview.prototype.slotLandscapeChanged = function() {
  */
 PrintPreview.prototype.getPaperBox = function() {
     return Print.getPaperBox(this.getDocument());
-//    var document = this.getDocument();
-//    var pages = Print.getPages(document);
-//    var box = new RBox();
-
-//    for (var i=0; i<pages.length; ++i) {
-//        var paperBorder = Print.getPaperBorder(document, pages[i]);
-//        var paperBorderTransformed = Print.getTransformed(document, paperBorder);
-
-//        var paperBox = new RBox(paperBorderTransformed);
-//        if (!box.isValid()) {
-//            box = paperBox;
-//        }
-//        else {
-//            box.growToIncludeBox(paperBox);
-//        }
-//    }
-
-//    return box;
 };
 
 PrintPreview.prototype.slotAutoZoomToPage = function() {

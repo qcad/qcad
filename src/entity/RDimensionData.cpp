@@ -31,6 +31,7 @@ RDimensionData::RDimensionData(RDocument* document) :
     lineSpacingFactor(1.0),
     defaultAngle(RNANDOUBLE),
     textAngle(0.0),
+    linearFactor(1.0),
     dirty(true),
     dimLineLength(0.0),
     autoTextPos(true) {

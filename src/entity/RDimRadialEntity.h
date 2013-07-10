@@ -57,6 +57,8 @@ public:
     static RPropertyTypeId PropertyUpperTolerance;
     static RPropertyTypeId PropertyLowerTolerance;
 
+    static RPropertyTypeId PropertyLinearFactor;
+
     static RPropertyTypeId PropertyCenterPointX;
     static RPropertyTypeId PropertyCenterPointY;
     static RPropertyTypeId PropertyCenterPointZ;

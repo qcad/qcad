@@ -37,6 +37,8 @@ RPropertyTypeId RDimDiametricEntity::PropertyText;
 RPropertyTypeId RDimDiametricEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimDiametricEntity::PropertyLowerTolerance;
 
+RPropertyTypeId RDimDiametricEntity::PropertyLinearFactor;
+
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointX;
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointY;
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointZ;
@@ -71,6 +73,8 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyText.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyText);
     RDimDiametricEntity::PropertyUpperTolerance.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimDiametricEntity::PropertyLowerTolerance.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLowerTolerance);
+
+    RDimDiametricEntity::PropertyLinearFactor.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLinearFactor);
 
     RDimDiametricEntity::PropertyChordPointX.generateId(typeid(RDimDiametricEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimDiametricEntity::PropertyChordPointY.generateId(typeid(RDimDiametricEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Y"));

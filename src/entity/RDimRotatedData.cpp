@@ -168,6 +168,7 @@ QString RDimRotatedData::getAutoMeasurement() const {
 
     // Definitive dimension line:
     double distance = dimP1.getDistanceTo(dimP2);
+    distance *= linearFactor;
 
     return formatLabel(distance);
 }
