@@ -415,16 +415,21 @@ bool RHatchData::mirror(const RLine& axis) {
 }
 
 bool RHatchData::stretch(const RPolyline& area, const RVector& offset) {
+    bool ret = false;
+
     for (int i=0; i<boundary.size(); ++i) {
         QList<QSharedPointer<RShape> > loop = boundary.at(i);
         for (int k=0; k<loop.size(); ++k) {
             QSharedPointer<RShape> shape = loop.at(k);
-            shape->stretch(area, offset);
+            ret = ret || shape->stretch(area, offset);
         }
     }
 
-    update();
-    return true;
+    if (ret) {
+        update();
+    }
+
+    return ret;
 }
 
 QList<QSharedPointer<RShape> > RHatchData::getShapes(const RBox& queryBox) const {

@@ -344,6 +344,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("qCritical", engine->newFunction(ecmaCritical));
     globalObject.setProperty("qGray", engine->newFunction(ecmaGray));
 
+    //globalObject.setProperty("attachDebugger", engine->newFunction(ecmaAttachDebugger));
     globalObject.setProperty("detachDebugger", engine->newFunction(ecmaDetachDebugger));
     globalObject.setProperty("collectGarbage", engine->newFunction(ecmaCollectGarbage));
     globalObject.setProperty("importExtension", engine->newFunction(ecmaImportExtension));
@@ -1697,4 +1698,6 @@ QScriptValue RScriptHandlerEcma::throwError(const QString& message,
 
 void RScriptHandlerEcma::exceptionHandler(const QScriptValue& exception) {
     qWarning() << "Script Exception:\n" << exception.toString();
+    QStringList stack = engine->uncaughtExceptionBacktrace();
+    qWarning() << stack.join("\n");
 }
