@@ -74,7 +74,7 @@ Print.prototype.print = function(pdfFile) {
     }
 
     var paperSizeEnum = Print.getPaperSizeEnum(this.document);
-    if (paperSizeEnum!=QPrinter.Custom) {
+    if (paperSizeEnum!==QPrinter.Custom) {
         printer.setPaperSize(paperSizeEnum);
     }
     else {
@@ -97,7 +97,7 @@ Print.prototype.print = function(pdfFile) {
         Print.cancel = false;
         Print.printDialog = new QPrintDialog(printer, EAction.getMainWindow());
 
-        if (RS.getSystemId()=="osx" || RS.getSystemId()=="win") {
+        if (RS.getSystemId()==="osx" || RS.getSystemId()==="win") {
             // Mac & Windows: 
             // exec() never returns without destroying the dialog through these signals:
             Print.printDialog["accepted(QPrinter*)"].connect(
@@ -272,6 +272,115 @@ Print.prototype.printPage = function(painter, rect) {
         )
     );
 };
+
+/**
+ * \return Maximum extents of paper
+ */
+Print.getPaperBox = function(document) {
+    //var document = this.getDocument();
+    var pages = Print.getPages(document);
+    var box = new RBox();
+
+    for (var i=0; i<pages.length; ++i) {
+        var paperBorder = Print.getPaperBorder(document, pages[i]);
+        var paperBorderTransformed = Print.getTransformed(document, paperBorder);
+
+        var paperBox = new RBox(paperBorderTransformed);
+        if (!box.isValid()) {
+            box = paperBox;
+        }
+        else {
+            box.growToIncludeBox(paperBox);
+        }
+    }
+
+    return box;
+};
+
+/**
+ * Auto fit drawing to page size.
+ */
+Print.autoFitDrawing = function(document) {
+    var paperUnit = Print.getPaperUnit(document);
+
+    // drawing bounding box in drawing units:
+    var bBox = document.getBoundingBox();
+
+    // paper bounding box in drawing units, multiplied by scale:
+    var pBox = Print.getPaperBox(document);
+
+    var scale = Print.getScale(document);
+
+    // margins in paper unit:
+    var glueWidth = Print.getGlueMarginLeft(document) + Print.getGlueMarginRight(document);
+    var glueHeight = Print.getGlueMarginTop(document) + Print.getGlueMarginBottom(document);
+    glueWidth = RUnit.convert(glueWidth, paperUnit, document.getUnit());
+    glueHeight = RUnit.convert(glueHeight, paperUnit, document.getUnit());
+
+    var wf = undefined;
+    var hf = undefined;
+    if (bBox.getWidth()>1.0e-6) {
+        wf = (pBox.getWidth() * scale - glueWidth) / bBox.getWidth();
+    }
+    if (bBox.getHeight()>1.0e-6) {
+        hf = (pBox.getHeight() * scale - glueHeight) / bBox.getHeight();
+    }
+    var f = 1.0;
+    if (!isNull(wf) && !isNull(hf)) {
+        f = Math.min(wf, hf);
+    }
+    else if (!isNull(wf)) {
+        f = wf;
+    }
+    else if (!isNull(hf)) {
+        f = hf;
+    }
+
+    if (f<0) {
+        f = 1.0;
+    }
+
+    Print.setScale(document, f);
+
+    Print.autoCenter(document);
+};
+
+Print.autoCenter = function(document) {
+    var paperUnit = Print.getPaperUnit(document);
+
+    var glueLeft = Print.getGlueMarginLeft(document);
+    glueLeft = RUnit.convert(glueLeft, paperUnit, document.getUnit());
+    var glueRight = Print.getGlueMarginRight(document);
+    glueRight = RUnit.convert(glueRight, paperUnit, document.getUnit());
+    var glueTop = Print.getGlueMarginTop(document);
+    glueTop = RUnit.convert(glueTop, paperUnit, document.getUnit());
+    var glueBottom = Print.getGlueMarginBottom(document);
+    glueBottom = RUnit.convert(glueBottom, paperUnit, document.getUnit());
+
+    var glueWidth = glueLeft + glueRight;
+    var glueHeight = glueTop + glueBottom;
+
+    var bBox = document.getBoundingBox(false);
+    if (!bBox.isValid()) {
+        return;
+    }
+
+    var pBox = Print.getPaperBox(document);
+    var scale = Print.getScale(document);
+
+    var w2 = (pBox.getWidth() - bBox.getWidth()) / 2;
+    var h2 = (pBox.getHeight() - bBox.getHeight()) / 2;
+    var dw = (glueRight - glueLeft) / scale;
+    var dh = (glueTop - glueBottom) / scale;
+    var offset = bBox.getMinimum().operator_subtract(new RVector(w2, h2));
+    offset = offset.operator_add(new RVector(dw/2, dh/2));
+    Print.setOffset(document, offset);
+
+//    this.updateBackgroundTransform();
+//    this.slotAutoZoomToPage();
+//    this.updateBackgroundDecoration();
+};
+
 
 /**
  * Draws the crop marks for the given page.
@@ -607,7 +716,7 @@ Print.getPages = function(document) {
     var w;
     var h;
     var paperSizeMM = Print.getPaperSizeMM(document);
-    if (Print.getPageOrientationEnum(document) == QPrinter.Portrait) {
+    if (Print.getPageOrientationEnum(document) === QPrinter.Portrait) {
         w = paperSizeMM.width();
         h = paperSizeMM.height();
     } else {

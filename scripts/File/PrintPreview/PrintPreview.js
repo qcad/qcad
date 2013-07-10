@@ -550,11 +550,22 @@ PrintPreview.setScale = function(document, scale) {
 PrintPreview.setScaleString = function(document, scaleString) {
     Print.setScaleString(document, scaleString);
 
+    PrintPreview.updateScaleString(document);
+//    var optionsToolBar = EAction.getOptionsToolBar();
+//    var scaleCombo = optionsToolBar.findChild("Scale");
+//    if (Print.getScale(document) != RMath.parseScale(scaleCombo.currentText)) {
+//        scaleCombo.blockSignals(true);
+//        scaleCombo.setEditText(scaleString);
+//        scaleCombo.blockSignals(false);
+//    }
+};
+
+PrintPreview.updateScaleString = function(document) {
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleCombo = optionsToolBar.findChild("Scale");
     if (Print.getScale(document) != RMath.parseScale(scaleCombo.currentText)) {
         scaleCombo.blockSignals(true);
-        scaleCombo.setEditText(scaleString);
+        scaleCombo.setEditText(Print.getScaleString());
         scaleCombo.blockSignals(false);
     }
 };
@@ -650,6 +661,9 @@ PrintPreview.prototype.slotPrintCropMarksChanged = function(checked) {
  */
 PrintPreview.prototype.slotAutoFitDrawing = function() {
     var document = this.getDocument();
+    Print.autoFitDrawing(document);
+    /*
+    var document = this.getDocument();
     var paperUnit = Print.getPaperUnit(document);
 
     // drawing bounding box in drawing units:
@@ -689,16 +703,24 @@ PrintPreview.prototype.slotAutoFitDrawing = function() {
         f = 1.0;
     }
 
-    PrintPreview.setScale(document, f);
+    */
+
+    //PrintPreview.setScale(document, f);
+    PrintPreview.updateScaleString(document);
 
     // needed to update pattern scaling according to drawing scale:
     var di = this.getDocumentInterface();
     di.regenerateScenes();
 
-    this.slotAutoCenter();
+    //this.slotAutoCenter();
+    this.updateBackgroundTransform();
+    this.slotAutoZoomToPage();
+    this.updateBackgroundDecoration();
 };
 
 PrintPreview.prototype.slotAutoCenter = function() {
+    Print.autoCenter(this.getDocument());
+    /*
     var document = this.getDocument();
     var paperUnit = Print.getPaperUnit(document);
 
@@ -729,6 +751,7 @@ PrintPreview.prototype.slotAutoCenter = function() {
     offset = bBox.getMinimum().operator_subtract(new RVector(w2, h2));
     offset = offset.operator_add(new RVector(dw/2, dh/2));
     Print.setOffset(document, offset);
+    */
 
     this.updateBackgroundTransform();
     this.slotAutoZoomToPage();
@@ -761,24 +784,25 @@ PrintPreview.prototype.slotLandscapeChanged = function() {
  * \return Maximum extents of paper
  */
 PrintPreview.prototype.getPaperBox = function() {
-    var document = this.getDocument();
-    var pages = Print.getPages(document);
-    var box = new RBox();
+    return Print.getPaperBox(this.getDocument());
+//    var document = this.getDocument();
+//    var pages = Print.getPages(document);
+//    var box = new RBox();
 
-    for (var i=0; i<pages.length; ++i) {
-        var paperBorder = Print.getPaperBorder(document, pages[i]);
-        var paperBorderTransformed = Print.getTransformed(document, paperBorder);
+//    for (var i=0; i<pages.length; ++i) {
+//        var paperBorder = Print.getPaperBorder(document, pages[i]);
+//        var paperBorderTransformed = Print.getTransformed(document, paperBorder);
 
-        var paperBox = new RBox(paperBorderTransformed);
-        if (!box.isValid()) {
-            box = paperBox;
-        }
-        else {
-            box.growToIncludeBox(paperBox);
-        }
-    }
+//        var paperBox = new RBox(paperBorderTransformed);
+//        if (!box.isValid()) {
+//            box = paperBox;
+//        }
+//        else {
+//            box.growToIncludeBox(paperBox);
+//        }
+//    }
 
-    return box;
+//    return box;
 };
 
 PrintPreview.prototype.slotAutoZoomToPage = function() {
