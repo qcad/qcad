@@ -95,7 +95,6 @@ ExLayerWhiteToBlack.init = function(basePath) {
     var action = new RGuiAction("Make all White Layers Black", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExLayerWhiteToBlack.js");
-    action.setDefaultShortcut(new QKeySequence("x,x"));
     action.setSortOrder(100);
     EAction.addGuiActionTo(action, LayerExamples, true, false, false);
 };
