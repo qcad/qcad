@@ -45,7 +45,7 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+351"/>
+        <location filename="../TextDialog/TextDialog.js" line="+352"/>
         <source>&amp;Undo</source>
         <translation>&amp;U アンドゥ</translation>
     </message>
@@ -100,12 +100,12 @@
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+302"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+129"/>
         <source>Degree</source>
         <translation>角度</translation>
     </message>

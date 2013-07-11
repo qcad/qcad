@@ -13,7 +13,7 @@
         <translation>Über %1</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+78"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
@@ -90,6 +90,11 @@
         <translation>Skript Add-Ons</translation>
     </message>
     <message>
+        <location line="+51"/>
+        <source>Credits</source>
+        <translation>Beitragende</translation>
+    </message>
+    <message>
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>Ü&amp;ber...</translation>
@@ -106,18 +111,32 @@
         <location line="+16"/>
         <location line="+25"/>
         <location line="+25"/>
+        <location line="+25"/>
         <source>about:blank</source>
         <translation>about:blank</translation>
     </message>
     <message>
-        <location line="-41"/>
-        <source>About Plugins</source>
-        <translation>Über Plugins</translation>
+        <location line="-66"/>
+        <source>Plugins</source>
+        <translation>Plugins</translation>
     </message>
     <message>
         <location line="+25"/>
+        <source>Scripts</source>
+        <translation>Scripts</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Credits</source>
+        <translation>Credits</translation>
+    </message>
+    <message>
+        <source>About Plugins</source>
+        <translation type="obsolete">Über Plugins</translation>
+    </message>
+    <message>
         <source>About Script Add-Ons</source>
-        <translation>Über Skript Add-Ons</translation>
+        <translation type="obsolete">Über Skript Add-Ons</translation>
     </message>
 </context>
 </TS>

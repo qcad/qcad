@@ -45,7 +45,7 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+351"/>
+        <location filename="../TextDialog/TextDialog.js" line="+352"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>
@@ -100,12 +100,12 @@
         <translation>&amp;Carattere speciale...</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+302"/>
         <source>Others...</source>
         <translation>Altri...</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+129"/>
         <source>Degree</source>
         <translation>Gradi</translation>
     </message>

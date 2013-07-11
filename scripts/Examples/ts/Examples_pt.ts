@@ -4,10 +4,14 @@
 <context>
     <name>Examples</name>
     <message>
-        <location filename="../Examples.js" line="+56"/>
         <source>&amp;Examples</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Exemplos</translation>
+        <translation type="obsolete">&amp;Exemplos</translation>
+    </message>
+    <message>
+        <location filename="../Examples.js" line="+56"/>
+        <source>&amp;Misc</source>
+        <translation>&amp;Diverso</translation>
     </message>
 </context>
 </TS>

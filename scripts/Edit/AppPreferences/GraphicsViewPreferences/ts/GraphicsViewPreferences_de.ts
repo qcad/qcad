@@ -56,7 +56,7 @@
     <message>
         <location line="+58"/>
         <source>Automatically scale meta grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Metaraster automatisch skalieren</translation>
     </message>
     <message>
         <location line="+13"/>

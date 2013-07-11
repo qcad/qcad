@@ -69,7 +69,7 @@ Rysuj obiekty tekstowe</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+351"/>
+        <location filename="../TextDialog/TextDialog.js" line="+352"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -147,14 +147,14 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">Znaki specjalne ...</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+302"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
         <translation type="unfinished">Inne...</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+129"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--

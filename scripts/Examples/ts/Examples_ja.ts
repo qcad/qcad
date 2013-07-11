@@ -4,9 +4,13 @@
 <context>
     <name>Examples</name>
     <message>
-        <location filename="../Examples.js" line="+56"/>
         <source>&amp;Examples</source>
-        <translation>&amp;E 例</translation>
+        <translation type="obsolete">&amp;E 例</translation>
+    </message>
+    <message>
+        <location filename="../Examples.js" line="+56"/>
+        <source>&amp;Misc</source>
+        <translation>雑多</translation>
     </message>
 </context>
 </TS>

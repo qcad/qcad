@@ -39,7 +39,7 @@ Nie można uruchomić Qt Assistant (%1)</translatorcomment>
 Niestandardowe..
 Niestandardowy
 Własne filtry</translatorcomment>
-        <translation type="unfinished">Niestandardowy</translation>
+        <translation>Niestandardowy</translation>
     </message>
 </context>
 <context>

@@ -4,9 +4,13 @@
 <context>
     <name>Examples</name>
     <message>
-        <location filename="../Examples.js" line="+56"/>
         <source>&amp;Examples</source>
-        <translation>&amp;Esempi</translation>
+        <translation type="obsolete">&amp;Esempi</translation>
+    </message>
+    <message>
+        <location filename="../Examples.js" line="+56"/>
+        <source>&amp;Misc</source>
+        <translation>&amp;Varie</translation>
     </message>
 </context>
 </TS>

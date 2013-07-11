@@ -13,7 +13,7 @@
         <translation type="unfinished">%1…</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+78"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
@@ -90,6 +90,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+51"/>
+        <source>Credits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translatorcomment>--exact match--
@@ -109,17 +114,23 @@
         <location line="+16"/>
         <location line="+25"/>
         <location line="+25"/>
+        <location line="+25"/>
         <source>about:blank</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-41"/>
-        <source>About Plugins</source>
+        <location line="-66"/>
+        <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>About Script Add-Ons</source>
+        <source>Scripts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Credits</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

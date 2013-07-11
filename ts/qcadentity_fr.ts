@@ -67,7 +67,7 @@ Hauteur
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+71"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+62"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+75"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+78"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+87"/>
@@ -75,20 +75,20 @@ Hauteur
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+75"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+79"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+75"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+79"/>
         <location line="+4"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+79"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+77"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+83"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+72"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+74"/>
         <location line="+3"/>
@@ -793,6 +793,11 @@ Tolérance inférieure</translatorcomment>
         <source>Measured Value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valeur mesurée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear Factor</source>
+        <translation>Facteur</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>

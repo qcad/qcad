@@ -9,7 +9,7 @@
         <translation>%1について</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+78"/>
         <source>Plugins</source>
         <translation>プラグイン</translation>
     </message>
@@ -86,6 +86,11 @@
         <translation>スクリプトアドオン</translation>
     </message>
     <message>
+        <location line="+51"/>
+        <source>Credits</source>
+        <translation>クレジット</translation>
+    </message>
+    <message>
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation></translation>
@@ -102,18 +107,32 @@
         <location line="+16"/>
         <location line="+25"/>
         <location line="+25"/>
+        <location line="+25"/>
         <source>about:blank</source>
         <translation></translation>
     </message>
     <message>
-        <location line="-41"/>
-        <source>About Plugins</source>
-        <translation>プラグインについて</translation>
+        <location line="-66"/>
+        <source>Plugins</source>
+        <translation>プラグイン</translation>
     </message>
     <message>
         <location line="+25"/>
+        <source>Scripts</source>
+        <translation>スクリプト</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Credits</source>
+        <translation>クレジット</translation>
+    </message>
+    <message>
+        <source>About Plugins</source>
+        <translation type="obsolete">プラグインについて</translation>
+    </message>
+    <message>
         <source>About Script Add-Ons</source>
-        <translation>スクリプトアドオンについて</translation>
+        <translation type="obsolete">スクリプトアドオンについて</translation>
     </message>
 </context>
 </TS>

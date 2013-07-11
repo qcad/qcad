@@ -272,7 +272,7 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -287,17 +287,17 @@
     <message>
         <location line="+1"/>
         <source>Color</source>
-        <translation type="unfinished">Kolor</translation>
+        <translation>Kolor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype</source>
-        <translation type="unfinished">Rodzaj linii</translation>
+        <translation>Rodzaj linii</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished">Szerokość linii</translation>
+        <translation>Szerokość linii</translation>
     </message>
 </context>
 <context>

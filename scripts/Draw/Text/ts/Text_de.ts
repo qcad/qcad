@@ -57,7 +57,7 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+351"/>
+        <location filename="../TextDialog/TextDialog.js" line="+352"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
@@ -82,7 +82,7 @@
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location line="+495"/>
+        <location line="+498"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -228,7 +228,7 @@
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="-495"/>
+        <location filename="../TextDialog/TextDialog.js" line="-498"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -258,12 +258,12 @@
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+302"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+130"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>

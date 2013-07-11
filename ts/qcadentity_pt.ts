@@ -10,7 +10,7 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="+62"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+77"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+74"/>
@@ -26,7 +26,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+75"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+78"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+87"/>
@@ -34,9 +34,9 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+75"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+79"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+75"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+79"/>
         <location line="+4"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+79"/>
@@ -44,10 +44,10 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+83"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+72"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -451,12 +451,17 @@ Tolerância Inferior</translatorcomment>
         <translation>Definindo ponto</translation>
     </message>
     <message>
+        <location line="+12"/>
+        <source>Linear Factor</source>
+        <translation>Fator</translation>
+    </message>
+    <message>
         <source>Definitionpoint</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Definitionpoint</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-11"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>

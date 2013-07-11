@@ -4,62 +4,62 @@
 <context>
     <name>LineBoxjoint</name>
     <message>
-        <location filename="../LineBoxjoint.js" line="63"/>
+        <location filename="../LineBoxjoint.js" line="+63"/>
         <source>First point</source>
         <translation>Erster Punkt</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.js" line="70"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.js" line="73"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../LineBoxjointInit.js" line="2"/>
+        <location filename="../LineBoxjointInit.js" line="+2"/>
         <source>Box &amp;Joint form 2 Points</source>
         <translation>Finger&amp;zinkung von 2 Punkten</translation>
     </message>
     <message>
-        <location filename="../LineBoxjointInit.js" line="9"/>
+        <location line="+7"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Fingerzinkung mit Zapfen, Nut oder Schlitz</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="17"/>
+        <location filename="../LineBoxjoint.ui" line="+17"/>
         <source>Depth:</source>
         <translation>Tiefe:</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="40"/>
+        <location line="+23"/>
         <source>Finger Width:</source>
         <translation>Zapfenbreite:</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="63"/>
+        <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
         <translation>Zapfen- zu Nutbreite:</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="86"/>
+        <location line="+23"/>
         <source>&amp;Style:</source>
         <translation>&amp;Art:</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="97"/>
+        <location line="+11"/>
         <source>Finger first</source>
         <translation>Zapfen zuerst</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="102"/>
+        <location line="+5"/>
         <source>Slot first</source>
         <translation>Nut zuerst</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="107"/>
+        <location line="+5"/>
         <source>Tennons</source>
         <translation>Schlitze</translation>
     </message>
