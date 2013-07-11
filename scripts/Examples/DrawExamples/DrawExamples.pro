@@ -3,4 +3,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     ts \
     ExDrawBoundingBox \
-    ExDrawColors
+    ExDrawColors \
+    ExText \
+    ExThreePoints \
+    LineBoxjoint
