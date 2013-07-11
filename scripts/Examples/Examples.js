@@ -53,7 +53,7 @@ Examples.getCadToolBarPanel = function() {
 };
 
 Examples.getTitle = function() {
-    return qsTr("&Examples");
+    return qsTr("&Misc");
 };
 
 Examples.prototype.getTitle = function() {
