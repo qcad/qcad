@@ -58,6 +58,10 @@ About.prototype.beginEvent = function() {
     WidgetFactory.initWebView(webView, this, "openUrl");
     this.initAboutScripts(webView);
 
+    webView = formWidget.findChild("CreditsText");
+    WidgetFactory.initWebView(webView, this, "openUrl");
+    this.initCredits(webView);
+
     formWidget.exec();
 };
 
@@ -232,7 +236,7 @@ About.prototype.initAboutScripts = function(webView) {
 
         html += "<table border='0' width='100%'>";
         html += "<col width='25%'/>";
-        html += "<col width='90%'/>";
+        html += "<col width='75%'/>";
 
         for (i=0; i<sorted.length; i++) {
             html += "<tr><td>" + sorted[i][0] + "</td><td>" + sorted[i][1] + "</td></tr>"
@@ -245,7 +249,53 @@ About.prototype.initAboutScripts = function(webView) {
     webView.setHtml(html);
 };
 
+About.prototype.initCredits = function(webView) {
+    var credits = include("AboutCredits.js");
 
+    var html =
+            "<html>"
+            + this.head
+            + "<body>"
+            + "<h1>%1</h1>".arg(qsTr("Credits"))
+            + "<hr/>";
+
+
+    for (var i=0; i<credits.length; i++) {
+        html += "<h2>%1</h2>".arg(credits[i][0])
+        if (credits[i].length>1 && credits[i][1].length>1) {
+            // table with names and credits:
+            html += "<table border='0' width='100%'>";
+            html += "<col width='40%'/>";
+            html += "<col width='60%'/>";
+            for (var k=1; k<credits[i].length; k++) {
+                if (isArray(credits[i][k]) && credits[i][k].length>1) {
+                    html += "<tr>";
+                    html += "<td valign='top'>" + credits[i][k][0] + "</td>";
+                    html += "<td valign='top'>" + credits[i][k][1] + "</td>";
+                    html += "</tr>";
+                }
+            }
+            html += "</table>";
+
+            // list of names:
+            var first = true;
+            for (var k=1; k<credits[i].length; k++) {
+                if (!isArray(credits[i][k])) {
+                    if (!first) {
+                        html += ", ";
+                    }
+                    html += credits[i][k];
+                    first = false;
+                }
+            }
+        }
+    }
+
+    html += "</body>";
+    html += "</html>";
+
+    webView.setHtml(html);
+};
 
 About.prototype.getTableRow = function(text1, text2, escape) {
     if (isNull(escape) || escape!==false) {

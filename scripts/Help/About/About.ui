@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>480</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowIcon">
@@ -103,7 +103,7 @@
        </widget>
        <widget class="QWidget" name="PluginsTab">
         <attribute name="title">
-         <string>About Plugins</string>
+         <string>Plugins</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <property name="leftMargin">
@@ -128,7 +128,7 @@
        </widget>
        <widget class="QWidget" name="ScriptsTab">
         <attribute name="title">
-         <string>About Script Add-Ons</string>
+         <string>Scripts</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <property name="leftMargin">
@@ -142,6 +142,31 @@
          </property>
          <item>
           <widget class="QWebView" name="ScriptsText">
+           <property name="url">
+            <url>
+             <string>about:blank</string>
+            </url>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="CreditsTab">
+        <attribute name="title">
+         <string>Credits</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QWebView" name="CreditsText">
            <property name="url">
             <url>
              <string>about:blank</string>
