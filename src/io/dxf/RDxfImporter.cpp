@@ -837,6 +837,20 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
         ret.setCustomTextPosition(true);
     }
 
+    if (xData.contains("ACAD")) {
+        QList<QPair<int, QVariant> > list = xData["ACAD"];
+        for (int i=0; i<list.size(); i++) {
+            QPair<int, QVariant> tuple = list[i];
+            // linear factor override (DIMLFAC):
+            if (tuple.first==1070 && tuple.second==144 && i<list.size()-1) {
+                tuple = list[i+1];
+                if (tuple.first==1040) {
+                    ret.setLinearFactor(tuple.second.toDouble());
+                }
+            }
+        }
+    }
+
     return ret;
 }
 

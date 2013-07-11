@@ -81,6 +81,7 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       fontName(style),
       defaultAngle(RNANDOUBLE),
       textAngle(angle),
+      linearFactor(1.0),
       dirty(true),
       dimLineLength(0.0),
       autoTextPos(true) {

@@ -794,32 +794,27 @@ struct DXFLIB_EXPORT DL_DimensionData {
     * Constructor.
     * Parameters: see member variables.
     */
-    DL_DimensionData(double ddpx, double ddpy, double ddpz,
-                     double dmpx, double dmpy, double dmpz,
-                     int dType,
-                     int dAttachmentPoint,
-                     int dLineSpacingStyle,
-                     double dLineSpacingFactor,
-                     const std::string& dText,
-                     const std::string& dStyle,
-                     double dAngle) {
+    DL_DimensionData(double dpx, double dpy, double dpz,
+                     double mpx, double mpy, double mpz,
+                     int type,
+                     int attachmentPoint,
+                     int lineSpacingStyle,
+                     double lineSpacingFactor,
+                     const std::string& text,
+                     const std::string& style,
+                     double angle,
+                     double linearFactor = 1.0) :
+        dpx(dpx), dpy(dpy), dpz(dpz),
+        mpx(mpx), mpy(mpy), mpz(mpz),
+        type(type),
+        attachmentPoint(attachmentPoint),
+        lineSpacingStyle(lineSpacingStyle),
+        lineSpacingFactor(lineSpacingFactor),
+        text(text),
+        style(style),
+        angle(angle),
+        linearFactor(linearFactor) {
 
-        dpx = ddpx;
-        dpy = ddpy;
-        dpz = ddpz;
-
-        mpx = dmpx;
-        mpy = dmpy;
-        mpz = dmpz;
-
-        type = dType;
-
-        attachmentPoint = dAttachmentPoint;
-        lineSpacingStyle = dLineSpacingStyle;
-        lineSpacingFactor = dLineSpacingFactor;
-        text = dText;
-        style = dStyle;
-        angle = dAngle;
     }
 
     /*! X Coordinate of definition point. */
@@ -887,6 +882,10 @@ struct DXFLIB_EXPORT DL_DimensionData {
      * default orientation.
      */
     double angle;
+    /**
+     * Linear factor style override.
+     */
+    double linearFactor;
 };
 
 

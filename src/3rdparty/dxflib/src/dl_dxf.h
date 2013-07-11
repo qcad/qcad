@@ -250,6 +250,8 @@ public:
     void writeText(DL_WriterA& dw,
                     const DL_TextData& data,
                     const DL_Attributes& attrib);
+    void writeDimStyleOverrides(DL_WriterA& dw,
+                             const DL_DimensionData& data);
     void writeDimAligned(DL_WriterA& dw,
                          const DL_DimensionData& data,
                          const DL_DimAlignedData& edata,

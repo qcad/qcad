@@ -2647,6 +2647,19 @@ void DL_Dxf::writeText(DL_WriterA& dw,
     dw.dxfInt(73, data.vJustification);
 }
 
+void DL_Dxf::writeDimStyleOverrides(DL_WriterA& dw,
+                             const DL_DimensionData& data) {
+
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(1001, "ACAD");
+        dw.dxfString(1000, "DSTYLE");
+        dw.dxfString(1002, "{");
+        dw.dxfInt(1070, 144);
+        dw.dxfInt(1040, data.linearFactor);
+        dw.dxfString(1002, "}");
+    }
+}
+
 
 /**
  * Writes an aligned dimension entity to the file.
@@ -2703,6 +2716,8 @@ void DL_Dxf::writeDimAligned(DL_WriterA& dw,
     dw.dxfReal(14, edata.epx2);
     dw.dxfReal(24, edata.epy2);
     dw.dxfReal(34, 0.0);
+
+    writeDimStyleOverrides(dw, data);
 }
 
 
@@ -2767,15 +2782,9 @@ void DL_Dxf::writeDimLinear(DL_WriterA& dw,
 
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbRotatedDimension");
-        /*
-        dw.dxfString(1001, "ACAD");
-        dw.dxfString(1000, "DSTYLE");
-        dw.dxfString(1002, "{");
-        dw.dxfInt(1070, 340);
-        dw.dxfInt(1005, 11);
-        dw.dxfString(1002, "}");
-        */
     }
+
+    writeDimStyleOverrides(dw, data);
 }
 
 
@@ -2833,6 +2842,8 @@ void DL_Dxf::writeDimRadial(DL_WriterA& dw,
     dw.dxfReal(35, 0.0);
 
     dw.dxfReal(40, edata.leader);
+
+    writeDimStyleOverrides(dw, data);
 }
 
 
@@ -2890,6 +2901,8 @@ void DL_Dxf::writeDimDiametric(DL_WriterA& dw,
     dw.dxfReal(35, 0.0);
 
     dw.dxfReal(40, edata.leader);
+
+    writeDimStyleOverrides(dw, data);
 }
 
 

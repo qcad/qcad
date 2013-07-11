@@ -1104,7 +1104,8 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                              (const char*)d.getMeasurement(false).toLatin1(),
                              // TODO: dim style:
                              (const char*)d.getFontName().toLatin1(),
-                             d.getTextAngle());
+                             d.getTextAngle(),
+                             d.getLinearFactor());
 
     switch (d.getType()) {
     case RS::EntityDimAligned: {
