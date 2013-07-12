@@ -21,7 +21,7 @@ include("../DrawExamples.js");
 
 /**
  * \class LineBoxjoint
- * \brief Polygon from two corner points and number of edges.
+ * \brief Box joint line between two points.
  * \ingroup ecma_draw_line
  */
 function LineBoxjoint(guiAction) {

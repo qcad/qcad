@@ -18,6 +18,7 @@
  */
 
 include("../Help.js");
+include("AboutCredits.js");
  
 
 function About(guiAction) {
@@ -250,7 +251,7 @@ About.prototype.initAboutScripts = function(webView) {
 };
 
 About.prototype.initCredits = function(webView) {
-    var credits = include("AboutCredits.js");
+    //var credits = include("AboutCredits.js");
 
     var html =
             "<html>"

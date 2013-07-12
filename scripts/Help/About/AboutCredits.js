@@ -1,3 +1,4 @@
+var credits = 
 [
     [
         "Programming",
