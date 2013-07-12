@@ -19,8 +19,12 @@
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../LineBoxjointInit.js" line="+2"/>
         <source>Box &amp;Joint form 2 Points</source>
+        <translation type="obsolete">Finger&amp;zinkung von 2 Punkten</translation>
+    </message>
+    <message>
+        <location filename="../LineBoxjointInit.js" line="+2"/>
+        <source>Box &amp;Joint from 2 Points</source>
         <translation>Finger&amp;zinkung von 2 Punkten</translation>
     </message>
     <message>

@@ -1,7 +1,7 @@
 function init(basePath) {
     var action = new RGuiAction(qsTranslate(
                                             "LineBoxjoint",
-                                            "Box &Joint form 2 Points"),
+                                            "Box &Joint from 2 Points"),
                                             RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/LineBoxjoint.js");

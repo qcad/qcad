@@ -55,7 +55,7 @@
     </message>
     <message>
         <location filename="../LineBoxjointInit.js" line="+2"/>
-        <source>Box &amp;Joint form 2 Points</source>
+        <source>Box &amp;Joint from 2 Points</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
