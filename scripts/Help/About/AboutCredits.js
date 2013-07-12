@@ -3,7 +3,7 @@ var credits =
     [
         "Programming",
         [ "Andrew Mustun", "Main developer." ],
-        [ "Matthias Melcher", "Drawing box joint lines, MOL file import." ],
+        [ "Matthias Melcher", "Drawing box joint lines, drawing dovetail joint lines, MOL file import." ],
     ],
     [
         "Translations",
