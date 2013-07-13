@@ -99,6 +99,7 @@
 #include <QTabBar>
 #include <QTemporaryFile>
 #include <QTextBrowser>
+#include <QTextCodec>
 #include <QTextEdit>
 #include <QThread>
 #include <QToolBar>
@@ -228,6 +229,7 @@ Q_DECLARE_METATYPE(QTabBar*)
 Q_DECLARE_METATYPE(QTabletEvent*)
 Q_DECLARE_METATYPE(QTemporaryFile*)
 Q_DECLARE_METATYPE(QTextBrowser*)
+Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(QTextEdit*)
 Q_DECLARE_METATYPE(QThread*)
 Q_DECLARE_METATYPE(QToolBar*)

@@ -123,40 +123,29 @@ dir="./io/dxf" filename="RDxfExporter.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </destructor>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QString</name>
-    </type>
-    <name>getCorrectedFileName</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>fileName</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>nameFilter</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>nameFilter</argument>)</argument_list>
-    </macro>
-    <return>return 
-    <expr>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getCorrectedFileName</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
       <name>fileName</name>
-    </expr>;</return>}</block>
-  </function>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>nameFilter</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>

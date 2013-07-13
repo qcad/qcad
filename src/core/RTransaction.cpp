@@ -428,15 +428,18 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         return false;
     }
 
-    // if object is an existing hatch, delete original and add new
-    // since hatched cannot be completely defined through properties
-    // which is a requirement for changing objects through transations:
+    // if object is an existing hatch and we are not just changing a property:
+    // delete original and add new since hatch geometry cannot be completely
+    // defined through properties which is a requirement for changing objects
+    // through transactions:
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
-    if (!entity.isNull() && entity->getType()==RS::EntityHatch && entity->getId()!=REntity::INVALID_ID) {
+    if (!entity.isNull() && entity->getType()==RS::EntityHatch &&
+        entity->getId()!=REntity::INVALID_ID && modifiedPropertyTypeIds.isEmpty()) {
+
         QSharedPointer<REntity> clone = QSharedPointer<REntity>(entity->clone());
         objectStorage->setObjectId(*clone, REntity::INVALID_ID);
-        addObject(clone);
         deleteObject(entity, entity->getDocument());
+        addObject(clone, useCurrentAttributes, modifiedPropertyTypeIds);
         return true;
     }
 

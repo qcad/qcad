@@ -42,6 +42,9 @@ RPropertyTypeId RHatchEntity::PropertyPatternName;
 RPropertyTypeId RHatchEntity::PropertyScaleFactor;
 RPropertyTypeId RHatchEntity::PropertyAngle;
 
+RPropertyTypeId RHatchEntity::PropertyOriginX;
+RPropertyTypeId RHatchEntity::PropertyOriginY;
+
 RPropertyTypeId RHatchEntity::PropertyVertexNX;
 RPropertyTypeId RHatchEntity::PropertyVertexNY;
 RPropertyTypeId RHatchEntity::PropertyVertexNZ;
@@ -76,6 +79,9 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyAngle.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Angle"));
     RHatchEntity::PropertyScaleFactor.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Scale"));
 
+    RHatchEntity::PropertyOriginX.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RHatchEntity::PropertyOriginY.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
+
     RHatchEntity::PropertyVertexNX.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"));
     RHatchEntity::PropertyVertexNY.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RHatchEntity::PropertyVertexNZ.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"));
@@ -91,9 +97,14 @@ bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& v
     ret = ret || RObject::setMember(data.scaleFactor, value, PropertyScaleFactor == propertyTypeId);
     ret = ret || RObject::setMember(data.angle, value, PropertyAngle == propertyTypeId);
 
-    ret = ret || setBoundaryVector(RObject::X, value, PropertyVertexNX==propertyTypeId);
-    ret = ret || setBoundaryVector(RObject::Y, value, PropertyVertexNY==propertyTypeId);
-    ret = ret || setBoundaryVector(RObject::Z, value, PropertyVertexNZ==propertyTypeId);
+    ret = ret || RObject::setMember(data.originPoint.x, value, PropertyOriginX == propertyTypeId);
+    ret = ret || RObject::setMember(data.originPoint.y, value, PropertyOriginY == propertyTypeId);
+
+    qDebug() << "set origin: " << data.originPoint;
+
+    ret = ret || setBoundaryVector(RObject::X, value, PropertyVertexNX == propertyTypeId);
+    ret = ret || setBoundaryVector(RObject::Y, value, PropertyVertexNY == propertyTypeId);
+    ret = ret || setBoundaryVector(RObject::Z, value, PropertyVertexNZ == propertyTypeId);
 
     if (ret) {
         data.update();
@@ -252,12 +263,18 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
         name = "SOLID";
     }
 
+    qDebug() << "get origin: " << data.originPoint;
+
     if (propertyTypeId == PropertyPatternName) {
         return qMakePair(QVariant(name), RPropertyAttributes(RPropertyAttributes::Pattern|op));
     } else if (propertyTypeId == PropertyScaleFactor) {
         return qMakePair(QVariant(data.scaleFactor), RPropertyAttributes(op));
     } else if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(data.angle), RPropertyAttributes(RPropertyAttributes::Angle|op));
+    } else if (propertyTypeId == PropertyOriginX) {
+        return qMakePair(QVariant(data.originPoint.x), RPropertyAttributes(op));
+    } else if (propertyTypeId == PropertyOriginY) {
+        return qMakePair(QVariant(data.originPoint.y), RPropertyAttributes(op));
     }
 
     if (propertyTypeId == PropertyVertexNX ||
@@ -343,6 +360,7 @@ void RHatchEntity::print(QDebug dbg) const {
     dbg.nospace() << ", solid: " << data.solid
                   << ", scale: " << data.scaleFactor
                   << ", angle: " << RMath::rad2deg(data.angle)
+                  << ", origin: " << data.originPoint
                   << ", pattern: " << data.patternName;
 
     dbg.nospace() << ",\nboundary: \n";

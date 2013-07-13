@@ -398,6 +398,39 @@ dir="./entity" filename="RDimensionData.h">
       <name>fontName</name>
     </expr>;</return>}</block>
   </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getLinearFactor</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>linearFactor</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setLinearFactor</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>f</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>linearFactor</name>= 
+    <name>f</name></expr>;</expr_stmt>}</block>
+  </function>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -985,6 +1018,13 @@ dir="./entity" filename="RDimensionData.h">
       <name>double</name>
     </type>
     <name>textAngle</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>linearFactor</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

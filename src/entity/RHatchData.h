@@ -104,6 +104,14 @@ public:
         update();
     }
 
+    RVector getOriginPoint() const {
+        return originPoint;
+    }
+
+    void setOriginPoint(const RVector& op) {
+        originPoint = op;
+    }
+
     QString getPatternName() const {
         return patternName;
     }
@@ -147,7 +155,7 @@ private:
     double scaleFactor;
     double angle;
     QString patternName;
-    RVector patternOrigin;
+    RVector originPoint;
 
     /**
      * Hatch boundary, ordered by loops, in strictly defined order.

@@ -246,7 +246,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getEscapedText" cppName="getEscapedText"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="escapeUnicode"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
     </method>
     <method name="getPlainText" cppName="getPlainText"
     specifier="public" isStatic="false" isVirtual="false"

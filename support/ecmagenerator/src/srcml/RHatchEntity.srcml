@@ -156,6 +156,22 @@ dir="./entity" filename="RHatchEntity.h">
       <name>static</name>
       <name>RPropertyTypeId</name>
     </type>
+    <name>PropertyOriginX</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyOriginY</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
     <name>PropertyVertexNX</name>
   </decl>;</decl_stmt>
   <decl_stmt>
@@ -674,6 +690,50 @@ dir="./entity" filename="RHatchEntity.h">
       <argument>
         <expr>
           <name>a</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>getOriginPoint</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getOriginPoint</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setOriginPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>op</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setOriginPoint</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>op</name>
         </expr>
       </argument>)</argument_list>
     </call></expr>;</expr_stmt>}</block>

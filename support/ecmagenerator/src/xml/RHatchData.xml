@@ -179,6 +179,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getOriginPoint" cppName="getOriginPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setOriginPoint" cppName="setOriginPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="op"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getPatternName" cppName="getPatternName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

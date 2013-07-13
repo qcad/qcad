@@ -121,6 +121,18 @@ dir="./core" filename="RUnit.h">
         <name>false</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>onlyPreciseResult</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -185,6 +197,18 @@ dir="./core" filename="RUnit.h">
       <name>bool</name>
     </type>
     <name>showTrailingZeroes</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>onlyPreciseResult</name>=
     <init>
       <expr>
         <name>false</name>
@@ -259,6 +283,18 @@ dir="./core" filename="RUnit.h">
         <name>false</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>onlyPreciseResult</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -323,6 +359,18 @@ dir="./core" filename="RUnit.h">
       <name>bool</name>
     </type>
     <name>showTrailingZeroes</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>onlyPreciseResult</name>=
     <init>
       <expr>
         <name>false</name>
@@ -397,6 +445,18 @@ dir="./core" filename="RUnit.h">
         <name>false</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>onlyPreciseResult</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -461,6 +521,18 @@ dir="./core" filename="RUnit.h">
       <name>bool</name>
     </type>
     <name>showTrailingZeroes</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>onlyPreciseResult</name>=
     <init>
       <expr>
         <name>false</name>
@@ -734,6 +806,18 @@ dir="./core" filename="RUnit.h">
       <name>bool</name>
     </type>
     <name>forceSuppressTrailingZeroes</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>onlyPreciseResult</name>=
     <init>
       <expr>
         <name>false</name>

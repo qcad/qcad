@@ -1063,7 +1063,19 @@ dir="./entity" filename="RTextEntity.h">
       <name>QString</name>
     </type>
     <name>getEscapedText</name>
-    <parameter_list>()</parameter_list>
+    <parameter_list>(
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>escapeUnicode</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
     <return>return 
@@ -1071,7 +1083,12 @@ dir="./entity" filename="RTextEntity.h">
     <name>data</name>.
     <call>
       <name>getEscapedText</name>
-      <argument_list>()</argument_list>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>escapeUnicode</name>
+        </expr>
+      </argument>)</argument_list>
     </call></expr>;</return>}</block>
   </function>
   <comment type="line">//QString getHtmlText() const {</comment>

@@ -54,6 +54,9 @@ public:
     static RPropertyTypeId PropertyScaleFactor;
     static RPropertyTypeId PropertyAngle;
 
+    static RPropertyTypeId PropertyOriginX;
+    static RPropertyTypeId PropertyOriginY;
+
     static RPropertyTypeId PropertyVertexNX;
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
@@ -131,6 +134,14 @@ public:
 
     void setAngle(double a) {
         data.setAngle(a);
+    }
+
+    RVector getOriginPoint() const {
+        return data.getOriginPoint();
+    }
+
+    void setOriginPoint(const RVector& op) {
+        data.setOriginPoint(op);
     }
 
     QString getPatternName() const {

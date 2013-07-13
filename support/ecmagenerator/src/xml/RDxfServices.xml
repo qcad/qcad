@@ -83,6 +83,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getQCad3Compatibility"
+    cppName="getQCad3Compatibility" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getQCad2LayerName" cppName="getQCad2LayerName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -163,6 +168,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="bool" typeName="bool" name="solid"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="getCodec" cppName="getCodec" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QTextCodec *" isPureVirtual="false" />
+    </method>
+    <method name="setCodec" cppName="setCodec" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QTextCodec *" typeName="QTextCodec *"
+        name="codec" isConst="false" />
       </variant>
     </method>
     <method name="numberToColor24" cppName="numberToColor24"

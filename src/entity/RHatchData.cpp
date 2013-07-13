@@ -580,7 +580,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
         RPatternLine patternLine = patternLines[i];
 
         // origin for pattern line:
-        RVector spBase = patternOrigin + patternLine.basePoint;
+        RVector spBase = originPoint + patternLine.basePoint;
         RLine baseLine(spBase, spBase + RVector::createPolar(1.0, patternLine.angle));
 
         // iterate through corners and find left most / right most offsets:
@@ -642,7 +642,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
         for (int m=leftMultiple; m<rightMultiple; m++) {
             RVector currentOffset = offset * m;
 
-            RVector sp = patternOrigin + patternLine.basePoint + currentOffset;
+            RVector sp = originPoint + patternLine.basePoint + currentOffset;
             RLine orthoLine(sp, sp + RVector::createPolar(1.0, patternLine.angle + M_PI/2.0));
 
             // limit pattern generation to area between boundaryBox edges:
