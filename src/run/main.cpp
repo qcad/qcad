@@ -79,11 +79,15 @@ void catchSigPipe(int /*s*/){
 #endif
 
 int main(int argc, char *argv[]) {
-    // 20130418 (experimental):
+
     // For correct Unicode translation, apply the current system locale:
     setlocale(LC_ALL, "");
     // But use usual conversion for scanf()/sprintf():
     setlocale(LC_NUMERIC, "C");
+
+    // Finetuning Japanese encoding for corrent DXF/DWG import.
+    // see http://qt-project.org/doc/qt-4.8/codecs-jis.html
+    setenv("UNICODEMAP_JP", "cp932");
 
     RMainWindow::installMessageHandler();
 #ifdef Q_OS_MAC
