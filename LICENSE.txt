@@ -1,4 +1,4 @@
-QCAD 3 source code is open source and distributed under GPL version 3
+The QCAD 3 source code is open source and distributed under GPL version 3
 with optional exceptions.
 See files:
 - gpl-3.0.txt
