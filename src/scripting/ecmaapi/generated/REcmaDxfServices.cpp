@@ -72,6 +72,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getQCad2Compatibility, "getQCad2Compatibility");
             
+            REcmaHelper::registerFunction(&engine, proto, getQCad3Compatibility, "getQCad3Compatibility");
+            
             REcmaHelper::registerFunction(&engine, proto, getQCad2LayerName, "getQCad2LayerName");
             
             REcmaHelper::registerFunction(&engine, proto, getQCad2BlockName, "getQCad2BlockName");
@@ -89,6 +91,10 @@
             REcmaHelper::registerFunction(&engine, proto, getQCad2PatternName, "getQCad2PatternName");
             
             REcmaHelper::registerFunction(&engine, proto, fixQCad2HatchData, "fixQCad2HatchData");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCodec, "getCodec");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCodec, "setCodec");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RDxfServices*>(), *proto);
@@ -809,6 +815,55 @@
             return result;
         }
          QScriptValue
+        REcmaDxfServices::getQCad3Compatibility
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getQCad3Compatibility", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad3Compatibility";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDxfServices* self = 
+                        getSelf("getQCad3Compatibility", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getQCad3Compatibility();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad3Compatibility().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad3Compatibility", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDxfServices::getQCad2LayerName
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1406,6 +1461,117 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDxfServices::fixQCad2HatchData", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::getCodec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getCodec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getCodec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDxfServices* self = 
+                        getSelf("getCodec", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QTextCodec *'
+    QTextCodec * cppResult =
+        
+               self->getCodec();
+        // return type: QTextCodec *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getCodec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getCodec", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::setCodec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::setCodec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::setCodec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDxfServices* self = 
+                        getSelf("setCodec", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QTextCodec * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QTextCodec * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QTextCodec >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDxfServices: Argument 0 is not of type QTextCodec *QTextCodec *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCodec(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.setCodec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::setCodec", context, engine);
             return result;
         }
          QScriptValue

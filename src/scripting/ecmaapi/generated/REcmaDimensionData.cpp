@@ -89,6 +89,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getFontName, "getFontName");
             
+            REcmaHelper::registerFunction(&engine, proto, getLinearFactor, "getLinearFactor");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLinearFactor, "setLinearFactor");
+            
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
             
             REcmaHelper::registerFunction(&engine, proto, intersectsWith, "intersectsWith");
@@ -1171,6 +1175,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::getFontName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getLinearFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getLinearFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getLinearFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getLinearFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLinearFactor();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getLinearFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getLinearFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setLinearFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setLinearFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setLinearFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setLinearFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLinearFactor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setLinearFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setLinearFactor", context, engine);
             return result;
         }
          QScriptValue

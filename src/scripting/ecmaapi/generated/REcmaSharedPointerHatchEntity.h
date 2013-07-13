@@ -109,6 +109,12 @@
         setAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getOriginPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOriginPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPatternName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

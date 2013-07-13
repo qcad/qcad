@@ -175,6 +175,10 @@
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyLowerTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyLinearFactor",
+                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyLinearFactor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDimensionLinePosX",
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimensionLinePosX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

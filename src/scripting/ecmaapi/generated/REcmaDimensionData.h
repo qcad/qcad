@@ -81,6 +81,12 @@
         getFontName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLinearFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLinearFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

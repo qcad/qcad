@@ -165,6 +165,10 @@
                 qScriptValueFromValue(&engine, RDimLinearEntity::PropertyLowerTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyLinearFactor",
+                qScriptValueFromValue(&engine, RDimLinearEntity::PropertyLinearFactor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDimensionLinePosX",
                 qScriptValueFromValue(&engine, RDimLinearEntity::PropertyDimensionLinePosX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

@@ -76,6 +76,9 @@
         getQCad2Compatibility
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getQCad3Compatibility
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getQCad2LayerName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -101,6 +104,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         fixQCad2HatchData
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCodec
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCodec
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         numberToColor24

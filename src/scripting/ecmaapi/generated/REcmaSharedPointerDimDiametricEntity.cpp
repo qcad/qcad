@@ -171,6 +171,10 @@
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyLowerTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyLinearFactor",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyLinearFactor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyChordPointX",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyChordPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

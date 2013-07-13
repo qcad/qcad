@@ -114,6 +114,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTextAngle, "getTextAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, getLinearFactor, "getLinearFactor");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLinearFactor, "setLinearFactor");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimensionEntity*>(), *proto);
 
@@ -199,6 +203,10 @@
             
             ctor.setProperty("PropertyLowerTolerance",
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyLowerTolerance),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyLinearFactor",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyLinearFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyMeasuredValue",
@@ -1757,6 +1765,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionEntity::getTextAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::getLinearFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::getLinearFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::getLinearFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("getLinearFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLinearFactor();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getLinearFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::getLinearFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::setLinearFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::setLinearFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::setLinearFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("setLinearFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLinearFactor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.setLinearFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::setLinearFactor", context, engine);
             return result;
         }
          QScriptValue REcmaDimensionEntity::toString
