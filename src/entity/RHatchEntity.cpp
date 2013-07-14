@@ -100,8 +100,6 @@ bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& v
     ret = ret || RObject::setMember(data.originPoint.x, value, PropertyOriginX == propertyTypeId);
     ret = ret || RObject::setMember(data.originPoint.y, value, PropertyOriginY == propertyTypeId);
 
-    qDebug() << "set origin: " << data.originPoint;
-
     ret = ret || setBoundaryVector(RObject::X, value, PropertyVertexNX == propertyTypeId);
     ret = ret || setBoundaryVector(RObject::Y, value, PropertyVertexNY == propertyTypeId);
     ret = ret || setBoundaryVector(RObject::Z, value, PropertyVertexNZ == propertyTypeId);
