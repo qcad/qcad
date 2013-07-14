@@ -263,8 +263,6 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
         name = "SOLID";
     }
 
-    qDebug() << "get origin: " << data.originPoint;
-
     if (propertyTypeId == PropertyPatternName) {
         return qMakePair(QVariant(name), RPropertyAttributes(RPropertyAttributes::Pattern|op));
     } else if (propertyTypeId == PropertyScaleFactor) {

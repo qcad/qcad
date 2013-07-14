@@ -70,6 +70,7 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     scaleFactor = other.scaleFactor;
     angle = other.angle;
     patternName = other.patternName;
+    originPoint = other.originPoint;
     //other.getPainterPath(false);
     other.getPainterPaths(false);
     //painterPath = other.painterPath;

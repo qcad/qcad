@@ -110,6 +110,7 @@ public:
 
     void setOriginPoint(const RVector& op) {
         originPoint = op;
+        update();
     }
 
     QString getPatternName() const {

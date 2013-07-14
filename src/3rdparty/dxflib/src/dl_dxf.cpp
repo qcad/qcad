@@ -1798,6 +1798,7 @@ void DL_Dxf::addHatch(DL_CreationInterface* creationInterface) {
                     getRealValue(41, 1.0),
                     getRealValue(52, 0.0),
                     getStringValue(2, ""));
+
     creationInterface->addHatch(hd);
 
     for (unsigned int i=0; i<hatchEdges.size(); i++) {
@@ -3212,6 +3213,13 @@ void DL_Dxf::writeHatch2(DL_WriterA& dw,
         dw.dxfInt(79, 0);
     }
     dw.dxfInt(98, 0);
+
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(1001, "ACAD");
+        dw.dxfReal(1010, data.originX);
+        dw.dxfReal(1020, data.originY);
+        dw.dxfInt(1030, 0.0);
+    }
 }
 
 

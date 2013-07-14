@@ -1278,7 +1278,9 @@ void RDxfExporter::writeHatch(const RHatchEntity& h) {
                       h.isSolid(),
                       h.getScale(),
                       RMath::rad2deg(h.getAngle()),
-                      (const char*)h.getPatternName().toLatin1());
+                      (const char*)h.getPatternName().toLatin1(),
+                      h.getOriginPoint().x, h.getOriginPoint().y);
+
     dxf.writeHatch1(*dw, data, attributes);
 
     for (int i=0; i<h.getLoopCount(); i++) {

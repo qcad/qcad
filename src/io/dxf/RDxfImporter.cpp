@@ -968,6 +968,23 @@ void RDxfImporter::addHatch(const DL_HatchData& data) {
     }
 
     hatch = RHatchData(data.solid, scale, angle, patternName);
+
+    // xData might contain hatch origin:
+    if (xData.contains("ACAD")) {
+        RVector op;
+        QList<QPair<int, QVariant> > list = xData["ACAD"];
+        for (int i=0; i<list.size(); i++) {
+            QPair<int, QVariant> tuple = list[i];
+            // hatch pattern offset:
+            if (tuple.first==1010) {
+                op.x = tuple.second.toDouble();
+            }
+            if (tuple.first==1020) {
+                op.y = tuple.second.toDouble();
+            }
+        }
+        hatch.setOriginPoint(op);
+    }
 }
 
 void RDxfImporter::addHatchLoop(const DL_HatchLoopData& data) {

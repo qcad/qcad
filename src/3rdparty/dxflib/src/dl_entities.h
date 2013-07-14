@@ -1267,16 +1267,21 @@ struct DXFLIB_EXPORT DL_HatchData {
      * Constructor.
      * Parameters: see member variables.
      */
-    DL_HatchData(int hNumLoops,
-                 bool hSolid,
-                 double hScale,
-                 double hAngle,
-                 const std::string& hPattern) {
-        numLoops = hNumLoops;
-        solid = hSolid;
-        scale = hScale;
-        angle = hAngle;
-        pattern = hPattern;
+    DL_HatchData(int numLoops,
+                 bool solid,
+                 double scale,
+                 double angle,
+                 const std::string& pattern,
+                 double originX = 0.0,
+                 double originY = 0.0) :
+        numLoops(numLoops),
+        solid(solid),
+        scale(scale),
+        angle(angle),
+        pattern(pattern),
+        originX(originX),
+        originY(originY) {
+
     }
 
     /*! Number of boundary paths (loops). */
@@ -1289,6 +1294,9 @@ struct DXFLIB_EXPORT DL_HatchData {
     double angle;
     /*! Pattern name. */
     std::string pattern;
+    /*! Pattern origin */
+    double originX;
+    double originY;
 };
 
 
