@@ -87,7 +87,11 @@ int main(int argc, char *argv[]) {
 
     // Finetuning Japanese encoding for corrent DXF/DWG import.
     // see http://qt-project.org/doc/qt-4.8/codecs-jis.html
+#ifdef Q_OS_WIN
+    _putenv_s("UNICODEMAP_JP", "cp932");
+#else
     setenv("UNICODEMAP_JP", "cp932", 1);
+#endif
 
     RMainWindow::installMessageHandler();
 #ifdef Q_OS_MAC
