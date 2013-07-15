@@ -373,8 +373,10 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
     }
     else if (isArcShape(shape) || isCircleShape(shape) || isEllipseShape(shape)) {
         orthoLine = new RLine(shape.getCenter(), position);
-        if (shape.isReversed()) {
-            shape.reverse();
+        if (isArcShape(shape) || isEllipseShape(shape)) {
+            if (shape.isReversed()) {
+                shape.reverse();
+            }
         }
     }
 
