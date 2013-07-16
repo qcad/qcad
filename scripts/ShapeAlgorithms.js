@@ -99,14 +99,15 @@ ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition
 
         for (i=0; i<insides.length; i++) {
             var inside = insides[i];
+            var d = distance;
 
             if (inside) {
-                distance *= -1;
+                d *= -1;
             }
 
             for (n=1; n<=number; ++n) {
                 var concentric = shape.clone();
-                concentric.setRadius(shape.getRadius() + distance*n);
+                concentric.setRadius(shape.getRadius() + d*n);
                 if (concentric.getRadius()<0.0) {
                     if (isCircleShape(shape)) {
                         ShapeAlgorithms.error =
