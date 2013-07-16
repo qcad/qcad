@@ -525,6 +525,9 @@ double RMath::getRelativeAngle(double a, double baseAngle) {
     if (ret>M_PI) {
         ret-=2*M_PI;
     }
+    if (ret<-M_PI) {
+        ret+=2*M_PI;
+    }
     return ret;
 }
 

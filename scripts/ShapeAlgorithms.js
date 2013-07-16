@@ -150,8 +150,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 
     var res = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
 
-    //qDebug("intersection points: ", res);
-
     var cutPos1 = undefined;
     var cutPos2 = undefined;
 
@@ -346,7 +344,7 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 };
 
 /**
- * \return Two intersections points of given shape with given
+ * \return The two intersection points of given shape with given
  * otherShapes which are closest to the given position or undefined.
  *
  * \param onShape True: only return intersections on the shape
@@ -401,8 +399,6 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
             }
         }
     }
-
-    //qDebug("intersection candidates: ", intersections);
 
     var cutPos1 = RVector.invalid;
     var distRight = undefined;
