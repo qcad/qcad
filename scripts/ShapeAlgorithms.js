@@ -150,6 +150,8 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 
     var res = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
 
+    //qDebug("intersection points: ", res);
+
     var cutPos1 = undefined;
     var cutPos2 = undefined;
 
@@ -400,13 +402,15 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
         }
     }
 
+    //qDebug("intersections: ", intersections);
+
     var cutPos1 = RVector.invalid;
     var distRight = undefined;
     var cutPos2 = RVector.invalid;
     var distLeft = undefined;
 
     // at least 2 intersection points are required to proceed:
-    if (intersections.length<2) {
+    if (intersections.length<2 && onShape) {
         return undefined;
     }
 
