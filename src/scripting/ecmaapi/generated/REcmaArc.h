@@ -134,6 +134,9 @@
         getAngleLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isAngleWithinArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDiameter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

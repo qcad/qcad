@@ -87,6 +87,9 @@ public:
     bool isReversed() const;
     void setReversed(bool reversed);
     double getAngleLength(bool allowForZeroLength = false) const;
+    bool isAngleWithinArc(double a) {
+        return RMath::isAngleBetween(a, startAngle, endAngle, reversed);
+    }
 
     double getDiameter() const;
     void setDiameter(double d);

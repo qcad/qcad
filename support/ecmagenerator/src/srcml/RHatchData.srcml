@@ -589,7 +589,11 @@ dir="./entity" filename="RHatchData.h">
     <expr_stmt>
     <expr>
     <name>originPoint</name>= 
-    <name>op</name></expr>;</expr_stmt>}</block>
+    <name>op</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>

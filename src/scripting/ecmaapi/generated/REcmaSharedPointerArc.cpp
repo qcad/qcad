@@ -168,6 +168,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngleLength, "getAngleLength");
             
+            REcmaHelper::registerFunction(&engine, proto, isAngleWithinArc, "isAngleWithinArc");
+            
             REcmaHelper::registerFunction(&engine, proto, getDiameter, "getDiameter");
             
             REcmaHelper::registerFunction(&engine, proto, setDiameter, "setDiameter");
@@ -2312,6 +2314,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerArc::getAngleLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerArc::isAngleWithinArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerArc::isAngleWithinArc", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::isAngleWithinArc";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("isAngleWithinArc", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isAngleWithinArc(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isAngleWithinArc().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerArc::isAngleWithinArc", context, engine);
             return result;
         }
          QScriptValue

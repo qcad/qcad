@@ -683,6 +683,7 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
         const RCircle& circle2) {
 
     QList<RVector> res;
+    bool tangent = false;
 
     RVector c1 = circle1.getCenter();
     RVector c2 = circle2.getCenter();
@@ -691,6 +692,14 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
     double r2 = circle2.getRadius();
 
     RVector u = c2 - c1;
+
+    // the two circles (almost) touch in one point (tangent):
+    if (RMath::fuzzyCompare(u.getMagnitude(), r1+r2)) {
+        u.setMagnitude2d(r1);
+        res.append(c1 + u);
+        tangent = true;
+        return res;
+    }
 
     // concentric
     if (u.getMagnitude() < RS::PointTolerance) {
@@ -713,7 +722,6 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
     // one or two intersections:
     t1 = sqrt(term);
     t2 = -sqrt(term);
-    bool tangent = false;
 
     RVector sol1 = c1 + u*s + v*t1;
     RVector sol2 = c1 + u*s + v*t2;

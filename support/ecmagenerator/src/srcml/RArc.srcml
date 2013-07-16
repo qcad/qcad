@@ -480,6 +480,51 @@ dir="./core/math" filename="RArc.h">
     </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isAngleWithinArc</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>a</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RMath</name>::
+        <name>isAngleBetween</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>a</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>startAngle</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>endAngle</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>reversed</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>double</name>
