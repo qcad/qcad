@@ -66,8 +66,6 @@
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
 
-//##Q_IMPORT_PLUGIN(customwidgetsplugin)
-
 
 #ifdef Q_OS_MAC
 void qt_mac_set_menubar_icons(bool);
@@ -159,10 +157,6 @@ int main(int argc, char *argv[]) {
     // the SQLite plugin can only be loaded if this line is present under windows:
     QSqlDatabase::drivers();
 #endif
-
-    if (guiEnabled) {
-        //##Q_INIT_RESOURCE(core);
-    }
 
     qRegisterMetaType<RColor>();
     qRegisterMetaTypeStreamOperators<RColor>("RColor");
