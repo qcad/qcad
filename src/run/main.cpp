@@ -20,6 +20,8 @@
 
 #include <QApplication>
 #include <QDebug>
+#include <QDir>
+#include <QFileInfo>
 #include <QImageReader>
 #include <QTextStream>
 #include <QSqlDatabase>
@@ -225,6 +227,11 @@ int main(int argc, char *argv[]) {
     int i = arguments.indexOf("-autostart");
     if (i!=-1 && arguments.count()>i+1) {
         autostartFile = arguments.at(i+1);
+
+        QFileInfo fi(autostartFile);
+        if (!fi.isAbsolute() && !autostartFile.startsWith(":")){
+            autostartFile = RSettings::getLaunchPath() + QDir::separator() + autostartFile;
+        }
     }
 
     RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
