@@ -78,6 +78,10 @@ protected:
     virtual void print(QDebug dbg) const;
 
 public:
+    /**
+     * \getter{getPosition}
+     * \setter{setPosition}
+     */
     RVector position;
 };
 

@@ -322,6 +322,95 @@
         
     } else 
 
+    if( context->argumentCount() ==
+        3
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isNumber()
+                ) /* type: double */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLine: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RLine
+                    cppResult(
+                    a0
+        ,
+    a1
+        ,
+    a2
+                    );
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RLine(): no matching constructor found."),

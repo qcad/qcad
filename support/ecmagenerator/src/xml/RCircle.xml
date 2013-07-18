@@ -20,6 +20,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RCircle *" isPureVirtual="false" />
     </method>
+    <method name="createFrom2Points" cppName="createFrom2Points"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RCircle" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p2"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="createFrom3Points" cppName="createFrom3Points"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -142,6 +152,21 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="double" typeName="double" name="a"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="contains" cppName="contains" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="touchesCircleInternally"
+    cppName="touchesCircleInternally" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RCircle &amp;" typeName="RCircle" name="other"
+        isConst="true" />
       </variant>
     </method>
     <method name="move" cppName="move" specifier="public"

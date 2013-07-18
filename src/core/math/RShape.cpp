@@ -694,7 +694,7 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
     RVector u = c2 - c1;
 
     // the two circles (almost) touch in one point (tangent):
-    if (RMath::fuzzyCompare(u.getMagnitude(), r1+r2)) {
+    if (RMath::fuzzyCompare(u.getMagnitude(), r1+r2, 1.0e-6)) {
         u.setMagnitude2d(r1);
         res.append(c1 + u);
         tangent = true;

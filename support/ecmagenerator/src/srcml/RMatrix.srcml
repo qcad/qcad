@@ -116,6 +116,60 @@ dir="./core/math" filename="RMatrix.h">
     <name>static</name>
     <name>RMatrix</name>
   </type>
+  <name>createRotation</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>angle</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>RMatrix</name>
+  </type>
+  <name>create2x2</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>a11</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>a12</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>a21</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>a22</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>RMatrix</name>
+  </type>
   <name>create3x3</name>
   <parameter_list>(
   <param>
@@ -344,6 +398,21 @@ dir="./core/math" filename="RMatrix.h">
       <type>
       <name>const</name>
       <name>RMatrix</name>&amp;</type>
+      <name>w</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RVector</name>
+  </type>
+  <name>multiplyWith</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
       <name>w</name>
     </decl>
   </param>)</parameter_list>

@@ -134,5 +134,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <property name="position" type="RVector"
+    cppGetter="getPosition" cppSetter="setPosition" />
   </class>
 </unit>

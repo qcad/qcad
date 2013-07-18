@@ -5,6 +5,7 @@ SUBDIRS = \
     Circle2PR \
     Circle2TR \
     Circle3P \
+    Circle3T \
     CircleCP \
     CircleCR \
     CircleConcentric \

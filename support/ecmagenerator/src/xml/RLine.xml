@@ -17,6 +17,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector"
         name="endPoint" isConst="true" />
       </variant>
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector"
+        name="startPoint" isConst="true" />
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+        <arg type="double" typeName="double" name="distance"
+        isConst="false" />
+      </variant>
     </constructor>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

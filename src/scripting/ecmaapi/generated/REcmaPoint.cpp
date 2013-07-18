@@ -65,6 +65,14 @@
 
     // properties:
     
+            proto->setProperty("position", engine.newFunction(
+                getSetPosition),
+                QScriptValue::PropertyGetter
+                
+                    | QScriptValue::PropertySetter
+                
+            );          
+            
 
     // methods:
     
@@ -266,7 +274,50 @@
     
 
     // properties:
-    
+     QScriptValue REcmaPoint::getSetPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+        RPoint* self = getSelf("position", context);
+        //Q_ASSERT(self!=NULL);
+        if (self==NULL) {
+            return REcmaHelper::throwError("self is NULL", context);
+        }
+        
+            if(context->argumentCount() == 1){
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPoint: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                self->setPosition(a0);
+            }
+        RVector
+        cppResult = self->
+        getPosition();
+        QScriptValue result;
+        
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+        return result;
+        }
+        
 
     // public methods:
      QScriptValue

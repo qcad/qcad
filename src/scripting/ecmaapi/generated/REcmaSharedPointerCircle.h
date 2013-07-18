@@ -54,6 +54,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        createFrom2Points
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         createFrom3Points
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -109,6 +112,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        contains
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        touchesCircleInternally
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         move

@@ -36,6 +36,12 @@ RCircle::RCircle(const RVector& center, const double radius) :
 RCircle::~RCircle() {
 }
 
+RCircle RCircle::createFrom2Points(const RVector& p1, const RVector& p2) {
+    RVector center = (p1+p2)/2.0;
+    double radius = p1.getDistanceTo(p2)/2.0;
+    return RCircle(center, radius);
+}
+
 RCircle RCircle::createFrom3Points(const RVector& p1,
                                   const RVector& p2,
                                   const RVector& p3) {
@@ -122,6 +128,15 @@ double RCircle::getArea() const {
 
 void RCircle::setArea(double a) {
     radius = sqrt(fabs(a)/M_PI);
+}
+
+bool RCircle::contains(const RVector& p) const {
+    return p.getDistanceTo(center) < radius;
+    // TODO: + RS::PointTolerance ?
+}
+
+bool RCircle::touchesCircleInternally(const RCircle& other) const {
+    return contains(other.center) || other.contains(center);
 }
 
 QList<RVector> RCircle::getEndPoints() const {

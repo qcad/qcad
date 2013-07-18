@@ -35,7 +35,7 @@ if (typeof(global)==="undefined") {
  */
 function getAbsolutePathForArg(file) {
     var fi = new QFileInfo(file);
-    if(fi.isAbsolute() || file.startsWith(":")){
+    if (fi.isAbsolute() || file.startsWith(":")){
         return file;
     }
     return RSettings.getLaunchPath() + QDir.separator + file;

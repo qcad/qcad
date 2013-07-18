@@ -44,28 +44,36 @@ public:
     static RMatrix createIdentity2x2();
     static RMatrix createIdentity3x3();
     static RMatrix createIdentity(int size);
-    static RMatrix create3x3(double a11, double a12, double a13, double a21,
-            double a22, double a23, double a31, double a32, double a33);
+    static RMatrix createRotation(double angle);
+    static RMatrix create2x2(double a11, double a12,
+                             double a21, double a22);
+    static RMatrix create3x3(double a11, double a12, double a13,
+                             double a21, double a22, double a23,
+                             double a31, double a32, double a33);
     static RMatrix create3x1(double a11, double a21, double a31);
-    static RMatrix create2x3(double a11, double a12, double a13, double a21,
-            double a22, double a23);
+    static RMatrix create2x3(double a11, double a12,
+                             double a13, double a21,
+                             double a22, double a23);
 
     RMatrix& operator =(const RMatrix& other);
     bool operator ==(const RMatrix& other) const;
     RMatrix operator *=(double f);
     RMatrix operator *(const RMatrix& other) const;
     RMatrix multiplyWith(const RMatrix& w) const;
+    RVector multiplyWith(const RVector& w) const;
     double* operator [](int i);
 
     void init(int r, int c);
     void reset();
     void clear();
 
-    void set3x3(double a11, double a12, double a13, double a21, double a22,
-            double a23, double a31, double a32, double a33);
+    void set3x3(double a11, double a12, double a13,
+                double a21, double a22, double a23,
+                double a31, double a32, double a33);
     void set3x1(double a11, double a21, double a31);
-    void set2x3(double a11, double a12, double a13, double a21, double a22,
-            double a23);
+    void set2x3(double a11, double a12,
+                double a13, double a21,
+                double a22, double a23);
 
     void set(int r, int c, double v);
     double get(int r, int c) const;

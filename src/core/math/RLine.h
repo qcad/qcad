@@ -43,6 +43,7 @@ class QCADCORE_EXPORT RLine: public RShape, public RDirected {
 public:
     RLine();
     RLine(const RVector& startPoint, const RVector& endPoint);
+    RLine(const RVector& startPoint, double angle, double distance);
     virtual ~RLine();
 
     virtual RLine* clone() const {

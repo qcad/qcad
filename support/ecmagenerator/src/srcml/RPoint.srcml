@@ -356,6 +356,8 @@ dir="./core/math" filename="RPoint.h">
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl></protected>
   <public>public: 
+  <comment type="block">/** * \getter{getPosition} *
+  \setter{setPosition} */</comment>
   <decl_stmt>
   <decl>
     <type>

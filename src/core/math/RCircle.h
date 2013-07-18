@@ -46,6 +46,7 @@ public:
         return new RCircle(*this);
     }
 
+    static RCircle createFrom2Points(const RVector& p1, const RVector& p2);
     static RCircle createFrom3Points(const RVector& p1, const RVector& p2, const RVector& p3);
 
     virtual void to2D();
@@ -73,6 +74,9 @@ public:
     void setCircumference(double c);
     double getArea() const;
     void setArea(double a);
+
+    bool contains(const RVector& p) const;
+    bool touchesCircleInternally(const RCircle& other) const;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);

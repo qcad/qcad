@@ -110,6 +110,35 @@ RMatrix RMatrix::createIdentity(int size) {
     return ret;
 }
 
+RMatrix RMatrix::createRotation(double angle) {
+    return RMatrix::create2x2(
+        cos(angle), -sin(angle),
+        sin(angle), cos(angle)
+    );
+}
+
+/**
+ * \return A matrix with 2 rows and 2 columns:
+ * \f$
+ *   \left( \begin{array}{ccc}
+ *     a_{11} & a_{12} \\
+ *     a_{21} & a_{22}
+ *   \end{array} \right)
+ * \f$
+ */
+RMatrix RMatrix::create2x2(double a11, double a12,
+                           double a21, double a22) {
+    RMatrix ret(2, 2);
+
+    ret.set(0, 0, a11);
+    ret.set(0, 1, a12);
+
+    ret.set(1, 0, a21);
+    ret.set(1, 1, a22);
+
+    return ret;
+}
+
 /**
  * \return A matrix with 3 rows and 3 columns:
  * \f$
@@ -253,6 +282,17 @@ RMatrix RMatrix::multiplyWith(const RMatrix& w) const {
     }
 
     return r;
+}
+
+RVector RMatrix::multiplyWith(const RVector& v) const {
+    if (getRows()==2 && getCols()==2) {
+        return RVector(
+            get(0,0)*v.x + get(0,1)*v.y,
+            get(1,0)*v.x + get(1,1)*v.y
+        );
+    }
+
+    return RVector::invalid;
 }
 
 /**

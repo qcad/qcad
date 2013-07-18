@@ -38,6 +38,12 @@ RLine::RLine(const RVector& startPoint, const RVector& endPoint) :
     endPoint(endPoint) {
 }
 
+RLine::RLine(const RVector& startPoint, double angle, double distance) :
+    startPoint(startPoint) {
+
+    endPoint = startPoint + RVector::createPolar(distance, angle);
+}
+
 RLine::~RLine() {
 }
 

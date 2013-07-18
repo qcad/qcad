@@ -150,9 +150,6 @@ Circle2P.prototype.getCircle2P = function(preview) {
         return undefined;
     }
 
-    var center = RVector.getAverage(this.point1, this.point2);
-    var radius = distance / 2.0;
-
-    return new RCircle(center, radius);
+    return RCircle.createFrom2Points(this.point1, this.point2);
 };
 

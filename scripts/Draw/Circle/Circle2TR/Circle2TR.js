@@ -22,7 +22,7 @@ include("scripts/ShapeAlgorithms.js");
 
 /**
  * \class Circle2TR
- * \brief Circle from start point, end point and radius.
+ * \brief Circle from radius and two tangential entities.
  * \ingroup ecma_draw_circle
  */
 function Circle2TR(guiAction) {
@@ -81,8 +81,6 @@ Circle2TR.prototype.setState = function(state) {
         this.setRightMouseTip(EAction.trBack);
         break;
     }
-
-    //EAction.showSnapTools();
 };
 
 Circle2TR.prototype.escapeEvent = function() {
@@ -104,13 +102,6 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
     var entityId = event.getEntityId();
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
-
-//    if (isNull(entity)) {
-//        if (preview) {
-//            this.updatePreview();
-//        }
-//        return;
-//    }
 
     var shape = undefined;
     if (!isNull(entity)) {
@@ -205,12 +196,6 @@ Circle2TR.prototype.getCircle2TR = function(preview) {
             ips = offset1[i].getIntersectionPoints(offset2[k], false);
             candidates = candidates.concat(ips);
         }
-    }
-
-    if (!preview) {
-        qDebug("offset1: ", offset1);
-        qDebug("offset2: ", offset2);
-        qDebug("candidates: ", candidates);
     }
 
     if (candidates.length===0) {

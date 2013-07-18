@@ -4,6 +4,7 @@ include(../translations.pri)
 SOURCES = \
     ../EAction.js \
     ../AddOn.js \
+    ../Apollonius.js \
     ../WidgetFactory.js \
     ../ShapeAlgorithms.js \
     ../DbConnection.js \

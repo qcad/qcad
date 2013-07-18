@@ -41,7 +41,9 @@
         ;
 
     // properties:
-    
+    static  QScriptValue getSetPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;
 
     // public methods:
     static  QScriptValue
