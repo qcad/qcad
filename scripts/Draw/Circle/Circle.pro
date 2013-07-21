@@ -4,6 +4,7 @@ SUBDIRS = \
     Circle2P \
     Circle2PR \
     Circle2TR \
+    Circle2TP \
     Circle3P \
     Circle3T \
     CircleCP \
