@@ -650,9 +650,10 @@ EAction.getMenu = function(title, objectName, initFunction) {
     var menu;
     for ( var i in menuBar.children()) {
         menu = menuBar.children()[i];
-        if (menu.objectName == objectName) {
+        if (menu.objectName === objectName) {
             break;
         }
+        qDebug("menu: ", menu.objectName);
         menu = undefined;
     }
     if (isNull(menu)) {
@@ -671,35 +672,37 @@ EAction.getMenu = function(title, objectName, initFunction) {
  * submenu as child of the given menu, with the given sort order, title and
  * icon.
  * 
- * \param menu Parent menu. \param sortOrder Sort oder among other submenus. All
- * submenus within the same menu are ordered by this number. \param title
- * Translated title of the submenu. E.g. qsTr("&Line"). \param objectName Object
- * name to use for the menu. Used mainly for later identification of the menu.
+ * \param menu Parent menu.
+ * \param sortOrder Sort oder among other submenus. All
+ *      submenus within the same menu are ordered by this number.
+ * \param title Translated title of the submenu. E.g. qsTr("&Line").
+ * \param objectName Object name to use for the menu. Used mainly for
+ *      later identification of the menu.
  * E.g. "line". \param iconFile Path and file name of icon to use for this
  * submenu.
  */
 EAction.getSubMenu = function(menu, sortOrder, title, objectName, iconFile) {
-    var subMenu = menu.findChild(title);
-    if (subMenu == undefined) {
+    var subMenu = menu.findChild(objectName);
+    if (isNull(subMenu)) {
         var subMenuActions = menu.actions();
         var actionBefore;
         for ( var i = 0; i < subMenuActions.length; ++i) {
             var so = subMenuActions[i].property("SortOrder");
-            if (so != undefined && so > sortOrder) {
+            if (!isNull(so) && so > sortOrder) {
                 actionBefore = subMenuActions[i];
                 break;
             }
         }
         subMenu = new QMenu(title, menu);
-        if (iconFile != undefined) {
+        if (!isNull(iconFile)) {
             subMenu.icon = new QIcon(iconFile);
         }
-        if (actionBefore == undefined) {
+        if (isNull(actionBefore)) {
             subMenuAction = menu.addMenu(subMenu);
         } else {
             subMenuAction = menu.insertMenu(actionBefore, subMenu);
         }
-        subMenu.objectName = title;
+        subMenu.objectName = objectName;
         subMenuAction.setProperty("SortOrder", sortOrder);
     }
     return subMenu;

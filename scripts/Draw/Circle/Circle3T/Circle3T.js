@@ -130,18 +130,19 @@ Circle3T.prototype.pickEntity = function(event, preview) {
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
 
-    var shape = undefined;
-    if (!isNull(entity)) {
-        shape = entity.getClosestShape(pos);
+    if (isNull(entity)) {
+        return;
+    }
 
-        if (!preview) {
-            if (!isLineShape(shape) &&
-                !isArcShape(shape) &&
-                !isCircleShape(shape)) {
+    var shape = entity.getClosestShape(pos);
 
-                EAction.warnNotLineArcCircle();
-                return;
-            }
+    if (!preview) {
+        if (!isLineShape(shape) &&
+            !isArcShape(shape) &&
+            !isCircleShape(shape)) {
+
+            EAction.warnNotLineArcCircle();
+            return;
         }
     }
 
@@ -219,7 +220,16 @@ Circle3T.prototype.getOperation = function(preview) {
         var entity = new RCircleEntity(doc, new RCircleData(shape[i]));
         op.addObject(entity);
     }
+
+    for (var k=0; k<Apollonius.constructionShapes.length; k++) {
+        var s = Apollonius.constructionShapes[k];
+        var e = shapeToEntity(doc, s);
+        e.setColor(new RColor("blue"));
+        op.addObject(e, false);
+    }
+
     return op;
+
 
 //    if (!isEntity(entity)) {
 //        return undefined;
@@ -235,6 +245,7 @@ Circle3T.prototype.getCircle3T = function(preview) {
 
     var i,k,ips;
 
+    Apollonius.constructionShapes = [];
     var candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), this.shape3.data());
 
     if (!preview) {

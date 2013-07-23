@@ -10,6 +10,6 @@ function init(basePath) {
                                     "Draw Box Joint Fingers, Slots and Tennons"));
     action.setDefaultShortcut(new QKeySequence("l,j"));
     action.setDefaultCommands(["boxjoint", "bxj"]);
-    action.setSortOrder(450);
-    EAction.addGuiActionTo(action, DrawExamples, true, true, true);
+    action.setSortOrder(100);
+    EAction.addGuiActionTo(action, MiscDraw, true, true, true);
 }

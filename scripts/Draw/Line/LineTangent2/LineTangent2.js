@@ -18,6 +18,7 @@
  */
 
 include("../Line.js");
+include("scripts/ShapeAlgorithms.js");
 
 /**
  * \class LineTangent2
@@ -226,68 +227,8 @@ LineTangent2.prototype.getOperation = function(preview) {
 };
 
 LineTangent2.prototype.getTangent = function() {
-    var ret, offs1, offs2;
-    
-    var doc = this.getDocument();
-
-    var circleCenter1 = this.shape1.getCenter();
-    var circleRadius1 = this.shape1.getRadius();
-    var circleCenter2 = this.shape2.getCenter();
-    var circleRadius2 = this.shape2.getRadius();
-
-    // create all four possible tangents:
-    var tangents = new Array();
-
-    var angle1 = circleCenter1.getAngleTo(circleCenter2);
-    var dist1 = circleCenter1.getDistanceTo(circleCenter2);
-
-    if (dist1<1.0e-6) {
-        return undefined;
-    }
-
-    // outer tangents:
-    var dist2 = circleRadius2 - circleRadius1;
-    if (dist1>dist2) {
-        var angle2 = Math.asin(dist2/dist1);
-        var angt1 = angle1 + angle2 + Math.PI/2.0;
-        var angt2 = angle1 - angle2 - Math.PI/2.0;
-        offs1 = new RVector();
-        offs2 = new RVector();
-
-        offs1.setPolar(circleRadius1, angt1);
-        offs2.setPolar(circleRadius2, angt1);
-
-        tangents.push(new RLine(circleCenter1.operator_add(offs1),
-                                circleCenter2.operator_add(offs2)));
-
-        offs1.setPolar(circleRadius1, angt2);
-        offs2.setPolar(circleRadius2, angt2);
-
-        tangents.push(new RLine(circleCenter1.operator_add(offs1),
-                                circleCenter2.operator_add(offs2)));
-    }
-
-    // inner tangents:
-    var dist3 = circleRadius2 + circleRadius1;
-    if (dist1>dist3) {
-        var angle3 = Math.asin(dist3/dist1);
-        var angt3 = angle1 + angle3 + Math.PI/2.0;
-        var angt4 = angle1 - angle3 - Math.PI/2.0;
-        offs1 = new RVector();
-        offs2 = new RVector();
-
-        offs1.setPolar(circleRadius1, angt3);
-        offs2.setPolar(circleRadius2, angt3);
-
-        tangents.push(new RLine(circleCenter1.operator_subtract(offs1),
-                                circleCenter2.operator_add(offs2)));
-
-        offs1.setPolar(circleRadius1, angt4);
-        offs2.setPolar(circleRadius2, angt4);
-
-        tangents.push(new RLine(circleCenter1.operator_subtract(offs1),
-                                circleCenter2.operator_add(offs2)));
-    }
+    var ret;
+    var tangents = ShapeAlgorithms.getTangents(this.shape1, this.shape2);
 
     // find closest tangent:
     var minDist;

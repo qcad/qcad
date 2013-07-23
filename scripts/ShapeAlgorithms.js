@@ -24,6 +24,71 @@
 function ShapeAlgorithms() {
 }
 
+ShapeAlgorithms.getTangents = function(circle1, circle2) {
+    var offs1, offs2;
+
+    var circleCenter1 = circle1.getCenter();
+    var circleRadius1 = circle1.getRadius();
+    var circleCenter2 = circle2.getCenter();
+    var circleRadius2 = circle2.getRadius();
+
+    // create all four possible tangents:
+    var tangents = new Array();
+
+    var angle1 = circleCenter1.getAngleTo(circleCenter2);
+    var dist1 = circleCenter1.getDistanceTo(circleCenter2);
+
+    if (dist1<1.0e-6) {
+        return [];
+    }
+
+    // outer tangents:
+    var dist2 = circleRadius2 - circleRadius1;
+    if (dist1>dist2) {
+        var angle2 = Math.asin(dist2/dist1);
+        var angt1 = angle1 + angle2 + Math.PI/2.0;
+        var angt2 = angle1 - angle2 - Math.PI/2.0;
+        offs1 = new RVector();
+        offs2 = new RVector();
+
+        offs1.setPolar(circleRadius1, angt1);
+        offs2.setPolar(circleRadius2, angt1);
+
+        tangents.push(new RLine(circleCenter1.operator_add(offs1),
+                                circleCenter2.operator_add(offs2)));
+
+        offs1.setPolar(circleRadius1, angt2);
+        offs2.setPolar(circleRadius2, angt2);
+
+        tangents.push(new RLine(circleCenter1.operator_add(offs1),
+                                circleCenter2.operator_add(offs2)));
+    }
+
+    // inner tangents:
+    var dist3 = circleRadius2 + circleRadius1;
+    if (dist1>dist3) {
+        var angle3 = Math.asin(dist3/dist1);
+        var angt3 = angle1 + angle3 + Math.PI/2.0;
+        var angt4 = angle1 - angle3 - Math.PI/2.0;
+        offs1 = new RVector();
+        offs2 = new RVector();
+
+        offs1.setPolar(circleRadius1, angt3);
+        offs2.setPolar(circleRadius2, angt3);
+
+        tangents.push(new RLine(circleCenter1.operator_subtract(offs1),
+                                circleCenter2.operator_add(offs2)));
+
+        offs1.setPolar(circleRadius1, angt4);
+        offs2.setPolar(circleRadius2, angt4);
+
+        tangents.push(new RLine(circleCenter1.operator_subtract(offs1),
+                                circleCenter2.operator_add(offs2)));
+    }
+
+    return tangents;
+};
+
 /**
  * \return Parallels to this shape.
  * \param distance Distance of first parallel or concentric arc or circle.

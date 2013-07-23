@@ -26,36 +26,36 @@
 include("../EAction.js");
 
 /**
- * \class Examples
+ * \class Misc
  * \brief Base class for all example scripts.
  */
-function Examples(guiAction) {
+function Misc(guiAction) {
     EAction.call(this, guiAction);
 }
 
-Examples.prototype = new EAction();
-Examples.includeBasePath = includeBasePath;
+Misc.prototype = new EAction();
+Misc.includeBasePath = includeBasePath;
 
-Examples.getMenu = function() {
-    var menu = EAction.getMenu(Examples.getTitle(), "ExamplesMenu");
-    menu.setProperty("scriptFile", Examples.includeBasePath + "/Examples.js");
+Misc.getMenu = function() {
+    var menu = EAction.getMenu(Misc.getTitle(), "MiscMenu");
+    menu.setProperty("scriptFile", Misc.includeBasePath + "/Misc.js");
     return menu;
 };
 
-Examples.getToolBar = function() {
-    var tb = EAction.getToolBar(Examples.getTitle(), "ExamplesToolBar");
+Misc.getToolBar = function() {
+    var tb = EAction.getToolBar(Misc.getTitle(), "MiscToolBar");
     tb.visible = false;
     return tb;
 };
 
-Examples.getCadToolBarPanel = function() {
+Misc.getCadToolBarPanel = function() {
     return EAction.getMainCadToolBarPanel();
 };
 
-Examples.getTitle = function() {
+Misc.getTitle = function() {
     return qsTr("&Misc");
 };
 
-Examples.prototype.getTitle = function() {
-    return Examples.getTitle();
+Misc.prototype.getTitle = function() {
+    return Misc.getTitle();
 };

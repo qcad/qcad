@@ -7,6 +7,6 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("r,v"));
     action.setStatusTip(qsTranslate("LineDove", "Draw a dovetail joint"));
     action.setDefaultCommands(["dovetail"]);
-    action.setSortOrder(500);
-    EAction.addGuiActionTo(action, DrawExamples, true, true, true, true);
+    action.setSortOrder(200);
+    EAction.addGuiActionTo(action, MiscDraw, true, true, true);
 }

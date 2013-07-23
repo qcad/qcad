@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../DrawExamples.js");
+include("script/EAction.js");
 
 /**
  * \class LineBoxjoint
@@ -25,7 +25,7 @@ include("../DrawExamples.js");
  * \ingroup ecma_draw_line
  */
 function LineBoxjoint(guiAction) {
-  DrawExamples.call(this, guiAction);
+  EAction.call(this, guiAction);
   
   this.corner1 = undefined;
   this.corner2 = undefined;
@@ -38,7 +38,7 @@ function LineBoxjoint(guiAction) {
   this.setUiOptions("LineBoxjoint.ui");
 }
 
-LineBoxjoint.prototype = new DrawExamples();
+LineBoxjoint.prototype = new EAction();
 
 LineBoxjoint.State = {
   SettingCorner1 : 0,
@@ -46,13 +46,13 @@ LineBoxjoint.State = {
 };
 
 LineBoxjoint.prototype.beginEvent = function() {
-  DrawExamples.prototype.beginEvent.call(this);
+  EAction.prototype.beginEvent.call(this);
   
   this.setState(LineBoxjoint.State.SettingCorner1);
 };
 
 LineBoxjoint.prototype.setState = function(state) {
-  DrawExamples.prototype.setState.call(this, state);
+  EAction.prototype.setState.call(this, state);
   
   this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
   this.setCrosshairCursor();

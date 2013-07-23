@@ -5,6 +5,4 @@ SUBDIRS = \
     ExDrawBoundingBox \
     ExDrawColors \
     ExText \
-    ExThreePoints \
-    LineBoxjoint \
-    LineDove
+    ExThreePoints

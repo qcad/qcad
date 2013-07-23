@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../DrawExamples.js");
+include("scripts/EAction.js");
 
 /**
  * \class LineDove
@@ -25,13 +25,13 @@ include("../DrawExamples.js");
  * \ingroup ecma_draw_line
  */
 function LineDove(guiAction) {
-    DrawExamples.call(this, guiAction);
+    EAction.call(this, guiAction);
 
     this.corner1 = undefined;
     this.corner2 = undefined;
 }
 
-LineDove.prototype = new DrawExamples();
+LineDove.prototype = new EAction();
 
 LineDove.State = {
     SettingCorner1 : 0,
@@ -39,13 +39,13 @@ LineDove.State = {
 };
 
 LineDove.prototype.beginEvent = function() {
-    DrawExamples.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     this.setState(LineDove.State.SettingCorner1);
 };
 
 LineDove.prototype.setState = function(state) {
-    DrawExamples.prototype.setState.call(this, state);
+    EAction.prototype.setState.call(this, state);
 
     this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
     this.setCrosshairCursor();

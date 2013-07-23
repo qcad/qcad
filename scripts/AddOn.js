@@ -456,7 +456,7 @@ AddOn.getAddOns = function(dir) {
                 new QFileInfo("scripts/Developer"),
                 new QFileInfo("scripts/Window"),
                 new QFileInfo("scripts/Widgets"),
-                new QFileInfo("scripts/Examples"),
+                new QFileInfo("scripts/Misc"),
                 new QFileInfo("scripts/Local"),
                 new QFileInfo(":scripts"),       // scripts wrapped in plugins
                 new QFileInfo("scripts/Help")

@@ -1,7 +1,4 @@
 function init(basePath) {
-    // diabled for now:
-    return;
-
     var action = new RGuiAction(qsTranslate("Circle2TP", "Point, 2 Tan&gents"),
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);

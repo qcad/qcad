@@ -1,5 +1,6 @@
 TEMPLATE = subdirs
 SUBDIRS = \
+    ts \
     BlockExamples \
     CommandLineExamples \
     DrawExamples \
@@ -7,6 +8,4 @@ SUBDIRS = \
     LayerExamples \
     MathExamples \
     ModifyExamples \
-    SystemExamples \
-    Tutorials \
-    ts
+    SystemExamples

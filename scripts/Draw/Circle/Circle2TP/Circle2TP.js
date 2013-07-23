@@ -122,18 +122,19 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
 
-    var shape = undefined;
-    if (!isNull(entity)) {
-        shape = entity.getClosestShape(pos);
+    if (isNull(entity)) {
+        return;
+    }
 
-        if (!preview) {
-            if (!isLineShape(shape) &&
-                !isArcShape(shape) &&
-                !isCircleShape(shape)) {
+    var shape = entity.getClosestShape(pos);
 
-                EAction.warnNotLineArcCircle();
-                return;
-            }
+    if (!preview) {
+        if (!isLineShape(shape) &&
+            !isArcShape(shape) &&
+            !isCircleShape(shape)) {
+
+            EAction.warnNotLineArcCircle();
+            return;
         }
     }
 
