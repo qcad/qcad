@@ -3,4 +3,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     ts \
     LineBoxJoint \
-    LineDove
+    LineDove \
+    LineRadicalAxis \
+    PointPole \
+    PointPowerCenter

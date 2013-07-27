@@ -136,14 +136,14 @@ Circle3T.prototype.pickEntity = function(event, preview) {
 
     var shape = entity.getClosestShape(pos);
 
-    if (!preview) {
-        if (!isLineShape(shape) &&
-            !isArcShape(shape) &&
-            !isCircleShape(shape)) {
+    if (!isLineShape(shape) &&
+        !isArcShape(shape) &&
+        !isCircleShape(shape)) {
 
+        if (!preview) {
             EAction.warnNotLineArcCircle();
-            return;
         }
+        return;
     }
 
     switch (this.state) {

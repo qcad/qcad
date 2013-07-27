@@ -653,7 +653,6 @@ EAction.getMenu = function(title, objectName, initFunction) {
         if (menu.objectName === objectName) {
             break;
         }
-        qDebug("menu: ", menu.objectName);
         menu = undefined;
     }
     if (isNull(menu)) {

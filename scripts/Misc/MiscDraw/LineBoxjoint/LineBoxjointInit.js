@@ -11,5 +11,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("l,j"));
     action.setDefaultCommands(["boxjoint", "bxj"]);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, MiscDraw, true, true, true);
+    EAction.addGuiActionTo(action, MiscDraw, true, true);
 }

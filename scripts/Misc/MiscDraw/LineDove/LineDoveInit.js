@@ -8,5 +8,5 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("LineDove", "Draw a dovetail joint"));
     action.setDefaultCommands(["dovetail"]);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, MiscDraw, true, true, true);
+    EAction.addGuiActionTo(action, MiscDraw, true, true);
 }
