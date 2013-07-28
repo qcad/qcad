@@ -28,6 +28,7 @@
 
 const RVector RVector::invalid = RVector(0, 0, 0, false);
 const RVector RVector::nullVector = RVector(0, 0, 0, true);
+RVector RVector::RVectorDistanceSort::v;
 
 RVector::RVector(double vx, double vy, double vz, bool valid_in) :
     x(vx), y(vy), z(vz) {
@@ -819,6 +820,16 @@ int RVector::getClosestIndex(const QList<RVector>& list) const {
     }
 
     return index;
+}
+
+/**
+ * \return List of same vectors as given, ordered by shortes distance to given vector v.
+ */
+QList<RVector> RVector::getSortedByDistance(const QList<RVector>& list, const RVector& v) {
+    RVectorDistanceSort::v = v;
+    QList<RVector> ret = list;
+    qSort(ret.begin(), ret.end(), RVectorDistanceSort::lessThan);
+    return ret;
 }
 
 

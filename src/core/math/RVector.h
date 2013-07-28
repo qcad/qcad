@@ -218,6 +218,15 @@ public:
         return v1.y > v2.y;
     }
 
+    static QList<RVector> getSortedByDistance(const QList<RVector>& list, const RVector& v);
+    class RVectorDistanceSort {
+    public:
+        static bool lessThan(const RVector& v1, const RVector& v2) {
+            return v.getDistanceTo(v1) < v.getDistanceTo(v2);
+        }
+        static RVector v;
+    };
+
 public:
     /**
      * \getter{getX}

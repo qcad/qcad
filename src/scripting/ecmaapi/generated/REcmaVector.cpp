@@ -242,6 +242,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, greaterThanY, "greaterThanY");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getSortedByDistance, "getSortedByDistance");
+            
 
     // static properties:
     
@@ -5822,6 +5824,82 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::greaterThanY", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getSortedByDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getSortedByDistance", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getSortedByDistance";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RVector::
+       getSortedByDistance(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getSortedByDistance().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getSortedByDistance", context, engine);
             return result;
         }
          QScriptValue REcmaVector::toString

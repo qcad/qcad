@@ -260,6 +260,9 @@
         ;static  QScriptValue
         greaterThanY
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSortedByDistance
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy
