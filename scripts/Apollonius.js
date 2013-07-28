@@ -69,8 +69,14 @@ Apollonius.getSolutions = function(shape1, shape2, shape3) {
     else if (lines.length===3) {
         return Apollonius.getSolutionsLLL(lines[0], lines[1], lines[2]);
     }
+    else if (points.length===3) {
+        return RCircle.createFrom3Points(points[0].position, points[1].position, points[2].position);
+    }
     else if (points.length===1 && circles.length===2) {
         return Apollonius.getSolutionsPCC(points[0], circles[0], circles[1]);
+    }
+    else if (points.length===2 && circles.length===1) {
+        return Apollonius.getSolutionsPPC(points[0], points[1], circles[0]);
     }
 
     qDebug("CASE NOT YET HANDLED");
@@ -449,7 +455,27 @@ Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
         debugger;
         return undefined;
     }
+};
 
+/**
+ * \return Solutions for circles that are tangetial to the two given points
+ * and the given circle.
+ */
+Apollonius.getSolutionsPPC = function(point1, point2, circle) {
+    // both points are on the circle line:
+    if (circle.isOnShape(point1.position) && circle.isOnShape(point2.position)) {
+        return [ circle ];
+    }
+
+    var inversionCircle = new RCircle(point1.position, 10);
+    var ret = [];
+
+    var circleInverse = Apollonius.getInverseShape(circle, inversionCircle);
+    var point2Inverse = Apollonius.getInverseShape(point2, inversionCircle);
+
+    var tangents = Apollonius.getTangentsThroughPoint(circleInverse, point2Inverse.position);
+
+    return Apollonius.getInverseShapes(tangents, inversionCircle);
 };
 
 Apollonius.getInverseShapes = function(shapes, circle) {
@@ -489,7 +515,6 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
         return new RPoint(new RVector(x, y));
     }
 
-    /*
     if (isLineShape(shape)) {
         var center = inversionCircle.center;
 
@@ -508,7 +533,6 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
             return RCircle.createFrom2Points(center, pInverse.position);
         }
     }
-    */
 
     if (isCircleShape(shape)) {
         var circle = shape;
@@ -717,3 +741,8 @@ Apollonius.getAngleBisectors = function(line1, line2) {
     ];
 };
 
+Apollonius.getVerticalToPoint = function(line, p) {
+    var v = RVector.createPolar(10, line.getAngle() + Math.PI/2);
+    v = v.operator_add(p);
+    return new RLine(p, v);
+};

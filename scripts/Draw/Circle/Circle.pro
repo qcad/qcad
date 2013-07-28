@@ -9,5 +9,6 @@ SUBDIRS = \
     Circle3T \
     CircleCP \
     CircleCR \
+    CircleT2P \
     CircleConcentric \
     CircleConcentricThrough
