@@ -82,29 +82,28 @@ Apollonius.getSolutions = function(shape1, shape2, shape3) {
  * \return Solutions for circles that are tangetial to the three given circles.
  */
 Apollonius.getSolutionsCCC = function(c1, c2, c3) {
-    qDebug("Apollonius.getSolutionsCCC");
     var ret = [];
     var circle1 = c1;
     var circle2 = c2;
     var circle3 = c3;
 
-//    var commonIP = Apollonius.getCommonIntersectionPoint(circle1, circle2, circle3);
-//    if (!isNull(commonIP)) {
-//        var inversionCircle = new RCircle(commonIP, 10);
-//        var invertedArray = Apollonius.getInverseShapes([circle1, circle2, circle3], inversionCircle);
+    var commonIP = Apollonius.getCommonIntersectionPoint(circle1, circle2, circle3);
+    if (!isNull(commonIP)) {
+        var inversionCircle = new RCircle(commonIP, 10);
+        var invertedArray = Apollonius.getInverseShapes([circle1, circle2, circle3], inversionCircle);
 
-//        if (isLineShape(invertedArray[0]) &&
-//            isLineShape(invertedArray[1]) &&
-//            isLineShape(invertedArray[2])) {
+        if (isLineShape(invertedArray[0]) &&
+            isLineShape(invertedArray[1]) &&
+            isLineShape(invertedArray[2])) {
 
-//            var circlesTouching = Apollonius.getSolutions(invertedArray);
-//            return Apollonius.getInverseShapes(circlesTouching, inversionCircle);
-//        }
-//        else {
-//            return [];
-//        }
-//    }
-//    else {
+            var circlesTouching = Apollonius.getSolutions(invertedArray);
+            return Apollonius.getInverseShapes(circlesTouching, inversionCircle);
+        }
+        else {
+            return [];
+        }
+    }
+    else {
         var powerCenter = Apollonius.getPowerCenter(c1, c2, c3);
         qDebug("powerCenter: ", powerCenter);
         var similarityAxes = Apollonius.getSimilarityAxes(c1, c2, c3);
@@ -170,7 +169,7 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3) {
                 ret.push(RCircle.createFrom3Points(pp,qq,rr));
             }
         }
-    //}
+    }
 
     return ret;
 };
