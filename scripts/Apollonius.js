@@ -78,6 +78,9 @@ Apollonius.getSolutions = function(shape1, shape2, shape3) {
     else if (points.length===2 && circles.length===1) {
         return Apollonius.getSolutionsPPC(points[0], points[1], circles[0]);
     }
+    else if (points.length===1 && lines.length===2) {
+        return Apollonius.getSolutionsPLL(points[0], lines[0], lines[1]);
+    }
 
     qDebug("CASE NOT YET HANDLED");
     debugger;
@@ -478,7 +481,75 @@ Apollonius.getSolutionsPPC = function(point1, point2, circle) {
     return Apollonius.getInverseShapes(tangents, inversionCircle);
 };
 
-Apollonius.getInverseShapes = function(shapes, circle) {
+/**
+ * \return Solutions for circles that are tangetial to the given point
+ * and the given lines.
+ */
+Apollonius.getSolutionsPLL = function(point, line1, line2) {
+    var inversionCircle = new RCircle(point.position, 10);
+
+    if (line1.isOnShape(point.position) && line2.isOnShape(point.position)) {
+        return [];
+    }
+
+    if (line2.isOnShape(point.position)) {
+        return Apollonius.getSolutionsPLL(point, line2, line1);
+    }
+
+    if (line1.isOnShape(point.position)) {
+        var bisectors = Apollonius.getAngleBisectors(line1, line2);
+        qDebug("bisectors: ", bisectors);
+        if (bisectors.length===0) {
+            var distV = line1.getVectorTo(line2.startPoint, false);
+            distV = distV.operator_multiply(0.5);
+            bisectors = [ new RLine(line1.startPoint.operator_add(distV), line1.endPoint.operator_add(distV)) ];
+        }
+
+        var ortho = new RLine(point.position, point.position.operator_add(RVector.createPolar(1.0, line1.getAngle()+Math.PI/2)));
+
+        var ret = [];
+        for (var i=0; i<bisectors.length; i++) {
+            var ips = bisectors[i].getIntersectionPoints(ortho, false);
+            if (ips.length<1) {
+                continue;
+            }
+            ret.push(new RCircle(ips[0], ips[0].getDistanceTo(point.position)));
+        }
+
+        return ret;
+    }
+
+    var line1Inverse = Apollonius.getInverseShape(line1, inversionCircle);
+    Apollonius.constructionShapes.push(line1Inverse);
+    var line2Inverse = Apollonius.getInverseShape(line2, inversionCircle);
+    Apollonius.constructionShapes.push(line2Inverse);
+
+    if (!isCircleShape(line1Inverse) || !isCircleShape(line2Inverse)) {
+        return [];
+    }
+
+    var tangents = Apollonius.getCommonTangents(line1Inverse, line2Inverse);
+    Apollonius.constructionShapes = Apollonius.constructionShapes.concat(tangents);
+    var tangentsInversed = Apollonius.getInverseShapes(tangents, inversionCircle);
+    //Apollonius.constructionShapes.push(tangentsInversed);
+
+    var ret = [];
+    for (var i=0; i<tangentsInversed.length; i++) {
+        if (isCircleShape(tangentsInversed[i])) {
+            ret.push(tangentsInversed[i]);
+        }
+    }
+
+    return ret;
+};
+
+/*
+Apollonius.getCommonTangents = function() {
+
+};
+*/
+
+Apollonius.getInverseShapes = function(shapes, inversionCircle) {
     var iObj;
     var length = shapes.length;
     var invertedArray = [];
@@ -487,7 +558,7 @@ Apollonius.getInverseShapes = function(shapes, circle) {
         if (isNull(shapes[i])) {
             continue;
         }
-        iObj = Apollonius.getInverseShape(shapes[i], circle);
+        iObj = Apollonius.getInverseShape(shapes[i], inversionCircle);
         if (!isNull(iObj)) {
             invertedArray[k++] = iObj;
         }
@@ -642,36 +713,43 @@ Apollonius.getCommonTangents = function(circle1, circle2) {
     var sArr = Apollonius.getTangentsThroughPoint(c2s, c1.center);
     var lArr = Apollonius.getTangentsThroughPoint(c2l, c1.center);
 
-    var tangents = [];
+    var ret = [];
 
     if (sArr.length === 2) {
-        tangents[0] = Apollonius.getParallelLinesWithDistance(sArr[0], c1.radius)[0];
-        tangents[3] = Apollonius.getParallelLinesWithDistance(sArr[1], c1.radius)[1];
+        ret[0] = Apollonius.getParallelLinesWithDistance(sArr[0], c1.radius)[0];
+        ret[3] = Apollonius.getParallelLinesWithDistance(sArr[1], c1.radius)[1];
     }
 
-    // System.out.println("lArr.length = " + lArr.length);
     if (lArr.length > 1) {
-        tangents[1] = Apollonius.getParallelLinesWithDistance(lArr[1], c1.radius)[0];
-        tangents[2] = Apollonius.getParallelLinesWithDistance(lArr[0], c1.radius)[1];
+        ret[1] = Apollonius.getParallelLinesWithDistance(lArr[1], c1.radius)[0];
+        ret[2] = Apollonius.getParallelLinesWithDistance(lArr[0], c1.radius)[1];
     }
 
-    qDebug("tangents: ", tangents);
+    qDebug("tangents: ", ret);
 
-    return tangents;
+    return ret;
 };
 
 Apollonius.getTangentsThroughPoint = function(circle, p) {
+    // used when creating tangential circles to two parallel lines and point:
+    if (Math.abs(circle.radius)<RS.PointTolerance) {
+        var lines = [];
+        lines[0] = lines[1] = new RLine(p, circle.center);
+        return lines;
+    }
+
     // point is inside the circle:
-    if (circle.contains(p)) {
+    else if (circle.contains(p)) {
         return [];
     }
 
-    // point on the circle line:
+    // point on the circle line (produces error):
     else if (circle.isOnShape(p)) {
-        var s = new RLine(p, circle.center);
-        var lines = [];
-        lines[0] = lines[1] = new RLine(p.position, s.getAngle() + Math.PI/2, 1.0);
-        return lines;
+//        var s = new RLine(p, circle.center);
+//        var lines = [];
+//        lines[0] = lines[1] = new RLine(p, s.getAngle() + Math.PI/2, 1.0);
+//        return lines;
+        return [];
     }
 
     // point outside circle:

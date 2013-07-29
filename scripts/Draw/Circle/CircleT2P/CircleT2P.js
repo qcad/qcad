@@ -190,6 +190,7 @@ CircleT2P.prototype.getOperation = function(preview) {
     // temporary disabled:
     if (preview) return undefined;
 
+    Apollonius.constructionShapes = [];
     var shape = this.getCircleT2P(preview);
 
     if (isNull(shape)) {
@@ -214,8 +215,10 @@ CircleT2P.prototype.getOperation = function(preview) {
     for (var k=0; k<Apollonius.constructionShapes.length; k++) {
         var s = Apollonius.constructionShapes[k];
         var e = shapeToEntity(doc, s);
-        e.setColor(new RColor("blue"));
-        op.addObject(e, false);
+        if (!isNull(e)) {
+            e.setColor(new RColor("blue"));
+            op.addObject(e, false);
+        }
     }
 
     return op;
@@ -231,7 +234,6 @@ CircleT2P.prototype.getCircleT2P = function(preview) {
     var shape2 = new RPoint(this.pos2);
     var shape3 = new RPoint(this.pos3);
 
-    Apollonius.constructionShapes = [];
     var candidates = Apollonius.getSolutions(this.shape1.data(), shape2, shape3);
 
     if (!preview) {

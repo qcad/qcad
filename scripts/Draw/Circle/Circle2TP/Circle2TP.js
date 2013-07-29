@@ -219,9 +219,12 @@ Circle2TP.prototype.getOperation = function(preview) {
 
     for (var k=0; k<Apollonius.constructionShapes.length; k++) {
         var s = Apollonius.constructionShapes[k];
+        qDebug("construction shape: ", s);
         var e = shapeToEntity(doc, s);
-        e.setColor(new RColor("blue"));
-        op.addObject(e, false);
+        if (!isNull(e)) {
+            e.setColor(new RColor("blue"));
+            op.addObject(e, false);
+        }
     }
 
     return op;
