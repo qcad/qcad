@@ -76,7 +76,7 @@ public:
     void setArea(double a);
 
     bool contains(const RVector& p) const;
-    bool touchesCircleInternally(const RCircle& other) const;
+    //bool touchesCircleInternally(const RCircle& other) const;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);

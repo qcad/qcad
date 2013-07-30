@@ -135,9 +135,9 @@ bool RCircle::contains(const RVector& p) const {
     // TODO: + RS::PointTolerance ?
 }
 
-bool RCircle::touchesCircleInternally(const RCircle& other) const {
-    return contains(other.center) || other.contains(center);
-}
+//bool RCircle::touchesCircleInternally(const RCircle& other) const {
+//    return contains(other.center) || other.contains(center);
+//}
 
 QList<RVector> RCircle::getEndPoints() const {
     QList<RVector> ret;

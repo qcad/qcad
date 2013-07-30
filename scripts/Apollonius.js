@@ -63,28 +63,58 @@ Apollonius.getSolutions = function(shape1, shape2, shape3) {
         }
     }
 
-    if (circles.length===3) {
-        return Apollonius.getSolutionsCCC(circles[0], circles[1], circles[2]);
+    if (points.length===3) {
+        return Apollonius.getSolutionsPPP(points[0], points[1], points[2]);
     }
-    else if (lines.length===3) {
-        return Apollonius.getSolutionsLLL(lines[0], lines[1], lines[2]);
+
+    else if (points.length===2) {
+        if (circles.length===1) {
+            return Apollonius.getSolutionsPPC(points[0], points[1], circles[0]);
+        }
+        else if (lines.length===1) {
+            return Apollonius.getSolutionsPPL(points[0], points[1], lines[0]);
+        }
     }
-    else if (points.length===3) {
-        return RCircle.createFrom3Points(points[0].position, points[1].position, points[2].position);
+
+    else if (points.length===1) {
+        if (circles.length===2) {
+            return Apollonius.getSolutionsPCC(points[0], circles[0], circles[1]);
+        }
+        else if (lines.length===2) {
+            return Apollonius.getSolutionsPLL(points[0], lines[0], lines[1]);
+        }
+        else if (circles.length===1 && lines.length===1) {
+            // TODO:
+            return Apollonius.getSolutionsPLC(points[0], lines[0], circles[0]);
+        }
     }
-    else if (points.length===1 && circles.length===2) {
-        return Apollonius.getSolutionsPCC(points[0], circles[0], circles[1]);
-    }
-    else if (points.length===2 && circles.length===1) {
-        return Apollonius.getSolutionsPPC(points[0], points[1], circles[0]);
-    }
-    else if (points.length===1 && lines.length===2) {
-        return Apollonius.getSolutionsPLL(points[0], lines[0], lines[1]);
+
+    else if (points.length===0) {
+        if (lines.length===3) {
+            return Apollonius.getSolutionsLLL(lines[0], lines[1], lines[2]);
+        }
+        else if (lines.length===2 && circles.length===1) {
+            return Apollonius.getSolutionsLLC(lines[0], lines[1], circles[0]);
+        }
+        else if (lines.length===1 && circles.length===2) {
+            // TODO:
+            return Apollonius.getSolutionsLCC(lines[0], circles[0], circles[1]);
+        }
+        else if (circles.length===3) {
+            return Apollonius.getSolutionsCCC(circles[0], circles[1], circles[2]);
+        }
     }
 
     qDebug("CASE NOT YET HANDLED");
     debugger;
     return [];
+};
+
+/**
+ * \return Solutions for circles that are tangetial to the three given points.
+ */
+Apollonius.getSolutionsPPP = function(point1, point2, point3) {
+    return RCircle.createFrom3Points(point1.position, point2.position, point3.position);
 };
 
 /**
@@ -447,10 +477,10 @@ Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
         qDebug("circlesInverse", circlesInverse);
         //Apollonius.constructionShapes = Apollonius.constructionShapes.concat(circlesInverse);
 
-        var tArr = Apollonius.getCommonTangents(circlesInverse[0], circlesInverse[1]);
-        qDebug("tArr", tArr);
+        var tangents = Apollonius.getCommonTangents(circlesInverse[0], circlesInverse[1]);
+        qDebug("tangents", tangents);
 
-        return Apollonius.getInverseShapes(tArr, inversionCircle);
+        return Apollonius.getInverseShapes(tangents, inversionCircle);
     }
     else {
         // TODO: error handling
@@ -480,6 +510,114 @@ Apollonius.getSolutionsPPC = function(point1, point2, circle) {
 
     return Apollonius.getInverseShapes(tangents, inversionCircle);
 };
+
+/**
+ * \return Solutions for circles that are tangetial to the two given points
+ * and the given line.
+ */
+Apollonius.getSolutionsPPL = function(point1, point2, line) {
+    if (line.isOnShape(point1.position)) {
+        var p = point1.clone();
+        point1 = point2.clone();
+        point2 = p.clone();
+
+        if (line.isOnShape(point1)) {
+            return [];
+        }
+    }
+
+    var inversionCircle = new RCircle(point1.position, 10);
+
+    var lineInverse = Apollonius.getInverseShape(line, inversionCircle);
+    var point2Inverse = Apollonius.getInverseShape(point2, inversionCircle);
+    var tangents = Apollonius.getTangentsThroughPoint(lineInverse, point2Inverse.position);
+
+    return Apollonius.getInverseShapes(tangents, inversionCircle);
+};
+
+/**
+ * \return Solutions for circles that are tangetial to the two given lines
+ * and the given point.
+ */
+Apollonius.getSolutionsLLP = function(line1, line2, point) {
+    var inversionCircle = new RCircle(point.position, 10);
+
+    var line1Inverse = Apollonius.getInverseShape(line1, inversionCircle);
+    var line2Inverse = Apollonius.getInverseShape(line2, inversionCircle);
+
+    var tangents = Apollonius.getCommonTangents(line1Inverse, line2Inverse);
+    return Apollonius.getInverseShapes(tangents, inversionCircle);
+};
+
+/**
+ * \return Solutions for circles that are tangetial to the two given lines
+ * and the given circle.
+ */
+Apollonius.getSolutionsLLC = function(line1, line2, circle) {
+    var parallels1 = ShapeAlgorithms.getOffsetShapes(line1, circle.radius, 1, RS.BothSides);
+    var parallels2 = ShapeAlgorithms.getOffsetShapes(line2, circle.radius, 1, RS.BothSides);
+
+    var arr1 = [];
+    var arr2 = [];
+    var arr3 = [];
+    var arr4 = [];
+
+    arr1.push(new RPoint(circle.center));
+    arr2.push(new RPoint(circle.center));
+    arr3.push(new RPoint(circle.center));
+    arr4.push(new RPoint(circle.center));
+
+    arr1.push(parallels1[0]);
+    arr2.push(parallels1[0]);
+    arr3.push(parallels1[1]);
+    arr4.push(parallels1[1]);
+
+    arr1.push(parallels2[0]);
+    arr2.push(parallels2[1]);
+    arr3.push(parallels2[0]);
+    arr4.push(parallels2[1]);
+
+    var cArr1 = Apollonius.getSolutions(arr1[0], arr1[1], arr1[2]);
+    var cArr2 = Apollonius.getSolutions(arr2[0], arr2[1], arr2[2]);
+    var cArr3 = Apollonius.getSolutions(arr3[0], arr3[1], arr3[2]);
+    var cArr4 = Apollonius.getSolutions(arr4[0], arr4[1], arr4[2]);
+
+    var cArrs = [ cArr1, cArr2, cArr3, cArr4 ];
+    var rArr = [];
+    var tmpCircle, obj1, obj2;
+    for (var i=0; i<cArrs.length; i++) {
+        var cArr = cArrs[i];
+
+        for (var k=0; k<cArr.length; k++) {
+            var obj = cArr[k];
+            if (!isCircleShape(obj)) {
+                continue;
+            }
+            tmpCircle = obj.clone();
+            obj1 = obj.clone();
+            obj2 = obj.clone();
+            obj1.radius += circle.radius;
+            obj2.radius -= circle.radius;
+
+            if (RMath.fuzzyCompare(obj1.center.getDistanceTo(circle.center), obj1.radius+circle.radius) &&
+                RMath.fuzzyCompare(line1.getDistanceTo(obj1.center, false), obj1.radius) &&
+                RMath.fuzzyCompare(line2.getDistanceTo(obj1.center, false), obj1.radius)) {
+
+                rArr.push(obj1);
+            }
+
+            if (RMath.fuzzyCompare(obj2.center.getDistanceTo(circle.center), obj2.radius+circle.radius) &&
+                RMath.fuzzyCompare(line1.getDistanceTo(obj2.center, false), obj2.radius) &&
+                RMath.fuzzyCompare(line2.getDistanceTo(obj2.center, false), obj2.radius)) {
+
+                rArr.push(obj2);
+            }
+        }
+    }
+
+    return rArr;
+};
+
 
 /**
  * \return Solutions for circles that are tangetial to the given point
@@ -820,7 +958,12 @@ Apollonius.getAngleBisectors = function(line1, line2) {
 };
 
 Apollonius.getVerticalToPoint = function(line, p) {
+    var p1 = line.getClosestPointOnShape(p, false);
+    return new RLine(p, p1);
+
+    /*
     var v = RVector.createPolar(10, line.getAngle() + Math.PI/2);
     v = v.operator_add(p);
     return new RLine(p, v);
+    */
 };

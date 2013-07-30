@@ -224,6 +224,10 @@ Circle3T.prototype.getOperation = function(preview) {
     for (var k=0; k<Apollonius.constructionShapes.length; k++) {
         var s = Apollonius.constructionShapes[k];
         var e = shapeToEntity(doc, s);
+        if (isNull(e)) {
+            continue;
+        }
+
         e.setColor(new RColor("blue"));
         op.addObject(e, false);
     }
