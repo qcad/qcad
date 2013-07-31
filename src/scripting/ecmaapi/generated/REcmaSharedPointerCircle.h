@@ -117,9 +117,6 @@
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        touchesCircleInternally
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
