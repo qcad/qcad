@@ -389,21 +389,8 @@ dir="./core/math" filename="RCircle.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>touchesCircleInternally</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RCircle</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
+  <comment type="line">//bool touchesCircleInternally(const
+  RCircle&amp; other) const;</comment>
   <function_decl>
   <type>
     <name>virtual</name>

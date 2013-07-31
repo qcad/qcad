@@ -161,14 +161,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="touchesCircleInternally"
-    cppName="touchesCircleInternally" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="RCircle &amp;" typeName="RCircle" name="other"
-        isConst="true" />
-      </variant>
-    </method>
     <method name="move" cppName="move" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
