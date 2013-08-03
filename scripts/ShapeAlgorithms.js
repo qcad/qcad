@@ -63,6 +63,10 @@ ShapeAlgorithms.getTangents = function(circle1, circle2) {
         tangents.push(new RLine(circleCenter1.operator_add(offs1),
                                 circleCenter2.operator_add(offs2)));
     }
+    else {
+        tangents.push(undefined);
+        tangents.push(undefined);
+    }
 
     // inner tangents:
     var dist3 = circleRadius2 + circleRadius1;
@@ -84,6 +88,10 @@ ShapeAlgorithms.getTangents = function(circle1, circle2) {
 
         tangents.push(new RLine(circleCenter1.operator_subtract(offs1),
                                 circleCenter2.operator_add(offs2)));
+    }
+    else {
+        tangents.push(undefined);
+        tangents.push(undefined);
     }
 
     return tangents;

@@ -4,12 +4,12 @@ SUBDIRS = \
 	Block \
     Draw \
     Edit \
-    Examples \
     File \
     Help \
     Information \
     ImportExport \
     Layer \
+    Misc \
     Modify \
     Navigation \
     Projection \

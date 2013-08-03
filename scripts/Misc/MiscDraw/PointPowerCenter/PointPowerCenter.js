@@ -40,6 +40,9 @@ PointPowerCenter.prototype.getShapes = function(preview) {
     var c = Apollonius.getPowerCenter(this.shape1.data(), this.shape2.data(), this.shape3.data());
 
     if (isNull(c)) {
+        if (!preview) {
+            this.error = qsTr("No solution");
+        }
         return undefined;
     }
 

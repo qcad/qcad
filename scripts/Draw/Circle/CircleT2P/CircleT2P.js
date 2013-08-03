@@ -184,12 +184,13 @@ CircleT2P.prototype.pickCoordinate = function(event, preview) {
         }
         break;
     }
+
+    if (!preview && this.error.length!==0) {
+        EAction.handleUserWarning(this.error);
+    }
 };
 
 CircleT2P.prototype.getOperation = function(preview) {
-    // temporary disabled:
-    if (preview) return undefined;
-
     Apollonius.constructionShapes = [];
     var shape = this.getCircleT2P(preview);
 
@@ -198,8 +199,6 @@ CircleT2P.prototype.getOperation = function(preview) {
     }
 
     var doc = this.getDocument();
-
-    //var entity = new RCircleEntity(doc, new RCircleData(shape));
 
     var op = new RAddObjectsOperation();
     for (var i=0; i<shape.length; i++) {
@@ -235,10 +234,6 @@ CircleT2P.prototype.getCircleT2P = function(preview) {
     var shape3 = new RPoint(this.pos3);
 
     var candidates = Apollonius.getSolutions(this.shape1.data(), shape2, shape3);
-
-    if (!preview) {
-        qDebug("candidates: ", candidates);
-    }
 
     if (candidates.length===0) {
         if (!preview) {

@@ -40,8 +40,6 @@ function Circle3T(guiAction) {
     this.pos3 = undefined;
 
     this.center = undefined;
-
-    //this.setUiOptions("Circle3T.ui");
 }
 
 Circle3T.prototype = new Circle();
@@ -131,6 +129,9 @@ Circle3T.prototype.pickEntity = function(event, preview) {
     var pos = event.getModelPosition();
 
     if (isNull(entity)) {
+        if (preview) {
+            this.updatePreview();
+        }
         return;
     }
 
@@ -197,27 +198,24 @@ Circle3T.prototype.pickEntity = function(event, preview) {
 };
 
 Circle3T.prototype.getOperation = function(preview) {
-    // temporary disabled:
     if (preview) return undefined;
 
-    var shape = this.getCircle3T(preview);
+    var shapes = this.getCircle3T(preview);
 
-    if (isNull(shape)) {
+    if (isNull(shapes)) {
         return undefined;
     }
 
     var doc = this.getDocument();
 
-    //var entity = new RCircleEntity(doc, new RCircleData(shape));
-
     var op = new RAddObjectsOperation();
-    for (var i=0; i<shape.length; i++) {
+    for (var i=0; i<shapes.length; i++) {
         // ignore lines:
-        if (!isCircleShape(shape[i])) {
+        if (!isCircleShape(shapes[i])) {
             continue;
         }
 
-        var entity = new RCircleEntity(doc, new RCircleData(shape[i]));
+        var entity = new RCircleEntity(doc, new RCircleData(shapes[i]));
         op.addObject(entity);
     }
 
@@ -275,7 +273,6 @@ Circle3T.prototype.getCircle3T = function(preview) {
         }
     }
 
-    //return circle;
     return candidates;
 };
 

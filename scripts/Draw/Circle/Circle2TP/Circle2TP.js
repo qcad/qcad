@@ -123,6 +123,9 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
     var pos = event.getModelPosition();
 
     if (isNull(entity)) {
+        if (preview) {
+            this.updatePreview();
+        }
         return;
     }
 

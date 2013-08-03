@@ -235,6 +235,10 @@ LineTangent2.prototype.getTangent = function() {
     var dist;
     var idx = -1;
     for (var i=0; i<tangents.length; ++i) {
+        if (isNull(tangents[i])) {
+            continue;
+        }
+
         dist = tangents[i].getDistanceTo(this.pos2, false);
         if (isNull(minDist) || dist<minDist) {
             minDist = dist;
