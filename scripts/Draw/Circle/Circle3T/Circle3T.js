@@ -32,14 +32,19 @@ function Circle3T(guiAction) {
     this.entity1 = undefined;
     this.shape1 = undefined;
     this.pos1 = undefined;
+
     this.entity2 = undefined;
     this.shape2 = undefined;
     this.pos2 = undefined;
+
+    this.entity3Id = undefined;
     this.entity3 = undefined;
     this.shape3 = undefined;
     this.pos3 = undefined;
 
-    this.center = undefined;
+    this.pos4 = undefined;
+
+    this.candidates = undefined;
 }
 
 Circle3T.prototype = new Circle();
@@ -47,7 +52,8 @@ Circle3T.prototype = new Circle();
 Circle3T.State = {
     ChoosingShape1 : 0,
     ChoosingShape2 : 1,
-    ChoosingShape3 : 2
+    ChoosingShape3 : 2,
+    ChoosingSolution : 3
 };
 
 Circle3T.prototype.beginEvent = function() {
@@ -59,19 +65,23 @@ Circle3T.prototype.beginEvent = function() {
 Circle3T.prototype.setState = function(state) {
     Circle.prototype.setState.call(this, state);
 
-    this.getDocumentInterface().setClickMode(RAction.PickEntity);
+    var di = this.getDocumentInterface();
+
     this.setCrosshairCursor();
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case Circle3T.State.ChoosingShape1:
+        di.setClickMode(RAction.PickEntity);
         this.entity1 = undefined;
         this.shape1 = undefined;
         this.entity2 = undefined;
         this.shape2 = undefined;
         this.entity3 = undefined;
+        this.entity3Id = undefined;
         this.shape3 = undefined;
-        this.center = undefined;
+        this.candidates = undefined;
+        this.pos4 = undefined;
         var trFirstEntity = qsTr("First line, arc or circle");
         this.setCommandPrompt(trFirstEntity);
         this.setLeftMouseTip(trFirstEntity);
@@ -79,11 +89,14 @@ Circle3T.prototype.setState = function(state) {
         break;
 
     case Circle3T.State.ChoosingShape2:
+        di.setClickMode(RAction.PickEntity);
         this.entity2 = undefined;
         this.shape2 = undefined;
         this.entity3 = undefined;
+        this.entity3Id = undefined;
         this.shape3 = undefined;
-        this.center = undefined;
+        this.candidates = undefined;
+        this.pos4 = undefined;
         var trSecondEntity = qsTr("Second line, arc or circle");
         this.setCommandPrompt(trSecondEntity);
         this.setLeftMouseTip(trSecondEntity);
@@ -91,12 +104,25 @@ Circle3T.prototype.setState = function(state) {
         break;
 
     case Circle3T.State.ChoosingShape3:
+        di.setClickMode(RAction.PickEntity);
         this.entity3 = undefined;
+        this.entity3Id = undefined;
         this.shape3 = undefined;
-        this.center = undefined;
+        this.candidates = undefined;
+        this.pos4 = undefined;
         var trThirdEntity = qsTr("Third line, arc or circle");
         this.setCommandPrompt(trThirdEntity);
         this.setLeftMouseTip(trThirdEntity);
+        this.setRightMouseTip(EAction.trBack);
+        break;
+
+    case Circle3T.State.ChoosingSolution:
+        di.setClickMode(RAction.PickCoordinate);
+        di.setSnap(new RSnapFree());
+        this.pos4 = undefined;
+        var trSolution = qsTr("Choose solution");
+        this.setCommandPrompt(trSolution);
+        this.setLeftMouseTip(trSolution);
         this.setRightMouseTip(EAction.trBack);
         break;
     }
@@ -116,6 +142,10 @@ Circle3T.prototype.escapeEvent = function() {
 
     case Circle3T.State.ChoosingShape3:
         this.setState(Circle3T.State.ChoosingShape2);
+        break;
+
+    case Circle3T.State.ChoosingSolution:
+        this.setState(Circle3T.State.ChoosingShape3);
         break;
     }
 };
@@ -175,10 +205,35 @@ Circle3T.prototype.pickEntity = function(event, preview) {
         break;
 
     case Circle3T.State.ChoosingShape3:
+        if (entityId!==this.entity3Id) {
+            this.candidates = undefined;
+        }
+
         this.entity3 = entity;
+        this.entity3Id = entityId;
         this.shape3 = shape;
         this.pos3 = pos;
 
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            this.setState(Circle3T.State.ChoosingSolution);
+        }
+        break;
+    }
+
+    if (!preview && this.error.length!==0) {
+        EAction.handleUserWarning(this.error);
+    }
+};
+
+Circle3T.prototype.pickCoordinate = function(event, preview) {
+    var di = this.getDocumentInterface();
+
+    switch (this.state) {
+    case Circle3T.State.ChoosingSolution:
+        this.pos4 = event.getModelPosition();
         if (preview) {
             this.updatePreview();
         }
@@ -192,14 +247,9 @@ Circle3T.prototype.pickEntity = function(event, preview) {
         break;
     }
 
-    if (!preview && this.error.length!==0) {
-        EAction.handleUserWarning(this.error);
-    }
 };
 
 Circle3T.prototype.getOperation = function(preview) {
-    if (preview) return undefined;
-
     var shapes = this.getCircle3T(preview);
 
     if (isNull(shapes)) {
@@ -219,6 +269,7 @@ Circle3T.prototype.getOperation = function(preview) {
         op.addObject(entity);
     }
 
+    /*
     for (var k=0; k<Apollonius.constructionShapes.length; k++) {
         var s = Apollonius.constructionShapes[k];
         var e = shapeToEntity(doc, s);
@@ -229,15 +280,9 @@ Circle3T.prototype.getOperation = function(preview) {
         e.setColor(new RColor("blue"));
         op.addObject(e, false);
     }
+    */
 
     return op;
-
-
-//    if (!isEntity(entity)) {
-//        return undefined;
-//    }
-
-//    return new RAddObjectOperation(entity);
 };
 
 Circle3T.prototype.getCircle3T = function(preview) {
@@ -247,33 +292,36 @@ Circle3T.prototype.getCircle3T = function(preview) {
 
     var i,k,ips;
 
-    Apollonius.constructionShapes = [];
-    var candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), this.shape3.data());
-
-    if (!preview) {
-        qDebug("candidates: ", candidates);
+    if (isNull(this.candidates)) {
+        Apollonius.constructionShapes = [];
+        qDebug("calling apollonius");
+        this.candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), this.shape3.data());
     }
 
-    if (candidates.length===0) {
+    if (this.candidates.length===0) {
         if (!preview) {
             this.error = qsTr("No solution");
         }
         return undefined;
     }
 
+    // no position yet: return all candidates for preview:
+    if (isNull(this.pos4)) {
+        return this.candidates;
+    }
+
     var minDist = -1;
     var circle = undefined;
-    for (i=0; i<candidates.length; i++) {
-        var c = candidates[i];
-        var dist = c.getDistanceTo(this.pos3);
+    for (i=0; i<this.candidates.length; i++) {
+        var c = this.candidates[i];
+        var dist = c.getDistanceTo(this.pos4);
         if (minDist<0 || dist<minDist) {
             minDist = dist;
             circle = c;
-            this.center = c.center;
         }
     }
 
-    return candidates;
+    return [ circle ];
 };
 
 Circle3T.prototype.getHighlightedEntities = function() {
@@ -292,25 +340,16 @@ Circle3T.prototype.getHighlightedEntities = function() {
 
 
 Circle3T.prototype.getAuxPreview = function() {
-    var ret = new Array();
-    /*
-    var a;
-
-    if (isVector(this.center)) {
-        if (isArcShape(this.shape1)) {
-            a = this.shape1.getCenter().getAngleTo(this.center);
-            if (!this.shape1.isAngleWithinArc(a)) {
-                ret.push(new RCircle(this.shape1.getCenter(), this.shape1.getRadius()));
-            }
-        }
-        if (isArcShape(this.shape2)) {
-            a = this.shape2.getCenter().getAngleTo(this.center);
-            if (!this.shape2.isAngleWithinArc(a)) {
-                ret.push(new RCircle(this.shape2.getCenter(), this.shape2.getRadius()));
-            }
-        }
+    if (isNull(this.shape1) || isNull(this.shape2) || isNull(this.shape3)) {
+        return [];
     }
-    */
 
-    return ret;
+    if (!isNull(this.pos4)) {
+        qDebug("aux preview: got pos4: candidates: ", this.candidates);
+        //return Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), this.shape3.data());
+        return this.candidates;
+    }
+    else {
+        qDebug("aux preview: no pos4");
+    }
 };

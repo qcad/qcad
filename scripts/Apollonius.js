@@ -198,15 +198,8 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
             var circle2Inverse = Apollonius.getInverseShape(circle2, inversionCircles[i]);
             var circle3Inverse = Apollonius.getInverseShape(circle3, inversionCircles[i]);
 
-            qDebug("inverse shape 1: ", circle1Inverse);
-            qDebug("inverse shape 2: ", circle2Inverse);
-            qDebug("inverse shape 3: ", circle3Inverse);
-
             var iSol = Apollonius.getSolutions(circle1Inverse, circle2Inverse, circle3Inverse);
-            qDebug("iSol: ", iSol.join("\n"));
-
             var sol = Apollonius.getInverseShapes(iSol, inversionCircles[i]);
-            qDebug("sol: ", sol.join("\n"));
 
             ret = ret.concat(sol);
         }
@@ -217,15 +210,13 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     }
 
     var powerCenter = Apollonius.getPowerCenter(circle1, circle2, circle3);
-    Apollonius.constructionShapes.push(new RPoint(powerCenter));
+    //Apollonius.constructionShapes.push(new RPoint(powerCenter));
 
     if (isNull(powerCenter)) {
         return ret;
     }
 
     var similarityAxes = Apollonius.getSimilarityAxes(circle1, circle2, circle3);
-
-    //return [new RCircle(new RVector(0,0), 10)];
 
     for (var i=0; i<similarityAxes.length; i++) {
         // array may contain 'null' items to guarantee index for
@@ -234,7 +225,7 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
             continue;
         }
 
-        Apollonius.constructionShapes.push(similarityAxes[i]);
+        //Apollonius.constructionShapes.push(similarityAxes[i]);
 
         var p, pp, q, qq, r, rr;
 
@@ -337,6 +328,10 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
             ret.push(RCircle.createFrom3Points(pp,qq,rr));
         }
     }
+
+    ret = ret.concat(Apollonius.getSolutionsCCCAlt(c1, c2, c3));
+    ret = Apollonius.removeDuplicates(ret);
+    ret = Apollonius.verify(ret, c1, c2, c3);
 
     return ret;
 }
@@ -936,9 +931,6 @@ Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
         return Apollonius.getInverseShapes(tangents, inversionCircle);
     }
     else {
-        // TODO: error handling
-        qDebug("Point is on either circle");
-        debugger;
         return undefined;
     }
 };
@@ -1417,6 +1409,10 @@ Apollonius.getCommonTangents = function(circle1, circle2) {
 };
 
 Apollonius.getTangentsThroughPoint = function(circle, p) {
+    if (!isCircleShape(circle)) {
+        return [];
+    }
+
     // used when creating tangential circles to two parallel lines and point:
     if (Math.abs(circle.radius)<RS.PointTolerance) {
         var lines = [];
