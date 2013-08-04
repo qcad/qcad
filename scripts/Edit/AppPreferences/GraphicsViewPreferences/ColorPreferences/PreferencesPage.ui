@@ -157,7 +157,7 @@
        <bool>true</bool>
       </property>
       <property name="showAlphaChannel" stdset="0">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="color" stdset="0">
        <color>
@@ -250,6 +250,9 @@
       <property name="blackWhite" stdset="0">
        <bool>false</bool>
       </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item row="9" column="0">
@@ -300,6 +303,9 @@
       </property>
       <property name="blackWhite" stdset="0">
        <bool>false</bool>
+      </property>
+      <property name="showAlphaChannel" stdset="0">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -370,7 +376,7 @@
        <bool>true</bool>
       </property>
       <property name="showAlphaChannel" stdset="0">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="color" stdset="0">
        <color>

@@ -1291,6 +1291,7 @@ void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,
         scene->setStyle(style);
         scene->setDashPattern(dashes.toVector());
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
+//        scene->setLinetypeId(document.getLinetypeId("DIVIDE2"));
 
         RPoint* point = dynamic_cast<RPoint*> (&shape);
         if (point != NULL) {
@@ -1342,7 +1343,7 @@ void RDocumentInterface::addAuxShapeToPreview(RShape& shape) {
     QList<qreal> dashes;
     dashes << 10 << 5 << 2 << 5;
     RDocumentInterface::addShapeToPreview(shape, RSettings::getColor(
-            "GraphicsViewColors/AuxShapeColor", RColor(121,118,197)), Qt::NoBrush, RLineweight::Weight000,
+            "GraphicsViewColors/AuxShapeColor", RColor(121,118,197,128)), Qt::NoBrush, RLineweight::Weight000,
             Qt::CustomDashLine, dashes);
 }
 

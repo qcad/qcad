@@ -1328,7 +1328,6 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
 
             ips = l.getIntersectionPoints(circle, false);
             if (ips.length<2) {
-                debugger;
                 return undefined;
             }
             var p1 = ips[0];
