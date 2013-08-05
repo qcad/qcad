@@ -454,7 +454,7 @@ function isArcShape(obj) {
 /**
  * Checks if the given object is a circle shape.
  *
- * \return true if the given object is a line shape (RCircle).
+ * \return true if the given object is a circle shape (RCircle).
  */
 function isCircleShape(obj) {
     return isOfType(obj, RCircle) || isOfType(obj, RCirclePointer);

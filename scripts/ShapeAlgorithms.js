@@ -28,10 +28,36 @@ function ShapeAlgorithms() {
  * \return Array with only the circle shapes from the given shapes.
  */
 ShapeAlgorithms.getCircleShapes = function(shapes) {
+    if (isNull(shapes)) {
+        return undefined;
+    }
+
     var ret = [];
     for (var i=0; i<shapes.length; i++) {
         if (isCircleShape(shapes[i])) {
             ret.push(shapes[i]);
+        }
+    }
+    return ret;
+};
+
+/**
+ * \return The shape of the given shapes that is closest to the given position.
+ */
+ShapeAlgorithms.getClosestShape = function(shapes, position) {
+    if (isNull(shapes)) {
+        return undefined;
+    }
+
+    var ret = undefined;
+    var minDist = undefined;
+    var circle = undefined;
+    for (var i=0; i<shapes.length; i++) {
+        var s = shapes[i];
+        var dist = s.getDistanceTo(position);
+        if (isNull(minDist) || dist<minDist) {
+            minDist = dist;
+            ret = s;
         }
     }
     return ret;

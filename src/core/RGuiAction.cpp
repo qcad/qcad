@@ -128,6 +128,7 @@ void RGuiAction::initTexts() {
     if (tip.isNull()) {
         tip = textOnly;
     }
+
     QString kcs = shortcutText.isEmpty() ? shortcut().toString() : shortcutText;
     if (!kcs.isEmpty()) {
         QAction::setToolTip(getToolTip(tip, kcs));
@@ -267,6 +268,7 @@ bool RGuiAction::isChecked() {
 
 void RGuiAction::setSortOrder(int sortOrder) {
     this->sortOrder = sortOrder;
+    // for debugging: setToolTip(QString("[%1]").arg(sortOrder));
 }
 
 int RGuiAction::getSortOrder() {

@@ -7,6 +7,6 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Circle3T", "Draw circle tangential to tree entities"));
     action.setDefaultShortcut(new QKeySequence("c,t,3"));
     action.setDefaultCommands(["circletangent3", "ct3"]);
-    action.setSortOrder(1200);
+    action.setSortOrder(1300);
     EAction.addGuiActionTo(action, Circle, true, true, true);
 }

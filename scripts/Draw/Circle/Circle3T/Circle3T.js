@@ -210,7 +210,6 @@ Circle3T.prototype.pickEntity = function(event, preview) {
         }
         else {
             var op = this.getOperation(false);
-            qDebug("this.candidates: ", this.candidates);
             if (!isNull(op)) {
                 // only one solution, we're done:
                 if (this.candidates.length===1) {
@@ -223,7 +222,6 @@ Circle3T.prototype.pickEntity = function(event, preview) {
             }
             // no solution:
             else {
-                qDebug("no solution");
                 this.setState(Circle3T.State.ChoosingShape1);
                 this.error = qsTr("No solution");
             }
@@ -261,11 +259,6 @@ Circle3T.prototype.getOperation = function(preview) {
 
     var op = new RAddObjectsOperation();
     for (var i=0; i<shapes.length; i++) {
-        // ignore lines:
-        if (!isCircleShape(shapes[i])) {
-            continue;
-        }
-
         var entity = new RCircleEntity(doc, new RCircleData(shapes[i]));
         op.addObject(entity);
     }
@@ -299,18 +292,7 @@ Circle3T.prototype.getShapes = function(preview) {
         return this.candidates;
     }
 
-    var minDist = -1;
-    var circle = undefined;
-    for (i=0; i<this.candidates.length; i++) {
-        var c = this.candidates[i];
-        var dist = c.getDistanceTo(this.pos4);
-        if (minDist<0 || dist<minDist) {
-            minDist = dist;
-            circle = c;
-        }
-    }
-
-    return [ circle ];
+    return [ ShapeAlgorithms.getClosestShape(this.candidates, this.pos4) ];
 };
 
 Circle3T.prototype.getHighlightedEntities = function() {

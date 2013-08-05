@@ -23,7 +23,7 @@ include("scripts/ShapeAlgorithms.js");
 
 /**
  * \class Circle2TP
- * \brief Circle tangential to three entities.
+ * \brief Circle tangential to two entities and through point.
  * \ingroup ecma_draw_circle
  */
 function Circle2TP(guiAction) {
@@ -36,8 +36,9 @@ function Circle2TP(guiAction) {
     this.shape2 = undefined;
     this.pos2 = undefined;
     this.pos3 = undefined;
+    this.pos4 = undefined;
 
-    this.center = undefined;
+    this.candidates = undefined;
 }
 
 Circle2TP.prototype = new Circle();
@@ -45,7 +46,8 @@ Circle2TP.prototype = new Circle();
 Circle2TP.State = {
     ChoosingShape1 : 0,
     ChoosingShape2 : 1,
-    SettingPoint : 2
+    SettingPoint : 2,
+    ChoosingSolution : 3
 };
 
 Circle2TP.prototype.beginEvent = function() {
@@ -57,17 +59,20 @@ Circle2TP.prototype.beginEvent = function() {
 Circle2TP.prototype.setState = function(state) {
     Circle.prototype.setState.call(this, state);
 
+    var di = this.getDocumentInterface();
+
     this.setCrosshairCursor();
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case Circle2TP.State.ChoosingShape1:
-        this.getDocumentInterface().setClickMode(RAction.PickEntity);
+        di.setClickMode(RAction.PickEntity);
         this.entity1 = undefined;
         this.shape1 = undefined;
         this.entity2 = undefined;
         this.shape2 = undefined;
-        this.center = undefined;
+        this.pos4 = undefined;
+        this.candidates = undefined;
         var trFirstEntity = qsTr("First line, arc or circle");
         this.setCommandPrompt(trFirstEntity);
         this.setLeftMouseTip(trFirstEntity);
@@ -75,10 +80,11 @@ Circle2TP.prototype.setState = function(state) {
         break;
 
     case Circle2TP.State.ChoosingShape2:
-        this.getDocumentInterface().setClickMode(RAction.PickEntity);
+        di.setClickMode(RAction.PickEntity);
         this.entity2 = undefined;
         this.shape2 = undefined;
-        this.center = undefined;
+        this.pos4 = undefined;
+        this.candidates = undefined;
         var trSecondEntity = qsTr("Second line, arc or circle");
         this.setCommandPrompt(trSecondEntity);
         this.setLeftMouseTip(trSecondEntity);
@@ -86,14 +92,24 @@ Circle2TP.prototype.setState = function(state) {
         break;
 
     case Circle2TP.State.SettingPoint:
-        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
+        di.setClickMode(RAction.PickCoordinate);
         this.pos3 = undefined;
-        this.center = undefined;
+        this.pos4 = undefined;
+        this.candidates = undefined;
         var trPoint = qsTr("Point on circle line");
         this.setCommandPrompt(trPoint);
         this.setLeftMouseTip(trPoint);
         this.setRightMouseTip(EAction.trBack);
         EAction.showSnapTools();
+        break;
+
+    case Circle2TP.State.ChoosingSolution:
+        di.setClickMode(RAction.PickEntity);
+        this.pos4 = undefined;
+        var trSolution = qsTr("Choose solution");
+        this.setCommandPrompt(trSolution);
+        this.setLeftMouseTip(trSolution);
+        this.setRightMouseTip(EAction.trBack);
         break;
     }
 };
@@ -111,6 +127,10 @@ Circle2TP.prototype.escapeEvent = function() {
     case Circle2TP.State.SettingPoint:
         this.setState(Circle2TP.State.ChoosingShape2);
         break;
+
+    case Circle2TP.State.ChoosingSolution:
+        this.setState(Circle2TP.State.SettingPoint);
+        break;
     }
 };
 
@@ -121,23 +141,21 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
     var entityId = event.getEntityId();
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
+    var shape = undefined;
 
-    if (isNull(entity)) {
-        if (preview) {
-            this.updatePreview();
-        }
-        return;
-    }
+    if (this.state!==Circle2TP.State.ChoosingSolution) {
+        if (!isNull(entity)) {
+            shape = entity.getClosestShape(pos);
 
-    var shape = entity.getClosestShape(pos);
+            if (!preview) {
+                if (!isLineShape(shape) &&
+                    !isArcShape(shape) &&
+                    !isCircleShape(shape)) {
 
-    if (!preview) {
-        if (!isLineShape(shape) &&
-            !isArcShape(shape) &&
-            !isCircleShape(shape)) {
-
-            EAction.warnNotLineArcCircle();
-            return;
+                    EAction.warnNotLineArcCircle();
+                    return;
+                }
+            }
         }
     }
 
@@ -167,20 +185,9 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
             this.setState(Circle2TP.State.SettingPoint);
         }
         break;
-    }
 
-    if (!preview && this.error.length!==0) {
-        EAction.handleUserWarning(this.error);
-    }
-};
-
-Circle2TP.prototype.pickCoordinate = function(event, preview) {
-    var di = this.getDocumentInterface();
-
-    switch (this.state) {
-    case Circle2TP.State.SettingPoint:
-        this.pos3 = event.getModelPosition();
-
+    case Circle2TP.State.ChoosingSolution:
+        this.pos4 = event.getModelPosition();
         if (preview) {
             this.updatePreview();
         }
@@ -193,13 +200,44 @@ Circle2TP.prototype.pickCoordinate = function(event, preview) {
         }
         break;
     }
+
+    if (!preview && this.error.length!==0) {
+        EAction.handleUserWarning(this.error);
+    }
+};
+
+Circle2TP.prototype.pickCoordinate = function(event, preview) {
+    var di = this.getDocumentInterface();
+    var pos = event.getModelPosition();
+
+    switch (this.state) {
+    case Circle2TP.State.SettingPoint:
+        if (isNull(this.pos3) || !pos.equalsFuzzy(this.pos3)) {
+            this.candidates = undefined;
+        }
+
+        this.pos3 = pos;
+
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            // only one solution:
+            var op = this.getOperation(false);
+            if (!isNull(op) && this.candidates.length===1) {
+                di.applyOperation(op);
+                this.setState(Circle2TP.State.ChoosingShape1);
+            }
+            else {
+                this.setState(Circle2TP.State.ChoosingSolution);
+            }
+        }
+        break;
+    }
 };
 
 Circle2TP.prototype.getOperation = function(preview) {
-    // temporary disabled:
-    if (preview) return undefined;
-
-    var shape = this.getCircle2TP(preview);
+    var shape = this.getShapes(preview);
 
     if (isNull(shape)) {
         return undefined;
@@ -207,76 +245,41 @@ Circle2TP.prototype.getOperation = function(preview) {
 
     var doc = this.getDocument();
 
-    //var entity = new RCircleEntity(doc, new RCircleData(shape));
-
     var op = new RAddObjectsOperation();
     for (var i=0; i<shape.length; i++) {
-        // ignore lines:
-        if (!isCircleShape(shape[i])) {
-            continue;
-        }
-
         var entity = new RCircleEntity(doc, new RCircleData(shape[i]));
         op.addObject(entity);
     }
 
-    for (var k=0; k<Apollonius.constructionShapes.length; k++) {
-        var s = Apollonius.constructionShapes[k];
-        qDebug("construction shape: ", s);
-        var e = shapeToEntity(doc, s);
-        if (!isNull(e)) {
-            e.setColor(new RColor("blue"));
-            op.addObject(e, false);
-        }
-    }
-
     return op;
-
-
-//    if (!isEntity(entity)) {
-//        return undefined;
-//    }
-
-//    return new RAddObjectOperation(entity);
 };
 
-Circle2TP.prototype.getCircle2TP = function(preview) {
+Circle2TP.prototype.getShapes = function(preview) {
     if (isNull(this.shape1) || isNull(this.shape2) || isNull(this.pos3)) {
         return undefined;
     }
 
-    var i,k,ips;
+    if (isNull(this.candidates)) {
+        var shape3 = new RPoint(this.pos3);
+        this.candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), shape3);
 
-    var shape3 = new RPoint(this.pos3);
-
-    Apollonius.constructionShapes = [];
-    var candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), shape3);
-
-    if (!preview) {
-        qDebug("candidates: ", candidates);
+        // filter out lines:
+        this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);
     }
 
-    if (candidates.length===0) {
+    if (this.candidates.length===0) {
         if (!preview) {
             this.error = qsTr("No solution");
         }
         return undefined;
     }
 
-    var minDist = -1;
-    var circle = undefined;
-    for (i=0; i<candidates.length; i++) {
-        var c = candidates[i];
-        var dist = c.getDistanceTo(this.pos3);
-        if (minDist<0 || dist<minDist) {
-            minDist = dist;
-            circle = c;
-            this.center = c.center;
-        }
+    // no position yet: return all candidates for preview:
+    if (isNull(this.pos4)) {
+        return this.candidates;
     }
 
-    //return circle;
-    return candidates;
+    return [ ShapeAlgorithms.getClosestShape(this.candidates, this.pos4) ];
 };
 
 Circle2TP.prototype.getHighlightedEntities = function() {
@@ -290,27 +293,14 @@ Circle2TP.prototype.getHighlightedEntities = function() {
     return ret;
 };
 
-
 Circle2TP.prototype.getAuxPreview = function() {
-    var ret = [];
-    /*
-    var a;
-
-    if (isVector(this.center)) {
-        if (isArcShape(this.shape1)) {
-            a = this.shape1.getCenter().getAngleTo(this.center);
-            if (!this.shape1.isAngleWithinArc(a)) {
-                ret.push(new RCircle(this.shape1.getCenter(), this.shape1.getRadius()));
-            }
-        }
-        if (isArcShape(this.shape2)) {
-            a = this.shape2.getCenter().getAngleTo(this.center);
-            if (!this.shape2.isAngleWithinArc(a)) {
-                ret.push(new RCircle(this.shape2.getCenter(), this.shape2.getRadius()));
-            }
-        }
+    if (isNull(this.shape1) || isNull(this.shape2) || isNull(this.pos3)) {
+        return [];
     }
-    */
 
-    return ret;
+    if (!isNull(this.pos4)) {
+        return this.candidates;
+    }
+
+    return [];
 };

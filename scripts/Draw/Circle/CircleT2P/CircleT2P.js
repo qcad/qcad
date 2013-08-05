@@ -264,8 +264,6 @@ CircleT2P.prototype.getShapes = function(preview) {
         return undefined;
     }
 
-    var i;
-
     if (isNull(this.candidates)) {
         var point1 = new RPoint(this.pos2);
         var point2 = new RPoint(this.pos3);
@@ -288,18 +286,7 @@ CircleT2P.prototype.getShapes = function(preview) {
         return this.candidates;
     }
 
-    var minDist = -1;
-    var circle = undefined;
-    for (i=0; i<this.candidates.length; i++) {
-        var c = this.candidates[i];
-        var dist = c.getDistanceTo(this.pos4);
-        if (minDist<0 || dist<minDist) {
-            minDist = dist;
-            circle = c;
-        }
-    }
-
-    return [ circle ];
+    return [ ShapeAlgorithms.getClosestShape(this.candidates, this.pos4) ];
 };
 
 CircleT2P.prototype.getHighlightedEntities = function() {
