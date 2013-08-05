@@ -204,7 +204,7 @@ ArcCPA.prototype.getOperation = function(preview) {
 
 ArcCPA.prototype.getAuxPreview = function() {
     var d;
-    var ret = new Array();
+    var ret = [];
 
     var v = new RVector();
 

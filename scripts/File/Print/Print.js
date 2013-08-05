@@ -405,7 +405,7 @@ Print.drawCropMarks = function(document, painter, border, printing) {
     painter.setPen(pen);
     painter.setBrush(new QBrush(Qt.NoBrush));
 
-    var lines = new Array();
+    var lines = [];
     Print.pushCropMarkLines(document, lines, border.bottomLeft(), printing);
     Print.pushCropMarkLines(document, lines, border.topLeft(), printing);
     Print.pushCropMarkLines(document, lines, border.topRight(), printing);
@@ -711,7 +711,7 @@ Print.getPages = function(document) {
     glueMarginLeft = RUnit.convert(glueMarginLeft, paperUnit, RS.Millimeter);
     glueMarginBottom = RUnit.convert(glueMarginBottom, paperUnit, RS.Millimeter);
 
-    var ret = new Array();
+    var ret = [];
 
     var w;
     var h;

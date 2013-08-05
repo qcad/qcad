@@ -291,7 +291,7 @@ EllipseArcCPPA.prototype.getOperation = function(preview) {
 EllipseArcCPPA.prototype.getAuxPreview = function() {
     var d, v, a;
     
-    var ret = new Array();
+    var ret = [];
 
     var ellipse = this.getEllipse();
 

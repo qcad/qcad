@@ -291,7 +291,7 @@ Scale.prototype.getAuxPreview = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
 
     if (this.state==Scale.State.SettingReferencePoint || this.state==Scale.State.SettingTargetPoint) {
         if (isValidVector(this.referencePoint)) {

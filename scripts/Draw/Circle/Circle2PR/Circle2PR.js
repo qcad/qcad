@@ -264,7 +264,7 @@ Circle2PR.prototype.getAuxPreview = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
 
     if (this.state===Circle2PR.State.SettingPoint2) {
         ret.push(new RLine(this.point1, this.point2));

@@ -72,7 +72,7 @@ FirstStart.prototype.showDialog = function() {
         this.changeLanguage(code);
     });
 
-    this.translators = new Array();
+    this.translators = [];
     this.changeLanguage(code);
 
     if (formWidget.exec()) {

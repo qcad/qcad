@@ -988,7 +988,7 @@ Array.prototype.sortNumerical = function() {
  * the function returns.
  */
 Array.intersect = function(a, b) {
-  var result = new Array();
+  var result = [];
   while (a.length > 0 && b.length > 0 ) {
      if (a[0] < b[0]) {
         a.shift();

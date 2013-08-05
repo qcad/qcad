@@ -46,7 +46,7 @@ ShapeAlgorithms.getTangents = function(circle1, circle2) {
     var circleRadius2 = circle2.getRadius();
 
     // create all four possible tangents:
-    var tangents = new Array();
+    var tangents = [];
 
     var angle1 = circleCenter1.getAngleTo(circleCenter2);
     var dist1 = circleCenter1.getDistanceTo(circleCenter2);
@@ -119,7 +119,7 @@ ShapeAlgorithms.getTangents = function(circle1, circle2) {
  */
 ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition) {
     ShapeAlgorithms.error = undefined;
-    var ret = new Array();
+    var ret = [];
     var i, n;
 
     if (isLineShape(shape)) {
@@ -421,7 +421,7 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         }
     }
 
-    var ret = new Array();
+    var ret = [];
 
     // add new rest entities:
     ret.push(rest1);
@@ -472,7 +472,7 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
     }
 
     // find all intersection points:
-    var intersections = new Array();
+    var intersections = [];
     if (onShape && !isCircleShape(shape) && !isFullEllipseShape(shape)) {
         intersections.push(shape.getStartPoint());
         intersections.push(shape.getEndPoint());

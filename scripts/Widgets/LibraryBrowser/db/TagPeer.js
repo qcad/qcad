@@ -203,7 +203,7 @@ TagPeer.doSelectByCategoryIdAndLocale = function(categoryId, locale, tagIds, fie
 };
 
 TagPeer.createFromQuery = function(query) {
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         var tag = new Tag();
         tag.addProperties(query);

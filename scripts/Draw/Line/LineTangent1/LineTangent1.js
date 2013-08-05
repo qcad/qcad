@@ -244,7 +244,7 @@ LineTangent1.prototype.getTangentArcOrCircle = function(arcOrCircle, preview) {
 };
 
 LineTangent1.prototype.getAuxPreview = function() {
-    var ret = new Array();
+    var ret = [];
 
     if (isArcShape(this.shape)) {
         ret.push(new RCircle(this.shape.getCenter(), this.shape.getRadius()));
@@ -260,7 +260,7 @@ LineTangent1.prototype.getAuxPreview = function() {
 };
 
 LineTangent1.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity)) {
         ret.push(this.entity.getId());
     }

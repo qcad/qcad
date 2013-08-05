@@ -104,7 +104,7 @@ EditFromReference.prototype.pickEntity = function(event, preview) {
 };
 
 EditFromReference.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity)) {
         ret.push(this.entity.getId());
     }

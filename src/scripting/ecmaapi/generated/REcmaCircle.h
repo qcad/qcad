@@ -58,6 +58,9 @@
         createFrom3Points
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         to2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

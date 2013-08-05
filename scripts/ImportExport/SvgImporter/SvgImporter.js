@@ -285,7 +285,7 @@ SvgImporter.prototype.parseSvgElement = function() {
     }
 
     var elementName = arguments[1];
-    var ret = new Array();
+    var ret = [];
     var list = domDoc.elementsByTagName(elementName);
     for ( var i = 0; i < list.count(); ++i) {
         var n = list.at(i);

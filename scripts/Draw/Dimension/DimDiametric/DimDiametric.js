@@ -167,7 +167,7 @@ DimDiametric.prototype.getOperation = function(preview) {
 };
 
 DimDiametric.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity)) {
         ret.push(this.entity.getId());
     }

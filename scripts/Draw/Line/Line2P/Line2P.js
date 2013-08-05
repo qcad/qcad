@@ -27,7 +27,7 @@ include("../Line.js");
 function Line2P(guiAction) {
     Line.call(this, guiAction);
 
-    this.pointList = new Array();
+    this.pointList = [];
     this.point1 = undefined;
     this.point2 = undefined;
 
@@ -61,7 +61,7 @@ Line2P.prototype.setState = function(state) {
         this.setCommandPrompt(trFirstPoint);
         this.setLeftMouseTip(trFirstPoint);
         this.setRightMouseTip(EAction.trCancel);
-        this.pointList = new Array();
+        this.pointList = [];
         break;
 
     case Line2P.State.SettingNextPoint:

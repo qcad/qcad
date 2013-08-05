@@ -50,7 +50,7 @@ Favorites.hasChanged = function() {
 Favorites.getAllAsItems = function() {
     Favorites.removeOrphans();
 
-    var items = new Array();
+    var items = [];
     var fileList = Favorites.loadFromSettings();
     for (var i = 0; i < fileList.length; ++i) {
         var file = fileList[i];
@@ -109,7 +109,7 @@ Favorites.add = function(fileName) {
  */
 Favorites.remove = function(fileName) {
     var fileList = Favorites.loadFromSettings();
-    var newList = new Array();
+    var newList = [];
     for ( var i = 0; i < fileList.length; ++i) {
         var file = fileList[i];
         if (file !== fileName) {
@@ -128,7 +128,7 @@ Favorites.remove = function(fileName) {
  */
 Favorites.removeOrphans = function() {
     var fileList = Favorites.loadFromSettings();
-    var cleanList = new Array();
+    var cleanList = [];
     for ( var i = 0; i < fileList.length; ++i) {
         var file = fileList[i];
         if (QFile.exists(file)) {
@@ -145,7 +145,7 @@ Favorites.saveToSettings = function(fileList) {
 Favorites.loadFromSettings = function() {
     var fileList = RSettings.getValue(Favorites.settingsKey, new Array());
     if (isNull(fileList)) {
-        return new Array();
+        return [];
     }
     return fileList;
 };

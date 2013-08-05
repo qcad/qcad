@@ -94,7 +94,7 @@ function Rdf(resource) {
     }
 
     // format: [category, locale, text]
-    this.tags = new Array();
+    this.tags = [];
 
     // add some generic meta data that is available even without RDF:
     if (resource.completeBaseName().toLowerCase()!=="_meta") {

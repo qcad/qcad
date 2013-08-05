@@ -134,7 +134,7 @@ BreakOut.prototype.getOperation = function(preview) {
 
     // find other shapes that potentially intersect with the chosen entity:
     var document = this.getDocument();
-    var otherShapes = new Array();
+    var otherShapes = [];
     // allow for error: especialy for ellipse segments bordering to tangential lines this is needed:
     var otherEntityIds;
 
@@ -229,7 +229,7 @@ BreakOut.prototype.getOperation = function(preview) {
 };
 
 BreakOut.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity)) {
         ret.push(this.entity.getId());
     }
@@ -241,7 +241,7 @@ BreakOut.prototype.getAuxPreview = function() {
 //        return undefined;
 //    }
 
-//    var ret = new Array();
+//    var ret = [];
 
 //    var view = EAction.getGraphicsView();
 //    var overlap = view.mapDistanceFromView(25);

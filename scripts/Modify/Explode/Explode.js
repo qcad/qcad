@@ -57,8 +57,8 @@ Explode.prototype.beginEvent = function() {
             continue;
         }
 
-        var newShapes = new Array();
-        var newEntities = new Array();
+        var newShapes = [];
+        var newEntities = [];
 
         // explode ellipse into polyline with arc segments:
         if (isEllipseEntity(entity)) {

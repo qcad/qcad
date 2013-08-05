@@ -162,7 +162,7 @@ Mirror.prototype.getAuxPreview = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
 
     ret.push(new RLine(this.axisPoint1, this.axisPoint2));
 

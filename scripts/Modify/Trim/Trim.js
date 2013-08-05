@@ -197,7 +197,7 @@ Trim.prototype.getOperation = function(preview) {
 };
 
 Trim.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.limitingEntity)) {
         ret.push(this.limitingEntity.getId());
     }

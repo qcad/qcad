@@ -295,7 +295,7 @@ Divide.prototype.getOperation = function(preview) {
 };
 
 Divide.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity)) {
         ret.push(this.entity.getId());
     }
@@ -307,7 +307,7 @@ Divide.prototype.getAuxPreview = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
 
     var view = EAction.getGraphicsView();
     var overlap = view.mapDistanceFromView(25);

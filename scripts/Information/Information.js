@@ -184,7 +184,7 @@ Information.prototype.addShape = function(shape) {
     var clr = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
     var brush = new QBrush();
     var lw = RLineweight.Weight000;
-    var dashes = new Array();
+    var dashes = [];
     di.addShapeToPreview(shape, clr, brush, lw, Qt.SolidLine.valueOf(), dashes);
 };
 

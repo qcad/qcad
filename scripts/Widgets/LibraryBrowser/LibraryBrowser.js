@@ -167,7 +167,7 @@ LibraryBrowser.getSourceList = function() {
         }
         //RSettings.setValue("LibraryBrowser/SourceList", sourceList);
     }
-    //LibraryBrowser.sources = new Array();
+    //LibraryBrowser.sources = [];
     //for (var i = 0; i < sourceList.length; ++i) {
         //LibraryBrowser.sources.push(new Directory(sourceList[i]));
     //}
@@ -812,7 +812,7 @@ LibraryBrowser.sourceChanged = function(text) {
 
     // the Qt way of hiding all folders named "_META"...
     fsModel.setNameFilterDisables(false);
-    var nf = new Array();
+    var nf = [];
     var ch;
     // TODO:
     for ( var i = 0; i < 26; ++i) {

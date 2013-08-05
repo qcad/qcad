@@ -226,7 +226,7 @@ Circle2TR.prototype.slotRadiusChanged = function(value) {
 };
 
 Circle2TR.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity1)) {
         ret.push(this.entity1.getId());
     }
@@ -238,7 +238,7 @@ Circle2TR.prototype.getHighlightedEntities = function() {
 
 
 Circle2TR.prototype.getAuxPreview = function() {
-    var ret = new Array();
+    var ret = [];
     var a;
 
     if (isVector(this.center)) {

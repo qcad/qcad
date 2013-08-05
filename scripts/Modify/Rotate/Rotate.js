@@ -247,7 +247,7 @@ Rotate.prototype.getAuxPreview = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
 
     if (this.state==Rotate.State.SettingReferencePoint || this.state==Rotate.State.SettingTargetPoint) {
         if (isValidVector(this.referencePoint)) {

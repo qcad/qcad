@@ -77,7 +77,7 @@ ListViewEventHandler.prototype.mouseMoveEvent = function(evt) {
     }
     
     var fileUrl = QUrl.fromLocalFile(file);
-    var urlList = new Array();
+    var urlList = [];
     urlList.push(fileUrl);
     
     var id = model.data(index, Qt.UserRole + 1);

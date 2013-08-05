@@ -280,7 +280,7 @@ Circle2TP.prototype.getCircle2TP = function(preview) {
 };
 
 Circle2TP.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity1)) {
         ret.push(this.entity1.getId());
     }
@@ -292,7 +292,7 @@ Circle2TP.prototype.getHighlightedEntities = function() {
 
 
 Circle2TP.prototype.getAuxPreview = function() {
-    var ret = new Array();
+    var ret = [];
     /*
     var a;
 

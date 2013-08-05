@@ -160,7 +160,7 @@ LineRelativeAngle.prototype.pickCoordinate = function(event, preview) {
 };
 
 LineRelativeAngle.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity)) {
         ret.push(this.entity.getId());
     }

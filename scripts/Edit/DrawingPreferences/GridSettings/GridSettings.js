@@ -51,7 +51,7 @@ GridSettings.updateUnit = function(unit) {
     }
 
 //    var i;
-//    var cb = new Array();
+//    var cb = [];
 //    cb.push(GridSettings.widgets["GridSpacingX"]);
 //    cb.push(GridSettings.widgets["GridSpacingY"]);
 //    cb.push(GridSettings.widgets["MetaGridSpacingX"]);
@@ -96,7 +96,7 @@ GridSettings.updateLinearFormat = function(linearFormat) {
     }
 
     var i;
-    var cb = new Array();
+    var cb = [];
     for (i=0; i<4; i++) {
         cb.push(GridSettings.widgets["GridSpacingX0%1".arg(i)]);
         cb.push(GridSettings.widgets["GridSpacingY0%1".arg(i)]);

@@ -293,7 +293,7 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
 };
 
 Round.prototype.getAuxPreview = function() {
-    var ret = new Array();
+    var ret = [];
 
     if (!isNull(this.par1)) {
         ret.push(this.par1);

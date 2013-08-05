@@ -136,7 +136,7 @@ ItemTagPeer.removeOrphans = function() {
 };
 
 ItemTagPeer.createFromQuery = function(query) {
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         var tag = TagPeer.doSelectById(query.value(1));
         ret.push(tag.text);

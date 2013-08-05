@@ -277,7 +277,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             value = c.value;
         }
         if (isOfType(c, QListWidget)) {
-            var items = new Array();
+            var items = [];
             if (c.count != 0) {
                 for ( var j = 0; j < c.count; ++j) {
                     items.push(c.item(j).text());
@@ -751,7 +751,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
             if (saveContents) {
                 if (isNull(c.defaultValue)) {
-                    var items = new Array();
+                    var items = [];
                     for (j = 0; j < c.count; ++j) {
                         items.push(c.item(j).text());
                     }
@@ -874,7 +874,7 @@ WidgetFactory.connect = function(sig, signalReceiver, objectName, isValue) {
  * \return Array of actions that were added to targetWidget.
  */
 WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup) {
-    var ret = new Array();
+    var ret = [];
 
     // move child widgets of UI file based widget directly to
     // options toolbar. rendering of tool buttons greatly depends

@@ -255,7 +255,7 @@ function setUpDragAndDrop(appWin) {
 
     appWin.drop.connect(function(evt) {
         var urls = evt.mimeData().urls();
-        var files = new Array();
+        var files = [];
         for (var i = 0; i < urls.length; ++i) {
             var file = new QUrl(urls[i]).toLocalFile();
             include("scripts/Edit/InsertScriptItem/InsertScriptItem.js");
@@ -397,7 +397,7 @@ function main() {
     qApp.applicationVersion = RSettings.getVersionString();
 
     var i;
-    var filesToOpen = new Array();
+    var filesToOpen = [];
 
     // open file that was clicked in Finder if application was not yet running (Mac OS X):
     qApp.fileOpenRequestReceived.connect(function(fileName) {

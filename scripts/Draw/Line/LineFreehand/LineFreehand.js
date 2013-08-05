@@ -27,7 +27,7 @@ include("../Line.js");
 function LineFreehand(guiAction) {
     Line.call(this, guiAction);
 
-    this.pointList = new Array();
+    this.pointList = [];
 }
 
 LineFreehand.prototype = new Line();
@@ -56,7 +56,7 @@ LineFreehand.prototype.setState = function(state) {
         this.setCommandPrompt(trStart);
         this.setLeftMouseTip(trStart);
         this.setRightMouseTip(EAction.trCancel);
-        this.pointList = new Array();
+        this.pointList = [];
         break;
 
     case LineFreehand.State.Drawing:

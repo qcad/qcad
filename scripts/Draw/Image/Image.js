@@ -83,7 +83,7 @@ Image.prototype.getFileName = function() {
             "Image/Path",
             QDesktopServices.storageLocation(QDesktopServices.DocumentsLocation));
     var formats = QImageReader.supportedImageFormats();
-    var filters = new Array();
+    var filters = [];
 
     var filterAllImages = "";
     for (var i=0; i<formats.length; ++i) {

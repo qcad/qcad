@@ -168,7 +168,7 @@ DimRadial.prototype.getOperation = function(preview) {
 };
 
 DimRadial.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity)) {
         ret.push(this.entity.getId());
     }

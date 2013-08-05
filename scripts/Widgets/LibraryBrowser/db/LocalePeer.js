@@ -139,7 +139,7 @@ LocalePeer.getAllLocales = function() {
     var query = con.createQuery();
     query.exec("SELECT DISTINCT name FROM " + Locale.tableName
             + " ORDER BY name");
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         ret.push(String(query.value(0)));
     }
@@ -148,7 +148,7 @@ LocalePeer.getAllLocales = function() {
 */
 
 LocalePeer.createFromQuery = function(query) {
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         var locale = new Locale();
         locale.addProperties(query);

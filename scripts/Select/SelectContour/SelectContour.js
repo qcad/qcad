@@ -66,7 +66,7 @@ SelectContour.prototype.selectEntities = function(entityId) {
         var candidates = this.doc.queryIntersectedEntitiesXY(box);
 
         // filter out candidates with end points outside range:
-        var connectedEntities = new Array();
+        var connectedEntities = [];
         var found = 0;
         length = candidates.length;
         for (var c = 0; c < length && found<=10; ++c) {
@@ -131,7 +131,7 @@ SelectContour.prototype.setState = function(state) {
 
 SelectContour.prototype.entityPickEvent = function(event) {
     this.traversed = new Object();
-    this.matchingEntities = new Array();
+    this.matchingEntities = [];
     this.selectEntities(event.getEntityId());
     this.selectWithMode(this.matchingEntities);
 };

@@ -94,7 +94,7 @@ Paste.prototype.getOperation = function(preview) {
 }
 
 Paste.prototype.getAuxPreview = function() {
-    var ret = new Array();
+    var ret = [];
     var unitFactor = RUnit.convert(1.0, RDocument.getClipboard().getUnit(), this.getDocument().getUnit());
     var boundary = this.getOperation().getBoundary(unitFactor);
     //qDebug("unitFactor: ", unitFactor);

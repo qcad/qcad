@@ -153,23 +153,18 @@ Circle3T.prototype.pickEntity = function(event, preview) {
     var shape = undefined;
 
     if (this.state!==Circle3T.State.ChoosingSolution) {
-        if (isNull(entity)) {
-            if (preview) {
-                this.updatePreview();
+        if (!isNull(entity)) {
+            shape = entity.getClosestShape(pos);
+
+            if (!isLineShape(shape) &&
+                !isArcShape(shape) &&
+                !isCircleShape(shape)) {
+
+                if (!preview) {
+                    EAction.warnNotLineArcCircle();
+                    return;
+                }
             }
-            return;
-        }
-
-        shape = entity.getClosestShape(pos);
-
-        if (!isLineShape(shape) &&
-            !isArcShape(shape) &&
-            !isCircleShape(shape)) {
-
-            if (!preview) {
-                EAction.warnNotLineArcCircle();
-            }
-            return;
         }
     }
 
@@ -214,7 +209,24 @@ Circle3T.prototype.pickEntity = function(event, preview) {
             this.updatePreview();
         }
         else {
-            this.setState(Circle3T.State.ChoosingSolution);
+            var op = this.getOperation(false);
+            qDebug("this.candidates: ", this.candidates);
+            if (!isNull(op)) {
+                // only one solution, we're done:
+                if (this.candidates.length===1) {
+                    di.applyOperation(op);
+                    this.setState(Circle3T.State.ChoosingShape1);
+                }
+                else {
+                    this.setState(Circle3T.State.ChoosingSolution);
+                }
+            }
+            // no solution:
+            else {
+                qDebug("no solution");
+                this.setState(Circle3T.State.ChoosingShape1);
+                this.error = qsTr("No solution");
+            }
         }
         break;
 

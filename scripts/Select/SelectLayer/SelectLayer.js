@@ -66,7 +66,7 @@ SelectLayer.prototype.setState = function(state) {
 };
 
 SelectLayer.prototype.entityPickEvent = function(event) {
-    this.matchingEntities = new Array();
+    this.matchingEntities = [];
     this.selectEntities(event.getEntityId());
     this.selectWithMode(this.matchingEntities);
 };

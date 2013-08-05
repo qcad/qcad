@@ -1,7 +1,7 @@
 // Public domain
 function Map() {
-    this.keyArray = new Array();
-    this.valArray = new Array();
+    this.keyArray = [];
+    this.valArray = [];
 }
 
 Map.prototype.put = function(key, val) {

@@ -295,7 +295,7 @@ Hatch.prototype.getAuxPreview = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
 
     var view = EAction.getGraphicsView();
     if (isNull(view)) {

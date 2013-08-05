@@ -184,7 +184,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
 };
 
 ModifyCorner.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity1)) {
         ret.push(this.entity1.getId());
     }

@@ -275,7 +275,7 @@ DimAngular.prototype.getOperation = function(preview) {
 };
 
 DimAngular.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.firstEntity)) {
         ret.push(this.firstEntity.getId());
     }

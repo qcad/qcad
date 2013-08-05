@@ -44,7 +44,7 @@ SelectIntersectedEntities.prototype.selectEntities = function() {
     
     var line = new RLine(this.point1, this.point2);
 
-    var matchingEntities = new Array();
+    var matchingEntities = [];
 
     // limit search to bounding box of line:
     var box = line.getBoundingBox();

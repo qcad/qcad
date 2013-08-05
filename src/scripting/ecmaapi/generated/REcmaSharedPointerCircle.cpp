@@ -90,6 +90,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
@@ -645,6 +647,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerCircle::createFrom3Points", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerCircle::isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::isValid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::isValid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCircle* self = 
+                        getSelf("isValid", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isValid();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.isValid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::isValid", context, engine);
             return result;
         }
          QScriptValue

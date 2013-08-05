@@ -58,8 +58,8 @@ SelectionDisplay.prototype.selectionChanged = function(documentInterface) {
     }
 
     var str = entities.length + " ";
-    var typesSingular = new Array();
-    var layers = new Array();
+    var typesSingular = [];
+    var layers = [];
     var pt = new RPropertyTypeId(0);
     for (var i = 0; i < count; ++i) {
         var entityId = entities[i];

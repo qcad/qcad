@@ -100,7 +100,7 @@ ItemPeer.getItemTagValues = function(id, categoryName, localeName) {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         ret.push(query.value(0));
     }
@@ -393,7 +393,7 @@ ItemPeer.getItemIdsByTagId = function(tagId) {
         + " ORDER BY id");
     query.bindValue(":tag_id", tagId);
     con.execQuery(query);
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         ret.push(query.value(0));
     }
@@ -566,7 +566,7 @@ ItemPeer.doSelectAll = function(offset, limit, idsOnly) {
     var query = con.execQuery(sql);
     
     if (idsOnly) {
-        var ret = new Array();
+        var ret = [];
         while (query.next()) {
             ret.push(query.value(0));
         }
@@ -586,7 +586,7 @@ ItemPeer.doCountAllFiles = function() {
 };
 
 ItemPeer.createFromQuery = function(query) {
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         var item = new Item();
         item.addProperties(query);      

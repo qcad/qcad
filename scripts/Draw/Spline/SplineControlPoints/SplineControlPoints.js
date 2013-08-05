@@ -179,7 +179,7 @@ SplineControlPoints.prototype.getOperation = function(preview) {
 };
 
 SplineControlPoints.prototype.getAuxPreview = function() {
-    var ret = new Array();
+    var ret = [];
 
     if (isNull(this.spline)) {
         return ret;

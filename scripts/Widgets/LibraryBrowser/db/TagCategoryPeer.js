@@ -172,7 +172,7 @@ TagCategoryPeer.getAllTagCategorys = function() {
     var query = con.createQuery();
     query.exec("SELECT DISTINCT name FROM " + TagCategory.tableName
             + " ORDER BY name");
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         ret.push(String(query.value(0)));
     }
@@ -181,7 +181,7 @@ TagCategoryPeer.getAllTagCategorys = function() {
 */
 
 TagCategoryPeer.createFromQuery = function(query) {
-    var ret = new Array();
+    var ret = [];
     while (query.next()) {
         var tagCategory = new TagCategory();
         tagCategory.addProperties(query);

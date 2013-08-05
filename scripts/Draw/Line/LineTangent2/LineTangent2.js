@@ -164,7 +164,7 @@ LineTangent2.prototype.pickEntity = function(event, preview) {
 };
 
 LineTangent2.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity1)) {
         ret.push(this.entity1.getId());
     }
@@ -177,7 +177,7 @@ LineTangent2.prototype.getHighlightedEntities = function() {
 LineTangent2.prototype.getAuxPreview = function() {
     var ellipse;
     
-    var ret = new Array();
+    var ret = [];
 
     if (isArcShape(this.shape1)) {
         ret.push(new RCircle(this.shape1.getCenter(), this.shape1.getRadius()));

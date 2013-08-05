@@ -20,7 +20,7 @@
 include("../../EAction.js");
 include("../../WidgetFactory.js");
 
-LanguagePreferences.localLanguageName = new Array();
+LanguagePreferences.localLanguageName = [];
 LanguagePreferences.localLanguageName["en"] = "English";
 LanguagePreferences.localLanguageName["en_US"] = "English";
 LanguagePreferences.localLanguageName["de"] = "Deutsch";
@@ -99,7 +99,7 @@ LanguagePreferences.getLanguages = function(dirName) {
         dirName = "ts";
     }
 
-    var codes = new Array();
+    var codes = [];
     
     var dir = new QDir(dirName);
     var sortFlags = new QDir.SortFlags(QDir.NoSort);

@@ -290,7 +290,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
         return;
     }
 
-    this.optionWidgetActions = new Array();
+    this.optionWidgetActions = [];
 
     if (!isNull(this.getGuiAction()) &&
             this.getGuiAction().getGroup() !== "snaps" &&
@@ -313,7 +313,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
         return;
     }
 
-    this.optionWidgetActions = new Array();
+    this.optionWidgetActions = [];
     for (var i = 0; i < this.uiFile.length; ++i) {
         var uiFile = this.uiFile[i];
         var wOptions = this.createWidget(uiFile);
@@ -1150,7 +1150,7 @@ EAction.addToStatusBar = function(widget, sortOrder) {
 EAction.prototype.getScales = function() {
     var doc = this.getDocument();
     if (isNull(doc)) {
-        return new Array();
+        return [];
     }
     return EAction.getScales(doc.getUnit());
 };

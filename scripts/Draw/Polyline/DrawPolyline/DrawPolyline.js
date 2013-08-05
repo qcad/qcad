@@ -365,7 +365,7 @@ DrawPolyline.prototype.checkButtonStates = function() {
 };
 
 DrawPolyline.prototype.getAuxPreview = function() {
-    var ret = new Array();
+    var ret = [];
 
     if (this.state==DrawPolyline.State.SettingNextVertex) {
         if (!isNull(this.center) && !isNull(this.angle)) {

@@ -263,7 +263,7 @@ Stretch.prototype.getAuxPreview = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
     var offset = undefined;
     if (isValidVector(this.referencePoint) && isValidVector(this.targetPoint)) {
         offset = this.targetPoint.operator_subtract(this.referencePoint);

@@ -47,7 +47,7 @@ function Viewport(vpNumber, vpWidget, documentInterface) {
 Viewport.getViewports = function(widget, documentInterface) {
     var vpWidget;
     var c = 0;
-    var vps = new Array();
+    var vps = [];
     do {
         var vpName = sprintf("Viewport%02d", c);
         vpWidget = widget.findChild(vpName);

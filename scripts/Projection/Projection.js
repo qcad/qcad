@@ -356,7 +356,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
     if (trim===true && (isPointShape(shape) || isLineShape(shape) || isArcShape(shape))) {
         var trimmedShapes = this.trimShape(shape);
 
-        ret = new Array();
+        ret = [];
         for (k=0; k<trimmedShapes.length; k++) {
             shape = trimmedShapes[k];
             //qDebug("projectShape: rec: ", shape);
@@ -370,7 +370,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         // with the given segment length. All other shapes are split up into
         // lines and arcs.
         if (isLineShape(shape) || isArcShape(shape)) {
-            ret = new Array();
+            ret = [];
 
             // switch off segmentation for polyline segments:
             this.segmentation = false;
@@ -517,7 +517,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
     if (isPolylineShape(shape)) {
         // add polyline, split up at arcs that are projected into ellipses and
         // at gaps caused by trimming:
-        ret = new Array();
+        ret = [];
         var pl = new RPolyline();
         var segmentCount = shape.countSegments();
         var addPl = false;

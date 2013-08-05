@@ -123,16 +123,26 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     var circle2 = c2;
     var circle3 = c3;
 
+    // special case: at least two circles are concentric: no solution:
+    if (c1.center.equalsFuzzy(c2.center) ||
+        c1.center.equalsFuzzy(c3.center) ||
+        c2.center.equalsFuzzy(c3.center)) {
+
+        return [];
+    }
+
     // special case: three circles of equal size:
     if (RMath.fuzzyCompare(c1.radius, c2.radius) && RMath.fuzzyCompare(c1.radius, c3.radius)) {
         // add outer and inner circles to result:
         var sol = RCircle.createFrom3Points(c1.center, c2.center, c3.center);
-        var sol1 = sol.clone();
-        var sol2 = sol.clone();
-        sol1.radius = sol1.radius + c1.radius;
-        sol2.radius = Math.abs(sol2.radius - c1.radius);
-        ret.push(sol1);
-        ret.push(sol2);
+        if (sol.isValid()) {
+            var sol1 = sol.clone();
+            var sol2 = sol.clone();
+            sol1.radius = sol1.radius + c1.radius;
+            sol2.radius = Math.abs(sol2.radius - c1.radius);
+            ret.push(sol1);
+            ret.push(sol2);
+        }
     }
 
     // circle1 is always the smallest:
@@ -602,6 +612,9 @@ Apollonius.shapesTouch = function(shape1, shape2) {
             return false;
         }
         else if (isCircleShape(shape2)) {
+//            if (!isValidVector(shape2.center)) {
+//                return false;
+//            }
             return RMath.fuzzyCompare(shape1.getDistanceTo(shape2.center, false), shape2.radius);
         }
     }

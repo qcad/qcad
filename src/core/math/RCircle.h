@@ -49,6 +49,10 @@ public:
     static RCircle createFrom2Points(const RVector& p1, const RVector& p2);
     static RCircle createFrom3Points(const RVector& p1, const RVector& p2, const RVector& p3);
 
+    bool isValid() const {
+        return center.isValid();
+    }
+
     virtual void to2D();
 
     virtual RBox getBoundingBox() const;

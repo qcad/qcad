@@ -233,7 +233,7 @@ Arc2PA.prototype.getAuxPreview = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
 
     if (this.state==Arc2PA.State.SettingPoint2) {
         ret.push(new RLine(this.center, this.point1));

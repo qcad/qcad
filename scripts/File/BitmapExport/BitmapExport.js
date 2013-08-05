@@ -64,7 +64,7 @@ BitmapExport.prototype.getFilename = function() {
     }
 
     var formats = QImageWriter.supportedImageFormats();
-    var filters = new Array();
+    var filters = [];
 
     var filterAllImages = "";
     for (var i=0; i<formats.length; ++i) {
@@ -154,7 +154,7 @@ BitmapExport.prototype.getProperties = function() {
         return undefined;
     }
 
-    var ret = new Array();
+    var ret = [];
 
     ret["width"] = widthEdit.getValue();
     ret["height"] = heightEdit.getValue();

@@ -220,7 +220,7 @@ About.prototype.initAboutScripts = function(webView) {
         var scriptsPath = RS.getDirectoryList("scripts")[0];
         var scriptsDir = new QDir(scriptsPath);
 
-        var sorted = new Array();
+        var sorted = [];
         for (i=0; i<numAddOns; i++) {
             var addOn = addOns[i];
             var path = addOn.getPath();
