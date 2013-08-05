@@ -24,6 +24,19 @@
 function ShapeAlgorithms() {
 }
 
+/**
+ * \return Array with only the circle shapes from the given shapes.
+ */
+ShapeAlgorithms.getCircleShapes = function(shapes) {
+    var ret = [];
+    for (var i=0; i<shapes.length; i++) {
+        if (isCircleShape(shapes[i])) {
+            ret.push(shapes[i]);
+        }
+    }
+    return ret;
+};
+
 ShapeAlgorithms.getTangents = function(circle1, circle2) {
     var offs1, offs2;
 

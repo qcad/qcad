@@ -67,8 +67,11 @@ CircleT2P.prototype.setState = function(state) {
         di.setClickMode(RAction.PickEntity);
         this.entity1 = undefined;
         this.shape1 = undefined;
-        this.candidates = undefined;
+        this.pos1 = undefined;
+        this.pos2 = undefined;
+        this.pos3 = undefined;
         this.pos4 = undefined;
+        this.candidates = undefined;
         var trFirstEntity = qsTr("Line, arc or circle");
         this.setCommandPrompt(trFirstEntity);
         this.setLeftMouseTip(trFirstEntity);
@@ -78,8 +81,9 @@ CircleT2P.prototype.setState = function(state) {
     case CircleT2P.State.SettingPoint1:
         di.setClickMode(RAction.PickCoordinate);
         this.pos2 = undefined;
-        this.candidates = undefined;
+        this.pos3 = undefined;
         this.pos4 = undefined;
+        this.candidates = undefined;
         var trFirstPoint = qsTr("First point on circle line");
         this.setCommandPrompt(trFirstPoint);
         this.setLeftMouseTip(trFirstPoint);
@@ -218,7 +222,15 @@ CircleT2P.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            this.setState(CircleT2P.State.ChoosingSolution);
+            // only one solution:
+            var op = this.getOperation(false);
+            if (!isNull(op) && this.candidates.length===1) {
+                di.applyOperation(op);
+                this.setState(CircleT2P.State.ChoosingShape);
+            }
+            else {
+                this.setState(CircleT2P.State.ChoosingSolution);
+            }
         }
         break;
 
@@ -240,25 +252,9 @@ CircleT2P.prototype.getOperation = function(preview) {
 
     var op = new RAddObjectsOperation();
     for (var i=0; i<shapes.length; i++) {
-        // ignore lines:
-        if (!isCircleShape(shapes[i])) {
-            continue;
-        }
-
         var entity = new RCircleEntity(doc, new RCircleData(shapes[i]));
         op.addObject(entity);
     }
-
-    /*
-    for (var k=0; k<Apollonius.constructionShapes.length; k++) {
-        var s = Apollonius.constructionShapes[k];
-        var e = shapeToEntity(doc, s);
-        if (!isNull(e)) {
-            e.setColor(new RColor("blue"));
-            op.addObject(e, false);
-        }
-    }
-    */
 
     return op;
 };
@@ -268,10 +264,16 @@ CircleT2P.prototype.getShapes = function(preview) {
         return undefined;
     }
 
+    var i;
+
     if (isNull(this.candidates)) {
         var point1 = new RPoint(this.pos2);
         var point2 = new RPoint(this.pos3);
+
         this.candidates = Apollonius.getSolutions(this.shape1.data(), point1, point2);
+
+        // filter out lines:
+        this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);
     }
 
     if (this.candidates.length===0) {
@@ -288,7 +290,7 @@ CircleT2P.prototype.getShapes = function(preview) {
 
     var minDist = -1;
     var circle = undefined;
-    for (var i=0; i<this.candidates.length; i++) {
+    for (i=0; i<this.candidates.length; i++) {
         var c = this.candidates[i];
         var dist = c.getDistanceTo(this.pos4);
         if (minDist<0 || dist<minDist) {
@@ -307,7 +309,6 @@ CircleT2P.prototype.getHighlightedEntities = function() {
     }
     return ret;
 };
-
 
 CircleT2P.prototype.getAuxPreview = function() {
     if (isNull(this.shape1) || isNull(this.pos2) || isNull(this.pos3)) {

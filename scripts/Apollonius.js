@@ -150,9 +150,9 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
         }
     }
 
-    qDebug("circle1: ", circle1);
-    qDebug("circle2: ", circle2);
-    qDebug("circle3: ", circle3);
+//    qDebug("circle1: ", circle1);
+//    qDebug("circle2: ", circle2);
+//    qDebug("circle3: ", circle3);
 
     // special case: three circles intersect in one point:
     var commonIP = Apollonius.getCommonIntersectionPoint(circle1, circle2, circle3);

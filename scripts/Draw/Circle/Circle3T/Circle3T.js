@@ -23,7 +23,7 @@ include("scripts/ShapeAlgorithms.js");
 
 /**
  * \class Circle3T
- * \brief Circle tangential to three entities.
+ * \brief Circle tangential to three entities (lines, arcs, circles).
  * \ingroup ecma_draw_circle
  */
 function Circle3T(guiAction) {
@@ -233,7 +233,6 @@ Circle3T.prototype.pickEntity = function(event, preview) {
         break;
     }
 
-
     if (!preview && this.error.length!==0) {
         EAction.handleUserWarning(this.error);
     }
@@ -259,19 +258,6 @@ Circle3T.prototype.getOperation = function(preview) {
         op.addObject(entity);
     }
 
-    /*
-    for (var k=0; k<Apollonius.constructionShapes.length; k++) {
-        var s = Apollonius.constructionShapes[k];
-        var e = shapeToEntity(doc, s);
-        if (isNull(e)) {
-            continue;
-        }
-
-        e.setColor(new RColor("blue"));
-        op.addObject(e, false);
-    }
-    */
-
     return op;
 };
 
@@ -285,6 +271,8 @@ Circle3T.prototype.getShapes = function(preview) {
     if (isNull(this.candidates)) {
         Apollonius.constructionShapes = [];
         this.candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), this.shape3.data());
+        // filter out lines:
+        this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);
     }
 
     if (this.candidates.length===0) {
@@ -314,7 +302,7 @@ Circle3T.prototype.getShapes = function(preview) {
 };
 
 Circle3T.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity1)) {
         ret.push(this.entity1.getId());
     }
