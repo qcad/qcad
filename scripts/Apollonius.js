@@ -103,8 +103,6 @@ Apollonius.getSolutions = function(shape1, shape2, shape3) {
         }
     }
 
-    qDebug("CASE NOT YET HANDLED");
-    debugger;
     return [];
 };
 
@@ -1089,8 +1087,8 @@ Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
     arr3.push(circle21);
 
     if (RMath.fuzzyCompare(circle1.radius, circle2.radius)) {
-        arr2.push(new RPoint(circle2.centerPoint));
-        arr3.push(new RPoint(circle2.centerPoint));
+        arr2.push(new RPoint(circle2.center));
+        arr3.push(new RPoint(circle2.center));
     }
     else {
         var circle22 = circle2.clone();

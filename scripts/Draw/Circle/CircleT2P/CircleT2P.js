@@ -34,8 +34,9 @@ function CircleT2P(guiAction) {
     this.pos1 = undefined;
     this.pos2 = undefined;
     this.pos3 = undefined;
+    this.pos4 = undefined;
 
-    this.center = undefined;
+    this.candidates = undefined;
 }
 
 CircleT2P.prototype = new Circle();
@@ -43,7 +44,8 @@ CircleT2P.prototype = new Circle();
 CircleT2P.State = {
     ChoosingShape : 0,
     SettingPoint1 : 1,
-    SettingPoint2 : 2
+    SettingPoint2 : 2,
+    ChoosingSolution : 3
 };
 
 CircleT2P.prototype.beginEvent = function() {
@@ -55,15 +57,18 @@ CircleT2P.prototype.beginEvent = function() {
 CircleT2P.prototype.setState = function(state) {
     Circle.prototype.setState.call(this, state);
 
+    var di = this.getDocumentInterface();
+
     this.setCrosshairCursor();
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case CircleT2P.State.ChoosingShape:
-        this.getDocumentInterface().setClickMode(RAction.PickEntity);
+        di.setClickMode(RAction.PickEntity);
         this.entity1 = undefined;
         this.shape1 = undefined;
-        this.center = undefined;
+        this.candidates = undefined;
+        this.pos4 = undefined;
         var trFirstEntity = qsTr("Line, arc or circle");
         this.setCommandPrompt(trFirstEntity);
         this.setLeftMouseTip(trFirstEntity);
@@ -71,9 +76,10 @@ CircleT2P.prototype.setState = function(state) {
         break;
 
     case CircleT2P.State.SettingPoint1:
-        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
+        di.setClickMode(RAction.PickCoordinate);
         this.pos2 = undefined;
-        this.center = undefined;
+        this.candidates = undefined;
+        this.pos4 = undefined;
         var trFirstPoint = qsTr("First point on circle line");
         this.setCommandPrompt(trFirstPoint);
         this.setLeftMouseTip(trFirstPoint);
@@ -82,14 +88,24 @@ CircleT2P.prototype.setState = function(state) {
         break;
 
     case CircleT2P.State.SettingPoint2:
-        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
+        di.setClickMode(RAction.PickCoordinate);
         this.pos3 = undefined;
-        this.center = undefined;
+        this.pos4 = undefined;
+        this.candidates = undefined;
         var trSecondPoint = qsTr("Second point on circle line");
         this.setCommandPrompt(trSecondPoint);
         this.setLeftMouseTip(trSecondPoint);
         this.setRightMouseTip(EAction.trBack);
         EAction.showSnapTools();
+        break;
+
+    case CircleT2P.State.ChoosingSolution:
+        di.setClickMode(RAction.PickEntity);
+        this.pos4 = undefined;
+        var trSolution = qsTr("Choose solution");
+        this.setCommandPrompt(trSolution);
+        this.setLeftMouseTip(trSolution);
+        this.setRightMouseTip(EAction.trBack);
         break;
     }
 };
@@ -107,6 +123,10 @@ CircleT2P.prototype.escapeEvent = function() {
     case CircleT2P.State.SettingPoint2:
         this.setState(CircleT2P.State.SettingPoint1);
         break;
+
+    case CircleT2P.State.ChoosingSolution:
+        this.setState(CircleT2P.State.SettingPoint2);
+        break;
     }
 };
 
@@ -117,20 +137,23 @@ CircleT2P.prototype.pickEntity = function(event, preview) {
     var entityId = event.getEntityId();
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
+    var shape = undefined;
 
-    if (isNull(entity)) {
-        return;
-    }
-
-    var shape = entity.getClosestShape(pos);
-
-    if (!preview) {
-        if (!isLineShape(shape) &&
-            !isArcShape(shape) &&
-            !isCircleShape(shape)) {
-
-            EAction.warnNotLineArcCircle();
+    if (this.state!==CircleT2P.State.ChoosingSolution) {
+        if (isNull(entity)) {
             return;
+        }
+
+        shape = entity.getClosestShape(pos);
+
+        if (!preview) {
+            if (!isLineShape(shape) &&
+                !isArcShape(shape) &&
+                !isCircleShape(shape)) {
+
+                EAction.warnNotLineArcCircle();
+                return;
+            }
         }
     }
 
@@ -147,31 +170,9 @@ CircleT2P.prototype.pickEntity = function(event, preview) {
             this.setState(CircleT2P.State.SettingPoint1);
         }
         break;
-    }
 
-    if (!preview && this.error.length!==0) {
-        EAction.handleUserWarning(this.error);
-    }
-};
-
-CircleT2P.prototype.pickCoordinate = function(event, preview) {
-    var di = this.getDocumentInterface();
-
-    switch (this.state) {
-    case CircleT2P.State.SettingPoint1:
-        this.pos2 = event.getModelPosition();
-
-        if (preview) {
-            this.updatePreview();
-        }
-        else {
-            this.setState(CircleT2P.State.SettingPoint2);
-        }
-        break;
-
-    case CircleT2P.State.SettingPoint2:
-        this.pos3 = event.getModelPosition();
-
+    case CircleT2P.State.ChoosingSolution:
+        this.pos4 = event.getModelPosition();
         if (preview) {
             this.updatePreview();
         }
@@ -190,27 +191,65 @@ CircleT2P.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
-CircleT2P.prototype.getOperation = function(preview) {
-    Apollonius.constructionShapes = [];
-    var shape = this.getCircleT2P(preview);
+CircleT2P.prototype.pickCoordinate = function(event, preview) {
+    var di = this.getDocumentInterface();
+    var pos = event.getModelPosition();
 
-    if (isNull(shape)) {
+    switch (this.state) {
+    case CircleT2P.State.SettingPoint1:
+        this.pos2 = pos;
+
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            this.setState(CircleT2P.State.SettingPoint2);
+        }
+        break;
+
+    case CircleT2P.State.SettingPoint2:
+        if (isNull(this.pos3) || !pos.equalsFuzzy(this.pos3)) {
+            this.candidates = undefined;
+        }
+
+        this.pos3 = pos;
+
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            this.setState(CircleT2P.State.ChoosingSolution);
+        }
+        break;
+
+    }
+
+    if (!preview && this.error.length!==0) {
+        EAction.handleUserWarning(this.error);
+    }
+};
+
+CircleT2P.prototype.getOperation = function(preview) {
+    var shapes = this.getShapes(preview);
+
+    if (isNull(shapes)) {
         return undefined;
     }
 
     var doc = this.getDocument();
 
     var op = new RAddObjectsOperation();
-    for (var i=0; i<shape.length; i++) {
+    for (var i=0; i<shapes.length; i++) {
         // ignore lines:
-        if (!isCircleShape(shape[i])) {
+        if (!isCircleShape(shapes[i])) {
             continue;
         }
 
-        var entity = new RCircleEntity(doc, new RCircleData(shape[i]));
+        var entity = new RCircleEntity(doc, new RCircleData(shapes[i]));
         op.addObject(entity);
     }
 
+    /*
     for (var k=0; k<Apollonius.constructionShapes.length; k++) {
         var s = Apollonius.constructionShapes[k];
         var e = shapeToEntity(doc, s);
@@ -219,47 +258,50 @@ CircleT2P.prototype.getOperation = function(preview) {
             op.addObject(e, false);
         }
     }
+    */
 
     return op;
 };
 
-CircleT2P.prototype.getCircleT2P = function(preview) {
+CircleT2P.prototype.getShapes = function(preview) {
     if (isNull(this.shape1) || isNull(this.pos2) || isNull(this.pos3)) {
         return undefined;
     }
 
-    var i,k,ips;
+    if (isNull(this.candidates)) {
+        var point1 = new RPoint(this.pos2);
+        var point2 = new RPoint(this.pos3);
+        this.candidates = Apollonius.getSolutions(this.shape1.data(), point1, point2);
+    }
 
-    var shape2 = new RPoint(this.pos2);
-    var shape3 = new RPoint(this.pos3);
-
-    var candidates = Apollonius.getSolutions(this.shape1.data(), shape2, shape3);
-
-    if (candidates.length===0) {
+    if (this.candidates.length===0) {
         if (!preview) {
             this.error = qsTr("No solution");
         }
         return undefined;
     }
 
+    // no position yet: return all candidates for preview:
+    if (isNull(this.pos4)) {
+        return this.candidates;
+    }
+
     var minDist = -1;
     var circle = undefined;
-    for (i=0; i<candidates.length; i++) {
-        var c = candidates[i];
-        var dist = c.getDistanceTo(this.pos3);
+    for (var i=0; i<this.candidates.length; i++) {
+        var c = this.candidates[i];
+        var dist = c.getDistanceTo(this.pos4);
         if (minDist<0 || dist<minDist) {
             minDist = dist;
             circle = c;
-            this.center = c.center;
         }
     }
 
-    //return circle;
-    return candidates;
+    return [ circle ];
 };
 
 CircleT2P.prototype.getHighlightedEntities = function() {
-    var ret = new Array();
+    var ret = [];
     if (isEntity(this.entity1)) {
         ret.push(this.entity1.getId());
     }
@@ -268,25 +310,13 @@ CircleT2P.prototype.getHighlightedEntities = function() {
 
 
 CircleT2P.prototype.getAuxPreview = function() {
-    var ret = new Array();
-    /*
-    var a;
-
-    if (isVector(this.center)) {
-        if (isArcShape(this.shape1)) {
-            a = this.shape1.getCenter().getAngleTo(this.center);
-            if (!this.shape1.isAngleWithinArc(a)) {
-                ret.push(new RCircle(this.shape1.getCenter(), this.shape1.getRadius()));
-            }
-        }
-        if (isArcShape(this.shape2)) {
-            a = this.shape2.getCenter().getAngleTo(this.center);
-            if (!this.shape2.isAngleWithinArc(a)) {
-                ret.push(new RCircle(this.shape2.getCenter(), this.shape2.getRadius()));
-            }
-        }
+    if (isNull(this.shape1) || isNull(this.pos2) || isNull(this.pos3)) {
+        return [];
     }
-    */
 
-    return ret;
+    if (!isNull(this.pos4)) {
+        return this.candidates;
+    }
+
+    return [];
 };

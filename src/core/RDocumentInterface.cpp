@@ -1291,7 +1291,6 @@ void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,
         scene->setStyle(style);
         scene->setDashPattern(dashes.toVector());
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
-//        scene->setLinetypeId(document.getLinetypeId("DIVIDE2"));
 
         RPoint* point = dynamic_cast<RPoint*> (&shape);
         if (point != NULL) {
