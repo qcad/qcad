@@ -18,9 +18,10 @@
  */
 #include <QDir>
 
-#include "RScriptHandler.h"
 #include "RDebug.h"
+#include "RScriptHandler.h"
 #include "RScriptHandlerRegistry.h"
+#include "RSettings.h"
 
 
 QString RScriptHandler::autostartScriptName = "autostart";
@@ -32,11 +33,13 @@ QString RScriptHandler::autostartScriptName = "autostart";
  * This method calls \ref initScript for all files with a
  * supported file extension (see \ref getSupportedFileExtensions).
  */
-void RScriptHandler::init(const QString& autostartFile,
-    const QStringList& arguments) {
-
+void RScriptHandler::init(const QString& autostartFile, const QStringList& arguments) {
     QStringList triedLocations;
     if (!autostartFile.isEmpty()) {
+        QFileInfo fi(autostartFile);
+        if (!fi.isAbsolute() && !autostartFile.startsWith(":")) {
+            triedLocations << RSettings::getLaunchPath() + QDir::separator() + autostartFile;
+        }
         triedLocations << autostartFile;
         triedLocations << ":" + autostartFile;
     }
