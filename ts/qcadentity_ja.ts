@@ -49,7 +49,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+82"/>
+        <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+74"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+58"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+68"/>
@@ -96,7 +97,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
@@ -304,6 +306,8 @@
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
+        <location line="+1"/>
         <source>Origin</source>
         <translation>原点</translation>
     </message>
@@ -419,7 +423,7 @@
         <translation>終了点</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
         <source>Solid</source>
         <translation>ソリッド</translation>
     </message>
@@ -450,7 +454,7 @@
         <translation>スケール</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>

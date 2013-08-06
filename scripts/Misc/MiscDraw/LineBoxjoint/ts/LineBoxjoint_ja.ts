@@ -2,24 +2,39 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="ja_JP">
 <context>
-    <name>LineBoxjoint</name>
+    <name>LineBoxJoint</name>
     <message>
-        <location filename="../LineBoxjoint.js" line="+63"/>
+        <location filename="../LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation>第１点</translation>
+        <translation type="unfinished">第１点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>第２点</translation>
+        <translation type="unfinished">第２点</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="unfinished">完了</translation>
+    </message>
+</context>
+<context>
+    <name>LineBoxjoint</name>
+    <message>
+        <source>First point</source>
+        <translation type="obsolete">第１点</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="+17"/>
+        <source>Second point</source>
+        <translation type="obsolete">第２点</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">完了</translation>
+    </message>
+    <message>
+        <location filename="../LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54,7 +69,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineBoxjointInit.js" line="+2"/>
+        <location filename="../LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
         <translation type="unfinished"></translation>
     </message>

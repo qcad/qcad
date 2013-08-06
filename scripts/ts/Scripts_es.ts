@@ -63,7 +63,7 @@
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+358"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
@@ -141,7 +141,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+113"/>
+        <location filename="../ShapeAlgorithms.js" line="+226"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Radio caído por debajo de 0,0 después %1 de círculos concéntricos.</translation>
@@ -153,7 +153,7 @@
         <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location line="+387"/>
+        <location line="+389"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

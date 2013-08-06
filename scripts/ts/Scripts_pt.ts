@@ -76,7 +76,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+358"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -161,7 +161,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+113"/>
+        <location filename="../ShapeAlgorithms.js" line="+226"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Raio caiu abaixo de 0,0, após %1 círculos concêntricos.</translation>
@@ -173,7 +173,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Raio caiu abaixo de 0,0, após %1 arcos concêntricos.</translation>
     </message>
     <message>
-        <location line="+387"/>
+        <location line="+389"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

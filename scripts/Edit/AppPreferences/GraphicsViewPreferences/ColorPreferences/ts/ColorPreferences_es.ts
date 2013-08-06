@@ -88,7 +88,7 @@ Meta cuadrícula
         <translation>Cuadro de zoom:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: grassmods_es.po--</translatorcomment>
@@ -101,7 +101,7 @@ Meta cuadrícula
         <translation>Borde del cuadro de selección:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cuadro de selección:</translation>

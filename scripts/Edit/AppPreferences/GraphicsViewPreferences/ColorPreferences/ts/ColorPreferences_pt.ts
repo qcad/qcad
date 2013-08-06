@@ -102,7 +102,7 @@ Meta-grade:</translatorcomment>
         <translation>Caixa de zoom:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection:</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -116,7 +116,7 @@ Selecção:</translatorcomment>
         <translation>Borda da caixa de seleção:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Caixa de seleção:</translation>

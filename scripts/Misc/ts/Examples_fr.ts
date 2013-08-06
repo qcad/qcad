@@ -8,9 +8,8 @@
         <translation type="obsolete">&amp;Exemples</translation>
     </message>
     <message>
-        <location filename="../Examples.js" line="+56"/>
         <source>&amp;Misc</source>
-        <translation>&amp;Divers</translation>
+        <translation type="obsolete">&amp;Divers</translation>
     </message>
 </context>
 </TS>

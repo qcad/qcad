@@ -10,7 +10,7 @@
         <translation type="obsolete">&amp;Sobre</translation>
     </message>
     <message>
-        <location filename="../About.js" line="+33"/>
+        <location filename="../About.js" line="+34"/>
         <source>About %1</source>
         <translation>Sobre %1</translation>
     </message>

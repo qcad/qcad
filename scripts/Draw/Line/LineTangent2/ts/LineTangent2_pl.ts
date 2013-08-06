@@ -4,7 +4,7 @@
 <context>
     <name>LineTangent2</name>
     <message>
-        <location filename="../LineTangent2.js" line="+67"/>
+        <location filename="../LineTangent2.js" line="+68"/>
         <source>Choose first circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz pierwszego okręgu lub łuku</translation>

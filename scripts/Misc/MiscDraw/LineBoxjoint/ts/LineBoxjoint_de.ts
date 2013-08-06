@@ -2,9 +2,9 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="de_DE">
 <context>
-    <name>LineBoxjoint</name>
+    <name>LineBoxJoint</name>
     <message>
-        <location filename="../LineBoxjoint.js" line="+63"/>
+        <location filename="../LineBoxJoint.js" line="+63"/>
         <source>First point</source>
         <translation>Erster Punkt</translation>
     </message>
@@ -18,12 +18,27 @@
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
+</context>
+<context>
+    <name>LineBoxjoint</name>
+    <message>
+        <source>First point</source>
+        <translation type="obsolete">Erster Punkt</translation>
+    </message>
+    <message>
+        <source>Second point</source>
+        <translation type="obsolete">Zweiter Punkt</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">Fertig</translation>
+    </message>
     <message>
         <source>Box &amp;Joint form 2 Points</source>
         <translation type="obsolete">Finger&amp;zinkung von 2 Punkten</translation>
     </message>
     <message>
-        <location filename="../LineBoxjointInit.js" line="+2"/>
+        <location filename="../LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
         <translation>Finger&amp;zinkung von 2 Punkten</translation>
     </message>
@@ -33,7 +48,7 @@
         <translation>Fingerzinkung mit Zapfen, Nut oder Schlitz</translation>
     </message>
     <message>
-        <location filename="../LineBoxjoint.ui" line="+17"/>
+        <location filename="../LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
         <translation>Tiefe:</translation>
     </message>

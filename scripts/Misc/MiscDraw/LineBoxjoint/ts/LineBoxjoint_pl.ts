@@ -2,9 +2,9 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="pl_PL">
 <context>
-    <name>LineBoxjoint</name>
+    <name>LineBoxJoint</name>
     <message>
-        <location filename="../LineBoxjoint.js" line="+63"/>
+        <location filename="../LineBoxJoint.js" line="+63"/>
         <source>First point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18,8 +18,11 @@
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>LineBoxjoint</name>
     <message>
-        <location filename="../LineBoxjoint.ui" line="+17"/>
+        <location filename="../LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54,7 +57,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineBoxjointInit.js" line="+2"/>
+        <location filename="../LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
         <translation type="unfinished"></translation>
     </message>

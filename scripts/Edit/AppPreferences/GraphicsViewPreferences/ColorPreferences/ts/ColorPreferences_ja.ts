@@ -62,7 +62,7 @@
         <translation>ズームボックス:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection:</source>
         <translation>選択:</translation>
     </message>
@@ -72,7 +72,7 @@
         <translation>選択ボックスの境界:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection Box:</source>
         <translation>選択ボックス:</translation>
     </message>

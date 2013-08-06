@@ -53,7 +53,7 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+358"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -121,7 +121,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+113"/>
+        <location filename="../ShapeAlgorithms.js" line="+226"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation>%1同心円の半径が0.0を下回りました。</translation>
     </message>
@@ -131,7 +131,7 @@
         <translation>%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location line="+387"/>
+        <location line="+389"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>

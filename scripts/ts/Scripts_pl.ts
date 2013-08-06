@@ -71,7 +71,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+358"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -157,7 +157,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+113"/>
+        <location filename="../ShapeAlgorithms.js" line="+226"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym okręgu (s).</translation>
@@ -169,7 +169,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location line="+387"/>
+        <location line="+389"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

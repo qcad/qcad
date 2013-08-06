@@ -13,4 +13,22 @@
         <translation>&amp;Desenho</translation>
     </message>
 </context>
+<context>
+    <name>DrawBasedOnThreeCircles</name>
+    <message>
+        <location filename="../DrawBasedOnThreeCircles.js" line="+72"/>
+        <source>First arc or circle</source>
+        <translation>Primeiro arco ou círculo</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Second arc or circle</source>
+        <translation>Segundo arco ou círculo</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Third arc or circle</source>
+        <translation>Terceiro arco ou círculo</translation>
+    </message>
+</context>
 </TS>

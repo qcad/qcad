@@ -87,7 +87,7 @@ Meta griglia:
         <translation>Finestra di zoom:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: it3.po--</translatorcomment>
@@ -100,7 +100,7 @@ Meta griglia:
         <translation>Confine finestra di selezione:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Finestra di selezione:</translation>

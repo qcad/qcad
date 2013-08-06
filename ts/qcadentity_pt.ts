@@ -53,7 +53,8 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+82"/>
+        <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+74"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+58"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+68"/>
@@ -104,7 +105,8 @@ Exportando o desenho...</translatorcomment>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
@@ -373,6 +375,8 @@ Ponto de Extensão 2|Y</translatorcomment>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
+        <location line="+1"/>
         <source>Origin</source>
         <translatorcomment>--google--
 Indique a primeira extensão da linha de origem
@@ -534,7 +538,7 @@ Ponto final (x):</translatorcomment>
         <translation>Ponto final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
@@ -586,7 +590,7 @@ Escalone entidades</translatorcomment>
         <translation>Escala</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>

@@ -28,12 +28,12 @@
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+258"/>
+        <location filename="../PreferencesPage.ui" line="+261"/>
         <source>Selection:</source>
         <translation>Auswahl:</translation>
     </message>
     <message>
-        <location line="-223"/>
+        <location line="-226"/>
         <source>Background:</source>
         <translation>Hintergrund:</translation>
     </message>
@@ -94,12 +94,12 @@
         <translation>Zoombox:</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+54"/>
         <source>Selection Box Border:</source>
         <translation>Auswahlbox (Rand):</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection Box:</source>
         <translation>Auswahlbox:</translation>
     </message>

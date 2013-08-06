@@ -261,7 +261,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+163"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+164"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wymaga doboru</translation>

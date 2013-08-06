@@ -84,7 +84,8 @@ Altura del Texto:</translatorcomment>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+82"/>
+        <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-8"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+58"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+68"/>
@@ -156,7 +157,8 @@ Arco: centro, punto, ángulos
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
@@ -291,7 +293,7 @@ Editar el contenido del bloque seleccionado</translatorcomment>
         <translation>Contenidos</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: Scripts_es.ts--
@@ -522,7 +524,7 @@ No se puede agregar a una polínea cerrada.</translatorcomment>
         <translation>Cerrado</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
@@ -693,6 +695,8 @@ Ubicación del arco dimensión</translatorcomment>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
         <location line="+1"/>
         <source>Origin</source>
         <translatorcomment>--exact match--

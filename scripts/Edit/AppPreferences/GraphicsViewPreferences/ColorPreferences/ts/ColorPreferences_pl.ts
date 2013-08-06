@@ -85,7 +85,7 @@ Meta-siatka:</translatorcomment>
         <translation type="unfinished">Box Zoom:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--</translatorcomment>
@@ -98,7 +98,7 @@ Meta-siatka:</translatorcomment>
         <translation type="unfinished">Border Box Selection:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Box Selection:</translation>

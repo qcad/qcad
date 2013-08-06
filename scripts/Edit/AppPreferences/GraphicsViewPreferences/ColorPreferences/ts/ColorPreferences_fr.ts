@@ -94,7 +94,7 @@ Métagrille :
         <translation>Boîte zoom:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--</translatorcomment>
@@ -107,7 +107,7 @@ Métagrille :
         <translation>Bordure de la zone de sélection :</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zone de sélection :</translation>

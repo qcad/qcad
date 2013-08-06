@@ -8,10 +8,5 @@
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Przykłady</translation>
     </message>
-    <message>
-        <location filename="../Examples.js" line="+56"/>
-        <source>&amp;Misc</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>

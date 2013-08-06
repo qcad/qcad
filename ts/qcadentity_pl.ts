@@ -49,7 +49,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+82"/>
+        <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+74"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+58"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+68"/>
@@ -96,7 +97,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
@@ -321,6 +323,8 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
+        <location line="+1"/>
         <source>Origin</source>
         <translatorcomment>--google--
 Wskaż początek pierwszej linii rozszerzenia
@@ -450,7 +454,7 @@ Punkt główny|Y</translatorcomment>
         <translation>Punkt końcowy</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
         <source>Solid</source>
         <translation>Jednolity</translation>
     </message>
@@ -481,7 +485,7 @@ Punkt główny|Y</translatorcomment>
         <translation>Skala</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>

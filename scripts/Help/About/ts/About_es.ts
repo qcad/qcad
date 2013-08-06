@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Acerca de</translation>
     </message>
     <message>
-        <location filename="../About.js" line="+33"/>
+        <location filename="../About.js" line="+34"/>
         <source>About %1</source>
         <translation>Acerca de %1</translation>
     </message>
