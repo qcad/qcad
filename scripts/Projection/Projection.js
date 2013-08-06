@@ -254,10 +254,13 @@ Projection.prototype.transform = function(entity, k, op, preview) {
             op.addObject(e, false);
         }
 
-        // hatch (explode):
+        // hatch or text (explode):
         else {
             var painterPaths = entity.getPainterPaths();
             for (i=0; i<painterPaths.length; i++) {
+                if (painterPaths[i].getFeatureSize()<0.0) {
+                    continue;
+                }
                 shapes = painterPaths[i].getShapes();
                 this.addTransformedShapes(entity, shapes, op, preview);
             }
@@ -274,17 +277,17 @@ Projection.prototype.transform = function(entity, k, op, preview) {
 //    }
 
     // text data that is part of this entity (dimension label):
-    if (isFunction(entity.getTextData)) {
-        var textData = entity.getTextData();
-        painterPaths = textData.getPainterPaths(false);
-        for (i=0; i<painterPaths.length; i++) {
-            if (painterPaths[i].getFeatureSize()<0.0) {
-                continue;
-            }
-            shapes = painterPaths[i].getShapes();
-            this.addTransformedShapes(entity, shapes, op, preview);
-        }
-    }
+//    if (isFunction(entity.getTextData)) {
+//        var textData = entity.getTextData();
+//        painterPaths = textData.getPainterPaths(false);
+//        for (i=0; i<painterPaths.length; i++) {
+//            if (painterPaths[i].getFeatureSize()<0.0) {
+//                continue;
+//            }
+//            shapes = painterPaths[i].getShapes();
+//            this.addTransformedShapes(entity, shapes, op, preview);
+//        }
+//    }
 };
 
 /**
