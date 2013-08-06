@@ -112,6 +112,8 @@ CircleT2P.prototype.setState = function(state) {
         this.setRightMouseTip(EAction.trBack);
         break;
     }
+
+    this.simulateMouseMoveEvent();
 };
 
 CircleT2P.prototype.escapeEvent = function() {
@@ -150,14 +152,15 @@ CircleT2P.prototype.pickEntity = function(event, preview) {
 
         shape = entity.getClosestShape(pos);
 
-        if (!preview) {
-            if (!isLineShape(shape) &&
-                !isArcShape(shape) &&
-                !isCircleShape(shape)) {
+        if (!isLineShape(shape) &&
+            !isArcShape(shape) &&
+            !isCircleShape(shape)) {
 
+            if (!preview) {
                 EAction.warnNotLineArcCircle();
                 return;
             }
+            shape = undefined;
         }
     }
 
@@ -222,14 +225,22 @@ CircleT2P.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            // only one solution:
             var op = this.getOperation(false);
-            if (!isNull(op) && this.candidates.length===1) {
-                di.applyOperation(op);
-                this.setState(CircleT2P.State.ChoosingShape);
+            if (!isNull(op)) {
+                // only one solution:
+                if (this.candidates.length===1) {
+                    di.applyOperation(op);
+                    this.setState(CircleT2P.State.ChoosingShape);
+                }
+                // multiple solutions:
+                else {
+                    this.setState(CircleT2P.State.ChoosingSolution);
+                }
             }
+            // no solution:
             else {
-                this.setState(CircleT2P.State.ChoosingSolution);
+                this.setState(CircleT2P.State.ChoosingShape);
+                this.error = qsTr("No solution");
             }
         }
         break;

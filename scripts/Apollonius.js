@@ -192,25 +192,37 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
         return ret;
     }
 
-    // special case: each circle intersects the other two:
-    if (!intersect &&
-        circle1.getIntersectionPoints(circle2).length>0 &&
-        circle1.getIntersectionPoints(circle3).length>0 &&
-        circle2.getIntersectionPoints(circle3).length>0) {
+    // special case: each circle intersects the other two,
+    // at least one intersects through two points:
+    var nIps12 = circle1.getIntersectionPoints(circle2).length;
+    var nIps13 = circle1.getIntersectionPoints(circle3).length;
+    var nIps23 = circle2.getIntersectionPoints(circle3).length;
+
+    if (!intersect && nIps12>0 && nIps13>0 && nIps23>0 &&
+        (nIps12===2 || nIps13===2 || nIps23===2)) {
 
         var ips12 = circle1.getIntersectionPoints(circle2);
         var ips13 = circle1.getIntersectionPoints(circle3);
         var ips23 = circle2.getIntersectionPoints(circle3);
 
-        var inversionCircles = [
-            new RCircle(ips12[0], ips12[0].getDistanceTo(ips12[1])),
-            new RCircle(ips13[0], ips13[0].getDistanceTo(ips13[1])),
-            new RCircle(ips23[0], ips23[0].getDistanceTo(ips23[1])),
+        var inversionCircles = [];
+        var r;
 
-            new RCircle(ips12[1], ips12[0].getDistanceTo(ips12[1])),
-            new RCircle(ips13[1], ips13[0].getDistanceTo(ips13[1])),
-            new RCircle(ips23[1], ips23[0].getDistanceTo(ips23[1]))
-        ];
+        if (ips12.length===2) {
+            r = ips12[0].getDistanceTo(ips12[1]);
+            inversionCircles.push(new RCircle(ips12[0], r));
+            inversionCircles.push(new RCircle(ips12[1], r));
+        }
+        if (ips13.length===2) {
+            r = ips13[0].getDistanceTo(ips13[1]);
+            inversionCircles.push(new RCircle(ips13[0], r));
+            inversionCircles.push(new RCircle(ips13[1], r));
+        }
+        if (ips23.length===2) {
+            r = ips23[0].getDistanceTo(ips23[1]);
+            inversionCircles.push(new RCircle(ips23[0], r));
+            inversionCircles.push(new RCircle(ips23[1], r));
+        }
 
         for (var i=0; i<inversionCircles.length; i++) {
             var circle1Inverse = Apollonius.getInverseShape(circle1, inversionCircles[i]);

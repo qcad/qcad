@@ -112,6 +112,8 @@ Circle2TP.prototype.setState = function(state) {
         this.setRightMouseTip(EAction.trBack);
         break;
     }
+
+    this.simulateMouseMoveEvent();
 };
 
 Circle2TP.prototype.escapeEvent = function() {
@@ -147,14 +149,16 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
         if (!isNull(entity)) {
             shape = entity.getClosestShape(pos);
 
-            if (!preview) {
-                if (!isLineShape(shape) &&
-                    !isArcShape(shape) &&
-                    !isCircleShape(shape)) {
+            if (!isLineShape(shape) &&
+                !isArcShape(shape) &&
+                !isCircleShape(shape)) {
 
+                if (!preview) {
                     EAction.warnNotLineArcCircle();
                     return;
                 }
+
+                shape = undefined;
             }
         }
     }
@@ -222,17 +226,29 @@ Circle2TP.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            // only one solution:
             var op = this.getOperation(false);
-            if (!isNull(op) && this.candidates.length===1) {
-                di.applyOperation(op);
-                this.setState(Circle2TP.State.ChoosingShape1);
+            if (!isNull(op)) {
+                // only one solution:
+                if (this.candidates.length===1) {
+                    di.applyOperation(op);
+                    this.setState(Circle2TP.State.ChoosingShape1);
+                }
+                // multiple solutions:
+                else {
+                    this.setState(Circle2TP.State.ChoosingSolution);
+                }
             }
+            // no solution:
             else {
-                this.setState(Circle2TP.State.ChoosingSolution);
+                this.setState(Circle2TP.State.ChoosingShape1);
+                this.error = qsTr("No solution");
             }
         }
         break;
+    }
+
+    if (!preview && this.error.length!==0) {
+        EAction.handleUserWarning(this.error);
     }
 };
 

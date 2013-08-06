@@ -81,6 +81,8 @@ Circle2TR.prototype.setState = function(state) {
         this.setRightMouseTip(EAction.trBack);
         break;
     }
+
+    this.simulateMouseMoveEvent();
 };
 
 Circle2TR.prototype.escapeEvent = function() {
@@ -107,14 +109,16 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
     if (!isNull(entity)) {
         shape = entity.getClosestShape(pos);
 
-        if (!preview) {
-            if (!isLineShape(shape) &&
-                !isArcShape(shape) &&
-                !isCircleShape(shape)) {
+        if (!isLineShape(shape) &&
+            !isArcShape(shape) &&
+            !isCircleShape(shape)) {
 
+            if (!preview) {
                 EAction.warnNotLineArcCircle();
                 return;
             }
+
+            shape = undefined;
         }
     }
 
@@ -145,6 +149,10 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
             if (!isNull(op)) {
                 di.applyOperation(op);
                 this.setState(Circle2TR.State.ChoosingShape1);
+            }
+            else {
+                this.setState(Circle2TR.State.ChoosingShape1);
+                this.error = qsTr("No solution");
             }
         }
         break;
