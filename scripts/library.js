@@ -1006,6 +1006,13 @@ Array.intersect = function(a, b) {
 }
 
 /**
+ * Escapes a string for use as literlal match in regular expression.
+ */
+RegExp.escape = function(s) {
+    return s.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
+}
+
+/**
  * Checks the type of the given object.
  *
  * \return true if the given object is an array.

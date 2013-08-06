@@ -599,7 +599,7 @@ QString RTextData::toEscapedText(const QTextDocument& textDocument, const RColor
             // backslash:
             text.replace("\\", "\\\\");
             // replace line separator (shift-enter):
-            text.replace(QChar(0x2028), "\\p");
+            text.replace(QChar(0x2028), "\\P");
             // curly brakets:
             text.replace('{', "\\{");
             text.replace('}', "\\}");
