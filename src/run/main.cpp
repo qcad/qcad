@@ -68,7 +68,7 @@
 
 
 #ifdef Q_OS_MAC
-void qt_mac_set_menubar_icons(bool);
+//extern void qt_mac_set_menubar_icons(bool enable);
 #endif
 
 
@@ -96,7 +96,8 @@ int main(int argc, char *argv[]) {
     RMainWindow::installMessageHandler();
 #ifdef Q_OS_MAC
     // TODO: make available as script function:
-    qt_mac_set_menubar_icons(false);
+    //qt_mac_set_menubar_icons(false);
+    QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
 
     QStringList originalArguments;

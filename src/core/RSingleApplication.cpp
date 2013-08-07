@@ -53,10 +53,12 @@ RSingleApplication::RSingleApplication(const QString &appId, int &argc, char **a
     sysInit(appId);
 }
 
+/*
 RSingleApplication::RSingleApplication(int &argc, char **argv, Type type)
     : QApplication(argc, argv, type) {
     sysInit();
 }
+*/
 
 
 #if defined(Q_OS_X11)

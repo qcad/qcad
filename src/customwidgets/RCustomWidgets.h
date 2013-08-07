@@ -26,8 +26,11 @@
 class RCustomWidgets: public QObject,
         public QDesignerCustomWidgetCollectionInterface {
 
-Q_OBJECT
-Q_INTERFACES(QDesignerCustomWidgetCollectionInterface)
+    Q_OBJECT
+    Q_INTERFACES(QDesignerCustomWidgetCollectionInterface)
+#if QT_VERSION >= 0x050000
+    Q_PLUGIN_METADATA(IID "org.qcad.customwidgets")
+#endif
 
 public:
     RCustomWidgets(QObject *parent = 0);

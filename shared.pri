@@ -1,3 +1,11 @@
+contains(QT_VERSION, ^5\\..*\\..*) {
+    cache()
+    DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
+    QT += printsupport webkitwidgets
+    #INCLUDEPATH += ~/local/qt/include/QtWebKitWidgets
+    QMAKE_CXXFLAGS += -I/Users/andrew/local/qt/include/QtWebKitWidgets
+}
+
 DEFINES += QCAD_DLL
 
 # output directory:
@@ -60,9 +68,16 @@ QT += core \
     xmlpatterns
 
 # make sure that the QtHelp framework is included in the app bundle under Mac OS X:
-CONFIG += help \
-    designer \
-    uitools
+contains(QT_VERSION, ^5\\..*\\..*) {
+    QT += help \
+        designer \
+        uitools
+}
+else {
+    CONFIG += help \
+        designer \
+        uitools
+}
 
 # required for the navel spatial index lib:
 !win32 {

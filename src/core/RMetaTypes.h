@@ -64,6 +64,7 @@
 #include <QKeyEvent>
 #include <QLayout>
 #include <QLayoutItem>
+#include <QLineEdit>
 #include <QList>
 #include <QListView>
 #include <QListWidget>
@@ -72,6 +73,7 @@
 #include <QMap>
 #include <QMainWindow>
 #include <QMdiArea>
+#include <QMdiSubWindow>
 #include <QMenu>
 #include <QModelIndex>
 #include <QMouseEvent>
@@ -92,6 +94,7 @@
 #include <QSettings>
 #include <QSharedPointer>
 #include <QShowEvent>
+#include <QStaticText>
 #include <QStringList>
 #include <QStyleOption>
 #include <QStyleOptionViewItem>

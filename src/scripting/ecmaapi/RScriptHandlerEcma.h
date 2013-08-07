@@ -105,7 +105,7 @@ public:
     static QScriptValue ecmaImportExtension(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue ecmaIsDeleted(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue ecmaSerialize(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue ecmaBlockEvents(QScriptContext* context, QScriptEngine* engine);
+    //static QScriptValue ecmaBlockEvents(QScriptContext* context, QScriptEngine* engine);
     //static QScriptValue ecmaUnblockEvents(QScriptContext* context, QScriptEngine* engine);
     //static QScriptValue ecmaGetOpt(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaAddApplicationFont(QScriptContext* context, QScriptEngine* engine);
@@ -140,7 +140,7 @@ private:
 
     static bool translatorInstalled;
     static bool alwaysLoadScripts;
-    static QAbstractEventDispatcher::EventFilter defaultEventFilter;
+    //static QAbstractEventDispatcher::EventFilter defaultEventFilter;
 };
 
 Q_DECLARE_METATYPE(RScriptHandlerEcma*)

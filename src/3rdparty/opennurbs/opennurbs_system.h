@@ -267,7 +267,8 @@
 /* 16-bit wide character ("UNICODE") */
 
 #if !defined(_WCHAR_T)
-typedef unsigned short wchar_t;
+//typedef unsigned short wchar_t;
+//typedef unsigned wchar_t;
 #endif
 
 #define _WCHAR_T_DEFINED

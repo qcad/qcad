@@ -57,4 +57,6 @@ QList<QDesignerCustomWidgetInterface*> RCustomWidgets::customWidgets() const {
     return widgets;
 }
 
+#if QT_VERSION < 0x050000
 Q_EXPORT_PLUGIN2(customwidgetsplugin, RCustomWidgets)
+#endif

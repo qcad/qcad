@@ -291,7 +291,7 @@
 
 bool RScriptHandlerEcma::alwaysLoadScripts = false;
 bool RScriptHandlerEcma::translatorInstalled = false;
-QAbstractEventDispatcher::EventFilter RScriptHandlerEcma::defaultEventFilter;
+//QAbstractEventDispatcher::EventFilter RScriptHandlerEcma::defaultEventFilter;
 
 RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     //  registerScriptHandler(this, getSupportedFileExtensionsStatic());
@@ -1656,15 +1656,15 @@ QScriptValue RScriptHandlerEcma::ecmaQSortFilterProxyModelCastToQAbstractItemMod
     return engine->newQObject(dynamic_cast<QAbstractItemModel*>(self));
 }
 
-QScriptValue RScriptHandlerEcma::ecmaBlockEvents(QScriptContext* context,
-        QScriptEngine* engine) {
-    Q_UNUSED(context)
-    Q_UNUSED(engine)
+//QScriptValue RScriptHandlerEcma::ecmaBlockEvents(QScriptContext* context,
+//        QScriptEngine* engine) {
+//    Q_UNUSED(context)
+//    Q_UNUSED(engine)
 
-    QAbstractEventDispatcher* evtDisp = QAbstractEventDispatcher::instance();
-    defaultEventFilter = evtDisp->setEventFilter(RScriptHandlerEcma::eventFilter);
-    return QScriptValue();
-}
+//    QAbstractEventDispatcher* evtDisp = QAbstractEventDispatcher::instance();
+//    defaultEventFilter = evtDisp->setEventFilter(RScriptHandlerEcma::eventFilter);
+//    return QScriptValue();
+//}
 
 bool RScriptHandlerEcma::eventFilter(void *message) {
     Q_UNUSED(message)

@@ -1,5 +1,5 @@
 TARGET = qcadcustomwidgets
-CONFIG += designer plugin
+CONFIG += plugin
 include( ../../shared.pri )
 
 SOURCES = RShortcutLineEditPlugin.cpp \

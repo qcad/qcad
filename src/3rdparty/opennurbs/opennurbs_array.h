@@ -1506,6 +1506,7 @@ See Also:
   ON_CompareDecreasing
 */
 template< class T>
+static
 int ON_CompareIncreasing( const T* a, const T* b);
 
 /* 
@@ -1539,6 +1540,7 @@ See Also:
   ON_CompareIncreasing
 */
 template< class T>
+static
 int ON_CompareDecreasing( const T* a, const T* b);
 
 

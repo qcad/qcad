@@ -63,10 +63,19 @@ bool RMainWindow::hasMainWindow() {
 }
 
 void RMainWindow::installMessageHandler() {
+#if QT_VERSION >= 0x050000
+    qInstallMessageHandler(RMainWindow::messageHandler);
+#else
     qInstallMsgHandler(RMainWindow::messageHandler);
+#endif
 }
 
+#if QT_VERSION >= 0x050000
+void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& message) {
+    const char* msg = message.toLocal8Bit().data();
+#else
 void RMainWindow::messageHandler(QtMsgType type, const char* msg) {
+#endif
     switch (type) {
     case QtDebugMsg:
         //getMainWindow()->handleUserMessage(msg, RS::Debug);

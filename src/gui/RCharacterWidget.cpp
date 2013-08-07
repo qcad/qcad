@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QtGui>
+#include <QToolTip>
 
 #include "RCharacterWidget.h"
 
@@ -86,7 +87,9 @@ void RCharacterWidget::mouseMoveEvent(QMouseEvent *event) {
 void RCharacterWidget::mousePressEvent(QMouseEvent *event) {
     if (event->button() == Qt::LeftButton) {
         lastKey = (event->y() / squareSize) * columns + event->x() / squareSize;
+#if QT_VERSION < 0x050000
         if (QChar(lastKey).category() != QChar::NoCategory)
+#endif
             emit characterSelected(QString(QChar(lastKey)));
         update();
     } else

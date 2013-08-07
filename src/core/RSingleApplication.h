@@ -34,7 +34,7 @@ class QCADCORE_EXPORT RSingleApplication : public QApplication {
 public:
     RSingleApplication(int& argc, char **argv, bool GUIenabled = true);
     RSingleApplication(const QString& id, int& argc, char **argv, bool GUIenabled = true);
-    RSingleApplication(int& argc, char **argv, Type type);
+    //RSingleApplication(int& argc, char **argv, Type type);
 #if defined(Q_OS_X11)
     RSingleApplication(Display* dpy, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0);
     RSingleApplication(Display *dpy, int& argc, char **argv, Qt::HANDLE visual = 0, Qt::HANDLE cmap= 0);

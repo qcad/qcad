@@ -18,6 +18,8 @@
  */
 #include <QtGui>
 #include <QLabel>
+#include <QMdiArea>
+#include <QStatusBar>
 #include <QTabBar>
 
 #include <RSingleApplication.h>

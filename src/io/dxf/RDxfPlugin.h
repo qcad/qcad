@@ -13,6 +13,9 @@ class RDxfPlugin : public QObject, public RPluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(RPluginInterface)
+#if QT_VERSION >= 0x050000
+    Q_PLUGIN_METADATA(IID "org.qcad.dxf")
+#endif
 
 public:
     virtual bool init();

@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QtGui>
+#include <QMdiArea>
 
 #include "RDebug.h"
 #include "RDocumentInterface.h"

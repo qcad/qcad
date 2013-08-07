@@ -187,10 +187,17 @@ public:
      */
     virtual void close() = 0;
 
+#if QT_VERSION >= 0x050000
+    /**
+     * \nonscriptable
+     */
+    static void messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& message);
+#else
     /**
      * \nonscriptable
      */
     static void messageHandler(QtMsgType type, const char* msg);
+#endif
 
     virtual void setCommandPrompt(const QString& text = "") = 0;
     virtual void setLeftMouseTip(const QString& text = "") = 0;
