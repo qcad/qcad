@@ -43,7 +43,7 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>Draw circle tangential to tree entities</source>
+        <source>Draw circle tangential to three entities</source>
         <translation>Kreis tangential zu drei Objekten</translation>
     </message>
 </context>
