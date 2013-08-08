@@ -22,11 +22,17 @@
 
 #include "../core_global.h"
 
+#include "RExplodable.h"
 #include "RShape.h"
 #include "RVector.h"
 #include "RLine.h"
 
 class RBox;
+
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 
 /**
  * Low-level mathematical representation of a triangle.
@@ -37,7 +43,7 @@ class RBox;
  * \copyable
  * \hasStreamOperator
  */
-class QCADCORE_EXPORT RTriangle: public RShape {
+class QCADCORE_EXPORT RTriangle: public RShape, public RExplodable {
 public:
     RTriangle();
     RTriangle(const RVector& p1, const RVector& p2, const RVector& p3);
@@ -48,6 +54,7 @@ public:
     }
 
     virtual void to2D();
+
 
     static RTriangle createArrow(const RVector& position, double direction, double size);
 
@@ -77,6 +84,8 @@ public:
     bool isPointInQuadrant(const RVector& p) const;
 
     double getD() const;
+
+    virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
 
     virtual bool move(const RVector& offset) {
         corner[0].move(offset);

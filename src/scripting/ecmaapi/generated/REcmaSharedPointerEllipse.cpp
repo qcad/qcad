@@ -230,6 +230,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPointAt, "getPointAt");
             
+            REcmaHelper::registerFunction(&engine, proto, getMiddlePoint, "getMiddlePoint");
+            
             REcmaHelper::registerFunction(&engine, proto, move, "move");
             
             REcmaHelper::registerFunction(&engine, proto, rotate, "rotate");
@@ -3787,6 +3789,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getPointAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipse::getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::getMiddlePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::getMiddlePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipse* self = 
+                        getSelf("getMiddlePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getMiddlePoint();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getMiddlePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getMiddlePoint", context, engine);
             return result;
         }
          QScriptValue

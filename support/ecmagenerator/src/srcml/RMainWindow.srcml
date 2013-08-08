@@ -772,6 +772,44 @@ dir="./core" filename="RMainWindow.h">
   <name>close</name>
   <parameter_list>()</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
+  <cpp:if>#
+  <cpp:directive>if</cpp:directive>
+  <expr>
+  <name>QT_VERSION</name>&gt;= 0x050000</expr></cpp:if>
+  <comment type="block">/** * \nonscriptable */</comment>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>messageHandler</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>QtMsgType</name>
+      </type>
+      <name>type</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QMessageLogContext</name>&amp;</type>
+      <name>context</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>message</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <cpp:else>#
+  <cpp:directive>else</cpp:directive></cpp:else>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
@@ -796,6 +834,8 @@ dir="./core" filename="RMainWindow.h">
       <name>msg</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
   <function_decl>
   <type>
     <name>virtual</name>

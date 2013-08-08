@@ -229,7 +229,8 @@ Projection.prototype.transform = function(entity, k, op, preview) {
     var shapes = entity.getShapes();
     this.addTransformedShapes(entity, shapes, op, preview);
 
-    // painter path that represent this (hatch) entity:
+    /*
+    // painter path that represent this (hatch, text) entity:
     if (isFunction(entity.getPainterPaths)) {
 
         // solid fill (transform):
@@ -266,6 +267,7 @@ Projection.prototype.transform = function(entity, k, op, preview) {
             }
         }
     }
+    */
 
     // painter paths that represent this entity:
 //    if (isFunction(entity.getPainterPaths)) {
@@ -277,17 +279,17 @@ Projection.prototype.transform = function(entity, k, op, preview) {
 //    }
 
     // text data that is part of this entity (dimension label):
-//    if (isFunction(entity.getTextData)) {
-//        var textData = entity.getTextData();
-//        painterPaths = textData.getPainterPaths(false);
-//        for (i=0; i<painterPaths.length; i++) {
-//            if (painterPaths[i].getFeatureSize()<0.0) {
-//                continue;
-//            }
-//            shapes = painterPaths[i].getShapes();
-//            this.addTransformedShapes(entity, shapes, op, preview);
-//        }
-//    }
+    if (isDimensionEntity(entity) && isFunction(entity.getTextData)) {
+        var textData = entity.getTextData();
+        var painterPaths = textData.getPainterPaths(false);
+        for (i=0; i<painterPaths.length; i++) {
+            if (painterPaths[i].getFeatureSize()<0.0) {
+                continue;
+            }
+            shapes = painterPaths[i].getShapes();
+            this.addTransformedShapes(entity, shapes, op, preview);
+        }
+    }
 };
 
 /**

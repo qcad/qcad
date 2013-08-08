@@ -62,7 +62,7 @@ SelectLayer.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     this.setLeftMouseTip(qsTr("Choose entity on layer"));
     this.setRightMouseTip(EAction.trCancel);
-    EAction.showSnapTools();
+    //EAction.showSnapTools();
 };
 
 SelectLayer.prototype.entityPickEvent = function(event) {

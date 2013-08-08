@@ -25,6 +25,9 @@ dir="./core/math" filename="RTriangle.h">
   <cpp:file>"../core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RExplodable.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RShape.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -34,6 +37,14 @@ dir="./core/math" filename="RTriangle.h">
   <cpp:file>"RLine.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RBox</name>;</class_decl>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDEFAULT_MIN1</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RDEFAULT_MIN1</name>-1</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
   <comment type="block">/** * Low-level mathematical representation
   of a triangle. * * \ingroup math * \scriptable *
   \sharedPointerSupport * \copyable * \hasStreamOperator
@@ -45,7 +56,9 @@ dir="./core/math" filename="RTriangle.h">
   <name>RTriangle</name>
   <super>: 
   <specifier>public</specifier>
-  <name>RShape</name></super>
+  <name>RShape</name>, 
+  <specifier>public</specifier>
+  <name>RExplodable</name></super>
   <block>{
   <private type="default"></private>
   <public>public: 
@@ -383,6 +396,34 @@ dir="./core/math" filename="RTriangle.h">
   </type>
   <name>getD</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RShape</name>
+      </argument>&gt;</argument_list></name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getExploded</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>int</name>
+    </type>
+    <name>segments</name>=
+    <init>
+      <expr>
+        <name>RDEFAULT_MIN1</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function>
     <type>

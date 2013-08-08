@@ -30,6 +30,8 @@
     // conversion functions for base classes:
     static  QScriptValue getRShape(QScriptContext *context,
             QScriptEngine *engine)
+        ;static  QScriptValue getRExplodable(QScriptContext *context,
+            QScriptEngine *engine)
         ;
 
     // returns class name:
@@ -39,6 +41,11 @@
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
         ;
+        // properties of secondary base class RExplodable:
+        
+
+        // methods of secondary base class RExplodable:
+        
 
     // properties:
     
@@ -94,6 +101,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getD
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         move

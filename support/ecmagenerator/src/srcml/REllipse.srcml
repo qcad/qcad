@@ -716,7 +716,8 @@ dir="./core/math" filename="REllipse.h">
       <name>RVector</name>&amp;</type>
       <name>pos</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>double</name>
@@ -730,7 +731,8 @@ dir="./core/math" filename="REllipse.h">
       </type>
       <name>angle</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>RVector</name>
@@ -744,7 +746,15 @@ dir="./core/math" filename="REllipse.h">
       </type>
       <name>angle</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RVector</name>
+  </type>
+  <name>getMiddlePoint</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>

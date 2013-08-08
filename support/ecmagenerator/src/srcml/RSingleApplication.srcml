@@ -115,31 +115,8 @@ dir="./core" filename="RSingleApplication.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RSingleApplication</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>int</name>&amp;</type>
-      <name>argc</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>char</name>**</type>
-      <name>argv</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>Type</name>
-      </type>
-      <name>type</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
+  <comment type="line">//RSingleApplication(int&amp; argc, char
+  **argv, Type type);</comment>
   <cpp:if>#
   <cpp:directive>if</cpp:directive>
   <expr>

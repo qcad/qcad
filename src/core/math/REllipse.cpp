@@ -157,7 +157,7 @@ void REllipse::moveEndPoint(const RVector& pos, bool changeAngleOnly) {
 }
 
 // previously: getEllipseAngle
-double REllipse::getParamTo(const RVector& pos) {
+double REllipse::getParamTo(const RVector& pos) const {
     RVector m = pos;
     m.rotate(-majorPoint.getAngle(), center);
     RVector v = m-center;
@@ -168,7 +168,7 @@ double REllipse::getParamTo(const RVector& pos) {
 /**
  * \return Radius of ellipse at given ellipse angle.
  */
-double REllipse::getRadiusAt(double angle) {
+double REllipse::getRadiusAt(double angle) const {
     RVector v(cos(angle)*getMajorRadius(),
               sin(angle)*getMinorRadius());
     return v.getMagnitude();
@@ -177,12 +177,18 @@ double REllipse::getRadiusAt(double angle) {
 /**
  * \return Point on ellipse at given ellipse angle.
  */
-RVector REllipse::getPointAt(double angle) {
+RVector REllipse::getPointAt(double angle) const {
     RVector v(cos(angle)*getMajorRadius(),
                    sin(angle)*getMinorRadius());
     v.rotate(getAngle());
     v.move(center);
     return v;
+}
+
+RVector REllipse::getMiddlePoint() const {
+    double a;
+    a = getStartParam() + getSweep()/2.0;
+    return getPointAt(a);
 }
 
 RVector REllipse::getCenter() const{
@@ -569,6 +575,7 @@ QList<RVector> REllipse::getEndPoints() const {
  */
 QList<RVector> REllipse::getMiddlePoints() const {
     QList<RVector> ret;
+    //ret.append(getMiddlePoint());
     return ret;
 }
 
@@ -863,13 +870,13 @@ double REllipse::getSweep() const {
     double ret = 0.0;
 
     if (reversed) {
-        if (startParam < endParam) {
+        if (startParam <= endParam) {
             ret = -(startParam + 2 * M_PI - endParam);
         } else {
             ret = -(startParam - endParam);
         }
     } else {
-        if (endParam < startParam) {
+        if (endParam <= startParam) {
             ret = endParam + 2 * M_PI - startParam;
         } else {
             ret = endParam - startParam;

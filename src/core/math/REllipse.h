@@ -118,9 +118,10 @@ public:
     double getLength() const;
     double getSimpsonLength(double f1, double f2) const;
 
-    double getParamTo(const RVector& pos);
-    double getRadiusAt(double angle);
-    RVector getPointAt(double angle);
+    double getParamTo(const RVector& pos) const;
+    double getRadiusAt(double angle) const;
+    RVector getPointAt(double angle) const;
+    RVector getMiddlePoint() const;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);

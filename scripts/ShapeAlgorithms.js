@@ -1062,3 +1062,154 @@ ShapeAlgorithms.lineOrArcToPolyline = function(shape, numSegments) {
     }
     return ret;
 };
+
+ShapeAlgorithms.removeSharedPointer = function(shape) {
+    if (isArray(shape)) {
+        var ret = [];
+        for (var i=0; i<shape.length; i++) {
+            ret.push(ShapeAlgorithms.removeSharedPointer(shape[i]));
+        }
+        return ret;
+    }
+
+    if (isFunction(shape.data)) {
+        return shape.data().clone();
+    }
+};
+
+/**
+ * \return Array of shapes of type point, line, arc, circle, ellipse.
+ */
+ShapeAlgorithms.explodeToTrimmable = function(shape) {
+    if (isSplineShape(shape)) {
+        return ShapeAlgorithms.removeSharedPointer(shape.getExploded());
+    }
+    if (isPolylineShape(shape)) {
+        return ShapeAlgorithms.removeSharedPointer(shape.getExploded());
+    }
+    if (isTriangleShape(shape)) {
+        return ShapeAlgorithms.removeSharedPointer(shape.getExploded());
+    }
+    return [ shape ];
+};
+
+/**
+ * \return Array of shapes which represent the given shape
+ * split up at the given points.
+ *
+ * \param points Array of RVector, assumed to be on shape.
+ */
+ShapeAlgorithms.splitAt = function(shape, points) {
+    var ret = [];
+    var i;
+    var center;
+    var radius;
+    var startPoint;
+    var endPoint;
+
+    if ((isArcShape(shape) || isEllipseShape(shape)) && shape.isReversed()) {
+        shape.reverse();
+    }
+
+    if (points.length===0) {
+        return [ shape ];
+    }
+
+    if (isLineShape(shape)) {
+        startPoint = shape.getStartPoint();
+        endPoint = shape.getEndPoint();
+
+        points = RVector.getSortedByDistance(points, startPoint);
+
+        if (!startPoint.equalsFuzzy(points[0])) {
+            points.unshift(startPoint);
+        }
+        if (!endPoint.equalsFuzzy(points[points.length-1])) {
+            points.push(endPoint);
+        }
+        for (i=0; i<points.length-1; i++) {
+            if (points[i].equalsFuzzy(points[i+1])) {
+                continue;
+            }
+
+            ret.push(new RLine(points[i], points[i+1]));
+        }
+    }
+
+    if (isCircleShape(shape)) {
+        center = shape.getCenter();
+        var refAngle = center.getAngleTo(points[0]);
+        radius = shape.getRadius();
+        startPoint = endPoint = center.operator_add(RVector.createPolar(shape.getRadius(), refAngle));
+
+        points = RVector.getSortedByAngle(points, shape.getCenter(), refAngle);
+
+        if (!startPoint.equalsFuzzy(points[0])) {
+            points.unshift(startPoint);
+        }
+        if (!endPoint.equalsFuzzy(points[points.length-1])) {
+            points.push(endPoint);
+        }
+        qDebug(points);
+        for (i=0; i<points.length-1; i++) {
+            if (points[i].equalsFuzzy(points[i+1])) {
+                continue;
+            }
+
+            ret.push(new RArc(center, radius, center.getAngleTo(points[i]), center.getAngleTo(points[i+1]), false));
+        }
+    }
+
+    if (isArcShape(shape)) {
+        center = shape.getCenter();
+        radius = shape.getRadius();
+        startPoint = shape.getStartPoint();
+        endPoint = shape.getEndPoint();
+
+        points = RVector.getSortedByAngle(points, center, shape.getStartAngle());
+
+        if (!startPoint.equalsFuzzy(points[0])) {
+            points.unshift(startPoint);
+        }
+        if (!endPoint.equalsFuzzy(points[points.length-1])) {
+            points.push(endPoint);
+        }
+        for (i=0; i<points.length-1; i++) {
+            if (points[i].equalsFuzzy(points[i+1])) {
+                continue;
+            }
+
+            var e = shape.clone();
+            e.setStartAngle(center.getAngleTo(points[i]));
+            e.setEndAngle(center.getAngleTo(points[i+1]));
+            ret.push(e);
+        }
+    }
+
+    if (isEllipseShape(shape)) {
+        center = shape.getCenter();
+        startPoint = shape.getStartPoint();
+        endPoint = shape.getEndPoint();
+
+        points = RVector.getSortedByAngle(points, center, shape.getStartAngle());
+
+        if (!startPoint.equalsFuzzy(points[0])) {
+            points.unshift(startPoint);
+        }
+        if (!endPoint.equalsFuzzy(points[points.length-1])) {
+            points.push(endPoint);
+        }
+        for (i=0; i<points.length-1; i++) {
+            if (points[i].equalsFuzzy(points[i+1])) {
+                continue;
+            }
+
+            var e = shape.clone();
+            e.setStartParam(e.getParamTo(points[i]));
+            e.setEndParam(e.getParamTo(points[i+1]));
+            ret.push(e);
+        }
+    }
+
+    return ret;
+};

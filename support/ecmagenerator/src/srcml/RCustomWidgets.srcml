@@ -46,7 +46,19 @@ dir="./customwidgets" filename="RCustomWidgets.h">
       <expr>
         <name>QDesignerCustomWidgetCollectionInterface</name>
       </expr>
-    </argument>)</argument_list>public</decl>
+    </argument>)</argument_list>
+    <cpp:if>#
+    <cpp:directive>if</cpp:directive>
+    <expr>
+    <name>QT_VERSION</name>&gt;= 0x050000</expr></cpp:if>
+    <name>Q_PLUGIN_METADATA</name>
+    <argument_list>(
+    <argument>
+      <expr>
+      <name>IID</name>"org.qcad.customwidgets"</expr>
+    </argument>)</argument_list>
+    <cpp:endif>#
+    <cpp:directive>endif</cpp:directive></cpp:endif>public</decl>
   </decl_stmt>: 
   <constructor_decl>
   <name>RCustomWidgets</name>

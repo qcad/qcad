@@ -401,10 +401,7 @@ RVector RTextData::getClosestPointOnEntity(const RVector& point,
 QList<QSharedPointer<RShape> > RTextData::getShapes(const RBox& queryBox) const {
     Q_UNUSED(queryBox);
 
-    return QList<QSharedPointer<RShape> >();
-}
-
-QList<QSharedPointer<RShape> > RTextData::getExploded() const {
+    //return QList<QSharedPointer<RShape> >();
     QList<QSharedPointer<RShape> > shapes;
 
     QList<RPainterPath> paths = getPainterPaths();
@@ -420,6 +417,25 @@ QList<QSharedPointer<RShape> > RTextData::getExploded() const {
     }
 
     return shapes;
+}
+
+QList<QSharedPointer<RShape> > RTextData::getExploded() const {
+    return getShapes();
+//    QList<QSharedPointer<RShape> > shapes;
+
+//    QList<RPainterPath> paths = getPainterPaths();
+//    for (int i=0; i<paths.length(); i++) {
+//        RPainterPath path = paths[i];
+
+//        // ignore bounding box rectangle:
+//        if (path.getFeatureSize()<0.0) {
+//            continue;
+//        }
+
+//        shapes.append(path.getShapes());
+//    }
+
+//    return shapes;
 }
 
 void RTextData::update() const {

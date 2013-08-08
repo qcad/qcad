@@ -56,6 +56,7 @@ public:
     RVector getMinimum() const;
     RVector getMaximum() const;
     bool isOutside(const RBox& other) const;
+    bool isOutsideXY(const RBox& other) const;
     bool contains(const RBox& other) const;
     /**
      * \nonscriptable

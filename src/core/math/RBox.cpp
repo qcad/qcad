@@ -159,6 +159,23 @@ bool RBox::isOutside(const RBox& other) const {
     );
 }
 
+/**
+ * \return True if the given box is completely outside this box.
+ */
+bool RBox::isOutsideXY(const RBox& other) const {
+    RVector maximum = getMaximum();
+    RVector minimum = getMinimum();
+    RVector otherMaximum = other.getMaximum();
+    RVector otherMinimum = other.getMinimum();
+
+    return (
+                minimum.x > otherMaximum.x ||
+                minimum.y > otherMaximum.y ||
+                maximum.x < otherMinimum.x ||
+                maximum.y < otherMinimum.y
+           );
+}
+
 
 
 /**

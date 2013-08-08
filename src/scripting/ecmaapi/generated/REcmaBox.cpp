@@ -84,6 +84,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isOutside, "isOutside");
             
+            REcmaHelper::registerFunction(&engine, proto, isOutsideXY, "isOutsideXY");
+            
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
             
             REcmaHelper::registerFunction(&engine, proto, containsBox, "containsBox");
@@ -945,6 +947,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBox::isOutside", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBox::isOutsideXY
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBox::isOutsideXY", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBox::isOutsideXY";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBox* self = 
+                        getSelf("isOutsideXY", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RBox: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOutsideXY(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBox.isOutsideXY().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBox::isOutsideXY", context, engine);
             return result;
         }
          QScriptValue

@@ -317,6 +317,22 @@ double RTriangle::getD() const {
             * corner[0].z;
 }
 
+/**
+ * \return List of RLines describing this triangle.
+ */
+QList<QSharedPointer<RShape> > RTriangle::getExploded(int segments) const {
+    Q_UNUSED(segments);
+
+    QList<QSharedPointer<RShape> > ret;
+
+    for (int i=0; i<3; i++) {
+        ret.append(QSharedPointer<RShape>(new RLine(corner[i], corner[(i+1)%3])));
+    }
+
+    return ret;
+}
+
+
 void RTriangle::print(QDebug dbg) const {
     dbg.nospace() << "RTriangle(";
     RShape::print(dbg);

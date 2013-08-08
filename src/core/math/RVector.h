@@ -221,10 +221,16 @@ public:
     static QList<RVector> getSortedByDistance(const QList<RVector>& list, const RVector& v);
     class RVectorDistanceSort {
     public:
-        static bool lessThan(const RVector& v1, const RVector& v2) {
-            return v.getDistanceTo(v1) < v.getDistanceTo(v2);
-        }
+        static bool lessThan(const RVector& v1, const RVector& v2);
         static RVector v;
+    };
+
+    static QList<RVector> getSortedByAngle(const QList<RVector>& list, const RVector& center, double angle);
+    class RVectorAngleSort {
+    public:
+        static bool lessThan(const RVector& v1, const RVector& v2);
+        static RVector center;
+        static double angle;
     };
 
 public:

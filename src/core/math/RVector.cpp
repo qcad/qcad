@@ -29,6 +29,8 @@
 const RVector RVector::invalid = RVector(0, 0, 0, false);
 const RVector RVector::nullVector = RVector(0, 0, 0, true);
 RVector RVector::RVectorDistanceSort::v;
+RVector RVector::RVectorAngleSort::center;
+double RVector::RVectorAngleSort::angle = 0.0;
 
 RVector::RVector(double vx, double vy, double vz, bool valid_in) :
     x(vx), y(vy), z(vz) {
@@ -828,7 +830,18 @@ int RVector::getClosestIndex(const QList<RVector>& list) const {
 QList<RVector> RVector::getSortedByDistance(const QList<RVector>& list, const RVector& v) {
     RVectorDistanceSort::v = v;
     QList<RVector> ret = list;
-    qSort(ret.begin(), ret.end(), RVectorDistanceSort::lessThan);
+    qSort(ret.begin(), ret.end(), RVector::RVectorDistanceSort::lessThan);
+    return ret;
+}
+
+/**
+ * \return List of same vectors as given, ordered by shortes angle difference to given reference angle.
+ */
+QList<RVector> RVector::getSortedByAngle(const QList<RVector>& list, const RVector& center, double angle) {
+    RVectorAngleSort::center = center;
+    RVectorAngleSort::angle = angle;
+    QList<RVector> ret = list;
+    qSort(ret.begin(), ret.end(), RVector::RVectorAngleSort::lessThan);
     return ret;
 }
 
@@ -874,4 +887,14 @@ QDataStream& operator>>(QDataStream& stream, RVector& vector) {
     stream >> vector.z;
     stream >> vector.valid;
     return stream;
+}
+
+bool RVector::RVectorDistanceSort::lessThan(const RVector& v1, const RVector& v2) {
+    return v.getDistanceTo(v1) < v.getDistanceTo(v2);
+}
+
+bool RVector::RVectorAngleSort::lessThan(const RVector& v1, const RVector& v2) {
+    double a1 = center.getAngleTo(v1);
+    double a2 = center.getAngleTo(v2);
+    return RMath::getAngleDifference(angle, a1) < RMath::getAngleDifference(angle, a2);
 }

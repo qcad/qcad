@@ -73,6 +73,9 @@
         isOutside
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isOutsideXY
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

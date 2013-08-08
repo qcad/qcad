@@ -7,6 +7,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="true" isQObject="false"
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <baseClass name="RShape" specifier="public" />
+    <baseClass name="RExplodable" specifier="public" />
     <constructor>
       <variant />
       <variant>
@@ -136,6 +137,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getD" cppName="getD" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getExploded" cppName="getExploded"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="int" typeName="int" name="segments"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
+      </variant>
     </method>
     <method name="move" cppName="move" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

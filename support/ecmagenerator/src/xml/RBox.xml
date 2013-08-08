@@ -62,6 +62,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="isOutsideXY" cppName="isOutsideXY"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="other"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="contains" cppName="contains" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

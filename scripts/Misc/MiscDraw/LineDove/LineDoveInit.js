@@ -4,7 +4,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/LineDove.js");
     action.setIcon(basePath + "/LineDove.svg");
-    action.setDefaultShortcut(new QKeySequence("r,v"));
     action.setStatusTip(qsTranslate("LineDove", "Draw a dovetail joint"));
     action.setDefaultCommands(["dovetail"]);
     action.setSortOrder(200);

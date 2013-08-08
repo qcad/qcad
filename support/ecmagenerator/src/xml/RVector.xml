@@ -605,6 +605,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getSortedByAngle" cppName="getSortedByAngle"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+      </variant>
+    </method>
     <property name="x" type="double" cppGetter="getX"
     cppSetter="setX" />
     <property name="y" type="double" cppGetter="getY"

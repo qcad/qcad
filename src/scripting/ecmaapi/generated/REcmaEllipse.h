@@ -217,6 +217,9 @@
         getPointAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

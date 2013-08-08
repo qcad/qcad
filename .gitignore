@@ -26,6 +26,7 @@ Makefile
 Makefile.Debug
 Makefile.Release
 *.pro.user
+.qmake.cache
 
 # Mac:
 .DS_Store

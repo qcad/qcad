@@ -315,13 +315,13 @@ double RArc::getSweep() const {
     double ret = 0.0;
 
     if (reversed) {
-        if (startAngle < endAngle) {
+        if (startAngle <= endAngle) {
             ret = -(startAngle + 2 * M_PI - endAngle);
         } else {
             ret = -(startAngle - endAngle);
         }
     } else {
-        if (endAngle < startAngle) {
+        if (endAngle <= startAngle) {
             ret = endAngle + 2 * M_PI - startAngle;
         } else {
             ret = endAngle - startAngle;

@@ -13,6 +13,8 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaShape.h"
+                
+                  #include "REcmaExplodable.h"
                  void REcmaTriangle::init(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -37,7 +39,8 @@
             }
           
         /*
-        
+        REcmaExplodable::init(engine, proto);
+          
         */
     
 
@@ -56,6 +59,9 @@
         // conversion for base class RShape
         REcmaHelper::registerFunction(&engine, proto, getRShape, "getRShape");
         
+        // conversion for base class RExplodable
+        REcmaHelper::registerFunction(&engine, proto, getRExplodable, "getRExplodable");
+        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -64,6 +70,12 @@
     // conversion to all base classes (multiple inheritance):
     REcmaHelper::registerFunction(&engine, proto, getBaseClasses, "getBaseClasses");
     
+
+        // properties of secondary base class RExplodable:
+        
+
+        // methods of secondary base class RExplodable:
+        
 
     // properties:
     
@@ -101,6 +113,8 @@
             REcmaHelper::registerFunction(&engine, proto, isPointInQuadrant, "isPointInQuadrant");
             
             REcmaHelper::registerFunction(&engine, proto, getD, "getD");
+            
+            REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
             REcmaHelper::registerFunction(&engine, proto, move, "move");
             
@@ -328,6 +342,15 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
+             QScriptValue REcmaTriangle::getRExplodable(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                RExplodable* cppResult =
+                    qscriptvalue_cast<RTriangle*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
             
 
     // returns class name:
@@ -346,10 +369,17 @@
         
         list.append("RShape");
     
+        list.append("RExplodable");
+    
 
         return qScriptValueFromSequence(engine, list);
     }
     
+        // properties of secondary base class RExplodable:
+        
+
+        // methods of secondary base class RExplodable:
+        
 
     // properties:
     
@@ -1581,6 +1611,87 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTriangle::getD", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTriangle::getExploded
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTriangle::getExploded", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getExploded";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("getExploded", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getExploded();
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getExploded(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getExploded().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTriangle::getExploded", context, engine);
             return result;
         }
          QScriptValue
