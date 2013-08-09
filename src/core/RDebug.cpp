@@ -31,7 +31,7 @@ QMap<int, QTime> RDebug::timer;
 #endif
 
 void RDebug::printBacktrace(const QString& prefix) {
-#ifndef Q_OS_WIN32
+#if !defined(Q_OS_WIN32) && !defined(Q_OS_FREEBSD)
     void *array[10];
     size_t size;
     char **strings;
