@@ -5,5 +5,6 @@ SUBDIRS = \
     LineBoxJoint \
     LineDove \
     LineRadicalAxis \
+    LineSimilarityAxes \
     PointPole \
     PointPowerCenter

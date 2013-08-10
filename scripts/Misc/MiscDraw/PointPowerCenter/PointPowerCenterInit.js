@@ -3,7 +3,7 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/PointPowerCenter.js");
-    action.setIcon(basePath + "/PointPowerCenter.svg");
+    //action.setIcon(basePath + "/PointPowerCenter.svg");
     action.setSortOrder(100);
     EAction.addGuiActionTo(action, MiscDraw, true, true);
 }
