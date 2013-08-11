@@ -6,17 +6,17 @@
     <message>
         <location filename="../CircleT2P.js" line="+75"/>
         <source>Line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>線分,弧または円</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>円上の第1の点</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>円上の第２の点</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -27,17 +27,17 @@
         <location line="+134"/>
         <location line="+47"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>解がありません</translation>
     </message>
     <message>
         <location filename="../CircleT2PInit.js" line="+2"/>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;t ２点と接線</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation type="unfinished"></translation>
+        <translation>２点と１つのエンティティに接する円を描画</translation>
     </message>
 </context>
 </TS>

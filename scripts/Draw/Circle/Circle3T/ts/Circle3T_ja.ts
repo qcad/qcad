@@ -13,17 +13,17 @@
     <message>
         <location filename="../Circle3T.js" line="+84"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>第１の線分,弧または円</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>第２の線分,弧または円</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Third line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>第３の線分,弧または円</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -34,17 +34,17 @@
         <location line="+112"/>
         <location line="+59"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>解がありません</translation>
     </message>
     <message>
         <location filename="../Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;a 3接線</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to three entities</source>
-        <translation type="unfinished"></translation>
+        <translation>３つのエンティティに接する接する円を描画</translation>
     </message>
 </context>
 </TS>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>第１の線分,弧または円</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>第２の線分,弧または円</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -32,12 +32,12 @@
     <message>
         <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;g 1点と2接線</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation type="unfinished"></translation>
+        <translation>２つのエンティティに接し１点を通る円を描画</translation>
     </message>
 </context>
 </TS>
