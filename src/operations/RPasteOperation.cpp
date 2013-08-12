@@ -59,6 +59,12 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
 RPolyline RPasteOperation::getBoundary(double unitFactor) {
     RBox box = sourceDocument.getBoundingBox();
     RPolyline polyline = box.getPolyline2d();
+    if (flipHorizontal) {
+        polyline.flipHorizontal();
+    }
+    if (flipVertical) {
+        polyline.flipVertical();
+    }
     polyline.scale(scale * unitFactor);
     polyline.rotate(rotation);
     polyline.move(offset);

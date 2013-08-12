@@ -115,8 +115,6 @@ public:
     virtual bool scale(double scaleFactor, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool scale(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool mirror(const RLine& axis);
-    virtual bool flipHorizontal();
-    virtual bool flipVertical();
     virtual bool reverse();
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 

@@ -456,23 +456,11 @@ bool REntityData::mirror(const RVector& axis1, const RVector& axis2) {
 }
 
 bool REntityData::flipHorizontal() {
-    // if this entity is based on a shape (point,line,arc,...),
-    // transform using shape API:
-    RShape* s = castToShape();
-    if (s==NULL) {
-        return mirror(RLine(RVector(0,0), RVector(0,1)));
-    }
-    return s->flipHorizontal();
+    return mirror(RLine(RVector(0,0), RVector(0,1)));
 }
 
 bool REntityData::flipVertical() {
-    // if this entity is based on a shape (point,line,arc,...),
-    // transform using shape API:
-    RShape* s = castToShape();
-    if (s==NULL) {
-        return mirror(RLine(RVector(0,0), RVector(1,0)));
-    }
-    return s->flipVertical();
+    return mirror(RLine(RVector(0,0), RVector(1,0)));
 }
 
 /**

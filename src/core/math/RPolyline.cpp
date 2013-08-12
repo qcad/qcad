@@ -623,20 +623,6 @@ bool RPolyline::mirror(const RLine& axis) {
     return true;
 }
 
-bool RPolyline::flipHorizontal() {
-    for (int i=0; i<vertices.size(); i++) {
-        vertices[i].flipHorizontal();
-    }
-    return true;
-}
-
-bool RPolyline::flipVertical() {
-    for (int i=0; i<vertices.size(); i++) {
-        vertices[i].flipVertical();
-    }
-    return true;
-}
-
 bool RPolyline::reverse() {
     RPolyline nPolyline;
     QList<QSharedPointer<RShape> > segments = getExploded();
