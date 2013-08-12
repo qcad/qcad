@@ -1,5 +1,6 @@
 TEMPLATE = subdirs
 SUBDIRS = \
     ts \
+    EllipseArcCPPA \
     EllipseCPP \
-    EllipseArcCPPA
+    EllipseInscribedQuad

@@ -986,6 +986,10 @@ ShapeAlgorithms.approximateEllipse = function(ellipse, segments) {
     return polyline;
 };
 
+ShapeAlgorithms.createEllipseInscribed = function(line1, line2, line3, line4) {
+    //var line
+};
+
 /**
  * Tries to convert the given spline into one line or arc.
  * \return RArc, RLine or the original RSpline.
