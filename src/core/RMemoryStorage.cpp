@@ -44,6 +44,8 @@ void RMemoryStorage::clear() {
     boundingBox = RBox();
     objectMap.clear();
     entityMap.clear();
+    blockMap.clear();
+    layerMap.clear();
     transactionMap.clear();
     variables.clear();
     variableCaseMap.clear();
@@ -172,8 +174,8 @@ QSet<RUcs::Id> RMemoryStorage::queryAllUcs() {
 
 QSet<RLayer::Id> RMemoryStorage::queryAllLayers(bool undone) {
     QSet<RLayer::Id> result;
-    QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
-    for (it = objectMap.begin(); it != objectMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RLayer> >::iterator it;
+    for (it = layerMap.begin(); it != layerMap.end(); ++it) {
         QSharedPointer<RLayer> l = it->dynamicCast<RLayer>();
         if (!l.isNull() && (undone || !l->isUndone())) {
             result.insert(l->getId());
@@ -184,8 +186,8 @@ QSet<RLayer::Id> RMemoryStorage::queryAllLayers(bool undone) {
 
 QSet<RBlock::Id> RMemoryStorage::queryAllBlocks(bool undone) {
     QSet<RBlock::Id> result;
-    QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
-    for (it = objectMap.begin(); it != objectMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RBlock> >::iterator it;
+    for (it = blockMap.begin(); it != blockMap.end(); ++it) {
         QSharedPointer<RBlock> b = it->dynamicCast<RBlock>();
         if (!b.isNull() && (undone || !b->isUndone())) {
             result.insert(b->getId());
@@ -328,28 +330,28 @@ QSharedPointer<REntity> RMemoryStorage::queryEntityDirect(REntity::Id objectId) 
 }
 
 QSharedPointer<RLayer> RMemoryStorage::queryLayerDirect(RLayer::Id layerId) const {
-    return objectMap[layerId].dynamicCast<RLayer>();
+    return layerMap[layerId].dynamicCast<RLayer>();
 }
 
 QSharedPointer<RLayer> RMemoryStorage::queryLayer(RLayer::Id layerId) const {
-    if (!objectMap.contains(layerId)) {
+    if (!layerMap.contains(layerId)) {
         return QSharedPointer<RLayer> ();
     }
-    if (objectMap[layerId].isNull()) {
+    if (layerMap[layerId].isNull()) {
         return QSharedPointer<RLayer> ();
     }
-    if (!objectMap[layerId].dynamicCast<RLayer>().isNull()) {
-        return QSharedPointer<RLayer>((RLayer*)objectMap[layerId]->clone());
+    if (!layerMap[layerId].dynamicCast<RLayer>().isNull()) {
+        return QSharedPointer<RLayer>((RLayer*)layerMap[layerId]->clone());
     }
 
     qWarning() << "RMemoryStorage::queryLayer: should never be reached: " << layerId;
-    qWarning() << "RMemoryStorage::queryLayer: found object but not layer: " << *objectMap[layerId];
+    qWarning() << "RMemoryStorage::queryLayer: found object but not layer: " << *layerMap[layerId];
     return QSharedPointer<RLayer>();
 }
 
 QSharedPointer<RLayer> RMemoryStorage::queryLayer(const QString& layerName) const {
-    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
-    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RLayer> >::const_iterator it;
+    for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
         QSharedPointer<RLayer> l = it->dynamicCast<RLayer>();
         if (!l.isNull() && l->getName().compare(layerName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
             return QSharedPointer<RLayer> (l->clone());
@@ -359,25 +361,25 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(const QString& layerName) cons
 }
 
 QSharedPointer<RBlock> RMemoryStorage::queryBlock(RBlock::Id blockId) const {
-    if (!objectMap.contains(blockId)) {
+    if (!blockMap.contains(blockId)) {
         return QSharedPointer<RBlock> ();
     }
-    if (objectMap[blockId].isNull()) {
+    if (blockMap[blockId].isNull()) {
         return QSharedPointer<RBlock> ();
     }
-    if (!objectMap[blockId].dynamicCast<RBlock>().isNull()) {
-        return QSharedPointer<RBlock>((RBlock*)objectMap[blockId]->clone());
+    if (!blockMap[blockId].dynamicCast<RBlock>().isNull()) {
+        return QSharedPointer<RBlock>((RBlock*)blockMap[blockId]->clone());
     }
     return QSharedPointer<RBlock>();
 }
 
 QSharedPointer<RBlock> RMemoryStorage::queryBlockDirect(RBlock::Id blockId) const {
-    return objectMap[blockId].dynamicCast<RBlock>();
+    return blockMap[blockId].dynamicCast<RBlock>();
 }
 
 QSharedPointer<RBlock> RMemoryStorage::queryBlock(const QString& blockName) const {
-    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
-    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
+    for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = it->dynamicCast<RBlock>();
         if (!b.isNull() && b->getName().compare(blockName, Qt::CaseInsensitive)==0 && !b->isUndone()) {
             return QSharedPointer<RBlock> (b->clone());
@@ -396,8 +398,8 @@ QString RMemoryStorage::getBlockName(RBlock::Id blockId) const {
 
 QSet<QString> RMemoryStorage::getBlockNames() const {
     QSet<QString> ret;
-    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
-    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
+    for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = it->dynamicCast<RBlock> ();
         if (!b.isNull() && !b->isUndone()) {
             ret.insert(b->getName());
@@ -687,17 +689,16 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object) {
     }
 
     // avoid block recursions:
-    QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<
-            RBlockReferenceEntity> ();
+    QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity> ();
     if (!blockRef.isNull()) {
         RBlock::Id id = blockRef->getBlockId();
         RBlock::Id refId = blockRef->getReferencedBlockId();
         // check if block with 'id' may contain a block reference which refers to
         // block with 'refid':
-        if (checkRecursion(id, refId)) {
-            qCritical("RMemoryStorage::saveObject: recursion found");
-            return false;
-        }
+//        if (checkRecursion(id, refId)) {
+//            qCritical("RMemoryStorage::saveObject: recursion found");
+//            return false;
+//        }
     }
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
@@ -724,6 +725,14 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object) {
     if (!entity.isNull()) {
         entityMap[object->getId()] = entity;
         setMaxDrawOrder(qMax(entity->getDrawOrder()+1, getMaxDrawOrder()));
+    }
+
+    if (!layer.isNull()) {
+        layerMap[object->getId()] = layer;
+    }
+
+    if (!block.isNull()) {
+        blockMap[object->getId()] = block;
     }
 
     return true;
@@ -773,6 +782,12 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
     objectMap.remove(objectId);
     if (entityMap.contains(objectId)) {
         entityMap.remove(objectId);
+    }
+    if (blockMap.contains(objectId)) {
+        blockMap.remove(objectId);
+    }
+    if (layerMap.contains(objectId)) {
+        layerMap.remove(objectId);
     }
 
     return true;
@@ -967,8 +982,8 @@ QString RMemoryStorage::getLayerName(RLayer::Id layerId) const {
 
 QSet<QString> RMemoryStorage::getLayerNames() const {
     QSet<QString> ret;
-    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
-    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RLayer> >::const_iterator it;
+    for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
         QSharedPointer<RLayer> l = it->dynamicCast<RLayer>();
         if (!l.isNull() && !l->isUndone()) {
             ret.insert(l->getName());

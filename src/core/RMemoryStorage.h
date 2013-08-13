@@ -157,6 +157,8 @@ protected:
     RBox boundingBox;
     QHash<RObject::Id, QSharedPointer<RObject> > objectMap;
     QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
+    QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
+    QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
     QHash<int, RTransaction> transactionMap;
     QHash<QString, QVariant> variables;
     QMap<QString, QString> variableCaseMap;

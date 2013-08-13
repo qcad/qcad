@@ -101,6 +101,14 @@ public:
         spatialIndexDisabled = on;
     }
 
+    void setExistingBlockDetectionDisabled(bool on) {
+        existingBlockDetectionDisabled = on;
+    }
+
+    void setExistingLayerDetectionDisabled(bool on) {
+        existingLayerDetectionDisabled = on;
+    }
+
     /**
      * \return True if this transaction should store undo / redo information
      *      for later undo / redo functionality.
@@ -286,6 +294,16 @@ protected:
      * the spatial index in the end.
      */
     bool spatialIndexDisabled;
+
+    /**
+     * True to disable detection of existing blocks (performance gain).
+     */
+    bool existingBlockDetectionDisabled;
+
+    /**
+     * True to disable detection of existing layers (performance gain).
+     */
+    bool existingLayerDetectionDisabled;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RTransaction& t);

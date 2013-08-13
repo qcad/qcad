@@ -40,6 +40,8 @@ RImporter::RImporter(RDocument& document, RMessageHandler* messageHandler, RProg
     transaction.setRecordAffectedObjects(false);
     transaction.setAllowAll(true);
     transaction.setSpatialIndexDisabled(true);
+    transaction.setExistingLayerDetectionDisabled(true);
+    transaction.setExistingBlockDetectionDisabled(true);
 }
 
 RImporter::~RImporter() {
@@ -56,7 +58,12 @@ void RImporter::startImport() {
  * Imports an entity into the document.
  */
 void RImporter::importObjectP(QSharedPointer<RObject> object) {
+    //qDebug() << "importObjectP: " << *object;
+    //RDebug::startTimer();
     transaction.addObject(object, false);
+//    if (RDebug::stopTimer("importObjectP")>10) {
+//        qDebug() << "importObjectP (slow): " << *object;
+//    }
 }
 
 /**

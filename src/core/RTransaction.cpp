@@ -32,7 +32,9 @@ RTransaction::RTransaction()
       recordAffectedObjects(true),
       allowAll(false),
       allowInvisible(false),
-      spatialIndexDisabled(false) {
+      spatialIndexDisabled(false),
+      existingBlockDetectionDisabled(false),
+      existingLayerDetectionDisabled(false) {
 }
 
 
@@ -48,7 +50,9 @@ RTransaction::RTransaction(RStorage& storage)
       recordAffectedObjects(true),
       allowAll(false),
       allowInvisible(false),
-      spatialIndexDisabled(false) {
+      spatialIndexDisabled(false),
+      existingBlockDetectionDisabled(false),
+      existingLayerDetectionDisabled(false) {
 }
 
 
@@ -75,7 +79,9 @@ RTransaction::RTransaction(
       recordAffectedObjects(true),
       allowAll(false),
       allowInvisible(false),
-      spatialIndexDisabled(false) {
+      spatialIndexDisabled(false),
+      existingBlockDetectionDisabled(false),
+      existingLayerDetectionDisabled(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -102,7 +108,9 @@ RTransaction::RTransaction(
       recordAffectedObjects(true),
       allowAll(false),
       allowInvisible(false),
-      spatialIndexDisabled(false) {
+      spatialIndexDisabled(false),
+      existingBlockDetectionDisabled(false),
+      existingLayerDetectionDisabled(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -476,19 +484,24 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     QSharedPointer<RBlock> block = object.dynamicCast<RBlock>();
     if (!block.isNull()) {
         objectIsBlock = true;
-        QSharedPointer<RBlock> existingBlock = block->getDocument()->queryBlock(block->getName());
-        if (!existingBlock.isNull()) {
-            storage->setObjectId(*block, existingBlock->getId());
+
+        if (!existingBlockDetectionDisabled) {
+            QSharedPointer<RBlock> existingBlock = block->getDocument()->queryBlock(block->getName());
+            if (!existingBlock.isNull()) {
+                storage->setObjectId(*block, existingBlock->getId());
+            }
         }
     }
 
     // if object is a layer,
     // look up existing layer based on case insensitive name comparison:
-    QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
-    if (!layer.isNull()) {
-        QSharedPointer<RLayer> existingLayer = layer->getDocument()->queryLayer(layer->getName());
-        if (!existingLayer.isNull()) {
-            storage->setObjectId(*layer, existingLayer->getId());
+    if (!existingLayerDetectionDisabled) {
+        QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
+        if (!layer.isNull()) {
+            QSharedPointer<RLayer> existingLayer = layer->getDocument()->queryLayer(layer->getName());
+            if (!existingLayer.isNull()) {
+                storage->setObjectId(*layer, existingLayer->getId());
+            }
         }
     }
 
@@ -618,6 +631,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         //}
 
         ret = storage->saveObject(object);
+
         if (!ret) {
             qCritical() << "RTransaction::addObject: saveObject() failed for object: ";
             qCritical() << *object;

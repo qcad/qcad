@@ -69,8 +69,8 @@ RDxfImporter::~RDxfImporter() {
 }
 
 bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter) {
-    qDebug() << "RDxfImporter::importFile";
-    Q_UNUSED(nameFilter)
+    qDebug() << "RDxfImporter::importFile: " << fileName;
+    Q_UNUSED(nameFilter);
 
     this->fileName = fileName;
     QFileInfo fi(fileName);
@@ -376,6 +376,8 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
         // TODO:
         //importXData(odEntity, entity);
     }
+
+    //qDebug() << "RDxfImporter::importEntity" << *entity;
 
     importObjectP(entity);
 }

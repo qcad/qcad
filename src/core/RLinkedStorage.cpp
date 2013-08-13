@@ -73,7 +73,7 @@ QSet<REntity::Id> RLinkedStorage::queryLayerEntities(RLayer::Id layerId, bool al
 }
 
 QSet<REntity::Id> RLinkedStorage::queryBlockEntities(RBlock::Id blockId) {
-    if (objectMap.contains(blockId)) {
+    if (blockMap.contains(blockId)) {
         // got block, return only block entities from this block:
         return RMemoryStorage::queryBlockEntities(blockId);
     }
@@ -122,14 +122,14 @@ QSharedPointer<REntity> RLinkedStorage::queryEntityDirect(REntity::Id objectId) 
 }
 
 QSharedPointer<RLayer> RLinkedStorage::queryLayerDirect(RLayer::Id layerId) const {
-    if (!objectMap.contains(layerId)) {
+    if (!layerMap.contains(layerId)) {
         return backStorage->queryLayerDirect(layerId);
     }
     return RMemoryStorage::queryLayerDirect(layerId);
 }
 
 QSharedPointer<RLayer> RLinkedStorage::queryLayer(RLayer::Id layerId) const {
-    if (!objectMap.contains(layerId)) {
+    if (!layerMap.contains(layerId)) {
         return backStorage->queryLayer(layerId);
     }
     return RMemoryStorage::queryLayer(layerId);
@@ -144,14 +144,14 @@ QSharedPointer<RLayer> RLinkedStorage::queryLayer(const QString& layerName) cons
 }
 
 QSharedPointer<RBlock> RLinkedStorage::queryBlockDirect(RBlock::Id blockId) const {
-    if (!objectMap.contains(blockId)) {
+    if (!blockMap.contains(blockId)) {
         return backStorage->queryBlockDirect(blockId);
     }
     return RMemoryStorage::queryBlockDirect(blockId);
 }
 
 QSharedPointer<RBlock> RLinkedStorage::queryBlock(RBlock::Id blockId) const {
-    if (!objectMap.contains(blockId)) {
+    if (!blockMap.contains(blockId)) {
         return backStorage->queryBlock(blockId);
     }
     return RMemoryStorage::queryBlock(blockId);
