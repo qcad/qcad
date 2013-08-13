@@ -1,12 +1,13 @@
 // Public domain
-function Map() {
+function Map(compareFunction) {
     this.keyArray = [];
     this.valArray = [];
+    this.compareFunction = compareFunction;
 }
 
 Map.prototype.put = function(key, val) {
     var elementIndex = this.findKey(key);
-    if (elementIndex == (-1)) {
+    if (elementIndex === (-1)) {
         this.keyArray.push(key);
         this.valArray.push(val);
     } else {
@@ -26,7 +27,7 @@ Map.prototype.get = function(key, def) {
 Map.prototype.remove = function(key) {
     var result = null;
     var elementIndex = this.findKey(key);
-    if (elementIndex != (-1)) {
+    if (elementIndex !== (-1)) {
         this.keyArray = this.keyArray.removeAt(elementIndex);
         this.valArray = this.valArray.removeAt(elementIndex);
     }
@@ -68,9 +69,17 @@ Map.prototype.hasKey = function(key) {
 Map.prototype.findKey = function(key) {
     var result = (-1);
     for ( var i = 0; i < this.keyArray.length; i++) {
-        if (this.keyArray[i] == key) {
-            result = i;
-            break;
+        if (typeof(this.compareFunction)!=="undefined") {
+            if (this.compareFunction(this.keyArray[i], key)) {
+                result = i;
+                break;
+            }
+        }
+        else {
+            if (this.keyArray[i] == key) {
+                result = i;
+                break;
+            }
         }
     }
     return result;

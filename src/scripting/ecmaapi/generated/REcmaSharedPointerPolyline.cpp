@@ -178,10 +178,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, mirror, "mirror");
             
-            REcmaHelper::registerFunction(&engine, proto, flipHorizontal, "flipHorizontal");
-            
-            REcmaHelper::registerFunction(&engine, proto, flipVertical, "flipVertical");
-            
             REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
             REcmaHelper::registerFunction(&engine, proto, stretch, "stretch");
@@ -3183,104 +3179,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::mirror", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerPolyline::flipHorizontal
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::flipHorizontal", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::flipHorizontal";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPolyline* self = 
-                        getSelf("flipHorizontal", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->flipHorizontal();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.flipHorizontal().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::flipHorizontal", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerPolyline::flipVertical
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::flipVertical", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::flipVertical";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPolyline* self = 
-                        getSelf("flipVertical", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->flipVertical();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.flipVertical().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::flipVertical", context, engine);
             return result;
         }
          QScriptValue

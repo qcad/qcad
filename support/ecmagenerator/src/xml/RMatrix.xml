@@ -4,6 +4,283 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RMatrix"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="false"
-  isScriptable="false" />
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="int" typeName="int" name="r" isConst="false" />
+        <arg type="int" typeName="int" name="c" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RMatrix &amp;" typeName="RMatrix" name="other"
+        isConst="true" />
+      </variant>
+    </constructor>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="createIdentity2x2" cppName="createIdentity2x2"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false" />
+    </method>
+    <method name="createIdentity3x3" cppName="createIdentity3x3"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false" />
+    </method>
+    <method name="createIdentity" cppName="createIdentity"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="int" typeName="int" name="size"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="createRotation" cppName="createRotation"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="create2x2" cppName="create2x2" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a11"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a12"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a21"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a22"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="create3x3" cppName="create3x3" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a11"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a12"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a13"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a21"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a22"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a23"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a31"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a32"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a33"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="create3x1" cppName="create3x1" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a11"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a21"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a31"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="create2x3" cppName="create2x3" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a11"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a12"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a13"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a21"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a22"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a23"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="multiplyWith" cppName="multiplyWith"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="RMatrix &amp;" typeName="RMatrix" name="w"
+        isConst="true" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="w"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="r" isConst="false" />
+        <arg type="int" typeName="int" name="c" isConst="false" />
+      </variant>
+    </method>
+    <method name="reset" cppName="reset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="clear" cppName="clear" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="set3x3" cppName="set3x3" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a11"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a12"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a13"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a21"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a22"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a23"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a31"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a32"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a33"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="set3x1" cppName="set3x1" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a11"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a21"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a31"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="set2x3" cppName="set2x3" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a11"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a12"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a13"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a21"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a22"
+        isConst="false" />
+        <arg type="double" typeName="double" name="a23"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="set" cppName="set" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="r" isConst="false" />
+        <arg type="int" typeName="int" name="c" isConst="false" />
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="get" cppName="get" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="r" isConst="false" />
+        <arg type="int" typeName="int" name="c" isConst="false" />
+      </variant>
+    </method>
+    <method name="getRows" cppName="getRows" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getCols" cppName="getCols" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="rref" cppName="rref" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getInverse" cppName="getInverse"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false" />
+    </method>
+    <method name="getTransposed" cppName="getTransposed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false" />
+    </method>
+    <method name="getAppended" cppName="getAppended"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="RMatrix &amp;" typeName="RMatrix" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="ref" cppName="ref" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="startRow"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="multiplyRow" cppName="multiplyRow"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="r" isConst="false" />
+        <arg type="double" typeName="double" name="factor"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addRow" cppName="addRow" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="r" isConst="false" />
+        <arg type="double" typeName="double" name="factor"
+        isConst="false" />
+        <arg type="int" typeName="int" name="r2" isConst="false" />
+      </variant>
+    </method>
+    <method name="swapRows" cppName="swapRows"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="r1" isConst="false" />
+        <arg type="int" typeName="int" name="r2" isConst="false" />
+      </variant>
+    </method>
+    <method name="getPivotRow" cppName="getPivotRow"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="int" typeName="int" name="startRow"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPivotCol" cppName="getPivotCol"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="int" typeName="int" name="r" isConst="false" />
+      </variant>
+    </method>
+  </class>
 </unit>

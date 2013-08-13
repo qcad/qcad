@@ -228,6 +228,18 @@
         getMaximum
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMinimumX
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMaximumX
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMinimumY
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMaximumY
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAverage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -25,27 +25,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
-    <method name="createInscribed" cppName="createInscribed"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="REllipse" isPureVirtual="false">
-        <arg type="QList &lt; RVector &gt; &amp;"
-        typeName="QList &lt; RVector &gt;" name="quad"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="createFromEquation" cppName="createFromEquation"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="REllipse" isPureVirtual="false">
-        <arg type="double" typeName="double" name="a"
-        isConst="false" />
-        <arg type="double" typeName="double" name="b"
-        isConst="false" />
-        <arg type="double" typeName="double" name="c"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="REllipse *" isPureVirtual="false" />

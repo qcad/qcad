@@ -182,12 +182,6 @@
         mirror
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        flipHorizontal
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        flipVertical
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

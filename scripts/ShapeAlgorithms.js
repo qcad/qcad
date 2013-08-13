@@ -986,8 +986,434 @@ ShapeAlgorithms.approximateEllipse = function(ellipse, segments) {
     return polyline;
 };
 
-ShapeAlgorithms.createEllipseInscribed = function(line1, line2, line3, line4) {
-    //var line
+ShapeAlgorithms.getCompleteQuadrilateralSegments = function(line1, line2, line3, line4) {
+    var ret = [];
+
+    // maps vertices to number of intersection points at that vertex:
+    var vertices = new Map(function(v1, v2) { return v1.equalsFuzzy(v2); });
+
+    var lines = ShapeAlgorithms.removeSharedPointer([ line1, line2, line3, line4 ]);
+    var i, k;
+
+    for (i=0; i<lines.length; i++) {
+        var angle = lines[i].getAngle();
+        var ips = [];
+        for (k=0; k<lines.length; k++) {
+            if (i===k) {
+                continue;
+            }
+
+            ips = ips.concat(lines[i].getIntersectionPoints(lines[k], false));
+        }
+
+        if (ips===0) {
+            return [];
+        }
+
+        var edge;
+        if (RMath.fuzzyCompare(angle, Math.PI/2, 0.1) || RMath.fuzzyCompare(angle, Math.PI/2*3, 0.1)) {
+            // line is (almost) vertical:
+            edge = RVector.getMinimumY(ips);
+        }
+        else {
+            // line is not vertical:
+            edge = RVector.getMinimumX(ips);
+        }
+
+        ips = RVector.getSortedByDistance(ips, edge);
+        for (k=0; k<ips.length-1; k++) {
+            ret.push(new RLine(ips[k], ips[k+1]));
+        }
+    }
+
+    for (i=0; i<ret.length; i++) {
+        var sp = ret[i].getStartPoint();
+        var ep = ret[i].getEndPoint();
+        vertices.put(sp, vertices.get(sp, 0) + 1);
+        vertices.put(ep, vertices.get(ep, 0) + 1);
+    }
+
+    qDebug("vertices: \n", vertices);
+
+    ret["vertices"] = vertices;
+
+    return ret;
+};
+
+ShapeAlgorithms.getQuadrilateral = function(line1, line2, line3, line4) {
+    var segments = ShapeAlgorithms.getCompleteQuadrilateralSegments(line1, line2, line3, line4);
+    var vertices = segments.vertices;
+    var i, k;
+
+    // produce vs array:
+    // vs[order] = list of vertices
+    // where order is the number of intersections at those vertices
+    var vs = [];
+    for (var order=4; order>0; order--) {
+        vs[order] = [];
+        var startIndex = 0;
+        var keys = vertices.getKeys();
+        var values = vertices.getValues();
+        do {
+            i = values.indexOf(order, startIndex);
+            startIndex = i+1;
+            if (i!==-1) {
+                vs[order].push(keys[i]);
+            }
+        } while (i!==-1);
+    }
+
+    qDebug("vs[4]: ", vs[4]);
+    qDebug("vs[3]: ", vs[3]);
+    qDebug("vs[2]: ", vs[2]);
+    qDebug("vs[1]: ", vs[1]);
+
+    var vert = [];
+
+    // quadrilateral:
+    if (vs[4].length===1 && vs[3].length===2 && vs[2].length===3) {
+        vert = [vs[3][0], vs[4][0], vs[3][1]];
+        var l1 = new RLine(vs[3][0], vs[4][0]);
+        var l2 = new RLine(vs[4][0], vs[3][1]);
+//        ret.push(new RLine(vs[3][0], vs[4][0]));
+//        ret.push(new RLine(vs[4][0], vs[3][1]));
+        for (i=0; i<vs[2].length; i++) {
+            if (l1.isOnShape(vs[2][i], false) || l2.isOnShape(vs[2][i], false)) {
+                continue;
+            }
+            vert.push(vs[2][i]);
+//            ret.push(new RLine(vs[3][1], vs[2][i]));
+//            ret.push(new RLine(vs[2][i], vs[3][0]));
+            break;
+        }
+//        return ret;
+    }
+
+    // trapezoid:
+    else if (vs[4].length===0 && vs[3].length===2 && vs[2].length===3) {
+        vert = [vs[3][0], vs[3][1]];
+//        ret.push(new RLine(vs[3][0], vs[3][1]));
+        for (i=0; i<vs[2].length; i++) {
+            for (k=0; k<vs[2].length; k++) {
+                if (i===k) {
+                    continue;
+                }
+
+                var l = new RLine(vs[2][k], vs[2][i]);
+                if (!l.isOnShape(vs[3][0], true) && !l.isOnShape(vs[3][1], true)) {
+                    vert.push(vs[2][i]);
+                    vert.push(vs[2][k]);
+//                    ret.push(new RLine(vs[3][1], vs[2][k]));
+//                    ret.push(l);
+//                    ret.push(new RLine(vs[2][i], vs[3][0]));
+                    break;
+                }
+            }
+            if (vert.length===4) {
+                break;
+            }
+        }
+    }
+
+    // parallelogram:
+    if (vs[4].length===0 && vs[3].length===0 && vs[2].length===4) {
+        vert = vs[2];
+    }
+
+    if (vert.length!==4) {
+        return undefined;
+    }
+
+    var ret = [];
+    var cursor = vert[0];
+
+    for (k=0; k<4; k++) {
+        for (i=0; i<segments.length; i++) {
+            var segment = segments[i];
+
+            if (segment.getEndPoint().equalsFuzzy(cursor)) {
+                segment.reverse();
+            }
+
+            if (segment.getStartPoint().equalsFuzzy(cursor)) {
+                for (var c=0; c<4; c++) {
+                    if (segment.getEndPoint().equalsFuzzy(vert[c])) {
+                        ret.push(segment.getStartPoint());
+                        cursor = segment.getEndPoint();
+                        segments.splice(i, 1);
+                        break;
+                    }
+                }
+            }
+
+            if (ret.length===k+1) {
+                break;
+            }
+        }
+    }
+
+    if (ret.length!==4) {
+        return undefined;
+    }
+
+    return ret;
+};
+
+/**
+ * Produces an ellipse inscribed in the quadrilateral defined by the
+ * four given unordered / untrimmed edges (RLine shapes).
+ */
+ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, line4) {
+    var quad = ShapeAlgorithms.getQuadrilateral(line1, line2, line3, line4);
+    if (isNull(quad)) {
+        return undefined;
+    }
+    return ShapeAlgorithms.createEllipseInscribedFromVertices(quad[0], quad[1], quad[2], quad[3]);
+};
+
+
+/**
+ * Produces an ellipse inscribed in the quadrilateral defined by the
+ * four given ordered vertices (RVector).
+ *
+ * Based on:
+ * http://chrisjones.id.au/Ellipses/ellipse.html
+ * http://mathworld.wolfram.com/Ellipse.html
+ */
+ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
+    var i;
+    var quad = [v1, v2, v3, v4];
+
+    var edges = [];
+    for (i=0; i<4; i++) {
+        edges[i] = new RLine(quad[i], quad[(i+1)%4]);
+    }
+
+    var x0 = quad[0].x;
+    var y0 = quad[0].y;
+    var x1 = quad[1].x;
+    var y1 = quad[1].y;
+    var x2 = quad[2].x;
+    var y2 = quad[2].y;
+    var x3 = quad[3].x;
+    var y3 = quad[3].y;
+
+    var ma =  x1 * x2 * y3 - x0 * x2 * y3 - x1 * y2 * x3 + x0 * y2 * x3 - x0 * y1 * x3 + y0 * x1 * x3 + x0 * y1 * x2 - y0 * x1 * x2;
+    var mb =  x0 * x2 * y3 - x0 * x1 * y3 - x1 * y2 * x3 + y1 * x2 * x3 - y0 * x2 * x3 + y0 * x1 * x3 + x0 * x1 * y2 - x0 * y1 * x2;
+    var mc =  x1 * x2 * y3 - x0 * x1 * y3 - x0 * y2 * x3 - y1 * x2 * x3 + y0 * x2 * x3 + x0 * y1 * x3 + x0 * x1 * y2 - y0 * x1 * x2;
+    var md =  y1 * x2 * y3 - y0 * x2 * y3 - x0 * y1 * y3 + y0 * x1 * y3 - y1 * y2 * x3 + y0 * y2 * x3 + x0 * y1 * y2 - y0 * x1 * y2;
+    var me = -x1 * y2 * y3 + x0 * y2 * y3 + y1 * x2 * y3 - x0 * y1 * y3 - y0 * y2 * x3 + y0 * y1 * x3 + y0 * x1 * y2 - y0 * y1 * x2;
+    var mf =  x1 * y2 * y3 - x0 * y2 * y3 + y0 * x2 * y3 - y0 * x1 * y3 - y1 * y2 * x3 + y0 * y1 * x3 + x0 * y1 * y2 - y0 * y1 * x2;
+    var mg =  x1 * y3 - x0 * y3 - y1 * x3 + y0 * x3 - x1 * y2 + x0 * y2 + y1 * x2 - y0 * x2;
+    var mh =  x2 * y3 - x1 * y3 - y2 * x3 + y1 * x3 + x0 * y2 - y0 * x2 - x0 * y1 + y0 * x1;
+    var mi =  x2 * y3 - x0 * y3 - y2 * x3 + y0 * x3 + x1 * y2 - y1 * x2 + x0 * y1 - y0 * x1;
+
+    var T = RMatrix.create3x3(
+        ma, mb, mc,
+        md, me, mf,
+        mg, mh, mi
+    );
+
+    var TI = T.getInverse();
+
+    var mj = TI.get(0, 0);
+    var mk = TI.get(0, 1);
+    var ml = TI.get(0, 2);
+    var mm = TI.get(1, 0);
+    var mn = TI.get(1, 1);
+    var mo = TI.get(1, 2);
+    var mp = TI.get(2, 0);
+    var mq = TI.get(2, 1);
+    var mr = TI.get(2, 2);
+
+    var a = mj*mj + mm*mm - mp*mp;
+    var b = mj*mk + mm*mn - mp*mq;
+    var c = mk*mk + mn*mn - mq*mq;
+    var d = mj*ml + mm*mo - mp*mr;
+    var f = mk*ml + mn*mo - mq*mr;
+    var g = ml*ml + mo*mo - mr*mr;
+
+    var term = (b*b - a*c);
+    var cx = (c*d - b*f) / term;
+    var cy = (a*f - b*d) / term;
+
+    var term1 = (2 * (a*f*f + c*d*d + g*b*b - 2*b*d*f - a*c*g));
+    var term2 = Math.sqrt((a-c)*(a-c) + 4*b*b);
+    var term3 = (a + c);
+
+    var axis1 = Math.sqrt(term1 / (term * (term2-term3)));
+    var axis2 = Math.sqrt(term1 / (term * (-term2-term3)));
+
+    var center = new RVector(cx, cy);
+
+    var angle;
+
+    if (b===0.0) {
+        angle = 0;
+    }
+    else {
+        var arccot = function(v) {
+            return Math.PI/2 - Math.atan(v);
+        };
+
+        angle = 0.5 * arccot((a-c)/(2*b));
+    }
+
+    if (a>c) {
+        angle += Math.PI/2;
+    }
+
+    var majorPoint = RVector.createPolar(axis1, angle);
+
+    var ellipse = new REllipse(center, majorPoint, axis2/axis1, 0.0, 2*Math.PI, false);
+
+    // workaround if the formula above does not produce the correct angle
+    // (90 degrees off):
+    for (i=0; i<4; i++) {
+        var ips = ellipse.getIntersectionPoints(edges[i], false);
+        if (ips.length===2) {
+            if (!ips[0].equalsFuzzy(ips[1], 0.001)) {
+                ellipse.rotate(Math.PI/2, ellipse.getCenter());
+                break;
+            }
+        }
+    }
+
+    return ellipse;
+
+    /*
+    var i;
+
+
+    var edges = [];
+    for (i=0; i<4; i++) {
+        edges[i] = new RLine(quad[i], quad[(i+1)%4]);
+    }
+
+    // diagonals:
+    var diagonals = [ new RLine(quad[0], quad[2]), new RLine(quad[1], quad[3])];
+    var diagonalIp = diagonals[0].getIntersectionPoints(diagonals[1], false);
+    if (diagonalIp.length!==1) {
+        return undefined;
+    }
+    diagonalIp = diagonalIp[0];
+
+    // vanishing points:
+    var fps = [
+        edges[1].getIntersectionPoints(edges[3], false),
+        edges[0].getIntersectionPoints(edges[2], false),
+    ];
+
+    for (i=0; i<2; i++) {
+        if (fps[i].length===1) {
+            fps[i] = fps[i][0];
+        }
+        else {
+            fps[i] = undefined;
+        }
+    }
+
+    // lines from vanishing points to intersection of diagonals:
+    var touchingPoints = [];
+    var tpLines = [];
+    for (i=0; i<2; i++) {
+        if (!isNull(fps[i])) {
+            tpLines[i] = new RLine(fps[i], diagonalIp);
+        }
+        else {
+            // two edges are parallel:
+            tpLines[i] = edges[i+1].clone();
+            var delta = diagonalIp.operator_subtract(tpLines[i].getStartPoint());
+            tpLines[i].move(delta);
+        }
+
+        var ips = tpLines[i].getIntersectionPoints(edges[i], false);
+        if (ips.length===0) {
+            return undefined;
+        }
+        touchingPoints[i] = ips[0];
+        ips = tpLines[i].getIntersectionPoints(edges[i+2], false);
+        if (ips.length===0) {
+            return undefined;
+        }
+        touchingPoints[i+2] = ips[0];
+    }
+
+    if (touchingPoints.length!==4) {
+        return undefined;
+    }
+
+    // two of the four lines connecting a quad vertex with the middle point
+    // between two touching points:
+    var centerLines = [];
+    for (i=0; i<2; i++) {
+        var m = RVector.getAverage(touchingPoints[i], touchingPoints[i+1]);
+        centerLines[i] = new RLine(quad[i+1], m);
+    }
+
+    if (centerLines.length!==2) {
+        return undefined;
+    }
+
+    // ellipse center point:
+    var center = centerLines[0].getIntersectionPoints(centerLines[1], false);
+    if (center.length!==1) {
+        return undefined;
+    }
+    center = center[0];
+
+    var ortho1 = new RLine(touchingPoints[1], edges[1].getAngle()+Math.PI/2, 100.0);
+    var mid13 = RVector.getAverage(touchingPoints[1], touchingPoints[3]);
+    var angle13 = touchingPoints[1].getAngleTo(touchingPoints[3]);
+    var midLine13 = new RLine(mid13, angle13 + Math.PI/2, 100.0);
+
+    var homologusCenter = ortho1.getIntersectionPoints(midLine13, false);
+    if (homologusCenter.length!==1) {
+        return undefined;
+    }
+    homologusCenter = homologusCenter[0];
+
+    var homologusCircle = new RCircle(homologusCenter, homologusCenter.getDistanceTo(touchingPoints[1]));
+
+    // project touching points onto homologus circle:
+    var projectionLine1 = new RLine(touchingPoints[1], touchingPoints[0]);
+    var projectionLine2 = new RLine(touchingPoints[1], touchingPoints[2]);
+
+    var ip1 = projectionLine1.getIntersectionPoints(homologusCircle, false);
+    if (ip1.length!==2) {
+        return undefined;
+    }
+    ip1 = RVector.getSortedByDistance(ip1, touchingPoints[1]);
+    ip1 = ip1[1];
+
+    var ip2 = projectionLine2.getIntersectionPoints(homologusCircle, false);
+    if (ip2.length!==2) {
+        return undefined;
+    }
+    ip2 = RVector.getSortedByDistance(ip2, touchingPoints[1]);
+    ip2 = ip2[1];
+
+    // line between projected points:
+    var line12 = new RLine(ip1, ip2);
+
+    // interesction between:
+    // line between touching points and
+    // line between projected touching points
+    var ip = line12.getIntersectionPoints(tpLines[0], false);
+    if (ip.length!==1) {
+        return undefined;
+    }
+    ip = ip[0];
+
+    var homologyAxis = new RLine(touchingPoints[3], ip);
+
+    var axisAngle = (homologyAxis.getAngle() + edges[1].getAngle()) / 2;
+    var l = new RLine(center, axisAngle, 100.0);
+
+    return [ ortho1, midLine13, homologusCircle, homologyAxis, l ];
+
+    //return edges.concat(diagonals.concat(tpLines));
+    */
 };
 
 /**
@@ -1078,6 +1504,9 @@ ShapeAlgorithms.removeSharedPointer = function(shape) {
 
     if (isFunction(shape.data)) {
         return shape.data().clone();
+    }
+    else {
+        return shape;
     }
 };
 

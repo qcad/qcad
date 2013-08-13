@@ -613,6 +613,82 @@ RVector RVector::getMaximum(const QList<RVector>& vectors) {
 }
 
 /**
+ * \return That one vector from the given vectors with the smallest X coordinate.
+ */
+RVector RVector::getMinimumX(const QList<RVector>& vectors) {
+    if (vectors.size() == 0) {
+        return RVector();
+    }
+
+    RVector ret = vectors[0];
+
+    for (int i=0; i<vectors.size(); i++) {
+        if (vectors[i].x < ret.x) {
+            ret = vectors[i];
+        }
+    }
+
+    return ret;
+}
+
+/**
+ * \return That one vector from the given vectors with the largest X coordinate.
+ */
+RVector RVector::getMaximumX(const QList<RVector>& vectors) {
+    if (vectors.size() == 0) {
+        return RVector();
+    }
+
+    RVector ret = vectors[0];
+
+    for (int i=0; i<vectors.size(); i++) {
+        if (vectors[i].x > ret.x) {
+            ret = vectors[i];
+        }
+    }
+
+    return ret;
+}
+
+/**
+ * \return That one vector from the given vectors with the smallest Y coordinate.
+ */
+RVector RVector::getMinimumY(const QList<RVector>& vectors) {
+    if (vectors.size() == 0) {
+        return RVector();
+    }
+
+    RVector ret = vectors[0];
+
+    for (int i=0; i<vectors.size(); i++) {
+        if (vectors[i].y < ret.y) {
+            ret = vectors[i];
+        }
+    }
+
+    return ret;
+}
+
+/**
+ * \return That one vector from the given vectors with the largest Y coordinate.
+ */
+RVector RVector::getMaximumY(const QList<RVector>& vectors) {
+    if (vectors.size() == 0) {
+        return RVector();
+    }
+
+    RVector ret = vectors[0];
+
+    for (int i=0; i<vectors.size(); i++) {
+        if (vectors[i].y > ret.y) {
+            ret = vectors[i];
+        }
+    }
+
+    return ret;
+}
+
+/**
  * \return A vector with the minimum components from the vectors v1 and v2.
  * These might be mixed components from both vectors.
  */

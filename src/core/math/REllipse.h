@@ -48,9 +48,6 @@ public:
              bool reversed);
     virtual ~REllipse();
 
-    static REllipse createInscribed(const QList<RVector>& quad);
-    static REllipse createFromEquation(double a, double b, double c);
-
     virtual REllipse* clone() const {
         return new REllipse(*this);
     }

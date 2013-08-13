@@ -116,6 +116,7 @@ HEADERS += \
     $$PWD/REcmaMainWindowQt.h \
     $$PWD/REcmaMath.h \
     $$PWD/REcmaMathLineEdit.h \
+    $$PWD/REcmaMatrix.h \
     $$PWD/REcmaMdiChildQt.h \
     $$PWD/REcmaMemoryStorage.h \
     $$PWD/REcmaMessageHandler.h \
@@ -400,6 +401,7 @@ SOURCES += \
     $$PWD/REcmaMainWindowQt.cpp \
     $$PWD/REcmaMath.cpp \
     $$PWD/REcmaMathLineEdit.cpp \
+    $$PWD/REcmaMatrix.cpp \
     $$PWD/REcmaMdiChildQt.cpp \
     $$PWD/REcmaMemoryStorage.cpp \
     $$PWD/REcmaMessageHandler.cpp \

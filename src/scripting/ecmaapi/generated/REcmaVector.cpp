@@ -220,6 +220,14 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getMaximum, "getMaximum");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getMinimumX, "getMinimumX");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMaximumX, "getMaximumX");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMinimumY, "getMinimumY");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMaximumY, "getMaximumY");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getAverage, "getAverage");
             
             REcmaHelper::registerFunction(&engine, &ctor, getXList, "getXList");
@@ -5001,6 +5009,210 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::getMaximum", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getMinimumX
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getMinimumX", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMinimumX";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        RVector::
+       getMinimumX(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMinimumX().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getMinimumX", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getMaximumX
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getMaximumX", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMaximumX";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        RVector::
+       getMaximumX(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMaximumX().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getMaximumX", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getMinimumY
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getMinimumY", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMinimumY";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        RVector::
+       getMinimumY(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMinimumY().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getMinimumY", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getMaximumY
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getMaximumY", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMaximumY";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        RVector::
+       getMaximumY(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMaximumY().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getMaximumY", context, engine);
             return result;
         }
          QScriptValue

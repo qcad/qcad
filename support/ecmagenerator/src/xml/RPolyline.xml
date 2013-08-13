@@ -299,16 +299,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="flipHorizontal" cppName="flipHorizontal"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
-    <method name="flipVertical" cppName="flipVertical"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
     <method name="reverse" cppName="reverse" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

@@ -30,7 +30,7 @@ dir="./core/math" filename="RMatrix.h">
   <cpp:directive>define</cpp:directive>
   <name>RMATRIX_TOLERANCE</name>1.0e-8</cpp:define>
   <comment type="block">/** * Simple matrix class. * * \ingroup
-  math * \copyable */</comment>
+  math * \scriptable * \copyable */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
@@ -330,6 +330,7 @@ dir="./core/math" filename="RMatrix.h">
       <name>a23</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
   <name>RMatrix</name>&amp;</type>
@@ -343,6 +344,7 @@ dir="./core/math" filename="RMatrix.h">
       <name>other</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>bool</name>
@@ -358,6 +360,7 @@ dir="./core/math" filename="RMatrix.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>RMatrix</name>
@@ -372,6 +375,7 @@ dir="./core/math" filename="RMatrix.h">
       <name>f</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>RMatrix</name>
@@ -417,6 +421,7 @@ dir="./core/math" filename="RMatrix.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
   <name>double</name>*</type>
@@ -709,28 +714,6 @@ dir="./core/math" filename="RMatrix.h">
       <name>cols</name>
     </expr>;</return>}</block>
   </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>print</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>printRow</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>

@@ -54,44 +54,6 @@ bool REllipse::isValid() {
     return center.isValid();
 }
 
-REllipse REllipse::createInscribed(const QList<RVector>& quad) {
-    Q_UNUSED(quad);
-    // TODO
-    return REllipse();
-}
-
-REllipse REllipse::createFromEquation(double a, double b, double c) {
-    if (fabs(a)<RS::PointTolerance || fabs(c)<RS::PointTolerance) {
-        return REllipse();
-    }
-
-    // eigenvalue and eigen vectors of quadratic form
-    // (a 0.5*b)
-    // (0.5*b c)
-    double d = a-c;
-    double s = sqrt(d*d + b*b);
-    double lambda1(0.5*(s+a+c));
-    double lambda2(0.5*(-s+a+c));
-
-    if (lambda1<RS::PointTolerance) {
-        return REllipse();
-    }
-    if (lambda2<RS::PointTolerance) {
-        return REllipse();
-    }
-
-    RVector majorP(-b/(s+d),1.0);
-    majorP /= sqrt(majorP.getSquaredMagnitude()*lambda2);
-
-    REllipse ret;
-    ret.setMajorPoint(majorP);
-    ret.setRatio(sqrt(lambda2/lambda1));
-    ret.setStartAngle(0.0);
-    ret.setEndAngle(0.0);
-
-    return ret;
-}
-
 QList<RVector> REllipse::getFoci() const {
     RVector vp(getMajorPoint() * sqrt(1.0 - getRatio()*getRatio()));
     return QList<RVector>() << getCenter()+vp << getCenter()-vp;

@@ -30,6 +30,7 @@
  * Simple matrix class.
  *
  * \ingroup math
+ * \scriptable
  * \copyable
  */
 class QCADCORE_EXPORT RMatrix {
@@ -55,12 +56,29 @@ public:
                              double a13, double a21,
                              double a22, double a23);
 
+    /**
+     * \nonscriptable
+     */
     RMatrix& operator =(const RMatrix& other);
+    /**
+     * \nonscriptable
+     */
     bool operator ==(const RMatrix& other) const;
+    /**
+     * \nonscriptable
+     */
     RMatrix operator *=(double f);
+    /**
+     * \nonscriptable
+     */
     RMatrix operator *(const RMatrix& other) const;
+
     RMatrix multiplyWith(const RMatrix& w) const;
     RVector multiplyWith(const RVector& w) const;
+
+    /**
+     * \nonscriptable
+     */
     double* operator [](int i);
 
     void init(int r, int c);
@@ -90,9 +108,6 @@ public:
     int getCols() const {
         return cols;
     }
-
-    void print() const;
-    void printRow(int r) const;
 
     bool rref();
 

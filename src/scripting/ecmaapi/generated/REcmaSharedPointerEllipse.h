@@ -69,12 +69,6 @@
 
     // public methods:
     static  QScriptValue
-        createInscribed
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        createFromEquation
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -185,6 +185,11 @@ public:
     static RVector getMinimum(const QList<RVector>& vectors);
     static RVector getMaximum(const QList<RVector>& vectors);
 
+    static RVector getMinimumX(const QList<RVector>& vectors);
+    static RVector getMaximumX(const QList<RVector>& vectors);
+    static RVector getMinimumY(const QList<RVector>& vectors);
+    static RVector getMaximumY(const QList<RVector>& vectors);
+
     static RVector getMinimum(const RVector& v1, const RVector& v2);
     static RVector getMaximum(const RVector& v1, const RVector& v2);
 

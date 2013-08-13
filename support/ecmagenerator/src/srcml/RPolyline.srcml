@@ -724,20 +724,6 @@ dir="./core/math" filename="RPolyline.h">
     <name>virtual</name>
     <name>bool</name>
   </type>
-  <name>flipHorizontal</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>flipVertical</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
   <name>reverse</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>

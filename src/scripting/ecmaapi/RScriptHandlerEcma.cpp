@@ -150,6 +150,7 @@
 #include "REcmaMainWindow.h"
 #include "REcmaMainWindowQt.h"
 #include "REcmaMath.h"
+#include "REcmaMatrix.h"
 #include "REcmaMathLineEdit.h"
 #include "REcmaMdiChildQt.h"
 #include "REcmaMemoryStorage.h"
@@ -418,6 +419,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     // *** do not change the order ***
     REcmaMath::init(*engine);
+    REcmaMatrix::init(*engine);
     REcmaStemmer::init(*engine);
 
     REcmaPropertyTypeId::init(*engine);
