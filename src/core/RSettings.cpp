@@ -363,7 +363,9 @@ QString RSettings::getQtVersion() {
 }
 
 QString RSettings::getCompilerVersion() {
-#if defined(Q_CC_GNU)
+#if defined(Q_CC_CLANG)
+    return QString("Clang %1.%2.%3").arg(__clang_major__).arg(__clang_minor__).arg(__clang_patchlevel__);
+#elif defined(Q_CC_GNU)
     return QString("gcc %1.%2.%3").arg(__GNUC__).arg(__GNUC_MINOR__).arg(__GNUC_PATCHLEVEL__);
 #elif defined(Q_CC_MSVC)
 #   if _MSC_VER==1310
