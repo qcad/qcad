@@ -262,8 +262,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 
     var res = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
 
-    //qDebug("intersection points: ", res);
-
     var cutPos1 = undefined;
     var cutPos2 = undefined;
 
@@ -298,17 +296,9 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
             rest2.trimStartPoint(cutPos1);
         }
 
-        //if (!remove) {
-            segment = shape.clone();
-            segment.setStartPoint(cutPos1);
-            segment.setEndPoint(cutPos2);
-//            if (!segment.getStartPoint().isValid()) {
-//                debugger;
-//            }
-//            if (!segment.getEndPoint().isValid()) {
-//                debugger;
-//            }
-        //}
+        segment = shape.clone();
+        segment.setStartPoint(cutPos1);
+        segment.setEndPoint(cutPos2);
 
         if (rest1.getLength()<RS.PointTolerance) {
             rest1 = undefined;
@@ -319,7 +309,7 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         }
     }
 
-    // arcs:
+    // arcs / ellipse arcs:
     else if (isArcShape(shape) || isEllipseArcShape(shape)) {
         rest1 = shape.clone();
         rest2 = shape.clone();
@@ -327,11 +317,9 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         rest1.trimEndPoint(cutPos1);
         rest2.trimStartPoint(cutPos2);
 
-        //if (!remove) {
-            segment = shape.clone();
-            segment.trimStartPoint(cutPos1);
-            segment.trimEndPoint(cutPos2);
-        //}
+        segment = shape.clone();
+        segment.trimStartPoint(cutPos1);
+        segment.trimEndPoint(cutPos2);
 
         var angleLength1 = rest1.getAngleLength(true);
         var angleLength2 = rest2.getAngleLength(true);
@@ -340,20 +328,18 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
             rest1.trimEndPoint(cutPos2);
             rest2.trimStartPoint(cutPos1);
 
-            //if (!remove) {
-                segment.trimStartPoint(cutPos2);
-                segment.trimEndPoint(cutPos1);
-            //}
+            segment.trimStartPoint(cutPos2);
+            segment.trimEndPoint(cutPos1);
 
             angleLength1 = rest1.getAngleLength(true);
             angleLength2 = rest2.getAngleLength(true);
         }
 
-        if (angleLength1<RS.AngleTolerance) {
+        if (angleLength1<1.0e-5) {
             rest1 = undefined;
         }
 
-        if (angleLength2<RS.AngleTolerance) {
+        if (angleLength2<1.0e-5) {
             rest2 = undefined;
         }
     }
@@ -375,23 +361,19 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
                         false);
             rest2 = undefined;
 
-            //if (!remove) {
-                segment = new RArc(
-                            shape.getCenter(),
-                            shape.getRadius(),
-                            angle2, angle1,
-                            false);
-            //}
+            segment = new RArc(
+                        shape.getCenter(),
+                        shape.getRadius(),
+                        angle2, angle1,
+                        false);
 
             var cursorAngle = shape.getCenter().getAngleTo(position);
 
             if (RMath.isAngleBetween(cursorAngle, angle1, angle2, false)) {
                 rest1.setStartAngle(angle2);
                 rest1.setEndAngle(angle1);
-                //if (!remove) {
-                    segment.setStartAngle(angle1);
-                    segment.setEndAngle(angle2);
-                //}
+                segment.setStartAngle(angle1);
+                segment.setEndAngle(angle2);
             }
 
             var angleLength1 = rest1.getAngleLength(true);
@@ -419,24 +401,20 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
                         false);
             rest2 = undefined;
 
-            //if (!remove) {
-                segment = new REllipse(
-                            shape.getCenter(),
-                            shape.getMajorPoint(),
-                            shape.getRatio(),
-                            angle2, angle1,
-                            false);
-            //}
+            segment = new REllipse(
+                        shape.getCenter(),
+                        shape.getMajorPoint(),
+                        shape.getRatio(),
+                        angle2, angle1,
+                        false);
 
             var cursorAngle = shape.getParamTo(position);
 
             if (RMath.isAngleBetween(cursorAngle, angle1, angle2, false)) {
                 rest1.setStartParam(angle2);
                 rest1.setEndParam(angle1);
-                //if (!remove) {
-                    segment.setStartParam(angle1);
-                    segment.setEndParam(angle2);
-                //}
+                segment.setStartParam(angle1);
+                segment.setEndParam(angle2);
             }
 
             var angleLength1 = rest1.getAngleLength();
