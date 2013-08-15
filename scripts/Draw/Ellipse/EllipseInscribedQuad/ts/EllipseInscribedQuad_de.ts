@@ -25,7 +25,7 @@
     </message>
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="2"/>
-        <source>Inscribed in Quad</source>
+        <source>Inscribed in Quadrilateral</source>
         <translation>Eingeschrieben in Viereck</translation>
     </message>
     <message>

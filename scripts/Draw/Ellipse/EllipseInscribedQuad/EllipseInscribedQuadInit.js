@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("EllipseInscribedQuad", "Inscribed in Quad"),
+    var action = new RGuiAction(qsTranslate("EllipseInscribedQuad", "Inscribed in Quadrilateral"),
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/EllipseInscribedQuad.js");
