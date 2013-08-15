@@ -6,32 +6,32 @@
     <message>
         <location filename="../EllipseInscribedQuad.js" line="82"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>最初の線分</translation>
     </message>
     <message>
         <location filename="../EllipseInscribedQuad.js" line="96"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>第２の線分</translation>
     </message>
     <message>
         <location filename="../EllipseInscribedQuad.js" line="109"/>
         <source>Third line</source>
-        <translation type="unfinished"></translation>
+        <translation>第３の線分</translation>
     </message>
     <message>
         <location filename="../EllipseInscribedQuad.js" line="119"/>
         <source>Fourth line</source>
-        <translation type="unfinished"></translation>
+        <translation>第４の線分</translation>
     </message>
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="2"/>
         <source>Inscribed in Quad</source>
-        <translation type="unfinished"></translation>
+        <translation>四角形に内接</translation>
     </message>
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="7"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>四角形に内接する楕円を描画</translation>
     </message>
 </context>
 </TS>
