@@ -1011,8 +1011,6 @@ ShapeAlgorithms.getCompleteQuadrilateralSegments = function(line1, line2, line3,
         vertices.put(ep, vertices.get(ep, 0) + 1);
     }
 
-    qDebug("vertices: \n", vertices);
-
     ret["vertices"] = vertices;
 
     return ret;
@@ -1041,10 +1039,10 @@ ShapeAlgorithms.getQuadrilateral = function(line1, line2, line3, line4) {
         } while (i!==-1);
     }
 
-    qDebug("vs[4]: ", vs[4]);
-    qDebug("vs[3]: ", vs[3]);
-    qDebug("vs[2]: ", vs[2]);
-    qDebug("vs[1]: ", vs[1]);
+//    qDebug("vs[4]: ", vs[4]);
+//    qDebug("vs[3]: ", vs[3]);
+//    qDebug("vs[2]: ", vs[2]);
+//    qDebug("vs[1]: ", vs[1]);
 
     var vert = [];
 
@@ -1427,7 +1425,6 @@ ShapeAlgorithms.splitAt = function(shape, points) {
         if (!endPoint.equalsFuzzy(points[points.length-1])) {
             points.push(endPoint);
         }
-        qDebug(points);
         for (i=0; i<points.length-1; i++) {
             if (points[i].equalsFuzzy(points[i+1])) {
                 continue;
