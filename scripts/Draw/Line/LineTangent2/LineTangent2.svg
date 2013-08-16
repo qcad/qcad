@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
 <g fill="none" transform="translate(0 464)">
 <path stroke="#f00" stroke-linejoin="round" stroke-linecap="round" stroke-width="37.333" d="m376,344a112,112 0 1,1 -224,0 112,112 0 1,1 224,0z" transform="matrix(.42857 0 0 .42857 310.85714 -411.42857)"/>

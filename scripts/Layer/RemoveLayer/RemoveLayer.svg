@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
 <path fill="#f00" stroke="#000" stroke-linecap="square" color="#000" stroke-width="14.311" d="m232,216-143.9688,0c-.0141,0-.0312,.0301-.0312,.0625v63.875c0,.0324 .0171,.0625 .0312,.0625h143.9688 64 143.9688c.0141,0 .0313-.0301 .0313-.0625v-63.875c-0-.0324-.0172-.0625-.0313-.0625h-143.9688-64z"/>
 </svg>

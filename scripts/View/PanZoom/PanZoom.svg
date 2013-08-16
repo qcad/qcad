@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <filter width="1.177" x="-.089" y="-.384" height="1.767" color-interpolation-filters="sRGB" id="filter3268">
 <feGaussianBlur stdDeviation="1.59836"/>

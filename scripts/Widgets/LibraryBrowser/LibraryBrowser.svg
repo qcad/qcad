@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <g stroke="#000" stroke-linecap="square" stroke-width="8" stroke-dashoffset="354.331" transform="translate(0 -540.3622)">
 <path fill="#fff" d="m40.0271,644.362h431.9459a.0271,.0097 0 0,1 .027,.01v367.978a.0271,.0097 0 0,1 -.027,.01h-431.9459a.0271,.0097 0 0,1 -.0271-.01v-367.978a.0271,.0097 0 0,1 .0271-.01"/>
 <path d="m40.0271,40h431.9459a.0271,.0114 0 0,1 .027,.0114v63.9776a.0271,.0114 0 0,1 -.027,.011h-431.9459a.0271,.0114 0 0,1 -.0271-.011v-63.9776a.0271,.0114 0 0,1 .0271-.0114" transform="translate(0 540.3622)"/>
