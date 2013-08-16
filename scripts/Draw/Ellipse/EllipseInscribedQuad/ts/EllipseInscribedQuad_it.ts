@@ -4,34 +4,34 @@
 <context>
     <name>EllipseInscribedQuad</name>
     <message>
-        <location filename="../EllipseInscribedQuad.js" line="82"/>
+        <location filename="../EllipseInscribedQuad.js" line="+82"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>Prima linea</translation>
     </message>
     <message>
-        <location filename="../EllipseInscribedQuad.js" line="96"/>
+        <location line="+14"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Seconda linea</translation>
     </message>
     <message>
-        <location filename="../EllipseInscribedQuad.js" line="109"/>
+        <location line="+13"/>
         <source>Third line</source>
-        <translation type="unfinished"></translation>
+        <translation>Terza linea</translation>
     </message>
     <message>
-        <location filename="../EllipseInscribedQuad.js" line="119"/>
+        <location line="+10"/>
         <source>Fourth line</source>
-        <translation type="unfinished"></translation>
+        <translation>Quarta linea</translation>
     </message>
     <message>
-        <location filename="../EllipseInscribedQuadInit.js" line="2"/>
+        <location filename="../EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>Iscritta nel quadrilatero</translation>
     </message>
     <message>
-        <location filename="../EllipseInscribedQuadInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>Disegnare una ellisse inscritto in un quadrilatero</translation>
     </message>
 </context>
 </TS>

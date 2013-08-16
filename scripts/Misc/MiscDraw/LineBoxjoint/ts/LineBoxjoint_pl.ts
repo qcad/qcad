@@ -4,23 +4,15 @@
 <context>
     <name>LineBoxJoint</name>
     <message>
-        <location filename="../LineBoxJoint.js" line="+63"/>
-        <source>First point</source>
+        <location filename="../LineBoxJointInit.js" line="+2"/>
+        <source>Box &amp;Joint from 2 Points</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Second point</source>
+        <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>LineBoxjoint</name>
     <message>
         <location filename="../LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
@@ -57,13 +49,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineBoxJointInit.js" line="+2"/>
-        <source>Box &amp;Joint from 2 Points</source>
+        <location filename="../LineBoxJoint.js" line="+63"/>
+        <source>First point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Draw Box Joint Fingers, Slots and Tennons</source>
+        <source>Second point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

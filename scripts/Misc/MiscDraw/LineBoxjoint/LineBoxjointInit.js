@@ -1,12 +1,12 @@
 function init(basePath) {
     var action = new RGuiAction(qsTranslate(
-                                            "LineBoxjoint",
+                                            "LineBoxJoint",
                                             "Box &Joint from 2 Points"),
                                             RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/LineBoxjoint.js");
-    action.setIcon(basePath + "/LineBoxjoint.svg");
-    action.setStatusTip(qsTranslate("LineBoxjoint",
+    action.setScriptFile(basePath + "/LineBoxJoint.js");
+    action.setIcon(basePath + "/LineBoxJoint.svg");
+    action.setStatusTip(qsTranslate("LineBoxJoint",
                                     "Draw Box Joint Fingers, Slots and Tennons"));
     action.setDefaultShortcut(new QKeySequence("l,j"));
     action.setDefaultCommands(["boxjoint", "bxj"]);

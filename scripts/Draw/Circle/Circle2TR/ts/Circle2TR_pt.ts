@@ -37,7 +37,7 @@
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhe um círculo tangente a duas entidades com um raio</translation>
     </message>
 </context>
 </TS>

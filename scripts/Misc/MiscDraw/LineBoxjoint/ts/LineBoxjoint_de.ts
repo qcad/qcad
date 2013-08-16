@@ -18,25 +18,6 @@
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
-</context>
-<context>
-    <name>LineBoxjoint</name>
-    <message>
-        <source>First point</source>
-        <translation type="obsolete">Erster Punkt</translation>
-    </message>
-    <message>
-        <source>Second point</source>
-        <translation type="obsolete">Zweiter Punkt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Fertig</translation>
-    </message>
-    <message>
-        <source>Box &amp;Joint form 2 Points</source>
-        <translation type="obsolete">Finger&amp;zinkung von 2 Punkten</translation>
-    </message>
     <message>
         <location filename="../LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
@@ -46,6 +27,10 @@
         <location line="+7"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Fingerzinkung mit Zapfen, Nut oder Schlitz</translation>
+    </message>
+    <message>
+        <source>Box &amp;Joint form 2 Points</source>
+        <translation type="obsolete">Finger&amp;zinkung von 2 Punkten</translation>
     </message>
     <message>
         <location filename="../LineBoxJoint.ui" line="+17"/>

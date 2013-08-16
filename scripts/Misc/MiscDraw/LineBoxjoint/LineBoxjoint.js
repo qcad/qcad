@@ -3,12 +3,12 @@
  *
  * This file is an extension of the QCAD project.
  *
- * LineBoxjoint is free software: you can redistribute it and/or modify
+ * LineBoxJoint is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * LineBoxjoint is distributed in the hope that it will be useful,
+ * LineBoxJoint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -20,11 +20,11 @@
 include("script/EAction.js");
 
 /**
- * \class LineBoxjoint
+ * \class LineBoxJoint
  * \brief Box joint line between two points.
  * \ingroup ecma_draw_line
  */
-function LineBoxjoint(guiAction) {
+function LineBoxJoint(guiAction) {
   EAction.call(this, guiAction);
   
   this.corner1 = undefined;
@@ -35,23 +35,23 @@ function LineBoxjoint(guiAction) {
   this.slotRatio = undefined;
   this.fingerStyle = undefined;
 
-  this.setUiOptions("LineBoxjoint.ui");
+  this.setUiOptions("LineBoxJoint.ui");
 }
 
-LineBoxjoint.prototype = new EAction();
+LineBoxJoint.prototype = new EAction();
 
-LineBoxjoint.State = {
+LineBoxJoint.State = {
   SettingCorner1 : 0,
   SettingCorner2 : 1
 };
 
-LineBoxjoint.prototype.beginEvent = function() {
+LineBoxJoint.prototype.beginEvent = function() {
   EAction.prototype.beginEvent.call(this);
   
-  this.setState(LineBoxjoint.State.SettingCorner1);
+  this.setState(LineBoxJoint.State.SettingCorner1);
 };
 
-LineBoxjoint.prototype.setState = function(state) {
+LineBoxJoint.prototype.setState = function(state) {
   EAction.prototype.setState.call(this, state);
   
   this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
@@ -59,14 +59,14 @@ LineBoxjoint.prototype.setState = function(state) {
   
   var appWin = RMainWindowQt.getMainWindow();
   switch (this.state) {
-    case LineBoxjoint.State.SettingCorner1:
+    case LineBoxJoint.State.SettingCorner1:
       var trCorner1 = qsTr("First point");
       this.setCommandPrompt(trCorner1);
       this.setLeftMouseTip(trCorner1);
       this.setRightMouseTip(EAction.trCancel);
       break;
       
-    case LineBoxjoint.State.SettingCorner2:
+    case LineBoxJoint.State.SettingCorner2:
       var trCorner2 = qsTr("Second point");
       this.setCommandPrompt(trCorner2);
       this.setLeftMouseTip(trCorner2);
@@ -77,32 +77,32 @@ LineBoxjoint.prototype.setState = function(state) {
   EAction.showSnapTools();
 };
 
-LineBoxjoint.prototype.escapeEvent = function() {
+LineBoxJoint.prototype.escapeEvent = function() {
   switch (this.state) {
-    case LineBoxjoint.State.SettingCorner1:
+    case LineBoxJoint.State.SettingCorner1:
       EAction.prototype.escapeEvent.call(this);
       break;
       
-    case LineBoxjoint.State.SettingCorner2:
-      this.setState(LineBoxjoint.State.SettingCorner1);
+    case LineBoxJoint.State.SettingCorner2:
+      this.setState(LineBoxJoint.State.SettingCorner1);
       break;
   }
 };
 
-LineBoxjoint.prototype.pickCoordinate = function(event, preview) {
+LineBoxJoint.prototype.pickCoordinate = function(event, preview) {
   var di = this.getDocumentInterface();
   
   switch (this.state) {
-    case LineBoxjoint.State.SettingCorner1:
+    case LineBoxJoint.State.SettingCorner1:
       this.corner1 = event.getModelPosition();
       if (!preview) {
         di.setRelativeZero(this.corner1);
         //di.repaintViews();
-        this.setState(LineBoxjoint.State.SettingCorner2);
+        this.setState(LineBoxJoint.State.SettingCorner2);
       }
       break;
       
-    case LineBoxjoint.State.SettingCorner2:
+    case LineBoxJoint.State.SettingCorner2:
       this.corner2 = event.getModelPosition();
       if (preview) {
         this.updatePreview();
@@ -112,14 +112,14 @@ LineBoxjoint.prototype.pickCoordinate = function(event, preview) {
         if (!isNull(op)) {
           di.applyOperation(op);
           di.setRelativeZero(this.corner2);
-          this.setState(LineBoxjoint.State.SettingCorner1);
+          this.setState(LineBoxJoint.State.SettingCorner1);
         }
       }
       break;
   }
 };
 
-LineBoxjoint.prototype.getOperation = function(preview) {
+LineBoxJoint.prototype.getOperation = function(preview) {
   if (isNull(this.corner1) || isNull(this.corner2)) {
     return undefined;
   }
@@ -200,22 +200,22 @@ LineBoxjoint.prototype.getOperation = function(preview) {
   return op;
 };
 
-LineBoxjoint.prototype.slotFingerHeightChanged = function(value) {
+LineBoxJoint.prototype.slotFingerHeightChanged = function(value) {
   this.fingerHeight = value;
   this.updatePreview(true);
 };
 
-LineBoxjoint.prototype.slotFingerLengthChanged = function(value) {
+LineBoxJoint.prototype.slotFingerLengthChanged = function(value) {
   this.fingerLength = value;
   this.updatePreview(true);
 };
 
-LineBoxjoint.prototype.slotSlotRatioChanged = function(value) {
+LineBoxJoint.prototype.slotSlotRatioChanged = function(value) {
   this.slotRatio = value;
   this.updatePreview(true);
 };
 
-LineBoxjoint.prototype.slotFingerStyleChanged = function(value) {
+LineBoxJoint.prototype.slotFingerStyleChanged = function(value) {
   this.fingerStyle = value;
   this.updatePreview(true);
 };

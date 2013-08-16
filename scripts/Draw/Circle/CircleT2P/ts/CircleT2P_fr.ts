@@ -37,7 +37,7 @@
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Tracez un cercle passant par deux points et tangentes à une seule entité</translation>
     </message>
 </context>
 </TS>

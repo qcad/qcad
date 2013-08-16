@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LineBoxjoint</class>
- <widget class="QWidget" name="LineBoxjoint">
+ <class>LineBoxJoint</class>
+ <widget class="QWidget" name="LineBoxJoint">
   <property name="geometry">
    <rect>
     <x>0</x>

@@ -44,7 +44,7 @@
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to three entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Disegnare un cerchio tangente a tre entità</translation>
     </message>
 </context>
 </TS>

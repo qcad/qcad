@@ -18,20 +18,15 @@
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
-</context>
-<context>
-    <name>LineBoxjoint</name>
     <message>
-        <source>First point</source>
-        <translation type="obsolete">Primo punto</translation>
+        <location filename="../LineBoxJointInit.js" line="+2"/>
+        <source>Box &amp;Joint from 2 Points</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Second point</source>
-        <translation type="obsolete">Secondo punto</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Fatto</translation>
+        <location line="+7"/>
+        <source>Draw Box Joint Fingers, Slots and Tennons</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../LineBoxJoint.ui" line="+17"/>
@@ -66,16 +61,6 @@
     <message>
         <location line="+5"/>
         <source>Tennons</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LineBoxJointInit.js" line="+2"/>
-        <source>Box &amp;Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
