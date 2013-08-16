@@ -64,6 +64,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setSpatialIndexDisabled, "setSpatialIndexDisabled");
             
+            REcmaHelper::registerFunction(&engine, proto, setExistingBlockDetectionDisabled, "setExistingBlockDetectionDisabled");
+            
+            REcmaHelper::registerFunction(&engine, proto, setExistingLayerDetectionDisabled, "setExistingLayerDetectionDisabled");
+            
             REcmaHelper::registerFunction(&engine, proto, isUndoable, "isUndoable");
             
             REcmaHelper::registerFunction(&engine, proto, isFailed, "isFailed");
@@ -771,6 +775,116 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTransaction::setSpatialIndexDisabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransaction::setExistingBlockDetectionDisabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::setExistingBlockDetectionDisabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::setExistingBlockDetectionDisabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("setExistingBlockDetectionDisabled", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExistingBlockDetectionDisabled(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.setExistingBlockDetectionDisabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::setExistingBlockDetectionDisabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransaction::setExistingLayerDetectionDisabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::setExistingLayerDetectionDisabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::setExistingLayerDetectionDisabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("setExistingLayerDetectionDisabled", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExistingLayerDetectionDisabled(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.setExistingLayerDetectionDisabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::setExistingLayerDetectionDisabled", context, engine);
             return result;
         }
          QScriptValue

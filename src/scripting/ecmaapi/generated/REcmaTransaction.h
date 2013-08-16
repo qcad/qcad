@@ -55,6 +55,12 @@
         setSpatialIndexDisabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setExistingBlockDetectionDisabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setExistingLayerDetectionDisabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isUndoable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
