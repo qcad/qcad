@@ -147,6 +147,8 @@ public:
     virtual bool flipVertical();
     virtual bool reverse();
 
+    QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
+
     virtual RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint);
     virtual void trimStartPoint(const RVector& p);
     virtual void trimEndPoint(const RVector& p);

@@ -137,6 +137,9 @@
         ;static  QScriptValue
         flipVertical
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTransformed
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

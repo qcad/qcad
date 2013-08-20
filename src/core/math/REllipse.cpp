@@ -36,12 +36,12 @@ REllipse::REllipse() :
 
 REllipse::REllipse(const RVector& center, const RVector& majorPoint,
                    double ratio,
-                   double startAngle, double endAngle, bool reversed) :
+                   double startParam, double endParam, bool reversed) :
     center(center),
     majorPoint(majorPoint),
     ratio(ratio),
-    startParam(startAngle),
-    endParam(endAngle),
+    startParam(startParam),
+    endParam(endParam),
     reversed(reversed) {
 
     correctMajorMinor();
@@ -792,6 +792,30 @@ bool REllipse::reverse() {
     endParam = a;
     reversed = !reversed;
     return true;
+}
+
+QSharedPointer<RShape> REllipse::getTransformed(const QTransform& transform) const {
+    RVector ct = center.getTransformed2d(transform);
+    RVector mp = center + getMajorPoint();
+    RVector mpt = mp.getTransformed2d(transform);
+    RVector sp = getStartPoint();
+    RVector spt = sp.getTransformed2d(transform);
+    RVector ep = getEndPoint();
+    RVector ept = ep.getTransformed2d(transform);
+
+    QSharedPointer<REllipse> ret = QSharedPointer<REllipse>(
+        new REllipse(
+            ct,
+            mpt - ct,
+            ratio,
+            0.0,
+            M_PI*2,
+            reversed
+        )
+    );
+    ret->setStartParam(ret->getParamTo(spt));
+    ret->setEndParam(ret->getParamTo(ept));
+    return ret;
 }
 
 RS::Ending REllipse::getTrimEnd(const RVector& coord, const RVector& trimPoint) {

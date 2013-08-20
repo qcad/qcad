@@ -209,6 +209,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getTransformed" cppName="getTransformed"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false">
+        <arg type="QTransform &amp;" typeName="QTransform"
+        name="transform" isConst="true" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

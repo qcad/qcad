@@ -74,6 +74,8 @@ public:
     virtual bool flipHorizontal();
     virtual bool flipVertical();
 
+    virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
+
 protected:
     virtual void print(QDebug dbg) const;
 

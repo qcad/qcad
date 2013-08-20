@@ -19,8 +19,6 @@
 
 include("scripts/ShapeAlgorithms.js");
 
-
-
 /**
  * SAX style XML handler.
  */
@@ -28,12 +26,90 @@ function SvgHandler(svgImporter) {
     QXmlDefaultHandler.call(this);
     this.context = "";
     this.svgImporter = svgImporter;
-    this.transform = new QTransform();
     this.displayStack = [];
     this.elementStack = [];
+    this.transformStack = [];
+    this.styleStack = [];
 }
 
 SvgHandler.prototype = new QXmlDefaultHandler();
+
+SvgHandler.rxMatrix = new RegExp(
+        "(translate)\\s*\\(" +
+            "\\s*" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[,\\s]+" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[\\s]*" +
+        "\\)" +
+        "|" +
+        "(rotate)\\s*\\(" +
+            "\\s*" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[\\s]*" +
+        "\\)" +
+        "|" +
+        "(matrix)\\s*\\(" +
+            "\\s*" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[,\\s]+" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[,\\s]+" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[,\\s]+" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[,\\s]+" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[,\\s]+" +
+            "([+-]?\\d*\\.?\\d*)" +
+            "[\\s]*" +
+        "\\)",
+        "gim"
+);
+
+/**
+ * \return QTransform object from given transform attribute string.
+ */
+SvgHandler.prototype.getTransform = function(str) {
+    var ret = new QTransform();
+    var t = undefined;
+
+    var match;
+    while (match = SvgHandler.rxMatrix.exec(str)) {
+        qDebug("match.length: ", match.length);
+        qDebug("match: ", match);
+
+        if (match.length<2) {
+            continue;
+        }
+
+        if (!isNull(match[1]) && match[1].toLowerCase()==="translate") {
+            t = new QTransform();
+            t.translate(match[2], match[3]);
+            qDebug("t (translate): ", t);
+        }
+        else if (!isNull(match[4]) && match[4].toLowerCase()==="rotate") {
+            t = new QTransform();
+            t.rotate(match[5]);
+            qDebug("t (rotate): ", t);
+        }
+        else if (!isNull(match[6]) && match[6].toLowerCase()==="matrix") {
+            t = new QTransform(
+                        match[7], match[8], 0.0,
+                        match[9], match[10], 0.0,
+                        match[11], match[12], 1.0
+                        );
+            qDebug("t: ", t);
+        }
+
+        if (!isNull(t)) {
+            t.operator_multiply_assign(ret);
+            ret = t;
+        }
+    }
+
+    return ret;
+};
 
 /**
  * Handle element (tag).
@@ -42,9 +118,32 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     this.elementStack.push(localName);
     this.displayStack.push(atts.value("display"));
 
-    //qDebug("localName: ", localName);
-    //qDebug("id: ", atts.value("id"));
+    var transformAttr = atts.value("transform");
+    if (transformAttr!=="") {
+        var transform = this.getTransform(transformAttr);
+        var combinedTransform = new QTransform();
+        if (this.transformStack.length!==0) {
+            combinedTransform = this.transformStack[this.transformStack.length-1];
+        }
+        transform.operator_multiply_assign(combinedTransform);
+        combinedTransform = transform;
+        this.transformStack.push(combinedTransform);
+        this.svgImporter.transform = combinedTransform;
 
+        for (var i=0; i<this.transformStack.length; i++) {
+            qDebug("[" + i + "]: ", this.transformStack[i]);
+        }
+    }
+    else {
+        if (this.transformStack.length!==0) {
+            this.transformStack.push(this.transformStack[this.transformStack.length-1]);
+        }
+        else {
+            this.transformStack.push(new QTransform());
+        }
+    }
+
+    // ignore some elements and all theirs child elements:
     if (this.elementStack.contains("metadata") ||
         this.elementStack.contains("pattern")) {
         return true;
@@ -115,10 +214,16 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
 };
 
 SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
+    this.transformStack.pop();
+    this.svgImporter.transform = this.transformStack[this.transformStack.length-1];
+
+        //this.updateTransformation();
     this.displayStack.pop();
     this.elementStack.pop();
     return true;
 };
+
+
 
 
 /**
@@ -131,6 +236,7 @@ SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
 function SvgImporter(document) {
     RFileImporterAdapter.call(this, document);
     this.setDocument(document);
+    this.transform = new QTransform();
 }
 
 SvgImporter.prototype = new RFileImporterAdapter();
@@ -143,11 +249,6 @@ SvgImporter.prototype.importFile = function(fileName) {
     }
 
     var fi = new QFileInfo(fileName);
-    //this.domDoc = this.getDomDocument(fi.absoluteFilePath());
-
-    //if (isNull(this.domDoc)) {
-    //    return false;
-    //}
 
     var file = new QFile(fi.absoluteFilePath());
     var xmlReader = new QXmlSimpleReader();
@@ -156,183 +257,49 @@ SvgImporter.prototype.importFile = function(fileName) {
     xmlReader.setContentHandler(handler);
     var ok = xmlReader.parse(source, false);
     file.close();
-
-    /*
-    var i;
-    
-    // import paths
-    var paths = this.parseSvgPaths();
-    for (i = 0; i < paths.length; ++i) {
-        this.importSvgPath(paths[i]);
-    }
-
-    // import lines
-    var lines = this.parseSvgLines();
-    for (i = 0; i < lines.length; i += 4) {
-        this.importSvgLine(lines.slice(i, i + 4));
-    }
-
-    // import polygons
-    var polygons = this.parseSvgPolygons();
-    for (i = 0; i < polygons.length; ++i) {
-        this.importSvgPolygon(polygons[i]);
-    }
-
-    // import polylines
-    var polylines = this.parseSvgPolylines();
-    for (i = 0; i < polylines.length; ++i) {
-        this.importSvgPolyline(polylines[i]);
-    }
-
-    // import circles
-    var circles = this.parseSvgCircles();
-    for (i = 0; i < circles.length; i += 3) {
-        this.importSvgCircle(circles.slice(i, i + 3));
-    }
-
-    // import ellipses
-    var ellipses = this.parseSvgEllipses();
-    for (i = 0; i < ellipses.length; i += 4) {
-        this.importSvgEllipse(ellipses.slice(i, i + 4));
-    }
-
-    // import rectangles
-    var rectangles = this.parseSvgRectangles();
-    for (i = 0; i < rectangles.length; i += 4) {
-        this.importSvgRectangle(rectangles.slice(i, i + 4));
-    }
-    */
     
     this.endImport();
 
     return true;
 };
 
-/*
-SvgImporter.prototype.getDomDocument = function(fileName) {
-    var dlg;
-
-    // read and parse SVG file
-    var domDoc = new QDomDocument();
-    var file = new QFile(fileName);
-    var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
-    if (!file.open(flags)) {
-        dlg = new QMessageBox(QMessageBox.Warning,
-                qsTr("Insufficient permissions"),
-                qsTr("Insufficient permissions to read file \n'%1'")
-                    .arg(file.fileName()), QMessageBox.OK);
-        dlg.exec();
-        return undefined;
-    }
-    if (!domDoc.setContent(file)) {
-        file.close();
-        dlg = new QMessageBox(QMessageBox.Warning,
-                qsTr("Parse Error"),
-                qsTr("Cannot parse SVG file\n'%1'")
-                    .arg(file.fileName()), QMessageBox.OK);
-        dlg.exec();
-        return undefined;
-    }
-    return domDoc;
-};
-*/
-
-/*
-SvgImporter.prototype.parseSvgLines = function() {
-    return this.parseSvgElement(this.domDoc, "line", "x1", "y1", "x2", "y2");
-};
-
-SvgImporter.prototype.parseSvgCircles = function() {
-    return this.parseSvgElement(this.domDoc, "circle", "cx", "cy", "r");
-};
-
-SvgImporter.prototype.parseSvgEllipses = function() {
-    return this.parseSvgElement(this.domDoc, "ellipse", "cx", "cy", "rx", "ry");
-};
-
-SvgImporter.prototype.parseSvgRectangles = function() {
-    return this.parseSvgElement(this.domDoc, "rect", "x", "y", "width", "height");
-};
-
-SvgImporter.prototype.parseSvgPolylines = function() {
-    return this.parseSvgElement(this.domDoc, "polyline", "points");
-};
-
-SvgImporter.prototype.parseSvgPolygons = function() {
-    return this.parseSvgElement(this.domDoc, "polygon", "points");
-};
-
-SvgImporter.prototype.parseSvgPaths = function() {
-    return this.parseSvgElement(this.domDoc, "path", "d");
-};
-*/
-
-/**
- * @param domDoc The DOM document.
- * @param elementName The element name.
- * @param array attributeName1..N The attribute names to parse. 
- * @returns {Array}
- */
- /*
-SvgImporter.prototype.parseSvgElement = function() {
-    if (arguments.length < 3) {
-        qWarning("SvgImporter.js:",
-                "parseSvgElement(): not enough arguments given");
-    }
-    var domDoc = arguments[0];
-    if (isNull(domDoc)) {
-        return [];
-    }
-
-    var elementName = arguments[1];
-    var ret = [];
-    var list = domDoc.elementsByTagName(elementName);
-    for ( var i = 0; i < list.count(); ++i) {
-        var n = list.at(i);
-        var e = n.toElement();
-        if (!e.isNull()) {
-            for ( var j = 2; j < arguments.length; j++) {
-                ret.push(e.attribute(arguments[j]));
-            }
-        }
-        else {
-            // one argument not found:
-            return [];
-        }
-    }
-    return ret;
-};
-*/
-
 SvgImporter.prototype.importCircle = function(x, y, r) {
     var circle = new RCircle(new RVector(x, -y), r);
+    circle = circle.getTransformed(this.transform).data();
     var entity = new RCircleEntity(this.getDocument(), new RCircleData(circle));
     this.importObject(entity);
 };
 
 SvgImporter.prototype.importEllipse = function(x, y, rx, ry) {
     var ellipse = new REllipse(new RVector(x, -y), new RVector(rx, 0), ry/rx, 0.0, 2*Math.PI, false);
+    ellipse = ellipse.getTransformed(this.transform).data();
     var entity = new REllipseEntity(this.getDocument(), new REllipseData(ellipse));
     this.importObject(entity);
 };
 
 SvgImporter.prototype.importRectangle = function(x, y, w, h) {
     var line = new RLine(new RVector(x, -y), new RVector(x+w, -y));
+    line = line.getTransformed(this.transform).data();
     var entity = new RLineEntity(this.getDocument(), new RLineData(line));
     this.importObject(entity);
     line = new RLine(new RVector(x+w, -y), new RVector(x+w, -y-h));
+    line = line.getTransformed(this.transform).data();
     entity = new RLineEntity(this.getDocument(), new RLineData(line));
     this.importObject(entity);
     line = new RLine(new RVector(x+w, -y-h), new RVector(x, -y-h));
+    line = line.getTransformed(this.transform).data();
     entity = new RLineEntity(this.getDocument(), new RLineData(line));
     this.importObject(entity);
     line = new RLine(new RVector(x, -y-h), new RVector(x, -y));
+    line = line.getTransformed(this.transform).data();
     entity = new RLineEntity(this.getDocument(), new RLineData(line));
     this.importObject(entity);
 };
 
 SvgImporter.prototype.importLine = function(x1, y1, x2, y2) {
-    var line = new RLine(new RVector(x1, -y1), new RVector(x2, -y2));
+    var line = new RLine(new RVector(x1, y1), new RVector(x2, y2));
+    line = line.getTransformed(this.transform).data();
+    line.scale(new RVector(1.0, -1.0));
     var entity = new RLineEntity(this.getDocument(), new RLineData(line));
     this.importObject(entity);
 };
@@ -342,6 +309,7 @@ SvgImporter.prototype.importArc = function(ox, oy, x, y, rx, ry, angle, isLarge,
     var center = SvgImporter.getArcCenter(ox, -oy, x, -y, rx, ry, sweep, !isLarge, angle);
     if (Math.abs(rx-ry) < RS.PointTolerance) {
         var arc = new RArc(center, rx, center.getAngleTo(new RVector(ox, -oy)), center.getAngleTo(new RVector(x, -y)), sweep);
+        arc = arc.getTransformed(this.transform).data();
         entity = new RArcEntity(this.getDocument(), new RArcData(arc));
         this.importObject(entity);
     }
@@ -367,6 +335,7 @@ SvgImporter.prototype.importBezier = function(x1, y1, px1, py1, px2, py2, x2, y2
     var entity = undefined;
 
     var shape = ShapeAlgorithms.splineToLineOrArc(spline, 0.1);
+    shape = shape.getTransformed(this.transform).data();
     if (isLineShape(shape)) {
         // spline resembles a line:
         entity = new RLineEntity(this.getDocument(), new RLineData(shape));
@@ -389,6 +358,7 @@ SvgImporter.prototype.importBezier2 = function(x1, y1, px, py, x2, y2) {
     spline.appendControlPoint(new RVector(x1, -y1));
     spline.appendControlPoint(new RVector(px, -py));
     spline.appendControlPoint(new RVector(x2, -y2));
+    spline = spline.getTransformed(this.transform).data();
     var entity = new RSplineEntity(this.getDocument(), new RSplineData(spline));
     this.importObject(entity);
 };
@@ -731,43 +701,6 @@ SvgImporter.getArcCenter = function(x1, y1, x2, y2, rx, ry, sweep, isLarge, angl
 
   return new RVector(x1 - dx3, y1 - dy3);
 };
-
-/*
-SvgImporter.prototype.importSvgLine = function(svgLine) {
-    var x1 = parseFloat(svgLine[0]);
-    var y1 = parseFloat(svgLine[1]);
-    var x2 = parseFloat(svgLine[2]);
-    var y2 = parseFloat(svgLine[3]);
-    this.importLine(x1, y1, x2, y2);
-};
-
-SvgImporter.prototype.importSvgCircle = function(svgCircle) {
-    var x = parseFloat(svgCircle[0]);
-    var y = parseFloat(svgCircle[1]);
-    var r = parseFloat(svgCircle[2]);
-    this.importCircle(x, y, r);
-};
-
-SvgImporter.prototype.importSvgEllipse = function(svgEllipse) {
-    var x = parseFloat(svgEllipse[0]);
-    var y = parseFloat(svgEllipse[1]);
-    var rx = parseFloat(svgEllipse[2]);
-    var ry = parseFloat(svgEllipse[3]);
-    this.importEllipse(x, y, rx, ry);
-};
-
-SvgImporter.prototype.importSvgRectangle = function(svgRectangle) {
-    var x = parseFloat(svgRectangle[0]);
-    var y = parseFloat(svgRectangle[1]);
-    var width = parseFloat(svgRectangle[2]);
-    var height = parseFloat(svgRectangle[3]);
-    this.importRectangle(x, y, width, height);
-};
-
-SvgImporter.prototype.importSvgPolyline = function(svgPolyline) {
-    this.importSvgPolygon(svgPolyline);
-};
-*/
 
 SvgImporter.prototype.importSvgPolygon = function(pointsData) {
     var coordinates = pointsData.trim().split(/[\s,]+/).map(parseFloat);

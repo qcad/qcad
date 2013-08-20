@@ -309,6 +309,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RMatrix &amp;" typeName="RMatrix" name="m"
         isConst="true" />
       </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QTransform &amp;" typeName="QTransform" name="t"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getDividedComponents"
     cppName="getDividedComponents" specifier="public"

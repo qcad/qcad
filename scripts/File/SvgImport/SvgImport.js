@@ -30,18 +30,42 @@ SvgImport.basePath = includeBasePath;
 
 SvgImport.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
-    
-    var lastDir = RSettings.getStringValue(
-            "SvgImport/Path",
-            QDesktopServices.storageLocation(QDesktopServices.DocumentsLocation));
-    var fileName = QFileDialog.getOpenFileName(
-        this, qsTr("Import SVG"), lastDir,
-        qsTr("SVG Files") + " (*.svg);;" + qsTr("All Files") + " (*)");
-    if (fileName.length===0) {
-        this.terminate();
-        return;
+
+    var fileName = undefined;
+
+    if (!isNull(this.guiAction)) {
+        var args = this.guiAction.getArguments();
+        if (args.length>0) {
+            fileName = args[0];
+        }
+
+        var fi = new QFileInfo(fileName);
+        if (!fi.isAbsolute()) {
+            fileName = RSettings.getLaunchPath() + QDir.separator + fileName;
+            fi = new QFileInfo(fileName);
+        }
+
+        if (!fi.exists()) {
+            qWarning("file does not exist: ", fileName);
+            this.terminate();
+            return;
+        }
     }
-    RSettings.setValue("SvgImport/Path", new QFileInfo(fileName).absolutePath());
+    
+    if (isNull(fileName)) {
+        var lastDir = RSettings.getStringValue(
+                "SvgImport/Path",
+                QDesktopServices.storageLocation(QDesktopServices.DocumentsLocation));
+        fileName = QFileDialog.getOpenFileName(
+            this, qsTr("Import SVG"), lastDir,
+            qsTr("SVG Files") + " (*.svg);;" + qsTr("All Files") + " (*)");
+        if (fileName.length===0) {
+            this.terminate();
+            return;
+        }
+        RSettings.setValue("SvgImport/Path", new QFileInfo(fileName).absolutePath());
+    }
+
     
     var svgImporter = new SvgImporter(this.getDocument());
     svgImporter.importFile(fileName);
@@ -49,6 +73,7 @@ SvgImport.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
     if (!isNull(di)) {
         di.regenerateScenes();
+        di.autoZoom();
     }
 
     var appWin = EAction.getMainWindow();

@@ -149,6 +149,8 @@ public:
     virtual bool stretch(const RBox& area, const RVector& offset);
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 
+    virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const = 0;
+
     static bool order(QList<QList<QSharedPointer<RShape> > >& boundary);
 
     static QList<RVector> getIntersectionPointsLL(const RLine& line1,

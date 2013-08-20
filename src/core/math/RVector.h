@@ -151,6 +151,7 @@ public:
 
     RVector getTransformed(const RMatrix& m) const;
     RVector getTransformed2d(const RMatrix& m) const;
+    RVector getTransformed2d(const QTransform& t) const;
 
     RVector getDividedComponents(const RVector& v) const;
     RVector getMultipliedComponents(const RVector& v) const;

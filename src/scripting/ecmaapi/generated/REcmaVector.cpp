@@ -3506,6 +3506,48 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QTransform */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QTransform*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QTransform*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type QTransform*.",
+                               context);                    
+                    }
+                    QTransform& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getTransformed2d(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getTransformed2d().",
                    context);

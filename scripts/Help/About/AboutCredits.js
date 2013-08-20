@@ -12,7 +12,7 @@ var credits =
     [
         "Testing and Feedback",
         "Clive Tubb",
-        "Harald ('Husky')",
+        "Harald Huesges ('Husky')",
         "many others",
     ]
 ];

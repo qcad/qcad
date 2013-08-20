@@ -142,6 +142,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, flipVertical, "flipVertical");
             
+            REcmaHelper::registerFunction(&engine, proto, getTransformed, "getTransformed");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RCirclePointer>(), *proto);
       
@@ -2323,6 +2325,76 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerCircle::flipVertical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerCircle::getTransformed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getTransformed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getTransformed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCircle* self = 
+                        getSelf("getTransformed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QTransform */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QTransform*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QTransform*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RCircle: Argument 0 is not of type QTransform*.",
+                               context);                    
+                    }
+                    QTransform& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
+        
+               self->getTransformed(a0);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getTransformed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getTransformed", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerCircle::toString

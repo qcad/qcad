@@ -306,6 +306,10 @@ bool RLine::stretch(const RPolyline& area, const RVector& offset) {
     return ret;
 }
 
+QSharedPointer<RShape> RLine::getTransformed(const QTransform& transform) const {
+    return QSharedPointer<RShape>(new RLine(startPoint.getTransformed2d(transform), endPoint.getTransformed2d(transform)));
+}
+
 RS::Ending RLine::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
     double angEl = getAngle();
     double angM = trimPoint.getAngleTo(coord);

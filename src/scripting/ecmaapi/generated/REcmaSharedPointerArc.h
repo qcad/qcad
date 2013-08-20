@@ -205,6 +205,9 @@
         stretch
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTransformed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTrimEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

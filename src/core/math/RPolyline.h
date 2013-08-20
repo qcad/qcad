@@ -118,6 +118,8 @@ public:
     virtual bool reverse();
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 
+    virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
+
     virtual RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint);
     virtual void trimStartPoint(const RVector& p);
     virtual void trimEndPoint(const RVector& p);

@@ -904,6 +904,21 @@ bool RSpline::reverse() {
     //return false;
 }
 
+QSharedPointer<RShape> RSpline::getTransformed(const QTransform& transform) const {
+    QSharedPointer<RSpline> ret = QSharedPointer<RSpline>(clone());
+
+    for (int i=0; i<ret->controlPoints.size(); i++) {
+        ret->controlPoints[i].transform2d(transform);
+    }
+    for (int i=0; i<ret->fitPoints.size(); i++) {
+        ret->fitPoints[i].transform2d(transform);
+    }
+
+    ret->update();
+
+    return ret;
+}
+
 bool RSpline::isValid() const {
     if (!dirty) {
 #ifndef R_NO_OPENNURBS

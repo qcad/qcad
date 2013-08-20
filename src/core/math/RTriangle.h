@@ -125,6 +125,16 @@ public:
         return true;
     }
 
+    QSharedPointer<RShape> getTransformed(const QTransform& transform) const {
+        return QSharedPointer<RShape>(
+            new RTriangle(
+                corner[0].getTransformed2d(transform),
+                corner[1].getTransformed2d(transform),
+                corner[2].getTransformed2d(transform)
+            )
+        );
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

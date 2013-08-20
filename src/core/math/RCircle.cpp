@@ -214,6 +214,19 @@ bool RCircle::flipVertical() {
     return true;
 }
 
+QSharedPointer<RShape> RCircle::getTransformed(const QTransform& transform) const {
+    RVector ct = center.getTransformed2d(transform);
+    RVector sp = center + RVector(radius, 0);
+    RVector spt = sp.getTransformed2d(transform);
+
+    return QSharedPointer<RShape>(
+        new RCircle(
+            ct,
+            ct.getDistanceTo(spt)
+        )
+    );
+}
+
 void RCircle::print(QDebug dbg) const {
     dbg.nospace() << "RCircle(";
     RShape::print(dbg);

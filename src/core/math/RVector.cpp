@@ -818,6 +818,15 @@ RVector RVector::getTransformed2d(const RMatrix& m) const {
 }
 
 /**
+ * \return A new vector which is the result of this vector transformed by
+ * the given transformation matrix.
+ */
+RVector RVector::getTransformed2d(const QTransform& t) const {
+    RVector ret = *this;
+    return ret.transform2d(t);
+}
+
+/**
  * Transforms this vector with the given transformation matrix.
  */
 RVector RVector::transform2d(const QTransform& t) {

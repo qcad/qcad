@@ -602,6 +602,24 @@ bool RArc::stretch(const RPolyline& area, const RVector& offset) {
     return ret;
 }
 
+QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
+    RVector ct = center.getTransformed2d(transform);
+    RVector sp = getStartPoint();
+    RVector spt = sp.getTransformed2d(transform);
+    RVector ep = getEndPoint();
+    RVector ept = ep.getTransformed2d(transform);
+
+    return QSharedPointer<RShape>(
+        new RArc(
+            ct,
+            ct.getDistanceTo(spt),
+            ct.getAngleTo(spt),
+            ct.getAngleTo(ept),
+            reversed
+        )
+    );
+}
+
 RS::Ending RArc::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
     double angEl = center.getAngleTo(trimPoint);
     double angM = center.getAngleTo(coord);

@@ -114,6 +114,9 @@
         stretch
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTransformed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         order
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

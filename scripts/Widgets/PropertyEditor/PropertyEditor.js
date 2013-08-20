@@ -484,12 +484,12 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
 
                 // don't display any Z values:
                 var controls;
-                if (title==="Z") {
-                    controls = undefined;
-                }
-                else {
+//                if (title==="Z") {
+//                    controls = undefined;
+//                }
+//                else {
                     controls = this.initControls(propertyTypeId, onlyChanges);
-                }
+//                }
 
                 // add property name and controls to layout:
                 if (!onlyChanges) {

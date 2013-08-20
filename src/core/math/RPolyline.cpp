@@ -644,6 +644,18 @@ bool RPolyline::stretch(const RPolyline& area, const RVector& offset) {
     return true;
 }
 
+QSharedPointer<RShape> RPolyline::getTransformed(const QTransform& transform) const {
+    QSharedPointer<RPolyline> ret = QSharedPointer<RPolyline>(new RPolyline());
+
+    for (int i=0; i<countSegments(); i++) {
+        QSharedPointer<RShape> s = getSegmentAt(i);
+        QSharedPointer<RShape> st = s->getTransformed(transform);
+        ret->appendShape(*st);
+    }
+
+    return ret;
+}
+
 RS::Ending RPolyline::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
     // TODO: implement
     return RS::EndingNone;
