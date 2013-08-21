@@ -26,7 +26,7 @@ function SvgImport(guiAction) {
 
 SvgImport.prototype = new File();
 
-SvgImport.basePath = includeBasePath;
+SvgImport.includeBasePath = includeBasePath;
 
 SvgImport.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
@@ -35,6 +35,7 @@ SvgImport.prototype.beginEvent = function() {
 
     if (!isNull(this.guiAction)) {
         var args = this.guiAction.getArguments();
+        this.guiAction.clearArguments();
         if (args.length>0) {
             fileName = args[0];
         }
@@ -66,8 +67,21 @@ SvgImport.prototype.beginEvent = function() {
         RSettings.setValue("SvgImport/Path", new QFileInfo(fileName).absolutePath());
     }
 
+    var appWin = EAction.getMainWindow();
+    var dialog = WidgetFactory.createDialog(SvgImport.includeBasePath, "SvgImportDialog.ui", appWin);
+    var resolutionCombo = dialog.findChild("Resolution");
+
+    if (!dialog.exec()) {
+        this.terminate();
+        return;
+    }
     
-    var svgImporter = new SvgImporter(this.getDocument());
+    var resolution = parseFloat(resolutionCombo.currentText);
+    if (isNaN(resolution) || resolution<=0) {
+        resolution = 90;
+    }
+
+    var svgImporter = new SvgImporter(this.getDocument(), resolution);
     svgImporter.importFile(fileName);
 
     var di = this.getDocumentInterface();

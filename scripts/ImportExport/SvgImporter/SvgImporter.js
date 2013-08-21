@@ -34,37 +34,42 @@ function SvgHandler(svgImporter) {
 
 SvgHandler.prototype = new QXmlDefaultHandler();
 
-SvgHandler.rxMatrix = new RegExp(
-        "(translate)\\s*\\(" +
-            "\\s*" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[,\\s]+" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[\\s]*" +
-        "\\)" +
-        "|" +
-        "(rotate)\\s*\\(" +
-            "\\s*" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[\\s]*" +
-        "\\)" +
-        "|" +
-        "(matrix)\\s*\\(" +
-            "\\s*" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[,\\s]+" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[,\\s]+" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[,\\s]+" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[,\\s]+" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[,\\s]+" +
-            "([+-]?\\d*\\.?\\d*)" +
-            "[\\s]*" +
-        "\\)",
-        "gim"
+SvgHandler.rxStyleStroke = new RegExp(
+    "stroke\\s*:\\s*([^;]*)",
+    "gim"
+);
+
+SvgHandler.rxTransform = new RegExp(
+    "(translate)\\s*\\(" +
+        "\\s*" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[,\\s]+" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[\\s]*" +
+    "\\)" +
+    "|" +
+    "(rotate)\\s*\\(" +
+        "\\s*" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[\\s]*" +
+    "\\)" +
+    "|" +
+    "(matrix)\\s*\\(" +
+        "\\s*" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[,\\s]+" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[,\\s]+" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[,\\s]+" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[,\\s]+" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[,\\s]+" +
+        "([+-]?\\d*\\.?\\d*)" +
+        "[\\s]*" +
+    "\\)",
+    "gim"
 );
 
 /**
@@ -75,10 +80,8 @@ SvgHandler.prototype.getTransform = function(str) {
     var t = undefined;
 
     var match;
-    while (match = SvgHandler.rxMatrix.exec(str)) {
-        qDebug("match.length: ", match.length);
-        qDebug("match: ", match);
-
+    SvgHandler.rxTransform.lastIndex = 0;
+    while (match = SvgHandler.rxTransform.exec(str)) {
         if (match.length<2) {
             continue;
         }
@@ -86,20 +89,17 @@ SvgHandler.prototype.getTransform = function(str) {
         if (!isNull(match[1]) && match[1].toLowerCase()==="translate") {
             t = new QTransform();
             t.translate(match[2], match[3]);
-            qDebug("t (translate): ", t);
         }
         else if (!isNull(match[4]) && match[4].toLowerCase()==="rotate") {
             t = new QTransform();
             t.rotate(match[5]);
-            qDebug("t (rotate): ", t);
         }
         else if (!isNull(match[6]) && match[6].toLowerCase()==="matrix") {
             t = new QTransform(
                         match[7], match[8], 0.0,
                         match[9], match[10], 0.0,
                         match[11], match[12], 1.0
-                        );
-            qDebug("t: ", t);
+            );
         }
 
         if (!isNull(t)) {
@@ -118,30 +118,58 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     this.elementStack.push(localName);
     this.displayStack.push(atts.value("display"));
 
+    // handle transforms:
     var transformAttr = atts.value("transform");
+    var newTransform = new QTransform();
+    if (this.transformStack.length!==0) {
+        newTransform = this.transformStack[this.transformStack.length-1];
+    }
     if (transformAttr!=="") {
+        // got transform attribute: update transform stack:
         var transform = this.getTransform(transformAttr);
-        var combinedTransform = new QTransform();
-        if (this.transformStack.length!==0) {
-            combinedTransform = this.transformStack[this.transformStack.length-1];
-        }
-        transform.operator_multiply_assign(combinedTransform);
-        combinedTransform = transform;
-        this.transformStack.push(combinedTransform);
-        this.svgImporter.transform = combinedTransform;
+//        var combinedTransform = new QTransform();
+//        if (this.transformStack.length!==0) {
+//            combinedTransform = this.transformStack[this.transformStack.length-1];
+//        }
+        transform.operator_multiply_assign(newTransform);
+        newTransform = transform;
 
-        for (var i=0; i<this.transformStack.length; i++) {
-            qDebug("[" + i + "]: ", this.transformStack[i]);
+//        for (var i=0; i<this.transformStack.length; i++) {
+//            qDebug("[" + i + "]: ", this.transformStack[i]);
+//        }
+    }
+//    else {
+//        // no transform attribute given: keep same transform:
+//        if (this.transformStack.length!==0) {
+//            newTransform = this.transformStack[this.transformStack.length-1];
+//        }
+//        // add identity transform to transform stack:
+//        else {
+//            newTransform = new QTransform();
+//        }
+//    }
+    this.transformStack.push(newTransform);
+    this.svgImporter.setTransform(newTransform);
+
+    // handle style (color):
+    var styleAttr = atts.value("style");
+    var newStyle = {};
+    if (this.styleStack.length>0) {
+        newStyle = deepCopy(this.styleStack[this.styleStack.length-1]);
+    }
+
+    if (styleAttr!=="") {
+        //qDebug("styleAttr: ", styleAttr);
+        SvgHandler.rxStyleStroke.lastIndex = 0;
+        var match = SvgHandler.rxStyleStroke.exec(styleAttr);
+        //qDebug("match: ", match);
+        if (!isNull(match) && match.length===2) {
+            newStyle.stroke = match[1];
+            //qDebug("color: ", match[1]);
         }
     }
-    else {
-        if (this.transformStack.length!==0) {
-            this.transformStack.push(this.transformStack[this.transformStack.length-1]);
-        }
-        else {
-            this.transformStack.push(new QTransform());
-        }
-    }
+    this.styleStack.push(newStyle);
+    this.svgImporter.setStyle(newStyle);
 
     // ignore some elements and all theirs child elements:
     if (this.elementStack.contains("metadata") ||
@@ -168,12 +196,12 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
         break;
 
     case "path":
-        this.svgImporter.importSvgPath(atts.value("d"));
+        this.svgImporter.importPath(atts.value("d"));
         break;
 
     case "polygon":
     case "polyline":
-        this.svgImporter.importSvgPolygon(atts.value("points"));
+        this.svgImporter.importPolygon(atts.value("points"));
         break;
 
     case "line":
@@ -214,12 +242,19 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
 };
 
 SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
-    this.transformStack.pop();
-    this.svgImporter.transform = this.transformStack[this.transformStack.length-1];
+    this.styleStack.pop();
+    if (this.styleStack.length>0) {
+        this.svgImporter.setStyle(this.styleStack[this.styleStack.length-1]);
+    }
 
-        //this.updateTransformation();
+    this.transformStack.pop();
+    if (this.transformStack.length>0) {
+        this.svgImporter.setTransform(this.transformStack[this.transformStack.length-1]);
+    }
+
     this.displayStack.pop();
     this.elementStack.pop();
+
     return true;
 };
 
@@ -233,15 +268,36 @@ SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
  *
  * \todo Use a 3rd party library to fully support SVG.
  */
-function SvgImporter(document) {
+function SvgImporter(document, resolution) {
     RFileImporterAdapter.call(this, document);
     this.setDocument(document);
     this.transform = new QTransform();
+    this.style = {};
+
+    // resolution for pixel values in PPI (pixels / inch):
+    this.resolution = resolution;
+    this.resolutionScale = RUnit.convert(1/this.resolution, RS.Inch, document.getUnit());
+    qDebug("this.resolutionScale: ", this.resolutionScale);
 }
 
 SvgImporter.prototype = new RFileImporterAdapter();
 
 SvgImporter.includeBasePath = includeBasePath;
+
+/**
+ * Sets the current style to apply to all imported entities.
+ * \param s object with style attributes (e.g. s.stroke="red")...
+ */
+SvgImporter.prototype.setStyle = function(s) {
+    this.style = s;
+};
+
+/**
+ * Sets the current QTransform to apply to all imported entities.
+ */
+SvgImporter.prototype.setTransform = function(t) {
+    this.transform = t;
+};
 
 SvgImporter.prototype.importFile = function(fileName) {
     if (isNull(this.getDocument())) {
@@ -263,55 +319,42 @@ SvgImporter.prototype.importFile = function(fileName) {
     return true;
 };
 
-SvgImporter.prototype.importCircle = function(x, y, r) {
-    var circle = new RCircle(new RVector(x, -y), r);
-    circle = circle.getTransformed(this.transform).data();
-    var entity = new RCircleEntity(this.getDocument(), new RCircleData(circle));
+SvgImporter.prototype.importShape = function(shape) {
+    shape = shape.getTransformed(this.transform).data();
+    shape.scale(new RVector(1.0, -1.0));
+    shape.scale(new RVector(this.resolutionScale, this.resolutionScale));
+
+    var entity = shapeToEntity(this.getDocument(), shape);
+    if (!isNull(this.style.stroke)) {
+        entity.setColor(new RColor(this.style.stroke));
+    }
     this.importObject(entity);
+};
+
+SvgImporter.prototype.importCircle = function(x, y, r) {
+    this.importShape(new RCircle(new RVector(x, y), r));
 };
 
 SvgImporter.prototype.importEllipse = function(x, y, rx, ry) {
-    var ellipse = new REllipse(new RVector(x, -y), new RVector(rx, 0), ry/rx, 0.0, 2*Math.PI, false);
-    ellipse = ellipse.getTransformed(this.transform).data();
-    var entity = new REllipseEntity(this.getDocument(), new REllipseData(ellipse));
-    this.importObject(entity);
+    this.importShape(new REllipse(new RVector(x, y), new RVector(rx, 0), ry/rx, 0.0, 2*Math.PI, false));
 };
 
 SvgImporter.prototype.importRectangle = function(x, y, w, h) {
-    var line = new RLine(new RVector(x, -y), new RVector(x+w, -y));
-    line = line.getTransformed(this.transform).data();
-    var entity = new RLineEntity(this.getDocument(), new RLineData(line));
-    this.importObject(entity);
-    line = new RLine(new RVector(x+w, -y), new RVector(x+w, -y-h));
-    line = line.getTransformed(this.transform).data();
-    entity = new RLineEntity(this.getDocument(), new RLineData(line));
-    this.importObject(entity);
-    line = new RLine(new RVector(x+w, -y-h), new RVector(x, -y-h));
-    line = line.getTransformed(this.transform).data();
-    entity = new RLineEntity(this.getDocument(), new RLineData(line));
-    this.importObject(entity);
-    line = new RLine(new RVector(x, -y-h), new RVector(x, -y));
-    line = line.getTransformed(this.transform).data();
-    entity = new RLineEntity(this.getDocument(), new RLineData(line));
-    this.importObject(entity);
+    this.importShape(new RLine(new RVector(x, y), new RVector(x+w, y)));
+    this.importShape(new RLine(new RVector(x+w, y), new RVector(x+w, y+h)));
+    this.importShape(new RLine(new RVector(x+w, y+h), new RVector(x, y+h)));
+    this.importShape(new RLine(new RVector(x, y+h), new RVector(x, y)));
 };
 
 SvgImporter.prototype.importLine = function(x1, y1, x2, y2) {
-    var line = new RLine(new RVector(x1, y1), new RVector(x2, y2));
-    line = line.getTransformed(this.transform).data();
-    line.scale(new RVector(1.0, -1.0));
-    var entity = new RLineEntity(this.getDocument(), new RLineData(line));
-    this.importObject(entity);
+    this.importShape(new RLine(new RVector(x1, y1), new RVector(x2, y2)));
 };
 
 SvgImporter.prototype.importArc = function(ox, oy, x, y, rx, ry, angle, isLarge, sweep) {
     var entity;
-    var center = SvgImporter.getArcCenter(ox, -oy, x, -y, rx, ry, sweep, !isLarge, angle);
+    var center = SvgImporter.getArcCenter(ox, oy, x, y, rx, ry, sweep, !isLarge, angle);
     if (Math.abs(rx-ry) < RS.PointTolerance) {
-        var arc = new RArc(center, rx, center.getAngleTo(new RVector(ox, -oy)), center.getAngleTo(new RVector(x, -y)), sweep);
-        arc = arc.getTransformed(this.transform).data();
-        entity = new RArcEntity(this.getDocument(), new RArcData(arc));
-        this.importObject(entity);
+        this.importShape(new RArc(center, rx, center.getAngleTo(new RVector(ox, oy)), center.getAngleTo(new RVector(x, y)), !sweep));
     }
     else {
         // TODO
@@ -327,47 +370,32 @@ SvgImporter.prototype.importArc = function(ox, oy, x, y, rx, ry, angle, isLarge,
 SvgImporter.prototype.importBezier = function(x1, y1, px1, py1, px2, py2, x2, y2) {
     var spline = new RSpline();
     spline.setDegree(3);
-    spline.appendControlPoint(new RVector(x1, -y1));
-    spline.appendControlPoint(new RVector(px1, -py1));
-    spline.appendControlPoint(new RVector(px2, -py2));
-    spline.appendControlPoint(new RVector(x2, -y2));
+    spline.appendControlPoint(new RVector(x1, y1));
+    spline.appendControlPoint(new RVector(px1, py1));
+    spline.appendControlPoint(new RVector(px2, py2));
+    spline.appendControlPoint(new RVector(x2, y2));
 
     var entity = undefined;
 
     var shape = ShapeAlgorithms.splineToLineOrArc(spline, 0.1);
-    shape = shape.getTransformed(this.transform).data();
-    if (isLineShape(shape)) {
-        // spline resembles a line:
-        entity = new RLineEntity(this.getDocument(), new RLineData(shape));
-    }
-    else if (isArcShape(shape)) {
-        // spline resembles an arc:
-        entity = new RArcEntity(this.getDocument(), new RArcData(shape));
-    }
-    else {
-        // spline is a normal spline:
-        entity = new RSplineEntity(this.getDocument(), new RSplineData(spline));
-    }
 
-    this.importObject(entity);
+    this.importShape(shape);
 };
 
 SvgImporter.prototype.importBezier2 = function(x1, y1, px, py, x2, y2) {
     var spline = new RSpline();
     spline.setDegree(2);
-    spline.appendControlPoint(new RVector(x1, -y1));
-    spline.appendControlPoint(new RVector(px, -py));
-    spline.appendControlPoint(new RVector(x2, -y2));
-    spline = spline.getTransformed(this.transform).data();
-    var entity = new RSplineEntity(this.getDocument(), new RSplineData(spline));
-    this.importObject(entity);
+    spline.appendControlPoint(new RVector(x1, y1));
+    spline.appendControlPoint(new RVector(px, py));
+    spline.appendControlPoint(new RVector(x2, y2));
+    this.importShape(spline);
 };
 
 /**
  * Parses the given path data string and imports the lines, arcs and splines
  * from the path.
  */
-SvgImporter.prototype.importSvgPath = function(dData) {
+SvgImporter.prototype.importPath = function(dData) {
     var segs = dData.split(/(?=[mlhvcsqtaz])/i);
     var x = 0;
     var y = 0;
@@ -664,45 +692,45 @@ SvgImporter.prototype.importSvgPath = function(dData) {
  * \return Center of arc as RVector
  */
 SvgImporter.getArcCenter = function(x1, y1, x2, y2, rx, ry, sweep, isLarge, angle) {
-  if (Math.abs(rx)<RS.PointTolerance || Math.abs(ry)<RS.PointTolerance) {
-      return RVector.invalid;
-  }
+    if (Math.abs(rx)<RS.PointTolerance || Math.abs(ry)<RS.PointTolerance) {
+        return RVector.invalid;
+    }
 
-  var f = 1.0;
-  if (sweep === false ^ isLarge === false) {
-      f = -1.0;
-  }
+    var f = -1.0;
+    if (sweep === false ^ isLarge === false) {
+        f = 1.0;
+    }
 
-  var dx = f * (x1 - x2);
-  var dy = f * (y1 - y2);
+    var dx = f * (x1 - x2);
+    var dy = f * (y1 - y2);
 
-  var sinAngle = Math.sin(angle);
-  var cosAngle = Math.cos(angle);
+    var sinAngle = Math.sin(angle);
+    var cosAngle = Math.cos(angle);
 
-  var dx2 = dx*cosAngle + dy*sinAngle;
-  var dy2 = -dx*sinAngle + dy*cosAngle;
-  dx2 = 0.5 * dx2 / rx;
-  dy2 = 0.5 * dy2 / ry;
+    var dx2 = dx*cosAngle + dy*sinAngle;
+    var dy2 = -dx*sinAngle + dy*cosAngle;
+    dx2 = 0.5 * dx2 / rx;
+    dy2 = 0.5 * dy2 / ry;
 
-  var lambda = Math.sqrt(dx2*dx2 + dy2*dy2);
-  if (lambda > 1.0) {
-      return new RVector(0.5*(x1+x2), 0.5*(y1+y2));
-  }
+    var lambda = Math.sqrt(dx2*dx2 + dy2*dy2);
+    if (lambda > 1.0) {
+        return new RVector(0.5*(x1+x2), 0.5*(y1+y2));
+    }
 
-  var psi1 = -Math.atan2(dx2, dy2);
-  var psi2 = Math.asin(Math.sqrt(dx2*dx2 + dy2*dy2));
-  var phi1 = psi1 + f * psi2;
+    var psi1 = -Math.atan2(dx2, dy2);
+    var psi2 = Math.asin(Math.sqrt(dx2*dx2 + dy2*dy2));
+    var phi1 = psi1 + f * psi2;
 
-  dx2 = Math.cos(phi1) * rx;
-  dy2 = Math.sin(phi1) * ry;
+    dx2 = Math.cos(phi1) * rx;
+    dy2 = Math.sin(phi1) * ry;
 
-  var dx3 = dx2 * cosAngle - dy2 * sinAngle;
-  var dy3 = dx2 * sinAngle + dy2 * cosAngle;
+    var dx3 = dx2 * cosAngle - dy2 * sinAngle;
+    var dy3 = dx2 * sinAngle + dy2 * cosAngle;
 
-  return new RVector(x1 - dx3, y1 - dy3);
+    return new RVector(x1 - dx3, y1 - dy3);
 };
 
-SvgImporter.prototype.importSvgPolygon = function(pointsData) {
+SvgImporter.prototype.importPolygon = function(pointsData) {
     var coordinates = pointsData.trim().split(/[\s,]+/).map(parseFloat);
     for (var i = 0; i < coordinates.length-1; i += 2) {
         var x1 = coordinates[i];
