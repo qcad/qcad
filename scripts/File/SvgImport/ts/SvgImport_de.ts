@@ -4,7 +4,7 @@
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../SvgImport.js" line="+38"/>
+        <location filename="../SvgImport.js" line="+61"/>
         <source>Import SVG</source>
         <translation>SVG Import</translation>
     </message>
@@ -26,6 +26,21 @@
         <location filename="../SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
         <translation>SVG &amp;Import...</translation>
+    </message>
+    <message>
+        <location filename="../SvgImportDialog.ui" line="+14"/>
+        <source>SVG Import</source>
+        <translation>SVG Import</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Resolution:</source>
+        <translation>Auflösung:</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>Pixels / Inch</source>
+        <translation>Pixel / Inch</translation>
     </message>
 </context>
 </TS>

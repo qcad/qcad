@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Svg Import</string>
+   <string>SVG Import</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
