@@ -235,6 +235,13 @@ public:
     virtual RVector getClosestPointOnEntity(const RVector& point,
         double range=RNANDOUBLE, bool limited=true) const;
 
+//    /**
+//     * Override to disable intersection point
+//     */
+//    virtual bool intersectionsEnabled() {
+//        return true;
+//    }
+
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,
             const RBox& queryBox = RDEFAULT_RBOX) const;

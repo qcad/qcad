@@ -77,10 +77,17 @@ RVector RSnapIntersection::snap(
             continue;
         }
 
+        if (e1->getType()==RS::EntityText) {
+            continue;
+        }
+
         QMap<REntity::Id, QSet<int> >::const_iterator it2;
         for (it2=it1; it2!=candidates.end(); it2++) {
             QSharedPointer<REntity> e2 = document->queryEntity(it2.key());
             if (e2.isNull()) {
+                continue;
+            }
+            if (e2->getType()==RS::EntityText) {
                 continue;
             }
 

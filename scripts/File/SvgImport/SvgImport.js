@@ -38,18 +38,18 @@ SvgImport.prototype.beginEvent = function() {
         this.guiAction.clearArguments();
         if (args.length>0) {
             fileName = args[0];
-        }
 
-        var fi = new QFileInfo(fileName);
-        if (!fi.isAbsolute()) {
-            fileName = RSettings.getLaunchPath() + QDir.separator + fileName;
-            fi = new QFileInfo(fileName);
-        }
+            var fi = new QFileInfo(fileName);
+            if (!fi.isAbsolute()) {
+                fileName = RSettings.getLaunchPath() + QDir.separator + fileName;
+                fi = new QFileInfo(fileName);
+            }
 
-        if (!fi.exists()) {
-            qWarning("file does not exist: ", fileName);
-            this.terminate();
-            return;
+            if (!fi.exists()) {
+                qWarning("file does not exist: ", fileName);
+                this.terminate();
+                return;
+            }
         }
     }
     

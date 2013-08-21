@@ -71,6 +71,28 @@ public:
     double getHeight() const;
 
     virtual RVector getPointOnEntity() const;
+
+    virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX) const {
+        Q_UNUSED(queryBox);
+        return QList<RVector>();
+    }
+    virtual QList<RVector> getMiddlePoints(const RBox& queryBox = RDEFAULT_RBOX) const {
+        Q_UNUSED(queryBox);
+        return QList<RVector>();
+    }
+    virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX) const {
+        Q_UNUSED(queryBox);
+        return QList<RVector>();
+    }
+    virtual QList<RVector> getPointsWithDistanceToEnd(
+        double distance, RS::From from = RS::FromAny, const RBox& queryBox = RDEFAULT_RBOX) const {
+        Q_UNUSED(distance);
+        Q_UNUSED(from);
+        Q_UNUSED(queryBox);
+
+        return QList<RVector>();
+    }
+
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false) const;
     virtual bool intersectsWith(const RShape& shape) const;
 
@@ -214,6 +236,12 @@ public:
     virtual QList<RPainterPath> getPainterPaths(bool draft = false) const;
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual QList<QSharedPointer<RShape> > getExploded() const;
+
+    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE) const {
+        Q_UNUSED(pos);
+        Q_UNUSED(range);
+        return QSharedPointer<RShape>();
+    }
 
     virtual RVector getClosestPointOnEntity(const RVector& point, double range, bool limited) const;
 
