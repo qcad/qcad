@@ -66,6 +66,18 @@
         getPointOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMiddlePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCenterPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointsWithDistanceToEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -205,6 +217,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getExploded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getClosestPointOnEntity

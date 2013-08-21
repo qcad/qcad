@@ -980,6 +980,14 @@ dir="./core" filename="REntityData.h">
     </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="line">// /**</comment>
+  <comment type="line">// * Override to disable intersection
+  point</comment>
+  <comment type="line">// */</comment>
+  <comment type="line">// virtual bool intersectionsEnabled()
+  {</comment>
+  <comment type="line">// return true;</comment>
+  <comment type="line">// }</comment>
   <function_decl>
   <type>
     <name>virtual</name>
