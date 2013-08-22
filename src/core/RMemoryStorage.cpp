@@ -176,7 +176,7 @@ QSet<RLayer::Id> RMemoryStorage::queryAllLayers(bool undone) {
     QSet<RLayer::Id> result;
     QHash<RObject::Id, QSharedPointer<RLayer> >::iterator it;
     for (it = layerMap.begin(); it != layerMap.end(); ++it) {
-        QSharedPointer<RLayer> l = it->dynamicCast<RLayer>();
+        QSharedPointer<RLayer> l = *it;
         if (!l.isNull() && (undone || !l->isUndone())) {
             result.insert(l->getId());
         }
@@ -188,7 +188,7 @@ QSet<RBlock::Id> RMemoryStorage::queryAllBlocks(bool undone) {
     QSet<RBlock::Id> result;
     QHash<RObject::Id, QSharedPointer<RBlock> >::iterator it;
     for (it = blockMap.begin(); it != blockMap.end(); ++it) {
-        QSharedPointer<RBlock> b = it->dynamicCast<RBlock>();
+        QSharedPointer<RBlock> b = *it;
         if (!b.isNull() && (undone || !b->isUndone())) {
             result.insert(b->getId());
         }
@@ -352,7 +352,7 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(RLayer::Id layerId) const {
 QSharedPointer<RLayer> RMemoryStorage::queryLayer(const QString& layerName) const {
     QHash<RObject::Id, QSharedPointer<RLayer> >::const_iterator it;
     for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
-        QSharedPointer<RLayer> l = it->dynamicCast<RLayer>();
+        QSharedPointer<RLayer> l = *it;
         if (!l.isNull() && l->getName().compare(layerName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
             return QSharedPointer<RLayer> (l->clone());
         }
@@ -380,7 +380,7 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlockDirect(RBlock::Id blockId) cons
 QSharedPointer<RBlock> RMemoryStorage::queryBlock(const QString& blockName) const {
     QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
     for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
-        QSharedPointer<RBlock> b = it->dynamicCast<RBlock>();
+        QSharedPointer<RBlock> b = *it;
         if (!b.isNull() && b->getName().compare(blockName, Qt::CaseInsensitive)==0 && !b->isUndone()) {
             return QSharedPointer<RBlock> (b->clone());
         }
@@ -400,7 +400,7 @@ QSet<QString> RMemoryStorage::getBlockNames() const {
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
     for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
-        QSharedPointer<RBlock> b = it->dynamicCast<RBlock> ();
+        QSharedPointer<RBlock> b = *it;
         if (!b.isNull() && !b->isUndone()) {
             ret.insert(b->getName());
         }
@@ -984,7 +984,7 @@ QSet<QString> RMemoryStorage::getLayerNames() const {
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RLayer> >::const_iterator it;
     for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
-        QSharedPointer<RLayer> l = it->dynamicCast<RLayer>();
+        QSharedPointer<RLayer> l = *it;
         if (!l.isNull() && !l->isUndone()) {
             ret.insert(l->getName());
         }

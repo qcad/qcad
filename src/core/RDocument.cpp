@@ -52,8 +52,11 @@ RDocument::RDocument(
 void RDocument::init() {
     RTransaction t(storage, "", false);
 
+    RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(&storage);
+    bool storageIsLinked = (ls!=NULL);
+
     // add default line types if not already added (RLinkedStorage):
-    if (queryLinetype("BYLAYER").isNull()) {
+    if (!storageIsLinked && queryLinetype("BYLAYER").isNull()) {
         t.addObject(QSharedPointer<RObject>(new RLinetype(this, "BYLAYER")));
         t.addObject(QSharedPointer<RObject>(new RLinetype(this, "BYBLOCK")));
         t.addObject(QSharedPointer<RObject>(new RLinetype(this, "CONTINUOUS")));
@@ -78,7 +81,7 @@ void RDocument::init() {
     }
 
     // add default layer:
-    if (queryLayer("0").isNull()) {
+    if (!storageIsLinked && queryLayer("0").isNull()) {
         QSharedPointer<RLayer> layer(
             new RLayer(
                 this, "0", false, false,
@@ -90,7 +93,7 @@ void RDocument::init() {
     }
 
     // add default block:
-    if (queryBlock(RBlock::modelSpaceName).isNull()) {
+    if (!storageIsLinked && queryBlock(RBlock::modelSpaceName).isNull()) {
         QSharedPointer<RBlock> modelSpace(
             new RBlock(
                 this, RBlock::modelSpaceName, RVector()
@@ -107,125 +110,128 @@ void RDocument::init() {
     linetypeByLayerId = queryLinetype("BYLAYER")->getId();
     linetypeByBlockId = queryLinetype("BYBLOCK")->getId();
 
-    setCurrentLayer("0");
-    setCurrentBlock(RBlock::modelSpaceName);
+    if (!storageIsLinked) {
+        setCurrentLayer("0");
 
-    // default variables:
-    setUnit((RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt());
-    setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
+        setCurrentBlock(RBlock::modelSpaceName);
 
-    setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
-    setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25));
-    setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625));
-    setKnownVariable(RS::DIMGAP, RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625));
-    setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
+        // default variables:
+        setUnit((RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt());
+        setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
-    // arch tick head:
-    if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
-        setKnownVariable(RS::DIMTSZ, 0.0);
+        setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
+        setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25));
+        setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625));
+        setKnownVariable(RS::DIMGAP, RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625));
+        setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
+
+        // arch tick head:
+        if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
+            setKnownVariable(RS::DIMTSZ, 0.0);
+        }
+
+        // arrow head:
+        else {
+            setKnownVariable(RS::DIMTSZ, getKnownVariable(RS::DIMASZ));
+        }
+
+        setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
+        setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4));
+
+        // show trailing zeroes:
+        if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
+            setKnownVariable(RS::DIMZIN, 0);
+        }
+
+        // suppress trailing zeroes:
+        else {
+            setKnownVariable(RS::DIMZIN, 8);
+        }
+
+        setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal));
+        setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0));
+
+        // show trailing zeroes:
+        if (RSettings::getBoolValue("DimensionSettings/AngularShowTrailingZeros", false)) {
+            setKnownVariable(RS::DIMAZIN, 0);
+        }
+
+        // suppress trailing zeroes:
+        else {
+            setKnownVariable(RS::DIMAZIN, 2);
+        }
+
+        //  multi page printing settings:
+        setVariable("MultiPageSettings/Columns", RSettings::getIntValue("MultiPageSettings/Columns", 1));
+        setVariable("MultiPageSettings/Rows", RSettings::getIntValue("MultiPageSettings/Rows", 1));
+        setVariable("MultiPageSettings/GlueMarginsLeft", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsLeft", 0));
+        setVariable("MultiPageSettings/GlueMarginsTop", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsTop", 0));
+        setVariable("MultiPageSettings/GlueMarginsRight", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsRight", 0));
+        setVariable("MultiPageSettings/GlueMarginsBottom", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsBottom", 0));
+        setVariable("MultiPageSettings/PrintCropMarks", RSettings::getBoolValue("MultiPageSettings/PrintCropMarks", false));
+
+        // printer page settings:
+        QString vs;
+        double vd;
+
+        // paper size:
+        vd = RSettings::getDoubleValue("PageSettings/PaperWidth", 0);
+        if (vd<1.0e-4) {
+            vd = 210;
+        }
+        setVariable("PageSettings/PaperWidth", vd);
+
+        vd = RSettings::getDoubleValue("PageSettings/PaperHeight", 0);
+        if (vd<1.0e-4) {
+            vd = 297;
+        }
+        setVariable("PageSettings/PaperHeight", vd);
+
+        // orientation:
+        vs = RSettings::getStringValue("PageSettings/PageOrientation", "");
+        if (vs.isEmpty()) {
+            vs = "Portrait";
+        }
+        setVariable("PageSettings/PageOrientation", vs);
+
+        // paper unit:
+        setVariable("UnitSettings/PaperUnit", RSettings::getIntValue("UnitSettings/PaperUnit", RS::Millimeter));
+
+        // offset:
+        setVariable("PageSettings/OffsetX", RSettings::getDoubleValue("PageSettings/OffsetX", 0));
+        setVariable("PageSettings/OffsetY", RSettings::getDoubleValue("PageSettings/OffsetY", 0));
+
+        // scale:
+        vs = RSettings::getStringValue("PageSettings/Scale", "1:1");
+        if (vs.isEmpty()) {
+            vs = "1:1";
+        }
+        setVariable("PageSettings/Scale", vs);
+
+        setVariable("PageSettings/ShowPaperBorders", RSettings::getBoolValue("PageSettings/ShowPaperBorders", true));
+        //setVariable("PageSettings/ShowBoundingBox", RSettings::getBoolValue("PageSettings/ShowBoundingBox", false));
+
+        // grid settings:
+        QString s;
+        for (int i=0; i<4; i++) {
+            s = QString("Grid/DisplayGrid0%1").arg(i);
+            setVariable(s, RSettings::getBoolValue(s, true));
+            s = QString("Grid/IsometricGrid0%1").arg(i);
+            setVariable(s, RSettings::getBoolValue(s, false));
+            s = QString("Grid/IsometricProjection0%1").arg(i);
+            setVariable(s, RSettings::getIntValue(s, (int)RS::IsoTop));
+            s = QString("Grid/GridSpacingX0%1").arg(i);
+            setVariable(s, RSettings::getStringValue(s, "auto"));
+            s = QString("Grid/GridSpacingY0%1").arg(i);
+            setVariable(s, RSettings::getStringValue(s, "auto"));
+            s = QString("Grid/MetaGridSpacingX0%1").arg(i);
+            setVariable(s, RSettings::getStringValue(s, "auto"));
+            s = QString("Grid/MetaGridSpacingY0%1").arg(i);
+            setVariable(s, RSettings::getStringValue(s, "auto"));
+        }
+
+        storage.setModified(false);
     }
-
-    // arrow head:
-    else {
-        setKnownVariable(RS::DIMTSZ, getKnownVariable(RS::DIMASZ));
-    }
-
-    setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
-    setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4));
-
-    // show trailing zeroes:
-    if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
-        setKnownVariable(RS::DIMZIN, 0);
-    }
-
-    // suppress trailing zeroes:
-    else {
-        setKnownVariable(RS::DIMZIN, 8);
-    }
-
-    setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal));
-    setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0));
-
-    // show trailing zeroes:
-    if (RSettings::getBoolValue("DimensionSettings/AngularShowTrailingZeros", false)) {
-        setKnownVariable(RS::DIMAZIN, 0);
-    }
-
-    // suppress trailing zeroes:
-    else {
-        setKnownVariable(RS::DIMAZIN, 2);
-    }
-
-    //  multi page printing settings:
-    setVariable("MultiPageSettings/Columns", RSettings::getIntValue("MultiPageSettings/Columns", 1));
-    setVariable("MultiPageSettings/Rows", RSettings::getIntValue("MultiPageSettings/Rows", 1));
-    setVariable("MultiPageSettings/GlueMarginsLeft", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsLeft", 0));
-    setVariable("MultiPageSettings/GlueMarginsTop", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsTop", 0));
-    setVariable("MultiPageSettings/GlueMarginsRight", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsRight", 0));
-    setVariable("MultiPageSettings/GlueMarginsBottom", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsBottom", 0));
-    setVariable("MultiPageSettings/PrintCropMarks", RSettings::getBoolValue("MultiPageSettings/PrintCropMarks", false));
-
-    // printer page settings:
-    QString vs;
-    double vd;
-
-    // paper size:
-    vd = RSettings::getDoubleValue("PageSettings/PaperWidth", 0);
-    if (vd<1.0e-4) {
-        vd = 210;
-    }
-    setVariable("PageSettings/PaperWidth", vd);
-
-    vd = RSettings::getDoubleValue("PageSettings/PaperHeight", 0);
-    if (vd<1.0e-4) {
-        vd = 297;
-    }
-    setVariable("PageSettings/PaperHeight", vd);
-
-    // orientation:
-    vs = RSettings::getStringValue("PageSettings/PageOrientation", "");
-    if (vs.isEmpty()) {
-        vs = "Portrait";
-    }
-    setVariable("PageSettings/PageOrientation", vs);
-
-    // paper unit:
-    setVariable("UnitSettings/PaperUnit", RSettings::getIntValue("UnitSettings/PaperUnit", RS::Millimeter));
-
-    // offset:
-    setVariable("PageSettings/OffsetX", RSettings::getDoubleValue("PageSettings/OffsetX", 0));
-    setVariable("PageSettings/OffsetY", RSettings::getDoubleValue("PageSettings/OffsetY", 0));
-
-    // scale:
-    vs = RSettings::getStringValue("PageSettings/Scale", "1:1");
-    if (vs.isEmpty()) {
-        vs = "1:1";
-    }
-    setVariable("PageSettings/Scale", vs);
-
-    setVariable("PageSettings/ShowPaperBorders", RSettings::getBoolValue("PageSettings/ShowPaperBorders", true));
-    //setVariable("PageSettings/ShowBoundingBox", RSettings::getBoolValue("PageSettings/ShowBoundingBox", false));
-
-    // grid settings:
-    QString s;
-    for (int i=0; i<4; i++) {
-        s = QString("Grid/DisplayGrid0%1").arg(i);
-        setVariable(s, RSettings::getBoolValue(s, true));
-        s = QString("Grid/IsometricGrid0%1").arg(i);
-        setVariable(s, RSettings::getBoolValue(s, false));
-        s = QString("Grid/IsometricProjection0%1").arg(i);
-        setVariable(s, RSettings::getIntValue(s, (int)RS::IsoTop));
-        s = QString("Grid/GridSpacingX0%1").arg(i);
-        setVariable(s, RSettings::getStringValue(s, "auto"));
-        s = QString("Grid/GridSpacingY0%1").arg(i);
-        setVariable(s, RSettings::getStringValue(s, "auto"));
-        s = QString("Grid/MetaGridSpacingX0%1").arg(i);
-        setVariable(s, RSettings::getStringValue(s, "auto"));
-        s = QString("Grid/MetaGridSpacingY0%1").arg(i);
-        setVariable(s, RSettings::getStringValue(s, "auto"));
-    }
-
-    storage.setModified(false);
 }
 
 
