@@ -1,4 +1,4 @@
-NAME = Examples
+NAME = Misc
 TSDIR = .
 include(../../translations.pri)
-SOURCES = ../Examples.js
+SOURCES = ../Misc.js
