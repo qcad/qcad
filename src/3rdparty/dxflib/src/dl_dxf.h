@@ -144,6 +144,7 @@ public:
     void addLine(DL_CreationInterface* creationInterface);
     
     void addPolyline(DL_CreationInterface* creationInterface);
+    void addVertex(DL_CreationInterface* creationInterface);
     
     void addSpline(DL_CreationInterface* creationInterface);
     
