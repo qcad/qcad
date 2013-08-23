@@ -69,7 +69,6 @@ RDxfImporter::~RDxfImporter() {
 }
 
 bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter) {
-    qDebug() << "RDxfImporter::importFile: " << fileName;
     Q_UNUSED(nameFilter);
 
     this->fileName = fileName;
@@ -438,15 +437,11 @@ void RDxfImporter::addCircle(const DL_CircleData& data) {
 }
 
 void RDxfImporter::addPolyline(const DL_PolylineData& data) {
-    qDebug() << "RDxfImporter::addPolyline";
     polyline = RPolyline();
     polyline.setClosed(data.flags&0x1);
 }
 
 void RDxfImporter::addVertex(const DL_VertexData& data) {
-    if (data.bulge>1.0e-6 || data.bulge < -1.0e-6) {
-        qDebug() << "RDxfImporter::addVertex: bulge: " << data.bulge;
-    }
     RVector v(data.x, data.y);
     polyline.appendVertex(v, data.bulge);
 }
