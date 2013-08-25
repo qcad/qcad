@@ -190,6 +190,8 @@ Select.prototype.selectWithMode = function(entityIds) {
     case Select.Mode.Intersect:
         var doc = this.getDocument();
         var allEntityIds = doc.queryAllEntities();
+        var entityIdsToSelect = [];
+        var entityIdsToDeselect = [];
         for (var e = 0; e < allEntityIds.length; ++e) {
             var entityId = allEntityIds[e];
             var entity = EAction.getDocument().queryEntity(entityId);
@@ -197,11 +199,17 @@ Select.prototype.selectWithMode = function(entityIds) {
             var previouslySelected = entity.isSelected();
             var select = match && previouslySelected;
             if (select && !previouslySelected) {
-                di.selectEntity(entityId, true);
+                entityIdsToSelect.push(entityId);
             }
             if (!select && previouslySelected) {
-                di.deselectEntity(entityId);
+                entityIdsToDeselect.push(entityId);
             }
+        }
+        if (entityIdsToSelect.length!==0) { 
+            di.selectEntities(entityIdsToSelect);
+        }
+        if (entityIdsToDeselect.length!==0) { 
+            di.deselectEntities(entityIdsToDeselect);
         }
         break;
     }
