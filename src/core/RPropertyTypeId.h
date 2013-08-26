@@ -75,6 +75,11 @@ public:
 
     bool isValid() const;
     bool isCustom() const;
+    //bool isBlockAttribute() const;
+
+//    QString getBlockAttributeTag() const;
+//    QString getBlockAttributePrompt() const;
+//    QString getBlockAttributeId() const;
 
     /**
      * \nonscriptable
@@ -108,6 +113,7 @@ public:
 
 public:
     const static long int INVALID_ID;
+    //const static QString blockAttributePrefix;
 
 private:
     long int id;

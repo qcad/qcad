@@ -1,0 +1,124 @@
+/**
+ * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */
+#include "RAttributeDefinitionEntity.h"
+#include "RExporter.h"
+
+RPropertyTypeId RAttributeDefinitionEntity::PropertyCustom;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyHandle;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyType;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyBlock;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyLayer;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyLinetype;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyLineweight;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyColor;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyDrawOrder;
+
+RPropertyTypeId RAttributeDefinitionEntity::PropertySimple;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyPositionX;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyPositionY;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyPositionZ;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyText;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyTag;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyPrompt;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyFontName;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyHeight;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyAngle;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyBold;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyItalic;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyLineSpacingFactor;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyHAlign;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyVAlign;
+
+
+RAttributeDefinitionEntity::RAttributeDefinitionEntity(RDocument* document, const RAttributeDefinitionData& data,
+        RObject::Id objectId) :
+    RTextEntity(document, objectId), data(document, data) {
+}
+
+RAttributeDefinitionEntity::~RAttributeDefinitionEntity() {
+}
+
+void RAttributeDefinitionEntity::init() {
+    RAttributeDefinitionEntity::PropertyCustom.generateId(typeid(RAttributeDefinitionEntity), RObject::PropertyCustom);
+    RAttributeDefinitionEntity::PropertyHandle.generateId(typeid(RAttributeDefinitionEntity), RObject::PropertyHandle);
+    RAttributeDefinitionEntity::PropertyType.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyType);
+    RAttributeDefinitionEntity::PropertyBlock.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyBlock);
+    RAttributeDefinitionEntity::PropertyLayer.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyLayer);
+    RAttributeDefinitionEntity::PropertyLinetype.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyLinetype);
+    RAttributeDefinitionEntity::PropertyLineweight.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyLineweight);
+    RAttributeDefinitionEntity::PropertyColor.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyColor);
+    RAttributeDefinitionEntity::PropertyDrawOrder.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyDrawOrder);
+
+    RAttributeDefinitionEntity::PropertySimple.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Simple"));
+    RAttributeDefinitionEntity::PropertyPositionX.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RAttributeDefinitionEntity::PropertyPositionY.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RAttributeDefinitionEntity::PropertyPositionZ.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RAttributeDefinitionEntity::PropertyText.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Contents"));
+    RAttributeDefinitionEntity::PropertyTag.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Tag"));
+    RAttributeDefinitionEntity::PropertyPrompt.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Prompt"));
+    RAttributeDefinitionEntity::PropertyFontName.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Font Name"));
+    RAttributeDefinitionEntity::PropertyHeight.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
+    RAttributeDefinitionEntity::PropertyAngle.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RAttributeDefinitionEntity::PropertyBold.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Bold"));
+    RAttributeDefinitionEntity::PropertyItalic.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Italic"));
+    RAttributeDefinitionEntity::PropertyLineSpacingFactor.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
+    RAttributeDefinitionEntity::PropertyHAlign.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Horizontal"));
+    RAttributeDefinitionEntity::PropertyVAlign.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
+}
+
+bool RAttributeDefinitionEntity::setProperty(RPropertyTypeId propertyTypeId,
+        const QVariant& value) {
+    bool ret = RTextEntity::setProperty(propertyTypeId, value);
+
+    ret = ret || RObject::setMember(data.tag, value, PropertyTag == propertyTypeId);
+    ret = ret || RObject::setMember(data.prompt, value, PropertyPrompt == propertyTypeId);
+
+    if (ret) {
+        data.update();
+    }
+    return ret;
+}
+
+QPair<QVariant, RPropertyAttributes> RAttributeDefinitionEntity::getProperty(
+        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+
+    if (propertyTypeId == PropertyType) {
+        return qMakePair(QVariant(RS::EntityAttributeDefinition), RPropertyAttributes(
+            RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyTag) {
+        return qMakePair(QVariant(data.tag), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyPrompt) {
+        return qMakePair(QVariant(data.prompt), RPropertyAttributes());
+    }
+    return RTextEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+}
+
+void RAttributeDefinitionEntity::print(QDebug dbg) const {
+    dbg.nospace() << "RAttributeDefinitionEntity(";
+    REntity::print(dbg);
+    dbg.nospace() << ", alignmentPoint: " << getAlignmentPoint()
+                  << ", position: " << getPosition()
+                  << ", text: " << getPlainText()
+                  << ", tag: " << getTag()
+                  << ", prompt: " << getPrompt()
+                  << ", textHeight: " << getTextHeight()
+                  << ", textWidth: " << getTextWidth()
+                  << ", drawingDirection: " << getDrawingDirection()
+                  << ")";
+}

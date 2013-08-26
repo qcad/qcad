@@ -17,13 +17,13 @@
  * along with QCAD.
  */
 
-#ifndef RTEXTENTITY_H
-#define RTEXTENTITY_H
+#ifndef RTEXTBASEDENTITY_H
+#define RTEXTBASEDENTITY_H
 
 #include "entity_global.h"
 
 #include "REntity.h"
-#include "RTextData.h"
+#include "RTextBasedData.h"
 
 class RDocument;
 class RExporter;
@@ -35,9 +35,9 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RTextEntity: public REntity {
+class QCADENTITY_EXPORT RTextBasedEntity: public REntity {
 
-    Q_DECLARE_TR_FUNCTIONS(RTextEntity)
+    Q_DECLARE_TR_FUNCTIONS(RTextBasedEntity)
 
 public:
     static RPropertyTypeId PropertyCustom;
@@ -65,18 +65,18 @@ public:
     static RPropertyTypeId PropertyVAlign;
 
 public:
-    RTextEntity(RDocument* document, const RTextData& data,
+    RTextBasedEntity(RDocument* document, const RTextBasedData& data,
         RObject::Id objectId = RObject::INVALID_ID);
-    virtual ~RTextEntity();
+    virtual ~RTextBasedEntity();
 
     static void init();
 
-    virtual RTextEntity* clone() const {
-        return new RTextEntity(*this);
+    virtual RTextBasedEntity* clone() const {
+        return new RTextBasedEntity(*this);
     }
 
     virtual RS::EntityType getType() const {
-        return RS::EntityText;
+        return RS::EntityTextBased;
     }
 
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value);
@@ -98,19 +98,19 @@ public:
         return data.getExploded();
     }
 
-    virtual RTextData& getTextData() {
+    virtual RTextBasedData& getTextData() {
         return data;
     }
 
-    virtual RTextData& getData() {
+    virtual RTextBasedData& getData() {
         return data;
     }
 
-    void setData(RTextData& d) {
+    void setData(RTextBasedData& d) {
         data = d;
     }
 
-    virtual const RTextData& getData() const {
+    virtual const RTextBasedData& getData() const {
         return data;
     }
 
@@ -229,11 +229,11 @@ protected:
     virtual void print(QDebug dbg) const;
 
 protected:
-    RTextData data;
+    RTextBasedData data;
 };
 
-Q_DECLARE_METATYPE(RTextEntity*)
-Q_DECLARE_METATYPE(QSharedPointer<RTextEntity>)
-Q_DECLARE_METATYPE(QSharedPointer<RTextEntity>*)
+Q_DECLARE_METATYPE(RTextBasedEntity*)
+Q_DECLARE_METATYPE(QSharedPointer<RTextBasedEntity>)
+Q_DECLARE_METATYPE(QSharedPointer<RTextBasedEntity>*)
 
 #endif

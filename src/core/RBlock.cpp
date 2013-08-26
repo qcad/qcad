@@ -54,10 +54,35 @@ void RBlock::setName(const QString& n) {
     name = n;
 }
 
+//void RBlock::setAttributeDefinition(const RAttributeDefinition& attDef) {
+//    for (int i=0; i<attributeDefinitions.size(); i++) {
+//        RAttributeDefinition ad = attributeDefinitions[i];
+//        if (ad.)
+//    }
+//    attributeDefinitions.append();
+//}
+
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value) {
 
     bool ret = false;
+
+//    // set attribute definition, internally a custom property:
+//    if (propertyTypeId.isBlockAttribute()) {
+//        if (value.isValid()) {
+//            setAttributeDefinition(
+//                RAttributeDefinition(
+//                    propertyTypeId.getBlockAttributeTag(),
+//                    propertyTypeId.getBlockAttributePrompt(),
+//                    value.toString()
+//                )
+//            );
+//        }
+//        else {
+//            removeCustomProperty(propertyTypeId.getCustomPropertyName());
+//        }
+//        return true;
+//    }
 
     ret = RObject::setMember(name, value, PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(frozen, value, PropertyFrozen == propertyTypeId);

@@ -24,7 +24,7 @@
 #include "RColor.h"
 #include "RFont.h"
 #include "RFontList.h"
-#include "RTextData.h"
+#include "RTextBasedData.h"
 #include "RPainterPathDevice.h"
 #include "RPointEntity.h"
 #include "RPolyline.h"
@@ -32,7 +32,7 @@
 #include "RTextRenderer.h"
 
 
-RTextData::RTextData()
+RTextBasedData::RTextBasedData()
  : textHeight(0.0),
    textWidth(0.0),
    verticalAlignment(RS::VAlignTop),
@@ -48,7 +48,7 @@ RTextData::RTextData()
    height(RNANDOUBLE), width(RNANDOUBLE), dirty(true), gotDraft(false) {
 }
 
-RTextData::RTextData(RDocument* document, const RTextData& data)
+RTextBasedData::RTextBasedData(RDocument* document, const RTextBasedData& data)
     : REntityData(document) {
     *this = data;
     this->document = document;
@@ -71,7 +71,7 @@ RTextData::RTextData(RDocument* document, const RTextData& data)
  * \param fontName Text font name
  * \param angle Rotation angle in rad
  */
-RTextData::RTextData(const RVector& position,
+RTextBasedData::RTextBasedData(const RVector& position,
                      const RVector& alignmentPoint,
                      double height,
                      double textWidth,
@@ -106,7 +106,7 @@ RTextData::RTextData(const RVector& position,
     setText(text);
 }
 
-RBox RTextData::getBoundingBox() const {
+RBox RTextBasedData::getBoundingBox() const {
     if (!boundingBox.isValid() || dirty) {
         getPainterPaths(gotDraft);
     }
@@ -118,7 +118,7 @@ RBox RTextData::getBoundingBox() const {
  * Width of the text (this is not equal to the bounding box width as it is
  * the width of the text at 0 angle).
  */
-double RTextData::getWidth() const {
+double RTextBasedData::getWidth() const {
     if (RMath::isNaN(width) || dirty) {
         getPainterPaths(gotDraft);
     }
@@ -130,7 +130,7 @@ double RTextData::getWidth() const {
  * Height of the text (this is not equal to the bounding box height as it is
  * the height of the text at 0 angle).
  */
-double RTextData::getHeight() const {
+double RTextBasedData::getHeight() const {
     if (RMath::isNaN(height) || dirty) {
         getPainterPaths(gotDraft);
     }
@@ -138,7 +138,7 @@ double RTextData::getHeight() const {
     return height;
 }
 
-RVector RTextData::getPointOnEntity() const {
+RVector RTextBasedData::getPointOnEntity() const {
     if (painterPaths.size()==0) {
         return RVector::invalid;
     }
@@ -148,17 +148,17 @@ RVector RTextData::getPointOnEntity() const {
     return RVector(p.x(), p.y());
 }
 
-double RTextData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
+double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
     Q_UNUSED(limited)
     Q_UNUSED(draft)
     
     if (!getBoundingBox().grow(range).contains(point)) {
-        //qDebug() << "RTextData::getDistanceTo: bounding box not in range: " << getBoundingBox();
+        //qDebug() << "RTextBasedData::getDistanceTo: bounding box not in range: " << getBoundingBox();
         return RNANDOUBLE;
     }
 
     if (painterPaths.size()==0) {
-        qDebug() << "RTextData::getDistanceTo: no painter paths";
+        qDebug() << "RTextBasedData::getDistanceTo: no painter paths";
     }
 
     //qDebug() << "painterPaths: " << painterPaths.size();
@@ -209,7 +209,7 @@ double RTextData::getDistanceTo(const RVector& point, bool limited, double range
     return ret;
 }
 
-bool RTextData::intersectsWith(const RShape& shape) const {
+bool RTextBasedData::intersectsWith(const RShape& shape) const {
     const RPolyline* polyline = dynamic_cast<const RPolyline*>(&shape);
     if (polyline==NULL) {
         return false;
@@ -232,12 +232,12 @@ bool RTextData::intersectsWith(const RShape& shape) const {
     return false;
 }
 
-void RTextData::setText(const QString& text) {
+void RTextBasedData::setText(const QString& text) {
     this->text = text;
     update();
 }
 
-QList<RVector> RTextData::getReferencePoints(
+QList<RVector> RTextBasedData::getReferencePoints(
         RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
@@ -263,7 +263,7 @@ QList<RVector> RTextData::getReferencePoints(
     return ret;
 }
 
-bool RTextData::moveReferencePoint(const RVector& referencePoint,
+bool RTextBasedData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
     if (referencePoint.equalsFuzzy(position)) {
@@ -274,14 +274,14 @@ bool RTextData::moveReferencePoint(const RVector& referencePoint,
     return ret;
 }
 
-bool RTextData::move(const RVector& offset) {
+bool RTextBasedData::move(const RVector& offset) {
     position.move(offset);
     alignmentPoint.move(offset);
     update();
     return true;
 }
 
-bool RTextData::rotate(double rotation, const RVector& center) {
+bool RTextBasedData::rotate(double rotation, const RVector& center) {
     position.rotate(rotation, center);
     alignmentPoint.rotate(rotation, center);
     angle = RMath::getNormalizedAngle(angle+rotation);
@@ -289,7 +289,7 @@ bool RTextData::rotate(double rotation, const RVector& center) {
     return true;
 }
 
-bool RTextData::scale(const RVector& scaleFactors, const RVector& center) {
+bool RTextBasedData::scale(const RVector& scaleFactors, const RVector& center) {
     position.scale(scaleFactors, center);
     alignmentPoint.scale(scaleFactors, center);
     textWidth*=scaleFactors.x;
@@ -298,7 +298,7 @@ bool RTextData::scale(const RVector& scaleFactors, const RVector& center) {
     return true;
 }
 
-bool RTextData::mirror(const RLine& axis) {
+bool RTextBasedData::mirror(const RLine& axis) {
     position.mirror(axis);
     alignmentPoint.mirror(axis);
     bool readable = RMath::isAngleReadable(angle);
@@ -327,27 +327,27 @@ bool RTextData::mirror(const RLine& axis) {
     return true;
 }
 
-bool RTextData::flipHorizontal() {
+bool RTextBasedData::flipHorizontal() {
     return mirror(RLine(RVector(0,0), RVector(0,1)));
 }
 
-bool RTextData::flipVertical() {
+bool RTextBasedData::flipVertical() {
     return mirror(RLine(RVector(0,0), RVector(1,0)));
 }
 
-QFont RTextData::getMainFont() const {
+QFont RTextBasedData::getMainFont() const {
     QFont mainFont(fontName);
     mainFont.setPointSizeF(textHeight);
     return mainFont;
 }
 
-QString RTextData::getPlainText() const {
+QString RTextBasedData::getPlainText() const {
     QTextDocument td;
     td.setHtml(toRichText(text, getMainFont()));
     return td.toPlainText();
 }
 
-QString RTextData::getEscapedText(bool escapeUnicode) const {
+QString RTextBasedData::getEscapedText(bool escapeUnicode) const {
     if (escapeUnicode) {
         QString ret;
         for (int i=0; i<text.length(); i++) {
@@ -367,7 +367,7 @@ QString RTextData::getEscapedText(bool escapeUnicode) const {
 }
 
 // "lo\C4;\H2.5;rem\P\C1;\fBaskerville|b0|i0|c0|p34;backslash:\FAPNORM.SHX|c0;\\semicolon:;\Pdolor\Psit\~amet\Plorem \Sipsum/dolor; sit\~amet"
-QList<RPainterPath> RTextData::getPainterPaths(bool draft) const {
+QList<RPainterPath> RTextBasedData::getPainterPaths(bool draft) const {
     if (!dirty) {
         // cached painter paths represent text in current draft mode (draft or normal):
         if (draft==gotDraft) {
@@ -379,7 +379,7 @@ QList<RPainterPath> RTextData::getPainterPaths(bool draft) const {
     RTextRenderer renderer(*this, draft, RTextRenderer::PainterPaths);
     painterPaths = renderer.getPainterPaths();
     boundingBox = renderer.getBoundingBox();
-    //qDebug() << "RTextData::getPainterPaths: boundingBox: " << boundingBox;
+    //qDebug() << "RTextBasedData::getPainterPaths: boundingBox: " << boundingBox;
     height = renderer.getHeight();
     width = renderer.getWidth();
 
@@ -388,7 +388,7 @@ QList<RPainterPath> RTextData::getPainterPaths(bool draft) const {
     return painterPaths;
 }
 
-RVector RTextData::getClosestPointOnEntity(const RVector& point,
+RVector RTextBasedData::getClosestPointOnEntity(const RVector& point,
     double range, bool limited) const {
 
     Q_UNUSED(point);
@@ -398,7 +398,7 @@ RVector RTextData::getClosestPointOnEntity(const RVector& point,
     return RVector::invalid;
 }
 
-QList<QSharedPointer<RShape> > RTextData::getShapes(const RBox& queryBox) const {
+QList<QSharedPointer<RShape> > RTextBasedData::getShapes(const RBox& queryBox) const {
     Q_UNUSED(queryBox);
 
     //return QList<QSharedPointer<RShape> >();
@@ -419,7 +419,7 @@ QList<QSharedPointer<RShape> > RTextData::getShapes(const RBox& queryBox) const 
     return shapes;
 }
 
-QList<QSharedPointer<RShape> > RTextData::getExploded() const {
+QList<QSharedPointer<RShape> > RTextBasedData::getExploded() const {
     return getShapes();
 //    QList<QSharedPointer<RShape> > shapes;
 
@@ -438,13 +438,13 @@ QList<QSharedPointer<RShape> > RTextData::getExploded() const {
 //    return shapes;
 }
 
-void RTextData::update() const {
+void RTextBasedData::update() const {
     dirty = true;
     boundingBox = RBox();
     painterPaths.clear();
 }
 
-bool RTextData::isDirty() const {
+bool RTextBasedData::isDirty() const {
     return dirty;
 }
 
@@ -455,7 +455,7 @@ bool RTextData::isDirty() const {
  * \param fontHeightFactor factor applied to all font heights. This allows
  *      the text edit to use a bigger / smaller font that needed in the end.
  */
-QString RTextData::toEscapedText(const QTextDocument& textDocument, const RColor& initialColor, double fontHeightFactor) {
+QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const RColor& initialColor, double fontHeightFactor) {
     QString ret = "";
 
     QString fontFamily = textDocument.defaultFont().family();
@@ -468,7 +468,7 @@ QString RTextData::toEscapedText(const QTextDocument& textDocument, const RColor
     RColor fontColor = initialColor;
     int blockCounter = 0;
 
-    //qDebug() << "RTextData::toEscapedText: html: " << textDocument.toHtml();
+    //qDebug() << "RTextBasedData::toEscapedText: html: " << textDocument.toHtml();
 
     //qDebug() << "initialColor: " << initialColor;
 
@@ -658,7 +658,7 @@ QString RTextData::toEscapedText(const QTextDocument& textDocument, const RColor
 /**
  * \return HTML representing this text.
  */
-QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont, double fontHeightFactor) {
+QString RTextBasedData::toRichText(const QString& escapedText, const QFont& mainFont, double fontHeightFactor) {
     //QString str = escapedText;
     //replaceLineFeeds(str);
     //replaceNonBreakingSpaces(str);
@@ -667,7 +667,7 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
     //replaceHeightChanges(str, mainFont.pointSizeF(), fontHeightFactor);
     //replaceStackedText(str);
 
-    RTextData textData;
+    RTextBasedData textData;
     textData.setFontName(mainFont.family());
     textData.setBold(mainFont.weight()>QFont::Normal);
     textData.setItalic(mainFont.italic());
@@ -700,7 +700,7 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
 /**
  * \internal HTML helper function.
  */
-//void RTextData::replaceLineFeeds(QString& str) {
+//void RTextBasedData::replaceLineFeeds(QString& str) {
 //    str.replace(QRegExp(RTextRenderer::rxLineFeed), "<br/>");
 
 //    // paragraphs:
@@ -714,14 +714,14 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
 /**
  * \internal HTML helper function.
  */
-//void RTextData::replaceNonBreakingSpaces(QString& str) {
+//void RTextBasedData::replaceNonBreakingSpaces(QString& str) {
 //    str.replace(QRegExp(RTextRenderer::rxNonBreakingSpace), "&nbsp;");
 //}
 
 /**
  * \internal HTML helper function.
  */
-//void RTextData::replaceFonts(QString& str) {
+//void RTextBasedData::replaceFonts(QString& str) {
 //    QRegExp re(RTextRenderer::rxFontChangeTtf);
 //    int pos = 0;
 //    int found = 0;
@@ -744,7 +744,7 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
  * \internal HTML helper function.
  */
 // {\fArial|b0|i0|c0|p34;ABC\P\C5;abc\P\C3;123}
-//void RTextData::replaceColorChanges(QString& str) {
+//void RTextBasedData::replaceColorChanges(QString& str) {
 //    QRegExp re(RTextRenderer::rxColorChangeIndex);
 //    int pos = 0;
 //    int found = 0;
@@ -776,7 +776,7 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
  * \internal HTML helper function.
  */
 // {\fArial|b1|i1|c0|p1;ABC\P\C5;\H0.666667x;abc\P\C3;\H2x;123}
-//void RTextData::replaceHeightChanges(QString& str, double initialHeight, double fontHeightFactor) {
+//void RTextBasedData::replaceHeightChanges(QString& str, double initialHeight, double fontHeightFactor) {
 //    QRegExp re(RTextRenderer::rxHeightChange);
 //    int pos = 0;
 
@@ -805,7 +805,7 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
 /**
  * \internal HTML helper function.
  */
-//void RTextData::replaceStackedText(QString& str) {
+//void RTextBasedData::replaceStackedText(QString& str) {
 //    QRegExp re(RTextRenderer::rxStackedText);
 //    int pos = 0;
 
@@ -826,19 +826,19 @@ QString RTextData::toRichText(const QString& escapedText, const QFont& mainFont,
 /**
  * \internal HTML helper function.
  */
-//QString RTextData::cadToHtmlColorIndex(const QString& str) {
+//QString RTextBasedData::cadToHtmlColorIndex(const QString& str) {
 //    return RColor::createFromCadIndex(str).name();
 //}
 
 /**
  * \internal HTML helper function.
  */
-//QString RTextData::cadToHtmlColorCustom(const QString& str) {
+//QString RTextBasedData::cadToHtmlColorCustom(const QString& str) {
 //    return RColor::createFromCadCustom(str).name();
 //}
 
-QDebug operator<<(QDebug dbg, const RTextData& t) {
-    dbg.nospace() << "RTextData("
+QDebug operator<<(QDebug dbg, const RTextBasedData& t) {
+    dbg.nospace() << "RTextBasedData("
                   << "text: " << t.text
                   << ", position: " << t.position
                   << ", alignmnet point: " << t.alignmentPoint

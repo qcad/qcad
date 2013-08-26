@@ -21,9 +21,12 @@
 
 long int RPropertyTypeId::counter = 0;
 const long int RPropertyTypeId::INVALID_ID = -1;
+//const QString RPropertyTypeId::blockAttributePrefix = "[[QCAD BLOCK ATTRIBUTE]]";
 
 QMap<QString, QSet<RPropertyTypeId> > RPropertyTypeId::propertyTypeByObjectMap;
 QMap<long int, QPair<QString, QString> > RPropertyTypeId::titleMap;
+
+
 
 RPropertyTypeId::RPropertyTypeId(const QString& customPropertyName) :
     id(-1), customPropertyName(customPropertyName) {
@@ -85,6 +88,11 @@ RPropertyTypeId RPropertyTypeId::getPropertyTypeId(const QString& groupTitle,
  * \return The property group title of the given property.
  */
 QString RPropertyTypeId::getPropertyGroupTitle() const {
+    // TODO: make translatable
+//    if (isBlockAttribute()) {
+//        return "Block Attributes";
+//    }
+//    else
     if (isCustom()) {
         return "Custom";
     }
@@ -114,6 +122,46 @@ bool RPropertyTypeId::isCustom() const {
     return id==INVALID_ID && !customPropertyName.isEmpty();
 }
 
+//bool RPropertyTypeId::isBlockAttribute() const {
+//    return isCustom() && customPropertyName.startsWith(RPropertyTypeId::blockAttributePrefix);
+//}
+
+//QString RPropertyTypeId::getBlockAttributeTag() const {
+//    if (!isBlockAttribute()) {
+//        return "";
+//    }
+
+//    QStringList parts = customPropertyName.split("|||");
+//    if (parts.length()!=3) {
+//        return "";
+//    }
+//    return parts[0];
+//}
+
+//QString RPropertyTypeId::getBlockAttributePrompt() const {
+//    if (!isBlockAttribute()) {
+//        return "";
+//    }
+
+//    QStringList parts = customPropertyName.split("|||");
+//    if (parts.length()!=3) {
+//        return "";
+//    }
+//    return parts[1];
+//}
+
+//QString RPropertyTypeId::getBlockAttributeId() const {
+//    if (!isBlockAttribute()) {
+//        return "";
+//    }
+
+//    QStringList parts = customPropertyName.split("|||");
+//    if (parts.length()!=3) {
+//        return "";
+//    }
+//    return parts[2];
+//}
+
 /**
  * \return The internal ID of this property.
  */
@@ -125,6 +173,9 @@ long int RPropertyTypeId::getId() const {
  * \return The name (key) of the custom property.
  */
 QString RPropertyTypeId::getCustomPropertyName() const {
+//    if (isBlockAttribute()) {
+//        return customPropertyName.mid(RPropertyTypeId::blockAttributePrefix.length());
+//    }
     return customPropertyName;
 }
 
@@ -133,6 +184,7 @@ QString RPropertyTypeId::getCustomPropertyName() const {
  */
 bool RPropertyTypeId::hasPropertyType(const std::type_info& classInfo,
         RPropertyTypeId propertyTypeId) {
+
     if (!propertyTypeByObjectMap.contains(classInfo.name())) {
         return false;
     }

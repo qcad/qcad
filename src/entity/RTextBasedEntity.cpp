@@ -16,69 +16,69 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RTextEntity.h"
+#include "RTextBasedEntity.h"
 #include "RExporter.h"
 
-RPropertyTypeId RTextEntity::PropertyCustom;
-RPropertyTypeId RTextEntity::PropertyHandle;
-RPropertyTypeId RTextEntity::PropertyType;
-RPropertyTypeId RTextEntity::PropertyBlock;
-RPropertyTypeId RTextEntity::PropertyLayer;
-RPropertyTypeId RTextEntity::PropertyLinetype;
-RPropertyTypeId RTextEntity::PropertyLineweight;
-RPropertyTypeId RTextEntity::PropertyColor;
-RPropertyTypeId RTextEntity::PropertyDrawOrder;
+RPropertyTypeId RTextBasedEntity::PropertyCustom;
+RPropertyTypeId RTextBasedEntity::PropertyHandle;
+RPropertyTypeId RTextBasedEntity::PropertyType;
+RPropertyTypeId RTextBasedEntity::PropertyBlock;
+RPropertyTypeId RTextBasedEntity::PropertyLayer;
+RPropertyTypeId RTextBasedEntity::PropertyLinetype;
+RPropertyTypeId RTextBasedEntity::PropertyLineweight;
+RPropertyTypeId RTextBasedEntity::PropertyColor;
+RPropertyTypeId RTextBasedEntity::PropertyDrawOrder;
 
-RPropertyTypeId RTextEntity::PropertySimple;
-RPropertyTypeId RTextEntity::PropertyPositionX;
-RPropertyTypeId RTextEntity::PropertyPositionY;
-RPropertyTypeId RTextEntity::PropertyPositionZ;
-RPropertyTypeId RTextEntity::PropertyText;
-RPropertyTypeId RTextEntity::PropertyFontName;
-RPropertyTypeId RTextEntity::PropertyHeight;
-RPropertyTypeId RTextEntity::PropertyAngle;
-RPropertyTypeId RTextEntity::PropertyBold;
-RPropertyTypeId RTextEntity::PropertyItalic;
-RPropertyTypeId RTextEntity::PropertyLineSpacingFactor;
-RPropertyTypeId RTextEntity::PropertyHAlign;
-RPropertyTypeId RTextEntity::PropertyVAlign;
+RPropertyTypeId RTextBasedEntity::PropertySimple;
+RPropertyTypeId RTextBasedEntity::PropertyPositionX;
+RPropertyTypeId RTextBasedEntity::PropertyPositionY;
+RPropertyTypeId RTextBasedEntity::PropertyPositionZ;
+RPropertyTypeId RTextBasedEntity::PropertyText;
+RPropertyTypeId RTextBasedEntity::PropertyFontName;
+RPropertyTypeId RTextBasedEntity::PropertyHeight;
+RPropertyTypeId RTextBasedEntity::PropertyAngle;
+RPropertyTypeId RTextBasedEntity::PropertyBold;
+RPropertyTypeId RTextBasedEntity::PropertyItalic;
+RPropertyTypeId RTextBasedEntity::PropertyLineSpacingFactor;
+RPropertyTypeId RTextBasedEntity::PropertyHAlign;
+RPropertyTypeId RTextBasedEntity::PropertyVAlign;
 
 
-RTextEntity::RTextEntity(RDocument* document, const RTextData& data,
+RTextBasedEntity::RTextBasedEntity(RDocument* document, const RTextBasedData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
 }
 
-RTextEntity::~RTextEntity() {
+RTextBasedEntity::~RTextBasedEntity() {
 }
 
-void RTextEntity::init() {
-    RTextEntity::PropertyCustom.generateId(typeid(RTextEntity), RObject::PropertyCustom);
-    RTextEntity::PropertyHandle.generateId(typeid(RTextEntity), RObject::PropertyHandle);
-    RTextEntity::PropertyType.generateId(typeid(RTextEntity), REntity::PropertyType);
-    RTextEntity::PropertyBlock.generateId(typeid(RTextEntity), REntity::PropertyBlock);
-    RTextEntity::PropertyLayer.generateId(typeid(RTextEntity), REntity::PropertyLayer);
-    RTextEntity::PropertyLinetype.generateId(typeid(RTextEntity), REntity::PropertyLinetype);
-    RTextEntity::PropertyLineweight.generateId(typeid(RTextEntity), REntity::PropertyLineweight);
-    RTextEntity::PropertyColor.generateId(typeid(RTextEntity), REntity::PropertyColor);
-    RTextEntity::PropertyDrawOrder.generateId(typeid(RTextEntity), REntity::PropertyDrawOrder);
+void RTextBasedEntity::init() {
+    RTextBasedEntity::PropertyCustom.generateId(typeid(RTextBasedEntity), RObject::PropertyCustom);
+    RTextBasedEntity::PropertyHandle.generateId(typeid(RTextBasedEntity), RObject::PropertyHandle);
+    RTextBasedEntity::PropertyType.generateId(typeid(RTextBasedEntity), REntity::PropertyType);
+    RTextBasedEntity::PropertyBlock.generateId(typeid(RTextBasedEntity), REntity::PropertyBlock);
+    RTextBasedEntity::PropertyLayer.generateId(typeid(RTextBasedEntity), REntity::PropertyLayer);
+    RTextBasedEntity::PropertyLinetype.generateId(typeid(RTextBasedEntity), REntity::PropertyLinetype);
+    RTextBasedEntity::PropertyLineweight.generateId(typeid(RTextBasedEntity), REntity::PropertyLineweight);
+    RTextBasedEntity::PropertyColor.generateId(typeid(RTextBasedEntity), REntity::PropertyColor);
+    RTextBasedEntity::PropertyDrawOrder.generateId(typeid(RTextBasedEntity), REntity::PropertyDrawOrder);
 
-    RTextEntity::PropertySimple.generateId(typeid(RTextEntity), "", QT_TRANSLATE_NOOP("REntity", "Simple"));
-    RTextEntity::PropertyPositionX.generateId(typeid(RTextEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RTextEntity::PropertyPositionY.generateId(typeid(RTextEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RTextEntity::PropertyPositionZ.generateId(typeid(RTextEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RTextEntity::PropertyText.generateId(typeid(RTextEntity), "", QT_TRANSLATE_NOOP("REntity", "Contents"));
-    RTextEntity::PropertyFontName.generateId(typeid(RTextEntity), "", QT_TRANSLATE_NOOP("REntity", "Font Name"));
-    RTextEntity::PropertyHeight.generateId(typeid(RTextEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
-    RTextEntity::PropertyAngle.generateId(typeid(RTextEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
-    RTextEntity::PropertyBold.generateId(typeid(RTextEntity), "", QT_TRANSLATE_NOOP("REntity", "Bold"));
-    RTextEntity::PropertyItalic.generateId(typeid(RTextEntity), "", QT_TRANSLATE_NOOP("REntity", "Italic"));
-    RTextEntity::PropertyLineSpacingFactor.generateId(typeid(RTextEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
-    RTextEntity::PropertyHAlign.generateId(typeid(RTextEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Horizontal"));
-    RTextEntity::PropertyVAlign.generateId(typeid(RTextEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
+    RTextBasedEntity::PropertySimple.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Simple"));
+    RTextBasedEntity::PropertyPositionX.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTextBasedEntity::PropertyPositionY.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTextBasedEntity::PropertyPositionZ.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTextBasedEntity::PropertyText.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Contents"));
+    RTextBasedEntity::PropertyFontName.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Font Name"));
+    RTextBasedEntity::PropertyHeight.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
+    RTextBasedEntity::PropertyAngle.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RTextBasedEntity::PropertyBold.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Bold"));
+    RTextBasedEntity::PropertyItalic.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Italic"));
+    RTextBasedEntity::PropertyLineSpacingFactor.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
+    RTextBasedEntity::PropertyHAlign.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Horizontal"));
+    RTextBasedEntity::PropertyVAlign.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
 }
 
-bool RTextEntity::setProperty(RPropertyTypeId propertyTypeId,
+bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value) {
     bool ret = REntity::setProperty(propertyTypeId, value);
 
@@ -102,7 +102,7 @@ bool RTextEntity::setProperty(RPropertyTypeId propertyTypeId,
     return ret;
 }
 
-QPair<QVariant, RPropertyAttributes> RTextEntity::getProperty(
+QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyType) {
         return qMakePair(QVariant(RS::EntityText), RPropertyAttributes(
@@ -143,14 +143,14 @@ QPair<QVariant, RPropertyAttributes> RTextEntity::getProperty(
 }
 
 
-void RTextEntity::exportEntity(RExporter& e, bool preview) const {
+void RTextBasedEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);
 
     e.exportPainterPathSource(data);
 }
 
-void RTextEntity::print(QDebug dbg) const {
-    dbg.nospace() << "RTextEntity(";
+void RTextBasedEntity::print(QDebug dbg) const {
+    dbg.nospace() << "RTextBasedEntity(";
     REntity::print(dbg);
     dbg.nospace() << ", alignmentPoint: " << getAlignmentPoint()
                   << ", position: " << getPosition()

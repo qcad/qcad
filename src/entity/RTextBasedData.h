@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 
-#ifndef RTEXTDATA_H
-#define RTEXTDATA_H
+#ifndef RTEXTBASEDDATA_H
+#define RTEXTBASEDDATA_H
 
 #include "entity_global.h"
 
@@ -34,22 +34,22 @@ class QTextDocument;
 
 /**
  * Stores and manages all data that defines the geometry and
- * appearance of a text entity.
+ * appearance of a text based entity (text, block attribute, block attribute definition).
  *
  * \scriptable
  * \sharedPointerSupport
  * \copyable
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RTextData: public REntityData, public RPainterPathSource {
-    friend class RTextEntity;
+class QCADENTITY_EXPORT RTextBasedData: public REntityData, public RPainterPathSource {
+    friend class RTextBasedEntity;
 
 protected:
-    RTextData(RDocument* document, const RTextData& data);
+    RTextBasedData(RDocument* document, const RTextBasedData& data);
 
 public:
-    RTextData();
-    RTextData(const RVector& position,
+    RTextBasedData();
+    RTextBasedData(const RVector& position,
               const RVector& alignmentPoint,
               double textHeight,
               double textWidth,
@@ -64,7 +64,7 @@ public:
               bool italic,
               double angle,
               bool simple);
-    virtual ~RTextData() {}
+    virtual ~RTextBasedData() {}
 
     virtual RBox getBoundingBox() const;
     double getWidth() const;
@@ -251,7 +251,7 @@ public:
     /**
      * \nonscriptable
      */
-    friend QDebug operator<<(QDebug dbg, const RTextData& t);
+    friend QDebug operator<<(QDebug dbg, const RTextBasedData& t);
 
 private:
     QString text;
@@ -278,9 +278,9 @@ private:
     mutable bool gotDraft;
 };
 
-Q_DECLARE_METATYPE(RTextData)
-Q_DECLARE_METATYPE(RTextData*)
-Q_DECLARE_METATYPE(QSharedPointer<RTextData>)
-Q_DECLARE_METATYPE(QSharedPointer<RTextData>*)
+Q_DECLARE_METATYPE(RTextBasedData)
+Q_DECLARE_METATYPE(RTextBasedData*)
+Q_DECLARE_METATYPE(QSharedPointer<RTextBasedData>)
+Q_DECLARE_METATYPE(QSharedPointer<RTextBasedData>*)
 
 #endif

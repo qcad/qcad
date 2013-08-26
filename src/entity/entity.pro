@@ -2,6 +2,8 @@ include( ../../shared.pri )
 SOURCES = \
     RArcData.cpp \
     RArcEntity.cpp \
+    RAttributeDefinitionData.cpp \
+    RAttributeDefinitionEntity.cpp \
     RCircleData.cpp \
     RCircleEntity.cpp \
     RDimAlignedData.cpp \
@@ -45,6 +47,8 @@ SOURCES = \
 HEADERS = \
     RArcData.h \
     RArcEntity.h \
+    RAttributeDefinitionData.h \
+    RAttributeDefinitionEntity.h \
     RCircleData.h \
     RCircleEntity.h \
     RDimAlignedData.h \

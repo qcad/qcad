@@ -75,6 +75,8 @@ public:
     enum EntityType {
         EntityAll,          /**< All entities (for filters) */
         EntityUnknown,      /**< Unknown */
+        EntityAttribute,    /**< Block attribute */
+        EntityAttributeDefinition,     /**< Block attribute definition */
         EntityBlockRef,     /**< Block reference */
         EntityPoint,        /**< Point */
         EntityLine,         /**< Line */
@@ -84,6 +86,7 @@ public:
         EntityEllipse,      /**< Ellipse */
         EntitySolid,        /**< Solid */
         Entity3dFace,       /**< 3d Face */
+        EntityTextBased,    /**< Any text based entity (text, attribute def, attribute) */
         EntityText,         /**< Text */
         EntityDimension,    /**< Any Dimension */
         EntityDimLinear,    /**< Any linear dimension */
