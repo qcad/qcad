@@ -929,6 +929,13 @@ QSet<REntity::Id> RDocument::queryContainedEntitiesXY(const RBox& box) {
             continue;
         }
 
+        // block is off:
+        QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+        if (isBlockFrozen(blockRef->getReferencedBlockId())) {
+            outsiders.insert(*it);
+            continue;
+        }
+
         if (!boxExpanded.contains(entity->getBoundingBox())) {
             outsiders.insert(*it);
             continue;
