@@ -2490,6 +2490,18 @@ dir="./core" filename="RStorage.h">
       </type>
       <name>object</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>checkBlockRecursion</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
   <comment type="block">/** * Deletes the object with the given ID.

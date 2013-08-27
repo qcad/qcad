@@ -36,7 +36,7 @@
  * \copyable
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RAttributeDefinitionData: public RTextData {
+class QCADENTITY_EXPORT RAttributeDefinitionData: public RTextBasedData {
     friend class RAttributeDefinitionEntity;
 
 protected:
@@ -44,6 +44,7 @@ protected:
 
 public:
     RAttributeDefinitionData() {}
+    RAttributeDefinitionData(const RTextBasedData& textData, const QString& tag, const QString& prompt);
     virtual ~RAttributeDefinitionData() {}
 
     QString getTag() const {

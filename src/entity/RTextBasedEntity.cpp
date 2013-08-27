@@ -44,9 +44,8 @@ RPropertyTypeId RTextBasedEntity::PropertyHAlign;
 RPropertyTypeId RTextBasedEntity::PropertyVAlign;
 
 
-RTextBasedEntity::RTextBasedEntity(RDocument* document, const RTextBasedData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RTextBasedEntity::RTextBasedEntity(RDocument* document, RObject::Id objectId) :
+    REntity(document, objectId) {
 }
 
 RTextBasedEntity::~RTextBasedEntity() {
@@ -82,22 +81,22 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value) {
     bool ret = REntity::setProperty(propertyTypeId, value);
 
-    ret = ret || RObject::setMember(data.simple, value, PropertySimple == propertyTypeId);
-    ret = ret || RObject::setMember(data.alignmentPoint.x, value, PropertyPositionX == propertyTypeId);
-    ret = ret || RObject::setMember(data.alignmentPoint.y, value, PropertyPositionY == propertyTypeId);
-    ret = ret || RObject::setMember(data.alignmentPoint.z, value, PropertyPositionZ == propertyTypeId);
-    ret = ret || RObject::setMember(data.text, value, PropertyText == propertyTypeId);
-    ret = ret || RObject::setMember(data.fontName, value, PropertyFontName == propertyTypeId);
-    ret = ret || RObject::setMember(data.textHeight, value, PropertyHeight == propertyTypeId);
-    ret = ret || RObject::setMember(data.angle, value, PropertyAngle == propertyTypeId);
-    ret = ret || RObject::setMember(data.bold, value, PropertyBold == propertyTypeId);
-    ret = ret || RObject::setMember(data.italic, value, PropertyItalic == propertyTypeId);
-    ret = ret || RObject::setMember(data.lineSpacingFactor, value, PropertyLineSpacingFactor == propertyTypeId);
-    ret = ret || RObject::setMember((int&)data.horizontalAlignment, value.value<int>(), PropertyHAlign == propertyTypeId);
-    ret = ret || RObject::setMember((int&)data.verticalAlignment, value.value<int>(), PropertyVAlign == propertyTypeId);
+    ret = ret || RObject::setMember(getData().simple, value, PropertySimple == propertyTypeId);
+    ret = ret || RObject::setMember(getData().alignmentPoint.x, value, PropertyPositionX == propertyTypeId);
+    ret = ret || RObject::setMember(getData().alignmentPoint.y, value, PropertyPositionY == propertyTypeId);
+    ret = ret || RObject::setMember(getData().alignmentPoint.z, value, PropertyPositionZ == propertyTypeId);
+    ret = ret || RObject::setMember(getData().text, value, PropertyText == propertyTypeId);
+    ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
+    ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
+    ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
+    ret = ret || RObject::setMember(getData().bold, value, PropertyBold == propertyTypeId);
+    ret = ret || RObject::setMember(getData().italic, value, PropertyItalic == propertyTypeId);
+    ret = ret || RObject::setMember(getData().lineSpacingFactor, value, PropertyLineSpacingFactor == propertyTypeId);
+    ret = ret || RObject::setMember((int&)getData().horizontalAlignment, value.value<int>(), PropertyHAlign == propertyTypeId);
+    ret = ret || RObject::setMember((int&)getData().verticalAlignment, value.value<int>(), PropertyVAlign == propertyTypeId);
 
     if (ret) {
-        data.update();
+        getData().update();
     }
     return ret;
 }
@@ -108,36 +107,36 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
         return qMakePair(QVariant(RS::EntityText), RPropertyAttributes(
             RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertySimple) {
-        return qMakePair(QVariant(data.simple), RPropertyAttributes());
+        return qMakePair(QVariant(getData().simple), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionX) {
-        return qMakePair(QVariant(data.alignmentPoint.x), RPropertyAttributes());
+        return qMakePair(QVariant(getData().alignmentPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionY) {
-        return qMakePair(QVariant(data.alignmentPoint.y), RPropertyAttributes());
+        return qMakePair(QVariant(getData().alignmentPoint.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionZ) {
-        return qMakePair(QVariant(data.alignmentPoint.z), RPropertyAttributes());
+        return qMakePair(QVariant(getData().alignmentPoint.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyText) {
-        return qMakePair(QVariant(data.text),
+        return qMakePair(QVariant(getData().text),
             RPropertyAttributes(RPropertyAttributes::RichText|RPropertyAttributes::Label));
     } else if (propertyTypeId == PropertyFontName) {
-        return qMakePair(QVariant(data.fontName),
+        return qMakePair(QVariant(getData().fontName),
             RPropertyAttributes(RPropertyAttributes::Style));
     } else if (propertyTypeId == PropertyHeight) {
-        return qMakePair(QVariant(data.textHeight), RPropertyAttributes());
+        return qMakePair(QVariant(getData().textHeight), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAngle) {
-        return qMakePair(QVariant(data.angle), RPropertyAttributes(
+        return qMakePair(QVariant(getData().angle), RPropertyAttributes(
             RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyBold) {
-        return qMakePair(QVariant(data.bold), RPropertyAttributes());
+        return qMakePair(QVariant(getData().bold), RPropertyAttributes());
     } else if (propertyTypeId == PropertyItalic) {
-        return qMakePair(QVariant(data.italic), RPropertyAttributes());
+        return qMakePair(QVariant(getData().italic), RPropertyAttributes());
     } else if (propertyTypeId == PropertyLineSpacingFactor) {
-        return qMakePair(QVariant(data.lineSpacingFactor), RPropertyAttributes());
+        return qMakePair(QVariant(getData().lineSpacingFactor), RPropertyAttributes());
     } else if (propertyTypeId == PropertyHAlign) {
-//        return qMakePair(QVariant(data.horizontalAlignment), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));
-        return qMakePair(QVariant(data.horizontalAlignment), RPropertyAttributes());
+//        return qMakePair(QVariant(getData().horizontalAlignment), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));
+        return qMakePair(QVariant(getData().horizontalAlignment), RPropertyAttributes());
     } else if (propertyTypeId == PropertyVAlign) {
-//        return qMakePair(QVariant(data.verticalAlignment), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));
-        return qMakePair(QVariant(data.verticalAlignment), RPropertyAttributes());
+//        return qMakePair(QVariant(getData().verticalAlignment), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));
+        return qMakePair(QVariant(getData().verticalAlignment), RPropertyAttributes());
     }
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
@@ -146,7 +145,7 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
 void RTextBasedEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);
 
-    e.exportPainterPathSource(data);
+    e.exportPainterPathSource(getData());
 }
 
 void RTextBasedEntity::print(QDebug dbg) const {

@@ -291,7 +291,7 @@
     ){
     // prepare arguments:
     
-                    // argument isCopyable and has default constructor and isSimpleClass 
+                    // argument is reference
                     RTextData*
                     ap0 =
                     qscriptvalue_cast<
@@ -301,13 +301,11 @@
                         0
                         )
                     );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RTextRenderer: Argument 0 is not of type RTextData.",
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RTextRenderer: Argument 0 is not of type RTextData*.",
                                context);                    
                     }
-                    RTextData 
-                    a0 = 
-                    *ap0;
+                    RTextData& a0 = *ap0;
                 
                     // argument isStandardType
                     bool
@@ -390,7 +388,7 @@
     ){
     // prepare arguments:
     
-                    // argument isCopyable and has default constructor and isSimpleClass 
+                    // argument is reference
                     RTextData*
                     ap0 =
                     qscriptvalue_cast<
@@ -400,13 +398,11 @@
                         0
                         )
                     );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RTextRenderer: Argument 0 is not of type RTextData.",
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RTextRenderer: Argument 0 is not of type RTextData*.",
                                context);                    
                     }
-                    RTextData 
-                    a0 = 
-                    *ap0;
+                    RTextData& a0 = *ap0;
                 
                     // argument isStandardType
                     bool

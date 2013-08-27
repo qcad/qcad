@@ -34,7 +34,8 @@ RTransaction::RTransaction()
       allowInvisible(false),
       spatialIndexDisabled(false),
       existingBlockDetectionDisabled(false),
-      existingLayerDetectionDisabled(false) {
+      existingLayerDetectionDisabled(false),
+      blockRecursionDetectionDisabled(false) {
 }
 
 
@@ -52,7 +53,8 @@ RTransaction::RTransaction(RStorage& storage)
       allowInvisible(false),
       spatialIndexDisabled(false),
       existingBlockDetectionDisabled(false),
-      existingLayerDetectionDisabled(false) {
+      existingLayerDetectionDisabled(false),
+      blockRecursionDetectionDisabled(false) {
 }
 
 
@@ -81,7 +83,8 @@ RTransaction::RTransaction(
       allowInvisible(false),
       spatialIndexDisabled(false),
       existingBlockDetectionDisabled(false),
-      existingLayerDetectionDisabled(false) {
+      existingLayerDetectionDisabled(false),
+      blockRecursionDetectionDisabled(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -110,7 +113,8 @@ RTransaction::RTransaction(
       allowInvisible(false),
       spatialIndexDisabled(false),
       existingBlockDetectionDisabled(false),
-      existingLayerDetectionDisabled(false) {
+      existingLayerDetectionDisabled(false),
+      blockRecursionDetectionDisabled(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -177,7 +181,7 @@ void RTransaction::redo(RDocument* document) {
                 object->setProperty(propertyTypeId, objectChanges.at(i).newValue);
             }
 
-            storage->saveObject(object);
+            storage->saveObject(object, false);
 
             if (document!=NULL) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
@@ -245,7 +249,7 @@ void RTransaction::undo(RDocument* document) {
                 object->setProperty(propertyTypeId, objectChanges.at(i).oldValue);
             }
 
-            storage->saveObject(object);
+            storage->saveObject(object, false);
 
             if (document!=NULL) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
@@ -630,7 +634,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 //            }
         //}
 
-        ret = storage->saveObject(object);
+        ret = storage->saveObject(object, !blockRecursionDetectionDisabled);
 
         if (!ret) {
             qCritical() << "RTransaction::addObject: saveObject() failed for object: ";

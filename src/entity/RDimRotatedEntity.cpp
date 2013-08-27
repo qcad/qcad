@@ -148,7 +148,7 @@ QPair<QVariant, RPropertyAttributes> RDimRotatedEntity::getProperty(
 }
 
 void RDimRotatedEntity::print(QDebug dbg) const {
-    dbg.nospace() << "RDimLinearEntity(";
+    dbg.nospace() << "RDimRotatedEntity(";
     RDimensionEntity::print(dbg);
     dbg.nospace() << ", extensionPoint1: " << getData().extensionPoint1
                   << ", extensionPoint2: " << getData().extensionPoint2

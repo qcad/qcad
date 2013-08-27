@@ -22,7 +22,7 @@
 
 #include "entity_global.h"
 
-#include "RTextEntity.h"
+#include "RTextBasedEntity.h"
 #include "RAttributeDefinitionData.h"
 
 class RDocument;
@@ -35,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RAttributeDefinitionEntity: public RTextEntity {
+class QCADENTITY_EXPORT RAttributeDefinitionEntity: public RTextBasedEntity {
 
     Q_DECLARE_TR_FUNCTIONS(RAttributeDefinitionEntity)
 
@@ -79,6 +79,14 @@ public:
 
     virtual RS::EntityType getType() const {
         return RS::EntityAttributeDefinition;
+    }
+
+    virtual RTextBasedData& getData() {
+        return data;
+    }
+
+    virtual const RTextBasedData& getData() const {
+        return data;
     }
 
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value);

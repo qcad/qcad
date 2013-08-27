@@ -181,6 +181,15 @@ dir="./core" filename="RS.h">
   </expr>, 
   <comment type="block">/**&lt; Unknown */</comment>
   <expr>
+    <name>EntityAttribute</name>
+  </expr>, 
+  <comment type="block">/**&lt; Block attribute */</comment>
+  <expr>
+    <name>EntityAttributeDefinition</name>
+  </expr>, 
+  <comment type="block">/**&lt; Block attribute definition
+  */</comment>
+  <expr>
     <name>EntityBlockRef</name>
   </expr>, 
   <comment type="block">/**&lt; Block reference */</comment>
@@ -216,6 +225,11 @@ dir="./core" filename="RS.h">
     <name>Entity3dFace</name>
   </expr>, 
   <comment type="block">/**&lt; 3d Face */</comment>
+  <expr>
+    <name>EntityTextBased</name>
+  </expr>, 
+  <comment type="block">/**&lt; Any text based entity (text,
+  attribute def, attribute) */</comment>
   <expr>
     <name>EntityText</name>
   </expr>, 

@@ -49,7 +49,7 @@ dir="./entity" filename="RDimRotatedEntity.h">
     <macro>
       <name>Q_DECLARE_TR_FUNCTIONS</name>
       <argument_list>(
-      <argument>RDimLinearEntity</argument>)</argument_list>
+      <argument>RDimRotatedEntity</argument>)</argument_list>
     </macro>
   </private>
   <public>public: 

@@ -6,6 +6,8 @@ HEADERS += \
     $$PWD/REcmaArc.h \
     $$PWD/REcmaArcData.h \
     $$PWD/REcmaArcEntity.h \
+    $$PWD/REcmaAttributeDefinitionData.h \
+    $$PWD/REcmaAttributeDefinitionEntity.h \
     $$PWD/REcmaAutoLoadEcma.h \
     $$PWD/REcmaBlock.h \
     $$PWD/REcmaBlockListener.h \
@@ -172,6 +174,8 @@ HEADERS += \
     $$PWD/REcmaShape.h \
     $$PWD/REcmaSharedPointerArc.h \
     $$PWD/REcmaSharedPointerArcEntity.h \
+    $$PWD/REcmaSharedPointerAttributeDefinitionData.h \
+    $$PWD/REcmaSharedPointerAttributeDefinitionEntity.h \
     $$PWD/REcmaSharedPointerBlock.h \
     $$PWD/REcmaSharedPointerBlockReferenceEntity.h \
     $$PWD/REcmaSharedPointerBox.h \
@@ -208,6 +212,8 @@ HEADERS += \
     $$PWD/REcmaSharedPointerSolidEntity.h \
     $$PWD/REcmaSharedPointerSpline.h \
     $$PWD/REcmaSharedPointerSplineEntity.h \
+    $$PWD/REcmaSharedPointerTextBasedData.h \
+    $$PWD/REcmaSharedPointerTextBasedEntity.h \
     $$PWD/REcmaSharedPointerTextData.h \
     $$PWD/REcmaSharedPointerTextEntity.h \
     $$PWD/REcmaSharedPointerTextLabel.h \
@@ -261,6 +267,8 @@ HEADERS += \
     $$PWD/REcmaStorage.h \
     $$PWD/REcmaTabletEvent.h \
     $$PWD/REcmaTerminateEvent.h \
+    $$PWD/REcmaTextBasedData.h \
+    $$PWD/REcmaTextBasedEntity.h \
     $$PWD/REcmaTextData.h \
     $$PWD/REcmaTextEdit.h \
     $$PWD/REcmaTextEntity.h \
@@ -291,6 +299,8 @@ SOURCES += \
     $$PWD/REcmaArc.cpp \
     $$PWD/REcmaArcData.cpp \
     $$PWD/REcmaArcEntity.cpp \
+    $$PWD/REcmaAttributeDefinitionData.cpp \
+    $$PWD/REcmaAttributeDefinitionEntity.cpp \
     $$PWD/REcmaAutoLoadEcma.cpp \
     $$PWD/REcmaBlock.cpp \
     $$PWD/REcmaBlockListener.cpp \
@@ -457,6 +467,8 @@ SOURCES += \
     $$PWD/REcmaShape.cpp \
     $$PWD/REcmaSharedPointerArc.cpp \
     $$PWD/REcmaSharedPointerArcEntity.cpp \
+    $$PWD/REcmaSharedPointerAttributeDefinitionData.cpp \
+    $$PWD/REcmaSharedPointerAttributeDefinitionEntity.cpp \
     $$PWD/REcmaSharedPointerBlock.cpp \
     $$PWD/REcmaSharedPointerBlockReferenceEntity.cpp \
     $$PWD/REcmaSharedPointerBox.cpp \
@@ -493,6 +505,8 @@ SOURCES += \
     $$PWD/REcmaSharedPointerSolidEntity.cpp \
     $$PWD/REcmaSharedPointerSpline.cpp \
     $$PWD/REcmaSharedPointerSplineEntity.cpp \
+    $$PWD/REcmaSharedPointerTextBasedData.cpp \
+    $$PWD/REcmaSharedPointerTextBasedEntity.cpp \
     $$PWD/REcmaSharedPointerTextData.cpp \
     $$PWD/REcmaSharedPointerTextEntity.cpp \
     $$PWD/REcmaSharedPointerTextLabel.cpp \
@@ -546,6 +560,8 @@ SOURCES += \
     $$PWD/REcmaStorage.cpp \
     $$PWD/REcmaTabletEvent.cpp \
     $$PWD/REcmaTerminateEvent.cpp \
+    $$PWD/REcmaTextBasedData.cpp \
+    $$PWD/REcmaTextBasedEntity.cpp \
     $$PWD/REcmaTextData.cpp \
     $$PWD/REcmaTextEdit.cpp \
     $$PWD/REcmaTextEntity.cpp \

@@ -1628,7 +1628,7 @@ RTransaction RDocumentInterface::applyOperation(const ROperation* operation) {
         qWarning() << "RDocumentInterface::applyOperation: "
                 "transaction failed";
         if (RMainWindow::hasMainWindow()) {
-            RMainWindow::getMainWindow()->handleUserWarning("#layer_locked");
+            RMainWindow::getMainWindow()->handleUserWarning("#transaction_failed");
         }
     }
 

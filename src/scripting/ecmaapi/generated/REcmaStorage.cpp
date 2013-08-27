@@ -6197,6 +6197,79 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RObject > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RObject > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RObject * o0 = 
+                    qscriptvalue_cast < RObject * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < RObject >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RObject >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RObject >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type  RObject .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RStorage: Argument 0 is not of type  RObject .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RObject > 
+                    //a0 =
+                    //QSharedPointer < RObject >(o0->clone());
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->saveObject(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.saveObject().",
                    context);

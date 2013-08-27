@@ -177,14 +177,12 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview) const {
 
     recursionDepth++;
 
-    /*
-    if (recursionDepth>10) {
-        recursionDepth--;
-        qWarning("RBlockReferenceEntity::exportEntity: "
-            "maximum recursion depth reached");
-        return;
-    }
-    */
+//    if (recursionDepth>10) {
+//        recursionDepth--;
+//        qWarning("RBlockReferenceEntity::exportEntity: "
+//            "maximum recursion depth reached");
+//        return;
+//    }
 
     data.update();
 

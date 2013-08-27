@@ -48,7 +48,7 @@ RPropertyTypeId RAttributeDefinitionEntity::PropertyVAlign;
 
 RAttributeDefinitionEntity::RAttributeDefinitionEntity(RDocument* document, const RAttributeDefinitionData& data,
         RObject::Id objectId) :
-    RTextEntity(document, objectId), data(document, data) {
+    RTextBasedEntity(document, objectId), data(document, data) {
 }
 
 RAttributeDefinitionEntity::~RAttributeDefinitionEntity() {
@@ -84,7 +84,7 @@ void RAttributeDefinitionEntity::init() {
 
 bool RAttributeDefinitionEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value) {
-    bool ret = RTextEntity::setProperty(propertyTypeId, value);
+    bool ret = RTextBasedEntity::setProperty(propertyTypeId, value);
 
     ret = ret || RObject::setMember(data.tag, value, PropertyTag == propertyTypeId);
     ret = ret || RObject::setMember(data.prompt, value, PropertyPrompt == propertyTypeId);
@@ -106,7 +106,7 @@ QPair<QVariant, RPropertyAttributes> RAttributeDefinitionEntity::getProperty(
     } else if (propertyTypeId == PropertyPrompt) {
         return qMakePair(QVariant(data.prompt), RPropertyAttributes());
     }
-    return RTextEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
 void RAttributeDefinitionEntity::print(QDebug dbg) const {

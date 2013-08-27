@@ -65,19 +65,18 @@ public:
     static RPropertyTypeId PropertyVAlign;
 
 public:
-    RTextBasedEntity(RDocument* document, const RTextBasedData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RTextBasedEntity(RDocument* document, RObject::Id objectId = RObject::INVALID_ID);
     virtual ~RTextBasedEntity();
 
     static void init();
 
-    virtual RTextBasedEntity* clone() const {
-        return new RTextBasedEntity(*this);
-    }
-
     virtual RS::EntityType getType() const {
         return RS::EntityTextBased;
     }
+
+    virtual RTextBasedData& getData() = 0;
+
+    virtual const RTextBasedData& getData() const = 0;
 
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value);
     QPair<QVariant, RPropertyAttributes> getProperty(
@@ -87,149 +86,134 @@ public:
     virtual void exportEntity(RExporter& e, bool preview=false) const;
 
     QList<RPainterPath> getPainterPaths(bool draft = false) const {
-        return data.getPainterPaths(draft);
+        return getData().getPainterPaths(draft);
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
-        return data.getShapes(queryBox);
+        return getData().getShapes(queryBox);
     }
 
     virtual QList<QSharedPointer<RShape> > getExploded() const {
-        return data.getExploded();
+        return getData().getExploded();
     }
 
     virtual RTextBasedData& getTextData() {
-        return data;
-    }
-
-    virtual RTextBasedData& getData() {
-        return data;
-    }
-
-    void setData(RTextBasedData& d) {
-        data = d;
-    }
-
-    virtual const RTextBasedData& getData() const {
-        return data;
+        return getData();
     }
 
     bool isBold() const {
-        return data.isBold();
+        return getData().isBold();
     }
 
     void setBold(bool on) {
-        data.setBold(on);
+        getData().setBold(on);
     }
 
     bool isItalic() const {
-        return data.isItalic();
+        return getData().isItalic();
     }
 
     void setItalic(bool on) {
-        data.setItalic(on);
+        getData().setItalic(on);
     }
 
     RVector getPosition() const {
-        return data.getPosition();
+        return getData().getPosition();
     }
 
     RVector getAlignmentPoint() const {
-        return data.getAlignmentPoint();
+        return getData().getAlignmentPoint();
     }
 
     double getTextHeight() const {
-        return data.getTextHeight();
+        return getData().getTextHeight();
     }
 
     double getTextWidth() const {
-        return data.getTextWidth();
+        return getData().getTextWidth();
     }
 
     double getWidth() const {
-        return data.getWidth();
+        return getData().getWidth();
     }
     double getHeight() const {
-        return data.getHeight();
+        return getData().getHeight();
     }
 
     RS::VAlign getVAlign() const {
-        return data.getVAlign();
+        return getData().getVAlign();
     }
 
     RS::HAlign getHAlign() const {
-        return data.getHAlign();
+        return getData().getHAlign();
     }
 
     QString getFontName() const {
-        return data.getFontName();
+        return getData().getFontName();
     }
 
     void setFontName(const QString& fontName) {
-        data.setFontName(fontName);
+        getData().setFontName(fontName);
     }
 
     void setDrawingDirection(RS::TextDrawingDirection drawingDirection) {
-        data.setDrawingDirection(drawingDirection);
+        getData().setDrawingDirection(drawingDirection);
     }
 
     RS::TextDrawingDirection getDrawingDirection() const {
-        return data.getDrawingDirection();
+        return getData().getDrawingDirection();
     }
 
     void setLineSpacingStyle(RS::TextLineSpacingStyle lineSpacingStyle) {
-        data.setLineSpacingStyle(lineSpacingStyle);
+        getData().setLineSpacingStyle(lineSpacingStyle);
     }
 
     RS::TextLineSpacingStyle getLineSpacingStyle() const {
-        return data.getLineSpacingStyle();
+        return getData().getLineSpacingStyle();
     }
 
     void setLineSpacingFactor(double lineSpacingFactor) {
-        data.setLineSpacingFactor(lineSpacingFactor);
+        getData().setLineSpacingFactor(lineSpacingFactor);
     }
 
     double getLineSpacingFactor() const {
-        return data.getLineSpacingFactor();
+        return getData().getLineSpacingFactor();
     }
 
     void setAngle(double angle) {
-        data.setAngle(angle);
+        getData().setAngle(angle);
     }
 
     double getAngle() const {
-        return data.getAngle();
+        return getData().getAngle();
     }
 
     void setSimple(bool on) {
-        data.setSimple(on);
+        getData().setSimple(on);
     }
 
     bool isSimple() const {
-        return data.isSimple();
+        return getData().isSimple();
     }
 
     QString getEscapedText(bool escapeUnicode = false) const {
-        return data.getEscapedText(escapeUnicode);
+        return getData().getEscapedText(escapeUnicode);
     }
 
     //QString getHtmlText() const {
-    //    return data.getHtmlText();
+    //    return getData().getHtmlText();
     //}
 
     QString getPlainText() const {
-        return data.getPlainText();
+        return getData().getPlainText();
     }
 
     void setText(const QString& text) {
-        data.setText(text);
+        getData().setText(text);
     }
 
 protected:
     virtual void print(QDebug dbg) const;
-
-protected:
-    RTextBasedData data;
 };
 
 Q_DECLARE_METATYPE(RTextBasedEntity*)

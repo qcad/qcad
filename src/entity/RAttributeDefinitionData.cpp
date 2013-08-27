@@ -18,13 +18,19 @@
  */
 #include "RAttributeDefinitionData.h"
 
+
 RAttributeDefinitionData::RAttributeDefinitionData(RDocument* document, const RAttributeDefinitionData& data)
-    : RTextData(document, data) {
+    : RTextBasedData(document, data) {
     *this = data;
     this->document = document;
     if (document!=NULL) {
         linetypeId = document->getLinetypeByLayerId();
     }
+}
+
+RAttributeDefinitionData::RAttributeDefinitionData(const RTextBasedData& textData, const QString& tag, const QString& prompt)
+    : RTextBasedData(textData), tag(tag), prompt(prompt) {
+
 }
 
 QDebug operator<<(QDebug dbg, const RAttributeDefinitionData& t) {

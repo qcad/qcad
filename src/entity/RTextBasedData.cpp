@@ -32,8 +32,9 @@
 #include "RTextRenderer.h"
 
 
-RTextBasedData::RTextBasedData()
- : textHeight(0.0),
+RTextBasedData::RTextBasedData(RDocument *document)
+ : REntityData(document),
+   textHeight(0.0),
    textWidth(0.0),
    verticalAlignment(RS::VAlignTop),
    horizontalAlignment(RS::HAlignLeft),

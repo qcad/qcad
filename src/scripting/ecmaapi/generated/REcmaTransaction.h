@@ -61,6 +61,9 @@
         setExistingLayerDetectionDisabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setBlockRecursionDetectionDisabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isUndoable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

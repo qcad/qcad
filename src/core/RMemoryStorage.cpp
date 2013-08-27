@@ -665,7 +665,7 @@ RBox RMemoryStorage::getSelectionBox() {
     return ret;
 }
 
-bool RMemoryStorage::saveObject(QSharedPointer<RObject> object) {
+bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion) {
     if (object.isNull()) {
         return false;
     }
@@ -695,10 +695,11 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object) {
         RBlock::Id refId = blockRef->getReferencedBlockId();
         // check if block with 'id' may contain a block reference which refers to
         // block with 'refid':
-//        if (checkRecursion(id, refId)) {
-//            qCritical("RMemoryStorage::saveObject: recursion found");
-//            return false;
-//        }
+        // 201308: too slow for large, complex drawings:
+        if (checkRecursion(id, refId)) {
+            qCritical("RMemoryStorage::saveObject: recursion found");
+            return false;
+        }
     }
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();

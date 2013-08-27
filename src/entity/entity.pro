@@ -8,28 +8,28 @@ SOURCES = \
     RCircleEntity.cpp \
     RDimAlignedData.cpp \
     RDimAlignedEntity.cpp \
-    RDimDiametricData.cpp \
-    RDimDiametricEntity.cpp \
     RDimAngularData.cpp \
     RDimAngularEntity.cpp \
-    RDimRadialData.cpp \
-    RDimRadialEntity.cpp \
-    RLeaderData.cpp \
-    RLeaderEntity.cpp \
+    RDimDiametricData.cpp \
+    RDimDiametricEntity.cpp \
     RDimLinearData.cpp \
     RDimLinearEntity.cpp \
     RDimOrdinateData.cpp \
     RDimOrdinateEntity.cpp \
+    RDimRadialData.cpp \
+    RDimRadialEntity.cpp \
     RDimRotatedData.cpp \
     RDimRotatedEntity.cpp \
     RDimensionData.cpp \
     RDimensionEntity.cpp \
     REllipseData.cpp \
     REllipseEntity.cpp \
-    RImageData.cpp \
-    RImageEntity.cpp \
     RHatchData.cpp \
     RHatchEntity.cpp \
+    RImageData.cpp \
+    RImageEntity.cpp \
+    RLeaderData.cpp \
+    RLeaderEntity.cpp \
     RLineData.cpp \
     RLineEntity.cpp \
     RPointData.cpp \
@@ -40,6 +40,8 @@ SOURCES = \
     RSolidEntity.cpp \
     RSplineData.cpp \
     RSplineEntity.cpp \
+    RTextBasedData.cpp \
+    RTextBasedEntity.cpp \
     RTextData.cpp \
     RTextEntity.cpp \
     RTextRenderer.cpp
@@ -53,28 +55,28 @@ HEADERS = \
     RCircleEntity.h \
     RDimAlignedData.h \
     RDimAlignedEntity.h \
-    RDimDiametricData.h \
-    RDimDiametricEntity.h \
     RDimAngularData.h \
     RDimAngularEntity.h \
-    RDimRadialData.h \
-    RDimRadialEntity.h \
-    RLeaderData.h \
-    RLeaderEntity.h \
+    RDimDiametricData.h \
+    RDimDiametricEntity.h \
     RDimLinearData.h \
     RDimLinearEntity.h \
     RDimOrdinateData.h \
     RDimOrdinateEntity.h \
+    RDimRadialData.h \
+    RDimRadialEntity.h \
     RDimRotatedData.h \
     RDimRotatedEntity.h \
     RDimensionData.h \
     RDimensionEntity.h \
     REllipseData.h \
     REllipseEntity.h \
-    RImageData.h \
-    RImageEntity.h \
     RHatchData.h \
     RHatchEntity.h \
+    RImageData.h \
+    RImageEntity.h \
+    RLeaderData.h \
+    RLeaderEntity.h \
     RLineData.h \
     RLineEntity.h \
     RPointData.h \
@@ -85,6 +87,8 @@ HEADERS = \
     RSolidEntity.h \
     RSplineData.h \
     RSplineEntity.h \
+    RTextBasedData.h \
+    RTextBasedEntity.h \
     RTextData.h \
     RTextEntity.h \
     RTextRenderer.h

@@ -450,7 +450,7 @@ public:
     /**
      * Saves the given object to the storage.
      */
-    virtual bool saveObject(QSharedPointer<RObject> object) = 0;
+    virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true) = 0;
 
     /**
      * Deletes the object with the given ID.

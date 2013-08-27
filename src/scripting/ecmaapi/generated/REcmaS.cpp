@@ -127,6 +127,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityAttribute",
+    QScriptValue(RS::EntityAttribute),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EntityAttributeDefinition",
+    QScriptValue(RS::EntityAttributeDefinition),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityBlockRef",
     QScriptValue(RS::EntityBlockRef),
     QScriptValue::ReadOnly);
@@ -169,6 +179,11 @@
 
     ctor.setProperty("Entity3dFace",
     QScriptValue(RS::Entity3dFace),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EntityTextBased",
+    QScriptValue(RS::EntityTextBased),
     QScriptValue::ReadOnly);
 
 

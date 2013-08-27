@@ -42,6 +42,7 @@ RImporter::RImporter(RDocument& document, RMessageHandler* messageHandler, RProg
     transaction.setSpatialIndexDisabled(true);
     transaction.setExistingLayerDetectionDisabled(true);
     transaction.setExistingBlockDetectionDisabled(true);
+    transaction.setBlockRecursionDetectionDisabled(true);
 }
 
 RImporter::~RImporter() {

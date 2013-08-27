@@ -283,8 +283,8 @@ CommandLine.init = function(basePath) {
     // show warning to user:
     appWin.userWarning.connect(function(message, messageBox) {
             // TODO: refactor:
-            if (message==="#layer_locked") {
-                message = qsTr("Trying to draw on or modify entities on a locked or invisible layer.");
+            if (message==="#transaction_failed") {
+                message = qsTr("Trying to draw on or modify entities on a locked or invisible layer or block recursion found.");
             }
 
             appendAndScroll("<span style='color:#cc0000;'>" + Qt.escape(message) + "</span>");

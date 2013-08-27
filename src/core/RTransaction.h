@@ -109,6 +109,10 @@ public:
         existingLayerDetectionDisabled = on;
     }
 
+    void setBlockRecursionDetectionDisabled(bool on) {
+        blockRecursionDetectionDisabled = on;
+    }
+
     /**
      * \return True if this transaction should store undo / redo information
      *      for later undo / redo functionality.
@@ -304,6 +308,11 @@ protected:
      * True to disable detection of existing layers (performance gain).
      */
     bool existingLayerDetectionDisabled;
+
+    /**
+     * True to disable block recursion detection (performance gain for loading).
+     */
+    bool blockRecursionDetectionDisabled;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RTransaction& t);

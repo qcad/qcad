@@ -48,7 +48,7 @@ protected:
     RTextBasedData(RDocument* document, const RTextBasedData& data);
 
 public:
-    RTextBasedData();
+    RTextBasedData(RDocument* document = NULL);
     RTextBasedData(const RVector& position,
               const RVector& alignmentPoint,
               double textHeight,

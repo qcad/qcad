@@ -43,6 +43,32 @@ dir="./core" filename="RBlock.h">
   <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
+  <comment type="line">//class QCADCORE_EXPORT RAttributeDefinition
+  : public RText {</comment>
+  <comment type="line">//public:</comment>
+  <comment type="line">// RAttributeDefinition(const QString&amp;
+  tag, const QString&amp; prompt, const QString&amp;
+  value)</comment>
+  <comment type="line">// : tag(tag), prompt(prompt), value(value)
+  {}</comment>
+  <comment type="line">// int getId() {</comment>
+  <comment type="line">// return id;</comment>
+  <comment type="line">// }</comment>
+  <comment type="line">// QString getTag() {</comment>
+  <comment type="line">// return tag;</comment>
+  <comment type="line">// }</comment>
+  <comment type="line">// QString getPrompt() {</comment>
+  <comment type="line">// return prompt;</comment>
+  <comment type="line">// }</comment>
+  <comment type="line">// QString getValue() {</comment>
+  <comment type="line">// return value;</comment>
+  <comment type="line">// }</comment>
+  <comment type="line">//private:</comment>
+  <comment type="line">// int id;</comment>
+  <comment type="line">// QString tag;</comment>
+  <comment type="line">// QString prompt;</comment>
+  <comment type="line">// QString value;</comment>
+  <comment type="line">//};</comment>
   <comment type="block">/** * Represents a block definition in a
   drawing. * * \ingroup core * \scriptable * \sharedPointerSupport
   */</comment>
@@ -319,7 +345,9 @@ dir="./core" filename="RBlock.h">
     <name>bool</name>
   </type>
   <name>isSelectedForPropertyEditing</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <comment type="line">//void setAttributeDefinition(const
+  RAttributeDefinition&amp; attDef);</comment></public>
   <public>public: 
   <decl_stmt>
   <decl>
@@ -369,7 +397,9 @@ dir="./core" filename="RBlock.h">
       <name>RVector</name>
     </type>
     <name>origin</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
+  </decl>;</decl_stmt>
+  <comment type="line">//QList&lt;RAttributeDefinition&gt;
+  attributeDefinitions;</comment></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

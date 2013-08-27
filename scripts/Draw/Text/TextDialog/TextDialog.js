@@ -835,7 +835,7 @@ TextDialog.prototype.updateSource = function(force) {
         var textDocument = new QTextDocument();
         textDocument.setHtml(html);
         textDocument.defaultFont = this.textEdit.document().defaultFont;
-        var source = RTextData.toEscapedText(textDocument, this.initialColor, this.fontHeightFactor);
+        var source = RTextBasedData.toEscapedText(textDocument, this.initialColor, this.fontHeightFactor);
         this.sourceEdit.setPlainText(source);
         this.textEdit.document().modified = false;
     }
@@ -847,7 +847,7 @@ TextDialog.prototype.updateSource = function(force) {
 TextDialog.prototype.updateRichText = function(force) {
     if (this.sourceEdit.document().modified || force===true) {
         var source = this.sourceEdit.plainText;
-        var richText = RTextData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
+        var richText = RTextBasedData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
 //        qDebug("HTML: \n\n", richText, "\n\n");
         this.textEdit.setHtml(richText);
 //        qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");

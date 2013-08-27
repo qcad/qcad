@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RAttributeDefinitionData"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RTextBasedData" specifier="public" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
+        name="textData" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="tag"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="prompt"
+        isConst="true" />
+      </variant>
+    </constructor>
+    <method name="getTag" cppName="getTag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setTag" cppName="setTag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="t"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getPrompt" cppName="getPrompt" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setPrompt" cppName="setPrompt" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

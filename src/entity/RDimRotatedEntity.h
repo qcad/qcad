@@ -37,7 +37,7 @@ class RExporter;
  */
 class QCADENTITY_EXPORT RDimRotatedEntity: public RDimensionEntity {
 
-    Q_DECLARE_TR_FUNCTIONS(RDimLinearEntity)
+    Q_DECLARE_TR_FUNCTIONS(RDimRotatedEntity)
 
 public:
     static RPropertyTypeId PropertyCustom;

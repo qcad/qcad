@@ -132,6 +132,13 @@ dir="./core" filename="RPropertyTypeId.h">
   <name>isCustom</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="line">//bool isBlockAttribute() const;</comment>
+  <comment type="line">// QString getBlockAttributeTag()
+  const;</comment>
+  <comment type="line">// QString getBlockAttributePrompt()
+  const;</comment>
+  <comment type="line">// QString getBlockAttributeId()
+  const;</comment>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
@@ -342,7 +349,9 @@ dir="./core" filename="RPropertyTypeId.h">
       <name>int</name>
     </type>
     <name>INVALID_ID</name>
-  </decl>;</decl_stmt></public>
+  </decl>;</decl_stmt>
+  <comment type="line">//const static QString
+  blockAttributePrefix;</comment></public>
   <private>private: 
   <decl_stmt>
   <decl>

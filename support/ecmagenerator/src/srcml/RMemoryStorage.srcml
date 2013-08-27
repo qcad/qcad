@@ -899,6 +899,18 @@ dir="./core" filename="RMemoryStorage.h">
       </type>
       <name>object</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>checkBlockRecursion</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
