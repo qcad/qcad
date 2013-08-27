@@ -55,12 +55,13 @@ TextPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docum
     for (var row = 0; row<lReducedList.count; row++) {
         var item = lReducedList.item(row);
         var flags = new Qt.ItemFlags(item.flags() | Qt.ItemIsUserCheckable);
-        // always check 'standard':
+
+        // always check 'standard' and make it immutable:
         if (item.text().toLowerCase()==="standard") {
             item.setCheckState(Qt.Checked);
-            flags = new Qt.ItemFlags(item.flags() & ~Qt.ItemIsEnabled);
+            flags = new Qt.ItemFlags(item.flags() & ~(Qt.ItemIsUserCheckable | Qt.ItemIsEnabled));
         }
-        if (list.contains(item.text())) {
+        else if (list.contains(item.text())) {
             item.setCheckState(Qt.Checked);
         }
         else {
@@ -78,6 +79,9 @@ TextPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docum
     bUncheckAll.clicked.connect(function() {
         for (var row = 0; row<lReducedList.count; row++) {
             var item = lReducedList.item(row);
+            if (item.text().toLowerCase()==="standard") {
+                continue;
+            }
             item.setCheckState(Qt.Unchecked);
         }
     });
