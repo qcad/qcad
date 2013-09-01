@@ -546,10 +546,11 @@ void RMemoryStorage::selectAllEntites(QSet<REntity::Id>* affectedEntities) {
             e->getBlockId()==currentBlock && e->isEditable()) {
             //!isLayerLocked(e->getLayerId()) && !isLayerFrozen(e->getLayerId())) {
 
-            if (affectedEntities != NULL) {
-                affectedEntities->insert(e->getId());
-            }
-            e->setSelected(true);
+//            if (affectedEntities != NULL) {
+//                affectedEntities->insert(e->getId());
+//            }
+//            e->setSelected(true);
+            setEntitySelected(e, true, affectedEntities);
         }
     }
 }
@@ -559,10 +560,11 @@ void RMemoryStorage::clearEntitySelection(QSet<REntity::Id>* affectedEntities) {
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (!e.isNull() && e->isSelected()) {
-            if (affectedEntities!=NULL) {
-                affectedEntities->insert(e->getId());
-            }
-            e->setSelected(false);
+//            if (affectedEntities!=NULL) {
+//                affectedEntities->insert(e->getId());
+//            }
+//            e->setSelected(false);
+            setEntitySelected(e, false, affectedEntities);
         }
     }
 }
@@ -594,10 +596,7 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
             if (!e.isNull() && e->isSelected() &&
                 !entityIds.contains(e->getId())) {
 
-                if (affectedEntities!=NULL) {
-                    affectedEntities->insert(e->getId());
-                }
-                e->setSelected(false);
+                setEntitySelected(e, false, affectedEntities);
             }
         }
     }
@@ -607,10 +606,29 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (!e.isNull() && !e->isSelected() &&
             !isLayerLocked(e->getLayerId())) {
-            if (affectedEntities!=NULL) {
-                affectedEntities->insert(e->getId());
-            }
-            e->setSelected(true);
+
+            setEntitySelected(e, true, affectedEntities);
+        }
+    }
+}
+
+void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
+    QSet<REntity::Id>* affectedEntities) {
+
+    // entity has a parent: select parent instead
+    // (select block ref for attribute):
+    REntity::Id parentId = entity->getParentId();
+    QSharedPointer<REntity> parent = queryEntityDirect(parentId);
+    if (!parent.isNull()) {
+        parent->setSelected(on);
+        if (affectedEntities!=NULL) {
+            affectedEntities->insert(parentId);
+        }
+    }
+    else {
+        entity->setSelected(on);
+        if (affectedEntities!=NULL) {
+            affectedEntities->insert(entity->getId());
         }
     }
 }
@@ -622,10 +640,11 @@ void RMemoryStorage::deselectEntities(const QSet<REntity::Id>& entityIds,
     for (it = entityIds.constBegin(); it != entityIds.constEnd(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (!e.isNull() && e->isSelected()) {
-            if (affectedEntities!=NULL) {
-                affectedEntities->insert(e->getId());
-            }
-            e->setSelected(false);
+//            if (affectedEntities!=NULL) {
+//                affectedEntities->insert(e->getId());
+//            }
+//            e->setSelected(false);
+            setEntitySelected(e, false, affectedEntities);
         }
     }
 }

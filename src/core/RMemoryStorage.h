@@ -89,6 +89,8 @@ public:
             QSet<REntity::Id>* affectedEntities = NULL);
     virtual void deselectEntities(const QSet<REntity::Id>& entityIds,
             QSet<REntity::Id>* affectedEntities = NULL);
+    void setEntitySelected(QSharedPointer<REntity> entity, bool on,
+        QSet<REntity::Id>* affectedEntities = NULL);
     virtual bool isSelected(REntity::Id entityId);
 
     virtual bool hasSelection() const;
