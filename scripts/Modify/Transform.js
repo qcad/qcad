@@ -78,27 +78,19 @@ Transform.prototype.getOperation = function(preview, selectResult) {
             id = ids[i];
             entity = document.queryEntity(id);
             if (isNull(entity)) {
-                debugger;
+                continue;
             }
-
-            var newEntity = undefined;
 
             // copy: assign new IDs
             if (this.copies>0) {
-                newEntity = entity.clone();
                 if (!preview && !selectResult) {
-                    newEntity.setSelected(false);
+                    entity.setSelected(false);
                 }
-                storage.setObjectId(newEntity, RObject.INVALID_ID);
             }
 
-            // move: keep IDs:
-            else {
-                newEntity = entity;
-            }
-
-            this.transform(newEntity, k, op, preview);
+            this.transform(entity, k, op, preview, this.copies>0);
         }
+        op.endCycle();
     }
 
     // deselect original entities, all copies are selected:

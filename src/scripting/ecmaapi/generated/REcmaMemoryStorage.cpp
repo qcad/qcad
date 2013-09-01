@@ -132,6 +132,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, deselectEntities, "deselectEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, setEntitySelected, "setEntitySelected");
+            
             REcmaHelper::registerFunction(&engine, proto, isSelected, "isSelected");
             
             REcmaHelper::registerFunction(&engine, proto, hasSelection, "hasSelection");
@@ -2788,6 +2790,287 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::deselectEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::setEntitySelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::setEntitySelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::setEntitySelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("setEntitySelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < REntity > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < REntity >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEntitySelected(a0
+        ,
+    a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < REntity > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isArray()
+        ) /* type: QSet < REntity::Id > * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < REntity >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument is pointer
+                    QSet < REntity::Id > * a2 = NULL;
+
+                    a2 = 
+                        REcmaHelper::scriptValueTo<QSet < REntity::Id > >(
+                            context->argument(2)
+                        );
+                    
+                    if (a2==NULL && 
+                        !context->argument(2).isNull()) {
+                        return REcmaHelper::throwError("RMemoryStorage: Argument 2 is not of type QSet < REntity::Id > *QSet < REntity::Id > *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEntitySelected(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < REntity > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isArray()
+        ) /* type: QSet < REntity::Id > * */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < REntity >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument is pointer
+                    QSet < REntity::Id > * a2 = NULL;
+
+                    a2 = 
+                        REcmaHelper::scriptValueTo<QSet < REntity::Id > >(
+                            context->argument(2)
+                        );
+                    
+                    if (a2==NULL && 
+                        !context->argument(2).isNull()) {
+                        return REcmaHelper::throwError("RMemoryStorage: Argument 2 is not of type QSet < REntity::Id > *QSet < REntity::Id > *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEntitySelected(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.setEntitySelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::setEntitySelected", context, engine);
             return result;
         }
          QScriptValue

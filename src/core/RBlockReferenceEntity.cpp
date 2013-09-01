@@ -245,6 +245,21 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview) const {
     recursionDepth--;
 }
 
+//bool RBlockReferenceEntity::rotate(double rotation, const RVector& center) {
+//    if (document=!NULL && document->hasChildEntities()) {
+//        QSet<REntity::Id> childIds = document->queryChildEntities(getId());
+//        QSet<REntity::Id>::iterator it;
+//        for (it=childIds.begin(); it!=childIds.end(); it++) {
+//            REntity::Id childId = *it;
+//            QSharedPointer<REntity> child = document->queryEntity(childId);
+//            if (child.isNull()) {
+//                continue;
+//            }
+//            child->rotate(rotation, center);
+//        }
+//    }
+//}
+
 void RBlockReferenceEntity::print(QDebug dbg) const {
     dbg.nospace() << "RBlockReferenceEntity(";
     REntity::print(dbg);

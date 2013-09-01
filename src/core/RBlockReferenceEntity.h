@@ -111,6 +111,8 @@ public:
         return data.getReferencedBlockName();
     }
 
+    //virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);
+
     virtual void update() const {
         data.update();
     }

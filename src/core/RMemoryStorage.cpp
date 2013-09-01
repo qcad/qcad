@@ -612,23 +612,41 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
     }
 }
 
+/**
+ * Selects first the top most parent in the entity hierarchy and then
+ * all children of it. This is necessary for attributes which are
+ * children of block references.
+ */
 void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
-    QSet<REntity::Id>* affectedEntities) {
+    QSet<REntity::Id>* affectedEntities, bool onlyDescend) {
 
-    // entity has a parent: select parent instead
-    // (select block ref for attribute):
-    REntity::Id parentId = entity->getParentId();
-    QSharedPointer<REntity> parent = queryEntityDirect(parentId);
-    if (!parent.isNull()) {
-        parent->setSelected(on);
-        if (affectedEntities!=NULL) {
-            affectedEntities->insert(parentId);
+    if (!onlyDescend) {
+        // entity has a parent: select parent instead
+        // (select block ref for attribute):
+        REntity::Id parentId = entity->getParentId();
+        QSharedPointer<REntity> parent = queryEntityDirect(parentId);
+        if (!parent.isNull()) {
+            setEntitySelected(parent, on, affectedEntities);
+            return;
         }
     }
-    else {
-        entity->setSelected(on);
-        if (affectedEntities!=NULL) {
-            affectedEntities->insert(entity->getId());
+
+    entity->setSelected(on);
+    if (affectedEntities!=NULL) {
+        affectedEntities->insert(entity->getId());
+    }
+
+    // if this is a parent, select all child entities (attributes for block ref):
+    if (hasChildEntities(entity->getId())) {
+        QSet<REntity::Id> childIds = queryChildEntities(entity->getId());
+        QSet<REntity::Id>::iterator it;
+        for (it=childIds.begin(); it!=childIds.end(); it++) {
+            REntity::Id childId = *it;
+            QSharedPointer<REntity> child = queryEntityDirect(childId);
+            if (child.isNull()) {
+                continue;
+            }
+            setEntitySelected(child, on, affectedEntities, true);
         }
     }
 }
@@ -751,16 +769,18 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     }
 
     // avoid block recursions:
-    QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity> ();
-    if (!blockRef.isNull()) {
-        RBlock::Id id = blockRef->getBlockId();
-        RBlock::Id refId = blockRef->getReferencedBlockId();
-        // check if block with 'id' may contain a block reference which refers to
-        // block with 'refid':
-        // 201308: too slow for large, complex drawings:
-        if (checkRecursion(id, refId)) {
-            qCritical("RMemoryStorage::saveObject: recursion found");
-            return false;
+    if (checkBlockRecursion) {
+        QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity> ();
+        if (!blockRef.isNull()) {
+            RBlock::Id id = blockRef->getBlockId();
+            RBlock::Id refId = blockRef->getReferencedBlockId();
+            // check if block with 'id' may contain a block reference which refers to
+            // block with 'refid':
+            // 201308: too slow for large, complex drawings:
+            if (checkRecursion(id, refId)) {
+                qCritical("RMemoryStorage::saveObject: recursion found");
+                return false;
+            }
         }
     }
 

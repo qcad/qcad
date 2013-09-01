@@ -59,6 +59,138 @@ dir="./operations" filename="RAddObjectsOperation.h">
   <block>{
   <private type="default"></private>
   <public>public: 
+  <class>class 
+  <name>RAddedObjects</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <constructor>
+    <name>RAddedObjects</name>
+    <parameter_list>()</parameter_list>
+    <member_list>: 
+    <call>
+      <name>object</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <call>
+            <name>QSharedPointer
+            <argument_list>&lt;
+            <argument>
+              <name>RObject</name>
+            </argument>&gt;</argument_list></name>
+            <argument_list>()</argument_list>
+          </call>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>useCurrentAttributes</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>forceNew</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></member_list>
+    <block>{}</block>
+  </constructor>
+  <constructor>
+    <name>RAddedObjects</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>QSharedPointer
+          <argument_list>&lt;
+          <argument>
+            <name>RObject</name>
+          </argument>&gt;</argument_list></name>
+        </type>
+        <name>object</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>useCurrentAttributes</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>forceNew</name>
+      </decl>
+    </param>)</parameter_list>
+    <member_list>: 
+    <call>
+      <name>object</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>object</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>useCurrentAttributes</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>useCurrentAttributes</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>forceNew</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>forceNew</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></member_list>
+    <block>{}</block>
+  </constructor>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RObject</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>object</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>useCurrentAttributes</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forceNew</name>
+  </decl>;</decl_stmt></public>}</block>;</class></public>
+  <public>public: 
   <constructor_decl>
   <name>RAddObjectsOperation</name>
   <parameter_list>(
@@ -179,6 +311,12 @@ dir="./operations" filename="RAddObjectsOperation.h">
   <type>
     <name>void</name>
   </type>
+  <name>nextCycle</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>addObject</name>
   <parameter_list>(
   <param>
@@ -202,6 +340,18 @@ dir="./operations" filename="RAddObjectsOperation.h">
     <init>
       <expr>
         <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forceNew</name>=
+    <init>
+      <expr>
+        <name>false</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
@@ -272,22 +422,14 @@ dir="./operations" filename="RAddObjectsOperation.h">
       <name>QList
       <argument_list>&lt;
       <argument>
-        <name>QPair
-        <argument_list>&lt;
-        <argument>
-          <name>QSharedPointer
-          <argument_list>&lt;
-          <argument>
-            <name>RObject</name>
-          </argument>&gt;</argument_list></name>
-        </argument>, 
-        <argument>
-          <name>bool</name>
-        </argument>&gt;</argument_list></name>
+        <name>RAddedObjects</name>
       </argument>&gt;</argument_list></name>
     </type>
-    <name>list</name>
+    <name>addedObjects</name>
   </decl>;</decl_stmt>
+  <comment type="line">
+  //QList&lt;QPair&lt;QSharedPointer&lt;RObject&gt;, bool&gt; &gt;
+  addedObjects;</comment>
   <decl_stmt>
   <decl>
     <type>

@@ -237,9 +237,9 @@ Rotate.prototype.getOperation = function(preview) {
 /**
  * Callback function for Transform.getOperation.
  */
-Rotate.prototype.transform = function(entity, k, op, preview) {
+Rotate.prototype.transform = function(entity, k, op, preview, forceNew) {
     entity.rotate(this.angle * k, this.centerPoint);
-    op.addObject(entity, this.useCurrentAttributes);
+    op.addObject(entity, this.useCurrentAttributes, forceNew);
 }
 
 Rotate.prototype.getAuxPreview = function() {

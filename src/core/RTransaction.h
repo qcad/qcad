@@ -75,7 +75,7 @@ public:
     RTransaction(RStorage& storage);
 
     RTransaction(RStorage& storage, int transactionId, const QString& text,
-            const QList<RObject::Id>& affectedObjects,
+            const QList<RObject::Id>& affectedObjectIds,
             //const QSet<RObject::Id>& affectedEntities,
             const QMap<RObject::Id, QList<RPropertyChange> >& propertyChanges);
             //RTransaction* parent = NULL);
@@ -173,6 +173,7 @@ public:
 
     bool addObject(QSharedPointer<RObject> obj,
                    bool useCurrentAttributes = true,
+                   bool forceNew = false,
                    const QSet<RPropertyTypeId>& modifiedPropertyTypeIds = RDEFAULT_QSET_RPROPERTYTYPEID);
 
     void addAffectedObject(RObject::Id objectId);
@@ -187,7 +188,7 @@ public:
      *      this transaction.
      */
     QList<RObject::Id> getAffectedObjects() const {
-        return affectedObjects;
+        return affectedObjectIds;
     }
 
     /**
@@ -210,6 +211,8 @@ public:
     }
 
     void fail();
+
+    void endCycle();
 
 protected:
     bool addPropertyChange(RObject::Id objectId, const RPropertyChange& propertyChange);
@@ -237,7 +240,7 @@ protected:
     /**
      * List of IDs of all objects that are affected by this transaction.
      */
-    QList<RObject::Id> affectedObjects;
+    QList<RObject::Id> affectedObjectIds;
 
     /**
      * List of IDs of all block references that need to be .
@@ -316,6 +319,8 @@ protected:
      * True to disable block recursion detection (performance gain for loading).
      */
     bool blockRecursionDetectionDisabled;
+
+    QMap<RObject::Id, RObject::Id> cloneIds;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RTransaction& t);

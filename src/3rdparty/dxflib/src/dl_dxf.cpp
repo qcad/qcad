@@ -2209,6 +2209,7 @@ void DL_Dxf::writeHeader(DL_WriterA& dw) {
         dw.dxfHex(5, 0xFFFF);
     }
 
+    // commented out: more variables can be added after that by caller:
     //dw.sectionEnd();
 }
 

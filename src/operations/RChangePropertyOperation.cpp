@@ -71,7 +71,7 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
         bool modified = entity->setProperty(propertyTypeId, val);
 
         if (modified) {
-            transaction.addObject(entity, false,
+            transaction.addObject(entity, false, false,
                 QSet<RPropertyTypeId>() << propertyTypeId);
         }
     }

@@ -53,6 +53,9 @@
         getObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        endCycle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

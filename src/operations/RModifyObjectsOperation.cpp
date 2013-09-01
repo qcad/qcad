@@ -22,7 +22,7 @@
 
 void RModifyObjectsOperation::transformSelection(RTransformation* transformation, RDocumentInterface* di, int copies, bool preview, bool selectResult, bool useCurrentAttributes) {
     RDocument& document = di->getDocument();
-    RStorage& storage = document.getStorage();
+    //RStorage& storage = document.getStorage();
     QSet<REntity::Id> ids = document.querySelectedEntities();
     bool move = false;
     if (copies==0) {
@@ -52,28 +52,21 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
                 continue;
             }
 
-            QSharedPointer<REntity> newEntity;
-
             // copy: assign new IDs
             if (!move) {
-                newEntity = QSharedPointer<REntity>(entity->clone());
                 if (!preview && !selectResult) {
-                    newEntity->setSelected(false);
+                    entity->setSelected(false);
                 }
-                storage.setObjectId(*newEntity, RObject::INVALID_ID);
-            }
-
-            // move: keep IDs:
-            else {
-                newEntity = entity;
             }
 
             if (translate) {
-                newEntity->move(translationOffset * k);
+                // TODO: entity->applyTransformation(transformation, k);
+                entity->move(translationOffset * k);
             }
 
-            addObject(newEntity, useCurrentAttributes);
+            addObject(entity, useCurrentAttributes, !move);
         }
+        endCycle();
     }
 
     // deselect original entities, all copies are selected:

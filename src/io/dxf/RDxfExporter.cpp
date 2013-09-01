@@ -104,6 +104,9 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "RDxfExporter::exportFile: variables";
     writeVariables();
 
+    // end header
+    dw->sectionEnd();
+
     // Section TABLES
     qDebug() << "RDxfExporter::exportFile: tables";
     dw->sectionTables();

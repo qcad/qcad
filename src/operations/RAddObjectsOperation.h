@@ -41,6 +41,23 @@ class RObject;
  */
 class QCADOPERATIONS_EXPORT RAddObjectsOperation: public ROperation {
 public:
+    class RAddedObjects {
+    public:
+        RAddedObjects()
+            : object(QSharedPointer<RObject>()),
+              useCurrentAttributes(false),
+              forceNew(false) {}
+        RAddedObjects(QSharedPointer<RObject> object, bool useCurrentAttributes, bool forceNew)
+            : object(object),
+              useCurrentAttributes(useCurrentAttributes),
+              forceNew(forceNew) {}
+
+        QSharedPointer<RObject> object;
+        bool useCurrentAttributes;
+        bool forceNew;
+    };
+
+public:
     RAddObjectsOperation(bool undoable = true);
     RAddObjectsOperation(QList<QSharedPointer<RObject> >& list,
         bool useCurrentAttributes = true, bool undoable = true);
@@ -56,8 +73,10 @@ public:
 
     QSharedPointer<RObject> getObject(RObject::Id id);
 
+    void endCycle();
+
     void addObject(const QSharedPointer<RObject>& object,
-        bool useCurrentAttributes = true);
+        bool useCurrentAttributes = true, bool forceNew=false);
 
     virtual RTransaction apply(RDocument& document, bool preview = false) const;
 
@@ -70,10 +89,12 @@ public:
     }
 
 private:
-    QList<QPair<QSharedPointer<RObject>, bool> > list;
+    QList<RAddedObjects> addedObjects;
+    //QList<QPair<QSharedPointer<RObject>, bool> > addedObjects;
     int previewCounter;
     bool limitPreview;
 };
+
 
 Q_DECLARE_METATYPE(RAddObjectsOperation*)
 

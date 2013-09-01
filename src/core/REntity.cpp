@@ -301,15 +301,6 @@ bool REntity::isEditable(bool allowInvisible) const {
  * \copydoc REntityData::setSelected
  */
 void REntity::setSelected(bool on) {
-    REntity::Id parentId = getParentId();
-    if (parentId!=REntity::INVALID_ID) {
-        QSharedPointer<REntity> parent = getDocument()->queryEntityDirect(parentId);
-        if (!parent.isNull()) {
-            parent->setSelected(on);
-            return;
-        }
-    }
-
     getData().setSelected(on);
 }
 

@@ -180,14 +180,14 @@ Rotate2.prototype.showDialog = function() {
 /**
  * Callback function for Transform.getOperation.
  */
-Rotate2.prototype.transform = function(entity, k, op, preview) {
+Rotate2.prototype.transform = function(entity, k, op, preview, forceNew) {
 //    qDebug("sc (transform): ", this.secondaryCenter);
 
     entity.rotate(this.primaryAngle * k, this.primaryCenter);
     var sc = this.secondaryCenter.copy();
     sc.rotate(this.primaryAngle * k, this.primaryCenter);
     entity.rotate(this.secondaryAngle * k, sc);
-    op.addObject(entity, this.useCurrentAttributes);
+    op.addObject(entity, this.useCurrentAttributes, forceNew);
 };
 
 Rotate2.prototype.slotPrimaryAngleChanged = function(value) {

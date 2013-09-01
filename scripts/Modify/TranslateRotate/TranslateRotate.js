@@ -81,11 +81,11 @@ TranslateRotate.prototype.getOperation = function(preview, selectResult) {
 /**
  * Callback function for Transform.getOperation.
  */
-TranslateRotate.prototype.transform = function(entity, k, op, preview) {
+TranslateRotate.prototype.transform = function(entity, k, op, preview, forceNew) {
     entity.rotate(this.angle * k, this.referencePoint);
     var delta = this.targetPoint.operator_subtract(this.referencePoint);
     entity.move(delta.operator_multiply(k));
-    op.addObject(entity, this.useCurrentAttributes);
+    op.addObject(entity, this.useCurrentAttributes, forceNew);
 };
 
 TranslateRotate.prototype.slotAngleChanged = function(value) {

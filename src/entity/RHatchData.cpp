@@ -422,7 +422,9 @@ bool RHatchData::stretch(const RPolyline& area, const RVector& offset) {
         QList<QSharedPointer<RShape> > loop = boundary.at(i);
         for (int k=0; k<loop.size(); ++k) {
             QSharedPointer<RShape> shape = loop.at(k);
-            ret = ret || shape->stretch(area, offset);
+            if (shape->stretch(area, offset)) {
+                ret = true;
+            }
         }
     }
 

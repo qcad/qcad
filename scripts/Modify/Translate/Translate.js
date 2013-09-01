@@ -176,9 +176,9 @@ Translate.prototype.showDialog = function() {
 /**
  * Callback function for Transform.getOperation.
  */
-//Translate.prototype.transform = function(entity, k, op, preview) {
+//Translate.prototype.transform = function(entity, k, op, preview, forceNew) {
 //    var delta = this.targetPoint.operator_subtract(this.referencePoint);
 //    entity.move(delta.operator_multiply(k));
-//    op.addObject(entity, this.useCurrentAttributes);
+//    op.addObject(entity, this.useCurrentAttributes, forceNew);
 //};
 

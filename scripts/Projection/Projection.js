@@ -214,69 +214,14 @@ Projection.prototype.postTransform = function(entity) {
 /**
  * Callback function for Transform.getOperation. Generic for all projections.
  */
-Projection.prototype.transform = function(entity, k, op, preview) {
+Projection.prototype.transform = function(entity, k, op, preview, forceNew) {
     var i;
 
     this.preTransform(entity);
 
-    // move original entity to neutral position:
-    //entity.move(this.referencePoint.getNegated());
-
-    // rotate entity:
-    //entity.rotate(RMath.deg2rad(this.rotation));
-
     // shapes that represent this entity:
     var shapes = entity.getShapes();
-    this.addTransformedShapes(entity, shapes, op, preview);
-
-    /*
-    // painter path that represent this (hatch, text) entity:
-    if (isFunction(entity.getPainterPaths)) {
-
-        // solid fill (transform):
-        if (isHatchEntity(entity) && entity.isSolid()) {
-            var e = new RHatchEntity(this.getDocument(), new RHatchData(true, 1.0, 0.0, "SOLID"));
-            e.copyAttributesFrom(entity);
-
-            // iterate through loops:
-            for (var l=0; l<entity.getLoopCount(); l++) {
-                e.newLoop();
-                shapes = entity.getLoopBoundary(l);
-                for (i=0; i<shapes.length; i++) {
-                    var s = this.projectShape(shapes[i].data(), preview);
-                    for (var n=0; n<s.length; n++) {
-                        e.addBoundary(s[n]);
-                    }
-                }
-            }
-
-            //this.postTransform(e);
-            //e.move(this.targetPoint);
-            op.addObject(e, false);
-        }
-
-        // hatch or text (explode):
-        else {
-            var painterPaths = entity.getPainterPaths();
-            for (i=0; i<painterPaths.length; i++) {
-                if (painterPaths[i].getFeatureSize()<0.0) {
-                    continue;
-                }
-                shapes = painterPaths[i].getShapes();
-                this.addTransformedShapes(entity, shapes, op, preview);
-            }
-        }
-    }
-    */
-
-    // painter paths that represent this entity:
-//    if (isFunction(entity.getPainterPaths)) {
-//        painterPaths = entity.getPainterPaths();
-//        for (i=0; i<painterPaths.length; i++) {
-//            shapes = painterPaths[i].getShapes();
-//            this.addTransformedShapes(entity, shapes, op, preview);
-//        }
-//    }
+    this.addTransformedShapes(entity, shapes, op, preview, forceNew);
 
     // text data that is part of this entity (dimension label):
     if (isDimensionEntity(entity) && isFunction(entity.getTextData)) {
@@ -287,7 +232,7 @@ Projection.prototype.transform = function(entity, k, op, preview) {
                 continue;
             }
             shapes = painterPaths[i].getShapes();
-            this.addTransformedShapes(entity, shapes, op, preview);
+            this.addTransformedShapes(entity, shapes, op, preview, forceNew);
         }
     }
 };
@@ -300,7 +245,7 @@ Projection.prototype.transform = function(entity, k, op, preview) {
  * \param shapes Array The transformed shapes
  * \param op RAddObjectsOperation Operation
  */
-Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview) {
+Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview, forceNew) {
     for (var i=0; i<shapes.length; i++) {
         var s = this.projectShape(shapes[i].data(), preview);
         for (var n=0; n<s.length; n++) {
@@ -313,7 +258,7 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
             e.copyAttributesFrom(entity);
             e.move(this.targetPoint);
             //this.postTransform(e);
-            op.addObject(e, false);
+            op.addObject(e, false, forceNew);
         }
     }
 };

@@ -67,13 +67,13 @@ RTransaction::RTransaction(
     RStorage& storage,
     int transactionId,
     const QString& text,
-    const QList<RObject::Id>& affectedObjects,
+    const QList<RObject::Id>& affectedObjectIds,
     const QMap<RObject::Id, QList<RPropertyChange> >& propertyChanges)
     //RTransaction* parent)
     : storage(&storage),
       transactionId(transactionId),
       text(text),
-      affectedObjects(affectedObjects),
+      affectedObjectIds(affectedObjectIds),
       propertyChanges(propertyChanges),
       undoable(true),
       failed(false),
@@ -134,8 +134,8 @@ RTransaction::~RTransaction() {
  */
 void RTransaction::redo(RDocument* document) {
     // iterate through all objects that were affected by this transaction:
-    for (int k=0; k<affectedObjects.size(); ++k) {
-        RObject::Id objId = affectedObjects[k];
+    for (int k=0; k<affectedObjectIds.size(); ++k) {
+        RObject::Id objId = affectedObjectIds[k];
 
         // no properties have changed for this object,
         // i.e. object was created or deleted:
@@ -202,8 +202,8 @@ void RTransaction::redo(RDocument* document) {
  */
 void RTransaction::undo(RDocument* document) {
     // iterate through all objects that were affected by this transaction:
-    for (int k=affectedObjects.size()-1; k>=0; --k) {
-        RObject::Id objId = affectedObjects[k];
+    for (int k=affectedObjectIds.size()-1; k>=0; --k) {
+        RObject::Id objId = affectedObjectIds[k];
 
         // no properties have changed for this object,
         // i.e. object was created or deleted:
@@ -263,7 +263,28 @@ void RTransaction::undo(RDocument* document) {
     updateOverwrittenBlockReferences();
 }
 
+/**
+ * Ends the current transaction cycle. A cycle typcially creates
+ * one copy of a selection. This function is necessary to fix IDs in
+ * parent / child related entities (block references / attributes).
+ */
+void RTransaction::endCycle() {
+    // reparent cloned child objects:
+    for (int i=0; i<affectedObjectIds.size(); i++) {
+        RObject::Id id = affectedObjectIds[i];
+        QSharedPointer<RObject> object = storage->queryObjectDirect(id);
+        QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+        if (entity.isNull()) {
+            continue;
+        }
 
+        REntity::Id parentId = entity->getParentId();
+        if (cloneIds.contains(parentId)) {
+            entity->setParentId(cloneIds.value(parentId, REntity::INVALID_ID));
+        }
+    }
+    cloneIds.clear();
+}
 
 /**
  * Saves this command to the storage of the document.
@@ -273,10 +294,15 @@ void RTransaction::commit() {
         //qWarning() << "RTransaction::commit: transaction is in state 'failed'";
         //return;
     }
-    if (affectedObjects.size()>0) {
+
+    if (affectedObjectIds.size()>0) {
         storage->saveTransaction(*this);
     }
     storage->commitTransaction();
+
+    if (!cloneIds.isEmpty()) {
+        qWarning() << "RTransaction::commit: last cycle not closed";
+    }
 
     updateOverwrittenBlockReferences();
 }
@@ -384,6 +410,7 @@ bool RTransaction::overwriteBlock(QSharedPointer<RBlock> block) {
  */
 bool RTransaction::addObject(QSharedPointer<RObject> object,
     bool useCurrentAttributes,
+    bool forceNew,
     const QSet<RPropertyTypeId>& modifiedPropertyTypeIds) {
 
     if (object.isNull()) {
@@ -410,6 +437,12 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         fail();
         Q_ASSERT(false);
         return false;
+    }
+
+    RObject::Id oldId = RObject::INVALID_ID;
+    if (forceNew && object->getId()!=RObject::INVALID_ID) {
+        oldId=object->getId();
+        storage->setObjectId(*object, RObject::INVALID_ID);
     }
 
     RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(storage);
@@ -440,18 +473,21 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         return false;
     }
 
+    QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+
     // if object is an existing hatch and we are not just changing a property:
     // delete original and add new since hatch geometry cannot be completely
     // defined through properties which is a requirement for changing objects
     // through transactions:
-    QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
     if (!entity.isNull() && entity->getType()==RS::EntityHatch &&
         entity->getId()!=REntity::INVALID_ID && modifiedPropertyTypeIds.isEmpty()) {
 
         QSharedPointer<REntity> clone = QSharedPointer<REntity>(entity->clone());
         objectStorage->setObjectId(*clone, REntity::INVALID_ID);
-        deleteObject(entity, entity->getDocument());
-        addObject(clone, useCurrentAttributes, modifiedPropertyTypeIds);
+        // note that we delete the OLD entity here
+        // (old entity is queried from storage since we pass the ID here):
+        deleteObject(entity->getId(), entity->getDocument());
+        addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
         return true;
     }
 
@@ -612,7 +648,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     }
 
     bool ret = true;
-    // this is a new object or an existing object that has changed:
+    // object is a new object or an existing object that has changed:
     if (object->getId()==RObject::INVALID_ID || objectHasChanged ||
         // always add block to linked storage to make sure that
         // block entities are found in linked storage:
@@ -627,6 +663,12 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         if (!ret) {
             qCritical() << "RTransaction::addObject: saveObject() failed for object: ";
             qCritical() << *object;
+        }
+
+        if (oldId!=RObject::INVALID_ID) {
+            qDebug() << "oldId: " << oldId;
+            qDebug() << "object->getId(): " << object->getId();
+            cloneIds.insert(oldId, object->getId());
         }
 
         addAffectedObject(object);
@@ -681,7 +723,7 @@ void RTransaction::addAffectedObject(RObject::Id objectId) {
         return;
     }
 
-    if (!affectedObjects.contains(objectId)) {
+    if (!affectedObjectIds.contains(objectId)) {
         addAffectedObject(storage->queryObjectDirect(objectId));
     }
 }
@@ -711,15 +753,15 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
         return;
     }
 
-    if (affectedObjects.contains(object->getId())) {
+    if (affectedObjectIds.contains(object->getId())) {
         return;
     }
 
-    affectedObjects.append(object->getId());
+    affectedObjectIds.append(object->getId());
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
     if (!entity.isNull()) {
-        if (!affectedObjects.contains(entity->getBlockId())) {
+        if (!affectedObjectIds.contains(entity->getBlockId())) {
             // if an entity has changed, the block definition it was in is affected:
             addAffectedObject(entity->getBlockId());
 
@@ -747,6 +789,9 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
         failed = true;
         return;
     }
+
+    RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(storage);
+    bool storageIsLinked = (ls!=NULL);
 
     onlyChanges = false;
 
@@ -829,23 +874,17 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
     statusChanges.insert(objectId);
 
     if (!undoable) {
-        //QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
-        if (!spatialIndexDisabled && !entity.isNull()) {
+        // only remove from si, if not linked storage / preview
+        if (!storageIsLinked && !spatialIndexDisabled && !entity.isNull()) {
             document->removeFromSpatialIndex(entity);
         }
         storage->deleteObject(objectId);
-//        if (!spatialIndexDisabled && !entity.isNull()) {
-//            document->removeFromSpatialIndex2(entity);
-//        }
     } else {
-        //QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
-        if (!spatialIndexDisabled && !entity.isNull()) {
+        // only remove from si, if not linked storage / preview
+        if (!storageIsLinked && !spatialIndexDisabled && !entity.isNull()) {
             document->removeFromSpatialIndex(entity);
         }
         storage->setUndoStatus(objectId, true);
-//        if (!spatialIndexDisabled && !entity.isNull()) {
-//            document->removeFromSpatialIndex2(entity);
-//        }
     }
 }
 
@@ -867,7 +906,7 @@ QDebug operator<<(QDebug dbg, RTransaction& t) {
     dbg.nospace() << ", text: " << t.getText();
 
     {
-        dbg.nospace() << "\n, affectedObjects: ";
+        dbg.nospace() << "\n, affectedObjectIds: ";
         QList<RObject::Id> objs = t.getAffectedObjects();
         QList<RObject::Id>::iterator it;
         for (it = objs.begin(); it != objs.end(); ++it) {

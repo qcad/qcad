@@ -43,6 +43,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="nextCycle" cppName="nextCycle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="addObject" cppName="addObject" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -52,6 +56,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool"
         name="useCurrentAttributes" hasDefault="true"
         default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceNew"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="apply" cppName="apply" specifier="public"

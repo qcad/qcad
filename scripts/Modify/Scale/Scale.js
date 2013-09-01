@@ -275,7 +275,7 @@ Scale.prototype.getOperation = function(preview) {
 /**
  * Callback function for Transform.getOperation.
  */
-Scale.prototype.transform = function(entity, k, op, preview) {
+Scale.prototype.transform = function(entity, k, op, preview, forceNew) {
     if (isNull(this.factorY)) {
         entity.scale(Math.pow(this.factorX, k), this.focusPoint);
     }
@@ -283,7 +283,7 @@ Scale.prototype.transform = function(entity, k, op, preview) {
         entity.scale(new RVector(Math.pow(this.factorX, k), Math.pow(this.factorY, k)), this.focusPoint);
     }
 
-    op.addObject(entity, this.useCurrentAttributes);
+    op.addObject(entity, this.useCurrentAttributes, forceNew);
 };
 
 Scale.prototype.getAuxPreview = function() {

@@ -143,6 +143,9 @@
         deselectEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setEntitySelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -499,6 +499,8 @@ dir="./core" filename="RBlockReferenceEntity.h">
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
   </function>
+  <comment type="line">//virtual bool rotate(double rotation, const
+  RVector&amp; center = RDEFAULT_RVECTOR);</comment>
   <function>
     <type>
       <name>virtual</name>

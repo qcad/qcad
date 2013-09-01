@@ -135,7 +135,7 @@ dir="./core" filename="RTransaction.h">
         <name>RObject</name>::
         <name>Id</name></name>
       </argument>&gt;</argument_list></name>&amp;</type>
-      <name>affectedObjects</name>
+      <name>affectedObjectIds</name>
     </decl>
   </param>, 
   <comment type="line">//const QSet&lt;RObject::Id&gt;&amp;
@@ -529,6 +529,18 @@ dir="./core" filename="RTransaction.h">
   <param>
     <decl>
     <type>
+      <name>bool</name>
+    </type>
+    <name>forceNew</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
     <name>const</name>
     <name>QSet
     <argument_list>&lt;
@@ -662,7 +674,7 @@ dir="./core" filename="RTransaction.h">
     <block>{ 
     <return>return 
     <expr>
-      <name>affectedObjects</name>
+      <name>affectedObjectIds</name>
     </expr>;</return>}</block>
   </function>
   <comment type="block">/** * \return Set of object IDs of objects
@@ -733,6 +745,12 @@ dir="./core" filename="RTransaction.h">
     <name>void</name>
   </type>
   <name>fail</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>nextCycle</name>
   <parameter_list>()</parameter_list>;</function_decl></public>
   <protected>protected: 
   <function_decl>
@@ -813,7 +831,7 @@ dir="./core" filename="RTransaction.h">
         <name>Id</name></name>
       </argument>&gt;</argument_list></name>
     </type>
-    <name>affectedObjects</name>
+    <name>affectedObjectIds</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * List of IDs of all block references
   that need to be . */</comment>
@@ -965,6 +983,24 @@ dir="./core" filename="RTransaction.h">
       <name>bool</name>
     </type>
     <name>blockRecursionDetectionDisabled</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>
+        <name>RObject</name>::
+        <name>Id</name></name>
+      </argument>, 
+      <argument>
+        <name>
+        <name>RObject</name>::
+        <name>Id</name></name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>cloneIds</name>
   </decl>;</decl_stmt></protected>}</block>;</class>
   <function_decl>
   <type>

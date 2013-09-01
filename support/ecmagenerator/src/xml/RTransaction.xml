@@ -23,7 +23,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="QList &lt; RObject::Id &gt; &amp;"
         typeName="QList &lt; RObject::Id &gt;"
-        name="affectedObjects" isConst="true" />
+        name="affectedObjectIds" isConst="true" />
         <arg type="QMap &lt; RObject::Id , QList &lt; RPropertyChange &gt; &gt; &amp;"
         typeName="QMap &lt; RObject::Id , QList &lt; RPropertyChange &gt; &gt;"
         name="propertyChanges" isConst="true" />
@@ -159,6 +159,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool"
         name="useCurrentAttributes" hasDefault="true"
         default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceNew"
+        hasDefault="true" default=" false" isConst="false" />
         <arg type="QSet &lt; RPropertyTypeId &gt; &amp;"
         typeName="QSet &lt; RPropertyTypeId &gt;"
         name="modifiedPropertyTypeIds" hasDefault="true"
@@ -228,6 +230,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="fail" cppName="fail" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="nextCycle" cppName="nextCycle" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>

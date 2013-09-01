@@ -674,6 +674,7 @@ void RPolyline::print(QDebug dbg) const {
     RShape::print(dbg);
     dbg.nospace() << ", ";
     dbg.nospace() << "vertices: " << countVertices() << ", ";
+    dbg.nospace() << "closed: " << closed << ", ";
     QList<QSharedPointer<RShape> > sub = getExploded();
     QList<QSharedPointer<RShape> >::iterator it;
     for (it=sub.begin(); it!=sub.end(); ++it) {

@@ -189,9 +189,8 @@ int main(int argc, char *argv[]) {
     // init entity properties (depends on translations):
     RObject::init();
     REntity::init();
+
     RArcEntity::init();
-    RAttributeDefinitionEntity::init();
-    RAttributeEntity::init();
     RBlockReferenceEntity::init();
     RCircleEntity::init();
     RDimensionEntity::init();
@@ -210,7 +209,11 @@ int main(int argc, char *argv[]) {
     RPolylineEntity::init();
     RSolidEntity::init();
     RSplineEntity::init();
+
+    RTextBasedEntity::init();
     RTextEntity::init();
+    RAttributeDefinitionEntity::init();
+    RAttributeEntity::init();
 
     RUcs::init();
     RLayer::init();

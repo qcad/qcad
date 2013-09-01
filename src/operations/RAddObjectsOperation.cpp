@@ -21,7 +21,7 @@
 #include "RSettings.h"
 
 RAddObjectsOperation::RAddObjectsOperation(bool undoable) :
-    ROperation(undoable), list(), previewCounter(0), limitPreview(true) {
+    ROperation(undoable), previewCounter(0), limitPreview(true) {
 }
 
 RAddObjectsOperation::RAddObjectsOperation(
@@ -43,14 +43,14 @@ void RAddObjectsOperation::replaceObject(const QSharedPointer<RObject>& object,
 
     RObject::Id id = object->getId();
 
-    for (int i = 0; i < list.size(); ++i) {
-        if (list[i].first.isNull()) {
+    for (int i = 0; i < addedObjects.size(); ++i) {
+        if (addedObjects[i].object.isNull()) {
             continue;
         }
 
-        if (list[i].first->getId()==id) {
-            list[i].first = object;
-            list[i].second = useCurrentAttributes;
+        if (addedObjects[i].object->getId()==id) {
+            addedObjects[i].object = object;
+            addedObjects[i].useCurrentAttributes = useCurrentAttributes;
             return;
         }
     }
@@ -59,21 +59,25 @@ void RAddObjectsOperation::replaceObject(const QSharedPointer<RObject>& object,
 }
 
 QSharedPointer<RObject> RAddObjectsOperation::getObject(RObject::Id id) {
-    for (int i = 0; i < list.size(); ++i) {
-        if (list[i].first.isNull()) {
+    for (int i = 0; i < addedObjects.size(); ++i) {
+        if (addedObjects[i].object.isNull()) {
             continue;
         }
 
-        if (list[i].first->getId()==id) {
-            return list[i].first;
+        if (addedObjects[i].object->getId()==id) {
+            return addedObjects[i].object;
         }
     }
 
     return QSharedPointer<RObject>();
 }
 
+void RAddObjectsOperation::endCycle() {
+    addedObjects.append(RAddedObjects());
+}
+
 void RAddObjectsOperation::addObject(const QSharedPointer<RObject>& object,
-    bool useCurrentAttributes) {
+    bool useCurrentAttributes, bool forceNew) {
 
     if (object.isNull()) {
         return;
@@ -83,7 +87,7 @@ void RAddObjectsOperation::addObject(const QSharedPointer<RObject>& object,
         previewCounter += object->getComplexity();
     }
 
-    list.append(QPair<QSharedPointer<RObject>, bool>(object, useCurrentAttributes));
+    addedObjects.append(RAddedObjects(object, useCurrentAttributes, forceNew));
 }
 
 RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) const {
@@ -91,18 +95,22 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
     transaction.setRecordAffectedObjects(recordAffectedObjects);
     transaction.setSpatialIndexDisabled(spatialIndexDisabled);
 
-    for (int i = 0; i < list.size(); ++i) {
+    for (int i = 0; i < addedObjects.size(); ++i) {
         if (limitPreview && preview && i>RSettings::getPreviewEntities()) {
             break;
         }
 
-        if (list[i].first.isNull()) {
-            qWarning() << "RAddObjectsOperation::apply: "
-                    "list contains NULL object";
+        if (addedObjects[i].object.isNull()) {
+            transaction.endCycle();
+            //qWarning() << "RAddObjectsOperation::apply: "
+            //        "list contains NULL object";
             continue;
         }
 
-        transaction.addObject(list[i].first, list[i].second);
+        transaction.addObject(
+            addedObjects[i].object,
+            addedObjects[i].useCurrentAttributes,
+            addedObjects[i].forceNew);
     }
 
     transaction.end();

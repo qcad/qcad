@@ -187,6 +187,8 @@ void RClipboardOperation::copy(
     //}
 
     //qDebug() << "After copying block and block ref and entities: \n" << dest;
+
+    transaction.endCycle();
 }
 
 
@@ -315,7 +317,7 @@ void RClipboardOperation::copyEntity(
 
     // add entity self:
     QSharedPointer<REntity> destEntity = QSharedPointer<REntity>(entity.clone());
-    dest.getStorage().setObjectId(*destEntity.data(), RObject::INVALID_ID);
+    //dest.getStorage().setObjectId(*destEntity.data(), RObject::INVALID_ID);
     dest.getStorage().setObjectHandle(*destEntity.data(), RObject::INVALID_HANDLE);
     destEntity->setSelected(false);
 
@@ -370,7 +372,7 @@ void RClipboardOperation::copyEntity(
 //        qDebug() << "updated block ref: " << *destBlockRef;
     }
 
-    transaction.addObject(destEntity, false);
+    transaction.addObject(destEntity, false, true);
 }
 
 QSharedPointer<RLayer> RClipboardOperation::copyEntityLayer(

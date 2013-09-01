@@ -152,9 +152,9 @@ Mirror.prototype.showDialog = function() {
 /**
  * Callback function for Transform.getOperation.
  */
-Mirror.prototype.transform = function(entity, k, op, preview) {
+Mirror.prototype.transform = function(entity, k, op, preview, forceNew) {
     entity.mirror(this.axisPoint1, this.axisPoint2);
-    op.addObject(entity, this.useCurrentAttributes);
+    op.addObject(entity, this.useCurrentAttributes, forceNew);
 };
 
 Mirror.prototype.getAuxPreview = function() {

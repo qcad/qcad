@@ -65,21 +65,22 @@ void RAttributeDefinitionEntity::init() {
     RAttributeDefinitionEntity::PropertyColor.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyColor);
     RAttributeDefinitionEntity::PropertyDrawOrder.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyDrawOrder);
 
-    RAttributeDefinitionEntity::PropertySimple.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Simple"));
-    RAttributeDefinitionEntity::PropertyPositionX.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RAttributeDefinitionEntity::PropertyPositionY.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RAttributeDefinitionEntity::PropertyPositionZ.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RAttributeDefinitionEntity::PropertyText.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Contents"));
+    RAttributeDefinitionEntity::PropertySimple.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertySimple);
+    RAttributeDefinitionEntity::PropertyPositionX.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyPositionX);
+    RAttributeDefinitionEntity::PropertyPositionY.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyPositionY);
+    RAttributeDefinitionEntity::PropertyPositionZ.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyPositionZ);
+    RAttributeDefinitionEntity::PropertyText.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyText);
+    RAttributeDefinitionEntity::PropertyFontName.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyFontName);
+    RAttributeDefinitionEntity::PropertyHeight.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyHeight);
+    RAttributeDefinitionEntity::PropertyAngle.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyAngle);
+    RAttributeDefinitionEntity::PropertyBold.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyBold);
+    RAttributeDefinitionEntity::PropertyItalic.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyItalic);
+    RAttributeDefinitionEntity::PropertyLineSpacingFactor.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyLineSpacingFactor);
+    RAttributeDefinitionEntity::PropertyHAlign.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyHAlign);
+    RAttributeDefinitionEntity::PropertyVAlign.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyVAlign);
+
     RAttributeDefinitionEntity::PropertyTag.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Tag"));
     RAttributeDefinitionEntity::PropertyPrompt.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Prompt"));
-    RAttributeDefinitionEntity::PropertyFontName.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Font Name"));
-    RAttributeDefinitionEntity::PropertyHeight.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
-    RAttributeDefinitionEntity::PropertyAngle.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
-    RAttributeDefinitionEntity::PropertyBold.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Bold"));
-    RAttributeDefinitionEntity::PropertyItalic.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Italic"));
-    RAttributeDefinitionEntity::PropertyLineSpacingFactor.generateId(typeid(RAttributeDefinitionEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
-    RAttributeDefinitionEntity::PropertyHAlign.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Horizontal"));
-    RAttributeDefinitionEntity::PropertyVAlign.generateId(typeid(RAttributeDefinitionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
 }
 
 bool RAttributeDefinitionEntity::setProperty(RPropertyTypeId propertyTypeId,

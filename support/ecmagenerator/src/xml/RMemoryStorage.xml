@@ -310,6 +310,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setEntitySelected" cppName="setEntitySelected"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; REntity &gt;"
+        typeName="QSharedPointer &lt; REntity &gt;" name="entity"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+        <arg type="QSet &lt; REntity::Id &gt; *"
+        typeName="QSet &lt; REntity::Id &gt; *"
+        name="affectedEntities" hasDefault="true" default=" NULL"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="onlyDescend"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
     <method name="isSelected" cppName="isSelected"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

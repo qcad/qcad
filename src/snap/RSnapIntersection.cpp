@@ -77,7 +77,9 @@ RVector RSnapIntersection::snap(
             continue;
         }
 
-        if (e1->getType()==RS::EntityText) {
+        if (e1->getType()==RS::EntityText ||
+            e1->getType()==RS::EntityAttribute ||
+            e1->getType()==RS::EntityAttributeDefinition) {
             continue;
         }
 
@@ -87,7 +89,9 @@ RVector RSnapIntersection::snap(
             if (e2.isNull()) {
                 continue;
             }
-            if (e2->getType()==RS::EntityText) {
+            if (e2->getType()==RS::EntityText ||
+                e2->getType()==RS::EntityAttribute ||
+                e2->getType()==RS::EntityAttributeDefinition) {
                 continue;
             }
 
