@@ -474,9 +474,8 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             entity->setLinetype(object->getDocument()->getCurrentLinetype());
         }
 
-        // 20110922: prevents entities on hidden / locked layers to be imported:
+        // allowAll to make sure entities on hidden / locked layers can be imported:
         if (!allowAll && !entity->isEditable(allowInvisible)) {
-            //qWarning() << "RTransaction::addObject: entity is not editable";
             fail();
             return false;
         }
@@ -615,24 +614,13 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     bool ret = true;
     // this is a new object or an existing object that has changed:
     if (object->getId()==RObject::INVALID_ID || objectHasChanged ||
-        // 20120608: always add block to linked storage to make sure that
+        // always add block to linked storage to make sure that
         // block entities are found in linked storage:
         (objectIsBlock && storageIsLinked)) {
         // new object:
         if (object->getId()==RObject::INVALID_ID) {
             onlyChanges = false;
         }
-
-        //if (object->getDocument()!=NULL) {
-            // only add to si, if not linked storage / preview
-            //if (!storage->isInBackStorage(object->getId())) {
-//            if (ls==NULL) {
-//                QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
-//                if (!spatialIndexDisabled && !entity.isNull()) {
-//                    object->getDocument()->addToSpatialIndex(entity);
-//                }
-//            }
-        //}
 
         ret = storage->saveObject(object, !blockRecursionDetectionDisabled);
 
