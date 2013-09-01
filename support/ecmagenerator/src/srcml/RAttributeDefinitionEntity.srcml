@@ -33,8 +33,9 @@ dir="./entity" filename="RAttributeDefinitionEntity.h">
   <name>RDocument</name>;</class_decl>
   <class_decl>class 
   <name>RExporter</name>;</class_decl>
-  <comment type="block">/** * Text entity. * * \scriptable *
-  \sharedPointerSupport * \ingroup entity */</comment>
+  <comment type="block">/** * Block attribute definition entity. *
+  * \scriptable * \sharedPointerSupport * \ingroup core
+  */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -331,7 +332,7 @@ dir="./entity" filename="RAttributeDefinitionEntity.h">
   <function>
     <type>
     <name>virtual</name>
-    <name>RTextBasedData</name>&amp;</type>
+    <name>RAttributeDefinitionData</name>&amp;</type>
     <name>getData</name>
     <parameter_list>()</parameter_list>
     <block>{ 
@@ -344,7 +345,7 @@ dir="./entity" filename="RAttributeDefinitionEntity.h">
     <type>
     <name>virtual</name>
     <name>const</name>
-    <name>RTextBasedData</name>&amp;</type>
+    <name>RAttributeDefinitionData</name>&amp;</type>
     <name>getData</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
@@ -421,6 +422,28 @@ dir="./entity" filename="RAttributeDefinitionEntity.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>exportEntity</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RExporter</name>&amp;</type>
+      <name>e</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>preview</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>QString</name>

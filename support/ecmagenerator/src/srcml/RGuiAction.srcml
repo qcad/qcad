@@ -1055,7 +1055,6 @@ dir="./core" filename="RGuiAction.h">
   <param>
     <decl>
       <type>
-      <name>const</name>
       <name>RDocument</name>*</type>
       <name>document</name>
     </decl>
@@ -1063,7 +1062,6 @@ dir="./core" filename="RGuiAction.h">
   <param>
     <decl>
     <type>
-    <name>const</name>
     <name>RTransaction</name>*</type>
     <name>transaction</name>=
     <init>

@@ -72,10 +72,7 @@ bool RPointEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RPointEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityPoint), RPropertyAttributes(
-                RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyPositionX) {
+    if (propertyTypeId == PropertyPositionX) {
         return qMakePair(QVariant(data.position.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionY) {
         return qMakePair(QVariant(data.position.y), RPropertyAttributes());

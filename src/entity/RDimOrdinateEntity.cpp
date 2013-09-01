@@ -121,10 +121,7 @@ bool RDimOrdinateEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RDimOrdinateEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityDimOrdinate),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyOrdinate) {
+    if (propertyTypeId == PropertyOrdinate) {
         if (humanReadable) {
             RPropertyAttributes attr;
             if (!noAttributes) {

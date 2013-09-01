@@ -113,10 +113,7 @@ bool RDimLinearEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RDimLinearEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityDimLinear),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyExtensionPoint1X) {
+    if (propertyTypeId == PropertyExtensionPoint1X) {
         return qMakePair(QVariant(getData().extensionPoint1.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyExtensionPoint1Y) {
         return qMakePair(QVariant(getData().extensionPoint1.y), RPropertyAttributes());

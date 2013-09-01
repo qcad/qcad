@@ -152,7 +152,7 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
         bool humanReadable, bool noAttributes) {
 
     if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityUnknown), RPropertyAttributes());
+        return qMakePair(QVariant(getType()), RPropertyAttributes());
     } else if (propertyTypeId == PropertyBlock) {
         return qMakePair(QVariant(getData().getBlockId()),
                          RPropertyAttributes());
@@ -314,6 +314,8 @@ void REntity::print(QDebug dbg) const {
         << ", type: " << getType()
         << ", layerId: " << getLayerId()
         << ", blockId: " << getBlockId()
+        << ", parentId: " << getParentId()
+        << ", childIds: " << getDocument()->queryChildEntities(getId())
         << ", lineweight: " << getLineweight()
         << ", linetypeId: " << getLinetypeId()
         << ", color: " << getColor()

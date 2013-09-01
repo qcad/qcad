@@ -6,6 +6,7 @@ SUBDIRS = \
     DrawExamples \
     IOExamples \
     LayerExamples \
+    ListenerExamples \
     MathExamples \
     ModifyExamples \
     SystemExamples

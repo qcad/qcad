@@ -30,7 +30,7 @@ function ExAddBlock(guiAction) {
 ExAddBlock.prototype = new BlockExamples();
 
 /**
- * Draws a spiral and terminates.
+ * Adds a block and terminates.
  */
 ExAddBlock.prototype.beginEvent = function() {
     BlockExamples.prototype.beginEvent.call(this);

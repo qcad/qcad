@@ -671,6 +671,14 @@ QSet<REntity::Id> RDocument::queryBlockEntities(RBlock::Id blockId) const {
     return storage.queryBlockEntities(blockId);
 }
 
+bool RDocument::hasChildEntities(REntity::Id parentId) const {
+    return storage.hasChildEntities(parentId);
+}
+
+QSet<REntity::Id> RDocument::queryChildEntities(REntity::Id parentId) const {
+    return storage.queryChildEntities(parentId);
+}
+
 QSet<REntity::Id> RDocument::queryBlockReferences(RBlock::Id blockId) const {
     return storage.queryBlockReferences(blockId);
 }
@@ -931,9 +939,11 @@ QSet<REntity::Id> RDocument::queryContainedEntitiesXY(const RBox& box) {
 
         // block is off:
         QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
-        if (isBlockFrozen(blockRef->getReferencedBlockId())) {
-            outsiders.insert(*it);
-            continue;
+        if (!blockRef.isNull()) {
+            if (isBlockFrozen(blockRef->getReferencedBlockId())) {
+                outsiders.insert(*it);
+                continue;
+            }
         }
 
         if (!boxExpanded.contains(entity->getBoundingBox())) {

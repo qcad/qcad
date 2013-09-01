@@ -187,8 +187,7 @@ void RMainWindow::addTransactionListener(RTransactionListener* l) {
     if (l != NULL) {
         transactionListeners.push_back(l);
     } else {
-        qWarning(
-                "RMainWindow::addTransactionListener(): Listener is NULL.");
+        qWarning("RMainWindow::addTransactionListener(): Listener is NULL.");
     }
 }
 
@@ -210,8 +209,7 @@ void RMainWindow::addSnapListener(RSnapListener* l) {
     if (l != NULL) {
         snapListeners.push_back(l);
     } else {
-        qWarning(
-                "RMainWindow::addSnapListener(): Listener is NULL.");
+        qWarning("RMainWindow::addSnapListener(): Listener is NULL.");
     }
 }
 
@@ -232,8 +230,7 @@ void RMainWindow::addFocusListener(RFocusListener* l) {
     if (l != NULL) {
         focusListeners.push_back(l);
     } else {
-        qWarning(
-                "RMainWindow::addFocusListener(): Listener is NULL.");
+        qWarning("RMainWindow::addFocusListener(): Listener is NULL.");
     }
 }
 

@@ -75,6 +75,8 @@ public:
             RPropertyTypeId propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
 
+//    virtual void setSelected(bool on);
+
     virtual void exportEntity(RExporter& e, bool preview = false) const;
 
     virtual RBlockReferenceData& getData() {

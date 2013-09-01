@@ -48,9 +48,6 @@ function main() {
         return;
     }
     
-    RDxfImporter.registerFileImporter();
-    RDxfExporterFactory.registerFileExporter();
-
     var inputFile = args[args.length - 2];
     if (inputFile.indexOf("-") === 0) {
         print("No input file. Try -h for help.");

@@ -122,10 +122,7 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
         RPropertyTypeId propertyTypeId,
         bool humanReadable, bool noAttributes) {
 
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityBlockRef),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyPositionX) {
+    if (propertyTypeId == PropertyPositionX) {
         return qMakePair(QVariant(data.position.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionY) {
         return qMakePair(QVariant(data.position.y), RPropertyAttributes());
@@ -168,6 +165,29 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
+//void RBlockReferenceEntity::setSelected(bool on) {
+//    RDocument* doc = getDocument();
+//    if (doc==NULL) {
+//        REntity::setSelected(on);
+//        return;
+//    }
+
+//    QSet<REntity::Id> attributeIds = doc->queryAttributes(getId());
+//    qDebug() << "RBlockReferenceEntity::setSelected: attribute IDs: " << attributeIds;
+//    QSet<REntity::Id>::iterator it;
+//    for (it=attributeIds.begin(); it!=attributeIds.end(); it++) {
+//        QSharedPointer<REntity> attribute = doc->queryEntityDirect(*it);
+//        if (attribute.isNull()) {
+//            qDebug() << "attribute is NULL";
+//            continue;
+//        }
+//        qDebug() << "selecting attribute";
+//        attribute->REntity::setSelected(on);
+//    }
+
+//    REntity::setSelected(on);
+//}
+
 void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview) const {
     const RDocument* document = getDocument();
     if (document==NULL) {
@@ -187,6 +207,10 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview) const {
     data.update();
 
     QSet<REntity::Id> ids = document->queryBlockEntities(data.referencedBlockId);
+//    QSet<REntity::Id> ids = document->queryBlockReferenceEntities(getId());
+    //QSet<REntity::Id> idsAttr = document->queryAttributes(objectId);
+    //ids.unite(idsAttr);
+
     QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
     int i;
     QList<REntity::Id>::iterator it;

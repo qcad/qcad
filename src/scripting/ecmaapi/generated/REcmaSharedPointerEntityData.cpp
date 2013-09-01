@@ -93,6 +93,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBlockId, "getBlockId");
             
+            REcmaHelper::registerFunction(&engine, proto, setParentId, "setParentId");
+            
+            REcmaHelper::registerFunction(&engine, proto, getParentId, "getParentId");
+            
             REcmaHelper::registerFunction(&engine, proto, getBlockName, "getBlockName");
             
             REcmaHelper::registerFunction(&engine, proto, setLinetypeId, "setLinetypeId");
@@ -1166,11 +1170,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayer::Id'
-    RLayer::Id cppResult =
+    // return type 'RBlock::Id'
+    RBlock::Id cppResult =
         
                self->getBlockId();
-        // return type: RLayer::Id
+        // return type: RBlock::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1183,6 +1187,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::getBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntityData::setParentId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntityData::setParentId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntityData::setParentId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("setParentId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setParentId(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.setParentId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::setParentId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntityData::getParentId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntityData::getParentId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntityData::getParentId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("getParentId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
+        
+               self->getParentId();
+        // return type: RObject::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.getParentId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::getParentId", context, engine);
             return result;
         }
          QScriptValue

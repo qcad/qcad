@@ -74,10 +74,7 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityLeader),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyArrowHead) {
+    if (propertyTypeId == PropertyArrowHead) {
         return qMakePair(QVariant(data.arrowHead), RPropertyAttributes());
     } else if (propertyTypeId == PropertyVertexNX) {
         QVariant v;

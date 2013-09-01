@@ -687,6 +687,8 @@ dir="./core" filename="RTransaction.h">
       <name>statusChanges</name>
     </expr>;</return>}</block>
   </function>
+  <comment type="block">/** * \return Map of properties that are
+  changed by this transaction. */</comment>
   <function>
     <type>
       <name>QMap

@@ -1,4 +1,4 @@
 NAME = IOExamples
 TSDIR = .
-include(../../../translations.pri)
+include(../../../../translations.pri)
 SOURCES = ../IOExamples.js

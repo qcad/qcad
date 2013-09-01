@@ -332,6 +332,8 @@ dir="./core" filename="RBlockReferenceEntity.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="line">// virtual void setSelected(bool
+  on);</comment>
   <function_decl>
   <type>
     <name>virtual</name>

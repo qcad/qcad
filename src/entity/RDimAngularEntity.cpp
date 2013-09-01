@@ -138,12 +138,8 @@ bool RDimAngularEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RDimAngularEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityDimAngular),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    }
 
-      else if (propertyTypeId == PropertyExtensionLine1StartX) {
+    if (propertyTypeId == PropertyExtensionLine1StartX) {
         return qMakePair(QVariant(data.extensionLine1Start.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyExtensionLine1StartY) {
         return qMakePair(QVariant(data.extensionLine1Start.y), RPropertyAttributes());

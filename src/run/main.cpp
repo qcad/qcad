@@ -36,6 +36,8 @@
 #endif
 
 #include "RArcEntity.h"
+#include "RAttributeDefinitionEntity.h"
+#include "RAttributeEntity.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
 #include "RDebug.h"
@@ -188,6 +190,8 @@ int main(int argc, char *argv[]) {
     RObject::init();
     REntity::init();
     RArcEntity::init();
+    RAttributeDefinitionEntity::init();
+    RAttributeEntity::init();
     RBlockReferenceEntity::init();
     RCircleEntity::init();
     RDimensionEntity::init();

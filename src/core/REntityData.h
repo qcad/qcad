@@ -160,8 +160,16 @@ public:
         this->blockId = blockId;
     }
 
-    RLayer::Id getBlockId() const {
+    RBlock::Id getBlockId() const {
         return blockId;
+    }
+
+    virtual void setParentId(RObject::Id parentId) {
+        this->parentId = parentId;
+    }
+
+    RObject::Id getParentId() const {
+        return parentId;
     }
 
     QString getBlockName() const;
@@ -298,6 +306,7 @@ protected:
     int drawOrder;
     RLayer::Id layerId;
     RBlock::Id blockId;
+    RObject::Id parentId;
     RLinetype::Id linetypeId;
     RLineweight::Lineweight lineweight;
     RColor color;

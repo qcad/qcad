@@ -813,6 +813,17 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
         }
     }
 
+    QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+
+    // if the entity has child entities, delete all child entities (e.g. attributes):
+    if (!entity.isNull() && document->hasChildEntities(entity->getId())) {
+        QSet<REntity::Id> ids = document->queryChildEntities(entity->getId());
+        QSetIterator<REntity::Id> it(ids);
+        while (it.hasNext()) {
+            deleteObject(it.next(), document);
+        }
+    }
+
     // if the current view is deleted, reset current view:
     QSharedPointer<RView> view = object.dynamicCast<RView>();
     if (!view.isNull()) {
@@ -822,7 +833,6 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
     }
 
     // if an entity is deleted, the block definition it was in is affected:
-    QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
     if (!entity.isNull()) {
         addAffectedObject(entity->getBlockId());
     }
@@ -831,7 +841,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
     statusChanges.insert(objectId);
 
     if (!undoable) {
-        QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+        //QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
         if (!spatialIndexDisabled && !entity.isNull()) {
             document->removeFromSpatialIndex(entity);
         }
@@ -840,7 +850,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
 //            document->removeFromSpatialIndex2(entity);
 //        }
     } else {
-        QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+        //QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
         if (!spatialIndexDisabled && !entity.isNull()) {
             document->removeFromSpatialIndex(entity);
         }

@@ -58,7 +58,6 @@ dir="./core" filename="RTransactionListener.h">
   <param>
     <decl>
       <type>
-      <name>const</name>
       <name>RDocument</name>*</type>
       <name>document</name>
     </decl>
@@ -66,7 +65,6 @@ dir="./core" filename="RTransactionListener.h">
   <param>
     <decl>
     <type>
-    <name>const</name>
     <name>RTransaction</name>*</type>
     <name>transaction</name>=
     <init>

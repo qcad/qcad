@@ -107,10 +107,7 @@ bool RLineEntity::setProperty(RPropertyTypeId propertyTypeId,
 QPair<QVariant, RPropertyAttributes> RLineEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable,
         bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityLine),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyStartPointX) {
+    if (propertyTypeId == PropertyStartPointX) {
         return qMakePair(QVariant(data.startPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyStartPointY) {
         return qMakePair(QVariant(data.startPoint.y), RPropertyAttributes());

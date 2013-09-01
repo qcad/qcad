@@ -85,6 +85,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
+            REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, getTag, "getTag");
             
             REcmaHelper::registerFunction(&engine, proto, setTag, "setTag");
@@ -662,11 +664,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTextBasedData &'
-    RTextBasedData & cppResult =
+    // return type 'RAttributeDefinitionData &'
+    RAttributeDefinitionData & cppResult =
         
                self->getData();
-        // return type: RTextBasedData &
+        // return type: RAttributeDefinitionData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));
@@ -684,11 +686,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTextBasedData &'
-    RTextBasedData & cppResult =
+    // return type 'RAttributeDefinitionData &'
+    RAttributeDefinitionData & cppResult =
         
                self->getData();
-        // return type: RTextBasedData &
+        // return type: RAttributeDefinitionData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));
@@ -1044,6 +1046,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getProperty", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAttributeDefinitionEntity::exportEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::exportEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::exportEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeDefinitionEntity* self = 
+                        getSelf("exportEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RExporter */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RExporter*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RExporter*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RAttributeDefinitionEntity: Argument 0 is not of type RExporter*.",
+                               context);                    
+                    }
+                    RExporter& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportEntity(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.exportEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::exportEntity", context, engine);
             return result;
         }
          QScriptValue

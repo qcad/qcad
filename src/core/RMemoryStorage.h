@@ -59,6 +59,8 @@ public:
 
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false);
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId);
+    virtual QSet<REntity::Id> queryChildEntities(REntity::Id parentId);
+    virtual bool hasChildEntities(REntity::Id parentId);
     virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId);
     virtual QSet<REntity::Id> queryAllBlockReferences();
     //virtual QSet<REntity::Id> queryViewEntities(RView::Id viewId);

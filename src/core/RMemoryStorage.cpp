@@ -263,6 +263,49 @@ QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
     return result;
 }
 
+QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId) {
+//    QSharedPointer<REntity> parent = queryEntityDirect(parentId).dynamicCast<REntity>();
+//    if (parent.isNull()) {
+//        qWarning() << "RMemoryStorage::queryChildEntities: "
+//            << "ID does not refer to an entity: " << parentId;
+//        return QSet<REntity::Id>();
+//    }
+
+    QSet<REntity::Id> result; // = queryBlockEntities(blockRef->getReferencedBlockId());
+    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (e.isNull() || e->isUndone() || e->getParentId()!=parentId) {
+            continue;
+        }
+
+        result.insert(e->getId());
+    }
+
+    return result;
+}
+
+bool RMemoryStorage::hasChildEntities(REntity::Id parentId) {
+//    QSharedPointer<REntity> parent = queryEntityDirect(parentId).dynamicCast<REntity>();
+//    if (parent.isNull()) {
+//        qWarning() << "RMemoryStorage::hasChildEntities: "
+//            << "ID does not refer to an entity: " << parentId;
+//        return false;
+//    }
+
+    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (e.isNull() || e->isUndone() || e->getParentId()!=parentId) {
+            continue;
+        }
+
+        return true;
+    }
+
+    return false;
+}
+
 QSet<REntity::Id> RMemoryStorage::queryBlockReferences(RBlock::Id blockId) {
     QSet<REntity::Id> result;
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;

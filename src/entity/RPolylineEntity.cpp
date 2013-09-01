@@ -83,10 +83,7 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
 QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable,
         bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityPolyline),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyClosed) {
+    if (propertyTypeId == PropertyClosed) {
         QVariant v;
         v.setValue(data.closed);
         return qMakePair(v, RPropertyAttributes());

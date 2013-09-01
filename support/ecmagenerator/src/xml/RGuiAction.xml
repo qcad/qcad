@@ -443,10 +443,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocument *" typeName="RDocument *"
-        name="document" isConst="true" />
+        name="document" isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
         name="transaction" hasDefault="true" default=" NULL"
-        isConst="true" />
+        isConst="false" />
       </variant>
     </method>
     <method name="updateSelectionListener"

@@ -29,11 +29,11 @@ class RDocument;
 class RExporter;
 
 /**
- * Text entity.
+ * Block attribute definition entity.
  *
  * \scriptable
  * \sharedPointerSupport
- * \ingroup entity
+ * \ingroup core
  */
 class QCADENTITY_EXPORT RAttributeDefinitionEntity: public RTextBasedEntity {
 
@@ -81,11 +81,11 @@ public:
         return RS::EntityAttributeDefinition;
     }
 
-    virtual RTextBasedData& getData() {
+    virtual RAttributeDefinitionData& getData() {
         return data;
     }
 
-    virtual const RTextBasedData& getData() const {
+    virtual const RAttributeDefinitionData& getData() const {
         return data;
     }
 
@@ -93,6 +93,8 @@ public:
     QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
+
+    void exportEntity(RExporter& e, bool preview) const;
 
     QString getTag() const {
         return data.getTag();

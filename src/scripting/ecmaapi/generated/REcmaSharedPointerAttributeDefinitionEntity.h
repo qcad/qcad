@@ -69,6 +69,9 @@
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

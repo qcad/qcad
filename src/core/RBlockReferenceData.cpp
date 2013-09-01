@@ -18,6 +18,7 @@
  */
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
+#include "RDocument.h"
 
 RBlockReferenceData::RBlockReferenceData() :
     referencedBlockId(RBlock::INVALID_ID), rotation(0) {
@@ -250,6 +251,10 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
     }
     return ret;
 }
+
+//void RBlockReferenceData::setSelected(bool on) {
+//    Q_ASSERT(false);
+//}
 
 bool RBlockReferenceData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {

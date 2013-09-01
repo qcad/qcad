@@ -98,15 +98,26 @@ bool RAttributeDefinitionEntity::setProperty(RPropertyTypeId propertyTypeId,
 QPair<QVariant, RPropertyAttributes> RAttributeDefinitionEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
 
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityAttributeDefinition), RPropertyAttributes(
-            RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyTag) {
+    if (propertyTypeId == PropertyTag) {
         return qMakePair(QVariant(data.tag), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPrompt) {
         return qMakePair(QVariant(data.prompt), RPropertyAttributes());
     }
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+}
+
+void RAttributeDefinitionEntity::exportEntity(RExporter& e, bool preview) const {
+    Q_UNUSED(preview);
+
+    RBlock::Id currentBlockId = e.getDocument().getCurrentBlockId();
+
+    // attribute definition is being rendered in the context of the
+    // block it is in (show tag):
+    if (getBlockId()==currentBlockId) {
+        RAttributeDefinitionData data = getData();
+        data.setText(getTag());
+        e.exportPainterPathSource(data);
+    }
 }
 
 void RAttributeDefinitionEntity::print(QDebug dbg) const {

@@ -26,6 +26,7 @@
 #include <QSharedPointer>
 
 #include "RBlock.h"
+#include "RBlockReferenceEntity.h"
 #include "RBox.h"
 #include "REntity.h"
 #include "RLayer.h"
@@ -129,6 +130,15 @@ public:
      * \return A set of all entity IDs that are part of the given block.
      */
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId) = 0;
+
+    /**
+     * \return A set of all block attributes which are not stored in the
+     * block definition but as separate entities on the same level as
+     * the block reference.
+     */
+    virtual QSet<REntity::Id> queryChildEntities(REntity::Id parentId) = 0;
+
+    virtual bool hasChildEntities(REntity::Id parentId) = 0;
 
     /**
      * \return A set of all block reference entity IDs that reference

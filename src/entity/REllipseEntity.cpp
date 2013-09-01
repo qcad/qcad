@@ -124,10 +124,7 @@ bool REllipseEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> REllipseEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityEllipse), RPropertyAttributes(
-                RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyCenterX) {
+    if (propertyTypeId == PropertyCenterX) {
         return qMakePair(QVariant(data.center.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterY) {
         return qMakePair(QVariant(data.center.y), RPropertyAttributes());

@@ -28,10 +28,6 @@ include("scripts/File/Print/Print.js");
 // init application name:
 qApp.applicationName = "MyApplication";
 
-// init DXF exporter:
-RDxfExporterFactory.registerFileExporter();
-//! [init]
-
 //! [document]
 var storage = new RMemoryStorage();
 var spatialIndex = new RSpatialIndexNavel();

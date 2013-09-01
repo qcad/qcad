@@ -28,9 +28,6 @@ dir="./core" filename="RBlockReferenceData.h">
   <cpp:file>"RBox.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -38,6 +35,8 @@ dir="./core" filename="RBlockReferenceData.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RBlock.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RDocument</name>;</class_decl>
   <comment type="block">/** * \scriptable * \ingroup entity
   */</comment>
   <class>class 
@@ -287,6 +286,8 @@ dir="./core" filename="RBlockReferenceData.h">
     </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="line">//virtual void setSelected(bool
+  on);</comment>
   <function_decl>
   <type>
     <name>virtual</name>

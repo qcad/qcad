@@ -29,12 +29,12 @@
 
 /**
  * Stores and manages all data that defines the geometry and
- * appearance of a block attribute entity.
+ * appearance of a block attribute definition entity.
  *
  * \scriptable
  * \sharedPointerSupport
  * \copyable
- * \ingroup entity
+ * \ingroup core
  */
 class QCADENTITY_EXPORT RAttributeDefinitionData: public RTextBasedData {
     friend class RAttributeDefinitionEntity;
@@ -46,6 +46,8 @@ public:
     RAttributeDefinitionData() {}
     RAttributeDefinitionData(const RTextBasedData& textData, const QString& tag, const QString& prompt);
     virtual ~RAttributeDefinitionData() {}
+
+    double getDistanceTo(const RVector& point, bool limited, double range, bool draft) const;
 
     QString getTag() const {
         return tag;

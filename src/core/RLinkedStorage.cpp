@@ -83,6 +83,26 @@ QSet<REntity::Id> RLinkedStorage::queryBlockEntities(RBlock::Id blockId) {
     }
 }
 
+QSet<REntity::Id> RLinkedStorage::queryChildEntities(REntity::Id parentId) {
+    if (entityMap.contains(parentId)) {
+        // got parent, return only child entities from this parent:
+        return RMemoryStorage::queryChildEntities(parentId);
+    }
+    else {
+        // parent is in back storage, return only child entities from that parent:
+        return backStorage->queryChildEntities(parentId);
+    }
+}
+
+bool RLinkedStorage::hasChildEntities(REntity::Id parentId) {
+    if (entityMap.contains(parentId)) {
+        return RMemoryStorage::hasChildEntities(parentId);
+    }
+    else {
+        return backStorage->hasChildEntities(parentId);
+    }
+}
+
 QSet<REntity::Id> RLinkedStorage::queryBlockReferences(RBlock::Id blockId) {
     return RMemoryStorage::queryBlockReferences(blockId)
             .unite(backStorage->queryBlockReferences(blockId));

@@ -20,7 +20,7 @@
 include("../BlockExamples.js");
 
 /**
- * This action fixes invid block names from imported drawings.
+ * This action fixes invalid block names from imported drawings.
  */
 function ExFixBlockNames(guiAction) {
     BlockExamples.call(this, guiAction);

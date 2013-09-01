@@ -132,10 +132,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityDimension), RPropertyAttributes(
-            RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyDefinitionPointX) {
+    if (propertyTypeId == PropertyDefinitionPointX) {
         return qMakePair(QVariant(getData().definitionPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDefinitionPointY) {
         return qMakePair(QVariant(getData().definitionPoint.y), RPropertyAttributes());

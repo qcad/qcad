@@ -103,11 +103,6 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable,
         bool noAttributes) {
 
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntitySpline),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    }
-
     if (!data.controlPoints.isEmpty() && data.fitPoints.isEmpty()) {
         if (propertyTypeId == PropertyControlPointNX) {
             QVariant v;

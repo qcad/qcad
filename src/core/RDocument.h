@@ -26,6 +26,7 @@
 #include <QSharedPointer>
 
 #include "RBlock.h"
+#include "RBlockReferenceEntity.h"
 #include "REntity.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
@@ -95,6 +96,8 @@ public:
 
     QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false) const;
     QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId) const;
+    QSet<REntity::Id> queryChildEntities(REntity::Id parentId) const;
+    bool hasChildEntities(REntity::Id parentId) const;
     QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
     QSet<REntity::Id> queryAllBlockReferences() const;
 

@@ -93,6 +93,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryBlockEntities, "queryBlockEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, queryChildEntities, "queryChildEntities");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasChildEntities, "hasChildEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryBlockReferences, "queryBlockReferences");
             
             REcmaHelper::registerFunction(&engine, proto, queryAllBlockReferences, "queryAllBlockReferences");
@@ -1125,6 +1129,127 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlockEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::queryChildEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryChildEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryChildEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("queryChildEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryChildEntities(a0);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryChildEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryChildEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::hasChildEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::hasChildEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::hasChildEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("hasChildEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasChildEntities(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.hasChildEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::hasChildEntities", context, engine);
             return result;
         }
          QScriptValue

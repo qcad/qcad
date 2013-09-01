@@ -34,8 +34,8 @@ dir="./entity" filename="RAttributeDefinitionData.h">
   <cpp:file>"RTextData.h"</cpp:file></cpp:include>
   <comment type="block">/** * Stores and manages all data that
   defines the geometry and * appearance of a block attribute
-  entity. * * \scriptable * \sharedPointerSupport * \copyable *
-  \ingroup entity */</comment>
+  definition entity. * * \scriptable * \sharedPointerSupport *
+  \copyable * \ingroup core */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -111,6 +111,45 @@ dir="./entity" filename="RAttributeDefinitionData.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </destructor>
+  <function_decl>
+  <type>
+    <name>double</name>
+  </type>
+  <name>getDistanceTo</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>point</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>range</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>draft</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>QString</name>

@@ -100,13 +100,31 @@ public:
     virtual const REntityData& getData() const = 0;
 
     /**
+     * Reimplemented by entities that are part of a block reference but not stored
+     * as part of the block definition (currently only block attributes).
+     * The default implementation returns false.
+     */
+//    virtual bool isPartOfBlockReference(REntity::Id blockRefId) const {
+//        Q_UNUSED(blockRefId)
+
+//        return false;
+//    }
+
+    /**
+     * Reimplemented by entities that do not want to be automatically painted
+     */
+//    virtual bool getAutoVisualize() const {
+//        return true;
+//    }
+
+    /**
      * \copydoc REntityData::isSelected
      */
     bool isSelected() const {
         return getData().isSelected();
     }
 
-    void setSelected(bool on);
+    virtual void setSelected(bool on);
 
     /**
      * \copydoc REntityData::setDrawOrder
@@ -162,6 +180,20 @@ public:
      */
     QString getBlockName() const {
         return getData().getBlockName();
+    }
+
+    /**
+     * \copydoc REntityData::setParentId
+     */
+    void setParentId(REntity::Id parentId) {
+        getData().setParentId(parentId);
+    }
+
+    /**
+     * \copydoc REntityData::getParentId
+     */
+    REntity::Id getParentId() const {
+        return getData().getParentId();
     }
 
     /**

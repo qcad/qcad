@@ -17,31 +17,33 @@
  * along with QCAD.
  */
 
-#ifndef RCLIPBOARDLISTENER_H
-#define RCLIPBOARDLISTENER_H
+#ifndef RTRANSACTIONLISTENERADAPTER_H_
+#define RTRANSACTIONLISTENERADAPTER_H_
 
-#include "core_global.h"
+#include <QObject>
 
-class RDocument;
-
-
+#include "RDocumentInterface.h"
+#include "RTransactionListener.h"
 
 /**
- * \brief Abstract base class for classes that are interested in the current 
- * clipboard contents and want to be notified whenever the clipboard changes.
- *
- * \ingroup core
+ * \scriptable
  */
-class QCADCORE_EXPORT RClipboardListener {
-public:
-    virtual ~RClipboardListener() {}
+class RTransactionListenerAdapter: public QObject, public RTransactionListener {
+Q_OBJECT
 
-    /**
-     * Called by the document whenever the current clipboard changes.
-     */
-    virtual void updateClipboardListener(const RDocument* document) = 0;
+public:
+    virtual ~RTransactionListenerAdapter() { }
+
+    virtual void updateTransactionListener(RDocument* document,
+        RTransaction* transaction=NULL) {
+
+        emit transactionUpdated(document, transaction);
+    }
+
+signals:
+    void transactionUpdated(RDocument* document, RTransaction* transaction);
 };
 
-Q_DECLARE_METATYPE(RClipboardListener*)
+Q_DECLARE_METATYPE(RTransactionListenerAdapter*)
 
 #endif

@@ -198,6 +198,9 @@ public:
         return statusChanges;
     }
 
+    /**
+     * \return Map of properties that are changed by this transaction.
+     */
     QMap<RObject::Id, QList<RPropertyChange> > getPropertyChanges() const {
         return propertyChanges;
     }

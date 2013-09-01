@@ -298,6 +298,21 @@ dir="./core" filename="REntity.h">
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * Reimplemented by entities that are
+  part of a block reference but not stored * as part of the block
+  definition (currently only block attributes). * The default
+  implementation returns false. */</comment>
+  <comment type="line">// virtual bool
+  isPartOfBlockReference(REntity::Id blockRefId) const {</comment>
+  <comment type="line">// Q_UNUSED(blockRefId)</comment>
+  <comment type="line">// return false;</comment>
+  <comment type="line">// }</comment>
+  <comment type="block">/** * Reimplemented by entities that do not
+  want to be automatically painted */</comment>
+  <comment type="line">// virtual bool getAutoVisualize() const
+  {</comment>
+  <comment type="line">// return true;</comment>
+  <comment type="line">// }</comment>
   <comment type="block">/** * \copydoc REntityData::isSelected
   */</comment>
   <function>
@@ -321,6 +336,7 @@ dir="./core" filename="REntity.h">
   </function>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>void</name>
   </type>
   <name>setSelected</name>
@@ -542,6 +558,64 @@ dir="./core" filename="REntity.h">
     </call>.
     <call>
       <name>getBlockName</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <comment type="block">/** * \copydoc REntityData::setParentId
+  */</comment>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setParentId</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>
+          <name>REntity</name>::
+          <name>Id</name></name>
+        </type>
+        <name>parentId</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>setParentId</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>parentId</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <comment type="block">/** * \copydoc REntityData::getParentId
+  */</comment>
+  <function>
+    <type>
+      <name>
+      <name>REntity</name>::
+      <name>Id</name></name>
+    </type>
+    <name>getParentId</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>getParentId</name>
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
   </function>

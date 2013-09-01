@@ -23,10 +23,11 @@
 #include "core_global.h"
 
 #include "RBox.h"
-#include "RDocument.h"
 #include "REntity.h"
 #include "RVector.h"
 #include "RBlock.h"
+
+class RDocument;
 
 /**
  * \scriptable
@@ -56,6 +57,8 @@ public:
         bool limited = true, double range = 0.0, bool draft = false) const;
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
+
+    //virtual void setSelected(bool on);
 
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);

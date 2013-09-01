@@ -554,6 +554,10 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Block References") : qsTr("Block Reference");
     case RS.EntityArc:
         return plural ? qsTr("Arcs") : qsTr("Arc");
+    case RS.EntityAttribute:
+        return plural ? qsTr("Attributes") : qsTr("Attribute");
+    case RS.EntityAttributeDefinition:
+        return plural ? qsTr("Attribute Definitions") : qsTr("Attribute Definition");
     case RS.EntityCircle:
         return plural ? qsTr("Circles") : qsTr("Circle");
     case RS.EntityDimAligned:

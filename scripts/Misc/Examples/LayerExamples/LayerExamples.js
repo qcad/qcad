@@ -21,7 +21,7 @@ include("../Examples.js");
 
 /**
  * \class LayerExamples
- * \brief Base class for all drawing examples.
+ * \brief Base class for all layer examples.
  */
 function LayerExamples(guiAction) {
     EAction.call(this, guiAction);

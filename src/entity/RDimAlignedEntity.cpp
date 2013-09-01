@@ -113,10 +113,7 @@ bool RDimAlignedEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RDimAlignedEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityDimAligned),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyDimensionLinePosX) {
+    if (propertyTypeId == PropertyDimensionLinePosX) {
         return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDimensionLinePosY) {
         return qMakePair(QVariant(data.definitionPoint.y), RPropertyAttributes());

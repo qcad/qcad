@@ -34,6 +34,9 @@ dir="./core" filename="RStorage.h">
   <cpp:file>"RBlock.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RBlockReferenceEntity.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RBox.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -394,6 +397,51 @@ dir="./core" filename="RStorage.h">
         <name>Id</name></name>
       </type>
       <name>blockId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * \return A set of all block attributes
+  which are not stored in the * block definition but as separate
+  entities on the same level as * the block reference. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSet
+    <argument_list>&lt;
+    <argument>
+      <name>
+      <name>REntity</name>::
+      <name>Id</name></name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryChildEntities</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>REntity</name>::
+        <name>Id</name></name>
+      </type>
+      <name>parentId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>bool</name>
+  </type>
+  <name>hasChildEntities</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>REntity</name>::
+        <name>Id</name></name>
+      </type>
+      <name>parentId</name>
     </decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>

@@ -154,10 +154,7 @@ bool RSolidEntity::setProperty(RPropertyTypeId propertyTypeId,
 QPair<QVariant, RPropertyAttributes> RSolidEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable,
         bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntitySolid),
-            RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyPoint1X) {
+    if (propertyTypeId == PropertyPoint1X) {
         return qMakePair(QVariant(data.getVertexAt(0).x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPoint1Y) {
         return qMakePair(QVariant(data.getVertexAt(0).y), RPropertyAttributes());

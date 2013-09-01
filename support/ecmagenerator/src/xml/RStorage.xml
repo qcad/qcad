@@ -115,6 +115,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="queryChildEntities" cppName="queryChildEntities"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="true">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="parentId" isConst="false" />
+      </variant>
+    </method>
+    <method name="hasChildEntities" cppName="hasChildEntities"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="true">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="parentId" isConst="false" />
+      </variant>
+    </method>
     <method name="queryBlockReferences"
     cppName="queryBlockReferences" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

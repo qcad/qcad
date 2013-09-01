@@ -1,4 +1,4 @@
 NAME = ModifyExamples
 TSDIR = .
-include(../../../translations.pri)
+include(../../../../translations.pri)
 SOURCES = ../ModifyExamples.js

@@ -6287,9 +6287,9 @@ AcDbMText
  72
      1
   3
-text, Arial, h5\p\fArial|b1|i0|c0|p0;text, Arial, h5, bold\p\fArial|b0|i1|c0|p0;text, Arial, h5, italic\p\fArial|b0|i0|c0|p0;\C1;text, Arial, h5, red\p\c0;special characters:\p%%d %%p %%c ≈ × ÷ Δ π ≡ ≠ Ω Ω ²³\P\fTimes New Roman|b0|i0|c0|p0;\C256;text
+text, Arial, h5\P\fArial|b1|i0|c0|p0;text, Arial, h5, bold\P\fArial|b0|i1|c0|p0;text, Arial, h5, italic\P\fArial|b0|i0|c0|p0;\C1;text, Arial, h5, red\P\c0;special characters:\P%%d %%p %%c ≈ × ÷ Δ π ≡ ≠ Ω Ω ²³\P\fTimes New Roman|b0|i0|c0|p0;\C256;text
   1
-, Times New Roman, h5\fArial|b0|i0|c0|p0;\c0;\p\H7.85714;text, Arial, h8
+, Times New Roman, h5\fArial|b0|i0|c0|p0;\c0;\P\H7.85714;text, Arial, h8
   7
 textstyle0
  73

@@ -42,8 +42,7 @@ public:
     /**
      * Called by the document whenever the current transaction stack changes.
      */
-    virtual void updateTransactionListener(const RDocument* document,
-        const RTransaction* transaction=NULL) = 0;
+    virtual void updateTransactionListener(RDocument* document, RTransaction* transaction=NULL) = 0;
 };
 
 Q_DECLARE_METATYPE(RTransactionListener*)

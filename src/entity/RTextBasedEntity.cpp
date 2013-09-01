@@ -103,10 +103,7 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
         RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyType) {
-        return qMakePair(QVariant(RS::EntityText), RPropertyAttributes(
-            RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertySimple) {
+    if (propertyTypeId == PropertySimple) {
         return qMakePair(QVariant(getData().simple), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionX) {
         return qMakePair(QVariant(getData().alignmentPoint.x), RPropertyAttributes());

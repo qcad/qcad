@@ -30,6 +30,8 @@
  * Text entity data class.
  *
  * \scriptable
+ * \sharedPointerSupport
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RTextData: public RTextBasedData {

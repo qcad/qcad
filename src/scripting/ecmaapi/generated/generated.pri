@@ -6,8 +6,10 @@ HEADERS += \
     $$PWD/REcmaArc.h \
     $$PWD/REcmaArcData.h \
     $$PWD/REcmaArcEntity.h \
+    $$PWD/REcmaAttributeData.h \
     $$PWD/REcmaAttributeDefinitionData.h \
     $$PWD/REcmaAttributeDefinitionEntity.h \
+    $$PWD/REcmaAttributeEntity.h \
     $$PWD/REcmaAutoLoadEcma.h \
     $$PWD/REcmaBlock.h \
     $$PWD/REcmaBlockListener.h \
@@ -174,8 +176,10 @@ HEADERS += \
     $$PWD/REcmaShape.h \
     $$PWD/REcmaSharedPointerArc.h \
     $$PWD/REcmaSharedPointerArcEntity.h \
+    $$PWD/REcmaSharedPointerAttributeData.h \
     $$PWD/REcmaSharedPointerAttributeDefinitionData.h \
     $$PWD/REcmaSharedPointerAttributeDefinitionEntity.h \
+    $$PWD/REcmaSharedPointerAttributeEntity.h \
     $$PWD/REcmaSharedPointerBlock.h \
     $$PWD/REcmaSharedPointerBlockReferenceEntity.h \
     $$PWD/REcmaSharedPointerBox.h \
@@ -278,6 +282,7 @@ HEADERS += \
     $$PWD/REcmaTransaction.h \
     $$PWD/REcmaTransactionEvent.h \
     $$PWD/REcmaTransactionListener.h \
+    $$PWD/REcmaTransactionListenerAdapter.h \
     $$PWD/REcmaTransformation.h \
     $$PWD/REcmaTranslation.h \
     $$PWD/REcmaTriangle.h \
@@ -299,8 +304,10 @@ SOURCES += \
     $$PWD/REcmaArc.cpp \
     $$PWD/REcmaArcData.cpp \
     $$PWD/REcmaArcEntity.cpp \
+    $$PWD/REcmaAttributeData.cpp \
     $$PWD/REcmaAttributeDefinitionData.cpp \
     $$PWD/REcmaAttributeDefinitionEntity.cpp \
+    $$PWD/REcmaAttributeEntity.cpp \
     $$PWD/REcmaAutoLoadEcma.cpp \
     $$PWD/REcmaBlock.cpp \
     $$PWD/REcmaBlockListener.cpp \
@@ -467,8 +474,10 @@ SOURCES += \
     $$PWD/REcmaShape.cpp \
     $$PWD/REcmaSharedPointerArc.cpp \
     $$PWD/REcmaSharedPointerArcEntity.cpp \
+    $$PWD/REcmaSharedPointerAttributeData.cpp \
     $$PWD/REcmaSharedPointerAttributeDefinitionData.cpp \
     $$PWD/REcmaSharedPointerAttributeDefinitionEntity.cpp \
+    $$PWD/REcmaSharedPointerAttributeEntity.cpp \
     $$PWD/REcmaSharedPointerBlock.cpp \
     $$PWD/REcmaSharedPointerBlockReferenceEntity.cpp \
     $$PWD/REcmaSharedPointerBox.cpp \
@@ -571,6 +580,7 @@ SOURCES += \
     $$PWD/REcmaTransaction.cpp \
     $$PWD/REcmaTransactionEvent.cpp \
     $$PWD/REcmaTransactionListener.cpp \
+    $$PWD/REcmaTransactionListenerAdapter.cpp \
     $$PWD/REcmaTransformation.cpp \
     $$PWD/REcmaTranslation.cpp \
     $$PWD/REcmaTriangle.cpp \

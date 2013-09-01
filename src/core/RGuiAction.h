@@ -282,8 +282,7 @@ public:
 
     static void clear();
 
-    virtual void updateTransactionListener(const RDocument* document,
-        const RTransaction* transaction = NULL);
+    virtual void updateTransactionListener(RDocument* document, RTransaction* transaction = NULL);
     virtual void updateSelectionListener(RDocumentInterface* documentInterface);
     virtual void updateFocus(RDocumentInterface* documentInterface);
 

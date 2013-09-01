@@ -1,4 +1,4 @@
 NAME = CommandLineExamples
 TSDIR = .
-include(../../../translations.pri)
+include(../../../../translations.pri)
 SOURCES = ../CommandLineExamples.js

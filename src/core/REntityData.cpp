@@ -28,6 +28,7 @@ REntityData::REntityData(RDocument* document) :
     drawOrder(0), 
     layerId(RLayer::INVALID_ID), 
     blockId(RBlock::INVALID_ID), 
+    parentId(REntity::INVALID_ID),
     linetypeId(RLinetype::INVALID_ID),
     lineweight(RLineweight::WeightInvalid),
     color() {

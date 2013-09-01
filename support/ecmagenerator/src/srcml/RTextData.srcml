@@ -33,7 +33,8 @@ dir="./entity" filename="RTextData.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <comment type="block">/** * Text entity data class. * *
-  \scriptable * \ingroup entity */</comment>
+  \scriptable * \sharedPointerSupport * \copyable * \ingroup entity
+  */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>

@@ -33,6 +33,20 @@ RAttributeDefinitionData::RAttributeDefinitionData(const RTextBasedData& textDat
 
 }
 
+double RAttributeDefinitionData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
+    if (document==NULL) {
+        return RNANDOUBLE;
+    }
+
+    RBlock::Id currentBlockId = document->getCurrentBlockId();
+
+    if (getBlockId()==currentBlockId) {
+        return RTextBasedData::getDistanceTo(point, limited, range, draft);
+    }
+
+    return RNANDOUBLE;
+}
+
 QDebug operator<<(QDebug dbg, const RAttributeDefinitionData& t) {
     dbg.nospace() << "RAttributeDefinitionData("
                   << "text: " << t.getEscapedText()
