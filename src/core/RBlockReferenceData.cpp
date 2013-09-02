@@ -247,6 +247,12 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
         if (entity.isNull()) {
             continue;
         }
+
+        // ignore attribute definitions since they are not rendered in the
+        // context of a block reference:
+        if (entity->getType()==RS::EntityAttributeDefinition) {
+            continue;
+        }
         ret.append(entity->getShapes(queryBox));
     }
     return ret;

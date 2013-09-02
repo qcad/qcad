@@ -658,10 +658,6 @@ void RMemoryStorage::deselectEntities(const QSet<REntity::Id>& entityIds,
     for (it = entityIds.constBegin(); it != entityIds.constEnd(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (!e.isNull() && e->isSelected()) {
-//            if (affectedEntities!=NULL) {
-//                affectedEntities->insert(e->getId());
-//            }
-//            e->setSelected(false);
             setEntitySelected(e, false, affectedEntities);
         }
     }
@@ -672,8 +668,8 @@ bool RMemoryStorage::hasSelection() const {
     QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && !e->isUndone() && e->isSelected() && e->getBlockId()
-                == currentBlock) {
+        if (!e.isNull() && !e->isUndone() && e->isSelected() &&
+            e->getBlockId() == currentBlock) {
             return true;
         }
     }
