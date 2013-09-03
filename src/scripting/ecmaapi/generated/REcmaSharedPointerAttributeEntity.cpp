@@ -183,10 +183,6 @@
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyPositionZ),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("PropertySimple",
-                qScriptValueFromValue(&engine, RAttributeEntity::PropertySimple),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
             ctor.setProperty("PropertyTag",
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyTag),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

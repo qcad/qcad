@@ -60,7 +60,6 @@ public:
     static RPropertyTypeId PropertyPositionX;
     static RPropertyTypeId PropertyPositionY;
     static RPropertyTypeId PropertyPositionZ;
-    static RPropertyTypeId PropertySimple;
     static RPropertyTypeId PropertyTag;
     static RPropertyTypeId PropertyText;
     static RPropertyTypeId PropertyVAlign;

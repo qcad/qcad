@@ -311,7 +311,7 @@ dir="./operations" filename="RAddObjectsOperation.h">
   <type>
     <name>void</name>
   </type>
-  <name>nextCycle</name>
+  <name>endCycle</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>

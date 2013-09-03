@@ -128,8 +128,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyPositionZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertySimple" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
     <property name="PropertyTag" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyText" type="RPropertyTypeId"

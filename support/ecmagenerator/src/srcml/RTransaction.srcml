@@ -750,7 +750,7 @@ dir="./core" filename="RTransaction.h">
   <type>
     <name>void</name>
   </type>
-  <name>nextCycle</name>
+  <name>endCycle</name>
   <parameter_list>()</parameter_list>;</function_decl></public>
   <protected>protected: 
   <function_decl>

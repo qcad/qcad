@@ -58,7 +58,7 @@ public:
     }
 
     QString getPrompt() const {
-        return tag;
+        return prompt;
     }
 
     void setPrompt(const QString& p) {

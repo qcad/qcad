@@ -80,6 +80,7 @@ Transform.prototype.getOperation = function(preview, selectResult) {
             if (isNull(entity)) {
                 continue;
             }
+            entity = entity.data();
 
             // copy: assign new IDs
             if (this.copies>0) {

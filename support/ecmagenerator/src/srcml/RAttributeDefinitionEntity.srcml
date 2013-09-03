@@ -220,14 +220,6 @@ dir="./entity" filename="RAttributeDefinitionEntity.h">
       <name>static</name>
       <name>RPropertyTypeId</name>
     </type>
-    <name>PropertySimple</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
     <name>PropertyTag</name>
   </decl>;</decl_stmt>
   <decl_stmt>

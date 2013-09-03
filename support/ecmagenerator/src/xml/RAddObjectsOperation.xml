@@ -43,7 +43,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="nextCycle" cppName="nextCycle" specifier="public"
+    <method name="endCycle" cppName="endCycle" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
