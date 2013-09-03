@@ -666,8 +666,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         }
 
         if (oldId!=RObject::INVALID_ID) {
-            qDebug() << "oldId: " << oldId;
-            qDebug() << "object->getId(): " << object->getId();
             cloneIds.insert(oldId, object->getId());
         }
 
