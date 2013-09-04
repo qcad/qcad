@@ -44,6 +44,7 @@ void RMemoryStorage::clear() {
     boundingBox = RBox();
     objectMap.clear();
     entityMap.clear();
+    blockEntityMap.clear();
     blockMap.clear();
     layerMap.clear();
     transactionMap.clear();
@@ -226,8 +227,8 @@ QSet<REntity::Id> RMemoryStorage::querySelectedEntities() {
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && !e->isUndone() && e->isSelected() && e->getBlockId()
-                == currentBlock) {
+        if (!e.isNull() && !e->isUndone() && e->isSelected() &&
+            e->getBlockId() == currentBlock) {
             result.insert(e->getId());
         }
     }
@@ -252,6 +253,23 @@ QSet<REntity::Id> RMemoryStorage::queryLayerEntities(RLayer::Id layerId, bool al
  * \todo store map block id -> entity ids for faster access
  */
 QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
+    if (!blockEntityMap.contains(blockId)) {
+        return QSet<REntity::Id>();
+    }
+
+    QSet<REntity::Id> result;
+    QList<QSharedPointer<REntity> > candidates = blockEntityMap.values(blockId);
+    QList<QSharedPointer<REntity> >::iterator it;
+    for (it=candidates.begin(); it!=candidates.end(); it++) {
+        QSharedPointer<REntity> e = *it;
+        if (!e.isNull() && !e->isUndone()) {
+            result.insert(e->getId());
+        }
+    }
+    return result;
+
+    /*
+    // TODO
     QSet<REntity::Id> result;
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
@@ -261,6 +279,7 @@ QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
         }
     }
     return result;
+    */
 }
 
 QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId) {
@@ -802,7 +821,8 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     //QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
     if (!entity.isNull()) {
-        entityMap[object->getId()] = entity;
+        entityMap[entity->getId()] = entity;
+        blockEntityMap.insert(entity->getBlockId(), entity);
         setMaxDrawOrder(qMax(entity->getDrawOrder()+1, getMaxDrawOrder()));
     }
 
@@ -867,6 +887,11 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
     }
     if (layerMap.contains(objectId)) {
         layerMap.remove(objectId);
+    }
+
+    QSharedPointer<REntity> entity = queryEntityDirect(objectId);
+    if (!entity.isNull()) {
+        blockEntityMap.remove(entity->getBlockId(), entity);
     }
 
     return true;

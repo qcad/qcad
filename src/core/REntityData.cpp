@@ -175,8 +175,8 @@ RLinetype::Id REntityData::getLinetypeId(bool resolve,
 
         else if (document->isByBlock(linetypeId)) {
             if (blockRefStack.isEmpty()) {
-                qWarning() << "REntityData::getColor: "
-                              "color is ByBlock but entity not in block reference";
+//                qWarning() << "REntityData::getColor: "
+//                              "color is ByBlock but entity not in block reference";
                 return RLinetype::INVALID_ID;
             }
             return blockRefStack.top()->getLinetypeId(true, blockRefStack);

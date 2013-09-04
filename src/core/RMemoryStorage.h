@@ -161,6 +161,7 @@ protected:
     RBox boundingBox;
     QHash<RObject::Id, QSharedPointer<RObject> > objectMap;
     QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
+    QMultiHash<RBlock::Id, QSharedPointer<REntity> > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
     QHash<int, RTransaction> transactionMap;

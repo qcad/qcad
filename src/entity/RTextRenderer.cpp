@@ -121,6 +121,9 @@ void RTextRenderer::renderSimple() {
     richText = "";
 
     RVector pos = textData.getAlignmentPoint();
+    if (textData.getHAlign()==RS::HAlignFit) {
+        pos = textData.getPosition();
+    }
     QString text = textData.getEscapedText();
     double textHeight = textData.getTextHeight();
     RS::VAlign verticalAlignment = textData.getVAlign();
@@ -765,6 +768,17 @@ void RTextRenderer::render() {
             textBlock += QChar(reg.cap(1).toInt(0, 16));
             continue;
         }
+
+//        // unicode (5 hex digits):
+//        reg.setPattern(rxUnicodeM);
+//        if (reg.exactMatch(formatting)) {
+//            uint code = reg.cap(1).toInt(0, 16);
+//            qDebug() << QString("M code: %1").arg(code, 0, 16);
+//            QString c = QString::fromUcs4(&code, 1);
+//            qDebug() << QString("M char: %1").arg(c);
+//            textBlock += c;
+//            continue;
+//        }
 
         // curly braket open:
         reg.setPattern(rxCurlyOpen);
