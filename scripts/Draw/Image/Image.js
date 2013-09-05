@@ -99,7 +99,7 @@ Image.prototype.getFileName = function() {
         // ignore unsupported formats:
         if (format=="ico" || format=="mng" ||
             format=="pbm" || format=="pgm" || format=="ppm" ||
-            format=="svg" || format==="svgz" ||
+            format=="svg" || format=="svgz" ||
             format=="xbm" || format=="xpm") {
             continue;
         }
