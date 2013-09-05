@@ -91,23 +91,23 @@ Image.prototype.getFileName = function() {
         var formatAlt = "";
 
         // ignore format aliases:
-        if (format==="jpg" ||
-            format==="tif") {
+        if (format=="jpg" ||
+            format=="tif") {
             continue;
         }
 
         // ignore unsupported formats:
-        if (format==="ico" || format==="mng" ||
-            format==="pbm" || format==="pgm" || format==="ppm" ||
-            format==="svg" || format==="svgz" ||
-            format==="xbm" || format==="xpm") {
+        if (format=="ico" || format=="mng" ||
+            format=="pbm" || format=="pgm" || format=="ppm" ||
+            format=="svg" || format==="svgz" ||
+            format=="xbm" || format=="xpm") {
             continue;
         }
 
-        if (format==="jpeg") {
+        if (format=="jpeg") {
             formatAlt = "jpg";
         }
-        else if (format==="tiff") {
+        else if (format=="tiff") {
             formatAlt = "tif";
         }
 
