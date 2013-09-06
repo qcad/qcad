@@ -10,9 +10,10 @@ var credits =
         [ "Tanaka Hidemune", "Japanese translation and user reference manual." ],
     ],
     [
-        "Testing and Feedback",
-        "Clive Tubb",
+        "Testing, feedback and minor fixes",
+        "Clive Tubb ('clive')",
         "Harald Huesges ('Husky')",
+        "Tamas TEVESZ ('kazmer')",
         "many others",
     ]
 ];

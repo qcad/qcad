@@ -410,6 +410,24 @@ function isBlockReferenceEntity(obj) {
 }
 
 /**
+ * Checks if the given object is an attribute definition entity.
+ *
+ * \return true if the given object is an attribute definition entity (RAttributeDefinitionEntity).
+ */
+function isAttributeDefinitionEntity(obj) {
+    return isOfType(obj, RAttributeDefinitionEntity) || isOfType(obj, RAttributeDefinitionEntityPointer);
+}
+
+/**
+ * Checks if the given object is an attribute entity.
+ *
+ * \return true if the given object is an attribute entity (RAttributeEntity).
+ */
+function isAttributeEntity(obj) {
+    return isOfType(obj, RAttributeEntity) || isOfType(obj, RAttributeEntityPointer);
+}
+
+/**
  * Checks if the given object is a leader entity.
  * 
  * \return true if the given object is a leader entity

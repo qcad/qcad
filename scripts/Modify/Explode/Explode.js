@@ -155,6 +155,11 @@ Explode.prototype.beginEvent = function() {
             }
         }
 
+        // explode attribute entities into texts:
+        else if (isAttributeEntity(entity)) {
+            newEntities.push(new RTextEntity(document, new RTextData(entity.getData())));
+        }
+
         // explode block reference into contained entities:
         else if (isBlockReferenceEntity(entity)) {
             var data = entity.getData();
@@ -165,6 +170,11 @@ Explode.prototype.beginEvent = function() {
                     continue;
                 }
 
+                // ignore attribute definitions:
+                if (isAttributeDefinitionEntity(subEntity)) {
+                    continue;
+                }
+
                 var e = subEntity.clone();
                 storage.setObjectId(e, RObject.INVALID_ID);
                 e.setBlockId(document.getCurrentBlockId());
@@ -172,6 +182,7 @@ Explode.prototype.beginEvent = function() {
                 newEntities.push(e);
             }
         }
+
 
         // add explosion result and delete original:
         if (newShapes.length!==0 || newEntities.length!==0) {
