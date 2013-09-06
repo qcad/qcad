@@ -33,7 +33,7 @@ class RExporter;
  *
  * \scriptable
  * \sharedPointerSupport
- * \ingroup core
+ * \ingroup entity
  */
 class QCADENTITY_EXPORT RAttributeDefinitionEntity: public RTextBasedEntity {
 

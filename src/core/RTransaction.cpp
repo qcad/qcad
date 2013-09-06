@@ -488,6 +488,9 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         // (old entity is queried from storage since we pass the ID here):
         deleteObject(entity->getId(), entity->getDocument());
         addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
+
+        // draw order was set to top value automatically by
+        // saveObject of RMemoryStorage:
         clone->setDrawOrder(entity->getDrawOrder());
         return true;
     }

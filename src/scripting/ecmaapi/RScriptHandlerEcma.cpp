@@ -48,6 +48,8 @@
 #include "REcmaArcData.h"
 #include "REcmaArcEntity.h"
 #include "REcmaAutoLoadEcma.h"
+#include "REcmaAttributeData.h"
+#include "REcmaAttributeEntity.h"
 #include "REcmaAttributeDefinitionData.h"
 #include "REcmaAttributeDefinitionEntity.h"
 #include "REcmaBlock.h"
@@ -203,6 +205,7 @@
 #include "REcmaSharedPointerArc.h"
 #include "REcmaSharedPointerArcEntity.h"
 #include "REcmaSharedPointerAttributeDefinitionEntity.h"
+#include "REcmaSharedPointerAttributeEntity.h"
 #include "REcmaSharedPointerBlock.h"
 #include "REcmaSharedPointerBlockReferenceEntity.h"
 #include "REcmaSharedPointerBox.h"
@@ -569,10 +572,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaBlockReferenceEntity::init(*engine);
     REcmaSharedPointerBlockReferenceEntity::init(*engine);
 
-    REcmaAttributeDefinitionData::init(*engine);
-    REcmaAttributeDefinitionEntity::init(*engine);
-    REcmaSharedPointerAttributeDefinitionEntity::init(*engine);
-
     REcmaPointData::init(*engine);
     REcmaPointEntity::init(*engine);
     REcmaSharedPointerPointEntity::init(*engine);
@@ -607,12 +606,21 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaTextBasedData::init(*engine);
     REcmaTextBasedEntity::init(*engine);
-    REcmaTextData::init(*engine);
-    REcmaTextEntity::init(*engine);
     REcmaSharedPointerTextBasedData::init(*engine);
     REcmaSharedPointerTextBasedEntity::init(*engine);
+
+    REcmaTextData::init(*engine);
+    REcmaTextEntity::init(*engine);
     REcmaSharedPointerTextData::init(*engine);
     REcmaSharedPointerTextEntity::init(*engine);
+
+    REcmaAttributeDefinitionData::init(*engine);
+    REcmaAttributeDefinitionEntity::init(*engine);
+    REcmaSharedPointerAttributeDefinitionEntity::init(*engine);
+
+    REcmaAttributeData::init(*engine);
+    REcmaAttributeEntity::init(*engine);
+    REcmaSharedPointerAttributeEntity::init(*engine);
 
     REcmaLeaderData::init(*engine);
     REcmaLeaderEntity::init(*engine);

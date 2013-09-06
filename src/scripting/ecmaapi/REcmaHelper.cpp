@@ -20,6 +20,8 @@
 #include <QVariantMap>
 
 #include "RArcEntity.h"
+#include "RAttributeEntity.h"
+#include "RAttributeDefinitionEntity.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
 #include "RDimAlignedEntity.h"
@@ -200,11 +202,20 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RShape* cppValue)
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<REntity>& cppValue) {
     QScriptValue v;
 
+    v = tryCast<RLineEntity>(engine, cppValue);
+    if (v.isValid()) return v;
     v = tryCast<RArcEntity>(engine, cppValue);
     if (v.isValid()) return v;
-    v = tryCast<RBlockReferenceEntity>(engine, cppValue);
-    if (v.isValid()) return v;
     v = tryCast<RCircleEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RTextEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+
+    v = tryCast<RAttributeEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RAttributeDefinitionEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RBlockReferenceEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RDimAlignedEntity>(engine, cppValue);
     if (v.isValid()) return v;
@@ -226,8 +237,6 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     if (v.isValid()) return v;
     v = tryCast<RLeaderEntity>(engine, cppValue);
     if (v.isValid()) return v;
-    v = tryCast<RLineEntity>(engine, cppValue);
-    if (v.isValid()) return v;
     v = tryCast<RPointEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RPolylineEntity>(engine, cppValue);
@@ -236,8 +245,6 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     if (v.isValid()) return v;
     v = tryCast<RSplineEntity>(engine, cppValue);
     if (v.isValid()) return v;
-    v = tryCast<RTextEntity>(engine, cppValue);
-    if (v.isValid()) return v;
 
     return qScriptValueFromValue(engine, cppValue);
 }
@@ -245,6 +252,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue) {
     QScriptValue v;
 
+    v = tryCast<RAttributeEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RAttributeDefinitionEntity>(engine, cppValue);
+    if (v.isValid()) return v;
     v = tryCast<RArcEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RBlockReferenceEntity>(engine, cppValue);
@@ -290,6 +301,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<REntityData>& cppValue) {
     QScriptValue v;
 
+    v = tryCast<RAttributeData>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RAttributeDefinitionData>(engine, cppValue);
+    if (v.isValid()) return v;
     v = tryCast<RArcData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RBlockReferenceData>(engine, cppValue);
