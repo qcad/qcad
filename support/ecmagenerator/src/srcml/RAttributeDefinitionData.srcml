@@ -193,7 +193,7 @@ dir="./entity" filename="RAttributeDefinitionData.h">
     <block>{ 
     <return>return 
     <expr>
-      <name>tag</name>
+      <name>prompt</name>
     </expr>;</return>}</block>
   </function>
   <function>

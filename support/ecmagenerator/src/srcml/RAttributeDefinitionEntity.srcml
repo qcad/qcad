@@ -34,7 +34,7 @@ dir="./entity" filename="RAttributeDefinitionEntity.h">
   <class_decl>class 
   <name>RExporter</name>;</class_decl>
   <comment type="block">/** * Block attribute definition entity. *
-  * \scriptable * \sharedPointerSupport * \ingroup core
+  * \scriptable * \sharedPointerSupport * \ingroup entity
   */</comment>
   <class>class 
   <macro>
