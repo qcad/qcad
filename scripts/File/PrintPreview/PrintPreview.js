@@ -206,6 +206,7 @@ PrintPreview.prototype.mouseReleaseEvent = function(event) {
 PrintPreview.prototype.mouseMoveEvent = function(event) {
     if (this.state != PrintPreview.State.SettingOffset) {
         DefaultAction.prototype.mouseMoveEvent.call(this, event);
+        return;
     }
 
     if (event.buttons().valueOf() & Qt.LeftButton.valueOf() &&
