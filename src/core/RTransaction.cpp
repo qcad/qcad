@@ -488,6 +488,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         // (old entity is queried from storage since we pass the ID here):
         deleteObject(entity->getId(), entity->getDocument());
         addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
+        clone->setDrawOrder(entity->getDrawOrder());
         return true;
     }
 
@@ -665,27 +666,30 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             qCritical() << *object;
         }
 
-        if (oldId!=RObject::INVALID_ID) {
-            cloneIds.insert(oldId, object->getId());
-        }
+        else {
 
-        addAffectedObject(object);
+            if (oldId!=RObject::INVALID_ID) {
+                cloneIds.insert(oldId, object->getId());
+            }
 
-        if (object->getDocument()!=NULL) {
-            // only add to si, if not linked storage / preview
-            if (!storageIsLinked) {
-                QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
-                if (!spatialIndexDisabled && !entity.isNull()) {
-                    QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
-                    if (blockRef.isNull() || blockRef->getReferencedBlockId()!=RObject::INVALID_ID) {
-                        object->getDocument()->addToSpatialIndex(entity);
+            addAffectedObject(object);
+
+            if (object->getDocument()!=NULL) {
+                // only add to si, if not linked storage / preview
+                if (!storageIsLinked) {
+                    QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+                    if (!spatialIndexDisabled && !entity.isNull()) {
+                        QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+                        if (blockRef.isNull() || blockRef->getReferencedBlockId()!=RObject::INVALID_ID) {
+                            object->getDocument()->addToSpatialIndex(entity);
+                        }
                     }
                 }
             }
-        }
 
-        if (!objectHasChanged) {
-            statusChanges.insert(object->getId());
+            if (!objectHasChanged) {
+                statusChanges.insert(object->getId());
+            }
         }
     }
     if (!ret) {
