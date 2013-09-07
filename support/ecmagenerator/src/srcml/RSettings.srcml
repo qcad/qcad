@@ -346,6 +346,21 @@ dir="./core" filename="RSettings.h">
   <function_decl>
   <type>
     <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>isQt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>majorVersion</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
     <name>QString</name>
   </type>
   <name>getCompilerVersion</name>

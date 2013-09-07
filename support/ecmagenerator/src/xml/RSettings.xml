@@ -170,6 +170,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="isQt" cppName="isQt" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="majorVersion"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getCompilerVersion" cppName="getCompilerVersion"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

@@ -230,9 +230,9 @@ CommandLine.init = function(basePath) {
         leCommand.clear();
 
         var historySize = RSettings.getIntValue("Console/HistorySize", 1000);
-        var buf = teHistory.plainText.split("\n");
+        var buf = teHistory.toPlainText().split("\n");
         if (buf.length > historySize) {
-            teHistory.plainText = buf.slice(-historySize).join("\n");
+            teHistory.setPlainText(buf.slice(-historySize).join("\n"));
         }
         leCommand.setFocus();
     });

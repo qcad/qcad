@@ -1473,3 +1473,18 @@ function fixSymbolTableName(name) {
 
     return name;
 }
+
+function getClipboard() {
+    if (RSettings.isQt(5)) {
+        return QGuiApplication.clipboard()
+    }
+    else {
+        return QApplication.clipboard();
+    }
+}
+
+if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
+    QPlainTextEdit.prototype.toPlainText = function() {
+        return this.plainText;
+    }
+}

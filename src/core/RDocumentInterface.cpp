@@ -323,7 +323,7 @@ bool RDocumentInterface::hasCurrentAction() {
         return true;
     }
 
-    return NULL;
+    return false;
 }
 
 void RDocumentInterface::suspend() {

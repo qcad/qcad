@@ -17,8 +17,9 @@
  * along with QCAD.
  */
 
-include("../../../WidgetFactory.js");
-include("../../../map.js");
+include("scripts/library.js");
+include("scripts/map.js");
+include("scripts/WidgetFactory.js");
 include("CharacterMapDialog.js");
 
 /**
@@ -78,6 +79,19 @@ function TextDialog() {
     this.initialColor = new RColor();
 }
 
+TextDialog.prototype.getTextDocument = function() {
+    if (RSettings.isQt(5)) {
+        return this.textEdit.document;
+    }
+    else {
+        return this.textEdit.document();
+    }
+}
+
+TextDialog.prototype.getSourceDocument = function() {
+    return this.sourceEdit.document();
+}
+
 TextDialog.prototype.show =  function(textDataIn) {
     this.dialog = WidgetFactory.createDialog(TextDialog.basePath, "TextDialog.ui", EAction.getMainWindow());
     this.dialog.windowIcon = new QIcon(TextDialog.basePath + "/../Text.svg");
@@ -132,11 +146,12 @@ TextDialog.prototype.show =  function(textDataIn) {
     this.textEdit.currentCharFormatChanged.connect(this, "currentCharFormatChanged");
     this.textEdit.cursorPositionChanged.connect(this, "cursorPositionChanged");
 
-    this.textEdit.document().undoAvailable.connect(this.actionUndo, "setEnabled");
-    this.textEdit.document().redoAvailable.connect(this.actionRedo, "setEnabled");
+    var td = this.getTextDocument();
+    td.undoAvailable.connect(this.actionUndo, "setEnabled");
+    td.redoAvailable.connect(this.actionRedo, "setEnabled");
 
-    this.actionUndo.setEnabled(this.textEdit.document().isUndoAvailable());
-    this.actionRedo.setEnabled(this.textEdit.document().isRedoAvailable());
+    this.actionUndo.setEnabled(td.isUndoAvailable());
+    this.actionRedo.setEnabled(td.isRedoAvailable());
 
     this.actionUndo.triggered.connect(this.textEdit, "undo");
     this.actionRedo.triggered.connect(this.textEdit, "redo");
@@ -164,7 +179,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     var buttonBottomCenter = this.dialog.findChild("AlignBottomCenter");
     var buttonBottomRight = this.dialog.findChild("AlignBottomRight");
 
-    QApplication.clipboard().dataChanged.connect(this, "clipboardDataChanged");
+    getClipboard().dataChanged.connect(this, "clipboardDataChanged");
 
     // sync rich text / source:
     this.tabWidget["currentChanged(int)"].connect(this, "tabChanged");
@@ -302,7 +317,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     // analize dialog input:
     var textDataOut = isNull(textDataIn) ? new RTextData() : textDataIn;
     textDataOut.setSimple(cbSimpleText.checked);
-    textDataOut.setText(this.sourceEdit.plainText);
+    textDataOut.setText(this.sourceEdit.toPlainText());
     textDataOut.setFontName(comboMainFont.currentFont.family());
     textDataOut.setBold(checkMainBold.checked);
     textDataOut.setItalic(checkMainItalic.checked);
@@ -369,7 +384,7 @@ TextDialog.prototype.setupEditActions = function() {
     a.shortcut = QKeySequence.Paste;
     this.dialog.findChild("Paste").setDefaultAction(a);
 
-    this.actionPaste.setEnabled(!QApplication.clipboard().text().isEmpty());
+    this.actionPaste.setEnabled(!getClipboard().text().isEmpty());
 };
 
 TextDialog.prototype.setupTextActions = function() {
@@ -480,7 +495,7 @@ TextDialog.prototype.mainFontChanged = function() {
         this.updateRichText(true);
     }
 
-    var document = this.textEdit.document();
+    var document = this.getTextDocument();
     var html = document.toHtml();
 
 //    qDebug("\n\nmainFontChanged: html before fix: ", html, "\n\n");
@@ -514,7 +529,7 @@ TextDialog.prototype.mainFontChanged = function() {
 
     this.textEdit.setHtml(html);
 
-//    qDebug("\n\nnew html: ", this.textEdit.document().toHtml(), "\n\n");
+//    qDebug("\n\nnew html: ", this.getTextDocument().toHtml(), "\n\n");
 
     this.updateSource(true);
 
@@ -810,7 +825,7 @@ TextDialog.prototype.clipboardDataChanged = function() {
         return;
     }
 
-    this.actionPaste.setEnabled(!QApplication.clipboard().text().isEmpty());
+    this.actionPaste.setEnabled(!getClipboard().text().isEmpty());
 };
 
 TextDialog.prototype.tabChanged = function(index) {
@@ -829,15 +844,15 @@ TextDialog.prototype.tabChanged = function(index) {
  * Updates the source based on the rich text edit.
  */
 TextDialog.prototype.updateSource = function(force) {
-    if (this.textEdit.document().modified || force===true) {
+    if (this.getTextDocument().modified || force===true) {
         var html = this.textEdit.html;
         html = this.fixHtml(html);
         var textDocument = new QTextDocument();
         textDocument.setHtml(html);
-        textDocument.defaultFont = this.textEdit.document().defaultFont;
+        textDocument.defaultFont = this.getTextDocument().defaultFont;
         var source = RTextBasedData.toEscapedText(textDocument, this.initialColor, this.fontHeightFactor);
         this.sourceEdit.setPlainText(source);
-        this.textEdit.document().modified = false;
+        this.getTextDocument().modified = false;
     }
 };
 
@@ -845,13 +860,13 @@ TextDialog.prototype.updateSource = function(force) {
  * Updates the rich text edit based on the source.
  */
 TextDialog.prototype.updateRichText = function(force) {
-    if (this.sourceEdit.document().modified || force===true) {
-        var source = this.sourceEdit.plainText;
+    if (this.getSourceDocument().modified || force===true) {
+        var source = this.getSourceDocument().toPlainText();
         var richText = RTextBasedData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
 //        qDebug("HTML: \n\n", richText, "\n\n");
         this.textEdit.setHtml(richText);
 //        qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");
-        this.sourceEdit.document().modified = false;
+        this.getSourceDocument().modified = false;
     }
 };
 

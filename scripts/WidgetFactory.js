@@ -213,7 +213,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             value = c.text;
         }
         if (isOfType(c, QPlainTextEdit)) {
-            value = c.plainText;
+            value = c.toPlainText();
         }
         if (isOfType(c, RMathLineEdit)) {
             //value = [c.text, c.getDefaultUnit()];
@@ -495,10 +495,10 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             c.textChanged.connect(WidgetFactory.topLevelWidget,
                     "slotSettingChanged");
             if (isNull(c.defaultValue)) {
-                c.setProperty("defaultValue", c.plainText);
+                c.setProperty("defaultValue", c.toPlainText());
             }
             if (!isNull(value)) {
-                c.plainText = value;
+                c.setPlainText(value);
             }
             continue;
         }        

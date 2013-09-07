@@ -157,7 +157,11 @@ Explode.prototype.beginEvent = function() {
 
         // explode attribute entities into texts:
         else if (isAttributeEntity(entity)) {
-            newEntities.push(new RTextEntity(document, new RTextData(entity.getData())));
+            // create text data from attribute data:
+            var d = new RTextData(entity.getData());
+            // unlink from parent (block ref):
+            d.setParentId(RObjectId.INVALID_ID);
+            newEntities.push(new RTextEntity(document, d));
         }
 
         // explode block reference into contained entities:

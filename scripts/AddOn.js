@@ -472,7 +472,7 @@ AddOn.getAddOns = function(dir) {
     } else {
         fileMenuList = new QDir(dir).entryInfoList(dirFilter, sortFlags);
     }
-    
+
     for (i=0; i<fileMenuList.length; ++i) {
         var dirInfo = fileMenuList[i];
         if (!dirInfo.exists()) {
@@ -482,6 +482,10 @@ AddOn.getAddOns = function(dir) {
         if (AddOn.isIgnored(dirInfo.filePath())) {
             continue;
         }
+
+//        if (dirInfo.fileName() === "LayerList") {
+//            debugger;
+//        }
 
         // don't dive into translation, doc or Tests folders:
         if (dirInfo.fileName() === "ts" || dirInfo.fileName() === "doc" || dirInfo.fileName() === "Tests") {
@@ -494,6 +498,13 @@ AddOn.getAddOns = function(dir) {
         }
         else {
             if (fileInfo.exists() && !AddOn.isIgnored(fileInfo.absoluteFilePath())) {
+
+                //for (var n=0; n<addOns.length; n++) {
+//                    if (fileInfo.filePath().contains("LayerList")) {
+//                        debugger;
+//                    }
+                //}
+
                 addOns.push(new AddOn(fileInfo.filePath()));
             }
         }

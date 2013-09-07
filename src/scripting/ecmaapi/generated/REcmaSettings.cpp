@@ -117,6 +117,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getQtVersion, "getQtVersion");
             
+            REcmaHelper::registerFunction(&engine, &ctor, isQt, "isQt");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getCompilerVersion, "getCompilerVersion");
             
             REcmaHelper::registerFunction(&engine, &ctor, getReleaseDate, "getReleaseDate");
@@ -1527,6 +1529,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getQtVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::isQt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::isQt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::isQt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       isQt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.isQt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::isQt", context, engine);
             return result;
         }
          QScriptValue

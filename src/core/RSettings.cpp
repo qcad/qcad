@@ -362,6 +362,10 @@ QString RSettings::getQtVersion() {
     return qVersion();
 }
 
+bool RSettings::isQt(int majorVersion) {
+    return QT_VERSION >= majorVersion<<16;
+}
+
 QString RSettings::getCompilerVersion() {
 #if defined(Q_CC_CLANG)
     return QString("Clang %1.%2.%3").arg(__clang_major__).arg(__clang_minor__).arg(__clang_patchlevel__);

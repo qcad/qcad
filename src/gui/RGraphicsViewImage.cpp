@@ -331,11 +331,9 @@ void RGraphicsViewImage::paintGrid(QPaintDevice& device, const QRect& rect) {
     }
 
     if (grid!=NULL) {
-        gridPainter->setPen(
-            RSettings::getColor(
-                "GraphicsViewColors/GridColor", RColor(192,192,192,192)
-            )
-        );
+        QPen pen(RSettings::getColor("GraphicsViewColors/GridColor", RColor(192,192,192,192)));
+        pen.setWidth(0);
+        gridPainter->setPen(pen);
         grid->paint();
     }
 
@@ -392,9 +390,10 @@ void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
 
     gridPainter = initPainter(device, false, false);
 
-    gridPainter->setPen(
-        QPen(RSettings::getColor("GraphicsViewColors/OriginColor", RColor(255,0,0,192)))
-    );
+    QPen pen(RSettings::getColor("GraphicsViewColors/OriginColor", RColor(255,0,0,192)));
+    pen.setWidth(0);
+
+    gridPainter->setPen(pen);
     double r = mapDistanceFromView(20.0);
     gridPainter->drawLine(
         QPointF(-r,0.0),
@@ -616,6 +615,7 @@ QPainter* RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool
     if (!screen) {
         painter->setWorldTransform(transform);
     }
+    //painter->setPen(QPen());
     return painter;
 }
 
