@@ -21,9 +21,14 @@
 #include <QCoreApplication>
 #include <QFileInfo>
 #include <QFontMetrics>
-#include <QStandardPaths>
 #include <QStringList>
 #include <QTranslator>
+
+#if QT_VERSION >= 0x050000
+#  include <QStandardPaths>
+#else
+#  include <QDesktopServices>
+#endif
 
 #include "RDebug.h"
 #include "RMath.h"

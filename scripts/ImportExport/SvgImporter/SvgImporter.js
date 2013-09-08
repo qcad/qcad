@@ -269,6 +269,11 @@ SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
  * \todo Use a 3rd party library to fully support SVG.
  */
 function SvgImporter(document, resolution) {
+    if (isNull(resolution)) {
+        // default resolution, e.g. for library items:
+        resolution = 90;
+    }
+
     RFileImporterAdapter.call(this, document);
     this.setDocument(document);
     this.transform = new QTransform();
@@ -277,7 +282,6 @@ function SvgImporter(document, resolution) {
     // resolution for pixel values in PPI (pixels / inch):
     this.resolution = resolution;
     this.resolutionScale = RUnit.convert(1/this.resolution, RS.Inch, document.getUnit());
-    qDebug("this.resolutionScale: ", this.resolutionScale);
 }
 
 SvgImporter.prototype = new RFileImporterAdapter();
