@@ -41,8 +41,12 @@
     </message>
     <message>
         <location line="+64"/>
+        <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
-        <translation>ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
+        <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
         <location line="+5"/>

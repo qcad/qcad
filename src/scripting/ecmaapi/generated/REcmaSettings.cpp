@@ -63,6 +63,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, loadTranslations, "loadTranslations");
             
+            REcmaHelper::registerFunction(&engine, &ctor, translate, "translate");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getOriginalArguments, "getOriginalArguments");
             
             REcmaHelper::registerFunction(&engine, &ctor, setOriginalArguments, "setOriginalArguments");
@@ -72,6 +74,16 @@
             REcmaHelper::registerFunction(&engine, &ctor, getApplicationPath, "getApplicationPath");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPluginPath, "getPluginPath");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getStandardLocation, "getStandardLocation");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getCacheLocation, "getCacheLocation");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getDesktopLocation, "getDesktopLocation");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getDocumentsLocation, "getDocumentsLocation");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getHomeLocation, "getHomeLocation");
             
             REcmaHelper::registerFunction(&engine, &ctor, isGuiEnabled, "isGuiEnabled");
             
@@ -439,6 +451,69 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::translate
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::translate", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::translate";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       translate(a0
+        ,
+    a1);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.translate().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::translate", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::getOriginalArguments
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -638,6 +713,212 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getPluginPath", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getStandardLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getStandardLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getStandardLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getStandardLocation(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getStandardLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getStandardLocation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getCacheLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getCacheLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getCacheLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getCacheLocation();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getCacheLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getCacheLocation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDesktopLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDesktopLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDesktopLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getDesktopLocation();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDesktopLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDesktopLocation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDocumentsLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDocumentsLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDocumentsLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getDocumentsLocation();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDocumentsLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDocumentsLocation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getHomeLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getHomeLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getHomeLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getHomeLocation();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getHomeLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getHomeLocation", context, engine);
             return result;
         }
          QScriptValue

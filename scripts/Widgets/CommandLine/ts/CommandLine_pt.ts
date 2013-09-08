@@ -56,8 +56,12 @@ Linha de Comando</translatorcomment>
     </message>
     <message>
         <location line="+64"/>
+        <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
-        <translation>Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
+        <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked layer.</source>

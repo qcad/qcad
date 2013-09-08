@@ -388,7 +388,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+552"/>
+        <location filename="../library.js" line="+570"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>3dFaces</translation>
@@ -431,6 +431,26 @@ Desenhe linhas paralelas a linhas, arcos ou círculos existentes</translatorcomm
 Arco
 Selecione a primeira linha ou arco</translatorcomment>
         <translation>Arco</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Attribute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Attribute Definitions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Attribute Definition</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

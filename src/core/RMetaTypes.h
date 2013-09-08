@@ -109,6 +109,7 @@
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
 #include <QUrl>
+#include <QValidator>
 #include <QVariant>
 #include <QVector>
 #include <QWebView>
@@ -240,6 +241,8 @@ Q_DECLARE_METATYPE(QTransform*)
 Q_DECLARE_METATYPE(QTreeWidget*)
 Q_DECLARE_METATYPE(QTreeWidgetItem*)
 Q_DECLARE_METATYPE(QUrl*)
+Q_DECLARE_METATYPE(QValidator*)
+Q_DECLARE_METATYPE(const QValidator*)
 Q_DECLARE_METATYPE(QVariant*)
 Q_DECLARE_METATYPE(QWebView*)
 Q_DECLARE_METATYPE(QWheelEvent*)

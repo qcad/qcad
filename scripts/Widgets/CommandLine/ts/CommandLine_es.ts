@@ -51,8 +51,12 @@
     </message>
     <message>
         <location line="+64"/>
+        <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
-        <translation>Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
+        <translation type="obsolete">Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked layer.</source>

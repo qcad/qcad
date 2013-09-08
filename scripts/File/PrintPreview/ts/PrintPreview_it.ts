@@ -29,7 +29,7 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+359"/>
+        <location line="+360"/>
         <source>Export to PDF</source>
         <translation>Esporta PDF</translation>
     </message>

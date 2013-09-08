@@ -20,7 +20,7 @@ Création d&apos;un nouveau fichier...</translatorcomment>
         <location filename="../src/entity/RPointEntity.cpp" line="+56"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -55,7 +55,7 @@ Largeur
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -108,7 +108,7 @@ Hauteur
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-5"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -182,7 +182,7 @@ Indiquer le centre</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -234,7 +234,7 @@ Modifier
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Z</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -294,7 +294,7 @@ Indiquer l&apos;angle de fin ou [Longueur de corde/Angle]</translatorcomment>
         <translation>Longueur</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Contents</source>
         <translatorcomment>--exact match--
 --file: assistant_fr.ts--
@@ -337,7 +337,7 @@ Enregistrement du dessin sous un nouveau nom</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -357,7 +357,7 @@ Met les entités à l&apos;échelle</translatorcomment>
         <translation>Echelle</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
         <source>Simple</source>
         <translatorcomment>--google--
 Texte simple</translatorcomment>
@@ -853,6 +853,17 @@ Point 3|Y</translatorcomment>
 Point 4|X
 Point 4|Y</translatorcomment>
         <translation>Point 4</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <source>Tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prompt</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

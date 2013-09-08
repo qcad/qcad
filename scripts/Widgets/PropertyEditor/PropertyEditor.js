@@ -190,12 +190,12 @@ function PropertyEditorImpl(basePath) {
 
     this.colon = qsTr(":");
 
-    this.widget.findChild("LabelLayer").text = QCoreApplication.translate("REntity", "Layer") + this.colon;
-    this.widget.findChild("LabelColor").text = QCoreApplication.translate("REntity", "Color") + this.colon;
-    this.widget.findChild("LabelLineweight").text = QCoreApplication.translate("REntity", "Lineweight") + this.colon;
-    this.widget.findChild("LabelLinetype").text = QCoreApplication.translate("REntity", "Linetype") + this.colon;
-    this.widget.findChild("LabelDrawOrder").text = QCoreApplication.translate("REntity", "Draw Order") + this.colon;
-    this.widget.findChild("LabelHandle").text = QCoreApplication.translate("REntity", "Handle") + this.colon;
+    this.widget.findChild("LabelLayer").text = RSettings.translate("REntity", "Layer") + this.colon;
+    this.widget.findChild("LabelColor").text = RSettings.translate("REntity", "Color") + this.colon;
+    this.widget.findChild("LabelLineweight").text = RSettings.translate("REntity", "Lineweight") + this.colon;
+    this.widget.findChild("LabelLinetype").text = RSettings.translate("REntity", "Linetype") + this.colon;
+    this.widget.findChild("LabelDrawOrder").text = RSettings.translate("REntity", "Draw Order") + this.colon;
+    this.widget.findChild("LabelHandle").text = RSettings.translate("REntity", "Handle") + this.colon;
 
     var selectionCombo = this.widget.findChild("Selection");
     selectionCombo["activated(int)"].connect(this, "filterChanged");
@@ -457,7 +457,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                             // situation with two splines, one with fit points,
                             // one with control points: no group label for fit points:
                             attributes.isList()===isArray(value)) {
-                        var groupLabel = new QLabel(QCoreApplication.translate("REntity", group), groupBox);
+                        var groupLabel = new QLabel(RSettings.translate("REntity", group), groupBox);
                         groupLabel.styleSheet = "margin-bottom:0px;font-weight:bold;";
                         if (!firstEntry) {
                             groupLabel.styleSheet += "margin-top:0px;";
@@ -495,7 +495,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                 if (!onlyChanges) {
                     if (!isNull(controls)) {
                         row = gridLayout.rowCount();
-                        var label = new QLabel(QCoreApplication.translate("REntity", title) + this.colon, groupBox);
+                        var label = new QLabel(RSettings.translate("REntity", title) + this.colon, groupBox);
                         label.alignment = Qt.AlignRight | Qt.AlignVCenter;
 
                         gridLayout.addWidget(label, row,0);

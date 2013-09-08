@@ -81,7 +81,7 @@ Image.prototype.beginEvent = function() {
 Image.prototype.getFileName = function() {
     var lastOpenFileDir = RSettings.getStringValue(
             "Image/Path",
-            QDesktopServices.storageLocation(QDesktopServices.DocumentsLocation));
+            RSettings.getDocumentsLocation());
     var formats = QImageReader.supportedImageFormats();
     var filters = [];
 

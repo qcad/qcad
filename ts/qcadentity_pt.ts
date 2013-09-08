@@ -67,7 +67,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -119,7 +119,7 @@ Exportando o desenho...</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -171,7 +171,7 @@ Modifique
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Z</source>
         <translatorcomment>--google--
 Oculte (congele) todos os carimbos
@@ -572,7 +572,7 @@ R&amp;enomeie Carimbo</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+4"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -620,7 +620,7 @@ Criando o novo arquivo...</translatorcomment>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="-6"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -654,7 +654,7 @@ Espessura:
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -763,7 +763,7 @@ Especifique o próximo ponto de controle</translatorcomment>
         <translation>Ponto de ajuste</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="-6"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
         <source>Simple</source>
         <translatorcomment>--google--
 &lt;b&gt;P1&lt;/b&gt;: deslocamento simples
@@ -844,6 +844,17 @@ Dimensão horizontal</translatorcomment>
 &amp;Vertical
 Dimensão vertical</translatorcomment>
         <translation>Vertical</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <source>Tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prompt</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -26,7 +26,7 @@ Mostra menù &quot;Seleziona&quot;</translatorcomment>
         <translation type="obsolete">Selezionare pannello degli Strumenti</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+154"/>
         <source>&amp;Select</source>
         <translation>&amp;Seleziona</translation>
     </message>

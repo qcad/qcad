@@ -29,7 +29,7 @@
         <translation>Terminar</translation>
     </message>
     <message>
-        <location line="+359"/>
+        <location line="+360"/>
         <source>Export to PDF</source>
         <translation>Exportar a PDF</translation>
     </message>

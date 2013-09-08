@@ -25,7 +25,7 @@ Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
         <translation type="unfinished">Wybór panelu Narzędzia</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+154"/>
         <source>&amp;Select</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

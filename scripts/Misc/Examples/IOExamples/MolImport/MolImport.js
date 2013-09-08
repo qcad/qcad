@@ -33,7 +33,7 @@ MolImport.prototype.beginEvent = function() {
     
     var lastDir = RSettings.getStringValue(
             "MolImport/Path",
-            QDesktopServices.storageLocation(QDesktopServices.DocumentsLocation));
+            RSettings.getDocumentsLocation());
     var fileName = QFileDialog.getOpenFileName(
         this, qsTr("Import MOL"), lastDir,
         qsTr("MOL Files") + " (*.mol);;" + qsTr("All Files") + " (*)");

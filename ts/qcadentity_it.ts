@@ -20,7 +20,7 @@ Caricamento File %1
         <location filename="../src/entity/RPointEntity.cpp" line="+56"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -55,7 +55,7 @@ Larghezza
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: wp-geo-it_IT.po--
@@ -108,7 +108,7 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-5"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: default.po--
@@ -182,7 +182,7 @@ Arco: Centro, Punto, Angoli
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -234,7 +234,7 @@ Caricamento indirizzi delle librerie
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Z</source>
         <translatorcomment>--exact match--
 --file: src_shell_data_translations_ktoon_it.ts--
@@ -295,7 +295,7 @@ Angolo finale o [Angolo/Lunghezza corda]</translatorcomment>
         <translation>Lunghezza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Contents</source>
         <translatorcomment>--exact match--
 --file: assistant_it.ts--
@@ -339,7 +339,7 @@ Salva Disegno con Nuovo Nome</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -357,7 +357,7 @@ Scala</translatorcomment>
         <translation>Scala</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
         <source>Simple</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -864,6 +864,17 @@ Punto 3|Y</translatorcomment>
 Punto 4|X
 Punto 4|Y</translatorcomment>
         <translation>Punto 4</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <source>Tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prompt</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

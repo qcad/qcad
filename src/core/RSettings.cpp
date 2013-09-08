@@ -21,6 +21,7 @@
 #include <QCoreApplication>
 #include <QFileInfo>
 #include <QFontMetrics>
+#include <QStandardPaths>
 #include <QStringList>
 #include <QTranslator>
 
@@ -120,6 +121,50 @@ QString RSettings::getPluginPath() {
     return appDir.path();
 }
 
+QString RSettings::getStandardLocation(int sl) {
+#if QT_VERSION >= 0x050000
+    QStringList candidates = QStandardPaths::standardLocations((QStandardPaths::StandardLocation)sl);
+    if (candidates.length()>0) {
+        return candidates[0];
+    }
+    return "";
+#else
+    return QDesktopServices::storageLocation((QDesktopServices::StandardLocation)sl);
+#endif
+}
+
+QString RSettings::getCacheLocation() {
+#if QT_VERSION >= 0x050000
+    return RSettings::getStandardLocation(QStandardPaths::CacheLocation);
+#else
+    return RSettings::getStandardLocation(QDesktopServices::CacheLocation);
+#endif
+}
+
+QString RSettings::getDesktopLocation() {
+#if QT_VERSION >= 0x050000
+    return RSettings::getStandardLocation(QStandardPaths::DesktopLocation);
+#else
+    return RSettings::getStandardLocation(QDesktopServices::DesktopLocation);
+#endif
+}
+
+QString RSettings::getDocumentsLocation() {
+#if QT_VERSION >= 0x050000
+    return RSettings::getStandardLocation(QStandardPaths::DocumentsLocation);
+#else
+    return RSettings::getStandardLocation(QDesktopServices::DocumentsLocation);
+#endif
+}
+
+QString RSettings::getHomeLocation() {
+#if QT_VERSION >= 0x050000
+    return RSettings::getStandardLocation(QStandardPaths::HomeLocation);
+#else
+    return RSettings::getStandardLocation(QDesktopServices::HomeLocation);
+#endif
+}
+
 bool RSettings::isGuiEnabled() {
     return !QCoreApplication::arguments().contains("-no-gui");
 }
@@ -199,6 +244,10 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
         qWarning() << "Cannot load translation: " << module + "_" + locale;
         qWarning() << "Directories: " << translationsDirs;
     }
+}
+
+QString RSettings::translate(const QString& context, const QString& str) {
+    return QCoreApplication::translate((const char*)context.toLatin1(), (const char*)str.toLatin1());
 }
 
 QStringList RSettings::getAllKeys(const QString& group) {

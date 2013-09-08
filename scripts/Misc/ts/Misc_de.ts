@@ -12,4 +12,12 @@
         <translation type="obsolete">&amp;Diverses</translation>
     </message>
 </context>
+<context>
+    <name>Misc</name>
+    <message>
+        <location filename="../Misc.js" line="+56"/>
+        <source>&amp;Misc</source>
+        <translation type="unfinished">&amp;Diverses</translation>
+    </message>
+</context>
 </TS>

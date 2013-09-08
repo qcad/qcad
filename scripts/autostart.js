@@ -536,7 +536,6 @@ function main() {
         var addOnList = [];
         for (i = 0; i < addOns.length; ++i) {
             addOnList.push(addOns[i].getFilePath());
-            qDebug("addOns: ", addOns[i].getFilePath());
         }
         RSettings.setValue("AddOns/List", addOnList);
     }

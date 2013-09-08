@@ -19,7 +19,7 @@
         <translation>選択ツールパネル</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+154"/>
         <source>&amp;Select</source>
         <translation>&amp;S 選択</translation>
     </message>

@@ -24,6 +24,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RDEFAULT_QSTRINGLIST" isConst="true" />
       </variant>
     </method>
+    <method name="translate" cppName="translate" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="context"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="str"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getOriginalArguments"
     cppName="getOriginalArguments" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -48,6 +57,33 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
     <method name="getPluginPath" cppName="getPluginPath"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getStandardLocation"
+    cppName="getStandardLocation" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="int" typeName="int" name="sl" isConst="false" />
+      </variant>
+    </method>
+    <method name="getCacheLocation" cppName="getCacheLocation"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getDesktopLocation" cppName="getDesktopLocation"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getDocumentsLocation"
+    cppName="getDocumentsLocation" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getHomeLocation" cppName="getHomeLocation"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />

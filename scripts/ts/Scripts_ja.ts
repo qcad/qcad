@@ -261,7 +261,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+552"/>
+        <location filename="../library.js" line="+570"/>
         <source>3dFaces</source>
         <translation>３Dフェース</translation>
     </message>
@@ -289,6 +289,26 @@
         <location line="+0"/>
         <source>Arc</source>
         <translation>弧</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Attribute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Attribute Definitions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Attribute Definition</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

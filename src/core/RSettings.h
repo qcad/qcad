@@ -52,6 +52,7 @@ public:
 
     static QString getLocale();
     static void loadTranslations(const QString& module, const QStringList& dirs = RDEFAULT_QSTRINGLIST);
+    static QString translate(const QString& context, const QString& str);
 
     static QStringList getOriginalArguments();
     static void setOriginalArguments(const QStringList& a);
@@ -59,6 +60,12 @@ public:
     static bool isDeployed();
     static QString getApplicationPath();
     static QString getPluginPath();
+
+    static QString getStandardLocation(int sl);
+    static QString getCacheLocation();
+    static QString getDesktopLocation();
+    static QString getDocumentsLocation();
+    static QString getHomeLocation();
 
     //static void setEventBlocking(bool on);
     //static bool isEventBlockingEnabled();

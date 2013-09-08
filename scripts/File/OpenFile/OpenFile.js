@@ -58,7 +58,7 @@ OpenFile.prototype.beginEvent = function() {
     
     var lastOpenFileDir = RSettings.getStringValue(
             "OpenFile/Path",
-            QDesktopServices.storageLocation(QDesktopServices.DocumentsLocation));
+            RSettings.getDocumentsLocation());
     var appWin = EAction.getMainWindow();
     var fileDialog = new QFileDialog(appWin, qsTr("Open Drawing"), lastOpenFileDir, "");
     var allFilter = filters[0];

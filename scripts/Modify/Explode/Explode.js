@@ -160,7 +160,7 @@ Explode.prototype.beginEvent = function() {
             // create text data from attribute data:
             var d = new RTextData(entity.getData());
             // unlink from parent (block ref):
-            d.setParentId(RObjectId.INVALID_ID);
+            d.setParentId(RObject.INVALID_ID);
             newEntities.push(new RTextEntity(document, d));
         }
 

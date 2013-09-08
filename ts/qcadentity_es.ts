@@ -15,7 +15,7 @@
         <location filename="../src/entity/RPointEntity.cpp" line="+56"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -45,7 +45,7 @@ A&amp;nchura papel:</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -98,7 +98,7 @@ Altura del Texto:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-5"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -171,7 +171,7 @@ Arco: centro, punto, ángulos
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -223,7 +223,7 @@ Ubicando las Bibliotecas
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Z</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -284,7 +284,7 @@ Especifique ángulo final o ángulo acorde a la longitud</translatorcomment>
         <translation>Longitud</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Contents</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -328,7 +328,7 @@ Guardando el dibujo con nombre nuevo</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -347,7 +347,7 @@ E&amp;scala</translatorcomment>
         <translation>Escalar</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
         <source>Simple</source>
         <translatorcomment>--google--
 Texto simple
@@ -850,6 +850,17 @@ Punto 3|Y</translatorcomment>
 Punto 4|X
 Punto 4|Y</translatorcomment>
         <translation>Punto 4</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <source>Tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prompt</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

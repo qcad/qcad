@@ -355,7 +355,7 @@ Dzielenie (÷)</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+552"/>
+        <location filename="../library.js" line="+570"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">3dFaces</translation>
@@ -396,6 +396,26 @@ Rysuj łuk z danymi 3 punktami</translatorcomment>
 Łuk
 Wskaż położenie linii wymiarowej łuku</translatorcomment>
         <translation type="unfinished">Łuk</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Attribute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Attribute Definitions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Attribute Definition</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

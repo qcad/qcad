@@ -52,6 +52,9 @@
         loadTranslations
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        translate
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getOriginalArguments
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -65,6 +68,21 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPluginPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getStandardLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCacheLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDesktopLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDocumentsLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHomeLocation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isGuiEnabled

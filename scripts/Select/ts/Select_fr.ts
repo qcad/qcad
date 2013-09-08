@@ -26,7 +26,7 @@ Afficher les outils de sélection</translatorcomment>
         <translation type="obsolete">Outils de sélection</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+154"/>
         <source>&amp;Select</source>
         <translation>&amp;Sélectionner</translation>
     </message>
