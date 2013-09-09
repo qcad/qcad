@@ -33,23 +33,30 @@ include("TextDialog/TextDialog.js");
  * \brief Insert text.
  * \ingroup ecma_draw_text
  */
-function Text(guiAction) {
+function Text(guiAction, mode) {
+    if (isNull(mode)) {
+        mode = TextDialog.Mode.Text;
+    }
+
     Draw.call(this, guiAction);
 
     this.textData = undefined;
-    this.State = {
-        SettingPosition : 0
-    };
+
+    this.mode = mode;
 
     this.setUiOptions("Text.ui");
 }
 
 Text.prototype = new Draw();
 
+Text.State = {
+    SettingPosition : 0
+};
+
 Text.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    var dialog = new TextDialog();
+    var dialog = new TextDialog(this.mode);
     this.textData = dialog.show();
     if (isNull(this.textData)) {
         this.terminate();
@@ -68,7 +75,7 @@ Text.prototype.beginEvent = function() {
     var angleEdit = optionsToolBar.findChild("Angle");
     angleEdit.setValue(this.textData.getAngle());
 
-    this.setState(this.State.SettingPosition);
+    this.setState(Text.State.SettingPosition);
 };
 
 Text.prototype.setState = function(state) {
@@ -91,10 +98,16 @@ Text.prototype.pickCoordinate = function(event, preview) {
         di.setRelativeZero(pos);
     }
     this.textData.setAlignmentPoint(pos);
-    var text = new RTextEntity(
-        this.getDocument(),
-        this.textData
-    );
+
+    var text;
+
+    if (isOfType(this.textData, RAttributeDefinitionData)) {
+        text = new RAttributeDefinitionEntity(this.getDocument(), this.textData);
+    }
+    else {
+        text = new RTextEntity(this.getDocument(), this.textData);
+    }
+
     var op = new RAddObjectOperation(text);
     if (preview) {
         di.previewOperation(op);

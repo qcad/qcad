@@ -61,6 +61,9 @@
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setData
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

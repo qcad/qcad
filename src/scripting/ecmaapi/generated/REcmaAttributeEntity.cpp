@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
             
+            REcmaHelper::registerFunction(&engine, proto, setData, "setData");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -692,6 +694,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAttributeEntity::getData", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAttributeEntity::setData
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAttributeEntity::setData", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAttributeEntity::setData";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeEntity* self = 
+                        getSelf("setData", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RAttributeData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RAttributeData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RAttributeData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RAttributeEntity: Argument 0 is not of type RAttributeData.",
+                               context);                    
+                    }
+                    RAttributeData 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setData(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeEntity.setData().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAttributeEntity::setData", context, engine);
             return result;
         }
          QScriptValue

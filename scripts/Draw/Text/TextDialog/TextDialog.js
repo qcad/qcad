@@ -43,7 +43,12 @@ SymbolMenuData.prototype.triggered = function() {
  * \brief Text creation or editing dialog.
  * \ingroup ecma_draw_text
  */
-function TextDialog() {
+function TextDialog(mode) {
+    if (isNull(mode)) {
+        mode = TextDialog.Mode.Text;
+    }
+    this.mode = mode;
+
     this.dialog = undefined;
 
     this.textEdit = undefined;
@@ -79,6 +84,16 @@ function TextDialog() {
     this.initialColor = new RColor();
 }
 
+TextDialog.Mode = {
+    Text : 0,
+    Attribute : 1,
+    AttributeDefinition : 2
+};
+
+TextDialog.prototype.setMode = function(mode) {
+    this.mode = mode;
+};
+
 TextDialog.prototype.getTextDocument = function() {
     if (RSettings.isQt(5)) {
         return this.textEdit.document;
@@ -86,13 +101,26 @@ TextDialog.prototype.getTextDocument = function() {
     else {
         return this.textEdit.document();
     }
-}
+};
 
 TextDialog.prototype.getSourceDocument = function() {
     return this.sourceEdit.document();
-}
+};
+
 
 TextDialog.prototype.show =  function(textDataIn) {
+    if (!isNull(textDataIn)) {
+        if (isOfType(textDataIn, RAttributeData)) {
+            this.mode = TextDialog.Mode.Attribute;
+        }
+        else if (isOfType(textDataIn, RAttributeDefinitionData)) {
+            this.mode = TextDialog.Mode.AttributeDefinition;
+        }
+        else {
+            this.mode = TextDialog.Mode.Text;
+        }
+    }
+
     this.dialog = WidgetFactory.createDialog(TextDialog.basePath, "TextDialog.ui", EAction.getMainWindow());
     this.dialog.windowIcon = new QIcon(TextDialog.basePath + "/../Text.svg");
 
@@ -175,11 +203,37 @@ TextDialog.prototype.show =  function(textDataIn) {
     var buttonMiddleLeft = this.dialog.findChild("AlignMiddleLeft");
     var buttonMiddleCenter = this.dialog.findChild("AlignMiddleCenter");
     var buttonMiddleRight = this.dialog.findChild("AlignMiddleRight");
+    var buttonBaseLeft = this.dialog.findChild("AlignBaseLeft");
+    var buttonBaseCenter = this.dialog.findChild("AlignBaseCenter");
+    var buttonBaseRight = this.dialog.findChild("AlignBaseRight");
     var buttonBottomLeft = this.dialog.findChild("AlignBottomLeft");
     var buttonBottomCenter = this.dialog.findChild("AlignBottomCenter");
     var buttonBottomRight = this.dialog.findChild("AlignBottomRight");
 
     getClipboard().dataChanged.connect(this, "clipboardDataChanged");
+
+    // change dialog into attribute / attribute definition dialog:
+    if (this.mode === TextDialog.Mode.AttributeDefinition ||
+        this.mode === TextDialog.Mode.Attribute) {
+
+        this.dialog.findChild("Separator").visible = false;
+        this.dialog.findChild("LineSpacingFactorLabel").visible = false;
+        editLineSpacingFactor.visible = false;
+        cbSimpleText.visible = false;
+        this.tabWidget.removeTab(1);
+        this.tabWidget.removeTab(0);
+        this.dialog.resize(0,0);
+
+        if (this.mode === TextDialog.Mode.AttributeDefinition) {
+            this.dialog.windowTitle = entityTypeToString(RS.EntityAttributeDefinition, false);
+        }
+        else if (this.mode === TextDialog.Mode.Attribute) {
+            this.dialog.windowTitle = entityTypeToString(RS.EntityAttribute, false);
+        }
+    }
+    else {
+        this.tabWidget.removeTab(2);
+    }
 
     // sync rich text / source:
     this.tabWidget["currentChanged(int)"].connect(this, "tabChanged");
@@ -195,7 +249,7 @@ TextDialog.prototype.show =  function(textDataIn) {
         this.sourceEdit.setPlainText(textDataIn.getEscapedText());
         this.updateRichText(true);
         if (textDataIn.getVAlign()==RS.VAlignTop) {
-            if (textDataIn.getHAlign()==RS.HAlignLeft) {
+            if (textDataIn.getHAlign()==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
                 buttonTopLeft.checked = true;
             }
             else if (textDataIn.getHAlign()==RS.HAlignCenter) {
@@ -206,18 +260,29 @@ TextDialog.prototype.show =  function(textDataIn) {
             }
         }
         else if (textDataIn.getVAlign()==RS.VAlignMiddle) {
-            if (textDataIn.getHAlign()==RS.HAlignLeft) {
+            if (textDataIn.getHAlign()==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
                 buttonMiddleLeft.checked = true;
             }
-            else if (textDataIn.getHAlign()==RS.HAlignCenter) {
+            else if (textDataIn.getHAlign()==RS.HAlignCenter || textDataIn.getHAlign()==RS.HAlignMid) {
                 buttonMiddleCenter.checked = true;
             }
             else if (textDataIn.getHAlign()==RS.HAlignRight) {
                 buttonMiddleRight.checked = true;
             }
         }
+        else if (textDataIn.getVAlign()==RS.VAlignBase) {
+            if (textDataIn.getHAlign()==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
+                buttonBaseLeft.checked = true;
+            }
+            else if (textDataIn.getHAlign()==RS.HAlignCenter) {
+                buttonBaseCenter.checked = true;
+            }
+            else if (textDataIn.getHAlign()==RS.HAlignRight) {
+                buttonBaseRight.checked = true;
+            }
+        }
         else if (textDataIn.getVAlign()==RS.VAlignBottom) {
-            if (textDataIn.getHAlign()==RS.HAlignLeft) {
+            if (textDataIn.getHAlign()==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
                 buttonBottomLeft.checked = true;
             }
             else if (textDataIn.getHAlign()==RS.HAlignCenter) {
@@ -230,6 +295,21 @@ TextDialog.prototype.show =  function(textDataIn) {
 
         editLineSpacingFactor.setValue(textDataIn.getLineSpacingFactor());
         editAngle.setValue(textDataIn.getAngle());
+
+        // init values specific to attributes / attribute definitions:
+        if (this.mode === TextDialog.Mode.Attribute ||
+            this.mode === TextDialog.Mode.AttributeDefinition) {
+
+            this.dialog.findChild("AttributeTag").text = textDataIn.getTag();
+            if (this.mode === TextDialog.Mode.AttributeDefinition) {
+                this.dialog.findChild("AttributePrompt").text = textDataIn.getPrompt();
+            }
+            else {
+                this.dialog.findChild("AttributePrompt").visible = false;
+                this.dialog.findChild("PromptLabel").visible = false;
+            }
+            this.dialog.findChild("AttributeValue").text = textDataIn.getEscapedText();
+        }
     }
     else {
         WidgetFactory.restoreState(this.dialog);
@@ -250,7 +330,7 @@ TextDialog.prototype.show =  function(textDataIn) {
         var hAlignment = RSettings.getIntValue("TextDialog/HAlignment", RS.HAlignLeft);
 
         if (vAlignment==RS.VAlignTop) {
-            if (hAlignment==RS.HAlignLeft) {
+            if (hAlignment==RS.HAlignLeft || hAlignment==RS.HAlignFit || hAlignment==RS.HAlignAlign) {
                 buttonTopLeft.checked = true;
             }
             else if (hAlignment==RS.HAlignCenter) {
@@ -261,7 +341,7 @@ TextDialog.prototype.show =  function(textDataIn) {
             }
         }
         else if (vAlignment==RS.VAlignMiddle) {
-            if (hAlignment==RS.HAlignLeft) {
+            if (hAlignment==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
                 buttonMiddleLeft.checked = true;
             }
             else if (hAlignment==RS.HAlignCenter) {
@@ -271,8 +351,19 @@ TextDialog.prototype.show =  function(textDataIn) {
                 buttonMiddleRight.checked = true;
             }
         }
+        else if (vAlignment==RS.VAlignBase) {
+            if (hAlignment==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
+                buttonBaseLeft.checked = true;
+            }
+            else if (hAlignment==RS.HAlignCenter) {
+                buttonBaseCenter.checked = true;
+            }
+            else if (hAlignment==RS.HAlignRight) {
+                buttonBaseRight.checked = true;
+            }
+        }
         else if (vAlignment==RS.VAlignBottom) {
-            if (hAlignment==RS.HAlignLeft) {
+            if (hAlignment==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
                 buttonBottomLeft.checked = true;
             }
             else if (hAlignment==RS.HAlignCenter) {
@@ -315,9 +406,22 @@ TextDialog.prototype.show =  function(textDataIn) {
     }
 
     // analize dialog input:
-    var textDataOut = isNull(textDataIn) ? new RTextData() : textDataIn;
-    textDataOut.setSimple(cbSimpleText.checked);
-    textDataOut.setText(this.sourceEdit.toPlainText());
+    var textDataOut;
+    if (isNull(textDataIn)) {
+        if (this.mode === TextDialog.Mode.Attribute) {
+            textDataOut = new RAttributeData();
+        }
+        else if (this.mode === TextDialog.Mode.AttributeDefinition) {
+            textDataOut = new RAttributeDefinitionData();
+        }
+        else {
+            textDataOut = new RTextData();
+        }
+    }
+    else {
+        textDataOut = textDataIn;
+    }
+
     textDataOut.setFontName(comboMainFont.currentFont.family());
     textDataOut.setBold(checkMainBold.checked);
     textDataOut.setItalic(checkMainItalic.checked);
@@ -329,17 +433,20 @@ TextDialog.prototype.show =  function(textDataIn) {
     else if (buttonMiddleLeft.checked || buttonMiddleCenter.checked || buttonMiddleRight.checked) {
         textDataOut.setVAlign(RS.VAlignMiddle);
     }
+    else if (buttonBaseLeft.checked || buttonBaseCenter.checked || buttonBaseRight.checked) {
+        textDataOut.setVAlign(RS.VAlignBase);
+    }
     else if (buttonBottomLeft.checked || buttonBottomCenter.checked || buttonBottomRight.checked) {
         textDataOut.setVAlign(RS.VAlignBottom);
     }
 
-    if (buttonTopLeft.checked || buttonMiddleLeft.checked || buttonBottomLeft.checked) {
+    if (buttonTopLeft.checked || buttonMiddleLeft.checked || buttonBaseLeft.checked || buttonBottomLeft.checked) {
         textDataOut.setHAlign(RS.HAlignLeft);
     }
-    else if (buttonTopCenter.checked || buttonMiddleCenter.checked || buttonBottomCenter.checked) {
+    else if (buttonTopCenter.checked || buttonMiddleCenter.checked || buttonBaseCenter.checked || buttonBottomCenter.checked) {
         textDataOut.setHAlign(RS.HAlignCenter);
     }
-    else if (buttonTopRight.checked || buttonMiddleRight.checked || buttonBottomRight.checked) {
+    else if (buttonTopRight.checked || buttonMiddleRight.checked || buttonBaseRight.checked || buttonBottomRight.checked) {
         textDataOut.setHAlign(RS.HAlignRight);
     }
 
@@ -348,6 +455,23 @@ TextDialog.prototype.show =  function(textDataIn) {
 
     textDataOut.setLineSpacingFactor(editLineSpacingFactor.getValue());
     textDataOut.setAngle(editAngle.getValue());
+
+    // init values specific to attributes / attribute definitions:
+    if (this.mode === TextDialog.Mode.Attribute ||
+        this.mode === TextDialog.Mode.AttributeDefinition) {
+
+        qDebug("attribute was edited");
+        textDataOut.setSimple(true);
+        textDataOut.setTag(this.dialog.findChild("AttributeTag").text);
+        if (this.mode === TextDialog.Mode.AttributeDefinition) {
+            textDataOut.setPrompt(this.dialog.findChild("AttributePrompt").text);
+        }
+        textDataOut.setText(this.dialog.findChild("AttributeValue").text);
+    }
+    else {
+        textDataOut.setSimple(cbSimpleText.checked);
+        textDataOut.setText(this.sourceEdit.toPlainText());
+    }
 
     WidgetFactory.saveState(this.dialog);
 
@@ -591,13 +715,21 @@ TextDialog.prototype.fixHtml = function(html) {
 };
 
 TextDialog.prototype.simpleTextToggled = function(enable) {
+    if (this.mode!==TextDialog.Mode.Text) {
+        return;
+    }
+
+    var editLineSpacingFactor = this.dialog.findChild("LineSpacingFactor");
+
     if (enable) {
         this.tabWidget.setTabEnabled(0, false);
         this.tabWidget.currentIndex = 1;
+        editLineSpacingFactor.enabled = false;
     }
     else {
         this.tabWidget.setTabEnabled(0, true);
         this.tabWidget.currentIndex = 0;
+        editLineSpacingFactor.enabled = true;
     }
 };
 

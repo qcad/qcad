@@ -78,7 +78,10 @@ EditText.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case EditText.State.ChoosingEntity:
-        if (isTextEntity(entity)) {
+        if (isTextEntity(entity) ||
+            isAttributeEntity(entity) ||
+            isAttributeDefinitionEntity(entity)) {
+
             this.entity = entity;
         }
 
@@ -105,7 +108,9 @@ EditText.prototype.getHighlightedEntities = function() {
  * given text entity in a text dialog.
  */
 EditText.editText = function(entity) {
-    if (!isTextEntity(entity)) {
+    if (!isTextEntity(entity) &&
+        !isAttributeEntity(entity) &&
+        !isAttributeDefinitionEntity(entity)) {
         return;
     }
 

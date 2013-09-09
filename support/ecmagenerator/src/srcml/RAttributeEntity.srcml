@@ -337,6 +337,25 @@ dir="./entity" filename="RAttributeEntity.h">
       <name>data</name>
     </expr>;</return>}</block>
   </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setData</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>RAttributeData</name>&amp;</type>
+        <name>d</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>= 
+    <name>d</name></expr>;</expr_stmt>}</block>
+  </function>
   <comment type="line">// virtual bool
   isPartOfBlockReference(RBlockReferenceEntity::Id blockRefId)
   const {</comment>

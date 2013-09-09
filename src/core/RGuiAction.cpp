@@ -268,6 +268,7 @@ bool RGuiAction::isChecked() {
 
 void RGuiAction::setSortOrder(int sortOrder) {
     this->sortOrder = sortOrder;
+    this->setProperty("SortOrder", sortOrder);
     // for debugging: setToolTip(QString("[%1]").arg(sortOrder));
 }
 

@@ -39,6 +39,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RAttributeData &amp;"
       isPureVirtual="false" />
     </method>
+    <method name="setData" cppName="setData" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RAttributeData &amp;" typeName="RAttributeData"
+        name="d" isConst="false" />
+      </variant>
+    </method>
     <method name="setProperty" cppName="setProperty"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

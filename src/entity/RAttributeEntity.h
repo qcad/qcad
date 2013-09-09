@@ -87,6 +87,10 @@ public:
         return data;
     }
 
+    void setData(RAttributeData& d) {
+        data = d;
+    }
+
 //    virtual bool isPartOfBlockReference(RBlockReferenceEntity::Id blockRefId) const {
 //        return blockRefId==data.getBlockReferenceId();
 //    }

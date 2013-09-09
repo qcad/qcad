@@ -684,8 +684,8 @@ EAction.getSubMenu = function(menu, sortOrder, title, objectName, iconFile) {
     var subMenu = menu.findChild(objectName);
     if (isNull(subMenu)) {
         var subMenuActions = menu.actions();
-        var actionBefore;
-        for ( var i = 0; i < subMenuActions.length; ++i) {
+        var actionBefore = undefined;
+        for (var i = 0; i < subMenuActions.length; ++i) {
             var so = subMenuActions[i].property("SortOrder");
             if (!isNull(so) && so > sortOrder) {
                 actionBefore = subMenuActions[i];
@@ -696,6 +696,8 @@ EAction.getSubMenu = function(menu, sortOrder, title, objectName, iconFile) {
         if (!isNull(iconFile)) {
             subMenu.icon = new QIcon(iconFile);
         }
+
+        var subMenuAction;
         if (isNull(actionBefore)) {
             subMenuAction = menu.addMenu(subMenu);
         } else {

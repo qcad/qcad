@@ -88,6 +88,10 @@ public:
         return data;
     }
 
+    void setData(RAttributeDefinitionData& d) {
+        data = d;
+    }
+
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value);
     QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId propertyTypeId,
