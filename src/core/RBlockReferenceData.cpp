@@ -159,14 +159,48 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
     if (entity.isNull()) {
         qWarning("RBlockReferenceData::queryEntity: "
             "entity %d is NULL", entityId);
-        return QSharedPointer<REntity> ();
+        return QSharedPointer<REntity>();
     }
 
+    if (!applyTransformations(entity)) {
+        return QSharedPointer<REntity>();
+    }
+
+//    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+//    if (block.isNull()) {
+//        qWarning("RBlockReferenceData::queryEntity: "
+//            "block %d is NULL", referencedBlockId);
+//        return QSharedPointer<REntity> ();
+//    }
+
+//    // nested block reference with negative scale factors (flipped):
+//    QSharedPointer<RBlockReferenceEntity> blockReference = entity.dynamicCast<RBlockReferenceEntity>();
+//    if (!blockReference.isNull() && scaleFactors.y<0.0) {
+//        blockReference->move(-block->getOrigin());
+//        blockReference->scale(scaleFactors);
+//        blockReference->rotate(-2*blockReference->getRotation(), blockReference->getPosition());
+//        blockReference->rotate(rotation);
+//        blockReference->move(position);
+//        cache.insert(entityId, blockReference);
+//        return blockReference;
+//    }
+
+//    entity->move(-block->getOrigin());
+//    entity->scale(scaleFactors);
+//    entity->rotate(rotation);
+//    entity->move(position);
+
+    cache.insert(entityId, entity);
+
+    return entity;
+}
+
+bool RBlockReferenceData::applyTransformations(QSharedPointer<REntity> entity) const {
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
-        qWarning("RBlockReferenceData::queryEntity: "
+        qWarning("RBlockReferenceData::applyTransformations: "
             "block %d is NULL", referencedBlockId);
-        return QSharedPointer<REntity> ();
+        return false;
     }
 
     // nested block reference with negative scale factors (flipped):
@@ -177,8 +211,7 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
         blockReference->rotate(-2*blockReference->getRotation(), blockReference->getPosition());
         blockReference->rotate(rotation);
         blockReference->move(position);
-        cache.insert(entityId, blockReference);
-        return blockReference;
+        return true;
     }
 
     entity->move(-block->getOrigin());
@@ -186,9 +219,7 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
     entity->rotate(rotation);
     entity->move(position);
 
-    cache.insert(entityId, entity);
-
-    return entity;
+    return true;
 }
 
 QList<RVector> RBlockReferenceData::getInternalReferencePoints(

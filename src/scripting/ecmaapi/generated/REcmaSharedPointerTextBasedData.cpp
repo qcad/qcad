@@ -90,6 +90,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
             
+            REcmaHelper::registerFunction(&engine, proto, sync, "sync");
+            
             REcmaHelper::registerFunction(&engine, proto, getPointOnEntity, "getPointOnEntity");
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoints, "getEndPoints");
@@ -833,6 +835,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getHeight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextBasedData::sync
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::sync", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::sync";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("sync", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTextBasedData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextBasedData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTextBasedData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RTextBasedData.",
+                               context);                    
+                    }
+                    RTextBasedData 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->sync(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.sync().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::sync", context, engine);
             return result;
         }
          QScriptValue

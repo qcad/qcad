@@ -341,7 +341,7 @@ TextDialog.prototype.show =  function(textDataIn) {
             }
         }
         else if (vAlignment==RS.VAlignMiddle) {
-            if (hAlignment==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
+            if (hAlignment==RS.HAlignLeft || hAlignment==RS.HAlignFit || hAlignment==RS.HAlignAlign) {
                 buttonMiddleLeft.checked = true;
             }
             else if (hAlignment==RS.HAlignCenter) {
@@ -352,7 +352,7 @@ TextDialog.prototype.show =  function(textDataIn) {
             }
         }
         else if (vAlignment==RS.VAlignBase) {
-            if (hAlignment==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
+            if (hAlignment==RS.HAlignLeft || hAlignment==RS.HAlignFit || hAlignment==RS.HAlignAlign) {
                 buttonBaseLeft.checked = true;
             }
             else if (hAlignment==RS.HAlignCenter) {
@@ -363,7 +363,7 @@ TextDialog.prototype.show =  function(textDataIn) {
             }
         }
         else if (vAlignment==RS.VAlignBottom) {
-            if (hAlignment==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
+            if (hAlignment==RS.HAlignLeft || hAlignment==RS.HAlignFit || hAlignment==RS.HAlignAlign) {
                 buttonBottomLeft.checked = true;
             }
             else if (hAlignment==RS.HAlignCenter) {

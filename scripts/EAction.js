@@ -680,7 +680,7 @@ EAction.getMenu = function(title, objectName, initFunction) {
  * E.g. "line". \param iconFile Path and file name of icon to use for this
  * submenu.
  */
-EAction.getSubMenu = function(menu, sortOrder, title, objectName, iconFile) {
+EAction.getSubMenu = function(menu, sortOrder, title, objectName, iconFile, addSeparator) {
     var subMenu = menu.findChild(objectName);
     if (isNull(subMenu)) {
         var subMenuActions = menu.actions();
@@ -695,6 +695,14 @@ EAction.getSubMenu = function(menu, sortOrder, title, objectName, iconFile) {
         subMenu = new QMenu(title, menu);
         if (!isNull(iconFile)) {
             subMenu.icon = new QIcon(iconFile);
+        }
+
+        var separator;
+        if (addSeparator) {
+            separator = new RGuiAction("", RMainWindowQt.getMainWindow());
+            separator.setSeparator(true);
+            separator.setSortOrder(sortOrder - 1);
+            separator.addToMenu(menu);
         }
 
         var subMenuAction;

@@ -61,6 +61,9 @@
         getHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        sync
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPointOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

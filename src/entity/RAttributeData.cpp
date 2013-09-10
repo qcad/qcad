@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RAttributeData.h"
+#include "RAttributeDefinitionData.h"
 
 
 RAttributeData::RAttributeData(RDocument* document, const RAttributeData& data)
@@ -33,6 +34,20 @@ RAttributeData::RAttributeData(const RTextBasedData& textData, RBlockReferenceEn
 
     setParentId(blockReferenceId);
 }
+
+//void RAttributeData::sync(RAttributeDefinitionData& attDefData) {
+//    position = attDefData.position;
+//    alignmentPoint = attDefData.alignmentPoint;
+//    textHeight = attDefData.textHeight;
+//    textWidth = attDefData.textWidth;
+//    verticalAlignment = attDefData.verticalAlignment;
+//    horizontalAlignment = attDefData.horizontalAlignment;
+//    drawingDirection = attDefData.drawingDirection;
+//    fontName = attDefData.fontName;
+//    bold = attDefData.bold;
+//    italic = attDefData.italic;
+//    angle = attDefData.angle;
+//}
 
 QDebug operator<<(QDebug dbg, const RAttributeData& t) {
     dbg.nospace() << "RAttributeData("

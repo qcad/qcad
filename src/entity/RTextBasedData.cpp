@@ -139,6 +139,21 @@ double RTextBasedData::getHeight() const {
     return height;
 }
 
+void RTextBasedData::sync(const RTextBasedData& other) {
+    *this = other;
+//    position = attDefData.position;
+//    alignmentPoint = attDefData.alignmentPoint;
+//    textHeight = attDefData.textHeight;
+//    textWidth = attDefData.textWidth;
+//    verticalAlignment = attDefData.verticalAlignment;
+//    horizontalAlignment = attDefData.horizontalAlignment;
+//    drawingDirection = attDefData.drawingDirection;
+//    fontName = attDefData.fontName;
+//    bold = attDefData.bold;
+//    italic = attDefData.italic;
+//    angle = attDefData.angle;
+}
+
 RVector RTextBasedData::getPointOnEntity() const {
     if (painterPaths.size()==0) {
         return RVector::invalid;

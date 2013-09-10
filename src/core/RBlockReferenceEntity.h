@@ -121,6 +121,10 @@ public:
         data.update(entityId);
     }
 
+    bool applyTransformations(QSharedPointer<REntity> entity) const {
+        data.applyTransformations(entity);
+    }
+
     /**
      * \nonscriptable
      */

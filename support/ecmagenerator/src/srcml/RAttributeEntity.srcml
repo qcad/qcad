@@ -28,6 +28,9 @@ dir="./entity" filename="RAttributeEntity.h">
   <cpp:file>"RTextBasedEntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RAttributeDefinitionEntity.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RAttributeData.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
@@ -497,6 +500,10 @@ dir="./entity" filename="RAttributeEntity.h">
       </argument>)</argument_list>
     </call></expr>;</expr_stmt>}</block>
   </function>
+  <comment type="line">// void sync(const
+  RAttributeDefinitionEntity&amp; attDef) {</comment>
+  <comment type="line">// data.sync(attDef.getData());</comment>
+  <comment type="line">// }</comment>
   <comment type="line">// RBlockReferenceEntity::Id
   getBlockReferenceId() const {</comment>
   <comment type="line">// return

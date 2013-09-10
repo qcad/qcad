@@ -70,6 +70,8 @@ public:
     double getWidth() const;
     double getHeight() const;
 
+    void sync(const RTextBasedData& other);
+
     virtual RVector getPointOnEntity() const;
 
     virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX) const {

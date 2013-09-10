@@ -567,6 +567,11 @@ QString RDxfServices::fixFontName(const QString& fontName) const {
         ret = "standard";
     }
 
+    // txt is an a*cad font
+    if (ret.toLower()=="txt") {
+        ret = "standard";
+    }
+
     if (qcad2Compatibility && ret.toLower()=="courier") {
         ret = "courier_2";
     }

@@ -88,6 +88,9 @@
         ;static  QScriptValue
         update
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        applyTransformations
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

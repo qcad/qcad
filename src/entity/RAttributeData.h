@@ -28,6 +28,8 @@
 #include "RDocument.h"
 #include "RTextData.h"
 
+class RAttributeDefinitionData;
+
 /**
  * Stores and manages all data that defines the geometry and
  * appearance of a block attribute entity.
@@ -74,6 +76,8 @@ public:
     void setTag(const QString& t) {
         tag = t;
     }
+
+    //void sync(RAttributeDefinitionData& attDefData);
 
 //    RBlockReferenceEntity::Id getBlockReferenceId() const {
 //        return blockReferenceId;

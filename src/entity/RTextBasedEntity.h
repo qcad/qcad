@@ -212,6 +212,10 @@ public:
         getData().setText(text);
     }
 
+    void sync(const RTextBasedEntity& other) {
+        getData().sync(other.getData());
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 };

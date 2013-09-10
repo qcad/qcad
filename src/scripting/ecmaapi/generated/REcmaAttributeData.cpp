@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RAttributeDefinitionData.h"
+            
             
         // includes for base ecma wrapper classes
         

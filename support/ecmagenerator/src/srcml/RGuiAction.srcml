@@ -1361,13 +1361,6 @@ dir="./core" filename="RGuiAction.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>int</name>
-    </type>
-    <name>sortOrder</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
       <name>bool</name>
     </type>
     <name>iconDisabled</name>

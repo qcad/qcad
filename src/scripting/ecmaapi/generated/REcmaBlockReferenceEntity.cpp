@@ -98,6 +98,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
             
+            REcmaHelper::registerFunction(&engine, proto, applyTransformations, "applyTransformations");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RBlockReferenceEntity*>(), *proto);
 
@@ -1492,6 +1494,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceEntity::applyTransformations
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceEntity::applyTransformations", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceEntity::applyTransformations";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("applyTransformations", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < REntity > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < REntity >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->applyTransformations(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.applyTransformations().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::applyTransformations", context, engine);
             return result;
         }
          QScriptValue REcmaBlockReferenceEntity::toString

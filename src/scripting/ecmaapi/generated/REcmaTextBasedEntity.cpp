@@ -144,6 +144,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setText, "setText");
             
+            REcmaHelper::registerFunction(&engine, proto, sync, "sync");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTextBasedEntity*>(), *proto);
 
@@ -2611,6 +2613,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedEntity::setText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedEntity::sync
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedEntity::sync", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedEntity::sync";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("sync", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTextBasedEntity */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RTextBasedEntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTextBasedEntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RTextBasedEntity*.",
+                               context);                    
+                    }
+                    RTextBasedEntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->sync(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.sync().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedEntity::sync", context, engine);
             return result;
         }
          QScriptValue REcmaTextBasedEntity::toString

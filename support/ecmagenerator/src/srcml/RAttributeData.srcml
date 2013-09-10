@@ -35,6 +35,8 @@ dir="./entity" filename="RAttributeData.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RTextData.h"</cpp:file></cpp:include>
+  <class_decl>class 
+  <name>RAttributeDefinitionData</name>;</class_decl>
   <comment type="block">/** * Stores and manages all data that
   defines the geometry and * appearance of a block attribute
   entity. * * \scriptable * \sharedPointerSupport * \copyable *
@@ -168,6 +170,8 @@ dir="./entity" filename="RAttributeData.h">
     <name>tag</name>= 
     <name>t</name></expr>;</expr_stmt>}</block>
   </function>
+  <comment type="line">//void sync(RAttributeDefinitionData&amp;
+  attDefData);</comment>
   <comment type="line">// RBlockReferenceEntity::Id
   getBlockReferenceId() const {</comment>
   <comment type="line">// return blockReferenceId;</comment>

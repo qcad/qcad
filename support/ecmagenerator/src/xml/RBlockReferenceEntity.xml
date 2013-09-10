@@ -114,6 +114,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
+    <method name="applyTransformations"
+    cppName="applyTransformations" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; REntity &gt;"
+        typeName="QSharedPointer &lt; REntity &gt;" name="entity"
+        isConst="false" />
+      </variant>
+    </method>
     <property name="PropertyCustom" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyHandle" type="RPropertyTypeId"
