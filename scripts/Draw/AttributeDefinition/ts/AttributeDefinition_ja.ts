@@ -6,12 +6,12 @@
     <message>
         <location filename="../AttributeDefinitionInit.js" line="2"/>
         <source>&amp;Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;A 属性定義</translation>
     </message>
     <message>
         <location filename="../AttributeDefinitionInit.js" line="7"/>
         <source>Add an attribute definition</source>
-        <translation type="unfinished"></translation>
+        <translation>属性定義を追加</translation>
     </message>
 </context>
 </TS>
