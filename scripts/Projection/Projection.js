@@ -310,7 +310,10 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         for (k=0; k<trimmedShapes.length; k++) {
             shape = trimmedShapes[k];
             //qDebug("projectShape: rec: ", shape);
-            ret.push(this.projectShape(shape, preview, false)[0]);
+            s = this.projectShape(shape, preview, false)[0];
+            if (!isNull(s)) {
+                ret.push(s);
+            }
         }
         return ret;
     }
@@ -333,8 +336,10 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
 
             var polyline = ShapeAlgorithms.lineOrArcToPolyline(shape, numSegments);
             var projectedPl = this.projectShape(polyline, preview, trim)[0];
-            projectedPl.simplify();
-            ret.push(projectedPl);
+            if (!isNull(projectedPl)) {
+                projectedPl.simplify();
+                ret.push(projectedPl);
+            }
             this.segmentation = true;
 
             return ret;
