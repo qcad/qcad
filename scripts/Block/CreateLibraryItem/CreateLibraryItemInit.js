@@ -10,7 +10,7 @@ function init(basePath) {
     action.setIcon(basePath + "/CreateLibraryItem.svg");
     action.setDefaultShortcut(new QKeySequence("b,t"));
     action.setDefaultCommands(["librarycreate", "bt"]);
-    action.setSortOrder(5000);
+    action.setSortOrder(1000);
     EAction.addGuiActionTo(action, Block, true, false, false, true);
 
     var appWin = EAction.getMainWindow();

@@ -95,6 +95,7 @@ public:
     QList<QKeySequence> getDefaultShortcuts();
     void setShortcutText(const QString& text);
     QString getShortcutText();
+
     void setSortOrder(int sortOrder);
     int getSortOrder();
 
@@ -326,7 +327,6 @@ protected:
     QList<QKeySequence> defaultShortcuts;
     QString shortcutText;
     QString toolTip;
-    int sortOrder;
     bool iconDisabled;
     int enabledOverride;
     RDocumentInterface* documentInterface;

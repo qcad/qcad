@@ -6,7 +6,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("i,a"));
     action.setDefaultCommands([ "infoangle", "ia" ]);
     action.setSortOrder(300);
-//    var appWin = EAction.getMainWindow();
-//    appWin.addFocusListener(action);
-    EAction.addGuiActionTo(action, Information, true, true, true);
+    EAction.addGuiActionTo(action, Information, true, true, true, true);
 }

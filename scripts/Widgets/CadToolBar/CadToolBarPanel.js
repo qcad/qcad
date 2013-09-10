@@ -36,7 +36,7 @@ function CadToolBarPanel(parent, hasBackButton) {
     if (hasBackButton) {
         var backAction = new QAction(this);
         backAction.objectName = "Back";
-        this.addAction(backAction, 0);
+        this.addAction(backAction);
         backAction.triggered.connect(CadToolBar, "back");
     }
 }
@@ -65,12 +65,12 @@ CadToolBarPanel.prototype.addAction = function(action) {
     var s = RSettings.getIntValue("CadToolBar/IconSize", 32);
     button.iconSize = new QSize(s, s);
     if (isFunction(action.getSortOrder)) {
-        button.setProperty("SortOrder", action.getSortOrder());
+        button.setProperty("SortOrder", ColumnLayout.getSortOrder(action));
     }
     if (isNumber(action.property("SortOrder"))) {
-        button.setProperty("SortOrder", action.property("SortOrder"));
+        button.setProperty("SortOrder", ColumnLayout.getSortOrder(action));
     }
-    if (button.objectName=="BackButton") {
+    if (button.objectName==="BackButton") {
         //button.arrowType=Qt.LeftArrow;
         button.icon = new QIcon("scripts/Widgets/CadToolBar/Back.svg");
         button.toolTip = qsTr("Back");

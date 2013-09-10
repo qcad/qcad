@@ -50,7 +50,6 @@ RGuiAction::RGuiAction(const QString& text, QObject* parent)
     requiresRedoableTransaction(false),
     override(false),
     noState(false),
-    sortOrder(-1),
     iconDisabled(false),
     enabledOverride(-1),
     documentInterface(NULL) {
@@ -161,7 +160,7 @@ QString RGuiAction::getToolTip(const QString& text, const QString& shortcut) {
     // additional info for disabled tools:
     if (!isEnabled()) {
         if (requiresSelection) {
-            ret += "<br>" + tr("Requires selection");
+            ret += "<br><i>" + tr("Requires selection") + "</i>";
         }
     }
 
@@ -267,13 +266,18 @@ bool RGuiAction::isChecked() {
 }
 
 void RGuiAction::setSortOrder(int sortOrder) {
-    this->sortOrder = sortOrder;
     this->setProperty("SortOrder", sortOrder);
+
     // for debugging: setToolTip(QString("[%1]").arg(sortOrder));
 }
 
 int RGuiAction::getSortOrder() {
-    return sortOrder;
+    if (property("SortOrder").isValid()) {
+        return this->property("SortOrder").toInt();
+    }
+    else {
+        return -1;
+    }
 }
 
 void RGuiAction::addToMenu(QMenu* menu) {

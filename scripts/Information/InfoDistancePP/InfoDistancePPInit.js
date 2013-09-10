@@ -7,7 +7,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("i,p"));
     action.setDefaultCommands([ "infodist", "ip" ]);
     action.setSortOrder(100);
-//    var appWin = EAction.getMainWindow();
-//    appWin.addFocusListener(action);
-    EAction.addGuiActionTo(action, Information, true, true, true);
+    EAction.addGuiActionTo(action, Information, true, true, true, true);
 }

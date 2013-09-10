@@ -7,6 +7,6 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("e,m"));
     action.setDefaultCommands(["editmain","em"]);
     action.setIcon(basePath + "/EditMainDrawing.svg");
-    action.setSortOrder(65);
-    EAction.addGuiActionTo(action, Block, true, true);
+    action.setSortOrder(240);
+    EAction.addGuiActionTo(action, Block, true, true, false, true);
 }

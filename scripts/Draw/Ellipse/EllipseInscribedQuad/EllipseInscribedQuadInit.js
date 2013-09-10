@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("e,q"));
     action.setDefaultCommands(["ellipseinscribedquad", "eq"]);
     action.setSortOrder(1000);
-    EAction.addGuiActionTo(action, Ellipse, true, true, true);
+    EAction.addGuiActionTo(action, Ellipse, true, true, true, true);
 }

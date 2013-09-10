@@ -45,12 +45,19 @@ ColumnLayout.prototype.addItem = function(item) {
         return;
     }
 
-    if (typeof(item.property("SortOrder"))=="number") {
+    var so = ColumnLayout.getSortOrder(item);
+
+    if (!isNull(so)) {
         for (var i=0; i<itemList.length; ++i) {
             if (typeof(itemList[i].property("SortOrder"))!="number") {
                 continue;
             }
-            if (itemList[i].property("SortOrder")>item.property("SortOrder")) {
+
+            var so2 = ColumnLayout.getSortOrder(itemList[i]);
+            if (isNull(so2)) {
+                continue;
+            }
+            if (so2>so) {
                 itemList.splice(i, 0, item);
                 this.setProperty("ItemList", itemList);
                 return;
@@ -61,6 +68,16 @@ ColumnLayout.prototype.addItem = function(item) {
     //var itemList = this.itemList;
     itemList.push(item);
     this.setProperty("ItemList", itemList);
+};
+
+ColumnLayout.getSortOrder = function(item) {
+    if (typeof(item.property("SortOrderCadToolBar"))=="number") {
+        return item.property("SortOrderCadToolBar");
+    }
+    if (typeof(item.property("SortOrder"))=="number") {
+        return item.property("SortOrder");
+    }
+    return undefined;
 };
 
 ColumnLayout.prototype.sizeHint = function() {

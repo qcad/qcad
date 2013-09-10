@@ -1,7 +1,6 @@
 TEMPLATE = subdirs
 SUBDIRS = \
     Arc \
-    AttributeDefinition \
     Circle \
     Dimension \
     Ellipse \
