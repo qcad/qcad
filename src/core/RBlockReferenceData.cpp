@@ -162,7 +162,7 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
         return QSharedPointer<REntity>();
     }
 
-    if (!applyTransformations(entity)) {
+    if (!applyTransformationTo(*entity)) {
         return QSharedPointer<REntity>();
     }
 
@@ -195,17 +195,18 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
     return entity;
 }
 
-bool RBlockReferenceData::applyTransformations(QSharedPointer<REntity> entity) const {
+bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
-        qWarning("RBlockReferenceData::applyTransformations: "
+        qWarning("RBlockReferenceData::applyTransformationTo: "
             "block %d is NULL", referencedBlockId);
         return false;
     }
 
     // nested block reference with negative scale factors (flipped):
-    QSharedPointer<RBlockReferenceEntity> blockReference = entity.dynamicCast<RBlockReferenceEntity>();
-    if (!blockReference.isNull() && scaleFactors.y<0.0) {
+    RBlockReferenceEntity* blockReference = dynamic_cast<RBlockReferenceEntity*>(&entity);
+    //QSharedPointer<RBlockReferenceEntity> blockReference = entity.dynamicCast<RBlockReferenceEntity>();
+    if (blockReference!=NULL && scaleFactors.y<0.0) {
         blockReference->move(-block->getOrigin());
         blockReference->scale(scaleFactors);
         blockReference->rotate(-2*blockReference->getRotation(), blockReference->getPosition());
@@ -214,10 +215,12 @@ bool RBlockReferenceData::applyTransformations(QSharedPointer<REntity> entity) c
         return true;
     }
 
-    entity->move(-block->getOrigin());
-    entity->scale(scaleFactors);
-    entity->rotate(rotation);
-    entity->move(position);
+    entity.move(-block->getOrigin());
+    entity.scale(scaleFactors);
+    entity.rotate(rotation);
+    entity.move(position);
+
+    qDebug() << "RBlockReferenceData::applyTransformationTo: pos (trans): " << entity;
 
     return true;
 }

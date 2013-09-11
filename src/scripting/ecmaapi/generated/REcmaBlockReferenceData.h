@@ -114,7 +114,7 @@
         queryEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        applyTransformations
+        applyTransformationTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

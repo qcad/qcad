@@ -98,7 +98,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
             
-            REcmaHelper::registerFunction(&engine, proto, applyTransformations, "applyTransformations");
+            REcmaHelper::registerFunction(&engine, proto, applyTransformationTo, "applyTransformationTo");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RBlockReferenceEntity*>(), *proto);
@@ -1497,19 +1497,19 @@
             return result;
         }
          QScriptValue
-        REcmaBlockReferenceEntity::applyTransformations
+        REcmaBlockReferenceEntity::applyTransformationTo
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlockReferenceEntity::applyTransformations", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceEntity::applyTransformations";
+            //REcmaHelper::functionStart("REcmaBlockReferenceEntity::applyTransformationTo", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceEntity::applyTransformationTo";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RBlockReferenceEntity* self = 
-                        getSelf("applyTransformations", context);
+                        getSelf("applyTransformationTo", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1523,44 +1523,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QSharedPointer < REntity > */
+        ) /* type: REntity */
     
     ){
     // prepare arguments:
     
-                    // argument is SharedPointer
-                    QSharedPointer < REntity > 
-                    a0;
-
-                    // argument might be a simple pointer:
-                     REntity * o0 = 
-                    qscriptvalue_cast < REntity * > (context->argument(0));
-
-                    if (o0!=NULL) {
-                        a0 =
-                        QSharedPointer < REntity >(o0->clone());
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type REntity*.",
+                               context);                    
                     }
-                    else {
-                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
-                        QSharedPointer < REntity >*
-                        p0;
-
-                        p0 =
-                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
-
-                        if (p0==NULL) {
-                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type  REntity .", context);                    
-                        }
-
-                        a0 = *p0;
-
-                           //return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type  REntity .",
-                           //    context);                    
-                    }
-
-                    //QSharedPointer < REntity > 
-                    //a0 =
-                    //QSharedPointer < REntity >(o0->clone());
+                    REntity& a0 = *ap0;
                 
     // end of arguments
 
@@ -1568,7 +1550,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->applyTransformations(a0);
+               self->applyTransformationTo(a0);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1578,10 +1560,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.applyTransformations().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.applyTransformationTo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::applyTransformations", context, engine);
+            //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::applyTransformationTo", context, engine);
             return result;
         }
          QScriptValue REcmaBlockReferenceEntity::toString

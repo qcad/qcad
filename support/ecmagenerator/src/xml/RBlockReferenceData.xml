@@ -205,12 +205,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
-    <method name="applyTransformations"
-    cppName="applyTransformations" specifier="public"
+    <method name="applyTransformationTo"
+    cppName="applyTransformationTo" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
-        <arg type="QSharedPointer &lt; REntity &gt;"
-        typeName="QSharedPointer &lt; REntity &gt;" name="entity"
+        <arg type="REntity &amp;" typeName="REntity" name="entity"
         isConst="false" />
       </variant>
     </method>

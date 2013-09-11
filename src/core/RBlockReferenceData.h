@@ -116,7 +116,7 @@ public:
     virtual void update(RObject::Id entityId) const;
 
     QSharedPointer<REntity> queryEntity(REntity::Id entityId) const;
-    bool applyTransformations(QSharedPointer<REntity> entity) const;
+    bool applyTransformationTo(REntity& entity) const;
 
 private:
     RBlock::Id referencedBlockId;

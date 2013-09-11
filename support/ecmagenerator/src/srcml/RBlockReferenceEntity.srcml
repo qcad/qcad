@@ -553,34 +553,29 @@ dir="./core" filename="RBlockReferenceEntity.h">
     <type>
       <name>bool</name>
     </type>
-    <name>applyTransformations</name>
+    <name>applyTransformationTo</name>
     <parameter_list>(
     <param>
       <decl>
         <type>
-          <name>QSharedPointer
-          <argument_list>&lt;
-          <argument>
-            <name>REntity</name>
-          </argument>&gt;</argument_list></name>
-        </type>
+        <name>REntity</name>&amp;</type>
         <name>entity</name>
       </decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
-    <expr_stmt>
+    <return>return 
     <expr>
     <name>data</name>.
     <call>
-      <name>applyTransformations</name>
+      <name>applyTransformationTo</name>
       <argument_list>(
       <argument>
         <expr>
           <name>entity</name>
         </expr>
       </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
+    </call></expr>;</return>}</block>
   </function>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>

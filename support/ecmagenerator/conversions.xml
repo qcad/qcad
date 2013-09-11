@@ -18,6 +18,7 @@
 	<entry key="RColor::Mode" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RObject::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="REntity::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RBlockReferenceEntity::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLayer::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RBlock::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RView::Id" value="toNumber()" testFunction="isNumber()" cast="int" />

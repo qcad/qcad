@@ -168,17 +168,7 @@
                 
                         context->argument(
                         1
-                        ).isVariant()
-                        ||
-                    
-                        context->argument(
-                        1
-                        ).isQObject()
-                        ||
-                    
-                        context->argument(
-                        1
-                        ).isNull()
+                        ).isNumber()
                 ) /* type: RBlockReferenceEntity::Id */
             
                 && (
@@ -209,21 +199,13 @@
                     a0 = 
                     *ap0;
                 
-                    // argument is reference
-                    RBlockReferenceEntity::Id*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RBlockReferenceEntity::Id*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type RBlockReferenceEntity::Id*.",
-                               context);                    
-                    }
-                    RBlockReferenceEntity::Id& a1 = *ap1;
+                    // argument isStandardType
+                    RBlockReferenceEntity::Id
+                    a1 =
+                    (RBlockReferenceEntity::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
                 
                     // argument isStandardType
                     QString
