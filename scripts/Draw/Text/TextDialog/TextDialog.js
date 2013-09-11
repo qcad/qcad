@@ -303,6 +303,7 @@ TextDialog.prototype.show =  function(textDataIn) {
             this.dialog.findChild("AttributeTag").text = textDataIn.getTag();
             if (this.mode === TextDialog.Mode.AttributeDefinition) {
                 this.dialog.findChild("AttributePrompt").text = textDataIn.getPrompt();
+                this.dialog.findChild("ValueLabel").text = qsTr("Default value:");
             }
             else {
                 this.dialog.findChild("AttributePrompt").visible = false;
