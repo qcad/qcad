@@ -28,10 +28,10 @@ function InsertBlock(guiAction) {
     Block.call(this, guiAction);
     this.setUiOptions("InsertBlock.ui");
 
-    this.blockReference = new RBlockReferenceData();
-    this.blockReference.setPosition(new RVector(0.0,0.0));
-    this.blockReference.setScaleFactors(new RVector(1.0,1.0));
-    this.blockReference.setRotation(0.0);
+    this.blockReferenceData = new RBlockReferenceData();
+    this.blockReferenceData.setPosition(new RVector(0.0,0.0));
+    this.blockReferenceData.setScaleFactors(new RVector(1.0,1.0));
+    this.blockReferenceData.setRotation(0.0);
 }
 
 InsertBlock.State = {
@@ -51,7 +51,7 @@ InsertBlock.prototype.beginEvent = function() {
         return;
     }
 
-    this.blockReference.setReferencedBlockId(blockId);
+    this.blockReferenceData.setReferencedBlockId(blockId);
 
     this.setState(InsertBlock.State.SettingPosition);
 };
@@ -74,7 +74,7 @@ InsertBlock.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
     var pos = event.getModelPosition();
 
-    this.blockReference.setPosition(pos);
+    this.blockReferenceData.setPosition(pos);
 
     if (preview) {
         di.previewOperation(this.getOperation(true));
@@ -89,12 +89,35 @@ InsertBlock.prototype.pickCoordinate = function(event, preview) {
 };
 
 InsertBlock.prototype.getOperation = function(preview) {
-    var entity = new RBlockReferenceEntity(
-        this.getDocument(),
-        this.blockReference
-    );
+    var doc = this.getDocument();
+    var op = new RAddObjectsOperation();
 
-    return new RAddObjectOperation(entity);
+    var blockRef = new RBlockReferenceEntity(
+        doc,
+        this.blockReferenceData
+    );
+    op.addObject(blockRef);
+    var blockRefId = doc.getStorage().getMaxObjectId();
+
+    if (!isNull(doc)) {
+        var blockId = this.blockReferenceData.getReferencedBlockId();
+        var ids = doc.queryBlockEntities(blockId);
+        for (var i=0; i<ids.length; i++) {
+            var id = ids[i];
+            var e = doc.queryEntity(id);
+            if (!isAttributeDefinitionEntity(e)) {
+                continue;
+            }
+            var att = new RAttributeEntity(
+                doc,
+                new RAttributeData(e.getData(), blockRefId, e.getTag())
+            );
+            blockRef.applyTransformationTo(att);
+            op.addObject(att);
+        }
+    }
+
+    return op;
 };
 
 InsertBlock.prototype.slotKeepProportionsChanged = function(value) {
@@ -124,11 +147,11 @@ InsertBlock.prototype.slotScaleXChanged = function(value) {
     if (!RMath.getError().isEmpty()) {
         return;
     }
-    var scaleY = this.blockReference.getScaleFactors().y;
+    var scaleY = this.blockReferenceData.getScaleFactors().y;
 
     // if keep proportions is checked, adjust y scale proportionally to x scale:
     if (keepProportions) {
-        var previousScaleX = this.blockReference.getScaleFactors().x;
+        var previousScaleX = this.blockReferenceData.getScaleFactors().x;
         var factor = scaleX / previousScaleX;
         scaleY = scaleY * factor;
 
@@ -136,34 +159,34 @@ InsertBlock.prototype.slotScaleXChanged = function(value) {
         scaleYCombo.setEditText("%1".arg(scaleY));
     }
 
-    this.blockReference.setScaleFactors(new RVector(scaleX, scaleY));
+    this.blockReferenceData.setScaleFactors(new RVector(scaleX, scaleY));
 };
 
 InsertBlock.prototype.slotScaleYChanged = function(value) {
     var scaleY = RMath.eval(value);
     if (RMath.getError().isEmpty()) {
-        this.blockReference.setScaleFactors(new RVector(this.blockReference.getScaleFactors().x, scaleY));
+        this.blockReferenceData.setScaleFactors(new RVector(this.blockReferenceData.getScaleFactors().x, scaleY));
     } else {
-        this.blockReference.setScaleFactors(new RVector(this.blockReference.getScaleFactors().x, 1.0));
+        this.blockReferenceData.setScaleFactors(new RVector(this.blockReferenceData.getScaleFactors().x, 1.0));
     }
 };
 
 InsertBlock.prototype.slotRotationChanged = function(value) {
     var rotation = RMath.eval(value);
     if (RMath.getError().isEmpty()) {
-        this.blockReference.setRotation(RMath.deg2rad(rotation));
+        this.blockReferenceData.setRotation(RMath.deg2rad(rotation));
     } else {
-        this.blockReference.setRotation(0);
+        this.blockReferenceData.setRotation(0);
     }
 };
 
 InsertBlock.prototype.slotFlipHorizontal = function() {
-    this.blockReference.flipHorizontal();
+    this.blockReferenceData.flipHorizontal();
     this.updateOptionsToolBar();
 };
 
 InsertBlock.prototype.slotFlipVertical = function() {
-    this.blockReference.flipVertical();
+    this.blockReferenceData.flipVertical();
     this.updateOptionsToolBar();
 };
 
@@ -174,8 +197,8 @@ InsertBlock.prototype.updateOptionsToolBar = function() {
     var scaleXCombo = optionsToolBar.findChild("ScaleX");
     var scaleYCombo = optionsToolBar.findChild("ScaleY");
 
-    rotationCombo.setEditText("%1".arg(RMath.rad2deg(this.blockReference.getRotation())));
-    scaleXCombo.setEditText("%1".arg(this.blockReference.getScaleFactors().x));
-    scaleYCombo.setEditText("%1".arg(this.blockReference.getScaleFactors().y));
+    rotationCombo.setEditText("%1".arg(RMath.rad2deg(this.blockReferenceData.getRotation())));
+    scaleXCombo.setEditText("%1".arg(this.blockReferenceData.getScaleFactors().x));
+    scaleYCombo.setEditText("%1".arg(this.blockReferenceData.getScaleFactors().y));
 }
 

@@ -121,6 +121,37 @@ bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
+//    if (propertyTypeId==PropertyPositionX) {
+//        double d = value - data.position.x;
+//        RObject::setMember(data.position.x, value);
+
+//        const RDocument* doc = getDocument();
+//        if (doc!=NULL) {
+//            QSet<REntity::Id> childIds = doc->queryChildEntities(getId(), RS::EntityAttribute);
+//            QSet<REntity::Id>::iterator it;
+//            for (it=childIds.begin(); it!=childIds.end(); it++) {
+//                REntity::Id childId = *it;
+//                QSharedPointer<REntity> child = doc->queryEntity(childId);
+//                if (child.isNull()) {
+//                    continue;
+//                }
+
+//                QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds();
+//                QSet<RPropertyTypeId>::iterator it2;
+//                for (it2=childProperties.begin(); it2!=childProperties.end(); it2++) {
+//                    RPropertyTypeId pid = *it2;
+//                    QPair<QVariant, RPropertyAttributes> p = child->getProperty(pid);
+//                    if (p.second.isVisibleToParent() && pid.getCustomPropertyName()==tag) {
+//                        //ret.insert(RPropertyTypeId(QT_TRANSLATE_NOOP("REntity", "Attributes"), p.first.toString()));
+//                        //return qMakePair(QVariant(p.first), RPropertyAttributes());
+//                        child->setProperty(pid, value.toString(), transaction);
+//                        transaction->addObject(child);
+//                    }
+//                }
+//            }
+//        }
+//    }
+
     ret = ret || RObject::setMember(data.position.x, value, PropertyPositionX == propertyTypeId);
     ret = ret || RObject::setMember(data.position.y, value, PropertyPositionY == propertyTypeId);
     ret = ret || RObject::setMember(data.position.z, value, PropertyPositionZ == propertyTypeId);

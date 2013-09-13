@@ -245,7 +245,9 @@ bool RPropertyTypeId::operator ==(const RPropertyTypeId& other) const {
         return id == other.id;
     }
     else {
-        return id == other.id && customPropertyName==other.customPropertyName;
+        return id == other.id &&
+            customPropertyName==other.customPropertyName &&
+            customPropertyTitle==other.customPropertyTitle;
     }
 }
 
@@ -264,7 +266,9 @@ bool RPropertyTypeId::operator <(const RPropertyTypeId& other) const {
         return id < other.id;
     }
     else {
-        return customPropertyName < other.customPropertyName;
+        return customPropertyTitle < other.customPropertyTitle ||
+            (customPropertyTitle == other.customPropertyTitle &&
+             customPropertyName < other.customPropertyName);
     }
 }
 
@@ -273,7 +277,7 @@ uint qHash(RPropertyTypeId propertyTypeId) {
         return qHash(propertyTypeId.getId());
     }
     else {
-        return qHash(propertyTypeId.getCustomPropertyName());
+        return qHash(propertyTypeId.getCustomPropertyTitle() + "///" + propertyTypeId.getCustomPropertyName());
     }
 }
 
@@ -281,6 +285,7 @@ QDebug operator<<(QDebug dbg, const RPropertyTypeId& p) {
     dbg.nospace()
         << "RPropertyTypeId("
         << p.getId() << ", "
+        << p.getCustomPropertyTitle() << ", "
         << p.getCustomPropertyName() << ", "
         << p.getPropertyGroupTitle() << ", "
         << p.getPropertyTitle()
