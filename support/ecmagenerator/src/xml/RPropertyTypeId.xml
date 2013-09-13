@@ -8,6 +8,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant>
         <arg type="QString &amp;" typeName="QString"
+        name="customPropertyTitle" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="customPropertyName" isConst="true" />
+      </variant>
+      <variant>
+        <arg type="QString &amp;" typeName="QString"
         name="customPropertyName" isConst="true" />
       </variant>
       <variant>
@@ -23,10 +29,37 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="setId" cppName="setId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+      </variant>
+    </method>
+    <method name="getCustomPropertyTitle"
+    cppName="getCustomPropertyTitle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setCustomPropertyTitle"
+    cppName="setCustomPropertyTitle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="t"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getCustomPropertyName"
     cppName="getCustomPropertyName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setCustomPropertyName"
+    cppName="setCustomPropertyName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="n"
+        isConst="true" />
+      </variant>
     </method>
     <method name="isValid" cppName="isValid" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

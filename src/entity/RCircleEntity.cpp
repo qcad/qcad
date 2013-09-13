@@ -70,8 +70,8 @@ void RCircleEntity::init() {
 }
 
 bool RCircleEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
     ret = ret || RObject::setMember(data.center.x, value, PropertyCenterX
             == propertyTypeId);
     ret = ret || RObject::setMember(data.center.y, value, PropertyCenterY
@@ -98,7 +98,7 @@ bool RCircleEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RCircleEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyCenterX) {
         return qMakePair(QVariant(data.center.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterY) {

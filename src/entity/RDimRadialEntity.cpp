@@ -84,8 +84,8 @@ void RDimRadialEntity::init() {
 }
 
 bool RDimRadialEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = RDimensionEntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = RDimensionEntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.definitionPoint.x, value, PropertyCenterPointX == propertyTypeId);
     ret = ret || RObject::setMember(data.definitionPoint.y, value, PropertyCenterPointY == propertyTypeId);
@@ -103,7 +103,7 @@ bool RDimRadialEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimRadialEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyCenterPointX) {
         return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterPointY) {

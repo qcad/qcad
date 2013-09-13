@@ -63,7 +63,7 @@ void RBlock::setName(const QString& n) {
 //}
 
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
-    const QVariant& value) {
+    const QVariant& value, RTransaction* transaction) {
 
     bool ret = false;
 
@@ -91,7 +91,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RBlock::getProperty(
-        RPropertyTypeId propertyTypeId,
+        RPropertyTypeId& propertyTypeId,
         bool humanReadable, bool noAttributes) {
 
     if (propertyTypeId == PropertyName) {

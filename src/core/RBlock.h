@@ -31,6 +31,7 @@
 #include "RPropertyTypeId.h"
 
 class RDocument;
+class RTransaction;
 
 //class QCADCORE_EXPORT RAttributeDefinition : public RText {
 //public:
@@ -107,11 +108,10 @@ public:
         return origin;
     }
 
-    virtual QPair<QVariant, RPropertyAttributes> getProperty(
-            RPropertyTypeId propertyTypeId,
+    virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
-            const QVariant& value);
+            const QVariant& value, RTransaction* transaction=NULL);
 
     virtual bool isSelectedForPropertyEditing();
 

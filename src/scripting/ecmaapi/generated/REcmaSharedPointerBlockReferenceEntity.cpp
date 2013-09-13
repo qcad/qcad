@@ -78,6 +78,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
+            REcmaHelper::registerFunction(&engine, proto, getPropertyTypeIds, "getPropertyTypeIds");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -598,6 +600,56 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("getPropertyTypeIds", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RPropertyTypeId >'
+    QSet < RPropertyTypeId > cppResult =
+        
+               self->getPropertyTypeIds();
+        // return type: QSet < RPropertyTypeId >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getPropertyTypeIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerBlockReferenceEntity::setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -677,6 +729,93 @@
                self->setProperty(a0
         ,
     a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPropertyTypeId */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNumber() || 
+            context->argument(1).isString() || 
+            context->argument(1).isBool() || 
+            context->argument(1).isArray() || 
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
+        ) /* type: QVariant */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPropertyTypeId*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPropertyTypeId*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RPropertyTypeId.",
+                               context);                    
+                    }
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a1 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                
+                    // argument is pointer
+                    RTransaction * a2 = NULL;
+
+                    a2 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(2)
+                        );
+                    
+                    if (a2==NULL && 
+                        !context->argument(2).isNull()) {
+                        return REcmaHelper::throwError("RBlockReferenceEntity: Argument 2 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->setProperty(a0
+        ,
+    a1
+        ,
+    a2);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);

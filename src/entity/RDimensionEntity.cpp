@@ -88,8 +88,8 @@ void RDimensionEntity::init() {
 }
 
 bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(getData().definitionPoint.x, value, PropertyDefinitionPointX == propertyTypeId);
     ret = ret || RObject::setMember(getData().definitionPoint.y, value, PropertyDefinitionPointY == propertyTypeId);
@@ -131,7 +131,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyDefinitionPointX) {
         return qMakePair(QVariant(getData().definitionPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDefinitionPointY) {

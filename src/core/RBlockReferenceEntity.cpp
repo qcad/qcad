@@ -72,7 +72,7 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyColor.generateId(typeid(RBlockReferenceEntity), REntity::PropertyColor);
     RBlockReferenceEntity::PropertyDrawOrder.generateId(typeid(RBlockReferenceEntity), REntity::PropertyDrawOrder);
 
-    RBlockReferenceEntity::PropertyReferencedBlock.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Referenced Block"));
+    RBlockReferenceEntity::PropertyReferencedBlock.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Block"));
     RBlockReferenceEntity::PropertyPositionX.generateId(typeid(RBlockReferenceEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
     RBlockReferenceEntity::PropertyPositionY.generateId(typeid(RBlockReferenceEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RBlockReferenceEntity::PropertyPositionZ.generateId(typeid(RBlockReferenceEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
@@ -82,9 +82,44 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyRotation.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
 }
 
+QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds() const {
+    QSet<RPropertyTypeId> ret;
+
+    // TODO: move to RObject?
+    // add attribute tag / values as properties of the block reference:
+    const RDocument* doc = getDocument();
+    if (doc!=NULL) {
+        QSet<REntity::Id> childIds = doc->queryChildEntities(getId(), RS::EntityAttribute);
+        QSet<REntity::Id>::iterator it;
+        for (it=childIds.begin(); it!=childIds.end(); it++) {
+            REntity::Id childId = *it;
+            QSharedPointer<REntity> child = doc->queryEntityDirect(childId);
+            if (child.isNull()) {
+                continue;
+            }
+
+            QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds();
+            QSet<RPropertyTypeId>::iterator it2;
+            for (it2=childProperties.begin(); it2!=childProperties.end(); it2++) {
+                RPropertyTypeId pid = *it2;
+                QPair<QVariant, RPropertyAttributes> p = child->getProperty(pid);
+                if (p.second.isVisibleToParent()) {
+                    pid.setId(RPropertyTypeId::INVALID_ID);
+                    ret.insert(pid);
+                    //qDebug() << pid.getCustomPropertyTitle() << " / " << pid.getCustomPropertyName();
+                    //qDebug() << p.first.toString();
+                }
+            }
+        }
+    }
+
+    ret.unite(RObject::getPropertyTypeIds());
+    return ret;
+}
+
 bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.position.x, value, PropertyPositionX == propertyTypeId);
     ret = ret || RObject::setMember(data.position.y, value, PropertyPositionY == propertyTypeId);
@@ -111,6 +146,39 @@ bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
         }
     }
 
+    // allow editing of attributes in the context of a block reference:
+    if (transaction && propertyTypeId.isCustom()) {
+        if (propertyTypeId.getCustomPropertyTitle()=="Attributes") {
+            QString tag = propertyTypeId.getCustomPropertyName();
+
+            const RDocument* doc = getDocument();
+            if (doc!=NULL) {
+                QSet<REntity::Id> childIds = doc->queryChildEntities(getId(), RS::EntityAttribute);
+                QSet<REntity::Id>::iterator it;
+                for (it=childIds.begin(); it!=childIds.end(); it++) {
+                    REntity::Id childId = *it;
+                    QSharedPointer<REntity> child = doc->queryEntity(childId);
+                    if (child.isNull()) {
+                        continue;
+                    }
+
+                    QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds();
+                    QSet<RPropertyTypeId>::iterator it2;
+                    for (it2=childProperties.begin(); it2!=childProperties.end(); it2++) {
+                        RPropertyTypeId pid = *it2;
+                        QPair<QVariant, RPropertyAttributes> p = child->getProperty(pid);
+                        if (p.second.isVisibleToParent() && pid.getCustomPropertyName()==tag) {
+                            //ret.insert(RPropertyTypeId(QT_TRANSLATE_NOOP("REntity", "Attributes"), p.first.toString()));
+                            //return qMakePair(QVariant(p.first), RPropertyAttributes());
+                            child->setProperty(pid, value.toString(), transaction);
+                            transaction->addObject(child);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     if (ret) {
         data.update();
     }
@@ -119,7 +187,7 @@ bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
-        RPropertyTypeId propertyTypeId,
+        RPropertyTypeId& propertyTypeId,
         bool humanReadable, bool noAttributes) {
 
     if (propertyTypeId == PropertyPositionX) {
@@ -162,6 +230,40 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
                     RPropertyAttributes());
         }
     }
+    else if (propertyTypeId.isCustom()) {
+        if (propertyTypeId.getCustomPropertyTitle()=="Attributes") {
+            QString tag = propertyTypeId.getCustomPropertyName();
+
+            const RDocument* doc = getDocument();
+            if (doc!=NULL) {
+                QSet<REntity::Id> childIds = doc->queryChildEntities(getId(), RS::EntityAttribute);
+                QSet<REntity::Id>::iterator it;
+                for (it=childIds.begin(); it!=childIds.end(); it++) {
+                    REntity::Id childId = *it;
+                    QSharedPointer<REntity> child = doc->queryEntityDirect(childId);
+                    if (child.isNull()) {
+                        continue;
+                    }
+
+                    QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds();
+                    QSet<RPropertyTypeId>::iterator it2;
+                    for (it2=childProperties.begin(); it2!=childProperties.end(); it2++) {
+                        RPropertyTypeId pid = *it2;
+                        QPair<QVariant, RPropertyAttributes> p = child->getProperty(pid);
+                        if (p.second.isVisibleToParent() && pid.getCustomPropertyName()==tag) {
+                            //ret.insert(RPropertyTypeId(QT_TRANSLATE_NOOP("REntity", "Attributes"), p.first.toString()));
+                            return qMakePair(QVariant(p.first), RPropertyAttributes());
+                        }
+                    }
+                }
+            }
+
+            //document->queryChildEntities(getId());
+
+            //return qMakePair(QVariant("Dummy"), RPropertyAttributes());
+        }
+    }
+
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 

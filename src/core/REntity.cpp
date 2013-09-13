@@ -148,7 +148,7 @@ QList<RVector> REntity::getIntersectionPoints(const RShape& shape, bool limited,
 }
 
 QPair<QVariant, RPropertyAttributes> REntity::getProperty(
-        RPropertyTypeId propertyTypeId,
+        RPropertyTypeId& propertyTypeId,
         bool humanReadable, bool noAttributes) {
 
     if (propertyTypeId == PropertyType) {
@@ -201,9 +201,9 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
-bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value) {
+bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
 
-    bool ret = RObject::setProperty(propertyTypeId, value);
+    bool ret = RObject::setProperty(propertyTypeId, value, transaction);
 
     if (propertyTypeId == PropertyBlock) {
         ret = ret || RObject::setMember(getData().blockId, value.toInt(), true);

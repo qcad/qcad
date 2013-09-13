@@ -33,23 +33,33 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RS::EntityType" isPureVirtual="false" />
     </method>
+    <method name="getPropertyTypeIds" cppName="getPropertyTypeIds"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RPropertyTypeId &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="setProperty" cppName="setProperty"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
         name="propertyTypeId" isConst="false" />
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getProperty" cppName="getProperty"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
       isPureVirtual="false">
-        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
-        name="propertyTypeId" isConst="false" />
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="propertyTypeId"
+        isConst="false" />
         <arg type="bool" typeName="bool" name="humanReadable"
         hasDefault="true" default=" false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"

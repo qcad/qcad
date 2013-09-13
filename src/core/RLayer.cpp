@@ -65,7 +65,7 @@ void RLayer::setName(const QString& n) {
 }
 
 bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
-    const QVariant& value) {
+    const QVariant& value, RTransaction* transaction) {
 
     bool ret = false;
 
@@ -98,7 +98,7 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RLayer::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable,
+        RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
 
     if (propertyTypeId == PropertyName) {

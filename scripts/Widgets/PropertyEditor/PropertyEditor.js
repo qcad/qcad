@@ -259,6 +259,7 @@ function PropertyEditorImpl(basePath) {
 //    }
 
     this.geometryGroup = undefined;
+    this.childGroup = undefined;
     this.customGroup = undefined;
     this.onlyChangesOverride = undefined;
 }
@@ -289,6 +290,10 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         if (!isNull(this.geometryGroup)) {
             this.geometryGroup.destroy();
             this.geometryGroup = undefined;
+        }
+        if (!isNull(this.childGroup)) {
+            this.childGroup.destroy();
+            this.childGroup = undefined;
         }
         if (!isNull(this.customGroup)) {
             this.customGroup.destroy();
@@ -331,6 +336,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     }
 
     var gridLayoutGeometry;
+    var gridLayoutChild;
     var gridLayoutCustom;
 
     if (!onlyChanges) {
@@ -346,11 +352,28 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         gridLayoutGeometry.setColumnStretch(2,0);
         this.geometryGroup.setLayout(gridLayoutGeometry);
 
+        // child properties
+        // (block attributes shown when block reference is selected):
+        // create child property group box with grid layout:
+        this.childGroup = new QGroupBox(qsTr("Dependent Entities"), this.widget);
+        layout.insertWidget(3, this.childGroup);
+
+        // grid layout with four columns and N rows for N property controls:
+        // (the fourth column is for the 'remove property' button)
+        gridLayoutChild = new QGridLayout(this.childGroup);
+        gridLayoutChild.setVerticalSpacing(4);
+        gridLayoutChild.setColumnStretch(0,0);
+        gridLayoutChild.setColumnStretch(1,1);
+        gridLayoutChild.setColumnStretch(2,0);
+        gridLayoutChild.setColumnStretch(3,0);
+        this.childGroup.setLayout(gridLayoutChild);
+        this.childGroup.visible = false;
+
         // custom properties:
         if (RSettings.isXDataEnabled()) {
             // create custom property group box with grid layout:
             this.customGroup = new QGroupBox(qsTr("Custom"), this.widget);
-            layout.insertWidget(3, this.customGroup);
+            layout.insertWidget(4, this.customGroup);
 
             // grid layout with four columns and N rows for N property controls:
             // (the fourth column is for the 'remove property' button)
@@ -369,12 +392,17 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     // for all property groups:
     for (var gi=0; gi<groups.length; ++gi) {
         var group = groups[gi];
+        //qDebug("group: ", group);
 
         // for all properties in that group:
         var titles = this.getPropertyTitles(group);
         for (var pi=0; pi<titles.length; ++pi) {
             var title = titles[pi];
+            //qDebug("title: ", title);
+
             var value = this.getPropertyValue(group, title);
+            //qDebug("value: ", value);
+
             var attributes = this.getPropertyAttributes(group, title);
             var propertyTypeId = attributes.getPropertyTypeId();
 
@@ -435,14 +463,25 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                 this.initControls(propertyTypeId, onlyChanges, handleEdit);
             }
 
-            // geometric properties:
+            // other properties:
             else {
                 var gridLayout;
                 var groupBox;
                 if (propertyTypeId.isCustom()) {
-                    gridLayout = gridLayoutCustom;
-                    groupBox = this.customGroup;
+                    // block reference attributes:
+                    if (propertyTypeId.getCustomPropertyTitle()==="Attributes") {
+                        gridLayout = gridLayoutChild;
+                        groupBox = this.childGroup;
+                        // only show group with dependent entities if needed:
+                        this.childGroup.visible = true;
+                    }
+                    // custom properties:
+                    else {
+                        gridLayout = gridLayoutCustom;
+                        groupBox = this.customGroup;
+                    }
                 }
+                // geometric properties:
                 else {
                     gridLayout = gridLayoutGeometry;
                     groupBox = this.geometryGroup;
@@ -451,7 +490,6 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                 // for the first property of a new property group,
                 // add group title and index controls if the property is a list:
                 if (pi===0) {
-                    //debugger;
                     // create group label:
                     if (!onlyChanges && group.length!==0 &&
                             // situation with two splines, one with fit points,
@@ -511,7 +549,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                         }
 
                         // 'remove custom property' button:
-                        if (propertyTypeId.isCustom()) {
+                        if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom)) {
                             var removeCustomPropertyButton = new QToolButton(this.widget);
                             removeCustomPropertyButton.icon = new QIcon(this.basePath + "/RemoveProperty.svg");
                             removeCustomPropertyButton.iconSize = new QSize(12,12);

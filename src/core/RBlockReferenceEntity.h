@@ -70,9 +70,12 @@ public:
         return RS::EntityBlockRef;
     }
 
-    bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value);
-    QPair<QVariant, RPropertyAttributes> getProperty(
-            RPropertyTypeId propertyTypeId,
+    virtual QSet<RPropertyTypeId> getPropertyTypeIds() const;
+
+    virtual bool setProperty(RPropertyTypeId propertyTypeId,
+            const QVariant& value, RTransaction* transaction=NULL);
+    virtual QPair<QVariant, RPropertyAttributes> getProperty(
+            RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
 
 //    virtual void setSelected(bool on);

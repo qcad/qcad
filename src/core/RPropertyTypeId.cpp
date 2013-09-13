@@ -28,6 +28,11 @@ QMap<long int, QPair<QString, QString> > RPropertyTypeId::titleMap;
 
 
 
+RPropertyTypeId::RPropertyTypeId(const QString& customPropertyTitle, const QString& customPropertyName) :
+    id(-1), customPropertyTitle(customPropertyTitle), customPropertyName(customPropertyName) {
+
+}
+
 RPropertyTypeId::RPropertyTypeId(const QString& customPropertyName) :
     id(-1), customPropertyName(customPropertyName) {
 
@@ -35,6 +40,7 @@ RPropertyTypeId::RPropertyTypeId(const QString& customPropertyName) :
 
 RPropertyTypeId::RPropertyTypeId(const RPropertyTypeId& other) {
     id = other.id;
+    customPropertyTitle = other.customPropertyTitle;
     customPropertyName = other.customPropertyName;
 }
 
@@ -94,7 +100,10 @@ QString RPropertyTypeId::getPropertyGroupTitle() const {
 //    }
 //    else
     if (isCustom()) {
-        return "Custom";
+        if (!customPropertyTitle.isEmpty()) {
+            return customPropertyTitle;
+        }
+        return QT_TRANSLATE_NOOP("REntity", "Custom");
     }
     else {
         return titleMap[id].first;
@@ -104,7 +113,6 @@ QString RPropertyTypeId::getPropertyGroupTitle() const {
 /**
  * \return The property title of the given property.
  */
-
 QString RPropertyTypeId::getPropertyTitle() const {
     if (isCustom()) {
         return customPropertyName;
@@ -169,6 +177,18 @@ long int RPropertyTypeId::getId() const {
     return id;
 }
 
+void RPropertyTypeId::setId(long int id) {
+    this->id = id;
+}
+
+QString RPropertyTypeId::getCustomPropertyTitle() const {
+    return customPropertyTitle;
+}
+
+void RPropertyTypeId::setCustomPropertyTitle(const QString& t) {
+    customPropertyTitle = t;
+}
+
 /**
  * \return The name (key) of the custom property.
  */
@@ -177,6 +197,10 @@ QString RPropertyTypeId::getCustomPropertyName() const {
 //        return customPropertyName.mid(RPropertyTypeId::blockAttributePrefix.length());
 //    }
     return customPropertyName;
+}
+
+void RPropertyTypeId::setCustomPropertyName(const QString& n) {
+    customPropertyName = n;
 }
 
 /**

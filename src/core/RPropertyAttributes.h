@@ -63,7 +63,8 @@ public:
         Pattern = 0x1000,                //!< Property is a hatch pattern name
         Custom = 0x2000,                 //!< Property is a map of custom properties
         Integer = 0x4000,                //!< Property is an int (not a double number)
-        Redundant = 0x8000               //!< Property is redundant (e.g. angle for line entities)
+        Redundant = 0x8000,              //!< Property is redundant (e.g. angle for line entities)
+        VisibleToParent = 0x10000        //!< Property can be edited in the context of the parent entity
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -188,6 +189,10 @@ public:
 
     bool isRedundant() const {
         return options.testFlag(Redundant);
+    }
+
+    bool isVisibleToParent() const {
+        return options.testFlag(VisibleToParent);
     }
 
     RPropertyTypeId getPropertyTypeId() {

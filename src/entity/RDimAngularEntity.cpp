@@ -106,8 +106,8 @@ void RDimAngularEntity::init() {
 }
 
 bool RDimAngularEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = RDimensionEntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = RDimensionEntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.extensionLine1Start.x, value, PropertyExtensionLine1StartX == propertyTypeId);
     ret = ret || RObject::setMember(data.extensionLine1Start.y, value, PropertyExtensionLine1StartY == propertyTypeId);
@@ -137,7 +137,7 @@ bool RDimAngularEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimAngularEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
 
     if (propertyTypeId == PropertyExtensionLine1StartX) {
         return qMakePair(QVariant(data.extensionLine1Start.x), RPropertyAttributes());

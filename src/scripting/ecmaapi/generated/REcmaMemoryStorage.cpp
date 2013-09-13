@@ -1371,6 +1371,52 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::EntityType
+                    a1 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryChildEntities(a0
+        ,
+    a1);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryChildEntities().",
                    context);

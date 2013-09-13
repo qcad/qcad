@@ -50,7 +50,9 @@ void RUcs::init() {
     RUcs::PropertyYAxisDirectionZ.generateId(typeid(RUcs), "Y Axis", "Z");
 }
 
-bool RUcs::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value) {
+bool RUcs::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
+    Q_UNUSED(transaction);
+
     bool ret = false;
     ret = RObject::setMember(name, value, PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(origin.x, value, PropertyOriginX  == propertyTypeId);
@@ -66,7 +68,7 @@ bool RUcs::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value) {
 }
 
 QPair<QVariant, RPropertyAttributes> RUcs::getProperty(
-        RPropertyTypeId propertyTypeId, bool /*humanReadable*/,
+        RPropertyTypeId& propertyTypeId, bool /*humanReadable*/,
         bool /*noAttributes*/) {
 
     if (propertyTypeId == PropertyName) {

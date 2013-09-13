@@ -282,14 +282,7 @@ QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
     */
 }
 
-QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId) {
-//    QSharedPointer<REntity> parent = queryEntityDirect(parentId).dynamicCast<REntity>();
-//    if (parent.isNull()) {
-//        qWarning() << "RMemoryStorage::queryChildEntities: "
-//            << "ID does not refer to an entity: " << parentId;
-//        return QSet<REntity::Id>();
-//    }
-
+QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {
     QSet<REntity::Id> result; // = queryBlockEntities(blockRef->getReferencedBlockId());
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
@@ -298,7 +291,9 @@ QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId) {
             continue;
         }
 
-        result.insert(e->getId());
+        if (type==RS::EntityAll || type==e->getType()) {
+            result.insert(e->getId());
+        }
     }
 
     return result;
@@ -639,16 +634,18 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
 void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     QSet<REntity::Id>* affectedEntities, bool onlyDescend) {
 
-    if (!onlyDescend) {
-        // entity has a parent: select parent instead
-        // (select block ref for attribute):
-        REntity::Id parentId = entity->getParentId();
-        QSharedPointer<REntity> parent = queryEntityDirect(parentId);
-        if (!parent.isNull()) {
-            setEntitySelected(parent, on, affectedEntities);
-            return;
-        }
-    }
+//    disabled:
+//    attributes can be selected individually to edit their attributes
+//    if (!onlyDescend) {
+//        // entity has a parent: select parent instead
+//        // (select block ref for attribute):
+//        REntity::Id parentId = entity->getParentId();
+//        QSharedPointer<REntity> parent = queryEntityDirect(parentId);
+//        if (!parent.isNull()) {
+//            setEntitySelected(parent, on, affectedEntities);
+//            return;
+//        }
+//    }
 
     entity->setSelected(on);
     if (affectedEntities!=NULL) {

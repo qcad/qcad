@@ -79,9 +79,10 @@ public:
         return RS::EntitySolid;
     }
 
-    bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value);
+    bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
+        RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(
-            RPropertyTypeId propertyTypeId,
+            RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
 
     virtual void exportEntity(RExporter& e, bool preview=false) const;

@@ -83,9 +83,10 @@ public:
         return RS::EntityDimDiametric;
     }
 
-    bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value);
+    bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
+        RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(
-            RPropertyTypeId propertyTypeId,
+            RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
 
     virtual RDimDiametricData& getData() {

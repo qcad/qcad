@@ -136,7 +136,7 @@ public:
      * block definition but as separate entities on the same level as
      * the block reference.
      */
-    virtual QSet<REntity::Id> queryChildEntities(REntity::Id parentId) = 0;
+    virtual QSet<REntity::Id> queryChildEntities(REntity::Id parentId, RS::EntityType type = RS::EntityAll) = 0;
 
     virtual bool hasChildEntities(REntity::Id parentId) = 0;
 

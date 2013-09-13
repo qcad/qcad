@@ -87,9 +87,10 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyVertexNZ.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"));
 }
 
-bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value) {
+bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
+    RTransaction* transaction) {
 
-    bool ret = REntity::setProperty(propertyTypeId, value);
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.solid, value, PropertySolid == propertyTypeId);
 
@@ -245,7 +246,7 @@ RVector RHatchEntity::setComponent(const RVector& p, double v, RObject::XYZ xyz)
 }
 
 QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
 
     if (propertyTypeId == PropertySolid) {
         //return qMakePair(QVariant(data.solid), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));

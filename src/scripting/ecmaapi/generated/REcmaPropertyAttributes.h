@@ -124,6 +124,9 @@
         isRedundant
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isVisibleToParent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPropertyTypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

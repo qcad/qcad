@@ -80,8 +80,8 @@ void RAttributeEntity::init() {
 }
 
 bool RAttributeEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = RTextBasedEntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = RTextBasedEntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.tag, value, PropertyTag == propertyTypeId);
 
@@ -92,11 +92,18 @@ bool RAttributeEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RAttributeEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
 
     if (propertyTypeId == PropertyTag) {
         return qMakePair(QVariant(data.tag), RPropertyAttributes());
     }
+    if (propertyTypeId == PropertyText) {
+        // add custom property title for use by parent (block reference):
+        propertyTypeId.setCustomPropertyTitle("Attributes");
+        propertyTypeId.setCustomPropertyName(getTag());
+        return qMakePair(QVariant(data.text), RPropertyAttributes(RPropertyAttributes::VisibleToParent));
+    }
+
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 

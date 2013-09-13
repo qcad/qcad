@@ -96,10 +96,10 @@ public:
     }
 
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
-            RPropertyTypeId propertyTypeId,
+            RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
-            const QVariant& value);
+            const QVariant& value, RTransaction* transaction=NULL);
 
     virtual bool isSelectedForPropertyEditing();
 

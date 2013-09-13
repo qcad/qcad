@@ -61,8 +61,8 @@ void RLeaderEntity::init() {
 }
 
 bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.arrowHead, value, PropertyArrowHead == propertyTypeId);
     ret = ret || RObject::setMemberX(data.vertices, value, PropertyVertexNX == propertyTypeId);
@@ -73,7 +73,7 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyArrowHead) {
         return qMakePair(QVariant(data.arrowHead), RPropertyAttributes());
     } else if (propertyTypeId == PropertyVertexNX) {

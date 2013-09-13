@@ -95,7 +95,9 @@ QList<QPair<QString, RLinetype> > RLinetype::getList(bool onlyFixed) {
 }
 
 bool RLinetype::setProperty(RPropertyTypeId propertyTypeId,
-    const QVariant& value) {
+    const QVariant& value, RTransaction* transaction) {
+
+    Q_UNUSED(transaction);
 
     bool ret = false;
     ret = RObject::setMember(name, value, PropertyName == propertyTypeId);
@@ -104,7 +106,7 @@ bool RLinetype::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RLinetype::getProperty(
-        RPropertyTypeId propertyTypeId, bool /*humanReadable*/,
+        RPropertyTypeId& propertyTypeId, bool /*humanReadable*/,
         bool /*noAttributes*/) {
 
     if (propertyTypeId == PropertyName) {

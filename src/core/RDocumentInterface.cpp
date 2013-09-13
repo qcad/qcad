@@ -1240,7 +1240,7 @@ void RDocumentInterface::deselectAll() {
 void RDocumentInterface::clearSelection() {
     QSet<REntity::Id> entityIds;
     document.clearSelection(&entityIds);
-    regenerateScenes(entityIds, true);
+    updateSelectionStatus(entityIds, true);
 
     if (RMainWindow::hasMainWindow()) {
         RMainWindow::getMainWindow()->postSelectionChangedEvent();

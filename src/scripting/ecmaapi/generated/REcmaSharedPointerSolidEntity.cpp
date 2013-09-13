@@ -715,6 +715,93 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPropertyTypeId */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNumber() || 
+            context->argument(1).isString() || 
+            context->argument(1).isBool() || 
+            context->argument(1).isArray() || 
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
+        ) /* type: QVariant */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPropertyTypeId*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPropertyTypeId*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSolidEntity: Argument 0 is not of type RPropertyTypeId.",
+                               context);                    
+                    }
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a1 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                
+                    // argument is pointer
+                    RTransaction * a2 = NULL;
+
+                    a2 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(2)
+                        );
+                    
+                    if (a2==NULL && 
+                        !context->argument(2).isNull()) {
+                        return REcmaHelper::throwError("RSolidEntity: Argument 2 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->setProperty(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidEntity.setProperty().",
                    context);

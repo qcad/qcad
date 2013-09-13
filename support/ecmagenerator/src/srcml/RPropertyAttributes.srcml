@@ -125,9 +125,13 @@ dir="./core" filename="RPropertyAttributes.h">
   <comment type="line">//!&lt; Property is an int (not a double
   number)</comment>
   <expr>
-  <name>Redundant</name>= 0x8000</expr>
+  <name>Redundant</name>= 0x8000</expr>, 
   <comment type="line">//!&lt; Property is redundant (e.g. angle
-  for line entities)</comment>}</block>;</enum>
+  for line entities)</comment>
+  <expr>
+  <name>VisibleToParent</name>= 0x10000</expr>
+  <comment type="line">//!&lt; Property can be edited in the
+  context of the parent entity</comment>}</block>;</enum>
   <macro>
     <name>Q_DECLARE_FLAGS</name>
     <argument_list>(
@@ -846,6 +850,27 @@ dir="./core" filename="RPropertyAttributes.h">
       <argument>
         <expr>
           <name>Redundant</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isVisibleToParent</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>options</name>.
+    <call>
+      <name>testFlag</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>VisibleToParent</name>
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>

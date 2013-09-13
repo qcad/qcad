@@ -593,8 +593,9 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             bool all = false;
             QSet<RPropertyTypeId>::iterator it;
             for (it=propertyTypeIds.begin(); it!=propertyTypeIds.end(); ++it) {
+                RPropertyTypeId pid = *it;
                 QPair<QVariant, RPropertyAttributes> newProperty =
-                    object->getProperty(*it);
+                    object->getProperty(pid);
                 // redundant properties affect other properties:
                 if (newProperty.second.isRedundant()) {
                     all = true;
@@ -609,10 +610,11 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
         QSet<RPropertyTypeId>::iterator it;
         for (it=propertyTypeIds.begin(); it!=propertyTypeIds.end(); ++it) {
+            RPropertyTypeId pid = *it;
             QPair<QVariant, RPropertyAttributes> newProperty =
-                object->getProperty(*it);
+                object->getProperty(pid);
             QPair<QVariant, RPropertyAttributes> oldProperty =
-                oldObject->getProperty(*it);
+                oldObject->getProperty(pid);
 
             // don't record changes in redundant properties (e.g. angle for lines):
             if (newProperty.second.isRedundant()) {

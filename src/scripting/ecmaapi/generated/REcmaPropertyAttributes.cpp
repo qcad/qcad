@@ -104,6 +104,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isRedundant, "isRedundant");
             
+            REcmaHelper::registerFunction(&engine, proto, isVisibleToParent, "isVisibleToParent");
+            
             REcmaHelper::registerFunction(&engine, proto, getPropertyTypeId, "getPropertyTypeId");
             
             REcmaHelper::registerFunction(&engine, proto, setPropertyTypeId, "setPropertyTypeId");
@@ -215,6 +217,11 @@
 
     ctor.setProperty("Redundant",
     QScriptValue(RPropertyAttributes::Redundant),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VisibleToParent",
+    QScriptValue(RPropertyAttributes::VisibleToParent),
     QScriptValue::ReadOnly);
 
 
@@ -1788,6 +1795,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::isRedundant", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isVisibleToParent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isVisibleToParent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isVisibleToParent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isVisibleToParent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isVisibleToParent();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isVisibleToParent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isVisibleToParent", context, engine);
             return result;
         }
          QScriptValue

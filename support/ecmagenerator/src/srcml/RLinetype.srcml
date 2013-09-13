@@ -52,6 +52,8 @@ dir="./core" filename="RLinetype.h">
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
+  <class_decl>class 
+  <name>RTransaction</name>;</class_decl>
   <comment type="block">/** * Represents a linetype in a drawing. A
   linetype is an object (RObject). * A drawings contains and owns a
   set of linetypes. * * \ingroup core * \scriptable *
@@ -236,8 +238,7 @@ dir="./core" filename="RLinetype.h">
   <param>
     <decl>
       <type>
-        <name>RPropertyTypeId</name>
-      </type>
+      <name>RPropertyTypeId</name>&amp;</type>
       <name>propertyTypeId</name>
     </decl>
   </param>, 
@@ -287,6 +288,17 @@ dir="./core" filename="RLinetype.h">
       <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

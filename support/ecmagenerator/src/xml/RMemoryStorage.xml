@@ -125,6 +125,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="parentId" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" hasDefault="true" default="RS :: EntityAll"
+        isConst="false" />
       </variant>
     </method>
     <method name="hasChildEntities" cppName="hasChildEntities"

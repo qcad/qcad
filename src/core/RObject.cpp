@@ -62,8 +62,7 @@ void RObject::setUndone(bool on) {
     }
 }
 
-QPair<QVariant, RPropertyAttributes> RObject::getProperty(
-        RPropertyTypeId propertyTypeId,
+QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& propertyTypeId,
         bool humanReadable, bool noAttributes) {
 
     Q_UNUSED(humanReadable)
@@ -91,7 +90,9 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(
     return qMakePair(QVariant(), RPropertyAttributes());
 }
 
-bool RObject::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value) {
+bool RObject::setProperty(RPropertyTypeId propertyTypeId,
+    const QVariant& value, RTransaction* transaction) {
+
     // set custom property:
     if (propertyTypeId.getId()==RPropertyTypeId::INVALID_ID) {
         if (propertyTypeId.getCustomPropertyName().isEmpty()) {

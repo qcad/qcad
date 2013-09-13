@@ -70,8 +70,8 @@ void RSplineEntity::init() {
 }
 
 bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
     ret = ret || RObject::setMemberX(data.controlPoints, value, PropertyControlPointNX == propertyTypeId);
     ret = ret || RObject::setMemberY(data.controlPoints, value, PropertyControlPointNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.controlPoints, value, PropertyControlPointNZ == propertyTypeId);
@@ -100,7 +100,7 @@ bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable,
+        RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
 
     if (!data.controlPoints.isEmpty() && data.fitPoints.isEmpty()) {

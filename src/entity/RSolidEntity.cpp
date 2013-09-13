@@ -84,8 +84,8 @@ void RSolidEntity::init() {
 }
 
 bool RSolidEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     if (propertyTypeId==PropertyPoint1X || propertyTypeId==PropertyPoint1Y || propertyTypeId==PropertyPoint1Z) {
         RVector v = data.getVertexAt(0);
@@ -152,7 +152,7 @@ bool RSolidEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RSolidEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable,
+        RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
     if (propertyTypeId == PropertyPoint1X) {
         return qMakePair(QVariant(data.getVertexAt(0).x), RPropertyAttributes());

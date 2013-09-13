@@ -255,7 +255,7 @@ public:
      */
     friend QDebug operator<<(QDebug dbg, const RTextBasedData& t);
 
-private:
+protected:
     QString text;
     RVector position;
     RVector alignmentPoint;

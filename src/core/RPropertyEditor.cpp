@@ -51,6 +51,8 @@ RPropertyEditor::~RPropertyEditor() {
 void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
         RObject& object, RDocument* document) {
 
+    RPropertyTypeId pid = propertyTypeId;
+
     QString propertyGroupTitle = propertyTypeId.getPropertyGroupTitle();
     QString propertyTitle = propertyTypeId.getPropertyTitle();
 
@@ -66,7 +68,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
         // existing property in existing group:
         if (propertyMap.count(propertyTitle) > 0) {
             QPair<QVariant, RPropertyAttributes> property =
-                object.getProperty(propertyTypeId, true, true);
+                object.getProperty(pid, true, true);
 
             // mixed value:
             if (!RS::compare(propertyMap[propertyTitle], property)) {
@@ -76,7 +78,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
         } else {
             // new property in existing group:
             QPair<QVariant, RPropertyAttributes> property =
-                object.getProperty(propertyTypeId, true);
+                object.getProperty(pid, true);
             if (property.second.isInvisible()) {
                 return;
             }
@@ -86,7 +88,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
         }
     } else {
         // new property in new group:
-        QPair<QVariant, RPropertyAttributes> property = object.getProperty(propertyTypeId,
+        QPair<QVariant, RPropertyAttributes> property = object.getProperty(pid,
                 document, true);
         if (property.second.isInvisible()) {
             return;
@@ -209,20 +211,20 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         }
         else {
             combinedTypes.insert(type, 1);
-        }
 
-        if (entityTypeFilter!=RS::EntityAll && entity->getType()!=entityTypeFilter) {
-            continue;
-        }
+            if (entityTypeFilter!=RS::EntityAll && entity->getType()!=entityTypeFilter) {
+                continue;
+            }
 
-        QSet<RPropertyTypeId> propertyTypeIds = entity->getPropertyTypeIds();
-        QMultiMap<QString, QString> propertiesToKeep;
-        QSet<RPropertyTypeId>::iterator it;
-        for (it = propertyTypeIds.begin(); it != propertyTypeIds.end(); ++it) {
-            propertiesToKeep.insert(it->getPropertyGroupTitle(),
-                                    it->getPropertyTitle());
+            QSet<RPropertyTypeId> propertyTypeIds = entity->getPropertyTypeIds();
+            QMultiMap<QString, QString> propertiesToKeep;
+            QSet<RPropertyTypeId>::iterator it;
+            for (it = propertyTypeIds.begin(); it != propertyTypeIds.end(); ++it) {
+                propertiesToKeep.insert(it->getPropertyGroupTitle(),
+                                        it->getPropertyTitle());
+            }
+            removeAllButThese(propertiesToKeep);
         }
-        removeAllButThese(propertiesToKeep);
     }
 
     updateGui(onlyChanges, entityTypeFilter);

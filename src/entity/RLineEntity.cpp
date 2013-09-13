@@ -77,7 +77,7 @@ void RLineEntity::init() {
 }
 
 bool RLineEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
+        const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value);
     ret = ret || RObject::setMember(data.startPoint.x, value, PropertyStartPointX
             == propertyTypeId);
@@ -105,7 +105,7 @@ bool RLineEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RLineEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable,
+        RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
     if (propertyTypeId == PropertyStartPointX) {
         return qMakePair(QVariant(data.startPoint.x), RPropertyAttributes());

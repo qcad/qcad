@@ -90,8 +90,8 @@ void RDimOrdinateEntity::init() {
 }
 
 bool RDimOrdinateEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = RDimensionEntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = RDimensionEntity::setProperty(propertyTypeId, value, transaction);
 
     if (PropertyOrdinate == propertyTypeId) {
         if (value.type() == QVariant::Bool) {
@@ -120,7 +120,7 @@ bool RDimOrdinateEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimOrdinateEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyOrdinate) {
         if (humanReadable) {
             RPropertyAttributes attr;

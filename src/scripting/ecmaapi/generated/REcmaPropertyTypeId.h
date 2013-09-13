@@ -46,7 +46,19 @@
         getId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCustomPropertyTitle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCustomPropertyTitle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCustomPropertyName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCustomPropertyName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isValid

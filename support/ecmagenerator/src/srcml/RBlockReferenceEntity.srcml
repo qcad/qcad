@@ -267,6 +267,19 @@ dir="./core" filename="RBlockReferenceEntity.h">
   </function>
   <function_decl>
   <type>
+    <name>virtual</name>
+    <name>QSet
+    <argument_list>&lt;
+    <argument>
+      <name>RPropertyTypeId</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getPropertyTypeIds</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>setProperty</name>
@@ -286,9 +299,21 @@ dir="./core" filename="RBlockReferenceEntity.h">
       <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>QPair
     <argument_list>&lt;
     <argument>
@@ -303,8 +328,7 @@ dir="./core" filename="RBlockReferenceEntity.h">
   <param>
     <decl>
       <type>
-        <name>RPropertyTypeId</name>
-      </type>
+      <name>RPropertyTypeId</name>&amp;</type>
       <name>propertyTypeId</name>
     </decl>
   </param>, 

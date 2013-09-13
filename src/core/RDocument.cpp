@@ -675,8 +675,8 @@ bool RDocument::hasChildEntities(REntity::Id parentId) const {
     return storage.hasChildEntities(parentId);
 }
 
-QSet<REntity::Id> RDocument::queryChildEntities(REntity::Id parentId) const {
-    return storage.queryChildEntities(parentId);
+QSet<REntity::Id> RDocument::queryChildEntities(REntity::Id parentId, RS::EntityType type) const {
+    return storage.queryChildEntities(parentId, type);
 }
 
 QSet<REntity::Id> RDocument::queryBlockReferences(RBlock::Id blockId) const {

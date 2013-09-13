@@ -446,8 +446,7 @@ dir="./core" filename="RLayer.h">
   <param>
     <decl>
       <type>
-        <name>RPropertyTypeId</name>
-      </type>
+      <name>RPropertyTypeId</name>&amp;</type>
       <name>propertyTypeId</name>
     </decl>
   </param>, 
@@ -497,6 +496,17 @@ dir="./core" filename="RLayer.h">
       <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

@@ -332,8 +332,7 @@ dir="./core" filename="RUcs.h">
   <param>
     <decl>
       <type>
-        <name>RPropertyTypeId</name>
-      </type>
+      <name>RPropertyTypeId</name>&amp;</type>
       <name>propertyTypeId</name>
     </decl>
   </param>, 
@@ -383,6 +382,17 @@ dir="./core" filename="RUcs.h">
       <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function>
     <type>

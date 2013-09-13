@@ -26,6 +26,7 @@
 #include "RPropertyTypeId.h"
 
 class RDocument;
+class RTransaction;
 
 #ifndef RDEFAULT_QVARIANT
 #define RDEFAULT_QVARIANT QVariant()
@@ -130,7 +131,7 @@ public:
      *      property if this property owner has no property with the given ID.
      */
     virtual QPair<QVariant, RPropertyAttributes>
-            getProperty(RPropertyTypeId propertyTypeId,
+            getProperty(RPropertyTypeId& propertyTypeId,
                     bool humanReadable = false,
                     bool noAttributes = false);
 
@@ -142,7 +143,8 @@ public:
      *
      * \return True if the property owner was modified in any way, false otherwise.
      */
-    virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value);
+    virtual bool setProperty(RPropertyTypeId propertyTypeId,
+        const QVariant& value, RTransaction* transaction=NULL);
 
     /**
      * \return True if this property owner has a property with the given ID,

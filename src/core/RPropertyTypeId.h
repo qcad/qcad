@@ -65,13 +65,18 @@ public:
      */
     //RPropertyTypeId(const std::type_info& classInfo, const RPropertyTypeId& other);
 
+    RPropertyTypeId(const QString& customPropertyTitle, const QString& customPropertyName);
     RPropertyTypeId(const QString& customPropertyName);
 
     RPropertyTypeId(const RPropertyTypeId& other);
     RPropertyTypeId(long int id = INVALID_ID);
 
     long int getId() const;
+    void setId(long int id);
+    QString getCustomPropertyTitle() const;
+    void setCustomPropertyTitle(const QString& t);
     QString getCustomPropertyName() const;
+    void setCustomPropertyName(const QString& n);
 
     bool isValid() const;
     bool isCustom() const;
@@ -117,6 +122,7 @@ public:
 
 private:
     long int id;
+    QString customPropertyTitle;
     QString customPropertyName;
 
     static long int counter;

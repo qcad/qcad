@@ -23,6 +23,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Custom" />
       <value name="Integer" />
       <value name="Redundant" />
+      <value name="VisibleToParent" />
     </enum>
     <constructor>
       <variant />
@@ -197,6 +198,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="isRedundant" cppName="isRedundant"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isVisibleToParent" cppName="isVisibleToParent"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

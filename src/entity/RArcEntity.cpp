@@ -82,7 +82,7 @@ void RArcEntity::init() {
 }
 
 bool RArcEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
+        const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value);
     ret = ret || RObject::setMember(data.center.x, value, PropertyCenterX
             == propertyTypeId);
@@ -115,7 +115,7 @@ bool RArcEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RArcEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyCenterX) {
         return qMakePair(QVariant(data.center.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterY) {

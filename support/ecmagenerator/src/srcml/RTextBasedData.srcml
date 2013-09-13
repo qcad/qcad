@@ -1523,7 +1523,7 @@ dir="./entity" filename="RTextBasedData.h">
       <name>t</name>
     </decl>
   </param>)</parameter_list>;</function_decl></public>
-  <private>private: 
+  <protected>protected: 
   <decl_stmt>
   <decl>
     <type>
@@ -1688,7 +1688,7 @@ dir="./entity" filename="RTextBasedData.h">
       <name>bool</name>
     </type>
     <name>gotDraft</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
+  </decl>;</decl_stmt></protected>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

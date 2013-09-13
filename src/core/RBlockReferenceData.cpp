@@ -166,30 +166,6 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
         return QSharedPointer<REntity>();
     }
 
-//    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
-//    if (block.isNull()) {
-//        qWarning("RBlockReferenceData::queryEntity: "
-//            "block %d is NULL", referencedBlockId);
-//        return QSharedPointer<REntity> ();
-//    }
-
-//    // nested block reference with negative scale factors (flipped):
-//    QSharedPointer<RBlockReferenceEntity> blockReference = entity.dynamicCast<RBlockReferenceEntity>();
-//    if (!blockReference.isNull() && scaleFactors.y<0.0) {
-//        blockReference->move(-block->getOrigin());
-//        blockReference->scale(scaleFactors);
-//        blockReference->rotate(-2*blockReference->getRotation(), blockReference->getPosition());
-//        blockReference->rotate(rotation);
-//        blockReference->move(position);
-//        cache.insert(entityId, blockReference);
-//        return blockReference;
-//    }
-
-//    entity->move(-block->getOrigin());
-//    entity->scale(scaleFactors);
-//    entity->rotate(rotation);
-//    entity->move(position);
-
     cache.insert(entityId, entity);
 
     return entity;
@@ -205,7 +181,6 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
 
     // nested block reference with negative scale factors (flipped):
     RBlockReferenceEntity* blockReference = dynamic_cast<RBlockReferenceEntity*>(&entity);
-    //QSharedPointer<RBlockReferenceEntity> blockReference = entity.dynamicCast<RBlockReferenceEntity>();
     if (blockReference!=NULL && scaleFactors.y<0.0) {
         blockReference->move(-block->getOrigin());
         blockReference->scale(scaleFactors);
@@ -219,8 +194,6 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
     entity.scale(scaleFactors);
     entity.rotate(rotation);
     entity.move(position);
-
-    qDebug() << "RBlockReferenceData::applyTransformationTo: pos (trans): " << entity;
 
     return true;
 }
@@ -291,10 +264,6 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
     }
     return ret;
 }
-
-//void RBlockReferenceData::setSelected(bool on) {
-//    Q_ASSERT(false);
-//}
 
 bool RBlockReferenceData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {

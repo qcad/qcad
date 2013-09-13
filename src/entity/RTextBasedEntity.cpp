@@ -78,8 +78,8 @@ void RTextBasedEntity::init() {
 }
 
 bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(getData().simple, value, PropertySimple == propertyTypeId);
     ret = ret || RObject::setMember(getData().alignmentPoint.x, value, PropertyPositionX == propertyTypeId);
@@ -102,7 +102,7 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertySimple) {
         return qMakePair(QVariant(getData().simple), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionX) {

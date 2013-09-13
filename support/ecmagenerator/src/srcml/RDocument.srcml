@@ -437,6 +437,22 @@ dir="./core" filename="RDocument.h">
       </type>
       <name>parentId</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>EntityType</name></name>
+    </type>
+    <name>type</name>=
+    <init>
+      <expr>
+        <name>
+        <name>RS</name>::
+        <name>EntityAll</name></name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

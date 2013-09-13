@@ -69,9 +69,9 @@ void RPolylineEntity::init() {
 }
 
 bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
+        const QVariant& value, RTransaction* transaction) {
 
-    bool ret = REntity::setProperty(propertyTypeId, value);
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
     ret = ret || RObject::setMember(data.closed, value, PropertyClosed == propertyTypeId);
     ret = ret || RObject::setMemberX(data.vertices, value, PropertyVertexNX == propertyTypeId);
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
@@ -81,7 +81,7 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable,
+        RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
     if (propertyTypeId == PropertyClosed) {
         QVariant v;

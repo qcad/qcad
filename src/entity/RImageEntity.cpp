@@ -84,9 +84,10 @@ void RImageEntity::init() {
     RImageEntity::PropertyAngle.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
 }
 
-bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value) {
+bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId,
+    const QVariant& value, RTransaction* transaction) {
 
-    bool ret = REntity::setProperty(propertyTypeId, value);
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     if (PropertyFileName == propertyTypeId) {
         data.fileName = value.toString();
@@ -135,7 +136,7 @@ bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& v
 
 
 QPair<QVariant, RPropertyAttributes> RImageEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyFileName) {
         return qMakePair(QVariant(data.fileName), RPropertyAttributes());
     } else if (propertyTypeId == PropertyInsertionPointX) {

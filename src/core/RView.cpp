@@ -49,7 +49,7 @@ RView* RView::clone() const {
 }
 
 bool RView::setProperty(RPropertyTypeId propertyTypeId,
-    const QVariant& value) {
+    const QVariant& value, RTransaction* transaction) {
     bool ret = false;
     ret = RObject::setMember(name, value, PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(centerPoint, value, PropertyCenterPoint == propertyTypeId);
@@ -59,7 +59,7 @@ bool RView::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RView::getProperty(
-        RPropertyTypeId propertyTypeId, bool /*humanReadable*/,
+        RPropertyTypeId& propertyTypeId, bool /*humanReadable*/,
         bool /*noAttributes*/) {
 
     if (propertyTypeId == PropertyName) {

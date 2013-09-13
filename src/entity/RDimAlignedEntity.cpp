@@ -89,8 +89,8 @@ void RDimAlignedEntity::init() {
 }
 
 bool RDimAlignedEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value) {
-    bool ret = RDimensionEntity::setProperty(propertyTypeId, value);
+        const QVariant& value, RTransaction* transaction) {
+    bool ret = RDimensionEntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.definitionPoint.x, value, PropertyDimensionLinePosX == propertyTypeId);
     ret = ret || RObject::setMember(data.definitionPoint.y, value, PropertyDimensionLinePosY == propertyTypeId);
@@ -112,7 +112,7 @@ bool RDimAlignedEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimAlignedEntity::getProperty(
-        RPropertyTypeId propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyDimensionLinePosX) {
         return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDimensionLinePosY) {
