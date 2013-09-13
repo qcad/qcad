@@ -26,18 +26,19 @@ function InvertSelection(guiAction) {
 InvertSelection.prototype = new Select();
 
 InvertSelection.prototype.selectEntities = function() {
-    var entities = EAction.getDocument().queryAllEntities();
-    for (var e = 0; e < entities.length; ++e) {
-        var entity = EAction.getDocument().queryEntity(entities[e]);
-        var previouslySelected = entity.isSelected();
+    var doc = EAction.getDocument();
+    var di = EAction.getDocumentInterface();
 
-        if (previouslySelected) {
-            EAction.getDocumentInterface().deselectEntity(entities[e]);
-        }
-        else {
-            EAction.getDocumentInterface().selectEntity(entities[e], true);
+    var ids = doc.queryAllEntities();
+    var selectIds = [];
+    for (var i = 0; i < ids.length; ++i) {
+        var id = ids[i];
+        if (!doc.isSelected(id)) {
+            selectIds.push(id);
         }
     }
+
+    di.selectEntities(selectIds, false);
 };
 
 InvertSelection.prototype.beginEvent = function() {
