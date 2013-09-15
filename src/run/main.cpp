@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
     RMainWindow::installMessageHandler();
 #ifdef Q_OS_MAC
     // TODO: make available as script function:
-    QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
+    //QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
 
     QStringList originalArguments;

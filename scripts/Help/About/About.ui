@@ -12,7 +12,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../qcad_icon.svg</normaloff>../../qcad_icon.svg</iconset>
+    <normaloff>../../qcad_icon.png</normaloff>../../qcad_icon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog{background-color: rgb(255, 255, 255);}</string>
