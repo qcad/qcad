@@ -28,7 +28,7 @@
 #include "REntityData.h"
 #include "RPainterPath.h"
 #include "RPainterPathSource.h"
-#include "RTextData.h"
+#include "RTextBasedData.h"
 #include "RVector.h"
 
 class QTextDocument;
@@ -47,7 +47,7 @@ public:
     };
 
 public:
-    RTextRenderer(const RTextData& textData, bool draft, RTextRenderer::Target target, double fontHeightFactor = 1.0);
+    RTextRenderer(const RTextBasedData& textData, bool draft, RTextRenderer::Target target, double fontHeightFactor = 1.0);
 
     void renderSimple();
     void render();
@@ -142,7 +142,7 @@ public:
     static QChar chDiameter;
 
 private:
-    RTextData textData;
+    const RTextBasedData& textData;
 
     Target target;
     QList<RPainterPath> painterPaths;

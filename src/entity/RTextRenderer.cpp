@@ -99,7 +99,7 @@ QString RTextRenderer::rxAll = "("
 
 
 
-RTextRenderer::RTextRenderer(const RTextData& textData, bool draft, Target target, double fontHeightFactor)
+RTextRenderer::RTextRenderer(const RTextBasedData& textData, bool draft, Target target, double fontHeightFactor)
     : textData(textData), target(target), height(0.0), width(0.0),
       draft(draft), fontHeightFactor(fontHeightFactor) {
 
@@ -1230,25 +1230,32 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
         }
 
         QPainterPath glyph = font->getGlyph(ch, draft);
-        RPainterPath path(glyph);
-        QPen pen = path.getPen();
-        pen.setStyle(Qt::SolidLine);
-        pen.setColor(currentColor);
-        path.setPen(pen);
-        if (currentColor.isValid()) {
-            // fixed color:
-            path.setFixedPenColor(true);
+        // glyph not available in font (show as question mark):
+        if (glyph.elementCount()==0) {
+            glyph = font->getGlyph('?', draft);
         }
+        // if question mark is not available, show nothing:
+        if (glyph.elementCount()>0) {
+            RPainterPath path(glyph);
+            QPen pen = path.getPen();
+            pen.setStyle(Qt::SolidLine);
+            pen.setColor(currentColor);
+            path.setPen(pen);
+            if (currentColor.isValid()) {
+                // fixed color:
+                path.setFixedPenColor(true);
+            }
 
-        QTransform transform;
-        transform.translate(cursor, 0);
-        transform.scale(cxfScale, cxfScale);
-        path.transform(transform);
-        ret.append(path);
+            QTransform transform;
+            transform.translate(cursor, 0);
+            transform.scale(cxfScale, cxfScale);
+            path.transform(transform);
+            ret.append(path);
 
-        // letter spacing:
-        cursor += path.boundingRect().width() + font->getLetterSpacing() * cxfScale;
-        gotLetterSpacing = true;
+            // letter spacing:
+            cursor += path.boundingRect().width() + font->getLetterSpacing() * cxfScale;
+            gotLetterSpacing = true;
+        }
     }
 
     horizontalAdvance = cursor;
