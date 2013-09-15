@@ -24,19 +24,19 @@ dir="./core" filename="RVersion.h">
   Application Framework. */</comment>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_STRING</name>"3.2.2"</cpp:define>
+  <name>R_QCAD_VERSION_STRING</name>"3.3.0"</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>R_QCAD_VERSION_MAJOR</name>3</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_MINOR</name>2</cpp:define>
+  <name>R_QCAD_VERSION_MINOR</name>3</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_REV</name>2</cpp:define>
+  <name>R_QCAD_VERSION_REV</name>0</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_BUILD</name>4</cpp:define>
+  <name>R_QCAD_VERSION_BUILD</name>0</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

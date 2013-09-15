@@ -113,7 +113,7 @@ QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds() const {
         }
     }
 
-    ret.unite(RObject::getPropertyTypeIds());
+    ret.unite(REntity::getPropertyTypeIds());
     return ret;
 }
 

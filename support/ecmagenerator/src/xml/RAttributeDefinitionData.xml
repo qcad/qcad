@@ -17,20 +17,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </constructor>
-    <method name="getDistanceTo" cppName="getDistanceTo"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="point"
-        isConst="true" />
-        <arg type="bool" typeName="bool" name="limited"
-        isConst="false" />
-        <arg type="double" typeName="double" name="range"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="draft"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="getTag" cppName="getTag" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
@@ -52,6 +38,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="p"
         isConst="true" />
       </variant>
+    </method>
+    <method name="getRenderedText" cppName="getRenderedText"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
     </method>
   </class>
 </unit>

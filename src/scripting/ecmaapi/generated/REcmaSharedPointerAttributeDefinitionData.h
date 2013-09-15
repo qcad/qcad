@@ -51,9 +51,6 @@
 
     // public methods:
     static  QScriptValue
-        getDistanceTo
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getTag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -64,6 +61,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPrompt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRenderedText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -137,6 +137,14 @@ dir="./entity" filename="RAttributeData.h">
   <comment type="line">// Q_UNUSED(draft)</comment>
   <comment type="line">// return RNANDOUBLE;</comment>
   <comment type="line">// }</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getRenderedText</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>QString</name>

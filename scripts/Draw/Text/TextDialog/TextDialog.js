@@ -308,6 +308,7 @@ TextDialog.prototype.show =  function(textDataIn) {
             else {
                 this.dialog.findChild("AttributePrompt").visible = false;
                 this.dialog.findChild("PromptLabel").visible = false;
+                this.dialog.findChild("AttributeTag").enabled = false;
             }
             this.dialog.findChild("AttributeValue").text = textDataIn.getEscapedText();
         }

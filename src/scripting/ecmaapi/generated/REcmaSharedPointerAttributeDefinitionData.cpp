@@ -76,8 +76,6 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
-            
             REcmaHelper::registerFunction(&engine, proto, getTag, "getTag");
             
             REcmaHelper::registerFunction(&engine, proto, setTag, "setTag");
@@ -85,6 +83,8 @@
             REcmaHelper::registerFunction(&engine, proto, getPrompt, "getPrompt");
             
             REcmaHelper::registerFunction(&engine, proto, setPrompt, "setPrompt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getRenderedText, "getRenderedText");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RAttributeDefinitionDataPointer>(), *proto);
@@ -305,117 +305,6 @@
 
     // public methods:
      QScriptValue
-        REcmaSharedPointerAttributeDefinitionData::getDistanceTo
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerAttributeDefinitionData::getDistanceTo", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerAttributeDefinitionData::getDistanceTo";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RAttributeDefinitionData* self = 
-                        getSelf("getDistanceTo", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RVector */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(3).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RAttributeDefinitionData: Argument 0 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
-                
-                    // argument isStandardType
-                    double
-                    a2 =
-                    (double)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    bool
-                    a3 =
-                    (bool)
-                    
-                    context->argument( 3 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDistanceTo(a0
-        ,
-    a1
-        ,
-    a2
-        ,
-    a3);
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionData.getDistanceTo().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerAttributeDefinitionData::getDistanceTo", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaSharedPointerAttributeDefinitionData::getTag
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -621,6 +510,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerAttributeDefinitionData::setPrompt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerAttributeDefinitionData::getRenderedText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerAttributeDefinitionData::getRenderedText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerAttributeDefinitionData::getRenderedText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeDefinitionData* self = 
+                        getSelf("getRenderedText", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getRenderedText();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionData.getRenderedText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerAttributeDefinitionData::getRenderedText", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerAttributeDefinitionData::toString

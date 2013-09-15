@@ -40,7 +40,7 @@ dir="./entity" filename="RTextRenderer.h">
   <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTextData.h"</cpp:file></cpp:include>
+  <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
@@ -71,7 +71,7 @@ dir="./entity" filename="RTextRenderer.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RTextData</name>&amp;</type>
+      <name>RTextBasedData</name>&amp;</type>
       <name>textData</name>
     </decl>
   </param>, 
@@ -710,7 +710,7 @@ dir="./entity" filename="RTextRenderer.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>RTextData</name>
+      <name>RTextBasedData</name>
     </type>
     <name>textData</name>
   </decl>;</decl_stmt>

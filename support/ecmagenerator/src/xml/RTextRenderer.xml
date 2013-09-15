@@ -12,7 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </enum>
     <constructor>
       <variant>
-        <arg type="RTextData &amp;" typeName="RTextData"
+        <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
         name="textData" isConst="true" />
         <arg type="bool" typeName="bool" name="draft"
         isConst="false" />

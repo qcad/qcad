@@ -111,45 +111,8 @@ dir="./entity" filename="RAttributeDefinitionData.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </destructor>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getDistanceTo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>limited</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>range</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>draft</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
+  <comment type="line">//double getDistanceTo(const RVector&amp;
+  point, bool limited, double range, bool draft) const;</comment>
   <function>
     <type>
       <name>QString</name>
@@ -216,6 +179,18 @@ dir="./entity" filename="RAttributeDefinitionData.h">
     <name>prompt</name>= 
     <name>p</name></expr>;</expr_stmt>}</block>
   </function>
+  <comment type="line">//virtual QList&lt;RPainterPath&gt;
+  getPainterPaths(bool draft) const;</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getRenderedText</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <comment type="line">//virtual RTextBasedData
+  getRenderedTextData() const;</comment>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>

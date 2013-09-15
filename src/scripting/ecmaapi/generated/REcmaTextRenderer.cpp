@@ -272,7 +272,7 @@
                         context->argument(
                         0
                         ).isNull()
-                ) /* type: RTextData */
+                ) /* type: RTextBasedData */
             
                 && (
                 
@@ -292,20 +292,20 @@
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RTextData*
+                    RTextBasedData*
                     ap0 =
                     qscriptvalue_cast<
-                    RTextData*
+                    RTextBasedData*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RTextRenderer: Argument 0 is not of type RTextData.",
+                           return REcmaHelper::throwError("RTextRenderer: Argument 0 is not of type RTextBasedData.",
                                context);                    
                     }
-                    RTextData 
+                    RTextBasedData 
                     a0 = 
                     *ap0;
                 
@@ -364,7 +364,7 @@
                         context->argument(
                         0
                         ).isNull()
-                ) /* type: RTextData */
+                ) /* type: RTextBasedData */
             
                 && (
                 
@@ -391,20 +391,20 @@
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RTextData*
+                    RTextBasedData*
                     ap0 =
                     qscriptvalue_cast<
-                    RTextData*
+                    RTextBasedData*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RTextRenderer: Argument 0 is not of type RTextData.",
+                           return REcmaHelper::throwError("RTextRenderer: Argument 0 is not of type RTextBasedData.",
                                context);                    
                     }
-                    RTextData 
+                    RTextBasedData 
                     a0 = 
                     *ap0;
                 

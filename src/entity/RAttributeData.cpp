@@ -35,6 +35,11 @@ RAttributeData::RAttributeData(const RTextBasedData& textData, RBlockReferenceEn
     setParentId(blockReferenceId);
 }
 
+QString RAttributeData::getRenderedText() const {
+    //qDebug() << "RAttributeData::getRenderedText";
+    return RTextBasedData::getRenderedText();
+}
+
 //void RAttributeData::sync(RAttributeDefinitionData& attDefData) {
 //    position = attDefData.position;
 //    alignmentPoint = attDefData.alignmentPoint;

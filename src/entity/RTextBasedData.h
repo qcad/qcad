@@ -66,6 +66,10 @@ public:
               bool simple);
     virtual ~RTextBasedData() {}
 
+    bool isValid() const {
+        return !text.isNull();
+    }
+
     virtual RBox getBoundingBox() const;
     double getWidth() const;
     double getHeight() const;
@@ -221,19 +225,20 @@ public:
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);
 
-    bool move(const RVector& offset);
-    bool rotate(double rotation, const RVector& center);
-    bool scale(const RVector& scaleFactors, const RVector& center);
-    bool mirror(const RLine& axis);
-    bool flipHorizontal();
-    bool flipVertical();
+    virtual bool move(const RVector& offset);
+    virtual bool rotate(double rotation, const RVector& center);
+    virtual bool scale(const RVector& scaleFactors, const RVector& center);
+    virtual bool mirror(const RLine& axis);
+    virtual bool flipHorizontal();
+    virtual bool flipVertical();
 
-    QString getPlainText() const;
-    QString getEscapedText(bool escapeUnicode = false) const;
-    QFont getMainFont() const;
+    virtual QString getRenderedText() const;
+    virtual QString getPlainText() const;
+    virtual QString getEscapedText(bool escapeUnicode = false) const;
+    virtual QFont getMainFont() const;
 
     virtual void update() const;
-    bool isDirty() const;
+    virtual bool isDirty() const;
 
     virtual QList<RPainterPath> getPainterPaths(bool draft = false) const;
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
@@ -246,6 +251,10 @@ public:
     }
 
     virtual RVector getClosestPointOnEntity(const RVector& point, double range, bool limited) const;
+
+//    virtual RTextBasedData getRenderedTextData() const {
+//        return *this;
+//    }
 
     static QString toEscapedText(const QTextDocument& textDocument, const RColor& initialColor, double fontHeightFactor=1.0);
     static QString toRichText(const QString& escapedText, const QFont& mainFont, double fontHeightFactor=1.0);

@@ -142,4 +142,3 @@ Text.prototype.slotAngleChanged = function(value) {
     this.textData.setAngle(value);
 
 };
-

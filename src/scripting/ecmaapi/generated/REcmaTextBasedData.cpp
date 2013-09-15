@@ -82,6 +82,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
             REcmaHelper::registerFunction(&engine, proto, getWidth, "getWidth");
@@ -177,6 +179,8 @@
             REcmaHelper::registerFunction(&engine, proto, flipHorizontal, "flipHorizontal");
             
             REcmaHelper::registerFunction(&engine, proto, flipVertical, "flipVertical");
+            
+            REcmaHelper::registerFunction(&engine, proto, getRenderedText, "getRenderedText");
             
             REcmaHelper::registerFunction(&engine, proto, getPlainText, "getPlainText");
             
@@ -694,6 +698,55 @@
 
     // public methods:
      QScriptValue
+        REcmaTextBasedData::isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::isValid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::isValid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("isValid", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isValid();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isValid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTextBasedData::getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3897,6 +3950,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::flipVertical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::getRenderedText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::getRenderedText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::getRenderedText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("getRenderedText", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getRenderedText();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getRenderedText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::getRenderedText", context, engine);
             return result;
         }
          QScriptValue

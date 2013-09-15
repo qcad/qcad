@@ -1316,13 +1316,18 @@ bool RDocument::addBlockToSpatialIndex(RBlock::Id blockId, RBlock::Id ignoreBloc
     // add entries for block references to the block the entity belongs to:
     QSet<REntity::Id> blockRefIds = queryBlockReferences(blockId);
     QSet<REntity::Id>::iterator it;
+    QSet<RBlock::Id> added;
+
     for (it=blockRefIds.begin(); it!=blockRefIds.end(); it++) {
         QSharedPointer<RBlockReferenceEntity> blockRef = queryEntityDirect(*it).dynamicCast<RBlockReferenceEntity>();
         if (blockRef.isNull()) {
             continue;
         }
 
-        addBlockToSpatialIndex(blockRef->getBlockId(), ignoreBlockId);
+        if (!added.contains(blockRef->getBlockId())) {
+            addBlockToSpatialIndex(blockRef->getBlockId(), ignoreBlockId);
+            added.insert(blockRef->getBlockId());
+        }
         //if (!addBlockToSpatialIndex(blockRef->getBlockId(), ignoreBlockId)) {
         //    return false;
         //}

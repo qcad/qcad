@@ -69,6 +69,8 @@ public:
 //        return RNANDOUBLE;
 //    }
 
+    virtual QString getRenderedText() const;
+
     QString getTag() const {
         return tag;
     }

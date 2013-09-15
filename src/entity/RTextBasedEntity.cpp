@@ -142,7 +142,10 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
 void RTextBasedEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);
 
-    e.exportPainterPathSource(getData());
+    //RTextBasedData data = getData().getRenderedTextData();
+    //if (data.isValid()) {
+        e.exportPainterPathSource(getData());
+    //}
 }
 
 void RTextBasedEntity::print(QDebug dbg) const {

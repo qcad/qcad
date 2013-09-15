@@ -49,6 +49,9 @@
 
     // public methods:
     static  QScriptValue
+        getRenderedText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

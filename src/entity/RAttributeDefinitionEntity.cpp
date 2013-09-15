@@ -105,19 +105,19 @@ QPair<QVariant, RPropertyAttributes> RAttributeDefinitionEntity::getProperty(
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
-void RAttributeDefinitionEntity::exportEntity(RExporter& e, bool preview) const {
-    Q_UNUSED(preview);
+//void RAttributeDefinitionEntity::exportEntity(RExporter& e, bool preview) const {
+//    Q_UNUSED(preview);
 
-    RBlock::Id currentBlockId = e.getDocument().getCurrentBlockId();
+//    RBlock::Id currentBlockId = e.getDocument().getCurrentBlockId();
 
-    // attribute definition is being rendered in the context of the
-    // block it is in (show tag):
-    if (getBlockId()==currentBlockId) {
-        RAttributeDefinitionData data = getData();
-        data.setText(getTag());
-        e.exportPainterPathSource(data);
-    }
-}
+//    // attribute definition is being rendered in the context of the
+//    // block it is in (show tag):
+//    if (getBlockId()==currentBlockId) {
+//        RAttributeDefinitionData data = getData();
+//        data.setText(getTag());
+//        e.exportPainterPathSource(data);
+//    }
+//}
 
 void RAttributeDefinitionEntity::print(QDebug dbg) const {
     dbg.nospace() << "RAttributeDefinitionEntity(";

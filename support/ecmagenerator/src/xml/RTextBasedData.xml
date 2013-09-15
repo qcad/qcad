@@ -49,6 +49,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getBoundingBox" cppName="getBoundingBox"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -340,14 +344,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="move" cppName="move" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="offset"
         isConst="true" />
       </variant>
     </method>
     <method name="rotate" cppName="rotate" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="double" typeName="double" name="rotation"
         isConst="false" />
@@ -356,7 +360,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="scale" cppName="scale" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector"
         name="scaleFactors" isConst="true" />
@@ -365,29 +369,34 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="mirror" cppName="mirror" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RLine &amp;" typeName="RLine" name="axis"
         isConst="true" />
       </variant>
     </method>
     <method name="flipHorizontal" cppName="flipHorizontal"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="flipVertical" cppName="flipVertical"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getRenderedText" cppName="getRenderedText"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getPlainText" cppName="getPlainText"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
     <method name="getEscapedText" cppName="getEscapedText"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="escapeUnicode"
@@ -395,7 +404,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getMainFont" cppName="getMainFont"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QFont" isPureVirtual="false" />
     </method>
@@ -404,7 +413,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="isDirty" cppName="isDirty" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getPainterPaths" cppName="getPainterPaths"

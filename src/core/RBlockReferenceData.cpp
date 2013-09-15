@@ -162,6 +162,11 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
         return QSharedPointer<REntity>();
     }
 
+    // never render attribute definition as part of a block reference:
+    if (entity->getType()==RS::EntityAttributeDefinition) {
+        return QSharedPointer<REntity>();
+    }
+
     if (!applyTransformationTo(*entity)) {
         return QSharedPointer<REntity>();
     }

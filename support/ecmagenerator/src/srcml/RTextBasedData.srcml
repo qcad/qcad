@@ -238,6 +238,22 @@ dir="./entity" filename="RTextBasedData.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </destructor>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isValid</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>!
+    <name>text</name>.
+    <call>
+      <name>isNull</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -1138,6 +1154,7 @@ dir="./entity" filename="RTextBasedData.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>move</name>
@@ -1152,6 +1169,7 @@ dir="./entity" filename="RTextBasedData.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>rotate</name>
@@ -1174,6 +1192,7 @@ dir="./entity" filename="RTextBasedData.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>scale</name>
@@ -1196,6 +1215,7 @@ dir="./entity" filename="RTextBasedData.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>mirror</name>
@@ -1210,18 +1230,29 @@ dir="./entity" filename="RTextBasedData.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>flipHorizontal</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>flipVertical</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getRenderedText</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>QString</name>
   </type>
   <name>getPlainText</name>
@@ -1229,6 +1260,7 @@ dir="./entity" filename="RTextBasedData.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>QString</name>
   </type>
   <name>getEscapedText</name>
@@ -1248,6 +1280,7 @@ dir="./entity" filename="RTextBasedData.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>QFont</name>
   </type>
   <name>getMainFont</name>
@@ -1263,6 +1296,7 @@ dir="./entity" filename="RTextBasedData.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>isDirty</name>
@@ -1433,6 +1467,10 @@ dir="./entity" filename="RTextBasedData.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="line">// virtual RTextBasedData
+  getRenderedTextData() const {</comment>
+  <comment type="line">// return *this;</comment>
+  <comment type="line">// }</comment>
   <function_decl>
   <type>
     <name>static</name>

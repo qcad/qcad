@@ -54,6 +54,9 @@
 
     // public methods:
     static  QScriptValue
+        isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -196,6 +199,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         flipVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRenderedText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPlainText

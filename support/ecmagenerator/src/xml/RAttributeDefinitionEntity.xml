@@ -75,16 +75,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
-    <method name="exportEntity" cppName="exportEntity"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RExporter &amp;" typeName="RExporter" name="e"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="preview"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="getTag" cppName="getTag" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />

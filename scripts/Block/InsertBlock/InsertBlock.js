@@ -200,5 +200,11 @@ InsertBlock.prototype.updateOptionsToolBar = function() {
     rotationCombo.setEditText("%1".arg(RMath.rad2deg(this.blockReferenceData.getRotation())));
     scaleXCombo.setEditText("%1".arg(this.blockReferenceData.getScaleFactors().x));
     scaleYCombo.setEditText("%1".arg(this.blockReferenceData.getScaleFactors().y));
-}
+};
 
+InsertBlock.prototype.slotReset = function() {
+    Block.prototype.slotReset.call(this);
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var scaleYCombo = optionsToolBar.findChild("ScaleY");
+    scaleYCombo.setEditText("1");
+};

@@ -112,6 +112,7 @@ RBox RTextBasedData::getBoundingBox() const {
         getPainterPaths(gotDraft);
     }
 
+    //qDebug() << "bb: " << boundingBox;
     return boundingBox;
 }
 
@@ -363,22 +364,28 @@ QString RTextBasedData::getPlainText() const {
     return td.toPlainText();
 }
 
+QString RTextBasedData::getRenderedText() const {
+    //qDebug() << "RTextBasedData::getRenderedText";
+    return text;
+}
+
 QString RTextBasedData::getEscapedText(bool escapeUnicode) const {
+    QString t = getRenderedText();
     if (escapeUnicode) {
         QString ret;
-        for (int i=0; i<text.length(); i++) {
-            ushort ch = text.at(i).unicode();
+        for (int i=0; i<t.length(); i++) {
+            ushort ch = t.at(i).unicode();
             if (ch>255) {
                 ret+=QString("\\U+%1").arg(ch, 4, 16, QChar('0'));
             }
             else {
-                ret+=text.at(i);
+                ret+=t.at(i);
             }
         }
         return ret;
     }
     else {
-        return text;
+        return t;
     }
 }
 
