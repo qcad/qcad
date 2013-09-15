@@ -876,6 +876,8 @@ WidgetFactory.connect = function(sig, signalReceiver, objectName, isValue) {
 WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup) {
     var ret = [];
 
+    var a;
+
     // move child widgets of UI file based widget directly to
     // options toolbar. rendering of tool buttons greatly depends
     // on this (especially on Mac OS X):
@@ -886,7 +888,9 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
 
         // add separator:
         if (isOfType(w, QFrame) && w.frameShape==QFrame.VLine) {
-            ret.push(targetWidget.addSeparator());
+            a = targetWidget.addSeparator();
+            a.objectName = w.objectName + "Action";
+            ret.push(a);
         }
 
         // reparent required for non-widgets (e.g. QButtonGroup):
@@ -914,7 +918,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
                     w.maximumWidth = 100;
                 }
             }
-            var a = targetWidget.addWidget(w);
+            a = targetWidget.addWidget(w);
             a.objectName = w.objectName + "Action";
             ret.push(a);
         }

@@ -55,13 +55,29 @@ InsertBlock.prototype.beginEvent = function() {
 
     this.blockReferenceData.setReferencedBlockId(blockId);
 
-    // add block attribute inputs to options tool bar:
+    var i, label, edit, sep, a;
     var optionsToolBar = EAction.getOptionsToolBar();
+
+    // hide attribute widgets by default:
+//    a = optionsToolBar.findChild("LastSeparator");
+//    a.visible = false;
+    for (i=1; i<4; i++) {
+        label = optionsToolBar.findChild("LabelAttribute%1".arg(i));
+        edit = optionsToolBar.findChild("Attribute%1".arg(i));
+        label.text = "";
+        edit.text = "";
+
+        optionsToolBar.findChild("LabelAttribute%1Action".arg(i)).visible = false;
+        optionsToolBar.findChild("Attribute%1Action".arg(i)).visible = false;
+        optionsToolBar.findChild("SeparatorAttribute%1Action".arg(i)).visible = false;
+    }
+
+    // add block attribute inputs to options tool bar:
     var doc = this.getDocument();
     if (!isNull(doc)) {
         var ids = doc.queryBlockEntities(blockId);
         var idx = 0;
-        for (var i=0; i<ids.length; i++) {
+        for (i=0; i<ids.length; i++) {
             var id = ids[i];
             var e = doc.queryEntityDirect(id);
             if (!isAttributeDefinitionEntity(e)) {
@@ -72,11 +88,19 @@ InsertBlock.prototype.beginEvent = function() {
             var prompt = e.getPrompt();
             var value = e.getEscapedText();
 
-            var label = optionsToolBar.findChild("LabelAttribute%1".arg(idx+1));
-            label.text = prompt;
+            // show attribute widgets:
+            optionsToolBar.findChild("LabelAttribute%1Action".arg(idx+1)).visible = true;
+            a = optionsToolBar.findChild("Attribute%1Action".arg(idx+1)).visible = true;
+            a = optionsToolBar.findChild("SeparatorAttribute%1Action".arg(idx+1)).visible = true;
 
-            var edit = optionsToolBar.findChild("Attribute%1".arg(idx+1));
+            label = optionsToolBar.findChild("LabelAttribute%1".arg(idx+1));
+            label.text = prompt;
+//            a = optionsToolBar.findChild("LabelAttribute%1Action".arg(idx+1));
+//            a.visible = true;
+
+            edit = optionsToolBar.findChild("Attribute%1".arg(idx+1));
             edit.text = value;
+            //edit.show();
 
             // make sure reset button resets to attribute definition default:
             edit.setProperty("defaultValue", value);
@@ -84,8 +108,8 @@ InsertBlock.prototype.beginEvent = function() {
             this.attributeTags[idx] = tag;
             idx++;
 
-            // only allow editing of max. two attributes in tool bar:
-            if (idx>=2) {
+            // only allow editing of max. 3 attributes in tool bar:
+            if (idx>=3) {
                 break;
             }
         }
@@ -93,6 +117,21 @@ InsertBlock.prototype.beginEvent = function() {
 
     this.setState(InsertBlock.State.SettingPosition);
 };
+
+//InsertBlock.prototype.initUiOptions = function(resume) {
+//    var i, label, edit;
+//    var optionsToolBar = EAction.getOptionsToolBar();
+
+//    for (i=1; i<4; i++) {
+//        label = optionsToolBar.findChild("LabelAttribute%1Action".arg(i));
+//        edit = optionsToolBar.findChild("Attribute%1Action".arg(i));
+//        label.visible = false;
+//        //label.enabled = false;
+//        //label.text = "";
+//        edit.enabled = false;
+//        edit.text = "";
+//    }
+//};
 
 InsertBlock.prototype.setState = function(state) {
     Block.prototype.setState.call(this, state);

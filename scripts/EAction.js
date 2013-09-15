@@ -346,7 +346,9 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
         wOptions.destroy();
 
         // automatically add separator to toolbar:
-        this.optionWidgetActions.push(optionsToolBar.addSeparator());
+        var a = optionsToolBar.addSeparator();
+        a.objectName = "LastSeparator";
+        this.optionWidgetActions.push(a);
 
         // give action a chance to initialize toolbar widgets that cannot
         // be initialized in Qt Designer:

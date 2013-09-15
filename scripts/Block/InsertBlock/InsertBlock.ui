@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>818</width>
+    <width>987</width>
     <height>50</height>
    </rect>
   </property>
@@ -355,16 +355,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QToolButton" name="Reset"/>
-   </item>
-   <item>
-    <widget class="Line" name="line_4">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QLabel" name="LabelAttribute1">
      <property name="text">
       <string>Attribute 1:</string>
@@ -388,7 +378,7 @@
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line_5">
+    <widget class="Line" name="SeparatorAttribute1">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
@@ -416,6 +406,46 @@
       </size>
      </property>
     </widget>
+   </item>
+   <item>
+    <widget class="Line" name="SeparatorAttribute2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="LabelAttribute3">
+     <property name="text">
+      <string>Attribute 3:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="Attribute3">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>75</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="SeparatorAttribute3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Reset"/>
    </item>
   </layout>
  </widget>
