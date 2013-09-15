@@ -67,7 +67,7 @@ public:
 
     //virtual QList<RPainterPath> getPainterPaths(bool draft) const;
 
-    virtual QString getRenderedText() const;
+    virtual QString getRenderedText(bool escUnicode=false) const;
     //virtual RTextBasedData getRenderedTextData() const;
 
     /**

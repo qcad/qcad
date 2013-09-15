@@ -232,9 +232,13 @@ public:
     virtual bool flipHorizontal();
     virtual bool flipVertical();
 
-    virtual QString getRenderedText() const;
+    virtual QString getText() const {
+        return text;
+    }
+    virtual QString getRenderedText(bool escapeUnicode = false) const;
     virtual QString getPlainText() const;
     virtual QString getEscapedText(bool escapeUnicode = false) const;
+    QString escapeUnicode(const QString& str) const;
     virtual QFont getMainFont() const;
 
     virtual void update() const;

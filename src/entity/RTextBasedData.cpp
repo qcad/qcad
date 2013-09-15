@@ -364,29 +364,36 @@ QString RTextBasedData::getPlainText() const {
     return td.toPlainText();
 }
 
-QString RTextBasedData::getRenderedText() const {
-    //qDebug() << "RTextBasedData::getRenderedText";
-    return text;
-}
-
-QString RTextBasedData::getEscapedText(bool escapeUnicode) const {
-    QString t = getRenderedText();
-    if (escapeUnicode) {
-        QString ret;
-        for (int i=0; i<t.length(); i++) {
-            ushort ch = t.at(i).unicode();
-            if (ch>255) {
-                ret+=QString("\\U+%1").arg(ch, 4, 16, QChar('0'));
-            }
-            else {
-                ret+=t.at(i);
-            }
-        }
-        return ret;
+QString RTextBasedData::getRenderedText(bool escUnicode) const {
+    if (escUnicode) {
+        return escapeUnicode(text);
     }
     else {
-        return t;
+        return text;
     }
+}
+
+QString RTextBasedData::getEscapedText(bool escUnicode) const {
+    if (escUnicode) {
+        return escapeUnicode(text);
+    }
+    else {
+        return text;
+    }
+}
+
+QString RTextBasedData::escapeUnicode(const QString& str) const {
+    QString ret;
+    for (int i=0; i<str.length(); i++) {
+        ushort ch = str.at(i).unicode();
+        if (ch>255) {
+            ret+=QString("\\U+%1").arg(ch, 4, 16, QChar('0'));
+        }
+        else {
+            ret+=str.at(i);
+        }
+    }
+    return ret;
 }
 
 // "lo\C4;\H2.5;rem\P\C1;\fBaskerville|b0|i0|c0|p34;backslash:\FAPNORM.SHX|c0;\\semicolon:;\Pdolor\Psit\~amet\Plorem \Sipsum/dolor; sit\~amet"

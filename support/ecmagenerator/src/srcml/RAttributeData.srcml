@@ -143,7 +143,19 @@ dir="./entity" filename="RAttributeData.h">
     <name>QString</name>
   </type>
   <name>getRenderedText</name>
-  <parameter_list>()</parameter_list>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>escUnicode</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function>
     <type>

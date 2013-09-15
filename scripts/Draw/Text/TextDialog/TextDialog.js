@@ -310,7 +310,7 @@ TextDialog.prototype.show =  function(textDataIn) {
                 this.dialog.findChild("PromptLabel").visible = false;
                 this.dialog.findChild("AttributeTag").enabled = false;
             }
-            this.dialog.findChild("AttributeValue").text = textDataIn.getEscapedText();
+            this.dialog.findChild("AttributeValue").text = textDataIn.getText();
         }
     }
     else {
@@ -462,7 +462,6 @@ TextDialog.prototype.show =  function(textDataIn) {
     if (this.mode === TextDialog.Mode.Attribute ||
         this.mode === TextDialog.Mode.AttributeDefinition) {
 
-        qDebug("attribute was edited");
         textDataOut.setSimple(true);
         textDataOut.setTag(this.dialog.findChild("AttributeTag").text);
         if (this.mode === TextDialog.Mode.AttributeDefinition) {

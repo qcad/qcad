@@ -201,6 +201,9 @@
         flipVertical
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getRenderedText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -208,6 +211,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getEscapedText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        escapeUnicode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getMainFont

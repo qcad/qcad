@@ -69,7 +69,7 @@ public:
 //        return RNANDOUBLE;
 //    }
 
-    virtual QString getRenderedText() const;
+    virtual QString getRenderedText(bool escUnicode=false) const;
 
     QString getTag() const {
         return tag;

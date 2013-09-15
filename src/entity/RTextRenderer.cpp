@@ -124,7 +124,7 @@ void RTextRenderer::renderSimple() {
     if (textData.getHAlign()==RS::HAlignFit) {
         pos = textData.getPosition();
     }
-    QString text = textData.getEscapedText();
+    QString text = textData.getRenderedText();
     double textHeight = textData.getTextHeight();
     RS::VAlign verticalAlignment = textData.getVAlign();
     RS::HAlign horizontalAlignment = textData.getHAlign();
@@ -298,7 +298,7 @@ void RTextRenderer::render() {
     painterPaths.clear();
     richText = "";
 
-    QString text = textData.getEscapedText();
+    QString text = textData.getRenderedText();
     //RVector position = textData.getPosition();
     RVector position = textData.getAlignmentPoint();
     double textHeight = textData.getTextHeight();

@@ -180,11 +180,15 @@
             
             REcmaHelper::registerFunction(&engine, proto, flipVertical, "flipVertical");
             
+            REcmaHelper::registerFunction(&engine, proto, getText, "getText");
+            
             REcmaHelper::registerFunction(&engine, proto, getRenderedText, "getRenderedText");
             
             REcmaHelper::registerFunction(&engine, proto, getPlainText, "getPlainText");
             
             REcmaHelper::registerFunction(&engine, proto, getEscapedText, "getEscapedText");
+            
+            REcmaHelper::registerFunction(&engine, proto, escapeUnicode, "escapeUnicode");
             
             REcmaHelper::registerFunction(&engine, proto, getMainFont, "getMainFont");
             
@@ -3953,6 +3957,55 @@
             return result;
         }
          QScriptValue
+        REcmaTextBasedData::getText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::getText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::getText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("getText", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getText();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::getText", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTextBasedData::getRenderedText
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3986,6 +4039,38 @@
     QString cppResult =
         
                self->getRenderedText();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getRenderedText(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -4129,6 +4214,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::getEscapedText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::escapeUnicode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::escapeUnicode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::escapeUnicode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("escapeUnicode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->escapeUnicode(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.escapeUnicode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::escapeUnicode", context, engine);
             return result;
         }
          QScriptValue

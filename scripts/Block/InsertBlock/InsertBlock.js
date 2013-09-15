@@ -32,6 +32,8 @@ function InsertBlock(guiAction) {
     this.blockReferenceData.setPosition(new RVector(0.0,0.0));
     this.blockReferenceData.setScaleFactors(new RVector(1.0,1.0));
     this.blockReferenceData.setRotation(0.0);
+    this.attributes = {};
+    this.attributeTags = [];
 }
 
 InsertBlock.State = {
@@ -52,6 +54,42 @@ InsertBlock.prototype.beginEvent = function() {
     }
 
     this.blockReferenceData.setReferencedBlockId(blockId);
+
+    // add block attribute inputs to options tool bar:
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var doc = this.getDocument();
+    if (!isNull(doc)) {
+        var ids = doc.queryBlockEntities(blockId);
+        var idx = 0;
+        for (var i=0; i<ids.length; i++) {
+            var id = ids[i];
+            var e = doc.queryEntityDirect(id);
+            if (!isAttributeDefinitionEntity(e)) {
+                continue;
+            }
+
+            var tag = e.getTag();
+            var prompt = e.getPrompt();
+            var value = e.getEscapedText();
+
+            var label = optionsToolBar.findChild("LabelAttribute%1".arg(idx+1));
+            label.text = prompt;
+
+            var edit = optionsToolBar.findChild("Attribute%1".arg(idx+1));
+            edit.text = value;
+
+            // make sure reset button resets to attribute definition default:
+            edit.setProperty("defaultValue", value);
+
+            this.attributeTags[idx] = tag;
+            idx++;
+
+            // only allow editing of max. two attributes in tool bar:
+            if (idx>=2) {
+                break;
+            }
+        }
+    }
 
     this.setState(InsertBlock.State.SettingPosition);
 };
@@ -99,6 +137,7 @@ InsertBlock.prototype.getOperation = function(preview) {
     op.addObject(blockRef);
     var blockRefId = doc.getStorage().getMaxObjectId();
 
+    // create attribute for each attribute definition in block:
     if (!isNull(doc)) {
         var blockId = this.blockReferenceData.getReferencedBlockId();
         var ids = doc.queryBlockEntities(blockId);
@@ -113,6 +152,13 @@ InsertBlock.prototype.getOperation = function(preview) {
                 new RAttributeData(e.getData(), blockRefId, e.getTag())
             );
             blockRef.applyTransformationTo(att);
+
+            // assign values to attributes:
+            var tag = att.getTag();
+            if (!isNull(this.attributes[tag])) {
+                att.setText(this.attributes[tag]);
+            }
+
             op.addObject(att);
         }
     }
@@ -208,3 +254,22 @@ InsertBlock.prototype.slotReset = function() {
     var scaleYCombo = optionsToolBar.findChild("ScaleY");
     scaleYCombo.setEditText("1");
 };
+
+InsertBlock.prototype.slotAttribute1Changed = function(value) {
+    if (isNull(this.attributeTags[0])) {
+        return;
+    }
+
+    this.attributes[this.attributeTags[0]] = value;
+    this.updatePreview(true);
+};
+
+InsertBlock.prototype.slotAttribute2Changed = function(value) {
+    if (isNull(this.attributeTags[1])) {
+        return;
+    }
+
+    this.attributes[this.attributeTags[1]] = value;
+    this.updatePreview(true);
+};
+

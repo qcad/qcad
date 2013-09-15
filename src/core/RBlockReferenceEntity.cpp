@@ -354,8 +354,6 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview) const {
 
         QSharedPointer<REntity> entity = data.queryEntity(*it);
         if (entity.isNull()) {
-            qWarning("RBlockReferenceEntity::exportEntity: "
-                "entity %d is NULL", *it);
             continue;
         }
         e.exportEntity(*entity, true);

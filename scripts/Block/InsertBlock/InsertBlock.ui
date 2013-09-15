@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>656</width>
+    <width>818</width>
     <height>50</height>
    </rect>
   </property>
@@ -20,9 +20,15 @@
    </item>
    <item>
     <widget class="QComboBox" name="Rotation">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="maximumSize">
       <size>
-       <width>100</width>
+       <width>75</width>
        <height>16777215</height>
       </size>
      </property>
@@ -130,14 +136,110 @@
    </item>
    <item>
     <widget class="QComboBox" name="ScaleX">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="maximumSize">
       <size>
-       <width>100</width>
+       <width>75</width>
        <height>16777215</height>
       </size>
      </property>
      <property name="toolTip">
       <string>Scale block in X&lt;br&gt;by this factor</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1/10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">10</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="ScaleYLabel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Y:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="ScaleY">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>75</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Scale block in Y&lt;br&gt;by this factor</string>
      </property>
      <property name="editable">
       <bool>true</bool>
@@ -217,90 +319,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="ScaleYLabel">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>Scale Y:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QComboBox" name="ScaleY">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>100</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="toolTip">
-      <string>Scale block in Y&lt;br&gt;by this factor</string>
-     </property>
-     <property name="editable">
-      <bool>true</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string notr="true">1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">1/2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">1/4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">1/5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">1/10</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string notr="true">10</string>
-      </property>
-     </item>
-    </widget>
-   </item>
-   <item>
     <widget class="Line" name="line_3">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -338,6 +356,66 @@
    </item>
    <item>
     <widget class="QToolButton" name="Reset"/>
+   </item>
+   <item>
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="LabelAttribute1">
+     <property name="text">
+      <string>Attribute 1:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="Attribute1">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>75</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_5">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="LabelAttribute2">
+     <property name="text">
+      <string>Attribute 2:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="Attribute2">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>75</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

@@ -710,8 +710,8 @@ dir="./entity" filename="RTextRenderer.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>RTextBasedData</name>
-    </type>
+    <name>const</name>
+    <name>RTextBasedData</name>&amp;</type>
     <name>textData</name>
   </decl>;</decl_stmt>
   <decl_stmt>

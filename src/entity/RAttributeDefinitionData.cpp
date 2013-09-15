@@ -49,10 +49,15 @@ RAttributeDefinitionData::RAttributeDefinitionData(const RTextBasedData& textDat
     return RNANDOUBLE;
 }*/
 
-QString RAttributeDefinitionData::getRenderedText() const {
+QString RAttributeDefinitionData::getRenderedText(bool escUnicode) const {
     //qDebug() << "RAttributeDefinitionData::getRenderedText";
     //if (document!=NULL && getBlockId()==document->getCurrentBlockId()) {
+    if (escUnicode) {
+        return escapeUnicode(getTag());
+    }
+    else {
         return getTag();
+    }
     //}
     //else {
     //    return QString();

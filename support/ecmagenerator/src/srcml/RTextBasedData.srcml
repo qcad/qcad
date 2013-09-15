@@ -1242,13 +1242,39 @@ dir="./entity" filename="RTextBasedData.h">
   </type>
   <name>flipVertical</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>QString</name>
+    </type>
+    <name>getText</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>text</name>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>virtual</name>
     <name>QString</name>
   </type>
   <name>getRenderedText</name>
-  <parameter_list>()</parameter_list>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>escapeUnicode</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -1276,6 +1302,21 @@ dir="./entity" filename="RTextBasedData.h">
         <name>false</name>
       </expr>
     </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QString</name>
+  </type>
+  <name>escapeUnicode</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>str</name>
+    </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

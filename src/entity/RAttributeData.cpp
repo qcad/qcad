@@ -35,9 +35,9 @@ RAttributeData::RAttributeData(const RTextBasedData& textData, RBlockReferenceEn
     setParentId(blockReferenceId);
 }
 
-QString RAttributeData::getRenderedText() const {
+QString RAttributeData::getRenderedText(bool escUnicode) const {
     //qDebug() << "RAttributeData::getRenderedText";
-    return RTextBasedData::getRenderedText();
+    return RTextBasedData::getRenderedText(escUnicode);
 }
 
 //void RAttributeData::sync(RAttributeDefinitionData& attDefData) {
