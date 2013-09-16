@@ -26,12 +26,12 @@
     <message>
         <location filename="../SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation type="unfinished"></translation>
+        <translation>SVGインポート</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation>解像度:</translation>
     </message>
     <message>
         <location line="+57"/>

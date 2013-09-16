@@ -233,7 +233,8 @@
     <message>
         <location filename="../src/core/REntity.cpp" line="+1"/>
         <source>Block ID</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>never shown to user</translatorcomment>
+        <translation>Block ID</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -263,7 +264,7 @@
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
         <source>Custom</source>
-        <translation type="unfinished">カスタム</translation>
+        <translation>カスタム</translation>
     </message>
 </context>
 <context>

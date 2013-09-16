@@ -16,47 +16,47 @@
     <message>
         <location filename="../InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">回転:</translation>
+        <translation>回転:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation type="unfinished">ブロック回転&lt;br&gt;この角度で</translation>
+        <translation>ブロック回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Scale X:</source>
-        <translation type="unfinished">スケールX:</translation>
+        <translation>スケールX:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="unfinished">X軸ブロック拡縮&lt;br&gt;この係数で</translation>
+        <translation>X軸ブロック拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Y軸ブロック拡縮&lt;br&gt;この係数で</translation>
+        <translation>Y軸ブロック拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation type="unfinished">比率保持</translation>
+        <translation>比率保持</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="unfinished">ブロック反転&lt;br&gt;水平</translation>
+        <translation>ブロック反転&lt;br&gt;水平</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="unfinished">ブロック反転&lt;br&gt;垂直</translation>
+        <translation>ブロック反転&lt;br&gt;垂直</translation>
     </message>
 </context>
 <context>

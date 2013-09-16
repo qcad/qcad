@@ -69,12 +69,12 @@ Rysuj obiekty tekstowe</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+306"/>
+        <location filename="../TextDialog/TextDialog.js" line="+242"/>
         <source>Default value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+253"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

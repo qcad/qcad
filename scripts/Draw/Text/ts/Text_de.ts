@@ -57,12 +57,12 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+306"/>
+        <location filename="../TextDialog/TextDialog.js" line="+242"/>
         <source>Default value:</source>
         <translation>Standardwert:</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+253"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>

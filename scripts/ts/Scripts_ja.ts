@@ -293,7 +293,7 @@
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>属性</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -308,7 +308,7 @@
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>属性定義</translation>
     </message>
     <message>
         <location line="+2"/>
