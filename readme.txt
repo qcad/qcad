@@ -1,8 +1,8 @@
-QCAD 3.2
+QCAD 3.3
 
-This is QCAD version 3.2.
+This is QCAD version 3.3.
 
-QCAD is an application for computer aided drafting in two dimensions (2D).
+QCAD is an application for computer aided drafting (CAD) in two dimensions (2D).
 
 With QCAD you can create technical drawings such as plans for buildings, 
 interiors, mechanical parts or schematics and diagrams.
