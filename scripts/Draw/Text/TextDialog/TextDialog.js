@@ -238,6 +238,10 @@ TextDialog.prototype.show =  function(textDataIn) {
     // sync rich text / source:
     this.tabWidget["currentChanged(int)"].connect(this, "tabChanged");
 
+    if (this.mode === TextDialog.Mode.AttributeDefinition) {
+        this.dialog.findChild("ValueLabel").text = qsTr("Default value:");
+    }
+
     // initialize dialog from given text data (textDataIn):
     if (!isNull(textDataIn)) {
         cbSimpleText.checked = textDataIn.isSimple();
@@ -303,7 +307,6 @@ TextDialog.prototype.show =  function(textDataIn) {
             this.dialog.findChild("AttributeTag").text = textDataIn.getTag();
             if (this.mode === TextDialog.Mode.AttributeDefinition) {
                 this.dialog.findChild("AttributePrompt").text = textDataIn.getPrompt();
-                this.dialog.findChild("ValueLabel").text = qsTr("Default value:");
             }
             else {
                 this.dialog.findChild("AttributePrompt").visible = false;
