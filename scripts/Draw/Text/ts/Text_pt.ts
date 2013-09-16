@@ -13,7 +13,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="+81"/>
+        <location filename="../Text.js" line="+88"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -65,7 +65,12 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+367"/>
+        <location filename="../TextDialog/TextDialog.js" line="+306"/>
+        <source>Default value:</source>
+        <translation>Padrão:</translation>
+    </message>
+    <message>
+        <location line="+186"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -143,7 +148,7 @@ Co&amp;lar</translatorcomment>
         <translation>&amp;Caracteres especiais...</translation>
     </message>
     <message>
-        <location line="+302"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
@@ -385,7 +390,27 @@ Fonte papel:</translatorcomment>
         <translation>Fonte</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+23"/>
+        <source>Attribute Details</source>
+        <translation>Detalhes atributo</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Tag:</source>
+        <translation>Etiqueta:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Prompt:</source>
+        <translation>Prompt:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Value:</source>
+        <translation>Valor:</translation>
+    </message>
+    <message>
+        <location line="+42"/>
         <source>Text Geometry</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Geometria texto</translation>
@@ -433,12 +458,17 @@ Alinhamento|Vertical</translatorcomment>
         <translation>Alinhamento</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+85"/>
         <source>Top Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro Acima</translatorcomment>
         <translation>Centro acima</translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>Base Left</source>
+        <translation>Esquerda base</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -452,6 +482,16 @@ Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</tr
     </message>
     <message>
         <location line="+35"/>
+        <source>Base Center</source>
+        <translation>Centro base</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Base Right</source>
+        <translation>Direita base</translation>
+    </message>
+    <message>
+        <location line="+128"/>
         <source>Top Right</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -460,7 +500,7 @@ Em cima à direita</translatorcomment>
         <translation>Direita acima</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-323"/>
         <source>Bottom Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -468,7 +508,7 @@ Centro Abaixo</translatorcomment>
         <translation>Centro abaixo</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+291"/>
         <source>Middle Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -476,7 +516,7 @@ Esquerda ao Meio</translatorcomment>
         <translation>Esquerda ao meio</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-64"/>
         <source>Middle Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -484,7 +524,7 @@ Centro ao Meio</translatorcomment>
         <translation>Centro ao meio</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-163"/>
         <source>Middle Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -492,7 +532,7 @@ Direita ao Meio</translatorcomment>
         <translation>Direita ao meio</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-96"/>
         <source>Bottom Left</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -501,7 +541,7 @@ Em baixo à esquerda</translatorcomment>
         <translation>Esquerda abaixo</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+291"/>
         <source>Bottom Right</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -510,7 +550,7 @@ Em baixo à direita</translatorcomment>
         <translation>Direita abaixo</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+152"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

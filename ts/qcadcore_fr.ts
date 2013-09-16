@@ -296,7 +296,7 @@ Autres...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+44"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_fr.ts--
@@ -306,10 +306,9 @@ Liste des blocs</translatorcomment>
         <translation>Bloc</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Bloc référencé</translation>
+        <translation type="obsolete">Bloc référencé</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -378,7 +377,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="-1"/>
+        <location filename="../src/core/REntity.cpp" line="+43"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -388,7 +387,12 @@ Type ordonnée</translatorcomment>
         <translation>Type</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Block ID</source>
+        <translation>Bloc ID</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Layer</source>
         <translatorcomment>--exact match--
 --file: AdvancedSelection_fr.ts--
@@ -426,11 +430,16 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordre de dessin</translation>
     </message>
+    <message>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <source>Custom</source>
+        <translation>Personnalisé</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+164"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+163"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nécessite une sélection</translation>

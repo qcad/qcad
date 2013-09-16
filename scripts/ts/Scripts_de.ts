@@ -43,7 +43,7 @@
     </message>
     <message>
         <location line="+246"/>
-        <location line="+104"/>
+        <location line="+106"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
     </message>
@@ -57,7 +57,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+368"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -168,7 +168,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+925"/>
+        <location filename="../WidgetFactory.js" line="+929"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -349,22 +349,22 @@
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribute</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Attributdefinitionen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Attributdefinition</translation>
     </message>
     <message>
         <location line="+2"/>

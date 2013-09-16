@@ -48,7 +48,7 @@
     </message>
     <message>
         <location line="+246"/>
-        <location line="+104"/>
+        <location line="+106"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Strumento attivo:</translation>
@@ -59,7 +59,7 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+368"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
@@ -182,7 +182,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+925"/>
+        <location filename="../WidgetFactory.js" line="+929"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -362,22 +362,22 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Attributi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Attributo</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Definizioni degli attributi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Definizione di attributo</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -546,7 +546,7 @@ in linee, solidi e testi</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation>&amp;Spline</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+2"/>

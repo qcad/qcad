@@ -43,7 +43,7 @@
     </message>
     <message>
         <location line="+246"/>
-        <location line="+104"/>
+        <location line="+106"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
     </message>
@@ -53,7 +53,7 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+368"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -160,7 +160,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+925"/>
+        <location filename="../WidgetFactory.js" line="+929"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>

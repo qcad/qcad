@@ -12,7 +12,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="+81"/>
+        <location filename="../Text.js" line="+88"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>
@@ -45,7 +45,12 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+367"/>
+        <location filename="../TextDialog/TextDialog.js" line="+306"/>
+        <source>Default value:</source>
+        <translation>Predefinito:</translation>
+    </message>
+    <message>
+        <location line="+186"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>
@@ -100,7 +105,7 @@
         <translation>&amp;Carattere speciale...</translation>
     </message>
     <message>
-        <location line="+302"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Altri...</translation>
     </message>
@@ -262,7 +267,27 @@
         <translation>Sorgente</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+23"/>
+        <source>Attribute Details</source>
+        <translation>Dettagli attributi</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Tag:</source>
+        <translation>Etichetta:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Prompt:</source>
+        <translation>Prompt:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Value:</source>
+        <translation>Valore:</translation>
+    </message>
+    <message>
+        <location line="+42"/>
         <source>Text Geometry</source>
         <translation>Geometria del testo</translation>
     </message>
@@ -292,9 +317,14 @@
         <translation>Allineamento</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+85"/>
         <source>Top Center</source>
         <translation>In Alto al Centro</translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>Base Left</source>
+        <translation>In Base a Sinistra</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -303,41 +333,51 @@
     </message>
     <message>
         <location line="+35"/>
+        <source>Base Center</source>
+        <translation>In Base al Centro</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Base Right</source>
+        <translation>In Base a Destra</translation>
+    </message>
+    <message>
+        <location line="+128"/>
         <source>Top Right</source>
         <translation>In Alto a Destra</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-323"/>
         <source>Bottom Center</source>
         <translation>In Basso al Centro</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+291"/>
         <source>Middle Left</source>
         <translation>Medio a Sinistra</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-64"/>
         <source>Middle Center</source>
         <translation>Medio al Centro</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-163"/>
         <source>Middle Right</source>
         <translation>Medio a Destra</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-96"/>
         <source>Bottom Left</source>
         <translation>In Basso a Sinistra</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+291"/>
         <source>Bottom Right</source>
         <translation>In Basso a Destra</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+152"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>

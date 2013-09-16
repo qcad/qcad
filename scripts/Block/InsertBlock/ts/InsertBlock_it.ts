@@ -15,7 +15,7 @@
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="+66"/>
+        <location filename="../InsertBlock.js" line="+143"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>
@@ -24,16 +24,13 @@
         <source>&amp;Insert Block</source>
         <translation>&amp;Inserisci Blocco</translation>
     </message>
-</context>
-<context>
-    <name>Paste</name>
     <message>
         <location filename="../InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
         <translation>Rotazione:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translation>Ruotare blocco&lt;br&gt;da questo angolo</translation>
     </message>
@@ -43,9 +40,19 @@
         <translation>Scala X:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translation>Scala il blocco in X&lt;br&gt;da questo fattore</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Y:</source>
+        <translation>Y:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translation>Scala il blocco in Y&lt;br&gt;da questo fattore</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -53,17 +60,7 @@
         <translation>Mantiene proporzioni</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Scale Y:</source>
-        <translation>Scala Y:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation>Scala il blocco in Y&lt;br&gt;da questo fattore</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translation>Rifletti blocco orizzontalmente</translation>
     </message>
@@ -71,6 +68,57 @@
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Rifletti blocco&lt;br&gt;verticalmente</translation>
+    </message>
+    <message>
+        <source>Attribute 1:</source>
+        <translation type="obsolete">Attribute 1:</translation>
+    </message>
+    <message>
+        <source>Attribute 2:</source>
+        <translation type="obsolete">Attribute 2:</translation>
+    </message>
+    <message>
+        <source>Attribute 3:</source>
+        <translation type="obsolete">Attribute 3:</translation>
+    </message>
+</context>
+<context>
+    <name>Paste</name>
+    <message>
+        <source>Rotation:</source>
+        <translation type="obsolete">Rotazione:</translation>
+    </message>
+    <message>
+        <source>Rotate block&lt;br&gt;by this angle</source>
+        <translation type="obsolete">Ruotare blocco&lt;br&gt;da questo angolo</translation>
+    </message>
+    <message>
+        <source>Scale X:</source>
+        <translation type="obsolete">Scala X:</translation>
+    </message>
+    <message>
+        <source>Scale block in X&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Scala il blocco in X&lt;br&gt;da questo fattore</translation>
+    </message>
+    <message>
+        <source>Keep Proportions</source>
+        <translation type="obsolete">Mantiene proporzioni</translation>
+    </message>
+    <message>
+        <source>Scale Y:</source>
+        <translation type="obsolete">Scala Y:</translation>
+    </message>
+    <message>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Scala il blocco in Y&lt;br&gt;da questo fattore</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;horizontally</source>
+        <translation type="obsolete">Rifletti blocco orizzontalmente</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;vertically</source>
+        <translation type="obsolete">Rifletti blocco&lt;br&gt;verticalmente</translation>
     </message>
 </context>
 </TS>

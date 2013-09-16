@@ -631,12 +631,12 @@
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezeichnung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished"></translation>
+        <translation>Aufforderung</translation>
     </message>
 </context>
 </TS>

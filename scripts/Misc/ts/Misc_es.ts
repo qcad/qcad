@@ -17,7 +17,7 @@
     <message>
         <location filename="../Misc.js" line="+56"/>
         <source>&amp;Misc</source>
-        <translation type="unfinished">&amp;Diverso</translation>
+        <translation>&amp;Diverso</translation>
     </message>
 </context>
 </TS>

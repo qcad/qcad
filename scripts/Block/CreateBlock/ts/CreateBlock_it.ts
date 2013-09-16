@@ -17,7 +17,7 @@
         <translation type="obsolete">Creare un blocco dalla selezione</translation>
     </message>
     <message>
-        <location filename="../CreateBlockInit.js" line="+3"/>
+        <location filename="../CreateBlockInit.js" line="+4"/>
         <source>&amp;Create Block from Selection</source>
         <translation>&amp;Creare un blocco dalla selezione</translation>
     </message>

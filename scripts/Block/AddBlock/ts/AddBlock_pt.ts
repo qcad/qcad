@@ -4,11 +4,15 @@
 <context>
     <name>AddBlock</name>
     <message>
-        <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Block</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Adicione Bloco</translatorcomment>
+        <translation type="obsolete">&amp;Adicione Bloco</translation>
+    </message>
+    <message>
+        <location filename="../AddBlockInit.js" line="+2"/>
+        <source>&amp;Add Empty Block</source>
         <translation>&amp;Adicione Bloco</translation>
     </message>
     <message>

@@ -15,7 +15,7 @@
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="+66"/>
+        <location filename="../InsertBlock.js" line="+143"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -24,16 +24,13 @@
         <source>&amp;Insert Block</source>
         <translation>Block ein&amp;fügen</translation>
     </message>
-</context>
-<context>
-    <name>Paste</name>
     <message>
         <location filename="../InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
         <translation>Rotation:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translation>Block rotieren&lt;br&gt;um diesen Winkel</translation>
     </message>
@@ -43,9 +40,19 @@
         <translation>Skalierung X:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translation>Block skalieren in X&lt;br&gt;um diesen Faktor</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Y:</source>
+        <translation>Y:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translation>Block skalieren in Y&lt;br&gt;um diesen Faktor</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -53,17 +60,7 @@
         <translation>Proportional</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Scale Y:</source>
-        <translation>Skalierung Y:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation>Block skalieren in Y&lt;br&gt;um diesen Faktor</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translation>Block horizontal&lt;br&gt;spiegeln</translation>
     </message>
@@ -71,6 +68,57 @@
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Block vertikal&lt;br&gt;spiegeln</translation>
+    </message>
+    <message>
+        <source>Attribute 1:</source>
+        <translation type="obsolete">Attribute 1:</translation>
+    </message>
+    <message>
+        <source>Attribute 2:</source>
+        <translation type="obsolete">Attribute 2:</translation>
+    </message>
+    <message>
+        <source>Attribute 3:</source>
+        <translation type="obsolete">Attribute 3:</translation>
+    </message>
+</context>
+<context>
+    <name>Paste</name>
+    <message>
+        <source>Rotation:</source>
+        <translation type="obsolete">Rotation:</translation>
+    </message>
+    <message>
+        <source>Rotate block&lt;br&gt;by this angle</source>
+        <translation type="obsolete">Block rotieren&lt;br&gt;um diesen Winkel</translation>
+    </message>
+    <message>
+        <source>Scale X:</source>
+        <translation type="obsolete">Skalierung X:</translation>
+    </message>
+    <message>
+        <source>Scale block in X&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Block skalieren in X&lt;br&gt;um diesen Faktor</translation>
+    </message>
+    <message>
+        <source>Keep Proportions</source>
+        <translation type="obsolete">Proportional</translation>
+    </message>
+    <message>
+        <source>Scale Y:</source>
+        <translation type="obsolete">Skalierung Y:</translation>
+    </message>
+    <message>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Block skalieren in Y&lt;br&gt;um diesen Faktor</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;horizontally</source>
+        <translation type="obsolete">Block horizontal&lt;br&gt;spiegeln</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;vertically</source>
+        <translation type="obsolete">Block vertikal&lt;br&gt;spiegeln</translation>
     </message>
 </context>
 </TS>

@@ -14,13 +14,13 @@
         <translation>Segundo punto</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
+        <location filename="../SelectIntersectedEntitiesInit.js" line="+3"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)seleccionar entidades in&amp;terseccionadas</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)seleccionar todas las entidades cortado por una línea</translation>

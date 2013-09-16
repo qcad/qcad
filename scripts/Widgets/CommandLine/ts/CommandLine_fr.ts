@@ -52,7 +52,7 @@
     <message>
         <location line="+64"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>

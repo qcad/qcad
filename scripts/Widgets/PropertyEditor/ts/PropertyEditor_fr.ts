@@ -23,17 +23,17 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+338"/>
+        <location filename="../PropertyEditor.js" line="+344"/>
         <source>Geometry</source>
         <translation>Géométrie</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+31"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+135"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -69,7 +69,7 @@
         <translation>Milieu</translation>
     </message>
     <message>
-        <location line="-430"/>
+        <location line="-468"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -84,13 +84,18 @@ Dessin enregistré : %1</translatorcomment>
         <translation> :</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+136"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aucune sélection</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+31"/>
+        <source>Dependent Entities</source>
+        <translation>Entités dépendantes</translation>
+    </message>
+    <message>
+        <location line="+229"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal

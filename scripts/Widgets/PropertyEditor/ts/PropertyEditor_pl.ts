@@ -46,13 +46,13 @@ Wersja: </translatorcomment>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+136"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No Selection</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -62,6 +62,11 @@ Edytuj geometrię obiektu</translatorcomment>
     </message>
     <message>
         <location line="+14"/>
+        <source>Dependent Entities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -71,7 +76,7 @@ Własne filtry</translatorcomment>
         <translation type="unfinished">Niestandardowy</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+135"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

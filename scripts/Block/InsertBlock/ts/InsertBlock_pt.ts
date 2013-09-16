@@ -23,7 +23,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="+66"/>
+        <location filename="../InsertBlock.js" line="+143"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
@@ -32,70 +32,118 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <source>&amp;Insert Block</source>
         <translation>&amp;Insira bloco</translation>
     </message>
-</context>
-<context>
-    <name>Paste</name>
     <message>
         <location filename="../InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translatorcomment>--exact match--
---file: pt.po--
-_Rotação</translatorcomment>
         <translation>Rotação:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Rodar bloco&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Scale X:</source>
-        <translatorcomment>--ignored ...--
---file: pt_PT.po--
-&lt;b&gt;Escala X:&lt;/b&gt;</translatorcomment>
         <translation>Escala X:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Escala bloco em X&lt;br&gt;por este fator</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Y:</source>
+        <translation>Y:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translation>Escala bloco em Y&lt;br&gt;por este fator</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Keep Proportions</source>
-        <translatorcomment>--ignored case--
---file: qcadguiqt_pt.ts--
-Mantenha proporções</translatorcomment>
         <translation>Mantenha proporções</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Scale Y:</source>
-        <translatorcomment>--ignored ...--
---file: pt_PT.po--
-&lt;b&gt;Escala Y:&lt;/b&gt;</translatorcomment>
-        <translation>Escala Y:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Escala bloco em Y&lt;br&gt;por este fator</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Inverter bloco&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Inverter bloco&lt;br&gt;verticalmente</translation>
+    </message>
+    <message>
+        <source>Attribute 1:</source>
+        <translation type="obsolete">Attribute 1:</translation>
+    </message>
+    <message>
+        <source>Attribute 2:</source>
+        <translation type="obsolete">Attribute 2:</translation>
+    </message>
+    <message>
+        <source>Attribute 3:</source>
+        <translation type="obsolete">Attribute 3:</translation>
+    </message>
+</context>
+<context>
+    <name>Paste</name>
+    <message>
+        <source>Rotation:</source>
+        <translatorcomment>--exact match--
+--file: pt.po--
+_Rotação</translatorcomment>
+        <translation type="obsolete">Rotação:</translation>
+    </message>
+    <message>
+        <source>Rotate block&lt;br&gt;by this angle</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Rodar bloco&lt;br&gt;por este ângulo</translation>
+    </message>
+    <message>
+        <source>Scale X:</source>
+        <translatorcomment>--ignored ...--
+--file: pt_PT.po--
+&lt;b&gt;Escala X:&lt;/b&gt;</translatorcomment>
+        <translation type="obsolete">Escala X:</translation>
+    </message>
+    <message>
+        <source>Scale block in X&lt;br&gt;by this factor</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Escala bloco em X&lt;br&gt;por este fator</translation>
+    </message>
+    <message>
+        <source>Keep Proportions</source>
+        <translatorcomment>--ignored case--
+--file: qcadguiqt_pt.ts--
+Mantenha proporções</translatorcomment>
+        <translation type="obsolete">Mantenha proporções</translation>
+    </message>
+    <message>
+        <source>Scale Y:</source>
+        <translatorcomment>--ignored ...--
+--file: pt_PT.po--
+&lt;b&gt;Escala Y:&lt;/b&gt;</translatorcomment>
+        <translation type="obsolete">Escala Y:</translation>
+    </message>
+    <message>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Escala bloco em Y&lt;br&gt;por este fator</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;horizontally</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Inverter bloco&lt;br&gt;horizontalmente</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;vertically</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Inverter bloco&lt;br&gt;verticalmente</translation>
     </message>
 </context>
 </TS>

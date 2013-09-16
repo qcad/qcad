@@ -849,12 +849,12 @@ Dimensão vertical</translatorcomment>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished"></translation>
+        <translation>Prompt</translation>
     </message>
 </context>
 </TS>

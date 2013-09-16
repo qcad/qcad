@@ -22,13 +22,13 @@ Especifique o segundo ponto de distância</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
+        <location filename="../SelectIntersectedEntitiesInit.js" line="+3"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)selecionar entidades in&amp;tersectada</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)selecione todas as entidades cortadas por uma linha</translation>

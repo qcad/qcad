@@ -13,7 +13,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location filename="../CreateBlockInit.js" line="+3"/>
+        <location filename="../CreateBlockInit.js" line="+4"/>
         <source>&amp;Create Block from Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tworzenie bloku z wyboru</translation>

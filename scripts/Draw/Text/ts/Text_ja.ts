@@ -12,7 +12,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="+81"/>
+        <location filename="../Text.js" line="+88"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
@@ -45,7 +45,12 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+367"/>
+        <location filename="../TextDialog/TextDialog.js" line="+306"/>
+        <source>Default value:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+186"/>
         <source>&amp;Undo</source>
         <translation>&amp;U アンドゥ</translation>
     </message>
@@ -100,7 +105,7 @@
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+302"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
@@ -259,7 +264,27 @@
         <translation>ソース</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+23"/>
+        <source>Attribute Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Tag:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Prompt:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Value:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
         <source>Text Geometry</source>
         <translation>テキスト配置</translation>
     </message>
@@ -289,9 +314,14 @@
         <translation>位置合わせ</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+85"/>
         <source>Top Center</source>
         <translation></translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>Base Left</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+32"/>
@@ -300,41 +330,51 @@
     </message>
     <message>
         <location line="+35"/>
+        <source>Base Center</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Base Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+128"/>
         <source>Top Right</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-323"/>
         <source>Bottom Center</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+291"/>
         <source>Middle Left</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-64"/>
         <source>Middle Center</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-163"/>
         <source>Middle Right</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-96"/>
         <source>Bottom Left</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+291"/>
         <source>Bottom Right</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+152"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>

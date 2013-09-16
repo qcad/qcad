@@ -858,12 +858,12 @@ Point 4|Y</translatorcomment>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Étiquette</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished"></translation>
+        <translation>Invite</translation>
     </message>
 </context>
 </TS>

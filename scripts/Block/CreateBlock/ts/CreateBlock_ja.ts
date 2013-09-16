@@ -9,7 +9,7 @@
         <translation>基準点</translation>
     </message>
     <message>
-        <location filename="../CreateBlockInit.js" line="+3"/>
+        <location filename="../CreateBlockInit.js" line="+4"/>
         <source>&amp;Create Block from Selection</source>
         <translation>&amp;C 選択からブロックを作成</translation>
     </message>

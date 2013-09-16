@@ -180,12 +180,11 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Referenced Block</source>
-        <translation>Blok</translation>
+        <translation type="obsolete">Blok</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+76"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -227,9 +226,14 @@
         <translation>Typ</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Block</source>
         <translation>Blok</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+1"/>
+        <source>Block ID</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -257,11 +261,16 @@
         <translatorcomment>--google--</translatorcomment>
         <translation>Kolejność rysowania</translation>
     </message>
+    <message>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <source>Custom</source>
+        <translation type="unfinished">Niestandardowy</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+164"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+163"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wymaga doboru</translation>

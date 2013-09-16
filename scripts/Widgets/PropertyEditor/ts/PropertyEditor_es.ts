@@ -30,12 +30,12 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+338"/>
+        <location filename="../PropertyEditor.js" line="+344"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+301"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
@@ -66,7 +66,7 @@ Tipo de línea:</translatorcomment>
         <translation>Medio</translation>
     </message>
     <message>
-        <location line="-430"/>
+        <location line="-468"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -81,7 +81,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+136"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -90,12 +90,17 @@ Seleccin nula</translatorcomment>
         <translation>Seleccin nula</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
+        <source>Dependent Entities</source>
+        <translation>Entidades dependientes</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+135"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--

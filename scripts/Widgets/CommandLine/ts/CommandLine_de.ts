@@ -50,7 +50,7 @@
     <message>
         <location line="+64"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Transaktion fehlgeschlagen. Bitte überprüfen Sie Ihre Zeichnung auf mögliche Blockrekursionen und gesperrte oder unsichtbare Layer oder Blöcke.</translation>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>

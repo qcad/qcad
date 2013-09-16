@@ -306,13 +306,12 @@ Cinza Claro</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Bloco referenciado</translation>
+        <translation type="obsolete">Bloco referenciado</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+76"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -382,7 +381,7 @@ Tipo Ordinal</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_pt.ts--
@@ -390,6 +389,11 @@ Tipo Ordinal</translatorcomment>
 Carimbo
 Lista de Blocos</translatorcomment>
         <translation>Bloco</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+1"/>
+        <source>Block ID</source>
+        <translation>Bloco ID</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -427,11 +431,16 @@ Abre diálogo de cores</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordem do traçado</translation>
     </message>
+    <message>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <source>Custom</source>
+        <translation>Personalizado</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+164"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+163"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Requer a seleção</translation>

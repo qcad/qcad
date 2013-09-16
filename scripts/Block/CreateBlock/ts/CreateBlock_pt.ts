@@ -25,7 +25,7 @@ C&amp;rie Novo Bloco</translatorcomment>
         <translation type="obsolete">Crie bloco da seleção</translation>
     </message>
     <message>
-        <location filename="../CreateBlockInit.js" line="+3"/>
+        <location filename="../CreateBlockInit.js" line="+4"/>
         <source>&amp;Create Block from Selection</source>
         <translation>&amp;Crie bloco da seleção</translation>
     </message>

@@ -32,17 +32,22 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+136"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Geometry</source>
         <translation>Geometrie</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+14"/>
+        <source>Dependent Entities</source>
+        <translation>Abhängige Objekte</translation>
+    </message>
+    <message>
+        <location line="+152"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -173,7 +178,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-823"/>
+        <location filename="../PropertyEditor.js" line="-838"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

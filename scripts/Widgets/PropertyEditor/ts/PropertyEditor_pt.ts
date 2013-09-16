@@ -46,13 +46,13 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+136"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não seleção</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -62,6 +62,11 @@ Geometria</translatorcomment>
     </message>
     <message>
         <location line="+14"/>
+        <source>Dependent Entities</source>
+        <translation>Entidades dependentes</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -71,7 +76,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+135"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó

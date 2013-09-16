@@ -48,7 +48,7 @@
     </message>
     <message>
         <location line="+246"/>
-        <location line="+104"/>
+        <location line="+106"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
     </message>
@@ -63,7 +63,7 @@
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+368"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
@@ -186,7 +186,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+925"/>
+        <location filename="../WidgetFactory.js" line="+929"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
@@ -366,22 +366,22 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Atributos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Atributo</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Definiciones de atributos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Definición de atributo</translation>
     </message>
     <message>
         <location line="+2"/>

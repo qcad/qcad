@@ -56,7 +56,7 @@ Anuluj
     </message>
     <message>
         <location line="+246"/>
-        <location line="+104"/>
+        <location line="+106"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktywne narzędzia:</translation>
@@ -71,7 +71,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+368"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -203,7 +203,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+925"/>
+        <location filename="../WidgetFactory.js" line="+929"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Paste</class>
- <widget class="QWidget" name="Paste">
+ <class>InsertBlock</class>
+ <widget class="QWidget" name="InsertBlock">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -357,7 +357,7 @@
    <item>
     <widget class="QLabel" name="LabelAttribute1">
      <property name="text">
-      <string>Attribute 1:</string>
+      <string notr="true">Attribute 1:</string>
      </property>
     </widget>
    </item>
@@ -387,7 +387,7 @@
    <item>
     <widget class="QLabel" name="LabelAttribute2">
      <property name="text">
-      <string>Attribute 2:</string>
+      <string notr="true">Attribute 2:</string>
      </property>
     </widget>
    </item>
@@ -417,7 +417,7 @@
    <item>
     <widget class="QLabel" name="LabelAttribute3">
      <property name="text">
-      <string>Attribute 3:</string>
+      <string notr="true">Attribute 3:</string>
      </property>
     </widget>
    </item>

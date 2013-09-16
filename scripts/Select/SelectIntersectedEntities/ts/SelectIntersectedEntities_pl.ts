@@ -61,13 +61,13 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">Przecięcie z bieżącego zaznaczenia</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
+        <location filename="../SelectIntersectedEntitiesInit.js" line="+3"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">(De-) Wybierz przecięte Podmioty</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">(De-) Wybierz wszystkie podmioty przecięte przez linię</translation>

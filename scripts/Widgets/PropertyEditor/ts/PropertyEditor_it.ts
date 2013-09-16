@@ -12,7 +12,7 @@
     <message>
         <location line="+12"/>
         <source>Name:</source>
-        <translation>&amp;Nome:</translation>
+        <translation>Nome:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -23,12 +23,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+338"/>
+        <location filename="../PropertyEditor.js" line="+344"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+301"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>
@@ -59,7 +59,7 @@
         <translation>Medio</translation>
     </message>
     <message>
-        <location line="-430"/>
+        <location line="-468"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -74,7 +74,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+136"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -82,12 +82,17 @@ Nessuna selezione</translatorcomment>
         <translation>Nessuna selezione</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
+        <source>Dependent Entities</source>
+        <translation>Entità dipendenti</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+135"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>

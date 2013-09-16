@@ -12,7 +12,7 @@
 <context>
     <name>Text</name>
     <message>
-        <location filename="../Text.js" line="+81"/>
+        <location filename="../Text.js" line="+88"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
@@ -45,7 +45,12 @@
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+367"/>
+        <location filename="../TextDialog/TextDialog.js" line="+306"/>
+        <source>Default value:</source>
+        <translation>Por defecto:</translation>
+    </message>
+    <message>
+        <location line="+186"/>
         <source>&amp;Undo</source>
         <translation>&amp;Deshacer</translation>
     </message>
@@ -98,10 +103,10 @@
         <location line="+6"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Caracteres especiales ...</translation>
+        <translation>&amp;Caracteres especiales ...</translation>
     </message>
     <message>
-        <location line="+302"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Otros...</translation>
     </message>
@@ -263,7 +268,27 @@
         <translation>Fuente</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+23"/>
+        <source>Attribute Details</source>
+        <translation>Detalles de atributos</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Tag:</source>
+        <translation>Etiqueta:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Prompt:</source>
+        <translation>Indicador:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Value:</source>
+        <translation>Valor:</translation>
+    </message>
+    <message>
+        <location line="+42"/>
         <source>Text Geometry</source>
         <translation>Geometría del texto</translation>
     </message>
@@ -293,9 +318,14 @@
         <translation>Alineación</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+85"/>
         <source>Top Center</source>
         <translation>Arriba centro</translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>Base Left</source>
+        <translation>Base izquierda</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -304,41 +334,51 @@
     </message>
     <message>
         <location line="+35"/>
+        <source>Base Center</source>
+        <translation>Base centro</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Base Right</source>
+        <translation>Base derecha</translation>
+    </message>
+    <message>
+        <location line="+128"/>
         <source>Top Right</source>
         <translation>Arriba derecha</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-323"/>
         <source>Bottom Center</source>
         <translation>Abajo centro</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+291"/>
         <source>Middle Left</source>
         <translation>Medio izquierda</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-64"/>
         <source>Middle Center</source>
         <translation>Medio centro</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-163"/>
         <source>Middle Right</source>
         <translation>Medio derecha</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-96"/>
         <source>Bottom Left</source>
         <translation>Abajo izquierda</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+291"/>
         <source>Bottom Right</source>
         <translation>Abajo derecha</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+152"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>

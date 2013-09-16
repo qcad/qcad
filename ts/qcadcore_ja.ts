@@ -180,12 +180,11 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Referenced Block</source>
-        <translation>参照ブロック</translation>
+        <translation type="obsolete">参照ブロック</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+76"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -227,9 +226,14 @@
         <translation>タイプ</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Block</source>
         <translation>ブロック</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+1"/>
+        <source>Block ID</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -256,11 +260,16 @@
         <source>Draw Order</source>
         <translation>描画順序</translation>
     </message>
+    <message>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <source>Custom</source>
+        <translation type="unfinished">カスタム</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+164"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+163"/>
         <source>Requires selection</source>
         <translation>選択が必要です</translation>
     </message>

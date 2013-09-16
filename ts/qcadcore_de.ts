@@ -184,14 +184,13 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+44"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Block</source>
         <translation>Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Referenced Block</source>
-        <translation>Referenzierter Block</translation>
+        <translation type="obsolete">Referenzierter Block</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -231,12 +230,17 @@
         <translation>Winkel</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="-1"/>
+        <location filename="../src/core/REntity.cpp" line="+43"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Block ID</source>
+        <translation>Block ID</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Layer</source>
         <translation>Layer</translation>
     </message>
@@ -260,11 +264,16 @@
         <source>Draw Order</source>
         <translation>Reihenfolge</translation>
     </message>
+    <message>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <source>Custom</source>
+        <translation>Benutzerdefiniert</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+164"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+163"/>
         <source>Requires selection</source>
         <translation>Benötigt Selektion</translation>
     </message>
