@@ -356,7 +356,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview) const {
         if (entity.isNull()) {
             continue;
         }
-        e.exportEntity(*entity, true);
+        e.exportEntity(*entity, preview, true);
     }
 
     // too slow:

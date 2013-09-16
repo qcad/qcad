@@ -111,6 +111,7 @@ void REntity::copyAttributesFrom(REntity* entity) {
 
     if (getDocument()!=entity->getDocument()) {
         qWarning("REntity::copyAttributesFrom: source entity not from same document");
+        //RDebug::printBacktrace();
         return;
     }
 

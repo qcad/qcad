@@ -694,6 +694,8 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
 
     sceneQt->setDraftMode(draftMode);
 
+    // TODO: PERFORMANCE: don't copy list, only get reference from scene
+
     QList<RPainterPath> painterPaths;
 
     // get painter paths for vector graphics entity:
