@@ -94,9 +94,7 @@ InsertBlock.prototype.beginEvent = function() {
             a = optionsToolBar.findChild("SeparatorAttribute%1Action".arg(idx+1)).visible = true;
 
             label = optionsToolBar.findChild("LabelAttribute%1".arg(idx+1));
-            label.text = prompt;
-//            a = optionsToolBar.findChild("LabelAttribute%1Action".arg(idx+1));
-//            a.visible = true;
+            label.text = prompt + qsTr(":");
 
             edit = optionsToolBar.findChild("Attribute%1".arg(idx+1));
             edit.text = value;

@@ -160,8 +160,7 @@ void RPropertyEditor::removeAllButThese(
 
 /**
  * Updates the property editor to contain the properties of the
- * property owners that are selected for editing in the given
- * property owner container.
+ * objects that are selected for editing in the given document.
  */
 void RPropertyEditor::updateFromDocument(RDocument* document,
     bool onlyChanges, RS::EntityType entityTypeFilter) {

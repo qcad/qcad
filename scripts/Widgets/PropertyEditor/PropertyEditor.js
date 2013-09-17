@@ -582,10 +582,12 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             //qDebug("type: ", type, " / count: ", typeCount);
             selectionCombo.addItem(entityTypeToString(type) + " (" + typeCount + ")", type);
         }
-        //if (totalCount!=1) {
-        if (types.length!=1) {
+        if (types.length!==1) {
             selectionCombo.insertItem(0, qsTr("All") + " (" + totalCount + ")", RS.EntityAll);
         }
+
+        //this.entityTypeFilter = RS.EntityBlockRef;
+
         var index = selectionCombo.findData(this.entityTypeFilter);
         if (index===-1) {
             selectionCombo.currentIndex = 0;
@@ -612,6 +614,20 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     }
 
     this.widget.updatesEnabled = true;
+
+    // if only a block reference and its attributes are selected,
+    // filter by block reference by default:
+//    if (true) {
+//        //this.entityTypeFilter = RS.EntityBlockRef;
+//        var idx = selectionCombo.findData(RS.EntityBlockRef);
+//        if (idx!==-1) {
+//            selectionCombo.currentIndex = idx;
+//            this.filterChanged();
+//        }
+//    }
+
+//    this.entityTypeFilter = RS.EntityBlockRef;
+//    this.updateFromDocument(EAction.getDocument(), false, this.entityTypeFilter);
 };
 
 /**

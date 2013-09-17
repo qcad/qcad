@@ -50,25 +50,6 @@ public:
     RAttributeData(const RTextBasedData& textData, RBlockReferenceEntity::Id blockReferenceId, const QString& tag);
     virtual ~RAttributeData() {}
 
-//    virtual void setSelected(bool on) {
-//        Q_ASSERT(false);
-//        Q_UNUSED(on)
-//        return;
-//    }
-
-//    virtual RBox getBoundingBox() const {
-//        return RBox();
-//    }
-
-//    virtual double getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
-//        Q_UNUSED(point)
-//        Q_UNUSED(limited)
-//        Q_UNUSED(range)
-//        Q_UNUSED(draft)
-
-//        return RNANDOUBLE;
-//    }
-
     virtual QString getRenderedText(bool escUnicode=false) const;
 
     QString getTag() const {
@@ -79,12 +60,6 @@ public:
         tag = t;
     }
 
-    //void sync(RAttributeDefinitionData& attDefData);
-
-//    RBlockReferenceEntity::Id getBlockReferenceId() const {
-//        return blockReferenceId;
-//    }
-
     /**
      * \nonscriptable
      */
@@ -92,11 +67,6 @@ public:
 
 private:
     QString tag;
-
-    /**
-     * ID of the block reference this attribute belongs to.
-     */
-    //RBlockReferenceEntity::Id blockReferenceId;
 };
 
 Q_DECLARE_METATYPE(RAttributeData)

@@ -52,8 +52,10 @@ RSnapCoordinatePolar.prototype.initAction = function(guiAction) {
     };
     this.action.slotSet = function() {
         var ce = snap.getCoordinateEvent();
-        var di = EAction.getDocumentInterface();
-        di.coordinateEvent(ce);
+        if (!isNull(ce)) {
+            var di = EAction.getDocumentInterface();
+            di.coordinateEvent(ce);
+        }
     };
 };
 

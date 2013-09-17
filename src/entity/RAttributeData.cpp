@@ -36,23 +36,8 @@ RAttributeData::RAttributeData(const RTextBasedData& textData, RBlockReferenceEn
 }
 
 QString RAttributeData::getRenderedText(bool escUnicode) const {
-    //qDebug() << "RAttributeData::getRenderedText";
     return RTextBasedData::getRenderedText(escUnicode);
 }
-
-//void RAttributeData::sync(RAttributeDefinitionData& attDefData) {
-//    position = attDefData.position;
-//    alignmentPoint = attDefData.alignmentPoint;
-//    textHeight = attDefData.textHeight;
-//    textWidth = attDefData.textWidth;
-//    verticalAlignment = attDefData.verticalAlignment;
-//    horizontalAlignment = attDefData.horizontalAlignment;
-//    drawingDirection = attDefData.drawingDirection;
-//    fontName = attDefData.fontName;
-//    bold = attDefData.bold;
-//    italic = attDefData.italic;
-//    angle = attDefData.angle;
-//}
 
 QDebug operator<<(QDebug dbg, const RAttributeData& t) {
     dbg.nospace() << "RAttributeData("

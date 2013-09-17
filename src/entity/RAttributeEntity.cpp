@@ -107,24 +107,6 @@ QPair<QVariant, RPropertyAttributes> RAttributeEntity::getProperty(
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
-//void RAttributeEntity::setSelected(bool on) {
-//    RDocument* doc = getDocument();
-//    if (doc==NULL) {
-//        RTextBasedEntity::setSelected(on);
-//        return;
-//    }
-
-//    QSharedPointer<REntity> blockRef = doc->queryEntityDirect(getBlockReferenceId());
-//    if (blockRef.isNull()) {
-//        RTextBasedEntity::setSelected(on);
-//        return;
-//    }
-
-//    blockRef->setSelected(on);
-
-//    REntity::setSelected(on);
-//}
-
 void RAttributeEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);
 

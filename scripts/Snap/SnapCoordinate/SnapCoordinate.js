@@ -58,8 +58,10 @@ RSnapCoordinate.prototype.initAction = function(guiAction) {
     };
     this.action.slotSet = function() {
         var ce = snap.getCoordinateEvent();
-        var di = EAction.getDocumentInterface();
-        di.coordinateEvent(ce);
+        if (!isNull(ce)) {
+            var di = EAction.getDocumentInterface();
+            di.coordinateEvent(ce);
+        }
     };
 };
 
@@ -88,6 +90,9 @@ RSnapCoordinate.prototype.hideUiOptions = function() {
 
 RSnapCoordinate.prototype.update = function() {
     var ce = this.getCoordinateEvent();
+    if (isNull(ce)) {
+        return;
+    }
     var di = EAction.getDocumentInterface();
     di.clearPreview();
     di.coordinateEventPreview(ce);
@@ -106,7 +111,13 @@ RSnapCoordinate.prototype.getCoordinate = function() {
 RSnapCoordinate.prototype.getCoordinateEvent = function() {
     var di = EAction.getDocumentInterface();
     var view = di.getGraphicsViewWithFocus();
+    if (isNull(view)) {
+        return undefined;
+    }
     var scene = view.getScene();
+    if (isNull(scene)) {
+        return undefined;
+    }
     var ce = new RCoordinateEvent(this.getCoordinate(), scene, view.getRGraphicsView());
     return ce;
 };

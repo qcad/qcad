@@ -92,17 +92,11 @@ public:
         data = d;
     }
 
-//    virtual bool isPartOfBlockReference(RBlockReferenceEntity::Id blockRefId) const {
-//        return blockRefId==data.getBlockReferenceId();
-//    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
-
-//    virtual void setSelected(bool on);
 
     void exportEntity(RExporter& e, bool preview) const;
 
@@ -113,14 +107,6 @@ public:
     void setTag(const QString& t) {
         data.setTag(t);
     }
-
-//    void sync(const RAttributeDefinitionEntity& attDef) {
-//        data.sync(attDef.getData());
-//    }
-
-//    RBlockReferenceEntity::Id getBlockReferenceId() const {
-//        return data.getBlockReferenceId();
-//    }
 
 protected:
     virtual void print(QDebug dbg) const;
