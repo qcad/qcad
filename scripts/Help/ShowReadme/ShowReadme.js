@@ -48,7 +48,7 @@ ShowReadme.prototype.beginEvent = function() {
         var textStream = new QTextStream(file);
         var allLines = textStream.readAll();
         file.close();
-        text.toPlainText() = allLines;
+        text.plainText = allLines;
     }
     formWidget.exec();
 };
