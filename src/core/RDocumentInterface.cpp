@@ -966,6 +966,8 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
         return false;
     }
 
+    qDebug() << "RDocumentInterface::exportFile: INSUNITS: " << document.getKnownVariable(RS::INSUNITS);
+
     bool success = fileExporter->exportFile(fileName, fileVersion, resetModified);
 
     if (success) {

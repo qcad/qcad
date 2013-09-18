@@ -243,7 +243,9 @@ void RDocument::clear() {
     storage.clear();
     spatialIndex.clear();
     transactionStack.reset();
+    RS::Unit u = getUnit();
     init();
+    setUnit(u);
 }
 
 
