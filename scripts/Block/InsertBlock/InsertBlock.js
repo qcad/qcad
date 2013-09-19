@@ -310,3 +310,11 @@ InsertBlock.prototype.slotAttribute2Changed = function(value) {
     this.updatePreview(true);
 };
 
+InsertBlock.prototype.slotAttribute3Changed = function(value) {
+    if (isNull(this.attributeTags[2])) {
+        return;
+    }
+
+    this.attributes[this.attributeTags[2]] = value;
+    this.updatePreview(true);
+};
