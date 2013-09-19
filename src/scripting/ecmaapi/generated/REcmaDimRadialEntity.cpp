@@ -170,6 +170,10 @@
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyLinearFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyAutoTextPos",
+                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyAutoTextPos),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCenterPointX",
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyCenterPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

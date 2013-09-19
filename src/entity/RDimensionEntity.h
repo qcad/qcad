@@ -61,6 +61,7 @@ public:
     static RPropertyTypeId PropertyLowerTolerance;
 
     static RPropertyTypeId PropertyLinearFactor;
+    static RPropertyTypeId PropertyAutoTextPos;
     //static RPropertyTypeId PropertyFontName;
     //static RPropertyTypeId PropertyHeight;
     //static RPropertyTypeId PropertyAngle;

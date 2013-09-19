@@ -359,12 +359,6 @@ dir="./entity" filename="RAttributeEntity.h">
     <name>data</name>= 
     <name>d</name></expr>;</expr_stmt>}</block>
   </function>
-  <comment type="line">// virtual bool
-  isPartOfBlockReference(RBlockReferenceEntity::Id blockRefId)
-  const {</comment>
-  <comment type="line">// return
-  blockRefId==data.getBlockReferenceId();</comment>
-  <comment type="line">// }</comment>
   <function_decl>
   <type>
     <name>bool</name>
@@ -442,8 +436,6 @@ dir="./entity" filename="RAttributeEntity.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">// virtual void setSelected(bool
-  on);</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -509,16 +501,7 @@ dir="./entity" filename="RAttributeEntity.h">
         </expr>
       </argument>)</argument_list>
     </call></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="line">// void sync(const
-  RAttributeDefinitionEntity&amp; attDef) {</comment>
-  <comment type="line">// data.sync(attDef.getData());</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// RBlockReferenceEntity::Id
-  getBlockReferenceId() const {</comment>
-  <comment type="line">// return
-  data.getBlockReferenceId();</comment>
-  <comment type="line">// }</comment></public>
+  </function></public>
   <protected>protected: 
   <function_decl>
   <type>

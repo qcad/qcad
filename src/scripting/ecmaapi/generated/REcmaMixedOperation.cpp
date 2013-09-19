@@ -74,6 +74,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, deleteObject, "deleteObject");
             
+            REcmaHelper::registerFunction(&engine, proto, endCycle, "endCycle");
+            
             REcmaHelper::registerFunction(&engine, proto, apply, "apply");
             
         engine.setDefaultPrototype(
@@ -105,6 +107,16 @@
 
     ctor.setProperty("Delete",
     QScriptValue(RMixedOperation::Delete),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ForceNew",
+    QScriptValue(RMixedOperation::ForceNew),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndCycle",
+    QScriptValue(RMixedOperation::EndCycle),
     QScriptValue::ReadOnly);
 
 
@@ -412,6 +424,92 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RObject > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RObject > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RObject * o0 = 
+                    qscriptvalue_cast < RObject * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < RObject >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RObject >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RObject >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RMixedOperation: Argument 0 is not of type  RObject .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RMixedOperation: Argument 0 is not of type  RObject .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RObject > 
+                    //a0 =
+                    //QSharedPointer < RObject >(o0->clone());
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
+        
+               self->addObject(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QSharedPointer < RObject >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RMixedOperation.addObject().",
                    context);
@@ -500,6 +598,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMixedOperation::deleteObject", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMixedOperation::endCycle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMixedOperation::endCycle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMixedOperation::endCycle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMixedOperation* self = 
+                        getSelf("endCycle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->endCycle();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMixedOperation.endCycle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMixedOperation::endCycle", context, engine);
             return result;
         }
          QScriptValue

@@ -39,6 +39,7 @@ RPropertyTypeId RDimensionEntity::PropertyText;
 RPropertyTypeId RDimensionEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLinearFactor;
+RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 //RPropertyTypeId RDimensionEntity::PropertyFontName;
 //RPropertyTypeId RDimensionEntity::PropertyHeight;
 //RPropertyTypeId RDimensionEntity::PropertyAngle;
@@ -85,6 +86,7 @@ void RDimensionEntity::init() {
 
     RDimensionEntity::PropertyMeasuredValue.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
     RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
+    RDimensionEntity::PropertyAutoTextPos.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
 }
 
 bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -116,6 +118,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().upperTolerance, value, PropertyUpperTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().lowerTolerance, value, PropertyLowerTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().linearFactor, value, PropertyLinearFactor == propertyTypeId);
+    ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
@@ -179,6 +182,8 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         }
     } else if (propertyTypeId == PropertyLinearFactor) {
         return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyAutoTextPos) {
+        return qMakePair(QVariant(getData().autoTextPos), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
 
     /*else if (propertyTypeId == PropertyFontName) {

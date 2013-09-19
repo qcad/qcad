@@ -71,7 +71,11 @@ dir="./operations" filename="RMixedOperation.h">
   <expr>
   <name>UseCurrentAttributes</name>= 0x1</expr>, 
   <expr>
-  <name>Delete</name>= 0x2</expr>}</block>;</enum>
+  <name>Delete</name>= 0x2</expr>, 
+  <expr>
+  <name>ForceNew</name>= 0x4</expr>, 
+  <expr>
+  <name>EndCycle</name>= 0x8</expr>}</block>;</enum>
   <macro>
     <name>Q_DECLARE_FLAGS</name>
     <argument_list>(
@@ -133,6 +137,18 @@ dir="./operations" filename="RMixedOperation.h">
         <name>true</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forceNew</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -152,6 +168,12 @@ dir="./operations" filename="RMixedOperation.h">
       <name>obj</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>endCycle</name>
+  <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -178,7 +200,13 @@ dir="./operations" filename="RMixedOperation.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
+  <specifier>const</specifier>;</function_decl>
+  <comment type="line">// int getPreviewCounter() const {</comment>
+  <comment type="line">// return previewCounter;</comment>
+  <comment type="line">// }</comment>
+  <comment type="line">// void setLimitPreview(bool on) {</comment>
+  <comment type="line">// limitPreview = on;</comment>
+  <comment type="line">// }</comment></public>
   <protected>protected: 
   <function_decl>
   <type>
@@ -266,7 +294,10 @@ dir="./operations" filename="RMixedOperation.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>list</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
+  </decl>;</decl_stmt>
+  <comment type="line">// int previewCounter;</comment>
+  <comment type="line">// bool
+  limitPreview;</comment></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_OPERATORS_FOR_FLAGS</name>
     <argument_list>(

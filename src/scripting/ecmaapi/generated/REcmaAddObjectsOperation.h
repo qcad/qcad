@@ -59,6 +59,9 @@
         addObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        deleteObject
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         apply
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

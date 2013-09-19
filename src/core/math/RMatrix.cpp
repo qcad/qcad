@@ -197,8 +197,9 @@ RMatrix RMatrix::create3x1(double a11, double a21, double a31) {
  *   \end{array} \right)
  * \f$
  */
-RMatrix RMatrix::create2x3(double a11, double a12, double a13, double a21,
-        double a22, double a23) {
+RMatrix RMatrix::create2x3(
+    double a11, double a12, double a13,
+    double a21, double a22, double a23) {
     RMatrix ret(2, 3);
 
     ret.set(0, 0, a11);
@@ -282,6 +283,10 @@ RMatrix RMatrix::multiplyWith(const RMatrix& w) const {
     }
 
     return r;
+}
+
+RMatrix RMatrix::multiplyWith(double f) const {
+    return *this * f;
 }
 
 RVector RMatrix::multiplyWith(const RVector& v) const {
@@ -608,15 +613,46 @@ RMatrix RMatrix::getAppended(const RMatrix& v) const {
     return r;
 }
 
-/**
- * \return \f$matrix \cdot factor\f$.
- */
-RMatrix operator *(const RMatrix& matrix, double factor) {
-    RMatrix ret = matrix;
+bool RMatrix::isUniformScale() const {
+    if (getRows()!=2 || getCols()!=2) {
+        return false;
+    }
+    return RMath::fuzzyCompare(fabs(get(0,0)), fabs(get(1,1)));
+}
+
+
+RVector RMatrix::getScaleVector() const {
+    if (getRows()!=2 || getCols()!=2) {
+        return RVector::invalid;
+    }
+    return RVector(get(0,0), get(1,1));
+}
+
+bool RMatrix::isRotation() const {
+    if (getRows()!=2 || getCols()!=2) {
+        return false;
+    }
+    double angle = getRotationAngle();
+    return RMath::fuzzyCompare(get(0,0), cos(angle)) &&
+           RMath::fuzzyCompare(fabs(get(0,1)), fabs(sin(angle))) &&
+           RMath::fuzzyCompare(fabs(get(1,0)), fabs(sin(angle))) &&
+           RMath::fuzzyCompare(get(0,1), -get(1,0)) &&
+           RMath::fuzzyCompare(get(1,1), cos(angle));
+}
+
+double RMatrix::getRotationAngle() const {
+    if (getRows()!=2 || getCols()!=2 || get(0,0)<-1.0 || get(0,0)>1.0) {
+        return RNANDOUBLE;
+    }
+    return acos(get(0,0));
+}
+
+RMatrix RMatrix::operator *(double s) const {
+    RMatrix ret = *this;
 
     for (int rc = 0; rc < ret.getRows(); ++rc) {
         for (int cc = 0; cc < ret.getCols(); ++cc) {
-            ret.set(rc, cc, ret.get(rc, cc) * factor);
+            ret.set(rc, cc, ret.get(rc, cc) * s);
         }
     }
 
@@ -628,4 +664,21 @@ RMatrix operator *(const RMatrix& matrix, double factor) {
  */
 RMatrix operator *(double factor, const RMatrix& matrix) {
     return matrix * factor;
+}
+
+/**
+ * Stream operator for QDebug
+ */
+QDebug operator<<(QDebug dbg, const RMatrix& m) {
+    dbg.nospace() << "RMatrix(";
+    for (int rc = 0; rc < m.getRows(); ++rc) {
+        for (int cc = 0; cc < m.getCols(); ++cc) {
+            dbg.nospace() << m.get(rc, cc);
+            if (rc!=m.getRows()-1 || cc!=m.getCols()-1) {
+                dbg.nospace() << ",";
+            }
+        }
+    }
+    dbg.nospace() << ")";
+    return dbg;
 }

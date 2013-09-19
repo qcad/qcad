@@ -60,12 +60,13 @@ dir="./operations" filename="RAddObjectsOperation.h">
   <private type="default"></private>
   <public>public: 
   <class>class 
-  <name>RAddedObjects</name>
+  <name>RModifiedObjects</name>
   <block>{
   <private type="default"></private>
   <public>public: 
+  <comment type="line">// constructor to mark cycles:</comment>
   <constructor>
-    <name>RAddedObjects</name>
+    <name>RModifiedObjects</name>
     <parameter_list>()</parameter_list>
     <member_list>: 
     <call>
@@ -101,11 +102,76 @@ dir="./operations" filename="RAddObjectsOperation.h">
           <name>false</name>
         </expr>
       </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>deleteIt</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>)</argument_list>
     </call></member_list>
     <block>{}</block>
   </constructor>
+  <comment type="line">// constructor to delete object:</comment>
   <constructor>
-    <name>RAddedObjects</name>
+    <name>RModifiedObjects</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>QSharedPointer
+          <argument_list>&lt;
+          <argument>
+            <name>RObject</name>
+          </argument>&gt;</argument_list></name>
+        </type>
+        <name>object</name>
+      </decl>
+    </param>)</parameter_list>
+    <member_list>: 
+    <call>
+      <name>object</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>object</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>useCurrentAttributes</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>forceNew</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>deleteIt</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>true</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></member_list>
+    <block>{}</block>
+  </constructor>
+  <comment type="line">// constructor to add object:</comment>
+  <constructor>
+    <name>RModifiedObjects</name>
     <parameter_list>(
     <param>
       <decl>
@@ -162,6 +228,15 @@ dir="./operations" filename="RAddObjectsOperation.h">
           <name>forceNew</name>
         </expr>
       </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>deleteIt</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>)</argument_list>
     </call></member_list>
     <block>{}</block>
   </constructor>
@@ -189,6 +264,13 @@ dir="./operations" filename="RAddObjectsOperation.h">
       <name>bool</name>
     </type>
     <name>forceNew</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>deleteIt</name>
   </decl>;</decl_stmt></public>}</block>;</class></public>
   <public>public: 
   <constructor_decl>
@@ -357,6 +439,24 @@ dir="./operations" filename="RAddObjectsOperation.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>void</name>
+  </type>
+  <name>deleteObject</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RObject</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>object</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>virtual</name>
     <name>RTransaction</name>
   </type>
@@ -422,7 +522,7 @@ dir="./operations" filename="RAddObjectsOperation.h">
       <name>QList
       <argument_list>&lt;
       <argument>
-        <name>RAddedObjects</name>
+        <name>RModifiedObjects</name>
       </argument>&gt;</argument_list></name>
     </type>
     <name>addedObjects</name>

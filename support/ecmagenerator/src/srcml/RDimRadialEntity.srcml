@@ -187,6 +187,14 @@ dir="./entity" filename="RDimRadialEntity.h">
       <name>static</name>
       <name>RPropertyTypeId</name>
     </type>
+    <name>PropertyAutoTextPos</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
     <name>PropertyCenterPointX</name>
   </decl>;</decl_stmt>
   <decl_stmt>

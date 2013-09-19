@@ -70,6 +70,9 @@
         create2x3
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        operator_multiply
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         multiplyWith
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -113,6 +116,18 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getAppended
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isUniformScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getScaleVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRotationAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

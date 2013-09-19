@@ -33,16 +33,6 @@ IsoProject.prototype = new Projection();
 
 IsoProject.includeBasePath = includeBasePath;
 
-//IsoProject.prototype.beginEvent = function() {
-//    Projection.prototype.beginEvent.call(this);
-
-//    if (!this.verifySelection()) {
-//        return;
-//    }
-
-//    this.setState(Projection.State.SettingReferencePoint);
-//};
-
 /**
  * Isometric projection of a single coordinate.
  */

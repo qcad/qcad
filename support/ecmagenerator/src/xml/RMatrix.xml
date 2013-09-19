@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RMatrix"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <constructor>
       <variant />
       <variant>
@@ -110,12 +110,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="operator *" cppName="operator *"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="multiplyWith" cppName="multiplyWith"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RMatrix" isPureVirtual="false">
         <arg type="RMatrix &amp;" typeName="RMatrix" name="w"
         isConst="true" />
+      </variant>
+      <variant returnType="RMatrix" isPureVirtual="false">
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
       </variant>
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="w"
@@ -233,6 +245,26 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RMatrix &amp;" typeName="RMatrix" name="v"
         isConst="true" />
       </variant>
+    </method>
+    <method name="isUniformScale" cppName="isUniformScale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getScaleVector" cppName="getScaleVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="isRotation" cppName="isRotation"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getRotationAngle" cppName="getRotationAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
     </method>
     <method name="ref" cppName="ref" specifier="protected"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

@@ -41,20 +41,33 @@ class RObject;
  */
 class QCADOPERATIONS_EXPORT RAddObjectsOperation: public ROperation {
 public:
-    class RAddedObjects {
+    class RModifiedObjects {
     public:
-        RAddedObjects()
+        // constructor to mark cycles:
+        RModifiedObjects()
             : object(QSharedPointer<RObject>()),
               useCurrentAttributes(false),
-              forceNew(false) {}
-        RAddedObjects(QSharedPointer<RObject> object, bool useCurrentAttributes, bool forceNew)
+              forceNew(false),
+              deleteIt(false) {}
+
+        // constructor to delete object:
+        RModifiedObjects(QSharedPointer<RObject> object)
+            : object(object),
+              useCurrentAttributes(false),
+              forceNew(false),
+              deleteIt(true) {}
+
+        // constructor to add object:
+        RModifiedObjects(QSharedPointer<RObject> object, bool useCurrentAttributes, bool forceNew)
             : object(object),
               useCurrentAttributes(useCurrentAttributes),
-              forceNew(forceNew) {}
+              forceNew(forceNew),
+              deleteIt(false) {}
 
         QSharedPointer<RObject> object;
         bool useCurrentAttributes;
         bool forceNew;
+        bool deleteIt;
     };
 
 public:
@@ -78,6 +91,8 @@ public:
     void addObject(const QSharedPointer<RObject>& object,
         bool useCurrentAttributes = true, bool forceNew=false);
 
+    void deleteObject(const QSharedPointer<RObject>& object);
+
     virtual RTransaction apply(RDocument& document, bool preview = false) const;
 
     int getPreviewCounter() const {
@@ -89,7 +104,7 @@ public:
     }
 
 private:
-    QList<RAddedObjects> addedObjects;
+    QList<RModifiedObjects> addedObjects;
     //QList<QPair<QSharedPointer<RObject>, bool> > addedObjects;
     int previewCounter;
     bool limitPreview;

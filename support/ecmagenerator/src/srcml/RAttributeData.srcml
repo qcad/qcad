@@ -118,25 +118,6 @@ dir="./entity" filename="RAttributeData.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </destructor>
-  <comment type="line">// virtual void setSelected(bool on)
-  {</comment>
-  <comment type="line">// Q_ASSERT(false);</comment>
-  <comment type="line">// Q_UNUSED(on)</comment>
-  <comment type="line">// return;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// virtual RBox getBoundingBox() const
-  {</comment>
-  <comment type="line">// return RBox();</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// virtual double getDistanceTo(const
-  RVector&amp; point, bool limited, double range, bool draft) const
-  {</comment>
-  <comment type="line">// Q_UNUSED(point)</comment>
-  <comment type="line">// Q_UNUSED(limited)</comment>
-  <comment type="line">// Q_UNUSED(range)</comment>
-  <comment type="line">// Q_UNUSED(draft)</comment>
-  <comment type="line">// return RNANDOUBLE;</comment>
-  <comment type="line">// }</comment>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -190,12 +171,6 @@ dir="./entity" filename="RAttributeData.h">
     <name>tag</name>= 
     <name>t</name></expr>;</expr_stmt>}</block>
   </function>
-  <comment type="line">//void sync(RAttributeDefinitionData&amp;
-  attDefData);</comment>
-  <comment type="line">// RBlockReferenceEntity::Id
-  getBlockReferenceId() const {</comment>
-  <comment type="line">// return blockReferenceId;</comment>
-  <comment type="line">// }</comment>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
@@ -227,11 +202,7 @@ dir="./entity" filename="RAttributeData.h">
       <name>QString</name>
     </type>
     <name>tag</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * ID of the block reference this
-  attribute belongs to. */</comment>
-  <comment type="line">//RBlockReferenceEntity::Id
-  blockReferenceId;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

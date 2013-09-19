@@ -52,9 +52,8 @@ public:
                              double a21, double a22, double a23,
                              double a31, double a32, double a33);
     static RMatrix create3x1(double a11, double a21, double a31);
-    static RMatrix create2x3(double a11, double a12,
-                             double a13, double a21,
-                             double a22, double a23);
+    static RMatrix create2x3(double a11, double a12, double a13,
+                             double a21, double a22, double a23);
 
     /**
      * \nonscriptable
@@ -64,6 +63,9 @@ public:
      * \nonscriptable
      */
     bool operator ==(const RMatrix& other) const;
+
+    RMatrix operator *(double s) const;
+
     /**
      * \nonscriptable
      */
@@ -74,6 +76,7 @@ public:
     RMatrix operator *(const RMatrix& other) const;
 
     RMatrix multiplyWith(const RMatrix& w) const;
+    RMatrix multiplyWith(double w) const;
     RVector multiplyWith(const RVector& w) const;
 
     /**
@@ -115,6 +118,11 @@ public:
     RMatrix getTransposed() const;
     RMatrix getAppended(const RMatrix& v) const;
 
+    bool isUniformScale() const;
+    RVector getScaleVector() const;
+    bool isRotation() const;
+    double getRotationAngle() const;
+
 protected:
     bool ref(int startRow);
     void multiplyRow(int r, double factor);
@@ -128,8 +136,9 @@ private:
     int rows, cols;
 };
 
-RMatrix operator *(const RMatrix& matrix, double factor);
 RMatrix operator *(double factor, const RMatrix& matrix);
+
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RMatrix& m);
 
 Q_DECLARE_METATYPE(RMatrix)
 Q_DECLARE_METATYPE(RMatrix*)

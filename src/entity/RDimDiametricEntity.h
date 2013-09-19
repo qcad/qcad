@@ -59,6 +59,7 @@ public:
     static RPropertyTypeId PropertyLowerTolerance;
 
     static RPropertyTypeId PropertyLinearFactor;
+    static RPropertyTypeId PropertyAutoTextPos;
 
     static RPropertyTypeId PropertyChordPointX;
     static RPropertyTypeId PropertyChordPointY;

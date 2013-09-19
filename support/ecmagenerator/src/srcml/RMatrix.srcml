@@ -360,6 +360,21 @@ dir="./core/math" filename="RMatrix.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RMatrix</name>
+  </type>
+  <name>operator *</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>s</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
@@ -402,6 +417,21 @@ dir="./core/math" filename="RMatrix.h">
       <type>
       <name>const</name>
       <name>RMatrix</name>&amp;</type>
+      <name>w</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RMatrix</name>
+  </type>
+  <name>multiplyWith</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
       <name>w</name>
     </decl>
   </param>)</parameter_list>
@@ -748,6 +778,34 @@ dir="./core/math" filename="RMatrix.h">
       <name>v</name>
     </decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>isUniformScale</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RVector</name>
+  </type>
+  <name>getScaleVector</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>isRotation</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>double</name>
+  </type>
+  <name>getRotationAngle</name>
+  <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl></public>
   <protected>protected: 
   <function_decl>
@@ -889,31 +947,32 @@ dir="./core/math" filename="RMatrix.h">
   <param>
     <decl>
       <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>matrix</name>
+        <name>double</name>
+      </type>
+      <name>factor</name>
     </decl>
   </param>, 
   <param>
     <decl>
       <type>
-        <name>double</name>
-      </type>
-      <name>factor</name>
+      <name>const</name>
+      <name>RMatrix</name>&amp;</type>
+      <name>matrix</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>RMatrix</name>
+    <name>QCADCORE_EXPORT</name>
+    <name>QDebug</name>
   </type>
-  <name>operator *</name>
+  <name>operator&lt;&lt;</name>
   <parameter_list>(
   <param>
     <decl>
       <type>
-        <name>double</name>
+        <name>QDebug</name>
       </type>
-      <name>factor</name>
+      <name>dbg</name>
     </decl>
   </param>, 
   <param>
@@ -921,7 +980,7 @@ dir="./core/math" filename="RMatrix.h">
       <type>
       <name>const</name>
       <name>RMatrix</name>&amp;</type>
-      <name>matrix</name>
+      <name>m</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <macro>

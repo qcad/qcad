@@ -45,7 +45,9 @@ public:
     enum Mode {
         NoMode = 0x0,
         UseCurrentAttributes = 0x1,
-        Delete = 0x2
+        Delete = 0x2,
+        ForceNew = 0x4,
+        EndCycle = 0x8
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -55,10 +57,19 @@ public:
     }
 
     QSharedPointer<RObject> addObject(const QSharedPointer<RObject>& obj,
-        bool useCurrentAttributes = true);
+        bool useCurrentAttributes = true, bool forceNew=false);
     void deleteObject(const QSharedPointer<RObject>& obj);
+    void endCycle();
 
     virtual RTransaction apply(RDocument& document, bool preview = false) const;
+
+//    int getPreviewCounter() const {
+//        return previewCounter;
+//    }
+
+//    void setLimitPreview(bool on) {
+//        limitPreview = on;
+//    }
 
 protected:
     void setMode(RMixedOperation::Modes& modes, RMixedOperation::Mode mode, bool on = true);
@@ -66,6 +77,8 @@ protected:
 
 private:
     QList<QPair<QSharedPointer<RObject>, Modes> > list;
+//    int previewCounter;
+//    bool limitPreview;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(RMixedOperation::Modes)

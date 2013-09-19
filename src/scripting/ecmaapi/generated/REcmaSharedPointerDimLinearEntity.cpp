@@ -169,6 +169,10 @@
                 qScriptValueFromValue(&engine, RDimLinearEntity::PropertyLinearFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyAutoTextPos",
+                qScriptValueFromValue(&engine, RDimLinearEntity::PropertyAutoTextPos),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDimensionLinePosX",
                 qScriptValueFromValue(&engine, RDimLinearEntity::PropertyDimensionLinePosX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

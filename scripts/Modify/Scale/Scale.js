@@ -18,6 +18,7 @@
  */
 
 include("../Transform.js");
+include("scripts/ShapeAlgorithms.js");
 
 /**
  * \class Scale
@@ -276,13 +277,42 @@ Scale.prototype.getOperation = function(preview) {
  * Callback function for Transform.getOperation.
  */
 Scale.prototype.transform = function(entity, k, op, preview, forceNew) {
+    // uniform scaling (supported by all entities):
     if (isNull(this.factorY)) {
         entity.scale(Math.pow(this.factorX, k), this.focusPoint);
-    }
-    else {
-        entity.scale(new RVector(Math.pow(this.factorX, k), Math.pow(this.factorY, k)), this.focusPoint);
+        return;
     }
 
+    // non-uniform scaling of arc, circle or ellipse:
+    var sv = new RVector(Math.pow(this.factorX, k), Math.pow(this.factorY, k));
+    if (isArcEntity(entity) || isCircleEntity(entity) || isEllipseEntity(entity)) {
+        var arc = entity.castToShape();
+        if (isCircleShape(arc)) {
+            arc = ShapeAlgorithms.circleToArc(arc);
+        }
+
+        var self=this;
+        var shape = ShapeAlgorithms.transformArc(
+            arc,
+            function(p) {
+                return p.scale(sv, self.focusPoint);
+            }
+        );
+
+        var e = shapeToEntity(this.getDocument(), shape);
+        e.copyAttributesFrom(entity);
+        e.setDrawOrder(entity.getDrawOrder());
+        e.setSelected(true);
+
+        if (this.copies===0) {
+            op.deleteObject(entity);
+        }
+        op.addObject(e, this.useCurrentAttributes, forceNew);
+        return;
+    }
+
+    // non-uniform scaling of other entities:
+    entity.scale(sv, this.focusPoint);
     op.addObject(entity, this.useCurrentAttributes, forceNew);
 };
 

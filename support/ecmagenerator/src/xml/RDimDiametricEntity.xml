@@ -138,6 +138,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyLinearFactor" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyAutoTextPos" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyChordPointX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyChordPointY" type="RPropertyTypeId"

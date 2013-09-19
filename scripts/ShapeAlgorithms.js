@@ -1487,3 +1487,67 @@ ShapeAlgorithms.splitAt = function(shape, points) {
 
     return ret;
 };
+
+
+/**
+ * \return An arc, circle or ellipse, whichever can be used to represent
+ * the given ellipse best.
+ */
+ShapeAlgorithms.ellipseToArcCircleEllipse = function(ellipse) {
+    if (ellipse.isCircular()) {
+        if (ellipse.isFullEllipse()) {
+            return new RCircle(ellipse.getCenter(), ellipse.getMajorRadius());
+        }
+        else {
+            return new RArc(ellipse.getCenter(), ellipse.getMajorRadius(),
+                ellipse.getStartAngle(), ellipse.getEndAngle(),
+                ellipse.isReversed());
+        }
+    }
+    else {
+        return ellipse;
+    }
+};
+
+/**
+ * Transforms the given arc, circle or ellipse into an ellipse
+ * using the given function which projects an RVector to another RVector.
+ *
+ * \returns An REllipse or in special cases an RArc or RCircle.
+ */
+ShapeAlgorithms.transformArc = function(arc, fun) {
+    var r1, r2;
+
+    if (isEllipseShape(arc)) {
+        r1 = arc.getMajorPoint();
+        r2 = arc.getMinorPoint();
+    }
+    else {
+        r1 = new RVector(arc.getRadius(), 0);
+        r2 = new RVector(0, arc.getRadius());
+    }
+
+    var v1 = arc.getCenter().operator_add(r1).operator_add(r2);
+    var v2 = arc.getCenter().operator_add(r1).operator_subtract(r2);
+    var v3 = arc.getCenter().operator_subtract(r1).operator_subtract(r2);
+    var v4 = arc.getCenter().operator_subtract(r1).operator_add(r2);
+
+    fun(v1);
+    fun(v2);
+    fun(v3);
+    fun(v4);
+
+    var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
+
+    if (isArcShape(arc) || isEllipseShape(arc)) {
+        var sp = arc.getStartPoint();
+        var ep = arc.getEndPoint();
+        fun(sp);
+        fun(ep);
+        ellipse.setStartParam(ellipse.getParamTo(sp));
+        ellipse.setEndParam(ellipse.getParamTo(ep));
+        ellipse.setReversed(arc.isReversed());
+    }
+
+    return ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse);
+};

@@ -53,6 +53,9 @@
         deleteObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        endCycle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         apply
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

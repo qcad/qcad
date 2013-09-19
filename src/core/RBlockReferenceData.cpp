@@ -145,6 +145,12 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
 
     if (cache.contains(entityId)) {
         QSharedPointer<REntity> e = cache.value(entityId);
+
+        // additional check if entity has been deleted:
+        if (e->isUndone()) {
+            return QSharedPointer<REntity> ();
+        }
+
         // always update selection status:
         e->setSelected(isSelected());
         return e;

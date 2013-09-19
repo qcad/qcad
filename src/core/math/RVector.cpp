@@ -410,10 +410,10 @@ RVector RVector::stretch(const RPolyline& area, const RVector& offset) {
 RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
     static RMatrix iso =
             RMatrix::create3x3(
-                sqrt(3.0), 0.0, -sqrt(3.0),
-                1.0, 2.0, 1.0,
-                sqrt(2.0), -sqrt(2.0), sqrt(2.0))
-            * (1.0 / sqrt(6.0));
+                sqrt(3.0), 0.0,        -sqrt(3.0),
+                1.0,       2.0,        1.0,
+                sqrt(2.0), -sqrt(2.0), sqrt(2.0)
+            ) * (1.0 / sqrt(6.0));
 
     RMatrix input;
     switch (type) {
@@ -424,7 +424,6 @@ RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
         input = RMatrix::create3x1(-x, y, z);
         break;
     case RS::IsoTop:
-        //input = RMatrix::create3x1(y, 0.0, -x);
         input = RMatrix::create3x1(y, z, -x);
         break;
     case RS::IsoBottom:
@@ -446,7 +445,6 @@ RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
 
     if (trueScale) {
         double f = 1.0 / cos(RMath::deg2rad(35.0 + 16.0/60.0));
-//        double f = 1.22477928993;
         x *= f;
         y *= f;
     }
@@ -799,7 +797,11 @@ RVector RVector::getTransformed(const RMatrix& m) const {
 RVector RVector::transform2d(const RMatrix& m) {
     RMatrix input;
 
-    input = RMatrix::create3x1(x, y, z);
+    input = RMatrix::create3x1(
+        x,
+        y,
+        z
+    );
     RMatrix res = m * input;
     x = res.get(0, 0);
     y = res.get(1, 0);

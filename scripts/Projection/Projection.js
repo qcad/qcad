@@ -208,11 +208,11 @@ Projection.prototype.preTransform = function(entity) {
 };
 
 Projection.prototype.postTransform = function(entity) {
-    //entity.move(this.targetPoint);
 };
 
 /**
  * Callback function for Transform.getOperation. Generic for all projections.
+ * \param k Ignored
  */
 Projection.prototype.transform = function(entity, k, op, preview, forceNew) {
     var i;
@@ -251,13 +251,11 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
         for (var n=0; n<s.length; n++) {
             if (isNull(s[n])) {
                 debugger;
-                //this.projectShape(shapes[i].data(), preview);
             }
 
             var e = shapeToEntity(this.getDocument(), s[n]);
             e.copyAttributesFrom(entity);
             e.move(this.targetPoint);
-            //this.postTransform(e);
             op.addObject(e, false, forceNew);
         }
     }
@@ -294,8 +292,6 @@ Projection.prototype.project = function(p) {
  * \return Array of new projected shapes.
  */
 Projection.prototype.projectShape = function(shape, preview, trim) {
-    //qDebug("projectShape: ", shape);
-    //qDebug("projectShape: trim: ", trim);
     var p, i, k, s, ret;
 
     if (isNull(trim)) {
@@ -309,7 +305,6 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         ret = [];
         for (k=0; k<trimmedShapes.length; k++) {
             shape = trimmedShapes[k];
-            //qDebug("projectShape: rec: ", shape);
             s = this.projectShape(shape, preview, false)[0];
             if (!isNull(s)) {
                 ret.push(s);
@@ -348,7 +343,6 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
 
     if (isPointShape(shape)) {
         p = shape.getPosition();
-        //this.trim(p, undefined);
         this.project(p);
         shape.setPosition(p);
         return [ shape ];
@@ -366,48 +360,12 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
     }
 
     if (isArcShape(shape)) {
-        var ellipse = new REllipse();
-        ellipse.setStartParam(0.0);
-        ellipse.setEndParam(2 * Math.PI);
-
-        p = shape.getCenter();
-        this.project(p);
-        ellipse.setCenter(p);
-
-        p = new RVector(shape.getRadius(), 0);
-        p.rotate(Math.PI/4);
-        this.project(p);
-        ellipse.setMajorPoint(p);
-
-        p = new RVector(shape.getRadius(), 0);
-        p.rotate(-Math.PI/4);
-        this.project(p);
-        ellipse.setMinorPoint(p);
-
-        if (!shape.isFullCircle()) {
-            p = shape.getStartPoint();
-            this.project(p);
-            ellipse.trimStartPoint(p);
-
-            p = shape.getEndPoint();
-            this.project(p);
-            ellipse.trimEndPoint(p);
-
-            if (this.projection === RS.IsoBottom ||
-                this.projection === RS.IsoLeftBack ||
-                this.projection === RS.IsoRightBack) {
-
-                ellipse.setReversed(!shape.isReversed());
+        var self=this;
+        var ellipse = ShapeAlgorithms.transformArc(shape,
+            function(p) {
+                return self.project(p);
             }
-            else {
-                ellipse.setReversed(shape.isReversed());
-            }
-        }
-        else {
-            ellipse.setStartParam(0);
-            ellipse.setEndParam(2*Math.PI);
-        }
-
+        );
         return [ ellipse ];
     }
 

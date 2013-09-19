@@ -73,7 +73,7 @@ QSharedPointer<RObject> RAddObjectsOperation::getObject(RObject::Id id) {
 }
 
 void RAddObjectsOperation::endCycle() {
-    addedObjects.append(RAddedObjects());
+    addedObjects.append(RModifiedObjects());
 }
 
 void RAddObjectsOperation::addObject(const QSharedPointer<RObject>& object,
@@ -87,7 +87,15 @@ void RAddObjectsOperation::addObject(const QSharedPointer<RObject>& object,
         previewCounter += object->getComplexity();
     }
 
-    addedObjects.append(RAddedObjects(object, useCurrentAttributes, forceNew));
+    addedObjects.append(RModifiedObjects(object, useCurrentAttributes, forceNew));
+}
+
+void RAddObjectsOperation::deleteObject(const QSharedPointer<RObject>& object) {
+    if (object.isNull()) {
+        return;
+    }
+
+    addedObjects.append(RModifiedObjects(object));
 }
 
 RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) const {
@@ -104,6 +112,11 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
             transaction.endCycle();
             //qWarning() << "RAddObjectsOperation::apply: "
             //        "list contains NULL object";
+            continue;
+        }
+
+        if (addedObjects[i].deleteIt) {
+            transaction.deleteObject(addedObjects[i].object, &document);
             continue;
         }
 

@@ -36,7 +36,7 @@ bool RMixedOperation::getMode(const Modes& modes, RMixedOperation::Mode mode) co
 }
 
 QSharedPointer<RObject> RMixedOperation::addObject(const QSharedPointer<RObject>& obj,
-    bool useCurrentAttributes) {
+    bool useCurrentAttributes, bool forceNew) {
 
     if (obj.isNull()) {
         return obj;
@@ -45,6 +45,9 @@ QSharedPointer<RObject> RMixedOperation::addObject(const QSharedPointer<RObject>
     Modes modes = RMixedOperation::NoMode;
     if (useCurrentAttributes) {
         setMode(modes, RMixedOperation::UseCurrentAttributes);
+    }
+    if (forceNew) {
+        setMode(modes, RMixedOperation::ForceNew);
     }
 
     list.append(QPair<QSharedPointer<RObject>, Modes>(obj, modes));
@@ -62,6 +65,12 @@ void RMixedOperation::deleteObject(const QSharedPointer<RObject>& obj) {
     list.append(QPair<QSharedPointer<RObject>, Modes>(obj, modes));
 }
 
+void RMixedOperation::endCycle() {
+    Modes modes = RMixedOperation::NoMode;
+    setMode(modes, RMixedOperation::EndCycle);
+    list.append(QPair<QSharedPointer<RObject>, Modes>(QSharedPointer<RObject>(), modes));
+}
+
 RTransaction RMixedOperation::apply(RDocument& document, bool preview) const {
     RTransaction transaction(document.getStorage(), "Adding object(s)", undoable);
 
@@ -72,12 +81,16 @@ RTransaction RMixedOperation::apply(RDocument& document, bool preview) const {
             continue;
         }
 
-        if (getMode(list[i].second, RMixedOperation::Delete)) {
+        if (getMode(list[i].second, RMixedOperation::EndCycle)) {
+            transaction.endCycle();
+        }
+        else if (getMode(list[i].second, RMixedOperation::Delete)) {
             transaction.deleteObject(list[i].first, &document);
         }
         else {
             transaction.addObject(list[i].first,
-                getMode(list[i].second, RMixedOperation::UseCurrentAttributes));
+                getMode(list[i].second, RMixedOperation::UseCurrentAttributes),
+                getMode(list[i].second, RMixedOperation::ForceNew));
         }
     }
 

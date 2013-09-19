@@ -37,6 +37,7 @@ RPropertyTypeId RDimLinearEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimLinearEntity::PropertyLowerTolerance;
 
 RPropertyTypeId RDimLinearEntity::PropertyLinearFactor;
+RPropertyTypeId RDimLinearEntity::PropertyAutoTextPos;
 
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosY;
@@ -75,6 +76,7 @@ void RDimLinearEntity::init() {
     RDimLinearEntity::PropertyLowerTolerance.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyLowerTolerance);
 
     RDimLinearEntity::PropertyLinearFactor.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyLinearFactor);
+    RDimLinearEntity::PropertyAutoTextPos.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyAutoTextPos);
 
     RDimLinearEntity::PropertyDimensionLinePosX.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimLinearEntity::PropertyDimensionLinePosY.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));

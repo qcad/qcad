@@ -52,6 +52,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
+            REcmaHelper::registerFunction(&engine, proto, operator_multiply, "operator_multiply");
+            
             REcmaHelper::registerFunction(&engine, proto, multiplyWith, "multiplyWith");
             
             REcmaHelper::registerFunction(&engine, proto, init, "init");
@@ -81,6 +83,14 @@
             REcmaHelper::registerFunction(&engine, proto, getTransposed, "getTransposed");
             
             REcmaHelper::registerFunction(&engine, proto, getAppended, "getAppended");
+            
+            REcmaHelper::registerFunction(&engine, proto, isUniformScale, "isUniformScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getScaleVector, "getScaleVector");
+            
+            REcmaHelper::registerFunction(&engine, proto, isRotation, "isRotation");
+            
+            REcmaHelper::registerFunction(&engine, proto, getRotationAngle, "getRotationAngle");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RMatrix*>(), *proto);
@@ -968,6 +978,66 @@
             return result;
         }
          QScriptValue
+        REcmaMatrix::operator_multiply
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMatrix::operator *", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::operator *";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMatrix* self = 
+                        getSelf("operator *", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RMatrix'
+    RMatrix cppResult =
+        
+               self->operator *(a0);
+        // return type: RMatrix
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.operator_multiply().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMatrix::operator *", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMatrix::multiplyWith
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1016,6 +1086,38 @@
                     RMatrix 
                     a0 = 
                     *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RMatrix'
+    RMatrix cppResult =
+        
+               self->multiplyWith(a0);
+        // return type: RMatrix
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
                 
     // end of arguments
 
@@ -2070,6 +2172,202 @@
             //REcmaHelper::functionEnd("REcmaMatrix::getAppended", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaMatrix::isUniformScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMatrix::isUniformScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::isUniformScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMatrix* self = 
+                        getSelf("isUniformScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isUniformScale();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.isUniformScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMatrix::isUniformScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMatrix::getScaleVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMatrix::getScaleVector", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getScaleVector";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMatrix* self = 
+                        getSelf("getScaleVector", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getScaleVector();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getScaleVector().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMatrix::getScaleVector", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMatrix::isRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMatrix::isRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::isRotation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMatrix* self = 
+                        getSelf("isRotation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isRotation();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.isRotation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMatrix::isRotation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMatrix::getRotationAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMatrix::getRotationAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getRotationAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMatrix* self = 
+                        getSelf("getRotationAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getRotationAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getRotationAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMatrix::getRotationAngle", context, engine);
+            return result;
+        }
          QScriptValue REcmaMatrix::toString
     (QScriptContext *context, QScriptEngine *engine)
     
@@ -2079,7 +2377,13 @@
     
     QString result;
     
-            result = QString("RMatrix(0x%1)").arg((unsigned long int)self, 0, 16);
+            QDebug d(&result);
+            if (self!=NULL) {
+                d << *self;
+            }
+            else {
+                d << "NULL";
+            }
         
     return QScriptValue(result);
     }
