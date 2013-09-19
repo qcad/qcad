@@ -61,7 +61,20 @@ RMatrix::~RMatrix() {
  * \return True if this matrix is a valid matrix (more than 0 columns and rows).
  */
 bool RMatrix::isValid() const {
-    return (cols > 0 && rows > 0 && m != NULL);
+    if (cols<=0 || rows<=0) {
+        return false;
+    }
+    if (m==NULL) {
+        return false;
+    }
+    for (int rc = 0; rc < rows; ++rc) {
+        for (int cc = 0; cc < cols; ++cc) {
+            if (RMath::isNaN(m[rc][cc])) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 /**

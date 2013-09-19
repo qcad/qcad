@@ -40,30 +40,6 @@
 #endif
 
 
-/*
-#ifndef exp10
-#define exp10(x) pow(10,x)
-#endif
-*/
-
-/*
-#ifndef isnan
-#ifdef Q_OS_MAC
-// Mac OS X does not appear to have std::isnan
-#define isnan(x) (std::fpclassify(x)==FP_NAN)
-#elif defined Q_OS_WIN32
-#include <cfloat>
-#define isnan(x) _isnan(x)
-#else
-// Linux has std::isnan:
-#define isnan(x) (std::isnan(x))
-#endif
-#endif
-*/
-
-//#define ARAD 57.29577951308232
-
-
 // Somewhere in the guts of Visual C++ a macro 'max' is defined which
 // breaks std::numeric_limits<double>::max(). This fix is not correct
 // but good enough for now.
@@ -78,6 +54,7 @@
 #ifndef RNANDOUBLE
 #define RNANDOUBLE std::numeric_limits<double>::quiet_NaN()
 #endif
+
 
 /**
  * Math functions.
