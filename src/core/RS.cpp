@@ -72,6 +72,14 @@ QString RS::getSystemId() {
 }
 
 QString RS::getWindowManagerId() {
+    static QString wm = "";
+
+    if (!wm.isEmpty()) {
+        return wm;
+    }
+
+    wm = "unknown";
+
 #if defined(Q_OS_LINUX)
     QDir proc("/proc");
     QStringList dirs = proc.entryList(QDir::Dirs);
@@ -103,23 +111,25 @@ QString RS::getWindowManagerId() {
         file.close();
 
         if (line.contains("ksmserver")) {
-            return "kde";
+            wm = "kde";
+            return wm;
         }
         if (line.contains("gnome-session")) {
-            return "gnome";
+            wm = "gnome";
+            return wm;
         }
         if (line.contains("xfce-mcs-manage")) {
-            return "xfce";
+            wm = "xfce";
+            return wm;
         }
     }
-    return "unknown";
 #elif defined(Q_OS_MAC)
-    return "osx";
+    wm = "osx";
 #elif defined(Q_OS_WIN)
-    return "win";
-#else
-    return "unknown";
+    wm = "win";
 #endif
+
+    return wm;
 }
 
 bool RS::compare(const QVariant& v1, const QVariant& v2) {
