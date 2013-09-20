@@ -77,24 +77,32 @@ QString RS::getWindowManagerId() {
     QStringList dirs = proc.entryList(QDir::Dirs);
     for (int i=0; i<dirs.length(); i++) {
         QString dir = dirs[i];
+	qDebug() << "dir: " << dir;
 
         bool ok;
         int pid = dir.toInt(&ok);
         if (!ok) {
+	    qDebug() << "no int: " << dir;
             // skip non-int dir names:
             continue;
         }
         if (pid<1000) {
+	    qDebug() << "kernel: " << dir;
             // skip kernel process:
             continue;
         }
 
-        QFile file("/proc/" + pid + "/cmdline");
+	qDebug() << "pid: " << pid;
+
+	QString fileName = QString("/proc/%1/cmdline").arg(pid);
+        QFile file(fileName);
         if (!file.exists()) {
+	    qDebug() << "file does not exist: " << fileName;
             continue;
         }
 
         if (!file.open(QFile::ReadOnly)) {
+	    qDebug() << "cannot open file: " << fileName;
             continue;
         }
 
@@ -102,16 +110,22 @@ QString RS::getWindowManagerId() {
         QString line = ts.readLine();
         file.close();
 
+	qDebug() << "line: " << line;
+
         if (line.contains("ksmserver")) {
+	    qDebug() << "--> kde";
             return "kde";
         }
         if (line.contains("gnome-session")) {
+	    qDebug() << "--> gnome";
             return "gnome";
         }
         if (line.contains("xfce-mcs-manage")) {
+	    qDebug() << "--> xfce";
             return "xfce";
         }
     }
+    qDebug() << "--> unknown";
     return "unknown";
 #elif defined(Q_OS_MAC)
     return "osx";
