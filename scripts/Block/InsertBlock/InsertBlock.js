@@ -188,37 +188,6 @@ InsertBlock.prototype.getOperation = function(preview) {
     return op;
 };
 
-/*
-InsertBlock.createAttributes = function(doc, blockId, blockRef, attributeValues, op) {
-    // create attribute for each attribute definition in block:
-    if (!isNull(doc)) {
-        var blockRefId = doc.getStorage().getMaxObjectId();
-
-        var ids = doc.queryBlockEntities(blockId);
-        for (var i=0; i<ids.length; i++) {
-            var id = ids[i];
-            var e = doc.queryEntity(id);
-            if (!isAttributeDefinitionEntity(e)) {
-                continue;
-            }
-            var att = new RAttributeEntity(
-                doc,
-                new RAttributeData(e.getData(), blockRefId, e.getTag())
-            );
-            blockRef.applyTransformationTo(att);
-
-            // assign values to attributes:
-            var tag = att.getTag();
-            if (!isNull(attributeValues[tag])) {
-                att.setText(attributeValues[tag]);
-            }
-
-            op.addObject(att);
-        }
-    }
-};
-*/
-
 InsertBlock.prototype.slotKeepProportionsChanged = function(value) {
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleYCombo = optionsToolBar.findChild("ScaleY");
