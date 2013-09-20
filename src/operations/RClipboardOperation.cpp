@@ -335,7 +335,7 @@ void RClipboardOperation::copyEntity(
         destEntity->scale(scale * unitScale);
     }
     destEntity->rotate(rotation);
-    // correct block referenc offset. necessary for unit conversion:
+    // correct block reference offset. necessary for unit conversion:
     if (blockRef!=NULL && src.getUnit()!=dest.getUnit()) {
         destEntity->move(-blockRef->getPosition());
         destEntity->move(blockRef->getPosition() * unitScale);

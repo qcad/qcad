@@ -249,9 +249,6 @@ QSet<REntity::Id> RMemoryStorage::queryLayerEntities(RLayer::Id layerId, bool al
     return result;
 }
 
-/**
- * \todo store map block id -> entity ids for faster access
- */
 QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
     if (!blockEntityMap.contains(blockId)) {
         return QSet<REntity::Id>();
@@ -267,19 +264,6 @@ QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
         }
     }
     return result;
-
-    /*
-    // TODO
-    QSet<REntity::Id> result;
-    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
-        QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && e->getBlockId() == blockId && !e->isUndone()) {
-            result.insert(e->getId());
-        }
-    }
-    return result;
-    */
 }
 
 QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {

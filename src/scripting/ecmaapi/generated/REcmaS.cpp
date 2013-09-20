@@ -69,6 +69,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getSystemId, "getSystemId");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getWindowManagerId, "getWindowManagerId");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getDirectoryList, "getDirectoryList");
             
             REcmaHelper::registerFunction(&engine, &ctor, getFileList, "getFileList");
@@ -1870,6 +1872,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getSystemId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getWindowManagerId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getWindowManagerId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getWindowManagerId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RS::
+       getWindowManagerId();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getWindowManagerId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getWindowManagerId", context, engine);
             return result;
         }
          QScriptValue

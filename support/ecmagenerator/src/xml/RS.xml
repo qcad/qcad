@@ -334,6 +334,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getWindowManagerId" cppName="getWindowManagerId"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getDirectoryList" cppName="getDirectoryList"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

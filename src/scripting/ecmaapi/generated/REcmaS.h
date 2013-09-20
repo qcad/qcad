@@ -55,6 +55,9 @@
         getSystemId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getWindowManagerId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDirectoryList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

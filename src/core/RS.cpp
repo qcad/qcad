@@ -71,6 +71,57 @@ QString RS::getSystemId() {
 #endif
 }
 
+QString RS::getWindowManagerId() {
+#if defined(Q_OS_LINUX)
+    QDir proc("/proc");
+    QStringList dirs = proc.entryList(QDir::Dirs);
+    for (int i=0; i<dirs.length(); i++) {
+        QString dir = dirs[i];
+
+        bool ok;
+        int pid = dir.toInt(&ok);
+        if (!ok) {
+            // skip non-int dir names:
+            continue;
+        }
+        if (pid<1000) {
+            // skip kernel process:
+            continue;
+        }
+
+        QFile file("/proc/" + pid + "/cmdline");
+        if (!file.exists()) {
+            continue;
+        }
+
+        if (!file.open(QFile::ReadOnly)) {
+            continue;
+        }
+
+        QTextStream ts(&file);
+        QString line = ts.readLine();
+        file.close();
+
+        if (line.contains("ksmserver")) {
+            return "kde";
+        }
+        if (line.contains("gnome-session")) {
+            return "gnome";
+        }
+        if (line.contains("xfce-mcs-manage")) {
+            return "xfce";
+        }
+    }
+    return "unknown";
+#elif defined(Q_OS_MAC)
+    return "osx";
+#elif defined(Q_OS_WIN)
+    return "win";
+#else
+    return "unknown";
+#endif
+}
+
 bool RS::compare(const QVariant& v1, const QVariant& v2) {
     if (v1.canConvert<RColor> () && v2.canConvert<RColor> ()) {
         return v1.value<RColor> () == v2.value<RColor> ();

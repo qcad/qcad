@@ -66,6 +66,13 @@ SaveAs.prototype.beginEvent = function() {
     var lastSaveAsFileDir = RSettings.getStringValue("SaveAs/Path", QDir.homePath());
     var defaultNameFilter = RSettings.getStringValue("SaveAs/Filter", "");
     var fileDialog = new QFileDialog(appWin);
+
+    // don't use KDE file dialog (workaround for file type filter bug):
+    fileDialog.setOption(
+        QFileDialog.DontUseNativeDialog,
+        RS.getWindowManagerId()==="kde"
+    );
+
     fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
     // overwrite is handled after extension has been added:
     fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);

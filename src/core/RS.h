@@ -451,6 +451,7 @@ public:
 
     static QString getHostId();
     static QString getSystemId();
+    static QString getWindowManagerId();
 
     static QStringList getDirectoryList(const QString& subDirectory);
     static QStringList getFileList(const QString& subDirectory,

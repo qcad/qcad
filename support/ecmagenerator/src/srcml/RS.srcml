@@ -1191,6 +1191,13 @@ dir="./core" filename="RS.h">
   <function_decl>
   <type>
     <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>getWindowManagerId</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
     <name>QStringList</name>
   </type>
   <name>getDirectoryList</name>

@@ -59,8 +59,6 @@ InsertBlock.prototype.beginEvent = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
 
     // hide attribute widgets by default:
-//    a = optionsToolBar.findChild("LastSeparator");
-//    a.visible = false;
     for (i=1; i<4; i++) {
         label = optionsToolBar.findChild("LabelAttribute%1".arg(i));
         edit = optionsToolBar.findChild("Attribute%1".arg(i));
@@ -98,7 +96,6 @@ InsertBlock.prototype.beginEvent = function() {
 
             edit = optionsToolBar.findChild("Attribute%1".arg(idx+1));
             edit.text = value;
-            //edit.show();
 
             // make sure reset button resets to attribute definition default:
             edit.setProperty("defaultValue", value);
@@ -115,21 +112,6 @@ InsertBlock.prototype.beginEvent = function() {
 
     this.setState(InsertBlock.State.SettingPosition);
 };
-
-//InsertBlock.prototype.initUiOptions = function(resume) {
-//    var i, label, edit;
-//    var optionsToolBar = EAction.getOptionsToolBar();
-
-//    for (i=1; i<4; i++) {
-//        label = optionsToolBar.findChild("LabelAttribute%1Action".arg(i));
-//        edit = optionsToolBar.findChild("Attribute%1Action".arg(i));
-//        label.visible = false;
-//        //label.enabled = false;
-//        //label.text = "";
-//        edit.enabled = false;
-//        edit.text = "";
-//    }
-//};
 
 InsertBlock.prototype.setState = function(state) {
     Block.prototype.setState.call(this, state);
@@ -165,6 +147,11 @@ InsertBlock.prototype.pickCoordinate = function(event, preview) {
 
 InsertBlock.prototype.getOperation = function(preview) {
     var doc = this.getDocument();
+
+    if (isNull(doc)) {
+        return undefined;
+    }
+
     var op = new RAddObjectsOperation();
 
     var blockRef = new RBlockReferenceEntity(
@@ -172,11 +159,41 @@ InsertBlock.prototype.getOperation = function(preview) {
         this.blockReferenceData
     );
     op.addObject(blockRef);
-    var blockRefId = doc.getStorage().getMaxObjectId();
 
     // create attribute for each attribute definition in block:
+    var blockRefId = doc.getStorage().getMaxObjectId();
+    var blockId = this.blockReferenceData.getReferencedBlockId();
+    var ids = doc.queryBlockEntities(blockId);
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+        var e = doc.queryEntity(id);
+        if (!isAttributeDefinitionEntity(e)) {
+            continue;
+        }
+        var att = new RAttributeEntity(
+                    doc,
+                    new RAttributeData(e.getData(), blockRefId, e.getTag())
+                    );
+        blockRef.applyTransformationTo(att);
+
+        // assign values to attributes:
+        var tag = att.getTag();
+        if (!isNull(this.attributes[tag])) {
+            att.setText(this.attributes[tag]);
+        }
+
+        op.addObject(att);
+    }
+
+    return op;
+};
+
+/*
+InsertBlock.createAttributes = function(doc, blockId, blockRef, attributeValues, op) {
+    // create attribute for each attribute definition in block:
     if (!isNull(doc)) {
-        var blockId = this.blockReferenceData.getReferencedBlockId();
+        var blockRefId = doc.getStorage().getMaxObjectId();
+
         var ids = doc.queryBlockEntities(blockId);
         for (var i=0; i<ids.length; i++) {
             var id = ids[i];
@@ -192,16 +209,15 @@ InsertBlock.prototype.getOperation = function(preview) {
 
             // assign values to attributes:
             var tag = att.getTag();
-            if (!isNull(this.attributes[tag])) {
-                att.setText(this.attributes[tag]);
+            if (!isNull(attributeValues[tag])) {
+                att.setText(attributeValues[tag]);
             }
 
             op.addObject(att);
         }
     }
-
-    return op;
 };
+*/
 
 InsertBlock.prototype.slotKeepProportionsChanged = function(value) {
     var optionsToolBar = EAction.getOptionsToolBar();
