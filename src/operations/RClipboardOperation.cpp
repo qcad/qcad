@@ -18,6 +18,8 @@
  */
 #include <QSet>
 
+#include "RAttributeDefinitionEntity.h"
+#include "RAttributeEntity.h"
 #include "RBlockReferenceEntity.h"
 #include "RClipboardOperation.h"
 #include "RSettings.h"
@@ -43,7 +45,8 @@ void RClipboardOperation::copy(
         RTransaction& transaction,
         bool selectionOnly, bool clear,
         bool toModelSpaceBlock,
-        bool preview) const {
+        bool preview,
+        const RQMapQStringQString& attributes) const {
 
     double unitScale = RUnit::convert(1.0, src.getUnit(), dest.getUnit());
 
@@ -105,6 +108,36 @@ void RClipboardOperation::copy(
         refp->scale(scale);
         refp->rotate(rotation);
         refp->move(offset);
+
+
+        // create attribute for each attribute definition in block with
+        // invalid parent ID (fixed later, when block reference ID is known):
+        QSet<REntity::Id> ids = src.queryAllEntities();
+        QSet<REntity::Id>::iterator it;
+        for (it=ids.begin(); it!=ids.end(); it++) {
+            REntity::Id id = *it;
+            QSharedPointer<RAttributeDefinitionEntity> e =
+                src.queryEntity(id).dynamicCast<RAttributeDefinitionEntity>();
+            if (e.isNull()) {
+                continue;
+            }
+
+            QSharedPointer<RAttributeEntity> att(
+                new RAttributeEntity(
+                    &dest,
+                    RAttributeData(e->getData(), REntity::INVALID_ID, e->getTag())
+                )
+            );
+            refp->applyTransformationTo(*att);
+
+            // assign values to attributes:
+            QString tag = att->getTag();
+            if (attributes.contains(tag)) {
+                att->setText(attributes[tag]);
+            }
+
+            transaction.addObject(att, false);
+        }
 
         scale = 1.0;
         rotation = 0.0;
@@ -178,6 +211,23 @@ void RClipboardOperation::copy(
     // we now have the boudning box for the spatial index:
     if (!refp.isNull()) {
         transaction.addObject(refp, /* useCurrentAttributes =*/ true);
+
+        // fix parent ID of attributes created by the new inserted block:
+        REntity::Id refId = refp->getId();
+        QSet<REntity::Id> ids = dest.queryAllEntities();
+        QSet<REntity::Id>::iterator it;
+        for (it=ids.begin(); it!=ids.end(); it++) {
+            REntity::Id id = *it;
+            QSharedPointer<RAttributeEntity> e =
+                dest.queryEntityDirect(id).dynamicCast<RAttributeEntity>();
+            if (e.isNull()) {
+                continue;
+            }
+
+            if (e->getParentId()==REntity::INVALID_ID) {
+                e->setParentId(refId);
+            }
+        }
     }
 
     // if block was overwritten, we need to update the spatial index

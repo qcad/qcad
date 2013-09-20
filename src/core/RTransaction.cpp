@@ -344,7 +344,7 @@ void RTransaction::updateOverwrittenBlockReferences() {
 }
 
 /**
- * Overwrites an existing block with the given block.
+ * Overwrites a potentially existing block with the given block.
  */
 bool RTransaction::overwriteBlock(QSharedPointer<RBlock> block) {
     QString blockName = block->getName();

@@ -6,11 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>679</width>
+    <width>965</width>
     <height>50</height>
    </rect>
   </property>
-  <layout class="QHBoxLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
@@ -20,9 +20,15 @@
    </item>
    <item>
     <widget class="QComboBox" name="Rotation">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="maximumSize">
       <size>
-       <width>100</width>
+       <width>75</width>
        <height>16777215</height>
       </size>
      </property>
@@ -123,9 +129,15 @@
    </item>
    <item>
     <widget class="QComboBox" name="Scale">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="maximumSize">
       <size>
-       <width>100</width>
+       <width>75</width>
        <height>16777215</height>
       </size>
      </property>
@@ -242,6 +254,52 @@
    </item>
    <item>
     <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="AttributeLabel">
+     <property name="text">
+      <string notr="true">Attributes:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="AttributeTag">
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="AttributeValue">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>75</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="AttributeSeparator">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>

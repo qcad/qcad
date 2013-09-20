@@ -82,7 +82,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="InsertBlockItem">
+        <widget class="QToolButton" name="InsertBlock">
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
            <horstretch>0</horstretch>

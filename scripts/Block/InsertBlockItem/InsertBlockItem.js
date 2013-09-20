@@ -18,7 +18,7 @@
  */
 
 include("scripts/File/SvgImport/SvgImport.js");
-include("../Edit.js");
+include("../BlockInsert.js");
 
 /**
  * \class InsertBlockItem
@@ -26,7 +26,7 @@ include("../Edit.js");
  * \ingroup ecma_edit
  */
 function InsertBlockItem(guiAction) {
-    Edit.call(this, guiAction);
+    BlockInsert.call(this, guiAction);
     if (!isNull(guiAction)) {
         this.setUiOptions("InsertBlockItem.ui");
     }
@@ -43,13 +43,16 @@ function InsertBlockItem(guiAction) {
     this.toCurrentLayer = false;
     this.overwriteLayers = false;
     this.overwriteBlocks = false;
+
+    this.attributes = {};
+    this.attributeTags = [];
 }
 
 InsertBlockItem.State = {
     SettingPosition : 0
 };
 
-InsertBlockItem.prototype = new Edit();
+InsertBlockItem.prototype = new BlockInsert();
 
 InsertBlockItem.prototype.beginEvent = function() {
     // part library item is loaded into this document:
@@ -59,7 +62,7 @@ InsertBlockItem.prototype.beginEvent = function() {
     this.diItem = new RDocumentInterface(this.docItem);
 
     // TODO refactor
-    Edit.prototype.beginEvent.call(this);
+    BlockInsert.prototype.beginEvent.call(this);
 
     var url = this.guiAction.data();
     if (url.toString().toLowerCase().endsWith(".svg")) {
@@ -87,11 +90,36 @@ InsertBlockItem.prototype.beginEvent = function() {
         EAction.handleUserMessage(qsTr("Adjusted invalid block name to '%1'").arg(this.blockName));
     }
 
+    // init block attribute inputs to options tool bar:
+    // assign values to attributes:
+    var first = true;
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var ids = this.docItem.queryAllEntities();
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+        var attDef = this.docItem.queryEntity(id);
+        if (!isAttributeDefinitionEntity(attDef)) {
+            continue;
+        }
+
+        if (first) {
+            this.showAttributeControls(true);
+            first = false;
+        }
+
+        var tag = attDef.getTag();
+        var prompt = attDef.getPrompt();
+        var defaultValue = attDef.getEscapedText();
+
+        var tagCombo = optionsToolBar.findChild("AttributeTag");
+        tagCombo.addItem(prompt, [tag, defaultValue]);
+    }
+
     this.setState(InsertBlockItem.State.SettingPosition);
 };
 
 InsertBlockItem.prototype.setState = function(state) {
-    Edit.prototype.setState.call(this, state);
+    BlockInsert.prototype.setState.call(this, state);
 
     this.setCrosshairCursor();
     this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
@@ -106,7 +134,7 @@ InsertBlockItem.prototype.setState = function(state) {
 
 InsertBlockItem.prototype.finishEvent = function() {
     this.diItem.destroy();
-    Edit.prototype.finishEvent.call(this);
+    BlockInsert.prototype.finishEvent.call(this);
 };
 
 InsertBlockItem.prototype.generate = function() {
@@ -131,6 +159,21 @@ InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
     operation.setToCurrentLayer(this.toCurrentLayer);
     operation.setOverwriteLayers(this.overwriteLayers);
     operation.setOverwriteBlocks(this.overwriteBlocks);
+
+    // assign values to attributes:
+    var ids = this.docItem.queryAllEntities();
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+        var attDef = this.docItem.queryEntity(id);
+        if (!isAttributeDefinitionEntity(attDef)) {
+            continue;
+        }
+
+        var tag = attDef.getTag();
+        if (!isNull(this.attributes[tag])) {
+            operation.setAttribute(tag, this.attributes[tag]);
+        }
+    }
 
     if (preview) {
         di.previewOperation(operation);
@@ -185,6 +228,3 @@ InsertBlockItem.prototype.slotOverwriteLayersChanged = function(value) {
 InsertBlockItem.prototype.slotOverwriteBlocksChanged = function(value) {
     this.overwriteBlocks = value;
 };
-
-/*
-*/

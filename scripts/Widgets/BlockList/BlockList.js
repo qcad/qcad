@@ -293,7 +293,7 @@ BlockList.init = function(basePath) {
     button.setDefaultAction(RGuiAction.getByScriptFile("scripts/Block/RenameBlock/RenameBlock.js"));
     button = formWidget.findChild("EditBlock");
     button.setDefaultAction(RGuiAction.getByScriptFile("scripts/Block/EditBlock/EditBlock.js"));
-    button = formWidget.findChild("InsertBlockItem");
+    button = formWidget.findChild("InsertBlock");
     button.setDefaultAction(RGuiAction.getByScriptFile("scripts/Block/InsertBlock/InsertBlock.js"));
 //    button = formWidget.findChild("CreateBlock");
 //    button.setDefaultAction(RGuiAction.getByScriptFile("scripts/Block/CreateBlock/CreateBlock.js"));

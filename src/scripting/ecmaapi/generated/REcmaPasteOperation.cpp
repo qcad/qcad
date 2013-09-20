@@ -107,6 +107,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBlockName, "getBlockName");
             
+            REcmaHelper::registerFunction(&engine, proto, setAttribute, "setAttribute");
+            
             REcmaHelper::registerFunction(&engine, proto, apply, "apply");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundary, "getBoundary");
@@ -1225,6 +1227,74 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPasteOperation::getBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPasteOperation::setAttribute
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPasteOperation::setAttribute", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setAttribute";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPasteOperation* self = 
+                        getSelf("setAttribute", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAttribute(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setAttribute().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPasteOperation::setAttribute", context, engine);
             return result;
         }
          QScriptValue

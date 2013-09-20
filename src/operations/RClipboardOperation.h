@@ -22,12 +22,17 @@
 
 #include "operations_global.h"
 
+#include <QMap>
+
 #include "RDocument.h"
 #include "REntity.h"
 #include "RExporter.h"
 #include "ROperation.h"
 #include "RVector.h"
 
+typedef QMap<QString, QString> RQMapQStringQString;
+
+#define RDEFAULT_QMAP_QSTRING_QSTRING RQMapQStringQString()
 
 /**
  * Base class for clipboard related operations (copy, cut, paste).
@@ -57,7 +62,8 @@ protected:
         RTransaction& transaction,
         bool selectionOnly, bool clear,
         bool toModelSpaceBlock,
-        bool preview
+        bool preview,
+        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
     ) const;
 
     void copyEntity(
@@ -89,6 +95,7 @@ protected:
 private:
     mutable QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     mutable QMap<QString, QSharedPointer<RBlock> > copiedBlocks;
+
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)

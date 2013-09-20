@@ -21,8 +21,8 @@ include("ListViewEventHandler.js");
 include("ItemDelegate.js");
 include("FileIconProvider.js");
 include("Rdf.js");
-include("scripts/Edit/InsertScriptItem/InsertScriptItem.js");
-include("scripts/Edit/InsertBlockItem/InsertBlockItem.js");
+include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
+include("scripts/Block/InsertBlockItem/InsertBlockItem.js");
 
 include("db/ItemPeer.js");
 include("db/ItemTagPeer.js");
@@ -1627,10 +1627,10 @@ LibraryBrowser.insertItem = function(itemView) {
     var action;
     if (InsertScriptItem.isScriptFile(file)) {
         action = RGuiAction.getByScriptFile(
-                    "scripts/Edit/InsertScriptItem/InsertScriptItem.js");
+                    "scripts/Block/InsertScriptItem/InsertScriptItem.js");
     } else {
         action = RGuiAction.getByScriptFile(
-                    "scripts/Edit/InsertBlockItem/InsertBlockItem.js");
+                    "scripts/Block/InsertBlockItem/InsertBlockItem.js");
     }
     action.setData(QUrl.fromLocalFile(file));
     action.slotTrigger();

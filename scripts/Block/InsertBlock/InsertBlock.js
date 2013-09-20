@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Block.js");
+include("../BlockInsert.js");
  
 
 /**
@@ -25,27 +25,25 @@ include("../Block.js");
  * from the block list into the drawing.
  */
 function InsertBlock(guiAction) {
-    Block.call(this, guiAction);
+    BlockInsert.call(this, guiAction);
     this.setUiOptions("InsertBlock.ui");
 
     this.blockReferenceData = new RBlockReferenceData();
     this.blockReferenceData.setPosition(new RVector(0.0,0.0));
     this.blockReferenceData.setScaleFactors(new RVector(1.0,1.0));
     this.blockReferenceData.setRotation(0.0);
-    this.attributes = {};
-    this.attributeTags = [];
 }
 
 InsertBlock.State = {
     SettingPosition : 0
 };
 
-InsertBlock.prototype = new Block();
+InsertBlock.prototype = new BlockInsert();
 
 InsertBlock.includeBasePath = includeBasePath;
 
 InsertBlock.prototype.beginEvent = function() {
-    Block.prototype.beginEvent.call(this);
+    BlockInsert.prototype.beginEvent.call(this);
 
     var blockId = Block.getActiveBlockId();
     if (blockId===RBlock.INVALID_ID) {
@@ -58,23 +56,11 @@ InsertBlock.prototype.beginEvent = function() {
     var i, label, edit, sep, a;
     var optionsToolBar = EAction.getOptionsToolBar();
 
-    // hide attribute widgets by default:
-    for (i=1; i<4; i++) {
-        label = optionsToolBar.findChild("LabelAttribute%1".arg(i));
-        edit = optionsToolBar.findChild("Attribute%1".arg(i));
-        label.text = "";
-        edit.text = "";
-
-        optionsToolBar.findChild("LabelAttribute%1Action".arg(i)).visible = false;
-        optionsToolBar.findChild("Attribute%1Action".arg(i)).visible = false;
-        optionsToolBar.findChild("SeparatorAttribute%1Action".arg(i)).visible = false;
-    }
-
-    // add block attribute inputs to options tool bar:
+    // init block attribute inputs to options tool bar:
     var doc = this.getDocument();
     if (!isNull(doc)) {
         var ids = doc.queryBlockEntities(blockId);
-        var idx = 0;
+        var first = true;
         for (i=0; i<ids.length; i++) {
             var id = ids[i];
             var e = doc.queryEntityDirect(id);
@@ -82,31 +68,17 @@ InsertBlock.prototype.beginEvent = function() {
                 continue;
             }
 
+            if (first) {
+                this.showAttributeControls(true);
+                first = false;
+            }
+
             var tag = e.getTag();
             var prompt = e.getPrompt();
-            var value = e.getEscapedText();
+            var defaultValue = e.getEscapedText();
 
-            // show attribute widgets:
-            optionsToolBar.findChild("LabelAttribute%1Action".arg(idx+1)).visible = true;
-            a = optionsToolBar.findChild("Attribute%1Action".arg(idx+1)).visible = true;
-            a = optionsToolBar.findChild("SeparatorAttribute%1Action".arg(idx+1)).visible = true;
-
-            label = optionsToolBar.findChild("LabelAttribute%1".arg(idx+1));
-            label.text = prompt + qsTr(":");
-
-            edit = optionsToolBar.findChild("Attribute%1".arg(idx+1));
-            edit.text = value;
-
-            // make sure reset button resets to attribute definition default:
-            edit.setProperty("defaultValue", value);
-
-            this.attributeTags[idx] = tag;
-            idx++;
-
-            // only allow editing of max. 3 attributes in tool bar:
-            if (idx>=3) {
-                break;
-            }
+            var tagCombo = optionsToolBar.findChild("AttributeTag");
+            tagCombo.addItem(prompt, [tag, defaultValue]);
         }
     }
 
@@ -114,7 +86,7 @@ InsertBlock.prototype.beginEvent = function() {
 };
 
 InsertBlock.prototype.setState = function(state) {
-    Block.prototype.setState.call(this, state);
+    BlockInsert.prototype.setState.call(this, state);
 
     this.setCrosshairCursor();
     this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
@@ -271,35 +243,8 @@ InsertBlock.prototype.updateOptionsToolBar = function() {
 };
 
 InsertBlock.prototype.slotReset = function() {
-    Block.prototype.slotReset.call(this);
+    BlockInsert.prototype.slotReset.call(this);
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleYCombo = optionsToolBar.findChild("ScaleY");
     scaleYCombo.setEditText("1");
-};
-
-InsertBlock.prototype.slotAttribute1Changed = function(value) {
-    if (isNull(this.attributeTags[0])) {
-        return;
-    }
-
-    this.attributes[this.attributeTags[0]] = value;
-    this.updatePreview(true);
-};
-
-InsertBlock.prototype.slotAttribute2Changed = function(value) {
-    if (isNull(this.attributeTags[1])) {
-        return;
-    }
-
-    this.attributes[this.attributeTags[1]] = value;
-    this.updatePreview(true);
-};
-
-InsertBlock.prototype.slotAttribute3Changed = function(value) {
-    if (isNull(this.attributeTags[2])) {
-        return;
-    }
-
-    this.attributes[this.attributeTags[2]] = value;
-    this.updatePreview(true);
 };

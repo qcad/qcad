@@ -34,6 +34,6 @@ HEADERS = RAddObjectOperation.h \
 TEMPLATE = lib
 CONFIG += plugin
 TARGET = qcadoperations
-LIBS += -lqcadcore
+LIBS += -lqcadcore -lqcadentity
 OTHER_FILES += operations.dox
 DEFINES += QCADOPERATIONS_LIBRARY

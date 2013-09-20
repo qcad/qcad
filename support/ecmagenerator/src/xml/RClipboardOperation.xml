@@ -46,6 +46,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
         isConst="false" />
+        <arg type="RQMapQStringQString &amp;"
+        typeName="RQMapQStringQString" name="attributes"
+        hasDefault="true" default="RDEFAULT_QMAP_QSTRING_QSTRING"
+        isConst="true" />
       </variant>
     </method>
     <method name="copyEntity" cppName="copyEntity"

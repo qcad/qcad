@@ -10,6 +10,8 @@ SUBDIRS = \
     EditMainDrawing \
     HideAllBlocks \
     InsertBlock \
+    InsertBlockItem \
+    InsertScriptItem \
     RemoveBlock \
     RenameBlock \
     ShowAllBlocks \

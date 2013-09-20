@@ -247,9 +247,9 @@ EventHandler.prototype.drop = function(event) {
             include("scripts/Edit/InsertScriptItem/InsertScriptItem.js");
             var action;
             if (InsertScriptItem.isScriptFile(file)) {
-                action = RGuiAction.getByScriptFile("scripts/Edit/InsertScriptItem/InsertScriptItem.js");
+                action = RGuiAction.getByScriptFile("scripts/Block/InsertScriptItem/InsertScriptItem.js");
             } else {
-                action = RGuiAction.getByScriptFile("scripts/Edit/InsertBlockItem/InsertBlockItem.js");
+                action = RGuiAction.getByScriptFile("scripts/Block/InsertBlockItem/InsertBlockItem.js");
             }
             action.setData(url);
             action.slotTrigger();

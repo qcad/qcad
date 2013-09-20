@@ -95,6 +95,9 @@ public:
     QString getBlockName() {
         return this->blockName;
     }
+    void setAttribute(const QString& tag, const QString& value) {
+        attributes.insert(tag, value);
+    }
 
     virtual RTransaction apply(RDocument& document, bool preview = false) const;
 
@@ -111,6 +114,7 @@ private:
     bool overwriteLayers;
     bool overwriteBlocks;
     QString blockName;
+    QMap<QString, QString> attributes;
 };
 
 Q_DECLARE_METATYPE(RPasteOperation*)

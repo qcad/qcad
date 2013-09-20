@@ -103,6 +103,9 @@
         getBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAttribute
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         apply
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

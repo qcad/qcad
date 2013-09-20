@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>987</width>
+    <width>851</width>
     <height>50</height>
    </rect>
   </property>
@@ -355,14 +355,30 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="LabelAttribute1">
+    <widget class="QLabel" name="AttributeLabel">
      <property name="text">
-      <string notr="true">Attribute 1:</string>
+      <string notr="true">Attributes:</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="Attribute1">
+    <widget class="QComboBox" name="AttributeTag">
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="AttributeValue">
      <property name="minimumSize">
       <size>
        <width>50</width>
@@ -378,67 +394,7 @@
     </widget>
    </item>
    <item>
-    <widget class="Line" name="SeparatorAttribute1">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="LabelAttribute2">
-     <property name="text">
-      <string notr="true">Attribute 2:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLineEdit" name="Attribute2">
-     <property name="minimumSize">
-      <size>
-       <width>50</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>75</width>
-       <height>16777215</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="Line" name="SeparatorAttribute2">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="LabelAttribute3">
-     <property name="text">
-      <string notr="true">Attribute 3:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLineEdit" name="Attribute3">
-     <property name="minimumSize">
-      <size>
-       <width>50</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>75</width>
-       <height>16777215</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="Line" name="SeparatorAttribute3">
+    <widget class="Line" name="AttributeSeparator">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>

@@ -365,6 +365,47 @@ dir="./operations" filename="RPasteOperation.h">
     <name>this</name>-&gt;
     <name>blockName</name></expr>;</return>}</block>
   </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setAttribute</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>tag</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>value</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>attributes</name>.
+    <call>
+      <name>insert</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>tag</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>value</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -475,6 +516,20 @@ dir="./operations" filename="RPasteOperation.h">
       <name>QString</name>
     </type>
     <name>blockName</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>QString</name>
+      </argument>, 
+      <argument>
+        <name>QString</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>attributes</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

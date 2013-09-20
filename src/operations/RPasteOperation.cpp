@@ -48,7 +48,8 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
         transaction,
         false, false,
         false,           // toModelSpace (paste to current block, not model space)
-        preview
+        preview,
+        attributes
     );
 
     transaction.end();

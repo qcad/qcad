@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Edit.js");
+include("../Block.js");
 include("../InsertBlockItem/InsertBlockItem.js");
 
 /**
@@ -49,7 +49,7 @@ InsertScriptItem.prototype.beginEvent = function() {
     // this document does never update the layer list, block list, etc:
     this.diItem.setNotifyListeners(false);
     
-    Edit.prototype.beginEvent.call(this);
+    Block.prototype.beginEvent.call(this);
 
     this.file = new QUrl(this.guiAction.data()).toLocalFile();
     include(this.file);
