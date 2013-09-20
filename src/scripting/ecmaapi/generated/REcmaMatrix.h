@@ -118,13 +118,10 @@
         getAppended
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isUniformScale
+        isRotationAndUniformScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getScaleVector
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        isRotation
+        getUniformScaleFactor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getRotationAngle

@@ -118,9 +118,8 @@ public:
     RMatrix getTransposed() const;
     RMatrix getAppended(const RMatrix& v) const;
 
-    bool isUniformScale() const;
-    RVector getScaleVector() const;
-    bool isRotation() const;
+    bool isRotationAndUniformScale() const;
+    double getUniformScaleFactor() const;
     double getRotationAngle() const;
 
 protected:

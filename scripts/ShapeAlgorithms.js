@@ -1174,6 +1174,23 @@ ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
     var x3 = quad[3].x;
     var y3 = quad[3].y;
 
+//    var norm = false;
+//    if (Math.abs(x0)>100 && Math.abs(y0)>100 &&
+//        Math.abs(x1)>100 && Math.abs(y1)>100 &&
+//        Math.abs(x1)>100 && Math.abs(y1)>100) {
+
+//        x0 = x0/100;
+//        y0 = y0/100;
+//        x1 = x1/100;
+//        y1 = y1/100;
+//        x2 = x2/100;
+//        y2 = y2/100;
+//        x3 = x3/100;
+//        y3 = y3/100;
+
+//        norm = true;
+//    }
+
     var ma =  x1 * x2 * y3 - x0 * x2 * y3 - x1 * y2 * x3 + x0 * y2 * x3 - x0 * y1 * x3 + y0 * x1 * x3 + x0 * y1 * x2 - y0 * x1 * x2;
     var mb =  x0 * x2 * y3 - x0 * x1 * y3 - x1 * y2 * x3 + y1 * x2 * x3 - y0 * x2 * x3 + y0 * x1 * x3 + x0 * x1 * y2 - x0 * y1 * x2;
     var mc =  x1 * x2 * y3 - x0 * x1 * y3 - x0 * y2 * x3 - y1 * x2 * x3 + y0 * x2 * x3 + x0 * y1 * x3 + x0 * x1 * y2 - y0 * x1 * x2;
@@ -1210,15 +1227,27 @@ ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
     var g = ml*ml + mo*mo - mr*mr;
 
     var term = (b*b - a*c);
-    var cx = (c*d - b*f) / term;
-    var cy = (a*f - b*d) / term;
 
-    var term1 = (2 * (a*f*f + c*d*d + g*b*b - 2*b*d*f - a*c*g));
-    var term2 = Math.sqrt((a-c)*(a-c) + 4*b*b);
-    var term3 = (a + c);
+    var cx, cy, axis1, axis2;
 
-    var axis1 = Math.sqrt(term1 / (term * (term2-term3)));
-    var axis2 = Math.sqrt(term1 / (term * (-term2-term3)));
+    // circle:
+    if (Math.abs(term)<1e-50) {
+        cx = (v1.x + v3.x)/2;
+        cy = (v1.y + v3.y)/2;
+        axis1 = v1.getDistanceTo(v2)/2;
+        axis2 = axis1;
+    }
+    else {
+        cx = (c*d - b*f) / term;
+        cy = (a*f - b*d) / term;
+
+        var term1 = (2 * (a*f*f + c*d*d + g*b*b - 2*b*d*f - a*c*g));
+        var term2 = Math.sqrt((a-c)*(a-c) + 4*b*b);
+        var term3 = (a + c);
+
+        axis1 = Math.sqrt(term1 / (term * (term2-term3)));
+        axis2 = Math.sqrt(term1 / (term * (-term2-term3)));
+    }
 
     var center = new RVector(cx, cy);
 
@@ -1499,9 +1528,14 @@ ShapeAlgorithms.ellipseToArcCircleEllipse = function(ellipse) {
             return new RCircle(ellipse.getCenter(), ellipse.getMajorRadius());
         }
         else {
-            return new RArc(ellipse.getCenter(), ellipse.getMajorRadius(),
-                ellipse.getStartAngle(), ellipse.getEndAngle(),
+            var c = ellipse.getCenter();
+            var ret = new RArc(c, ellipse.getMajorRadius(),
+                //ellipse.getStartAngle(), ellipse.getEndAngle(),
+                0.0, 2*Math.PI,
                 ellipse.isReversed());
+            ret.setStartAngle(c.getAngleTo(ellipse.getStartPoint()));
+            ret.setEndAngle(c.getAngleTo(ellipse.getEndPoint()));
+            return ret;
         }
     }
     else {
@@ -1542,11 +1576,22 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
     if (isArcShape(arc) || isEllipseShape(arc)) {
         var sp = arc.getStartPoint();
         var ep = arc.getEndPoint();
+        var mp = arc.getMiddlePoint();
+
         fun(sp);
         fun(ep);
+        fun(mp);
+
         ellipse.setStartParam(ellipse.getParamTo(sp));
         ellipse.setEndParam(ellipse.getParamTo(ep));
-        ellipse.setReversed(arc.isReversed());
+
+        var d1 = ellipse.getMiddlePoint().getDistanceTo(mp);
+        ellipse.setReversed(true);
+        var d2 = ellipse.getMiddlePoint().getDistanceTo(mp);
+
+        if (d1<d2) {
+            ellipse.setReversed(false);
+        }
     }
 
     return ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse);

@@ -246,20 +246,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="isUniformScale" cppName="isUniformScale"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="isRotationAndUniformScale"
+    cppName="isRotationAndUniformScale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="getScaleVector" cppName="getScaleVector"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="RVector" isPureVirtual="false" />
-    </method>
-    <method name="isRotation" cppName="isRotation"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
+    <method name="getUniformScaleFactor"
+    cppName="getUniformScaleFactor" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
     </method>
     <method name="getRotationAngle" cppName="getRotationAngle"
     specifier="public" isStatic="false" isVirtual="false"

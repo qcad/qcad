@@ -84,11 +84,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAppended, "getAppended");
             
-            REcmaHelper::registerFunction(&engine, proto, isUniformScale, "isUniformScale");
+            REcmaHelper::registerFunction(&engine, proto, isRotationAndUniformScale, "isRotationAndUniformScale");
             
-            REcmaHelper::registerFunction(&engine, proto, getScaleVector, "getScaleVector");
-            
-            REcmaHelper::registerFunction(&engine, proto, isRotation, "isRotation");
+            REcmaHelper::registerFunction(&engine, proto, getUniformScaleFactor, "getUniformScaleFactor");
             
             REcmaHelper::registerFunction(&engine, proto, getRotationAngle, "getRotationAngle");
             
@@ -2173,19 +2171,19 @@
             return result;
         }
          QScriptValue
-        REcmaMatrix::isUniformScale
+        REcmaMatrix::isRotationAndUniformScale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMatrix::isUniformScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::isUniformScale";
+            //REcmaHelper::functionStart("REcmaMatrix::isRotationAndUniformScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::isRotationAndUniformScale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RMatrix* self = 
-                        getSelf("isUniformScale", context);
+                        getSelf("isRotationAndUniformScale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2205,7 +2203,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->isUniformScale();
+               self->isRotationAndUniformScale();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2215,26 +2213,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.isUniformScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.isRotationAndUniformScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMatrix::isUniformScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::isRotationAndUniformScale", context, engine);
             return result;
         }
          QScriptValue
-        REcmaMatrix::getScaleVector
+        REcmaMatrix::getUniformScaleFactor
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMatrix::getScaleVector", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getScaleVector";
+            //REcmaHelper::functionStart("REcmaMatrix::getUniformScaleFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getUniformScaleFactor";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RMatrix* self = 
-                        getSelf("getScaleVector", context);
+                        getSelf("getUniformScaleFactor", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2251,60 +2249,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
+    // return type 'double'
+    double cppResult =
         
-               self->getScaleVector();
-        // return type: RVector
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getScaleVector().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMatrix::getScaleVector", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaMatrix::isRotation
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMatrix::isRotation", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::isRotation";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMatrix* self = 
-                        getSelf("isRotation", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isRotation();
-        // return type: bool
+               self->getUniformScaleFactor();
+        // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2313,10 +2262,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.isRotation().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getUniformScaleFactor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMatrix::isRotation", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::getUniformScaleFactor", context, engine);
             return result;
         }
          QScriptValue

@@ -57,15 +57,6 @@ dir="./core/math" filename="RMath.h">
   <name>M_PI_2</name>1.57079632679489661923</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/* #ifndef exp10 #define exp10(x) pow(10,x)
-  #endif */</comment>
-  <comment type="block">/* #ifndef isnan #ifdef Q_OS_MAC // Mac OS
-  X does not appear to have std::isnan #define isnan(x)
-  (std::fpclassify(x)==FP_NAN) #elif defined Q_OS_WIN32 #include
-  &lt;cfloat&gt; #define isnan(x) _isnan(x) #else // Linux has
-  std::isnan: #define isnan(x) (std::isnan(x)) #endif #endif
-  */</comment>
-  <comment type="line">//#define ARAD 57.29577951308232</comment>
   <comment type="line">// Somewhere in the guts of Visual C++ a
   macro 'max' is defined which</comment>
   <comment type="line">// breaks

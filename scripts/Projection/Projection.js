@@ -286,6 +286,14 @@ Projection.prototype.project = function(p) {
 }
 
 /**
+ * Can be reimplemented to return true if the transformation flips
+ * entities (mirroring). This means that arcs have to be reversed.
+ */
+Projection.prototype.isFlip = function() {
+    return false;
+}
+
+/**
  * Projection of the given shape. The shape uses coordinates relative to
  * the chosen reference point.
  *

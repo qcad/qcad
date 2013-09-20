@@ -783,21 +783,14 @@ dir="./core/math" filename="RMatrix.h">
   <type>
     <name>bool</name>
   </type>
-  <name>isUniformScale</name>
+  <name>isRotationAndUniformScale</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
-    <name>RVector</name>
+    <name>double</name>
   </type>
-  <name>getScaleVector</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isRotation</name>
+  <name>getUniformScaleFactor</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

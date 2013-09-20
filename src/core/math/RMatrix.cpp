@@ -626,38 +626,48 @@ RMatrix RMatrix::getAppended(const RMatrix& v) const {
     return r;
 }
 
-bool RMatrix::isUniformScale() const {
-    if (getRows()!=2 || getCols()!=2) {
+bool RMatrix::isRotationAndUniformScale() const {
+    double a = getRotationAngle();
+
+    if (RMath::isNaN(a)) {
         return false;
     }
-    return RMath::fuzzyCompare(fabs(get(0,0)), fabs(get(1,1)));
+
+    if (fabs(cos(a))<RS::PointTolerance) {
+        return RMath::fuzzyCompare(get(0,1) / -sin(a), get(1,0) / sin(a)) &&
+               RMath::fuzzyCompare(get(0,0), get(1,1));
+    }
+    if (fabs(sin(a))<RS::PointTolerance) {
+        return RMath::fuzzyCompare(get(0,0) / cos(a), get(1,1) / cos(a)) &&
+               RMath::fuzzyCompare(-get(0,1), get(1,0));
+    }
+
+    double s00 = get(0,0) / cos(a);
+    double s01 = get(0,1) / -sin(a);
+    double s10 = get(1,0) / sin(a);
+    double s11 = get(1,1) / cos(a);
+
+    return (RMath::fuzzyCompare(s00, s01) &&
+        RMath::fuzzyCompare(s00, s10) &&
+        RMath::fuzzyCompare(s00, s11));
 }
 
-
-RVector RMatrix::getScaleVector() const {
+double RMatrix::getUniformScaleFactor() const {
     if (getRows()!=2 || getCols()!=2) {
-        return RVector::invalid;
+        return RNANDOUBLE;
     }
-    return RVector(get(0,0), get(1,1));
-}
-
-bool RMatrix::isRotation() const {
-    if (getRows()!=2 || getCols()!=2) {
-        return false;
+    double a = getRotationAngle();
+    if (RMath::isNaN(a)) {
+        return RNANDOUBLE;
     }
-    double angle = getRotationAngle();
-    return RMath::fuzzyCompare(get(0,0), cos(angle)) &&
-           RMath::fuzzyCompare(fabs(get(0,1)), fabs(sin(angle))) &&
-           RMath::fuzzyCompare(fabs(get(1,0)), fabs(sin(angle))) &&
-           RMath::fuzzyCompare(get(0,1), -get(1,0)) &&
-           RMath::fuzzyCompare(get(1,1), cos(angle));
+    return get(0,0) / cos(a);
 }
 
 double RMatrix::getRotationAngle() const {
-    if (getRows()!=2 || getCols()!=2 || get(0,0)<-1.0 || get(0,0)>1.0) {
+    if (getRows()!=2 || getCols()!=2) {
         return RNANDOUBLE;
     }
-    return acos(get(0,0));
+    return atan2(get(1,0), get(0,0));
 }
 
 RMatrix RMatrix::operator *(double s) const {

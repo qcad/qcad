@@ -476,19 +476,19 @@ void REllipse::setReversed(bool r) {
 
 double REllipse::getDirection1() const{
     if (!reversed) {
-        return RMath::getNormalizedAngle(startParam+M_PI/2.0);
+        return RMath::getNormalizedAngle(getAngle() + startParam+M_PI/2.0);
     }
     else {
-        return RMath::getNormalizedAngle(startParam-M_PI/2.0);
+        return RMath::getNormalizedAngle(getAngle() + startParam-M_PI/2.0);
     }
 }
 
 double REllipse::getDirection2() const{
     if (!reversed) {
-        return RMath::getNormalizedAngle(endParam-M_PI/2.0);
+        return RMath::getNormalizedAngle(getAngle() + endParam-M_PI/2.0);
     }
     else {
-        return RMath::getNormalizedAngle(endParam+M_PI/2.0);
+        return RMath::getNormalizedAngle(getAngle() + endParam+M_PI/2.0);
     }
 }
 
