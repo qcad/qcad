@@ -73,7 +73,6 @@ SaveAs.prototype.beginEvent = function() {
         RS.getWindowManagerId()==="kde"
     );
 
-    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
     // overwrite is handled after extension has been added:
     fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);
     fileDialog.fileMode = QFileDialog.AnyFile;
