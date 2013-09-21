@@ -5,6 +5,6 @@ function init(basePath) {
     action.setIcon(basePath + "/InfoPosition.svg");
     action.setDefaultShortcut(new QKeySequence("i,o"));
     action.setDefaultCommands([ "infopos", "io" ]);
-    action.setSortOrder(50);
+    action.setSortOrder(100);
     EAction.addGuiActionTo(action, Information, true, true, true);
 }

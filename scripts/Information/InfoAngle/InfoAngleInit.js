@@ -5,6 +5,6 @@ function init(basePath) {
     action.setIcon(basePath + "/InfoAngle.svg");
     action.setDefaultShortcut(new QKeySequence("i,a"));
     action.setDefaultCommands([ "infoangle", "ia" ]);
-    action.setSortOrder(300);
+    action.setSortOrder(2000);
     EAction.addGuiActionTo(action, Information, true, true, true, true);
 }

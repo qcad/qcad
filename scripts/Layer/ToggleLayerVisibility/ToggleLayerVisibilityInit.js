@@ -7,6 +7,6 @@ function init(basePath) {
     action.setIcon(basePath + "/ToggleLayerVisibility.svg");
     action.setDefaultShortcut(new QKeySequence("y,v"));
     action.setDefaultCommands(["layertogglevisibility", "yv"]);
-    action.setSortOrder(5);
+    action.setSortOrder(100);
     EAction.addGuiActionTo(action, Layer, true, true);
 }

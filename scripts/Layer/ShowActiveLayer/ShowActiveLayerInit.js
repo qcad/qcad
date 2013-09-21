@@ -6,6 +6,6 @@ function init(basePath) {
     action.setIcon(basePath + "/ShowActiveLayer.svg");
     action.setDefaultShortcut(new QKeySequence("y,o"));
     action.setDefaultCommands(["layershowactive", "yo"]);
-    action.setSortOrder(20);
+    action.setSortOrder(300);
     EAction.addGuiActionTo(action, Layer, true, true);
 }

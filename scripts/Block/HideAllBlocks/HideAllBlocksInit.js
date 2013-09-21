@@ -6,6 +6,6 @@ function init(basePath) {
     action.setIcon(basePath + "/HideAllBlocks.svg");
     action.setDefaultShortcut(new QKeySequence("b,h"));
     action.setDefaultCommands(["blockhideAll"]);
-    action.setSortOrder(30);
+    action.setSortOrder(300);
     EAction.addGuiActionTo(action, Block, true, true);
 }

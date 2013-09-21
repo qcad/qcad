@@ -5,6 +5,6 @@ function init(basePath) {
     action.setIcon(basePath + "/InfoPositionRel.svg");
     action.setDefaultShortcut(new QKeySequence("i,v"));
     action.setDefaultCommands([ "infoposrel", "iv" ]);
-    action.setSortOrder(55);
+    action.setSortOrder(200);
     EAction.addGuiActionTo(action, Information, true, true, true);
 }

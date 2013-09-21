@@ -6,6 +6,6 @@ function init(basePath) {
     action.setIcon(basePath + "/HideAllLayers.svg");
     action.setDefaultShortcut(new QKeySequence("y,h"));
     action.setDefaultCommands(["layerhideall", "yh"]);
-    action.setSortOrder(30);
+    action.setSortOrder(400);
     EAction.addGuiActionTo(action, Layer, true, true);
 }

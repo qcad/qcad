@@ -6,7 +6,7 @@ function init(basePath) {
     action.setIcon(basePath + "/ShowAllLayers.svg");
     action.setDefaultShortcut(new QKeySequence("y,s"));
     action.setDefaultCommands(["layershowall", "ys"]);
-    action.setSortOrder(10);
+    action.setSortOrder(200);
     EAction.addGuiActionTo(action, Layer, true, true);
 }
 

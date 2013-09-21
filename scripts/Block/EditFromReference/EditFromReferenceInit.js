@@ -7,6 +7,6 @@ function init(basePath) {
     action.setIcon(basePath + "/EditFromReference.svg");
     action.setDefaultShortcut(new QKeySequence("b,d"));
     action.setDefaultCommands(["blockeditfromreference", "bd"]);
-    action.setSortOrder(230);
+    action.setSortOrder(2300);
     EAction.addGuiActionTo(action, Block, true, false, false);
 }

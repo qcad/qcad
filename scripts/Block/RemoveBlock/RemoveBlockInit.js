@@ -6,6 +6,6 @@ function init(basePath) {
     action.setIcon(basePath + "/RemoveBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,r"));
     action.setDefaultCommands(["blockremove", "br"]);
-    action.setSortOrder(200);
+    action.setSortOrder(2000);
     EAction.addGuiActionTo(action, Block, true, true, false, true);
 }

@@ -57,6 +57,8 @@ RLayerListQt.prototype.contextMenuEvent = function(e) {
     RGuiAction.getByScriptFile("scripts/Layer/AddLayer/AddLayer.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Layer/RemoveLayer/RemoveLayer.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Layer/EditLayer/EditLayer.js").addToMenu(menu);
+    RGuiAction.getByScriptFile("scripts/Layer/SelectLayer/SelectLayer.js").addToMenu(menu);
+    RGuiAction.getByScriptFile("scripts/Layer/DeselectLayer/DeselectLayer.js").addToMenu(menu);
     menu.exec(QCursor.pos());
 
     e.ignore();

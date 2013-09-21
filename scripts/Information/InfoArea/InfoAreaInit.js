@@ -6,8 +6,6 @@ function init(basePath) {
     action.setIcon(basePath + "/InfoArea.svg");
     action.setDefaultShortcut(new QKeySequence("i,r"));
     action.setDefaultCommands([ "infoarea", "ir" ]);
-    action.setSortOrder(500);
-//    var appWin = EAction.getMainWindow();
-//    appWin.addFocusListener(action);
+    action.setSortOrder(3100);
     EAction.addGuiActionTo(action, Information, true, true, true);
 }

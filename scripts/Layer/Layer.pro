@@ -5,6 +5,7 @@ SUBDIRS = \
     EditLayer \
     HideAllLayers \
     RemoveLayer \
+    SelectLayer \
     ShowActiveLayer \
     ShowAllLayers \
     ToggleLayerVisibility

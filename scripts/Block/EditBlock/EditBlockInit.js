@@ -9,6 +9,6 @@ function init(basePath) {
     action.setIcon(basePath + "/EditBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,e"));
     action.setDefaultCommands(["blockedit","be"]);
-    action.setSortOrder(220);
+    action.setSortOrder(2200);
     EAction.addGuiActionTo(action, Block, true, true);
 }

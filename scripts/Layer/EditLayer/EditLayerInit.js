@@ -6,6 +6,6 @@ function init(basePath) {
     action.setIcon(basePath + "/EditLayer.svg");
     action.setDefaultShortcut(new QKeySequence("y,e"));
     action.setDefaultCommands(["layeredit", "ye"]);
-    action.setSortOrder(60);
+    action.setSortOrder(700);
     EAction.addGuiActionTo(action, Layer, true, true);
 }

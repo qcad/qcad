@@ -6,8 +6,6 @@ function init(basePath) {
     action.setIcon(basePath + "/InfoDistanceEP.svg");
     action.setDefaultShortcut(new QKeySequence("i,e"));
     action.setDefaultCommands([ "infodistep", "ie" ]);
-    action.setSortOrder(200);
-//    var appWin = EAction.getMainWindow();
-//    appWin.addFocusListener(action);
+    action.setSortOrder(1100);
     EAction.addGuiActionTo(action, Information, true, true, true);
 }

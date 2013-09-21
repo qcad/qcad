@@ -10,7 +10,7 @@ function init(basePath) {
     action.setIcon(basePath + "/CreateBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,c"));
     action.setDefaultCommands(["blockcreate", "bc"]);
-    action.setSortOrder(110);
+    action.setSortOrder(1100);
     EAction.addGuiActionTo(action, Block, true);
 
     var appWin = EAction.getMainWindow();
