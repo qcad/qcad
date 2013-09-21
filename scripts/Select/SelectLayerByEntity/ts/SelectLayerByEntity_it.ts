@@ -4,13 +4,12 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Scegli entità sul layer</translation>
+        <translation type="obsolete">Scegli entità sul layer</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="+2"/>
+        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
         <translation>(De)seleziona la&amp;yer</translation>
     </message>
@@ -21,7 +20,7 @@
         <translation>(De-)seleziona tutte le entità sullo stesso layer</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="+17"/>
+        <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
@@ -71,6 +70,14 @@ Sottrai dalla selezione corrente</translatorcomment>
 --file: SelectContour_it.ts--
 Interseca con la selezione corrente</translatorcomment>
         <translation>Interseca con la selezione corrente</translation>
+    </message>
+</context>
+<context>
+    <name>SelectLayerByEntity</name>
+    <message>
+        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <source>Choose entity on layer</source>
+        <translation type="unfinished">Scegli entità sul layer</translation>
     </message>
 </context>
 </TS>

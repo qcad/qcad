@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elija la entidad en la capa</translation>
+        <translation type="obsolete">Choisissez une entité sur le calque</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="+2"/>
+        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(De-)seleccionar ca&amp;pa</translation>
+        <translation>(Dé-)sélectionner &amp;calque</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)seleccionar todas las entidades en la misma capa</translation>
+        <translation>(Dé)sélectionner toutes les entités sur le même calque</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="+17"/>
+        <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translatorcomment>--exact match--
---file: es.po--
-Modo de color:
-Modo de búsqueda:</translatorcomment>
-        <translation>Modo:</translation>
+        <translatorcomment>--google--
+Mode de couleur :</translatorcomment>
+        <translation>Mode :</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Reemplazar la selección actual</translation>
+        <translation>Remplacer la sélection courante</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -48,19 +45,27 @@ Modo de búsqueda:</translatorcomment>
         <location line="-53"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Añadir a la selección actual</translation>
+        <translation>Ajouter à la sélection courante</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Restar de la selección actual</translation>
+        <translation>Soustraire de la sélection courante</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Se cruzan con la selección actual</translation>
+        <translation>Intersection avec la sélection courante</translation>
+    </message>
+</context>
+<context>
+    <name>SelectLayerByEntity</name>
+    <message>
+        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <source>Choose entity on layer</source>
+        <translation type="unfinished">Choisissez une entité sur le calque</translation>
     </message>
 </context>
 </TS>

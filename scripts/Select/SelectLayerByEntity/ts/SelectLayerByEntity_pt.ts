@@ -4,13 +4,12 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha entidade na camada</translation>
+        <translation type="obsolete">Escolha entidade na camada</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="+2"/>
+        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
@@ -24,7 +23,7 @@
         <translation>(De-)selecione todas as entidades na mesma camada</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="+17"/>
+        <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -74,6 +73,14 @@ Subtrair da seleção atual</translatorcomment>
 --file: SelectContour_pt.ts--
 Interseção com a seleção atual</translatorcomment>
         <translation>Interseção com a seleção atual</translation>
+    </message>
+</context>
+<context>
+    <name>SelectLayerByEntity</name>
+    <message>
+        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <source>Choose entity on layer</source>
+        <translation type="unfinished">Escolha entidade na camada</translation>
     </message>
 </context>
 </TS>

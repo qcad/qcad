@@ -5,6 +5,6 @@ SUBDIRS = \
     SelectAll \
     SelectContour \
     SelectIntersectedEntities \
-    SelectLayer \
+    SelectLayerByEntity \
     SelectRectangle \
     ts

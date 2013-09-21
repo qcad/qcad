@@ -4,12 +4,11 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
-        <translation>Objekt auf gewünschtem Layer auswählen</translation>
+        <translation type="obsolete">Objekt auf gewünschtem Layer auswählen</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="+2"/>
+        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
         <translation>La&amp;yer (de-)selektieren</translation>
     </message>
@@ -19,7 +18,7 @@
         <translation>(De-)selektiert alle Objekte auf dem gleichen Layer</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="+17"/>
+        <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
         <translation>Modus:</translation>
     </message>
@@ -50,6 +49,14 @@
         <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Schnittmenge mit aktueller Selektion</translation>
+    </message>
+</context>
+<context>
+    <name>SelectLayerByEntity</name>
+    <message>
+        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <source>Choose entity on layer</source>
+        <translation type="unfinished">Objekt auf gewünschtem Layer auswählen</translation>
     </message>
 </context>
 </TS>

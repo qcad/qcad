@@ -4,12 +4,11 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
-        <translation>画層のエンティティを選択</translation>
+        <translation type="obsolete">画層のエンティティを選択</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="+17"/>
+        <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
         <translation>モード:</translation>
     </message>
@@ -42,7 +41,7 @@
         <translation>現在の選択と交差</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="+2"/>
+        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
         <translation>&amp;y 画層選択（選択解除）</translation>
     </message>
@@ -50,6 +49,14 @@
         <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>同じ画層の全てのエンティティを選択（選択解除）</translation>
+    </message>
+</context>
+<context>
+    <name>SelectLayerByEntity</name>
+    <message>
+        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <source>Choose entity on layer</source>
+        <translation type="unfinished">画層のエンティティを選択</translation>
     </message>
 </context>
 </TS>

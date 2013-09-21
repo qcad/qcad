@@ -4,13 +4,12 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayer.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz jednostkę na warstwie</translation>
+        <translation type="obsolete">Wybierz jednostkę na warstwie</translation>
     </message>
     <message>
-        <location filename="../SelectLayer.ui" line="+17"/>
+        <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tryb:</translation>
@@ -49,7 +48,7 @@
         <translation type="unfinished">Przecięcie z bieżącego zaznaczenia</translation>
     </message>
     <message>
-        <location filename="../SelectLayerInit.js" line="+2"/>
+        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -61,6 +60,14 @@
         <source>(De-)Select all entities on the same layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">(De-) wybrać wszystkie elementy tej samej warstwy</translation>
+    </message>
+</context>
+<context>
+    <name>SelectLayerByEntity</name>
+    <message>
+        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <source>Choose entity on layer</source>
+        <translation type="unfinished">Wybierz jednostkę na warstwie</translation>
     </message>
 </context>
 </TS>
