@@ -8,47 +8,36 @@
         <translation type="obsolete">画層のエンティティを選択</translation>
     </message>
     <message>
-        <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>モード:</translation>
+        <translation type="obsolete">モード:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation>現在の選択を置き換え</translation>
+        <translation type="obsolete">現在の選択を置き換え</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>選択モード</translation>
+        <translation type="obsolete">選択モード</translation>
     </message>
     <message>
-        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation>現在の選択に追加</translation>
+        <translation type="obsolete">現在の選択に追加</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>現在の選択から差し引く</translation>
+        <translation type="obsolete">現在の選択から差し引く</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>現在の選択と交差</translation>
+        <translation type="obsolete">現在の選択と交差</translation>
     </message>
     <message>
-        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>&amp;y 画層選択（選択解除）</translation>
+        <translation type="obsolete">&amp;y 画層選択（選択解除）</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>同じ画層の全てのエンティティを選択（選択解除）</translation>
+        <translation type="obsolete">同じ画層の全てのエンティティを選択（選択解除）</translation>
     </message>
 </context>
 <context>
@@ -57,6 +46,49 @@
         <location filename="../SelectLayerByEntity.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translation type="unfinished">画層のエンティティを選択</translation>
+    </message>
+    <message>
+        <location filename="../SelectLayerByEntity.ui" line="+17"/>
+        <source>Mode:</source>
+        <translation type="unfinished">モード:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Replace the current selection</source>
+        <translation type="unfinished">現在の選択を置き換え</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <source>SelectionMode</source>
+        <translation type="unfinished">選択モード</translation>
+    </message>
+    <message>
+        <location line="-53"/>
+        <source>Add to the current selection</source>
+        <translation type="unfinished">現在の選択に追加</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Subtract from the current selection</source>
+        <translation type="unfinished">現在の選択から差し引く</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Intersect with the current selection</source>
+        <translation type="unfinished">現在の選択と交差</translation>
+    </message>
+    <message>
+        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
+        <source>(De-)Select La&amp;yer</source>
+        <translation type="unfinished">&amp;y 画層選択（選択解除）</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>(De-)Select all entities on the same layer</source>
+        <translation type="unfinished">同じ画層の全てのエンティティを選択（選択解除）</translation>
     </message>
 </context>
 </TS>

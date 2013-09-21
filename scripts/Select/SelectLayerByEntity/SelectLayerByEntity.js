@@ -19,19 +19,19 @@
 
 include("../Select.js");
 
-function SelectLayer(guiAction) {
+function SelectLayerByEntity(guiAction) {
     Select.call(this, guiAction);
 
-    this.setUiOptions("SelectLayer.ui");
+    this.setUiOptions("SelectLayerByEntity.ui");
 }
 
-SelectLayer.prototype = new Select();
+SelectLayerByEntity.prototype = new Select();
 
-SelectLayer.State = {
+SelectLayerByEntity.State = {
     ChoosingEntity : 0
 };
 
-SelectLayer.prototype.selectEntities = function(entityId) {
+SelectLayerByEntity.prototype.selectEntities = function(entityId) {
     var entity = this.doc.queryEntity(entityId);
     if (isNull(entity)) {
         return;
@@ -44,16 +44,16 @@ SelectLayer.prototype.selectEntities = function(entityId) {
 };
 
 
-SelectLayer.prototype.beginEvent = function() {
+SelectLayerByEntity.prototype.beginEvent = function() {
     Select.prototype.beginEvent.call(this);
 
     this.doc = this.getDocument();
     this.di = this.getDocumentInterface();
 
-    this.setState(SelectLayer.State.ChoosingEntity);
+    this.setState(SelectLayerByEntity.State.ChoosingEntity);
 };
 
-SelectLayer.prototype.setState = function(state) {
+SelectLayerByEntity.prototype.setState = function(state) {
     Select.prototype.setState.call(this, state);
     this.setCrosshairCursor();
 
@@ -65,13 +65,13 @@ SelectLayer.prototype.setState = function(state) {
     //EAction.showSnapTools();
 };
 
-SelectLayer.prototype.entityPickEvent = function(event) {
+SelectLayerByEntity.prototype.entityPickEvent = function(event) {
     this.matchingEntities = [];
     this.selectEntities(event.getEntityId());
     this.selectWithMode(this.matchingEntities);
 };
 
-SelectLayer.prototype.entityPickEventPreview = function(event) {
+SelectLayerByEntity.prototype.entityPickEventPreview = function(event) {
     this.di.highlightEntity(event.getEntityId());
 };
 

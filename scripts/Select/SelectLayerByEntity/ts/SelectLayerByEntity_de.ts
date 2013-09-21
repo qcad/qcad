@@ -2,10 +2,11 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="de_DE">
 <context>
-    <name>SelectLayer</name>
+    <name>SelectLayerByEntity</name>
     <message>
+        <location filename="../SelectLayerByEntity.js" line="+63"/>
         <source>Choose entity on layer</source>
-        <translation type="obsolete">Objekt auf gewünschtem Layer auswählen</translation>
+        <translation type="unfinished">Objekt auf gewünschtem Layer auswählen</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>
@@ -49,14 +50,6 @@
         <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Schnittmenge mit aktueller Selektion</translation>
-    </message>
-</context>
-<context>
-    <name>SelectLayerByEntity</name>
-    <message>
-        <location filename="../SelectLayerByEntity.js" line="+63"/>
-        <source>Choose entity on layer</source>
-        <translation type="unfinished">Objekt auf gewünschtem Layer auswählen</translation>
     </message>
 </context>
 </TS>

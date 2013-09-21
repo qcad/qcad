@@ -9,67 +9,56 @@
         <translation type="obsolete">Scegli entità sul layer</translation>
     </message>
     <message>
-        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(De)seleziona la&amp;yer</translation>
+        <translation type="obsolete">(De)seleziona la&amp;yer</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)seleziona tutte le entità sullo stesso layer</translation>
+        <translation type="obsolete">(De-)seleziona tutte le entità sullo stesso layer</translation>
     </message>
     <message>
-        <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Modo colore:
 Modalità:</translatorcomment>
-        <translation>Modalità:</translation>
+        <translation type="obsolete">Modalità:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sostituire la selezione corrente</translatorcomment>
-        <translation>Sostituire la selezione corrente</translation>
+        <translation type="obsolete">Sostituire la selezione corrente</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 SelectionMode</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation type="obsolete">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
         <source>Add to the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Aggiungere alla selezione corrente</translatorcomment>
-        <translation>Aggiungere alla selezione corrente</translation>
+        <translation type="obsolete">Aggiungere alla selezione corrente</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sottrai dalla selezione corrente</translatorcomment>
-        <translation>Sottrai dalla selezione corrente</translation>
+        <translation type="obsolete">Sottrai dalla selezione corrente</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Interseca con la selezione corrente</translatorcomment>
-        <translation>Interseca con la selezione corrente</translation>
+        <translation type="obsolete">Interseca con la selezione corrente</translation>
     </message>
 </context>
 <context>
@@ -78,6 +67,49 @@ Interseca con la selezione corrente</translatorcomment>
         <location filename="../SelectLayerByEntity.js" line="+63"/>
         <source>Choose entity on layer</source>
         <translation type="unfinished">Scegli entità sul layer</translation>
+    </message>
+    <message>
+        <location filename="../SelectLayerByEntity.ui" line="+17"/>
+        <source>Mode:</source>
+        <translation type="unfinished">Modalità:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Replace the current selection</source>
+        <translation type="unfinished">Sostituire la selezione corrente</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <source>SelectionMode</source>
+        <translation type="unfinished">SelectionMode</translation>
+    </message>
+    <message>
+        <location line="-53"/>
+        <source>Add to the current selection</source>
+        <translation type="unfinished">Aggiungere alla selezione corrente</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Subtract from the current selection</source>
+        <translation type="unfinished">Sottrai dalla selezione corrente</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Intersect with the current selection</source>
+        <translation type="unfinished">Interseca con la selezione corrente</translation>
+    </message>
+    <message>
+        <location filename="../SelectLayerByEntityInit.js" line="+2"/>
+        <source>(De-)Select La&amp;yer</source>
+        <translation type="unfinished">(De)seleziona la&amp;yer</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>(De-)Select all entities on the same layer</source>
+        <translation type="unfinished">(De-)seleziona tutte le entità sullo stesso layer</translation>
     </message>
 </context>
 </TS>

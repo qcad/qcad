@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SelectLayer</class>
- <widget class="QWidget" name="SelectLayer">
+ <class>SelectLayerByEntity</class>
+ <widget class="QWidget" name="SelectLayerByEntity">
   <property name="geometry">
    <rect>
     <x>0</x>
