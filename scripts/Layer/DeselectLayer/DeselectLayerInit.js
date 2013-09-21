@@ -5,8 +5,8 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DeselectLayer.js");
     action.setIcon(basePath + "/DeselectLayer.svg");
-    action.setDefaultShortcut(new QKeySequence("y,d"));
-    action.setDefaultCommands(["layerdeselect", "deselectlayer", "yd"]);
+    action.setDefaultShortcut(new QKeySequence("y,-"));
+    action.setDefaultCommands(["layerdeselect", "deselectlayer", "y-"]);
     action.setSortOrder(1100);
     EAction.addGuiActionTo(action, Layer, true, true);
 }

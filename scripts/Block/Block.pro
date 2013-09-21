@@ -5,6 +5,7 @@ SUBDIRS = \
     AddBlock \
     CreateBlock \
     CreateLibraryItem \
+    DeselectBlockReferences \
     EditBlock \
     EditFromReference \
     EditMainDrawing \

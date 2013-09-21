@@ -5,8 +5,8 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SelectBlockReferences.js");
     action.setIcon(basePath + "/SelectBlockReferences.svg");
-    action.setDefaultShortcut(new QKeySequence("b,l"));
-    action.setDefaultCommands(["blockselect", "selectblock", "bl"]);
+    action.setDefaultShortcut(new QKeySequence("b,+"));
+    action.setDefaultCommands(["blockselect", "selectblock", "b+"]);
     action.setSortOrder(2800);
     EAction.addGuiActionTo(action, Block, true, true, false, true);
 }
