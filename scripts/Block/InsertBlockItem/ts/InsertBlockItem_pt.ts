@@ -21,7 +21,7 @@ _Rotação</translatorcomment>
         <translation>Rotação:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Girar entidades colado&lt;br&gt;por este ângulo</translation>
@@ -36,7 +36,7 @@ Escala da Superfície</translatorcomment>
         <translation>Ampliar:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escala entidades colado&lt;br&gt;por este factor</translation>
@@ -91,12 +91,12 @@ Utilize a camada atual</translatorcomment>
         <translation>Sobrescrever blocos</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+87"/>
+        <location filename="../InsertBlockItem.js" line="+90"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajustado nome do bloco inválido &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+38"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>

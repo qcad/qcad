@@ -52,17 +52,17 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+76"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Add Custom Property</source>
         <translation>Benutzerdefiniertes Property hinzufügen</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+52"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
@@ -178,7 +178,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-838"/>
+        <location filename="../PropertyEditor.js" line="-854"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

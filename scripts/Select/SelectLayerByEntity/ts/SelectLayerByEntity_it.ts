@@ -66,17 +66,17 @@ Interseca con la selezione corrente</translatorcomment>
     <message>
         <location filename="../SelectLayerByEntity.js" line="+63"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished">Scegli entità sul layer</translation>
+        <translation>Scegli entità sul layer</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">Modalità:</translation>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">Sostituire la selezione corrente</translation>
+        <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -84,32 +84,32 @@ Interseca con la selezione corrente</translatorcomment>
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="unfinished">SelectionMode</translation>
+        <translation>SelectionMode</translation>
     </message>
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">Aggiungere alla selezione corrente</translation>
+        <translation>Aggiungere alla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">Sottrai dalla selezione corrente</translation>
+        <translation>Sottrai dalla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">Interseca con la selezione corrente</translation>
+        <translation>Interseca con la selezione corrente</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished">(De)seleziona la&amp;yer</translation>
+        <translation>(De)seleziona la&amp;yer</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished">(De-)seleziona tutte le entità sullo stesso layer</translation>
+        <translation>(De-)seleziona tutte le entità sullo stesso layer</translation>
     </message>
 </context>
 </TS>

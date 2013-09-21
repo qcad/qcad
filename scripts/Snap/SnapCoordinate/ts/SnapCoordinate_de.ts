@@ -19,7 +19,7 @@
         <translation>Relative Koordinate</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinate.js" line="+80"/>
+        <location filename="../SnapCoordinate.js" line="+82"/>
         <source>Set coordinate</source>
         <translation>Koordinate setzen</translation>
     </message>

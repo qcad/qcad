@@ -56,17 +56,17 @@ Modo de búsqueda:</translatorcomment>
     <message>
         <location filename="../SelectLayerByEntity.js" line="+63"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished">Elija la entidad en la capa</translation>
+        <translation>Elija la entidad en la capa</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">Modo:</translation>
+        <translation>Modo:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">Reemplazar la selección actual</translation>
+        <translation>Reemplazar la selección actual</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -74,32 +74,32 @@ Modo de búsqueda:</translatorcomment>
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="unfinished">SelectionMode</translation>
+        <translation>SelectionMode</translation>
     </message>
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">Añadir a la selección actual</translation>
+        <translation>Añadir a la selección actual</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">Restar de la selección actual</translation>
+        <translation>Restar de la selección actual</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">Se cruzan con la selección actual</translation>
+        <translation>Se cruzan con la selección actual</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished">(De-)seleccionar ca&amp;pa</translation>
+        <translation>(De-)seleccionar ca&amp;pa</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished">(De-)seleccionar todas las entidades en la misma capa</translation>
+        <translation>(De-)seleccionar todas las entidades en la misma capa</translation>
     </message>
 </context>
 </TS>

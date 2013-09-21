@@ -454,7 +454,7 @@ Colore G&amp;riglia:</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+163"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Richiede selezione</translation>

@@ -13,7 +13,7 @@
         <translation>Rotation :</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Pivoter les entités&lt;br&gt;collées par cet angle</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation>Echelle :</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Échelle des entités&lt;br&gt;collées par ce facteur</translation>
     </message>
@@ -66,12 +66,12 @@
         <translation>Ecraser les blocs</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+87"/>
+        <location filename="../InsertBlockItem.js" line="+90"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajusté nom de bloc invalide &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+38"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

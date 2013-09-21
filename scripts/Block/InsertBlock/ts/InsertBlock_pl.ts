@@ -4,7 +4,7 @@
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="+143"/>
+        <location filename="../InsertBlock.js" line="+95"/>
         <source>Position</source>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej lub wprowadź kąt:

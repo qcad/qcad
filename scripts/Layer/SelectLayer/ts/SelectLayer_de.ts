@@ -4,9 +4,9 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayerInit.js" line="3"/>
+        <location filename="../SelectLayerInit.js" line="+3"/>
         <source>&amp;Select Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer &amp;selektieren</translation>
     </message>
 </context>
 </TS>

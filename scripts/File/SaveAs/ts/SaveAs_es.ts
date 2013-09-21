@@ -24,7 +24,7 @@
         <translation>No se han encontrado filtros de exportación. Anulando...</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

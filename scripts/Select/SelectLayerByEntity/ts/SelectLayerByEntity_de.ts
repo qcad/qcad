@@ -6,7 +6,7 @@
     <message>
         <location filename="../SelectLayerByEntity.js" line="+63"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished">Objekt auf gewünschtem Layer auswählen</translation>
+        <translation>Objekt auf gewünschtem Layer auswählen</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>

@@ -4,7 +4,7 @@
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../Scale.js" line="+70"/>
+        <location filename="../Scale.js" line="+71"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Punkt ostrości</translation>

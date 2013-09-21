@@ -84,7 +84,7 @@ Trocar para a próxima camada</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+76"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -94,13 +94,13 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+52"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

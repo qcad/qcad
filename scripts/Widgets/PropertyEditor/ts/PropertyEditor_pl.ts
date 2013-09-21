@@ -85,7 +85,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
         <translation type="unfinished">Indeks</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+76"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -96,13 +96,13 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+52"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

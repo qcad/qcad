@@ -28,7 +28,7 @@
         <translation>Geometria</translation>
     </message>
     <message>
-        <location line="+301"/>
+        <location line="+317"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>
@@ -59,7 +59,7 @@
         <translation>Medio</translation>
     </message>
     <message>
-        <location line="-468"/>
+        <location line="-484"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -97,18 +97,18 @@ Nessuna selezione</translatorcomment>
         <translation>Indice</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+76"/>
         <source>All</source>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aggiungi proprietà personalizzata</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+53"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--

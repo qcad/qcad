@@ -13,7 +13,7 @@
         <translation>Rotación:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Girar las entidades&lt;br&gt;pegadas por este ángulo</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation>Escala:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Escala de entidades&lt;br&gt;pegadas por este factor</translation>
     </message>
@@ -66,12 +66,12 @@
         <translation>Sobreescribir los bloques</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+87"/>
+        <location filename="../InsertBlockItem.js" line="+90"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajustado nombre de bloque no válido &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+38"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>

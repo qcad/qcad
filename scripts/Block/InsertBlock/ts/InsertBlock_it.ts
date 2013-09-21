@@ -15,7 +15,7 @@
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="+143"/>
+        <location filename="../InsertBlock.js" line="+95"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>

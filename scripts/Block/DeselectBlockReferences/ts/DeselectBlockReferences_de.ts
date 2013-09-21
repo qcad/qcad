@@ -4,9 +4,9 @@
 <context>
     <name>DeselectBlockReferences</name>
     <message>
-        <location filename="../DeselectBlockReferencesInit.js" line="3"/>
+        <location filename="../DeselectBlockReferencesInit.js" line="+3"/>
         <source>&amp;Deselect Block References</source>
-        <translation type="unfinished"></translation>
+        <translation>Block Referenzen &amp;deselektieren</translation>
     </message>
 </context>
 </TS>

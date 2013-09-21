@@ -67,7 +67,7 @@ Hauteur
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+71"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+62"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+78"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+80"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+87"/>
@@ -75,20 +75,20 @@ Hauteur
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+81"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+81"/>
         <location line="+4"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+79"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+77"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+79"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+83"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+85"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+74"/>
         <location line="+3"/>
@@ -802,6 +802,11 @@ Tolérance inférieure</translatorcomment>
         <location line="+1"/>
         <source>Linear Factor</source>
         <translation>Facteur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto Label Position</source>
+        <translation>Auto Label Position</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>

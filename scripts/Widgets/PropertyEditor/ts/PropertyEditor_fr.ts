@@ -38,7 +38,7 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+151"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
@@ -69,7 +69,7 @@
         <translation>Milieu</translation>
     </message>
     <message>
-        <location line="-468"/>
+        <location line="-484"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -95,7 +95,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+228"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -104,13 +104,13 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
         <translation>Tous</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ajouter une propriété personnalisée</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+53"/>
         <source>Fit</source>
         <translatorcomment>--google--
 Ajuster à la page

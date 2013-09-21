@@ -4,7 +4,7 @@
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../Scale.js" line="+81"/>
+        <location filename="../Scale.js" line="+82"/>
         <source>Reference point</source>
         <translation>Referenzpunkt</translation>
     </message>

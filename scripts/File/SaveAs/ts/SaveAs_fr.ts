@@ -24,7 +24,7 @@
         <translation>Pas de filtres d&apos;exportation ont été trouvés. Abandon...</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Format:</source>
         <translation>Format :</translation>
     </message>

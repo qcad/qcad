@@ -6,27 +6,27 @@
     <message>
         <location filename="../LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">第１点</translation>
+        <translation>第１点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">第２点</translation>
+        <translation>第２点</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">完了</translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location filename="../LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation type="unfinished">&amp;J ボックスジョイント</translation>
+        <translation>&amp;J ボックスジョイント</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished">凹凸及びテノンを描画</translation>
+        <translation>凹凸及びテノンを描画</translation>
     </message>
     <message>
         <location filename="../LineBoxJoint.ui" line="+17"/>

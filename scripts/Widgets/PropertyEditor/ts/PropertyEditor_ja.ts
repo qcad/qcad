@@ -57,17 +57,17 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+76"/>
         <source>All</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Add Custom Property</source>
         <translation>カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+52"/>
         <source>Left</source>
         <translation></translation>
     </message>
