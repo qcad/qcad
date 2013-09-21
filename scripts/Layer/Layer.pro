@@ -2,6 +2,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     ts \
     AddLayer \
+    DeselectLayer \
     EditLayer \
     HideAllLayers \
     RemoveLayer \

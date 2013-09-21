@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("y,a"));
     action.setDefaultCommands(["layeradd", "ya"]);
     action.setSortOrder(500);
-    EAction.addGuiActionTo(action, Layer, true, true);
+    EAction.addGuiActionTo(action, Layer, true, true, false, true);
 }

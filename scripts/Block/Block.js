@@ -60,17 +60,17 @@ Block.prototype.getTitle = function() {
 Block.getActiveBlockId = function() {
     var blockList = EAction.getMainWindow().findChild("BlockList");
     if (isNull(blockList)) {
-        return RBlock.INVALID_ID;
+        return RObject.INVALID_ID;
     }
 
     var item = blockList.currentItem();
     if (isNull(item)) {
-        return RBlock.INVALID_ID;
+        return RObject.INVALID_ID;
     }
 
     var document = EAction.getDocument();
     if (isNull(document)) {
-        return RBlock.INVALID_ID;
+        return RObject.INVALID_ID;
     }
 
     var blockId = document.getBlockId(item.text());

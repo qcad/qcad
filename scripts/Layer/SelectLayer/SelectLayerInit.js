@@ -7,6 +7,6 @@ function init(basePath) {
     action.setIcon(basePath + "/SelectLayer.svg");
     action.setDefaultShortcut(new QKeySequence("y,t"));
     action.setDefaultCommands(["layerselect", "selectlayer", "yt"]);
-    action.setSortOrder(800);
-    EAction.addGuiActionTo(action, Layer, true, true);
+    action.setSortOrder(1000);
+    EAction.addGuiActionTo(action, Layer, true, true, false, true);
 }

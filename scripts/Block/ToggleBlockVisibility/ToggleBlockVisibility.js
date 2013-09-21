@@ -30,7 +30,7 @@ ToggleBlockVisibility.prototype.beginEvent = function() {
     Block.prototype.beginEvent.call(this);
 
     var blockId = Block.getActiveBlockId();
-    if (blockId==RBlock.INVALID_ID) {
+    if (blockId===RObject.INVALID_ID) {
         this.terminate();
         return;
     }

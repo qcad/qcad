@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("y,r"));
     action.setDefaultCommands(["layerremove", "yr"]);
     action.setSortOrder(600);
-    EAction.addGuiActionTo(action, Layer, true, true);
+    EAction.addGuiActionTo(action, Layer, true, true, false, true);
 }

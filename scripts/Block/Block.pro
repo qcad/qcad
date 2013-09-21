@@ -14,5 +14,6 @@ SUBDIRS = \
     InsertScriptItem \
     RemoveBlock \
     RenameBlock \
+    SelectBlockReferences \
     ShowAllBlocks \
     ToggleBlockVisibility

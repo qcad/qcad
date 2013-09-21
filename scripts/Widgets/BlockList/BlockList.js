@@ -56,6 +56,7 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
     RGuiAction.getByScriptFile("scripts/Block/RenameBlock/RenameBlock.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/EditBlock/EditBlock.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/InsertBlock/InsertBlock.js").addToMenu(menu);
+    RGuiAction.getByScriptFile("scripts/Block/SelectBlockReferences/SelectBlockReferences.js").addToMenu(menu);
 
     menu.exec(QCursor.pos());
 

@@ -18,40 +18,40 @@
  */
 
 include("../Block.js");
-include("../BlockDialog.js");
+ 
 
-/**
- * Renames the active (selected) block.
- */
-function RenameBlock(guiAction) {
+function SelectBlockReferences(guiAction) {
     Block.call(this, guiAction);
 }
 
-RenameBlock.prototype = new Block();
+SelectBlockReferences.prototype = new Block();
 
-RenameBlock.prototype.beginEvent = function() {
+SelectBlockReferences.prototype.beginEvent = function() {
     Block.prototype.beginEvent.call(this);
 
-    var blockId = Block.getActiveBlockId();
+    var doc = this.getDocument();
+    var di = this.getDocumentInterface();
+
+    var blockList = EAction.getMainWindow().findChild("BlockList");
+    if (isNull(blockList)) {
+        this.terminate();
+        return;
+    }
+
+    var item = blockList.currentItem();
+    if (isNull(item)) {
+        this.terminate();
+        return;
+    }
+
+    var blockId = doc.getBlockId(item.text());
     if (blockId===RObject.INVALID_ID) {
         this.terminate();
         return;
     }
 
-    var block = this.getDocument().queryBlock(blockId);
-
-    var dlg = new BlockDialog(this.getDocument(), block);
-    var newBlock = dlg.show();
-    if (!newBlock) {
-        this.terminate();
-        return;
-    }
-
-    var operation = new RAddObjectOperation(newBlock);
-    var di = this.getDocumentInterface();
-    di.applyOperation(operation);
-    di.clearPreview();
-    di.repaintViews();
+    var ids = doc.queryBlockReferences(blockId);
+    di.selectEntities(ids, true);
 
     this.terminate();
 };

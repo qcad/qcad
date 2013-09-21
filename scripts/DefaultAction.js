@@ -291,7 +291,7 @@ DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
         var view = event.getGraphicsView();
         var range = view.mapDistanceFromView(this.rangePixels);
         var entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
-        if (entityId==REntity.INVALID_ID) {
+        if (entityId===RObject.INVALID_ID) {
             return;
         }
 
