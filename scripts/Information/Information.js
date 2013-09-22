@@ -32,6 +32,9 @@ include("../EAction.js");
  */
 function Information(guiAction) {
     EAction.call(this, guiAction);
+
+    this.addToDrawing = false;
+    this.textHeight = 1.0;
 }
 
 Information.prototype = new EAction();
@@ -73,7 +76,7 @@ Information.prototype.formatAngularResult = function(angle) {
 Information.prototype.formatLinearResultCmd = function(distance) {
     var ret = this.formatLinearResult(distance);
     var exact = sprintf("%0.6f", distance)
-    if (ret!=exact) {
+    if (ret!==exact) {
         ret += " [" + exact + "]";
     }
     return ret;
@@ -88,13 +91,13 @@ Information.prototype.formatLinearResultCmd = function(distance) {
 Information.prototype.formatAngularResultCmd = function(angle) {
     var ret = this.formatAngularResult(angle);
     var exact = sprintf("%0.6f\u00B0", RMath.rad2deg(angle))
-    if (ret!=exact) {
+    if (ret!==exact) {
         ret += " [" + exact + "]";
     }
     return ret;
 };
 
-Information.prototype.addInfoLine = function(point1, point2) {
+Information.prototype.addInfoLine = function(op, point1, point2, preview) {
     if (isNull(point1) || isNull(point2)) {
         return;
     }
@@ -106,23 +109,43 @@ Information.prototype.addInfoLine = function(point1, point2) {
     // line
     var line = new RLine(point1, point2);
     var angle = line.getAngle();
-    this.addShape(line);
-    // tickers
-    this.addMajorTicker(view, point1, angle);
-    this.addMajorTicker(view, point2, angle);
-    this.addGridTickers(view, point1, point2);
+    this.addShape(op, line, preview);
+    // ticks:
+    this.addMajorTick(op, view, point1, angle, preview);
+    this.addMajorTick(op, view, point2, angle, preview);
+    this.addGridTicks(op, view, point1, point2, preview);
     
     // label
-    var dx = view.mapDistanceFromView(10);
-    var dy = view.mapDistanceFromView(30);
     var lengthText = this.formatLinearResult(line.getLength());
     //var lengthText = sprintf("%0.3f", line.getLength());
     view.clearTextLabels();
-    view.addTextLabel(new RTextLabel(new RVector(point2.x + dx,
-            point2.y + dy), lengthText));
+    this.addTextLabel(op, view, point2,
+        lengthText, preview);
 };
 
-Information.prototype.addGridTickers = function(view, point1, point2) {
+Information.prototype.addTextLabel = function(op, view, pos, text, preview) {
+    var dx, dy;
+
+    if (preview) {
+        dx = view.mapDistanceFromView(10);
+        dy = view.mapDistanceFromView(30);
+        view.addTextLabel(new RTextLabel(new RVector(pos.x + dx, pos.y + dy), text));
+    }
+    else {
+        dx = this.textHeight*0.5;
+        dy = this.textHeight*1.2;
+        var td = new RTextData();
+        td.setAlignmentPoint(new RVector(pos.x + dx, pos.y + dy));
+        td.setVAlign(RS.VAlignTop);
+        td.setHAlign(RS.HAlignLeft);
+        td.setText(text);
+        td.setTextHeight(this.textHeight);
+        td.setFontName("standard");
+        op.addObject(new RTextEntity(this.getDocument(), td));
+    }
+};
+
+Information.prototype.addGridTicks = function(op, view, point1, point2, preview) {
     var doc = this.getDocument();
     var minV = new RVector(0.001, 0.001);
     if (!isNull(doc)) {
@@ -138,7 +161,7 @@ Information.prototype.addGridTickers = function(view, point1, point2) {
     var gridSpacing = spacings[0];
     var metaGridSpacing = spacings[1];
     
-    // minor tickers
+    // minor ticks
     var dv = point2.operator_subtract(point1);
     var a = point1.getAngleTo(point2);
     var b = new RVector(gridSpacing.x, 0); // assuming equal spacing for x / y
@@ -147,45 +170,67 @@ Information.prototype.addGridTickers = function(view, point1, point2) {
     var num = Math.ceil(dv.getMagnitude() / gridSpacing.x);
     for (var i = 1; i < num; ++i) {
         c = b.operator_multiply(i);
-        this.addMinorTicker(view, point1.operator_add(c), a);
+        this.addMinorTick(op, view, point1.operator_add(c), a, preview);
     }
 
-    // major tickers
+    // major ticks
     b = new RVector(metaGridSpacing.x, 0); // assuming equal spacing for x / y
     b = b.rotate(a);
     c = b;
     num = Math.ceil(dv.getMagnitude() / metaGridSpacing.x);
     for (i = 1; i < num; ++i) {
         c = b.operator_multiply(i);
-        this.addMajorTicker(view, point1.operator_add(c), a);
+        this.addMajorTick(op, view, point1.operator_add(c), a, preview);
     }
 };
 
-Information.prototype.addMinorTicker = function(view, p, angle) {
-    this.addTicker(view, p, 2, angle);
+Information.prototype.addMinorTick = function(op, view, p, angle, preview) {
+    this.addTick(op, view, p, 2, angle, preview);
 };
 
-Information.prototype.addMajorTicker = function(view, p, angle) {
-    this.addTicker(view, p, 5, angle);
+Information.prototype.addMajorTick = function(op, view, p, angle, preview) {
+    this.addTick(op, view, p, 5, angle, preview);
 };
 
-Information.prototype.addTicker = function(view, p, length, angle) {
+Information.prototype.addTick = function(op, view, p, length, angle, preview) {
     var s = view.mapDistanceFromView(length);
     var v = new RVector(0, s);
     v1 = v.rotate(angle + RMath.deg2rad(180));
     var st1 = p.operator_add(v1);
     var st2 = p.operator_subtract(v1);
-    var ticker = new RLine(st2, st1);
-    this.addShape(ticker);
+    var tick = new RLine(st2, st1);
+    this.addShape(op, tick, preview);
 };
 
-Information.prototype.addShape = function(shape) {
+Information.prototype.addShape = function(op, shape, preview) {
     var di = this.getDocumentInterface();
-    var clr = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
-    var brush = new QBrush();
-    var lw = RLineweight.Weight000;
-    var dashes = [];
-    di.addShapeToPreview(shape, clr, brush, lw, Qt.SolidLine.valueOf(), dashes);
+
+    if (preview) {
+        var clr = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
+        var brush = new QBrush();
+        var lw = RLineweight.Weight000;
+        var dashes = [];
+        di.addShapeToPreview(shape, clr, brush, lw, Qt.SolidLine.valueOf(), dashes);
+    }
+    else {
+        if (!isNull(op)) {
+            var e = shapeToEntity(this.getDocument(), shape);
+            op.addObject(e);
+        }
+    }
+};
+
+Information.prototype.slotAddToDrawingChanged = function(value) {
+    this.addToDrawing = value;
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var textHeightEdit = optionsToolBar.findChild("TextHeight");
+    textHeightEdit.enabled = value;
+    var textHeightLabel = optionsToolBar.findChild("TextHeightLabel");
+    textHeightLabel.enabled = value;
+};
+
+Information.prototype.slotTextHeightChanged = function(value) {
+    this.textHeight = value;
 };
 
 /**

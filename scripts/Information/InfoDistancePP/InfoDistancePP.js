@@ -24,6 +24,8 @@ function InfoDistancePP(guiAction) {
 
     this.point1 = undefined;
     this.point2 = undefined;
+
+    this.setUiOptions("../Information.ui");
 }
 
 InfoDistancePP.prototype = new Information();
@@ -79,6 +81,7 @@ InfoDistancePP.prototype.escapeEvent = function() {
 InfoDistancePP.prototype.pickCoordinate = function(event, preview) {
     var appWin = EAction.getMainWindow();
     var di = this.getDocumentInterface();
+    var op;
 
     switch (this.state) {
     case InfoDistancePP.State.SettingFirstPoint:
@@ -92,6 +95,18 @@ InfoDistancePP.prototype.pickCoordinate = function(event, preview) {
 
     case InfoDistancePP.State.SettingSecondPoint:
         this.point2 = event.getModelPosition();
+
+        if (this.addToDrawing) {
+            op = this.getOperation(preview);
+            if (preview) {
+                di.previewOperation(op);
+            }
+            else {
+                di.applyOperation(op);
+                di.setRelativeZero(this.point2);
+            }
+        }
+
         if (!preview) {
             var line = new RLine(this.point1, this.point2);
             var distance = line.getLength();
@@ -105,11 +120,23 @@ InfoDistancePP.prototype.pickCoordinate = function(event, preview) {
             this.setState(InfoDistancePP.State.SettingFirstPoint);
             appWin.handleUserInfo(resultMessage);
         }
+
         break;
     }
 
-    if (!isNull(this.point1) && !isNull(this.point2)) {
-        this.addInfoLine(this.point1, this.point2);
+    // keep showing preview after 2nd point has been set:
+    if (!this.addToDrawing) {
+        if (!isNull(this.point1) && !isNull(this.point2)) {
+            op = this.getOperation(preview);
+            if (preview) {
+                di.previewOperation(op);
+            }
+        }
     }
 };
 
+InfoDistancePP.prototype.getOperation = function(preview) {
+    var op = new RAddObjectsOperation();
+    this.addInfoLine(op, this.point1, this.point2, preview);
+    return op;
+};

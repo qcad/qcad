@@ -32,6 +32,8 @@ function InfoAngle(guiAction) {
 
     this.arc = undefined;
     this.position = undefined;
+
+    this.setUiOptions("../Information.ui");
 }
 
 InfoAngle.prototype = new Information();
@@ -81,23 +83,15 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
     var pos = event.getModelPosition();
     var entityId = event.getEntityId();
     var entity = doc.queryEntity(entityId);
+    var op;
 
-//    if (isNull(entity)) {
-//        switch (this.state) {
-//        case InfoAngle.State.SettingFirstShape:
-//            this.entity1 = undefined;
-//            break;
-//        case InfoAngle.State.SettingSecondShape:
-//            di.highlightEntity(this.entity1.getId());
-//            this.entity2 = undefined;
-//            break;
-//        }
-//        return;
-//    }
-
-    //if (preview) {
-        this.updatePreview();
-    //}
+    // keep showing preview after 2nd entity has been set:
+    if (!this.addToDrawing) {
+        op = this.getOperation(preview);
+        if (!isNull(op) && preview) {
+            di.previewOperation(op);
+        }
+    }
 
     if (isNull(entity)) {
         return;
@@ -143,21 +137,27 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
             di.highlightEntity(this.entity2.getId());
         }
 
-        if (!preview) {
+        op = this.getOperation(preview);
+        if (preview) {
+            di.previewOperation(op);
+        }
+        else {
+            if (this.addToDrawing) {
+                di.applyOperation(op);
+                di.setRelativeZero(this.point2);
+            }
+
             this.setState(InfoAngle.State.SettingFirstShape);
             if (!isNull(this.arc)) {
-                //var angleText = RMath.angleToString(this.arc.getAngleLength());
                 var angleText = this.formatAngularResultCmd(this.arc.getAngleLength());
                 EAction.getMainWindow().handleUserInfo(qsTr("Angle:") + " " + angleText);
             }
         }
         break;
     }
-    
-    //this.updatePreview();
 };
 
-InfoAngle.prototype.addMeasuringArc = function(center) {
+InfoAngle.prototype.addMeasuringArc = function(op, center, preview) {
     var di = this.getDocumentInterface();
     var a1 = center.getAngleTo(this.point1);
     var a2 = center.getAngleTo(this.point2);
@@ -166,24 +166,23 @@ InfoAngle.prototype.addMeasuringArc = function(center) {
     var reversed = RMath.isAngleBetween(posAngle, a1, a2, true);
 
     this.arc = new RArc(center, r, a1, a2, reversed);
-    this.addShape(this.arc);
+    this.addShape(op, this.arc, preview);
 
     // add label:
     var view = di.getLastKnownViewWithFocus();
     view = view.getRGraphicsView();
-    var dx = view.mapDistanceFromView(10);
-    var dy = view.mapDistanceFromView(30);
-    //var label = sprintf("%0.3f°", RMath.angleToString(this.arc.getAngleLength()));
     var label = this.formatAngularResult(this.arc.getAngleLength());
     view.clearTextLabels();
-    view.addTextLabel(new RTextLabel(new RVector(this.point2.x + dx, this.point2.y + dy), label));
+    this.addTextLabel(op, view, this.point2, label, preview);
 };
 
-InfoAngle.prototype.updatePreview = function() {
+InfoAngle.prototype.getOperation = function(preview) {
     if (isNull(this.shape1) || isNull(this.shape2) ||
         isNull(this.point1) || isNull(this.point2)) {
-        return;
+        return undefined;
     }
+
+    var op = new RAddObjectsOperation();
 
     var sol = this.shape1.getIntersectionPoints(this.shape2.data(), false);
     if (!isNull(sol) && sol.length > 0) {
@@ -192,11 +191,12 @@ InfoAngle.prototype.updatePreview = function() {
             var angle1 = intersection.getAngleTo(this.point1);
             var angle2 = intersection.getAngleTo(this.point2);
             var angle = RMath.getAngleDifference(angle1, angle2);
-            this.addMeasuringArc(intersection);
+            this.addMeasuringArc(op, intersection, preview);
         }
         this.noAngle = false;
     } else {
         this.noAngle = true;
     }
-};
 
+    return op;
+};

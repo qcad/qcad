@@ -26,6 +26,8 @@ function InfoDistanceEP(guiAction) {
     this.shape = undefined;
     this.point1 = undefined;
     this.point2 = undefined;
+
+    this.setUiOptions("../Information.ui");
 }
 
 InfoDistanceEP.prototype = new Information();
@@ -74,13 +76,17 @@ InfoDistanceEP.prototype.pickEntity = function(event, preview) {
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
 
-    // keep previous preview alive:
-    if (preview && isValidVector(this.point1) && isValidVector(this.point2)) {
-        this.addInfoLine(this.point1, this.point2);
+    // keep showing preview after 2nd point has been set:
+    if (!this.addToDrawing) {
+        if (!isNull(this.point1) && !isNull(this.point2)) {
+            var op = this.getOperation(preview);
+            if (preview) {
+                di.previewOperation(op);
+            }
+        }
     }
 
     if (isNull(entity)) {
-        //this.entity = undefined;
         return;
     }
 
@@ -106,7 +112,7 @@ InfoDistanceEP.prototype.pickCoordinate = function(event, preview) {
         return;
     }
 
-    this.point1 = this.shape.getClosestPointOnShape(this.point2);
+    this.point1 = this.shape.getClosestPointOnShape(this.point2, false);
 
     if (!isValidVector(this.point1)) {
         return;
@@ -114,13 +120,26 @@ InfoDistanceEP.prototype.pickCoordinate = function(event, preview) {
 
     di.highlightEntity(this.entity.getId());
 
+    var op = this.getOperation(preview);
     if (preview) {
-        this.addInfoLine(this.point1, this.point2);
-        return;
+        di.previewOperation(op);
+    }
+    else {
+        if (this.addToDrawing) {
+            di.applyOperation(op);
+            di.setRelativeZero(this.point2);
+        }
     }
 
-    this.setState(InfoDistanceEP.State.SettingShape);
-    var distance = this.point1.getDistanceTo(this.point2);
-    EAction.getMainWindow().handleUserInfo(qsTr("Distance:") + " " + this.formatLinearResultCmd(distance));
+    if (!preview) {
+        this.setState(InfoDistanceEP.State.SettingShape);
+        var distance = this.point1.getDistanceTo(this.point2);
+        EAction.getMainWindow().handleUserInfo(qsTr("Distance:") + " " + this.formatLinearResultCmd(distance));
+    }
 };
 
+InfoDistanceEP.prototype.getOperation = function(preview) {
+    var op = new RAddObjectsOperation();
+    this.addInfoLine(op, this.point1, this.point2, preview);
+    return op;
+};

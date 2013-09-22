@@ -21,8 +21,9 @@ include("../Information.js");
 
 function InfoArea(guiAction) {
     Information.call(this, guiAction);
-    //this.setUiOptions("InfoArea.ui");
     this.polyline = undefined;
+
+    this.setUiOptions("../Information.ui");
 }
 
 InfoArea.prototype = new Information();
@@ -43,6 +44,13 @@ InfoArea.prototype.escapeEvent = function() {
         this.slotCalculate();
         break;
     case InfoArea.State.Done:
+        if (this.addToDrawing) {
+            var di = this.getDocumentInterface();
+            var op = this.getOperation(false);
+            if (!isNull(op)) {
+                di.applyOperation(op);
+            }
+        }
         EAction.prototype.escapeEvent.call(this);
         break;
     }
@@ -99,35 +107,32 @@ InfoArea.prototype.pickCoordinate = function(event, preview) {
         if (!preview) {
             di.setRelativeZero(pos);
         }
-        //this.setState(InfoArea.State.SettingPoint);
-        this.updatePreview();
         if (preview) {
+            this.updatePreview();
             this.polyline.removeLastVertex();
         }
         break;
     }
 };
 
-InfoArea.prototype.updatePreview = function() {
+InfoArea.prototype.getOperation = function(preview) {
+    if (isNull(this.polyline)) {
+        return undefined;
+    }
+
     var di = this.getDocumentInterface();
+    var op = new RAddObjectsOperation();
+    this.addShape(op, this.polyline, preview);
+
     var view = di.getLastKnownViewWithFocus();
     view = view.getRGraphicsView();
-
-    // polygon
-    this.addShape(this.polyline);
-
-    // label
     var area = this.getArea();
     var label = sprintf("%0.3f", area);
     view.clearTextLabels();
-
-    // center calculation is off sometimes:
-    //var c = this.getCenter();
-
     var c = this.polyline.getLastVertex();
-    var dx = view.mapDistanceFromView(10);
-    var dy = view.mapDistanceFromView(30);
-    view.addTextLabel(new RTextLabel(new RVector(c.x+dx, c.y+dy), label));
+    this.addTextLabel(op, view, c, label, preview);
+
+    return op;
 };
 
 InfoArea.prototype.getArea = function() {
@@ -199,8 +204,3 @@ InfoArea.prototype.slotCalculate = function() {
     di.regenerateViews();
     di.repaintViews();
 };
-
-//InfoArea.prototype.slotClose = function() {
-//    this.terminate();
-//};
-
