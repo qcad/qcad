@@ -89,6 +89,15 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
     if (document == NULL) {
         return RNANDOUBLE;
     }
+
+    static int recursionDepth=0;
+    if (recursionDepth++>16) {
+        recursionDepth--;
+        qWarning() << "RBlockReferenceData::getDistanceTo: "
+            << "maximum recursion depth reached: block: " << getBlockName();
+        return RNANDOUBLE;
+    }
+
     QSet<REntity::Id> ids =
         document->queryBlockEntities(referencedBlockId);
     QSet<REntity::Id>::iterator it;
@@ -99,10 +108,13 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
             continue;
         }
         double dist = entity->getDistanceTo(point, limited, range, draft);
-        if (dist < minDist) {
+        if (RMath::isNormal(dist) && dist < minDist) {
             minDist = dist;
         }
     }
+
+    recursionDepth--;
+
     return minDist;
 }
 
@@ -117,7 +129,12 @@ RBox RBlockReferenceData::getBoundingBox() const {
     }
 
     static int recursionDepth=0;
-    recursionDepth++;
+    if (recursionDepth++>16) {
+        recursionDepth--;
+        qWarning() << "RBlockReferenceData::getBoundingBox: "
+            << "maximum recursion depth reached: block: " << getBlockName();
+        return RBox();
+    }
 
     QSet<REntity::Id> ids =
         document->queryBlockEntities(referencedBlockId);
@@ -128,6 +145,7 @@ RBox RBlockReferenceData::getBoundingBox() const {
         if (entity.isNull()) {
             continue;
         }
+
         RBox b = entity->getBoundingBox();
         boundingBox.growToInclude(b);
     }

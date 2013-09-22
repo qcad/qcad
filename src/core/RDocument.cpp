@@ -1270,6 +1270,14 @@ void RDocument::rebuildSpatialIndex() {
 }
 
 void RDocument::removeBlockFromSpatialIndex(RBlock::Id blockId) {
+    static int recursionDepth = 0;
+    recursionDepth++;
+
+    if (recursionDepth>16) {
+        recursionDepth--;
+        return;
+    }
+
     // remove entry for block references to the block the entity belongs to:
     QSet<REntity::Id> blockRefIds = queryBlockReferences(blockId);
     QSet<REntity::Id>::iterator it;
@@ -1282,10 +1290,20 @@ void RDocument::removeBlockFromSpatialIndex(RBlock::Id blockId) {
         removeBlockFromSpatialIndex(blockRef->getBlockId());
         removeFromSpatialIndex(blockRef);
     }
+
+    recursionDepth--;
 }
 
 bool RDocument::blockContainsReferences(RBlock::Id blockId, RBlock::Id referencedBlockId) {
     if (blockId==referencedBlockId) {
+        return true;
+    }
+
+    static int recursionDepth = 0;
+    if (recursionDepth++>16) {
+        recursionDepth--;
+        qWarning() << "RDocument::blockContainsReferences: "
+            << "maximum recursion depth reached: blockId: " << blockId;
         return true;
     }
 
@@ -1299,10 +1317,12 @@ bool RDocument::blockContainsReferences(RBlock::Id blockId, RBlock::Id reference
         }
 
         if (blockContainsReferences(blockReference->getReferencedBlockId(), referencedBlockId)) {
+            recursionDepth--;
             return true;
         }
     }
 
+    recursionDepth--;
     return false;
 }
 

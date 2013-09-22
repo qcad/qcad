@@ -84,6 +84,8 @@ void RImporter::importObject(RObject* object) {
 void RImporter::endImport() {
     transaction.end();
     document->rebuildSpatialIndex();
+
+    // TODO: check block recursion
 }
 
 void RImporter::setCurrentBlockId(RBlock::Id id) {

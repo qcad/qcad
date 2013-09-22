@@ -766,6 +766,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     // avoid block recursions:
     if (checkBlockRecursion) {
+        /*
         QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity> ();
         if (!blockRef.isNull()) {
             RBlock::Id id = blockRef->getBlockId();
@@ -778,6 +779,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
                 return false;
             }
         }
+        */
     }
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
