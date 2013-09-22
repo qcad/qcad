@@ -21,6 +21,9 @@ include("../Information.js");
 
 function InfoPosition(guiAction) {
     Information.call(this, guiAction);
+    this.pos = undefined;
+    this.lastPos = undefined;
+    this.setUiOptions("../Information.ui");
 }
 
 InfoPosition.prototype = new Information();
@@ -62,17 +65,63 @@ InfoPosition.prototype.escapeEvent = function() {
     }
 };
 
+InfoPosition.prototype.getDisplayedLabel = function(p, prec) {
+    if (isNull(prec)) {
+        prec = 4;
+    }
+
+    return coordinateToString(p, prec, false, false);
+};
+
 InfoPosition.prototype.pickCoordinate = function(event, preview) {
     var appWin = EAction.getMainWindow();
     var di = this.getDocumentInterface();
 
     switch (this.state) {
     case InfoPosition.State.SettingPoint:
+        this.pos = event.getModelPosition();
         if (!preview) {
-            var p = event.getModelPosition();
-            appWin.handleUserInfo(coordinateToString(p, 4, false, false));
-            di.setRelativeZero(p);
+            this.lastPos = this.pos;
         }
+
+        var op = this.getOperation(preview);
+
+        if (!preview) {
+            appWin.handleUserInfo(this.getDisplayedLabel(this.pos, 8));
+            if (!isNull(op) && this.addToDrawing) {
+                di.applyOperation(op);
+            }
+        }
+        else {
+            di.previewOperation(op);
+        }
+
         break;
     }
+};
+
+InfoPosition.prototype.getOperation = function(preview) {
+    if (isNull(this.pos)) {
+        return undefined;
+    }
+
+    var op = new RAddObjectsOperation();
+
+    var di = this.getDocumentInterface();
+    var view = di.getLastKnownViewWithFocus();
+    view = view.getRGraphicsView();
+    view.clearTextLabels();
+
+    this.addShape(op, new RPoint(this.pos), preview);
+
+    var label = this.getDisplayedLabel(this.pos);
+    this.addTextLabel(op, view, this.pos, label, preview);
+
+    if (preview && !this.addToDrawing && !isNull(this.lastPos)) {
+        label = this.getDisplayedLabel(this.lastPos);
+        this.addTextLabel(op, view, this.lastPos, label, preview);
+        this.addShape(op, new RPoint(this.lastPos), preview);
+    }
+
+    return op;
 };

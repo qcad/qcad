@@ -6,4 +6,6 @@ SUBDIRS = \
     InfoDistanceEP \
     InfoDistancePP \
     InfoPosition \
-    InfoPositionRel
+    InfoPositionRel \
+    InfoPositionPol \
+    InfoPositionPolRel

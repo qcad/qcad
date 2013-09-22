@@ -4,9 +4,8 @@
 <context>
     <name>InfoPositionRel</name>
     <message>
-        <location filename="../InfoPositionRel.js" line="+47"/>
         <source>Point</source>
-        <translation>Point</translation>
+        <translation type="obsolete">Point</translation>
     </message>
     <message>
         <location filename="../InfoPositionRelInit.js" line="+2"/>

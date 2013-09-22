@@ -17,64 +17,24 @@
  * along with QCAD.
  */
 
-include("../Information.js");
+include("../InfoPosition/InfoPosition.js");
 
 function InfoPositionRel(guiAction) {
-    Information.call(this, guiAction);
+    InfoPosition.call(this, guiAction);
 }
 
-InfoPositionRel.prototype = new Information();
+InfoPositionRel.prototype = new InfoPosition();
 
-InfoPositionRel.State = {
-    SettingPoint : 0
-};
-
-InfoPositionRel.prototype.beginEvent = function() {
-    Information.prototype.beginEvent.call(this);
-    this.setState(InfoPositionRel.State.SettingPoint);
-};
-
-InfoPositionRel.prototype.setState = function(state) {
-    Information.prototype.setState.call(this, state);
-    var di = this.getDocumentInterface();
-
-    di.setClickMode(RAction.PickCoordinate);
-    this.setCrosshairCursor();
-
-    var appWin = RMainWindowQt.getMainWindow();
-    switch (this.state) {
-    case InfoPositionRel.State.SettingPoint:
-        var tsPoint = qsTr("Point");
-        this.setCommandPrompt(tsPoint);
-        this.setLeftMouseTip(tsPoint);
-        this.setRightMouseTip(EAction.trCancel);
-        break;
+InfoPositionRel.prototype.getDisplayedLabel = function(p, prec) {
+    if (isNull(prec)) {
+        prec = 4;
     }
 
-    EAction.showSnapTools();
-};
-
-InfoPositionRel.prototype.escapeEvent = function() {
-    switch (this.state) {
-    case InfoPositionRel.State.SettingPoint:
-        EAction.prototype.escapeEvent.call(this);
-        break;
-    }
-};
-
-InfoPositionRel.prototype.pickCoordinate = function(event, preview) {
-    var appWin = EAction.getMainWindow();
     var di = this.getDocumentInterface();
     var relZero = di.getRelativeZero();
-
-    switch (this.state) {
-    case InfoPositionRel.State.SettingPoint:
-        if (!preview) {
-            var p = event.getModelPosition().operator_subtract(relZero);
-            appWin.handleUserInfo(coordinateToString(p, 4, false, false));
-            // don't move relative zero for this special tool:
-            //di.setRelativeZero(p);
-        }
-        break;
+    if (!relZero.isValid()) {
+        relZero = new RVector(0,0);
     }
+    p = p.operator_subtract(relZero);
+    return coordinateToString(p, prec, true, false);
 };

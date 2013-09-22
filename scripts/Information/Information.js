@@ -119,8 +119,7 @@ Information.prototype.addInfoLine = function(op, point1, point2, preview) {
     var lengthText = this.formatLinearResult(line.getLength());
     //var lengthText = sprintf("%0.3f", line.getLength());
     view.clearTextLabels();
-    this.addTextLabel(op, view, point2,
-        lengthText, preview);
+    this.addTextLabel(op, view, point2, lengthText, preview);
 };
 
 Information.prototype.addTextLabel = function(op, view, pos, text, preview) {
