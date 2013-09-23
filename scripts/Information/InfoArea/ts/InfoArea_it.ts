@@ -4,7 +4,7 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="+64"/>
+        <location filename="../InfoArea.js" line="+72"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Impostare angolo successiva del poligono</translation>
@@ -15,7 +15,7 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translatorcomment>--ignored colon--
 --file: qgis_it.ts--</translatorcomment>

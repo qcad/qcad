@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="+51"/>
+        <location filename="../InfoDistancePP.js" line="+53"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -32,7 +32,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+50"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

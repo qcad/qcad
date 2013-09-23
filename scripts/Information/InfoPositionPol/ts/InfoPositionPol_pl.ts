@@ -4,7 +4,7 @@
 <context>
     <name>InfoPositionPol</name>
     <message>
-        <location filename="../InfoPositionPolInit.js" line="2"/>
+        <location filename="../InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
         <translation type="unfinished"></translation>
     </message>

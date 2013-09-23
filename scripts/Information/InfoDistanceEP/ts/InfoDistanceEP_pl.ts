@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+51"/>
+        <location filename="../InfoDistanceEP.js" line="+53"/>
         <source>Specify entity</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -31,7 +31,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+73"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+51"/>
+        <location filename="../InfoDistanceEP.js" line="+53"/>
         <source>Specify entity</source>
         <translation>エンティティを指定</translation>
     </message>
@@ -19,7 +19,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+73"/>
         <source>Distance:</source>
         <translation>距離:</translation>
     </message>

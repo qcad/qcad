@@ -4,9 +4,9 @@
 <context>
     <name>InfoPositionPolRel</name>
     <message>
-        <location filename="../InfoPositionPolRelInit.js" line="2"/>
-        <source>&amp;Polar Position</source>
-        <translation type="unfinished"></translation>
+        <location filename="../InfoPositionPolRelInit.js" line="+2"/>
+        <source>Relative P&amp;olar Position</source>
+        <translation>Relativa posizione p&amp;olare</translation>
     </message>
 </context>
 </TS>
