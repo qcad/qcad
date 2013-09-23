@@ -62,6 +62,15 @@ RVector RBlockReferenceData::getVectorTo(
     if (document == NULL) {
         return RVector::invalid;
     }
+
+    static int recursionDepth=0;
+    if (recursionDepth++>16) {
+        recursionDepth--;
+        qWarning() << "RBlockReferenceData::getVectorTo: "
+            << "maximum recursion depth reached: block: " << getBlockName();
+        return RVector::invalid;
+    }
+
     QSet<REntity::Id> ids =
         document->queryBlockEntities(referencedBlockId);
     QSet<REntity::Id>::iterator it;
@@ -79,6 +88,9 @@ RVector RBlockReferenceData::getVectorTo(
             res = v;
         }
     }
+
+    recursionDepth--;
+
     return res;
 }
 
@@ -235,6 +247,15 @@ QList<RVector> RBlockReferenceData::getInternalReferencePoints(
     if (document == NULL) {
         return ret;
     }
+
+    static int recursionDepth=0;
+    if (recursionDepth++>16) {
+        recursionDepth--;
+        qWarning() << "RBlockReferenceData::getInternalReferencePoints: "
+            << "maximum recursion depth reached: block: " << getBlockName();
+        return ret;
+    }
+
     QSet<REntity::Id> ids =
         document->queryBlockEntities(referencedBlockId);
     QSet<REntity::Id>::iterator it;
@@ -246,6 +267,7 @@ QList<RVector> RBlockReferenceData::getInternalReferencePoints(
         ret.append(entity->getInternalReferencePoints(hint));
     }
 
+    recursionDepth--;
     return ret;
 }
 
@@ -260,6 +282,14 @@ QList<RVector> RBlockReferenceData::getReferencePoints(
 
 QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox) const {
     QList<QSharedPointer<RShape> > ret;
+
+    static int recursionDepth=0;
+    if (recursionDepth++>16) {
+        recursionDepth--;
+        qWarning() << "RBlockReferenceData::getShapes: "
+            << "maximum recursion depth reached: block: " << getBlockName();
+        return ret;
+    }
 
     // query entities in query box that are part of the block definition:
     QSet<REntity::Id> ids;
@@ -291,6 +321,8 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
         }
         ret.append(entity->getShapes(queryBox));
     }
+
+    recursionDepth--;
     return ret;
 }
 
