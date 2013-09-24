@@ -118,6 +118,16 @@ InsertBlockItem.prototype.beginEvent = function() {
     this.setState(InsertBlockItem.State.SettingPosition);
 };
 
+InsertBlockItem.prototype.initUiOptions = function(resume) {
+    BlockInsert.prototype.initUiOptions.call(this, resume);
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    var combo = optionsToolBar.findChild("Scale");
+    combo.setCompleter(null);
+    combo = optionsToolBar.findChild("Rotation");
+    combo.setCompleter(null);
+};
+
 InsertBlockItem.prototype.setState = function(state) {
     BlockInsert.prototype.setState.call(this, state);
 

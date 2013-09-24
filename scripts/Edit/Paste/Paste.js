@@ -52,6 +52,16 @@ Paste.prototype.beginEvent = function() {
     this.setState(this.State.SettingPosition);
 };
 
+Paste.prototype.initUiOptions = function(resume) {
+    Edit.prototype.initUiOptions.call(this, resume);
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    var combo = optionsToolBar.findChild("Scale");
+    combo.setCompleter(null);
+    combo = optionsToolBar.findChild("Rotation");
+    combo.setCompleter(null);
+};
+
 Paste.prototype.setState = function(state) {
     Edit.prototype.setState.call(this, state);
 
