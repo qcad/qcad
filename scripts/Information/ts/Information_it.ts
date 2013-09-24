@@ -18,5 +18,15 @@
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>
+    <message>
+        <location filename="../Information.ui" line="+17"/>
+        <source>Add measurement to drawing</source>
+        <translation>Aggiungi il risultato al disegno</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Text Height:</source>
+        <translation>Altezza Testo:</translation>
+    </message>
 </context>
 </TS>

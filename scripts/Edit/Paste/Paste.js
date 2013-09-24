@@ -28,7 +28,6 @@ include("../Edit.js");
 function Paste(guiAction) {
     Edit.call(this, guiAction);
     this.setUiOptions("Paste.ui");
-    //this.operation = new RPasteOperation(RDocument.getClipboard());
 
     this.offset = new RVector(0,0);
     this.scale = 1.0;
@@ -70,7 +69,6 @@ Paste.prototype.pickCoordinate = function(event, preview) {
     this.offset = event.getModelPosition();
     if (preview) {
         this.updatePreview();
-        //this.di.previewOperation(this.operation);
     }
     else {
         this.di.applyOperation(this.getOperation());
@@ -80,7 +78,6 @@ Paste.prototype.pickCoordinate = function(event, preview) {
 };
 
 Paste.prototype.getOperation = function(preview) {
-    //return this.operation;
     var op = new RPasteOperation(RDocument.getClipboard());
     op.setOffset(this.offset);
     op.setScale(this.scale);
@@ -97,8 +94,6 @@ Paste.prototype.getAuxPreview = function() {
     var ret = [];
     var unitFactor = RUnit.convert(1.0, RDocument.getClipboard().getUnit(), this.getDocument().getUnit());
     var boundary = this.getOperation().getBoundary(unitFactor);
-    //qDebug("unitFactor: ", unitFactor);
-    //boundary.scale(unitFactor);
     ret.push(boundary);
     return ret;
 }
