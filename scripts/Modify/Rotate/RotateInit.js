@@ -10,6 +10,5 @@ function init(basePath) {
     action.setSortOrder(200);
     EAction.addGuiActionTo(action, Modify, true, true, true);
     var appWin = EAction.getMainWindow();
-    //appWin.addFocusListener(action);
     appWin.addSelectionListener(action);
 }

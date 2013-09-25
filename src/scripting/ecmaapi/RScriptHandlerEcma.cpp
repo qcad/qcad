@@ -383,6 +383,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     QScriptValue classQDir = globalObject.property("QDir");
     classQDir.setProperty("separator", engine->newVariant(QDir::separator()));
 
+    QScriptValue classQEvent = globalObject.property("QEvent");
+    classQEvent.property("prototype").setProperty("cast",
+            engine->newFunction(ecmaQEventCast));
+
     QScriptValue classQDomNode = globalObject.property("QDomNode");
     classQDomNode.property("prototype").setProperty("appendChild",
             engine->newFunction(ecmaQDomNodeAppendChild));
@@ -1680,6 +1684,33 @@ QScriptValue RScriptHandlerEcma::ecmaQSortFilterProxyModelCastToQAbstractItemMod
     }
 
     return engine->newQObject(dynamic_cast<QAbstractItemModel*>(self));
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQEventCast(QScriptContext* context, QScriptEngine* engine) {
+
+    QEvent* self = REcmaHelper::scriptValueTo<QEvent>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QEvent.castEvent: Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 0) {
+        return throwError("Wrong number/types of arguments for QSortFilterProxyModel.castToQAbstractItemModel.", context);
+    }
+
+    {
+        QMouseEvent* e = dynamic_cast<QMouseEvent*>(self);
+        if (e!=NULL) {
+            return qScriptValueFromValue(engine, e);
+        }
+    }
+    {
+        QKeyEvent* e = dynamic_cast<QKeyEvent*>(self);
+        if (e!=NULL) {
+            return qScriptValueFromValue(engine, e);
+        }
+    }
+
+    return context->thisObject();
 }
 
 //QScriptValue RScriptHandlerEcma::ecmaBlockEvents(QScriptContext* context,

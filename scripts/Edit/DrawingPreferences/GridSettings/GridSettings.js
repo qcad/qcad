@@ -257,7 +257,4 @@ GridSettings.applyPreferences = function(doc, mdiChild) {
             view.regenerate(false);
         }
     }
-
-    //var appWin = EAction.getMainWindow();
-    //appWin.notifyFocusListeners(di);
 };

@@ -112,6 +112,7 @@ public:
     static QScriptValue ecmaDownload(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQSortFilterProxyModelCastToQAbstractItemModel(QScriptContext* context, QScriptEngine* engine);
 //    static QScriptValue ecmaQFontDatabaseFamilies(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQEventCast(QScriptContext* context, QScriptEngine* engine);
 
     static bool eventFilter(void *message);
 

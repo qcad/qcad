@@ -18,6 +18,21 @@
  */
 
 include("../QtExamples.js");
+include("ExScreencastOverlay.js");
+
+function ExScreencastFocusListener() {
+    RFocusListenerAdapter.call(this);
+}
+
+ExScreencastFocusListener.prototype = new RFocusListenerAdapter();
+
+ExScreencastFocusListener.prototype.updateFocus = function(di) {
+    qDebug("updateFocus");
+    var appWin = RMainWindowQt.getMainWindow();
+    var mdiArea = appWin.findChild("MdiArea");
+    ExScreencast.installEventFilters(mdiArea);
+};
+
 
 /**
  * This action creates a Qt main window.
@@ -61,13 +76,43 @@ ExScreencast.prototype.beginEvent = function() {
     var cl = appWin.findChild("CommandLineDock");
     cl.hide();
 
+    ExScreencast.showOverlay();
+
     this.terminate();
+};
+
+ExScreencast.showOverlay = function() {
+    var appWin = RMainWindowQt.getMainWindow();
+    ExScreencast.overlayWidget = new ExScreencastOverlay(appWin);
+    ExScreencast.overlayWidget.objectName = "ExScreencastOverlay";
+    ExScreencast.overlayWidget.resize(appWin.width, appWin.height);
+    ExScreencast.overlayWidget.move(0, 0);
+    ExScreencast.overlayWidget.show();
+
+    ExScreencast.installEventFilters(appWin);
+};
+
+ExScreencast.installEventFilters = function(w, overlay) {
+    var kids = w.children();
+    for (var i=0; i<kids.length; i++) {
+        var k = kids[i];
+        if (isNull(k.gotEventFilter)) {
+            k.installEventFilter(ExScreencast.overlayWidget);
+            k.setProperty("gotEventFilter", true);
+        }
+        this.installEventFilters(k);
+    }
 };
 
 /**
  * Adds a menu for this action to Examples/Math Examples/ExScreencast.
  */
 ExScreencast.init = function(basePath) {
+    var appWin = RMainWindowQt.getMainWindow();
+
+    var fl = new ExScreencastFocusListener();
+    appWin.addFocusListener(fl);
+
     var action = new RGuiAction("&Screen cast", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExScreencast.js");
@@ -75,3 +120,4 @@ ExScreencast.init = function(basePath) {
     action.setDefaultCommands(["screencast"]);
     EAction.addGuiActionTo(action, QtExamples, true, false, false);
 };
+
