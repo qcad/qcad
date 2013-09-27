@@ -189,6 +189,9 @@ background-color: rgb(255, 255, 255);
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="toolTip">
+               <string>Proportional</string>
+              </property>
               <property name="icon">
                <iconset>
                 <normaloff>KeepProportionsOn.svg</normaloff>KeepProportionsOn.svg</iconset>

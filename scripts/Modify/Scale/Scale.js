@@ -184,7 +184,6 @@ Scale.prototype.pickCoordinate = function(event, preview) {
  */
 Scale.prototype.showDialog = function() {
     var dialog = WidgetFactory.createDialog(Scale.includeBasePath, "ScaleDialog.ui");
-    WidgetFactory.restoreState(dialog);
     var widgets = getWidgets(dialog);
 
     widgets["FactorX"].textChanged.connect(
@@ -207,6 +206,8 @@ Scale.prototype.showDialog = function() {
                         widgets["KeepProportions"].icon = new QIcon(Scale.includeBasePath + "/KeepProportionsOff.svg");
                     }
                 });
+
+    WidgetFactory.restoreState(dialog);
 
     if (!dialog.exec()) {
         return false;
@@ -280,6 +281,7 @@ Scale.prototype.transform = function(entity, k, op, preview, forceNew) {
     // uniform scaling (supported by all entities):
     if (isNull(this.factorY)) {
         entity.scale(Math.pow(this.factorX, k), this.focusPoint);
+        op.addObject(entity, this.useCurrentAttributes, forceNew);
         return;
     }
 
