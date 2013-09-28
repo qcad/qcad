@@ -18,5 +18,5 @@ public:
     virtual void initScriptExtensions(QScriptEngine& engine);
     virtual RPluginInfo getPluginInfo();
 
-    virtual void updateTransactionListener(const RDocument* document, const RTransaction* transaction=NULL);
+    virtual void updateTransactionListener(RDocument* document, RTransaction* transaction=NULL);
 };

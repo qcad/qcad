@@ -47,7 +47,7 @@ RPluginInfo TransactionListenerPlugin::getPluginInfo() {
 /**
  * Called after every change of at least one object.
  */
-void TransactionListenerPlugin::updateTransactionListener(const RDocument* document, const RTransaction* transaction) {
+void TransactionListenerPlugin::updateTransactionListener(RDocument* document, RTransaction* transaction) {
     qDebug() << "got transaction";
 
     if (transaction==NULL) {
