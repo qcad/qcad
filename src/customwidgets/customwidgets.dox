@@ -10,7 +10,7 @@ The plugin class we create will be named \c RListViewPlugin.
 
 Create the new header file as shown below:
 
-\include trunk/src/plugins/qt/RListViewPlugin.h
+\include RListViewPlugin.h
 
 Create the new class. Be sure to include both, the Plugin header file just created, and
 the header file of the widget you want to map.

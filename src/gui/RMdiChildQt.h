@@ -34,7 +34,7 @@ class RGraphicsViewQt;
 /**
  * \brief MDI child window.
  *
- * \ingroup gui_qt
+ * \ingroup gui
  *
  * \scriptable
  */

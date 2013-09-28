@@ -30,7 +30,7 @@
  * can be used in script environments with prototype based
  * OOP as base class.
  *
- * \ingroup core
+ * \ingroup ecma
  * \scriptable
  * \generateScriptShell
  */

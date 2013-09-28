@@ -29,6 +29,7 @@ include("../EAction.js");
 /**
  * \class Information
  * \brief Base class for all measuring and information tools.
+ * \ingroup ecma_information
  */
 function Information(guiAction) {
     EAction.call(this, guiAction);

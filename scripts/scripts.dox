@@ -1,8 +1,8 @@
 /*!
 
-\defgroup ecma_scripts ECMA Scripts
+\defgroup ecma_scripts ECMAScript
 
-\brief This module contains classes and libraries implemented in ECMA Script (JavaScript).
+\brief This module contains classes and libraries implemented in ECMAScript (JavaScript).
 
 These scripts define the actual application (GUI, menus, widgets, actions, etc.).
 The entry point is always autostart.js.

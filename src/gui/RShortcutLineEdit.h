@@ -29,6 +29,7 @@
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RShortcutLineEdit: public QLineEdit {
 

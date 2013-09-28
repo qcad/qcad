@@ -28,6 +28,7 @@
 
 /**
  * \scriptable
+ * \ingroup ecma
  */
 class QCADECMAAPI_EXPORT RAutoLoadEcma {
 public:

@@ -29,9 +29,11 @@ class RDocument;
 class RExporter;
 
 /**
+ * Block reference entity.
+ *
  * \scriptable
  * \sharedPointerSupport
- * \ingroup entity
+ * \ingroup core
  */
 class QCADCORE_EXPORT RBlockReferenceEntity: public REntity {
 

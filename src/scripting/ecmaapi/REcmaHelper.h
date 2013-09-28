@@ -36,6 +36,9 @@ class RGraphicsScene;
 class RGraphicsView;
 
 
+/**
+ * \ingroup ecma
+ */
 class QCADECMAAPI_EXPORT REcmaHelper {
 public:
 

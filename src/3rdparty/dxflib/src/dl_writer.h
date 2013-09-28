@@ -57,7 +57,7 @@
 class DXFLIB_EXPORT DL_Writer {
 public:
     /**
-     * @para version DXF version. Defaults to DL_VERSION_2002.
+     * @param version DXF version. Defaults to DL_VERSION_2002.
      */
     DL_Writer(DL_Codes::version version) : m_handle(0x30) {
         this->version = version;

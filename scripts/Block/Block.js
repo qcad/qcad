@@ -21,8 +21,8 @@
  * \defgroup ecma_block Block Tools
  * \ingroup ecma_scripts
  *
- * \brief This module contains ECMAScript implementations of the
- * block tools.
+ * \brief This module contains ECMAScript implementations of
+ * block related tools.
  */
 include("../EAction.js");
 

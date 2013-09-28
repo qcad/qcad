@@ -31,6 +31,7 @@
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RMathLineEdit: public QLineEdit {
 

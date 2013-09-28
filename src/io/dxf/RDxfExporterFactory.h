@@ -34,6 +34,9 @@
 class RMessageHandler;
 class RProgressHandler;
 
+/**
+ * \ingroup dxf
+ */
 class QCADDXF_EXPORT RDxfExporterFactory: public RFileExporterFactory {
 public:
     static void registerFileExporter() {

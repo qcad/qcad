@@ -25,6 +25,7 @@
 
 /**
  * \scriptable
+ * \ingroup ecma
  */
 class RFontDatabase : public QFontDatabase {
 public:

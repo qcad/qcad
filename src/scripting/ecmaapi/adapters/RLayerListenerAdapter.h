@@ -27,6 +27,7 @@
 
 /**
  * \scriptable
+ * \ingroup ecma
  */
 class RLayerListenerAdapter: public QObject, public RLayerListener {
 Q_OBJECT

@@ -17,12 +17,19 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_draw_image Image Drawing Tool
+ * \ingroup ecma_draw
+ *
+ * \brief This module contains the ECMAScript implementation of the image
+ * drawing tool.
+ */
 include("../Draw.js");
 
 /**
  * \class Image
  * \brief Inserts an image (bitmap) into the drawing.
- * \ingroup ecmaDrawImage
+ * \ingroup ecma_draw_image
  */
 function Image(guiAction) {
     Draw.call(this, guiAction);

@@ -108,7 +108,14 @@ WidgetFactory.createDialog = function(basePath, uiFile, parent) {
     // a global function might be defined to do additional
     // initilization for all dialogs (e.g. for testing purposes):
     if (typeof(initDialog)!=="undefined") {
-        initDialog(dialog);
+        qDebug("got initDialog");
+        //debugger;
+        for (var i=0; i<initDialog.length; i++) {
+            initDialog[i](dialog);
+        }
+    }
+    else {
+        qDebug("got NO initDialog");
     }
 
     return dialog;

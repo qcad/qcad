@@ -27,6 +27,7 @@
 
 /**
  * \scriptable
+ * \ingroup ecma
  */
 class RPenListenerAdapter: public QObject, public RPenListener {
 Q_OBJECT

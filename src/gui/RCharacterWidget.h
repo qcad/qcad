@@ -35,6 +35,7 @@ class QPaintEvent;
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RCharacterWidget: public QWidget {
 

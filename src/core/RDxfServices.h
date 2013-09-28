@@ -31,7 +31,7 @@
 /**
  * \brief DXF support tools, mainly for QCAD 2 DXF imports.
  *
- * \ingroup qcadcore
+ * \ingroup core
  * \scriptable
  * \copyable
  */

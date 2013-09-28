@@ -48,7 +48,7 @@ class RGraphicsViewImage;
  * 
  * \ref RGraphicView "graphics views". 
  *
- * \ingroup qcadguiqt
+ * \ingroup gui
  * \scriptable
  */
 class QCADGUI_EXPORT RGraphicsSceneQt : public RGraphicsScene {

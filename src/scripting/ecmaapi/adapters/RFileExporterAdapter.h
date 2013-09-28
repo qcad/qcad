@@ -43,7 +43,7 @@ class RVector;
  *
  * File exporters export \ref RDocument objects into files of a specific format.
  *
- * \ingroup core
+ * \ingroup ecma
  * \scriptable
  * \generateScriptShell
  */

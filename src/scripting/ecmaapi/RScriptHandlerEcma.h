@@ -37,7 +37,7 @@ class QScriptEngineDebugger;
 /**
  * Script handler implementation for ECMA scripts, based on Qt Script.
  *
- * \ingroup scripting_ecma
+ * \ingroup ecma
  */
 class QCADECMAAPI_EXPORT RScriptHandlerEcma: public QObject, public RScriptHandler {
 Q_OBJECT

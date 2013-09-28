@@ -42,6 +42,7 @@ class RVector;
 
 /**
  * Represents a text style.
+ * \ingroup dxf
  */
 class QCADDXF_EXPORT RDxfTextStyle {
 public:
@@ -56,7 +57,7 @@ public:
 /**
  * \brief Importer for the DXF format, based on the dxflib library.
  *
- * \ingroup qcadiodxf
+ * \ingroup dxf
  */
 class QCADDXF_EXPORT RDxfImporter : public RFileImporter, public DL_CreationAdapter {
 public:

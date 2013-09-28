@@ -38,7 +38,7 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer
 # a quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "2D CAD"
+PROJECT_BRIEF          = "Open Source 2D CAD"
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is
 # included in the documentation. The maximum height of the logo should not
@@ -712,20 +712,14 @@ EXCLUDE_SYMLINKS       = NO
 # against the file with absolute path, so to exclude all test directories
 # for example use the pattern */test/*
 
-EXCLUDE_PATTERNS       = */.svn/* \
-                         */moc_* \
-                         */libxml2/* \
-                         */libxslt/* \
-                         */spatialindex/* \
+EXCLUDE_PATTERNS       = */moc_* \
                          */ecmaapi/* \
-                         */opennurbs/* \
                          */opendesign/* \
-                         */Box2D/* \
-                         */FreeMagic/* \
-                         */libstemmer_c/* \
-                         */Tests/* \
-                         */scripts/Developer/* \
-                         */scripts/MyScripts/*
+                         */3rdparty/opennurbs/* \
+                         */3rdparty/qt-labs-qtscriptgenerator* \
+                         */3rdparty/spatialindexnavel/* \
+                         */3rdparty/stemmer/* \
+                         */Tests/*
 
 # The EXCLUDE_SYMBOLS tag can be used to specify one or more symbol names
 # (namespaces, classes, functions, etc.) that should be excluded from the
@@ -739,8 +733,8 @@ EXCLUDE_SYMBOLS        =
 # directories that contain example code fragments that are included (see
 # the \include command).
 
-EXAMPLE_PATH           = scripts/Examples \
-                         src/plugins/qt
+EXAMPLE_PATH           = scripts/Misc
+                         #src/plugins/qt
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp

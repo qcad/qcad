@@ -29,6 +29,7 @@ include("../EAction.js");
 /**
  * \class Edit
  * \brief Base class for all editing tools.
+ * \ingroup ecma_edit
  */
 function Edit(guiAction) {
     EAction.call(this, guiAction);

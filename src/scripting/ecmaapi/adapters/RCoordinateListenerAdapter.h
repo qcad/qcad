@@ -33,6 +33,7 @@ class RDocumentInterface;
  * for instance from an ECMA script.
  *
  * \scriptable
+ * \ingroup ecma
  */
 class RCoordinateListenerAdapter: public QObject, public RCoordinateListener {
 Q_OBJECT

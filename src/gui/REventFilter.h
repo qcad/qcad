@@ -28,6 +28,7 @@
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT REventFilter : public QObject {
     Q_OBJECT

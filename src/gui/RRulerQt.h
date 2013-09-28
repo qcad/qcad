@@ -36,6 +36,7 @@ class RDocumentInterface;
  * Widget that displays the current mouse position.
  * Usually shown in the status bar of an application.
  *
+ * \ingroup gui
  * \scriptable
  */
 class QCADGUI_EXPORT RRulerQt: public QFrame, public RRuler, public RCoordinateListener {

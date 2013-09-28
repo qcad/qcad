@@ -21,7 +21,8 @@
  * \defgroup ecma_draw Drawing Tools
  * \ingroup ecma_scripts
  *
- * \brief This module contains ECMAScript implementations of various drawing tools.
+ * \brief This module contains ECMAScript implementations of the
+ * various drawing tools.
  */
 include("../EAction.js");
 

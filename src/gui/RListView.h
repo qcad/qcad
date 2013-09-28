@@ -30,6 +30,7 @@
 /**
  * \scriptable
  * \generateScriptShell
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RListView: public QListView {
 

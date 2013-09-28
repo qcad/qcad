@@ -28,6 +28,7 @@
 
 /**
  * \scriptable
+ * \ingroup ecma
  */
 class RViewListenerAdapter: public QObject, public RViewListener {
 Q_OBJECT

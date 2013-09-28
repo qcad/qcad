@@ -8,8 +8,6 @@ SUBDIRS = \
     CutWithReference \
     DrawingPreferences \
     Delete \
-    InsertBlockItem \
-    InsertScriptItem \
     Esc \
     Paste \
     Redo \

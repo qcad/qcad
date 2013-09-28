@@ -30,8 +30,10 @@
 class RDocument;
 
 /**
+ * Defines the geometry and appearance of a block reference entity.
+ *
  * \scriptable
- * \ingroup entity
+ * \ingroup core
  */
 class QCADCORE_EXPORT RBlockReferenceData: public REntityData {
 

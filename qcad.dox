@@ -32,8 +32,7 @@ components provided by Qt and the QCAD Application Framework.
 
 \section language_choice C++ or ECMAScript
 
-The QCAD Application Framework can be extended in both C++ (developer license
-required) or ECMAScript (under any QCAD user license).
+The QCAD Application Framework can be extended in both C++ or ECMAScript.
 
 \section doc_for_developers Further Documentation for Developers
 
@@ -69,7 +68,6 @@ They may also be used by other applications.
 
 \subsection ecma_doc Overviews, Introductions and Howtos for Developers
 
-- \subpage ScriptLicensing
 - \subpage ScriptOverviews
 - \subpage ScriptTutorials
 - \ref ecma_scripts "ECMAScript classes and libraries"

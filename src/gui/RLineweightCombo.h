@@ -29,6 +29,7 @@
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RLineweightCombo: public QComboBox {
 

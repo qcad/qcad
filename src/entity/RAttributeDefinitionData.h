@@ -34,7 +34,7 @@
  * \scriptable
  * \sharedPointerSupport
  * \copyable
- * \ingroup core
+ * \ingroup entity
  */
 class QCADENTITY_EXPORT RAttributeDefinitionData: public RTextBasedData {
     friend class RAttributeDefinitionEntity;

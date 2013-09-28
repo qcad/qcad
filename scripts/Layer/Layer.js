@@ -17,8 +17,20 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_layer Layer Tools.
+ * \ingroup ecma_scripts
+ *
+ * \brief This module contains ECMAScript implementations of various
+ * layer related tools.
+ */
 include("../EAction.js");
 
+/**
+ * \class Layer
+ * \brief Base class for all layer tools.
+ * \ingroup ecma_layer
+ */
 function Layer(guiAction) {
     EAction.call(this, guiAction);
 }

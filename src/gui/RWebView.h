@@ -27,6 +27,7 @@
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RWebView: public QWebView {
 

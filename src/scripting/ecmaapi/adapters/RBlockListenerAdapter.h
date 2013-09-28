@@ -32,6 +32,7 @@
  * for instance from an ECMA script.
  *
  * \scriptable
+ * \ingroup ecma
  */
 class RBlockListenerAdapter: public QObject, public RBlockListener {
 Q_OBJECT

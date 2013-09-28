@@ -40,10 +40,6 @@ license. Every QCAD user may use the ECMAScript interface and distribute
 any modifications and additions to anyone else with a valid QCAD license on
 their own terms.
 
-Note that to extend and modify the C++ sources of the QCAD Application Framework, 
-a special developer license is required.
-
-
 
 \section qt_qcad_ecma Qt, the QCAD Application Framework and ECMAScript
 

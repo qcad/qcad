@@ -9,6 +9,9 @@
 
 class RSpline;
 
+/**
+ * \ingroup dxf
+ */
 class RDxfPlugin : public QObject, public RPluginInterface
 {
     Q_OBJECT

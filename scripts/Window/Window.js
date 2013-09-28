@@ -17,6 +17,13 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_window Window Tools
+ * \ingroup ecma_scripts
+ *
+ * \brief This module contains ECMAScript implementations of various
+ * window tools.
+ */
 include("../EAction.js");
 
 function MenuData(d) {
@@ -29,6 +36,12 @@ MenuData.prototype.triggered = function() {
     mdiArea.setActiveSubWindow(this.data);
 };
 
+
+/**
+ * \class Window
+ * \brief Base class for all window tools.
+ * \ingroup ecma_window
+ */
 function Window(guiAction) {
     EAction.call(this, guiAction);
 }

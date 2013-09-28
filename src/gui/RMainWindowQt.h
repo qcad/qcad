@@ -50,7 +50,7 @@ class RViewListener;
 /**
  * \brief Base class for a Qt based MDI main application window.
  *
- * \ingroup gui_qt
+ * \ingroup gui
  *
  * \scriptable
  */

@@ -29,6 +29,7 @@ include("../EAction.js");
 /**
  * \class Modify
  * \brief Base class for all modification tools.
+ * \ingroup ecma_modify
  */
 function Modify(guiAction) {
     EAction.call(this, guiAction);

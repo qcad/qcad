@@ -31,7 +31,7 @@ class RProgressHandler;
  *
  * File importers import files of a specific format into an \ref RDocument.
  *
- * \ingroup core
+ * \ingroup ecma
  * \scriptable
  * \generateScriptShell
  */

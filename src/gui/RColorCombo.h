@@ -28,6 +28,7 @@
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RColorCombo: public QComboBox {
 

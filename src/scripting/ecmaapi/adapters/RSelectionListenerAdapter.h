@@ -28,6 +28,7 @@
 
 /**
  * \scriptable
+ * \ingroup ecma
  */
 class RSelectionListenerAdapter: public QObject, public RSelectionListener {
 Q_OBJECT

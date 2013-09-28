@@ -17,8 +17,20 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_view View Tools
+ * \ingroup ecma_scripts
+ *
+ * \brief This module contains ECMAScript implementations of various
+ * view tools.
+ */
 include("../EAction.js");
 
+/**
+ * \class View
+ * \brief Base class for all view tools.
+ * \ingroup ecma_view
+ */
 function View(guiAction) {
     EAction.call(this, guiAction);
 }

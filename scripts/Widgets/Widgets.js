@@ -27,6 +27,11 @@
 include("../EAction.js");
 include("../View/View.js");
 
+/**
+ * \class Widgets
+ * \brief Base class for widget related tools.
+ * \ingroup ecma_widgets
+ */
 function Widgets(guiAction) {
     EAction.call(this, guiAction);
 }

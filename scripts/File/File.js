@@ -29,6 +29,7 @@ include("../EAction.js");
 /**
  * \class File
  * \brief Base class for all file menu tools.
+ * \ingroup ecma_file
  */
 function File(guiAction) {
     EAction.call(this, guiAction);

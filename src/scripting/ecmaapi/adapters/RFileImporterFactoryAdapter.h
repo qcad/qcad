@@ -36,7 +36,7 @@ class RProgressHandler;
  * to check if the importer is suitable to import a file and to instantiate
  * the file importer if required.
  *
- * \ingroup core
+ * \ingroup ecma
  * \scriptable
  * \generateScriptShell
  */

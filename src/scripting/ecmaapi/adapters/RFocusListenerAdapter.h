@@ -32,7 +32,7 @@ class RDocumentInterface;
  * \brief Abstract base class for classes that are interested in the current 
  * focus.
  *
- * \ingroup core
+ * \ingroup ecma
  * \scriptable
  * \generateScriptShell
  */

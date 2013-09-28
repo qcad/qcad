@@ -22,6 +22,7 @@ function main() {
 //! [init]
 // init application name:
 qApp.applicationName = "MyApplication";
+//! [init]
 
 //! [document]
 var storage = new RMemoryStorage();

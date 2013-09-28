@@ -18,16 +18,18 @@
  */
 
 /**
- * \defgroup ecma_examples Example Scripts
+ * \defgroup ecma_misc Misc Examples and Scripts
  * \ingroup ecma_scripts
  *
- * \brief This module contains ECMAScript examples.
+ * \brief This module contains ECMAScript examples and uncategorized
+ * scripts.
  */
 include("../EAction.js");
 
 /**
  * \class Misc
  * \brief Base class for all example scripts.
+ * \ingroup ecma_misc
  */
 function Misc(guiAction) {
     EAction.call(this, guiAction);

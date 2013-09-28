@@ -30,6 +30,7 @@
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RLinetypeCombo: public QComboBox {
 

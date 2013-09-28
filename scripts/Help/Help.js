@@ -29,6 +29,7 @@ include("../EAction.js");
 /**
  * \class Help
  * \brief Base class for all help menu entries.
+ * \ingroup ecma_help
  */
 function Help(guiAction) {
     EAction.call(this, guiAction);

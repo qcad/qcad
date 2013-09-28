@@ -17,8 +17,20 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_snap Snap Tools
+ * \ingroup ecma_scripts
+ *
+ * \brief This module contains ECMAScript implementations of various
+ * snap tools.
+ */
 include("../EAction.js");
 
+/**
+ * \class Snap
+ * \brief Base class for all snap tools.
+ * \ingroup ecma_snap
+ */
 function Snap(guiAction) {
     EAction.call(this, guiAction);
 }

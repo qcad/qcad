@@ -28,7 +28,7 @@
  * \brief Event that is posted when an action requests the closing
  * of the current document.
  * 
- * \ingroup core
+ * \ingroup gui
  * \scriptable
  */
 class QCADGUI_EXPORT RCloseCurrentEvent : public QEvent {

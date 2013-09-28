@@ -35,7 +35,7 @@ class RRuler;
  * This class is responsible for updating the grid and snapping to the grid.
  *
  * \scriptable
- * \ingroup grids
+ * \ingroup grid
  */
 class QCADGRID_EXPORT ROrthoGrid : public RGrid {
 public:

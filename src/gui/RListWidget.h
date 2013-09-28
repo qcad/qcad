@@ -30,6 +30,7 @@
 /**
  * List widget with some additional functionality for icons.
  *
+ * \ingroup gui
  * \scriptable
  * \generateScriptShell
  */

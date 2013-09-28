@@ -30,9 +30,14 @@
 #include "RMath.h"
 #include "RSettings.h"
 
-
+/**
+ * Last error encountered.
+ */
 QString RMath::lastError = "";
 
+/**
+ * \return Absolute modulus.
+ */
 int RMath::absmod(int a, int b) {
     if (b == 0) {
         return a;
@@ -44,6 +49,9 @@ int RMath::absmod(int a, int b) {
     return m;
 }
 
+/**
+ * \return v truncated (cut off) at decimal point.
+ */
 double RMath::trunc(double v) {
 #if defined Q_OS_WIN32
     if (v==0 || RMath::isNaN(v) || RMath::isInf(v)) {
@@ -81,7 +89,9 @@ double RMath::pow(double x, double y) {
     return ret;
 }
 
-
+/**
+ * \return true if v is non NaN and not Inf.
+ */
 bool RMath::isNormal(double v) {
     if (RMath::isNaN(v) || RMath::isInf(v)) {
         return false;
@@ -89,6 +99,9 @@ bool RMath::isNormal(double v) {
     return true;
 }
 
+/**
+ * \return true if v is NaN.
+ */
 bool RMath::isNaN(double v) {
 #ifdef Q_OS_MAC
     return std::fpclassify(v)==FP_NAN;
@@ -99,6 +112,9 @@ bool RMath::isNaN(double v) {
 #endif
 }
 
+/**
+ * \return true if v is Inf.
+ */
 bool RMath::isInf(double v) {
 #ifdef Q_OS_MAC
     return std::fpclassify(v)==FP_INFINITE;
@@ -109,6 +125,11 @@ bool RMath::isInf(double v) {
 #endif
 }
 
+/**
+ * Evaluates the given mathematical expression and returns the result.
+ * Angles may be expressed in degrees (default), rad (#r), gon (#g)
+ * or as surveyors angles (N#d#'#"E).
+ */
 double RMath::eval(const QString& expression, bool* ok) {
     lastError = "";
 
@@ -363,33 +384,19 @@ double RMath::eval(const QString& expression, bool* ok) {
     return res.toNumber();
 }
 
+/**
+ * \return Last error encountered by a math function.
+ */
 QString RMath::getError() {
     return lastError;
 }
 
+/**
+ * \return True if an error was encountered since the last check.
+ */
 bool RMath::hasError() {
     return !lastError.isEmpty();
 }
-
-/**
- * Converts the given string to an angle. Accepted
- * formats are:
- * #.## for an angle in degrees,
- * #.##r for an angle in rad,
- * #.##g for an angle in gon,
- * ##d##.#'##.##" for an angle in degrees, minutes, seconds,
- * N##d##'##"E, S##D##'##"E for suveyors units.
- */
-/*double RMath::stringToAngle(const QString& str) {
-    if (str.isEmpty()) {
-        return 0.0;
-    }
-
-    if (str.endsWith('r', Qt::CaseInsensitive)) {
-
-    }
-
-}*/
 
 /**
  * Converts the given angle in rad to the given angle format.
@@ -656,6 +663,9 @@ bool RMath::isSameDirection(double dir1, double dir2, double tolerance) {
     }
 }
 
+/**
+ * \return String representing the given number, expressed as fraction (# #/#).
+ */
 QString RMath::toFractionString(double v, int maxDenominator) {
     int number, numerator, denominator;
     toFraction(v, maxDenominator, number, numerator, denominator);
@@ -673,6 +683,10 @@ QString RMath::toFractionString(double v, int maxDenominator) {
     }
 }
 
+/**
+ * \return Representation of the given number as fraction (number numerator/denominator).
+ * Rounding occurs to satisfy the use of maxDenominator as maximum value for denominator.
+ */
 void RMath::toFraction(double v, int maxDenominator, int& number, int& numerator, int& denominator) {
     int in = (int)v;
     number = in;
@@ -687,17 +701,26 @@ void RMath::toFraction(double v, int maxDenominator, int& number, int& numerator
     simplify(abs(mround((v-in)*maxDenominator)), maxDenominator, numerator, denominator);
 }
 
+/**
+ * \return Simlified fraction for the given fraction (numerator/denomiator).
+ */
 void RMath::simplify(int numerator, int denominator, int& numeratorRes, int& denominatorRes) {
     int g = getGcd(numerator, denominator);
     numeratorRes = numerator/g;
     denominatorRes = denominator/g;
 }
 
-
+/**
+ * \return True if the difference between v1 and v2 is less then the
+ * given tolerance.
+ */
 bool RMath::fuzzyCompare(double v1, double v2, double tolerance) {
     return fabs(v1-v2) < tolerance;
 }
 
+/**
+ * \return Value given as drawing scale (#:#).
+ */
 double RMath::parseScale(const QString& scaleString) {
     int i;
     double d;

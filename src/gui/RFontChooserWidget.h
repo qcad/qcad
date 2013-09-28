@@ -30,6 +30,7 @@ class QLabel;
 
 /**
  * \scriptable
+ * \ingroup gui
  */
 class QCADGUI_EXPORT RFontChooserWidget: public QWidget {
 

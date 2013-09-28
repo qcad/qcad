@@ -44,7 +44,7 @@ class RSnapRestriction;
  * This graphics view displays a rectangular area of a
  * RGraphicsSceneQt.
  *
- * \ingroup qcadguiqt
+ * \ingroup gui
  * \scriptable
  * \generateScriptShell
  */

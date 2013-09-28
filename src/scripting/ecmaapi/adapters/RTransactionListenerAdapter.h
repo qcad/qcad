@@ -27,6 +27,7 @@
 
 /**
  * \scriptable
+ * \ingroup ecma
  */
 class RTransactionListenerAdapter: public QObject, public RTransactionListener {
 Q_OBJECT

@@ -16,9 +16,8 @@ without first starting the QCAD Application user interface.
 
 \section initialization Initialization
 
-Some initialization is required before we get started to give the
-application a name (used among other things as ID for XDATA in DXF / DWG)
-and to make DXF / DWG export available:
+Some initialization is required before we get started. We need to give the
+application a name (used among other things as ID for XDATA in DXF / DWG).
 
 \snippet CreatingDrawing.jsd init
 

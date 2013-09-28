@@ -33,7 +33,7 @@ class RProgressHandler;
  * to check if the exporter is suitable to export a file and to instantiate
  * the file exporter if required.
  *
- * \ingroup core
+ * \ingroup ecma
  * \scriptable
  * \generateScriptShell
  */
