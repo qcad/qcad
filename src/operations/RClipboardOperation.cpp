@@ -128,6 +128,7 @@ void RClipboardOperation::copy(
                     RAttributeData(e->getData(), REntity::INVALID_ID, e->getTag())
                 )
             );
+            att->scale(unitScale);
             refp->applyTransformationTo(*att);
 
             // assign values to attributes:

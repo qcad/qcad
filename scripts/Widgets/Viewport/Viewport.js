@@ -244,7 +244,7 @@ EventHandler.prototype.drop = function(event) {
                 appWin.raise();
                 appWin.setFocus(Qt.OtherFocusReason);
             }
-            include("scripts/Edit/InsertScriptItem/InsertScriptItem.js");
+            include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
             var action;
             if (InsertScriptItem.isScriptFile(file)) {
                 action = RGuiAction.getByScriptFile("scripts/Block/InsertScriptItem/InsertScriptItem.js");

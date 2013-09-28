@@ -258,7 +258,7 @@ function setUpDragAndDrop(appWin) {
         var files = [];
         for (var i = 0; i < urls.length; ++i) {
             var file = new QUrl(urls[i]).toLocalFile();
-            include("scripts/Edit/InsertScriptItem/InsertScriptItem.js");
+            include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
             if (InsertScriptItem.isScriptFile(file)) {
                 qWarning("autostart.js:", "main(): cannot open script file:", file);
                 return;
