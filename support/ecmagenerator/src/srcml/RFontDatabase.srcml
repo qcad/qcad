@@ -26,7 +26,8 @@ dir="./scripting/ecmaapi/adapters" filename="RFontDatabase.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable */</comment>
+  <comment type="block">/** * \scriptable * \ingroup ecma
+  */</comment>
   <class>class 
   <name>RFontDatabase</name>
   <super>: 

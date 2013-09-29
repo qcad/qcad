@@ -34,7 +34,8 @@ dir="./gui" filename="RFontChooserWidget.h">
   <cpp:file>&lt;QFontComboBox&gt;</cpp:file></cpp:include>
   <class_decl>class 
   <name>QLabel</name>;</class_decl>
-  <comment type="block">/** * \scriptable */</comment>
+  <comment type="block">/** * \scriptable * \ingroup gui
+  */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

@@ -99,6 +99,8 @@ public:
     static QScriptValue ecmaQLayoutGetWidth(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQByteArrayToString(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue ecmaQUrlQueryItems(QScriptContext *context, QScriptEngine *engine);
+    static QScriptValue ecmaQLocaleScript(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQLocaleScriptToString(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaMSleep(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaArguments(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaGetObjectId(QScriptContext* context, QScriptEngine* engine);

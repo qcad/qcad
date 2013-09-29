@@ -62,7 +62,7 @@ dir="./gui" filename="RGraphicsViewQt.h">
   <name>RSnapRestriction</name>;</class_decl>
   <comment type="block">/** * \brief QWidget based 2d graphics
   view. * * This graphics view displays a rectangular area of a *
-  RGraphicsSceneQt. * * \ingroup qcadguiqt * \scriptable *
+  RGraphicsSceneQt. * * \ingroup gui * \scriptable *
   \generateScriptShell */</comment>
   <class>class 
   <macro>

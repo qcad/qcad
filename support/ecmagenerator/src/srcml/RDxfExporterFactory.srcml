@@ -48,6 +48,7 @@ dir="./io/dxf" filename="RDxfExporterFactory.h">
   <name>RMessageHandler</name>;</class_decl>
   <class_decl>class 
   <name>RProgressHandler</name>;</class_decl>
+  <comment type="block">/** * \ingroup dxf */</comment>
   <class>class 
   <macro>
     <name>QCADDXF_EXPORT</name>

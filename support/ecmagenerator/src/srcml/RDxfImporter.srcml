@@ -61,7 +61,8 @@ dir="./io/dxf" filename="RDxfImporter.h">
   <name>RProgressHandler</name>;</class_decl>
   <class_decl>class 
   <name>RVector</name>;</class_decl>
-  <comment type="block">/** * Represents a text style. */</comment>
+  <comment type="block">/** * Represents a text style. * \ingroup
+  dxf */</comment>
   <class>class 
   <macro>
     <name>QCADDXF_EXPORT</name>
@@ -116,7 +117,7 @@ dir="./io/dxf" filename="RDxfImporter.h">
     <name>italic</name>
   </decl>;</decl_stmt></public>}</block>;</class>
   <comment type="block">/** * \brief Importer for the DXF format,
-  based on the dxflib library. * * \ingroup qcadiodxf */</comment>
+  based on the dxflib library. * * \ingroup dxf */</comment>
   <class>class 
   <macro>
     <name>QCADDXF_EXPORT</name>

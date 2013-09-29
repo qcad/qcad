@@ -35,7 +35,7 @@ filename="RCoordinateListenerAdapter.h">
   <comment type="block">/** * This coordinate listener adapter
   emits signals on coordinate events. * Used to simplify listening
   to coordinate events from QObjects, * for instance from an ECMA
-  script. * * \scriptable */</comment>
+  script. * * \scriptable * \ingroup ecma */</comment>
   <class>class 
   <name>RCoordinateListenerAdapter</name>
   <super>: 

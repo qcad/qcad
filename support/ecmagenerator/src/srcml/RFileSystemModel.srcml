@@ -30,7 +30,8 @@ dir="./gui" filename="RFileSystemModel.h">
   <cpp:directive>define</cpp:directive>
   <name>RDEFAULT_QMODELINDEX</name>
   <name>QModelIndex</name>()</cpp:define>
-  <comment type="block">/** * \scriptable */</comment>
+  <comment type="block">/** * \scriptable * \ingroup gui
+  */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

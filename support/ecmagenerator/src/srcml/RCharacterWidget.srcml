@@ -49,7 +49,8 @@ dir="./gui" filename="RCharacterWidget.h">
   <name>QMouseEvent</name>;</class_decl>
   <class_decl>class 
   <name>QPaintEvent</name>;</class_decl>
-  <comment type="block">/** * \scriptable */</comment>
+  <comment type="block">/** * \scriptable * \ingroup gui
+  */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

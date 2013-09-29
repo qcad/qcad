@@ -33,8 +33,8 @@ dir="./core" filename="RBlockReferenceEntity.h">
   <name>RDocument</name>;</class_decl>
   <class_decl>class 
   <name>RExporter</name>;</class_decl>
-  <comment type="block">/** * \scriptable * \sharedPointerSupport *
-  \ingroup entity */</comment>
+  <comment type="block">/** * Block reference entity. * *
+  \scriptable * \sharedPointerSupport * \ingroup core */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>

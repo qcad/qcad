@@ -22,6 +22,7 @@ dir="./io/dxf" filename="RDxfPlugin.h">
   <cpp:file>"RPluginInterface.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RSpline</name>;</class_decl>
+  <comment type="block">/** * \ingroup dxf */</comment>
   <class>class 
   <name>RDxfPlugin</name>
   <super>: 

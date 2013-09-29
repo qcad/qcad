@@ -40,7 +40,7 @@ dir="./entity" filename="RAttributeData.h">
   <comment type="block">/** * Stores and manages all data that
   defines the geometry and * appearance of a block attribute
   entity. * * \scriptable * \sharedPointerSupport * \copyable *
-  \ingroup core */</comment>
+  \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>

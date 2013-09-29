@@ -42,7 +42,7 @@ filename="RFileImporterFactoryAdapter.h">
   <comment type="block">/** * \brief Needs to be implemented by
   RFileImporter implementations * to check if the importer is
   suitable to import a file and to instantiate * the file importer
-  if required. * * \ingroup core * \scriptable *
+  if required. * * \ingroup ecma * \scriptable *
   \generateScriptShell */</comment>
   <class>class 
   <name>RFileImporterFactoryAdapter</name>

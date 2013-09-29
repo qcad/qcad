@@ -36,7 +36,7 @@ filename="RBlockListenerAdapter.h">
   <comment type="block">/** * This block listener adapter emits
   signals on block events. * Used to simplify listening to block
   events from QObjects, * for instance from an ECMA script. * *
-  \scriptable */</comment>
+  \scriptable * \ingroup ecma */</comment>
   <class>class 
   <name>RBlockListenerAdapter</name>
   <super>: 

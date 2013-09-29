@@ -32,7 +32,7 @@ filename="RFileImporterAdapter.h">
   <name>RProgressHandler</name>;</class_decl>
   <comment type="block">/** * \brief Base class for file importers.
   * * File importers import files of a specific format into an \ref
-  RDocument. * * \ingroup core * \scriptable * \generateScriptShell
+  RDocument. * * \ingroup ecma * \scriptable * \generateScriptShell
   */</comment>
   <class>class 
   <name>RFileImporterAdapter</name>

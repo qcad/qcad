@@ -98,6 +98,7 @@ public:
     static QString getQtVersion();
     static bool isQt(int majorVersion);
     static QString getCompilerVersion();
+    static QString getOSVersion();
     static QString getReleaseDate();
     static QString getVersionString();
     static QString getNumericalVersionString();

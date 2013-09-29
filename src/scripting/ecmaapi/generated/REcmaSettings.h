@@ -157,6 +157,9 @@
         getCompilerVersion
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getOSVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReleaseDate
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

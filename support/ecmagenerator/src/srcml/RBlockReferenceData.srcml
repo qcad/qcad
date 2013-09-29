@@ -37,7 +37,8 @@ dir="./core" filename="RBlockReferenceData.h">
   <cpp:file>"RBlock.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
-  <comment type="block">/** * \scriptable * \ingroup entity
+  <comment type="block">/** * Defines the geometry and appearance
+  of a block reference entity. * * \scriptable * \ingroup core
   */</comment>
   <class>class 
   <macro>

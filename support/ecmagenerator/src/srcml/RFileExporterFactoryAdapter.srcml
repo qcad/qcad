@@ -36,7 +36,7 @@ filename="RFileExporterFactoryAdapter.h">
   <comment type="block">/** * \brief Need to be implemented for
   every RFileExporter implementation * to check if the exporter is
   suitable to export a file and to instantiate * the file exporter
-  if required. * * \ingroup core * \scriptable *
+  if required. * * \ingroup ecma * \scriptable *
   \generateScriptShell */</comment>
   <class>class 
   <name>RFileExporterFactoryAdapter</name>

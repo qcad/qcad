@@ -70,7 +70,7 @@ dir="./gui" filename="RMainWindowQt.h">
   <class_decl>class 
   <name>RViewListener</name>;</class_decl>
   <comment type="block">/** * \brief Base class for a Qt based MDI
-  main application window. * * \ingroup gui_qt * * \scriptable
+  main application window. * * \ingroup gui * * \scriptable
   */</comment>
   <class>class 
   <macro>

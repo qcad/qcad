@@ -44,7 +44,7 @@ dir="./gui" filename="RRulerQt.h">
   <name>RDocumentInterface</name>;</class_decl>
   <comment type="block">/** * Widget that displays the current
   mouse position. * Usually shown in the status bar of an
-  application. * * \scriptable */</comment>
+  application. * * \ingroup gui * \scriptable */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

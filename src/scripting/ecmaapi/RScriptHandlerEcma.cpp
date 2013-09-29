@@ -421,6 +421,12 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQUrl.property("prototype").setProperty("queryItems",
             engine->newFunction(ecmaQUrlQueryItems));
 
+    QScriptValue classQLocale = globalObject.property("QLocale");
+    classQLocale.property("prototype").setProperty("script",
+            engine->newFunction(ecmaQLocaleScript));
+    classQLocale.setProperty("scriptToString",
+            engine->newFunction(ecmaQLocaleScriptToString));
+
     QScriptValue classQt = globalObject.property("Qt");
     classQt.setProperty("escape",
             engine->newFunction(ecmaQtEscape));
@@ -1541,13 +1547,46 @@ QScriptValue RScriptHandlerEcma::ecmaQUrlQueryItems(QScriptContext* context, QSc
     }
 
     if (context->argumentCount() == 0) {
-        QUrl* url = qscriptvalue_cast<QUrl*> (context->argument(0));
+        //QUrl* url = qscriptvalue_cast<QUrl*> (context->argument(0));
         QList<QPair<QString, QString> > cppResult = self->queryItems();
         result = REcmaHelper::pairListToScriptValue<QString, QString>(engine, cppResult);
     } else {
         return throwError(
-                "Wrong number/types of arguments for QUrl.queryItems().",
+                    "Wrong number/types of arguments for QUrl.queryItems().",
+                    context);
+    }
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQLocaleScript(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    QLocale* self = qscriptvalue_cast<QLocale*> (context->thisObject());
+    if (self == NULL) {
+        return throwError("QLocale.script(): This object is not a QLocale", context);
+    }
+
+    if (context->argumentCount() == 0) {
+        QLocale::Script cppResult = self->script();
+        return qScriptValueFromValue(engine, (int)cppResult);
+    } else {
+        return throwError(
+                "Wrong number/types of arguments for QLocale.script().",
                 context);
+    }
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQLocaleScriptToString(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+
+    if (context->argumentCount() == 1) {
+        QLocale::Script script = qscriptvalue_cast<QLocale::Script> (context->argument(0));
+        QString cppResult = QLocale::scriptToString(script);
+        return qScriptValueFromValue(engine, cppResult);
+    } else {
+        return throwError(
+                    "Wrong number/types of arguments for QLocale.scriptToString().",
+                    context);
     }
     return result;
 }

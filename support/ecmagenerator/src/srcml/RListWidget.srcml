@@ -36,8 +36,8 @@ dir="./gui" filename="RListWidget.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QtDebug&gt;</cpp:file></cpp:include>
   <comment type="block">/** * List widget with some additional
-  functionality for icons. * * \scriptable * \generateScriptShell
-  */</comment>
+  functionality for icons. * * \ingroup gui * \scriptable *
+  \generateScriptShell */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

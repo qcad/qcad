@@ -133,6 +133,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getCompilerVersion, "getCompilerVersion");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getOSVersion, "getOSVersion");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getReleaseDate, "getReleaseDate");
             
             REcmaHelper::registerFunction(&engine, &ctor, getVersionString, "getVersionString");
@@ -1899,6 +1901,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getCompilerVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getOSVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getOSVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getOSVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getOSVersion();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getOSVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getOSVersion", context, engine);
             return result;
         }
          QScriptValue

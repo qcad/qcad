@@ -29,7 +29,8 @@ dir="./gui" filename="RDockWidget.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QDockWidget&gt;</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable */</comment>
+  <comment type="block">/** * \scriptable * \ingroup gui
+  */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

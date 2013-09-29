@@ -35,8 +35,8 @@ dir="./gui" filename="RListView.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QHelpEvent&gt;</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable * \generateScriptShell
-  */</comment>
+  <comment type="block">/** * \scriptable * \generateScriptShell *
+  \ingroup gui */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

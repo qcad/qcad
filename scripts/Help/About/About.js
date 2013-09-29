@@ -63,6 +63,10 @@ About.prototype.beginEvent = function() {
     WidgetFactory.initWebView(webView, this, "openUrl");
     this.initCredits(webView);
 
+    // init system view:
+    var textEdit = formWidget.findChild("SystemText");
+    this.initAboutSystem(textEdit);
+
     formWidget.exec();
 };
 
@@ -305,6 +309,66 @@ About.prototype.getTableRow = function(text1, text2, escape) {
 
     return "<tr><td valign='top'>%1 </td><td>%2</td></tr>".arg(text1).arg(text2);
 };
+
+About.prototype.initAboutSystem = function(textEdit) {
+    var text = "";
+
+    text += "Versions";
+    text += "\nQCAD version: %1.%2.%3.%4"
+        .arg(RSettings.getMajorVersion())
+        .arg(RSettings.getMinorVersion())
+        .arg(RSettings.getRevisionVersion())
+        .arg(RSettings.getBuildVersion());
+    text += "\nDate: " + RSettings.getReleaseDate();
+    text += "\nQt version: " + RSettings.getQtVersion();
+    text += "\nCompiler version: " + RSettings.getCompilerVersion();
+
+    text += "\nOS: ";
+    if (RS.getSystemId()==="win") {
+        text += "Windows";
+    }
+    if (RS.getSystemId()==="osx") {
+        text += "Mac";
+    }
+    if (RS.getSystemId()==="linux") {
+        text += "Linux";
+    }
+    text += "\nOS version: " + RSettings.getOSVersion();
+
+    text += "\n";
+    text += "\nLocale";
+    text += "\nQCAD locale: " + RSettings.getLocale();
+    var sysloc = QLocale.system();
+    text += "\nName: " + sysloc.name();
+    text += "\nCountry: " + sysloc.country();
+    text += "\nCountry name: " + sysloc.nativeCountryName();
+    text += "\nLanguage: " + sysloc.language();
+    text += "\nLanguage name: " + sysloc.nativeLanguageName();
+    text += "\nScript: " + sysloc.script();
+    text += "\nScript name: " + QLocale.scriptToString(sysloc.script());
+    text += "\nDecimal point: " + sysloc.decimalPoint();
+    text += "\nNegative sign: " + sysloc.negativeSign();
+    text += "\nPositive sign: " + sysloc.positiveSign();
+    text += "\nText direction: " + sysloc.textDirection();
+
+    text += "\n";
+    text += "\nCodec";
+    text += "\nSystem codec: " + QTextCodec.codecForLocale().name();
+
+    text += "\n";
+    text += "\nArguments: " + RSettings.getOriginalArguments();
+
+    var env = QProcessEnvironment.systemEnvironment();
+    var keys = env.keys();
+    text += "\n";
+    text += "\nEnvironment";
+    for (var i=0; i<keys.length; i++) {
+        var key = keys[i];
+        text += "\n" + key + ": " + env.value(key);
+    }
+
+    textEdit.plainText = text;
+}
 
 About.prototype.openUrl = function(url) {
     QDesktopServices.openUrl(url);

@@ -28,7 +28,7 @@ dir="./gui" filename="RCloseCurrentEvent.h">
   <cpp:file>&lt;QEvent&gt;</cpp:file></cpp:include>
   <comment type="block">/** * \brief Event that is posted when an
   action requests the closing * of the current document. * *
-  \ingroup core * \scriptable */</comment>
+  \ingroup gui * \scriptable */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

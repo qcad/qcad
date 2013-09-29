@@ -32,7 +32,7 @@ dir="./grid" filename="ROrthoGrid.h">
   <name>RRuler</name>;</class_decl>
   <comment type="block">/** * \brief Grid representation. * * This
   class is responsible for updating the grid and snapping to the
-  grid. * * \scriptable * \ingroup grids */</comment>
+  grid. * * \scriptable * \ingroup grid */</comment>
   <class>class 
   <macro>
     <name>QCADGRID_EXPORT</name>

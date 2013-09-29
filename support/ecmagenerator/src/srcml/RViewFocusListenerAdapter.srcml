@@ -31,7 +31,7 @@ filename="RViewFocusListenerAdapter.h">
   <name>RGraphicsView</name>;</class_decl>
   <comment type="block">/** * \brief Abstract base class for
   classes that are interested in the current * focus. * * \ingroup
-  core * \scriptable * \generateScriptShell */</comment>
+  ecma * \scriptable * \generateScriptShell */</comment>
   <class>class 
   <name>RViewFocusListenerAdapter</name>
   <super>: 

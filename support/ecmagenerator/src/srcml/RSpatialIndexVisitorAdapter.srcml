@@ -30,7 +30,7 @@ filename="RSpatialIndexVisitorAdapter.h">
   <comment type="block">/** * \brief Base class for classes that
   are interested in * the data of spatial index items. Not
   abstract, so it * can be used in script environments with
-  prototype based * OOP as base class. * * \ingroup core *
+  prototype based * OOP as base class. * * \ingroup ecma *
   \scriptable * \generateScriptShell */</comment>
   <class>class 
   <name>RSpatialIndexVisitorAdapter</name>

@@ -36,8 +36,8 @@ dir="./core" filename="RDxfServices.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
   <comment type="block">/** * \brief DXF support tools, mainly for
-  QCAD 2 DXF imports. * * \ingroup qcadcore * \scriptable *
-  \copyable */</comment>
+  QCAD 2 DXF imports. * * \ingroup core * \scriptable * \copyable
+  */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>

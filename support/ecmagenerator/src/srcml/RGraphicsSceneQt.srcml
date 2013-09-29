@@ -70,7 +70,7 @@ dir="./gui" filename="RGraphicsSceneQt.h">
   <comment type="block">/** * \brief Qt based 2d graphics scene. *
   * This graphics scene is an exporter that exports entities into *
   QPainterPaths (2d). * * \ref RGraphicView "graphics views". * *
-  \ingroup qcadguiqt * \scriptable */</comment>
+  \ingroup gui * \scriptable */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

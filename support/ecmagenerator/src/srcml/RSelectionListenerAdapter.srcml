@@ -33,7 +33,8 @@ filename="RSelectionListenerAdapter.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable */</comment>
+  <comment type="block">/** * \scriptable * \ingroup ecma
+  */</comment>
   <class>class 
   <name>RSelectionListenerAdapter</name>
   <super>: 

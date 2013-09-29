@@ -30,7 +30,8 @@ filename="RTransactionListenerAdapter.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable */</comment>
+  <comment type="block">/** * \scriptable * \ingroup ecma
+  */</comment>
   <class>class 
   <name>RTransactionListenerAdapter</name>
   <super>: 

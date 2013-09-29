@@ -32,7 +32,8 @@ dir="./gui" filename="RLineweightCombo.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable */</comment>
+  <comment type="block">/** * \scriptable * \ingroup gui
+  */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

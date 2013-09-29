@@ -441,6 +441,56 @@ QString RSettings::getCompilerVersion() {
     return "Unknown";
 }
 
+QString RSettings::getOSVersion() {
+#ifdef Q_OS_WIN
+    switch (QSysInfo::windowsVersion()) {
+    case QSysInfo::WV_NT:
+        return "Windows NT (operating system version 4.0)";
+    case QSysInfo::WV_2000:
+        return "Windows 2000 (operating system version 5.0)";
+    case QSysInfo::WV_XP:
+        return "Windows XP (operating system version 5.1)";
+    case QSysInfo::WV_2003:
+        return "Windows Server 2003, Windows Server 2003 R2, Windows Home Server, Windows XP Professional x64 Edition (operating system version 5.2)";
+    case QSysInfo::WV_VISTA:
+        return "Windows Vista, Windows Server 2008 (operating system version 6.0)";
+    case QSysInfo::WV_WINDOWS7:
+        return "Windows 7, Windows Server 2008 R2 (operating system version 6.1)";
+    case QSysInfo::WV_WINDOWS8:
+        return "Windows 8";
+    default:
+        return "Unknown / Unsupported";
+    }
+#elif defined (Q_OS_MAC)
+    switch (QSysInfo::MacintoshVersion) {
+    case QSysInfo::MV_9:
+        return "Mac OS 9 (Unsupported)";
+    case QSysInfo::MV_10_0:
+        return "Mac OS X 10.0 (Unsupported)";
+    case QSysInfo::MV_10_1:
+        return "Mac OS X 10.1 (Unsupported)";
+    case QSysInfo::MV_10_2:
+        return "Mac OS X 10.2 (Unsupported)";
+    case QSysInfo::MV_10_3:
+        return "Mac OS X 10.3";
+    case QSysInfo::MV_10_4:
+        return "Mac OS X 10.4";
+    case QSysInfo::MV_10_5:
+        return "Mac OS X 10.5";
+    case QSysInfo::MV_10_6:
+        return "Mac OS X 10.6";
+    case QSysInfo::MV_10_7:
+        return "Mac OS X 10.7";
+    case QSysInfo::MV_10_8:
+        return "Mac OS X 10.8";
+    case QSysInfo::MV_Unknown:
+        return "Unknown / Unsupported";
+    }
+#else
+    return "Unknown";
+#endif
+}
+
 QString RSettings::getVersionString() {
     return R_QCAD_VERSION_STRING;
 }

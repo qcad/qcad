@@ -39,7 +39,7 @@ dir="./gui" filename="RMdiChildQt.h">
   <class_decl>class 
   <name>RGraphicsViewQt</name>;</class_decl>
   <comment type="block">/** * \brief MDI child window. * * \ingroup
-  gui_qt * * \scriptable */</comment>
+  gui * * \scriptable */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>

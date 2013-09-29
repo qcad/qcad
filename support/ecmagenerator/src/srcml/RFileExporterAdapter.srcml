@@ -57,7 +57,7 @@ filename="RFileExporterAdapter.h">
   <comment type="block">/** * \brief Base class for file exporters,
   including script file exporters. * * File exporters export \ref
   RDocument objects into files of a specific format. * * \ingroup
-  core * \scriptable * \generateScriptShell */</comment>
+  ecma * \scriptable * \generateScriptShell */</comment>
   <class>class 
   <name>RFileExporterAdapter</name>
   <super>: 
