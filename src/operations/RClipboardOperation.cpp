@@ -116,16 +116,16 @@ void RClipboardOperation::copy(
         QSet<REntity::Id>::iterator it;
         for (it=ids.begin(); it!=ids.end(); it++) {
             REntity::Id id = *it;
-            QSharedPointer<RAttributeDefinitionEntity> e =
+            QSharedPointer<RAttributeDefinitionEntity> attDef =
                 src.queryEntity(id).dynamicCast<RAttributeDefinitionEntity>();
-            if (e.isNull()) {
+            if (attDef.isNull()) {
                 continue;
             }
 
             QSharedPointer<RAttributeEntity> att(
                 new RAttributeEntity(
                     &dest,
-                    RAttributeData(e->getData(), REntity::INVALID_ID, e->getTag())
+                    RAttributeData(attDef->getData(), REntity::INVALID_ID, attDef->getTag())
                 )
             );
             att->scale(unitScale);
@@ -136,6 +136,11 @@ void RClipboardOperation::copy(
             if (attributes.contains(tag)) {
                 att->setText(attributes[tag]);
             }
+
+            // make sure the attribute has the correct layer ID of the
+            // corresponding layer in dest:
+            QSharedPointer<RLayer> destLayer = copyEntityLayer(*attDef, src, dest, overwriteLayers, transaction);
+            att->setLayerId(destLayer->getId());
 
             transaction.addObject(att, false);
         }
