@@ -190,8 +190,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEscapedText, "getEscapedText");
             
-            REcmaHelper::registerFunction(&engine, proto, escapeUnicode, "escapeUnicode");
-            
             REcmaHelper::registerFunction(&engine, proto, getMainFont, "getMainFont");
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
@@ -217,6 +215,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, escapeUnicode, "escapeUnicode");
+            
             REcmaHelper::registerFunction(&engine, &ctor, toEscapedText, "toEscapedText");
             
             REcmaHelper::registerFunction(&engine, &ctor, toRichText, "toRichText");
@@ -4224,16 +4224,6 @@
 
             QScriptValue result = engine->undefinedValue();
             
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RTextBasedData* self = 
-                        getSelf("escapeUnicode", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
     
     if( context->argumentCount() ==
     1 && (
@@ -4256,8 +4246,8 @@
     // call C++ function:
     // return type 'QString'
     QString cppResult =
-        
-               self->escapeUnicode(a0);
+        RTextBasedData::
+       escapeUnicode(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);

@@ -312,6 +312,7 @@ About.prototype.getTableRow = function(text1, text2, escape) {
 
 About.prototype.initAboutSystem = function(textEdit) {
     var text = "";
+    var i;
 
     text += "Versions";
     text += "\nQCAD version: %1.%2.%3.%4"
@@ -354,19 +355,32 @@ About.prototype.initAboutSystem = function(textEdit) {
     text += "\nNegative sign: " + sysloc.negativeSign();
     text += "\nPositive sign: " + sysloc.positiveSign();
     text += "\nText direction: " + sysloc.textDirection();
-
-    text += "\n";
-    text += "\nCodec";
     text += "\nSystem codec: " + QTextCodec.codecForLocale().name();
 
     text += "\n";
     text += "\nArguments: " + RSettings.getOriginalArguments();
 
+    var numPlugins = RPluginLoader.countPlugins();
+    if (numPlugins>0) {
+        text += "\n";
+        text += "\nPlugins";
+        for (i=0; i<numPlugins; i++) {
+            var pluginInfo = RPluginLoader.getPluginInfo(i);
+            var keys = pluginInfo.getKeys();
+            for (var k=0; k<keys.length; k++) {
+                text += "\n" + keys[k] + "=" + pluginInfo.get(keys[k]);
+            }
+            text += "\n"
+        }
+    }
+    else {
+        text += "\n";
+    }
+
     var env = QProcessEnvironment.systemEnvironment();
     var keyValues = env.toStringList();
-    text += "\n";
     text += "\nEnvironment";
-    for (var i=0; i<keyValues.length; i++) {
+    for (i=0; i<keyValues.length; i++) {
         var keyValue = keyValues[i];
         text += "\n" + keyValue;
     }

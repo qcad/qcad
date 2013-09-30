@@ -145,6 +145,7 @@ dir="./core" filename="RPluginInfo.h">
         </expr>
       </init></decl>
     </param>)</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <if>if 
     <condition>(
@@ -178,6 +179,22 @@ dir="./core" filename="RPluginInfo.h">
     <expr>
       <name>def</name>
     </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QStringList</name>
+    </type>
+    <name>getKeys</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>map</name>.
+    <call>
+      <name>keys</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function></public>
   <private>private: 
   <decl_stmt>

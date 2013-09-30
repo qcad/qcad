@@ -48,11 +48,15 @@ public:
         map.insert(key, value);
     }
 
-    QVariant get(const QString& key, const QVariant& def = RDEFAULT_QVARIANT) {
+    QVariant get(const QString& key, const QVariant& def = RDEFAULT_QVARIANT) const {
         if (map.contains(key)) {
             return map.value(key);
         }
         return def;
+    }
+
+    QStringList getKeys() const {
+        return map.keys();
     }
 
 private:

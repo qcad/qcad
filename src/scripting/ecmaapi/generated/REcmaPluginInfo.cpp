@@ -54,6 +54,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, get, "get");
             
+            REcmaHelper::registerFunction(&engine, proto, getKeys, "getKeys");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPluginInfo*>(), *proto);
 
@@ -346,6 +348,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginInfo::get", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInfo::getKeys
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInfo::getKeys", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::getKeys";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInfo* self = 
+                        getSelf("getKeys", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getKeys();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.getKeys().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInfo::getKeys", context, engine);
             return result;
         }
          QScriptValue REcmaPluginInfo::toString

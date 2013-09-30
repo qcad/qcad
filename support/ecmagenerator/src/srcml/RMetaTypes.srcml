@@ -634,6 +634,11 @@ dir="./core" filename="RMetaTypes.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>QLocale::Script</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>QMainWindow*</argument>)</argument_list>
   </macro>
   <macro>

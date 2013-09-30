@@ -864,6 +864,48 @@ dir="./scripting/ecmaapi" filename="RScriptHandlerEcma.h">
     <name>static</name>
     <name>QScriptValue</name>
   </type>
+  <name>ecmaQLocaleScript</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QScriptContext</name>*</type>
+      <name>context</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>QScriptEngine</name>*</type>
+      <name>engine</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QScriptValue</name>
+  </type>
+  <name>ecmaQLocaleScriptToString</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QScriptContext</name>*</type>
+      <name>context</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>QScriptEngine</name>*</type>
+      <name>engine</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QScriptValue</name>
+  </type>
   <name>ecmaMSleep</name>
   <parameter_list>(
   <param>
