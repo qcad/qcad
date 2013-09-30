@@ -345,7 +345,9 @@ About.prototype.initAboutSystem = function(textEdit) {
         text += "\nCountry name: " + sysloc.nativeCountryName();
     }
     text += "\nLanguage: " + sysloc.language();
-    text += "\nLanguage name: " + sysloc.nativeLanguageName();
+    if (RSettings.getQtVersion().startsWith("4.8") || RSettings.getQtVersion().startsWith("5")) {
+        text += "\nLanguage name: " + sysloc.nativeLanguageName();
+    }
     text += "\nScript: " + sysloc.script();
     text += "\nScript name: " + QLocale.scriptToString(sysloc.script());
     text += "\nDecimal point: " + sysloc.decimalPoint();
@@ -361,12 +363,12 @@ About.prototype.initAboutSystem = function(textEdit) {
     text += "\nArguments: " + RSettings.getOriginalArguments();
 
     var env = QProcessEnvironment.systemEnvironment();
-    var keys = env.keys();
+    var keyValues = env.toStringList();
     text += "\n";
     text += "\nEnvironment";
-    for (var i=0; i<keys.length; i++) {
-        var key = keys[i];
-        text += "\n" + key + ": " + env.value(key);
+    for (var i=0; i<keyValues.length; i++) {
+        var keyValue = keyValues[i];
+        text += "\n" + keyValue;
     }
 
     textEdit.plainText = text;
