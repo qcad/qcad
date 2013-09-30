@@ -1566,8 +1566,12 @@ QScriptValue RScriptHandlerEcma::ecmaQLocaleScript(QScriptContext* context, QScr
     }
 
     if (context->argumentCount() == 0) {
+#if QT_VERSION >= 0x040800
         QLocale::Script cppResult = self->script();
         return qScriptValueFromValue(engine, (int)cppResult);
+#else
+        return qScriptValueFromValue(engine, -1);
+#endif
     } else {
         return throwError(
                 "Wrong number/types of arguments for QLocale.script().",
@@ -1580,9 +1584,13 @@ QScriptValue RScriptHandlerEcma::ecmaQLocaleScriptToString(QScriptContext* conte
     QScriptValue result = engine->undefinedValue();
 
     if (context->argumentCount() == 1) {
+#if QT_VERSION >= 0x040800
         QLocale::Script script = qscriptvalue_cast<QLocale::Script> (context->argument(0));
         QString cppResult = QLocale::scriptToString(script);
         return qScriptValueFromValue(engine, cppResult);
+#else
+        return qScriptValueFromValue(engine, QString("No information available (Qt < 4.8)"));
+#endif
     } else {
         return throwError(
                     "Wrong number/types of arguments for QLocale.scriptToString().",

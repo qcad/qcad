@@ -456,10 +456,15 @@ QString RSettings::getOSVersion() {
         return "Windows Vista, Windows Server 2008 (operating system version 6.0)";
     case QSysInfo::WV_WINDOWS7:
         return "Windows 7, Windows Server 2008 R2 (operating system version 6.1)";
+#if QT_VERSION >= 0x040800
     case QSysInfo::WV_WINDOWS8:
         return "Windows 8";
     default:
         return "Unknown / Unsupported";
+#else
+    default:
+        return "Windows >= 8";
+#endif
     }
 #elif defined (Q_OS_MAC)
     switch (QSysInfo::MacintoshVersion) {
