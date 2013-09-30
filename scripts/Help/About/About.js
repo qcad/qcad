@@ -341,7 +341,9 @@ About.prototype.initAboutSystem = function(textEdit) {
     var sysloc = QLocale.system();
     text += "\nName: " + sysloc.name();
     text += "\nCountry: " + sysloc.country();
-    text += "\nCountry name: " + sysloc.nativeCountryName();
+    if (RSettings.getQtVersion().startsWith("4.8") || RSettings.getQtVersion().startsWith("5")) {
+        text += "\nCountry name: " + sysloc.nativeCountryName();
+    }
     text += "\nLanguage: " + sysloc.language();
     text += "\nLanguage name: " + sysloc.nativeLanguageName();
     text += "\nScript: " + sysloc.script();
