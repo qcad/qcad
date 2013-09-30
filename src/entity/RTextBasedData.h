@@ -238,7 +238,7 @@ public:
     virtual QString getRenderedText(bool escapeUnicode = false) const;
     virtual QString getPlainText() const;
     virtual QString getEscapedText(bool escapeUnicode = false) const;
-    QString escapeUnicode(const QString& str) const;
+    static QString escapeUnicode(const QString& str);
     virtual QFont getMainFont() const;
 
     virtual void update() const;

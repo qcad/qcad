@@ -382,11 +382,11 @@ QString RTextBasedData::getEscapedText(bool escUnicode) const {
     }
 }
 
-QString RTextBasedData::escapeUnicode(const QString& str) const {
+QString RTextBasedData::escapeUnicode(const QString& str) {
     QString ret;
     for (int i=0; i<str.length(); i++) {
         ushort ch = str.at(i).unicode();
-        if (ch>255) {
+        if (ch>127) {
             ret+=QString("\\U+%1").arg(ch, 4, 16, QChar('0'));
         }
         else {
