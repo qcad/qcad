@@ -954,6 +954,7 @@ void REllipse::print(QDebug dbg) const {
     dbg.nospace() << ", startPoint: " << getStartPoint()
                   << ", endPoint: " << getEndPoint()
                   << ", center: " << getCenter()
+                  << ", majorPoint: " << getMajorPoint()
                   << ", majorRadius: " << getMajorRadius()
                   << ", minorRadius: " << getMinorRadius()
                   << ", ratio: " << getRatio()

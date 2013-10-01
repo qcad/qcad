@@ -740,8 +740,6 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
 
 QList<RVector> RShape::getIntersectionPointsCE(const RCircle& circle1,
         const REllipse& ellipse2) {
-    QList<RVector> res;
-
     REllipse ellipse1(
         circle1.getCenter(),
         RVector(circle1.getRadius(),0.),
@@ -873,19 +871,29 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     // for comparison:
     bool identicalCenter =
         (ellipse1Copy.getCenter() - ellipse2Copy.getCenter()).getMagnitude() < RS::PointTolerance;
-    bool identicalShape =
-        (ellipse1Copy.getMajorPoint() - ellipse2Copy.getMajorPoint()).getMagnitude() < RS::PointTolerance &&
-        fabs(ellipse1Copy.getMajorRadius() - ellipse2Copy.getMajorRadius()) < RS::PointTolerance &&
-        fabs(ellipse1Copy.getMinorRadius() - ellipse2Copy.getMinorRadius()) < RS::PointTolerance;
+//    bool identicalShape =
+//        (ellipse1Copy.getMajorPoint() - ellipse2Copy.getMajorPoint()).getMagnitude() < RS::PointTolerance &&
+//        fabs(ellipse1Copy.getMajorRadius() - ellipse2Copy.getMajorRadius()) < RS::PointTolerance &&
+//        fabs(ellipse1Copy.getMinorRadius() - ellipse2Copy.getMinorRadius()) < RS::PointTolerance;
+    bool identicalRatio = fabs(ellipse1Copy.getRatio() - ellipse2Copy.getRatio()) < 1.0e-4;
+    double angleDifference = fabs(RMath::getAngleDifference180(ellipse1Copy.getAngle(), ellipse2Copy.getAngle()));
+    bool identicalRotation = angleDifference < 1.0e-4 || angleDifference>M_PI-1.0e-4;
+
+    //qDebug() << "identicalCenter" << identicalCenter;
+    //qDebug() << "identicalShape" << identicalShape;
 
     // ellipses are identical (no intersection points):
-    if (identicalCenter && identicalShape) {
+//    if (identicalCenter && identicalShape) {
+    if (identicalCenter && identicalRatio && identicalRotation) {
         //qDebug() << "RShape::getIntersectionPointsEE: identical";
         return ret;
     }
 
     // special case: ellipse shapes are identical (different positions):
-    if (identicalShape) {
+    //if (identicalShape) {
+    if (identicalRatio && identicalRotation) {
+        //qDebug() << "identical ratio and rotation";
+
         double angle = -ellipse1Copy.getAngle();
         double yScale = 1.0 / ellipse1Copy.getRatio();
 
@@ -949,6 +957,9 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
         return ret;
     }
 
+//    qDebug() << "e1" << ellipse1Copy;
+//    qDebug() << "e2" << ellipse2Copy;
+
     double phi_1 = ellipse1Copy.getAngle();
     double a1 = ellipse1Copy.getMajorRadius();
     double b1 = ellipse1Copy.getMinorRadius();
@@ -976,7 +987,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     // each of the ellipse axis lengths must be positive
     if ( (!(a1 > 0.0) || !(b1 > 0.0)) || (!(a2 > 0.0) || !(b2 > 0.0)) ) {
         //(*rtnCode) = ERROR_ELLIPSE_PARAMETERS;
-//        qDebug() << "negative axis";
+        //qDebug() << "negative axis length";
         return QList<RVector>();
     }
 
@@ -987,6 +998,9 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     if (fabs(phi_2) > twopi) {
         phi_2 = fmod(phi_2, twopi);
     }
+
+    //qDebug() << "phi_1: " << phi_1;
+    //qDebug() << "phi_2: " << phi_2;
 
     // determine the two ellipse equations from input parameters:
 
@@ -1019,6 +1033,8 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     if (fabs(PHI_2R) > twopi) {
         PHI_2R = fmod(PHI_2R, twopi);
     }
+
+    //qDebug() << "PHI_2R: " << PHI_2R;
 
     // Calculate implicit (Polynomial) coefficients for the second ellipse
     // in its translated-by (-H1, -H2) and rotated-by -PHI_1 postion
@@ -1053,6 +1069,10 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
 //    qDebug() << "EE: " << EE;
 //    qDebug() << "FF: " << FF;
 
+//    if (BB==0.0) {
+//        BB = 1.0e-12;
+//    }
+
     // create and solve the quartic equation to find intersection points:
 
     // If execution arrives here, the ellipses are at least 'close' to
@@ -1067,21 +1087,30 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     cy[1] = 2.0*b1*(a1*a1*(AA*EE - BB*DD) + EE*FF);
     cy[0] = (a1*(a1*AA - DD) + FF)*(a1*(a1*AA + DD) + FF);
 
+//    for (i = 0; i < 5; i++) {
+//        qDebug() << "cy[" << i << "]: " << cy[i];
+//    }
+
     // Once the coefficients for the Quartic Equation in y are known, the
     // roots of the quartic polynomial will represent y-values of the
     // intersection points of the two ellipse curves.
     // The quartic sometimes degenerates into a polynomial of lesser
     // degree, so handle all possible cases.
     if (fabs (cy[4]) > 0.0) {
+        //qDebug() << "quartic";
         // quartic coefficient nonzero, use quartic formula:
         for (i = 0; i <= 3; i++) {
             py[4-i] = cy[i]/cy[4];
         }
         py[0] = 1.0;
+//        for (i = 0; i < 5; i++) {
+//            qDebug() << "py[" << i << "]: " << py[i];
+//        }
         RMath::getBiQuadRoots (py, r);
         nroots = 4;
     }
     else if (fabs (cy[3]) > 0.0) {
+        //qDebug() << "cubic";
         // quartic degenerates to cubic, use cubic formula:
         for (i = 0; i <= 2; i++) {
             py[3-i] = cy[i]/cy[3];
@@ -1090,8 +1119,8 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
         RMath::getCubicRoots (py, r);
         nroots = 3;
     }
-    else if (fabs (cy[2]) > 0.0)
-    {
+    else if (fabs (cy[2]) > 0.0) {
+        //qDebug() << "quadratic";
         // quartic degenerates to quadratic, use quadratic formula:
         for (i = 0; i <= 1; i++) {
             py[2-i] = cy[i]/cy[2];
@@ -1102,14 +1131,15 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
 
     }
     else if (fabs (cy[1]) > 0.0) {
+        //qDebug() << "linear";
         // quartic degenerates to linear: solve directly:
         // cy[1]*Y + cy[0] = 0
         r[1][1] = (-cy[0]/cy[1]);
         r[2][1] = 0.0;
         nroots = 1;
     }
-    else
-    {
+    else {
+        //qDebug() << "degenerate";
         // completely degenerate quartic: ellipses identical?
         // a completely degenerate quartic, which would seem to
         // indicate that the ellipses are identical. However, some
@@ -1118,7 +1148,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
         nroots = 0;
     }
 
-    //qDebug() << "nroots" << nroots;
+    //qDebug() << "nroots: " << nroots;
 
     // check roots of the quartic: are they points of intersection?
     // determine which roots are real, discard any complex roots
@@ -1147,6 +1177,8 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     // for the two ellipses
     nintpts = 0;
     for (i = 1; i <= nychk; i++) {
+        //qDebug() << "ychk[i]: " << ychk[i];
+
         // check for multiple roots
         if ((i > 1) && (fabs(ychk[i] - ychk[i-1]) < (epsTolerance/2.0))) {
             continue;
