@@ -28,13 +28,15 @@ RDxfServices::RDxfServices() :
     qcad2GotDIMAZIN(false),
     qcad2GotInvalidEllipse(false),
     qcad2Compatibility(false),
-    qcad3Compatibility(false) {
+    qcad3Compatibility(false),
+    codec(NULL) {
 
 }
 
 void RDxfServices::reset() {
     qcad2LayerMapping.clear();
     qcad2BlockMapping.clear();
+    codec = NULL;
 }
 
 void RDxfServices::fixQCad2String(QString& str) const {

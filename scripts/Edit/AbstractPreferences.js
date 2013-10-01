@@ -134,10 +134,10 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
         var items = treeWidget.findItems(cat[0], Qt.MatchFixedString);
         var item;
         item = undefined;
-        if (items.length == 0) {
+        if (items.length === 0) {
             item = new QTreeWidgetItem(treeWidget, [ cat[0] ]);
             treeWidget.addTopLevelItem(item);
-            if (cat.length == 1) {
+            if (cat.length === 1) {
                 item.setData(0, Qt.UserRole, i);
             }
         } else {
@@ -149,12 +149,12 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
             subitem = undefined;
             for (var c = 0; c < parent.childCount(); ++c) {
                 var child = parent.child(c);
-                if (child.text(0) == cat[x]) {
+                if (child.text(0) === cat[x]) {
                     subitem = child;
                     break;
                 }
             }
-            if (subitem == undefined) {
+            if (isNull(subitem)) {
                 subitem = new QTreeWidgetItem(parent, [ cat[x] ]);
                 parent.addChild(subitem);
                 if (x == cat.length - 1) {
