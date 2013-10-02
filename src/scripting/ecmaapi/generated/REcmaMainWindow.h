@@ -196,7 +196,7 @@
         move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        close
+        quit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setCommandPrompt

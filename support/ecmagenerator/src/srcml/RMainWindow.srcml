@@ -769,7 +769,7 @@ dir="./core" filename="RMainWindow.h">
     <name>virtual</name>
     <name>void</name>
   </type>
-  <name>close</name>
+  <name>quit</name>
   <parameter_list>()</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
   <cpp:if>#

@@ -326,7 +326,6 @@ dir="./core" filename="RMetaTypes.h">
     <argument_list>(
     <argument>qint64*</argument>)</argument_list>
   </macro>
-  <comment type="line">//Q_DECLARE_METATYPE(uint8_t*)</comment>
   <cpp:if>#
   <cpp:directive>if</cpp:directive>
   <expr>!
@@ -338,6 +337,17 @@ dir="./core" filename="RMetaTypes.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>size_t*</argument>)</argument_list>
+  </macro>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <cpp:if>#
+  <cpp:directive>if</cpp:directive>
+  <expr>
+  <name>QT_VERSION</name>&gt;= 0x040800</expr></cpp:if>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>QLocale::Script</argument>)</argument_list>
   </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
@@ -630,11 +640,6 @@ dir="./core" filename="RMetaTypes.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>QLocale*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>QLocale::Script</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

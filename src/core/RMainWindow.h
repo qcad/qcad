@@ -185,7 +185,7 @@ public:
     /**
      * Closes the application window.
      */
-    virtual void close() = 0;
+    virtual void quit() = 0;
 
 #if QT_VERSION >= 0x050000
     /**

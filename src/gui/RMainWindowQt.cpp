@@ -306,7 +306,9 @@ void RMainWindowQt::move(int x, int y) {
     QMainWindow::move(x, y);
 }
 
-void RMainWindowQt::close() {
+void RMainWindowQt::quit() {
+    qDebug() << "RMainWindowQt::quit";
+    emit closeRequested();
     QMainWindow::close();
 }
 

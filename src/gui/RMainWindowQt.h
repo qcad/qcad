@@ -66,7 +66,6 @@ public:
     virtual int getPositionY();
     virtual void resize(int width, int height);
     virtual void move(int x, int y);
-    virtual void close();
     virtual RDocument* getDocument();
     virtual RDocumentInterface* getDocumentInterface();
 
@@ -104,6 +103,7 @@ public:
     virtual void writeSettings();
 
 public slots:
+    void quit();
     void currentTabChanged(int index);
     void subWindowActivated(QMdiSubWindow* sw);
     //void objectDestroyed(QObject *obj);
@@ -137,6 +137,8 @@ signals:
     void dragEnter(QDragEnterEvent* event);
 
     void resumedTab(RMdiChildQt* mdiChild);
+
+    void closeRequested();
 
 protected:
     virtual void closeEvent(QCloseEvent* e);

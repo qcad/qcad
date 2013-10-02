@@ -167,9 +167,6 @@
         move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        close
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -237,6 +234,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         writeSettings
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        quit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         currentTabChanged

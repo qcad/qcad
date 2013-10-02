@@ -20,7 +20,10 @@
 include("../Screencast.js");
 
 
-
+/**
+ * Focus listener. Re-installes event filters if focus has changed
+ * (e.g. new document).
+ */
 function ScInputInfoFocusListener(ef) {
     RFocusListenerAdapter.call(this);
     this.eventFilter = ef;
@@ -29,7 +32,6 @@ function ScInputInfoFocusListener(ef) {
 ScInputInfoFocusListener.prototype = new RFocusListenerAdapter();
 
 ScInputInfoFocusListener.prototype.updateFocus = function(di) {
-    qDebug("updateFocus");
     var appWin = RMainWindowQt.getMainWindow();
     var mdiArea = appWin.findChild("MdiArea");
     this.eventFilter.install(mdiArea);
@@ -37,15 +39,28 @@ ScInputInfoFocusListener.prototype.updateFocus = function(di) {
 
 
 
-
+/**
+ * Event filter installed for all widgets, tracks mouse, keys, etc.
+ */
 function ScInputInfoEventFilter() {
     QObject.call(this);
-    this.mouseLabel = ScInputInfoEventFilter.createLabel("mouse_l", "mouse_mask", 32, 32);
+
+    var w = 32;
+    var h = 32;
+
+    this.leftButtonPixmap = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/mouse_l.svg", w, h);
+    this.middleButtonPixmap = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/mouse_m.svg", w, h);
+    this.rightButtonPixmap = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/mouse_r.svg", w, h);
+    this.mask = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/mouse_mask.svg", w, h);
+
+    this.mouseLabel = ScInputInfoEventFilter.createLabel(this.leftButtonPixmap, this.mask, w, h);
+
+    this.stopped = false;
 }
 
 ScInputInfoEventFilter.prototype = new QObject();
 
-ScInputInfoEventFilter.createLabel = function(file, maskFile, w, h) {
+ScInputInfoEventFilter.createLabel = function(pixmap, mask, w, h) {
     var appWin = RMainWindowQt.getMainWindow();
     var label = new QLabel(appWin);
     label.focusPolicy = Qt.NoFocus;
@@ -58,8 +73,6 @@ ScInputInfoEventFilter.createLabel = function(file, maskFile, w, h) {
     label.move(0,0);
     label.scaledContents = true;
 
-    var pixmap = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/" + file + ".svg", w, h);
-    var mask = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/" + maskFile + ".svg", w, h);
     label.pixmap = pixmap;
     label.setMask(new QBitmap(mask));
     label.setMask(mask.mask());
@@ -80,6 +93,10 @@ ScInputInfoEventFilter.createPixmap = function(file, w, h) {
 }
 
 ScInputInfoEventFilter.prototype.install = function(w) {
+    if (this.stopped) {
+        return;
+    }
+
     var kids = w.children();
     for (var i=0; i<kids.length; i++) {
         var k = kids[i];
@@ -92,6 +109,20 @@ ScInputInfoEventFilter.prototype.install = function(w) {
     }
 };
 
+ScInputInfoEventFilter.prototype.uninstall = function(w) {
+    this.stopped = true;
+    var kids = w.children();
+    for (var i=0; i<kids.length; i++) {
+        var k = kids[i];
+        if (isNull(k.gotEventFilter)) {
+            k.removeEventFilter();
+            k.setProperty("gotEventFilter", undefined);
+        }
+        this.uninstall(k);
+    }
+};
+
+
 ScInputInfoEventFilter.prototype.showMouseLabel = function() {
     this.mouseLabel.show();
 };
@@ -101,19 +132,37 @@ ScInputInfoEventFilter.prototype.hideMouseLabel = function() {
 };
 
 ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
+    if (this.stopped) {
+        return false;
+    }
+
     var appWin = RMainWindowQt.getMainWindow();
     e = e.cast();
     var type = e.type().toString();
+    var objectName = watched.objectName;
 
-    if (isNull(this.counter)) {
-        this.counter = 0;
+    if (type==="DeferredDelete") {
+        return true;
     }
 
-    if (type.contains("Mouse") ||
-        type.contains("Key") ||
-        type.contains("Focus") ||
-        type.contains("Enter") ||
-        type.contains("Leave")) {
+//    qDebug("type: ", type);
+//    qDebug("objectName: ", objectName);
+
+//    if (type.contains("Close")) {
+//        qDebug("UNINSTALLING EVENT FILTERS:");
+//        qDebug("type: ", type);
+//        qDebug("objectName: ", objectName);
+//        this.uninstall(appWin);
+//        return false;
+//    }
+
+    if (!type.contains("Mouse") &&
+        !type.contains("Key") &&
+        !type.contains("Focus") &&
+        !type.contains("Enter") &&
+        !type.contains("Leave")) {
+
+        return false;
 
         //qDebug("object: ", watched.objectName);
         //qDebug("type: ", type);
@@ -129,6 +178,16 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
             this.button = e.button().valueOf();
             this.buttons = e.buttons().valueOf();
             break;
+    }
+
+    if (this.button===Qt.LeftButton.valueOf() || this.buttons===Qt.LeftButton.valueOf()) {
+        this.mouseLabel.pixmap = this.leftButtonPixmap;
+    }
+    else if (this.button===Qt.MidButton.valueOf() || this.buttons===Qt.MidButton.valueOf()) {
+        this.mouseLabel.pixmap = this.middleButtonPixmap;
+    }
+    else if (this.button===Qt.RightButton.valueOf() || this.buttons===Qt.RightButton.valueOf()) {
+        this.mouseLabel.pixmap = this.rightButtonPixmap;
     }
 
     switch (type) {
@@ -150,26 +209,27 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
             break;
 
         case "MouseMove":
-            //this.hideMouseLabel();
-            //var pos = watched.mapToGlobal(e.pos());
-            this.counter++;
-            if (this.counter>=2) {
-                this.counter = 0;
-                updatePos = true;
-            }
+            updatePos = true;
             break;
     }
 
     if (installFilter) {
-        var self = this;
-        for (var i=0; i<2; i++) {
-            var singleShot = new QTimer();
-            singleShot.singleShot = true;
-            singleShot.timeout.connect(function() {
-                self.mouseLabel.raise();
-                self.install(appWin);
-            });
-            singleShot.start(20 + i*200);
+        if (objectName!=="GraphicsView" &&
+            objectName!=="MdiArea" &&
+            objectName!=="Form" &&
+            !objectName.startsWith("Viewport") &&
+            objectName!=="Single") {
+
+            var self = this;
+            for (var i=0; i<2; i++) {
+                var singleShot = new QTimer();
+                singleShot.singleShot = true;
+                singleShot.timeout.connect(function() {
+                    self.mouseLabel.raise();
+                    self.install(appWin);
+                });
+                singleShot.start(20 + i*200);
+            }
         }
     }
 
@@ -214,8 +274,6 @@ ScInputInfo.prototype.beginEvent = function() {
     var pe = appWin.findChild("PropertyEditorDock");
     pe.show();
     pe.maximumWidth = 280;
-    //pe.resize(300,h+5);
-    //pe.move(x+w+10,y);
 
     var ll = appWin.findChild("LayerListDock");
     ll.show();
@@ -225,37 +283,26 @@ ScInputInfo.prototype.beginEvent = function() {
     bl.show();
     bl.maximumWidth = 220;
 
-    //var ct = appWin.findChild("CamToolBar");
-    //ct.hide();
+    var ct = appWin.findChild("CamToolBar");
+    ct.hide();
 
     var cl = appWin.findChild("CommandLineDock");
     cl.hide();
 
-    //this.showOverlay();
-
     var ef = new ScInputInfoEventFilter(this);
     ef.install(appWin);
+
+    appWin.closeRequested.connect(function() {
+        ef.uninstall(appWin);
+    });
 
     var fl = new ScInputInfoFocusListener(ef);
     appWin.addFocusListener(fl);
 
-    qDebug("init running: true");
     appWin.setProperty("ScreencastRunning", true);
-    //ScInputInfo.running = true;
 
     this.terminate();
 };
-
-//ScInputInfo.prototype.showOverlay = function() {
-//    var appWin = RMainWindowQt.getMainWindow();
-    //ScInputInfo.overlayWidget = new ScInputInfoOverlay(appWin);
-    //ScInputInfo.overlayWidget.objectName = "ScInputInfoOverlay";
-    //ScInputInfo.overlayWidget.resize(200, 200);
-    //ScInputInfo.overlayWidget.move(0, 0);
-    //ScInputInfo.overlayWidget.show();
-
-//    ScInputInfo.installEventFilter(appWin);
-//};
 
 
 //ScInputInfo.prototype.eventFilter = function(watched, e) {

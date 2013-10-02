@@ -72,10 +72,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="y" isConst="false" />
       </variant>
     </method>
-    <method name="close" cppName="close" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
     <method name="getDocument" cppName="getDocument"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -229,6 +225,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="writeSettings" cppName="writeSettings"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="quit" cppName="quit" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="currentTabChanged" cppName="currentTabChanged"

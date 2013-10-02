@@ -143,6 +143,8 @@ bool RGraphicsViewQt::gestureEvent(QGestureEvent* event) {
         RGraphicsView::handlePinchGestureEvent(*static_cast<QPinchGesture *>(pinch));
     }
 
+    event->accept();
+
     return true;
 }
 
@@ -152,7 +154,8 @@ void RGraphicsViewQt::tabletEvent(QTabletEvent* event) {
     }
     RTabletEvent e(*event, *scene, *this);
     RGraphicsView::handleTabletEvent(e);
-    event->ignore();
+    //event->ignore();
+    event->accept();
 }
 
 /**
@@ -212,6 +215,7 @@ void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
         lastButtonState = event->buttons();
     }
 #endif
+    event->accept();
 }
 
 void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
@@ -221,6 +225,7 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
     RMouseEvent e(*event, *scene, *this);
     RGraphicsView::handleMousePressEvent(e);
     lastButtonState = event->buttons();
+    event->accept();
 }
 
 void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
@@ -230,6 +235,7 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
     RMouseEvent e(*event, *scene, *this);
     RGraphicsView::handleMouseReleaseEvent(e);
     lastButtonState = event->buttons();
+    event->accept();
 }
 
 void RGraphicsViewQt::mouseDoubleClickEvent(QMouseEvent* event) {
@@ -239,6 +245,7 @@ void RGraphicsViewQt::mouseDoubleClickEvent(QMouseEvent* event) {
     RMouseEvent e(*event, *scene, *this);
     RGraphicsView::handleMouseDoubleClickEvent(e);
     lastButtonState = event->buttons();
+    event->accept();
 }
 
 void RGraphicsViewQt::wheelEvent(QWheelEvent* event) {
@@ -247,6 +254,7 @@ void RGraphicsViewQt::wheelEvent(QWheelEvent* event) {
     }
     RWheelEvent e(*event, *scene, *this);
     RGraphicsView::handleWheelEvent(e);
+    event->accept();
 }
 
 void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
@@ -254,6 +262,7 @@ void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
         return;
     }
     RGraphicsView::handleKeyPressEvent(*event);
+    event->accept();
 }
 
 void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {
@@ -261,14 +270,17 @@ void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {
         return;
     }
     RGraphicsView::handleKeyReleaseEvent(*event);
+    event->accept();
 }
 
 void RGraphicsViewQt::dragEnterEvent(QDragEnterEvent* event) {
     emit dragEnter(event);
+    event->accept();
 }
 
 void RGraphicsViewQt::dropEvent(QDropEvent* event) {
     emit drop(event);
+    event->accept();
 }
 
 void RGraphicsViewQt::resizeEvent(QResizeEvent* ) {

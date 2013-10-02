@@ -11,6 +11,6 @@ function init(basePath) {
     action.checkable = false;
     action.setSortOrder(9990);
     var appWin = EAction.getMainWindow();
-    action.triggered.connect(appWin, "close");
+    action.triggered.connect(appWin, "quit");
     EAction.addGuiActionTo(action, File, true, false, false, true);
 }

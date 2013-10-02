@@ -195,13 +195,6 @@ dir="./gui" filename="RMainWindowQt.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>close</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
   <name>virtual</name>
   <name>RDocument</name>*</type>
   <name>getDocument</name>
@@ -493,6 +486,12 @@ dir="./gui" filename="RMainWindowQt.h">
   <type>
     <name>void</name>
   </type>
+  <name>quit</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>currentTabChanged</name>
   <parameter_list>(
   <param>
@@ -716,7 +715,13 @@ dir="./gui" filename="RMainWindowQt.h">
       <name>RMdiChildQt</name>*</type>
       <name>mdiChild</name>
     </decl>
-  </param>)</parameter_list>;</function_decl></public>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>closeRequested</name>
+  <parameter_list>()</parameter_list>;</function_decl></public>
   <protected>protected: 
   <function_decl>
   <type>

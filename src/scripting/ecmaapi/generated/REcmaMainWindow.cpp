@@ -199,7 +199,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, move, "move");
             
-            REcmaHelper::registerFunction(&engine, proto, close, "close");
+            REcmaHelper::registerFunction(&engine, proto, quit, "quit");
             
             REcmaHelper::registerFunction(&engine, proto, setCommandPrompt, "setCommandPrompt");
             
@@ -3446,19 +3446,19 @@
             return result;
         }
          QScriptValue
-        REcmaMainWindow::close
+        REcmaMainWindow::quit
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::close", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::close";
+            //REcmaHelper::functionStart("REcmaMainWindow::quit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::quit";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RMainWindow* self = 
-                        getSelf("close", context);
+                        getSelf("quit", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3477,16 +3477,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->close();
+               self->quit();
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.close().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.quit().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::close", context, engine);
+            //REcmaHelper::functionEnd("REcmaMainWindow::quit", context, engine);
             return result;
         }
          QScriptValue
