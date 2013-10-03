@@ -56,6 +56,7 @@ function ScInputInfoEventFilter() {
     this.mouseLabel = ScInputInfoEventFilter.createLabel(this.leftButtonPixmap, this.mask, w, h);
 
     this.stopped = false;
+    this.quit = false;
 }
 
 ScInputInfoEventFilter.prototype = new QObject();
@@ -93,9 +94,10 @@ ScInputInfoEventFilter.createPixmap = function(file, w, h) {
 }
 
 ScInputInfoEventFilter.prototype.install = function(w) {
-    if (this.stopped) {
+    if (this.quit) {
         return;
     }
+    this.stopped = false;
 
     var kids = w.children();
     for (var i=0; i<kids.length; i++) {
@@ -110,12 +112,12 @@ ScInputInfoEventFilter.prototype.install = function(w) {
 };
 
 ScInputInfoEventFilter.prototype.uninstall = function(w) {
-    this.stopped = true;
+    //qDebug("UNINSTALLING EVENT FILTERS");
     var kids = w.children();
     for (var i=0; i<kids.length; i++) {
         var k = kids[i];
         if (isNull(k.gotEventFilter)) {
-            k.removeEventFilter();
+            k.removeEventFilter(this);
             k.setProperty("gotEventFilter", undefined);
         }
         this.uninstall(k);
@@ -132,7 +134,7 @@ ScInputInfoEventFilter.prototype.hideMouseLabel = function() {
 };
 
 ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
-    if (this.stopped) {
+    if (this.stopped || this.quit) {
         return false;
     }
 
@@ -145,16 +147,16 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
         return true;
     }
 
-//    qDebug("type: ", type);
-//    qDebug("objectName: ", objectName);
+    //qDebug("type: ", type);
+    //qDebug("objectName: ", objectName);
 
-//    if (type.contains("Close")) {
-//        qDebug("UNINSTALLING EVENT FILTERS:");
-//        qDebug("type: ", type);
-//        qDebug("objectName: ", objectName);
-//        this.uninstall(appWin);
-//        return false;
-//    }
+    if (type.contains("Close") && objectName.contains("Untitled")) {
+        //qDebug("type: ", type);
+        //qDebug("objectName: ", objectName);
+        this.uninstall(appWin);
+        this.stopped = true;
+        return false;
+    }
 
     if (!type.contains("Mouse") &&
         !type.contains("Key") &&
@@ -293,7 +295,12 @@ ScInputInfo.prototype.beginEvent = function() {
     ef.install(appWin);
 
     appWin.closeRequested.connect(function() {
+        qDebug("ScInputInfo: closeRequested");
+        ef.stopped = true;
+        ef.quit = true;
+        //ef.uninstall(appWin.findChild("MdiArea"));
         ef.uninstall(appWin);
+        qDebug("ScInputInfo: closeRequested: OK");
     });
 
     var fl = new ScInputInfoFocusListener(ef);
