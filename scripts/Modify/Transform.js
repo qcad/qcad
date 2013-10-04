@@ -62,7 +62,7 @@ Transform.prototype.getOperation = function(preview, selectResult) {
     var document = this.getDocument();
     var storage = document.getStorage();
     var ids = document.querySelectedEntities();
-    var i, k, id, entity;
+    var i, k, id, entity, entityP;
     var num = this.copies;
     if (num===0) {
         num=1;
@@ -76,11 +76,13 @@ Transform.prototype.getOperation = function(preview, selectResult) {
             }
 
             id = ids[i];
-            entity = document.queryEntity(id);
-            if (isNull(entity)) {
+            entityP = document.queryEntity(id);
+            if (isNull(entityP)) {
                 continue;
             }
-            entity = entity.data();
+
+            // entity is valid as long as entityP is valid:
+            entity = entityP.data();
 
             // copy: assign new IDs
             if (this.copies>0) {

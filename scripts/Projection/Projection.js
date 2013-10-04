@@ -426,8 +426,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         var shapes = shape.getExploded(segments);
         var pls = new RPolyline();
         for (i=0; i<shapes.length; i++) {
-            s = shapes[i];
-            s = s.data();
+            s = shapes[i].data();
             pls.appendShape(s);
         }
         ret = this.projectShape(pls, preview, trim);
@@ -445,8 +444,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
 
         // project each segment individually:
         for (i=0; i<segmentCount; i++) {
-            s = shape.getSegmentAt(i);
-            s = s.data();
+            s = shape.getSegmentAt(i).data();
             s = this.projectShape(s, preview, trim);
 
             // iterate through projected shapes (trimming might lead to gaps):

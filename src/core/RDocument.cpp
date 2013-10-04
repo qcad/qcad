@@ -1429,7 +1429,7 @@ RDocument& RDocument::getClipboard() {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RDocument& d) {
-    dbg.nospace() << "RDocument(" << QString("%1").arg((long int)&d, 0, 16) << ", ";
+    dbg.nospace() << "RDocument(" << QString("0x%1").arg((long int)&d, 0, 16) << ", ";
     dbg.nospace() << d.getStorage();
     dbg.nospace() << d.getSpatialIndex();
     return dbg.space();

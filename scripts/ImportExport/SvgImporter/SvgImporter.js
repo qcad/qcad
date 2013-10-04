@@ -324,7 +324,8 @@ SvgImporter.prototype.importFile = function(fileName) {
 };
 
 SvgImporter.prototype.importShape = function(shape) {
-    shape = shape.getTransformed(this.transform).data();
+    var shapeP = shape.getTransformed(this.transform);
+    shape = shapeP.data();
     shape.scale(new RVector(1.0, -1.0));
     shape.scale(new RVector(this.resolutionScale, this.resolutionScale));
 

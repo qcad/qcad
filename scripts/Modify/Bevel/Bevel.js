@@ -76,10 +76,10 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
         return false;
     }
 
-    var shape1 = entity1.getClosestShape(pos1);
-    var shape2 = entity2.getClosestShape(pos2);
-    shape1 = shape1.data();
-    shape2 = shape2.data();
+    var shape1P = entity1.getClosestShape(pos1);
+    var shape2P = entity2.getClosestShape(pos2);
+    var shape1 = shape1P.data();
+    var shape2 = shape2P.data();
 
     if (!isShape(shape1) || !isShape(shape2)) {
         return false;

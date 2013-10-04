@@ -55,7 +55,8 @@ LayerDialog.prototype.show = function() {
         }
         color.setColor(this.layer.getColor());
         lineweight.setLineweight(this.layer.getLineweight());
-        lt = this.document.queryLinetype(this.layer.getLinetypeId()).data();
+        var ltP = this.document.queryLinetype(this.layer.getLinetypeId());
+        lt = ltP.data();
         linetype.setLinetype(lt);
     }
 
