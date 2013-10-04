@@ -151,11 +151,34 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="SystemTab">
+        <attribute name="title">
+         <string>System</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QPlainTextEdit" name="SystemText">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
        <widget class="QWidget" name="CreditsTab">
         <attribute name="title">
          <string>Credits</string>
         </attribute>
-        <layout class="QVBoxLayout" name="verticalLayout_5">
+        <layout class="QVBoxLayout" name="verticalLayout_7">
          <property name="leftMargin">
           <number>10</number>
          </property>
@@ -171,29 +194,6 @@
             <url>
              <string>about:blank</string>
             </url>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="SystemTab">
-        <attribute name="title">
-         <string>System</string>
-        </attribute>
-        <layout class="QVBoxLayout" name="verticalLayout_7">
-         <property name="leftMargin">
-          <number>10</number>
-         </property>
-         <property name="rightMargin">
-          <number>10</number>
-         </property>
-         <property name="bottomMargin">
-          <number>10</number>
-         </property>
-         <item>
-          <widget class="QPlainTextEdit" name="SystemText">
-           <property name="readOnly">
-            <bool>true</bool>
            </property>
           </widget>
          </item>

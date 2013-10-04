@@ -322,7 +322,7 @@ ScMirrored.prototype.beginEvent = function() {
     var cursors = {
         "ArrowCursor": [5,5],
         "CrossCursor": [15,15],
-        "WindowZoom": [12,12],
+        "WindowZoomCursor": [12,12],
         "PrintPreviewOffsetCursor": [16,16],
         "OpenHandCursor": [16,16],
         "ClosedHandCursor": [16,16],
