@@ -1,6 +1,8 @@
 /**
  * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
  * 
+ * DirectDistanceEntry handling added 2013 by Robert S.
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -124,32 +126,39 @@ CommandLine.init = function(basePath) {
             return;
         }
 
-        if (di.getClickMode()!=RAction.PickCoordinate) {
+        if (di.getClickMode() !== RAction.PickCoordinate) {
             return;
         }
 
-        // handle coordinates for preview:
-        var pos = stringToCoordinate(di.getRelativeZero(), command);
-        if (isNull(pos)) {
+        var view = di.getLastKnownViewWithFocus();
+
+        // handle direct distance entry for preview:
+        var pos = stringToDirectDistanceEntry(di.getRelativeZero(), di.getCursorPosition(), command);
+
+        // handle coordinate entry for preview:
+        if (isNull(pos) || !pos.isValid()) {
+            pos = stringToCoordinate(di.getRelativeZero(), command);
+        }
+
+        var sp;
+
+        if (isNull(pos) || !pos.isValid()) {
+            sp = di.getCursorPosition();
             di.clearPreview();
             di.repaintViews();
+            di.setCursorPosition(sp);
             return;
         }
 
-        if (!pos.isValid()) {
-            di.clearPreview();
-            di.repaintViews();
-            return;
-        }
-
+        sp = di.getCursorPosition();
         di.setCursorPosition(pos);
         appWin.notifyCoordinateListeners(di);
 
-        var view = di.getLastKnownViewWithFocus();
         e = new RCoordinateEvent(pos, view.getScene(), view.getRGraphicsView());
         di.clearPreview();
         di.coordinateEventPreview(e);
         di.repaintViews();
+        di.setCursorPosition(sp);
     });
     
     // user pressed enter, enter command or coordinate:
@@ -175,12 +184,18 @@ CommandLine.init = function(basePath) {
                 return;
             }
 
-            // handle coordinates:
-            var pos = stringToCoordinate(di.getRelativeZero(), command);
+            // handle direct distance entry:
+            var pos = stringToDirectDistanceEntry(di.getRelativeZero(), di.getCursorPosition(), command);
+
+            // handle coordinate entry:
+            if (isNull(pos) || !pos.isValid()) {
+                pos = stringToCoordinate(di.getRelativeZero(), command);
+            }
+
             if (!isNull(pos)) {
                 if (!pos.isValid()) {
                     appWin.handleUserWarning(
-                        qsTr("Invalid coordinate '%1'.")
+                        qsTr("Invalid coordinate or distance '%1'.")
                             .arg(Qt.escape(command))
                     );
                     return;

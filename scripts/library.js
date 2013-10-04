@@ -1,6 +1,8 @@
 /**
  * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
  * 
+ * Function stringToDirectDistanceEntry added 2013 by Robert S.
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -1234,7 +1236,7 @@ String.prototype.wordWrap = function(m, c, b){
  */
 Number.prototype.mod = function(n) {
     return ((this%n)+n)%n;
-}
+};
 
 /**
  * Formats the given number into a locale aware string.
@@ -1365,6 +1367,40 @@ function stringToCoordinate(relativeZero, str) {
     }
 
     return pos;
+}
+
+/**
+ * Parses the given string as direct distance entry.
+ *
+ * \param relativeZero RVector position of relative zero point.
+ * \param cursorPosition RVector position of cursor.
+ * \param str String to parse (e.g. "34" or "15.123", ...)
+ *
+ * \return Invalid RVector if str is an invalid dde or
+ *         return the dde point.
+ */
+function stringToDirectDistanceEntry(relativeZero, cursorPosition, str) {
+    var value = RMath.eval(str);
+    if (isNumber(value)) {
+        var point1 = relativeZero;
+        if (!isValidVector(point1)) {       // if this is the first action
+            point1 = new RVector(0.0, 0.0); // of a new drawing relativezero
+        }                                   // is not valid
+        var point2 = cursorPosition;
+        if (point1.equalsFuzzy(point2)) {
+            // cursor at same pos as relative zero:
+            return RVector.invalid;
+        }
+
+        var angle = point1.getAngleTo(point2);
+        var v = new RVector();
+        v.setPolar(value, angle);
+        var point = point1.operator_add(v);
+        return point;
+     } else {
+        // not a direct distance entry (not an error):
+        return undefined;
+     }
 }
 
 /**
