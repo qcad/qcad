@@ -1372,6 +1372,8 @@ function stringToCoordinate(relativeZero, str) {
 /**
  * Parses the given string as direct distance entry.
  *
+ * \author Robert S
+ *
  * \param relativeZero RVector position of relative zero point.
  * \param cursorPosition RVector position of cursor.
  * \param str String to parse (e.g. "34" or "15.123", ...)
