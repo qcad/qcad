@@ -151,7 +151,7 @@ public:
     /**
      * Sets the cursor of all graphics views in all MDI children.
      * Necessary as workaround for Qt cursor bug (cursor inconsistent
-     * with multiple widgets on top of each otehr in MDI area).
+     * with multiple widgets on top of each other in MDI area).
      */
     virtual void setGraphicsViewCursor(const QCursor& cursor) = 0;
 

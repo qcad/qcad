@@ -128,7 +128,7 @@ PrintPreview.prototype.setState = function(state) {
 
     if (this.state == PrintPreview.State.SettingOffset) {
         EAction.getDocumentInterface().setClickMode(RAction.PickingDisabled);
-        EAction.getGraphicsView().setCursor(this.cursor);
+        this.setCursor(this.cursor, "PrintPreviewOffsetCursor");
         EAction.showMainTools();
         EAction.getMainWindow().setLeftMouseTip(qsTr("Drag to move paper"));
         EAction.getMainWindow().setRightMouseTip(qsTr("Done"));

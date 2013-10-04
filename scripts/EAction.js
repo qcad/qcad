@@ -56,6 +56,8 @@ EAction.prototype = new RActionAdapter();
 EAction.trBack = qsTr("Back");
 EAction.trCancel = qsTr("Cancel");
 
+EAction.crossCursor = undefined;
+
 /**
  * Called when the user starts this action by clicking a button, choosing a
  * menu, entering a command, etc.
@@ -482,10 +484,13 @@ EAction.prototype.keyReleaseEvent = function(event) {
  * to it) to crosshair cursor.
  */
 EAction.prototype.setCrosshairCursor = function() {
-    var bitmap = new QBitmap("scripts/CrosshairCursor.png", "PNG");
-    var mask = new QBitmap("scripts/CrosshairCursorMask.png", "PNG");
-    var cursor = new QCursor(bitmap, mask, 15, 15);
-    this.getDocumentInterface().setCursor(cursor);
+    if (isNull(EAction.crossCursor)) {
+        var bitmap = new QBitmap("scripts/CrosshairCursor.png", "PNG");
+        var mask = new QBitmap("scripts/CrosshairCursorMask.png", "PNG");
+        EAction.crossCursor = new QCursor(bitmap, mask, 15, 15);
+    }
+
+    this.setCursor(EAction.crossCursor, "CrossCursor");
 };
 
 /**
@@ -493,9 +498,19 @@ EAction.prototype.setCrosshairCursor = function() {
  * to it) to the normal arrow cursor.
  */
 EAction.prototype.setArrowCursor = function() {
+    this.setCursor(new QCursor(Qt.ArrowCursor));
+};
+
+EAction.prototype.setCursor = function(cursor, name) {
     var di = this.getDocumentInterface();
     if (!isNull(di)) {
-        di.setCursor(new QCursor(Qt.ArrowCursor));
+        di.setCursor(cursor);
+    }
+    if (!isNull(name)) {
+        var views = this.getGraphicsViews();
+        for (var i=0; i<views.length; i++) {
+            views[i].setProperty("CursorName", name);
+        }
     }
 };
 

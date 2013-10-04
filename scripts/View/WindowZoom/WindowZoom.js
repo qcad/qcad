@@ -49,8 +49,7 @@ WindowZoom.prototype.setState = function(state) {
     View.prototype.setState.call(this, state);
 
     this.getDocumentInterface().setClickMode(RAction.PickingDisabled);
-    this.setCrosshairCursor();
-    this.getDocumentInterface().setCursor(this.cursor);
+    this.setCursor(this.cursor, "WindowZoomCursor");
 };
 
 WindowZoom.prototype.mousePressEvent = function(event) {
@@ -99,6 +98,6 @@ WindowZoom.prototype.mouseMoveEvent = function(event) {
 
 WindowZoom.prototype.finishEvent = function(event) {
     View.prototype.finishEvent.call(this);
-    this.getDocumentInterface().setCursor(new QCursor(Qt.ArrowCursor));
+    this.setCursor(new QCursor(Qt.ArrowCursor));
 };
 

@@ -24,6 +24,7 @@ include("../Screencast.js");
  * Focus listener. Re-installes event filters if focus has changed
  * (e.g. new document).
  */
+/*
 function ScInputInfoFocusListener(ef) {
     RFocusListenerAdapter.call(this);
     this.eventFilter = ef;
@@ -36,22 +37,24 @@ ScInputInfoFocusListener.prototype.updateFocus = function(di) {
     var mdiArea = appWin.findChild("MdiArea");
     this.eventFilter.install(mdiArea);
 };
+*/
 
 
 
 /**
  * Event filter installed for all widgets, tracks mouse, keys, etc.
  */
+/*
 function ScInputInfoEventFilter() {
     QObject.call(this);
 
     var w = 32;
     var h = 32;
 
-    this.leftButtonPixmap = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/mouse_l.svg", w, h);
-    this.middleButtonPixmap = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/mouse_m.svg", w, h);
-    this.rightButtonPixmap = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/mouse_r.svg", w, h);
-    this.mask = ScInputInfoEventFilter.createPixmap(ScInputInfo.includeBasePath + "/mouse_mask.svg", w, h);
+    this.leftButtonPixmap = ScInputInfoEventFilter.createPixmap(ScMirrored.includeBasePath + "/mouse_l.svg", w, h);
+    this.middleButtonPixmap = ScInputInfoEventFilter.createPixmap(ScMirrored.includeBasePath + "/mouse_m.svg", w, h);
+    this.rightButtonPixmap = ScInputInfoEventFilter.createPixmap(ScMirrored.includeBasePath + "/mouse_r.svg", w, h);
+    this.mask = ScInputInfoEventFilter.createPixmap(ScMirrored.includeBasePath + "/mouse_mask.svg", w, h);
 
     this.mouseLabel = ScInputInfoEventFilter.createLabel(this.leftButtonPixmap, this.mask, w, h);
 
@@ -97,7 +100,7 @@ ScInputInfoEventFilter.createPixmap = function(file, w, h) {
     r.render(p);
     p.end();
     return pixmap;
-}
+};
 
 ScInputInfoEventFilter.prototype.install = function(w) {
     if (this.quit) {
@@ -248,6 +251,7 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
 
     return false;
 };
+*/
 
 
 
@@ -255,28 +259,30 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
 /**
  * This action creates a Qt main window.
  */
-function ScInputInfo(guiAction) {
+function ScMirrored(guiAction) {
     EAction.call(this, guiAction);
 }
 
-ScInputInfo.prototype = new EAction();
-ScInputInfo.includeBasePath = includeBasePath;
+ScMirrored.prototype = new EAction();
+ScMirrored.includeBasePath = includeBasePath;
 
-ScInputInfo.prototype.beginEvent = function() {
+ScMirrored.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     var w = 1280;
-    var h = 680;
-    var x = 50;
+    var h = 670;
+    var x = 0;
     var y = 20;
 
     var appWin = RMainWindowQt.getMainWindow();
     appWin.resize(w,h);
     appWin.move(x,y);
+    //appWin.setAttribute(Qt.WA_MacAlwaysShowToolWindow);
+    //appWin.setAttribute(Qt.WA_MacNoCocoaChildWindow);
 
-    //var flags = new Qt.WindowFlags(appWin.windowFlags | Qt.FramelessWindowHint);
+    //var flags = new Qt.WindowFlags(appWin.windowFlags.valueOf() + Qt.FramelessWindowHint.valueOf());
     //var flags = new Qt.WindowFlags(appWin.windowFlags());
-    //var flags = new Qt.WindowFlags(appWin.windowFlags() | Qt.Window);
+    //var flags = new Qt.WindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool);
     //appWin.setWindowFlags(flags);
 
     var pe = appWin.findChild("PropertyEditorDock");
@@ -297,120 +303,113 @@ ScInputInfo.prototype.beginEvent = function() {
     var cl = appWin.findChild("CommandLineDock");
     cl.hide();
 
-    var ef = new ScInputInfoEventFilter(this);
-    ef.install(appWin);
+    var mir = new QLabel(appWin);
+    mir.setAttribute(Qt.WA_MacAlwaysShowToolWindow);
+    mir.setAttribute(Qt.WA_TransparentForMouseEvents);
+    mir.resize(w,y+h+30);
+    mir.move(x+w,y);
+//    mir.resize(w,h);
+//    mir.move(x,y);
+    mir.focusPolicy = Qt.NoFocus;
+    var flags = new Qt.WindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool);
+    mir.setWindowFlags(flags);
+    mir.setAttribute(Qt.WA_MacNoShadow);
+    mir.setAttribute(Qt.WA_DeleteOnClose);
+    mir.setAttribute(Qt.WA_ShowWithoutActivating);
 
-    appWin.closeRequested.connect(function() {
-        qDebug("ScInputInfo: closeRequested");
-        ef.stopped = true;
-        ef.quit = true;
-        //ef.uninstall(appWin.findChild("MdiArea"));
-        ef.uninstall(appWin);
-        qDebug("ScInputInfo: closeRequested: OK");
-    });
+    mir.show();
 
-    var fl = new ScInputInfoFocusListener(ef);
-    appWin.addFocusListener(fl);
+    var cursors = {
+        "ArrowCursor": [5,5],
+        "CrossCursor": [15,15],
+        "WindowZoom": [12,12],
+        "PrintPreviewOffsetCursor": [16,16],
+        "OpenHandCursor": [16,16],
+        "ClosedHandCursor": [16,16],
+        "IBeamCursor": [16,16]
+    };
 
-    appWin.setProperty("ScreencastRunning", true);
+    //var cursorPixmaps = [];
+    for (var cursorShape in cursors) {
+        cursors[cursorShape].push(ScInputInfoEventFilter.createPixmap(
+            ScMirrored.includeBasePath + "/" + cursorShape + ".svg", 32,32));
+    }
+
+    var t = new QTimer(mir);
+    t.interval = 50;
+    t.timeout.connect(
+        function() {
+            var pm = QPixmap.grabWindow(QApplication.desktop().winId(), 0, 0, w, y+h+30);
+            var pos = QCursor.pos();
+
+            var widget = QApplication.widgetAt(pos);
+            var shape;
+            if (!isNull(widget)) {
+                shape = widget.cursor.shape().toString();
+            }
+
+            if (shape==="BitmapCursor") {
+                shape = widget["CursorName"];
+            }
+
+            if (isNull(shape)|| isNull(cursors[shape])) {
+                shape = "ArrowCursor";
+            }
+
+            var p = new QPainter();
+            p.begin(pm);
+            var cursor = cursors[shape];
+            pos.operator_add_assign(new QPoint(-cursor[0], -cursor[1]));
+            p.drawPixmap(pos, cursor[2]);
+            p.end();
+
+            mir.pixmap = pm;
+            collectGarbage();
+        }
+    );
+    t.start();
+
+//    var ef = new ScInputInfoEventFilter(this);
+//    ef.install(appWin);
+
+//    appWin.closeRequested.connect(function() {
+//        qDebug("ScMirrored: closeRequested");
+//        ef.stopped = true;
+//        ef.quit = true;
+//        //ef.uninstall(appWin.findChild("MdiArea"));
+//        ef.uninstall(appWin);
+//        qDebug("ScMirrored: closeRequested: OK");
+//    });
+
+    //var fl = new ScInputInfoFocusListener(ef);
+    //appWin.addFocusListener(fl);
+
+    //appWin.setProperty("ScreencastRunning", true);
 
     this.terminate();
 };
 
+ScMirrored.createPixmap = function(file, w, h) {
+    var pixmap = new QPixmap(w,h);
+    pixmap.fill(new QColor(0,0,0,0));
+    var p = new QPainter();
+    p.begin(pixmap);
+    var r = new QSvgRenderer();
+    r.load(file);
+    r.render(p);
+    p.end();
+    return pixmap;
+}
 
-//ScInputInfo.prototype.eventFilter = function(watched, e) {
-//    e = e.cast();
-//    var type = e.type().toString();
 
-////    if (watched.objectName==="ScInputInfoOverlay") {
-////        return false;
-////    }
-
-//    qDebug("object: ", watched.objectName);
-//    qDebug("type: ", type);
-
-//    /*
-//    switch (type) {
-//        case "ContextMenu":
-//            var self = this;
-//            var singleShot = new QTimer();
-//            singleShot.singleShot = true;
-//            singleShot.timeout.connect(function() {
-//                self.raise();
-//            });
-//            singleShot.start(20);
-//            break;
-
-//        case "KeyRelease":
-//            this.raise();
-////            qDebug("key: ", e.key());
-////            qDebug("watched: ", watched.objectName);
-////            qDebug("");
-//            //this.keyLabel.text = String.fromCharCode(e.key());
-//            //this.keyLabel.show();
-//            //var a = new QPropertyAnimation(this.keyLabel, "anim", this.keyLabel);
-//            //a.setDuration(1000);
-//            //timer.start(30);
-//            //this.keyLabel.start(String.fromCharCode(e.key()));
-
-//            //this.key = e.key();
-//            //this.update();
-//            break;
-
-//        case "MouseButtonPress":
-//        case "MouseButtonRelease":
-//        case "MouseMove":
-
-//            this.buttons = e.buttons().valueOf();
-//            qDebug("e.buttons(): ", e.buttons());
-
-//            //qDebug("e.pos(): ", e.pos().x(), e.pos().y());
-
-//            var appWin = RMainWindowQt.getMainWindow();
-//            //var pos = watched.mapTo(appWin, e.pos());
-//            var pos = watched.mapToGlobal(e.pos());
-//            //pos = appWin.mapFromGlobal(pos);
-
-//            qDebug("pos: ", pos.x(), pos.y());
-
-//            this.move(pos.x()+20, pos.y()+20);
-//            this.update();
-
-//            //this.move(e.pos().x(), e.pos().y());
-//            //this.raise();
-////            if (e.buttons().valueOf()===Qt.NoButton.valueOf()) {
-////                this.mouseLabel.stop();
-////            }
-////            else {
-////                this.mouseLabel.start(watched, e);
-////            }
-
-////            qDebug("button: ", e.button());
-////            qDebug("buttons: ", e.buttons());
-//            qDebug("type: ", type);
-////            qDebug("pos: ", e.pos());
-////            qDebug("watched: ", watched.objectName);
-////            qDebug("");
-//            break;
-
-//        default:
-//            break;
-//    }
-
-////    if (type.contains("Key") || type.contains("Mouse")) {
-////        qDebug("event: ", e.type());
-////    }
-//    */
-//    return false;
-//};
 
 /**
- * Adds a menu for this action to Examples/Math Examples/ScInputInfo.
+ * Adds a menu for this action to Examples/Math Examples/ScMirrored.
  */
-ScInputInfo.init = function(basePath) {
-    var action = new RGuiAction("&Show input info", RMainWindowQt.getMainWindow());
+ScMirrored.init = function(basePath) {
+    var action = new RGuiAction("&Mirrored", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
-    action.setScriptFile(basePath + "/ScInputInfo.js");
+    action.setScriptFile(basePath + "/ScMirrored.js");
     action.setSortOrder(20);
     action.setDefaultCommands(["screencast"]);
     EAction.addGuiActionTo(action, Screencast, true, false, false);
