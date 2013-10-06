@@ -93,6 +93,7 @@
 #include <QSet>
 #include <QSettings>
 #include <QSharedPointer>
+#include <QShortcutEvent>
 #include <QShowEvent>
 #include <QStaticText>
 #include <QStringList>
@@ -225,6 +226,7 @@ Q_DECLARE_METATYPE(const QRectF*)
 Q_DECLARE_METATYPE(QResizeEvent*)
 Q_DECLARE_METATYPE(QSettings*)
 Q_DECLARE_METATYPE(QSize*)
+Q_DECLARE_METATYPE(QShortcutEvent*)
 Q_DECLARE_METATYPE(QShowEvent*)
 Q_DECLARE_METATYPE(QStaticText*)
 Q_DECLARE_METATYPE(QString)

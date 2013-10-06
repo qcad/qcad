@@ -51,6 +51,13 @@ function ScInputInfoEventFilter() {
     this.buttons = undefined;
     this.button = undefined;
     this.key = undefined;
+    this.shortcut = undefined;
+
+    this.highlightWidget = undefined;
+    this.widgetTimer = undefined;
+
+    this.mouseInfo = undefined;
+    this.mouseTimer = undefined;
 }
 
 ScInputInfoEventFilter.prototype = new QObject();
@@ -100,6 +107,10 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
         return true;
     }
 
+    if (type==="ToolTip") {
+        return true;
+    }
+
     //qDebug("type: ", type);
     //qDebug("objectName: ", objectName);
 
@@ -113,14 +124,16 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
 
     if (!type.contains("Mouse") &&
         !type.contains("Key") &&
+        !type.contains("Shortcut") &&
         !type.contains("Focus") &&
         !type.contains("Enter") &&
-        !type.contains("Leave")) {
-
-        return false;
+        !type.contains("Leave") &&
+        !type.contains("ContextMenu")) {
 
         //qDebug("object: ", watched.objectName);
         //qDebug("type: ", type);
+
+        return false;
     }
 
     var installFilter = false;
@@ -135,16 +148,6 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
             break;
     }
 
-//    if (this.button===Qt.LeftButton.valueOf() || this.buttons===Qt.LeftButton.valueOf()) {
-//        this.mouseLabel.pixmap = this.leftButtonPixmap;
-//    }
-//    else if (this.button===Qt.MidButton.valueOf() || this.buttons===Qt.MidButton.valueOf()) {
-//        this.mouseLabel.pixmap = this.middleButtonPixmap;
-//    }
-//    else if (this.button===Qt.RightButton.valueOf() || this.buttons===Qt.RightButton.valueOf()) {
-//        this.mouseLabel.pixmap = this.rightButtonPixmap;
-//    }
-
     switch (type) {
         case "ContextMenu":
             installFilter = true;
@@ -153,6 +156,7 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
         case "MouseButtonRelease":
             //updatePos = true;
             //this.hideMouseLabel();
+            this.mouseTimer = 1000;
             break;
 
         case "MouseButtonPress":
@@ -160,6 +164,7 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
             if (this.buttons!==Qt.RightButton.valueOf()) {
                 installFilter = true;
             }
+            this.mouseTimer = -1;
             //updatePos = true;
             break;
 
@@ -167,7 +172,13 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
             //updatePos = true;
             break;
 
+        case "Shortcut":
+            this.shortcut = e.key();
+            qDebug("this.shortcut: ", this.shortcut);
+            break;
+
         case "KeyPress":
+        case "ShortcutOverride":
             this.key = e.key().valueOf();
             this.modifiers = e.modifiers().valueOf();
             break;
@@ -176,6 +187,40 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
             this.key = undefined;
             this.modifiers = undefined;
             break;
+    }
+
+    if (this.button===Qt.LeftButton.valueOf() || this.buttons===Qt.LeftButton.valueOf()) {
+        this.mouseInfo = "left";
+        //painter.drawPixmap(pos, this.leftButtonPixmap);
+    }
+    else if (this.button===Qt.MidButton.valueOf() || this.buttons===Qt.MidButton.valueOf()) {
+        this.mouseInfo = "middle";
+        //painter.drawPixmap(pos, this.middleButtonPixmap);
+    }
+    else if (this.button===Qt.RightButton.valueOf() || this.buttons===Qt.RightButton.valueOf()) {
+        this.mouseInfo = "right";
+        //painter.drawPixmap(pos, this.rightButtonPixmap);
+    }
+
+    if (this.key===Qt.Key_QuoteLeft.valueOf()) {
+        this.highlightWidget = QApplication.widgetAt(QCursor.pos());
+        this.widgetTimer = -1;
+
+        //var pos = this.highlightWidget.pos;
+        //pos.setX(pos.x() + this.highlightWidget.width);
+        //var pos = new QPoint(this.highlightWidget.width-5, 5);
+        //var gpos = this.highlightWidget.mapToGlobal(pos);
+
+        // TODO: show tool tip at fixed location, away from highlighted widget:
+        //QToolTip.showText(gpos, this.highlightWidget.toolTip);
+
+//        var toolTipEvent = new QHelpEvent(
+//            QEvent.ToolTip,
+//            pos,
+//            QCursor.pos()
+//            //gpos
+//        );
+//        QCoreApplication.postEvent(this.highlightWidget, toolTipEvent);
     }
 
     if (installFilter) {
@@ -218,6 +263,7 @@ function ScMirrored(guiAction) {
 
 ScMirrored.prototype = new EAction();
 ScMirrored.includeBasePath = includeBasePath;
+ScMirrored.interval = 50;
 
 ScMirrored.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
@@ -226,6 +272,8 @@ ScMirrored.prototype.beginEvent = function() {
     this.h = 670;
     this.x = 0;
     this.y = 20;
+
+    this.iconSize = 32;
 
     var appWin = RMainWindowQt.getMainWindow();
     appWin.resize(this.w,this.h);
@@ -284,12 +332,17 @@ ScMirrored.prototype.beginEvent = function() {
 
     for (var cursorShape in this.cursors) {
         this.cursors[cursorShape].push(ScMirrored.createPixmap(
-            ScMirrored.includeBasePath + "/" + cursorShape + ".svg", 32,32));
+            ScMirrored.includeBasePath + "/" + cursorShape + ".svg", this.iconSize,this.iconSize));
     }
+
+    this.mousePixmap = [];
+    this.mousePixmap["left"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/mouse_l.svg", this.iconSize,this.iconSize);
+    this.mousePixmap["middle"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/mouse_m.svg", this.iconSize,this.iconSize);
+    this.mousePixmap["right"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/mouse_r.svg", this.iconSize,this.iconSize);
 
     // start mirroring:
     var t = new QTimer(this.mirrorWidget);
-    t.interval = 50;
+    t.interval = ScMirrored.interval;
     t.timeout.connect(this, "mirror");
 
     this.ef = new ScInputInfoEventFilter(this);
@@ -316,8 +369,33 @@ ScMirrored.prototype.beginEvent = function() {
 
 ScMirrored.prototype.mirror = function() {
     var pm = QPixmap.grabWindow(QApplication.desktop().winId(), 0, 0, this.w, this.y+this.h+30);
-    var pos = QCursor.pos();
 
+    var painter = new QPainter();
+    painter.begin(pm);
+
+    //qDebug("bs: ", this.ef.buttons);
+    //qDebug("b: ", this.ef.button);
+    //if (!isNull(this.ef.key)) {
+        //qDebug("k: ", "0x%1".arg(this.ef.key.valueOf(), 0, 16));
+    //}
+    //qDebug("m: ", this.ef.modifiers);
+    //qDebug("shortcut: ", this.ef.shortcut);
+
+    this.paintRedWidget(painter);
+    this.paintCursor(painter);
+    this.paintMouseInfo(painter);
+
+    painter.end();
+
+    this.mirrorWidget.pixmap = pm;
+    collectGarbage();
+};
+
+/**
+ * Paint mouse cursor.
+ */
+ScMirrored.prototype.paintCursor = function(painter) {
+    var pos = QCursor.pos();
     var widget = QApplication.widgetAt(pos);
     var shape;
     if (!isNull(widget)) {
@@ -332,34 +410,86 @@ ScMirrored.prototype.mirror = function() {
         shape = "ArrowCursor";
     }
 
-    var p = new QPainter();
-    p.begin(pm);
-
-    //qDebug("bs: ", this.ef.buttons);
-    //qDebug("b: ", this.ef.button);
-    //qDebug("k: ", this.ef.key);
-    //qDebug("m: ", this.ef.modifiers);
-
-    // highlight widget under cursor:
-    if (!isNull(widget) && this.ef.key===Qt.Key_Backslash.valueOf()) {
-        //qDebug("widget.objectName: ", widget.objectName);
-        p.setBrush(new QBrush(new QColor(255,0,0,32)));
-        var pen = new QPen(new QColor(255,0,0,128));
-        pen.setWidth(2);
-        p.setPen(pen);
-        var wpos = widget.mapToGlobal(new QPoint(0,0));
-        p.drawRect(wpos.x(), wpos.y(), widget.width, widget.height);
-    }
-
-    // paint mouse cursor:
     var cursor = this.cursors[shape];
     pos.operator_add_assign(new QPoint(-cursor[0], -cursor[1]));
-    p.drawPixmap(pos, cursor[2]);
+    painter.drawPixmap(pos, cursor[2]);
+};
 
-    p.end();
+/**
+ * Paint mouse button info.
+ */
+ScMirrored.prototype.paintMouseInfo = function(painter) {
+    if (this.ef.mouseTimer<=0 && this.ef.mouseTimer!==-1) {
+        return;
+    }
 
-    this.mirrorWidget.pixmap = pm;
-    collectGarbage();
+    var pos = QCursor.pos();
+    pos.setX(pos.x() + this.iconSize);
+
+    var alpha;
+    if (this.ef.mouseTimer!==-1) {
+        this.ef.mouseTimer = Math.max(this.ef.mouseTimer-ScMirrored.interval, 0);
+        alpha = Math.max(Math.min(this.ef.mouseTimer, 255), 0);
+    }
+    else {
+        alpha = 255;
+    }
+
+    painter.setOpacity(alpha/255);
+
+    if (!isNull(this.mousePixmap[this.ef.mouseInfo])) {
+        painter.drawPixmap(pos, this.mousePixmap[this.ef.mouseInfo]);
+    }
+
+    /*
+    if (this.ef.button===Qt.LeftButton.valueOf() || this.ef.buttons===Qt.LeftButton.valueOf()) {
+        painter.drawPixmap(pos, this.leftButtonPixmap);
+    }
+    else if (this.ef.button===Qt.MidButton.valueOf() || this.ef.buttons===Qt.MidButton.valueOf()) {
+        painter.drawPixmap(pos, this.middleButtonPixmap);
+    }
+    else if (this.ef.button===Qt.RightButton.valueOf() || this.ef.buttons===Qt.RightButton.valueOf()) {
+        painter.drawPixmap(pos, this.rightButtonPixmap);
+    }
+    */
+};
+
+/**
+ * Highlight widget under cursor.
+ */
+ScMirrored.prototype.paintRedWidget = function(painter) {
+    if (isNull(this.ef.highlightWidget)) {
+        return;
+    }
+
+    if (this.ef.widgetTimer<=0 && this.ef.widgetTimer!==-1) {
+        return;
+    }
+
+    var pos = QCursor.pos();
+    var widget = QApplication.widgetAt(pos);
+
+    // cursor moved away: fade out:
+    if (widget!==this.ef.highlightWidget && (this.ef.widgetTimer>500 || this.ef.widgetTimer===-1)) {
+        this.ef.widgetTimer = 500;
+    }
+
+    var alpha;
+    if (this.ef.widgetTimer!==-1) {
+        this.ef.widgetTimer = Math.max(this.ef.widgetTimer-ScMirrored.interval, 0);
+        alpha = Math.max(Math.min(this.ef.widgetTimer, 255), 0);
+    }
+    else {
+        alpha = 255;
+    }
+
+    //qDebug("widget.objectName: ", widget.objectName);
+    painter.setBrush(new QBrush(new QColor(255,0,0,alpha/8)));
+    var pen = new QPen(new QColor(255,0,0,alpha/2));
+    pen.setWidth(2);
+    painter.setPen(pen);
+    var wpos = this.ef.highlightWidget.mapToGlobal(new QPoint(0,0));
+    painter.drawRect(wpos.x(), wpos.y(), this.ef.highlightWidget.width, this.ef.highlightWidget.height);
 };
 
 ScMirrored.createPixmap = function(file, w, h) {

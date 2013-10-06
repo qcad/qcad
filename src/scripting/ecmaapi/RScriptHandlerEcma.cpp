@@ -1756,6 +1756,12 @@ QScriptValue RScriptHandlerEcma::ecmaQEventCast(QScriptContext* context, QScript
             return qScriptValueFromValue(engine, e);
         }
     }
+    {
+        QShortcutEvent* e = dynamic_cast<QShortcutEvent*>(self);
+        if (e!=NULL) {
+            return qScriptValueFromValue(engine, e);
+        }
+    }
 
     return context->thisObject();
 }
