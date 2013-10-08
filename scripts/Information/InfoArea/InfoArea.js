@@ -44,13 +44,6 @@ InfoArea.prototype.escapeEvent = function() {
         this.slotCalculate();
         break;
     case InfoArea.State.Done:
-        if (this.addToDrawing) {
-            var di = this.getDocumentInterface();
-            var op = this.getOperation(false);
-            if (!isNull(op)) {
-                di.applyOperation(op);
-            }
-        }
         EAction.prototype.escapeEvent.call(this);
         break;
     }
@@ -130,7 +123,9 @@ InfoArea.prototype.getOperation = function(preview) {
     var label = sprintf("%0.3f", area);
     view.clearTextLabels();
     var c = this.polyline.getLastVertex();
-    this.addTextLabel(op, view, c, label, preview);
+    if (c.isValid()) {
+        this.addTextLabel(op, view, c, label, preview);
+    }
 
     return op;
 };
@@ -195,12 +190,32 @@ InfoArea.prototype.getCenter = function() {
 InfoArea.prototype.slotCalculate = function() {
     var di = this.getDocumentInterface();
 
-    EAction.getMainWindow().handleUserInfo(
-            qsTr("Polygon area:") + " " + this.getArea() +
-            ", " + qsTr("circumference:") + " " + this.getCircumference());
+    if (isNull(this.polyline) || this.polyline.countVertices()===0) {
+        this.polyline = undefined;
+        this.setState(InfoArea.State.Done);
+//        di.clearPreview();
+//        di.regenerateViews();
+//        di.repaintViews();
+        return;
+    }
+
+    var info = qsTr("Polygon area:") + " " + this.getArea() +
+            ", " + qsTr("circumference:") + " " + this.getCircumference();
+
+    if (this.addToDrawing) {
+        //var di = this.getDocumentInterface();
+        var op = this.getOperation(false);
+        if (!isNull(op)) {
+            di.applyOperation(op);
+        }
+        this.polyline = undefined;
+    }
+
     this.setState(InfoArea.State.Done);
     di.clearPreview();
     this.updatePreview();
     di.regenerateViews();
     di.repaintViews();
+
+    EAction.getMainWindow().handleUserInfo(info);
 };
