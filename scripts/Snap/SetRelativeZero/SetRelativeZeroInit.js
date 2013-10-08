@@ -7,7 +7,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("r,z"));
     action.setDefaultCommands(["setrelativezero", "rz"]);
     action.setSortOrder(4000);
-//    var appWin = EAction.getMainWindow();
-//    appWin.addFocusListener(action);
     EAction.addGuiActionTo(action, Snap, true, true, true, true);
 }
