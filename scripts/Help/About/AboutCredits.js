@@ -4,7 +4,7 @@ var credits =
         "Programming",
         [ "Andrew Mustun", "Main developer." ],
         [ "Matthias Melcher", "Drawing box joint lines, drawing dovetail joint lines, MOL file import." ],
-        [ "Robert S.", "Direct distance entry." ],
+        [ "Robert S.", "Direct distance entry, Snap - X/Y from Points, Snap - Y/X from Points" ],
     ],
     [
         "Translations",
