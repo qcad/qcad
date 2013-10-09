@@ -74,6 +74,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
             
+            REcmaHelper::registerFunction(&engine, proto, setShape, "setShape");
+            
             REcmaHelper::registerFunction(&engine, proto, appendControlPoint, "appendControlPoint");
             
             REcmaHelper::registerFunction(&engine, proto, setPeriodic, "setPeriodic");
@@ -520,6 +522,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSplineData::moveReferencePoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineData::setShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineData::setShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::setShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineData* self = 
+                        getSelf("setShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RSpline */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setShape(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.setShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineData::setShape", context, engine);
             return result;
         }
          QScriptValue

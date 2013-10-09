@@ -445,6 +445,20 @@ dir="./entity" filename="RSplineEntity.h">
       <name>data</name>
     </expr>;</return>}</block>
   </function>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setShape</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RSpline</name>&amp;</type>
+      <name>s</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function>
     <type>
       <name>bool</name>

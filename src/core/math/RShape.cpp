@@ -103,13 +103,13 @@ bool RShape::intersectsWith(const RShape& other, bool limited) const {
  *      other shape.
  */
 QList<RVector> RShape::getIntersectionPoints(const RShape& other,
-        bool limited, bool same) const {
-    return getIntersectionPoints(*this, other, limited, same);
+        bool limited, bool same, bool force) const {
+    return getIntersectionPoints(*this, other, limited, same, force);
 }
 
 
 QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
-        const RShape& shape2, bool limited, bool same) {
+        const RShape& shape2, bool limited, bool same, bool force) {
 
     QList<RVector> empty;
 
@@ -123,19 +123,18 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         }
     }
 
-//    const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
-//    if (spline1 != NULL) {
-//        QList<RVector> res;
-//        if (spline1->getIntersectionPoints(res, shape2, limited, same)) {
-//            return res;
-//        }
-
-//        // spline / spline intersections disabled for now (too slow):
-//        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
-//        if (spline2 != NULL) {
-//            return empty;
-//        }
-//    }
+    // spline / spline intersections disabled for now (too slow)
+    // for some operations where performance is not crucial, spline/spline
+    // intersection calculation can be forced:
+    if (!force) {
+        const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
+        if (spline1 != NULL) {
+            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+            if (spline2 != NULL) {
+                return empty;
+            }
+        }
+    }
 
     const RLine* line1 = dynamic_cast<const RLine*> (&shape1);
     if (line1 != NULL) {

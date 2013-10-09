@@ -140,7 +140,7 @@ SnapIntersectionManual.prototype.getIntersection = function(event) {
         return RVector.invalid;
     }
 
-    var ips = this.shape1.getIntersectionPoints(this.shape2.data(), false);
+    var ips = this.shape1.getIntersectionPoints(this.shape2.data(), false, false, true);
 
     return position.getClosest(ips);
 };

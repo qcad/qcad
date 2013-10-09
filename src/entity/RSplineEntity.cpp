@@ -161,6 +161,9 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
+void RSplineEntity::setShape(const RSpline& s) {
+    data.setShape(s);
+}
 
 void RSplineEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);

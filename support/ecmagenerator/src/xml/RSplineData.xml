@@ -40,6 +40,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="targetPoint" isConst="true" />
       </variant>
     </method>
+    <method name="setShape" cppName="setShape" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSpline &amp;" typeName="RSpline" name="s"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="appendControlPoint" cppName="appendControlPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

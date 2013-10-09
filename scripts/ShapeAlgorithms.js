@@ -428,6 +428,7 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
     else if (isSplineShape(shape)) {
         rest1 = shape.clone();
         rest2 = shape.clone();
+        segment = shape.clone();
 
         var tAtCutPos1 = shape.getTAtPoint(cutPos1);
         var tAtCutPos2 = shape.getTAtPoint(cutPos2);
@@ -440,16 +441,20 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 
         if (tAtCutPos1 < tAtCutPos2) {
             rest1.trimEndPoint(cutPos1);
+            segment.trimStartPoint(cutPos1);
+            segment.trimEndPoint(cutPos2);
             rest2.trimStartPoint(cutPos2);
         }
         else {
             rest1.trimEndPoint(cutPos2);
+            segment.trimStartPoint(cutPos2);
+            segment.trimEndPoint(cutPos1);
             rest2.trimStartPoint(cutPos1);
         }
 
-        segment = shape.clone();
-        segment.trimStartPoint(cutPos1);
-        segment.trimEndPoint(cutPos2);
+        if (!segment.isValid() || segment.getLength()<RS.PointTolerance) {
+            segment = undefined;
+        }
 
         if (!rest1.isValid() || rest1.getLength()<RS.PointTolerance) {
             rest1 = undefined;
@@ -519,7 +524,7 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
 
     for (var i=0; i<otherShapes.length; i++) {
         //qDebug("otherShapes[" + i + "]: ", otherShapes[i]);
-        var sol = shape.getIntersectionPoints(otherShapes[i].data(), onShape);
+        var sol = shape.getIntersectionPoints(otherShapes[i].data(), onShape, false, true);
         for (var k=0; k<sol.length; k++) {
             if (!onOtherShapes || otherShapes[i].isOnShape(sol[k])) {
                 intersections.push(sol[k]);
@@ -609,14 +614,14 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
 
             if (dist>0.0) {
                 if (isNull(distRight) || dist<distRight) {
-                    cutPos1 = inters;
+                    cutPos2 = inters;
                     distRight = dist;
                 }
             }
             else if (dist<0.0) {
                 dist = Math.abs(dist);
                 if (isNull(distLeft) || dist<distLeft) {
-                    cutPos2 = inters;
+                    cutPos1 = inters;
                     distLeft = dist;
                 }
             }

@@ -54,6 +54,10 @@ public:
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);
 
+    void setShape(const RSpline& s) {
+        copySpline(s);
+    }
+
     void appendControlPoint(const RVector& point) {
         RSpline::appendControlPoint(point);
     }

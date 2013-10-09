@@ -98,6 +98,8 @@ public:
         return data;
     }
 
+    void setShape(const RSpline& s);
+
     bool isValid() const {
         return data.isValid();
     }

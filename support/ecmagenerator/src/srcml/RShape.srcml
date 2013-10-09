@@ -451,6 +451,18 @@ dir="./core/math" filename="RShape.h">
         <name>false</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>force</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \return The intersection point(s)
@@ -500,6 +512,18 @@ dir="./core/math" filename="RShape.h">
       <name>bool</name>
     </type>
     <name>same</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>force</name>=
     <init>
       <expr>
         <name>false</name>

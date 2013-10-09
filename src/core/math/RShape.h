@@ -130,14 +130,14 @@ public:
         bool limited = true) const;
 
     QList<RVector> getIntersectionPoints(const RShape& other,
-            bool limited = true, bool same = false) const;
+            bool limited = true, bool same = false, bool force = false) const;
 
     /**
      * \return The intersection point(s) between this shape and the given
      *      other shape.
      */
     static QList<RVector> getIntersectionPoints(const RShape& shape1,
-            const RShape& shape2, bool limited = true, bool same = false);
+            const RShape& shape2, bool limited = true, bool same = false, bool force = false);
 
     virtual bool move(const RVector& offset)=0;
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR)=0;

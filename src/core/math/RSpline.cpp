@@ -644,7 +644,7 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
         return exploded;
     }
 
-    //qDebug() << "RSpline::getExploded: segments: " << segments;
+    qDebug() << "RSpline::getExploded: segments: " << segments;
     //RDebug::printBacktrace("getExploded:    ");
 
     //##boundingBox = RBox();
@@ -1297,6 +1297,9 @@ RS::Ending RSpline::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
 
 void RSpline::trimStartPoint(const RVector& p) {
     if (splineProxy!=NULL) {
+        if (!isValid()) {
+            return;
+        }
         if (p.equalsFuzzy(getStartPoint())) {
             return;
         }
@@ -1315,6 +1318,9 @@ void RSpline::trimStartPoint(const RVector& p) {
 
 void RSpline::trimEndPoint(const RVector& p) {
     if (splineProxy!=NULL) {
+        if (!isValid()) {
+            return;
+        }
         if (p.equalsFuzzy(getStartPoint())) {
             this->invalidate();
             return;

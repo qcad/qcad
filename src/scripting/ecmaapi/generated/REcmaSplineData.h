@@ -54,6 +54,9 @@
         moveReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         appendControlPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
