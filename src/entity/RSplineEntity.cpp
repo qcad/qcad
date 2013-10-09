@@ -66,7 +66,7 @@ void RSplineEntity::init() {
     RSplineEntity::PropertyFitPointNX.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Fit Point"), QT_TRANSLATE_NOOP("REntity", "X"));
     RSplineEntity::PropertyFitPointNY.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Fit Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RSplineEntity::PropertyFitPointNZ.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Fit Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    //RSplineEntity::PropertyKnotN.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Knot Vector"), QT_TRANSLATE_NOOP("REntity", "Knot"));
+    RSplineEntity::PropertyKnotN.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Knot Vector"), QT_TRANSLATE_NOOP("REntity", "Knot"));
 }
 
 bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -78,7 +78,7 @@ bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMemberX(data.fitPoints, value, PropertyFitPointNX == propertyTypeId);
     ret = ret || RObject::setMemberY(data.fitPoints, value, PropertyFitPointNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.fitPoints, value, PropertyFitPointNZ == propertyTypeId);
-    //ret = ret || RObject::setMember(data.knotVector, value, PropertyKnotN == propertyTypeId);
+    ret = ret || RObject::setMember(data.knotVector, value, PropertyKnotN == propertyTypeId);
     ret = ret || RObject::setMember(data.periodic, value, PropertyPeriodic == propertyTypeId);
 
     if (PropertyDegree == propertyTypeId) {
@@ -135,13 +135,13 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
         }
     }
 
-//    if (!data.knotVector.isEmpty()) {
-//        if (propertyTypeId == PropertyKnotN) {
-//            QVariant v;
-//            v.setValue(data.knotVector);
-//            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
-//        }
-//    }
+    if (!data.knotVector.isEmpty()) {
+        if (propertyTypeId == PropertyKnotN) {
+            QVariant v;
+            v.setValue(data.knotVector);
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List | RPropertyAttributes::ReadOnly));
+        }
+    }
 
     if (propertyTypeId == PropertyPeriodic) {
 //        return qMakePair(QVariant(data.periodic), RPropertyAttributes());

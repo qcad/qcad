@@ -149,6 +149,10 @@ IndexWatcher.prototype.indexChanged = function(index) {
         return;
     }
 
+    if (isNull(indexControl.controlNames[0]) || isNull(indexControl.controlNames[1])) {
+        return;
+    }
+
     var controlX = this.propertyEditor.widget.findChild(indexControl.controlNames[0]);
     var controlY = this.propertyEditor.widget.findChild(indexControl.controlNames[1]);
 

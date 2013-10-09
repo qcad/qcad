@@ -327,8 +327,8 @@ Trim.trim = function(op, limitingEntity, limitingShape, limitingPos, trimEntity,
     // trim trim entity:
     var ending = trimmed1.getTrimEnd(trimPos, is);
 
-    var trimmedShape1 = trimmed1.castToShape();
-    qDebug("trimmed1: ", trimmedShape1);
+    //var trimmedShape1 = trimmed1.castToShape();
+    //qDebug("trimmed1: ", trimmedShape1);
 
     switch (ending) {
     case RS.EndingStart:
@@ -349,8 +349,8 @@ Trim.trim = function(op, limitingEntity, limitingShape, limitingPos, trimEntity,
         break;
     }
 
-    trimmedShape1 = trimmed1.castToShape();
-    qDebug("trimmed1 (after): ", trimmedShape1);
+    //trimmedShape1 = trimmed1.castToShape();
+    //qDebug("trimmed1 (after): ", trimmedShape1);
 
     // trim limiting entity if possible (not possible for splines):
     if (trimBoth && isFunction(trimmed2.getTrimEnd)) {

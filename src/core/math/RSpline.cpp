@@ -62,8 +62,9 @@ void RSpline::copySpline(const RSpline& other) {
     this->tangentEnd = other.tangentEnd;
     this->boundingBox = other.boundingBox;
     this->exploded = other.exploded;
-    this->curve = other.curve;
-    this->dirty = other.dirty;
+    //this->curve = other.curve;
+    //this->dirty = other.dirty;
+    this->dirty = true;
 }
 
 /**
@@ -1310,6 +1311,7 @@ void RSpline::trimStartPoint(const RVector& p) {
         if (splines.length()>1) {
             copySpline(splines[1]);
         }
+        update();
     }
 }
 
@@ -1327,6 +1329,7 @@ void RSpline::trimEndPoint(const RVector& p) {
         if (splines.length()>0) {
             copySpline(splines[0]);
         }
+        update();
     }
 }
 

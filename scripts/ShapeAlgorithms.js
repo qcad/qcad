@@ -438,22 +438,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
             }
         }
 
-        qDebug("cutPos1: ", cutPos1);
-        qDebug("cutPos2: ", cutPos2);
-
-        qDebug("tAtCutPos1: ", tAtCutPos1);
-        qDebug("tAtCutPos2: ", tAtCutPos2);
-
-        qDebug("tMin: ", shape.getTMin());
-        qDebug("tMax: ", shape.getTMax());
-
-//        if (shape.getStartPoint().equalsFuzzy(shape.getEndPoint())) {
-//            if (cutPos1.equalsFuzzy(shape.getStartPoint())) {
-//            }
-//            if (cutPos2.equalsFuzzy(shape.getStartPoint())) {
-//            }
-//        }
-
         if (tAtCutPos1 < tAtCutPos2) {
             rest1.trimEndPoint(cutPos1);
             rest2.trimStartPoint(cutPos2);
@@ -477,10 +461,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
     }
 
     var ret = [];
-
-    qDebug("rest1: ", rest1);
-    qDebug("rest2: ", rest2);
-    qDebug("segment: ", segment);
 
     // add new rest entities:
     ret.push(rest1);
