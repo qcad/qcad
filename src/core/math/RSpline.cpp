@@ -62,8 +62,6 @@ void RSpline::copySpline(const RSpline& other) {
     this->tangentEnd = other.tangentEnd;
     this->boundingBox = other.boundingBox;
     this->exploded = other.exploded;
-    //this->curve = other.curve;
-    //this->dirty = other.dirty;
     this->dirty = true;
 }
 

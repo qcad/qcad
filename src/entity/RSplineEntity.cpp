@@ -144,7 +144,6 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
     }
 
     if (propertyTypeId == PropertyPeriodic) {
-//        return qMakePair(QVariant(data.periodic), RPropertyAttributes());
         return qMakePair(QVariant(data.isPeriodic()), RPropertyAttributes());
     }
 
@@ -173,42 +172,10 @@ void RSplineEntity::exportEntity(RExporter& e, bool preview) const {
 void RSplineEntity::print(QDebug dbg) const {
     dbg.nospace() << "RSplineEntity(";
     REntity::print(dbg);
-
     dbg.nospace() << getData();
-
-    /*
-    dbg.nospace() << "\nclosed: " << isClosed();
-    dbg.nospace() << "\nperiodic: " << isPeriodic();
-
-    QList<RVector> controlPoints = getControlPointsWrapped();
-    dbg.nospace() << "\ncontrolPoints (" << controlPoints.count() << "): ";
-    for (int i=0; i<controlPoints.count(); ++i) {
-        dbg.nospace() << i << ": " << controlPoints.at(i);
-    }
-
-    QList<RVector> controlPoints = getControlPointsWrapped();
-    dbg.nospace() << "\ncontrolPoints (" << controlPoints.count() << "): ";
-    for (int i=0; i<controlPoints.count(); ++i) {
-        dbg.nospace() << i << ": " << controlPoints.at(i);
-    }
-
-    QList<RVector> fitPoints = getFitPoints();
-    dbg.nospace() << "\nfitPoints (" << fitPoints.count() << "): ";
-    for (int i=0; i<fitPoints.count(); ++i) {
-        dbg.nospace() << i << ": " << fitPoints.at(i) << ", ";
-    }
-
-    QList<double> knotVector = getKnotVector();
-    dbg.nospace() << "\nknots (" << knotVector.count() << "): ";
-    for (int i=0; i<knotVector.count(); ++i) {
-        dbg.nospace() << i << ": " << knotVector.at(i) << ", ";
-    }
-    */
-
     dbg.nospace() << ")";
 }
 
 int RSplineEntity::getComplexity() const {
-    //##return getData().getExploded().count();
     return qMax(data.countControlPoints()*64, data.countFitPoints()*64);
 }

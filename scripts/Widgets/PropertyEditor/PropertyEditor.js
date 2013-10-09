@@ -134,8 +134,6 @@ IndexWatcher.prototype.indexChanged = function(index) {
     var control = this.propertyEditor.widget.findChild(objectName);
     this.propertyEditor.initNumberControls(objectName, this.propertyType, true, control, index);
 
-    //debugger;
-
     var indexControlObjectName =
         PropertyEditorImpl.getIndexControlObjectName(this.propertyType.getPropertyGroupTitle());
     var indexControl = this.propertyEditor.widget.findChild(indexControlObjectName);
