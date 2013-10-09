@@ -1297,8 +1297,15 @@ RS::Ending RSpline::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
 }
 
 void RSpline::trimStartPoint(const RVector& p) {
-    //if (splitFunction!=NULL) {
     if (splineProxy!=NULL) {
+        if (p.equalsFuzzy(getStartPoint())) {
+            return;
+        }
+        if (p.equalsFuzzy(getEndPoint())) {
+            this->invalidate();
+            return;
+        }
+
         QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << p);
         if (splines.length()>1) {
             copySpline(splines[1]);
@@ -1307,8 +1314,15 @@ void RSpline::trimStartPoint(const RVector& p) {
 }
 
 void RSpline::trimEndPoint(const RVector& p) {
-    //if (splitFunction!=NULL) {
     if (splineProxy!=NULL) {
+        if (p.equalsFuzzy(getStartPoint())) {
+            this->invalidate();
+            return;
+        }
+        if (p.equalsFuzzy(getEndPoint())) {
+            return;
+        }
+
         QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << p);
         if (splines.length()>0) {
             copySpline(splines[0]);

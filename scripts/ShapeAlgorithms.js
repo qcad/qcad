@@ -424,8 +424,63 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
             }
         }
     }
+    // spline:
+    else if (isSplineShape(shape)) {
+        rest1 = shape.clone();
+        rest2 = shape.clone();
+
+        var tAtCutPos1 = shape.getTAtPoint(cutPos1);
+        var tAtCutPos2 = shape.getTAtPoint(cutPos2);
+
+        if (shape.getStartPoint().equalsFuzzy(shape.getEndPoint())) {
+            if (RMath.fuzzyCompare(tAtCutPos1, shape.getTMax())) {
+                tAtCutPos1 = shape.getTMin();
+            }
+        }
+
+        qDebug("cutPos1: ", cutPos1);
+        qDebug("cutPos2: ", cutPos2);
+
+        qDebug("tAtCutPos1: ", tAtCutPos1);
+        qDebug("tAtCutPos2: ", tAtCutPos2);
+
+        qDebug("tMin: ", shape.getTMin());
+        qDebug("tMax: ", shape.getTMax());
+
+//        if (shape.getStartPoint().equalsFuzzy(shape.getEndPoint())) {
+//            if (cutPos1.equalsFuzzy(shape.getStartPoint())) {
+//            }
+//            if (cutPos2.equalsFuzzy(shape.getStartPoint())) {
+//            }
+//        }
+
+        if (tAtCutPos1 < tAtCutPos2) {
+            rest1.trimEndPoint(cutPos1);
+            rest2.trimStartPoint(cutPos2);
+        }
+        else {
+            rest1.trimEndPoint(cutPos2);
+            rest2.trimStartPoint(cutPos1);
+        }
+
+        segment = shape.clone();
+        segment.trimStartPoint(cutPos1);
+        segment.trimEndPoint(cutPos2);
+
+        if (!rest1.isValid() || rest1.getLength()<RS.PointTolerance) {
+            rest1 = undefined;
+        }
+
+        if (!rest2.isValid() || rest2.getLength()<RS.PointTolerance) {
+            rest2 = undefined;
+        }
+    }
 
     var ret = [];
+
+    qDebug("rest1: ", rest1);
+    qDebug("rest2: ", rest2);
+    qDebug("segment: ", segment);
 
     // add new rest entities:
     ret.push(rest1);
@@ -471,7 +526,7 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
         }
     }
 
-    if (isNull(orthoLine)) {
+    if (isNull(orthoLine) && !isSplineShape(shape)) {
         return undefined;
     }
 
@@ -565,6 +620,26 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
                 distLeft = dist;
             }
             */
+        }
+        else if (isSplineShape(shape)) {
+            var tPos = shape.getTAtPoint(position);
+            var tInters = shape.getTAtPoint(inters);
+
+            dist = tPos - tInters;
+
+            if (dist>0.0) {
+                if (isNull(distRight) || dist<distRight) {
+                    cutPos1 = inters;
+                    distRight = dist;
+                }
+            }
+            else if (dist<0.0) {
+                dist = Math.abs(dist);
+                if (isNull(distLeft) || dist<distLeft) {
+                    cutPos2 = inters;
+                    distLeft = dist;
+                }
+            }
         }
     }
 

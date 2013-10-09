@@ -58,7 +58,7 @@ BreakOut.prototype.setState = function(state) {
             this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse to auto trim"));
         }
         else {
-            this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse segment"));
+            this.setLeftMouseTip(qsTr("Choose line, arc, circle, ellipse or spline segment"));
         }
         this.setRightMouseTip(EAction.trCancel);
         EAction.showModificationTools();
@@ -92,11 +92,12 @@ BreakOut.prototype.pickEntity = function(event, preview) {
         var cond = isLineEntity(entity) ||
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
-            isEllipseEntity(entity);
+            isEllipseEntity(entity) ||
+            isSplineEntity(entity);
 
         if (!cond) {
             if (!preview) {
-                EAction.warnNotLineArcCircleEllipse();
+                EAction.warnNotLineArcCircleEllipseSpline();
             }
             break;
         }
