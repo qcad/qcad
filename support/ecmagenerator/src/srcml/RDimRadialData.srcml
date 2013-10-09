@@ -357,6 +357,11 @@ dir="./entity" filename="RDimRadialData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RDimRadialData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RDimRadialData&gt;</argument>)</argument_list>
   </macro>

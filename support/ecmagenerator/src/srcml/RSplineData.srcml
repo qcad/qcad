@@ -332,6 +332,111 @@ dir="./entity" filename="RSplineData.h">
   </function>
   <function>
     <type>
+      <name>
+      <name>RS</name>::
+      <name>Ending</name></name>
+    </type>
+    <name>getTrimEnd</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>coord</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>trimPoint</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RSpline</name>::
+        <name>getTrimEnd</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>coord</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>trimPoint</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>trimStartPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>p</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RSpline</name>::
+        <name>trimStartPoint</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>p</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>trimEndPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>p</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RSpline</name>::
+        <name>trimEndPoint</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>p</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>bool</name>
     </type>
     <name>isClosed</name>
@@ -672,6 +777,11 @@ dir="./entity" filename="RSplineData.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>RSplineData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>const RSplineData*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

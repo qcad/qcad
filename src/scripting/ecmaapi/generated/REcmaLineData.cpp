@@ -68,6 +68,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getLine, "getLine");
+            
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
@@ -363,6 +365,55 @@
 
     // public methods:
      QScriptValue
+        REcmaLineData::getLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLineData::getLine", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLineData::getLine";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLineData* self = 
+                        getSelf("getLine", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLine'
+    RLine cppResult =
+        
+               self->getLine();
+        // return type: RLine
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLineData.getLine().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLineData::getLine", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaLineData::getStartPoint
         (QScriptContext* context, QScriptEngine* engine) 
         

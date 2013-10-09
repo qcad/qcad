@@ -113,6 +113,17 @@ dir="./entity" filename="RLineData.h">
       <name>endPoint</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
+  <function>
+    <type>
+      <name>RLine</name>
+    </type>
+    <name>getLine</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>*
+    <name>this</name></expr>;</return>}</block>
+  </function>
   <comment type="line">//virtual RBox getBoundingBox()
   const;</comment>
   <function>
@@ -506,6 +517,11 @@ dir="./entity" filename="RLineData.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>RLineData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>const RLineData*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

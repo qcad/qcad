@@ -36,7 +36,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RAttributeData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RAttributeData &amp;"
+      <variant returnType="const RAttributeData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="setData" cppName="setData" specifier="public"

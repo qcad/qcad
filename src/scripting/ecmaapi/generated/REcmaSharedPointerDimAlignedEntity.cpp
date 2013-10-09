@@ -1120,11 +1120,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimAlignedData &'
-    RDimAlignedData & cppResult =
+    // return type 'const RDimAlignedData &'
+    const RDimAlignedData & cppResult =
         
                self->getData();
-        // return type: RDimAlignedData &
+        // return type: const RDimAlignedData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

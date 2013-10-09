@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RSplineProxy" />
   <class name="RSpline"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
@@ -21,6 +22,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RSpline *" isPureVirtual="false" />
+    </method>
+    <method name="copySpline" cppName="copySpline"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSpline &amp;" typeName="RSpline" name="other"
+        isConst="true" />
+      </variant>
     </method>
     <method name="createSplinesFromArc"
     cppName="createSplinesFromArc" specifier="public"
@@ -471,6 +480,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getTMax" cppName="getTMax" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getTAtPoint" cppName="getTAtPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+      </variant>
     </method>
     <method name="updateFromControlPoints"
     cppName="updateFromControlPoints" specifier="public"

@@ -72,7 +72,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RLineData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RLineData &amp;"
+      <variant returnType="const RLineData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="setShape" cppName="setShape" specifier="public"

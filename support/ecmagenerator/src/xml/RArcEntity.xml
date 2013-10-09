@@ -78,7 +78,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RArcData &amp;" isPureVirtual="false" />
-      <variant returnType="RArcData &amp;" isPureVirtual="false" />
+      <variant returnType="const RArcData &amp;"
+      isPureVirtual="false" />
     </method>
     <method name="getCenter" cppName="getCenter" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

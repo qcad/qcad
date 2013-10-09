@@ -63,7 +63,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RDimAngularData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RDimAngularData &amp;"
+      <variant returnType="const RDimAngularData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="setData" cppName="setData" specifier="public"

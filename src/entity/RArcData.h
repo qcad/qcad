@@ -49,6 +49,10 @@ public:
     RArcData(const RVector& center, double radius, double startAngle,
             double endAngle, bool reversed = false);
 
+    RArc getArc() {
+        return *this;
+    }
+
     RVector getCenter() const {
         return RArc::getCenter();
     }
@@ -118,6 +122,7 @@ public:
 };
 
 Q_DECLARE_METATYPE(RArcData*)
+Q_DECLARE_METATYPE(const RArcData*)
 Q_DECLARE_METATYPE(QSharedPointer<RArcData>)
 
 #endif

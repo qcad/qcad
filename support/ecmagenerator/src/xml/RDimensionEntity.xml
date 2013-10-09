@@ -66,7 +66,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RDimensionData &amp;"
       isPureVirtual="true" />
-      <variant returnType="RDimensionData &amp;"
+      <variant returnType="const RDimensionData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="isValid" cppName="isValid" specifier="public"

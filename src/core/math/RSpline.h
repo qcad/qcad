@@ -33,6 +33,8 @@
 #include "opennurbs/opennurbs.h"
 #endif
 
+class RSplineProxy;
+
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
 #endif
@@ -51,7 +53,8 @@
  */
 class QCADCORE_EXPORT RSpline: public RShape, public RExplodable, public RDirected {
 public:
-    typedef RSpline (*UpdateFromFitPointsFunction)(const RSpline& spline, bool useTangents);
+    //typedef RSpline (*UpdateFromFitPointsFunction)(const RSpline& spline, bool useTangents);
+    //typedef QList<RSpline> (*SplitFunction)(const RSpline& spline, const QList<RVector>& points);
 
     RSpline();
     RSpline(const QList<RVector>& controlPoints, int degree);
@@ -60,6 +63,8 @@ public:
     virtual RSpline* clone() const {
         return new RSpline(*this);
     }
+
+    void copySpline(const RSpline& other);
 
     static QList<RSpline> createSplinesFromArc(const RArc& arc);
     static RSpline createBezierFromSmallArc(double r, double a1, double a2);
@@ -163,6 +168,8 @@ public:
     double getTDelta() const;
     double getTMin() const;
     double getTMax() const;
+    double getTAtPoint(const RVector& point) const;
+    //bool getIntersectionPointsProxy(QList<RVector>& res, const RShape& other, bool limited, bool same) const;
 
     void updateFromControlPoints() const;
     void updateFromFitPoints(bool useTangents = false) const;
@@ -171,8 +178,8 @@ public:
     /**
      * \nonscriptable
      */
-    static void setUpdateFromFitPointsFunction(UpdateFromFitPointsFunction f) {
-        updateFromFitPointsFunction = f;
+    static void setSplineProxy(RSplineProxy* p) {
+        splineProxy = p;
     }
 
 protected:
@@ -239,7 +246,9 @@ private:
     mutable RBox boundingBox;
     mutable QList<QSharedPointer<RShape> > exploded;
 
-    static UpdateFromFitPointsFunction updateFromFitPointsFunction;
+    static RSplineProxy* splineProxy;
+    //static UpdateFromFitPointsFunction updateFromFitPointsFunction;
+    //static SplitFunction splitFunction;
 };
 
 Q_DECLARE_METATYPE(const RSpline*)

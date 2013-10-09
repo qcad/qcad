@@ -75,6 +75,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        copySpline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         createSplinesFromArc
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -280,6 +283,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTAtPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateFromControlPoints

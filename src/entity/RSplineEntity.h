@@ -114,6 +114,18 @@ public:
         return data.getDirection2();
     }
 
+    RS::Ending getTrimEnd(const RVector& coord,
+                            const RVector& trimPoint) {
+        return data.getTrimEnd(coord, trimPoint);
+    }
+
+    void trimStartPoint(const RVector& p) {
+        return data.trimStartPoint(p);
+    }
+    void trimEndPoint(const RVector& p) {
+        return data.trimEndPoint(p);
+    }
+
     RVector getTangentAtStart() const {
         return data.getTangentAtStart();
     }

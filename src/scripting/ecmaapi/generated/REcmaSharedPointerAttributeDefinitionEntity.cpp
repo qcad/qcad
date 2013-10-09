@@ -683,11 +683,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RAttributeDefinitionData &'
-    RAttributeDefinitionData & cppResult =
+    // return type 'const RAttributeDefinitionData &'
+    const RAttributeDefinitionData & cppResult =
         
                self->getData();
-        // return type: RAttributeDefinitionData &
+        // return type: const RAttributeDefinitionData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

@@ -82,6 +82,7 @@ private:
 };
 
 Q_DECLARE_METATYPE(RDimDiametricData*)
+Q_DECLARE_METATYPE(const RDimDiametricData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimDiametricData>)
 
 #endif

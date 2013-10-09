@@ -968,11 +968,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimensionData &'
-    RDimensionData & cppResult =
+    // return type 'const RDimensionData &'
+    const RDimensionData & cppResult =
         
                self->getData();
-        // return type: RDimensionData &
+        // return type: const RDimensionData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

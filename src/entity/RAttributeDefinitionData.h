@@ -82,6 +82,7 @@ private:
 
 Q_DECLARE_METATYPE(RAttributeDefinitionData)
 Q_DECLARE_METATYPE(RAttributeDefinitionData*)
+Q_DECLARE_METATYPE(const RAttributeDefinitionData*)
 Q_DECLARE_METATYPE(QSharedPointer<RAttributeDefinitionData>)
 Q_DECLARE_METATYPE(QSharedPointer<RAttributeDefinitionData>*)
 

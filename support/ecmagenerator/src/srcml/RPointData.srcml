@@ -254,6 +254,11 @@ dir="./entity" filename="RPointData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RPointData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RPointData&gt;</argument>)</argument_list>
   </macro>

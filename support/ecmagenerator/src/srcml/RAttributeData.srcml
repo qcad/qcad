@@ -216,6 +216,11 @@ dir="./entity" filename="RAttributeData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RAttributeData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RAttributeData&gt;</argument>)</argument_list>
   </macro>

@@ -123,14 +123,19 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         }
     }
 
-    // spline / spline intersections disabled for now (too slow):
-    const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
-    if (spline1 != NULL) {
-        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
-        if (spline2 != NULL) {
-            return empty;
-        }
-    }
+//    const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
+//    if (spline1 != NULL) {
+//        QList<RVector> res;
+//        if (spline1->getIntersectionPoints(res, shape2, limited, same)) {
+//            return res;
+//        }
+
+//        // spline / spline intersections disabled for now (too slow):
+//        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+//        if (spline2 != NULL) {
+//            return empty;
+//        }
+//    }
 
     const RLine* line1 = dynamic_cast<const RLine*> (&shape1);
     if (line1 != NULL) {
@@ -156,6 +161,10 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         const RTriangle* triangle2 = dynamic_cast<const RTriangle*> (&shape2);
         if (triangle2 != NULL) {
             return getIntersectionPointsLT(*line1, *triangle2, limited);
+        }
+        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+        if (spline2 != NULL) {
+            return getIntersectionPointsLS(*line1, *spline2, limited);
         }
 
         // spline, polyline, ...:
@@ -190,8 +199,12 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         if (triangle2 != NULL) {
             return getIntersectionPointsAT(*arc1, *triangle2, limited);
         }
+        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+        if (spline2 != NULL) {
+            return getIntersectionPointsAS(*arc1, *spline2, limited);
+        }
 
-        // spline, polyline, ...:
+        // polyline, ...:
         const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
         if (explodable2 != NULL) {
             return getIntersectionPointsAX(*arc1, *explodable2, limited);
@@ -218,6 +231,10 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
         if (ellipse2 != NULL) {
             return getIntersectionPointsCE(*circle1, *ellipse2);
+        }
+        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+        if (spline2 != NULL) {
+            return getIntersectionPointsCS(*circle1, *spline2);
         }
 
         // spline, polyline, ...:
@@ -248,6 +265,10 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         if (ellipse2 != NULL) {
             return getIntersectionPointsEE(*ellipse2, *ellipse1, limited);
         }
+        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+        if (spline2 != NULL) {
+            return getIntersectionPointsES(*ellipse1, *spline2, limited);
+        }
 
         // spline, polyline, ...:
         const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
@@ -271,7 +292,28 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         }
     }
 
-    const RExplodable* explodable1 = dynamic_cast<const RExplodable*> (&shape1);
+    const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
+    if (spline1 != NULL) {
+        const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
+        if (line2 != NULL) {
+            return getIntersectionPointsLS(*line2, *spline1, limited);
+        }
+        const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
+        if (arc2 != NULL) {
+            return getIntersectionPointsAS(*arc2, *spline1, limited);
+        }
+        const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
+        if (circle2 != NULL) {
+            return getIntersectionPointsCS(*circle2, *spline1, limited);
+        }
+        const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
+        if (ellipse2 != NULL) {
+            return getIntersectionPointsES(*ellipse2, *spline1, limited);
+        }
+    }
+
+    const RExplodable* explodable1 = RShape::castToExplodable(&shape1);
+    //dynamic_cast<const RExplodable*> (&shape1);
     if (explodable1 != NULL) {
         if (!same) {
             const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
@@ -296,6 +338,25 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
     }
 
     return QList<RVector>();
+}
+
+const RExplodable* RShape::castToExplodable(const RShape* shape) {
+    const RPolyline* polyline = dynamic_cast<const RPolyline*>(shape);
+    if (polyline!=NULL) {
+        return dynamic_cast<const RExplodable*>(polyline);
+    }
+
+    const RSpline* spline = dynamic_cast<const RSpline*>(shape);
+    if (spline!=NULL) {
+        return dynamic_cast<const RExplodable*>(spline);
+    }
+
+    const RTriangle* triangle = dynamic_cast<const RTriangle*>(shape);
+    if (triangle!=NULL) {
+        return dynamic_cast<const RExplodable*>(triangle);
+    }
+
+    return NULL;
 }
 
 QList<RVector> RShape::getIntersectionPointsLL(const RLine& line1,
@@ -529,9 +590,24 @@ QList<RVector> RShape::getIntersectionPointsLT(const RLine& line1,
     return res;
 }
 
+QList<RVector> RShape::getIntersectionPointsLS(const RLine& line1,
+            const RSpline& spline2, bool limited) {
+//    qDebug() << "RShape::getIntersectionPointsLS";
+
+//    QList<RVector> res;
+//    if (spline2.getIntersectionPointsProxy(res, line1, limited, false)) {
+//        qDebug() << "RShape::getIntersectionPointsLS: from proxy";
+//        return res;
+//    }
+
+    return getIntersectionPointsLX(line1, spline2, limited);
+}
+
 QList<RVector> RShape::getIntersectionPointsLX(const RLine& line1,
         const RExplodable& explodable2, bool limited) {
     Q_UNUSED(limited)
+
+    qDebug() << "RShape::getIntersectionPointsLX";
 
     QList<RVector> res;
 
@@ -653,6 +729,17 @@ QList<RVector> RShape::getIntersectionPointsAT(const RArc& arc1,
     return l.getIntersectionPoints(arc1);
 }
 
+QList<RVector> RShape::getIntersectionPointsAS(const RArc& arc1,
+            const RSpline& spline2, bool limited) {
+
+//    QList<RVector> res;
+//    if (spline2.getIntersectionPointsProxy(res, arc1, limited, false)) {
+//        return res;
+//    }
+
+    return getIntersectionPointsAX(arc1, spline2, limited);
+}
+
 QList<RVector> RShape::getIntersectionPointsAX(const RArc& arc1,
         const RExplodable& explodable2, bool limited) {
     Q_UNUSED(limited)
@@ -749,6 +836,17 @@ QList<RVector> RShape::getIntersectionPointsCE(const RCircle& circle1,
         false);
 
     return getIntersectionPointsEE(ellipse1,ellipse2);
+}
+
+QList<RVector> RShape::getIntersectionPointsCS(const RCircle& circle1,
+            const RSpline& spline2, bool limited) {
+
+//    QList<RVector> res;
+//    if (spline2.getIntersectionPointsProxy(res, circle1, limited, false)) {
+//        return res;
+//    }
+
+    return getIntersectionPointsCX(circle1, spline2, limited);
 }
 
 QList<RVector> RShape::getIntersectionPointsCX(const RCircle& circle1,
@@ -1231,6 +1329,17 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     }
 
     return ret;
+}
+
+QList<RVector> RShape::getIntersectionPointsES(const REllipse& ellipse1,
+            const RSpline& spline2, bool limited) {
+
+//    QList<RVector> res;
+//    if (spline2.getIntersectionPointsProxy(res, ellipse1, limited, false)) {
+//        return res;
+//    }
+
+    return getIntersectionPointsEX(ellipse1, spline2, limited);
 }
 
 QList<RVector> RShape::getIntersectionPointsEX(const REllipse& ellipse1,

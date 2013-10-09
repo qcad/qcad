@@ -25,7 +25,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RStorage &amp;" isPureVirtual="false" />
-      <variant returnType="RStorage &amp;" isPureVirtual="false" />
+      <variant returnType="const RStorage &amp;"
+      isPureVirtual="false" />
     </method>
     <method name="getSpatialIndex" cppName="getSpatialIndex"
     specifier="public" isStatic="false" isVirtual="false"

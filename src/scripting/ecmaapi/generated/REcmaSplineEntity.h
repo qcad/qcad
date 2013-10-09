@@ -83,6 +83,15 @@
         getDirection2
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTrimEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        trimStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        trimEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTangentAtStart
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

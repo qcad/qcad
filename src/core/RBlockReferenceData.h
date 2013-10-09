@@ -130,6 +130,7 @@ private:
 };
 
 Q_DECLARE_METATYPE(RBlockReferenceData*)
+Q_DECLARE_METATYPE(const RBlockReferenceData*)
 Q_DECLARE_METATYPE(QSharedPointer<RBlockReferenceData>)
 
 #endif

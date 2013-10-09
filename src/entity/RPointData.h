@@ -71,6 +71,7 @@ public:
 };
 
 Q_DECLARE_METATYPE(RPointData*)
+Q_DECLARE_METATYPE(const RPointData*)
 Q_DECLARE_METATYPE(QSharedPointer<RPointData>)
 
 #endif

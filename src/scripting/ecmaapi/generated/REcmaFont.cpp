@@ -382,11 +382,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QStringList'
-    QStringList cppResult =
+    // return type 'const QStringList'
+    const QStringList cppResult =
         
                self->getNames();
-        // return type: QStringList
+        // return type: const QStringList
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -431,11 +431,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QStringList'
-    QStringList cppResult =
+    // return type 'const QStringList'
+    const QStringList cppResult =
         
                self->getAuthors();
-        // return type: QStringList
+        // return type: const QStringList
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             

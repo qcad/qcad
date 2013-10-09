@@ -72,7 +72,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RImageData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RImageData &amp;"
+      <variant returnType="const RImageData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getFileName" cppName="getFileName"

@@ -1338,11 +1338,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REllipseData &'
-    REllipseData & cppResult =
+    // return type 'const REllipseData &'
+    const REllipseData & cppResult =
         
                self->getData();
-        // return type: REllipseData &
+        // return type: const REllipseData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

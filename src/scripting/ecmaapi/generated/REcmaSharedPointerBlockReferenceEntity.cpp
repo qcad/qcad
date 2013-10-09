@@ -1245,11 +1245,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlockReferenceData &'
-    RBlockReferenceData & cppResult =
+    // return type 'const RBlockReferenceData &'
+    const RBlockReferenceData & cppResult =
         
                self->getData();
-        // return type: RBlockReferenceData &
+        // return type: const RBlockReferenceData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

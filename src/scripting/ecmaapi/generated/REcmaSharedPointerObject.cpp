@@ -327,11 +327,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDocument *'
-    RDocument * cppResult =
+    // return type 'const RDocument *'
+    const RDocument * cppResult =
         
                self->getDocument();
-        // return type: RDocument *
+        // return type: const RDocument *
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             

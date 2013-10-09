@@ -221,6 +221,7 @@ HEADERS = \
     math/RPolyline.h \
     math/RShape.h \
     math/RSpline.h \
+    math/RSplineProxy.h \
     math/RTextLabel.h \
     math/RTriangle.h \
     math/RVector.h

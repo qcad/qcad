@@ -592,11 +592,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RStorage &'
-    RStorage & cppResult =
+    // return type 'const RStorage &'
+    const RStorage & cppResult =
         
                self->getStorage();
-        // return type: RStorage &
+        // return type: const RStorage &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

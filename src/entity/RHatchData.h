@@ -171,6 +171,7 @@ private:
 
 Q_DECLARE_METATYPE(RHatchData)
 Q_DECLARE_METATYPE(RHatchData*)
+Q_DECLARE_METATYPE(const RHatchData*)
 Q_DECLARE_METATYPE(QSharedPointer<RHatchData>)
 
 #endif

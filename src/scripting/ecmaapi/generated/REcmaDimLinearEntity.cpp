@@ -806,11 +806,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimLinearData &'
-    RDimLinearData & cppResult =
+    // return type 'const RDimLinearData &'
+    const RDimLinearData & cppResult =
         
                self->getData();
-        // return type: RDimLinearData &
+        // return type: const RDimLinearData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

@@ -47,6 +47,10 @@ public:
     RLineData(const RLine& line);
     RLineData(const RVector& startPoint, const RVector& endPoint);
 
+    RLine getLine() {
+        return *this;
+    }
+
     //virtual RBox getBoundingBox() const;
 
     RVector getStartPoint() const {
@@ -105,6 +109,7 @@ public:
 };
 
 Q_DECLARE_METATYPE(RLineData*)
+Q_DECLARE_METATYPE(const RLineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RLineData>)
 
 #endif

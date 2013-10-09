@@ -171,6 +171,8 @@ public:
             const REllipse& ellipse2, bool limited = true);
     static QList<RVector> getIntersectionPointsLT(const RLine& line1,
             const RTriangle& triangle2, bool limited = true);
+    static QList<RVector> getIntersectionPointsLS(const RLine& line1,
+            const RSpline& spline2, bool limited = true);
     static QList<RVector> getIntersectionPointsLX(const RLine& line1,
             const RExplodable& explodable2, bool limited = true);
 
@@ -182,6 +184,8 @@ public:
             const REllipse& ellipse2, bool limited = true);
     static QList<RVector> getIntersectionPointsAT(const RArc& arc1,
             const RTriangle& triangle2, bool limited = true);
+    static QList<RVector> getIntersectionPointsAS(const RArc& arc1,
+            const RSpline& spline2, bool limited = true);
     static QList<RVector> getIntersectionPointsAX(const RArc& arc1,
             const RExplodable& explodable2, bool limited = true);
 
@@ -189,6 +193,8 @@ public:
             const RCircle& circle2);
     static QList<RVector> getIntersectionPointsCE(const RCircle& circle1,
             const REllipse& ellipse2);
+    static QList<RVector> getIntersectionPointsCS(const RCircle& circle1,
+            const RSpline& spline2, bool limited = true);
     static QList<RVector> getIntersectionPointsCX(const RCircle& circle1,
             const RExplodable& explodable2, bool limited = true);
 
@@ -196,11 +202,15 @@ public:
             const REllipse& ellipse2);
     static QList<RVector> getIntersectionPointsEE(const REllipse& ellipse1,
             const REllipse& ellipse2, bool limited);
+    static QList<RVector> getIntersectionPointsES(const REllipse& ellipse1,
+            const RSpline& spline2, bool limited = true);
     static QList<RVector> getIntersectionPointsEX(const REllipse& ellipse1,
             const RExplodable& explodable2, bool limited = true);
 
     static QList<RVector> getIntersectionPointsXX(const RExplodable& explodable1,
             const RExplodable& explodable2, bool limited = true, bool same = false);
+
+    static const RExplodable* castToExplodable(const RShape* shape);
 
     void dump();
 

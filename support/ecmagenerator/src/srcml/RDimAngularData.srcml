@@ -568,6 +568,11 @@ dir="./entity" filename="RDimAngularData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RDimAngularData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RDimAngularData&gt;</argument>)</argument_list>
   </macro>

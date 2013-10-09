@@ -314,6 +314,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" true" isConst="false" />
       </variant>
     </method>
+    <method name="getIntersectionPointsLS"
+    cppName="getIntersectionPointsLS" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="line1"
+        isConst="true" />
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
     <method name="getIntersectionPointsLX"
     cppName="getIntersectionPointsLX" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -379,6 +392,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" true" isConst="false" />
       </variant>
     </method>
+    <method name="getIntersectionPointsAS"
+    cppName="getIntersectionPointsAS" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RArc &amp;" typeName="RArc" name="arc1"
+        isConst="true" />
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
     <method name="getIntersectionPointsAX"
     cppName="getIntersectionPointsAX" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -414,6 +440,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="ellipse2" isConst="true" />
       </variant>
     </method>
+    <method name="getIntersectionPointsCS"
+    cppName="getIntersectionPointsCS" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RCircle &amp;" typeName="RCircle" name="circle1"
+        isConst="true" />
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
     <method name="getIntersectionPointsCX"
     cppName="getIntersectionPointsCX" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -447,6 +486,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getIntersectionPointsES"
+    cppName="getIntersectionPointsES" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="REllipse &amp;" typeName="REllipse"
+        name="ellipse1" isConst="true" />
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
+    </method>
     <method name="getIntersectionPointsEX"
     cppName="getIntersectionPointsEX" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -473,6 +525,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" true" isConst="false" />
         <arg type="bool" typeName="bool" name="same"
         hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="castToExplodable" cppName="castToExplodable"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="const RExplodable *"
+      isPureVirtual="false">
+        <arg type="RShape *" typeName="RShape *" name="shape"
+        isConst="true" />
       </variant>
     </method>
     <method name="dump" cppName="dump" specifier="public"

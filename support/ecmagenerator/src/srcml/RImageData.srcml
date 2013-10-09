@@ -804,6 +804,11 @@ dir="./entity" filename="RImageData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RImageData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RImageData&gt;</argument>)</argument_list>
   </macro>

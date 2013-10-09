@@ -146,6 +146,17 @@ dir="./entity" filename="RArcData.h">
   </param>)</parameter_list>;</constructor_decl>
   <function>
     <type>
+      <name>RArc</name>
+    </type>
+    <name>getArc</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>*
+    <name>this</name></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>RVector</name>
     </type>
     <name>getCenter</name>
@@ -628,6 +639,11 @@ dir="./entity" filename="RArcData.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>RArcData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>const RArcData*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

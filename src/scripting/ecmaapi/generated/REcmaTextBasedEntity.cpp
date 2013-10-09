@@ -456,11 +456,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTextBasedData &'
-    RTextBasedData & cppResult =
+    // return type 'const RTextBasedData &'
+    const RTextBasedData & cppResult =
         
                self->getData();
-        // return type: RTextBasedData &
+        // return type: const RTextBasedData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

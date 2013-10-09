@@ -94,6 +94,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
             
+            REcmaHelper::registerFunction(&engine, proto, getTrimEnd, "getTrimEnd");
+            
+            REcmaHelper::registerFunction(&engine, proto, trimStartPoint, "trimStartPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, trimEndPoint, "trimEndPoint");
+            
             REcmaHelper::registerFunction(&engine, proto, getTangentAtStart, "getTangentAtStart");
             
             REcmaHelper::registerFunction(&engine, proto, getTangentAtEnd, "getTangentAtEnd");
@@ -1285,11 +1291,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RSplineData &'
-    RSplineData & cppResult =
+    // return type 'const RSplineData &'
+    const RSplineData & cppResult =
         
                self->getData();
-        // return type: RSplineData &
+        // return type: const RSplineData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));
@@ -1499,6 +1505,237 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSplineEntity::getDirection2", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineEntity::getTrimEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineEntity::getTrimEnd", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineEntity::getTrimEnd";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("getTrimEnd", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Ending'
+    RS::Ending cppResult =
+        
+               self->getTrimEnd(a0
+        ,
+    a1);
+        // return type: RS::Ending
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.getTrimEnd().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineEntity::getTrimEnd", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineEntity::trimStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineEntity::trimStartPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineEntity::trimStartPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("trimStartPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->trimStartPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.trimStartPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineEntity::trimStartPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineEntity::trimEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineEntity::trimEndPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineEntity::trimEndPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("trimEndPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->trimEndPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.trimEndPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineEntity::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue

@@ -29,7 +29,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RTextBasedData &amp;"
       isPureVirtual="true" />
-      <variant returnType="RTextBasedData &amp;"
+      <variant returnType="const RTextBasedData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="setProperty" cppName="setProperty"

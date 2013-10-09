@@ -96,7 +96,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RHatchData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RHatchData &amp;"
+      <variant returnType="const RHatchData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getPainterPaths" cppName="getPainterPaths"

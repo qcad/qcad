@@ -45,6 +45,9 @@
 
     // public methods:
     static  QScriptValue
+        getLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStartPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

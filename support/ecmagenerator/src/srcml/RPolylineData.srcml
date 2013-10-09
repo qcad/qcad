@@ -884,6 +884,11 @@ dir="./entity" filename="RPolylineData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RPolylineData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RPolylineData&gt;</argument>)</argument_list>
   </macro>

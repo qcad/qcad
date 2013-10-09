@@ -73,7 +73,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RCircleData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RCircleData &amp;"
+      <variant returnType="const RCircleData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getCenter" cppName="getCenter" specifier="public"

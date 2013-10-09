@@ -1148,11 +1148,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimAngularData &'
-    RDimAngularData & cppResult =
+    // return type 'const RDimAngularData &'
+    const RDimAngularData & cppResult =
         
                self->getData();
-        // return type: RDimAngularData &
+        // return type: const RDimAngularData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

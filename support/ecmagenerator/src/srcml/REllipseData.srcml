@@ -560,6 +560,11 @@ dir="./entity" filename="REllipseData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const REllipseData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;REllipseData&gt;</argument>)</argument_list>
   </macro>

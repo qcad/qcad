@@ -107,6 +107,7 @@ private:
 };
 
 Q_DECLARE_METATYPE(RLeaderData*)
+Q_DECLARE_METATYPE(const RLeaderData*)
 Q_DECLARE_METATYPE(QSharedPointer<RLeaderData>)
 
 #endif

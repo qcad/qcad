@@ -652,7 +652,7 @@ dir="./core" filename="RMainWindow.h">
   <specifier>= 0</specifier>;</function_decl>
   <comment type="block">/** * Sets the cursor of all graphics views
   in all MDI children. * Necessary as workaround for Qt cursor bug
-  (cursor inconsistent * with multiple widgets on top of each otehr
+  (cursor inconsistent * with multiple widgets on top of each other
   in MDI area). */</comment>
   <function_decl>
   <type>

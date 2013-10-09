@@ -1073,6 +1073,45 @@ dir="./core/math" filename="RShape.h">
       <name>RVector</name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>getIntersectionPointsLS</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLine</name>&amp;</type>
+      <name>line1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RSpline</name>&amp;</type>
+      <name>spline2</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>limited</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RVector</name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>getIntersectionPointsLX</name>
   <parameter_list>(
   <param>
@@ -1268,6 +1307,45 @@ dir="./core/math" filename="RShape.h">
       <name>RVector</name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>getIntersectionPointsAS</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RArc</name>&amp;</type>
+      <name>arc1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RSpline</name>&amp;</type>
+      <name>spline2</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>limited</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RVector</name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>getIntersectionPointsAX</name>
   <parameter_list>(
   <param>
@@ -1351,6 +1429,45 @@ dir="./core/math" filename="RShape.h">
       <name>REllipse</name>&amp;</type>
       <name>ellipse2</name>
     </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RVector</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getIntersectionPointsCS</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RCircle</name>&amp;</type>
+      <name>circle1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RSpline</name>&amp;</type>
+      <name>spline2</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>limited</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -1462,6 +1579,45 @@ dir="./core/math" filename="RShape.h">
       <name>RVector</name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>getIntersectionPointsES</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>REllipse</name>&amp;</type>
+      <name>ellipse1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RSpline</name>&amp;</type>
+      <name>spline2</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>limited</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RVector</name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>getIntersectionPointsEX</name>
   <parameter_list>(
   <param>
@@ -1542,6 +1698,21 @@ dir="./core/math" filename="RShape.h">
         <name>false</name>
       </expr>
     </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+  <name>static</name>
+  <name>const</name>
+  <name>RExplodable</name>*</type>
+  <name>castToExplodable</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RShape</name>*</type>
+      <name>shape</name>
+    </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

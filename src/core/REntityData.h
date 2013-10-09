@@ -313,6 +313,7 @@ protected:
 };
 
 Q_DECLARE_METATYPE(REntityData*)
+Q_DECLARE_METATYPE(const REntityData*)
 Q_DECLARE_METATYPE(QSharedPointer<REntityData>)
 Q_DECLARE_METATYPE(QSharedPointer<REntityData>*)
 

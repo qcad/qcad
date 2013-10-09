@@ -81,6 +81,7 @@ private:
 };
 
 Q_DECLARE_METATYPE(RDimRadialData*)
+Q_DECLARE_METATYPE(const RDimRadialData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimRadialData>)
 
 #endif

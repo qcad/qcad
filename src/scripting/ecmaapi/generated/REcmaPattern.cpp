@@ -398,13 +398,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QString'
-    QString cppResult =
+    // return type 'const QString'
+    const QString cppResult =
         
                self->getName();
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
+        // return type: const QString
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
             
     } else
 

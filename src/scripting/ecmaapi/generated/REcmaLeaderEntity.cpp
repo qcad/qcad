@@ -1091,11 +1091,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLeaderData &'
-    RLeaderData & cppResult =
+    // return type 'const RLeaderData &'
+    const RLeaderData & cppResult =
         
                self->getData();
-        // return type: RLeaderData &
+        // return type: const RLeaderData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

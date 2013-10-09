@@ -121,6 +121,7 @@ private:
 };
 
 Q_DECLARE_METATYPE(RDimAngularData*)
+Q_DECLARE_METATYPE(const RDimAngularData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimAngularData>)
 
 #endif

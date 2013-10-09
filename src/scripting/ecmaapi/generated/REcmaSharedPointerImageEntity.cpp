@@ -1213,11 +1213,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RImageData &'
-    RImageData & cppResult =
+    // return type 'const RImageData &'
+    const RImageData & cppResult =
         
                self->getData();
-        // return type: RImageData &
+        // return type: const RImageData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

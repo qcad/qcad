@@ -72,7 +72,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RPointData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RPointData &amp;"
+      <variant returnType="const RPointData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getPosition" cppName="getPosition"

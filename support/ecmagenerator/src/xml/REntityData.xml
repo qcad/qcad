@@ -20,7 +20,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RDocument *" isPureVirtual="false" />
-      <variant returnType="RDocument *" isPureVirtual="false" />
+      <variant returnType="const RDocument *"
+      isPureVirtual="false" />
     </method>
     <method name="setDocument" cppName="setDocument"
     specifier="public" isStatic="false" isVirtual="false"

@@ -1288,11 +1288,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RPolylineData &'
-    RPolylineData & cppResult =
+    // return type 'const RPolylineData &'
+    const RPolylineData & cppResult =
         
                self->getData();
-        // return type: RPolylineData &
+        // return type: const RPolylineData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

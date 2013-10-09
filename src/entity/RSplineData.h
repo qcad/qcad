@@ -90,6 +90,16 @@ public:
         return RSpline::reverse();
     }
 
+    RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint) {
+        return RSpline::getTrimEnd(coord, trimPoint);
+    }
+    void trimStartPoint(const RVector& p) {
+        return RSpline::trimStartPoint(p);
+    }
+    void trimEndPoint(const RVector& p) {
+        return RSpline::trimEndPoint(p);
+    }
+
     bool isClosed() const  {
         return RSpline::isClosed();
     }
@@ -162,6 +172,7 @@ public:
 };
 
 Q_DECLARE_METATYPE(RSplineData*)
+Q_DECLARE_METATYPE(const RSplineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RSplineData>)
 
 #endif

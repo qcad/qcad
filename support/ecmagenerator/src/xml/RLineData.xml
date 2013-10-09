@@ -20,6 +20,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="endPoint" isConst="true" />
       </variant>
     </constructor>
+    <method name="getLine" cppName="getLine" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RLine" isPureVirtual="false" />
+    </method>
     <method name="getStartPoint" cppName="getStartPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -1107,11 +1107,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimDiametricData &'
-    RDimDiametricData & cppResult =
+    // return type 'const RDimDiametricData &'
+    const RDimDiametricData & cppResult =
         
                self->getData();
-        // return type: RDimDiametricData &
+        // return type: const RDimDiametricData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

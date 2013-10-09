@@ -1579,6 +1579,11 @@ dir="./core" filename="REntityData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const REntityData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;REntityData&gt;</argument>)</argument_list>
   </macro>

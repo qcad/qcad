@@ -80,7 +80,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RBlockReferenceData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RBlockReferenceData &amp;"
+      <variant returnType="const RBlockReferenceData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getPosition" cppName="getPosition"

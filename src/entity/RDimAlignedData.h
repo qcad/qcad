@@ -64,6 +64,7 @@ private:
 };
 
 Q_DECLARE_METATYPE(RDimAlignedData*)
+Q_DECLARE_METATYPE(const RDimAlignedData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimAlignedData>)
 
 #endif

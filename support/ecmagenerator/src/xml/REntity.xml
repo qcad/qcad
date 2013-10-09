@@ -42,7 +42,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="REntityData &amp;"
       isPureVirtual="true" />
-      <variant returnType="REntityData &amp;"
+      <variant returnType="const REntityData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="isSelected" cppName="isSelected"

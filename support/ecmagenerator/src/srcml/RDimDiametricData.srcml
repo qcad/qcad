@@ -365,6 +365,11 @@ dir="./entity" filename="RDimDiametricData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RDimDiametricData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RDimDiametricData&gt;</argument>)</argument_list>
   </macro>

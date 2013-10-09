@@ -167,6 +167,7 @@ public:
 };
 
 Q_DECLARE_METATYPE(RPolylineData*)
+Q_DECLARE_METATYPE(const RPolylineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RPolylineData>)
 
 #endif

@@ -73,6 +73,7 @@ private:
 };
 
 Q_DECLARE_METATYPE(RDimRotatedData*)
+Q_DECLARE_METATYPE(const RDimRotatedData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimRotatedData>)
 
 #endif

@@ -316,5 +316,6 @@ private:
 };
 
 Q_DECLARE_METATYPE(RDocument*)
+Q_DECLARE_METATYPE(const RDocument*)
 
 #endif

@@ -1178,11 +1178,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RCircleData &'
-    RCircleData & cppResult =
+    // return type 'const RCircleData &'
+    const RCircleData & cppResult =
         
                self->getData();
-        // return type: RCircleData &
+        // return type: const RCircleData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

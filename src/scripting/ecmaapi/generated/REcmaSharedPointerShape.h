@@ -135,6 +135,9 @@
         getIntersectionPointsLT
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getIntersectionPointsLS
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getIntersectionPointsLX
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -150,6 +153,9 @@
         getIntersectionPointsAT
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getIntersectionPointsAS
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getIntersectionPointsAX
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -159,16 +165,25 @@
         getIntersectionPointsCE
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getIntersectionPointsCS
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getIntersectionPointsCX
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getIntersectionPointsEE
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getIntersectionPointsES
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getIntersectionPointsEX
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getIntersectionPointsXX
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        castToExplodable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         dump

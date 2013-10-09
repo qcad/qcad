@@ -748,6 +748,12 @@ dir="./core" filename="RBlockReferenceData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const
+    RBlockReferenceData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RBlockReferenceData&gt;</argument>)</argument_list>
   </macro>

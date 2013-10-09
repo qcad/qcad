@@ -668,15 +668,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTextData &'
-    
-            // stripped reference:
-            RTextData cppResult =
+    // return type 'const RTextData &'
+    const RTextData & cppResult =
         
                self->getData();
-        // return type: RTextData &
+        // return type: const RTextData &
+                // reference
                 result = engine->newVariant(
-                QVariant::fromValue(cppResult));
+                QVariant::fromValue(&cppResult));
             
     } else
 

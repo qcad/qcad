@@ -91,6 +91,7 @@ protected:
 };
 
 Q_DECLARE_METATYPE(RDimLinearData*)
+Q_DECLARE_METATYPE(const RDimLinearData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimLinearData>)
 
 #endif

@@ -142,6 +142,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsLT, "getIntersectionPointsLT");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsLS, "getIntersectionPointsLS");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsLX, "getIntersectionPointsLX");
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsAA, "getIntersectionPointsAA");
@@ -152,19 +154,27 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsAT, "getIntersectionPointsAT");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsAS, "getIntersectionPointsAS");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsAX, "getIntersectionPointsAX");
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsCC, "getIntersectionPointsCC");
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsCE, "getIntersectionPointsCE");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsCS, "getIntersectionPointsCS");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsCX, "getIntersectionPointsCX");
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsEE, "getIntersectionPointsEE");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsES, "getIntersectionPointsES");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsEX, "getIntersectionPointsEX");
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsXX, "getIntersectionPointsXX");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, castToExplodable, "castToExplodable");
             
 
     // static properties:
@@ -3663,6 +3673,175 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerShape::getIntersectionPointsLS
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getIntersectionPointsLS", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getIntersectionPointsLS";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSpline */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RShape::
+       getIntersectionPointsLS(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSpline */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RShape::
+       getIntersectionPointsLS(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getIntersectionPointsLS().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getIntersectionPointsLS", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerShape::getIntersectionPointsLX
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4504,6 +4683,175 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerShape::getIntersectionPointsAS
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getIntersectionPointsAS", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getIntersectionPointsAS";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RArc */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSpline */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RArc*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RArc*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
+                               context);                    
+                    }
+                    RArc 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RShape::
+       getIntersectionPointsAS(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RArc */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSpline */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RArc*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RArc*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RArc.",
+                               context);                    
+                    }
+                    RArc 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RShape::
+       getIntersectionPointsAS(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getIntersectionPointsAS().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getIntersectionPointsAS", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerShape::getIntersectionPointsAX
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4843,6 +5191,175 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerShape::getIntersectionPointsCS
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getIntersectionPointsCS", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getIntersectionPointsCS";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RCircle */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSpline */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RCircle*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RCircle*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle.",
+                               context);                    
+                    }
+                    RCircle 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RShape::
+       getIntersectionPointsCS(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RCircle */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSpline */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RCircle*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RCircle*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RCircle.",
+                               context);                    
+                    }
+                    RCircle 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RShape::
+       getIntersectionPointsCS(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getIntersectionPointsCS().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getIntersectionPointsCS", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerShape::getIntersectionPointsCX
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5174,6 +5691,175 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::getIntersectionPointsEE", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::getIntersectionPointsES
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getIntersectionPointsES", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getIntersectionPointsES";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REllipse */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSpline */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    REllipse*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REllipse*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse.",
+                               context);                    
+                    }
+                    REllipse 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RShape::
+       getIntersectionPointsES(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REllipse */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSpline */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    REllipse*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REllipse*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type REllipse.",
+                               context);                    
+                    }
+                    REllipse 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RShape::
+       getIntersectionPointsES(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getIntersectionPointsES().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getIntersectionPointsES", context, engine);
             return result;
         }
          QScriptValue
@@ -5591,6 +6277,63 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::getIntersectionPointsXX", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::castToExplodable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::castToExplodable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::castToExplodable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RShape * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RShape >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape *RShape *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'const RExplodable *'
+    const RExplodable * cppResult =
+        RShape::
+       castToExplodable(a0);
+        // return type: const RExplodable *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.castToExplodable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::castToExplodable", context, engine);
             return result;
         }
          QScriptValue

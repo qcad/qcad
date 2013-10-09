@@ -72,7 +72,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RSolidData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RSolidData &amp;"
+      <variant returnType="const RSolidData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getVertexAt" cppName="getVertexAt"

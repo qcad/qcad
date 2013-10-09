@@ -63,7 +63,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RDimAlignedData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RDimAlignedData &amp;"
+      <variant returnType="const RDimAlignedData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="setData" cppName="setData" specifier="public"

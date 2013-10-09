@@ -1294,11 +1294,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RArcData &'
-    RArcData & cppResult =
+    // return type 'const RArcData &'
+    const RArcData & cppResult =
         
                self->getData();
-        // return type: RArcData &
+        // return type: const RArcData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

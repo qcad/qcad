@@ -62,6 +62,7 @@ public:
 
 Q_DECLARE_METATYPE(RTextData)
 Q_DECLARE_METATYPE(RTextData*)
+Q_DECLARE_METATYPE(const RTextData*)
 Q_DECLARE_METATYPE(QSharedPointer<RTextData>)
 Q_DECLARE_METATYPE(QSharedPointer<RTextData>*)
 

@@ -17,6 +17,8 @@ SUBDIRS = \
     SnapOnEntity \
     SnapPerpendicular \
     SnapReference \
+    SnapXManual \
+    SnapYManual \
     RestrictOff \
     RestrictHorizontal \
     RestrictVertical \

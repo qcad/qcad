@@ -1223,11 +1223,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RSolidData &'
-    RSolidData & cppResult =
+    // return type 'const RSolidData &'
+    const RSolidData & cppResult =
         
                self->getData();
-        // return type: RSolidData &
+        // return type: const RSolidData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

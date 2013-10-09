@@ -34,7 +34,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getName" cppName="getName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
+      <variant returnType="const QString" isPureVirtual="false" />
     </method>
     <method name="isLoaded" cppName="isLoaded" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

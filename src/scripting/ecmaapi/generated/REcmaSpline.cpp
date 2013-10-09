@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RSplineProxy.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -131,6 +133,8 @@
     // methods:
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
+            
+            REcmaHelper::registerFunction(&engine, proto, copySpline, "copySpline");
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
             
@@ -265,6 +269,8 @@
             REcmaHelper::registerFunction(&engine, proto, getTMin, "getTMin");
             
             REcmaHelper::registerFunction(&engine, proto, getTMax, "getTMax");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTAtPoint, "getTAtPoint");
             
             REcmaHelper::registerFunction(&engine, proto, updateFromControlPoints, "updateFromControlPoints");
             
@@ -733,6 +739,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::copySpline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::copySpline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::copySpline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("copySpline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RSpline */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copySpline(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.copySpline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::copySpline", context, engine);
             return result;
         }
          QScriptValue
@@ -4810,6 +4883,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::getTMax", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::getTAtPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getTAtPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getTAtPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getTAtPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getTAtPoint(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getTAtPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getTAtPoint", context, engine);
             return result;
         }
          QScriptValue

@@ -82,7 +82,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RPolylineData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RPolylineData &amp;"
+      <variant returnType="const RPolylineData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getPolylineShape" cppName="getPolylineShape"

@@ -1204,11 +1204,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLineData &'
-    RLineData & cppResult =
+    // return type 'const RLineData &'
+    const RLineData & cppResult =
         
                self->getData();
-        // return type: RLineData &
+        // return type: const RLineData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

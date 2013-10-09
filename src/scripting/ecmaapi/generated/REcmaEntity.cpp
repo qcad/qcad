@@ -553,11 +553,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntityData &'
-    REntityData & cppResult =
+    // return type 'const REntityData &'
+    const REntityData & cppResult =
         
                self->getData();
-        // return type: REntityData &
+        // return type: const REntityData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

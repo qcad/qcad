@@ -22,11 +22,14 @@
 #include "RDebug.h"
 #include "RLine.h"
 #include "RSpline.h"
+#include "RSplineProxy.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
 
 
-RSpline::UpdateFromFitPointsFunction RSpline::updateFromFitPointsFunction = NULL;
+//RSpline::UpdateFromFitPointsFunction RSpline::updateFromFitPointsFunction = NULL;
+//RSpline::SplitFunction RSpline::splitFunction = NULL;
+RSplineProxy* RSpline::splineProxy = NULL;
 
 /**
  * Creates a spline object without controlPoints.
@@ -46,6 +49,21 @@ RSpline::RSpline(const QList<RVector>& controlPoints, int degree) :
 
 RSpline::~RSpline() {
     //invalidate();
+}
+
+void RSpline::copySpline(const RSpline& other) {
+    this->degree = other.degree;
+    this->periodic = other.periodic;
+    this->controlPoints = other.controlPoints;
+    this->fitPoints = other.fitPoints;
+    this->knotVector = other.knotVector;
+    this->weights = other.weights;
+    this->tangentStart = other.tangentStart;
+    this->tangentEnd = other.tangentEnd;
+    this->boundingBox = other.boundingBox;
+    this->exploded = other.exploded;
+    this->curve = other.curve;
+    this->dirty = other.dirty;
 }
 
 /**
@@ -994,6 +1012,22 @@ double RSpline::getTMax() const {
     return 0.0;
 }
 
+double RSpline::getTAtPoint(const RVector& point) const {
+    if (splineProxy!=NULL) {
+        return splineProxy->getTAtPoint(*this, point);
+    }
+    return 0.0;
+}
+
+//bool RSpline::getIntersectionPointsProxy(QList<RVector>& res, const RShape& other, bool limited, bool same) const {
+//    if (splineProxy!=NULL) {
+//        res.append(splineProxy->getIntersectionPoints(*this, other, limited, same));
+//        return true;
+//    }
+
+//    return false;
+//}
+
 void RSpline::invalidate() const {
 #ifndef R_NO_OPENNURBS
     curve.Destroy();
@@ -1188,8 +1222,9 @@ void RSpline::updateFromFitPoints(bool useTangents) const {
     }
 
     // call into plugin
-    if (updateFromFitPointsFunction!=NULL) {
-        RSpline spline = updateFromFitPointsFunction(*this, useTangents);
+    //if (updateFromFitPointsFunction!=NULL) {
+    if (splineProxy!=NULL) {
+        RSpline spline = splineProxy->updateFromFitPoints(*this, useTangents);
         this->degree = spline.degree;
         this->periodic = spline.periodic;
         this->controlPoints = spline.controlPoints;
@@ -1250,23 +1285,35 @@ QList<RSpline> RSpline::getBezierSegments() const {
 }
 
 RS::Ending RSpline::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-    Q_UNUSED(coord)
-    Q_UNUSED(trimPoint)
+    double tTrimPoint = getTAtPoint(trimPoint);
+    double tCoord = getTAtPoint(coord);
 
-    // TODO: implement
-    return RS::EndingNone;
+    if (tCoord < tTrimPoint) {
+        return RS::EndingEnd;
+    }
+    else {
+        return RS::EndingStart;
+    }
 }
 
 void RSpline::trimStartPoint(const RVector& p) {
-    Q_UNUSED(p)
-
-    Q_ASSERT(false);
+    //if (splitFunction!=NULL) {
+    if (splineProxy!=NULL) {
+        QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << p);
+        if (splines.length()>1) {
+            copySpline(splines[1]);
+        }
+    }
 }
 
 void RSpline::trimEndPoint(const RVector& p) {
-    Q_UNUSED(p)
-
-    Q_ASSERT(false);
+    //if (splitFunction!=NULL) {
+    if (splineProxy!=NULL) {
+        QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << p);
+        if (splines.length()>0) {
+            copySpline(splines[0]);
+        }
+    }
 }
 
 void RSpline::update() const {

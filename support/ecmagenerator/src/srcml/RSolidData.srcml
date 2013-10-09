@@ -549,6 +549,11 @@ dir="./entity" filename="RSolidData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RSolidData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RSolidData&gt;</argument>)</argument_list>
   </macro>

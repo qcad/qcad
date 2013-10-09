@@ -109,6 +109,7 @@ private:
 };
 
 Q_DECLARE_METATYPE(RDimOrdinateData*)
+Q_DECLARE_METATYPE(const RDimOrdinateData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimOrdinateData>)
 
 #endif

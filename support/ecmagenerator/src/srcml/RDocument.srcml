@@ -2465,6 +2465,11 @@ dir="./core" filename="RDocument.h">
     <argument_list>(
     <argument>RDocument*</argument>)</argument_list>
   </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>const RDocument*</argument>)</argument_list>
+  </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

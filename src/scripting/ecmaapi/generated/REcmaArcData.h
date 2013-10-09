@@ -45,6 +45,9 @@
 
     // public methods:
     static  QScriptValue
+        getArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCenter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

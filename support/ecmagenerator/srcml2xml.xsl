@@ -158,6 +158,9 @@
         <xsl:if test="rs:isScriptable(.)">
             <variant>
                 <xsl:variable name="returnType">
+                    <xsl:if test="boolean(srcml:type/srcml:name[text()='const'])">
+                        <xsl:text>const </xsl:text>
+                    </xsl:if>
                     <xsl:apply-templates select="srcml:type/srcml:name[last()]"
                         mode="alltext"/>
                     <xsl:value-of select="srcml:type/text()[last()]"/>

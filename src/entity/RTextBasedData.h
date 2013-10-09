@@ -295,6 +295,7 @@ protected:
 
 Q_DECLARE_METATYPE(RTextBasedData)
 Q_DECLARE_METATYPE(RTextBasedData*)
+Q_DECLARE_METATYPE(const RTextBasedData*)
 Q_DECLARE_METATYPE(QSharedPointer<RTextBasedData>)
 Q_DECLARE_METATYPE(QSharedPointer<RTextBasedData>*)
 

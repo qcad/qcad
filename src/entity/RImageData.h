@@ -145,6 +145,7 @@ private:
 
 Q_DECLARE_METATYPE(RImageData)
 Q_DECLARE_METATYPE(RImageData*)
+Q_DECLARE_METATYPE(const RImageData*)
 Q_DECLARE_METATYPE(QSharedPointer<RImageData>)
 
 #endif

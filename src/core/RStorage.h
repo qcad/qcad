@@ -591,5 +591,6 @@ private:
 };
 
 Q_DECLARE_METATYPE(RStorage*)
+Q_DECLARE_METATYPE(const RStorage*)
 
 #endif

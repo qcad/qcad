@@ -63,7 +63,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RLeaderData &amp;"
       isPureVirtual="false" />
-      <variant returnType="RLeaderData &amp;"
+      <variant returnType="const RLeaderData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="setData" cppName="setData" specifier="public"

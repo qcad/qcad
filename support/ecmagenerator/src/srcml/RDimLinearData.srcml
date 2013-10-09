@@ -404,6 +404,11 @@ dir="./entity" filename="RDimLinearData.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const RDimLinearData*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RDimLinearData&gt;</argument>)</argument_list>
   </macro>

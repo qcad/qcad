@@ -1435,11 +1435,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RHatchData &'
-    RHatchData & cppResult =
+    // return type 'const RHatchData &'
+    const RHatchData & cppResult =
         
                self->getData();
-        // return type: RHatchData &
+        // return type: const RHatchData &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

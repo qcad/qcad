@@ -118,6 +118,7 @@ public:
 };
 
 Q_DECLARE_METATYPE(REllipseData*)
+Q_DECLARE_METATYPE(const REllipseData*)
 Q_DECLARE_METATYPE(QSharedPointer<REllipseData>)
 
 #endif

@@ -213,6 +213,7 @@ protected:
 };
 
 Q_DECLARE_METATYPE(RDimensionData*)
+Q_DECLARE_METATYPE(const RDimensionData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimensionData>)
 
 #endif

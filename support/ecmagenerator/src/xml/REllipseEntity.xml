@@ -80,7 +80,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="REllipseData &amp;"
       isPureVirtual="false" />
-      <variant returnType="REllipseData &amp;"
+      <variant returnType="const REllipseData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getCenter" cppName="getCenter" specifier="public"
