@@ -4,12 +4,21 @@
 <context>
     <name>Divide</name>
     <message>
-        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc or circle</source>
-        <translation>Scegliere una linea, un arco o un cerchio</translation>
+        <translation type="obsolete">Scegliere una linea, un arco o un cerchio</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location filename="../Divide.js" line="+68"/>
+        <source>Choose line, arc, circle, ellipse or spline</source>
+        <translation>Scegliere linea, arco, cerchio, ellisse o spline</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse</source>
+        <translation>Scegliere linea, arco, cerchio o ellisse</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Specify point</source>
         <translation>Punto</translation>
     </message>
@@ -19,9 +28,8 @@
         <translation>Secondo punto</translation>
     </message>
     <message>
-        <location line="+193"/>
         <source>Cutting point is not on entity.</source>
-        <translation>Il punto per spezzare non è sull&apos;entità.</translation>
+        <translation type="obsolete">Il punto per spezzare non è sull&apos;entità.</translation>
     </message>
     <message>
         <location filename="../DivideInit.js" line="+2"/>

@@ -24,13 +24,14 @@
         <translation>Choisissez ligne, arc, cercle ou ellipse pour ajuster</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez segment de ligne, arc, cercle, ellipse ou spline</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="obsolete">Choisissez segment de ligne, arc, cercle ou ellipse</translation>
+        <translation>Choisissez segment de ligne, arc, cercle ou ellipse</translation>
     </message>
 </context>
 </TS>

@@ -154,7 +154,7 @@ Ferramentas CAD</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entidade não é uma linha, um arco, círculo, elipse ou uma spline.</translation>
     </message>
     <message>
         <location line="+5"/>

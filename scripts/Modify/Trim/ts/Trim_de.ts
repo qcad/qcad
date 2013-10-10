@@ -19,7 +19,7 @@
         <translation>Zu trimmendes Objekt wählen</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+125"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Die zwei Objekte schneiden sich nicht oder werden momentan nicht für Trimmen unterstützt.</translation>
     </message>

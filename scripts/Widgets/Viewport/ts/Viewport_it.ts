@@ -80,7 +80,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="unfinished">Quattro: equal</translation>
+        <translation>Quattro: equal</translation>
     </message>
 </context>
 <context>
@@ -88,7 +88,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="unfinished">Quattro: sinistra</translation>
+        <translation>Quattro: sinistra</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="unfinished">Quattro: giusto</translation>
+        <translation>Quattro: giusto</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="unfinished">Singolo</translation>
+        <translation>Singolo</translation>
     </message>
 </context>
 <context>
@@ -112,7 +112,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="unfinished">Tre: al di sotto</translation>
+        <translation>Tre: al di sotto</translation>
     </message>
 </context>
 <context>
@@ -120,7 +120,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="unfinished">Tre: orizzontale</translation>
+        <translation>Tre: orizzontale</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="unfinished">Tre: verticale</translation>
+        <translation>Tre: verticale</translation>
     </message>
 </context>
 <context>
@@ -136,7 +136,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="unfinished">Due: orizzontale</translation>
+        <translation>Due: orizzontale</translation>
     </message>
 </context>
 <context>
@@ -144,7 +144,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished">Due: verticale</translation>
+        <translation>Due: verticale</translation>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Viewport.js" line="+314"/>
         <source>Grid</source>
-        <translation>&amp;Griglia</translation>
+        <translation>Griglia</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -162,7 +162,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>&amp;Sull&apos;entità</translation>
+        <translation>Sull&apos;entità</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -177,27 +177,27 @@ Seleziona il piano perpendicolare alla vista corrente</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation>&amp;Centro</translation>
+        <translation>Centro</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>&amp;Medio</translation>
+        <translation>Medio</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation>&amp;Intersezione</translation>
+        <translation>Intersezione</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation>&amp;Riferimento</translation>
+        <translation>Riferimento</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
+        <translation>Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
     </message>
 </context>
 <context>
@@ -205,7 +205,7 @@ Seleziona il piano perpendicolare alla vista corrente</translatorcomment>
     <message>
         <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
+        <translation>Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
     </message>
 </context>
 </TS>

@@ -70,7 +70,7 @@ Linha de Comando</translatorcomment>
     <message>
         <location line="-104"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Coordenar ou distância inválido &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+109"/>

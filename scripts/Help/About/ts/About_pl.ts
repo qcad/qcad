@@ -114,12 +114,12 @@
         <location line="+16"/>
         <location line="+25"/>
         <location line="+25"/>
-        <location line="+48"/>
+        <location line="+25"/>
         <source>about:blank</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-89"/>
+        <location line="-41"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
@@ -134,7 +134,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-75"/>
         <source>Credits</source>
         <translation type="unfinished"></translation>
     </message>

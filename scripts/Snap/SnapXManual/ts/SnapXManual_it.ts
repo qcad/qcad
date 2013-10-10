@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;X/Y dalla posizione</translation>
     </message>
 </context>
 </TS>

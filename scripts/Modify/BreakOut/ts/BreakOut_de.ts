@@ -23,13 +23,14 @@
         <translation>Linie, Bogen, Kreis oder Ellipse zum Trimmen wählen</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Linien-, Bogen-, Kreis-, Ellipsen- oder Splinesegment wählen</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="obsolete">Linien-, Bogen-, Kreis- oder Ellipsensegment wählen</translation>
+        <translation>Linien-, Bogen-, Kreis- oder Ellipsensegment wählen</translation>
     </message>
 </context>
 </TS>

@@ -80,7 +80,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="unfinished">Quatre : égalité</translation>
+        <translation>Quatre : égalité</translation>
     </message>
 </context>
 <context>
@@ -88,7 +88,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="unfinished">Quatre : gauche</translation>
+        <translation>Quatre : gauche</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="unfinished">Quatre : droite</translation>
+        <translation>Quatre : droite</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="unfinished">Un seul</translation>
+        <translation>Un seul</translation>
     </message>
 </context>
 <context>
@@ -112,7 +112,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="unfinished">Trois : en dessous</translation>
+        <translation>Trois : en dessous</translation>
     </message>
 </context>
 <context>
@@ -120,7 +120,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="unfinished">Trois : horizontale</translation>
+        <translation>Trois : horizontale</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="unfinished">Trois : verticale</translation>
+        <translation>Trois : verticale</translation>
     </message>
 </context>
 <context>
@@ -136,7 +136,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="unfinished">Deux : horizontale</translation>
+        <translation>Deux : horizontale</translation>
     </message>
 </context>
 <context>
@@ -144,7 +144,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished">Deux : verticale</translation>
+        <translation>Deux : verticale</translation>
     </message>
 </context>
 <context>
@@ -193,7 +193,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Espacement de la grille &lt; espacement de la meta grille</translation>
+        <translation>Espacement de la grille &lt; espacement de la meta grille</translation>
     </message>
 </context>
 <context>
@@ -201,7 +201,7 @@ Points uniques</translatorcomment>
     <message>
         <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Espacement de la grille &lt; espacement de la meta grille</translation>
+        <translation>Espacement de la grille &lt; espacement de la meta grille</translation>
     </message>
 </context>
 </TS>

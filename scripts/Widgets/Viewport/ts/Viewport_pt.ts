@@ -80,7 +80,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="unfinished">Quatro: Igualdade</translation>
+        <translation>Quatro: Igualdade</translation>
     </message>
 </context>
 <context>
@@ -88,7 +88,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="unfinished">Quatro: Esquerda</translation>
+        <translation>Quatro: Esquerda</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="unfinished">Quatro: Direito</translation>
+        <translation>Quatro: Direito</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="unfinished">Único</translation>
+        <translation>Único</translation>
     </message>
 </context>
 <context>
@@ -112,7 +112,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="unfinished">Três: Debajo del</translation>
+        <translation>Três: Debajo del</translation>
     </message>
 </context>
 <context>
@@ -120,7 +120,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="unfinished">Três: Horizontal</translation>
+        <translation>Três: Horizontal</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="unfinished">Três: Vertical</translation>
+        <translation>Três: Vertical</translation>
     </message>
 </context>
 <context>
@@ -136,7 +136,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="unfinished">Dois: Horizontal</translation>
+        <translation>Dois: Horizontal</translation>
     </message>
 </context>
 <context>
@@ -144,7 +144,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished">Dois: Vertical</translation>
+        <translation>Dois: Vertical</translation>
     </message>
 </context>
 <context>
@@ -229,7 +229,7 @@ Indique o ponto de referência
     <message>
         <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Espaçamento da grade &lt; Meta espaçamento da grade</translation>
+        <translation>Espaçamento da grade &lt; Meta espaçamento da grade</translation>
     </message>
 </context>
 <context>
@@ -237,7 +237,7 @@ Indique o ponto de referência
     <message>
         <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Espaçamento da grade &lt; Meta espaçamento da grade</translation>
+        <translation>Espaçamento da grade &lt; Meta espaçamento da grade</translation>
     </message>
 </context>
 </TS>

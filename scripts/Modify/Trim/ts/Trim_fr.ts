@@ -16,7 +16,7 @@
         <translation>Choisissez l&apos;entité à ajuster</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+125"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Les deux entités ne se croisent pas, ou ne sont pas supporté pour adjuster.</translation>

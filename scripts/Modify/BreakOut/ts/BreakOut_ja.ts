@@ -9,13 +9,14 @@
         <translation>オートトリムのための線分、弧、円または楕円を選択してください</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="obsolete">線分、弧、円または楕円の切片を選択してください</translation>
+        <translation type="unfinished">線分、弧、円または楕円の切片を選択してください</translation>
     </message>
     <message>
         <location filename="../BreakOut.ui" line="+17"/>

@@ -134,7 +134,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entidad no es una línea, un arco, círculo, una elipse o una spline.</translation>
     </message>
     <message>
         <location line="+5"/>

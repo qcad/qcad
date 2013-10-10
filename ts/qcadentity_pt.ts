@@ -770,12 +770,12 @@ Especifique o próximo ponto de controle</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished"></translation>
+        <translation>Vetor nó</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished"></translation>
+        <translation>Nó</translation>
     </message>
     <message>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>

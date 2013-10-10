@@ -65,7 +65,7 @@
     <message>
         <location line="-104"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Invalid coordonner ou distance &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+109"/>

@@ -25,13 +25,14 @@
         <translation>Elija línea, arco, círculo o elipse</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Elija segmento de línea, arco, círculo, elipse o spline</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="obsolete">Elija segmento de línea, arco, círculo o elipse</translation>
+        <translation>Elija segmento de línea, arco, círculo o elipse</translation>
     </message>
 </context>
 </TS>

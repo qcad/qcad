@@ -400,12 +400,12 @@
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished"></translation>
+        <translation>Knotenvektor</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished"></translation>
+        <translation>Knoten</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="+5"/>
@@ -581,7 +581,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation>Definitionspunkt:</translation>
+        <translation>Definitionspunkt</translation>
     </message>
     <message>
         <location line="+12"/>

@@ -31,13 +31,14 @@ Remove Segmento</translatorcomment>
         <translation>Escolha linha, arco, círculo ou elipse</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolha segmento de linha, arco, círculo, elipse ou chaveta</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="obsolete">Escolha segmento de linha, arco, círculo ou elipse</translation>
+        <translation>Escolha segmento de linha, arco, círculo ou elipse</translation>
     </message>
 </context>
 </TS>

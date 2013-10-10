@@ -102,7 +102,7 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location line="+23"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Proporzionale</translation>
     </message>
     <message>
         <location line="+26"/>

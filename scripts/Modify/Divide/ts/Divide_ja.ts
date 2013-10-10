@@ -4,12 +4,21 @@
 <context>
     <name>Divide</name>
     <message>
-        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc or circle</source>
-        <translation>線分、弧、円を選択してください</translation>
+        <translation type="obsolete">線分、弧、円を選択してください</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location filename="../Divide.js" line="+68"/>
+        <source>Choose line, arc, circle, ellipse or spline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Specify point</source>
         <translation>点を指定</translation>
     </message>
@@ -19,9 +28,8 @@
         <translation>第２点を指定</translation>
     </message>
     <message>
-        <location line="+193"/>
         <source>Cutting point is not on entity.</source>
-        <translation>切り取り点はエンティティ上にありません。</translation>
+        <translation type="obsolete">切り取り点はエンティティ上にありません。</translation>
     </message>
     <message>
         <location filename="../DivideInit.js" line="+2"/>

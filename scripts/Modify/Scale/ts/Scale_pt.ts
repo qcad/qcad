@@ -135,7 +135,7 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location line="+23"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Proporcional</translation>
     </message>
     <message>
         <location line="+26"/>

@@ -98,7 +98,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+23"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Proportionnelle</translation>
     </message>
     <message>
         <location line="+26"/>
