@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+75"/>
+        <location filename="../CommandLine.js" line="+77"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
@@ -30,12 +30,11 @@ Linha de Comando</translatorcomment>
         <translation>Linha de &amp;comando</translation>
     </message>
     <message>
-        <location line="+127"/>
         <source>Invalid coordinate &apos;%1&apos;.</source>
-        <translation>Coordenar inválido &apos;%1&apos;.</translation>
+        <translation type="obsolete">Coordenar inválido &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+159"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconhecido ou coordenadas ou valor inválido: &apos;%1&apos;</translation>
     </message>
@@ -69,7 +68,12 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-104"/>
+        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+109"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--

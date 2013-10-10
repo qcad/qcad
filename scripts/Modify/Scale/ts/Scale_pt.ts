@@ -133,7 +133,12 @@ Use camada e &amp;atributos atual</translatorcomment>
         <translation>Fator &amp;x:</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+23"/>
+        <source>Proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Factor &amp;y:</source>
         <translation>Fator &amp;y:</translation>
     </message>

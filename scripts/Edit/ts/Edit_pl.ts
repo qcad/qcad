@@ -51,7 +51,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="+52"/>
+        <location filename="../Edit.js" line="+53"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

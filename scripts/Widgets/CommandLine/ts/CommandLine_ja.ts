@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+56"/>
+        <location filename="../CommandLine.js" line="+58"/>
         <source>&amp;Command Line</source>
         <translation>&amp;C コマンドライン</translation>
     </message>
@@ -15,12 +15,11 @@
         <translation>コマンドライン</translation>
     </message>
     <message>
-        <location line="+108"/>
         <source>Invalid coordinate &apos;%1&apos;.</source>
-        <translation>無効な座標 &apos;%1&apos;.</translation>
+        <translation type="obsolete">無効な座標 &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+140"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>不明なコマンドまたは無効な座標もしくは値: &apos;%1&apos;</translation>
     </message>
@@ -49,7 +48,12 @@
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-104"/>
+        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+109"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>

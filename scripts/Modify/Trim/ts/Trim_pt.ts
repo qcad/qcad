@@ -16,7 +16,7 @@
         <translation>Escolha entidade para cortar</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+115"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>As duas entidades não se cruzam, ou não são suportados atualmente para aparar.</translation>

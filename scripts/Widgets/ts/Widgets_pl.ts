@@ -25,7 +25,7 @@ Anuluj
 <context>
     <name>Widgets</name>
     <message>
-        <location filename="../Widgets.js" line="+48"/>
+        <location filename="../Widgets.js" line="+53"/>
         <source>&amp;Widgets</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Widgety</translation>

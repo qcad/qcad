@@ -55,7 +55,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="+246"/>
+        <location line="+248"/>
         <location line="+106"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -71,7 +71,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+368"/>
+        <location line="+381"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -148,6 +148,11 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Jednostka nie linia, łuk, okrąg lub elipsa jest.</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or spline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+5"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -169,7 +174,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location line="+367"/>
+        <location line="+427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -203,7 +208,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+929"/>
+        <location filename="../WidgetFactory.js" line="+931"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -355,7 +360,7 @@ Dzielenie (÷)</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+570"/>
+        <location filename="../library.js" line="+572"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">3dFaces</translation>

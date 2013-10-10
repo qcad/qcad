@@ -41,7 +41,7 @@ Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="+52"/>
+        <location filename="../Edit.js" line="+53"/>
         <source>&amp;Edit</source>
         <translation>&amp;Modifica</translation>
     </message>

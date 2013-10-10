@@ -55,7 +55,7 @@ Cancelar
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="+246"/>
+        <location line="+248"/>
         <location line="+106"/>
         <source>Active Tool:</source>
         <translation>Ferramenta de ativos:</translation>
@@ -76,7 +76,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+368"/>
+        <location line="+381"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -152,6 +152,11 @@ Ferramentas CAD</translatorcomment>
         <translation>Entidade não é uma linha, um arco, círculo ou elipse.</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or spline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+5"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -173,7 +178,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Raio caiu abaixo de 0,0, após %1 arcos concêntricos.</translation>
     </message>
     <message>
-        <location line="+367"/>
+        <location line="+427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -206,7 +211,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+929"/>
+        <location filename="../WidgetFactory.js" line="+931"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
@@ -388,7 +393,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+570"/>
+        <location filename="../library.js" line="+572"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>3dFaces</translation>

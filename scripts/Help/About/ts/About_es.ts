@@ -13,7 +13,7 @@
         <translation>Acerca de %1</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+82"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
@@ -111,12 +111,12 @@
         <location line="+16"/>
         <location line="+25"/>
         <location line="+25"/>
-        <location line="+25"/>
+        <location line="+48"/>
         <source>about:blank</source>
         <translation>about:blank</translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="-89"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
@@ -127,6 +127,11 @@
     </message>
     <message>
         <location line="+25"/>
+        <source>System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Credits</source>
         <translation>Credits</translation>
     </message>

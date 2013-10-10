@@ -87,7 +87,12 @@ Mnożnik &amp;X:</translatorcomment>
         <translation type="unfinished">Mnożnik &amp;X:</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+23"/>
+        <source>Proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Factor &amp;y:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

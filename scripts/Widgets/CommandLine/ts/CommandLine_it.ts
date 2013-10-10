@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+75"/>
+        <location filename="../CommandLine.js" line="+77"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Riga di comando</translation>
@@ -25,12 +25,11 @@
         <translation>Riga di &amp;comando</translation>
     </message>
     <message>
-        <location line="+127"/>
         <source>Invalid coordinate &apos;%1&apos;.</source>
-        <translation>Non valido coordinate &apos;%1&apos;.</translation>
+        <translation type="obsolete">Non valido coordinate &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+159"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando sconosciuto o coordinate o valore non valido: &apos;%1&apos;</translation>
     </message>
@@ -64,7 +63,12 @@
         <translation type="obsolete">Cercando di disegnare o modificare le entità su un layer bloccato.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-104"/>
+        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+109"/>
         <source>Warning</source>
         <translation>Attenzione</translation>
     </message>

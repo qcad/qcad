@@ -42,7 +42,7 @@
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="+246"/>
+        <location line="+248"/>
         <location line="+106"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -57,7 +57,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+368"/>
+        <location line="+381"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -117,6 +117,11 @@
         <translation>Element ist keine Linie, kein Bogen oder Kreis und keine Ellipse.</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or spline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+5"/>
         <source>Entity is not a polyline.</source>
         <translation>Element ist keine Polylinie.</translation>
@@ -135,7 +140,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+434"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -168,7 +173,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+929"/>
+        <location filename="../WidgetFactory.js" line="+931"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -317,7 +322,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+570"/>
+        <location filename="../library.js" line="+572"/>
         <source>3dFaces</source>
         <translation>3dFaces</translation>
     </message>

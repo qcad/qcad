@@ -4,7 +4,7 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="+72"/>
+        <location filename="../InfoArea.js" line="+65"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Definir canto polígono próxima</translation>
@@ -20,7 +20,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+131"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Área do polígono:</translation>

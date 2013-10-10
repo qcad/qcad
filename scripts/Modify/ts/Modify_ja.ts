@@ -4,7 +4,7 @@
 <context>
     <name>Modify</name>
     <message>
-        <location filename="../Modify.js" line="+104"/>
+        <location filename="../Modify.js" line="+105"/>
         <source>Modification Tools</source>
         <translation>修正ツール</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+56"/>
+        <location filename="../CommandLine.js" line="+58"/>
         <source>&amp;Command Line</source>
         <translatorcomment>--google--
 Aktywuj linię &amp;poleceń</translatorcomment>
@@ -21,13 +21,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Linia poleceń</translation>
     </message>
     <message>
-        <location line="+108"/>
         <source>Invalid coordinate &apos;%1&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
+        <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+140"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieznane polecenie lub nieprawidłowy współrzędnych lub wartość:&apos;&amp;#39;</translation>
@@ -61,7 +60,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-104"/>
+        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+109"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

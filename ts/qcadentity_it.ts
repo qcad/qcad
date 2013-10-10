@@ -597,6 +597,16 @@ Punto di adattamento successivo
         <translation>Punto di adattamento</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Knot Vector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Knot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>

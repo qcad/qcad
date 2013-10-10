@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+75"/>
+        <location filename="../CommandLine.js" line="+77"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Línea de comandos</translation>
@@ -25,12 +25,11 @@
         <translation>Línea de &amp;comandos</translation>
     </message>
     <message>
-        <location line="+127"/>
         <source>Invalid coordinate &apos;%1&apos;.</source>
-        <translation>Inválida coordinar &apos;%1&apos;.</translation>
+        <translation type="obsolete">Inválida coordinar &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+159"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconocido o valor de coordenadas no válido: &apos;%1&apos;</translation>
     </message>
@@ -64,7 +63,12 @@
         <translation type="obsolete">Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-104"/>
+        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+109"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>

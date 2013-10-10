@@ -42,7 +42,7 @@
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="+246"/>
+        <location line="+248"/>
         <location line="+106"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
@@ -53,7 +53,7 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+368"/>
+        <location line="+381"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -113,6 +113,11 @@
         <translation>エンティティは線分、弧、円または楕円ではありません。</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or spline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+5"/>
         <source>Entity is not a polyline.</source>
         <translation>エンティティはポリラインではありません。</translation>
@@ -131,7 +136,7 @@
         <translation>%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location line="+367"/>
+        <location line="+427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -160,7 +165,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+929"/>
+        <location filename="../WidgetFactory.js" line="+931"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
@@ -261,7 +266,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+570"/>
+        <location filename="../library.js" line="+572"/>
         <source>3dFaces</source>
         <translation>３Dフェース</translation>
     </message>

@@ -37,7 +37,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="+52"/>
+        <location filename="../Edit.js" line="+53"/>
         <source>&amp;Edit</source>
         <translation>&amp;E 編集</translation>
     </message>

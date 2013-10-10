@@ -11,9 +11,13 @@
     </message>
     <message>
         <location line="+3"/>
+        <source>Choose line, arc, circle, ellipse or spline segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Choose line, arc, circle or ellipse segment</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz segment linii, łuku, okręgu lub elipsy</translation>
+        <translation type="obsolete">Wybierz segment linii, łuku, okręgu lub elipsy</translation>
     </message>
     <message>
         <location filename="../BreakOut.ui" line="+17"/>

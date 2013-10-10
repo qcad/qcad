@@ -100,7 +100,12 @@ Usar capa y los &amp;atributos actual</translatorcomment>
         <translation>Factor &amp;x:</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+23"/>
+        <source>Proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Factor &amp;y:</source>
         <translation>Factor &amp;y:</translation>
     </message>

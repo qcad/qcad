@@ -4,7 +4,7 @@
 <context>
     <name>Draw</name>
     <message>
-        <location filename="../Draw.js" line="+56"/>
+        <location filename="../Draw.js" line="+57"/>
         <source>&amp;Draw</source>
         <translation>&amp;Dibujar</translation>
     </message>

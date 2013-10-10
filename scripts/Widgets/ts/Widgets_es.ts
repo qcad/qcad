@@ -17,7 +17,7 @@
 <context>
     <name>Widgets</name>
     <message>
-        <location filename="../Widgets.js" line="+48"/>
+        <location filename="../Widgets.js" line="+53"/>
         <source>&amp;Widgets</source>
         <translation>&amp;Widgets</translation>
     </message>

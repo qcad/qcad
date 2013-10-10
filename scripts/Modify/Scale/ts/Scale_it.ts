@@ -100,7 +100,12 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
         <translation>Fattore &amp;x:</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+23"/>
+        <source>Proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Factor &amp;y:</source>
         <translation>Fattore &amp;y:</translation>
     </message>

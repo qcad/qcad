@@ -37,7 +37,7 @@ pour appliquer les modifications.</translation>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="+52"/>
+        <location filename="../Edit.js" line="+53"/>
         <source>&amp;Edit</source>
         <translation>&amp;Édition</translation>
     </message>

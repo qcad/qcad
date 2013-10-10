@@ -4,7 +4,7 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="+72"/>
+        <location filename="../InfoArea.js" line="+65"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Ustaw następny róg wielokąta</translation>
@@ -20,7 +20,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+131"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Polygon area:</translation>

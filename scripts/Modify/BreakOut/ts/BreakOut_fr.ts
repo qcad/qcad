@@ -25,8 +25,12 @@
     </message>
     <message>
         <location line="+3"/>
+        <source>Choose line, arc, circle, ellipse or spline segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation>Choisissez segment de ligne, arc, cercle ou ellipse</translation>
+        <translation type="obsolete">Choisissez segment de ligne, arc, cercle ou ellipse</translation>
     </message>
 </context>
 </TS>

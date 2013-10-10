@@ -47,7 +47,7 @@
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="+246"/>
+        <location line="+248"/>
         <location line="+106"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -59,7 +59,7 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+368"/>
+        <location line="+381"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
@@ -128,6 +128,11 @@
         <translation>Entità non è una linea, un arco, un cerchio o un&apos;ellisse.</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or spline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+5"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -149,7 +154,7 @@
         <translation>Raggio è sceso sotto 0,0 dopo %1 archi concentrici.</translation>
     </message>
     <message>
-        <location line="+367"/>
+        <location line="+427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -182,7 +187,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+929"/>
+        <location filename="../WidgetFactory.js" line="+931"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -324,7 +329,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+570"/>
+        <location filename="../library.js" line="+572"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>3dFaces</translation>

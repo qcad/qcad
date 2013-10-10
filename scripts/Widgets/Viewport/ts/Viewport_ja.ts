@@ -4,19 +4,16 @@
 <context>
     <name>Form</name>
     <message>
-        <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>シングル</translation>
+        <translation type="obsolete">シングル</translation>
     </message>
     <message>
-        <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>２:垂直</translation>
+        <translation type="obsolete">２:垂直</translation>
     </message>
     <message>
-        <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation>２:水平</translation>
+        <translation type="obsolete">２:水平</translation>
     </message>
     <message>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
@@ -34,40 +31,104 @@
         <translation>３:上</translation>
     </message>
     <message>
-        <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>３:下</translation>
+        <translation type="obsolete">３:下</translation>
     </message>
     <message>
-        <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation>３:垂直</translation>
+        <translation type="obsolete">３:垂直</translation>
     </message>
     <message>
-        <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation>２:垂直</translation>
+        <translation type="obsolete">２:垂直</translation>
     </message>
+    <message>
+        <source>Four: Equal</source>
+        <translation type="obsolete">４:イコール</translation>
+    </message>
+    <message>
+        <source>Four: Right</source>
+        <translation type="obsolete">４:右</translation>
+    </message>
+    <message>
+        <source>Four: Left</source>
+        <translation type="obsolete">４:左</translation>
+    </message>
+    <message>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="obsolete">グリッド間隔＜メタグリッド間隔</translation>
+    </message>
+</context>
+<context>
+    <name>FourEqual</name>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>４:イコール</translation>
+        <translation type="unfinished">４:イコール</translation>
     </message>
-    <message>
-        <location filename="../Templates/31_FourRight.ui" line="+14"/>
-        <source>Four: Right</source>
-        <translation>４:右</translation>
-    </message>
+</context>
+<context>
+    <name>FourLeft</name>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>４:左</translation>
+        <translation type="unfinished">４:左</translation>
     </message>
+</context>
+<context>
+    <name>FourRight</name>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
-        <location filename="../ViewportGl.ui" line="+99"/>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>グリッド間隔＜メタグリッド間隔</translation>
+        <location filename="../Templates/31_FourRight.ui" line="+14"/>
+        <source>Four: Right</source>
+        <translation type="unfinished">４:右</translation>
+    </message>
+</context>
+<context>
+    <name>Single</name>
+    <message>
+        <location filename="../Templates/00_Single.ui" line="+14"/>
+        <source>Single</source>
+        <translation type="unfinished">シングル</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeBelow</name>
+    <message>
+        <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
+        <source>Three: Below</source>
+        <translation type="unfinished">３:下</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeHorizontal</name>
+    <message>
+        <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
+        <source>Three: Horizontal</source>
+        <translation type="unfinished">２:垂直</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeVertical</name>
+    <message>
+        <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
+        <source>Three: Vertical</source>
+        <translation type="unfinished">３:垂直</translation>
+    </message>
+</context>
+<context>
+    <name>TwoHorizontal</name>
+    <message>
+        <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
+        <source>Two: Horizontal</source>
+        <translation type="unfinished">２:水平</translation>
+    </message>
+</context>
+<context>
+    <name>TwoVertical</name>
+    <message>
+        <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
+        <source>Two: Vertical</source>
+        <translation type="unfinished">２:垂直</translation>
     </message>
 </context>
 <context>
@@ -111,6 +172,19 @@
         <location line="+3"/>
         <source>Reference</source>
         <translation>基準点</translation>
+    </message>
+    <message>
+        <location filename="../Viewport.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">グリッド間隔＜メタグリッド間隔</translation>
+    </message>
+</context>
+<context>
+    <name>ViewportGl</name>
+    <message>
+        <location filename="../ViewportGl.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">グリッド間隔＜メタグリッド間隔</translation>
     </message>
 </context>
 </TS>

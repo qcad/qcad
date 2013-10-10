@@ -4,7 +4,7 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../Layer.js" line="+42"/>
+        <location filename="../Layer.js" line="+54"/>
         <source>&amp;Layer</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
@@ -16,7 +16,7 @@ Utilize a &amp;camada atual</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+104"/>
+        <location filename="../LayerDialog.js" line="+105"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nome da camada está vazia.</translation>

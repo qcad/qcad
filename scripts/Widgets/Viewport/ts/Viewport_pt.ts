@@ -4,25 +4,22 @@
 <context>
     <name>Form</name>
     <message>
-        <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Fragmente entidades de texto em letras singulares
 Selecione Entidades singulares</translatorcomment>
-        <translation>Único</translation>
+        <translation type="obsolete">Único</translation>
     </message>
     <message>
-        <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dois: Vertical</translation>
+        <translation type="obsolete">Dois: Vertical</translation>
     </message>
     <message>
-        <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dois: Horizontal</translation>
+        <translation type="obsolete">Dois: Horizontal</translation>
     </message>
     <message>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
@@ -43,47 +40,111 @@ Selecione Entidades singulares</translatorcomment>
         <translation>Três: encima del</translation>
     </message>
     <message>
-        <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Três: Debajo del</translation>
+        <translation type="obsolete">Três: Debajo del</translation>
     </message>
     <message>
-        <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Três: Vertical</translation>
+        <translation type="obsolete">Três: Vertical</translation>
     </message>
     <message>
-        <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Três: Horizontal</translation>
+        <translation type="obsolete">Três: Horizontal</translation>
     </message>
+    <message>
+        <source>Four: Equal</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Quatro: Igualdade</translation>
+    </message>
+    <message>
+        <source>Four: Right</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Quatro: Direito</translation>
+    </message>
+    <message>
+        <source>Four: Left</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Quatro: Esquerda</translation>
+    </message>
+    <message>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Espaçamento da grade &lt; Meta espaçamento da grade</translation>
+    </message>
+</context>
+<context>
+    <name>FourEqual</name>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Quatro: Igualdade</translation>
+        <translation type="unfinished">Quatro: Igualdade</translation>
     </message>
-    <message>
-        <location filename="../Templates/31_FourRight.ui" line="+14"/>
-        <source>Four: Right</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Quatro: Direito</translation>
-    </message>
+</context>
+<context>
+    <name>FourLeft</name>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Quatro: Esquerda</translation>
+        <translation type="unfinished">Quatro: Esquerda</translation>
     </message>
+</context>
+<context>
+    <name>FourRight</name>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
-        <location filename="../ViewportGl.ui" line="+99"/>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Espaçamento da grade &lt; Meta espaçamento da grade</translation>
+        <location filename="../Templates/31_FourRight.ui" line="+14"/>
+        <source>Four: Right</source>
+        <translation type="unfinished">Quatro: Direito</translation>
+    </message>
+</context>
+<context>
+    <name>Single</name>
+    <message>
+        <location filename="../Templates/00_Single.ui" line="+14"/>
+        <source>Single</source>
+        <translation type="unfinished">Único</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeBelow</name>
+    <message>
+        <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
+        <source>Three: Below</source>
+        <translation type="unfinished">Três: Debajo del</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeHorizontal</name>
+    <message>
+        <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
+        <source>Three: Horizontal</source>
+        <translation type="unfinished">Três: Horizontal</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeVertical</name>
+    <message>
+        <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
+        <source>Three: Vertical</source>
+        <translation type="unfinished">Três: Vertical</translation>
+    </message>
+</context>
+<context>
+    <name>TwoHorizontal</name>
+    <message>
+        <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
+        <source>Two: Horizontal</source>
+        <translation type="unfinished">Dois: Horizontal</translation>
+    </message>
+</context>
+<context>
+    <name>TwoVertical</name>
+    <message>
+        <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
+        <source>Two: Vertical</source>
+        <translation type="unfinished">Dois: Vertical</translation>
     </message>
 </context>
 <context>
@@ -164,6 +225,19 @@ Selecione o primeiro ponto da linha de intersecção</translatorcomment>
 Indique o ponto de referência
 &amp;Copie com referência</translatorcomment>
         <translation>Referência</translation>
+    </message>
+    <message>
+        <location filename="../Viewport.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">Espaçamento da grade &lt; Meta espaçamento da grade</translation>
+    </message>
+</context>
+<context>
+    <name>ViewportGl</name>
+    <message>
+        <location filename="../ViewportGl.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">Espaçamento da grade &lt; Meta espaçamento da grade</translation>
     </message>
 </context>
 </TS>

@@ -4,7 +4,7 @@
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="+52"/>
+        <location filename="../File.js" line="+53"/>
         <source>&amp;File</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--

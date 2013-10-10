@@ -8,25 +8,20 @@
         <translation type="obsolete">Formular</translation>
     </message>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
-        <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Rasterabstand &lt; Meta Rasterabstand</translation>
+        <translation type="obsolete">Rasterabstand &lt; Meta Rasterabstand</translation>
     </message>
     <message>
-        <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>Einzel</translation>
+        <translation type="obsolete">Einzel</translation>
     </message>
     <message>
-        <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>Zwei: Vertikal</translation>
+        <translation type="obsolete">Zwei: Vertikal</translation>
     </message>
     <message>
-        <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation>Zwei: Horizontal</translation>
+        <translation type="obsolete">Zwei: Horizontal</translation>
     </message>
     <message>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
@@ -44,34 +39,100 @@
         <translation>Drei: Oben</translation>
     </message>
     <message>
-        <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>Drei: Unten</translation>
+        <translation type="obsolete">Drei: Unten</translation>
     </message>
     <message>
-        <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation>Drei: Vertikal</translation>
+        <translation type="obsolete">Drei: Vertikal</translation>
     </message>
     <message>
-        <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation>Drei: Horizontal</translation>
+        <translation type="obsolete">Drei: Horizontal</translation>
     </message>
+    <message>
+        <source>Four: Equal</source>
+        <translation type="obsolete">Vier: Gleichmässig</translation>
+    </message>
+    <message>
+        <source>Four: Right</source>
+        <translation type="obsolete">Vier: Rechts</translation>
+    </message>
+    <message>
+        <source>Four: Left</source>
+        <translation type="obsolete">Vier: Links</translation>
+    </message>
+</context>
+<context>
+    <name>FourEqual</name>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Vier: Gleichmässig</translation>
+        <translation type="unfinished">Vier: Gleichmässig</translation>
     </message>
-    <message>
-        <location filename="../Templates/31_FourRight.ui" line="+14"/>
-        <source>Four: Right</source>
-        <translation>Vier: Rechts</translation>
-    </message>
+</context>
+<context>
+    <name>FourLeft</name>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Vier: Links</translation>
+        <translation type="unfinished">Vier: Links</translation>
+    </message>
+</context>
+<context>
+    <name>FourRight</name>
+    <message>
+        <location filename="../Templates/31_FourRight.ui" line="+14"/>
+        <source>Four: Right</source>
+        <translation type="unfinished">Vier: Rechts</translation>
+    </message>
+</context>
+<context>
+    <name>Single</name>
+    <message>
+        <location filename="../Templates/00_Single.ui" line="+14"/>
+        <source>Single</source>
+        <translation type="unfinished">Einzel</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeBelow</name>
+    <message>
+        <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
+        <source>Three: Below</source>
+        <translation type="unfinished">Drei: Unten</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeHorizontal</name>
+    <message>
+        <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
+        <source>Three: Horizontal</source>
+        <translation type="unfinished">Drei: Horizontal</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeVertical</name>
+    <message>
+        <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
+        <source>Three: Vertical</source>
+        <translation type="unfinished">Drei: Vertikal</translation>
+    </message>
+</context>
+<context>
+    <name>TwoHorizontal</name>
+    <message>
+        <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
+        <source>Two: Horizontal</source>
+        <translation type="unfinished">Zwei: Horizontal</translation>
+    </message>
+</context>
+<context>
+    <name>TwoVertical</name>
+    <message>
+        <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
+        <source>Two: Vertical</source>
+        <translation type="unfinished">Zwei: Vertikal</translation>
     </message>
 </context>
 <context>
@@ -115,6 +176,19 @@
         <location line="+3"/>
         <source>Reference</source>
         <translation>Referenz</translation>
+    </message>
+    <message>
+        <location filename="../Viewport.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">Rasterabstand &lt; Meta Rasterabstand</translation>
+    </message>
+</context>
+<context>
+    <name>ViewportGl</name>
+    <message>
+        <location filename="../ViewportGl.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">Rasterabstand &lt; Meta Rasterabstand</translation>
     </message>
 </context>
 </TS>

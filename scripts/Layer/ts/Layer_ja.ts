@@ -4,7 +4,7 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../Layer.js" line="+42"/>
+        <location filename="../Layer.js" line="+54"/>
         <source>&amp;Layer</source>
         <translation>&amp;L 画層</translation>
     </message>
@@ -12,7 +12,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+104"/>
+        <location filename="../LayerDialog.js" line="+105"/>
         <source>Layer name is empty.</source>
         <translation>画層名は空です。</translation>
     </message>

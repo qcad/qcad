@@ -16,7 +16,7 @@
         <translation type="unfinished">Wybierz jednostkę do wykończenia</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+115"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Oba podmioty nie przecinają się, ani nie są obecnie obsługiwane przez przycinanie.</translation>

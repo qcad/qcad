@@ -53,7 +53,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="+52"/>
+        <location filename="../Edit.js" line="+53"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

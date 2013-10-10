@@ -4,7 +4,7 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../Layer.js" line="+42"/>
+        <location filename="../Layer.js" line="+54"/>
         <source>&amp;Layer</source>
         <translation>&amp;Calque</translation>
     </message>
@@ -46,7 +46,7 @@
         <translation>Type de ligne :</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+104"/>
+        <location filename="../LayerDialog.js" line="+105"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nom du calque est vide.</translation>

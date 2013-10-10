@@ -579,6 +579,16 @@
         <translation>適合点</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Knot Vector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Knot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
         <source>Simple</source>
         <translation>シンプル</translation>

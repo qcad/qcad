@@ -4,7 +4,7 @@
 <context>
     <name>SnapYManual</name>
     <message>
-        <location filename="../SnapYManualInit.js" line="2"/>
+        <location filename="../SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
         <translation type="unfinished"></translation>
     </message>

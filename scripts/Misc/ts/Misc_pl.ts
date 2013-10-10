@@ -12,7 +12,7 @@
 <context>
     <name>Misc</name>
     <message>
-        <location filename="../Misc.js" line="+56"/>
+        <location filename="../Misc.js" line="+58"/>
         <source>&amp;Misc</source>
         <translation type="unfinished"></translation>
     </message>

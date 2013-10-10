@@ -96,7 +96,12 @@ Indiquer le point cible</translatorcomment>
         <translation>Facteur &amp;x :</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+23"/>
+        <source>Proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Factor &amp;y:</source>
         <translation>Facteur &amp;y :</translation>
     </message>

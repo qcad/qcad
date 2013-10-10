@@ -16,7 +16,7 @@
         <translation>Scegli entità per tagliare</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+115"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Le due entità non si intersecano, o non sono attualmente supportati per il taglio.</translation>

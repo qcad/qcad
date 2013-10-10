@@ -4,7 +4,7 @@
 <context>
     <name>Snap</name>
     <message>
-        <location filename="../Snap.js" line="+30"/>
+        <location filename="../Snap.js" line="+42"/>
         <source>Snap Tools</source>
         <translation>スナップツール</translation>
     </message>

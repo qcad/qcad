@@ -71,7 +71,7 @@
         <translation>Ajustado nombre de bloque no válido &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+48"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>

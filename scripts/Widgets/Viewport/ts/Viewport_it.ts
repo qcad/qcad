@@ -4,25 +4,22 @@
 <context>
     <name>Form</name>
     <message>
-        <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
         <translatorcomment>--ignored case--
 --file: locale_it_BKChem.po--
 Esplodi gli oggetti testo in singole lettere
 Seleziona Singolo Oggetto</translatorcomment>
-        <translation>Singolo</translation>
+        <translation type="obsolete">Singolo</translation>
     </message>
     <message>
-        <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Due: verticale</translation>
+        <translation type="obsolete">Due: verticale</translation>
     </message>
     <message>
-        <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Due: orizzontale</translation>
+        <translation type="obsolete">Due: orizzontale</translation>
     </message>
     <message>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
@@ -43,47 +40,111 @@ Seleziona Singolo Oggetto</translatorcomment>
         <translation>Tre: sopra</translation>
     </message>
     <message>
-        <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tre: al di sotto</translation>
+        <translation type="obsolete">Tre: al di sotto</translation>
     </message>
     <message>
-        <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tre: verticale</translation>
+        <translation type="obsolete">Tre: verticale</translation>
     </message>
     <message>
-        <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tre: orizzontale</translation>
+        <translation type="obsolete">Tre: orizzontale</translation>
     </message>
+    <message>
+        <source>Four: Equal</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Quattro: equal</translation>
+    </message>
+    <message>
+        <source>Four: Right</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Quattro: giusto</translation>
+    </message>
+    <message>
+        <source>Four: Left</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Quattro: sinistra</translation>
+    </message>
+    <message>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
+    </message>
+</context>
+<context>
+    <name>FourEqual</name>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Quattro: equal</translation>
+        <translation type="unfinished">Quattro: equal</translation>
     </message>
-    <message>
-        <location filename="../Templates/31_FourRight.ui" line="+14"/>
-        <source>Four: Right</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Quattro: giusto</translation>
-    </message>
+</context>
+<context>
+    <name>FourLeft</name>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Quattro: sinistra</translation>
+        <translation type="unfinished">Quattro: sinistra</translation>
     </message>
+</context>
+<context>
+    <name>FourRight</name>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
-        <location filename="../ViewportGl.ui" line="+99"/>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
+        <location filename="../Templates/31_FourRight.ui" line="+14"/>
+        <source>Four: Right</source>
+        <translation type="unfinished">Quattro: giusto</translation>
+    </message>
+</context>
+<context>
+    <name>Single</name>
+    <message>
+        <location filename="../Templates/00_Single.ui" line="+14"/>
+        <source>Single</source>
+        <translation type="unfinished">Singolo</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeBelow</name>
+    <message>
+        <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
+        <source>Three: Below</source>
+        <translation type="unfinished">Tre: al di sotto</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeHorizontal</name>
+    <message>
+        <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
+        <source>Three: Horizontal</source>
+        <translation type="unfinished">Tre: orizzontale</translation>
+    </message>
+</context>
+<context>
+    <name>ThreeVertical</name>
+    <message>
+        <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
+        <source>Three: Vertical</source>
+        <translation type="unfinished">Tre: verticale</translation>
+    </message>
+</context>
+<context>
+    <name>TwoHorizontal</name>
+    <message>
+        <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
+        <source>Two: Horizontal</source>
+        <translation type="unfinished">Due: orizzontale</translation>
+    </message>
+</context>
+<context>
+    <name>TwoVertical</name>
+    <message>
+        <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
+        <source>Two: Vertical</source>
+        <translation type="unfinished">Due: verticale</translation>
     </message>
 </context>
 <context>
@@ -132,6 +193,19 @@ Seleziona il piano perpendicolare alla vista corrente</translatorcomment>
         <location line="+3"/>
         <source>Reference</source>
         <translation>&amp;Riferimento</translation>
+    </message>
+    <message>
+        <location filename="../Viewport.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
+    </message>
+</context>
+<context>
+    <name>ViewportGl</name>
+    <message>
+        <location filename="../ViewportGl.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
     </message>
 </context>
 </TS>

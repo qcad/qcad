@@ -100,7 +100,12 @@
         <translation>Faktor &amp;X:</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+23"/>
+        <source>Proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Factor &amp;y:</source>
         <translation>Faktor &amp;Y:</translation>
     </message>
