@@ -293,6 +293,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, createBezierFromSmallArc, "createBezierFromSmallArc");
             
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
+            
 
     // static properties:
     
@@ -5111,6 +5113,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSpline::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerSpline::toString

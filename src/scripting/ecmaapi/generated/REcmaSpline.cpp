@@ -296,6 +296,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, createBezierFromSmallArc, "createBezierFromSmallArc");
             
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
+            
 
     // static properties:
     
@@ -5114,6 +5116,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSpline::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaSpline::toString

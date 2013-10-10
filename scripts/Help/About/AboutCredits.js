@@ -12,9 +12,9 @@ var credits =
     ],
     [
         "Testing, feedback and minor fixes",
-        "Clive Tubb ('clive')",
-        "Harald Huesges ('Husky')",
-        "Tamas TEVESZ ('kazmer')",
-        "many others",
+        [ "Clive Tubb ('clive')", "" ],
+        [ "Harald Huesges ('Husky')", "" ],
+        [ "Tamas TEVESZ ('kazmer')", "" ],
+        [ "and many others", "" ],
     ]
 ];

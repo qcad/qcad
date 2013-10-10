@@ -175,6 +175,10 @@ public:
     void updateFromFitPoints(bool useTangents = false) const;
     void update() const;
 
+    static bool hasProxy() {
+        return splineProxy!=NULL;
+    }
+
     /**
      * \nonscriptable
      */

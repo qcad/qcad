@@ -64,7 +64,12 @@ Divide.prototype.setState = function(state) {
         this.pos = undefined;
         this.cutPos = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.setLeftMouseTip(qsTr("Choose line, arc or circle"));
+        if (RSpline.hasProxy()) {
+            this.setLeftMouseTip(qsTr("Choose line, arc, circle, ellipse or spline"));
+        }
+        else {
+            this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse"));
+        }
         this.setRightMouseTip(EAction.trCancel);
         EAction.showModificationTools();
         break;
@@ -120,7 +125,8 @@ Divide.prototype.pickEntity = function(event, preview) {
         if (isLineEntity(entity) ||
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
-            isEllipseEntity(entity)) {
+            isEllipseEntity(entity) ||
+            (RSpline.hasProxy() && isSplineEntity(entity))) {
 
             this.entity = entity;
             this.shape = entity.getClosestShape(pos);
@@ -272,20 +278,14 @@ Divide.prototype.getOperation = function(preview) {
         this.cutPos = shape1.getEndPoint();
         shape2.trimStartPoint(this.pos);
 
-        // cutting point not on original shape:
-        if (!this.shape.isOnShape(this.cutPos)) {
-            if (!preview) {
-                EAction.handleUserWarning(qsTr("Cutting point is not on entity."));
-            }
-            return undefined;
-        }
-
         // modify chosen entity into first part:
         this.entity.setShape(shape1);
         op.addObject(this.entity, false);
 
         // add second part as new entity:
-        if (isLineShape(shape2) || isArcShape(shape2) || isEllipseShape(shape2)) {
+        if (isLineShape(shape2) || isArcShape(shape2) ||
+            isEllipseShape(shape2) || isSplineShape(shape2)) {
+
             e = shapeToEntity(this.entity.getDocument(), shape2);
             e.copyAttributesFrom(this.entity.data());
             op.addObject(e, false);

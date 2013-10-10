@@ -644,7 +644,7 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
         return exploded;
     }
 
-    qDebug() << "RSpline::getExploded: segments: " << segments;
+    //qDebug() << "RSpline::getExploded: segments: " << segments;
     //RDebug::printBacktrace("getExploded:    ");
 
     //##boundingBox = RBox();
@@ -809,15 +809,23 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
 RVector RSpline::getVectorTo(const RVector& point, bool limited) const {
     RVector ret = RVector::invalid;
 
-    //QList<QSharedPointer<RShape> > sub = getExploded(16);
-    QList<QSharedPointer<RShape> > sub = getExploded();
-    QList<QSharedPointer<RShape> >::iterator it;
-    for (it=sub.begin(); it!=sub.end(); ++it) {
-        RVector v = (*it)->getVectorTo(point, limited);
-        if (v.isValid() && (!ret.isValid() || v.getMagnitude()<ret.getMagnitude())) {
-            ret = v;
+//  TODO: not implemented in Teigha:
+//    if (splineProxy!=NULL) {
+//        RVector p = splineProxy->getClosestPointOnShape(*this, point, limited);
+//        if (p.isValid()) {
+//            ret = p - point;
+//        }
+//    }
+//    else {
+        QList<QSharedPointer<RShape> > sub = getExploded();
+        QList<QSharedPointer<RShape> >::iterator it;
+        for (it=sub.begin(); it!=sub.end(); ++it) {
+            RVector v = (*it)->getVectorTo(point, limited);
+            if (v.isValid() && (!ret.isValid() || v.getMagnitude()<ret.getMagnitude())) {
+                ret = v;
+            }
         }
-    }
+//    }
 
     return ret;
 }

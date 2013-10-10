@@ -296,6 +296,9 @@
         ;static  QScriptValue
         update
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

@@ -58,6 +58,9 @@ function ScInputInfoEventFilter() {
 
     this.mouseInfo = undefined;
     this.mouseTimer = undefined;
+
+    this.keyInfo = undefined;
+    this.keyTimer = undefined;
 }
 
 ScInputInfoEventFilter.prototype = new QObject();
@@ -85,7 +88,7 @@ ScInputInfoEventFilter.prototype.uninstall = function(w) {
     var kids = w.children();
     for (var i=0; i<kids.length; i++) {
         var k = kids[i];
-        if (isNull(k.gotEventFilter)) {
+        if (isNull(k.gotEventFilter) && isFunction(k.removeEventFilter)) {
             k.removeEventFilter(this);
             k.setProperty("gotEventFilter", undefined);
         }
@@ -156,7 +159,7 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
         case "MouseButtonRelease":
             //updatePos = true;
             //this.hideMouseLabel();
-            this.mouseTimer = 1000;
+            this.mouseTimer = 500;
             break;
 
         case "MouseButtonPress":
@@ -174,6 +177,8 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
 
         case "Shortcut":
             this.shortcut = e.key();
+            this.keyInfo = this.shortcut.toString();
+            this.keyTimer = 500;
             qDebug("this.shortcut: ", this.shortcut);
             break;
 
@@ -191,16 +196,17 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
 
     if (this.button===Qt.LeftButton.valueOf() || this.buttons===Qt.LeftButton.valueOf()) {
         this.mouseInfo = "left";
-        //painter.drawPixmap(pos, this.leftButtonPixmap);
     }
     else if (this.button===Qt.MidButton.valueOf() || this.buttons===Qt.MidButton.valueOf()) {
         this.mouseInfo = "middle";
-        //painter.drawPixmap(pos, this.middleButtonPixmap);
     }
     else if (this.button===Qt.RightButton.valueOf() || this.buttons===Qt.RightButton.valueOf()) {
         this.mouseInfo = "right";
-        //painter.drawPixmap(pos, this.rightButtonPixmap);
     }
+
+//    if (!isNull(this.shortcut)) {
+//        this.keyInfo = this.shortCut.toString();
+//    }
 
     if (this.key===Qt.Key_QuoteLeft.valueOf()) {
         this.highlightWidget = QApplication.widgetAt(QCursor.pos());
@@ -336,9 +342,9 @@ ScMirrored.prototype.beginEvent = function() {
     }
 
     this.mousePixmap = [];
-    this.mousePixmap["left"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/mouse_l.svg", this.iconSize,this.iconSize);
-    this.mousePixmap["middle"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/mouse_m.svg", this.iconSize,this.iconSize);
-    this.mousePixmap["right"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/mouse_r.svg", this.iconSize,this.iconSize);
+    this.mousePixmap["left"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/MouseButtonLeft.svg", this.iconSize,this.iconSize);
+    this.mousePixmap["middle"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/MouseButtonMiddle.svg", this.iconSize,this.iconSize);
+    this.mousePixmap["right"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/MouseButtonRight.svg", this.iconSize,this.iconSize);
 
     // start mirroring:
     var t = new QTimer(this.mirrorWidget);
@@ -381,14 +387,28 @@ ScMirrored.prototype.mirror = function() {
     //qDebug("m: ", this.ef.modifiers);
     //qDebug("shortcut: ", this.ef.shortcut);
 
-    this.paintRedWidget(painter);
+    this.paintLogo(painter, pm);
+    this.paintHighlightedWidget(painter);
     this.paintCursor(painter);
     this.paintMouseInfo(painter);
+    this.paintKeyInfo(painter);
 
     painter.end();
 
     this.mirrorWidget.pixmap = pm;
     collectGarbage();
+};
+
+/**
+ * Overpaint a**le logo.
+ */
+ScMirrored.prototype.paintLogo = function(painter, pixmap) {
+    if (RS.getSystemId()!=="osx") {
+        return;
+    }
+
+    var bg = pixmap.copy(0,0,18,21);
+    painter.drawPixmap(19,0,bg);
 };
 
 /**
@@ -424,7 +444,7 @@ ScMirrored.prototype.paintMouseInfo = function(painter) {
     }
 
     var pos = QCursor.pos();
-    pos.setX(pos.x() + this.iconSize);
+    pos.setX(pos.x() + this.iconSize/2);
 
     var alpha;
     if (this.ef.mouseTimer!==-1) {
@@ -440,24 +460,47 @@ ScMirrored.prototype.paintMouseInfo = function(painter) {
     if (!isNull(this.mousePixmap[this.ef.mouseInfo])) {
         painter.drawPixmap(pos, this.mousePixmap[this.ef.mouseInfo]);
     }
+};
 
-    /*
-    if (this.ef.button===Qt.LeftButton.valueOf() || this.ef.buttons===Qt.LeftButton.valueOf()) {
-        painter.drawPixmap(pos, this.leftButtonPixmap);
+/**
+ * Paint key info.
+ */
+ScMirrored.prototype.paintKeyInfo = function(painter) {
+    qDebug("keyInfo: ", this.ef.keyInfo);
+    qDebug("keyTimer: ", this.ef.keyTimer);
+
+    if (this.ef.keyTimer<=0 && this.ef.keyTimer!==-1) {
+        return;
     }
-    else if (this.ef.button===Qt.MidButton.valueOf() || this.ef.buttons===Qt.MidButton.valueOf()) {
-        painter.drawPixmap(pos, this.middleButtonPixmap);
+
+    if (isNull(this.ef.keyInfo)) {
+        return;
     }
-    else if (this.ef.button===Qt.RightButton.valueOf() || this.ef.buttons===Qt.RightButton.valueOf()) {
-        painter.drawPixmap(pos, this.rightButtonPixmap);
+
+    var pos = QCursor.pos();
+    pos.setX(pos.x() + this.iconSize*1.5);
+
+    var alpha;
+    if (this.ef.keyTimer!==-1) {
+        this.ef.keyTimer = Math.max(this.ef.keyTimer-ScMirrored.interval, 0);
+        alpha = Math.max(Math.min(this.ef.keyTimer, 255), 0);
     }
-    */
+    else {
+        alpha = 255;
+    }
+
+    painter.setOpacity(alpha/255);
+
+//    if (!isNull(this.keyPixmap[this.ef.mouseInfo])) {
+//        painter.drawPixmap(pos, this.mousePixmap[this.ef.mouseInfo]);
+//    }
+    painter.drawText(pos, this.ef.keyInfo);
 };
 
 /**
  * Highlight widget under cursor.
  */
-ScMirrored.prototype.paintRedWidget = function(painter) {
+ScMirrored.prototype.paintHighlightedWidget = function(painter) {
     if (isNull(this.ef.highlightWidget)) {
         return;
     }

@@ -606,8 +606,6 @@ QList<RVector> RShape::getIntersectionPointsLX(const RLine& line1,
         const RExplodable& explodable2, bool limited) {
     Q_UNUSED(limited)
 
-    qDebug() << "RShape::getIntersectionPointsLX";
-
     QList<RVector> res;
 
     QList<QSharedPointer<RShape> > sub = explodable2.getExploded();

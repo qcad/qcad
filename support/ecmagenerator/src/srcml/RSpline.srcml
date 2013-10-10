@@ -1072,6 +1072,19 @@ dir="./core/math" filename="RSpline.h">
   <name>update</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function>
+    <type>
+      <name>static</name>
+      <name>bool</name>
+    </type>
+    <name>hasProxy</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>splineProxy</name>!=
+    <name>NULL</name></expr>;</return>}</block>
+  </function>
   <comment type="block">/** * \nonscriptable */</comment>
   <function>
     <type>

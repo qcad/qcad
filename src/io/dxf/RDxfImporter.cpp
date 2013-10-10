@@ -170,6 +170,10 @@ void RDxfImporter::addLayer(const DL_LayerData& data) {
     }
     RLineweight::Lineweight lw = RDxfServices::numberToWeight(attributes.getWidth());
 
+    if (lw==RLineweight::WeightByLayer) {
+        lw = RLineweight::Weight005;
+    }
+
     QSharedPointer<RLayer> layer(
                 new RLayer(
                     document,

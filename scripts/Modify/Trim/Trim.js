@@ -120,10 +120,15 @@ Trim.prototype.pickEntity = function(event, preview) {
             !isArcShape(shape) &&
             !isCircleShape(shape) &&
             !isEllipseShape(shape) &&
-            !isSplineShape(shape)) {
+            (!RSpline.hasProxy() || !isSplineShape(shape))) {
 
             if (!preview) {
-                EAction.warnNotLineArcCircleEllipse();
+                if (RSpline.hasProxy()) {
+                    EAction.warnNotLineArcCircleEllipseSpline();
+                }
+                else {
+                    EAction.warnNotLineArcCircleEllipse();
+                }
             }
             break;
         }
@@ -152,14 +157,19 @@ Trim.prototype.pickEntity = function(event, preview) {
             !isArcEntity(entity) &&
             !isCircleEntity(entity) &&
             !isEllipseEntity(entity) &&
-            !isSplineEntity(entity)) {
+            (!RSpline.hasProxy() || !isSplineEntity(entity))) {
 
             this.trimEntity = undefined;
             if (preview) {
                 this.updatePreview();
             }
             else {
-                EAction.warnNotLineArcCircleEllipse();
+                if (RSpline.hasProxy()) {
+                    EAction.warnNotLineArcCircleEllipseSpline();
+                }
+                else {
+                    EAction.warnNotLineArcCircleEllipse();
+                }
             }
             break;
         }
