@@ -43,8 +43,7 @@ Print.defaultPrinter = new QPrinter();
 Print.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
-    /*
-    // TODO: print preview
+    // switch to print preview:
     include("../PrintPreview/PrintPreview.js");
     if (!PrintPreview.isRunning()) {
         var guiAction = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js");
@@ -57,7 +56,6 @@ Print.prototype.beginEvent = function() {
         var pp = PrintPreview.getInstance();
         pp.slotPrint();
     }
-    */
 
     this.terminate();
 };
