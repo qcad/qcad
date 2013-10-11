@@ -137,6 +137,87 @@ ShapeAlgorithms.getTangents = function(circle1, circle2) {
 };
 
 /**
+ * \return Line that is orthogonal to line and tangential to circle.
+ */
+ShapeAlgorithms.getOrthogonalTangents = function(line, circle) {
+    var ret = [];
+
+    var auxLine1, auxLine2;
+    var ips, ips1, ips2;
+
+    var lineAngle = line.getAngle();
+
+    if (isCircleShape(circle) || isArcShape(circle)) {
+        // line parallel to line through center of circle:
+        auxLine1 = new RLine(circle.getCenter(), lineAngle, 100.0);
+
+        // intersections of parallel with circle:
+        ips1 = circle.getIntersectionPoints(auxLine1, false);
+        for (var i=0; i<ips1.length; i++) {
+            // candidate:
+            auxLine2 = new RLine(ips1[i], lineAngle+Math.PI/2, 100.0);
+            ips2 = line.getIntersectionPoints(auxLine2, false);
+            if (ips2.length===1) {
+                ret.push(new RLine(ips1[i], ips2[0]));
+            }
+        }
+    }
+    else if (isEllipseShape(circle)) {
+        var center = circle.getCenter();
+
+        // circle around ellipse:
+        var auxCircle = new RCircle(center, circle.getMajorRadius());
+
+        var foci = circle.getFoci();
+        auxLine1 = new RLine(foci[0], lineAngle, 100.0);
+        auxLine2 = new RLine(foci[1], lineAngle, 100.0);
+
+        ips1 = auxLine1.getIntersectionPoints(auxCircle, false);
+        ips2 = auxLine2.getIntersectionPoints(auxCircle, false);
+
+        var pointOfContact1 = undefined;
+        var pointOfContact2 = undefined;
+
+        if (ips1.length>=1 && ips2.length>=1) {
+            if (ips1[0].equalsFuzzy(ips2[0])) {
+                pointOfContact1 = ips1[0];
+            }
+            else {
+                auxLine1 = new RLine(ips1[0], ips2[0]);
+                ips = circle.getIntersectionPoints(auxLine1, false);
+                if (ips.length>=1) {
+                    pointOfContact1 = ips[0];
+                }
+            }
+        }
+
+        if (ips1.length>=2 && ips2.length>=2) {
+            if (ips1[1].equalsFuzzy(ips2[1])) {
+                pointOfContact2 = ips1[1];
+            }
+            else {
+                auxLine2 = new RLine(ips1[1], ips2[1]);
+                ips = circle.getIntersectionPoints(auxLine2, false);
+                if (ips.length>=1) {
+                    pointOfContact2 = ips[0];
+                }
+            }
+        }
+
+        if (!isNull(pointOfContact1)) {
+            var pointOnLine1 = line.getClosestPointOnShape(pointOfContact1, false);
+            ret.push(new RLine(pointOfContact1, pointOnLine1));
+        }
+        if (!isNull(pointOfContact2)) {
+            var pointOnLine2 = line.getClosestPointOnShape(pointOfContact2, false);
+            ret.push(new RLine(pointOfContact2, pointOnLine2));
+        }
+    }
+
+    return ret;
+};
+
+/**
  * \return Parallels to this shape.
  * \param distance Distance of first parallel or concentric arc or circle.
  * \param number Number of offset shapes to generate.

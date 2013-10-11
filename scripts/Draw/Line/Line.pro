@@ -7,6 +7,7 @@ SUBDIRS = \
     LineFreehand \
     LineHorizontal \
     LineOrthogonal \
+    LineOrthogonalTangent \
     LineParallel \
     LineParallelThrough \
     LinePolygonCP \
