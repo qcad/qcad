@@ -31,7 +31,6 @@ About.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
     var formWidget = this.createWidget("About.ui");
-    formWidget.windowTitle = qsTr("About %1").arg(qApp.applicationName);
 
     this.head = "<head>\n"
          + "<style type='text/css'>\n"
@@ -50,6 +49,8 @@ About.prototype.beginEvent = function() {
     var webPage = webView.page();
     webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
     this.initAboutPlugins(webView);
+
+    formWidget.windowTitle = qsTr("About %1").arg(this.applicationName);
 
     // init about view:
     webView = formWidget.findChild("QCADText");
@@ -136,7 +137,12 @@ About.prototype.initAboutPlugins = function(webView) {
             // plugin about info:
             text = pluginInfo.get("Name", qsTr("No information available"));
             if (text==="Pro Tools") {
-                this.applicationName = qApp.applicationName + " Professional";
+                if (isNull(pluginInfo.get("TrialExpired"))) {
+                    this.applicationName = qApp.applicationName + " Professional";
+                }
+                else {
+                    this.applicationName = qApp.applicationName + " Professional Trial";
+                }
             }
             html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
 
