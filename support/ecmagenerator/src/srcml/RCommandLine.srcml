@@ -107,7 +107,21 @@ dir="./gui" filename="RCommandLine.h">
     <name>QString</name>
   </type>
   <name>getLastCommand</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>appendCommand</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>cmd</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <protected>protected: 
   <function_decl>
   <type>

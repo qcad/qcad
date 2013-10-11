@@ -47,6 +47,9 @@
     static  QScriptValue
         getLastCommand
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        appendCommand
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

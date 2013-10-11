@@ -43,6 +43,7 @@ signals:
 public:
     RCommandLine(QWidget* parent = 0);
     QString getLastCommand();
+    void appendCommand(const QString& cmd);
 
 protected:
     virtual void keyPressEvent(QKeyEvent * event);

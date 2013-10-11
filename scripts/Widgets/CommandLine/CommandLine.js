@@ -165,6 +165,7 @@ CommandLine.init = function(basePath) {
     leCommand.commandConfirmed.connect(function(command) {
         // enter with empty input: repeat last command:
         if (command === "") {
+            debugger;
             var last = leCommand.getLastCommand();
             if (last !== "") {
                 arguments.callee(last);
@@ -304,7 +305,7 @@ CommandLine.init = function(basePath) {
 
             appendAndScroll("<span style='color:#cc0000;'>" + Qt.escape(message) + "</span>");
             if (RSettings.getBoolValue("CommandLine/WarningsAsDialog", false) || messageBox) {
-                QMessageBox.warning(null, qsTr("Warning"), message);
+                QMessageBox.warning(appWin, qsTr("Warning"), message);
             }
         });
 
@@ -312,14 +313,14 @@ CommandLine.init = function(basePath) {
     appWin.userInfo.connect(function(message) {
             appendAndScroll("<span style='color:#0066cc;'>" + Qt.escape(message) + "</span>");
             if (RSettings.getBoolValue("CommandLine/InfoAsDialog", false)) {
-                QMessageBox.information(null, qsTr("Info"), message);
+                QMessageBox.information(appWin, qsTr("Info"), message);
             }
         });
 
     // show previously entered command:
     appWin.userCommand.connect(function(message) {
         // prevent some very frequent commands from being displayed every time:
-        if (message==="snapauto" || message==="restrictoff") {
+        if (message==="snapauto" || message==="restrictoff" || message==="escape") {
             return;
         }
 
@@ -333,6 +334,7 @@ CommandLine.init = function(basePath) {
         else {
             what = qsTr("Command");
         }
+        leCommand.appendCommand(message);
         appendAndScroll(
             "<span style='color:#0000cc;'>"
             + "<i>" + what + ": </i>"

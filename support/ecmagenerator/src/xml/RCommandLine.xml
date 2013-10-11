@@ -17,6 +17,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="appendCommand" cppName="appendCommand"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="cmd"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="keyPressEvent" cppName="keyPressEvent"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

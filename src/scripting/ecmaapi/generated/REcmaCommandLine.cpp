@@ -65,6 +65,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, getLastCommand, "getLastCommand");
             
+            REcmaHelper::registerFunction(&engine, proto, appendCommand, "appendCommand");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RCommandLine*>(), *proto);
 
@@ -269,6 +271,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaCommandLine::getLastCommand", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCommandLine::appendCommand
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCommandLine::appendCommand", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCommandLine::appendCommand";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCommandLine* self = 
+                        getSelf("appendCommand", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->appendCommand(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCommandLine.appendCommand().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCommandLine::appendCommand", context, engine);
             return result;
         }
          QScriptValue REcmaCommandLine::toString

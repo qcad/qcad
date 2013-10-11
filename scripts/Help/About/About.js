@@ -42,17 +42,19 @@ About.prototype.beginEvent = function() {
          + "}\n</style>\n"
          + "</head>";
 
-    // init about view:
-    var webView = formWidget.findChild("QCADText");
-    WidgetFactory.initWebView(webView, this, "openUrl");
-    this.initAboutQCAD(webView);
+    this.applicationName = qApp.applicationName;
 
     // init plugin view:
-    webView = formWidget.findChild("PluginsText");
+    var webView = formWidget.findChild("PluginsText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     var webPage = webView.page();
     webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
     this.initAboutPlugins(webView);
+
+    // init about view:
+    webView = formWidget.findChild("QCADText");
+    WidgetFactory.initWebView(webView, this, "openUrl");
+    this.initAboutQCAD(webView);
 
     // init scripts view:
     webView = formWidget.findChild("ScriptsText");
@@ -75,7 +77,7 @@ About.prototype.initAboutQCAD = function(webView) {
             "<html>"
             + this.head
             + "<body>"
-            + "<h1>%1</h1>".arg(qApp.applicationName)
+            + "<h1>%1</h1>".arg(this.applicationName)
             + "<br/>"
             + "<table border='0'><tr>"
             + "<td><b>Version:</b> </td><td>%1.%2.%3.%4 (%5)</td>"
@@ -129,10 +131,13 @@ About.prototype.initAboutPlugins = function(webView) {
 
             var text, url;
 
-             var pluginInfo = RPluginLoader.getPluginInfo(i);
+            var pluginInfo = RPluginLoader.getPluginInfo(i);
 
             // plugin about info:
             text = pluginInfo.get("Name", qsTr("No information available"));
+            if (text==="Pro Tools") {
+                this.applicationName = qApp.applicationName + " Professional";
+            }
             html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
 
             // description:

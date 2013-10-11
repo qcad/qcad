@@ -178,7 +178,7 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
         case "Shortcut":
             this.shortcut = e.key();
             this.keyInfo = this.shortcut.toString();
-            this.keyTimer = 500;
+            this.keyTimer = 1500;
             qDebug("this.shortcut: ", this.shortcut);
             break;
 
@@ -274,10 +274,14 @@ ScMirrored.interval = 50;
 ScMirrored.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    this.w = 1280;
-    this.h = 670;
+    this.titleBarHeight = 22;
+
     this.x = 0;
-    this.y = 20;
+    this.y = 22;
+
+    this.w = 1280;
+    this.targetHeight = 720;
+    this.h = this.targetHeight - this.y - this.titleBarHeight;
 
     this.iconSize = 32;
 
@@ -313,7 +317,7 @@ ScMirrored.prototype.beginEvent = function() {
     this.mirrorWidget = new QLabel(appWin);
     this.mirrorWidget.setAttribute(Qt.WA_MacAlwaysShowToolWindow);
     this.mirrorWidget.setAttribute(Qt.WA_TransparentForMouseEvents);
-    this.mirrorWidget.resize(this.w,this.y+this.h+30);
+    this.mirrorWidget.resize(this.w,this.targetHeight);
     this.mirrorWidget.move(this.x+this.w,this.y);
 //    this.mirrorWidget.resize(this.w,this.h);
 //    this.mirrorWidget.move(this.x,this.y);
@@ -346,6 +350,8 @@ ScMirrored.prototype.beginEvent = function() {
     this.mousePixmap["middle"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/MouseButtonMiddle.svg", this.iconSize,this.iconSize);
     this.mousePixmap["right"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/MouseButtonRight.svg", this.iconSize,this.iconSize);
 
+    this.keyPixmap = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/Key.svg", this.iconSize,this.iconSize);
+
     // start mirroring:
     var t = new QTimer(this.mirrorWidget);
     t.interval = ScMirrored.interval;
@@ -374,7 +380,7 @@ ScMirrored.prototype.beginEvent = function() {
 };
 
 ScMirrored.prototype.mirror = function() {
-    var pm = QPixmap.grabWindow(QApplication.desktop().winId(), 0, 0, this.w, this.y+this.h+30);
+    var pm = QPixmap.grabWindow(QApplication.desktop().winId(), 0, 0, this.w, this.targetHeight);
 
     var painter = new QPainter();
     painter.begin(pm);
@@ -409,6 +415,12 @@ ScMirrored.prototype.paintLogo = function(painter, pixmap) {
 
     var bg = pixmap.copy(0,0,18,21);
     painter.drawPixmap(19,0,bg);
+
+    //bg = pixmap.copy(0,44,1280,714);
+    //painter.drawPixmap(0,21,bg);
+
+    bg = pixmap.copy(70,25,60,18);
+    painter.drawPixmap(5,25,bg);
 };
 
 /**
@@ -445,6 +457,7 @@ ScMirrored.prototype.paintMouseInfo = function(painter) {
 
     var pos = QCursor.pos();
     pos.setX(pos.x() + this.iconSize/2);
+    pos.setY(pos.y() + this.iconSize);
 
     var alpha;
     if (this.ef.mouseTimer!==-1) {
@@ -466,8 +479,8 @@ ScMirrored.prototype.paintMouseInfo = function(painter) {
  * Paint key info.
  */
 ScMirrored.prototype.paintKeyInfo = function(painter) {
-    qDebug("keyInfo: ", this.ef.keyInfo);
-    qDebug("keyTimer: ", this.ef.keyTimer);
+    //qDebug("keyInfo: ", this.ef.keyInfo);
+    //qDebug("keyTimer: ", this.ef.keyTimer);
 
     if (this.ef.keyTimer<=0 && this.ef.keyTimer!==-1) {
         return;
@@ -479,6 +492,10 @@ ScMirrored.prototype.paintKeyInfo = function(painter) {
 
     var pos = QCursor.pos();
     pos.setX(pos.x() + this.iconSize*1.5);
+    pos.setY(pos.y() + this.iconSize);
+//    var posText = pos;
+//    posText.setX(pos.x() + this.iconSize*1.5 + this.iconSize*0.5);
+//    posText.setY(pos.y() + this.iconSize*0.5);
 
     var alpha;
     if (this.ef.keyTimer!==-1) {
@@ -491,10 +508,15 @@ ScMirrored.prototype.paintKeyInfo = function(painter) {
 
     painter.setOpacity(alpha/255);
 
-//    if (!isNull(this.keyPixmap[this.ef.mouseInfo])) {
-//        painter.drawPixmap(pos, this.mousePixmap[this.ef.mouseInfo]);
-//    }
-    painter.drawText(pos, this.ef.keyInfo);
+    var keys = this.ef.keyInfo.split(/[,+]/);
+
+    for (var i=0; i<keys.length; i++) {
+        var x = pos.x() + this.iconSize*1.2*i;
+        var keyText = keys[i].trim();
+
+        painter.drawPixmap(x, pos.y(), this.keyPixmap);
+        painter.drawText(x, pos.y(), this.iconSize, this.iconSize, Qt.AlignCenter.valueOf(), keyText, new QRectF());
+    }
 };
 
 /**

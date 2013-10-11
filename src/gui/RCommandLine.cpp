@@ -33,6 +33,11 @@ QString RCommandLine::getLastCommand() {
     return history.last();
 }
 
+void RCommandLine::appendCommand(const QString& cmd) {
+    history.append(cmd);
+    it = history.end();
+}
+
 bool RCommandLine::event(QEvent* event) {
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*> (event);
