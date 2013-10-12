@@ -179,10 +179,13 @@ BitmapExport.prototype.exportBitmap = function(fileName, properties) {
     var v = di.getLastKnownViewWithFocus();
     var scene = v.getScene();
     var view = new RGraphicsViewImage();
-    view.setScene(scene);
+    view.setScene(scene, false);
     view.setAntialiasing(true);
     view.setPaintOrigin(false);
-    view.setPrinting(true);
+    view.setTextHeightThresholdOverride(0);
+
+    // disabled: produces very thin lines, invisible for units >= Meter
+    //view.setPrinting(true);
 
     view.setBackgroundColor(properties.background);
     view.resizeImage(properties.width, properties.height);
@@ -196,7 +199,6 @@ BitmapExport.prototype.exportBitmap = function(fileName, properties) {
 
     scene.unregisterView(view);
 
-    var appWin = EAction.getMainWindow();
     
     var iw = new QImageWriter(fileName);
     // always empty
@@ -211,6 +213,8 @@ BitmapExport.prototype.exportBitmap = function(fileName, properties) {
     } else if (ext === "bmp") {
         iw.setCompression(1);
     }
+
+    var appWin = EAction.getMainWindow();
     if (!iw.write(buffer)) {
         print("Error: cannot save file: ", fileName);
         print("Error: ", iw.errorString());

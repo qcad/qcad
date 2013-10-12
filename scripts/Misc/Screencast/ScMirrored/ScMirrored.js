@@ -204,10 +204,6 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
         this.mouseInfo = "right";
     }
 
-//    if (!isNull(this.shortcut)) {
-//        this.keyInfo = this.shortCut.toString();
-//    }
-
     if (this.key===Qt.Key_QuoteLeft.valueOf()) {
         this.highlightWidget = QApplication.widgetAt(QCursor.pos());
         this.widgetTimer = -1;
@@ -227,6 +223,11 @@ ScInputInfoEventFilter.prototype.eventFilter = function(watched, e) {
 //            //gpos
 //        );
 //        QCoreApplication.postEvent(this.highlightWidget, toolTipEvent);
+    }
+
+    if (this.key===Qt.Key_AsciiTilde.valueOf()) {
+        this.highlightWidget = QApplication.widgetAt(QCursor.pos()).parentWidget();
+        this.widgetTimer = -1;
     }
 
     if (installFilter) {
@@ -351,6 +352,7 @@ ScMirrored.prototype.beginEvent = function() {
     this.mousePixmap["right"] = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/MouseButtonRight.svg", this.iconSize,this.iconSize);
 
     this.keyPixmap = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/Key.svg", this.iconSize,this.iconSize);
+    this.keyWidePixmap = ScMirrored.createPixmap(ScMirrored.includeBasePath + "/KeyWide.svg", this.iconSize*1.5,this.iconSize);
 
     // start mirroring:
     var t = new QTimer(this.mirrorWidget);
@@ -510,12 +512,21 @@ ScMirrored.prototype.paintKeyInfo = function(painter) {
 
     var keys = this.ef.keyInfo.split(/[,+]/);
 
+    var x = pos.x();
     for (var i=0; i<keys.length; i++) {
-        var x = pos.x() + this.iconSize*1.2*i;
         var keyText = keys[i].trim();
+        var f = 1.0;
+        var pm = this.keyPixmap;
 
-        painter.drawPixmap(x, pos.y(), this.keyPixmap);
-        painter.drawText(x, pos.y(), this.iconSize, this.iconSize, Qt.AlignCenter.valueOf(), keyText, new QRectF());
+        if (keyText.length>1) {
+            f = 1.5;
+            pm = this.keyWidePixmap;
+        }
+
+        painter.drawPixmap(x, pos.y(), pm);
+        painter.drawText(x, pos.y(), this.iconSize*f, this.iconSize, Qt.AlignCenter.valueOf(), keyText, new QRectF());
+
+        x += this.iconSize*f*1.2;
     }
 };
 
@@ -533,9 +544,16 @@ ScMirrored.prototype.paintHighlightedWidget = function(painter) {
 
     var pos = QCursor.pos();
     var widget = QApplication.widgetAt(pos);
+    var parentWidget = undefined;
+
+    if (!isNull(widget)) {
+        parentWidget = widget.parentWidget();
+    }
 
     // cursor moved away: fade out:
-    if (widget!==this.ef.highlightWidget && (this.ef.widgetTimer>500 || this.ef.widgetTimer===-1)) {
+    if (widget!==this.ef.highlightWidget && parentWidget!==this.ef.highlightWidget &&
+        (this.ef.widgetTimer>500 || this.ef.widgetTimer===-1)) {
+
         this.ef.widgetTimer = 500;
     }
 
