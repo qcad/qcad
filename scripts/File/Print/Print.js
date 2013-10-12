@@ -95,37 +95,32 @@ Print.prototype.print = function(pdfFile) {
         Print.cancel = false;
         Print.printDialog = new QPrintDialog(printer, EAction.getMainWindow());
 
-        if (RS.getSystemId()==="osx" || RS.getSystemId()==="win") {
-            // Mac & Windows: 
-            // exec() never returns without destroying the dialog through these signals:
-            Print.printDialog["accepted(QPrinter*)"].connect(
-                        function() {
-                            Print.cancel = false;
-                            Print.printDialog.close();
-                            if (RS.getSystemId()=="osx") {
-                                Print.printDialog.destroy();
-                            }
-                        });
+        // Mac, Win: exec() never returns without destroying the dialog through these signals:
+        // Linux: make sure that cancel is caught correctly:
+        Print.printDialog["accepted(QPrinter*)"].connect(
+                    function() {
+                        Print.cancel = false;
+                        Print.printDialog.close();
+                        if (RS.getSystemId()=="osx") {
+                            Print.printDialog.destroy();
+                        }
+                    });
 
-            Print.printDialog.rejected.connect(
-                        function() {
-                            Print.cancel = true;
-                            Print.printDialog.close();
-                            if (RS.getSystemId()=="osx") {
-                                Print.printDialog.destroy();
-                            }
-                        });
+        Print.printDialog.rejected.connect(
+                    function() {
+                        Print.cancel = true;
+                        Print.printDialog.close();
+                        if (RS.getSystemId()=="osx") {
+                            Print.printDialog.destroy();
+                        }
+                    });
 
-            if (RS.getSystemId()=="osx") {
-                Print.printDialog.exec();
-            }
-            else if (RS.getSystemId()=="win") {
-                // slot 'dummy' is never called:
-                Print.printDialog.open(this, "dummy");
-            }
-        }
-        else {
+        if (RS.getSystemId()=="osx" || RS.getSystemId()=="linux") {
             Print.printDialog.exec();
+        }
+        else if (RS.getSystemId()=="win") {
+            // slot 'dummy' is never called:
+            Print.printDialog.open(this, "dummy");
         }
 
         if (Print.cancel===true) {
