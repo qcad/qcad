@@ -52,11 +52,11 @@ class DL_CreationInterface;
 class DL_WriterA;
 
 
-#define DL_VERSION "3.2.3.0"
+#define DL_VERSION "3.3.4.0"
 
 #define DL_VERSION_MAJOR    3
-#define DL_VERSION_MINOR    2
-#define DL_VERSION_REV      3
+#define DL_VERSION_MINOR    3
+#define DL_VERSION_REV      4
 #define DL_VERSION_BUILD    0
 
 #define DL_UNKNOWN               0
