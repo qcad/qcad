@@ -190,6 +190,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     // Appid:
     qDebug() << "writing appid...";
     dw->tableAppid(1);
+    dxf.writeAppid(*dw, "ACAD");
     dxf.writeAppid(*dw, "QCAD");
     dw->tableEnd();
 
