@@ -98,6 +98,7 @@ public:
     virtual RBox getBoundingBox(bool includeHiddenLayer = true);
     virtual RBox getSelectionBox();
 
+    virtual bool removeObject(QSharedPointer<RObject> object);
     virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true);
     bool checkRecursion(
         RBlock::Id blockId, RBlock::Id potentialChildBlockId

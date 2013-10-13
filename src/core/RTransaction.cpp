@@ -175,6 +175,8 @@ void RTransaction::redo(RDocument* document) {
                 }
             }
 
+            storage->removeObject(storage->queryObjectDirect(objId));
+
             QList<RPropertyChange> objectChanges = propertyChanges.value(objId);
             for (int i=0; i<objectChanges.size(); ++i) {
                 RPropertyTypeId propertyTypeId = objectChanges.at(i).propertyTypeId;
@@ -242,6 +244,8 @@ void RTransaction::undo(RDocument* document) {
                     document->removeFromSpatialIndex(entity);
                 }
             }
+
+            storage->removeObject(storage->queryObjectDirect(objId));
 
             QList<RPropertyChange> objectChanges = propertyChanges.value(objId);
             for (int i=objectChanges.size()-1; i>=0; --i) {
@@ -549,13 +553,13 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     }
 
     bool objectHasChanged = false;
+    QSharedPointer<RObject> oldObject;
 
     // object is an existing object that might have changed:
     if (object->getId() != RObject::INVALID_ID) {
         // store diff between previous object and this object
         // as part of this transaction:
-        QSharedPointer<RObject> oldObject =
-            storage->queryObjectDirect(object->getId());
+        oldObject = storage->queryObjectDirect(object->getId());
         if (oldObject.isNull()) {
             qWarning("RTransaction::addObject: "
                 "original object not found in storage");
@@ -578,6 +582,8 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             fail();
             return false;
         }
+
+        storage->removeObject(oldObject);
 
         // iterate through all properties of the original object
         // and store the property changes (if any) in this transaction:

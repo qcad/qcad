@@ -457,6 +457,8 @@ public:
 
     virtual RBox getSelectionBox() = 0;
 
+    virtual bool removeObject(QSharedPointer<RObject> object) = 0;
+
     /**
      * Saves the given object to the storage.
      */

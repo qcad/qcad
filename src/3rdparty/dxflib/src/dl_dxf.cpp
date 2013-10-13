@@ -4135,10 +4135,14 @@ void DL_Dxf::writeStyle(DL_WriterA& dw, const DL_StyleData& style) {
 //    dw.dxfInt( 70, 1);
     dw.dxfString(  0, "STYLE");
     if (version==DL_VERSION_2000) {
-        //dw.dxfHex(5, 0x11);
-        dw.handle();
+        if (style.name=="Standard") {
+            //dw.dxfHex(5, 0x11);
+            styleHandleStd = dw.handle();
+        }
+        else {
+            dw.handle();
+        }
     }
-    //styleHandleStd = dw.handle();
     //dw.dxfHex(330, 3);
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbSymbolTableRecord");
@@ -4314,8 +4318,8 @@ void DL_Dxf::writeDimStyle(DL_WriterA& dw,
         dw.dxfInt(278, 44);
         dw.dxfInt(283, 0);
         dw.dxfInt(284, 8);
-        //dw.dxfHex(340, styleHandleStd);
-        dw.dxfHex(340, 0x11);
+        dw.dxfHex(340, styleHandleStd);
+        //dw.dxfHex(340, 0x11);
     }
     // * /
     dw.dxfString(  0, "ENDTAB");

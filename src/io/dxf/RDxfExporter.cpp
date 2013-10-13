@@ -119,8 +119,16 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     QStringList lts = document->getLinetypeNames().toList();
     qDebug() << "RDxfExporter::exportFile: linetypes table";
     dw->tableLineTypes(lts.size());
+    // continuous must always be the first LTYPE:
+    QSharedPointer<RLinetype> lt = document->queryLinetype("CONTINUOUS");
+    if (!lt.isNull()) {
+        writeLinetype(*lt);
+    }
     qDebug() << "RDxfExporter::exportFile: linetypes loop";
     for (int i=0; i<lts.size(); i++) {
+        if (lts[i].toUpper()=="CONTINUOUS") {
+            continue;
+        }
         QSharedPointer<RLinetype> lt = document->queryLinetype(lts[i]);
         writeLinetype(*lt);
     }
@@ -148,6 +156,22 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     // STYLE:
     qDebug() << "writing styles...";
     QList<DL_StyleData> uniqueTextStyles;
+
+    // add text style for dimensions:
+    DL_StyleData style("Standard",
+                       0,    // flags
+                       0.0,  // fixed height (not fixed)
+                       1.0,  // width factor
+                       0.0,  // oblique angle
+                       0,    // text generation flags
+                       2.5,  // last height used
+                       "txt", // primary font file
+                       ""    // big font file
+                       );
+    style.bold = false;
+    style.italic = false;
+    uniqueTextStyles.append(style);
+
     // write one text style for each new, unique combination of font, size, etc:
     QList<REntity::Id> entityIds = document->queryAllEntities(false, true).toList();
     for (int i=0; i<entityIds.size(); i++) {
@@ -552,6 +576,8 @@ void RDxfExporter::writeEntity(const REntity& e) {
         // never reached:
         return;
     }
+
+    qDebug() << "RDxfExporter::writeEntity: " << e;
 
     attributes = getEntityAttributes(e);
 
@@ -1096,6 +1122,9 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
         dimType |= 0x80;
     }
 
+    QString text = d.getMeasurement(false);
+    text.replace("^", "^ ");
+
     qDebug() << "dimType: " << dimType;
     qDebug() << "text: " << d.getMeasurement(false);
 
@@ -1109,7 +1138,7 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                              attachmentPoint,
                              d.getLineSpacingStyle(),
                              d.getLineSpacingFactor(),
-                             (const char*)d.getMeasurement(false).toLatin1(),
+                             (const char*)text.toLatin1(),
                              // TODO: dim style:
                              (const char*)d.getFontName().toLatin1(),
                              d.getTextAngle(),

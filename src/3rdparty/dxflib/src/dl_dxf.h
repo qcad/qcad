@@ -482,7 +482,9 @@ private:
     // library version. hex: 0x20003001 = 2.0.3.1
     int libVersion;
     // app specific dictionary handle:
-    int appDictionaryHandle;
+    unsigned long appDictionaryHandle;
+    // handle of standard text style, referenced by dimstyle:
+    unsigned long styleHandleStd;
 };
 
 #endif

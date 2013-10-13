@@ -539,7 +539,6 @@ void RExporter::exportView(RView::Id viewId) {
  * Note that entity is a temporary clone.
  */
 void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks) {
-
     RDocument* doc = entity.getDocument();
     if (doc==NULL) {
         doc = document;
@@ -547,6 +546,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks) {
 
     // entity not on current block and allBlocks==false, break:
     if (!allBlocks && doc->getCurrentBlockId()!=entity.getBlockId()) {
+        //unexportEntity(entity.getId());
         return;
     }
 

@@ -741,6 +741,21 @@ RBox RMemoryStorage::getSelectionBox() {
     return ret;
 }
 
+bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
+    if (object.isNull()) {
+        return false;
+    }
+
+    QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
+    if (!entity.isNull()) {
+        //blockEntityMap.remove(entity->getBlockId());
+        //int r =
+        blockEntityMap.remove(entity->getBlockId(), entity);
+//        qDebug() << "removed " << r << " entities";
+//        qDebug() << "removed " << entity->getId() << " from block " << entity->getBlockId();
+    }
+}
+
 bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion) {
     if (object.isNull()) {
         return false;
@@ -806,6 +821,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     if (!entity.isNull()) {
         entityMap[entity->getId()] = entity;
         blockEntityMap.insert(entity->getBlockId(), entity);
+        //qDebug() << "added " << entity->getId() << " to block " << entity->getBlockId();
         setMaxDrawOrder(qMax(entity->getDrawOrder()+1, getMaxDrawOrder()));
     }
 
