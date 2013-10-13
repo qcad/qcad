@@ -14,7 +14,7 @@
         <translation>Exportar mapa de bits</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+124"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>Error al generar el archivo de mapa de bits &apos;%1&apos;: %2</translation>
     </message>

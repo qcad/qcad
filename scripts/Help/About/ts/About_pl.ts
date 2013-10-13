@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="+34"/>
+        <location filename="../About.js" line="+53"/>
         <source>About %1</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -13,7 +13,7 @@
         <translation type="unfinished">%1…</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+66"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23,7 +23,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+9"/>
         <source>Plugin:</source>
         <translation type="unfinished"></translation>
     </message>

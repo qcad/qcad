@@ -14,7 +14,7 @@
         <translation>ビットマップとしてエクスポート</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+124"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>ビットマップファイルの生成中にエラー &apos;%1&apos;: %2</translation>
     </message>

@@ -4,12 +4,12 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="+34"/>
+        <location filename="../About.js" line="+53"/>
         <source>About %1</source>
         <translation>%1について</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+66"/>
         <source>Plugins</source>
         <translation>プラグイン</translation>
     </message>
@@ -19,7 +19,7 @@
         <translation>利用可能な情報がありません</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+9"/>
         <source>Plugin:</source>
         <translation>プラグイン:</translation>
     </message>

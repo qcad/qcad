@@ -27,7 +27,7 @@
         <translation type="obsolete">Ungültige Koordinate &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+159"/>
+        <location line="+160"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Unbekanntes Kommando oder ungültige Koordinate oder Wert: &apos;%1&apos;</translation>
     </message>
@@ -85,7 +85,7 @@
         <translation>Kommando</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Command:</source>
         <translation>Kommando:</translation>
     </message>

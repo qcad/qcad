@@ -19,7 +19,7 @@
         <translation type="obsolete">無効な座標 &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+141"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>不明なコマンドまたは無効な座標もしくは値: &apos;%1&apos;</translation>
     </message>
@@ -73,7 +73,7 @@
         <translation>コマンド</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Command:</source>
         <translation>コマンド:</translation>
     </message>

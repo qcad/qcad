@@ -19,7 +19,7 @@ Wszystkie pliki (*.*)</translatorcomment>
         <translation type="unfinished">Eksportuj jako bitmapę</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+124"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Błąd podczas generowania pliku bitmapy&apos;&amp;#39;:</translation>

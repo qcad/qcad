@@ -10,12 +10,12 @@
         <translation type="obsolete">&amp;Sobre</translation>
     </message>
     <message>
-        <location filename="../About.js" line="+34"/>
+        <location filename="../About.js" line="+53"/>
         <source>About %1</source>
         <translation>Sobre %1</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+66"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
@@ -25,7 +25,7 @@
         <translation>Não há informações disponíveis</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+9"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>

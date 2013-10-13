@@ -29,7 +29,7 @@
         <translation type="obsolete">Invalid coordonner &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+159"/>
+        <location line="+160"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Commande inconnue ou de coordonnées ou une valeur invalide: &apos;%1&apos;</translation>
     </message>
@@ -92,7 +92,7 @@ Curseur dans la ligne de &amp;commande</translatorcomment>
         <translation>Commande</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Command:</source>
         <translation>Commande :</translation>
     </message>

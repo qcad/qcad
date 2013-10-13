@@ -14,7 +14,7 @@
         <translation>Exportieren als Bitmap</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+124"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>Fehler beim Generieren der Bitmap Datei &apos;%1&apos;: %2</translation>
     </message>

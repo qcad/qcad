@@ -126,7 +126,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+226"/>
+        <location filename="../ShapeAlgorithms.js" line="+307"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation>%1同心円の半径が0.0を下回りました。</translation>
     </message>

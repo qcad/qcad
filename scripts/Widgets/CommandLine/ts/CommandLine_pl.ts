@@ -26,7 +26,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+141"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieznane polecenie lub nieprawidłowy współrzędnych lub wartość:&apos;&amp;#39;</translation>
@@ -103,7 +103,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Polecenie</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Command:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

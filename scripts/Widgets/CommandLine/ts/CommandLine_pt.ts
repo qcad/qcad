@@ -34,7 +34,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Coordenar inválido &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+159"/>
+        <location line="+160"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconhecido ou coordenadas ou valor inválido: &apos;%1&apos;</translation>
     </message>
@@ -108,7 +108,7 @@ Linha de Comando</translatorcomment>
         <translation>Comando</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Command:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

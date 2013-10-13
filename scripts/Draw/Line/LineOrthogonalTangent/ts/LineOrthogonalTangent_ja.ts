@@ -4,27 +4,27 @@
 <context>
     <name>LineOrthogonalTangent</name>
     <message>
-        <location filename="../LineOrthogonalTangent.js" line="68"/>
+        <location filename="../LineOrthogonalTangent.js" line="+68"/>
         <source>Choose line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineOrthogonalTangent.js" line="79"/>
+        <location line="+11"/>
         <source>Choose circle, arc or ellipse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineOrthogonalTangent.js" line="215"/>
+        <location line="+136"/>
         <source>No tangent possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineOrthogonalTangentInit.js" line="2"/>
+        <location filename="../LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineOrthogonalTangentInit.js" line="7"/>
+        <location line="+5"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished"></translation>
     </message>

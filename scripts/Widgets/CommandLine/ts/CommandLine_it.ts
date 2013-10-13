@@ -29,7 +29,7 @@
         <translation type="obsolete">Non valido coordinate &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+159"/>
+        <location line="+160"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando sconosciuto o coordinate o valore non valido: &apos;%1&apos;</translation>
     </message>
@@ -92,7 +92,7 @@ Vai alla &amp;Riga di Comando</translatorcomment>
         <translation>Comando</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Command:</source>
         <translation>Comando:</translation>
     </message>

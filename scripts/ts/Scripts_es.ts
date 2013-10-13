@@ -146,7 +146,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+226"/>
+        <location filename="../ShapeAlgorithms.js" line="+307"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Radio caído por debajo de 0,0 después %1 de círculos concéntricos.</translation>

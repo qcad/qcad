@@ -162,7 +162,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+226"/>
+        <location filename="../ShapeAlgorithms.js" line="+307"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym okręgu (s).</translation>
