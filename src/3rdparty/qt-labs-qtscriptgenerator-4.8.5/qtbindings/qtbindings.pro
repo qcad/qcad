@@ -10,5 +10,6 @@ SUBDIRS = qtscript_core \
 	  qtscript_phonon \
 	  qtscript_webkit \
 	  qtscript_xmlpatterns \
-	  qtscript_uitools \
-	  qs_eval
+	  qtscript_uitools
+
+	  #qs_eval
