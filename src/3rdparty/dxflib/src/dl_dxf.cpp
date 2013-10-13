@@ -4538,7 +4538,7 @@ void DL_Dxf::writeObjects(DL_WriterA& dw, const std::string& appDictionaryName) 
     //dw.dxfHex(330, dicId2);                      // 1A
     dw.dxfString(100, "AcDbPlotSettings");
     dw.dxfString(  1, "");
-    dw.dxfString(  2, "C:\\Program Files\\AutoCAD 2002\\plotters\\DWF ePlot (optimized for plotting).pc3");
+    dw.dxfString(  2, "none_device");
     dw.dxfString(  4, "");
     dw.dxfString(  6, "");
     dw.dxfReal( 40, 0.0);
@@ -4602,7 +4602,7 @@ void DL_Dxf::writeObjects(DL_WriterA& dw, const std::string& appDictionaryName) 
     //dw.dxfHex(330, dicId2);                      // 1A
     dw.dxfString(100, "AcDbPlotSettings");
     dw.dxfString(  1, "");
-    dw.dxfString(  2, "C:\\Program Files\\AutoCAD 2002\\plotters\\DWF ePlot (optimized for plotting).pc3");
+    dw.dxfString(  2, "none_device");
     dw.dxfString(  4, "");
     dw.dxfString(  6, "");
     dw.dxfReal( 40, 0.0);
@@ -4666,7 +4666,7 @@ void DL_Dxf::writeObjects(DL_WriterA& dw, const std::string& appDictionaryName) 
     //dw.dxfHex(330, dicId2);                      // 1A
     dw.dxfString(100, "AcDbPlotSettings");
     dw.dxfString(  1, "");
-    dw.dxfString(  2, "C:\\Program Files\\AutoCAD 2002\\plotters\\DWF ePlot (optimized for plotting).pc3");
+    dw.dxfString(  2, "none_device");
     dw.dxfString(  4, "");
     dw.dxfString(  6, "");
     dw.dxfReal( 40, 0.0);

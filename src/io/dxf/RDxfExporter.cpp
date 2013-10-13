@@ -58,7 +58,6 @@ RDxfExporter::RDxfExporter(RDocument& document,
 }
 
 QString RDxfExporter::getCorrectedFileName(const QString& fileName, const QString& nameFilter) {
-
     QString ret = fileName;
     QString ext = QFileInfo(ret).suffix().toLower();
 
@@ -211,6 +210,11 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         dxf.writeBlockRecord(*dw);
 
         for (int i=0; i<blockNames.size(); ++i) {
+            qDebug() << "writing block record: " << blockNames[i];
+            if (blockNames[i].startsWith("*")) {
+                continue;
+            }
+
             QSharedPointer<RBlock> blk = document->queryBlock(blockNames[i]);
             if (blk.isNull()) {
                 continue;
@@ -230,21 +234,20 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "writing blocks...";
     dw->sectionBlocks();
 
-    /*
     if (exportVersion!=DL_Codes::AC1009) {
-        RS_Block b1(graphic, RS_BlockData("*Model_Space",
-                                          RS_Vector(0.0,0.0), false));
-        writeBlock(&b1);
-        RS_Block b2(graphic, RS_BlockData("*Paper_Space",
-                                          RS_Vector(0.0,0.0), false));
-        writeBlock(&b2);
-        RS_Block b3(graphic, RS_BlockData("*Paper_Space0",
-                                          RS_Vector(0.0,0.0), false));
-        writeBlock(&b3);
+        RBlock b1(document, "*Model_Space", RVector(0.0,0.0));
+        writeBlock(b1);
+        RBlock b2(document, "*Paper_Space", RVector(0.0,0.0));
+        writeBlock(b2);
+        RBlock b3(document, "*Paper_Space0", RVector(0.0,0.0));
+        writeBlock(b3);
     }
-    */
 
     for (int i=0; i<blockNames.size(); ++i) {
+        qDebug() << "writing block: " << blockNames[i];
+        if (blockNames[i].startsWith("*")) {
+            continue;
+        }
         QSharedPointer<RBlock> block = document->queryBlock(blockNames[i]);
         if (block.isNull()) {
             continue;
@@ -511,13 +514,14 @@ void RDxfExporter::writeBlock(const RBlock& b) {
         }
     }
 
-    dxf.writeBlock( *dw, DL_BlockData((const char*)blockName.toLatin1(), 0,
+    dxf.writeBlock(*dw, DL_BlockData((const char*)blockName.toLatin1(), 0,
                                       b.getOrigin().x,
                                       b.getOrigin().y,
                                       b.getOrigin().z));
 
     // entities in model space are stored in section ENTITIES, not in block:
     if (blockName.toLower()==RBlock::modelSpaceName.toLower()) {
+        dxf.writeEndBlock(*dw, (const char*)b.getName().toLatin1());
         return;
     }
 
