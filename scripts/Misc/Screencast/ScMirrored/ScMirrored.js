@@ -587,16 +587,3 @@ ScMirrored.createPixmap = function(file, w, h) {
     return pixmap;
 }
 
-
-
-/**
- * Adds a menu for this action to Examples/Math Examples/ScMirrored.
- */
-ScMirrored.init = function(basePath) {
-    var action = new RGuiAction("&Mirrored", RMainWindowQt.getMainWindow());
-    action.setRequiresDocument(false);
-    action.setScriptFile(basePath + "/ScMirrored.js");
-    action.setSortOrder(20);
-    action.setDefaultCommands(["screencast"]);
-    EAction.addGuiActionTo(action, Screencast, true, false, false);
-};
