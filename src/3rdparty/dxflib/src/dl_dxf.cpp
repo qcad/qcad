@@ -2666,6 +2666,10 @@ void DL_Dxf::writeText(DL_WriterA& dw,
     dw.dxfReal(21, data.apy);
     dw.dxfReal(31, data.apz);
 
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbText");
+    }
+
     dw.dxfInt(73, data.vJustification);
 }
 

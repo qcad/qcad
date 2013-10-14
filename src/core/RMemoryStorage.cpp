@@ -1070,6 +1070,9 @@ QVariant RMemoryStorage::getKnownVariable(RS::KnownVariable key) const {
              knownVariables.value(RS::DIMDEC).toInt()==-1) {
         return getKnownVariable(RS::DIMDEC);
     }
+    else if (key==RS::DWGCODEPAGE) {
+        return "ANSI_1252";
+    }
     else {
         return knownVariables.value(key);
     }
