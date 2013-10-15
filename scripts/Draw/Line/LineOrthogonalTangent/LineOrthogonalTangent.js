@@ -124,12 +124,12 @@ LineOrthogonalTangent.prototype.pickEntity = function(event, preview) {
             }
         }
         else {
-            if (!preview) {
-                EAction.warnNotArcCircleEllipse();
-            }
             this.entity1 = undefined;
             this.shape1 = undefined;
             this.pos1 = undefined;
+            if (!preview) {
+                EAction.warnNotLine();
+            }
         }
         break;
 
@@ -161,6 +161,9 @@ LineOrthogonalTangent.prototype.pickEntity = function(event, preview) {
             this.pos2 = undefined;
             if (preview) {
                 this.updatePreview();
+            }
+            else {
+                EAction.warnNotArcCircleEllipse();
             }
         }
         break;
