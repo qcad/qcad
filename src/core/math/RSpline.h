@@ -53,9 +53,6 @@ class RSplineProxy;
  */
 class QCADCORE_EXPORT RSpline: public RShape, public RExplodable, public RDirected {
 public:
-    //typedef RSpline (*UpdateFromFitPointsFunction)(const RSpline& spline, bool useTangents);
-    //typedef QList<RSpline> (*SplitFunction)(const RSpline& spline, const QList<RVector>& points);
-
     RSpline();
     RSpline(const QList<RVector>& controlPoints, int degree);
     virtual ~RSpline();
