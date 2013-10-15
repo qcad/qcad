@@ -1521,9 +1521,20 @@ function getClipboard() {
     }
 }
 
+
+function stripDirtyFlag(title) {
+    return title.replace("[*] ", "");
+}
+
+function addDirtyFlag(title) {
+    return "[*] " + title;
+}
+
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
         return this.plainText;
     }
 }
+

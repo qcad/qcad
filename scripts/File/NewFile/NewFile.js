@@ -201,10 +201,8 @@ NewFile.updateTitle = function(mdiChild) {
     // untitled:
     if (fileName==="") {
         if (mdiChild.windowTitle==="") {
-            title = qsTr("Untitled %1").arg(documentCounter);
+            title = addDirtyFlag(qsTr("Untitled %1").arg(documentCounter));
             tabBar.setTabToolTip(tabBar.currentIndex, title);
-            // dirty flag automatically handled by Qt:
-            title += " [*]";
             mdiChild.objectName = "Untitled%1".arg(documentCounter);
             documentCounter++;
             mdiChild.setWindowTitle(title);
@@ -214,14 +212,23 @@ NewFile.updateTitle = function(mdiChild) {
         var fi = new QFileInfo(fileName);
         var name = fi.fileName();
         var roStr = qsTr("read-only");
-        title = name + (fi.isWritable() ? " [*]" : " " + roStr);
+        if (fi.isWritable()) {
+            title = addDirtyFlag(name);
+        }
+        else {
+            title = name + " " + roStr;
+        }
+
         mdiChild.objectName = name;
         tabBar.setTabToolTip(tabBar.currentIndex, fileName);
         mdiChild.setWindowTitle(title);
     }
 
-    //appWin.setWindowTitle(title + (document.isModified() ? " *" : "") + " - " + qApp.applicationName);
-    appWin.setWindowTitle(mdiChild.windowTitle.replace(" [*]", "") + (document.isModified() ? " *" : "") + " - " + qApp.applicationName);
+    appWin.setWindowTitle(
+        stripDirtyFlag(mdiChild.windowTitle) +
+        (document.isModified() ? " *" : "") +
+        " - " + qApp.applicationName
+    );
 };
 
 /**
@@ -241,7 +248,7 @@ NewFile.closeRequested = function(mdiChild) {
 
     var fileName = new QFileInfo(document.getFileName()).fileName();
     if (fileName.length===0) {
-        fileName = mdiChild.windowTitle.replace(" [*]", "");
+        fileName = stripDirtyFlag(mdiChild.windowTitle);
     }
 
     var label1 = dialog.findChild("Text1");

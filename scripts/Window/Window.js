@@ -73,9 +73,13 @@ Window.getMenu = function() {
             for (i = 0; i < windows.length; ++i) {
                 var window = windows[i];
                 var file = window.getDocument().getFileName();
+                var modified = window.getDocument().isModified();
                 var text = new QFileInfo(file).fileName();
                 if (text === "") {
-                    text = window.windowTitle;
+                    text = stripDirtyFlag(window.windowTitle);
+                }
+                if (modified) {
+                    text += " *";
                 }
                 action = menu.addAction(text);
                 action.checkable = true;

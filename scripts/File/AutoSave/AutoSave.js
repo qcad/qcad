@@ -199,7 +199,7 @@ AutoSave.recoverUntitled = function() {
             var document = mdiChild.getDocument();
             document.setFileName("");
             document.setModified(true);
-            mdiChild.setWindowTitle(qsTr("Recovered") + " %1 [*]".arg(documentCounter));
+            mdiChild.setWindowTitle(addDirtyFlag(qsTr("Recovered") + " %1".arg(documentCounter)));
             mdiChild.objectName = "Recovered%1".arg(documentCounter);
             documentCounter++;
             var autoSaveFileName = AutoSave.autoSave();
@@ -331,7 +331,7 @@ AutoSave.getAutoSaveFileNameCurrent = function() {
     var counter = 0;
     //var postfix = "";
     var title = mdiChild.windowTitle;
-    title = title.replace(" [*]", "");
+    title = stripDirtyFlag(title);
     title = title.replace(" ", "_");
     bakFileName = RSettings.getPath() + QDir.separator + "~" + title + ".dxf";
 //        do {

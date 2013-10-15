@@ -56,7 +56,7 @@ BitmapExport.prototype.getFilename = function() {
     if (drawingFileName.length === 0) {
         fi = new QFileInfo(QDir.homePath());
         initialPath = fi.absoluteFilePath() + QDir.separator
-                + EAction.getMdiChild().windowTitle.replace(" [*]", "");
+                + stripDirtyFlag(EAction.getMdiChild().windowTitle);
         //initialFile = fi.completeBaseName();
     } else {
         fi = new QFileInfo(drawingFileName);

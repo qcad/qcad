@@ -133,7 +133,7 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
     fileName = EAction.getDocument().getFileName();
     var mdiChild = EAction.getMdiChild();
     if (!isNull(mdiChild)) {
-        mdiChild.setWindowTitle(new QFileInfo(fileName).fileName() + " [*]");
+        mdiChild.setWindowTitle(addDirtyFlag(new QFileInfo(fileName).fileName()));
     }
     RSettings.addRecentFile(fileName);
 
