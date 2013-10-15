@@ -154,8 +154,10 @@ void RGraphicsViewQt::tabletEvent(QTabletEvent* event) {
     }
     RTabletEvent e(*event, *scene, *this);
     RGraphicsView::handleTabletEvent(e);
-    //event->ignore();
-    event->accept();
+
+    // possibly needed for Wacom tablet support on Windows:
+    event->ignore();
+    //event->accept();
 }
 
 /**
