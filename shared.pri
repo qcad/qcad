@@ -50,10 +50,17 @@ macx {
 win32 {
     RLIBPRE = 
     RLIBPOST = .lib
+    RLIBPOSTDLL = .dll
 }
 else {
     RLIBPRE = lib
     RLIBPOST = .a
+    macx {
+        RLIBPOSTDLL = .dylib
+    }
+    else {
+        RLIBPOSTDLL = .so
+    }
 }
 
 QT += core \

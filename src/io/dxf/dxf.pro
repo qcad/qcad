@@ -19,12 +19,4 @@ DEFINES += QCADDXF_LIBRARY
 DESTDIR = ../../../plugins
 LIBS += -lqcadcore -lqcadentity -ldxflib -lqcadoperations
 
-win32 {
-    POST_TARGETDEPS += ../../../$$ROUTDIR/dxflib.lib
-}
-macx {
-    POST_TARGETDEPS += ../../../$$ROUTDIR/libdxflib.a
-}
-linux {
-    POST_TARGETDEPS += ../../../$$ROUTDIR/libdxflib.a
-}
+POST_TARGETDEPS += ../../../$$ROUTDIR/$${RLIBPRE}dxflib$${RLIBPOST}

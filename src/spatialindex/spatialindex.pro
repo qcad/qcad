@@ -13,12 +13,4 @@ LIBS += -lqcadcore -lspatialindexnavel
 OTHER_FILES += spatialindex.dox
 DEFINES += QCADSPATIALINDEX_LIBRARY
 
-win32 {
-    POST_TARGETDEPS += ../../$$ROUTDIR/spatialindexnavel.dll
-}
-macx {
-    POST_TARGETDEPS += ../../$$ROUTDIR/libspatialindexnavel.dylib
-}
-linux {
-    POST_TARGETDEPS += ../../$$ROUTDIR/libspatialindexnavel.so
-}
+POST_TARGETDEPS += ../../$$ROUTDIR/$${RLIBPRE}spatialindexnavel$${RLIBPOSTDLL}
