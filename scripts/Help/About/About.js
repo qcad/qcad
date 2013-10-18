@@ -53,9 +53,9 @@ About.prototype.beginEvent = function() {
     formWidget.windowTitle = qsTr("About %1").arg(this.applicationName);
 
     // init about view:
-    webView = formWidget.findChild("QCADText");
+    webView = formWidget.findChild("AppText");
     WidgetFactory.initWebView(webView, this, "openUrl");
-    this.initAboutQCAD(webView);
+    this.initAboutApp(webView);
 
     // init scripts view:
     webView = formWidget.findChild("ScriptsText");
@@ -73,7 +73,7 @@ About.prototype.beginEvent = function() {
     formWidget.exec();
 };
 
-About.prototype.initAboutQCAD = function(webView) {
+About.prototype.initAboutApp = function(webView) {
     var html =
             "<html>"
             + this.head
@@ -96,7 +96,7 @@ About.prototype.initAboutQCAD = function(webView) {
             + "</tr></table>"
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
             + "<p/>"
-            + "<p>QCAD is free (open source) software.</p>"
+            + "<p>%1 is free (open source) software.</p>".arg(qApp.applicationName)
             + "<p>Plugins and script add-ons are subject to their respective license (see 'About Plugins' tab).</p>"
             + "<p/>"
             + "<p>Internet: <a href='http://%1'>%1</a></p>".arg(qApp.organizationDomain)
@@ -326,7 +326,8 @@ About.prototype.initAboutSystem = function(textEdit) {
     var i;
 
     text += "Versions";
-    text += "\nQCAD version: %1.%2.%3.%4"
+    text += "\n%1 version: %2.%3.%4.%5"
+        .arg(qApp.applicationName)
         .arg(RSettings.getMajorVersion())
         .arg(RSettings.getMinorVersion())
         .arg(RSettings.getRevisionVersion())
@@ -349,7 +350,7 @@ About.prototype.initAboutSystem = function(textEdit) {
 
     text += "\n";
     text += "\nLocale";
-    text += "\nQCAD locale: " + RSettings.getLocale();
+    text += "\n" + qApp.applicationName + " locale: " + RSettings.getLocale();
     var sysloc = QLocale.system();
     text += "\nName: " + sysloc.name();
     text += "\nCountry: " + sysloc.country();

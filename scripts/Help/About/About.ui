@@ -76,9 +76,9 @@
        <property name="currentIndex">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="QCADTab">
+       <widget class="QWidget" name="AppTab">
         <attribute name="title">
-         <string>About QCAD</string>
+         <string>About</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <property name="leftMargin">
@@ -91,7 +91,7 @@
           <number>10</number>
          </property>
          <item>
-          <widget class="QWebView" name="QCADText">
+          <widget class="QWebView" name="AppText">
            <property name="url">
             <url>
              <string>about:blank</string>
