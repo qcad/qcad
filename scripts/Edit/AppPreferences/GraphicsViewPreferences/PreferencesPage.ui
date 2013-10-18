@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>582</width>
-    <height>615</height>
+    <height>485</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>565</width>
-     <height>621</height>
+     <width>580</width>
+     <height>483</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -75,100 +75,6 @@
         <widget class="QCheckBox" name="ShowLargeCrosshair">
          <property name="text">
           <string>Show large crosshairs</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="groupBox_3">
-      <property name="title">
-       <string>Grid</string>
-      </property>
-      <layout class="QFormLayout" name="formLayout_3">
-       <item row="0" column="1">
-        <widget class="QCheckBox" name="AutoScaleGrid">
-         <property name="text">
-          <string>Automatically scale grid</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QCheckBox" name="SolidGridLines">
-         <property name="text">
-          <string>Solid grid lines</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_14">
-         <property name="text">
-          <string>Minimal grid spacing (px):</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QComboBox" name="MinGridSpacing">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="editable">
-          <bool>true</bool>
-         </property>
-         <property name="currentIndex">
-          <number>0</number>
-         </property>
-         <item>
-          <property name="text">
-           <string notr="true">5</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">10</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">15</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">20</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">25</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">30</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">50</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QCheckBox" name="AutoScaleMetaGrid">
-         <property name="text">
-          <string>Automatically scale meta grid</string>
          </property>
          <property name="checked">
           <bool>true</bool>
