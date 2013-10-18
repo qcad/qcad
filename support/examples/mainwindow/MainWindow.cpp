@@ -76,8 +76,8 @@ MainWindow::MainWindow(QWidget *parent)
     lineEntity->setLineweight(RLineweight::Weight100);
 
     // set a custom property:
-    lineEntity->setCustomProperty("MyIntProperty", 77);
-    lineEntity->setCustomProperty("MyStringProperty", "Some text");
+    lineEntity->setCustomProperty("MyApp", "MyIntProperty", 77);
+    lineEntity->setCustomProperty("MyApp", "MyStringProperty", "Some text");
 
     op = new RAddObjectOperation(
         lineEntity, 
