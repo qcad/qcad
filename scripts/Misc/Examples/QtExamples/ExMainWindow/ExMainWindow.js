@@ -51,8 +51,8 @@ ExMainWindow.init = function(basePath) {
     action.setSortOrder(10);
     EAction.addGuiActionTo(action, QtExamples, true, false, false);
 
-    qApp.organizationName = "MyCAD";
-    qApp.organizationDomain = "MyCAD.org";
-    qApp.applicationVersion = "1.0.0";
-    qApp.applicationName = "MyCAD";
+//    qApp.organizationName = "MyCAD";
+//    qApp.organizationDomain = "MyCAD.org";
+//    qApp.applicationVersion = "1.0.0";
+//    qApp.applicationName = "MyCAD";
 };
