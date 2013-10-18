@@ -140,8 +140,14 @@ Viewport.prototype.init = function() {
     if (isFunction(this.graphicsView.setFocusFrameWidget)) {
         this.graphicsView.setFocusFrameWidget(this.vpWidget);
     }
-    this.graphicsView.setScene(new RGraphicsSceneQt(this.documentInterface));
-//    this.graphicsView.setScene(new RGraphicsSceneGl(this.documentInterface));
+
+    var scene = new RGraphicsSceneQt(this.documentInterface);
+    // var scene = new RGraphicsSceneGl(this.documentInterface);
+    if (RSettings.getBoolValue("GraphicsView/AutoSwitchLinetypes", false)===true) {
+        scene.setScreenBasedLinetypes(true);
+    }
+
+    this.graphicsView.setScene(scene);
     if (!isNull(DefaultNavigation)) {
         var navigationAction = new DefaultNavigation(this.vpWidget);
         this.graphicsView.setNavigationAction(navigationAction);

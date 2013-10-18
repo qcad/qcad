@@ -104,6 +104,15 @@ PrintPreview.prototype.beginEvent = function() {
 
         this.updateBackgroundDecoration();
 
+        if (!isNull(this.view.getScene())) {
+
+            if (RSettings.getBoolValue("GraphicsView/AutoSwitchLinetypes", false)===true) {
+                this.view.getScene().setScreenBasedLinetypes(false);
+                var ltModeAction = RGuiAction.getByScriptFile("scripts/View/LinetypeMode/LinetypeMode.js");
+                ltModeAction.setChecked(false);
+            }
+        }
+
         // needed to update pattern scaling according to drawing scale:
         var di = EAction.getDocumentInterface();
         di.regenerateScenes();
@@ -153,6 +162,14 @@ PrintPreview.prototype.finishEvent = function() {
         this.view.setBackgroundColor(this.bgColor);
         this.view.setColorMode(RGraphicsView.FullColor);
         this.view.clearBackground();
+
+        if (!isNull(this.view.getScene())) {
+            if (RSettings.getBoolValue("GraphicsView/AutoSwitchLinetypes", false)===true) {
+                this.view.getScene().setScreenBasedLinetypes(true);
+                var ltModeAction = RGuiAction.getByScriptFile("scripts/View/LinetypeMode/LinetypeMode.js");
+                ltModeAction.setChecked(true);
+            }
+        }
 
         // needed to update pattern scaling without using drawing scale:
         var di = EAction.getDocumentInterface();

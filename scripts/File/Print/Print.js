@@ -135,6 +135,17 @@ Print.prototype.print = function(pdfFile) {
     this.view.setBackgroundColor(Print.getBackgroundColor(this.document));
     this.view.setPrinting(true);
 
+    var draftMode = false;
+    var screenBasedLinetypes = false;
+    if (!isNull(this.scene)) {
+        draftMode = this.scene.getDraftMode();
+        screenBasedLinetypes = this.scene.getScreenBasedLinetypes();
+
+        this.scene.setDraftMode(false);
+        this.scene.setScreenBasedLinetypes(false);
+        this.scene.regenerate();
+    }
+
     var painter = new QPainter();
     painter.begin(printer);
 
@@ -241,6 +252,10 @@ Print.prototype.print = function(pdfFile) {
 
     painter.end();
     printer.destroy();
+
+    this.scene.setScreenBasedLinetypes(screenBasedLinetypes);
+    this.scene.setDraftMode(draftMode);
+    this.scene.regenerate();
 
     this.view.setBackgroundColor(bgColor);
     this.view.setPrinting(false);

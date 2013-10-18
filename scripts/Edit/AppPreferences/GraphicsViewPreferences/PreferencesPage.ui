@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>597</width>
-    <height>557</height>
+    <height>584</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>595</width>
-     <height>555</height>
+     <height>582</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -218,7 +218,7 @@
     <item>
      <widget class="QGroupBox" name="groupBox_3">
       <property name="title">
-       <string>Zero Weight Linetype</string>
+       <string>Linetypes</string>
       </property>
       <layout class="QFormLayout" name="formLayout_3">
        <property name="fieldGrowthPolicy">
@@ -227,14 +227,30 @@
        <item row="0" column="0">
         <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>Same pattern scale as:</string>
+          <string>Pattern scale for lineweight 0.00mm:</string>
          </property>
         </widget>
        </item>
        <item row="0" column="1">
         <widget class="RLineweightCombo" name="ZeroWeightWeight" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="AutoSwitchLinetypes">
+         <property name="toolTip">
+          <string>Automatically use screen based linetypes in model view</string>
+         </property>
+         <property name="text">
+          <string>Auto switch linetypes</string>
          </property>
         </widget>
        </item>
