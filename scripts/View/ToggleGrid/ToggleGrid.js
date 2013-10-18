@@ -64,13 +64,6 @@ ToggleGrid.prototype = new View();
 ToggleGrid.prototype.beginEvent = function() {
     View.prototype.beginEvent.call(this);
 
-//    var doc = this.getDocument();
-//    var di = this.getDocumentInterface();
-//    var gridOn = ToggleGrid.isGridOn(doc);
-//    gridOn = !gridOn;
-//    doc.setVariable("Grid/DisplayGrid", gridOn);
-//    di.regenerateViews(true);
-
     var view = this.getDocumentInterface().getLastKnownViewWithFocus();
     if (!isNull(view)) {
         var gridOn = view.isGridVisible();
@@ -91,18 +84,7 @@ ToggleGrid.prototype.finishEvent = function() {
             guiAction.setChecked(view.isGridVisible());
         }
     }
-
-//    var doc = this.getDocument();
-//    var gridOn = ToggleGrid.isGridOn(doc);
-
-//    if (!isNull(this.getGuiAction())) {
-//        this.getGuiAction().setChecked(gridOn);
-//    }
 };
-
-//ToggleGrid.isGridOn = function(document) {
-//    return EAction.getBoolValue("Grid/DisplayGrid", true, document);
-//};
 
 ToggleGrid.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Grid"), RMainWindowQt.getMainWindow());
@@ -116,5 +98,5 @@ ToggleGrid.init = function(basePath) {
     var appWin = EAction.getMainWindow();
     var fl = new ToggleGridFocusListener(action);
     appWin.addViewFocusListener(fl);
-    EAction.addGuiActionTo(action, View, true, true, false, false);
+    EAction.addGuiActionTo(action, View, true, true, false, true);
 };

@@ -217,12 +217,6 @@
         isGridVisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDraftMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDraftMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         paintGridPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

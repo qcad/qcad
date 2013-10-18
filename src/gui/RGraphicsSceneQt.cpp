@@ -40,7 +40,6 @@ RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface)
     setProjectionRenderingHint(RS::RenderTop);
 
     currentPainterPath.setValid(false);
-    currentPainterPathDraft.setValid(false);
 }
 
 RGraphicsSceneQt::~RGraphicsSceneQt() {
@@ -106,7 +105,23 @@ bool RGraphicsSceneQt::beginPath() {
 
     currentPainterPath = RPainterPath();
     currentPainterPath.setZLevel(0);
-    currentPainterPath.setPen(currentPen);
+
+    if (screenBasedLinetypes) {
+        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype();
+        if (!pat.isEmpty()) {
+            currentPen.setDashPattern(pat);
+        }
+    }
+
+    if (draftMode || screenBasedLinetypes) {
+        QPen draftPen = currentPen;
+        draftPen.setWidth(0);
+        currentPainterPath.setPen(draftPen);
+    }
+    else {
+        currentPainterPath.setPen(currentPen);
+    }
+
     currentPainterPath.setBrush(QBrush(Qt::NoBrush));
     currentPainterPath.setPixelSizeHint(pixelSizeHint);
 
@@ -116,48 +131,25 @@ bool RGraphicsSceneQt::beginPath() {
         }
     }
 
-    if (hasDraftView()) {
-        currentPainterPathDraft = currentPainterPath;
-        QPen draftPen = currentPen;
-        draftPen.setWidth(0);
-        currentPainterPathDraft.setPen(draftPen);
-    }
-
     return true;
 }
 
 void RGraphicsSceneQt::endPath() {
     if (!exportToPreview) {
-        if (hasNormalView() && !currentPainterPath.isEmpty()) {
+        if (!currentPainterPath.isEmpty()) {
             addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
         }
-        if (hasDraftView() && !currentPainterPathDraft.isEmpty()) {
-            addPath(getBlockRefOrEntity()->getId(), currentPainterPathDraft, true);
-        }
     } else {
-        if (hasNormalView()) {
-            addToPreview(currentPainterPath);
-        }
-        else {
-            addToPreview(currentPainterPathDraft);
-        }
+        addToPreview(currentPainterPath);
     }
 
     currentPainterPath.setValid(false);
-    currentPainterPathDraft.setValid(false);
 }
 
 void RGraphicsSceneQt::exportPoint(const RPoint& point) {
     bool created = beginPath();
 
-    if (hasNormalView()) {
-        setDraftMode(false);
-        currentPainterPath.addPoint(point.position);
-    }
-    if (hasDraftView()) {
-        setDraftMode(true);
-        currentPainterPathDraft.addPoint(point.position);
-    }
+    currentPainterPath.addPoint(point.position);
 
     if (created) {
         endPath();
@@ -167,14 +159,7 @@ void RGraphicsSceneQt::exportPoint(const RPoint& point) {
 void RGraphicsSceneQt::exportLine(const RLine& line, double offset) {
     bool created = beginPath();
 
-    if (hasNormalView()) {
-        setDraftMode(false);
-        RGraphicsScene::exportLine(line, offset);
-    }
-    if (hasDraftView()) {
-        setDraftMode(true);
-        RGraphicsScene::exportLine(line, offset);
-    }
+    RGraphicsScene::exportLine(line, offset);
 
     if (created) {
         endPath();
@@ -184,14 +169,7 @@ void RGraphicsSceneQt::exportLine(const RLine& line, double offset) {
 void RGraphicsSceneQt::exportArc(const RArc& arc, double offset) {
     bool created = beginPath();
 
-    if (hasNormalView()) {
-        setDraftMode(false);
-        RGraphicsScene::exportArc(arc, offset);
-    }
-    if (hasDraftView()) {
-        setDraftMode(true);
-        RGraphicsScene::exportArc(arc, offset);
-    }
+    RGraphicsScene::exportArc(arc, offset);
 
     if (created) {
         endPath();
@@ -201,14 +179,7 @@ void RGraphicsSceneQt::exportArc(const RArc& arc, double offset) {
 void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
     bool created = beginPath();
 
-    if (hasNormalView()) {
-        setDraftMode(false);
-        RGraphicsScene::exportEllipse(ellipse, offset);
-    }
-    if (hasDraftView()) {
-        setDraftMode(true);
-        RGraphicsScene::exportEllipse(ellipse, offset);
-    }
+    RGraphicsScene::exportEllipse(ellipse, offset);
 
     if (created) {
         endPath();
@@ -219,16 +190,7 @@ void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, double offset) 
     // filling:
     bool created = beginPath();
 
-    //RGraphicsScene::exportPolyline(polyline, offset);
-
-    if (hasNormalView()) {
-        setDraftMode(false);
-        exportPolylineFill(polyline);
-    }
-    if (hasDraftView()) {
-        setDraftMode(true);
-        exportPolylineFill(polyline);
-    }
+    exportPolylineFill(polyline);
 
     if (created) {
         endPath();
@@ -237,16 +199,7 @@ void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, double offset) 
     // outline:
     created = beginPath();
 
-    //RGraphicsScene::exportPolyline(polyline, offset);
-
-    if (hasNormalView()) {
-        setDraftMode(false);
-        RGraphicsScene::exportPolyline(polyline, offset);
-    }
-    if (hasDraftView()) {
-        setDraftMode(true);
-        RGraphicsScene::exportPolyline(polyline, offset);
-    }
+    RGraphicsScene::exportPolyline(polyline, offset);
 
     if (created) {
         endPath();
@@ -254,8 +207,6 @@ void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, double offset) 
 }
 
 void RGraphicsSceneQt::exportPolylineFill(const RPolyline& polyline) {
-    RPainterPath& path = draftMode ? currentPainterPathDraft : currentPainterPath;
-
     if (currentBrush!=Qt::NoBrush) {
         bool created = beginPath();
 
@@ -266,8 +217,8 @@ void RGraphicsSceneQt::exportPolylineFill(const RPolyline& polyline) {
             RVector v = points.at(i);
             qpolygon << QPointF(v.x, v.y);
         }
-        path.setBrush(currentBrush);
-        path.addPolygon(qpolygon);
+        currentPainterPath.setBrush(currentBrush);
+        currentPainterPath.addPolygon(qpolygon);
 
         if (created) {
             endPath();
@@ -278,16 +229,7 @@ void RGraphicsSceneQt::exportPolylineFill(const RPolyline& polyline) {
 void RGraphicsSceneQt::exportSpline(const RSpline& spline, double offset) {
     bool created = beginPath();
 
-    //RGraphicsScene::exportSpline(spline, offset);
-
-    if (hasNormalView()) {
-        setDraftMode(false);
-        RGraphicsScene::exportSpline(spline, offset);
-    }
-    if (hasDraftView()) {
-        setDraftMode(true);
-        RGraphicsScene::exportSpline(spline, offset);
-    }
+    RGraphicsScene::exportSpline(spline, offset);
 
     if (created) {
         endPath();
@@ -295,18 +237,16 @@ void RGraphicsSceneQt::exportSpline(const RSpline& spline, double offset) {
 }
 
 void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
-    RPainterPath& path = draftMode ? currentPainterPathDraft : currentPainterPath;
-
-    Q_ASSERT(path.isValid());
+    Q_ASSERT(currentPainterPath.isValid());
 
     if (arc.getRadius()<RS::PointTolerance) {
-        path.addPoint(arc.getCenter());
+        currentPainterPath.addPoint(arc.getCenter());
         return;
     }
 
     if (arc.getAngleLength()<0.05) {
-        path.moveTo(arc.getStartPoint());
-        path.lineTo(arc.getEndPoint());
+        currentPainterPath.moveTo(arc.getStartPoint());
+        currentPainterPath.lineTo(arc.getEndPoint());
         return;
     }
 
@@ -315,21 +255,19 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
     // p.addArc(arc);
     // path.addPath(p);
 
-    path.setAutoRegen(true);
+    currentPainterPath.setAutoRegen(true);
     RGraphicsScene::exportArcSegment(arc);
 }
 
 void RGraphicsSceneQt::exportLineSegment(const RLine& line) {
-    RPainterPath& path = draftMode ? currentPainterPathDraft : currentPainterPath;
-
-    Q_ASSERT(path.isValid());
+    Q_ASSERT(currentPainterPath.isValid());
 
     // add new painter path with current entity ID:
-    if ((path.currentPosition() - QPointF(line.startPoint.x, line.startPoint.y)).manhattanLength() > RS::PointTolerance) {
-        path.moveTo(line.startPoint);
+    if ((currentPainterPath.currentPosition() - QPointF(line.startPoint.x, line.startPoint.y)).manhattanLength() > RS::PointTolerance) {
+        currentPainterPath.moveTo(line.startPoint);
     }
 
-    path.lineTo(line.endPoint);
+    currentPainterPath.lineTo(line.endPoint);
 }
 
 void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
@@ -387,14 +325,7 @@ void RGraphicsSceneQt::exportRectangle(const RVector& p1,
 }
 
 void RGraphicsSceneQt::exportPainterPathSource(const RPainterPathSource& pathSource) {
-    if (hasNormalView()) {
-        setDraftMode(false);
-        exportPainterPaths(pathSource.getPainterPaths(false));
-    }
-    if (hasDraftView()) {
-        setDraftMode(true);
-        exportPainterPaths(pathSource.getPainterPaths(true));
-    }
+    exportPainterPaths(pathSource.getPainterPaths(false));
 }
 
 void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
@@ -471,14 +402,12 @@ double RGraphicsSceneQt::getPatternFactor() {
 void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
     if (!exportToPreview) {
         painterPaths.remove(entityId);
-        painterPathsDraft.remove(entityId);
         images.remove(entityId);
     }
 }
 
 void RGraphicsSceneQt::deletePainterPaths() {
     painterPaths.clear();
-    painterPathsDraft.clear();
     images.clear();
     previewPainterPaths.clear();
 }
@@ -488,12 +417,6 @@ void RGraphicsSceneQt::deletePainterPaths() {
  * given ID.
  */
 QList<RPainterPath> RGraphicsSceneQt::getPainterPaths(REntity::Id entityId) {
-    if (draftMode) {
-        if (painterPathsDraft.contains(entityId)) {
-            return painterPathsDraft[entityId];
-        }
-    }
-
     if (painterPaths.contains(entityId)) {
         return painterPaths[entityId];
     }
@@ -514,21 +437,11 @@ RImageData RGraphicsSceneQt::getImage(REntity::Id entityId) {
 }
 
 void RGraphicsSceneQt::addPath(REntity::Id entityId, const RPainterPath& path, bool draft) {
-    if (draft) {
-        if (painterPathsDraft.contains(entityId)) {
-            painterPathsDraft[entityId].append(path);
-        }
-        else {
-            painterPathsDraft.insert(entityId, QList<RPainterPath>() << path);
-        }
+    if (painterPaths.contains(entityId)) {
+        painterPaths[entityId].append(path);
     }
     else {
-        if (painterPaths.contains(entityId)) {
-            painterPaths[entityId].append(path);
-        }
-        else {
-            painterPaths.insert(entityId, QList<RPainterPath>() << path);
-        }
+        painterPaths.insert(entityId, QList<RPainterPath>() << path);
     }
 }
 
@@ -571,7 +484,6 @@ void RGraphicsSceneQt::startEntity(bool topLevelEntity) {
     if (!exportToPreview) {
         if (topLevelEntity) {
             painterPaths.remove(getEntity()->getId());
-            painterPathsDraft.remove(getEntity()->getId());
         }
     }
 }

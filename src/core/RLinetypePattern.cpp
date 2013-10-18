@@ -21,8 +21,8 @@
 #include "RMath.h"
 #include "RDebug.h"
 
-RLinetypePattern::RLinetypePattern(int num...)
-    :num(0), pattern(NULL), symmetrical(NULL) {
+RLinetypePattern::RLinetypePattern(const QString& name, int num...)
+    : name(name), num(0), pattern(NULL), symmetrical(NULL) {
 
     QList<double> dashes;
 
@@ -65,6 +65,10 @@ void RLinetypePattern::set(const QList<double> dashes) {
 
 RLinetypePattern::RLinetypePattern() :
     num(-1), pattern(NULL), symmetrical(NULL) {
+}
+
+RLinetypePattern::RLinetypePattern(const QString &name) :
+    name(name), num(-1), pattern(NULL), symmetrical(NULL) {
 }
 
 RLinetypePattern::RLinetypePattern(const RLinetypePattern& other) :
@@ -129,6 +133,22 @@ void RLinetypePattern::scale(double factor) {
     for (int i = 0; i < num; ++i) {
         pattern[i] *= factor;
     }
+}
+
+/**
+ * \return Line pattern that can be used for a QPen to render screen
+ * optimized patterns. Empty vector for continuous.
+ */
+QVector<qreal> RLinetypePattern::getScreenBasedLinetype() {
+    QVector<qreal> ret;
+
+    if (num>1) {
+        for (int i = 0; i < num; ++i) {
+            ret << ceil(fabs(pattern[i]));
+        }
+    }
+
+    return ret;
 }
 
 double RLinetypePattern::getDelta(double pos) const {

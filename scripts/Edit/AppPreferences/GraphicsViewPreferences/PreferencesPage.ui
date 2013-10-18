@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>582</width>
-    <height>485</height>
+    <width>597</width>
+    <height>557</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>580</width>
-     <height>483</height>
+     <width>595</width>
+     <height>555</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -216,6 +216,32 @@
      </widget>
     </item>
     <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>Zero Weight Linetype</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout_3">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Same pattern scale as:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="RLineweightCombo" name="ZeroWeightWeight" native="true">
+         <property name="onlyFixed" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
      <widget class="QGroupBox" name="groupBox_8">
       <property name="title">
        <string>Performance</string>
@@ -330,6 +356,13 @@
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RLineweightCombo</class>
+   <extends>QWidget</extends>
+   <header>rlineweightcombo.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

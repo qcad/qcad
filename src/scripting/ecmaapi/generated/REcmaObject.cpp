@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, removeCustomProperty, "removeCustomProperty");
             
+            REcmaHelper::registerFunction(&engine, proto, getCustomPropertyTitles, "getCustomPropertyTitles");
+            
             REcmaHelper::registerFunction(&engine, proto, getCustomPropertyKeys, "getCustomPropertyKeys");
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
@@ -1228,8 +1230,11 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
         ) /* type: QString */
     
     ){
@@ -1243,13 +1248,23 @@
                     context->argument( 0 ).
                     toString();
                 
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'QVariant'
     QVariant cppResult =
         
-               self->getCustomProperty(a0);
+               self->getCustomProperty(a0
+        ,
+    a1);
         // return type: QVariant
                 // QVariant:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
@@ -1260,18 +1275,21 @@
         
     
     if( context->argumentCount() ==
-    2 && (
+    3 && (
             context->argument(0).isString()
         ) /* type: QString */
      && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNumber() || 
-            context->argument(1).isString() || 
-            context->argument(1).isBool() || 
-            context->argument(1).isArray() || 
-            context->argument(1).isNull() || 
-            context->argument(1).isUndefined()
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNumber() || 
+            context->argument(2).isString() || 
+            context->argument(2).isBool() || 
+            context->argument(2).isArray() || 
+            context->argument(2).isNull() || 
+            context->argument(2).isUndefined()
         ) /* type: QVariant */
     
     ){
@@ -1285,14 +1303,22 @@
                     context->argument( 0 ).
                     toString();
                 
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
                     // argument isCopyable or pointer
                     QVariant
-                    a1 =
+                    a2 =
                     qscriptvalue_cast<
                     QVariant
                         >(
                         context->argument(
-                        1
+                        2
                         )
                     );
                 
@@ -1304,7 +1330,9 @@
         
                self->getCustomProperty(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
         // return type: QVariant
                 // QVariant:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
@@ -1343,18 +1371,21 @@
                 
     
     if( context->argumentCount() ==
-    2 && (
+    3 && (
             context->argument(0).isString()
         ) /* type: QString */
      && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNumber() || 
-            context->argument(1).isString() || 
-            context->argument(1).isBool() || 
-            context->argument(1).isArray() || 
-            context->argument(1).isNull() || 
-            context->argument(1).isUndefined()
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNumber() || 
+            context->argument(2).isString() || 
+            context->argument(2).isBool() || 
+            context->argument(2).isArray() || 
+            context->argument(2).isNull() || 
+            context->argument(2).isUndefined()
         ) /* type: QVariant */
     
     ){
@@ -1368,14 +1399,22 @@
                     context->argument( 0 ).
                     toString();
                 
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
                     // argument isCopyable or pointer
                     QVariant
-                    a1 =
+                    a2 =
                     qscriptvalue_cast<
                     QVariant
                         >(
                         context->argument(
-                        1
+                        2
                         )
                     );
                 
@@ -1386,7 +1425,9 @@
     
                self->setCustomProperty(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
     } else
 
 
@@ -1421,8 +1462,11 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
         ) /* type: QString */
     
     ){
@@ -1436,12 +1480,22 @@
                     context->argument( 0 ).
                     toString();
                 
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->removeCustomProperty(a0);
+               self->removeCustomProperty(a0
+        ,
+    a1);
     } else
 
 
@@ -1451,6 +1505,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::removeCustomProperty", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::getCustomPropertyTitles
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::getCustomPropertyTitles", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::getCustomPropertyTitles";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("getCustomPropertyTitles", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getCustomPropertyTitles();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomPropertyTitles().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::getCustomPropertyTitles", context, engine);
             return result;
         }
          QScriptValue
@@ -1476,17 +1579,28 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
     ){
     // prepare arguments:
     
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'QStringList'
     QStringList cppResult =
         
-               self->getCustomPropertyKeys();
+               self->getCustomPropertyKeys(a0);
         // return type: QStringList
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);

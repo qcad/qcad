@@ -37,8 +37,13 @@ ToggleDraftModeFocusListener.prototype.updateFocus = function(view) {
         return;
     }
 
-    var draftModeOn = view.getDraftMode();
-    this.action.checked = draftModeOn;
+    var scene = view.getScene();
+    if (isNull(scene)) {
+        this.action.checked = false;
+        return;
+    }
+
+    this.action.checked = scene.getDraftMode();
 };
 
 
@@ -55,7 +60,11 @@ DraftMode.prototype.beginEvent = function() {
 
     var view = this.getDocumentInterface().getLastKnownViewWithFocus();
     if (!isNull(view)) {
-        view.setDraftMode(!view.getDraftMode());
+        var scene = view.getScene();
+        if (!isNull(scene)) {
+            scene.toggleDraftMode();
+            scene.regenerate();
+        }
     }
 
     this.terminate();
@@ -66,7 +75,10 @@ DraftMode.prototype.finishEvent = function() {
 
     var view = this.getDocumentInterface().getLastKnownViewWithFocus();
     if (!isNull(view) && !isNull(this.getGuiAction())) {
-        this.getGuiAction().setChecked(view.getDraftMode());
+        var scene = view.getScene();
+        if (!isNull(scene)) {
+            this.getGuiAction().setChecked(scene.getDraftMode());
+        }
     }
 };
 
@@ -77,8 +89,9 @@ DraftMode.init = function(basePath) {
     action.setIcon(basePath + "/DraftMode.svg");
     action.setDefaultShortcut(new QKeySequence("d,f"));
     action.setDefaultCommands(["draftmode", "df"]);
-    action.setNoState(true);
     action.setSortOrder(10);
+    action.setGroup("viewmodes");
+    action.setNoState(true);
 
     var appWin = EAction.getMainWindow();
     var fl = new ToggleDraftModeFocusListener(action);

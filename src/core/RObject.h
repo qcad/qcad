@@ -161,15 +161,16 @@ public:
      */
     virtual bool isSelectedForPropertyEditing() = 0;
 
-    QVariant getCustomProperty(const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT);
-    void setCustomProperty(const QString& key, const QVariant& value);
-    void removeCustomProperty(const QString& key);
-    QStringList getCustomPropertyKeys() const;
+    QVariant getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT);
+    void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
+    void removeCustomProperty(const QString& title, const QString& key);
+    QStringList getCustomPropertyTitles() const;
+    QStringList getCustomPropertyKeys(const QString& title) const;
 
     /**
      * \nonscriptable
      */
-    QVariantMap getCustomProperties() const;
+    QMap<QString, QVariantMap> getCustomProperties() const;
 
     virtual int getComplexity() const {
         return 0;
@@ -276,9 +277,22 @@ private:
      * Unique ID of this object.
      */
     Id objectId;
+    /**
+     * Handle of this object (from DXF / DWG).
+     */
     Handle handle;
+    /**
+     * True if this object has been undone (deleted).
+     */
     bool undone;
-    QMap<QString, QVariant> customProperties;
+    /**
+     * AppID -> key -> value
+     * e.g. 'QCAD' -> 'wall thickness' -> 12.0;
+     * or   'SomeApplication' -> '00001_1000' -> 'SomeString'
+     * where '00001' is the position in the list of values and 1000 is the
+     * original DXF code from the file.
+     */
+    QMap<QString, QVariantMap> customProperties;
 };
 
 Q_DECLARE_METATYPE(RObject::XYZ)

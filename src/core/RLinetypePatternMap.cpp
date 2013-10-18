@@ -21,34 +21,34 @@
 RLinetypePatternMap RLinetypePatternMap::patternMap;
 
 RLinetypePatternMap::RLinetypePatternMap() {
-    insert("BYLAYER", RLinetypePattern());
-    insert("BYBLOCK", RLinetypePattern());
+    insert("BYLAYER", RLinetypePattern("BYLAYER"));
+    insert("BYBLOCK", RLinetypePattern("BYBLOCK"));
 
-    insert("CONTINUOUS", RLinetypePattern(1, 10.0));
+    insert("CONTINUOUS", RLinetypePattern("CONTINUOUS", 1, 10.0));
 
-    insert("BORDER", RLinetypePattern(6, 12.0, -6.0, 12.0, -5.95, 0.1, -5.95));
-    insert("BORDER2", RLinetypePattern(6, 6.0, -3.0, 6.0, -2.95, 0.1, -2.95));
-    insert("BORDERX2", RLinetypePattern(6, 24.0, -12.0, 24.0, -11.95, 0.1, -11.95));
+    insert("BORDER", RLinetypePattern("BORDER", 6, 12.0, -6.0, 12.0, -5.95, 0.1, -5.95));
+    insert("BORDER2", RLinetypePattern("BORDER2", 6, 6.0, -3.0, 6.0, -2.95, 0.1, -2.95));
+    insert("BORDERX2", RLinetypePattern("BORDERX2", 6, 24.0, -12.0, 24.0, -11.95, 0.1, -11.95));
 
-    insert("CENTER", RLinetypePattern(4, 32.0, -6.0, 6.0, -6.0));
-    insert("CENTER2", RLinetypePattern(4, 16.0, -3.0, 3.0, -3.0));
-    insert("CENTERX2", RLinetypePattern(4, 64.0, -12.0, 12.0, -12.0));
+    insert("CENTER", RLinetypePattern("CENTER", 4, 32.0, -6.0, 6.0, -6.0));
+    insert("CENTER2", RLinetypePattern("CENTER2", 4, 16.0, -3.0, 3.0, -3.0));
+    insert("CENTERX2", RLinetypePattern("CENTERX2", 4, 64.0, -12.0, 12.0, -12.0));
 
-    insert("DASHDOT", RLinetypePattern(4, 12.0, -5.95, 0.1, -5.95));
-    insert("DASHDOT2", RLinetypePattern(4, 6.0, -2.95, 0.1, -2.95));
-    insert("DASHDOTX2", RLinetypePattern(4, 24.0, -11.95, 0.1, -11.95));
+    insert("DASHDOT", RLinetypePattern("DASHDOT", 4, 12.0, -5.95, 0.1, -5.95));
+    insert("DASHDOT2", RLinetypePattern("DASHDOT2", 4, 6.0, -2.95, 0.1, -2.95));
+    insert("DASHDOTX2", RLinetypePattern("DASHDOTX2", 4, 24.0, -11.95, 0.1, -11.95));
 
-    insert("DASHED", RLinetypePattern(2, 12.0, -6.0));
-    insert("DASHED2", RLinetypePattern(2, 6.0, -3.0));
-    insert("DASHEDX2", RLinetypePattern(2, 24.0, -12.0));
+    insert("DASHED", RLinetypePattern("DASHED", 2, 12.0, -6.0));
+    insert("DASHED2", RLinetypePattern("DASHED2", 2, 6.0, -3.0));
+    insert("DASHEDX2", RLinetypePattern("DASHEDX2", 2, 24.0, -12.0));
 
-    insert("DIVIDE", RLinetypePattern(6, 12.0, -5.9, 0.15, -5.9, 0.15, -5.9));
-    insert("DIVIDE2", RLinetypePattern(6, 6.0, -2.9, 0.15, -2.9, 0.15, -2.9));
-    insert("DIVIDEX2", RLinetypePattern(6, 24.0, -11.9, 0.15, -11.9, 0.15, -11.9));
+    insert("DIVIDE", RLinetypePattern("DIVIDE", 6, 12.0, -5.9, 0.15, -5.9, 0.15, -5.9));
+    insert("DIVIDE2", RLinetypePattern("DIVIDE2", 6, 6.0, -2.9, 0.15, -2.9, 0.15, -2.9));
+    insert("DIVIDEX2", RLinetypePattern("DIVIDEX2", 6, 24.0, -11.9, 0.15, -11.9, 0.15, -11.9));
 
-    insert("DOT", RLinetypePattern(2, 0.1, -6.2));
-    insert("DOT2", RLinetypePattern(2, 0.1, -3.1));
-    insert("DOTX2", RLinetypePattern(2, 0.1, -12.4));
+    insert("DOT", RLinetypePattern("DOT", 2, 0.1, -6.2));
+    insert("DOT2", RLinetypePattern("DOT2", 2, 0.1, -3.1));
+    insert("DOTX2", RLinetypePattern("DOTX2", 2, 0.1, -12.4));
 }
 
 RLinetypePattern RLinetypePatternMap::getPattern(const QString& name) {

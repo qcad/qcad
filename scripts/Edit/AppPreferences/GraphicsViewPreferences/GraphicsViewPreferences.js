@@ -25,11 +25,11 @@ GraphicsViewPreferences.getPreferencesCategory = function() {
 };
 
 GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
-    //var widgets = getWidgets(pageWidget);
-        
-    //widgets["ShowCrosshair"].clicked.connect(this, function(checked) {
-    //    widgets["ShowLargeCrosshair"].enabled = checked;
-    //});
+    var widgets = getWidgets(pageWidget);
+    // remove item "Default":
+    widgets["ZeroWeightWeight"].removeItem(0);
+    // remove item "0.00":
+    widgets["ZeroWeightWeight"].removeItem(0);
 };
 
 GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {

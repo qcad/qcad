@@ -107,6 +107,7 @@ public:
     static int getRevisionVersion();
     static int getBuildVersion();
     static int getSnapRange();
+    static int getZeroWeightWeight();
     static int getPreviewEntities();
     static bool getShowCrosshair();
     static void setShowCrosshair(bool on);
@@ -157,6 +158,7 @@ private:
     static QFont* infoLabelFont;
     static QFont* statusBarFont;
     static int snapRange;
+    static int zeroWeightWeight;
     static int showCrosshair;
     static int showLargeCrosshair;
     static int concurrentDrawing;

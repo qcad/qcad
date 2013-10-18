@@ -555,6 +555,14 @@ dir="./core" filename="RObject.h">
       <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
+      <name>title</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
       <name>key</name>
     </decl>
   </param>, 
@@ -576,6 +584,14 @@ dir="./core" filename="RObject.h">
   </type>
   <name>setCustomProperty</name>
   <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>title</name>
+    </decl>
+  </param>, 
   <param>
     <decl>
       <type>
@@ -603,6 +619,14 @@ dir="./core" filename="RObject.h">
       <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
+      <name>title</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
       <name>key</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
@@ -610,13 +634,35 @@ dir="./core" filename="RObject.h">
   <type>
     <name>QStringList</name>
   </type>
-  <name>getCustomPropertyKeys</name>
+  <name>getCustomPropertyTitles</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QStringList</name>
+  </type>
+  <name>getCustomPropertyKeys</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>title</name>
+    </decl>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
-    <name>QVariantMap</name>
+    <name>QMap
+    <argument_list>&lt;
+    <argument>
+      <name>QString</name>
+    </argument>, 
+    <argument>
+      <name>QVariantMap</name>
+    </argument>&gt;</argument_list></name>
   </type>
   <name>getCustomProperties</name>
   <parameter_list>()</parameter_list>
@@ -1118,6 +1164,8 @@ dir="./core" filename="RObject.h">
     </type>
     <name>objectId</name>
   </decl>;</decl_stmt>
+  <comment type="block">/** * Handle of this object (from DXF /
+  DWG). */</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -1125,6 +1173,8 @@ dir="./core" filename="RObject.h">
     </type>
     <name>handle</name>
   </decl>;</decl_stmt>
+  <comment type="block">/** * True if this object has been undone
+  (deleted). */</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -1132,6 +1182,11 @@ dir="./core" filename="RObject.h">
     </type>
     <name>undone</name>
   </decl>;</decl_stmt>
+  <comment type="block">/** * AppID -&gt; key -&gt; value * e.g.
+  'QCAD' -&gt; 'wall thickness' -&gt; 12.0; * or 'SomeApplication'
+  -&gt; '00001_1000' -&gt; 'SomeString' * where '00001' is the
+  position in the list of values and 1000 is the * original DXF
+  code from the file. */</comment>
   <decl_stmt>
   <decl>
     <type>
@@ -1141,7 +1196,7 @@ dir="./core" filename="RObject.h">
         <name>QString</name>
       </argument>, 
       <argument>
-        <name>QVariant</name>
+        <name>QVariantMap</name>
       </argument>&gt;</argument_list></name>
     </type>
     <name>customProperties</name>

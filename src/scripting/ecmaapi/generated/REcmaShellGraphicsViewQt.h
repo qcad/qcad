@@ -338,16 +338,6 @@
             );
         
     
-      void setDraftMode(
-                bool on
-            );
-        
-    
-      bool getDraftMode(
-                
-            );
-        
-    
       void setPrinting(
                 bool on
             );

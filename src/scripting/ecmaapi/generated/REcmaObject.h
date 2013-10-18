@@ -91,6 +91,9 @@
         removeCustomProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCustomPropertyTitles
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCustomPropertyKeys
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

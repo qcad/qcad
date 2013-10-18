@@ -979,33 +979,6 @@ dir="./core" filename="RGraphicsView.h">
   <name>isGridVisible</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setDraftMode</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getDraftMode</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>draftMode</name>
-    </expr>;</return>}</block>
-  </function>
   <function>
     <type>
       <name>virtual</name>
@@ -1659,13 +1632,6 @@ dir="./core" filename="RGraphicsView.h">
       <name>int</name>
     </type>
     <name>gridVisible</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>draftMode</name>
   </decl>;</decl_stmt></protected>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

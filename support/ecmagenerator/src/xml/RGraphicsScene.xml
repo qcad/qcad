@@ -258,24 +258,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QMultiMap &lt; REntity::Id , RVector &gt; &amp;"
       isPureVirtual="false" />
     </method>
-    <method name="updateDraftStatus" cppName="updateDraftStatus"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="regen"
-        hasDefault="true" default=" true" isConst="false" />
-      </variant>
-    </method>
-    <method name="hasDraftView" cppName="hasDraftView"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
-    <method name="hasNormalView" cppName="hasNormalView"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
     <method name="dump" cppName="dump" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />

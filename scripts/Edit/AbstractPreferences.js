@@ -65,20 +65,8 @@ AbstractPreferences.prototype.beginEvent = function() {
     this.treeWidget.expandAll();
 
     if (this.formWidget.exec() === QDialog.Accepted.valueOf()) {
-        //this.save();
         // apply calls save and apply:
         this.apply();
-
-        // force all settings to be reloaded from RSettings when they are
-        // used next time:
-        //RSettings.resetCache();
-
-        /*
-        if (!this.appPreferences) {
-            var view = EAction.getGraphicsView();
-            view.regenerate(true);
-        }
-        */
     }
     this.formWidget.destroy();
     this.terminate();
@@ -230,6 +218,11 @@ AbstractPreferences.prototype.apply = function() {
                 .arg(e.message).arg(e.fileName).arg(e.lineNumber));
             continue;
         }
+    }
+
+    var di = EAction.getDocumentInterface();
+    if (!isNull(di)) {
+        di.regenerateScenes();
     }
 };
 

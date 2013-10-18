@@ -114,6 +114,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
         <arg type="QString &amp;" typeName="QString" name="key"
         isConst="true" />
         <arg type="QVariant &amp;" typeName="QVariant"
@@ -125,6 +127,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
         <arg type="QString &amp;" typeName="QString" name="key"
         isConst="true" />
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
@@ -135,14 +139,24 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="removeCustomProperty" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
         <arg type="QString &amp;" typeName="QString" name="key"
         isConst="true" />
       </variant>
     </method>
+    <method name="getCustomPropertyTitles"
+    cppName="getCustomPropertyTitles" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
     <method name="getCustomPropertyKeys"
     cppName="getCustomPropertyKeys" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QStringList" isPureVirtual="false" />
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getComplexity" cppName="getComplexity"
     specifier="public" isStatic="false" isVirtual="true"

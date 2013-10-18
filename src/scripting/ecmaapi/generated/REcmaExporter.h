@@ -235,7 +235,19 @@
         setDraftMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toggleDraftMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDraftMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScreenBasedLinetypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        toggleScreenBasedLinetypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getScreenBasedLinetypes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isVisualExporter

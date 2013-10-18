@@ -32,6 +32,7 @@
 #include "RLinetypePatternMap.h"
 #include "RPainterPathSource.h"
 #include "RPolyline.h"
+#include "RSettings.h"
 #include "RSpline.h"
 #include "RStorage.h"
 #include "RTriangle.h"
@@ -46,6 +47,7 @@ RExporter::RExporter()
       layerSource(NULL),
       blockSource(NULL),
       draftMode(false),
+      screenBasedLinetypes(false),
       visualExporter(false),
       pixelSizeHint(0.5),
       projectionRenderingHint(RS::RenderThreeD) {
@@ -66,6 +68,7 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       layerSource(NULL),
       blockSource(NULL),
       draftMode(false),
+      screenBasedLinetypes(false),
       visualExporter(false),
       pixelSizeHint(0.5),
       projectionRenderingHint(RS::RenderThreeD) {
@@ -172,6 +175,12 @@ QPen RExporter::getPen(const RPainterPath& path) {
     if (draftMode) {
         pen.setWidth(0);
     }
+
+//    if (screenBasedLinetypes) {
+//        // TODO:
+//        qDebug() << "pattern: " << currentLinetypePattern;
+//        pen.setDashPattern(QVector<qreal>() << 12 << 6);
+//    }
 
     if (path.isFixedPenColor()) {
         // pen is fixed color (text color given):
@@ -753,7 +762,10 @@ void RExporter::exportLine(const RLine& line, double offset) {
 
     RLinetypePattern p = getLinetypePattern();
 
-    if (!p.isValid() || p.getNumDashes() == 1 || draftMode) {
+    // continuous line or
+    // we are in draft mode or
+    // QCAD is configured to show screen based line patterns
+    if (!p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes) {
         exportLineSegment(line);
         return;
     }
@@ -867,7 +879,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
 
     RLinetypePattern p = getLinetypePattern();
 
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes) {
         exportArcSegment(arc);
         return;
     }
@@ -1111,7 +1123,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes) {
         continuous = true;
     }
 
@@ -1131,7 +1143,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes) {
         continuous = true;
     }
 
@@ -1270,7 +1282,8 @@ double RExporter::getPatternFactor() {
     double ltscale = document->getKnownVariable(RS::LTSCALE).toDouble();
 
     if (factor < 1e-6) {
-        return RUnit::convert(1.0, RS::Millimeter, document->getUnit()) * ltscale;
+        // line pattern factor for lines of width 0:
+        return RUnit::convert(RSettings::getZeroWeightWeight()/100.0, RS::Millimeter, document->getUnit()) * ltscale;
     }
 
     // LTSCALE might be zero:
@@ -1279,6 +1292,20 @@ double RExporter::getPatternFactor() {
     }
 
     return factor;
+}
+
+void RExporter::setDraftMode(bool on) {
+    draftMode = on;
+    if (draftMode) {
+        screenBasedLinetypes = false;
+    }
+}
+
+void RExporter::setScreenBasedLinetypes(bool on) {
+    screenBasedLinetypes = on;
+    if (screenBasedLinetypes) {
+        draftMode = false;
+    }
 }
 
 QStack<REntity*> RExporter::getEntityStack() {

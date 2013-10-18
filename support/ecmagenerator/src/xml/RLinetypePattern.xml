@@ -8,6 +8,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+      </variant>
+      <variant>
         <arg type="RLinetypePattern &amp;"
         typeName="RLinetypePattern" name="other" isConst="true" />
       </variant>

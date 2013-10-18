@@ -5,6 +5,7 @@ SUBDIRS = \
     CommandLineFocus \
     DraftMode \
     IsometricView \
+    LinetypeMode \
     OptionsToolBarFocus \
     PanZoom \
     PreviousView \

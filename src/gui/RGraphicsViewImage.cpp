@@ -692,7 +692,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         return;
     }
 
-    sceneQt->setDraftMode(draftMode);
+    //sceneQt->setDraftMode(draftMode);
 
     // TODO: PERFORMANCE: don't copy list, only get reference from scene
 
@@ -977,7 +977,11 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
 }
 
 void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
-    if (!getDraftMode()) {
+    if (scene==NULL) {
+        return;
+    }
+
+    if (!scene->getDraftMode()) {
         QImage qImage = image.getImage();
         if (qImage.isNull()) {
             return;
@@ -1003,7 +1007,7 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
     }
 
     // draw image in draft mode / selected mode (border in black or white):
-    if (getDraftMode() || image.isSelected()) {
+    if (scene->getDraftMode() || image.isSelected()) {
         if (image.isSelected()) {
             RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
             painter->setPen(QPen(QBrush(selectionColor), 0));

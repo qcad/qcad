@@ -220,12 +220,24 @@ public:
     double getPatternOffset(double length, const RLinetypePattern& pattern,
             int index, double* gap = NULL);
 
-    void setDraftMode(bool on) {
-        draftMode = on;
+    void setDraftMode(bool on);
+
+    void toggleDraftMode() {
+        setDraftMode(!draftMode);
     }
 
     bool getDraftMode() const {
         return draftMode;
+    }
+
+    void setScreenBasedLinetypes(bool on);
+
+    void toggleScreenBasedLinetypes() {
+        setScreenBasedLinetypes(!screenBasedLinetypes);
+    }
+
+    bool getScreenBasedLinetypes() const {
+        return screenBasedLinetypes;
     }
 
     /**
@@ -259,6 +271,7 @@ protected:
     RDocument* layerSource;
     RDocument* blockSource;
     bool draftMode;
+    bool screenBasedLinetypes;
     bool visualExporter;
     QString errorMessage;
     double pixelSizeHint;

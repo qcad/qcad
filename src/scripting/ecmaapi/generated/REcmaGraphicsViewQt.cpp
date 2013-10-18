@@ -130,10 +130,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDocumentInterface, "getDocumentInterface");
             
-            REcmaHelper::registerFunction(&engine, proto, setDraftMode, "setDraftMode");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDraftMode, "getDraftMode");
-            
             REcmaHelper::registerFunction(&engine, proto, setPrinting, "setPrinting");
             
             REcmaHelper::registerFunction(&engine, proto, isPrinting, "isPrinting");
@@ -1902,110 +1898,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getDocumentInterface", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsViewQt::setDraftMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::setDraftMode", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::setDraftMode";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewQt* self = 
-                        getSelf("setDraftMode", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDraftMode(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.setDraftMode().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setDraftMode", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsViewQt::getDraftMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::getDraftMode", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::getDraftMode";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewQt* self = 
-                        getSelf("getDraftMode", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->getDraftMode();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.getDraftMode().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getDraftMode", context, engine);
             return result;
         }
          QScriptValue

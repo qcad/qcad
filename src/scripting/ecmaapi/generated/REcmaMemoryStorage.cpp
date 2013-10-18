@@ -142,6 +142,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSelectionBox, "getSelectionBox");
             
+            REcmaHelper::registerFunction(&engine, proto, removeObject, "removeObject");
+            
             REcmaHelper::registerFunction(&engine, proto, saveObject, "saveObject");
             
             REcmaHelper::registerFunction(&engine, proto, checkRecursion, "checkRecursion");
@@ -3356,6 +3358,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::getSelectionBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::removeObject
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::removeObject", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::removeObject";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("removeObject", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RObject > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RObject > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RObject * o0 = 
+                    qscriptvalue_cast < RObject * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < RObject >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RObject >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RObject >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  RObject .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  RObject .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RObject > 
+                    //a0 =
+                    //QSharedPointer < RObject >(o0->clone());
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->removeObject(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.removeObject().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::removeObject", context, engine);
             return result;
         }
          QScriptValue

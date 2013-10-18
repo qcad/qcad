@@ -356,6 +356,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false" />
     </method>
+    <method name="removeObject" cppName="removeObject"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RObject &gt;"
+        typeName="QSharedPointer &lt; RObject &gt;" name="object"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="saveObject" cppName="saveObject"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

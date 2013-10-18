@@ -430,7 +430,27 @@
             );
         
     
+      void toggleDraftMode(
+                
+            );
+        
+    
       bool getDraftMode(
+                
+            );
+        
+    
+      void setScreenBasedLinetypes(
+                bool on
+            );
+        
+    
+      void toggleScreenBasedLinetypes(
+                
+            );
+        
+    
+      bool getScreenBasedLinetypes(
                 
             );
         

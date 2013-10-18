@@ -145,6 +145,41 @@
                 
                         context->argument(
                         0
+                        ).isString()
+                ) /* type: QString */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RLinetypePattern
+                    cppResult(
+                    a0
+                    );
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
                         ).isVariant()
                         ||
                     

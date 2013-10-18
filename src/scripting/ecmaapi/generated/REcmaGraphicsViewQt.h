@@ -111,12 +111,6 @@
         getDocumentInterface
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDraftMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDraftMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setPrinting
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

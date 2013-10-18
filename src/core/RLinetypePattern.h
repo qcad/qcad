@@ -26,6 +26,7 @@
 #include <math.h>
 
 #include <QMetaType>
+#include <QVector>
 
 
 
@@ -41,10 +42,11 @@ public:
     /**
      * \nonscriptable
      */
-    RLinetypePattern(int num...);
+    RLinetypePattern(const QString& name, int num...);
     void set(const QList<double> dashes);
 
     RLinetypePattern();
+    RLinetypePattern(const QString& name);
     RLinetypePattern(const RLinetypePattern& other);
     ~RLinetypePattern();
 
@@ -58,10 +60,13 @@ public:
     bool isSymmetrical(int i) const;
     void scale(double factor);
 
+    QVector<qreal> getScreenBasedLinetype();
+
     RLinetypePattern& operator=(const RLinetypePattern& other);
     bool operator==(const RLinetypePattern& other) const;
 
 private:
+    QString name;
     int num;
     double* pattern;
     bool* symmetrical;

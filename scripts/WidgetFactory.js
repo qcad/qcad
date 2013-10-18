@@ -709,6 +709,9 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 c.defaultValue = c.getLineweight();
             }
             if (!isNull(value)) {
+                if (isString(value)) {
+                    value = parseInt(value, 10);
+                }
                 c.setLineweight(value);
             }
             continue;

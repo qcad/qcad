@@ -117,9 +117,6 @@ private:
     RPainterPath currentPainterPath;
     QMap<REntity::Id, QList<RPainterPath> > painterPaths;
 
-    RPainterPath currentPainterPathDraft;
-    QMap<REntity::Id, QList<RPainterPath> > painterPathsDraft;
-
     QMap<REntity::Id, RImageData> images;
 
     QList<RPainterPath> previewPainterPaths;

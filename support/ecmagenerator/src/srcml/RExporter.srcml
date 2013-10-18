@@ -1446,6 +1446,25 @@ dir="./core" filename="RExporter.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>toggleDraftMode</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+      <call>
+        <name>setDraftMode</name>
+        <argument_list>(
+        <argument>
+          <expr>!
+          <name>draftMode</name></expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
       <name>bool</name>
     </type>
     <name>getDraftMode</name>
@@ -1455,6 +1474,58 @@ dir="./core" filename="RExporter.h">
     <return>return 
     <expr>
       <name>draftMode</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setScreenBasedLinetypes</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>screenBasedLinetypes</name>= 
+    <name>on</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>toggleScreenBasedLinetypes</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+      <call>
+        <name>setScreenBasedLinetypes</name>
+        <argument_list>(
+        <argument>
+          <expr>!
+          <name>screenBasedLinetypes</name></expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>getScreenBasedLinetypes</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>screenBasedLinetypes</name>
     </expr>;</return>}</block>
   </function>
   <comment type="block">/** * \return True if this exporter exports
@@ -1598,6 +1669,13 @@ dir="./core" filename="RExporter.h">
       <name>bool</name>
     </type>
     <name>draftMode</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>screenBasedLinetypes</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

@@ -309,6 +309,9 @@
         getSelectionBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeObject
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         saveObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -44,18 +44,12 @@ dir="./core" filename="RLinetypePattern.h">
   <private type="default"></private>
   <public>public: 
   <comment type="block">/** * \nonscriptable */</comment>
-  <constructor_decl>
-  <name>RLinetypePattern</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>num</name>
-      <param>...</param>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
+  <macro>
+    <name>RLinetypePattern</name>
+    <argument_list>(
+    <argument>const QString&amp; name</argument>, 
+    <argument>int num...</argument>)</argument_list>
+  </macro>; 
   <function_decl>
   <type>
     <name>void</name>
@@ -78,6 +72,17 @@ dir="./core" filename="RLinetypePattern.h">
   <constructor_decl>
   <name>RLinetypePattern</name>
   <parameter_list>()</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RLinetypePattern</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>name</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
   <constructor_decl>
   <name>RLinetypePattern</name>
   <parameter_list>(
@@ -223,6 +228,13 @@ dir="./core" filename="RLinetypePattern.h">
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl></public>
   <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>name</name>
+  </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
     <type>

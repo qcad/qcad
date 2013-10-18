@@ -942,6 +942,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     }
 
     delete fileImporter;
+
     if (mainWindow!=NULL && notify==true && notifyListeners==true) {
         mainWindow->notifyListeners();
     }
@@ -1111,7 +1112,10 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
     RGraphicsView* view = getLastKnownViewWithFocus();
     bool draft = false;
     if (view!=NULL) {
-        draft = view->getDraftMode();
+        RGraphicsScene* scene = view->getScene();
+        if (scene!=NULL) {
+            draft = scene->getDraftMode();
+        }
     }
 
     return document.queryClosestXY(position, range, draft, includeLockedLayers);

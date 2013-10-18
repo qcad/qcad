@@ -73,16 +73,20 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     }
     else {
         if (propertyTypeId.isCustom()) {
+            QString appId = propertyTypeId.getCustomPropertyTitle();
             QString name = propertyTypeId.getCustomPropertyName();
-            if (customProperties.contains(name)) {
-                RPropertyAttributes attr;
-                if  (customProperties.value(name).type()==QVariant::Int) {
-                    attr = RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer);
+            if (customProperties.contains(appId)) {
+                QVariantMap vm = customProperties.value(appId);
+                if (vm.contains(name)) {
+                    RPropertyAttributes attr;
+                    if  (vm.value(name).type()==QVariant::Int) {
+                        attr = RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer);
+                    }
+                    else {
+                        attr = RPropertyAttributes(RPropertyAttributes::Custom);
+                    }
+                    return qMakePair(vm.value(name), attr);
                 }
-                else {
-                    attr = RPropertyAttributes(RPropertyAttributes::Custom);
-                }
-                return qMakePair(customProperties.value(name), attr);
             }
         }
     }
@@ -95,16 +99,18 @@ bool RObject::setProperty(RPropertyTypeId propertyTypeId,
 
     // set custom property:
     if (propertyTypeId.getId()==RPropertyTypeId::INVALID_ID) {
-        if (propertyTypeId.getCustomPropertyName().isEmpty()) {
-            qWarning() << "RObject::setProperty: cannot set custom property with empty name";
+        if (propertyTypeId.getCustomPropertyTitle().isEmpty() ||
+            propertyTypeId.getCustomPropertyName().isEmpty()) {
+            qWarning() << "RObject::setProperty: "
+                << "cannot set custom property with empty title or name";
             return false;
         }
 
         if (value.isValid()) {
-            setCustomProperty(propertyTypeId.getCustomPropertyName(), value);
+            setCustomProperty(propertyTypeId.getCustomPropertyTitle(), propertyTypeId.getCustomPropertyName(), value);
         }
         else {
-            removeCustomProperty(propertyTypeId.getCustomPropertyName());
+            removeCustomProperty(propertyTypeId.getCustomPropertyTitle(), propertyTypeId.getCustomPropertyName());
         }
         return true;
     }
@@ -343,10 +349,15 @@ bool RObject::setMember(QList<double>& variable, const QVariant& value,
 QSet<RPropertyTypeId> RObject::getPropertyTypeIds() const {
     QSet<RPropertyTypeId> ret = RPropertyTypeId::getPropertyTypeIds(typeid(*this));
 
-    QVariantMap::const_iterator it;
+    QMap<QString, QVariantMap>::const_iterator it;
     for (it=customProperties.begin(); it!=customProperties.end(); it++) {
-        QString name = it.key();
-        ret.insert(RPropertyTypeId(name));
+        QString title = it.key();
+        QVariantMap vm = it.value();
+        QVariantMap::const_iterator it2;
+        for (it2=vm.begin(); it2!=vm.end(); it2++) {
+            QString name = it2.key();
+            ret.insert(RPropertyTypeId(title, name));
+        }
     }
 
     return ret;
@@ -355,35 +366,52 @@ QSet<RPropertyTypeId> RObject::getPropertyTypeIds() const {
 /**
  * \return Value of given custom property.
  */
-QVariant RObject::getCustomProperty(const QString& key, const QVariant& defaultValue) {
-    return customProperties.value(key, defaultValue);
+QVariant RObject::getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue) {
+    if (!customProperties.contains(title)) {
+        return defaultValue;
+    }
+    QVariantMap vm = customProperties.value(title);
+    return vm.value(key, defaultValue);
 }
 
 /**
  * Sets a custom property with the given name.
  */
-void RObject::setCustomProperty(const QString& key, const QVariant& value) {
-    customProperties.insert(key, value);
+void RObject::setCustomProperty(const QString& title, const QString& key, const QVariant& value) {
+    if (!customProperties.contains(title)) {
+        customProperties.insert(title, QVariantMap());
+    }
+    customProperties[title].insert(key, value);
 }
 
 /**
  * Removes the custom property with the given name.
  */
-void RObject::removeCustomProperty(const QString& key) {
-    customProperties.remove(key);
+void RObject::removeCustomProperty(const QString& title, const QString& key) {
+    if (!customProperties.contains(title)) {
+        return;
+    }
+    customProperties[title].remove(key);
+}
+
+QStringList RObject::getCustomPropertyTitles() const {
+    return customProperties.keys();
 }
 
 /**
  * \return List of custom property keys.
  */
-QStringList RObject::getCustomPropertyKeys() const {
-    return customProperties.keys();
+QStringList RObject::getCustomPropertyKeys(const QString& title) const {
+    if (!customProperties.contains(title)) {
+        return QStringList();
+    }
+    return customProperties.value(title).keys();
 }
 
 /**
  * \return Map of custom properties assigned to this object.
  */
-QVariantMap RObject::getCustomProperties() const {
+QMap<QString, QVariantMap> RObject::getCustomProperties() const {
     return customProperties;
 }
 
@@ -400,9 +428,15 @@ void RObject::print(QDebug dbg) const {
 
     if (!customProperties.isEmpty()) {
         dbg.nospace() << "\nCustom Properties:\n";
-        QVariantMap::const_iterator it;
-        for (it=customProperties.begin(); it!=customProperties.end(); it++) {
-            dbg.nospace() << it.key() << ": " << it.value() << "\n";
+
+        QMap<QString, QVariantMap>::const_iterator titleIt;
+        for (titleIt=customProperties.begin(); titleIt!=customProperties.end(); titleIt++) {
+            dbg.nospace() << titleIt.key() << ":\n";
+            QVariantMap vm = titleIt.value();
+            QVariantMap::const_iterator keyIt;
+            for (keyIt=vm.begin(); keyIt!=vm.end(); keyIt++) {
+                dbg.nospace() << keyIt.key() << ": " << keyIt.value() << "\n";
+            }
         }
     }
 }

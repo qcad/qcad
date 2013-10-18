@@ -44,6 +44,7 @@ QFont* RSettings::snapLabelFont = NULL;
 QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
 int RSettings::snapRange = -1;
+int RSettings::zeroWeightWeight = -1;
 int RSettings::showCrosshair = -1;
 int RSettings::showLargeCrosshair = -1;
 int RSettings::concurrentDrawing = -1;
@@ -535,6 +536,13 @@ int RSettings::getSnapRange() {
     return snapRange;
 }
 
+int RSettings::getZeroWeightWeight() {
+    if (zeroWeightWeight==-1) {
+        zeroWeightWeight = getValue("GraphicsView/ZeroWeightWeight", QVariant(0)).toInt();
+    }
+    return zeroWeightWeight;
+}
+
 int RSettings::getPreviewEntities() {
     if (previewEntities==-1) {
         previewEntities = getValue("GraphicsView/PreviewEntities", QVariant(50)).toInt();
@@ -741,6 +749,7 @@ void RSettings::resetCache() {
         statusBarFont = NULL;
     }
     snapRange = -1;
+    zeroWeightWeight = -1;
     showCrosshair = -1;
     showLargeCrosshair = -1;
     concurrentDrawing = -1;

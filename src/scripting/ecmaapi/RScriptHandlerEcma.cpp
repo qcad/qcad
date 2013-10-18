@@ -462,6 +462,9 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaVector::init(*engine);
 
+    REcmaImporter::init(*engine);
+    REcmaExporter::init(*engine);
+
     REcmaShape::init(*engine);
     REcmaSharedPointerShape::init(*engine);
     REcmaArc::init(*engine);
@@ -678,12 +681,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaTransaction::init(*engine);
 
-    REcmaImporter::init(*engine);
     REcmaFileImporter::init(*engine);
     REcmaFileImporterAdapter::init(*engine);
     REcmaFileImporterRegistry::init(*engine);
 
-    REcmaExporter::init(*engine);
     REcmaFileExporter::init(*engine);
     REcmaFileExporterAdapter::init(*engine);
     REcmaFileExporterFactory::init(*engine);

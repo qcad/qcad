@@ -123,14 +123,6 @@ public:
         return referencePoints;
     }
 
-    void updateDraftStatus(bool regen = true);
-    bool hasDraftView() const {
-        return gotDraftView;
-    }
-    bool hasNormalView() const {
-        return gotNormalView;
-    }
-
 //    virtual bool isVisualExporter() const {
 //        return true;
 //    }
@@ -162,8 +154,6 @@ protected:
     QMultiMap<REntity::Id, RVector> referencePoints;
 
 private:
-    bool gotDraftView;
-    bool gotNormalView;
     bool deleting;
 };
 

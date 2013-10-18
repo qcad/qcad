@@ -79,12 +79,6 @@ dir="./core/math" filename="RSpline.h">
   <block>{
   <private type="default"></private>
   <public>public: 
-  <comment type="line">//typedef RSpline
-  (*UpdateFromFitPointsFunction)(const RSpline&amp; spline, bool
-  useTangents);</comment>
-  <comment type="line">//typedef QList&lt;RSpline&gt;
-  (*SplitFunction)(const RSpline&amp; spline, const
-  QList&lt;RVector&gt;&amp; points);</comment>
   <constructor_decl>
   <name>RSpline</name>
   <parameter_list>()</parameter_list>;</constructor_decl>

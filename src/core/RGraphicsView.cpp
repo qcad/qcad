@@ -46,8 +46,7 @@ RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
       textHeightThresholdOverride(-1),
       textHeightThreshold(3),
       viewportNumber(-1),
-      gridVisible(-1),
-      draftMode(false) {
+      gridVisible(-1) {
 
     setScene(scene, false);
 
@@ -879,13 +878,6 @@ void RGraphicsView::clearTextLabels() {
 
 void RGraphicsView::addTextLabel(const RTextLabel& textLabel) {
     textLabels.append(textLabel);
-}
-
-void RGraphicsView::setDraftMode(bool on) {
-    draftMode = on;
-    if (scene!=NULL) {
-        scene->updateDraftStatus();
-    }
 }
 
 bool RGraphicsView::isPathVisible(const RPainterPath &path) const {

@@ -212,11 +212,6 @@ public:
     void setGridVisible(bool on);
     bool isGridVisible() const;
 
-    void setDraftMode(bool on);
-    bool getDraftMode() const {
-        return draftMode;
-    }
-
     virtual void paintGridPoint(const RVector& /*ucsPosition*/) {}
     virtual void paintGridLine(const RLine& /*ucsPosition*/) {}
 
@@ -350,7 +345,6 @@ protected:
 
     // grid display flag, cached:
     mutable int gridVisible;
-    bool draftMode;
 };
 
 Q_DECLARE_METATYPE(RGraphicsView::ColorMode)

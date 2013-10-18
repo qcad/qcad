@@ -144,15 +144,6 @@
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        updateDraftStatus
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        hasDraftView
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        hasNormalView
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         dump
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
