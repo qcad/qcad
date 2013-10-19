@@ -34,7 +34,7 @@
 #include "RSettings.h"
 #include "RVector.h"
 
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
+#if defined(Q_WS_X11)
 #include <X11/Xlib.h>
 #endif
 
@@ -78,7 +78,7 @@ QString RS::getSystemId() {
 QString RS::getWindowManagerId() {
     static QString wm = "";
 
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
+#if defined(Q_WS_X11)
     Display  *dpy;
 
     Atom wmCheckAtom;
@@ -101,11 +101,11 @@ QString RS::getWindowManagerId() {
 
     wm = "unknown";
 
-#if defined(Q_OS_MAC)
+#if defined(Q_WS_MAC)
     wm = "osx";
-#elif defined(Q_OS_WIN)
+#elif defined(Q_WS_WIN)
     wm = "win";
-#elif defined(Q_OS_UNIX)
+#elif defined(Q_WS_X11)
 
     dpy = NULL;
     data = NULL;
