@@ -126,7 +126,7 @@ Q_DECLARE_METATYPE(int*)
 Q_DECLARE_METATYPE(unsigned int*)
 Q_DECLARE_METATYPE(qint64*)
 
-#if !defined Q_OS_WIN32 && !defined Q_OS_LINUX
+#if !defined Q_OS_WIN32 && !defined Q_OS_LINUX && !defined Q_OS_FREEBSD
 Q_DECLARE_METATYPE(size_t*)
 #endif
 

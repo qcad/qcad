@@ -40,6 +40,10 @@ linux-g++ {
     LIBS += -lGLU
 }
 
+freebsd-g++ {
+    LIBS += -lGLU -lexecinfo
+}
+
 macx {
     QMAKE_LFLAGS += -framework ApplicationServices
     LIBS += \
