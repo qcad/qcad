@@ -34,6 +34,10 @@
 #include "RSettings.h"
 #include "RVector.h"
 
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
+#include <X11/Xlib.h>
+#endif
+
 const double RS::PointTolerance = 1.0e-9;
 const double RS::AngleTolerance = 1.0e-9;
 
@@ -74,60 +78,111 @@ QString RS::getSystemId() {
 QString RS::getWindowManagerId() {
     static QString wm = "";
 
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
+    Display  *dpy;
+
+    Atom wmCheckAtom;
+    Atom windowAtom;
+    Atom nameAtom;
+    Atom utf8Atom;
+    Atom type;
+
+    int format;
+    unsigned long nitems, bytes;
+    unsigned char *data;
+
+    char *wmname;
+    int res;
+#endif
+
     if (!wm.isEmpty()) {
         return wm;
     }
 
     wm = "unknown";
 
-#if defined(Q_OS_LINUX)
-    QDir proc("/proc");
-    QStringList dirs = proc.entryList(QDir::Dirs);
-    for (int i=0; i<dirs.length(); i++) {
-        QString dir = dirs[i];
-
-        bool ok;
-        int pid = dir.toInt(&ok);
-        if (!ok) {
-            // skip non-int dir names:
-            continue;
-        }
-        if (pid<1000) {
-            // skip kernel process:
-            continue;
-        }
-
-	QString fileName = QString("/proc/%1/cmdline").arg(pid);
-        QFile file(fileName);
-        if (!file.exists()) {
-            continue;
-        }
-
-        if (!file.open(QFile::ReadOnly)) {
-            continue;
-        }
-
-        QTextStream ts(&file);
-        QString line = ts.readLine();
-        file.close();
-
-        if (line.contains("ksmserver")) {
-            wm = "kde";
-            return wm;
-        }
-        if (line.contains("gnome-session")) {
-            wm = "gnome";
-            return wm;
-        }
-        if (line.contains("xfce-mcs-manage")) {
-            wm = "xfce";
-            return wm;
-        }
-    }
-#elif defined(Q_OS_MAC)
+#if defined(Q_OS_MAC)
     wm = "osx";
 #elif defined(Q_OS_WIN)
     wm = "win";
+#elif defined(Q_OS_UNIX)
+
+    dpy = NULL;
+    data = NULL;
+
+    dpy = XOpenDisplay(NULL);
+    if (dpy) {
+
+        wmCheckAtom = XInternAtom(dpy, "_NET_SUPPORTING_WM_CHECK", False);
+        windowAtom = XInternAtom(dpy, "WINDOW", False);
+        nameAtom = XInternAtom(dpy, "_NET_WM_NAME", False);
+        utf8Atom = XInternAtom(dpy, "UTF8_STRING", False);
+
+        res = XGetWindowProperty(
+            dpy,
+            RootWindow(dpy, 0),
+            wmCheckAtom,
+            0LL,
+            ~0LL,
+            False,
+            windowAtom,
+            &type,
+            &format,
+            &nitems,
+            &bytes,
+            &data);
+
+        if ((res == Success) &&
+            (type == windowAtom) &&
+            (format == 32)) {
+
+            res = XGetWindowProperty(
+                dpy,
+                *(Window *)data,
+                nameAtom,
+                0LL,
+                ~0LL,
+                False,
+                utf8Atom,
+                &type,
+                &format,
+                &nitems,
+                &bytes,
+                &data);
+
+            if ((res == Success) &&
+                (type == utf8Atom) &&
+                (format == 8)) {
+
+                wmname = (char *)malloc(nitems + 1);
+                if (wmname) {
+                    memcpy(wmname, data, nitems);
+                    wmname[nitems] = '\0';
+                    if (strncasecmp(wmname, "KWin", 4) == 0) {
+                        wm = "kde";
+                    } else if ((strncasecmp(wmname, "Metacity", 8) == 0) ||
+                               (strncasecmp(wmname, "Mutter", 6) == 0) ||
+                               (strncasecmp(wmname, "Marco", 5) == 0)) {
+                        wm = "gnome";
+                    } else if (strncasecmp(wmname, "Xfwm", 4) == 0) {
+                        wm = "xfce";
+                    } else {
+                        wm = "unknown";
+                    }
+                    free(wmname);
+                    wmname = NULL;
+                }
+            }
+        }
+    }
+
+    if (data) {
+        XFree(data);
+    }
+
+    if (dpy) {
+        XCloseDisplay(dpy);
+    }
 #endif
 
     return wm;
