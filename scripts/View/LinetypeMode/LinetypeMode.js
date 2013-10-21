@@ -83,7 +83,7 @@ LinetypeMode.prototype.finishEvent = function() {
 };
 
 LinetypeMode.init = function(basePath) {
-    var action = new RGuiAction(qsTranslate("LinetypeMode", "Screen Line&type Mode"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("LinetypeMode", "Screen-based Line&types"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/LinetypeMode.js");
     action.setIcon(basePath + "/LinetypeMode.svg");
