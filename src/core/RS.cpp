@@ -79,7 +79,8 @@ QString RS::getWindowManagerId() {
     static QString wm = "";
 
 #if defined(Q_WS_X11)
-    Display  *dpy;
+    Display *dpy;
+    Window win;
 
     Atom wmCheckAtom;
     Atom windowAtom;
@@ -136,9 +137,12 @@ QString RS::getWindowManagerId() {
             (type == windowAtom) &&
             (format == 32)) {
 
+            win = *(Window *)data;
+            XFree(data);
+
             res = XGetWindowProperty(
                 dpy,
-                *(Window *)data,
+                win,
                 nameAtom,
                 0LL,
                 ~0LL,
@@ -160,7 +164,8 @@ QString RS::getWindowManagerId() {
                     wmname[nitems] = '\0';
                     if (strncasecmp(wmname, "KWin", 4) == 0) {
                         wm = "kde";
-                    } else if ((strncasecmp(wmname, "Metacity", 8) == 0) ||
+                    } else if ((strncasecmp(wmname, "Compiz", 6) == 0) ||
+                               (strncasecmp(wmname, "Metacity", 8) == 0) ||
                                (strncasecmp(wmname, "Mutter", 6) == 0) ||
                                (strncasecmp(wmname, "Marco", 5) == 0)) {
                         wm = "gnome";
