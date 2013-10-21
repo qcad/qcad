@@ -59,6 +59,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, uninit, "uninit");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getAppId, "getAppId");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getLocale, "getLocale");
             
             REcmaHelper::registerFunction(&engine, &ctor, loadTranslations, "loadTranslations");
@@ -151,6 +153,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getSnapRange, "getSnapRange");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getZeroWeightWeight, "getZeroWeightWeight");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getPreviewEntities, "getPreviewEntities");
             
             REcmaHelper::registerFunction(&engine, &ctor, getShowCrosshair, "getShowCrosshair");
@@ -200,6 +204,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getQSettings, "getQSettings");
             
             REcmaHelper::registerFunction(&engine, &ctor, resetCache, "resetCache");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setXDataEnabled, "setXDataEnabled");
             
             REcmaHelper::registerFunction(&engine, &ctor, isXDataEnabled, "isXDataEnabled");
             
@@ -325,6 +331,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::uninit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getAppId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getAppId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getAppId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getAppId();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getAppId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getAppId", context, engine);
             return result;
         }
          QScriptValue
@@ -2255,6 +2300,45 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::getZeroWeightWeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getZeroWeightWeight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getZeroWeightWeight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getZeroWeightWeight();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getZeroWeightWeight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getZeroWeightWeight", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::getPreviewEntities
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3524,6 +3608,51 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::resetCache", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::setXDataEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setXDataEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setXDataEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setXDataEnabled(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setXDataEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setXDataEnabled", context, engine);
             return result;
         }
          QScriptValue

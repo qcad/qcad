@@ -254,12 +254,6 @@ function PropertyEditorImpl(basePath) {
                 new PropertyWatcher(this, drawOrderEdit, REntity.PropertyDrawOrder),
                 'propertyChanged');
 
-    // adding custom properties:
-//    if (RSettings.isXDataEnabled()) {
-//        var addCustomButton = this.widget.findChild("AddCustomProperty");
-//        addCustomButton.clicked.connect(this, "addCustomProperty");
-//    }
-
     this.geometryGroup = undefined;
     this.childGroup = undefined;
     this.customGroup = undefined;
@@ -1144,44 +1138,21 @@ PropertyEditorImpl.prototype.makeReadWrite = function(control) {
 };
 
 PropertyEditorImpl.prototype.addCustomProperty = function() {
-    var dialog = WidgetFactory.createDialog(this.basePath, "AddCustomProperty.ui");
+    var dialog = WidgetFactory.createDialog(this.basePath, "AddCustomPropertyDialog.ui");
 
     var nameEdit = dialog.findChild("Name");
-    var typeCombo = dialog.findChild("Type");
+    var valueEdit = dialog.findChild("Value");
 
-    typeCombo.addItem("Boolean (true/false)");
-    typeCombo.addItem("Integer");
-    typeCombo.addItem("Double");
-    typeCombo.addItem("String");
-
-    if (dialog.exec()) {
-        var name = nameEdit.text;
-        var type = typeCombo.currentIndex;
-        var typeHint = 0;
-        var value;
-
-        // set default value in correct type:
-        switch (type) {
-        case 0:
-            value = true;
-            break;
-        case 1:
-            value = 0;
-            typeHint = 2;
-            break;
-        case 2:
-            value = 0.0;
-            typeHint = 6;
-            break;
-        case 3:
-            value = "";
-            break;
-        }
-
-        // trigger change property operation for custom property:
-        this.propertyChanged(new RPropertyTypeId(name), value, this.entityTypeFilter, typeHint);
-        this.onlyChangesOverride = false;
+    if (!dialog.exec()) {
+        return;
     }
+
+    var name = nameEdit.text;
+    var value = valueEdit.text;
+
+    // trigger change property operation for custom property:
+    this.propertyChanged(new RPropertyTypeId(RSettings.getAppId(), name), value, this.entityTypeFilter);
+    this.onlyChangesOverride = false;
 };
 
 

@@ -73,6 +73,9 @@
         scale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getScreenBasedLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         operator_assign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

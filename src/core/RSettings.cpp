@@ -49,7 +49,6 @@ int RSettings::showCrosshair = -1;
 int RSettings::showLargeCrosshair = -1;
 int RSettings::concurrentDrawing = -1;
 int RSettings::previewEntities = -1;
-int RSettings::enableXData = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -58,6 +57,18 @@ QSettings* RSettings::qSettings = NULL;
 QStringList RSettings::originalArguments;
 
 bool RSettings::quitFlag = false;
+bool RSettings::xDataEnabled = false;
+
+QString RSettings::getAppId() {
+    QString ret = qApp->applicationName();
+    ret.replace(QRegExp("[^a-zA-Z0-9]"), "");
+    // prevent 'empty record name' exception:
+    if (ret.isEmpty()) {
+        ret = "QCAD";
+    }
+    return ret;
+}
+
 
 QStringList RSettings::getOriginalArguments() {
     return originalArguments;
@@ -723,12 +734,12 @@ void RSettings::setApplicationName(const QString& n) {
     applicationNameOverride = n;
 }
 
+void RSettings::setXDataEnabled(bool on) {
+    xDataEnabled = on;
+}
+
 bool RSettings::isXDataEnabled() {
-    if (enableXData==-1) {
-        QStringList args = QCoreApplication::arguments();
-        enableXData = (bool)args.contains("-enable-xdata");
-    }
-    return (bool)enableXData;
+    return xDataEnabled;
 }
 
 void RSettings::resetCache() {

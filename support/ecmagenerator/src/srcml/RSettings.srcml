@@ -88,6 +88,13 @@ dir="./core" filename="RSettings.h">
     <name>static</name>
     <name>QString</name>
   </type>
+  <name>getAppId</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
   <name>getLocale</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -499,6 +506,13 @@ dir="./core" filename="RSettings.h">
     <name>static</name>
     <name>int</name>
   </type>
+  <name>getZeroWeightWeight</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
   <name>getPreviewEntities</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -855,6 +869,21 @@ dir="./core" filename="RSettings.h">
   <function_decl>
   <type>
     <name>static</name>
+    <name>void</name>
+  </type>
+  <name>setXDataEnabled</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
     <name>bool</name>
   </type>
   <name>isXDataEnabled</name>
@@ -920,6 +949,14 @@ dir="./core" filename="RSettings.h">
       <name>int</name>
     </type>
     <name>snapRange</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>int</name>
+    </type>
+    <name>zeroWeightWeight</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
@@ -1003,9 +1040,9 @@ dir="./core" filename="RSettings.h">
   <decl>
     <type>
       <name>static</name>
-      <name>int</name>
+      <name>bool</name>
     </type>
-    <name>enableXData</name>
+    <name>quitFlag</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
@@ -1013,7 +1050,7 @@ dir="./core" filename="RSettings.h">
       <name>static</name>
       <name>bool</name>
     </type>
-    <name>quitFlag</name>
+    <name>xDataEnabled</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

@@ -335,7 +335,9 @@ dir="./core" filename="RMetaTypes.h">
   <name>defined</name>
   <name>Q_OS_WIN32</name>&amp;&amp; !
   <name>defined</name>
-  <name>Q_OS_LINUX</name></expr></cpp:if>
+  <name>Q_OS_LINUX</name>&amp;&amp; !
+  <name>defined</name>
+  <name>Q_OS_FREEBSD</name></expr></cpp:if>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

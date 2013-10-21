@@ -187,6 +187,23 @@ public:
      */
     virtual void quit() = 0;
 
+    virtual void handleUserMessage(const QString& message) {
+        qDebug() << message;
+    }
+
+    virtual void handleUserInfo(const QString& message) {
+        qDebug() << message;
+    }
+
+    virtual void handleUserWarning(const QString& message, bool messageBox = false) {
+        Q_UNUSED(messageBox);
+        qWarning() << message;
+    }
+
+    virtual void handleUserCommand(const QString& message) {
+        qDebug() << "Command: " << message;
+    }
+
 #if QT_VERSION >= 0x050000
     /**
      * \nonscriptable

@@ -78,6 +78,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getScreenBasedLinetype"
+    cppName="getScreenBasedLinetype" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QVector &lt; qreal &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="operator=" cppName="operator=" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RLinetypePattern &amp;"

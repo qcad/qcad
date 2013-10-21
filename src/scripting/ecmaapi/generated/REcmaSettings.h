@@ -46,6 +46,9 @@
         uninit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAppId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLocale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -184,6 +187,9 @@
         getSnapRange
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getZeroWeightWeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPreviewEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -257,6 +263,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         resetCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setXDataEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isXDataEnabled

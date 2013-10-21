@@ -1424,26 +1424,20 @@ dir="./core" filename="RExporter.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setDraftMode</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>draftMode</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setDraftMode</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function>
     <type>
       <name>void</name>
@@ -1476,26 +1470,20 @@ dir="./core" filename="RExporter.h">
       <name>draftMode</name>
     </expr>;</return>}</block>
   </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setScreenBasedLinetypes</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>screenBasedLinetypes</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setScreenBasedLinetypes</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function>
     <type>
       <name>void</name>

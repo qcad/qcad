@@ -50,6 +50,8 @@ class QCADCORE_EXPORT RSettings {
 public:
     static void uninit();
 
+    static QString getAppId();
+
     static QString getLocale();
     static void loadTranslations(const QString& module, const QStringList& dirs = RDEFAULT_QSTRINGLIST);
     static QString translate(const QString& context, const QString& str);
@@ -142,6 +144,7 @@ public:
 
     static void resetCache();
 
+    static void setXDataEnabled(bool on);
     static bool isXDataEnabled();
 
 private:
@@ -174,9 +177,9 @@ private:
 
     static QStringList originalArguments;
 
-    static int enableXData;
-
     static bool quitFlag;
+
+    static bool xDataEnabled;
 };
 
 Q_DECLARE_METATYPE(RSettings*)

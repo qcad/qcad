@@ -32,6 +32,9 @@ dir="./core" filename="RLinetypePattern.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QVector&gt;</cpp:file></cpp:include>
   <comment type="block">/** * Represents a linetype pattern which
   can be used to draw * dashed graphical elements. * * \scriptable
   * \copyable */</comment>
@@ -199,6 +202,16 @@ dir="./core" filename="RLinetypePattern.h">
       <name>factor</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QVector
+    <argument_list>&lt;
+    <argument>
+      <name>qreal</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getScreenBasedLinetype</name>
+  <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
   <name>RLinetypePattern</name>&amp;</type>
