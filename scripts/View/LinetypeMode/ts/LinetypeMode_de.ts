@@ -5,8 +5,8 @@
     <name>LinetypeMode</name>
     <message>
         <location filename="../LinetypeMode.js" line="86"/>
-        <source>Screen Line&amp;type Mode</source>
-        <translation type="unfinished"></translation>
+        <source>Screen-based Line&amp;types</source>
+        <translation>Bildschirm-basierte Linien&typen</translation>
     </message>
 </context>
 </TS>
