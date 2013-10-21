@@ -89,7 +89,7 @@ protected:
 
     void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object,
             RDocument* document);
-    void removeAllButThese(const QMultiMap<QString, QString>& propertyTitles);
+    void removeAllButThese(const QMultiMap<QString, QString>& propertyTitles, bool customOnly=false);
 
 protected:
     //! key / value / attributes

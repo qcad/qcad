@@ -74,6 +74,7 @@ function usage() {
           + "                                 given import filter.\n"
           + "-rescan                          Rescan scripts folder for new add-ons\n"
           + "-version                         Displays the application version.\n"
+          + "-enable-xdata                    Enables XData (custom properties) support.\n"
           + "-quit                            Quits QCAD, for example after executing the\n"
           + "                                 given script(s).\n"
     );
@@ -420,6 +421,9 @@ function main() {
     if (args.contains("-version") || args.contains("-v")) {
         version();
         return;
+    }
+    if (args.contains("-enable-xdata")) {
+        RSettings.setXDataEnabled(true);
     }
 
     // in test mode, clean up first:

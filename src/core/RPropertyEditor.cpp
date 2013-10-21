@@ -107,7 +107,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
  * collected so far.
  */
 void RPropertyEditor::removeAllButThese(
-        const QMultiMap<QString, QString>& propertyTitles) {
+        const QMultiMap<QString, QString>& propertyTitles, bool customOnly) {
 
     // iterate through all groups of properties (e.g. "Start Point", "End Point", ...):
     QStringList removableGroups;
@@ -118,6 +118,10 @@ void RPropertyEditor::removeAllButThese(
         QStringList removableProperties;
         RPropertyMap::iterator it2;
         for (it2 = it.value().begin(); it2 != it.value().end(); ++it2) {
+            if (customOnly && !it2.value().second.getPropertyTypeId().isCustom()) {
+                continue;
+            }
+
             bool keep = false;
 
             // check if the current property is among the given properties
@@ -205,24 +209,40 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
 
         QPair<QVariant, RPropertyAttributes> p = entity->getProperty(REntity::PropertyType);
         RS::EntityType type = (RS::EntityType)p.first.toInt();
+
+        if (entityTypeFilter!=RS::EntityAll && entity->getType()!=entityTypeFilter) {
+            continue;
+        }
+
+        bool customOnly = false;
+        QSet<RPropertyTypeId> propertyTypeIds;
         if (combinedTypes.contains(type)) {
-            combinedTypes[type]++;
+            // already filtered out property type IDs of this type,
+            // only look into custom properties:
+            propertyTypeIds = entity->getCustomPropertyTypeIds();
+            customOnly = true;
+            //propertyTypeIds = entity->getPropertyTypeIds();
         }
         else {
-            combinedTypes.insert(type, 1);
+            // not filtered out this type yet, look into all properties:
+            propertyTypeIds = entity->getPropertyTypeIds();
+        }
 
-            if (entityTypeFilter!=RS::EntityAll && entity->getType()!=entityTypeFilter) {
-                continue;
-            }
-
-            QSet<RPropertyTypeId> propertyTypeIds = entity->getPropertyTypeIds();
+        if (!propertyTypeIds.isEmpty()) {
             QMultiMap<QString, QString> propertiesToKeep;
             QSet<RPropertyTypeId>::iterator it;
             for (it = propertyTypeIds.begin(); it != propertyTypeIds.end(); ++it) {
                 propertiesToKeep.insert(it->getPropertyGroupTitle(),
                                         it->getPropertyTitle());
             }
-            removeAllButThese(propertiesToKeep);
+            removeAllButThese(propertiesToKeep, customOnly);
+        }
+
+        if (combinedTypes.contains(type)) {
+            combinedTypes[type]++;
+        }
+        else {
+            combinedTypes.insert(type, 1);
         }
     }
 

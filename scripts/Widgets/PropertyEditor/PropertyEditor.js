@@ -547,8 +547,9 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                         // 'remove custom property' button:
                         if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom)) {
                             var removeCustomPropertyButton = new QToolButton(this.widget);
-                            removeCustomPropertyButton.icon = new QIcon(this.basePath + "/RemoveProperty.svg");
+                            removeCustomPropertyButton.icon = new QIcon(this.basePath + "/RemoveCustomProperty.svg");
                             removeCustomPropertyButton.iconSize = new QSize(12,12);
+                            removeCustomPropertyButton.toolTip = qsTr("Remove this property from selected objects");
                             var name = propertyTypeId.getCustomPropertyName();
                             removeCustomPropertyButton.objectName = "DeleteCustomProperty" + name;
                             //qDebug("adding button to remove custom property named: ", name);
@@ -600,12 +601,12 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     if (!onlyChanges) {
         if (RSettings.isXDataEnabled()) {
             var addCustomPropertyButton = new QToolButton(this.widget);
-            addCustomPropertyButton.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
-            addCustomPropertyButton.styleSheet = "margin-top:10px;";
-            addCustomPropertyButton.text = qsTr("Add Custom Property");
+            addCustomPropertyButton.icon = new QIcon(this.basePath + "/AddCustomProperty.svg");
+            addCustomPropertyButton.iconSize = new QSize(12,12);
+            addCustomPropertyButton.toolTip = qsTr("Add custom property to selected objects");
             addCustomPropertyButton.objectName = "AddCustomProperty";
             addCustomPropertyButton.clicked.connect(this, "addCustomProperty");
-            gridLayoutCustom.addWidget(addCustomPropertyButton, gridLayoutCustom.rowCount(),0, 1,4);
+            gridLayoutCustom.addWidget(addCustomPropertyButton, gridLayoutCustom.rowCount(),3, 1,1);
         }
     }
 
@@ -1140,7 +1141,19 @@ PropertyEditorImpl.prototype.makeReadWrite = function(control) {
 PropertyEditorImpl.prototype.addCustomProperty = function() {
     var dialog = WidgetFactory.createDialog(this.basePath, "AddCustomPropertyDialog.ui");
 
+    var buttonBox = dialog.findChild("ButtonBox");
+    buttonBox.button(QDialogButtonBox.Ok).enabled = false;
+
     var nameEdit = dialog.findChild("Name");
+    var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
+    var validator = new QRegExpValidator(rx, nameEdit);
+    nameEdit.setValidator(validator);
+    nameEdit.textChanged.connect(
+        function(text) {
+            buttonBox.button(QDialogButtonBox.Ok).enabled = !text.isEmpty();
+        }
+    );
+
     var valueEdit = dialog.findChild("Value");
 
     if (!dialog.exec()) {

@@ -348,6 +348,16 @@ bool RObject::setMember(QList<double>& variable, const QVariant& value,
  */
 QSet<RPropertyTypeId> RObject::getPropertyTypeIds() const {
     QSet<RPropertyTypeId> ret = RPropertyTypeId::getPropertyTypeIds(typeid(*this));
+    ret.unite(getCustomPropertyTypeIds());
+    return ret;
+}
+
+/**
+ * \return A set of all custom property IDs of properties that are available
+ *      for this object.
+ */
+QSet<RPropertyTypeId> RObject::getCustomPropertyTypeIds() const {
+    QSet<RPropertyTypeId> ret;
 
     QMap<QString, QVariantMap>::const_iterator it;
     for (it=customProperties.begin(); it!=customProperties.end(); it++) {

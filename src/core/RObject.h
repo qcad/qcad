@@ -125,6 +125,7 @@ public:
     virtual void setUndone(bool on);
 
     virtual QSet<RPropertyTypeId> getPropertyTypeIds() const;
+    virtual QSet<RPropertyTypeId> getCustomPropertyTypeIds() const;
 
     /**
      * \return The value and attributes of the given property or an invalid

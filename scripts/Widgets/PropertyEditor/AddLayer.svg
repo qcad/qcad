@@ -1,4 +1,65 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<path fill="#f00" stroke="#000" stroke-linecap="square" color="#000" stroke-width="14.311" d="m232.0625,72c-.0324,0-.0625,.0171-.0625,.0312v143.9688h-143.9688c-.0141,0-.0312,.0301-.0312,.0625v63.875c0,.0324 .0171,.0625 .0312,.0625h143.9688v143.9688c0,.0141 .0301,.0312 .0625,.0312h63.875c.0324,0 .0625-.0171 .0625-.0312v-143.9688h143.9688c.0141,0 .0312-.0301 .0312-.0625v-63.875c0-.0324-.0171-.0625-.0312-.0625h-143.9688v-143.9688c0-.0141-.0301-.0312-.0625-.0312h-63.875z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="AddCustomProperty.svg">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1981"
+     inkscape:window-height="1176"
+     id="namedview8"
+     showgrid="true"
+     inkscape:zoom="0.65186406"
+     inkscape:cx="159.45763"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2987"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="16px"
+       spacingy="16px" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4" />
+  <path
+     style="fill:#ff0000;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     d="m 216,72 0,144 -144,0 0,80 144,0 0,144 80,0 0,-144 144,0 0,-80 -144,0 0,-144 z"
+     id="path2993"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccccccccccc" />
 </svg>
