@@ -26,11 +26,12 @@ function ShowReadme(guiAction) {
 }
 
 ShowReadme.prototype = new Help();
+ShowReadme.includeBasePath = includeBasePath;
 
 ShowReadme.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
-    var formWidget = this.createWidget("scripts/Help/ShowReadme/ShowReadme.ui");
+    var formWidget = this.createWidget(ShowReadme.includeBasePath + "/ShowReadmeDialog.ui");
 
     var dontShow = formWidget.findChild("DontShowOnStartup");
     dontShow.checked = !RSettings.getBoolValue("Start/ShowReadme", true);

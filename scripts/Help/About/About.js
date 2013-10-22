@@ -30,7 +30,7 @@ About.prototype = new Help();
 About.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
-    var formWidget = this.createWidget("About.ui");
+    var formWidget = this.createWidget("AboutDialog.ui");
 
     this.head = "<head>\n"
          + "<style type='text/css'>\n"

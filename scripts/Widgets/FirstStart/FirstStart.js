@@ -29,7 +29,7 @@ FirstStart.prototype.showDialog = function() {
     var code;
     
     this.path = "scripts/Widgets/FirstStart";
-    var formWidget = WidgetFactory.createWidget(this.path, "FirstStart.ui", null);
+    var formWidget = WidgetFactory.createWidget(this.path, "FirstStartDialog.ui", null);
 
     var pathFi = new QFileInfo(this.path);
     formWidget.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
