@@ -106,8 +106,8 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../About.ui" line="+81"/>
-        <source>About QCAD</source>
+        <location filename="../AboutDialog.ui" line="+81"/>
+        <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

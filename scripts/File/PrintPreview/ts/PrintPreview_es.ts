@@ -19,7 +19,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+133"/>
+        <location filename="../PrintPreview.js" line="+142"/>
         <source>Drag to move paper</source>
         <translation>Arrastre para mover el papel</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Terminar</translation>
     </message>
     <message>
-        <location line="+360"/>
+        <location line="+368"/>
         <source>Export to PDF</source>
         <translation>Exportar a PDF</translation>
     </message>

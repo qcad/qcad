@@ -4,7 +4,7 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="+14"/>
+        <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Añadir propiedad personalizada</translation>
@@ -20,22 +20,31 @@ Nombre de capa:</translatorcomment>
     </message>
     <message>
         <location line="+10"/>
+        <source>Value:</source>
+        <translation>Valor:</translation>
+    </message>
+    <message>
         <source>Type:</source>
         <translatorcomment>--exact match--
 --file: es.po--
 Tipo de línea:</translatorcomment>
-        <translation>Tipo:</translation>
+        <translation type="obsolete">Tipo:</translation>
     </message>
 </context>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+346"/>
+        <location filename="../PropertyEditor.js" line="+340"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+266"/>
+        <source>Add custom property to selected objects</source>
+        <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
@@ -66,7 +75,7 @@ Tipo de línea:</translatorcomment>
         <translation>Medio</translation>
     </message>
     <message>
-        <location line="-484"/>
+        <location line="-479"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -81,7 +90,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+130"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -109,7 +118,12 @@ Valor indexado</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+46"/>
+        <source>Remove this property from selected objects</source>
+        <translation>Retire esta propiedad de los objetos seleccionados</translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -120,13 +134,12 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Añadir propiedad personalizada</translation>
+        <translation type="obsolete">Añadir propiedad personalizada</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+76"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -170,7 +183,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+300"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>

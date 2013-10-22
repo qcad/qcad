@@ -4,7 +4,7 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="+14"/>
+        <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translation>カスタムプロパティを追加</translation>
     </message>
@@ -15,8 +15,8 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Type:</source>
-        <translation></translation>
+        <source>Value:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -32,7 +32,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+130"/>
         <source>No Selection</source>
         <translation></translation>
     </message>
@@ -57,14 +57,23 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+46"/>
+        <source>Remove this property from selected objects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>All</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Add Custom Property</source>
-        <translation>カスタムプロパティを追加</translation>
+        <translation type="obsolete">カスタムプロパティを追加</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Add custom property to selected objects</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+52"/>
@@ -133,7 +142,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+300"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>プロパティエディタ</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>DraftMode</name>
     <message>
-        <location filename="../DraftMode.js" line="+74"/>
+        <location filename="../DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Modalità &amp;bozza</translation>

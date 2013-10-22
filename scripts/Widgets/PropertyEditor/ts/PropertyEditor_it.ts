@@ -4,7 +4,7 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="+14"/>
+        <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aggiungi proprietà personalizzata</translation>
@@ -16,19 +16,28 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Value:</source>
+        <translation>Valore:</translation>
+    </message>
+    <message>
         <source>Type:</source>
-        <translation>Tipo:</translation>
+        <translation type="obsolete">Tipo:</translation>
     </message>
 </context>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+346"/>
+        <location filename="../PropertyEditor.js" line="+340"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+266"/>
+        <source>Add custom property to selected objects</source>
+        <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>
@@ -59,7 +68,7 @@
         <translation>Medio</translation>
     </message>
     <message>
-        <location line="-484"/>
+        <location line="-479"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -74,7 +83,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+130"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -97,18 +106,22 @@ Nessuna selezione</translatorcomment>
         <translation>Indice</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+46"/>
+        <source>Remove this property from selected objects</source>
+        <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>All</source>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Aggiungi proprietà personalizzata</translation>
+        <translation type="obsolete">Aggiungi proprietà personalizzata</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+76"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -152,7 +165,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+300"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor delle proprietà</translation>

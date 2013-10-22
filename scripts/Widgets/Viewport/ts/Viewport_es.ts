@@ -150,7 +150,7 @@ Selecciona entidades solas</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+314"/>
+        <location filename="../Viewport.js" line="+320"/>
         <source>Grid</source>
         <translation>Rejilla</translation>
     </message>

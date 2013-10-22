@@ -4,9 +4,9 @@
 <context>
     <name>LinetypeMode</name>
     <message>
-        <location filename="../LinetypeMode.js" line="86"/>
+        <location filename="../LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tipos de línea base de la pantalla</translation>
     </message>
 </context>
 </TS>

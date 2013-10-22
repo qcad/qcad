@@ -14,7 +14,7 @@
         <translation>Kreis, Bogen oder Ellipse wählen</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+139"/>
         <source>No tangent possible</source>
         <translation>Keine Tangente möglich</translation>
     </message>

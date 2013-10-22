@@ -4,7 +4,7 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="+14"/>
+        <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Dodaj niestandardowy obiekt</translation>
@@ -20,12 +20,16 @@ Nazwa warstwy:</translatorcomment>
     </message>
     <message>
         <location line="+10"/>
+        <source>Value:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Type:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Typ linii:
 &amp;Typ pola:</translatorcomment>
-        <translation type="unfinished">Typ:</translation>
+        <translation type="obsolete">Typ:</translation>
     </message>
 </context>
 <context>
@@ -46,7 +50,7 @@ Wersja: </translatorcomment>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+130"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No Selection</translation>
@@ -85,7 +89,12 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
         <translation type="unfinished">Indeks</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+46"/>
+        <source>Remove this property from selected objects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -96,10 +105,14 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Dodaj niestandardowy obiekt</translation>
+        <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Add custom property to selected objects</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+52"/>
@@ -220,7 +233,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+300"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

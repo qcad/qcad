@@ -34,29 +34,24 @@
         <translation>大きな十字線を表示</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Grid</source>
-        <translation>グリッド</translation>
+        <translation type="obsolete">グリッド</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Automatically scale grid</source>
-        <translation>自動スケールグリッド</translation>
+        <translation type="obsolete">自動スケールグリッド</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>ソリッドグリッドライン</translation>
+        <translation type="obsolete">ソリッドグリッドライン</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation>最小グリッド間隔（ピクセル）:</translation>
+        <translation type="obsolete">最小グリッド間隔（ピクセル）:</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Automatically scale meta grid</source>
-        <translation>自動スケールメタグリッド</translation>
+        <translation type="obsolete">自動スケールメタグリッド</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -85,6 +80,26 @@
     </message>
     <message>
         <location line="+36"/>
+        <source>Linetypes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Pattern scale for lineweight 0.00mm:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Automatically use screen based linetypes in model view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch linetypes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Performance</source>
         <translation>パフォーマンス</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="+14"/>
+        <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Adicionar propriedade personalizada</translation>
@@ -21,11 +21,15 @@ Nome da Camada:</translatorcomment>
     </message>
     <message>
         <location line="+10"/>
+        <source>Value:</source>
+        <translation>Valor:</translation>
+    </message>
+    <message>
         <source>Type:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Tipo de linha:</translatorcomment>
-        <translation>Tipo:</translation>
+        <translation type="obsolete">Tipo:</translation>
     </message>
 </context>
 <context>
@@ -46,7 +50,7 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+130"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não seleção</translation>
@@ -84,7 +88,12 @@ Trocar para a próxima camada</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+46"/>
+        <source>Remove this property from selected objects</source>
+        <translation>Remover esta propriedade a partir de objetos selecionados</translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -94,10 +103,14 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Adicionar propriedade personalizada</translation>
+        <translation type="obsolete">Adicionar propriedade personalizada</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Add custom property to selected objects</source>
+        <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -229,7 +242,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+300"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

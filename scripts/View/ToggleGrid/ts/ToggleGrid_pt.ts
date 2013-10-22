@@ -4,7 +4,7 @@
 <context>
     <name>ToggleGrid</name>
     <message>
-        <location filename="../ToggleGrid.js" line="+108"/>
+        <location filename="../ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
         <translatorcomment>--exact match--
 --file: SnapGrid_pt.ts--

@@ -28,5 +28,9 @@
         <source>Global Linetype Scale:</source>
         <translation>L&apos;échelle globale de type de ligne :</translation>
     </message>
+    <message>
+        <source>Use screen based line patterns for model space view</source>
+        <translation type="obsolete">Utilisez motifs de ligne à base d&apos;écran pour vue de l&apos;espace</translation>
+    </message>
 </context>
 </TS>

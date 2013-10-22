@@ -31,7 +31,7 @@ Sem Título</translatorcomment>
         <translation type="obsolete">Sem título %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+91"/>
+        <location filename="../NewFile.js" line="+120"/>
         <source>Loading...</source>
         <translation>Carregando...</translation>
     </message>
@@ -71,17 +71,17 @@ Sem Título</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+92"/>
         <source>Untitled %1</source>
         <translation>Sem título %1</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+10"/>
         <source>read-only</source>
         <translation>Apenas leitura</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+41"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Você deseja salvar as alterações feitas no&lt;br&gt;documento &apos;%1&apos;?</translation>

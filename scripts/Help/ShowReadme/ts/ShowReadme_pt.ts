@@ -4,7 +4,7 @@
 <context>
     <name>ReadmeDialog</name>
     <message>
-        <location filename="../ShowReadme.ui" line="+14"/>
+        <location filename="../ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
         <translation>Readme</translation>
     </message>
@@ -17,7 +17,7 @@
 <context>
     <name>ShowReadme</name>
     <message>
-        <location filename="../ShowReadme.js" line="+45"/>
+        <location filename="../ShowReadme.js" line="+46"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arquivo &apos;%1&apos; não existe.</translation>

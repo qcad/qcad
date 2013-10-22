@@ -105,10 +105,14 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../About.ui" line="+81"/>
         <source>About QCAD</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Sobre o QCAD</translation>
+        <translation type="obsolete">Sobre o QCAD</translation>
+    </message>
+    <message>
+        <location filename="../AboutDialog.ui" line="+81"/>
+        <source>About</source>
+        <translation>Sobre</translation>
     </message>
     <message>
         <location line="+16"/>

@@ -165,7 +165,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+931"/>
+        <location filename="../WidgetFactory.js" line="+934"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
@@ -238,7 +238,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+298"/>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
         <translation>アドオンの翻訳をロード中...</translation>
     </message>

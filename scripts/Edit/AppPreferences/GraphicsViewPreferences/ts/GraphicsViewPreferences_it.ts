@@ -34,29 +34,24 @@
         <translation>Mostra reticolo grande</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Grid</source>
-        <translation>Griglia</translation>
+        <translation type="obsolete">Griglia</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Automatically scale grid</source>
-        <translation>Scala automaticamente la griglia</translation>
+        <translation type="obsolete">Scala automaticamente la griglia</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Linne griglia spesse</translation>
+        <translation type="obsolete">Linne griglia spesse</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation>Spaziatura griglia minima (px):</translation>
+        <translation type="obsolete">Spaziatura griglia minima (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Automatically scale meta grid</source>
-        <translation>Scala automaticamente la griglia meta</translation>
+        <translation type="obsolete">Scala automaticamente la griglia meta</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -85,6 +80,26 @@
     </message>
     <message>
         <location line="+36"/>
+        <source>Linetypes</source>
+        <translation>Tipi di linea</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Pattern scale for lineweight 0.00mm:</source>
+        <translation>Scala del modello per lo spessore di linea 0,00mm:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Automatically use screen based linetypes in model view</source>
+        <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch linetypes</source>
+        <translation>Regolare automaticamente i tipi di linea</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Performance</source>
         <translation>Performance</translation>
     </message>

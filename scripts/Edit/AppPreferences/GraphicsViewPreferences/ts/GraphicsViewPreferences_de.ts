@@ -34,29 +34,24 @@
         <translation>Grosses Fadenkreuz</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Grid</source>
-        <translation>Raster</translation>
+        <translation type="obsolete">Raster</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Automatically scale grid</source>
-        <translation>Raster automatisch skalieren</translation>
+        <translation type="obsolete">Raster automatisch skalieren</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Durchgezogene Rasterlinien</translation>
+        <translation type="obsolete">Durchgezogene Rasterlinien</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation>Minimaler Rasterabstand (pix):</translation>
+        <translation type="obsolete">Minimaler Rasterabstand (pix):</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Automatically scale meta grid</source>
-        <translation>Metaraster automatisch skalieren</translation>
+        <translation type="obsolete">Metaraster automatisch skalieren</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -85,6 +80,26 @@
     </message>
     <message>
         <location line="+36"/>
+        <source>Linetypes</source>
+        <translation>Linientypen</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Pattern scale for lineweight 0.00mm:</source>
+        <translation>Linientypskalierung für Linienstärke 0.00mm:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Automatically use screen based linetypes in model view</source>
+        <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch linetypes</source>
+        <translation>Linientypen automatisch Umschalten</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Performance</source>
         <translation>Leistung</translation>
     </message>

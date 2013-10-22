@@ -4,7 +4,7 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="+14"/>
+        <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translation>Benutzerdefinierte Eigenschaft hinzufügen</translation>
     </message>
@@ -15,8 +15,12 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Value:</source>
+        <translation>Wert:</translation>
+    </message>
+    <message>
         <source>Type:</source>
-        <translation>Typ:</translation>
+        <translation type="obsolete">Typ:</translation>
     </message>
 </context>
 <context>
@@ -32,7 +36,7 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+130"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
@@ -52,17 +56,21 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+46"/>
+        <source>Remove this property from selected objects</source>
+        <translation>Eigenschaft von ausgewählten Objekten entfernen</translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Add Custom Property</source>
-        <translation>Benutzerdefiniertes Property hinzufügen</translation>
+        <translation type="obsolete">Benutzerdefiniertes Property hinzufügen</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+75"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
@@ -98,7 +106,12 @@
         <translation>Mittelpunkt</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-62"/>
+        <source>Add custom property to selected objects</source>
+        <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
+    </message>
+    <message>
+        <location line="+62"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
@@ -132,7 +145,7 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+300"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Eigenschaften Editor</translation>
@@ -178,7 +191,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-854"/>
+        <location filename="../PropertyEditor.js" line="-844"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

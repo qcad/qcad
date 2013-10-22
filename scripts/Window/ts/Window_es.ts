@@ -4,7 +4,7 @@
 <context>
     <name>Window</name>
     <message>
-        <location filename="../Window.js" line="+103"/>
+        <location filename="../Window.js" line="+107"/>
         <source>&amp;Window</source>
         <translation>&amp;Ventana</translation>
     </message>

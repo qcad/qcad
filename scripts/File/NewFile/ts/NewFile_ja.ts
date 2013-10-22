@@ -20,7 +20,7 @@
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../NewFile.js" line="+91"/>
+        <location filename="../NewFile.js" line="+120"/>
         <source>Loading...</source>
         <translation>読込中...</translation>
     </message>
@@ -60,17 +60,17 @@
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+92"/>
         <source>Untitled %1</source>
         <translation>無題%1</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+10"/>
         <source>read-only</source>
         <translation>読み込み専用</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+41"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>このドキュメントへの変更を保存しますか？&lt;br&gt;&apos;%1&apos;</translation>
     </message>

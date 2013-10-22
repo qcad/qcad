@@ -49,16 +49,6 @@
     </layout>
    </item>
    <item>
-    <widget class="QCheckBox" name="ScreenBasedPatterns">
-     <property name="text">
-      <string>Use screen based line patterns for model space view</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>

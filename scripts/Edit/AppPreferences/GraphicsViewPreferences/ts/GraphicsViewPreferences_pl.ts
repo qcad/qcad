@@ -48,43 +48,34 @@ Pokazuj duże krzyżyki</translatorcomment>
         <translation type="unfinished">Pokazuj duże krzyżyki</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
 &amp;Siatka
 Siatka
 Pozycjonowanie siatki</translatorcomment>
-        <translation type="unfinished">Siatka</translation>
+        <translation type="obsolete">Siatka</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Automatically scale grid</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Automatyczne skalowanie siatki</translatorcomment>
-        <translation type="unfinished">Automatyczne skalowanie siatki</translation>
+        <translation type="obsolete">Automatyczne skalowanie siatki</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Solid grid lines</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Ciągłe linie siatki</translatorcomment>
-        <translation type="unfinished">Ciągłe linie siatki</translation>
+        <translation type="obsolete">Ciągłe linie siatki</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Minimalny odstęp siatki (piksele):</translatorcomment>
-        <translation type="unfinished">Minimalny odstęp siatki (piksele):</translation>
-    </message>
-    <message>
-        <location line="+58"/>
-        <source>Automatically scale meta grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Minimalny odstęp siatki (piksele):</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -121,6 +112,26 @@ Autozoom
     </message>
     <message>
         <location line="+36"/>
+        <source>Linetypes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Pattern scale for lineweight 0.00mm:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Automatically use screen based linetypes in model view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch linetypes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Performance</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wydajność</translation>

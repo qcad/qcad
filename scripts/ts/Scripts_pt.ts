@@ -211,7 +211,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+931"/>
+        <location filename="../WidgetFactory.js" line="+934"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
@@ -349,7 +349,7 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+298"/>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
         <translation>Carregar add-on traduções...</translation>
     </message>

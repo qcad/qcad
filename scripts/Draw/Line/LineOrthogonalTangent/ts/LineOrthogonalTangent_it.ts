@@ -14,7 +14,7 @@
         <translation>Scegli un cerchio, un arco o un&apos;ellisse</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+139"/>
         <source>No tangent possible</source>
         <translation>Nessuna tangente è possibile</translation>
     </message>

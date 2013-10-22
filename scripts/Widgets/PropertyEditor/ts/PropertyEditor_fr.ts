@@ -4,7 +4,7 @@
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
-        <location filename="../AddCustomProperty.ui" line="+14"/>
+        <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ajouter une propriété personnalisée</translation>
@@ -16,14 +16,18 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Value:</source>
+        <translation>Valeur :</translation>
+    </message>
+    <message>
         <source>Type:</source>
-        <translation>Type : </translation>
+        <translation type="obsolete">Type : </translation>
     </message>
 </context>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+346"/>
+        <location filename="../PropertyEditor.js" line="+340"/>
         <source>Geometry</source>
         <translation>Géométrie</translation>
     </message>
@@ -38,7 +42,17 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+46"/>
+        <source>Remove this property from selected objects</source>
+        <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Add custom property to selected objects</source>
+        <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
@@ -69,7 +83,7 @@
         <translation>Milieu</translation>
     </message>
     <message>
-        <location line="-484"/>
+        <location line="-479"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -84,7 +98,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation> :</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+130"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aucune sélection</translation>
@@ -95,7 +109,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+229"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -104,13 +118,12 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
         <translation>Tous</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ajouter une propriété personnalisée</translation>
+        <translation type="obsolete">Ajouter une propriété personnalisée</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+76"/>
         <source>Fit</source>
         <translatorcomment>--google--
 Ajuster à la page
@@ -162,7 +175,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+300"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Éditeur de propriétés</translation>

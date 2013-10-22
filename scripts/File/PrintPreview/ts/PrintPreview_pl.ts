@@ -32,7 +32,7 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+133"/>
+        <location filename="../PrintPreview.js" line="+142"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przeciągnij, aby przesunąć papier</translation>
@@ -48,7 +48,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location line="+360"/>
+        <location line="+368"/>
         <source>Export to PDF</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

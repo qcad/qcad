@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+139"/>
         <source>No tangent possible</source>
         <translation type="unfinished"></translation>
     </message>

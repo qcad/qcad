@@ -191,7 +191,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+931"/>
+        <location filename="../WidgetFactory.js" line="+934"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
@@ -289,7 +289,7 @@
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+298"/>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>
