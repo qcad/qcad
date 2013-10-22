@@ -46,8 +46,37 @@ function NewFile(guiAction) {
 }
 
 NewFile.prototype = new File();
-
 NewFile.includeBasePath = includeBasePath;
+
+// list of actions to trigger after opening file:
+NewFile.postOpenActions = [];
+
+NewFile.getScriptFileName = function(scriptFile) {
+    if (scriptFile.startsWith(":/")) {
+        return ":" + scriptFile.mid(2);
+    }
+    return scriptFile;
+};
+
+/**
+ * Adds the given script file as action to be triggered after a document
+ * has been opened.
+ */
+NewFile.addPostOpenAction = function(scriptFile) {
+    var sf = NewFile.getScriptFileName(scriptFile);
+    if (!NewFile.postOpenActions.contains(sf)) {
+        NewFile.postOpenActions.push(sf);
+    }
+};
+
+/**
+ * Removes the given script file as action to be triggered after a document
+ * has been opened.
+ */
+NewFile.removePostOpenAction = function(scriptFile) {
+    var sf = NewFile.getScriptFileName(scriptFile)
+    NewFile.postOpenActions.remove(sf);
+};
 
 /**
  * \param isOpen True if new is called from a file open function.
@@ -186,6 +215,17 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     appWin.subWindowActivated(mdiChild);
     mdiChild.updatesEnabled = true;
     Viewport.updateViewports(viewports);
+
+    if (isOpen) {
+        for (var k=0; k<NewFile.postOpenActions.length; k++) {
+            if (!isNull(NewFile.postOpenActions[k])) {
+                var action = RGuiAction.getByScriptFile(NewFile.postOpenActions[k]);
+                if (!isNull(action)) {
+                    action.slotTrigger();
+                }
+            }
+        }
+    }
 
     return mdiChild;
 };
