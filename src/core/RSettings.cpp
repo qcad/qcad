@@ -500,8 +500,9 @@ QString RSettings::getOSVersion() {
         return "Mac OS X 10.7";
     case QSysInfo::MV_10_8:
         return "Mac OS X 10.8";
+    default:
     case QSysInfo::MV_Unknown:
-        return "Unknown / Unsupported";
+        return "Mac OS X >= 10.9";
     }
 #else
     return "Unknown";
