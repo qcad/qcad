@@ -1382,6 +1382,14 @@ function stringToCoordinate(relativeZero, str) {
  *         return the dde point.
  */
 function stringToDirectDistanceEntry(relativeZero, cursorPosition, str) {
+    var cartCoordSep =
+        RSettings.getStringValue("Input/CartesianCoordinateSeparator", ',');
+    var polCoordSep =
+        RSettings.getStringValue("Input/PolarCoordinateSeparator", '<');
+    if (str.contains(cartCoordSep) || str.contains(polCoordSep)) {
+        return undefined;
+    }
+
     var value = RMath.eval(str);
     if (isNumber(value)) {
         var point1 = relativeZero;

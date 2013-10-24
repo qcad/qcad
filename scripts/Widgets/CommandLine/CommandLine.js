@@ -165,7 +165,6 @@ CommandLine.init = function(basePath) {
     leCommand.commandConfirmed.connect(function(command) {
         // enter with empty input: repeat last command:
         if (command === "") {
-            debugger;
             var last = leCommand.getLastCommand();
             if (last !== "") {
                 arguments.callee(last);

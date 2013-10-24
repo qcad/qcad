@@ -550,7 +550,7 @@ int RSettings::getSnapRange() {
 
 int RSettings::getZeroWeightWeight() {
     if (zeroWeightWeight==-1) {
-        zeroWeightWeight = getValue("GraphicsView/ZeroWeightWeight", QVariant(0)).toInt();
+        zeroWeightWeight = getValue("GraphicsView/ZeroWeightWeight", QVariant(100)).toInt();
     }
     return zeroWeightWeight;
 }
