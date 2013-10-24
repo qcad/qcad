@@ -756,7 +756,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
 
     double length = line.getLength();
 
-    if (length>1e100) {
+    if (length>1e100 || length<RS::PointTolerance) {
         return;
     }
 
@@ -771,10 +771,12 @@ void RExporter::exportLine(const RLine& line, double offset) {
     }
 
     p.scale(getPatternFactor());
+    double patternLength = p.getPatternLength();
+    
 
     // avoid huge number of small segments due to very fine 
     // pattern or long lines:
-    if (length / p.getPatternLength() > 5000) {
+    if (patternLength<RS::PointTolerance || length / patternLength > 5000) {
         exportLineSegment(line);
         return;
     }
@@ -793,8 +795,8 @@ void RExporter::exportLine(const RLine& line, double offset) {
         optimizeEnds = true;
     }
     else {
-        double num = ceil(offset / p.getPatternLength());
-        offset -= num * p.getPatternLength();
+        double num = ceil(offset / patternLength);
+        offset -= num * patternLength;
     }
 
     bool done = false;
@@ -896,10 +898,11 @@ void RExporter::exportArc(const RArc& arc, double offset) {
     p.scale(getPatternFactor());
 
     double length = normalArc.getLength();
+    double patternLength = p.getPatternLength();
 
     // avoid huge number of small segments due to very fine 
     // pattern or long lines:
-    if (length / p.getPatternLength() > 5000) {
+    if (patternLength<RS::PointTolerance || length / patternLength > 5000) {
         exportArcSegment(arc);
         return;
     }
@@ -1258,13 +1261,18 @@ double RExporter::getPatternOffset(double length,
 
 double RExporter::getPatternOffset(double length,
         const RLinetypePattern& pattern, int index, double* gap) {
+    double patternLength = pattern.getPatternLength();
+    if (patternLength<RS::PointTolerance) {
+        return 0.0;
+    }
+
     double po = fabs(pattern.getDashLengthAt(index)) / 2;
     for (int i = index - 1; i >= 0; --i) {
         po += fabs(pattern.getDashLengthAt(i));
     }
     double offset = length / 2 - po;
-    int m = (int) RMath::trunc(offset / (pattern.getPatternLength()));
-    offset -= (m + 1) * pattern.getPatternLength();
+    int m = (int) RMath::trunc(offset / patternLength);
+    offset -= (m + 1) * patternLength;
     if (gap != NULL) {
         *gap = pattern.getDelta(-offset);
     }
@@ -1283,7 +1291,11 @@ double RExporter::getPatternFactor() {
 
     if (factor < 1e-6) {
         // line pattern factor for lines of width 0:
-        return RUnit::convert(RSettings::getZeroWeightWeight()/100.0, RS::Millimeter, document->getUnit()) * ltscale;
+        int zww = RSettings::getZeroWeightWeight();
+        if (zww<=0) {
+            zww = 100;
+        }
+        return RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit()) * ltscale;
     }
 
     // LTSCALE might be zero:
