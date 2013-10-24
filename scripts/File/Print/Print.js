@@ -167,17 +167,21 @@ Print.prototype.print = function(pdfFile) {
 
     this.view.setPrintPointSize(new RVector(1.0/printerFactor.x, 1.0/printerFactor.y));
 
+    var scale = Print.getScale(this.document);
+    var offset = Print.getOffset(this.document);
+
+    //var ex = this.scene.getRExporter();
+    var previousPixelSizeHint = this.scene.getPixelSizeHint();
+
     var widthInDrawingUnits = RUnit.convert(widthInMM, RS.Millimeter, this.document.getUnit());
     if (printer.paperRect().width()>0) {
-        var e = this.scene.getRExporter();
-        e.setPixelSizeHint(1.0/printer.paperRect().width()*widthInDrawingUnits);
+        var pixelSizeHint = 1.0/printer.paperRect().width()*widthInDrawingUnits;
+        pixelSizeHint = pixelSizeHint / scale;
+        this.scene.setPixelSizeHint(pixelSizeHint);
     }
 
     // iterate through all pages and print the appropriate area
     var first = true;
-
-    var scale = Print.getScale(this.document);
-    var offset = Print.getOffset(this.document);
 
     var pages = Print.getPages(this.document);
     for (var i = 0; i < pages.length; ++i) {
@@ -252,6 +256,8 @@ Print.prototype.print = function(pdfFile) {
 
     painter.end();
     printer.destroy();
+
+    this.scene.setPixelSizeHint(previousPixelSizeHint);
 
     this.scene.setScreenBasedLinetypes(screenBasedLinetypes);
     this.scene.setDraftMode(draftMode);

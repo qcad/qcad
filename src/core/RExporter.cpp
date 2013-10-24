@@ -1015,8 +1015,13 @@ void RExporter::exportArcSegment(const RArc& arc) {
         if (aStep>1.0) {
             aStep = 1.0;
         }
-        if (aStep<0.001) {
-            aStep = 0.001;
+        double minAStep = 2*M_PI/360.0;
+        if (!draftMode) {
+            minAStep /= 4;
+        }
+
+        if (aStep<minAStep) {
+            aStep = minAStep;
         }
     }
     RVector prev = arc.getStartPoint();
