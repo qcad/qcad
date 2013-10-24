@@ -170,7 +170,6 @@ Print.prototype.print = function(pdfFile) {
     var scale = Print.getScale(this.document);
     var offset = Print.getOffset(this.document);
 
-    //var ex = this.scene.getRExporter();
     var previousPixelSizeHint = this.scene.getPixelSizeHint();
 
     var widthInDrawingUnits = RUnit.convert(widthInMM, RS.Millimeter, this.document.getUnit());
