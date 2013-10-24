@@ -545,7 +545,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                         }
 
                         // 'remove custom property' button:
-                        if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom)) {
+                        if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom) && group===RSettings.getAppId()) {
                             var removeCustomPropertyButton = new QToolButton(this.widget);
                             removeCustomPropertyButton.icon = new QIcon(this.basePath + "/RemoveCustomProperty.svg");
                             removeCustomPropertyButton.iconSize = new QSize(12,12);
