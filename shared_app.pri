@@ -40,7 +40,7 @@ linux-g++ {
     LIBS += -lGLU
 }
 
-freebsd-g++ {
+freebsd-* {
     LIBS += -lGLU -lexecinfo
 }
 
