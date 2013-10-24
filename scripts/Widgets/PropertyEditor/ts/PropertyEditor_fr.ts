@@ -42,7 +42,7 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+57"/>
         <source>Remove this property from selected objects</source>
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
@@ -83,7 +83,7 @@
         <translation>Milieu</translation>
     </message>
     <message>
-        <location line="-479"/>
+        <location line="-490"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -109,7 +109,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+240"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal

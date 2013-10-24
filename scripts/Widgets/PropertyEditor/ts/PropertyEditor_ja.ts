@@ -57,7 +57,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+57"/>
         <source>Remove this property from selected objects</source>
         <translation type="unfinished"></translation>
     </message>

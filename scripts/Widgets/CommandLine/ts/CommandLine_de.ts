@@ -4,7 +4,8 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+77"/>
+        <location filename="../CommandLine.js" line="+29"/>
+        <location line="+48"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Kommandozeile</translation>
@@ -27,7 +28,7 @@
         <translation type="obsolete">Ungültige Koordinate &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="+159"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Unbekanntes Kommando oder ungültige Koordinate oder Wert: &apos;%1&apos;</translation>
     </message>
@@ -60,7 +61,12 @@
         <translation type="obsolete">Versuch Objekte auf gesperrtem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
     <message>
-        <location line="-104"/>
+        <location line="-273"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
+    </message>
+    <message>
+        <location line="+169"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Ungültige Koordinate oder Distanz &apos;%1&apos;.</translation>
     </message>

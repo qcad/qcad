@@ -4,7 +4,8 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+77"/>
+        <location filename="../CommandLine.js" line="+29"/>
+        <location line="+48"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
@@ -34,7 +35,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Coordenar inválido &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="+159"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconhecido ou coordenadas ou valor inválido: &apos;%1&apos;</translation>
     </message>
@@ -68,7 +69,12 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="-104"/>
+        <location line="-273"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
+    </message>
+    <message>
+        <location line="+169"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Coordenar ou distância inválido &apos;%1&apos;.</translation>
     </message>

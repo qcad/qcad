@@ -11,7 +11,8 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Command Line</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="-29"/>
+        <location line="+48"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
@@ -26,7 +27,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+140"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieznane polecenie lub nieprawidłowy współrzędnych lub wartość:&apos;&amp;#39;</translation>
@@ -60,7 +61,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-104"/>
+        <location line="-273"/>
+        <source>Widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+169"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>

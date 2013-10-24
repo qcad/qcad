@@ -9,7 +9,8 @@
         <translation>&amp;C コマンドライン</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="-29"/>
+        <location line="+48"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>コマンドライン</translation>
@@ -19,7 +20,7 @@
         <translation type="obsolete">無効な座標 &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+140"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>不明なコマンドまたは無効な座標もしくは値: &apos;%1&apos;</translation>
     </message>
@@ -48,7 +49,12 @@
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-104"/>
+        <location line="-273"/>
+        <source>Widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+169"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
