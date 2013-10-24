@@ -279,7 +279,14 @@ void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
     // add new painter path with current entity ID:
     RPainterPath p;
     p.setZLevel(0);
-    p.setPen(currentPen);
+    if (draftMode || screenBasedLinetypes) {
+        QPen draftPen = currentPen;
+        draftPen.setWidth(0);
+        p.setPen(draftPen);
+    }
+    else {
+        p.setPen(currentPen);
+    }
     p.setBrush(currentBrush);
     p.moveTo(triangle.corner[0]);
     p.lineTo(triangle.corner[1]);
@@ -287,12 +294,7 @@ void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
     p.lineTo(triangle.corner[0]);
 
     if (!exportToPreview) {
-        if (draftMode) {
-            addPath(getBlockRefOrEntity()->getId(), p, true);
-        }
-        else {
-            addPath(getBlockRefOrEntity()->getId(), p, false);
-        }
+        addPath(getBlockRefOrEntity()->getId(), p, draftMode);
     } else {
         addToPreview(p);
     }

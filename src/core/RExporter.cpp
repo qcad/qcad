@@ -172,15 +172,9 @@ void RExporter::setPen(const QPen& pen) {
 QPen RExporter::getPen(const RPainterPath& path) {
     QPen pen = currentPen;
 
-    if (draftMode) {
+    if (draftMode || screenBasedLinetypes) {
         pen.setWidth(0);
     }
-
-//    if (screenBasedLinetypes) {
-//        // TODO:
-//        qDebug() << "pattern: " << currentLinetypePattern;
-//        pen.setDashPattern(QVector<qreal>() << 12 << 6);
-//    }
 
     if (path.isFixedPenColor()) {
         // pen is fixed color (text color given):
