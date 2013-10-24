@@ -26,7 +26,7 @@ function CommandLine(guiAction) {
 }
 
 CommandLine.getPreferencesCategory = function() {
-    return ["Widgets", "Command Line"];
+    return [ qsTr("Widgets"), qsTr("Command Line") ];
 };
 
 CommandLine.prototype = new Widgets();

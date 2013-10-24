@@ -529,7 +529,18 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                 if (!onlyChanges) {
                     if (!isNull(controls)) {
                         row = gridLayout.rowCount();
-                        var label = new QLabel(RSettings.translate("REntity", title) + this.colon, groupBox);
+                        var localTitle = title;
+                        if (propertyTypeId.isCustom() && group!==RSettings.getAppId()) {
+                            var pos = title.indexOf("_");
+                            if (pos!==-1) {
+                                localTitle = title.mid(pos+1);
+                            }
+                        }
+                        else {
+                            localTitle = RSettings.translate("REntity", title);
+                        }
+
+                        var label = new QLabel(localTitle + this.colon, groupBox);
                         label.alignment = Qt.AlignRight | Qt.AlignVCenter;
 
                         gridLayout.addWidget(label, row,0);
@@ -545,7 +556,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                         }
 
                         // 'remove custom property' button:
-                        if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom)) {
+                        if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom) && group===RSettings.getAppId()) {
                             var removeCustomPropertyButton = new QToolButton(this.widget);
                             removeCustomPropertyButton.icon = new QIcon(this.basePath + "/RemoveCustomProperty.svg");
                             removeCustomPropertyButton.iconSize = new QSize(12,12);

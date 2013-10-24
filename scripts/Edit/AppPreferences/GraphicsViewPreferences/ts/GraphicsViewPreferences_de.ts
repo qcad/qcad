@@ -96,7 +96,7 @@
     <message>
         <location line="+3"/>
         <source>Auto switch linetypes</source>
-        <translation>Linientypen automatisch Umschalten</translation>
+        <translation>Linientypen automatisch umschalten</translation>
     </message>
     <message>
         <location line="+10"/>
