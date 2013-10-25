@@ -518,7 +518,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
 
                 // don't display any Z values:
                 var controls;
-                if (title==="Z") {
+                if (title==="Z" && !propertyTypeId.isCustom()) {
                     controls = undefined;
                 }
                 else {
