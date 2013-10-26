@@ -171,6 +171,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QMultiMap &lt; QString , QString &gt; &amp;"
         typeName="QMultiMap &lt; QString , QString &gt;"
         name="propertyTitles" isConst="true" />
+        <arg type="bool" typeName="bool" name="customOnly"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
   </class>

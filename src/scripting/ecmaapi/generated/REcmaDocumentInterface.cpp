@@ -145,6 +145,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, disableUpdates, "disableUpdates");
             
+            REcmaHelper::registerFunction(&engine, proto, enableMouseTracking, "enableMouseTracking");
+            
+            REcmaHelper::registerFunction(&engine, proto, disableMouseTracking, "disableMouseTracking");
+            
             REcmaHelper::registerFunction(&engine, proto, updateAllEntities, "updateAllEntities");
             
             REcmaHelper::registerFunction(&engine, proto, regenerateScenes, "regenerateScenes");
@@ -2687,6 +2691,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::disableUpdates", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::enableMouseTracking
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::enableMouseTracking", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::enableMouseTracking";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("enableMouseTracking", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->enableMouseTracking();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.enableMouseTracking().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::enableMouseTracking", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::disableMouseTracking
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::disableMouseTracking", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::disableMouseTracking";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("disableMouseTracking", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->disableMouseTracking();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.disableMouseTracking().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::disableMouseTracking", context, engine);
             return result;
         }
          QScriptValue

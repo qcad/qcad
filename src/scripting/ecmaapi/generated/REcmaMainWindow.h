@@ -45,19 +45,7 @@
         
 
         // methods of secondary base class RMessageHandler:
-        static  QScriptValue
-        handleUserMessage
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        handleUserInfo
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        handleUserWarning
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        handleUserCommand
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;
+        
 
     // properties:
     
@@ -197,6 +185,18 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         quit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleUserMessage
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleUserInfo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleUserWarning
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleUserCommand
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setCommandPrompt

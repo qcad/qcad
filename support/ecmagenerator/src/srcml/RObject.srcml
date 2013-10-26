@@ -399,6 +399,18 @@ dir="./core" filename="RObject.h">
   <name>getPropertyTypeIds</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSet
+    <argument_list>&lt;
+    <argument>
+      <name>RPropertyTypeId</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getCustomPropertyTypeIds</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \return The value and attributes of
   the given property or an invalid * property if this property
   owner has no property with the given ID. */</comment>

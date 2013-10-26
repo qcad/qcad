@@ -296,6 +296,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="enableMouseTracking"
+    cppName="enableMouseTracking" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="disableMouseTracking"
+    cppName="disableMouseTracking" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="updateAllEntities" cppName="updateAllEntities"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -500,6 +500,18 @@ dir="./core" filename="RPropertyEditor.h">
       </argument>&gt;</argument_list></name>&amp;</type>
       <name>propertyTitles</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>customOnly</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl></protected>
   <protected>protected: 
   <comment type="line">//! key / value / attributes</comment>

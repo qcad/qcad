@@ -139,7 +139,8 @@
     
     
       void removeAllButThese(
-                const QMultiMap < QString , QString > & propertyTitles
+                const QMultiMap < QString , QString > & propertyTitles, bool customOnly
+        =  false
             );
         
     

@@ -446,6 +446,22 @@ dir="./entity" filename="RCircleEntity.h">
         </expr>
       </argument>)</argument_list>
     </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getLength</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getLength</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function></public>
   <protected>protected: 
   <function_decl>

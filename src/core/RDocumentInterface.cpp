@@ -70,7 +70,8 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     notifyListeners(true),
     deleting(false),
     cursorOverride(false),
-    keepPreviewOnce(false) {
+    keepPreviewOnce(false),
+    mouseTrackingEnabled(true) {
 }
 
 RDocumentInterface::~RDocumentInterface() {
@@ -481,6 +482,14 @@ void RDocumentInterface::disableUpdates() {
     allowUpdate = false;
 }
 
+void RDocumentInterface::enableMouseTracking() {
+    mouseTrackingEnabled = true;
+}
+
+void RDocumentInterface::disableMouseTracking() {
+    mouseTrackingEnabled = false;
+}
+
 /**
  * Marks all entities with any kind of caching as dirty, so they are
  * regenerated next time regenerate is called.
@@ -606,12 +615,14 @@ void RDocumentInterface::keyReleaseEvent(QKeyEvent& event) {
  * Forwards the given mouse move \c event to the current action.
  */
 void RDocumentInterface::mouseMoveEvent(RMouseEvent& event) {
-    if (suspended || deleting) {
+    if (suspended || deleting || !mouseTrackingEnabled) {
         return;
     }
 
     if (!keepPreviewOnce) {
-        clearPreview();
+        //if (mouseTrackingEnabled) {
+            clearPreview();
+        //}
     }
     else {
         keepPreviewOnce = false;
@@ -627,13 +638,19 @@ void RDocumentInterface::mouseMoveEvent(RMouseEvent& event) {
         event.ignore();
     }
 
-    repaintViews();
+    //if (mouseTrackingEnabled) {
+        repaintViews();
+    //}
 }
 
 /**
  * Forwards the given mouse press \c event to the current action.
  */
 void RDocumentInterface::mousePressEvent(RMouseEvent& event) {
+    if (!mouseTrackingEnabled) {
+        return;
+    }
+
     if (hasCurrentAction()) {
         getCurrentAction()->mousePressEvent(event);
     } else if (defaultAction != NULL) {
@@ -647,6 +664,9 @@ void RDocumentInterface::mousePressEvent(RMouseEvent& event) {
  * Forwards the given mouse release \c event to the current action.
  */
 void RDocumentInterface::mouseReleaseEvent(RMouseEvent& event) {
+    if (!mouseTrackingEnabled) {
+        return;
+    }
     if (hasCurrentAction()) {
         getCurrentAction()->mouseReleaseEvent(event);
         handleClickEvent(*getCurrentAction(), event);
@@ -662,6 +682,9 @@ void RDocumentInterface::mouseReleaseEvent(RMouseEvent& event) {
  * Forwards the given mouse double click \c event to the current action.
  */
 void RDocumentInterface::mouseDoubleClickEvent(RMouseEvent& event) {
+    if (!mouseTrackingEnabled) {
+        return;
+    }
     if (hasCurrentAction()) {
         getCurrentAction()->mouseDoubleClickEvent(event);
     } else if (defaultAction != NULL) {

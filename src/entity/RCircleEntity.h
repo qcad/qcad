@@ -99,6 +99,10 @@ public:
         data.setRadius(radius);
     }
 
+    double getLength() const {
+        return data.getLength();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

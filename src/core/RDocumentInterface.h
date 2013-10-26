@@ -171,6 +171,8 @@ public:
 
     void enableUpdates();
     void disableUpdates();
+    void enableMouseTracking();
+    void disableMouseTracking();
 
     void updateAllEntities();
 
@@ -335,6 +337,7 @@ private:
     bool cursorOverride;
 
     bool keepPreviewOnce;
+    bool mouseTrackingEnabled;
 };
 
 Q_DECLARE_METATYPE(RDocumentInterface::IoErrorCode)

@@ -70,6 +70,9 @@
         getPropertyTypeIds
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCustomPropertyTypeIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

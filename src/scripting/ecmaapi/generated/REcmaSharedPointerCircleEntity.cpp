@@ -92,6 +92,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setRadius, "setRadius");
             
+            REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RCircleEntityPointer>(), *proto);
       
@@ -1350,6 +1352,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerCircleEntity::setRadius", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerCircleEntity::getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerCircleEntity::getLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircleEntity::getLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCircleEntity* self = 
+                        getSelf("getLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLength();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.getLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircleEntity::getLength", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerCircleEntity::toString

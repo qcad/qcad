@@ -160,6 +160,12 @@
         disableUpdates
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        enableMouseTracking
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        disableMouseTracking
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

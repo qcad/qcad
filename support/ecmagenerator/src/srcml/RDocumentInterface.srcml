@@ -603,6 +603,18 @@ dir="./core" filename="RDocumentInterface.h">
   <type>
     <name>void</name>
   </type>
+  <name>enableMouseTracking</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>disableMouseTracking</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>updateAllEntities</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -2035,6 +2047,13 @@ dir="./core" filename="RDocumentInterface.h">
       <name>bool</name>
     </type>
     <name>keepPreviewOnce</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>mouseTrackingEnabled</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

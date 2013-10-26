@@ -1356,7 +1356,7 @@
     
     
       void REcmaShellPropertyEditor::removeAllButThese(
-                const QMultiMap < QString , QString > & propertyTitles
+                const QMultiMap < QString , QString > & propertyTitles, bool customOnly
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellPropertyEditor::removeAllButThese", engine);
@@ -1369,7 +1369,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RPropertyEditor::removeAllButThese";
@@ -1382,7 +1382,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RPropertyEditor::removeAllButThese(
-                            propertyTitles
+                            propertyTitles, customOnly
                         );
 
                         // block recursion again:
@@ -1411,6 +1411,15 @@
         << qScriptValueFromValue(engine, 
 
         propertyTitles
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        customOnly
         )
       
                             )
@@ -1853,6 +1862,56 @@
     // return type 'void'
     
                self->RPropertyEditor::removeAllButThese(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QMultiMap < QString , QString > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QMultiMap < QString , QString >*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QMultiMap < QString , QString >*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type QMultiMap < QString , QString >*.",
+                               context);                    
+                    }
+                    QMultiMap < QString , QString >& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->RPropertyEditor::removeAllButThese(a0
+        ,
+    a1);
     } else
 
 

@@ -105,14 +105,6 @@
 
         // methods of secondary base class RMessageHandler:
         
-            REcmaHelper::registerFunction(&engine, proto, handleUserMessage, "handleUserMessage");
-            
-            REcmaHelper::registerFunction(&engine, proto, handleUserInfo, "handleUserInfo");
-            
-            REcmaHelper::registerFunction(&engine, proto, handleUserWarning, "handleUserWarning");
-            
-            REcmaHelper::registerFunction(&engine, proto, handleUserCommand, "handleUserCommand");
-            
 
     // properties:
     
@@ -200,6 +192,14 @@
             REcmaHelper::registerFunction(&engine, proto, move, "move");
             
             REcmaHelper::registerFunction(&engine, proto, quit, "quit");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleUserMessage, "handleUserMessage");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleUserInfo, "handleUserInfo");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleUserWarning, "handleUserWarning");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleUserCommand, "handleUserCommand");
             
             REcmaHelper::registerFunction(&engine, proto, setCommandPrompt, "setCommandPrompt");
             
@@ -299,266 +299,6 @@
         
 
         // methods of secondary base class RMessageHandler:
-         QScriptValue
-        REcmaMainWindow::handleUserMessage
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMainWindow::handleUserMessage", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserMessage";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMainWindow* self = 
-                        getSelf("handleUserMessage", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->handleUserMessage(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserMessage().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserMessage", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaMainWindow::handleUserInfo
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMainWindow::handleUserInfo", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserInfo";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMainWindow* self = 
-                        getSelf("handleUserInfo", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->handleUserInfo(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserInfo().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserInfo", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaMainWindow::handleUserWarning
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMainWindow::handleUserWarning", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserWarning";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMainWindow* self = 
-                        getSelf("handleUserWarning", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->handleUserWarning(a0);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->handleUserWarning(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserWarning().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserWarning", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaMainWindow::handleUserCommand
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMainWindow::handleUserCommand", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserCommand";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMainWindow* self = 
-                        getSelf("handleUserCommand", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->handleUserCommand(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserCommand().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserCommand", context, engine);
-            return result;
-        }
         
 
     // properties:
@@ -3487,6 +3227,266 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindow::quit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::handleUserMessage
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::handleUserMessage", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserMessage";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("handleUserMessage", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleUserMessage(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserMessage().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserMessage", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::handleUserInfo
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::handleUserInfo", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserInfo";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("handleUserInfo", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleUserInfo(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserInfo().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserInfo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::handleUserWarning
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::handleUserWarning", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserWarning";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("handleUserWarning", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleUserWarning(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleUserWarning(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserWarning().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserWarning", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::handleUserCommand
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::handleUserCommand", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserCommand";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("handleUserCommand", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleUserCommand(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserCommand().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserCommand", context, engine);
             return result;
         }
          QScriptValue
