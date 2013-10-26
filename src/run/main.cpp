@@ -94,6 +94,11 @@ int main(int argc, char *argv[]) {
 #ifdef Q_OS_MAC
     // TODO: make available as script function:
     QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
+
+    if (QSysInfo::MacintoshVersion>=0x000B) {
+        // system font change bug fix on OS X 10.9 (Mavericks):
+        QFont::insertSubstitution(".Lucida Grande UI", "Lucida Grande");
+    }
 #endif
 
     QStringList originalArguments;

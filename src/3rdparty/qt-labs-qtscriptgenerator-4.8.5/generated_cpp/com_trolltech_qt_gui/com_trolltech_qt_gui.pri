@@ -139,6 +139,7 @@ HEADERS += \
            $$PWD/qtscriptshell_QPanGesture.h \
            $$PWD/qtscriptshell_QPicture.h \
            $$PWD/qtscriptshell_QPictureFormatPlugin.h \
+           $$PWD/qtscriptshell_QPinchGesture.h \
            $$PWD/qtscriptshell_QPixmap.h \
            $$PWD/qtscriptshell_QPixmapCache.h \
            $$PWD/qtscriptshell_QPlainTextDocumentLayout.h \
@@ -455,6 +456,7 @@ SOURCES += \
            $$PWD/qtscript_QPicture.cpp \
            $$PWD/qtscript_QPictureFormatPlugin.cpp \
            $$PWD/qtscript_QPictureIO.cpp \
+           $$PWD/qtscript_QPinchGesture.cpp \
            $$PWD/qtscript_QPixmap.cpp \
            $$PWD/qtscript_QPixmapCache.cpp \
            $$PWD/qtscript_QPixmapCache_Key.cpp \
@@ -754,6 +756,7 @@ SOURCES += \
            $$PWD/qtscriptshell_QPanGesture.cpp \
            $$PWD/qtscriptshell_QPicture.cpp \
            $$PWD/qtscriptshell_QPictureFormatPlugin.cpp \
+           $$PWD/qtscriptshell_QPinchGesture.cpp \
            $$PWD/qtscriptshell_QPixmap.cpp \
            $$PWD/qtscriptshell_QPixmapCache.cpp \
            $$PWD/qtscriptshell_QPlainTextDocumentLayout.cpp \
