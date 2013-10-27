@@ -288,6 +288,7 @@
 #include "REcmaTransaction.h"
 #include "REcmaTransactionListener.h"
 #include "REcmaTransactionListenerAdapter.h"
+#include "REcmaTreeWidget.h"
 #include "REcmaTriangle.h"
 #include "REcmaUcs.h"
 #include "REcmaUnit.h"
@@ -724,6 +725,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaPropertyEditor::init(*engine);
 
     REcmaListWidget::init(*engine);
+    REcmaTreeWidget::init(*engine);
     REcmaListView::init(*engine);
     REcmaLayerListener::init(*engine);
     REcmaLayerListenerAdapter::init(*engine);

@@ -240,6 +240,7 @@ HEADERS += \
     $$PWD/REcmaShellSnapDistance.h \
     $$PWD/REcmaShellSnapRestriction.h \
     $$PWD/REcmaShellSpatialIndexVisitorAdapter.h \
+    $$PWD/REcmaShellTreeWidget.h \
     $$PWD/REcmaShellViewFocusListenerAdapter.h \
     $$PWD/REcmaShortcutLineEdit.h \
     $$PWD/REcmaSnap.h \
@@ -285,6 +286,7 @@ HEADERS += \
     $$PWD/REcmaTransactionListenerAdapter.h \
     $$PWD/REcmaTransformation.h \
     $$PWD/REcmaTranslation.h \
+    $$PWD/REcmaTreeWidget.h \
     $$PWD/REcmaTriangle.h \
     $$PWD/REcmaUcs.h \
     $$PWD/REcmaUnit.h \
@@ -538,6 +540,7 @@ SOURCES += \
     $$PWD/REcmaShellSnapDistance.cpp \
     $$PWD/REcmaShellSnapRestriction.cpp \
     $$PWD/REcmaShellSpatialIndexVisitorAdapter.cpp \
+    $$PWD/REcmaShellTreeWidget.cpp \
     $$PWD/REcmaShellViewFocusListenerAdapter.cpp \
     $$PWD/REcmaShortcutLineEdit.cpp \
     $$PWD/REcmaSnap.cpp \
@@ -583,6 +586,7 @@ SOURCES += \
     $$PWD/REcmaTransactionListenerAdapter.cpp \
     $$PWD/REcmaTransformation.cpp \
     $$PWD/REcmaTranslation.cpp \
+    $$PWD/REcmaTreeWidget.cpp \
     $$PWD/REcmaTriangle.cpp \
     $$PWD/REcmaUcs.cpp \
     $$PWD/REcmaUnit.cpp \

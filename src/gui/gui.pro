@@ -21,6 +21,7 @@ SOURCES += \
     RMdiChildQt.cpp \
     RRulerQt.cpp \
     RTextEdit.cpp \
+    RTreeWidget.cpp \
     RWebView.cpp
 
 HEADERS += \
@@ -46,6 +47,7 @@ HEADERS += \
     RMdiChildQt.h \
     RRulerQt.h \
     RTextEdit.h \
+    RTreeWidget.h \
     RWebView.h
 TEMPLATE = lib
 CONFIG += plugin
