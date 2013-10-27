@@ -201,6 +201,18 @@ public:
         return data.trimEndPoint(p);
     }
 
+    double getLength() const {
+        return data.getLength();
+    }
+
+    double getSweep() const {
+        return data.getSweep();
+    }
+
+    RVector getPointAt(double angle) const {
+        return data.getPointAt(angle);
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

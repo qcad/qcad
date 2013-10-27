@@ -95,6 +95,18 @@ public:
         return REllipse::getParamTo(pos);
     }
 
+    double getLength() const {
+        return REllipse::getLength();
+    }
+
+    double getSweep() const {
+        return REllipse::getSweep();
+    }
+
+    RVector getPointAt(double angle) const {
+        return REllipse::getPointAt(angle);
+    }
+
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 

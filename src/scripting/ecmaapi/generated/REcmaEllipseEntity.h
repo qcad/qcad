@@ -142,6 +142,15 @@
         ;static  QScriptValue
         trimEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

@@ -84,6 +84,15 @@
         getParamTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
