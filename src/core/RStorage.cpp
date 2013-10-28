@@ -220,6 +220,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
                 continue;
             }
             dbg.nospace() << *b.data() << "\n";
+            dbg.nospace() << "block entities: " << s.queryBlockEntities(id) << "\n";
         }
     }
 

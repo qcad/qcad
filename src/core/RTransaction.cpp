@@ -583,8 +583,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             return false;
         }
 
-        storage->removeObject(oldObject);
-
         // iterate through all properties of the original object
         // and store the property changes (if any) in this transaction:
         QSet<RPropertyTypeId> propertyTypeIds;
@@ -644,6 +642,9 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         }
 
         if (objectHasChanged) {
+            // remove old entity from storage (only if it has actually changed):
+            storage->removeObject(oldObject);
+
             if (object->getDocument()!=NULL) {
                 // only remove from si, if not linked storage / preview
                 if (!storage->isInBackStorage(oldObject->getId())) {

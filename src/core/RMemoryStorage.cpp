@@ -891,6 +891,7 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
     QSharedPointer<REntity> entity = queryEntityDirect(objectId);
     if (!entity.isNull()) {
         blockEntityMap.remove(entity->getBlockId(), entity);
+        //qDebug() << "deleteObject: removed " << entity->getId() << " from block " << entity->getBlockId();
     }
 
     return true;

@@ -286,7 +286,9 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     dw->sectionEntities();
 
     QSet<REntity::Id> blockEntityIds = document->queryBlockEntities(document->getModelSpaceBlockId());
+    //qDebug() << "writing model space entities with IDs: " << blockEntityIds;
     QList<REntity::Id> list = document->getStorage().orderBackToFront(blockEntityIds);
+    //qDebug() << "writing ordered entities with IDs: " << list;
 
     for (int i=0; i<list.size(); i++) {
         writeEntity(list[i]);
@@ -573,6 +575,7 @@ void RDxfExporter::writeEntity(REntity::Id id) {
  */
 void RDxfExporter::writeEntity(const REntity& e) {
     if (e.isUndone()) {
+        qDebug() << "RDxfExporter::writeEntity: entity undone...";
         // never reached:
         return;
     }
