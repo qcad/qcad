@@ -50,7 +50,7 @@ static QScriptValue qtscript_QPinchGesture_throw_ambiguity_error_helper(
 Q_DECLARE_METATYPE(QPinchGesture*)
 Q_DECLARE_METATYPE(QtScriptShell_QPinchGesture*)
 Q_DECLARE_METATYPE(QPinchGesture::ChangeFlag)
-Q_DECLARE_METATYPE(QFlags<QPinchGesture::ChangeFlag>)
+//Q_DECLARE_METATYPE(QFlags<QPinchGesture::ChangeFlag>)
 Q_DECLARE_METATYPE(QGesture*)
 
 static QScriptValue qtscript_create_enum_class_helper(
