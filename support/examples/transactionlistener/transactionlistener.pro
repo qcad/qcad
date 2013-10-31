@@ -5,5 +5,5 @@ include(../../../shared.pri)
 TEMPLATE    = lib
 HEADERS     = TransactionListenerPlugin.h
 SOURCES     = TransactionListenerPlugin.cpp
-DESTDIR     = ../../../../qcad/plugins
+DESTDIR     = ../../../plugins
 LIBS += -lqcadcore -lqcadgui

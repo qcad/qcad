@@ -68,7 +68,27 @@ dir="./gui" filename="RListWidget.h">
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RListWidget</name>
-  <parameter_list>()</parameter_list>;</destructor_decl></public>
+  <parameter_list>()</parameter_list>;</destructor_decl>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setIconOffset</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>int</name>
+        </type>
+        <name>o</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>iconOffset</name>= 
+    <name>o</name></expr>;</expr_stmt>}</block>
+  </function></public>
   <protected>protected: 
   <function_decl>
   <type>

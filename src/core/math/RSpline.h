@@ -166,6 +166,7 @@ public:
     double getTMin() const;
     double getTMax() const;
     double getTAtPoint(const RVector& point) const;
+    QList<RSpline> getSegments(const QList<RVector>& points) const;
     //bool getIntersectionPointsProxy(QList<RVector>& res, const RShape& other, bool limited, bool same) const;
 
     void updateFromControlPoints() const;
@@ -248,8 +249,6 @@ private:
     mutable QList<QSharedPointer<RShape> > exploded;
 
     static RSplineProxy* splineProxy;
-    //static UpdateFromFitPointsFunction updateFromFitPointsFunction;
-    //static SplitFunction splitFunction;
 };
 
 Q_DECLARE_METATYPE(const RSpline*)

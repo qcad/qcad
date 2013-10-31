@@ -274,6 +274,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTAtPoint, "getTAtPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, getSegments, "getSegments");
+            
             REcmaHelper::registerFunction(&engine, proto, updateFromControlPoints, "updateFromControlPoints");
             
             REcmaHelper::registerFunction(&engine, proto, updateFromFitPoints, "updateFromFitPoints");
@@ -4954,6 +4956,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getTAtPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::getSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::getSegments", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::getSegments";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getSegments", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RSpline >'
+    QList < RSpline > cppResult =
+        
+               self->getSegments(a0);
+        // return type: QList < RSpline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getSegments().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getSegments", context, engine);
             return result;
         }
          QScriptValue

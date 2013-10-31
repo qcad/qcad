@@ -1026,6 +1026,13 @@ double RSpline::getTAtPoint(const RVector& point) const {
     return 0.0;
 }
 
+QList<RSpline> RSpline::getSegments(const QList<RVector>& points) const {
+    if (splineProxy!=NULL) {
+        return splineProxy->split(*this, points);
+    }
+    return QList<RSpline>();
+}
+
 //bool RSpline::getIntersectionPointsProxy(QList<RVector>& res, const RShape& other, bool limited, bool same) const {
 //    if (splineProxy!=NULL) {
 //        res.append(splineProxy->getIntersectionPoints(*this, other, limited, same));

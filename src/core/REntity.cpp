@@ -103,7 +103,7 @@ RLinetype::Id REntity::getLinetypeId(bool resolve,
 /**
  * Copies all attributes (layer, block, color, line weight, line style) from the given entity.
  */
-void REntity::copyAttributesFrom(REntity* entity) {
+void REntity::copyAttributesFrom(REntity* entity, bool copyBlockId) {
     if (entity==NULL) {
         qWarning("REntity::copyAttributesFrom: source entity is NULL");
         return;
@@ -116,7 +116,9 @@ void REntity::copyAttributesFrom(REntity* entity) {
     }
 
     setLayerId(entity->getLayerId());
-    setBlockId(entity->getBlockId());
+    if (copyBlockId) {
+        setBlockId(entity->getBlockId());
+    }
     setColor(entity->getColor());
     setLineweight(entity->getLineweight());
     setLinetypeId(entity->getLinetypeId());

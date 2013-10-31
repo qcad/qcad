@@ -124,6 +124,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
+    <method name="queryEntity" cppName="queryEntity"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; REntity &gt;"
+      isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
     <method name="applyTransformationTo"
     cppName="applyTransformationTo" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

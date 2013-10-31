@@ -42,6 +42,10 @@ public:
     RListWidget(QWidget* parent=0);
     virtual ~RListWidget();
 
+    void setIconOffset(int o) {
+        iconOffset = o;
+    }
+
 protected:
     void contextMenuEvent(QContextMenuEvent* e);
     void mousePressEvent(QMouseEvent* e);

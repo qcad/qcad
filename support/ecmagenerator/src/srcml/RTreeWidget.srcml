@@ -68,7 +68,10 @@ dir="./gui" filename="RTreeWidget.h">
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RTreeWidget</name>
-  <parameter_list>()</parameter_list>;</destructor_decl></public>
+  <parameter_list>()</parameter_list>;</destructor_decl>
+  <comment type="line">// void setIconOffset(int o) {</comment>
+  <comment type="line">// iconOffset = o;</comment>
+  <comment type="line">// }</comment></public>
   <protected>protected: 
   <function_decl>
   <type>
@@ -128,21 +131,21 @@ dir="./gui" filename="RTreeWidget.h">
   <type>
     <name>void</name>
   </type>
-  <name>iconClicked</name>
+  <name>itemColumnClicked</name>
   <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>x</name>
-    </decl>
-  </param>, 
   <param>
     <decl>
       <type>
       <name>QTreeWidgetItem</name>*</type>
       <name>item</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>column</name>
     </decl>
   </param>)</parameter_list>;</function_decl></protected>
   <private>private: 
@@ -157,8 +160,10 @@ dir="./gui" filename="RTreeWidget.h">
     <type>
       <name>int</name>
     </type>
-    <name>iconOffset</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
+    <name>indexPressed</name>
+  </decl>;</decl_stmt>
+  <comment type="line">//int
+  iconOffset;</comment></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

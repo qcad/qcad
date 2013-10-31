@@ -20,18 +20,18 @@
 #include "RDebug.h"
 
 #include <QContextMenuEvent>
+#include <QHeaderView>
 
 /**
  * Default Constructor.
  */
 RTreeWidget::RTreeWidget(QWidget* parent) :
-    QTreeWidget(parent) {
-    itemPressed = NULL;
-#ifdef Q_OS_MAC
-    iconOffset = 7;
-#else
-    iconOffset = 0;
-#endif
+    QTreeWidget(parent), itemPressed(NULL), indexPressed(-1) {
+//#ifdef Q_OS_MAC
+//    iconOffset = 7;
+//#else
+//    iconOffset = 0;
+//#endif
 }
 
 /**
@@ -45,36 +45,46 @@ void RTreeWidget::contextMenuEvent(QContextMenuEvent* e) {
         QTreeWidgetItem* item = itemAt(e->pos());
         if (item != NULL) {
             setCurrentItem(item);
-            emit itemClicked(item, 0);
+            emit itemClicked(item, columnCount()-1);
         }
     }
     e->ignore();
 }
 
 void RTreeWidget::mousePressEvent(QMouseEvent* e) {
-    if (e->x()-iconOffset < iconSize().width()) {
-        itemPressed = itemAt(e->pos());
-    } else {
+//    if (header()==NULL) {
+//        e->ignore();
+//        QTreeWidget::mousePressEvent(e);
+//        qDebug() << "header closed";
+//        return;
+//    }
+
+    itemPressed = itemAt(e->pos());
+    indexPressed = header()->logicalIndexAt(e->pos());
+    //qDebug() << "index: " << index;
+    if (indexPressed==0) {
         e->ignore();
         QTreeWidget::mousePressEvent(e);
     }
 }
 
 void RTreeWidget::mouseReleaseEvent(QMouseEvent* e) {
-    if (e->x()-iconOffset < iconSize().width()) {
-        QTreeWidgetItem* item = itemAt(e->pos());
-        if (item != NULL && item == itemPressed) {
-            emit iconClicked(e->x()-iconOffset, item);
-        }
-    } else {
+    QTreeWidgetItem* item = itemAt(e->pos());
+    int index = header()->logicalIndexAt(e->pos());
+
+    if (item != NULL && item == itemPressed && index==indexPressed) {
+        emit itemColumnClicked(item, index);
+    }
+
+    if (index==0) {
         e->ignore();
         QTreeWidget::mouseReleaseEvent(e);
     }
 }
 
 void RTreeWidget::mouseMoveEvent(QMouseEvent* e) {
-    if (e->x()-iconOffset < iconSize().width()) {
-    } else {
+    int index = header()->logicalIndexAt(e->pos());
+    if (index==0) {
         e->ignore();
         QTreeWidget::mouseMoveEvent(e);
     }

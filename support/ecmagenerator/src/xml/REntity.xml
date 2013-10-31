@@ -204,6 +204,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity *" typeName="REntity *" name="entity"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="copyBlockId"
+        hasDefault="true" default=" true" isConst="false" />
       </variant>
     </method>
     <method name="getBoundingBox" cppName="getBoundingBox"

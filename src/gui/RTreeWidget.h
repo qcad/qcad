@@ -42,6 +42,10 @@ public:
     RTreeWidget(QWidget* parent=0);
     virtual ~RTreeWidget();
 
+//    void setIconOffset(int o) {
+//        iconOffset = o;
+//    }
+
 protected:
     void contextMenuEvent(QContextMenuEvent* e);
     void mousePressEvent(QMouseEvent* e);
@@ -49,11 +53,12 @@ protected:
     void mouseMoveEvent(QMouseEvent* e);
 
 signals:
-    void iconClicked(int x, QTreeWidgetItem* item);
+    void itemColumnClicked(QTreeWidgetItem* item, int column);
 
 private:
     QTreeWidgetItem* itemPressed;
-    int iconOffset;
+    int indexPressed;
+    //int iconOffset;
 };
 
 Q_DECLARE_METATYPE(RTreeWidget*)

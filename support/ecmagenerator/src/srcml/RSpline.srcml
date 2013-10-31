@@ -1030,6 +1030,29 @@ dir="./core/math" filename="RSpline.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RSpline</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getSegments</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>points</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <comment type="line">//bool
   getIntersectionPointsProxy(QList&lt;RVector&gt;&amp; res, const
   RShape&amp; other, bool limited, bool same) const;</comment>
@@ -1293,11 +1316,7 @@ dir="./core/math" filename="RSpline.h">
     <name>static</name>
     <name>RSplineProxy</name>*</type>
     <name>splineProxy</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//static UpdateFromFitPointsFunction
-  updateFromFitPointsFunction;</comment>
-  <comment type="line">//static SplitFunction
-  splitFunction;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

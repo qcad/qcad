@@ -288,6 +288,9 @@
         getTAtPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateFromControlPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -94,6 +94,9 @@
         update
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         applyTransformationTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

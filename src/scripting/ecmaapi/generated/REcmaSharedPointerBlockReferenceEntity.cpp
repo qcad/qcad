@@ -102,6 +102,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
             
+            REcmaHelper::registerFunction(&engine, proto, queryEntity, "queryEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, applyTransformationTo, "applyTransformationTo");
             
         engine.setDefaultPrototype(
@@ -1634,6 +1636,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::queryEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::queryEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::queryEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("queryEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < REntity >'
+    QSharedPointer < REntity > cppResult =
+        
+               self->queryEntity(a0);
+        // return type: QSharedPointer < REntity >
+                // Shared pointer to entity, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.queryEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::queryEntity", context, engine);
             return result;
         }
          QScriptValue

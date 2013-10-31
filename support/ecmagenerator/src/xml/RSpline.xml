@@ -489,6 +489,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getSegments" cppName="getSegments"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RSpline &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="points"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="updateFromControlPoints"
     cppName="updateFromControlPoints" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

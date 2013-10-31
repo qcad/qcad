@@ -44,7 +44,10 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        setIconOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RListWidget* getSelf(const QString& fName, QScriptContext* context)

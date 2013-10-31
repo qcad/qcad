@@ -937,6 +937,18 @@ dir="./core" filename="REntity.h">
       <name>REntity</name>*</type>
       <name>entity</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>copyBlockId</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * \copydoc REntityData::getBoundingBox
   */</comment>

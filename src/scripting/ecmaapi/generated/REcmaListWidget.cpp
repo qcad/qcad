@@ -63,6 +63,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, setIconOffset, "setIconOffset");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RListWidget*>(), *proto);
 
@@ -226,7 +228,62 @@
     
 
     // public methods:
-     QScriptValue REcmaListWidget::toString
+     QScriptValue
+        REcmaListWidget::setIconOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaListWidget::setIconOffset", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaListWidget::setIconOffset";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RListWidget* self = 
+                        getSelf("setIconOffset", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setIconOffset(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RListWidget.setIconOffset().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaListWidget::setIconOffset", context, engine);
+            return result;
+        }
+         QScriptValue REcmaListWidget::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {

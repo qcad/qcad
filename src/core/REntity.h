@@ -255,7 +255,7 @@ public:
 
     RColor getColor(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack);
 
-    void copyAttributesFrom(REntity* entity);
+    void copyAttributesFrom(REntity* entity, bool copyBlockId=true);
 
     /**
      * \copydoc REntityData::getBoundingBox

@@ -1526,7 +1526,7 @@ ShapeAlgorithms.removeSharedPointer = function(shape) {
  * \return Array of shapes of type point, line, arc, circle, ellipse.
  */
 ShapeAlgorithms.explodeToTrimmable = function(shape) {
-    if (isSplineShape(shape)) {
+    if (isSplineShape(shape) && !RSpline.hasProxy()) {
         return ShapeAlgorithms.removeSharedPointer(shape.getExploded());
     }
     if (isPolylineShape(shape)) {
@@ -1579,6 +1579,26 @@ ShapeAlgorithms.splitAt = function(shape, points) {
 
             ret.push(new RLine(points[i], points[i+1]));
         }
+        return ret;
+    }
+
+    if (isSplineShape(shape) && RSpline.hasProxy()) {
+        startPoint = shape.getStartPoint();
+        endPoint = shape.getEndPoint();
+
+        var sortable = [];
+        for (i=0; i<points.length; i++) {
+            var t = shape.getTAtPoint(points[i]);
+            sortable.push([points[i], t]);
+        }
+        sortable.sort(function(a,b) { return a[1]-b[1]; });
+
+        var sortedPoints = [];
+        for (i=0; i<sortable.length; i++) {
+            sortedPoints.push(sortable[i][0]);
+        }
+
+        return shape.getSegments(sortedPoints);
     }
 
     if (isCircleShape(shape)) {
@@ -1602,6 +1622,7 @@ ShapeAlgorithms.splitAt = function(shape, points) {
 
             ret.push(new RArc(center, radius, center.getAngleTo(points[i]), center.getAngleTo(points[i+1]), false));
         }
+        return ret;
     }
 
     if (isArcShape(shape)) {
@@ -1628,6 +1649,7 @@ ShapeAlgorithms.splitAt = function(shape, points) {
             e.setEndAngle(center.getAngleTo(points[i+1]));
             ret.push(e);
         }
+        return ret;
     }
 
     if (isEllipseShape(shape)) {
@@ -1653,6 +1675,7 @@ ShapeAlgorithms.splitAt = function(shape, points) {
             e.setEndParam(e.getParamTo(points[i+1]));
             ret.push(e);
         }
+        return ret;
     }
 
     return ret;

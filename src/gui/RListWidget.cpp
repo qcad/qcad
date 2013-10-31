@@ -25,13 +25,12 @@
  * Default Constructor.
  */
 RListWidget::RListWidget(QWidget* parent) :
-    QListWidget(parent) {
-    itemPressed = NULL;
-#ifdef Q_OS_MAC
-    iconOffset = 7;
-#else
-    iconOffset = 0;
-#endif
+    QListWidget(parent), itemPressed(NULL), iconOffset(0) {
+//#ifdef Q_OS_MAC
+//    iconOffset = 7;
+//#else
+//    iconOffset = 0;
+//#endif
 }
 
 /**

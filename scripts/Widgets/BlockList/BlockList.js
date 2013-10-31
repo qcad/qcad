@@ -24,6 +24,9 @@ include("../../WidgetFactory.js");
  */
 function RBlockListQt(parent) {
     RListWidget.call(this, parent);
+    if (RS.getSystemId()==="osx") {
+        this.setIconOffset(7);
+    }
     this.iconSize = new QSize(32, 16);
     this.di = null;
 

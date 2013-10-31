@@ -575,6 +575,41 @@ dir="./core" filename="RBlockReferenceEntity.h">
   </function>
   <function>
     <type>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>REntity</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>queryEntity</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>
+          <name>REntity</name>::
+          <name>Id</name></name>
+        </type>
+        <name>entityId</name>
+      </decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>queryEntity</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>entityId</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
       <name>bool</name>
     </type>
     <name>applyTransformationTo</name>

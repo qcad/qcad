@@ -39,6 +39,12 @@
         
     
     
+      void setIconOffset(
+                int o
+            );
+        
+    
+    
       void contextMenuEvent(
                 QContextMenuEvent * e
             );
