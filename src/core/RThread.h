@@ -28,8 +28,9 @@
 #include "RRunner.h"
 
 /**
+ * Experimental / not working.
  * \scriptable
- * _generateScriptShell
+ * \generateScriptShell
  */
 class QCADCORE_EXPORT RThread: public QThread {
 
@@ -42,6 +43,10 @@ public:
     void start();
 
     static void yieldCurrentThread();
+
+    static QString currentThreadAddress();
+    static QString currentThreadName();
+    static RThread* currentThread();
 
 signals:
     void dorun();

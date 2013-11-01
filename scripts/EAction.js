@@ -1451,6 +1451,29 @@ EAction.prototype.setCommandPrompt = function(prompt) {
     }
 };
 
+EAction.disableCoordinateWidget = function() {
+    EAction.enableCoordinateWidget(false);
+};
+
+EAction.enableCoordinateWidget = function(enable) {
+    if (isNull(enable)) {
+        enable=true;
+    }
+
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+    var statusBar = appWin.statusBar();
+    if (isNull(statusBar)) {
+        return;
+    }
+    var cd = statusBar.findChild("CoordinateDisplay");
+    if (!isNull(cd)) {
+        cd.enabled = enable;
+    }
+};
+
 /**
  * Some common, shared translated warnings:
  */

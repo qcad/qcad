@@ -23,6 +23,19 @@
     }
 
     
+        // primary base class QObject:
+        
+            QScriptValue dpt = engine.defaultPrototype(
+                qMetaTypeId<QObject*>());
+
+            if (dpt.isValid()) {
+                proto->setPrototype(dpt);
+            }
+          
+        /*
+        
+        */
+    
 
     QScriptValue fun;
 
@@ -33,6 +46,9 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
+        // conversion for base class QObject
+        REcmaHelper::registerFunction(&engine, proto, getQObject, "getQObject");
+        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -47,10 +63,16 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, doWork, "doWork");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RRunner*>(), *proto);
 
         
+                        qScriptRegisterMetaType<
+                        RRunner*>(
+                        &engine, toScriptValue, fromScriptValue, *proto);
+                    
     
 
     QScriptValue ctor = engine.newFunction(create, *proto, 2);
@@ -106,8 +128,7 @@
                     REcmaShellRunner
                     ();
                 
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                    result = engine->newQObject(context->thisObject(), cppResult);
                 
         cppResult->__qtscript_self = result;
     
@@ -124,7 +145,16 @@
     
 
     // conversion functions for base classes:
-    
+     QScriptValue REcmaRunner::getQObject(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                QObject* cppResult =
+                    qscriptvalue_cast<RRunner*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
+            
 
     // returns class name:
      QScriptValue REcmaRunner::getClassName(QScriptContext *context, QScriptEngine *engine) 
@@ -140,6 +170,8 @@
     {
         QStringList list;
         
+        list.append("QObject");
+    
 
         return qScriptValueFromSequence(engine, list);
     }
@@ -149,7 +181,51 @@
     
 
     // public methods:
-     QScriptValue REcmaRunner::toString
+     QScriptValue
+        REcmaRunner::doWork
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRunner::doWork", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRunner::doWork";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRunner* self = 
+                        getSelf("doWork", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->doWork();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRunner.doWork().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRunner::doWork", context, engine);
+            return result;
+        }
+         QScriptValue REcmaRunner::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {
@@ -226,4 +302,23 @@
 
 
         }
-        
+         void fromScriptValue(const QScriptValue& value,
+        RRunner*
+        &out) {
+            QObject* o = value.toQObject();
+            out = qobject_cast<
+            RRunner*>(o);
+        }
+     QScriptValue toScriptValue(QScriptEngine *engine,
+        RRunner*
+        const &in){
+            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
+            QScriptEngine::PreferExistingWrapperObject);
+            /*
+            if(s.isNull()){
+               REcmaHelper::throwError("This object is null.", engine->currentContext());
+            }
+            */
+            return s;
+        }
+    

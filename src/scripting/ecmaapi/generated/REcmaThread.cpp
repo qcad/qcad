@@ -81,6 +81,12 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, yieldCurrentThread, "yieldCurrentThread");
             
+            REcmaHelper::registerFunction(&engine, &ctor, currentThreadAddress, "currentThreadAddress");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, currentThreadName, "currentThreadName");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, currentThread, "currentThread");
+            
 
     // static properties:
     
@@ -124,14 +130,16 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RThread
+            REcmaShellThread
                     * cppResult =
                     new
-                    RThread
+                    REcmaShellThread
                     ();
                 
                     result = engine->newQObject(context->thisObject(), cppResult);
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     if( context->argumentCount() ==
@@ -162,16 +170,18 @@
     // call C++ constructor:
     
             // non-copyable class:
-            RThread
+            REcmaShellThread
                     * cppResult =
                     new
-                    RThread
+                    REcmaShellThread
                     (
                     a0
                     );
                 
                     result = engine->newQObject(context->thisObject(), cppResult);
                 
+        cppResult->__qtscript_self = result;
+    
     } else 
 
     {
@@ -299,6 +309,123 @@
             //REcmaHelper::functionEnd("REcmaThread::yieldCurrentThread", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaThread::currentThreadAddress
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaThread::currentThreadAddress", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaThread::currentThreadAddress";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RThread::
+       currentThreadAddress();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RThread.currentThreadAddress().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaThread::currentThreadAddress", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaThread::currentThreadName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaThread::currentThreadName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaThread::currentThreadName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RThread::
+       currentThreadName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RThread.currentThreadName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaThread::currentThreadName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaThread::currentThread
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaThread::currentThread", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaThread::currentThread";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RThread *'
+    RThread * cppResult =
+        RThread::
+       currentThread();
+        // return type: RThread *
+                // QObject
+                result = engine->newQObject(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RThread.currentThread().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaThread::currentThread", context, engine);
+            return result;
+        }
          QScriptValue REcmaThread::toString
     (QScriptContext *context, QScriptEngine *engine)
     
@@ -359,12 +486,12 @@
 
             return self;
         }
-        RThread* REcmaThread::getSelfShell(const QString& fName, QScriptContext* context)
+        REcmaShellThread* REcmaThread::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RThread* selfBase = getSelf(fName, context);
-                RThread* self = dynamic_cast<RThread*>(selfBase);
-                //return REcmaHelper::scriptValueTo<RThread >(context->thisObject());
+                REcmaShellThread* self = dynamic_cast<REcmaShellThread*>(selfBase);
+                //return REcmaHelper::scriptValueTo<REcmaShellThread >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RThread.%1(): "
                     "This object is not a RThread").arg(fName),

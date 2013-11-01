@@ -17,24 +17,38 @@
  * along with QCAD.
  */
 
-#ifndef RRUNNER_H_
-#define RRUNNER_H_
+#ifndef RRUNNER_H
+#define RRUNNER_H
 
 #include "core_global.h"
 
+#include <QDebug>
+#include <QObject>
+
 /**
+ * Experimental / not working.
  * \scriptable
  * \generateScriptShell
  */
-class QCADCORE_EXPORT RRunner {
-    friend class RThread;
-protected:
+class QCADCORE_EXPORT RRunner : public QObject {
+    Q_OBJECT
+
+public slots:
+    void doWork() {
+        int i=0;
+        while(true) {
+            qDebug() << "runner: i: " << i++;
+        }
+    }
+
+    //friend class RThread;
+//protected:
     /**
      * \todo Should be pure virtual
      */
-    virtual void run() { }
+//    virtual void run() { }
 };
 
 Q_DECLARE_METATYPE(RRunner*)
 
-#endif /* RRUNNER_H_ */
+#endif

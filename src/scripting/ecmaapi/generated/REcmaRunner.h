@@ -28,7 +28,9 @@
     ;
 
     // conversion functions for base classes:
-    
+    static  QScriptValue getQObject(QScriptContext *context,
+            QScriptEngine *engine)
+        ;
 
     // returns class name:
     static  QScriptValue getClassName(QScriptContext *context, QScriptEngine *engine) 
@@ -42,11 +44,33 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        doWork
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RRunner* getSelf(const QString& fName, QScriptContext* context)
     ;static REcmaShellRunner* getSelfShell(const QString& fName, QScriptContext* context)
-    ;};
+    ;static  void fromScriptValue(const QScriptValue& value,
+        RRunner*
+        &out) {
+            QObject* o = value.toQObject();
+            out = qobject_cast<
+            RRunner*>(o);
+        }
+    static  QScriptValue toScriptValue(QScriptEngine *engine,
+        RRunner*
+        const &in){
+            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
+            QScriptEngine::PreferExistingWrapperObject);
+            /*
+            if(s.isNull()){
+               REcmaHelper::throwError("This object is null.", engine->currentContext());
+            }
+            */
+            return s;
+        }
+    };
     #endif
     

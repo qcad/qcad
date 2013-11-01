@@ -32,8 +32,8 @@ dir="./core" filename="RThread.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RRunner.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable * _generateScriptShell
-  */</comment>
+  <comment type="block">/** * Experimental / not working. *
+  \scriptable * \generateScriptShell */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
@@ -77,6 +77,26 @@ dir="./core" filename="RThread.h">
     <name>void</name>
   </type>
   <name>yieldCurrentThread</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>currentThreadAddress</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>currentThreadName</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+  <name>static</name>
+  <name>RThread</name>*</type>
+  <name>currentThread</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <label>
   <name>signals</name>:</label>

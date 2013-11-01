@@ -12,7 +12,7 @@
         #include <QDebug>
 
         
-                #include "RThread.h"
+                #include "REcmaShellThread.h"
             
 
         /**
@@ -50,11 +50,20 @@
         ;static  QScriptValue
         yieldCurrentThread
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        currentThreadAddress
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        currentThreadName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        currentThread
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RThread* getSelf(const QString& fName, QScriptContext* context)
-    ;static RThread* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static REcmaShellThread* getSelfShell(const QString& fName, QScriptContext* context)
     ;static  void fromScriptValue(const QScriptValue& value,
         RThread*
         &out) {

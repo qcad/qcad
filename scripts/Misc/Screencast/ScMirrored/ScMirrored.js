@@ -270,7 +270,7 @@ function ScMirrored(guiAction) {
 
 ScMirrored.prototype = new EAction();
 ScMirrored.includeBasePath = includeBasePath;
-ScMirrored.interval = 50;
+ScMirrored.interval = 20;
 
 ScMirrored.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);

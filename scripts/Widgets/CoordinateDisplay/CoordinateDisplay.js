@@ -47,7 +47,14 @@ CoordinateDisplay.init = function(basePath) {
     appWin.addCoordinateListener(adapter);
     var statusBar = appWin.statusBar();
 
+    var counter=0;
+    var singleShot = undefined;
+
     adapter.coordinateUpdated.connect(function(documentInterface) {
+        if (!widget.enabled) {
+            return;
+        }
+
         if (isNull(documentInterface)) {
             // clear texts (no document open):
             lAbs.setText("");
@@ -57,20 +64,33 @@ CoordinateDisplay.init = function(basePath) {
             return;
         }
 
-        statusBar.clearMessage();
-        var absPos = documentInterface.getCursorPosition();
-        var relPos = absPos.operator_subtract(documentInterface.getRelativeZero());
 
-        lAbs.setText(coordinateToString(absPos, 4, false, false));
-        lAbsPol.setText(coordinateToString(absPos, 4, false, true));
+        if (!isNull(singleShot)) {
+            if (singleShot.active) {
+                singleShot.stop();
+            }
+        }
 
-        if (relPos.isValid()) {
-            lRel.setText(coordinateToString(relPos, 4, true, false));
-            lRelPol.setText(coordinateToString(relPos, 4, true, true));
-        }
-        else {
-            lRel.setText("-");
-            lRelPol.setText("-");
-        }
+        singleShot = new QTimer();
+        singleShot.singleShot = true;
+        singleShot.timeout.connect(function() {
+            statusBar.clearMessage();
+            var absPos = documentInterface.getCursorPosition();
+            var relPos = absPos.operator_subtract(documentInterface.getRelativeZero());
+
+            lAbs.setText(coordinateToString(absPos, 4, false, false));
+            lAbsPol.setText(coordinateToString(absPos, 4, false, true));
+
+            if (relPos.isValid()) {
+                lRel.setText(coordinateToString(relPos, 4, true, false));
+                lRelPol.setText(coordinateToString(relPos, 4, true, true));
+            }
+            else {
+                lRel.setText("-");
+                lRelPol.setText("-");
+            }
+        });
+
+        singleShot.start(counter++%10==0 ? 0 : 20);
     });
 };

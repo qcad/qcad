@@ -240,6 +240,7 @@ HEADERS += \
     $$PWD/REcmaShellSnapDistance.h \
     $$PWD/REcmaShellSnapRestriction.h \
     $$PWD/REcmaShellSpatialIndexVisitorAdapter.h \
+    $$PWD/REcmaShellThread.h \
     $$PWD/REcmaShellTreeWidget.h \
     $$PWD/REcmaShellViewFocusListenerAdapter.h \
     $$PWD/REcmaShortcutLineEdit.h \
@@ -540,6 +541,7 @@ SOURCES += \
     $$PWD/REcmaShellSnapDistance.cpp \
     $$PWD/REcmaShellSnapRestriction.cpp \
     $$PWD/REcmaShellSpatialIndexVisitorAdapter.cpp \
+    $$PWD/REcmaShellThread.cpp \
     $$PWD/REcmaShellTreeWidget.cpp \
     $$PWD/REcmaShellViewFocusListenerAdapter.cpp \
     $$PWD/REcmaShortcutLineEdit.cpp \

@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RThread.h"
+#include <QDebug>
 
-#include "RDebug.h"
+#include "RThread.h"
 
 RThread::RThread(QObject * parent) :
     QThread(parent) {
@@ -32,16 +32,33 @@ void RThread::start() {
 }
 
 void RThread::run() {
+    qDebug() << "RThread::run: " << RThread::currentThreadAddress();
+
     emit dorun();
     //  QThread::run();
-    //  int i=0;
-    //  while (i<100000) {
-    //      qDebug(QString("RThread::run: %1").arg(i));
-    //      ++i;
-    //  }
+//      int i=0;
+//      while (i<10000000) {
+//          qDebug() << "RThread::run: " << i;
+//          ++i;
+//      }
     //  exec();
 }
 
 void RThread::yieldCurrentThread() {
     QThread::yieldCurrentThread();
+}
+
+QString RThread::currentThreadAddress() {
+    return QString("0x%1").arg((int)QThread::currentThread(), 0, 16);
+}
+
+QString RThread::currentThreadName() {
+    if (QThread::currentThread()==NULL) {
+        return "NULL";
+    }
+    return QThread::currentThread()->objectName();
+}
+
+RThread* RThread::currentThread() {
+    return qobject_cast<RThread*>(QThread::currentThread());
 }

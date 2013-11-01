@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RThread"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="QThread" specifier="public" />
     <constructor>
@@ -20,6 +20,21 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="currentThreadAddress"
+    cppName="currentThreadAddress" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="currentThreadName" cppName="currentThreadName"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="currentThread" cppName="currentThread"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RThread *" isPureVirtual="false" />
     </method>
     <method name="run" cppName="run" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

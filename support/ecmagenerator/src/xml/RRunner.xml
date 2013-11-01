@@ -3,10 +3,11 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RRunner"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <method name="run" cppName="run" specifier="protected"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+    <baseClass name="QObject" specifier="public" />
+    <method name="doWork" cppName="doWork" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>

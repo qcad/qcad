@@ -101,6 +101,7 @@ DefaultNavigation.prototype.mousePressEvent = function(event) {
         this.savedCursor = this.view.getCursor();
         this.view.setCursor(new QCursor(Qt.OpenHandCursor));
         this.view.startPan();
+        EAction.disableCoordinateWidget();
     }
 };
 
@@ -118,6 +119,7 @@ DefaultNavigation.prototype.mouseReleaseEvent = function(event) {
         }
         this.panning = false;
         this.savedCursor = undefined;
+        EAction.enableCoordinateWidget();
     }
 };
 

@@ -16,41 +16,72 @@ dir="./core" filename="RRunner.h">
   License * along with QCAD. */</comment>
   <cpp:ifndef>#
   <cpp:directive>ifndef</cpp:directive>
-  <name>RRUNNER_H_</name></cpp:ifndef>
+  <name>RRUNNER_H</name></cpp:ifndef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RRUNNER_H_</name></cpp:define>
+  <name>RRUNNER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable * \generateScriptShell
-  */</comment>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
+  <comment type="block">/** * Experimental / not working. *
+  \scriptable * \generateScriptShell */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
   </macro>
   <name>RRunner</name>
+  <super>: 
+  <specifier>public</specifier>
+  <name>QObject</name></super>
   <block>{
   <private type="default">
-    <decl_stmt>
-    <decl>
-      <type>
-      <name>friend</name>class</type>
-      <name>RThread</name>
-    </decl>;</decl_stmt>
+    <macro>
+      <name>Q_OBJECT</name>
+    </macro>
   </private>
-  <protected>protected: 
-  <comment type="block">/** * \todo Should be pure virtual
-  */</comment>
+  <public>public slots: 
   <function>
     <type>
-      <name>virtual</name>
       <name>void</name>
     </type>
-    <name>run</name>
+    <name>doWork</name>
     <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </function></protected>}</block>;</class>
+    <block>{ 
+    <decl_stmt>
+    <decl>
+    <type>
+      <name>int</name>
+    </type>
+    <name>i</name>=
+    <init>
+      <expr>0</expr>
+    </init></decl>;</decl_stmt>
+    <while>while
+    <condition>(
+    <expr>
+      <name>true</name>
+    </expr>)</condition>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <call>
+      <name>qDebug</name>
+      <argument_list>()</argument_list>
+    </call>&lt;&lt; "runner: i: " &lt;&lt; 
+    <name>i</name>++</expr>;</expr_stmt>}</block></while>}</block>
+  </function>
+  <comment type="line">//friend class RThread;</comment>
+  <comment type="line">//protected:</comment>
+  <comment type="block">/** * \todo Should be pure virtual
+  */</comment>
+  <comment type="line">// virtual void run() {
+  }</comment></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
@@ -58,5 +89,4 @@ dir="./core" filename="RRunner.h">
   </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/* RRUNNER_H_ */</comment>
 </unit>

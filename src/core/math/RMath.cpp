@@ -406,7 +406,6 @@ QString RMath::angleToString(double a) {
     return QString("%1").arg(rad2deg(a));
 }
 
-
 /**
  * Converts radians to degrees.
  *
