@@ -421,8 +421,8 @@ ScMirrored.prototype.paintLogo = function(painter, pixmap) {
     //bg = pixmap.copy(0,44,1280,714);
     //painter.drawPixmap(0,21,bg);
 
-    bg = pixmap.copy(70,25,60,18);
-    painter.drawPixmap(5,25,bg);
+    //bg = pixmap.copy(70,25,60,18);
+    //painter.drawPixmap(5,25,bg);
 };
 
 /**

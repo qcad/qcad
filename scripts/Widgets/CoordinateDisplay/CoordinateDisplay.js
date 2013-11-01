@@ -91,6 +91,14 @@ CoordinateDisplay.init = function(basePath) {
             }
         });
 
-        singleShot.start(counter++%10==0 ? 0 : 20);
+        // force immediate update every 10 mouse moves
+        counter++;
+        if (counter>=10) {
+            singleShot.start(0);
+            counter = 0;
+        }
+        else {
+            singleShot.start(20);
+        }
     });
 };
