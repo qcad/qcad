@@ -298,22 +298,32 @@ ScMirrored.prototype.beginEvent = function() {
     //appWin.setWindowFlags(flags);
 
     var pe = appWin.findChild("PropertyEditorDock");
-    pe.show();
-    pe.maximumWidth = 280;
+    if (!isNull(pe)) {
+        pe.show();
+        pe.maximumWidth = 280;
+    }
 
     var ll = appWin.findChild("LayerListDock");
-    ll.show();
-    ll.maximumWidth = 220;
+    if (!isNull(ll)) {
+        ll.show();
+        ll.maximumWidth = 220;
+    }
 
     var bl = appWin.findChild("BlockListDock");
-    bl.show();
-    bl.maximumWidth = 220;
+    if (!isNull(bl)) {
+        bl.show();
+        bl.maximumWidth = 220;
+    }
 
     var ct = appWin.findChild("CamToolBar");
-    ct.hide();
+    if (!isNull(ct)) {
+        ct.hide();
+    }
 
     var cl = appWin.findChild("CommandLineDock");
-    cl.hide();
+    if (!isNull(ct)) {
+        cl.hide();
+    }
 
     this.mirrorWidget = new QLabel(appWin);
     this.mirrorWidget.setAttribute(Qt.WA_MacAlwaysShowToolWindow);
