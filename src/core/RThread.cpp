@@ -49,7 +49,7 @@ void RThread::yieldCurrentThread() {
 }
 
 QString RThread::currentThreadAddress() {
-    return QString("0x%1").arg((int)QThread::currentThread(), 0, 16);
+    return QString("0x%1").arg((intptr_t)QThread::currentThread(), 0, 16);
 }
 
 QString RThread::currentThreadName() {
