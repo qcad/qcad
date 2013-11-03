@@ -915,18 +915,18 @@ bool RSpline::reverse() {
     for(k = 0; k < fitPoints.size()/2; k++) {
         fitPoints.swap(k,fitPoints.size()-(1+k));
     }
-    for(k = 0; k < knotVector.size()/2; k++) {
-        knotVector[k] *= -1;
+    double t;
+    int i, j;
+    for(i = 0, j = knotVector.size()-1; i <= j; i++, j--) {
+        t = knotVector[i];
+        knotVector[i] = -knotVector[j];
+        knotVector[j] = -t;
     }
-    RVector t = tangentStart;
+    RVector ts = tangentStart;
     tangentStart = tangentEnd;
-    tangentEnd = t;
+    tangentEnd = ts;
     update();
     return true;
-    // TODO:
-//    curve.Reverse();
-    //Q_ASSERT(false);
-    //return false;
 }
 
 QSharedPointer<RShape> RSpline::getTransformed(const QTransform& transform) const {
