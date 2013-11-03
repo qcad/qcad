@@ -75,9 +75,11 @@ ScInputInfoEventFilter.prototype.install = function(w) {
     for (var i=0; i<kids.length; i++) {
         var k = kids[i];
         if (isNull(k.gotEventFilter)) {
-            k.installEventFilter(this);
-            //k.mouseTracking = true;
-            k.setProperty("gotEventFilter", true);
+            if (isFunction(k.installEventFilter)) {
+                //k.mouseTracking = true;
+                k.installEventFilter(this);
+                k.setProperty("gotEventFilter", true);
+            }
         }
         this.install(k);
     }

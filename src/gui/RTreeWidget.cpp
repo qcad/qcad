@@ -63,7 +63,7 @@ void RTreeWidget::mousePressEvent(QMouseEvent* e) {
     indexPressed = header()->logicalIndexAt(e->pos());
     //qDebug() << "index: " << index;
     if (indexPressed==0) {
-        e->ignore();
+        //e->ignore();
         QTreeWidget::mousePressEvent(e);
     }
 }
@@ -72,12 +72,12 @@ void RTreeWidget::mouseReleaseEvent(QMouseEvent* e) {
     QTreeWidgetItem* item = itemAt(e->pos());
     int index = header()->logicalIndexAt(e->pos());
 
-    if (item != NULL && item == itemPressed && index==indexPressed) {
+    if (index>0 && item != NULL && item == itemPressed && index==indexPressed) {
         emit itemColumnClicked(item, index);
     }
 
     if (index==0) {
-        e->ignore();
+        //e->ignore();
         QTreeWidget::mouseReleaseEvent(e);
     }
 }
@@ -85,7 +85,7 @@ void RTreeWidget::mouseReleaseEvent(QMouseEvent* e) {
 void RTreeWidget::mouseMoveEvent(QMouseEvent* e) {
     int index = header()->logicalIndexAt(e->pos());
     if (index==0) {
-        e->ignore();
+        //e->ignore();
         QTreeWidget::mouseMoveEvent(e);
     }
 }
