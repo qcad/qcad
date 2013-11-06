@@ -226,5 +226,6 @@ BitmapExport.prototype.exportBitmap = function(fileName, properties) {
         appWin.handleUserMessage(
                 qsTr("Bitmap file has been exported to '%1'").arg(fileName));
     }
+    iw.destroy();
 };
 

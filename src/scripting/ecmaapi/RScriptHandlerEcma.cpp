@@ -398,6 +398,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQPrinter.property("prototype").setProperty("destroy",
             engine->newFunction(ecmaQPrinterDestroy));
 
+    QScriptValue classQImageWriter = globalObject.property("QImageWriter");
+    classQImageWriter.property("prototype").setProperty("destroy",
+            engine->newFunction(ecmaQImageWriterDestroy));
+
     QScriptValue classQPainter = globalObject.property("QPainter");
     classQPainter.property("prototype").setProperty("destroy",
             engine->newFunction(ecmaQPainterDestroy));
@@ -1450,6 +1454,23 @@ QScriptValue RScriptHandlerEcma::ecmaQPrinterDestroy(QScriptContext* context,
 
     if (self == NULL) {
         return throwError("QPrinter.destroy(): Object is NULL", context);
+    }
+    delete self;
+    self = NULL;
+
+    context->thisObject().setData(engine->nullValue());
+    context->thisObject().prototype().setData(engine->nullValue());
+    context->thisObject().setPrototype(engine->nullValue());
+    context->thisObject().setScriptClass(NULL);
+    return engine->undefinedValue();
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQImageWriterDestroy(QScriptContext* context,
+                                                     QScriptEngine* engine) {
+    QImageWriter* self = qscriptvalue_cast<QImageWriter*> (context->thisObject());
+
+    if (self == NULL) {
+        return throwError("QImageWriter.destroy(): Object is NULL", context);
     }
     delete self;
     self = NULL;

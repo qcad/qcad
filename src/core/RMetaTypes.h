@@ -61,6 +61,7 @@
 #include <QHideEvent>
 #include <QInputMethodEvent>
 #include <QImage>
+#include <QImageWriter>
 #include <QKeyEvent>
 #include <QLayout>
 #include <QLayoutItem>
@@ -181,6 +182,7 @@ Q_DECLARE_METATYPE(QGridLayout*)
 Q_DECLARE_METATYPE(QHelpEvent*)
 Q_DECLARE_METATYPE(QHideEvent*)
 Q_DECLARE_METATYPE(QImage*)
+Q_DECLARE_METATYPE(QImageWriter*)
 Q_DECLARE_METATYPE(QInputEvent*)
 Q_DECLARE_METATYPE(QInputMethodEvent*)
 Q_DECLARE_METATYPE(QItemSelection*)

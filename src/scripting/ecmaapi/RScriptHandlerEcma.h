@@ -87,6 +87,7 @@ public:
     static QScriptValue ecmaDestroy(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQPainterDestroy(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQPrinterDestroy(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQImageWriterDestroy(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQXmlResultItemsDestroy(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQXmlStreamWriterDestroy(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQObjectFindChild(QScriptContext* context, QScriptEngine* engine);
