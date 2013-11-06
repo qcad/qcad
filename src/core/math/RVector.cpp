@@ -794,7 +794,7 @@ RVector RVector::getTransformed(const RMatrix& m) const {
 /**
  * Generic 2d transformation. \c m must be a 3x2 matrix.
  */
-RVector RVector::transform2d(const RMatrix& m) {
+RVector RVector::transform2dM(const RMatrix& m) {
     RMatrix input;
 
     input = RMatrix::create3x1(
@@ -814,9 +814,9 @@ RVector RVector::transform2d(const RMatrix& m) {
  * \return A new vector which is the result of this vector transformed by
  * the given matrix.
  */
-RVector RVector::getTransformed2d(const RMatrix& m) const {
+RVector RVector::getTransformed2dM(const RMatrix& m) const {
     RVector ret = *this;
-    return ret.transform2d(m);
+    return ret.transform2dM(m);
 }
 
 /**

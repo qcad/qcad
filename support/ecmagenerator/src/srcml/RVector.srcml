@@ -914,7 +914,7 @@ dir="./core/math" filename="RVector.h">
   <type>
     <name>RVector</name>
   </type>
-  <name>transform2d</name>
+  <name>transform2dM</name>
   <parameter_list>(
   <param>
     <decl>
@@ -957,7 +957,7 @@ dir="./core/math" filename="RVector.h">
   <type>
     <name>RVector</name>
   </type>
-  <name>getTransformed2d</name>
+  <name>getTransformed2dM</name>
   <parameter_list>(
   <param>
     <decl>

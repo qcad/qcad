@@ -146,11 +146,11 @@ public:
     RVector stretch(const RPolyline& area, const RVector& offset);
     RVector isoProject(RS::IsoProjectionType type, bool trueScale);
     RVector transform(const RMatrix& m);
-    RVector transform2d(const RMatrix& m);
+    RVector transform2dM(const RMatrix& m);
     RVector transform2d(const QTransform& t);
 
     RVector getTransformed(const RMatrix& m) const;
-    RVector getTransformed2d(const RMatrix& m) const;
+    RVector getTransformed2dM(const RMatrix& m) const;
     RVector getTransformed2d(const QTransform& t) const;
 
     RVector getDividedComponents(const RVector& v) const;

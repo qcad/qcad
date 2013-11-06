@@ -602,22 +602,31 @@ bool RArc::stretch(const RPolyline& area, const RVector& offset) {
     return ret;
 }
 
+/**
+ * \todo Not working as expected, fix or disable
+ */
 QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
     RVector ct = center.getTransformed2d(transform);
     RVector sp = getStartPoint();
     RVector spt = sp.getTransformed2d(transform);
     RVector ep = getEndPoint();
     RVector ept = ep.getTransformed2d(transform);
+    //RVector mp = getMiddlePoint();
+    //RVector mpt = mp.getTransformed2d(transform);
 
-    return QSharedPointer<RShape>(
-        new RArc(
+    RArc* ret = new RArc(
             ct,
             ct.getDistanceTo(spt),
             ct.getAngleTo(spt),
             ct.getAngleTo(ept),
             reversed
-        )
-    );
+        );
+
+//    if (!ret->getMiddlePoint().equalsFuzzy(mpt)) {
+//        ret->setReversed(!reversed);
+//    }
+
+    return QSharedPointer<RShape>(ret);
 }
 
 RS::Ending RArc::getTrimEnd(const RVector& coord, const RVector& trimPoint) {

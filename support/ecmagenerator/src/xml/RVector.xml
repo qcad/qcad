@@ -282,13 +282,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="transform2d" cppName="transform2d"
+    <method name="transform2dM" cppName="transform2dM"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="RMatrix &amp;" typeName="RMatrix" name="m"
         isConst="true" />
       </variant>
+    </method>
+    <method name="transform2d" cppName="transform2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="QTransform &amp;" typeName="QTransform" name="t"
         isConst="true" />
@@ -302,13 +306,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getTransformed2d" cppName="getTransformed2d"
+    <method name="getTransformed2dM" cppName="getTransformed2dM"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="RMatrix &amp;" typeName="RMatrix" name="m"
         isConst="true" />
       </variant>
+    </method>
+    <method name="getTransformed2d" cppName="getTransformed2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="QTransform &amp;" typeName="QTransform" name="t"
         isConst="true" />

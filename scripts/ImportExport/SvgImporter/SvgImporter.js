@@ -324,8 +324,21 @@ SvgImporter.prototype.importFile = function(fileName) {
 };
 
 SvgImporter.prototype.importShape = function(shape) {
-    var shapeP = shape.getTransformed(this.transform);
-    shape = shapeP.data();
+    var shapeP;
+
+    if (isArcShape(shape) || isEllipseShape(shape) || isCircleShape(shape)) {
+        var t = this.transform;
+        shape = ShapeAlgorithms.transformArc(shape,
+            function(v) {
+                v.transform2d(t);
+            }
+        );
+    }
+    else {
+        shapeP = shape.getTransformed(this.transform);
+        shape = shapeP.data();
+    }
+
     shape.scale(new RVector(1.0, -1.0));
     shape.scale(new RVector(this.resolutionScale, this.resolutionScale));
 
@@ -379,8 +392,6 @@ SvgImporter.prototype.importBezier = function(x1, y1, px1, py1, px2, py2, x2, y2
     spline.appendControlPoint(new RVector(px1, py1));
     spline.appendControlPoint(new RVector(px2, py2));
     spline.appendControlPoint(new RVector(x2, y2));
-
-    var entity = undefined;
 
     var shape = ShapeAlgorithms.splineToLineOrArc(spline, 0.1);
 

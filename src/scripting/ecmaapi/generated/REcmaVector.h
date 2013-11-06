@@ -153,10 +153,16 @@
         transform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        transform2dM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         transform2d
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTransformed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTransformed2dM
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTransformed2d
