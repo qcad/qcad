@@ -20,15 +20,15 @@
 include("../ModifyExamples.js");
 
 /**
- * This action changes the font of all (selected) text entities to 'Arial'.
+ * Changes the direction of all (selected) arcs.
  */
-function ExChangeFontToArial(guiAction) {
+function ExChangeArcDirection(guiAction) {
     ModifyExamples.call(this, guiAction);
 }
 
-ExChangeFontToArial.prototype = new ModifyExamples();
+ExChangeArcDirection.prototype = new ModifyExamples();
 
-ExChangeFontToArial.prototype.beginEvent = function() {
+ExChangeArcDirection.prototype.beginEvent = function() {
     ModifyExamples.prototype.beginEvent.call(this);
 
     var di = this.getDocumentInterface();
@@ -41,7 +41,6 @@ ExChangeFontToArial.prototype.beginEvent = function() {
         ids = document.querySelectedEntities();
     }
     else {
-        // all entities on all blocks:
         ids = document.queryAllEntities(false, true);
     }
 
@@ -49,9 +48,8 @@ ExChangeFontToArial.prototype.beginEvent = function() {
         var id = ids[i];
         var entity = document.queryEntity(id);
 
-        if (isTextEntity(entity)) {
-            entity.setFontName("Arial");
-            entity.update();
+        if (isArcEntity(entity)) {
+            entity.setReversed(!entity.isReversed());
             op.addObject(entity);
         }
     }
@@ -61,11 +59,10 @@ ExChangeFontToArial.prototype.beginEvent = function() {
     this.terminate();
 };
 
-ExChangeFontToArial.init = function(basePath) {
-    var action = new RGuiAction("Set font to Arial", RMainWindowQt.getMainWindow());
+ExChangeArcDirection.init = function(basePath) {
+    var action = new RGuiAction("Change Arc Direction", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setRequiresSelection(false);
-    action.setScriptFile(basePath + "/ExChangeFontToArial.js");
-    action.setSortOrder(100);
+    action.setScriptFile(basePath + "/ExChangeArcDirection.js");
+    action.setSortOrder(200);
     EAction.addGuiActionTo(action, ModifyExamples, true, false, false);
 };

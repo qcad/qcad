@@ -164,7 +164,7 @@ public:
         return data.isReversed();
     }
 
-    void setRevered(bool reversed) {
+    void setReversed(bool reversed) {
         data.setReversed(reversed);
     }
 
