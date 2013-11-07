@@ -780,7 +780,7 @@ dir="./entity" filename="REllipseEntity.h">
     <type>
       <name>void</name>
     </type>
-    <name>setRevered</name>
+    <name>setReversed</name>
     <parameter_list>(
     <param>
       <decl>

@@ -113,7 +113,7 @@ private:
 private:
     static bool isInitialized;
     static QList<QPair<QString, RColor> > list;
-    static QMap<RColor, QIcon> iconMap;
+    static QMap<QPair<RColor, QPair<int, int> >, QIcon> iconMap;
     //static QVector<RColor> cadColors;
     Mode mode;
 

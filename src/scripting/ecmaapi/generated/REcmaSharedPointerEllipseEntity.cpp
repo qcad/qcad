@@ -118,7 +118,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, isReversed, "isReversed");
             
-            REcmaHelper::registerFunction(&engine, proto, setRevered, "setRevered");
+            REcmaHelper::registerFunction(&engine, proto, setReversed, "setReversed");
             
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
             
@@ -2118,19 +2118,19 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerEllipseEntity::setRevered
+        REcmaSharedPointerEllipseEntity::setReversed
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerEllipseEntity::setRevered", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipseEntity::setRevered";
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipseEntity::setReversed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipseEntity::setReversed";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     REllipseEntity* self = 
-                        getSelf("setRevered", context);
+                        getSelf("setReversed", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2160,16 +2160,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->setRevered(a0);
+               self->setReversed(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseEntity.setRevered().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseEntity.setReversed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerEllipseEntity::setRevered", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipseEntity::setReversed", context, engine);
             return result;
         }
          QScriptValue

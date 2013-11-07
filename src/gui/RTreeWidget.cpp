@@ -72,7 +72,7 @@ void RTreeWidget::mouseReleaseEvent(QMouseEvent* e) {
     QTreeWidgetItem* item = itemAt(e->pos());
     int index = header()->logicalIndexAt(e->pos());
 
-    if (index>0 && item != NULL && item == itemPressed && index==indexPressed) {
+    if (item != NULL && item == itemPressed && index==indexPressed) {
         emit itemColumnClicked(item, index);
     }
 

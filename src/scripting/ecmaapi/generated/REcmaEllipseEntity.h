@@ -116,7 +116,7 @@
         isReversed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setRevered
+        setReversed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getStartPoint

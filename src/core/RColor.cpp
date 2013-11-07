@@ -28,7 +28,7 @@
 QColor RColor::CompatByLayer = QColor(1,1,1);
 QColor RColor::CompatByBlock = QColor(2,2,2);
 QList<QPair<QString, RColor> > RColor::list;
-QMap<RColor, QIcon> RColor::iconMap;
+QMap<QPair<RColor, QPair<int, int> >, QIcon> RColor::iconMap;
 bool RColor::isInitialized = false;
 #include "RColorCodes.h"
 
@@ -426,14 +426,14 @@ void RColor::init() {
 
 void RColor::init(const QString& cn, const RColor& c) {
     list.append(QPair<QString, RColor> (cn, c));
-    iconMap.insert(c, getIcon(c));
+    //iconMap.insert(c, getIcon(c));
 }
 
 QIcon RColor::getIcon(const RColor& color, const QSize& size) {
     init();
 
-    if (iconMap.contains(color)) {
-        return iconMap[color];
+    if (iconMap.contains(QPair<RColor, QPair<int, int> >(color, QPair<int, int>(size.width(), size.height())))) {
+        return iconMap[QPair<RColor, QPair<int, int> >(color, QPair<int, int>(size.width(), size.height()))];
     }
 
     RColor col = color;
@@ -476,7 +476,9 @@ QIcon RColor::getIcon(const RColor& color, const QSize& size) {
     painter.setPen(Qt::black);
     painter.drawRect(0, 0, w - 1, h - 1);
     painter.end();
-    return QIcon(QPixmap::fromImage(img));
+    QIcon ret(QPixmap::fromImage(img));
+    iconMap.insert(QPair<RColor, QPair<int, int> >(color, QPair<int, int>(size.width(), size.height())), ret);
+    return ret;
 }
 
 /**
