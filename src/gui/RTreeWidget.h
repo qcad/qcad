@@ -56,7 +56,7 @@ signals:
     void itemColumnClicked(QTreeWidgetItem* item, int column);
 
 private:
-    QTreeWidgetItem* itemPressed;
+    QVariant itemPressedData;
     int indexPressed;
     //int iconOffset;
 };

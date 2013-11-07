@@ -26,7 +26,7 @@
  * Default Constructor.
  */
 RTreeWidget::RTreeWidget(QWidget* parent) :
-    QTreeWidget(parent), itemPressed(NULL), indexPressed(-1) {
+    QTreeWidget(parent), indexPressed(-1) {
 //#ifdef Q_OS_MAC
 //    iconOffset = 7;
 //#else
@@ -41,27 +41,28 @@ RTreeWidget::~RTreeWidget() {
 }
 
 void RTreeWidget::contextMenuEvent(QContextMenuEvent* e) {
-    if (e != NULL) {
+    if (e!=NULL) {
         QTreeWidgetItem* item = itemAt(e->pos());
-        if (item != NULL) {
+        if (item!=NULL) {
             setCurrentItem(item);
-            emit itemClicked(item, columnCount()-1);
+            emit itemClicked(item, 0);
         }
     }
     e->ignore();
 }
 
 void RTreeWidget::mousePressEvent(QMouseEvent* e) {
-//    if (header()==NULL) {
-//        e->ignore();
-//        QTreeWidget::mousePressEvent(e);
-//        qDebug() << "header closed";
-//        return;
-//    }
+    QTreeWidgetItem* item = itemAt(e->pos());
+    int index = header()->logicalIndexAt(e->pos());
 
-    itemPressed = itemAt(e->pos());
-    indexPressed = header()->logicalIndexAt(e->pos());
-    //qDebug() << "index: " << index;
+    if (item!=NULL) {
+        itemPressedData = item->data(0, Qt::UserRole);
+        if (index==0) {
+            emit itemColumnClicked(item, index);
+        }
+    }
+    indexPressed = index;
+
     if (indexPressed==0) {
         //e->ignore();
         QTreeWidget::mousePressEvent(e);
@@ -72,7 +73,7 @@ void RTreeWidget::mouseReleaseEvent(QMouseEvent* e) {
     QTreeWidgetItem* item = itemAt(e->pos());
     int index = header()->logicalIndexAt(e->pos());
 
-    if (item != NULL && item == itemPressed && index==indexPressed) {
+    if (item!=NULL && item->data(0, Qt::UserRole)==itemPressedData && index==indexPressed) {
         emit itemColumnClicked(item, index);
     }
 
@@ -83,7 +84,12 @@ void RTreeWidget::mouseReleaseEvent(QMouseEvent* e) {
 }
 
 void RTreeWidget::mouseMoveEvent(QMouseEvent* e) {
+    QTreeWidgetItem* item = itemAt(e->pos());
     int index = header()->logicalIndexAt(e->pos());
+    if (item!=NULL && item->data(0, Qt::UserRole)!=itemPressedData && index==0) {
+        itemPressedData=item->data(0, Qt::UserRole);
+        emit itemColumnClicked(item, index);
+    }
     if (index==0) {
         //e->ignore();
         QTreeWidget::mouseMoveEvent(e);
