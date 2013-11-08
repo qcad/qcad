@@ -55,10 +55,11 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     }
 
     // value comes from a combo box:
-    else if (this.sender.toString()==="QComboBox" ||
-        this.sender.toString().startsWith("RColorCombo") ||
-        this.sender.toString().startsWith("RLineweightCombo") ||
-        this.sender.toString().startsWith("RLinetypeCombo")) {
+//    else if (this.sender.toString()==="QComboBox" ||
+//        this.sender.toString().startsWith("RColorCombo") ||
+//        this.sender.toString().startsWith("RLineweightCombo") ||
+//        this.sender.toString().startsWith("RLinetypeCombo")) {
+    else if (isComboBox(this.sender)) {
 
         // value is index of combo box:
         if (isNumber(value)) {
@@ -663,12 +664,13 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
     }
 
     // Layer:
-    if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
-        WidgetFactory.initLayerCombo(control, EAction.getDocument());
-    }
+//    if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
+//        WidgetFactory.initLayerCombo(control, EAction.getDocument());
+//    }
 
     // Horizontal alignment: combo box:
-    else if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
+    //else
+    if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
         controls = this.initChoiceControls(
                     objectName, propertyTypeId, onlyChanges, control,
                     [ qsTr("Left"), qsTr("Center"), qsTr("Right"),
@@ -977,7 +979,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
 
         control.objectName = objectName;
 
-        if (isNull(choicesData)) {
+        if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
             control['activated(QString)'].connect(
                         new PropertyWatcher(this, control, propertyTypeId),
                         'propertyChanged');
@@ -989,7 +991,11 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         }
     }
 
-    if (isOfType(control, QComboBox)) {
+    if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
+        WidgetFactory.initLayerCombo(control, EAction.getDocument());
+    }
+
+    else if (isOfType(control, QComboBox) /*&& propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
         control.clear();
         if (isNull(choices)) {
             control.addItems(attributes.getChoices());
@@ -1010,7 +1016,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     // mixed:
     var variesIndex = control.findText(this.varies);
     if (attributes.isMixed()) {
-        if (variesIndex!=-1) {
+        if (variesIndex!==-1) {
             control.currentIndex = variesIndex;
         }
         else {
@@ -1021,7 +1027,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     }
 
     // not mixed anymore, remove mixed option:
-    if (variesIndex!=-1) {
+    if (variesIndex!==-1) {
         control.removeItem(variesIndex);
     }
 

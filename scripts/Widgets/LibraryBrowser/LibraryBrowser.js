@@ -1530,7 +1530,6 @@ LibraryBrowser.increaseProgress = function(progressDialog) {
     //}
 
     if (progressDialog.wasCanceled) {
-        qDebug("--- CANCEL ---");
         return false;
     }
 
