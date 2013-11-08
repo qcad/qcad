@@ -411,16 +411,21 @@ void RColor::init() {
     init(tr("By Layer"), RColor(RColor::ByLayer));
     init(tr("By Block"), RColor(RColor::ByBlock));
     init(tr("Red"), RColor(Qt::red));
-    init(tr("Yellow"), RColor(Qt::yellow));
     init(tr("Green"), RColor(Qt::green));
-    init(tr("Cyan"), RColor(Qt::cyan));
     init(tr("Blue"), RColor(Qt::blue));
+    init(tr("Cyan"), RColor(Qt::cyan));
     init(tr("Magenta"), RColor(Qt::magenta));
-    //init(tr("Black / White"), RColor(Qt::black, RColor::BlackWhite));
+    init(tr("Yellow"), RColor(Qt::yellow));
+    init(tr("Dark Red"), RColor(Qt::darkRed));
+    init(tr("Dark Green"), RColor(Qt::darkGreen));
+    init(tr("Dark Blue"), RColor(Qt::darkBlue));
+    init(tr("Dark Cyan"), RColor(Qt::darkCyan));
+    init(tr("Dark Magenta"), RColor(Qt::darkMagenta));
+    init(tr("Dark Yellow"), RColor(Qt::darkYellow));
     init(tr("Black"), RColor(Qt::black));
-    init(tr("White"), RColor(Qt::white));
     init(tr("Gray"), RColor(Qt::gray));
     init(tr("Light Gray"), RColor(Qt::lightGray));
+    init(tr("White"), RColor(Qt::white));
     init(tr("Others..."), RColor());
 }
 
