@@ -662,8 +662,13 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
         }
     }
 
+    // Layer:
+    if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
+        WidgetFactory.initLayerCombo(control, EAction.getDocument());
+    }
+
     // Horizontal alignment: combo box:
-    if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
+    else if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
         controls = this.initChoiceControls(
                     objectName, propertyTypeId, onlyChanges, control,
                     [ qsTr("Left"), qsTr("Center"), qsTr("Right"),

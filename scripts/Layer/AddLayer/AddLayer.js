@@ -32,7 +32,7 @@ AddLayer.prototype = new Layer();
 AddLayer.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
-    var dlg = new LayerDialog(this.getDocument());
+    var dlg = this.createLayerDialog(this.getDocument());
     this.layer = dlg.show();
     if (isNull(this.layer)) {
         this.terminate();
@@ -44,9 +44,6 @@ AddLayer.prototype.beginEvent = function() {
     di.applyOperation(operation);
 
     di.setCurrentLayer(this.layer);
-
-    //di.clearPreview();
-    //di.repaintViews();
 
     this.terminate();
 };

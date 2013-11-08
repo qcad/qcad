@@ -35,7 +35,7 @@ EditLayer.prototype.beginEvent = function() {
 
     var layer = this.getDocument().queryCurrentLayer();
     
-    var dlg = new LayerDialog(this.getDocument(), layer);
+    var dlg = this.createLayerDialog(this.getDocument(), layer);
     var newLayer = dlg.show();
     if (!newLayer) {
         this.terminate();

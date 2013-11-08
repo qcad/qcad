@@ -31,6 +31,26 @@ function LayerDialog(document, layer) {
     this.layer = layer;
 }
 
+/**
+ * Hook for derived classes to do additional initialization.
+ */
+LayerDialog.prototype.initDialog = function(dialog, layer) {
+};
+
+/**
+ * Hook for derived classes to store additional information back to layer.
+ */
+LayerDialog.prototype.initLayer = function(dialog, layer) {
+};
+
+/**
+ * Hook for derived classes to return complete layer name.
+ */
+LayerDialog.prototype.getLayerName = function(dialog) {
+    var leLayerName = dialog.findChild("LayerName");
+    return leLayerName.text;
+};
+
 LayerDialog.prototype.show = function() {
     var lt;
     
@@ -44,21 +64,23 @@ LayerDialog.prototype.show = function() {
     var validator = new QRegExpValidator(rx, layerName);
     layerName.setValidator(validator);
     layerName.textChanged.connect(this, "validate");
-    var color = widgets["Color"];
-    var lineweight = widgets["Lineweight"];
-    var linetype = widgets["Linetype"];
+    var cbColor = widgets["Color"];
+    var cbLineweight = widgets["Lineweight"];
+    var cbLinetype = widgets["Linetype"];
 
     if (!isNull(this.layer)) {
         layerName.text = this.layer.getName();
         if (layerName.text == "0") {
             layerName.enabled = false;
         }
-        color.setColor(this.layer.getColor());
-        lineweight.setLineweight(this.layer.getLineweight());
+        cbColor.setColor(this.layer.getColor());
+        cbLineweight.setLineweight(this.layer.getLineweight());
         var ltP = this.document.queryLinetype(this.layer.getLinetypeId());
         lt = ltP.data();
-        linetype.setLinetype(lt);
+        cbLinetype.setLinetype(lt);
     }
+
+    this.initDialog(this.dialog, this.layer);
 
     this.dialog.show();
 
@@ -70,21 +92,23 @@ LayerDialog.prototype.show = function() {
 
     if (this.dialog.exec()) {
         var text = layerName.text.trim();
-        var clr = color.getColor();
-        var lw = lineweight.getLineweight();
-        lt = linetype.getLinetype();
+        var clr = cbColor.getColor();
+        var lw = cbLineweight.getLineweight();
+        lt = cbLinetype.getLinetype();
         var ltId = this.document.getLinetypeId(lt.getName());
         if (!isNull(this.layer)) {
             this.layer.setName(text);
             this.layer.setColor(clr);
             this.layer.setLinetypeId(ltId);
             this.layer.setLineweight(lw);
+            this.initLayer(this.dialog, this.layer);
             return this.layer;
         }
         this.dialog.setAttribute(Qt.WA_DeleteOnClose);
         this.dialog.close();
         var layer = new RLayer(this.document, text, false, false,
                 clr, ltId, lw);
+        this.initLayer(this.dialog, layer);
         return layer;
     }
 };
@@ -101,17 +125,18 @@ LayerDialog.prototype.validate = function() {
     var pos = 0;
     var acceptable = true;
     message.clear();
-    if (validator.validate(leLayerName.text, pos) != QValidator.Acceptable) {
+    var layerName = this.getLayerName(this.dialog);
+    if (validator.validate(layerName, pos) != QValidator.Acceptable) {
         message.text = "<font color='red'>" + qsTr("Layer name is empty.") + "</font>";
         acceptable = false;
     }
 
     // layer exists: check if name exists:
-    if (this.document.hasLayer(leLayerName.text)) {
+    if (this.document.hasLayer(layerName)) {
         // error if we're creating a new layer and the layer name is taken or
         // we're trying to rename a layer to an existing name
         if (isNull(this.layer) ||
-            this.layer.getName().toLowerCase() != leLayerName.text.toLowerCase()) {
+            this.layer.getName().toLowerCase() != layerName.toLowerCase()) {
 
             message.text = "<font color='red'>" + qsTr("Layer already exists.") + "</font>";
             acceptable = false;

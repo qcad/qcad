@@ -33,6 +33,12 @@ SelectLayer.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
 
     var layerId = doc.getCurrentLayerId();
+    var layer = doc.queryLayer(layerId);
+    if (layer.isFrozen()) {
+        this.terminate();
+        return;
+    }
+
     var ids = doc.queryLayerEntities(layerId);
     di.selectEntities(ids, true);
 

@@ -63,7 +63,7 @@ Layer.showHide = function(show, obj, layerId) {
     var layers = obj.getDocument().queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
         var layer = obj.getDocument().queryLayer(layers[l]);
-        if (layers[l] != layerId) {
+        if (layers[l] !== layerId) {
             layer.setFrozen(!show);
         } else {
             layer.setFrozen(false);
@@ -74,4 +74,11 @@ Layer.showHide = function(show, obj, layerId) {
     di.applyOperation(operation);
     di.clearPreview();
     di.repaintViews();
+};
+
+/**
+ * Can be reimplemented in derived classes to provide an advanced dialog.
+ */
+Layer.prototype.createLayerDialog = function(doc, layer) {
+    return new LayerDialog(doc, layer);
 };

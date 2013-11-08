@@ -1019,3 +1019,17 @@ WidgetFactory.initWebView = function(webView, linkHandler, slot) {
     webPage.palette = palette;
     webView.setAttribute(Qt.WA_OpaquePaintEvent, false);
 };
+
+WidgetFactory.initLayerCombo = function(comboBox, doc) {
+    comboBox.clear();
+    comboBox.iconSize = new QSize(32, 16);
+    var names = doc.getLayerNames();
+    names.sort();
+    for (var i=0; i<names.length; i++) {
+        var name = names[i];
+        var layer = doc.queryLayer(name);
+        var icon = RColor.getIcon(layer.getColor());
+        comboBox.addItem(icon, layer.getName());
+    }
+    //WidgetFactory.initLayerCombo2(comboBox, doc);
+};

@@ -483,10 +483,6 @@ AddOn.getAddOns = function(dir) {
             continue;
         }
 
-//        if (dirInfo.fileName() === "LayerList") {
-//            debugger;
-//        }
-
         // don't dive into translation, doc or Tests folders:
         if (dirInfo.fileName() === "ts" || dirInfo.fileName() === "doc" || dirInfo.fileName() === "Tests") {
             continue;
@@ -498,13 +494,6 @@ AddOn.getAddOns = function(dir) {
         }
         else {
             if (fileInfo.exists() && !AddOn.isIgnored(fileInfo.absoluteFilePath())) {
-
-                //for (var n=0; n<addOns.length; n++) {
-//                    if (fileInfo.filePath().contains("LayerList")) {
-//                        debugger;
-//                    }
-                //}
-
                 addOns.push(new AddOn(fileInfo.filePath()));
             }
         }
