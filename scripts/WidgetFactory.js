@@ -1031,5 +1031,4 @@ WidgetFactory.initLayerCombo = function(comboBox, doc) {
         var icon = RColor.getIcon(layer.getColor());
         comboBox.addItem(icon, layer.getName());
     }
-    //WidgetFactory.initLayerCombo2(comboBox, doc);
 };
