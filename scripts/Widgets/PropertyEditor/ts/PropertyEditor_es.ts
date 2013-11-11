@@ -34,7 +34,7 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+340"/>
+        <location filename="../PropertyEditor.js" line="+341"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>
@@ -44,7 +44,7 @@ Tipo de línea:</translatorcomment>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+58"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
@@ -75,7 +75,7 @@ Tipo de línea:</translatorcomment>
         <translation>Medio</translation>
     </message>
     <message>
-        <location line="-490"/>
+        <location line="-496"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -139,7 +139,7 @@ Mosaico horizontal
         <translation type="obsolete">Añadir propiedad personalizada</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+82"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -183,7 +183,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>

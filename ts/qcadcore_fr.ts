@@ -207,7 +207,7 @@ Rétablit la dernière action</translatorcomment>
         <translation>Rouge</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
         <source>Yellow</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -215,7 +215,7 @@ Jaune</translatorcomment>
         <translation>Jaune</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-4"/>
         <source>Green</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -224,7 +224,7 @@ Greenphone (179 x 185)</translatorcomment>
         <translation>Vert</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cyan</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -232,7 +232,7 @@ Cyan</translatorcomment>
         <translation>Cyan</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Blue</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -242,7 +242,7 @@ Bluetooth</translatorcomment>
         <translation>Bleu</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Magenta</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -251,6 +251,36 @@ Magenta</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Dark Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Cyan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Magenta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Yellow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -259,7 +289,7 @@ Extra-gras</translatorcomment>
         <translation>Noir</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: FirstStart_fr.ts--
@@ -268,7 +298,7 @@ Blanc</translatorcomment>
         <translation>Blanc</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
         <source>Gray</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -285,7 +315,7 @@ Gris clair</translatorcomment>
         <translation>Gris clair</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Others...</source>
         <translatorcomment>--exact match--
 --file: Text_fr.ts--

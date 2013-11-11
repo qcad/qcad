@@ -27,7 +27,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+340"/>
+        <location filename="../PropertyEditor.js" line="+341"/>
         <source>Geometry</source>
         <translation>Géométrie</translation>
     </message>
@@ -52,7 +52,7 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+58"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
@@ -83,7 +83,7 @@
         <translation>Milieu</translation>
     </message>
     <message>
-        <location line="-490"/>
+        <location line="-496"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -123,7 +123,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
         <translation type="obsolete">Ajouter une propriété personnalisée</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+82"/>
         <source>Fit</source>
         <translatorcomment>--google--
 Ajuster à la page
@@ -175,7 +175,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Éditeur de propriétés</translation>

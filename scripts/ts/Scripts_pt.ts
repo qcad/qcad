@@ -111,7 +111,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Entidade está em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+77"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade não é uma referência de bloco.</translation>

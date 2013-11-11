@@ -25,7 +25,7 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Nombre de capa:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+34"/>
         <source>Pen</source>
         <translation>Trazador</translation>
     </message>
@@ -35,20 +35,20 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Color:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+35"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Grosor de línea:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+32"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_es.ts--</translatorcomment>
         <translation>Tipo de línea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+105"/>
+        <location filename="../LayerDialog.js" line="+130"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nombre de la capa está vacía.</translation>

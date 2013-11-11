@@ -78,7 +78,7 @@
         <translation>エンティティはロックされた画層にあります。</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+77"/>
         <source>Entity is not a block reference.</source>
         <translation>エンティティはブロック参照ではありません。</translation>
     </message>

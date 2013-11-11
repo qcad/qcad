@@ -12,7 +12,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+105"/>
+        <location filename="../LayerDialog.js" line="+130"/>
         <source>Layer name is empty.</source>
         <translation>画層名は空です。</translation>
     </message>
@@ -32,7 +32,7 @@
         <translation>画層名:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+34"/>
         <source>Pen</source>
         <translation>ペン</translation>
     </message>
@@ -42,12 +42,12 @@
         <translation>色:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+35"/>
         <source>Lineweight:</source>
         <translation>ラインの太さ:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+32"/>
         <source>Linetype:</source>
         <translation>ラインタイプ:</translation>
     </message>

@@ -106,7 +106,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+77"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie odniesienia do bloku jest.</translation>

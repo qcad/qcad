@@ -215,7 +215,7 @@ Ripeti l&apos;ultima azione</translatorcomment>
         <translation>Rosso</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
         <source>Yellow</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -225,7 +225,7 @@ Verde - giallo</translatorcomment>
         <translation>Giallo</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-4"/>
         <source>Green</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -235,7 +235,7 @@ Greenphone (179 x 185)</translatorcomment>
         <translation>Verde</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cyan</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -244,7 +244,7 @@ Verde - ciano</translatorcomment>
         <translation>Ciano</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Blue</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -254,7 +254,7 @@ Blu - ciano</translatorcomment>
         <translation>Blu</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Magenta</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -264,6 +264,36 @@ Rosso - magenta</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Dark Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Cyan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Magenta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Yellow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: qt_it.ts--
@@ -273,7 +303,7 @@ nero</translatorcomment>
         <translation>Nero</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -283,7 +313,7 @@ bianco</translatorcomment>
         <translation>Bianco</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
         <source>Gray</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -300,7 +330,7 @@ Grigio Chiaro</translatorcomment>
         <translation>Grigio chiaro</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Others...</source>
         <translatorcomment>--exact match--
 --file: Text_it.ts--

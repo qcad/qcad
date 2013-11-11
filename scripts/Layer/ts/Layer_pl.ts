@@ -16,7 +16,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+105"/>
+        <location filename="../LayerDialog.js" line="+130"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nazwa warstwy jest pusta.</translation>
@@ -42,7 +42,7 @@ Nazwa warstwy:</translatorcomment>
         <translation type="unfinished">Nazwa warstwy:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+34"/>
         <source>Pen</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -62,13 +62,13 @@ Kolor &amp;meta-siatki:</translatorcomment>
         <translation type="unfinished">Kolor:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+35"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Szerokość linii:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+32"/>
         <source>Linetype:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rodzaj linii:</translation>

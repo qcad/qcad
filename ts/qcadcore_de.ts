@@ -131,42 +131,72 @@
         <translation>Rot</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
         <source>Yellow</source>
         <translation>Gelb</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-4"/>
         <source>Green</source>
         <translation>Grün</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cyan</source>
         <translation>Cyan</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Blue</source>
         <translation>Blau</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Magenta</source>
         <translation>Magenta</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Dark Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Cyan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Magenta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Yellow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Black</source>
         <translation>Schwarz</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>White</source>
         <translation>Weiss</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
         <source>Gray</source>
         <translation>Grau</translation>
     </message>
@@ -176,7 +206,7 @@
         <translation>Hellgrau</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>

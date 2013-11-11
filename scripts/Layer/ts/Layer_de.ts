@@ -17,7 +17,7 @@
         <translation>Layername:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+34"/>
         <source>Pen</source>
         <translation>Stift</translation>
     </message>
@@ -27,22 +27,22 @@
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+35"/>
         <source>Lineweight:</source>
         <translation>Linienbreite:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+32"/>
         <source>Linetype:</source>
         <translation>Linientyp:</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location line="-122"/>
         <source>Layer Data</source>
         <translation>Layer Data</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+105"/>
+        <location filename="../LayerDialog.js" line="+130"/>
         <source>Layer name is empty.</source>
         <translation>Layername ist leer.</translation>
     </message>

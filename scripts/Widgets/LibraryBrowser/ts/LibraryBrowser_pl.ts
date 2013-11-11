@@ -202,7 +202,7 @@ Library browser will not be available.</source>
         <translation type="unfinished">LibraryBrowser Plugin: nie można połączyć się z DB. Błąd kierowcy: Błąd bazy danych: Plik bazy danych: przeglądarka Biblioteka nie będzie dostępna.</translation>
     </message>
     <message>
-        <location line="+447"/>
+        <location line="+446"/>
         <source>&amp;Insert</source>
         <translatorcomment>--google--
 &amp;Wstaw blok

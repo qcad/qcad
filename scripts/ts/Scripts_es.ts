@@ -91,7 +91,7 @@
         <translation>Entidad está en una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+77"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una referencia a bloque.</translation>

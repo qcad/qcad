@@ -160,7 +160,7 @@ Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+447"/>
+        <location line="+446"/>
         <source>&amp;Insert</source>
         <translation>&amp;Inserir</translation>
     </message>

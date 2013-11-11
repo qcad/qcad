@@ -211,7 +211,7 @@ Refaça a última ação</translatorcomment>
         <translation>Encarnado</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
         <source>Yellow</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -221,7 +221,7 @@ Canal Amarelo</translatorcomment>
         <translation>Amarelo</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-4"/>
         <source>Green</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -230,7 +230,7 @@ V&amp;erde:</translatorcomment>
         <translation>Verde</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cyan</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -240,7 +240,7 @@ Canal Ciano</translatorcomment>
         <translation>Ciano</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Blue</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -250,7 +250,7 @@ Remover Azul</translatorcomment>
         <translation>Azul</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Magenta</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -261,6 +261,36 @@ Canal Magenta</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Dark Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Cyan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Magenta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Yellow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -269,7 +299,7 @@ Preto</translatorcomment>
         <translation>Preto</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -278,7 +308,7 @@ Branco</translatorcomment>
         <translation>Branco</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
         <source>Gray</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -296,7 +326,7 @@ Cinza Claro</translatorcomment>
         <translation>Cinza Claro</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>

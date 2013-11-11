@@ -145,7 +145,7 @@ Database file: %3
 ライブラリブラウザは利用できません。</translation>
     </message>
     <message>
-        <location line="+447"/>
+        <location line="+446"/>
         <source>&amp;Insert</source>
         <translation>&amp;I 挿入</translation>
     </message>

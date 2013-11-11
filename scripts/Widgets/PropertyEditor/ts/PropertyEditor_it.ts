@@ -27,7 +27,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+340"/>
+        <location filename="../PropertyEditor.js" line="+341"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
@@ -37,7 +37,7 @@
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+58"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>
@@ -68,7 +68,7 @@
         <translation>Medio</translation>
     </message>
     <message>
-        <location line="-490"/>
+        <location line="-496"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -121,7 +121,7 @@ Nessuna selezione</translatorcomment>
         <translation type="obsolete">Aggiungi proprietà personalizzata</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+82"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -165,7 +165,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor delle proprietà</translation>

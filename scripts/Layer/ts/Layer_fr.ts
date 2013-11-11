@@ -23,7 +23,7 @@
         <translation>Nom du calque :</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+34"/>
         <source>Pen</source>
         <translation>Stylo</translation>
     </message>
@@ -33,20 +33,20 @@
         <translation>Couleur :</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+35"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Epaisseur de la ligne :</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+32"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_fr.ts--</translatorcomment>
         <translation>Type de ligne :</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+105"/>
+        <location filename="../LayerDialog.js" line="+130"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nom du calque est vide.</translation>

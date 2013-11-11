@@ -35,7 +35,7 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+189"/>
+        <location filename="../PropertyEditor.js" line="+190"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">* Różni *</translation>
@@ -115,7 +115,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+58"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -233,7 +233,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

@@ -127,42 +127,72 @@
         <translation>赤</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
         <source>Yellow</source>
         <translation>黄</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-4"/>
         <source>Green</source>
         <translation>緑</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cyan</source>
         <translation>シアン</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Blue</source>
         <translation>青</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Magenta</source>
         <translation>マゼンタ</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Dark Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Cyan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Magenta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Yellow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Black</source>
         <translation>黒</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>White</source>
         <translation>白</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
         <source>Gray</source>
         <translation>灰色</translation>
     </message>
@@ -172,7 +202,7 @@
         <translation>明るい灰色</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>

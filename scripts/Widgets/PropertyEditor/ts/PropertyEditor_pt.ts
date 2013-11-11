@@ -35,7 +35,7 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+189"/>
+        <location filename="../PropertyEditor.js" line="+190"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -113,7 +113,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+58"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -242,7 +242,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

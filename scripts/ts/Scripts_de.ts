@@ -82,7 +82,7 @@
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+77"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>

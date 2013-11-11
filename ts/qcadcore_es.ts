@@ -209,7 +209,7 @@ Rehace última orden</translatorcomment>
         <translation>Rojo</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
         <source>Yellow</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -218,7 +218,7 @@ Fijar color de trayecto a amarillo:</translatorcomment>
         <translation>Amarillo</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-4"/>
         <source>Green</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -227,7 +227,7 @@ Verde
         <translation>Verde</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cyan</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -236,7 +236,7 @@ Fijar color de trayecto a cian:</translatorcomment>
         <translation>Cian</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Blue</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -246,7 +246,7 @@ Función azul</translatorcomment>
         <translation>Azul</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Magenta</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -256,6 +256,36 @@ Fijar color de trayecto a magenta:</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Dark Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Cyan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Magenta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dark Yellow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -264,7 +294,7 @@ Negro</translatorcomment>
         <translation>Negro</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>White</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -273,7 +303,7 @@ Blanca</translatorcomment>
         <translation>Blanca</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
         <source>Gray</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -290,7 +320,7 @@ gris claro</translatorcomment>
         <translation>Gris claro</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Others...</source>
         <translatorcomment>--exact match--
 --file: Text_es.ts--
