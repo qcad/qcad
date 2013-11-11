@@ -186,6 +186,19 @@ dir="./core" filename="RMainWindow.h">
   <type>
     <name>void</name>
   </type>
+  <name>removeCoordinateListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RCoordinateListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>notifyCoordinateListeners</name>
   <parameter_list>(
   <param>
@@ -200,6 +213,19 @@ dir="./core" filename="RMainWindow.h">
     <name>void</name>
   </type>
   <name>addSelectionListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RSelectionListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>removeSelectionListener</name>
   <parameter_list>(
   <param>
     <decl>
@@ -305,6 +331,19 @@ dir="./core" filename="RMainWindow.h">
   <type>
     <name>void</name>
   </type>
+  <name>removePropertyListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RPropertyListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>notifyPropertyListeners</name>
   <parameter_list>( 
   <param>
@@ -385,6 +424,19 @@ dir="./core" filename="RMainWindow.h">
   <type>
     <name>void</name>
   </type>
+  <name>removeTransactionListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RTransactionListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>notifyTransactionListeners</name>
   <parameter_list>(
   <param>
@@ -410,6 +462,19 @@ dir="./core" filename="RMainWindow.h">
     <name>void</name>
   </type>
   <name>addSnapListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RSnapListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>removeSnapListener</name>
   <parameter_list>(
   <param>
     <decl>
@@ -448,6 +513,19 @@ dir="./core" filename="RMainWindow.h">
   <type>
     <name>void</name>
   </type>
+  <name>removeFocusListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RFocusListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>notifyFocusListeners</name>
   <parameter_list>(
   <param>
@@ -462,6 +540,19 @@ dir="./core" filename="RMainWindow.h">
     <name>void</name>
   </type>
   <name>addViewFocusListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RViewFocusListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>removeViewFocusListener</name>
   <parameter_list>(
   <param>
     <decl>
@@ -513,6 +604,19 @@ dir="./core" filename="RMainWindow.h">
   <type>
     <name>void</name>
   </type>
+  <name>removeUcsListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RUcsListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>notifyUcsListeners</name>
   <parameter_list>(
   <param>
@@ -527,6 +631,19 @@ dir="./core" filename="RMainWindow.h">
     <name>void</name>
   </type>
   <name>addLayerListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RLayerListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>removeLayerListener</name>
   <parameter_list>(
   <param>
     <decl>
@@ -565,6 +682,19 @@ dir="./core" filename="RMainWindow.h">
   <type>
     <name>void</name>
   </type>
+  <name>removeBlockListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RBlockListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>notifyBlockListeners</name>
   <parameter_list>(
   <param>
@@ -591,6 +721,19 @@ dir="./core" filename="RMainWindow.h">
   <type>
     <name>void</name>
   </type>
+  <name>removeViewListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RViewListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>notifyViewListeners</name>
   <parameter_list>(
   <param>
@@ -605,6 +748,19 @@ dir="./core" filename="RMainWindow.h">
     <name>void</name>
   </type>
   <name>addPenListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RPenListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>removePenListener</name>
   <parameter_list>(
   <param>
     <decl>

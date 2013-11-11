@@ -76,6 +76,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="removeCoordinateListener"
+    cppName="removeCoordinateListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RCoordinateListener *"
+        typeName="RCoordinateListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="notifyCoordinateListeners"
     cppName="notifyCoordinateListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -87,6 +96,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="addSelectionListener"
     cppName="addSelectionListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSelectionListener *"
+        typeName="RSelectionListener *" name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeSelectionListener"
+    cppName="removeSelectionListener" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RSelectionListener *"
@@ -133,6 +150,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RPropertyListener *" name="l" isConst="false" />
       </variant>
     </method>
+    <method name="removePropertyListener"
+    cppName="removePropertyListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyListener *"
+        typeName="RPropertyListener *" name="l" isConst="false" />
+      </variant>
+    </method>
     <method name="notifyPropertyListeners"
     cppName="notifyPropertyListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -162,6 +187,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="removeTransactionListener"
+    cppName="removeTransactionListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransactionListener *"
+        typeName="RTransactionListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="notifyTransactionListeners"
     cppName="notifyTransactionListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -174,6 +208,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="addSnapListener" cppName="addSnapListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSnapListener *" typeName="RSnapListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeSnapListener" cppName="removeSnapListener"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -198,6 +240,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="l" isConst="false" />
       </variant>
     </method>
+    <method name="removeFocusListener"
+    cppName="removeFocusListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RFocusListener *" typeName="RFocusListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
     <method name="notifyFocusListeners"
     cppName="notifyFocusListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -209,6 +259,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="addViewFocusListener"
     cppName="addViewFocusListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RViewFocusListener *"
+        typeName="RViewFocusListener *" name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeViewFocusListener"
+    cppName="removeViewFocusListener" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RViewFocusListener *"
@@ -239,6 +297,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="l" isConst="false" />
       </variant>
     </method>
+    <method name="removeUcsListener" cppName="removeUcsListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RUcsListener *" typeName="RUcsListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
     <method name="notifyUcsListeners" cppName="notifyUcsListeners"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -251,6 +317,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="addLayerListener" cppName="addLayerListener"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLayerListener *" typeName="RLayerListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeLayerListener"
+    cppName="removeLayerListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RLayerListener *" typeName="RLayerListener *"
         name="l" isConst="false" />
@@ -273,6 +347,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="l" isConst="false" />
       </variant>
     </method>
+    <method name="removeBlockListener"
+    cppName="removeBlockListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBlockListener *" typeName="RBlockListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
     <method name="notifyBlockListeners"
     cppName="notifyBlockListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -290,6 +372,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="l" isConst="false" />
       </variant>
     </method>
+    <method name="removeViewListener" cppName="removeViewListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RViewListener *" typeName="RViewListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
     <method name="notifyViewListeners"
     cppName="notifyViewListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -300,6 +390,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="addPenListener" cppName="addPenListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPenListener *" typeName="RPenListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removePenListener" cppName="removePenListener"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

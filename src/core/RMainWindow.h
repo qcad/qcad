@@ -86,9 +86,11 @@ public:
     void notifyListeners(bool withNull = false);
 
     void addCoordinateListener(RCoordinateListener* l);
+    void removeCoordinateListener(RCoordinateListener* l);
     void notifyCoordinateListeners(RDocumentInterface* documentInterface);
 
     void addSelectionListener(RSelectionListener* l);
+    void removeSelectionListener(RSelectionListener* l);
     void notifySelectionListeners(RDocumentInterface* documentInterface);
 
     virtual void postSelectionChangedEvent() = 0;
@@ -105,6 +107,7 @@ public:
 //    ) = 0;
 
     void addPropertyListener(RPropertyListener* l);
+    void removePropertyListener(RPropertyListener* l);
     void notifyPropertyListeners(
         RDocument* document,
         bool onlyChanges=false,
@@ -114,32 +117,41 @@ public:
     void notifyPropertyListeners();
 
     void addTransactionListener(RTransactionListener* l);
+    void removeTransactionListener(RTransactionListener* l);
     void notifyTransactionListeners(RDocument* document, RTransaction* transaction = NULL);
 
     void addSnapListener(RSnapListener* l);
+    void removeSnapListener(RSnapListener* l);
     void notifySnapListeners(RDocumentInterface* documentInterface);
 
     void addFocusListener(RFocusListener* l);
+    void removeFocusListener(RFocusListener* l);
     void notifyFocusListeners(RDocumentInterface* documentInterface);
 
     void addViewFocusListener(RViewFocusListener* l);
+    void removeViewFocusListener(RViewFocusListener* l);
     void notifyViewFocusListeners(RGraphicsView* view);
 
     void propertyChangeEvent(RPropertyEvent& event);
 
     void addUcsListener(RUcsListener* l);
+    void removeUcsListener(RUcsListener* l);
     void notifyUcsListeners(RDocumentInterface* documentInterface);
 
     void addLayerListener(RLayerListener* l);
+    void removeLayerListener(RLayerListener* l);
     void notifyLayerListeners(RDocumentInterface* documentInterface);
 
     void addBlockListener(RBlockListener* l);
+    void removeBlockListener(RBlockListener* l);
     void notifyBlockListeners(RDocumentInterface* documentInterface);
 
     void addViewListener(RViewListener* l);
+    void removeViewListener(RViewListener* l);
     void notifyViewListeners(RDocumentInterface* documentInterface);
 
     void addPenListener(RPenListener* l);
+    void removePenListener(RPenListener* l);
     void notifyPenListeners(RDocumentInterface* documentInterface);
 
     void ucsSetEvent(const QString& ucsName);

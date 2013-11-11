@@ -65,10 +65,16 @@
         addCoordinateListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeCoordinateListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         notifyCoordinateListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addSelectionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeSelectionListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         notifySelectionListeners
@@ -77,10 +83,16 @@
         addPropertyListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removePropertyListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         notifyPropertyListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeTransactionListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         notifyTransactionListeners
@@ -89,16 +101,25 @@
         addSnapListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeSnapListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         notifySnapListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addFocusListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeFocusListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         notifyFocusListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addViewFocusListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeViewFocusListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         notifyViewFocusListeners
@@ -110,10 +131,16 @@
         addUcsListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeUcsListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         notifyUcsListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addLayerListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeLayerListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         notifyLayerListeners
@@ -122,16 +149,25 @@
         addBlockListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeBlockListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         notifyBlockListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addViewListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeViewListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         notifyViewListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addPenListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removePenListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         notifyPenListeners

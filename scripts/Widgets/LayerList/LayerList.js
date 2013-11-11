@@ -32,6 +32,7 @@ function RLayerListQt(parent) {
     appWin.addLayerListener(adapter);
     adapter.layersUpdated.connect(this, "updateLayers");
     adapter.layersCleared.connect(this, "clearLayers");
+    this.setProperty("listener", adapter);
 
     this.itemSelectionChanged.connect(this, "layerActivated");
     this.itemDoubleClicked.connect(this, "moveSelectionToLayer");
@@ -196,6 +197,16 @@ LayerList.prototype.finishEvent = function() {
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("LayerListDock");
     this.getGuiAction().setChecked(dock.visible);
+};
+
+LayerList.uninit = function() {
+    var action = RGuiAction.getByScriptFile("scripts/Widgets/LayerList/LayerList.js");
+    action.visible = false;
+    var appWin = RMainWindowQt.getMainWindow();
+    var layerList = appWin.findChild("LayerList");
+    appWin.removeLayerListener(layerList.property("listener"));
+    var basicDock = appWin.findChild("LayerListDock");
+    basicDock.destroy();
 };
 
 LayerList.init = function(basePath) {

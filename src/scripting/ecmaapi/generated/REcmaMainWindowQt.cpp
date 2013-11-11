@@ -113,29 +113,43 @@
             
             REcmaHelper::registerFunction(&engine, proto, addCoordinateListener, "addCoordinateListener");
             
+            REcmaHelper::registerFunction(&engine, proto, removeCoordinateListener, "removeCoordinateListener");
+            
             REcmaHelper::registerFunction(&engine, proto, notifyCoordinateListeners, "notifyCoordinateListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addSelectionListener, "addSelectionListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeSelectionListener, "removeSelectionListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifySelectionListeners, "notifySelectionListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addPropertyListener, "addPropertyListener");
             
+            REcmaHelper::registerFunction(&engine, proto, removePropertyListener, "removePropertyListener");
+            
             REcmaHelper::registerFunction(&engine, proto, notifyPropertyListeners, "notifyPropertyListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addTransactionListener, "addTransactionListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeTransactionListener, "removeTransactionListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyTransactionListeners, "notifyTransactionListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addSnapListener, "addSnapListener");
             
+            REcmaHelper::registerFunction(&engine, proto, removeSnapListener, "removeSnapListener");
+            
             REcmaHelper::registerFunction(&engine, proto, notifySnapListeners, "notifySnapListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addFocusListener, "addFocusListener");
             
+            REcmaHelper::registerFunction(&engine, proto, removeFocusListener, "removeFocusListener");
+            
             REcmaHelper::registerFunction(&engine, proto, notifyFocusListeners, "notifyFocusListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addViewFocusListener, "addViewFocusListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeViewFocusListener, "removeViewFocusListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyViewFocusListeners, "notifyViewFocusListeners");
             
@@ -143,21 +157,31 @@
             
             REcmaHelper::registerFunction(&engine, proto, addUcsListener, "addUcsListener");
             
+            REcmaHelper::registerFunction(&engine, proto, removeUcsListener, "removeUcsListener");
+            
             REcmaHelper::registerFunction(&engine, proto, notifyUcsListeners, "notifyUcsListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addLayerListener, "addLayerListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeLayerListener, "removeLayerListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyLayerListeners, "notifyLayerListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addBlockListener, "addBlockListener");
             
+            REcmaHelper::registerFunction(&engine, proto, removeBlockListener, "removeBlockListener");
+            
             REcmaHelper::registerFunction(&engine, proto, notifyBlockListeners, "notifyBlockListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addViewListener, "addViewListener");
             
+            REcmaHelper::registerFunction(&engine, proto, removeViewListener, "removeViewListener");
+            
             REcmaHelper::registerFunction(&engine, proto, notifyViewListeners, "notifyViewListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addPenListener, "addPenListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removePenListener, "removePenListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyPenListeners, "notifyPenListeners");
             
@@ -734,6 +758,68 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::removeCoordinateListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeCoordinateListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeCoordinateListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeCoordinateListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RCoordinateListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RCoordinateListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RCoordinateListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RCoordinateListener *RCoordinateListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeCoordinateListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeCoordinateListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeCoordinateListener", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::notifyCoordinateListeners
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -858,6 +944,68 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::removeSelectionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeSelectionListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeSelectionListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeSelectionListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RSelectionListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RSelectionListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RSelectionListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RSelectionListener *RSelectionListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeSelectionListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeSelectionListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeSelectionListener", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::notifySelectionListeners
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -979,6 +1127,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::addPropertyListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::removePropertyListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removePropertyListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removePropertyListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removePropertyListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPropertyListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RPropertyListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RPropertyListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RPropertyListener *RPropertyListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removePropertyListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removePropertyListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removePropertyListener", context, engine);
             return result;
         }
          QScriptValue
@@ -1289,6 +1499,68 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::removeTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeTransactionListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeTransactionListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeTransactionListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransactionListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RTransactionListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RTransactionListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RTransactionListener *RTransactionListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeTransactionListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeTransactionListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeTransactionListener", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::notifyTransactionListeners
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1467,6 +1739,68 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::removeSnapListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeSnapListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeSnapListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeSnapListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RSnapListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RSnapListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RSnapListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RSnapListener *RSnapListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeSnapListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeSnapListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeSnapListener", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::notifySnapListeners
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1591,6 +1925,68 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::removeFocusListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeFocusListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeFocusListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeFocusListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RFocusListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RFocusListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RFocusListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RFocusListener *RFocusListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeFocusListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeFocusListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeFocusListener", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::notifyFocusListeners
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1712,6 +2108,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::addViewFocusListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::removeViewFocusListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeViewFocusListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeViewFocusListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeViewFocusListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RViewFocusListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RViewFocusListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RViewFocusListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RViewFocusListener *RViewFocusListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeViewFocusListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeViewFocusListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeViewFocusListener", context, engine);
             return result;
         }
          QScriptValue
@@ -1906,6 +2364,68 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::removeUcsListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeUcsListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeUcsListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeUcsListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RUcsListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RUcsListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RUcsListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RUcsListener *RUcsListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeUcsListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeUcsListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeUcsListener", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::notifyUcsListeners
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2027,6 +2547,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::addLayerListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::removeLayerListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeLayerListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeLayerListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeLayerListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLayerListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RLayerListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RLayerListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RLayerListener *RLayerListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeLayerListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeLayerListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeLayerListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2154,6 +2736,68 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::removeBlockListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeBlockListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeBlockListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeBlockListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBlockListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RBlockListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RBlockListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RBlockListener *RBlockListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeBlockListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeBlockListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeBlockListener", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::notifyBlockListeners
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2278,6 +2922,68 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::removeViewListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeViewListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeViewListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeViewListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RViewListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RViewListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RViewListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RViewListener *RViewListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeViewListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeViewListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeViewListener", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::notifyViewListeners
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2399,6 +3105,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::addPenListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::removePenListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removePenListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removePenListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removePenListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPenListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RPenListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RPenListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RPenListener *RPenListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removePenListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removePenListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removePenListener", context, engine);
             return result;
         }
          QScriptValue

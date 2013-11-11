@@ -151,6 +151,10 @@ void RMainWindow::addCoordinateListener(RCoordinateListener* l) {
     coordinateListeners.push_back(l);
 }
 
+void RMainWindow::removeCoordinateListener(RCoordinateListener* l) {
+    coordinateListeners.removeAll(l);
+}
+
 /**
  * Notifies all coordinate listeners that the coordinate has changed to \c position.
  */
@@ -167,6 +171,10 @@ void RMainWindow::notifyCoordinateListeners(RDocumentInterface* documentInterfac
  */
 void RMainWindow::addSelectionListener(RSelectionListener* l) {
     selectionListeners.push_back(l);
+}
+
+void RMainWindow::removeSelectionListener(RSelectionListener* l) {
+    selectionListeners.removeAll(l);
 }
 
 /**
@@ -191,6 +199,10 @@ void RMainWindow::addTransactionListener(RTransactionListener* l) {
     }
 }
 
+void RMainWindow::removeTransactionListener(RTransactionListener* l) {
+    transactionListeners.removeAll(l);
+}
+
 /**
  * Notifies all transaction listeners.
  */
@@ -211,6 +223,10 @@ void RMainWindow::addSnapListener(RSnapListener* l) {
     } else {
         qWarning("RMainWindow::addSnapListener(): Listener is NULL.");
     }
+}
+
+void RMainWindow::removeSnapListener(RSnapListener* l) {
+    snapListeners.removeAll(l);
 }
 
 /**
@@ -234,6 +250,10 @@ void RMainWindow::addFocusListener(RFocusListener* l) {
     }
 }
 
+void RMainWindow::removeFocusListener(RFocusListener* l) {
+    focusListeners.removeAll(l);
+}
+
 /**
  * Notifies all focus listeners.
  */
@@ -255,6 +275,10 @@ void RMainWindow::addViewFocusListener(RViewFocusListener* l) {
     }
 }
 
+void RMainWindow::removeViewFocusListener(RViewFocusListener* l) {
+    viewFocusListeners.removeAll(l);
+}
+
 /**
  * Notifies all view focus listeners.
  */
@@ -271,6 +295,10 @@ void RMainWindow::notifyViewFocusListeners(RGraphicsView* view) {
  */
 void RMainWindow::addPropertyListener(RPropertyListener* l) {
     propertyListeners.push_back(l);
+}
+
+void RMainWindow::removePropertyListener(RPropertyListener* l) {
+    propertyListeners.removeAll(l);
 }
 
 /**
@@ -324,6 +352,10 @@ void RMainWindow::addUcsListener(RUcsListener* l) {
     ucsListeners.push_back(l);
 }
 
+void RMainWindow::removeUcsListener(RUcsListener* l) {
+    ucsListeners.removeAll(l);
+}
+
 /**
  * Notifies all UCS listeners that at least one UCS object has changed.
  */
@@ -339,6 +371,10 @@ void RMainWindow::notifyUcsListeners(RDocumentInterface* documentInterface) {
  */
 void RMainWindow::addLayerListener(RLayerListener* l) {
     layerListeners.push_back(l);
+}
+
+void RMainWindow::removeLayerListener(RLayerListener* l) {
+    layerListeners.removeAll(l);
 }
 
 /**
@@ -358,6 +394,10 @@ void RMainWindow::addBlockListener(RBlockListener* l) {
     blockListeners.push_back(l);
 }
 
+void RMainWindow::removeBlockListener(RBlockListener* l) {
+    blockListeners.removeAll(l);
+}
+
 /**
  * Notifies all block listeners that at least one block object has changed.
  */
@@ -375,6 +415,10 @@ void RMainWindow::addViewListener(RViewListener* l) {
     viewListeners.push_back(l);
 }
 
+void RMainWindow::removeViewListener(RViewListener* l) {
+    viewListeners.removeAll(l);
+}
+
 /**
  * Notifies all view listeners that at least one view object has changed.
  */
@@ -390,6 +434,10 @@ void RMainWindow::notifyViewListeners(RDocumentInterface* documentInterface) {
  */
 void RMainWindow::addPenListener(RPenListener* l) {
     penListeners.push_back(l);
+}
+
+void RMainWindow::removePenListener(RPenListener* l) {
+    penListeners.removeAll(l);
 }
 
 /**
