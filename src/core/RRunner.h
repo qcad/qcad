@@ -23,6 +23,7 @@
 #include "core_global.h"
 
 #include <QDebug>
+#include <QMetaType>
 #include <QObject>
 
 /**
@@ -40,13 +41,6 @@ public slots:
             qDebug() << "runner: i: " << i++;
         }
     }
-
-    //friend class RThread;
-//protected:
-    /**
-     * \todo Should be pure virtual
-     */
-//    virtual void run() { }
 };
 
 Q_DECLARE_METATYPE(RRunner*)
