@@ -1,6 +1,6 @@
 function init(basePath) {
     // disabled for now:
-    //return;
+    return;
 
     var action = new RGuiAction("&Mirrored", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
