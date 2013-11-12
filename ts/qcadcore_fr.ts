@@ -252,32 +252,32 @@ Magenta</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Dark Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Rouge foncé</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished"></translation>
+        <translation>Vert foncé</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Bleu foncé</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Cyan foncé</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Magenta foncé</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaune foncé</translation>
     </message>
     <message>
         <location line="+1"/>

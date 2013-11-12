@@ -257,32 +257,32 @@ Fijar color de trayecto a magenta:</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Dark Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Rojo oscuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished"></translation>
+        <translation>Verde oscuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Azul oscuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciánico oscuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Magenta oscuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Amarillo oscuro</translation>
     </message>
     <message>
         <location line="+1"/>

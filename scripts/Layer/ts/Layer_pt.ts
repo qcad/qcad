@@ -16,7 +16,12 @@ Utilize a &amp;camada atual</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+130"/>
+        <location filename="../LayerDialog.js" line="+131"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Esquerda ou à direita espaços.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nome da camada está vazia.</translation>

@@ -262,32 +262,32 @@ Canal Magenta</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Dark Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Vermelho escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished"></translation>
+        <translation>Verde escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Azul escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciano escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Magenta escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Amarelo escuro</translation>
     </message>
     <message>
         <location line="+1"/>

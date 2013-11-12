@@ -42,7 +42,12 @@
         <translation>Tipo di linea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+130"/>
+        <location filename="../LayerDialog.js" line="+131"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Spazi iniziali o finali.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Layer name is empty.</source>
         <translation>Nome del layer è vuoto.</translation>
     </message>

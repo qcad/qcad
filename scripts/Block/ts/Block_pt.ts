@@ -15,7 +15,12 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+92"/>
+        <location filename="../BlockDialog.js" line="+93"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Esquerda ou à direita espaços.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Block name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nome do bloco está vazio.</translation>

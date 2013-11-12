@@ -48,7 +48,12 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Tipo de línea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+130"/>
+        <location filename="../LayerDialog.js" line="+131"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Espacios iniciales o finales.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nombre de la capa está vacía.</translation>

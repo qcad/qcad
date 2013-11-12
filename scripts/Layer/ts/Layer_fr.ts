@@ -46,7 +46,12 @@
         <translation>Type de ligne :</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+130"/>
+        <location filename="../LayerDialog.js" line="+131"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Espaces avant ou après.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nom du calque est vide.</translation>

@@ -12,7 +12,12 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+130"/>
+        <location filename="../LayerDialog.js" line="+131"/>
+        <source>Leading or trailing spaces.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Layer name is empty.</source>
         <translation>画層名は空です。</translation>
     </message>

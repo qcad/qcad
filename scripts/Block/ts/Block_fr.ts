@@ -27,7 +27,12 @@
         <translation>block 1</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.js" line="+92"/>
+        <location filename="../BlockDialog.js" line="+93"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Espaces avant ou après.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Block name is empty.</source>
         <translation>Nom du bloc est vide.</translation>
     </message>

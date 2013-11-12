@@ -4,7 +4,7 @@
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../LayerList.js" line="+204"/>
+        <location filename="../LayerList.js" line="+215"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Liste des calques</translation>
     </message>
