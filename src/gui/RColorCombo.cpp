@@ -35,7 +35,7 @@ RColorCombo::RColorCombo(QWidget *parent) :
 
 void RColorCombo::init() {
     clear();
-    setMaxVisibleItems(15);
+    setMaxVisibleItems(20);
     QVariant v;
     QListIterator<QPair<QString, RColor> > it(RColor::getList(onlyFixed));
 
