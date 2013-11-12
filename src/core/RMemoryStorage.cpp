@@ -748,12 +748,11 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
     if (!entity.isNull()) {
-        //blockEntityMap.remove(entity->getBlockId());
-        //int r =
         blockEntityMap.remove(entity->getBlockId(), entity);
-//        qDebug() << "removed " << r << " entities";
-//        qDebug() << "removed " << entity->getId() << " from block " << entity->getBlockId();
+        return true;
     }
+
+    return false;
 }
 
 bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion) {
