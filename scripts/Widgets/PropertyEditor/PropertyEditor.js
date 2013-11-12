@@ -220,9 +220,16 @@ function PropertyEditorImpl(basePath) {
         if (isNull(di)) {
             return;
         }
-        var action = new AddLayer();
-        di.setCurrentAction(action);
-        var layer = action.getAddedLayer();
+        var action = RGuiAction.getByScriptFile("scripts/Layer/AddLayer/AddLayer.js");
+        if (isNull(action)) {
+            return;
+        }
+        action.trigger();
+        var doc = di.getDocument();
+        var layer = doc.queryCurrentLayer();
+        //var action = new AddLayer();
+        //di.setCurrentAction(action);
+        //var layer = action.getAddedLayer();
         if (!isNull(layer)) {
             var pw = new PropertyWatcher(propertyEditor, layerCombo, REntity.PropertyLayer);
             pw.propertyChanged(layer.getName());
