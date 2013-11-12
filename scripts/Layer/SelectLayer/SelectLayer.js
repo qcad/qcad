@@ -22,6 +22,7 @@ include("../Layer.js");
 
 function SelectLayer(guiAction) {
     Layer.call(this, guiAction);
+    this.select = true;
 }
 
 SelectLayer.prototype = new Layer();
@@ -30,18 +31,23 @@ SelectLayer.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
     var doc = this.getDocument();
-    var di = this.getDocumentInterface();
-
-    var layerId = doc.getCurrentLayerId();
-    var layer = doc.queryLayer(layerId);
-    if (layer.isFrozen()) {
-        this.terminate();
-        return;
-    }
-
-    var ids = doc.queryLayerEntities(layerId);
-    di.selectEntities(ids, true);
-
+    var layer = doc.queryCurrentLayer();
+    this.selectLayer(layer);
     this.terminate();
 };
 
+SelectLayer.prototype.selectLayer = function(layer) {
+    var doc = this.getDocument();
+    var di = this.getDocumentInterface();
+    if (layer.isFrozen()) {
+        return false;
+    }
+
+    var ids = doc.queryLayerEntities(layer.getId());
+    if (this.select) {
+        di.selectEntities(ids, true);
+    }
+    else {
+        di.deselectEntities(ids);
+    }
+};

@@ -88,6 +88,12 @@ BlockDialog.prototype.validate = function() {
     var pos = 0;
     var acceptable = true;
     message.clear();
+
+    if (leBlockName.text!==leBlockName.text.trim()) {
+        message.text = "<font color='red'>" + qsTr("Leading or trailing spaces.") + "</font>";
+        acceptable = false;
+    }
+
     if (validator.validate(leBlockName.text, pos) != QValidator.Acceptable) {
         message.text = "<font color='red'>" + qsTr("Block name is empty.") + "</font>";
         acceptable = false;

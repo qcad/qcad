@@ -126,6 +126,12 @@ LayerDialog.prototype.validate = function() {
     var acceptable = true;
     message.clear();
     var layerName = this.getLayerName(this.dialog);
+
+    if (layerName!==layerName.trim()) {
+        message.text = "<font color='red'>" + qsTr("Leading or trailing spaces.") + "</font>";
+        acceptable = false;
+    }
+
     if (validator.validate(layerName, pos) != QValidator.Acceptable) {
         message.text = "<font color='red'>" + qsTr("Layer name is empty.") + "</font>";
         acceptable = false;

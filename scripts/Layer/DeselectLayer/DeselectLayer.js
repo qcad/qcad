@@ -17,25 +17,17 @@
  * along with QCAD.
  */
 
-include("../Layer.js");
+include("../SelectLayer/SelectLayer.js");
  
 
 function DeselectLayer(guiAction) {
-    Layer.call(this, guiAction);
+    SelectLayer.call(this, guiAction);
+    this.select = false;
 }
 
-DeselectLayer.prototype = new Layer();
+DeselectLayer.prototype = new SelectLayer();
 
 DeselectLayer.prototype.beginEvent = function() {
-    Layer.prototype.beginEvent.call(this);
-
-    var doc = this.getDocument();
-    var di = this.getDocumentInterface();
-
-    var layerId = doc.getCurrentLayerId();
-    var ids = doc.queryLayerEntities(layerId);
-    di.deselectEntities(ids);
-
-    this.terminate();
+    SelectLayer.prototype.beginEvent.call(this);
 };
 

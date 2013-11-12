@@ -33,7 +33,7 @@ RBlock::RBlock() :
 RBlock::RBlock(RDocument* document, const QString& name,
     const RVector& origin) :
     RObject(document),
-    name(name),
+    name(name.trimmed()),
     frozen(false),
     origin(origin) {
 }
@@ -51,7 +51,7 @@ RBlock* RBlock::clone() const {
 }
 
 void RBlock::setName(const QString& n) {
-    name = n;
+    name = n.trimmed();
 }
 
 //void RBlock::setAttributeDefinition(const RAttributeDefinition& attDef) {
@@ -84,7 +84,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
 //        return true;
 //    }
 
-    ret = RObject::setMember(name, value, PropertyName == propertyTypeId);
+    ret = RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(frozen, value, PropertyFrozen == propertyTypeId);
 
     return ret;

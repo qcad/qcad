@@ -42,7 +42,10 @@ EditLayer.prototype.beginEvent = function() {
         return;
     }
     
-    var operation = new RAddObjectOperation(newLayer);
+    var operation = new RAddObjectsOperation();
+    operation.addObject(newLayer);
+    this.completeOperation(operation, layer, newLayer);
+
     var di = this.getDocumentInterface();
     di.applyOperation(operation);
     di.clearPreview();
@@ -51,3 +54,8 @@ EditLayer.prototype.beginEvent = function() {
     this.terminate();
 };
 
+/**
+ * Hook for derived classes to add more objects to operation.
+ */
+EditLayer.prototype.completeOperation = function(operation, newLayer) {
+};

@@ -37,7 +37,7 @@ RLayer::RLayer() :
 RLayer::RLayer(RDocument* document, const QString& name,
     bool frozen, bool locked, const RColor& color,
     RLinetype::Id linetype, RLineweight::Lineweight lineweight) :
-    RObject(document), name(name), frozen(frozen), locked(locked),
+    RObject(document), name(name.trimmed()), frozen(frozen), locked(locked),
     color(color), linetype(linetype), lineweight(lineweight) {
 }
 
@@ -61,7 +61,7 @@ void RLayer::setName(const QString& n) {
     if (name == "0") {
         return;
     }
-    name = n;
+    name = n.trimmed();
 }
 
 bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
@@ -73,7 +73,7 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
         return false;
     }
 
-    ret = RObject::setMember(name, value, PropertyName == propertyTypeId);
+    ret = RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(frozen, value, PropertyFrozen == propertyTypeId);
     ret = ret || RObject::setMember(locked, value, PropertyLocked == propertyTypeId);
     ret = ret || RObject::setMember(color, value, PropertyColor == propertyTypeId);
