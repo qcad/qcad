@@ -18,6 +18,7 @@
  */
 #include <QDebug>
 
+#include <stdint.h>
 #include "RThread.h"
 
 RThread::RThread(QObject * parent) :
