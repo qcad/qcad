@@ -1,13 +1,10 @@
-include( ../../../shared.pri )
+exists(../../../shared.pri) {
+    include( ../../../shared.pri )
+}
 
 win32-msvc {
   DEFINES += _CRT_SECURE_NO_DEPRECATE
 }
-
-#macx {
-#  QMAKE_MAC_SDK=/Developer/SDKs/MacOSX10.5.sdk
-#  CONFIG+=x86 ppc
-#}
 
 INCLUDEPATH += src
 HEADERS = \
