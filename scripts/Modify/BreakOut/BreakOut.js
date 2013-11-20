@@ -192,7 +192,7 @@ BreakOut.prototype.getOperation = function(preview) {
     var e;
 
     if (isNull(newSegments[0]) && isNull(newSegments[1])) {
-        if (!this.extend) {
+        if (!this.extend && this.removeSegment) {
             // delete entity completely:
             op.deleteObject(this.entity);
         }
@@ -201,10 +201,12 @@ BreakOut.prototype.getOperation = function(preview) {
         // replace circle with arc:
         if (isCircleEntity(this.entity)) {
             op.deleteObject(this.entity);
-            if (this.extend && !isNull(newSegments[2])) {
-                e = shapeToEntity(this.entity.getDocument(), newSegments[2]);
-                e.copyAttributesFrom(this.entity.data());
-                op.addObject(e, false);
+            if (!isNull(newSegments[2])) {
+                if (this.extend || !this.removeSegment) {
+                    e = shapeToEntity(this.entity.getDocument(), newSegments[2]);
+                    e.copyAttributesFrom(this.entity.data());
+                    op.addObject(e, false);
+                }
             }
         }
 
