@@ -193,6 +193,9 @@
         getPreviewEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLimitZoomAndScroll
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShowCrosshair
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

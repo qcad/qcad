@@ -111,6 +111,7 @@ public:
     static int getSnapRange();
     static int getZeroWeightWeight();
     static int getPreviewEntities();
+    static bool getLimitZoomAndScroll();
     static bool getShowCrosshair();
     static void setShowCrosshair(bool on);
     static bool getShowLargeCrosshair();
@@ -166,6 +167,7 @@ private:
     static int showLargeCrosshair;
     static int concurrentDrawing;
     static int previewEntities;
+    static int limitZoomAndScroll;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 

@@ -28,6 +28,9 @@ dir="./core" filename="RRunner.h">
   <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
   <comment type="block">/** * Experimental / not working. *
   \scriptable * \generateScriptShell */</comment>
@@ -75,13 +78,7 @@ dir="./core" filename="RRunner.h">
       <argument_list>()</argument_list>
     </call>&lt;&lt; "runner: i: " &lt;&lt; 
     <name>i</name>++</expr>;</expr_stmt>}</block></while>}</block>
-  </function>
-  <comment type="line">//friend class RThread;</comment>
-  <comment type="line">//protected:</comment>
-  <comment type="block">/** * \todo Should be pure virtual
-  */</comment>
-  <comment type="line">// virtual void run() {
-  }</comment></public>}</block>;</class>
+  </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

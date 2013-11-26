@@ -49,6 +49,7 @@ int RSettings::showCrosshair = -1;
 int RSettings::showLargeCrosshair = -1;
 int RSettings::concurrentDrawing = -1;
 int RSettings::previewEntities = -1;
+int RSettings::limitZoomAndScroll = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -564,6 +565,13 @@ int RSettings::getPreviewEntities() {
     return previewEntities;
 }
 
+bool RSettings::getLimitZoomAndScroll() {
+    if (limitZoomAndScroll==-1) {
+        limitZoomAndScroll = getValue("GraphicsViewNavigation/LimitZoomAndScroll", QVariant(true)).toBool();
+    }
+    return (bool)limitZoomAndScroll;
+}
+
 bool RSettings::getShowCrosshair() {
     if (showCrosshair==-1) {
         showCrosshair = getValue("GraphicsView/ShowCrosshair", 
@@ -768,6 +776,7 @@ void RSettings::resetCache() {
     showLargeCrosshair = -1;
     concurrentDrawing = -1;
     previewEntities = -1;
+    limitZoomAndScroll = -1;
     cache.clear();
 }
 

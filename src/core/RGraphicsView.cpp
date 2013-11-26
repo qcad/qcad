@@ -346,11 +346,13 @@ void RGraphicsView::setOffset(const RVector& offset, bool regen) {
     RVector o = offset;
 
     // 20111024: avoid overflows with weird behaviour when using track pad:
-    if (offset.x < -1.0e8 || offset.x > 1.0e8) {
-        o.x = 0.0;
-    }
-    if (offset.y < -1.0e8 || offset.y > 1.0e8) {
-        o.y = 0.0;
+    if (RSettings::getLimitZoomAndScroll()) {
+        if (offset.x < -1.0e8 || offset.x > 1.0e8) {
+            o.x = 0.0;
+        }
+        if (offset.y < -1.0e8 || offset.y > 1.0e8) {
+            o.y = 0.0;
+        }
     }
 
     this->offset = o;
@@ -370,11 +372,13 @@ void RGraphicsView::setOffset(const RVector& offset, bool regen) {
 void RGraphicsView::setFactor(double f, bool regen) {
     factor = f;
 
-    if (factor>1.0e6) {
-        factor = 1.0e6;
-    }
-    if (factor<1.0e-6) {
-        factor = 1.0e-6;
+    if (RSettings::getLimitZoomAndScroll()) {
+        if (factor>1.0e6) {
+            factor = 1.0e6;
+        }
+        if (factor<1.0e-6) {
+            factor = 1.0e-6;
+        }
     }
 
     scene->setPixelSizeHint(mapDistanceFromView(1.0));

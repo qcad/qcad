@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>353</width>
+    <width>451</width>
     <height>343</height>
    </rect>
   </property>
@@ -27,6 +27,16 @@
       <widget class="QCheckBox" name="PanGesture">
        <property name="text">
         <string>Enable pan gesture</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QCheckBox" name="LimitZoomAndScroll">
+       <property name="text">
+        <string>Limit zoom and scroll to prevent overflows</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
