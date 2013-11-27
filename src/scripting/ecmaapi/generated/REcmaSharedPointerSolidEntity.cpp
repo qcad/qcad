@@ -119,6 +119,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getStaticPropertyTypeIds, "getStaticPropertyTypeIds");
+            
 
     // static properties:
     
@@ -527,6 +529,46 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSolidEntity::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSolidEntity::getStaticPropertyTypeIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSolidEntity::getStaticPropertyTypeIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSolidEntity::getStaticPropertyTypeIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RPropertyTypeId >'
+    QSet < RPropertyTypeId > cppResult =
+        RSolidEntity::
+       getStaticPropertyTypeIds();
+        // return type: QSet < RPropertyTypeId >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSolidEntity.getStaticPropertyTypeIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSolidEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue

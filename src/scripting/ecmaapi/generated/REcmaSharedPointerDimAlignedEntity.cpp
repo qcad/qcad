@@ -108,6 +108,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getStaticPropertyTypeIds, "getStaticPropertyTypeIds");
+            
 
     // static properties:
     
@@ -539,6 +541,46 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RPropertyTypeId >'
+    QSet < RPropertyTypeId > cppResult =
+        RDimAlignedEntity::
+       getStaticPropertyTypeIds();
+        // return type: QSet < RPropertyTypeId >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getStaticPropertyTypeIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue

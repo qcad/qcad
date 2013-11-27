@@ -63,6 +63,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RPolylineEntity));
+    }
+
     virtual RPolylineEntity* clone() const {
         return new RPolylineEntity(*this);
     }

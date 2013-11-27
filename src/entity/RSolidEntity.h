@@ -71,6 +71,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RSolidEntity));
+    }
+
     virtual RSolidEntity* clone() const {
         return new RSolidEntity(*this);
     }

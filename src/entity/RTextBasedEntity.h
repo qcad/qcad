@@ -70,6 +70,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RTextBasedEntity));
+    }
+
     virtual RS::EntityType getType() const {
         return RS::EntityTextBased;
     }

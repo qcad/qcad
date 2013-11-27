@@ -63,6 +63,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RCircleEntity));
+    }
+
     virtual RCircleEntity* clone() const {
         return new RCircleEntity(*this);
     }

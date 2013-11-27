@@ -67,6 +67,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RArcEntity));
+    }
+
     virtual RArcEntity* clone() const {
         return new RArcEntity(*this);
     }

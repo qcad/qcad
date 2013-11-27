@@ -280,7 +280,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getLimitZoomAndScroll"
     cppName="getLimitZoomAndScroll" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="int" isPureVirtual="false" />
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getShowCrosshair" cppName="getShowCrosshair"
     specifier="public" isStatic="true" isVirtual="false"

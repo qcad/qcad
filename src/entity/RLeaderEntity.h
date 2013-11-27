@@ -61,6 +61,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RLeaderEntity));
+    }
+
     virtual RLeaderEntity* clone() const {
         return new RLeaderEntity(*this);
     }

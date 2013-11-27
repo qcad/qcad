@@ -207,6 +207,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getStaticPropertyTypeIds, "getStaticPropertyTypeIds");
+            
 
     // static properties:
     
@@ -339,6 +341,46 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::getStaticPropertyTypeIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::getStaticPropertyTypeIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::getStaticPropertyTypeIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RPropertyTypeId >'
+    QSet < RPropertyTypeId > cppResult =
+        REntity::
+       getStaticPropertyTypeIds();
+        // return type: QSet < RPropertyTypeId >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.getStaticPropertyTypeIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue

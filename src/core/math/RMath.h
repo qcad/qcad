@@ -44,8 +44,8 @@
 // breaks std::numeric_limits<double>::max(). This fix is not correct
 // but good enough for now.
 #ifdef _MSC_VER
-#define RMAXDOUBLE 1e10
-#define RMINDOUBLE -1e10
+#define RMAXDOUBLE 1e300
+#define RMINDOUBLE -1e300
 #else
 #define RMAXDOUBLE std::numeric_limits<double>::max()
 #define RMINDOUBLE -std::numeric_limits<double>::max()

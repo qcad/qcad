@@ -518,7 +518,7 @@ dir="./core" filename="RSettings.h">
   <function_decl>
   <type>
     <name>static</name>
-    <name>int</name>
+    <name>bool</name>
   </type>
   <name>getLimitZoomAndScroll</name>
   <parameter_list>()</parameter_list>;</function_decl>
@@ -1001,7 +1001,7 @@ dir="./core" filename="RSettings.h">
   <decl>
     <type>
       <name>static</name>
-      <name>bool</name>
+      <name>int</name>
     </type>
     <name>limitZoomAndScroll</name>
   </decl>;</decl_stmt>

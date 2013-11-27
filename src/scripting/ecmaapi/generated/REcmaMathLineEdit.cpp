@@ -135,6 +135,26 @@
             // generate constructor variants:
             
     if( context->argumentCount() ==
+        0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RMathLineEdit
+                    * cppResult =
+                    new
+                    RMathLineEdit
+                    ();
+                
+                    result = engine->newQObject(context->thisObject(), cppResult);
+                
+    } else 
+
+    if( context->argumentCount() ==
         1
                 && (
                 

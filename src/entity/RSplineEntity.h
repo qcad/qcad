@@ -62,12 +62,18 @@ public:
     static RPropertyTypeId PropertyPeriodic;
     static RPropertyTypeId PropertyDegree;
 
+    static RPropertyTypeId PropertyLength;
+
 public:
     RSplineEntity(RDocument* document, const RSplineData& data,
         RObject::Id objectId = RObject::INVALID_ID);
     virtual ~RSplineEntity();
 
     static void init();
+
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RSplineEntity));
+    }
 
     virtual RSplineEntity* clone() const {
         return new RSplineEntity(*this);

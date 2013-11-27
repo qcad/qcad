@@ -75,6 +75,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimRadialEntity));
+    }
+
     virtual RDimRadialEntity* clone() const {
         return new RDimRadialEntity(*this);
     }

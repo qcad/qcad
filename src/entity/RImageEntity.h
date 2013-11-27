@@ -66,6 +66,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RImageEntity));
+    }
+
     virtual RImageEntity* clone() const;
 
     virtual RS::EntityType getType() const {

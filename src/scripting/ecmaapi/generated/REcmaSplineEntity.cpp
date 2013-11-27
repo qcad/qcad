@@ -154,6 +154,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getStaticPropertyTypeIds, "getStaticPropertyTypeIds");
+            
 
     // static properties:
     
@@ -227,6 +229,10 @@
             
             ctor.setProperty("PropertyDegree",
                 qScriptValueFromValue(&engine, RSplineEntity::PropertyDegree),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyLength",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -542,6 +548,46 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSplineEntity::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineEntity::getStaticPropertyTypeIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineEntity::getStaticPropertyTypeIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineEntity::getStaticPropertyTypeIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RPropertyTypeId >'
+    QSet < RPropertyTypeId > cppResult =
+        RSplineEntity::
+       getStaticPropertyTypeIds();
+        // return type: QSet < RPropertyTypeId >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.getStaticPropertyTypeIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue

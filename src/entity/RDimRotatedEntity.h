@@ -81,6 +81,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimRotatedEntity));
+    }
+
     virtual RDimRotatedEntity* clone() const {
         return new RDimRotatedEntity(*this);
     }

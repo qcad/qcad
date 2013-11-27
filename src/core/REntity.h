@@ -78,6 +78,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(REntity));
+    }
+
     void setDocument(RDocument* document) {
         RObject::setDocument(document);
         getData().setDocument(document);

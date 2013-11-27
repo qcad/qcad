@@ -68,10 +68,10 @@ dir="./core/math" filename="RMath.h">
   <name>_MSC_VER</name></cpp:ifdef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RMAXDOUBLE</name>1e10</cpp:define>
+  <name>RMAXDOUBLE</name>1e300</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RMINDOUBLE</name>-1e10</cpp:define>
+  <name>RMINDOUBLE</name>-1e300</cpp:define>
   <cpp:else>#
   <cpp:directive>else</cpp:directive></cpp:else>
   <cpp:define>#

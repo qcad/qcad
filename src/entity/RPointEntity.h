@@ -58,6 +58,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RPointEntity));
+    }
+
     virtual RPointEntity* clone() const {
         return new RPointEntity(*this);
     }

@@ -78,6 +78,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(REllipseEntity));
+    }
+
     virtual REllipseEntity* clone() const {
         return new REllipseEntity(*this);
     }

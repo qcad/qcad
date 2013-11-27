@@ -43,7 +43,7 @@ Q_PROPERTY(bool angle READ isAngle WRITE setAngle);
 //Q_ENUMS(RS::Unit);
 
 public:
-    RMathLineEdit(QWidget* parent);
+    RMathLineEdit(QWidget* parent = NULL);
 
     bool isAngle() const {
        return angle;

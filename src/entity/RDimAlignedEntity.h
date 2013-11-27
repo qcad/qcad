@@ -77,6 +77,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimAlignedEntity));
+    }
+
     virtual RDimAlignedEntity* clone() const {
         return new RDimAlignedEntity(*this);
     }

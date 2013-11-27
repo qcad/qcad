@@ -236,6 +236,41 @@ dir="./entity" filename="RHatchEntity.h">
   </type>
   <name>init</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function>
+    <type>
+      <name>static</name>
+      <name>QSet
+      <argument_list>&lt;
+      <argument>
+        <name>RPropertyTypeId</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>getStaticPropertyTypeIds</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RPropertyTypeId</name>::
+        <name>getPropertyTypeIds</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <call>
+              <name>typeid</name>
+              <argument_list>(
+              <argument>
+                <expr>
+                  <name>RHatchEntity</name>
+                </expr>
+              </argument>)</argument_list>
+            </call>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
   <name>virtual</name>

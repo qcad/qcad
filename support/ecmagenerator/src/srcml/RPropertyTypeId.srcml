@@ -41,6 +41,9 @@ dir="./core" filename="RPropertyTypeId.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RDebug.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RS.h"</cpp:file></cpp:include>
   <comment type="block">/** * Represents unique property type IDs.
   Every property type an object can have * has such an unique ID. *
   * E.g. all objects of type car may have a property * type called

@@ -68,6 +68,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RHatchEntity));
+    }
+
     virtual RHatchEntity* clone() const;
 
     virtual RS::EntityType getType() const {

@@ -64,6 +64,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RBlockReferenceEntity));
+    }
+
     virtual RBlockReferenceEntity* clone() const {
         return new RBlockReferenceEntity(*this);
     }

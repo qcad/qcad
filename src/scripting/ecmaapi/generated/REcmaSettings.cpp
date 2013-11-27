@@ -2399,11 +2399,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'int'
-    int cppResult =
+    // return type 'bool'
+    bool cppResult =
         RSettings::
        getLimitZoomAndScroll();
-        // return type: int
+        // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
             

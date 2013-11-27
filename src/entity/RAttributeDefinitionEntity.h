@@ -72,6 +72,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RAttributeDefinitionEntity));
+    }
+
     virtual RAttributeDefinitionEntity* clone() const {
         return new RAttributeDefinitionEntity(*this);
     }

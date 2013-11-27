@@ -30,6 +30,7 @@
 #include <QString>
 
 #include "RDebug.h"
+#include "RS.h"
 
 /**
  * Represents unique property type IDs. Every property type an object can have

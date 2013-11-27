@@ -23,6 +23,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getStaticPropertyTypeIds"
+    cppName="getStaticPropertyTypeIds" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RPropertyTypeId &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RDimRotatedEntity *"

@@ -71,6 +71,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RTextEntity));
+    }
+
     virtual RTextEntity* clone() const {
         return new RTextEntity(*this);
     }

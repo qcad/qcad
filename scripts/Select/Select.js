@@ -176,8 +176,11 @@ Select.prototype.slotModeIntersectChanged = function(checked) {
  */
 Select.prototype.selectWithMode = function(entityIds) {
     var di = this.getDocumentInterface();
+    Select.selectWithMode(entityIds, di, this.selectionMode);
+};
 
-    switch (this.selectionMode) {
+Select.selectWithMode = function(entityIds, di, selectionMode) {
+    switch (selectionMode) {
     case Select.Mode.Replace:
         di.selectEntities(entityIds, false);
         break;
@@ -188,7 +191,7 @@ Select.prototype.selectWithMode = function(entityIds) {
         di.deselectEntities(entityIds);
         break;
     case Select.Mode.Intersect:
-        var doc = this.getDocument();
+        var doc = di.getDocument();
         var allEntityIds = doc.queryAllEntities();
         var entityIdsToSelect = [];
         var entityIdsToDeselect = [];
@@ -205,10 +208,10 @@ Select.prototype.selectWithMode = function(entityIds) {
                 entityIdsToDeselect.push(entityId);
             }
         }
-        if (entityIdsToSelect.length!==0) { 
+        if (entityIdsToSelect.length!==0) {
             di.selectEntities(entityIdsToSelect);
         }
-        if (entityIdsToDeselect.length!==0) { 
+        if (entityIdsToDeselect.length!==0) {
             di.deselectEntities(entityIdsToDeselect);
         }
         break;

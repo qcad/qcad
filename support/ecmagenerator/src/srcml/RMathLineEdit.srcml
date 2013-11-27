@@ -83,10 +83,14 @@ dir="./gui" filename="RMathLineEdit.h">
   <parameter_list>(
   <param>
     <decl>
-      <type>
-      <name>QWidget</name>*</type>
-      <name>parent</name>
-    </decl>
+    <type>
+    <name>QWidget</name>*</type>
+    <name>parent</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</constructor_decl>
   <function>
     <type>

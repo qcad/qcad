@@ -78,6 +78,10 @@ public:
 
     static void init();
 
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimOrdinateEntity));
+    }
+
     virtual RDimOrdinateEntity* clone() const {
         return new RDimOrdinateEntity(*this);
     }
