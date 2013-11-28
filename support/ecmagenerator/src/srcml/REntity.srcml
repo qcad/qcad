@@ -174,6 +174,38 @@ dir="./core" filename="REntity.h">
       <name>RPropertyTypeId</name>
     </type>
     <name>PropertyDrawOrder</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyMinX</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyMinY</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyMaxX</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyMaxY</name>
   </decl>;</decl_stmt></public>
   <public>public: 
   <macro>

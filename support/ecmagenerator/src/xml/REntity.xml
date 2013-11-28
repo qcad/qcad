@@ -568,5 +568,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyDrawOrder" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyMinX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMinY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMaxX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMaxY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
   </class>
 </unit>

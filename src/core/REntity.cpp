@@ -33,6 +33,11 @@ RPropertyTypeId REntity::PropertyLineweight;
 RPropertyTypeId REntity::PropertyColor;
 RPropertyTypeId REntity::PropertyDrawOrder;
 
+RPropertyTypeId REntity::PropertyMinX;
+RPropertyTypeId REntity::PropertyMaxX;
+RPropertyTypeId REntity::PropertyMinY;
+RPropertyTypeId REntity::PropertyMaxY;
+
 
 REntity::~REntity() {
 }
@@ -47,6 +52,11 @@ void REntity::init() {
     REntity::PropertyLineweight.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
     REntity::PropertyColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Color"));
     REntity::PropertyDrawOrder.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Draw Order"));
+
+    REntity::PropertyMinX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Left"));
+    REntity::PropertyMinY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
+    REntity::PropertyMaxX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Right"));
+    REntity::PropertyMaxY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Top"));
 }
 
 /**
@@ -156,10 +166,12 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
 
     if (propertyTypeId == PropertyType) {
         return qMakePair(QVariant(getType()), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyBlock) {
+    }
+    else if (propertyTypeId == PropertyBlock) {
         return qMakePair(QVariant(getData().getBlockId()),
                          RPropertyAttributes());
-    }else if (propertyTypeId == PropertyLayer) {
+    }
+    else if (propertyTypeId == PropertyLayer) {
         if (humanReadable) {
             RDocument* document = getData().getDocument();
             if (document != NULL) {
@@ -171,11 +183,13 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
                 return qMakePair(QVariant(document->getLayerName(
                         getData().getLayerId())), attr);
             }
-        } else {
+        }
+        else {
             return qMakePair(QVariant(getData().getLayerId()),
                     RPropertyAttributes());
         }
-    } else if (propertyTypeId == PropertyLinetype) {
+    }
+    else if (propertyTypeId == PropertyLinetype) {
         if (humanReadable) {
             RDocument* document = getData().getDocument();
             if (document != NULL) {
@@ -185,20 +199,36 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
                 var.setValue<RLinetype> (*linetype.data());
                 return qMakePair(var, RPropertyAttributes());
             }
-        } else {
+        }
+        else {
             return qMakePair(QVariant(getData().getLinetypeId()),
                     RPropertyAttributes());
         }
-    } else if (propertyTypeId == PropertyLineweight) {
+    }
+    else if (propertyTypeId == PropertyLineweight) {
         QVariant v;
         v.setValue<RLineweight::Lineweight>(getData().getLineweight());
         return qMakePair(v, RPropertyAttributes());
-    } else if (propertyTypeId == PropertyColor) {
+    }
+    else if (propertyTypeId == PropertyColor) {
         QVariant var;
         var.setValue<RColor> (getData().getColor());
         return qMakePair(var, RPropertyAttributes());
-    } else if (propertyTypeId == PropertyDrawOrder) {
+    }
+    else if (propertyTypeId == PropertyDrawOrder) {
         return qMakePair(QVariant(getData().getDrawOrder()), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyMinX) {
+        return qMakePair(QVariant(getBoundingBox().getMinimum().x), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+    else if (propertyTypeId == PropertyMinY) {
+        return qMakePair(QVariant(getBoundingBox().getMinimum().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+    else if (propertyTypeId == PropertyMaxX) {
+        return qMakePair(QVariant(getBoundingBox().getMaximum().x), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+    else if (propertyTypeId == PropertyMaxY) {
+        return qMakePair(QVariant(getBoundingBox().getMaximum().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);

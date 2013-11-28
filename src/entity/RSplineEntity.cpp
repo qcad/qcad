@@ -148,8 +148,7 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
     if (propertyTypeId == PropertyPeriodic) {
         return qMakePair(QVariant(data.isPeriodic()), RPropertyAttributes());
     }
-
-    if (propertyTypeId == PropertyDegree) {
+    else if (propertyTypeId == PropertyDegree) {
         RPropertyAttributes attr;
         QSet<QString> choices;
         if (!data.hasFitPoints()) {
@@ -159,8 +158,7 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
         attr.setChoices(choices);
         return qMakePair(QVariant(QString("%1").arg(data.degree)), attr);
     }
-
-    if (propertyTypeId==PropertyLength) {
+    else if (propertyTypeId==PropertyLength) {
         return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
     }
 

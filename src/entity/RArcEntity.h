@@ -48,6 +48,7 @@ public:
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
     static RPropertyTypeId PropertyDrawOrder;
+
     static RPropertyTypeId PropertyCenterX;
     static RPropertyTypeId PropertyCenterY;
     static RPropertyTypeId PropertyCenterZ;

@@ -72,6 +72,11 @@ public:
     static RPropertyTypeId PropertyColor;
     static RPropertyTypeId PropertyDrawOrder;
 
+    static RPropertyTypeId PropertyMinX;
+    static RPropertyTypeId PropertyMinY;
+    static RPropertyTypeId PropertyMaxX;
+    static RPropertyTypeId PropertyMaxY;
+
 public:
     REntity(RDocument* document, Id objectId=-1) : RObject(document, objectId) {}
     virtual ~REntity();

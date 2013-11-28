@@ -249,6 +249,22 @@
                 qScriptValueFromValue(&engine, REntity::PropertyDrawOrder),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMinX",
+                qScriptValueFromValue(&engine, REntity::PropertyMinX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyMinY",
+                qScriptValueFromValue(&engine, REntity::PropertyMinY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyMaxX",
+                qScriptValueFromValue(&engine, REntity::PropertyMaxX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyMaxY",
+                qScriptValueFromValue(&engine, REntity::PropertyMaxY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
