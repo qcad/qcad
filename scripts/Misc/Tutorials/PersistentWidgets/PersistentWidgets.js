@@ -28,6 +28,7 @@ function PersistentWidgets(guiAction) {
 }
 
 PersistentWidgets.prototype = new Tutorials();
+PersistentWidgets.includeBasePath = includeBasePath;
 
 //! [beginEvent]
 PersistentWidgets.prototype.beginEvent = function() {
@@ -36,7 +37,7 @@ PersistentWidgets.prototype.beginEvent = function() {
     // Create the dialog from the .ui file using the helper
     // function WidgetFactory.createWidget().
     var dialog = WidgetFactory.createWidget(
-            "scripts/Examples/Tutorials/PersistentWidgets",
+            PersistentWidgets.includeBasePath,
             "PersistentWidgets.ui");
 
     // Restore the previous user data or display default values as
