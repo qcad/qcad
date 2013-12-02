@@ -102,16 +102,12 @@ void RLeaderEntity::exportEntity(RExporter& e, bool preview) const {
         return;
     }
 
-    RTriangle arrow = data.getArrowShape();
-
-//    RVector p = data.getStartPoint();
-//    double direction = data.getDirection1() + M_PI;
-//    double dimasz = data.getDimasz();
-
-//    RTriangle arrow = RTriangle::createArrow(p, direction, dimasz);
-    QList<QSharedPointer<RShape> > arrowShapes;
-    arrowShapes.append(QSharedPointer<RShape>(new RTriangle(arrow)));
-    e.exportShapes(arrowShapes);
+    if (hasArrowHead()) {
+        RTriangle arrow = data.getArrowShape();
+        QList<QSharedPointer<RShape> > arrowShapes;
+        arrowShapes.append(QSharedPointer<RShape>(new RTriangle(arrow)));
+        e.exportShapes(arrowShapes);
+    }
 
     e.setBrush(Qt::NoBrush);
     e.exportPolyline(data);

@@ -162,7 +162,10 @@
         getMeasurement
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getAutoMeasurement
+        getMeasuredValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAutoLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         formatLabel

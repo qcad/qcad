@@ -63,6 +63,7 @@ public:
     static RPropertyTypeId PropertyPrompt;
     static RPropertyTypeId PropertyTag;
     static RPropertyTypeId PropertyText;
+    static RPropertyTypeId PropertyPlainText;
     static RPropertyTypeId PropertyVAlign;
 
 public:

@@ -851,9 +851,21 @@ dir="./entity" filename="RDimensionData.h">
   <function>
     <type>
       <name>virtual</name>
+      <name>double</name>
+    </type>
+    <name>getMeasuredValue</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>0.0</expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
       <name>QString</name>
     </type>
-    <name>getAutoMeasurement</name>
+    <name>getAutoLabel</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
     <block>{ 

@@ -55,6 +55,7 @@ public:
     static RPropertyTypeId PropertyPositionY;
     static RPropertyTypeId PropertyPositionZ;
     static RPropertyTypeId PropertyText;
+    static RPropertyTypeId PropertyPlainText;
     static RPropertyTypeId PropertyFontName;
     static RPropertyTypeId PropertyHeight;
     static RPropertyTypeId PropertyAngle;

@@ -70,7 +70,10 @@
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getAutoMeasurement
+        getMeasuredValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAutoLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

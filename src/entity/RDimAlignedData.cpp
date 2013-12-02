@@ -158,8 +158,12 @@ QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox) 
     return ret;
 }
 
-QString RDimAlignedData::getAutoMeasurement() const {
-    double distance = extensionPoint1.getDistanceTo(extensionPoint2);
+double RDimAlignedData::getMeasuredValue() const {
+    return extensionPoint1.getDistanceTo(extensionPoint2);
+}
+
+QString RDimAlignedData::getAutoLabel() const {
+    double distance = getMeasuredValue();
     distance *= linearFactor;
     return formatLabel(distance);
 }

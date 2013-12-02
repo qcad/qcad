@@ -435,9 +435,17 @@ dir="./entity" filename="RDimOrdinateData.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>double</name>
+  </type>
+  <name>getMeasuredValue</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>QString</name>
   </type>
-  <name>getAutoMeasurement</name>
+  <name>getAutoLabel</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl></public>
   <private>private: 

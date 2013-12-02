@@ -241,15 +241,16 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox)
     return ret;
 }
 
-QString RDimOrdinateData::getAutoMeasurement() const {
-    double distance;
-
+double RDimOrdinateData::getMeasuredValue() const {
     if (isMeasuringXAxis()) {
-        distance = qAbs(definingPoint.x-definitionPoint.x);
+        return qAbs(definingPoint.x-definitionPoint.x);
     }
     else {
-        distance = qAbs(definingPoint.y-definitionPoint.y);
+        return qAbs(definingPoint.y-definitionPoint.y);
     }
+}
 
+QString RDimOrdinateData::getAutoLabel() const {
+    double distance = getMeasuredValue();
     return formatLabel(distance);
 }

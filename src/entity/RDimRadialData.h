@@ -73,7 +73,8 @@ public:
     virtual bool mirror(const RLine& axis);
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
-    virtual QString getAutoMeasurement() const;
+    virtual double getMeasuredValue() const;
+    virtual QString getAutoLabel() const;
 
 private:
     /** Chord point. Definition point from RDimensionData is center. */

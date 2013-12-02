@@ -69,6 +69,7 @@ public:
     //static RPropertyTypeId PropertyHAlign;
     //static RPropertyTypeId PropertyVAlign;
 
+    static RPropertyTypeId PropertyAutoLabel;
     static RPropertyTypeId PropertyMeasuredValue;
 
 public:

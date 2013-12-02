@@ -437,7 +437,7 @@ QString RDimensionData::getMeasurement(bool resolveAutoMeasurement) const {
     // normal auto generated label without tolerance:
     if (text.isEmpty() && upperTolerance.isEmpty() && lowerTolerance.isEmpty()) {
         if (resolveAutoMeasurement) {
-            return getAutoMeasurement();
+            return getAutoLabel();
         }
         else {
             return "";
@@ -464,7 +464,7 @@ QString RDimensionData::getMeasurement(bool resolveAutoMeasurement) const {
 
     QString measurement;
     if (resolveAutoMeasurement) {
-        measurement = getAutoMeasurement();
+        measurement = getAutoLabel();
     }
     else {
         measurement = "<>";

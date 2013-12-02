@@ -143,7 +143,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, getMeasurement, "getMeasurement");
             
-            REcmaHelper::registerFunction(&engine, proto, getAutoMeasurement, "getAutoMeasurement");
+            REcmaHelper::registerFunction(&engine, proto, getMeasuredValue, "getMeasuredValue");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAutoLabel, "getAutoLabel");
             
             REcmaHelper::registerFunction(&engine, proto, formatLabel, "formatLabel");
             
@@ -3111,19 +3113,68 @@
             return result;
         }
          QScriptValue
-        REcmaDimensionData::getAutoMeasurement
+        REcmaDimensionData::getMeasuredValue
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimensionData::getAutoMeasurement", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getAutoMeasurement";
+            //REcmaHelper::functionStart("REcmaDimensionData::getMeasuredValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getMeasuredValue";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionData* self = 
-                        getSelf("getAutoMeasurement", context);
+                        getSelf("getMeasuredValue", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getMeasuredValue();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getMeasuredValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getMeasuredValue", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getAutoLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getAutoLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getAutoLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getAutoLabel", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3143,7 +3194,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->getAutoMeasurement();
+               self->getAutoLabel();
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -3153,10 +3204,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getAutoMeasurement().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getAutoLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimensionData::getAutoMeasurement", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimensionData::getAutoLabel", context, engine);
             return result;
         }
          QScriptValue

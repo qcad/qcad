@@ -34,6 +34,7 @@ RPropertyTypeId RTextEntity::PropertyPositionX;
 RPropertyTypeId RTextEntity::PropertyPositionY;
 RPropertyTypeId RTextEntity::PropertyPositionZ;
 RPropertyTypeId RTextEntity::PropertyText;
+RPropertyTypeId RTextEntity::PropertyPlainText;
 RPropertyTypeId RTextEntity::PropertyFontName;
 RPropertyTypeId RTextEntity::PropertyHeight;
 RPropertyTypeId RTextEntity::PropertyAngle;
@@ -67,6 +68,7 @@ void RTextEntity::init() {
     RTextEntity::PropertyPositionY.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyPositionY);
     RTextEntity::PropertyPositionZ.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyPositionZ);
     RTextEntity::PropertyText.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyText);
+    RTextEntity::PropertyPlainText.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyPlainText);
     RTextEntity::PropertyFontName.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyFontName);
     RTextEntity::PropertyHeight.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyHeight);
     RTextEntity::PropertyAngle.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyAngle);

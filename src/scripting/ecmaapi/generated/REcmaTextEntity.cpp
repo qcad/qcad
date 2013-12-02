@@ -156,6 +156,10 @@
                 qScriptValueFromValue(&engine, RTextEntity::PropertyText),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyPlainText",
+                qScriptValueFromValue(&engine, RTextEntity::PropertyPlainText),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyFontName",
                 qScriptValueFromValue(&engine, RTextEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

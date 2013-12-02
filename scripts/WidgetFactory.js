@@ -1032,3 +1032,31 @@ WidgetFactory.initLayerCombo = function(comboBox, doc) {
         comboBox.addItem(icon, layer.getName());
     }
 };
+
+WidgetFactory.initBlockCombo = function(comboBox, doc) {
+    comboBox.clear();
+    var names = doc.getBlockNames();
+    names.sort();
+    for (var i=0; i<names.length; i++) {
+        var name = names[i];
+        comboBox.addItem(name);
+    }
+};
+
+WidgetFactory.initHAlignCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("Left"), RS.HAlignLeft);
+    comboBox.addItem(qsTr("Center"), RS.HAlignCenter);
+    comboBox.addItem(qsTr("Right"), RS.HAlignRight);
+    comboBox.addItem(qsTr("Aligned"), RS.HAlignAlign);
+    comboBox.addItem(qsTr("Middle"), RS.HAlignMid);
+    comboBox.addItem(qsTr("Fit"), RS.HAlignFit);
+};
+
+WidgetFactory.initVAlignCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("Top"), RS.VAlignTop);
+    comboBox.addItem(qsTr("Middle"), RS.VAlignMiddle);
+    comboBox.addItem(qsTr("Base"), RS.VAlignBase);
+    comboBox.addItem(qsTr("Bottom"), RS.VAlignBottom);
+};

@@ -141,8 +141,12 @@ QList<QSharedPointer<RShape> > RDimDiametricData::getShapes(const RBox& queryBox
     return ret;
 }
 
-QString RDimDiametricData::getAutoMeasurement() const {
-    double distance = definitionPoint.getDistanceTo(chordPoint);
+double RDimDiametricData::getMeasuredValue() const {
+    return definitionPoint.getDistanceTo(chordPoint);
+}
+
+QString RDimDiametricData::getAutoLabel() const {
+    double distance = getMeasuredValue();
     distance *= linearFactor;
     return formatLabel(distance);
 }

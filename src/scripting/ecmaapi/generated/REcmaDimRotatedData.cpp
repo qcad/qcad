@@ -85,7 +85,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
-            REcmaHelper::registerFunction(&engine, proto, getAutoMeasurement, "getAutoMeasurement");
+            REcmaHelper::registerFunction(&engine, proto, getMeasuredValue, "getMeasuredValue");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAutoLabel, "getAutoLabel");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RDimRotatedData*>(), *proto);
@@ -852,19 +854,68 @@
             return result;
         }
          QScriptValue
-        REcmaDimRotatedData::getAutoMeasurement
+        REcmaDimRotatedData::getMeasuredValue
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::getAutoMeasurement", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getAutoMeasurement";
+            //REcmaHelper::functionStart("REcmaDimRotatedData::getMeasuredValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getMeasuredValue";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimRotatedData* self = 
-                        getSelf("getAutoMeasurement", context);
+                        getSelf("getMeasuredValue", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getMeasuredValue();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getMeasuredValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimRotatedData::getMeasuredValue", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimRotatedData::getAutoLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimRotatedData::getAutoLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getAutoLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimRotatedData* self = 
+                        getSelf("getAutoLabel", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -884,7 +935,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->getAutoMeasurement();
+               self->getAutoLabel();
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -894,10 +945,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getAutoMeasurement().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getAutoLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::getAutoMeasurement", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimRotatedData::getAutoLabel", context, engine);
             return result;
         }
          QScriptValue REcmaDimRotatedData::toString

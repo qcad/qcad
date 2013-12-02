@@ -219,6 +219,10 @@
                 qScriptValueFromValue(&engine, RTextBasedEntity::PropertyText),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyPlainText",
+                qScriptValueFromValue(&engine, RTextBasedEntity::PropertyPlainText),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyFontName",
                 qScriptValueFromValue(&engine, RTextBasedEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

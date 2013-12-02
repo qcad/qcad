@@ -174,7 +174,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
-    <method name="getAutoMeasurement" cppName="getAutoMeasurement"
+    <method name="getMeasuredValue" cppName="getMeasuredValue"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getAutoLabel" cppName="getAutoLabel"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />

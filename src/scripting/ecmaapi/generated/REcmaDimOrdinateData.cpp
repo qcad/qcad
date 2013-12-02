@@ -104,7 +104,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
-            REcmaHelper::registerFunction(&engine, proto, getAutoMeasurement, "getAutoMeasurement");
+            REcmaHelper::registerFunction(&engine, proto, getMeasuredValue, "getMeasuredValue");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAutoLabel, "getAutoLabel");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RDimOrdinateData*>(), *proto);
@@ -1587,19 +1589,68 @@
             return result;
         }
          QScriptValue
-        REcmaDimOrdinateData::getAutoMeasurement
+        REcmaDimOrdinateData::getMeasuredValue
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::getAutoMeasurement", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getAutoMeasurement";
+            //REcmaHelper::functionStart("REcmaDimOrdinateData::getMeasuredValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getMeasuredValue";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimOrdinateData* self = 
-                        getSelf("getAutoMeasurement", context);
+                        getSelf("getMeasuredValue", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getMeasuredValue();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getMeasuredValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getMeasuredValue", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimOrdinateData::getAutoLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimOrdinateData::getAutoLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getAutoLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimOrdinateData* self = 
+                        getSelf("getAutoLabel", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1619,7 +1670,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->getAutoMeasurement();
+               self->getAutoLabel();
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1629,10 +1680,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getAutoMeasurement().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getAutoLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getAutoMeasurement", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getAutoLabel", context, engine);
             return result;
         }
          QScriptValue REcmaDimOrdinateData::toString

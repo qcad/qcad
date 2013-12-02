@@ -107,7 +107,8 @@ public:
                    bool& reversed,
                    RVector& p1, RVector& p2) const;
     RVector getCenter() const;
-    virtual QString getAutoMeasurement() const;
+    virtual double getMeasuredValue() const;
+    virtual QString getAutoLabel() const;
 
 private:
     /** Start point of first extension line. */

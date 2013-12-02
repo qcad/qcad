@@ -156,7 +156,7 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox) 
     return ret;
 }
 
-QString RDimRotatedData::getAutoMeasurement() const {
+double RDimRotatedData::getMeasuredValue() const {
     // direction of dimension line
     RVector dirDim;
     dirDim.setPolar(1.0, rotation);
@@ -167,7 +167,11 @@ QString RDimRotatedData::getAutoMeasurement() const {
     RVector dimP2 = dimLine.getClosestPointOnShape(extensionPoint2, false);
 
     // Definitive dimension line:
-    double distance = dimP1.getDistanceTo(dimP2);
+    return dimP1.getDistanceTo(dimP2);
+}
+
+QString RDimRotatedData::getAutoLabel() const {
+    double distance = getMeasuredValue();
     distance *= linearFactor;
 
     return formatLabel(distance);

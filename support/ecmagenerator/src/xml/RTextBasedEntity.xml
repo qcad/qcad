@@ -302,6 +302,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyText" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyPlainText" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyFontName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyHeight" type="RPropertyTypeId"

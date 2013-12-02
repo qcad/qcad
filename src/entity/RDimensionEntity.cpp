@@ -47,6 +47,7 @@ RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 //RPropertyTypeId RDimensionEntity::PropertyHAlign;
 //RPropertyTypeId RDimensionEntity::PropertyVAlign;
 
+RPropertyTypeId RDimensionEntity::PropertyAutoLabel;
 RPropertyTypeId RDimensionEntity::PropertyMeasuredValue;
 
 
@@ -84,6 +85,7 @@ void RDimensionEntity::init() {
 //    RDimensionEntity::PropertyHAlign.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Horizontal"));
 //    RDimensionEntity::PropertyVAlign.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
 
+    RDimensionEntity::PropertyAutoLabel.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label"));
     RDimensionEntity::PropertyMeasuredValue.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
     RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
     RDimensionEntity::PropertyAutoTextPos.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
@@ -171,13 +173,22 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
     } else if (propertyTypeId == PropertyLowerTolerance) {
         return qMakePair(QVariant(getData().lowerTolerance),
                          RPropertyAttributes(RPropertyAttributes::Label));
-    } else if (propertyTypeId == PropertyMeasuredValue) {
+    } else if (propertyTypeId == PropertyAutoLabel) {
         if (getType()==RS::EntityDimAngular) {
-            return qMakePair(QVariant(getData().getAutoMeasurement()),
+            return qMakePair(QVariant(getData().getAutoLabel()),
                              RPropertyAttributes(RPropertyAttributes::ReadOnly | RPropertyAttributes::Angle));
         }
         else {
-            return qMakePair(QVariant(getData().getAutoMeasurement()),
+            return qMakePair(QVariant(getData().getAutoLabel()),
+                             RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        }
+    } else if (propertyTypeId == PropertyMeasuredValue) {
+        if (getType()==RS::EntityDimAngular) {
+            return qMakePair(QVariant(getData().getMeasuredValue()),
+                             RPropertyAttributes(RPropertyAttributes::ReadOnly | RPropertyAttributes::Angle));
+        }
+        else {
+            return qMakePair(QVariant(getData().getMeasuredValue()),
                              RPropertyAttributes(RPropertyAttributes::ReadOnly));
         }
     } else if (propertyTypeId == PropertyLinearFactor) {

@@ -679,19 +679,19 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
     //else
     if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
         controls = this.initChoiceControls(
-                    objectName, propertyTypeId, onlyChanges, control,
-                    [ qsTr("Left"), qsTr("Center"), qsTr("Right"),
-                      qsTr("Aligned"), qsTr("Middle"), qsTr("Fit")],
-                    [ RS.HAlignLeft, RS.HAlignCenter, RS.HAlignRight,
-                      RS.HAlignAlign, RS.HAlignMid, RS.HAlignFit]);
+                    objectName, propertyTypeId, onlyChanges, control, false, true);
+//                    [ qsTr("Left"), qsTr("Center"), qsTr("Right"),
+//                      qsTr("Aligned"), qsTr("Middle"), qsTr("Fit")],
+//                    [ RS.HAlignLeft, RS.HAlignCenter, RS.HAlignRight,
+//                      RS.HAlignAlign, RS.HAlignMid, RS.HAlignFit]);
     }
 
     // Vertical alignment: combo box:
     else if (propertyTypeId.getId()===RTextEntity.PropertyVAlign.getId()) {
         controls = this.initChoiceControls(
-                    objectName, propertyTypeId, onlyChanges, control,
-                    [qsTr("Top"), qsTr("Middle"), qsTr("Base"), qsTr("Bottom")],
-                    [RS.VAlignTop, RS.VAlignMiddle, RS.VAlignBase, RS.VAlignBottom]);
+                    objectName, propertyTypeId, onlyChanges, control, false, true);
+//                    [qsTr("Top"), qsTr("Middle"), qsTr("Base"), qsTr("Bottom")],
+//                    [RS.VAlignTop, RS.VAlignMiddle, RS.VAlignBase, RS.VAlignBottom]);
     }
 
     // Hatch pattern: combo box with hatch names:
@@ -720,8 +720,7 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
 //        }
 
         controls = this.initChoiceControls(
-                    objectName, propertyTypeId, onlyChanges, control,
-                    patternNames);
+                    objectName, propertyTypeId, onlyChanges, control);
     }
 
     // List:
@@ -1001,7 +1000,12 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
         WidgetFactory.initLayerCombo(control, EAction.getDocument());
     }
-
+    else if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
+        WidgetFactory.initHAlignCombo(control);
+    }
+    else if (propertyTypeId.getId()===RTextEntity.PropertyVAlign.getId()) {
+        WidgetFactory.initVAlignCombo(control);
+    }
     else if (isOfType(control, QComboBox) /*&& propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
         control.clear();
         if (isNull(choices)) {
@@ -1088,7 +1092,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         control.currentIndex = index;
     }
 
-    return new Array(control);
+    return [ control ];
 };
 
 PropertyEditorImpl.getControlObjectName = function(propertyTypeId) {

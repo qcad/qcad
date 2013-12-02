@@ -106,7 +106,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
       </variant>
     </method>
-    <method name="getAutoMeasurement" cppName="getAutoMeasurement"
+    <method name="getMeasuredValue" cppName="getMeasuredValue"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getAutoLabel" cppName="getAutoLabel"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />

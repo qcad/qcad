@@ -33,6 +33,7 @@ RPropertyTypeId RAttributeDefinitionEntity::PropertyPositionX;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyPositionY;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyPositionZ;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyText;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyPlainText;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyTag;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyPrompt;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyFontName;
@@ -68,6 +69,7 @@ void RAttributeDefinitionEntity::init() {
     RAttributeDefinitionEntity::PropertyPositionY.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyPositionY);
     RAttributeDefinitionEntity::PropertyPositionZ.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyPositionZ);
     RAttributeDefinitionEntity::PropertyText.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyText);
+    RAttributeDefinitionEntity::PropertyPlainText.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyPlainText);
     RAttributeDefinitionEntity::PropertyFontName.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyFontName);
     RAttributeDefinitionEntity::PropertyHeight.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyHeight);
     RAttributeDefinitionEntity::PropertyAngle.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyAngle);

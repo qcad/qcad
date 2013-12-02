@@ -216,6 +216,10 @@
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyAutoTextPos),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyAutoLabel",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyAutoLabel),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyMeasuredValue",
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyMeasuredValue),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

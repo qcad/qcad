@@ -34,6 +34,7 @@ RPropertyTypeId RTextBasedEntity::PropertyPositionX;
 RPropertyTypeId RTextBasedEntity::PropertyPositionY;
 RPropertyTypeId RTextBasedEntity::PropertyPositionZ;
 RPropertyTypeId RTextBasedEntity::PropertyText;
+RPropertyTypeId RTextBasedEntity::PropertyPlainText;
 RPropertyTypeId RTextBasedEntity::PropertyFontName;
 RPropertyTypeId RTextBasedEntity::PropertyHeight;
 RPropertyTypeId RTextBasedEntity::PropertyAngle;
@@ -66,7 +67,8 @@ void RTextBasedEntity::init() {
     RTextBasedEntity::PropertyPositionX.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
     RTextBasedEntity::PropertyPositionY.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RTextBasedEntity::PropertyPositionZ.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RTextBasedEntity::PropertyText.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Contents"));
+    RTextBasedEntity::PropertyText.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Text"));
+    RTextBasedEntity::PropertyPlainText.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Plain Text"));
     RTextBasedEntity::PropertyFontName.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Font Name"));
     RTextBasedEntity::PropertyHeight.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
     RTextBasedEntity::PropertyAngle.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
@@ -114,6 +116,9 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
     } else if (propertyTypeId == PropertyText) {
         return qMakePair(QVariant(getData().text),
             RPropertyAttributes(RPropertyAttributes::RichText|RPropertyAttributes::Label));
+    } else if (propertyTypeId == PropertyPlainText) {
+        return qMakePair(QVariant(getData().getPlainText()),
+                         RPropertyAttributes(RPropertyAttributes::Label|RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyFontName) {
         return qMakePair(QVariant(getData().fontName),
             RPropertyAttributes(RPropertyAttributes::Style));

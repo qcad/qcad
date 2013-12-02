@@ -194,6 +194,10 @@
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyText),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyPlainText",
+                qScriptValueFromValue(&engine, RAttributeEntity::PropertyPlainText),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyVAlign",
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyVAlign),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

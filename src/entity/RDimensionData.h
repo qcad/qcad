@@ -159,7 +159,8 @@ public:
     void initTextData() const;
     virtual void updateTextData() const;
     virtual QString getMeasurement(bool resolveAutoMeasurement = true) const;
-    virtual QString getAutoMeasurement() const { return ""; }
+    virtual double getMeasuredValue() const { return 0.0; }
+    virtual QString getAutoLabel() const { return ""; }
     QString formatLabel(double distance) const;
     QString formatAngleLabel(double textAngle) const;
     //virtual void updateFromTextPosition() = 0;

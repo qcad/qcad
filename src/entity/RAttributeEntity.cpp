@@ -33,6 +33,7 @@ RPropertyTypeId RAttributeEntity::PropertyPositionX;
 RPropertyTypeId RAttributeEntity::PropertyPositionY;
 RPropertyTypeId RAttributeEntity::PropertyPositionZ;
 RPropertyTypeId RAttributeEntity::PropertyText;
+RPropertyTypeId RAttributeEntity::PropertyPlainText;
 RPropertyTypeId RAttributeEntity::PropertyTag;
 RPropertyTypeId RAttributeEntity::PropertyFontName;
 RPropertyTypeId RAttributeEntity::PropertyHeight;
@@ -67,6 +68,7 @@ void RAttributeEntity::init() {
     RAttributeEntity::PropertyPositionY.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPositionY);
     RAttributeEntity::PropertyPositionZ.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPositionZ);
     RAttributeEntity::PropertyText.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyText);
+    RAttributeEntity::PropertyPlainText.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPlainText);
     RAttributeEntity::PropertyFontName.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyFontName);
     RAttributeEntity::PropertyHeight.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyHeight);
     RAttributeEntity::PropertyAngle.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyAngle);
@@ -97,11 +99,16 @@ QPair<QVariant, RPropertyAttributes> RAttributeEntity::getProperty(
     if (propertyTypeId == PropertyTag) {
         return qMakePair(QVariant(data.tag), RPropertyAttributes());
     }
-    if (propertyTypeId == PropertyText) {
+    if (propertyTypeId == PropertyText || propertyTypeId == PropertyPlainText) {
         // add custom property title for use by parent (block reference):
         propertyTypeId.setCustomPropertyTitle("Attributes");
         propertyTypeId.setCustomPropertyName(getTag());
-        return qMakePair(QVariant(data.text), RPropertyAttributes(RPropertyAttributes::VisibleToParent));
+        return qMakePair(
+            QVariant(data.text),
+            RPropertyAttributes(
+                RPropertyAttributes::VisibleToParent |
+                (propertyTypeId==PropertyPlainText ? RPropertyAttributes::ReadOnly : RPropertyAttributes::NoOptions))
+        );
     }
 
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);

@@ -218,8 +218,12 @@ QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox) c
     return ret;
 }
 
-QString RDimRadialData::getAutoMeasurement() const {
-    double distance = definitionPoint.getDistanceTo(chordPoint);
+double RDimRadialData::getMeasuredValue() const {
+    return definitionPoint.getDistanceTo(chordPoint);
+}
+
+QString RDimRadialData::getAutoLabel() const {
+    double distance = getMeasuredValue();
     distance *= linearFactor;
     return formatLabel(distance);
 }

@@ -396,10 +396,14 @@ RVector RDimAngularData::getCenter() const {
     return vs.at(0);
 }
 
-QString RDimAngularData::getAutoMeasurement() const {
+double RDimAngularData::getMeasuredValue() const {
+    return getAngle();
+}
+
+QString RDimAngularData::getAutoLabel() const {
     QString ret;
 
-    ret = formatAngleLabel(getAngle());
+    ret = formatAngleLabel(getMeasuredValue());
 
     return ret;
 }
