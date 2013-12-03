@@ -1021,6 +1021,10 @@ WidgetFactory.initWebView = function(webView, linkHandler, slot) {
 };
 
 WidgetFactory.initLayerCombo = function(comboBox, doc) {
+    if (isNull(doc)) {
+        return;
+    }
+
     comboBox.clear();
     comboBox.iconSize = new QSize(32, 16);
     var names = doc.getLayerNames();
@@ -1034,6 +1038,10 @@ WidgetFactory.initLayerCombo = function(comboBox, doc) {
 };
 
 WidgetFactory.initBlockCombo = function(comboBox, doc) {
+    if (isNull(doc)) {
+        return;
+    }
+
     comboBox.clear();
     var names = doc.getBlockNames();
     names.sort();
