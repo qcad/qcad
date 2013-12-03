@@ -407,7 +407,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+43"/>
+        <location filename="../src/core/REntity.cpp" line="+48"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -459,6 +459,34 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordre de dessin</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Boundary</source>
+        <translation>Limite</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Left</source>
+        <translation>Gauche</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation>En bas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation>Droite</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Top</source>
+        <translation>En haut</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>

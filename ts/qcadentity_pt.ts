@@ -47,7 +47,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+85"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+75"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -65,9 +65,9 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+64"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -233,6 +233,7 @@ Diâmetro (ø)</translatorcomment>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <source>Length</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -455,7 +456,12 @@ Tolerância Inferior</translatorcomment>
         <translation>Definindo ponto</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
+        <source>Auto Label</source>
+        <translation>Auto rótulo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Linear Factor</source>
         <translation>Fator</translation>
     </message>
@@ -470,7 +476,7 @@ Tolerância Inferior</translatorcomment>
         <translation type="obsolete">Definitionpoint</translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="-13"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
@@ -478,7 +484,7 @@ Tolerância Inferior</translatorcomment>
         <translation>Posição do texto</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Measured Value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valor medido</translation>
@@ -577,7 +583,7 @@ R&amp;enomeie Carimbo</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+5"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -625,7 +631,7 @@ Criando o novo arquivo...</translatorcomment>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -659,7 +665,7 @@ Espessura:
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -735,7 +741,7 @@ Ponto 4|Y</translatorcomment>
         <translation>Ponto 4</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-9"/>
         <source>Closed Periodic</source>
         <translation>Fechado periódica</translation>
     </message>
@@ -778,7 +784,7 @@ Especifique o próximo ponto de controle</translatorcomment>
         <translation>Nó</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
         <source>Simple</source>
         <translatorcomment>--google--
 &lt;b&gt;P1&lt;/b&gt;: deslocamento simples
@@ -787,13 +793,22 @@ Especifique o próximo ponto de controle</translatorcomment>
         <translation>Simples</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Contents</source>
         <translatorcomment>--google--
 Cole o conteúdo da área de transferência
 Antever Conteúdo do Ficheiro
 Tem a certeza que quer eliminar todo o conteúdo?</translatorcomment>
-        <translation>Conteúdo</translation>
+        <translation type="obsolete">Conteúdo</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Text</source>
+        <translation>Texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plain Text</source>
+        <translation>Texto simples</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -861,8 +876,8 @@ Dimensão vertical</translatorcomment>
         <translation>Vertical</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+81"/>
         <source>Tag</source>
         <translation>Etiqueta</translation>
     </message>

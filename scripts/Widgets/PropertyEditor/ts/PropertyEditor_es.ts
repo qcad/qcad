@@ -34,7 +34,7 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+341"/>
+        <location filename="../PropertyEditor.js" line="+348"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>
@@ -44,38 +44,31 @@ Tipo de línea:</translatorcomment>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Left</source>
-        <translation>Izquierda</translation>
+        <translation type="obsolete">Izquierda</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Center</source>
-        <translation>Centro</translation>
+        <translation type="obsolete">Centro</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Right</source>
-        <translation>Derecha</translation>
+        <translation type="obsolete">Derecha</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Aligned</source>
-        <translation>Alineado</translation>
+        <translation type="obsolete">Alineado</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Top</source>
-        <translation>Parte superior</translation>
+        <translation type="obsolete">Parte superior</translation>
     </message>
     <message>
-        <location line="-9"/>
-        <location line="+9"/>
         <source>Middle</source>
-        <translation>Medio</translation>
+        <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-496"/>
+        <location line="-435"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -90,7 +83,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+137"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -139,30 +132,27 @@ Mosaico horizontal
         <translation type="obsolete">Añadir propiedad personalizada</translation>
     </message>
     <message>
-        <location line="+82"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
 Encajar en la página
 Primer punto de ajuste</translatorcomment>
-        <translation>Ajuste</translation>
+        <translation type="obsolete">Ajuste</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Bottom</source>
-        <translation>Parte inferior</translation>
+        <translation type="obsolete">Parte inferior</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Base</source>
         <translatorcomment>--google--
 Dibuje arcos tangenciales a su base
 Especifique la etnidad base
 Seleccione entidad base</translatorcomment>
-        <translation>Base</translation>
+        <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+173"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -183,7 +173,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+309"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>

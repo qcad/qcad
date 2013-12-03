@@ -402,7 +402,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+43"/>
+        <location filename="../src/core/REntity.cpp" line="+48"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -460,6 +460,34 @@ Abre diálogo de cores</translatorcomment>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordem do traçado</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Boundary</source>
+        <translation>Limite</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Left</source>
+        <translation>Esquerda</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation>Fundo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation>Direita</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Top</source>
+        <translation>Topo</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>

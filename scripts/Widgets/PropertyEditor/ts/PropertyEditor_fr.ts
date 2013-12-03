@@ -27,7 +27,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+341"/>
+        <location filename="../PropertyEditor.js" line="+348"/>
         <source>Geometry</source>
         <translation>Géométrie</translation>
     </message>
@@ -52,38 +52,31 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Left</source>
-        <translation>Gauche</translation>
+        <translation type="obsolete">Gauche</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Center</source>
-        <translation>Centrer</translation>
+        <translation type="obsolete">Centrer</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Right</source>
-        <translation>Droite</translation>
+        <translation type="obsolete">Droite</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Aligned</source>
-        <translation>Alignée</translation>
+        <translation type="obsolete">Alignée</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Top</source>
-        <translation>En haut</translation>
+        <translation type="obsolete">En haut</translation>
     </message>
     <message>
-        <location line="-9"/>
-        <location line="+9"/>
         <source>Middle</source>
-        <translation>Milieu</translation>
+        <translation type="obsolete">Milieu</translation>
     </message>
     <message>
-        <location line="-496"/>
+        <location line="-435"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -98,7 +91,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation> :</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+137"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aucune sélection</translation>
@@ -123,30 +116,27 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
         <translation type="obsolete">Ajouter une propriété personnalisée</translation>
     </message>
     <message>
-        <location line="+82"/>
         <source>Fit</source>
         <translatorcomment>--google--
 Ajuster à la page
 Premier point ajustement
 Point ajustement suivant</translatorcomment>
-        <translation>Ajustement</translation>
+        <translation type="obsolete">Ajustement</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Bottom</source>
-        <translation>En bas</translation>
+        <translation type="obsolete">En bas</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Base</source>
         <translatorcomment>--google--
 Dessine des arcs tangents à une entité de base
 Indiquer l&apos;entité de base
 Sélectionner l&apos;entité de base</translatorcomment>
-        <translation>Base</translation>
+        <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+173"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -175,7 +165,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+309"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Éditeur de propriétés</translation>

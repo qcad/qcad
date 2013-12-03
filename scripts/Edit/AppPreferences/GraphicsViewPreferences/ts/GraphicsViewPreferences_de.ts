@@ -59,7 +59,7 @@
         <translation>Auto Ansicht</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Margin (px):</source>
         <translation>Randabstand (px):</translation>
     </message>

@@ -43,7 +43,7 @@
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+85"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+75"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -61,9 +61,9 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+64"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
         <source>X</source>
         <translation type="unfinished"></translation>
     </message>
@@ -197,6 +197,7 @@
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <source>Length</source>
         <translation type="unfinished"></translation>
     </message>
@@ -207,8 +208,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+81"/>
         <source>Tag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -383,6 +384,11 @@
     </message>
     <message>
         <location line="+8"/>
+        <source>Auto Label</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Measured Value</source>
         <translation type="unfinished"></translation>
     </message>
@@ -460,7 +466,7 @@
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+5"/>
         <source>Angle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -495,7 +501,7 @@
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -518,7 +524,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
         <source>Height</source>
         <translation type="unfinished"></translation>
     </message>
@@ -566,7 +572,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-9"/>
         <source>Closed Periodic</source>
         <translation type="unfinished"></translation>
     </message>
@@ -600,13 +606,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
         <source>Simple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Contents</source>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plain Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -87,7 +87,7 @@ Autozoom
         <translation type="unfinished">Autozoom</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Margin (px):</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Marża (px):</translation>

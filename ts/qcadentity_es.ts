@@ -15,7 +15,7 @@
         <location filename="../src/entity/RPointEntity.cpp" line="+56"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -45,7 +45,7 @@ A&amp;nchura papel:</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -78,7 +78,7 @@ Altura del Texto:</translatorcomment>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+85"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+75"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+74"/>
         <location line="+3"/>
@@ -96,9 +96,9 @@ Altura del Texto:</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+64"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -276,6 +276,7 @@ Invertido</translatorcomment>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <source>Length</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -284,13 +285,12 @@ Especifique ángulo final o ángulo acorde a la longitud</translatorcomment>
         <translation>Longitud</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Contents</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
 Pega el contenido del portapapeles
 Editar el contenido del bloque seleccionado</translatorcomment>
-        <translation>Contenidos</translation>
+        <translation type="obsolete">Contenidos</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
@@ -328,7 +328,7 @@ Guardando el dibujo con nombre nuevo</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+5"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -347,7 +347,7 @@ E&amp;scala</translatorcomment>
         <translation>Escalar</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-8"/>
         <source>Simple</source>
         <translatorcomment>--google--
 Texto simple
@@ -356,7 +356,17 @@ El plugin no implementa un método %1 necesario para el ajuste simplex.</transla
         <translation>Simple</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Text</source>
+        <translation>Texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plain Text</source>
+        <translation>Texto plano</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nombre de la fuente</translation>
@@ -547,7 +557,7 @@ Primer vértice</translatorcomment>
         <translation>Bulto</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-9"/>
         <source>Closed Periodic</source>
         <translation>Cerrado periódico</translation>
     </message>
@@ -801,6 +811,11 @@ Límite inferior</translatorcomment>
     </message>
     <message>
         <location line="+8"/>
+        <source>Auto Label</source>
+        <translation>Auto etiqueta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Measured Value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valor medido</translation>
@@ -867,8 +882,8 @@ Punto 4|Y</translatorcomment>
         <translation>Punto 4</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+81"/>
         <source>Tag</source>
         <translation>Etiqueta</translation>
     </message>

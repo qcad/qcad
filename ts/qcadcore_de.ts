@@ -260,7 +260,7 @@
         <translation>Winkel</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+43"/>
+        <location filename="../src/core/REntity.cpp" line="+48"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -293,6 +293,34 @@
         <location line="+1"/>
         <source>Draw Order</source>
         <translation>Reihenfolge</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Boundary</source>
+        <translation>Begrenzung</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Left</source>
+        <translation>Links</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation>Unten</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation>Rechts</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Top</source>
+        <translation>Oben</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>

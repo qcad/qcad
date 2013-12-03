@@ -262,6 +262,52 @@
         <translatorcomment>--google--</translatorcomment>
         <translation>Valeur mesurée</translation>
     </message>
+    <message>
+        <location line="+84"/>
+        <source>Left</source>
+        <translation>Gauche</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Center</source>
+        <translation>Centre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation>Droite</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Aligned</source>
+        <translation>Alignée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+7"/>
+        <source>Middle</source>
+        <translation>Milieu</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Fit</source>
+        <translation>Ajustement</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Top</source>
+        <translation>En haut</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Base</source>
+        <translation>Base</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation>En bas</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -333,7 +379,17 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+572"/>
+        <location filename="../library.js" line="+607"/>
+        <source>Entity</source>
+        <translation>Entité</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Entities</source>
+        <translation>Entités</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>3dFaces</translation>
@@ -405,6 +461,16 @@ Dessine des parallèles aux cercles, arcs et lignes existants
 Dessine des cercles avec un centre et un point
 Dessine des cercles avec 2 points</translatorcomment>
         <translation>Cercles</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimensions</source>
+        <translation>Cotations</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension</source>
+        <translation>Cotation</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -576,6 +642,11 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
         <location line="+0"/>
         <source>Spline</source>
         <translation>Spline</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Text based</source>
+        <translation>Texte basé</translation>
     </message>
     <message>
         <location line="+2"/>

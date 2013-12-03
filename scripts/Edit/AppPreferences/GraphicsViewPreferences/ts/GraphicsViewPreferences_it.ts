@@ -59,7 +59,7 @@
         <translation>Zoom automatico</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Margin (px):</source>
         <translation>Margine (px):</translation>
     </message>

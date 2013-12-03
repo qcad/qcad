@@ -44,5 +44,10 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
         <translatorcomment>--google--</translatorcomment>
         <translation>Activer geste pan</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <source>Limit zoom and scroll to prevent overflows</source>
+        <translation>Limiter zoom pour éviter les débordements</translation>
+    </message>
 </context>
 </TS>

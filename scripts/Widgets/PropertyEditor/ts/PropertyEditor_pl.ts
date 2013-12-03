@@ -50,7 +50,7 @@ Wersja: </translatorcomment>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+137"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No Selection</translation>
@@ -115,90 +115,80 @@ Czy chcesz zamknąć plik
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Góra - lewo
 Środek - lewo</translatorcomment>
-        <translation type="unfinished">Lewo</translation>
+        <translation type="obsolete">Lewo</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Wskaż środek
 Łuk: środek, punkt, kąty</translatorcomment>
-        <translation type="unfinished">Wyśrodkuj</translation>
+        <translation type="obsolete">Wyśrodkuj</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Right</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Góra - prawo
 Środek - prawo</translatorcomment>
-        <translation type="unfinished">Prawo</translation>
+        <translation type="obsolete">Prawo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Aligned</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wyrównany
 &amp;Wyrównany</translatorcomment>
-        <translation type="unfinished">Wyrównany</translation>
+        <translation type="obsolete">Wyrównany</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+9"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 &amp;Punkt centralny
 Środek
 Przyciągaj do punktów pośrednich</translatorcomment>
-        <translation type="unfinished">Środek</translation>
+        <translation type="obsolete">Środek</translation>
     </message>
     <message>
-        <location line="-9"/>
         <source>Fit</source>
         <translatorcomment>--google--
 Rozmieść na stronie
 Dopasuj szerokość
 Dopasuj stronę</translatorcomment>
-        <translation type="unfinished">Dopasować</translation>
+        <translation type="obsolete">Dopasować</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Top</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Upuść aby zakończyć przesuwanie widoku
 Góra - prawo</translatorcomment>
-        <translation type="unfinished">Do góry</translation>
+        <translation type="obsolete">Do góry</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Base</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
 Rysuj łuki styczne do  obiektu podstawowego
 Zaznacz obiekt podstawowy</translatorcomment>
-        <translation type="unfinished">Podstawa</translation>
+        <translation type="obsolete">Podstawa</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Bottom</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Dół - lewo
 Dół - prawo</translatorcomment>
-        <translation type="unfinished">W dół</translation>
+        <translation type="obsolete">W dół</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+150"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -233,7 +223,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+309"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

@@ -258,6 +258,52 @@
         <translatorcomment>--google--</translatorcomment>
         <translation>Valore misurato</translation>
     </message>
+    <message>
+        <location line="+84"/>
+        <source>Left</source>
+        <translation>Sinistra</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Center</source>
+        <translation>Centro</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation>Destra</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Aligned</source>
+        <translation>Allineato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+7"/>
+        <source>Middle</source>
+        <translation>Medio</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Fit</source>
+        <translation>Fit</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Top</source>
+        <translation>Sopra</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Base</source>
+        <translation>Base</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation>Sotto</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -329,7 +375,17 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+572"/>
+        <location filename="../library.js" line="+607"/>
+        <source>Entity</source>
+        <translation>Entità</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Entities</source>
+        <translation>Entità</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>3dFaces</translation>
@@ -393,6 +449,16 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
         <location line="+0"/>
         <source>Circle</source>
         <translation>Cerchio</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimensions</source>
+        <translation>Quote</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension</source>
+        <translation>Quota</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -552,6 +618,11 @@ in linee, solidi e testi</translatorcomment>
         <location line="+0"/>
         <source>Spline</source>
         <translation>Spline</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Text based</source>
+        <translation>Basato su testo</translation>
     </message>
     <message>
         <location line="+2"/>

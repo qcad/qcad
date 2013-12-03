@@ -50,7 +50,7 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+137"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não seleção</translation>
@@ -113,95 +113,85 @@ Fecha todas as janelas</translatorcomment>
         <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Esquerda acima
 Em cima à esquerda
 Esquerda ao meio</translatorcomment>
-        <translation>Esquerda</translation>
+        <translation type="obsolete">Esquerda</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 &amp;Centro, ponto, ângulos
 Centro, ponto, ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation>Centro</translation>
+        <translation type="obsolete">Centro</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Right</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Direita ao meio
 Direita abaixo
 Em baixo à direita</translatorcomment>
-        <translation>Direita</translation>
+        <translation type="obsolete">Direita</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Aligned</source>
         <translatorcomment>--exact match--
 --file: DimAligned_pt.ts--
 &amp;Alinhado
 Alinhado
 Dimensão Alinhada</translatorcomment>
-        <translation>Alinhado</translation>
+        <translation type="obsolete">Alinhado</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+9"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 &amp;Meio
 Meio
 Salta aos pontos de meio</translatorcomment>
-        <translation>Meio</translation>
+        <translation type="obsolete">Meio</translation>
     </message>
     <message>
-        <location line="-9"/>
         <source>Fit</source>
         <translatorcomment>--google--
 Ajuste à página
 Ponto de ajustar primeiro
 Ponto de ajustar próximo</translatorcomment>
-        <translation>Caber</translation>
+        <translation type="obsolete">Caber</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Top</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Deposita ao fim da garimpagem
 Centro acima</translatorcomment>
-        <translation>Topo</translation>
+        <translation type="obsolete">Topo</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Base</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Desenhe arcos tangenciais à entidade de base
 Arco tangencial à entidade de base com raio</translatorcomment>
-        <translation>Base</translation>
+        <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Bottom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Direita abaixo
 Em baixo à direita
 Centro abaixo</translatorcomment>
-        <translation>Fundo</translation>
+        <translation type="obsolete">Fundo</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+150"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: SnapAuto_pt.ts--
@@ -242,7 +232,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+309"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

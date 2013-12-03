@@ -44,5 +44,10 @@ Pasek do nawigacji
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Włącz gest panoramowania</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <source>Limit zoom and scroll to prevent overflows</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

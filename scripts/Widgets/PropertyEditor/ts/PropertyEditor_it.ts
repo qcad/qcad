@@ -27,7 +27,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+341"/>
+        <location filename="../PropertyEditor.js" line="+348"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
@@ -37,38 +37,31 @@
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Left</source>
-        <translation>Sinistra</translation>
+        <translation type="obsolete">Sinistra</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Center</source>
-        <translation>Centro</translation>
+        <translation type="obsolete">Centro</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Right</source>
-        <translation>Destra</translation>
+        <translation type="obsolete">Destra</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Aligned</source>
-        <translation>Allineato</translation>
+        <translation type="obsolete">Allineato</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Top</source>
-        <translation>Sopra</translation>
+        <translation type="obsolete">Sopra</translation>
     </message>
     <message>
-        <location line="-9"/>
-        <location line="+9"/>
         <source>Middle</source>
-        <translation>Medio</translation>
+        <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-496"/>
+        <location line="-435"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -83,7 +76,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+137"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -121,30 +114,27 @@ Nessuna selezione</translatorcomment>
         <translation type="obsolete">Aggiungi proprietà personalizzata</translation>
     </message>
     <message>
-        <location line="+82"/>
         <source>Fit</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
 Adatta alla pagina
 Primo punto di adattamento</translatorcomment>
-        <translation>Fit</translation>
+        <translation type="obsolete">Fit</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Bottom</source>
-        <translation>Sotto</translation>
+        <translation type="obsolete">Sotto</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Base</source>
         <translatorcomment>--exact match--
 --file: src_shell_data_translations_ktoon_it.ts--
 Disegna arco tangente alla base dell&apos;oggetto
 Specifica la base</translatorcomment>
-        <translation>Base</translation>
+        <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+173"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -165,7 +155,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+309"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor delle proprietà</translation>

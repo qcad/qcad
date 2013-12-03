@@ -36,7 +36,7 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+137"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
@@ -70,58 +70,48 @@
         <translation type="obsolete">Benutzerdefiniertes Property hinzufügen</translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Left</source>
-        <translation>Links</translation>
+        <translation type="obsolete">Links</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Center</source>
-        <translation>Zentrum</translation>
+        <translation type="obsolete">Zentrum</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Right</source>
-        <translation>Rechts</translation>
+        <translation type="obsolete">Rechts</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Aligned</source>
-        <translation>Ausgerichtet</translation>
+        <translation type="obsolete">Ausgerichtet</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Fit</source>
-        <translation>Anpassen</translation>
+        <translation type="obsolete">Anpassen</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Top</source>
-        <translation>Oben</translation>
+        <translation type="obsolete">Oben</translation>
     </message>
     <message>
-        <location line="-9"/>
-        <location line="+9"/>
         <source>Middle</source>
-        <translation>Mittelpunkt</translation>
+        <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location line="+23"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
     <message>
-        <location line="+68"/>
         <source>Bottom</source>
-        <translation>Unten</translation>
+        <translation type="obsolete">Unten</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Base</source>
-        <translation>Basis</translation>
+        <translation type="obsolete">Basis</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+150"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
@@ -145,7 +135,7 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+309"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Eigenschaften Editor</translation>
@@ -191,7 +181,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-865"/>
+        <location filename="../PropertyEditor.js" line="-869"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

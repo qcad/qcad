@@ -45,5 +45,10 @@ Las capas ráster de elevada resolución pueden ralentizar la navegación en QGI
         <translatorcomment>--google--</translatorcomment>
         <translation>Habilitar gesto de pan</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <source>Limit zoom and scroll to prevent overflows</source>
+        <translation>Limitar el zoom para evitar desbordamientos</translation>
+    </message>
 </context>
 </TS>

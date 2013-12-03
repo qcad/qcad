@@ -412,7 +412,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Ángulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+43"/>
+        <location filename="../src/core/REntity.cpp" line="+48"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -465,6 +465,34 @@ Colores
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Orden de dibujo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Boundary</source>
+        <translation>Límite</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Left</source>
+        <translation>Izquierda</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation>Parte inferior</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation>Derecha</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Top</source>
+        <translation>Parte superior</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>

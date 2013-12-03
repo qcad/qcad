@@ -421,7 +421,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Angolo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+43"/>
+        <location filename="../src/core/REntity.cpp" line="+48"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -474,6 +474,34 @@ Colore G&amp;riglia:</translatorcomment>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordine di disegno</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Boundary</source>
+        <translation>Limite</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Left</source>
+        <translation>Sinistra</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation>Sotto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation>Destra</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Top</source>
+        <translation>Sopra</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>

@@ -45,5 +45,10 @@ Texto a mostrar</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Habilitar gesto pan</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <source>Limit zoom and scroll to prevent overflows</source>
+        <translation>Limitar zoom para evitar transbordamentos</translation>
+    </message>
 </context>
 </TS>

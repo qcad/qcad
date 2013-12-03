@@ -27,7 +27,7 @@
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+85"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+75"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+74"/>
         <location line="+3"/>
@@ -45,9 +45,9 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+64"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
         <source>X</source>
         <translation>X</translation>
     </message>
@@ -86,7 +86,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
         <source>Height</source>
         <translation>Höhe</translation>
     </message>
@@ -150,7 +150,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-5"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
@@ -230,13 +230,13 @@
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <source>Length</source>
         <translation>Länge</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Contents</source>
-        <translation>Inhalt</translation>
+        <translation type="obsolete">Inhalt</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
@@ -260,7 +260,7 @@
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+5"/>
         <source>Angle</source>
         <translation>Winkel</translation>
     </message>
@@ -270,12 +270,22 @@
         <translation>Skalierung</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-8"/>
         <source>Simple</source>
         <translation>Einfach</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plain Text</source>
+        <translation>Klartext</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Font Name</source>
         <translation>Schrift Name</translation>
     </message>
@@ -374,7 +384,7 @@
         <translation>Wölbung</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-9"/>
         <source>Closed Periodic</source>
         <translation>Geschlossen periodisch</translation>
     </message>
@@ -584,7 +594,12 @@
         <translation>Definitionspunkt</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
+        <source>Auto Label</source>
+        <translation>Auto Beschriftung</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Linear Factor</source>
         <translation>Linearfaktor</translation>
     </message>
@@ -598,14 +613,14 @@
         <translation type="obsolete">Definitionspunkt</translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="-13"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
         <translation>Text Position</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Measured Value</source>
         <translation>Gemessener Wert</translation>
     </message>
@@ -643,8 +658,8 @@
         <translation>Punkt 4</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+81"/>
         <source>Tag</source>
         <translation>Bezeichnung</translation>
     </message>

@@ -29,7 +29,7 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
         <translation type="obsolete">Ferramentas de seleção</translation>
     </message>
     <message>
-        <location line="+154"/>
+        <location line="+157"/>
         <source>&amp;Select</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

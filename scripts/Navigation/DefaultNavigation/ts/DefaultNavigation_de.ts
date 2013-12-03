@@ -36,5 +36,10 @@
         <source>Enable pan gesture</source>
         <translation>Bewegung zum Verschieben der Ansicht aktivieren</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <source>Limit zoom and scroll to prevent overflows</source>
+        <translation>Zoom und pan begrenzen um Überläufe zu verhindern</translation>
+    </message>
 </context>
 </TS>

@@ -59,7 +59,7 @@
         <translation>オートズーム</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Margin (px):</source>
         <translation>マージン（ピクセル）:</translation>
     </message>

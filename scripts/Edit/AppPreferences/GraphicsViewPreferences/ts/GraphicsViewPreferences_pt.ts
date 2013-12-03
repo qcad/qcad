@@ -59,7 +59,7 @@
         <translation>Close automático</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Margin (px):</source>
         <translation>Margem (px):</translation>
     </message>

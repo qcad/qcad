@@ -20,7 +20,7 @@ Caricamento File %1
         <location filename="../src/entity/RPointEntity.cpp" line="+56"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+66"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -55,7 +55,7 @@ Larghezza
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: wp-geo-it_IT.po--
@@ -88,7 +88,7 @@ Altezza Testo:</translatorcomment>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+85"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+75"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+74"/>
         <location line="+3"/>
@@ -106,9 +106,9 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+63"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+64"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: default.po--
@@ -287,6 +287,7 @@ Arcocomplementare</translatorcomment>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <source>Length</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -295,13 +296,12 @@ Angolo finale o [Angolo/Lunghezza corda]</translatorcomment>
         <translation>Lunghezza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Contents</source>
         <translatorcomment>--exact match--
 --file: assistant_it.ts--
 Incolla il contenuto degli appunti
 Modificare il contenuto del blocco selezionato</translatorcomment>
-        <translation>Contenuti</translation>
+        <translation type="obsolete">Contenuti</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
@@ -339,7 +339,7 @@ Salva Disegno con Nuovo Nome</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+5"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -357,7 +357,7 @@ Scala</translatorcomment>
         <translation>Scala</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-8"/>
         <source>Simple</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -366,7 +366,17 @@ Esplode gli oggetti selezionati in oggetti piú semplice, o sottrae le facce</tr
         <translation>Semplice</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Text</source>
+        <translation>Testo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plain Text</source>
+        <translation>Testo normale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nome del font</translation>
@@ -560,7 +570,7 @@ Aggiungi vertice</translatorcomment>
         <translation>Bulge</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-9"/>
         <source>Closed Periodic</source>
         <translation>Chiuso periodica</translation>
     </message>
@@ -815,6 +825,11 @@ Limite inferiore</translatorcomment>
     </message>
     <message>
         <location line="+8"/>
+        <source>Auto Label</source>
+        <translation>Auto etichetta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Measured Value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valore misurato</translation>
@@ -881,8 +896,8 @@ Punto 4|Y</translatorcomment>
         <translation>Punto 4</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+80"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+81"/>
         <source>Tag</source>
         <translation>Etichetta</translation>
     </message>

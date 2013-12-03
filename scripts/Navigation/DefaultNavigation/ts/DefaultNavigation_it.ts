@@ -45,5 +45,10 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translatorcomment>--google--</translatorcomment>
         <translation>Abilita gesto pan</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <source>Limit zoom and scroll to prevent overflows</source>
+        <translation>Limitare zoom per evitare overflow</translation>
+    </message>
 </context>
 </TS>

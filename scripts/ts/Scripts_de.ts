@@ -242,6 +242,52 @@
         <source>Measured value</source>
         <translation>Gemessener Wert</translation>
     </message>
+    <message>
+        <location line="+84"/>
+        <source>Left</source>
+        <translation>Links</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Center</source>
+        <translation>Zentrum</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation>Rechts</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Aligned</source>
+        <translation>Ausgerichtet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+7"/>
+        <source>Middle</source>
+        <translation>Mitte</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Fit</source>
+        <translation>Anpassen</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Top</source>
+        <translation>Oben</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Base</source>
+        <translation>Basis</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation>Unten</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -322,7 +368,17 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+572"/>
+        <location filename="../library.js" line="+607"/>
+        <source>Entity</source>
+        <translation>Objekt</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Entities</source>
+        <translation>Objekte</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>3dFaces</source>
         <translation>3dFaces</translation>
     </message>
@@ -380,6 +436,16 @@
         <location line="+0"/>
         <source>Circle</source>
         <translation>Kreis</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimensions</source>
+        <translation>Bemassungen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension</source>
+        <translation>Bemassung</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -530,6 +596,11 @@
         <location line="+0"/>
         <source>Spline</source>
         <translation>Spline</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Text based</source>
+        <translation>Textbasiert</translation>
     </message>
     <message>
         <location line="+2"/>
