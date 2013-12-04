@@ -605,12 +605,7 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
         if (!e.isNull() && !e->isSelected() &&
             !isLayerLocked(e->getLayerId()) && !isLayerFrozen(e->getLayerId())) {
 
-            qDebug() << "select: " << *e;
-
             setEntitySelected(e, true, affectedEntities);
-        }
-        else {
-            qDebug() << "DON'T select: " << *e;
         }
     }
 }
