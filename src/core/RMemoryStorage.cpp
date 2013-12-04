@@ -603,9 +603,14 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
     for (it = entityIds.constBegin(); it != entityIds.constEnd(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (!e.isNull() && !e->isSelected() &&
-            !isLayerLocked(e->getLayerId())) {
+            !isLayerLocked(e->getLayerId()) && !isLayerFrozen(e->getLayerId())) {
+
+            qDebug() << "select: " << *e;
 
             setEntitySelected(e, true, affectedEntities);
+        }
+        else {
+            qDebug() << "DON'T select: " << *e;
         }
     }
 }
