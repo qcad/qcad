@@ -1037,9 +1037,12 @@ WidgetFactory.initLayerCombo = function(comboBox, doc) {
     }
 };
 
-WidgetFactory.initBlockCombo = function(comboBox, doc) {
+WidgetFactory.initBlockCombo = function(comboBox, doc, showSpaces) {
     if (isNull(doc)) {
         return;
+    }
+    if (isNull(showSpaces)) {
+        showSpaces = false;
     }
 
     comboBox.clear();
@@ -1047,7 +1050,9 @@ WidgetFactory.initBlockCombo = function(comboBox, doc) {
     names.sort();
     for (var i=0; i<names.length; i++) {
         var name = names[i];
-        comboBox.addItem(name);
+        if (showSpaces || !name.startsWith("*")) {
+            comboBox.addItem(name);
+        }
     }
 };
 
