@@ -272,6 +272,8 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
 
     e->accept();
     writeSettings();
+
+    QApplication::quit();
 }
 
 void RMainWindowQt::dragEnterEvent(QDragEnterEvent* event) {
