@@ -80,7 +80,7 @@ SaveAs.prototype.beginEvent = function() {
     var fileName = this.getDocument().getFileName();
     var fileInfo = new QFileInfo(fileName);
     if (fileName.length!==0) {
-        fileDialog.selectFile(fileInfo.completeBaseName());
+        fileDialog.selectFile(fileInfo.fileName());
         fileDialog.setDirectory(fileInfo.absolutePath());
     }
     else {
