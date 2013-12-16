@@ -18,7 +18,9 @@
  */
 #include <QDebug>
 
+#if !defined(_MSC_VER) || _MSC_VER > 1500
 #include <stdint.h>
+#endif
 #include "RThread.h"
 
 RThread::RThread(QObject * parent) :

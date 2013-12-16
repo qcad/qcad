@@ -122,7 +122,7 @@ static T* scriptValueToQObject(QScriptValue v) {
 
 static QScriptValue throwError(const QString& message, QScriptContext* context);
 
-static QScriptValue toScriptValue(QScriptEngine* engine, const QMap<QString, QString>& cppValue);
+//static QScriptValue toScriptValue(QScriptEngine* engine, const QMap<QString, QString>& cppValue);
 
 //static bool isRVector(QScriptValue& sv);
 

@@ -23,18 +23,6 @@ function AutoZoomView(parent) {
 
 AutoZoomView.prototype = new RGraphicsViewQt();
 
-/*
-AutoZoomView.prototype.event = function(event) {
-    if (event.type()==QEvent.ToolTip) {
-        this.toolTip =
-             qsTr("Unit: %1").arg(RUnit.unitToName(this.getDocument().getUnit()));
-    }
-
-    // TypeError: Result of expression 'RGraphicsViewQt.prototype.event.call' [undefined] is not a function.
-    RGraphicsViewQt.prototype.event.call(this, event);
-};
-*/
-
 AutoZoomView.prototype.resizeEvent = function(event) {
     RGraphicsViewQt.prototype.resizeEvent.call(this, event);
     this.autoZoom();

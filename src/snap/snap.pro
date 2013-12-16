@@ -36,6 +36,6 @@ HEADERS = \
 TEMPLATE = lib
 CONFIG += plugin
 TARGET = qcadsnap
-LIBS += -lqcadcore -lqcadgrid
+LIBS += -lqcadcore -lqcadgrid -lqcadentity
 OTHER_FILES += snap.dox
 DEFINES += QCADSNAP_LIBRARY
