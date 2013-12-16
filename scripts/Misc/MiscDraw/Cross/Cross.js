@@ -18,7 +18,6 @@
  */
 
 include("scripts/EAction.js");
-//include("scripts/Apollonius.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
@@ -151,14 +150,17 @@ Cross.prototype.drawCross = function(shape) {
         point4 = cp.operator_add(v);
     }
 
+    var op = new RAddObjectsOperation();
+    var empty = true;
+
     // draw horizontal line from point1 to point2
     if (!point1.equalsFuzzy(point2)) {
         var line = new RLineEntity(
                 this.getDocument(),
                 new RLineData(point1, point2)
                 )
-        var op = new RAddObjectOperation(line);
-        this.getDocumentInterface().applyOperation(op);
+        op.addObject(line);
+        empty = false;
     }
 
     // draw vertical line from point3 to point4
@@ -167,7 +169,11 @@ Cross.prototype.drawCross = function(shape) {
                     this.getDocument(),
                     new RLineData(point3, point4)
                     )
-        op = new RAddObjectOperation(line);
+        op.addObject(line);
+        empty = false;
+    }
+
+    if (!empty) {
         this.getDocumentInterface().applyOperation(op);
     }
 };
