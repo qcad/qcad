@@ -12,5 +12,5 @@ function init(basePath) {
     action.setNoState(true);
     var appWin = EAction.getMainWindow();
     appWin.addFocusListener(action);
-    EAction.addGuiActionTo(action, Snap, true, true, true);
+    EAction.addGuiActionTo(action, Snap, true, true, true, true);
 }
