@@ -68,6 +68,7 @@ RVector RBlockReferenceData::getVectorTo(
         recursionDepth--;
         qWarning() << "RBlockReferenceData::getVectorTo: "
             << "maximum recursion depth reached: block: " << getBlockName();
+        groundReferencedBlockId();
         return RVector::invalid;
     }
 
@@ -107,6 +108,7 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
         recursionDepth--;
         qWarning() << "RBlockReferenceData::getDistanceTo: "
             << "maximum recursion depth reached: block: " << getBlockName();
+        groundReferencedBlockId();
         return RNANDOUBLE;
     }
 
@@ -145,6 +147,7 @@ RBox RBlockReferenceData::getBoundingBox() const {
         recursionDepth--;
         qWarning() << "RBlockReferenceData::getBoundingBox: "
             << "maximum recursion depth reached: block: " << getBlockName();
+        groundReferencedBlockId();
         return RBox();
     }
 
@@ -253,6 +256,7 @@ QList<RVector> RBlockReferenceData::getInternalReferencePoints(
         recursionDepth--;
         qWarning() << "RBlockReferenceData::getInternalReferencePoints: "
             << "maximum recursion depth reached: block: " << getBlockName();
+        groundReferencedBlockId();
         return ret;
     }
 
@@ -288,6 +292,7 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
         recursionDepth--;
         qWarning() << "RBlockReferenceData::getShapes: "
             << "maximum recursion depth reached: block: " << getBlockName();
+        groundReferencedBlockId();
         return ret;
     }
 

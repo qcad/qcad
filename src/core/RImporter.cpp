@@ -22,6 +22,7 @@
 #include "REntity.h"
 #include "RObject.h"
 #include "RStorage.h"
+#include "RMainWindow.h"
 
 RImporter::RImporter() :
     document(NULL),
@@ -83,9 +84,47 @@ void RImporter::importObject(RObject* object) {
  */
 void RImporter::endImport() {
     transaction.end();
-    document->rebuildSpatialIndex();
 
-    // TODO: check block recursion
+    // ground all directly recursive block references:
+    int counter = 0;
+    QStringList blockNames;
+    QSet<RBlock::Id> blockIds = document->queryAllBlocks();
+    QSet<RBlock::Id>::const_iterator it;
+    for (it=blockIds.constBegin(); it!=blockIds.constEnd(); it++) {
+        RBlock::Id blockId = *it;
+
+        QSet<REntity::Id> ids = document->queryBlockEntities(blockId);
+        QSet<REntity::Id>::const_iterator it2;
+        for (it2=ids.constBegin(); it2!=ids.constEnd(); it2++) {
+            REntity::Id entityId = *it2;
+
+            QSharedPointer<REntity> entity = document->queryEntityDirect(entityId);
+            QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+            if (blockRef.isNull()) {
+                // ignore non block reference entities:
+                continue;
+            }
+
+            RBlock::Id refBlockId = blockRef->getReferencedBlockId();
+
+            if (refBlockId==blockId) {
+                blockNames.append(document->getBlockName(refBlockId));
+                blockRef->setReferencedBlockId(RBlock::INVALID_ID);
+                counter++;
+            }
+        }
+    }
+
+    if (RMainWindow::hasMainWindow()) {
+        blockNames = blockNames.toSet().toList();
+        RMainWindow::getMainWindow()->handleUserWarning(
+            QString("Grounded %1 recursive block references in blocks: %2")
+                .arg(counter)
+                .arg(blockNames.join(", "))
+        );
+    }
+
+    document->rebuildSpatialIndex();
 }
 
 void RImporter::setCurrentBlockId(RBlock::Id id) {

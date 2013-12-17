@@ -78,7 +78,7 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QMap<QStrin
     }
     return qScriptValueFromValue(engine, vm);
 
-    /*
+    / *
     // alterative version (compiles in release mode with MSVC 2008):
     qDebug() << "REcmaHelper::toScriptValue: QMap<QString, QString>";
     QMap<QString, QString> vm;
@@ -87,7 +87,7 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QMap<QStrin
         vm.insert(it.key(), it.value());
     }
     return qScriptValueFromValue(engine, vm);
-    */
+    * /
 }
 */
 

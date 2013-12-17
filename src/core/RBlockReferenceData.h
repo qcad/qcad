@@ -74,6 +74,10 @@ public:
         referencedBlockId = blockId;
     }
 
+    void groundReferencedBlockId() const {
+        referencedBlockId = RBlock::INVALID_ID;
+    }
+
     RBlock::Id getReferencedBlockId() const {
         return referencedBlockId;
     }
@@ -121,7 +125,7 @@ public:
     bool applyTransformationTo(REntity& entity) const;
 
 private:
-    RBlock::Id referencedBlockId;
+    mutable RBlock::Id referencedBlockId;
     RVector position;
     RVector scaleFactors;
     double rotation;
