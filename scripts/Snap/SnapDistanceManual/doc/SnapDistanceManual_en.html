@@ -17,26 +17,27 @@
 <br /><b>Commands:</b> <font face='courier new'>snapdistancemanual | sh</font>
 </div>
 <p><strong>Description:</strong></p>
-<p>This tool allows you to snap to a point that is between two points, or a
-given distance from the first point, at an angle defined by the second point.
-You enter the value in the snap distance box, and then choose 'Distance',
-'Percent', or 'Fraction' from the dropdown box. This command does not restrict
-the distance, percent or fraction entered. Therefore a distance greater than
-the distance between the two points will return a point beyond the second
-point. Similarly a percentage greater than 100, and a fraction greater than 1
-will return a point beyond the second point. You can also enter a negative
-value. This will return a point before the first point. (Note: You can enter
-fractions as '1/7', or '3/11' for example.)</p>
+<p>This tool allows you to snap to a point that lays on the imaginary
+line between two points at a given distance from the first point.
+<br/>
+This snap tool does not restrict the distance, percentage or fraction 
+entered. Entering a distance greater than the distance between the two points,
+a percentage greater than 100 or a fraction greater than 1.0 will allow you 
+to snap to a point beyond the second point. 
+<br/>
+Negative values can be entered to snap to points beyond the first point.
+<br/>
+Fractions may be entered as decimal numbers (0.5, 0.7) or as fractions
+(1/7, 3/11).</p>
 <p><strong>Procedure:</strong></p>
 <div>
   <ol>
-    <li>After activating this snap tool, choose 'Distance', 'Percent', or
-    'Fraction' from the dropdown box and enter the value in the edit box. </li>
-    <img src ="SnapDistanceManualOptions.png" class="figure" />
-    <li>Specify the first of the two points that define the point to measure
-    the distance from. (Note: the distance, percent or fraction is always
-    meausured from the first selected point.)</li>
-    <li>Click the second of the two points.</li>
+    <li>After activating this snap tool, choose 'Distance', 'Percentage', or
+    'Fraction' and enter the desired value in the options tool bar.</li>
+    <img src="SnapDistanceManualOptions.png" class="figure" />
+    <li>Specify the first point. That is the point to measure the distance
+    from.</li>
+    <li>Click the second point.</li>
   </ol>
   <br />
   <img src="SnapDistanceManual.svg" class="figure" />

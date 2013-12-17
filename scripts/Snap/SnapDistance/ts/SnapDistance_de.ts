@@ -9,13 +9,9 @@
         <translation>Abstand:</translation>
     </message>
     <message>
-        <source>1</source>
-        <translation type="obsolete">1</translation>
-    </message>
-    <message>
         <location filename="../SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translation>&amp;Distanz</translation>
+        <translation>&amp;Abstand</translation>
     </message>
 </context>
 </TS>
