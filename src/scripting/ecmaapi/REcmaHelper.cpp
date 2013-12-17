@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include <QKeySequence>
-//#include <QVariantMap>
 
 #include "RArcEntity.h"
 #include "RAttributeEntity.h"
@@ -78,16 +77,14 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QMap<QStrin
     }
     return qScriptValueFromValue(engine, vm);
 
-    / *
-    // alterative version (compiles in release mode with MSVC 2008):
-    qDebug() << "REcmaHelper::toScriptValue: QMap<QString, QString>";
-    QMap<QString, QString> vm;
-    QMap<QString, QString>::const_iterator it;
-    for (it = cppValue.constBegin(); it!=cppValue.constEnd(); ++it) {
-        vm.insert(it.key(), it.value());
-    }
-    return qScriptValueFromValue(engine, vm);
-    * /
+    // // alterative version (compiles in release mode with MSVC 2008):
+    // qDebug() << "REcmaHelper::toScriptValue: QMap<QString, QString>";
+    // QMap<QString, QString> vm;
+    // QMap<QString, QString>::const_iterator it;
+    // for (it = cppValue.constBegin(); it!=cppValue.constEnd(); ++it) {
+    //     vm.insert(it.key(), it.value());
+    // }
+    // return qScriptValueFromValue(engine, vm);
 }
 */
 
