@@ -16,7 +16,7 @@
     <message>
         <location filename="../PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Pôle d&apos;une ligne et d&apos;un cercle</translation>
     </message>
 </context>
 </TS>

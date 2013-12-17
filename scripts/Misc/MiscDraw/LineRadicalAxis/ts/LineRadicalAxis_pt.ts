@@ -23,7 +23,7 @@
     <message>
         <location filename="../LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Eixo radical de dois círculos</translation>
     </message>
     <message>
         <location filename="../LineRadicalAxis.ui" line="+17"/>

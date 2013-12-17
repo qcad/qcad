@@ -263,7 +263,7 @@
         <translation>Valeur mesurée</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+89"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>

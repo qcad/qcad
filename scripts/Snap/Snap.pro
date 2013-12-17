@@ -6,6 +6,7 @@ SUBDIRS = \
     SnapCoordinate \
     SnapCoordinatePolar \
     SnapDistance \
+    SnapDistanceManual \
     SnapEnd \
     SnapFree \
     SnapGrid \

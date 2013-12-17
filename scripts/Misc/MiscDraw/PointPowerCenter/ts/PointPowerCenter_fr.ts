@@ -11,7 +11,7 @@
     <message>
         <location filename="../PointPowerCenterInit.js" line="+2"/>
         <source>Power center of three circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Centre radical des trois cercles</translation>
     </message>
 </context>
 </TS>

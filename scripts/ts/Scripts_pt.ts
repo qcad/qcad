@@ -321,7 +321,7 @@ Delta X</translatorcomment>
         <translation>Valor medido</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+89"/>
         <source>Left</source>
         <translation>Esquerda</translation>
     </message>

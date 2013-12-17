@@ -44,13 +44,13 @@ SnapDistanceManual.prototype.beginEvent = function() {
     this.di.setClickMode(RAction.PickCoordinate);
     this.base = this.getOverrideBase();
     if (isNull(this.base)) {
-        qWarning(qsTr("No base action to override"));
+        qWarning("No base action to override");
         this.terminate();
         return;
     }
 
     if (this.base.getClickMode() !== RAction.PickCoordinate) {
-        qWarning(qsTr("No coordinate requested at this point"));
+        qWarning("No coordinate requested at this point");
         this.terminate();
     }
 };
@@ -59,7 +59,7 @@ SnapDistanceManual.prototype.coordinateEvent = function(event) {
     if (this.state===this.State.PickingPoint1) {
         this.point1 = event.getModelPosition();
         this.state = this.State.PickingPoint2;
-        this.setCommandPrompt(qsTr("Specify second distance point"));
+        this.setCommandPrompt(qsTr("Second point"));
     }
     else {
         this.point2 = event.getModelPosition();

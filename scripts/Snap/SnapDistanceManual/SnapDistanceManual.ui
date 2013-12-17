@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SnapDistance</class>
+ <class>SnapDistanceManual</class>
  <widget class="QWidget" name="SnapDistanceManual">
   <property name="geometry">
    <rect>
@@ -88,7 +88,7 @@
      </item>
      <item>
       <property name="text">
-       <string>Percent</string>
+       <string>Percentage</string>
       </property>
      </item>
      <item>

@@ -4,24 +4,20 @@
 <context>
     <name>SnapDistance</name>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Abstand:</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="86"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Abstand</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="91"/>
-        <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <source>Percentage</source>
+        <translation type="obsolete">Prozentsatz</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="96"/>
         <source>Fraction</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Bruchteil</translation>
     </message>
 </context>
 <context>
@@ -29,32 +25,46 @@
     <message>
         <location filename="../SnapDistanceManual.js" line="31"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SnapDistanceManual.js" line="47"/>
-        <source>No base action to override</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SnapDistanceManual.js" line="53"/>
-        <source>No coordinate requested at this point</source>
-        <translation type="unfinished"></translation>
+        <translation>Erster Punkt, von dem Abstand gemessen wird</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManual.js" line="62"/>
+        <source>Second point</source>
+        <translation>Zweiter Punkt</translation>
+    </message>
+    <message>
         <source>Specify second distance point</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Zweiter Punkt</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManualInit.js" line="2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abstand manuell</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManualInit.js" line="7"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Abstand zwischen zwei Punkten fangen</translation>
+    </message>
+    <message>
+        <location filename="../SnapDistanceManual.ui" line="17"/>
+        <source>Snap distance:</source>
+        <translation>Abstand:</translation>
+    </message>
+    <message>
+        <location filename="../SnapDistanceManual.ui" line="86"/>
+        <source>Distance</source>
+        <translation>Abstand</translation>
+    </message>
+    <message>
+        <location filename="../SnapDistanceManual.ui" line="91"/>
+        <source>Percentage</source>
+        <translation>Prozentsatz</translation>
+    </message>
+    <message>
+        <location filename="../SnapDistanceManual.ui" line="96"/>
+        <source>Fraction</source>
+        <translation>Bruchteil</translation>
     </message>
 </context>
 </TS>

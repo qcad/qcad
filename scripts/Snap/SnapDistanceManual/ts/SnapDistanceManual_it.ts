@@ -4,24 +4,20 @@
 <context>
     <name>SnapDistance</name>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Snap distanza:</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="86"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Distanza</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="91"/>
-        <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <source>Percentage</source>
+        <translation type="obsolete">Percentuale</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="96"/>
         <source>Fraction</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Frazione</translation>
     </message>
 </context>
 <context>
@@ -29,32 +25,42 @@
     <message>
         <location filename="../SnapDistanceManual.js" line="31"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SnapDistanceManual.js" line="47"/>
-        <source>No base action to override</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SnapDistanceManual.js" line="53"/>
-        <source>No coordinate requested at this point</source>
-        <translation type="unfinished"></translation>
+        <translation>Primo punto</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManual.js" line="62"/>
-        <source>Specify second distance point</source>
-        <translation type="unfinished"></translation>
+        <source>Second point</source>
+        <translation>Secondo punto</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManualInit.js" line="2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Distanza manualmente</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManualInit.js" line="7"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggancia distanza tra 2 punti</translation>
+    </message>
+    <message>
+        <location filename="../SnapDistanceManual.ui" line="17"/>
+        <source>Snap distance:</source>
+        <translation>Snap distanza:</translation>
+    </message>
+    <message>
+        <location filename="../SnapDistanceManual.ui" line="86"/>
+        <source>Distance</source>
+        <translation>Distanza</translation>
+    </message>
+    <message>
+        <location filename="../SnapDistanceManual.ui" line="91"/>
+        <source>Percentage</source>
+        <translation>Percentuale</translation>
+    </message>
+    <message>
+        <location filename="../SnapDistanceManual.ui" line="96"/>
+        <source>Fraction</source>
+        <translation>Frazione</translation>
     </message>
 </context>
 </TS>
