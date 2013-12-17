@@ -9,7 +9,7 @@ var credits =
         [ "Robert S.",        "Direct distance entry, " +
                               "Snap > X/Y from Points, " +
                               "Snap > Y/X from Points, " +
-                              "Snap > Distance Manual" +
+                              "Snap > Distance Manual, " +
                               "Misc > Drawing > Centerline Cross"],
         [ "Tamas Tevesz",     "Port to FreeBSD, " +
                               "various improvements and fixes." ],
