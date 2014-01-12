@@ -6,12 +6,12 @@
     <message>
         <location filename="../Snap.js" line="+42"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja pritrjevanja</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pritrdi</translation>
     </message>
 </context>
 </TS>

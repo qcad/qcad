@@ -6,17 +6,17 @@
     <message>
         <location filename="../Ellipse.js" line="+71"/>
         <source>Ellipse Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja elipse</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show ellipse tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja elipse</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Elipsa</translation>
     </message>
 </context>
 </TS>

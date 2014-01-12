@@ -6,7 +6,7 @@
     <message>
         <location filename="../HideAllBlocksInit.js" line="+3"/>
         <source>&amp;Hide All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Skrij vse</translation>
     </message>
 </context>
 </TS>

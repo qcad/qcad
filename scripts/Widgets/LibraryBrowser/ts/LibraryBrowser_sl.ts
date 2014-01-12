@@ -6,130 +6,130 @@
     <message>
         <location filename="../LibraryBrowser.js" line="+69"/>
         <source>audience</source>
-        <translation type="unfinished"></translation>
+        <translation>občinstvo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>creator</source>
-        <translation type="unfinished"></translation>
+        <translation>avtor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>dimenzija</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>levelOfDetail</source>
-        <translation type="unfinished"></translation>
+        <translation>nivo podrobnosti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>license</source>
-        <translation type="unfinished"></translation>
+        <translation>licenca</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>perspective</source>
-        <translation type="unfinished"></translation>
+        <translation>pogled</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>presentation</source>
-        <translation type="unfinished"></translation>
+        <translation>predstavitev</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>publisher</source>
-        <translation type="unfinished"></translation>
+        <translation>izdajatelj</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>subject</source>
-        <translation type="unfinished"></translation>
+        <translation>zadeva</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>title</source>
-        <translation type="unfinished"></translation>
+        <translation>naslov</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradniki</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+1101"/>
         <location filename="../LibraryBrowserInit.js" line="+18"/>
         <source>Library Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Brskalnik po knjižnici</translation>
     </message>
     <message>
         <location line="-1093"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikona</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>List</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose Source Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberite izvorno mapo</translation>
     </message>
     <message>
         <location line="+652"/>
         <source>Page %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Stran %1 od %2</translation>
     </message>
     <message>
         <location line="+215"/>
         <source>Updating icons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Posodabljam ikone...</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+219"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Prekini</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Folder:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapa:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenca:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Attribute as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Atribut kot:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Creator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Avtor:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Updating library index:</source>
-        <translation type="unfinished"></translation>
+        <translation>Posodabljam index knjižnice:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>DB error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka podatkovne baze</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -138,123 +138,128 @@ Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vtičnik LibraryBrowser: Nemorem se povezat na podatkovno bazo.
+Napaka gonilnika: %1
+Napaka na baze: %2
+Datoteka baze: %3
+Vtičnik LibraryBrowser ne bo navoljo.</translation>
     </message>
     <message>
         <location line="+446"/>
         <source>&amp;Insert</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vstavi</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Edit Script File...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uredi datoteko skripte...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Open &amp;SVG File...</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri &amp;SVG datoteko...</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Odpri...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Edit...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uredi...</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>File Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Brskalnik datotek</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Show in %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;rikaži v %1...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Remove from Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbriši iz pri&amp;ljubljenih</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Add to Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj med &amp;priljubljene</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>&amp;Regenerate Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Osveži ikono</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Regenerate Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Osveži ikone</translation>
     </message>
     <message>
         <location filename="../LibraryBrowserInit.js" line="-10"/>
         <source>&amp;Library Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Brskalnik po &amp;knjižnici</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Synchronization</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinhronizacija</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Update search index on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Posodobi iskalni index ob zagonu</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitve prikaza</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Icon Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost ikone:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>View Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Način pogleda:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation type="unfinished"></translation>
+        <translation>Število predmetov,
+ prikazanih v rezultatih iskanja:</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Library Sources</source>
-        <translation type="unfinished"></translation>
+        <translation>Viri knjižni</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj...</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstrani</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Gor</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Dol</translation>
     </message>
 </context>
 <context>
@@ -262,52 +267,52 @@ shown in search results:</source>
     <message>
         <location filename="../LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation type="unfinished"></translation>
+        <translation>Datotečni sistem</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Značke</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Look for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Išči za:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Počisti</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Find</source>
-        <translation type="unfinished"></translation>
+        <translation>Najdi</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponastavi izbor značk</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>about:blank</source>
-        <translation type="unfinished"></translation>
+        <translation>o:nedoločeno</translation>
     </message>
     <message>
         <location line="+106"/>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Priljubljeno</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Update DB from file system</source>
-        <translation type="unfinished"></translation>
+        <translation>Posodobi podatkovno bazo iz datoteke</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
 </context>
 </TS>

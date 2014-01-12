@@ -6,27 +6,27 @@
     <message>
         <location filename="../InfoAngle.js" line="+61"/>
         <source>Specify first line</source>
-        <translation type="unfinished"></translation>
+        <translation>Določi prvo črto</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Določi drugo črto</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kot:</translation>
     </message>
     <message>
         <location filename="../InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kot</translation>
     </message>
 </context>
 </TS>

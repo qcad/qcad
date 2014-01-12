@@ -6,7 +6,7 @@
     <message>
         <location filename="../PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Premakni območje</translation>
     </message>
 </context>
 </TS>

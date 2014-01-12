@@ -6,7 +6,7 @@
     <message>
         <location filename="../DeselectBlockReferencesInit.js" line="+3"/>
         <source>&amp;Deselect Block References</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Razveljavi izbor blokovnih referenc</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi blokovno referenco</translation>
     </message>
     <message>
         <location filename="../EditFromReferenceInit.js" line="+3"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Ure&amp;di blok z referenco</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Uredi blok temelječ na izbrani blokovni referenci</translation>
     </message>
 </context>
 </TS>

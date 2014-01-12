@@ -6,17 +6,17 @@
     <message>
         <location filename="../Point1P.js" line="+50"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozicija</translation>
     </message>
     <message>
         <location filename="../Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Točka</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši točko</translation>
     </message>
 </context>
 </TS>

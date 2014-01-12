@@ -6,12 +6,12 @@
     <message>
         <location filename="../SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razdalja pritrditve:</translation>
     </message>
     <message>
         <location filename="../SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Razdalja</translation>
     </message>
 </context>
 </TS>

@@ -8,12 +8,14 @@
         <source>The folder
 &apos;%1&apos;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapa
+&apos; %1&apos;
+je že na seznamu.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Folder not added</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapa ni bila dodana</translation>
     </message>
 </context>
 </TS>

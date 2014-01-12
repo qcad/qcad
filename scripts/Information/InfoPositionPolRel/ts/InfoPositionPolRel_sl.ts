@@ -6,7 +6,7 @@
     <message>
         <location filename="../InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Relativna p&amp;olarna pozicija</translation>
     </message>
 </context>
 </TS>

@@ -6,52 +6,52 @@
     <message>
         <location filename="../FirstStart.js" line="+35"/>
         <source>%1 First Start</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 prvi začetek</translation>
     </message>
     <message>
         <location line="+183"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Črno</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Belo</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jezik:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Dobrodošli v %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberite nastavitve za nove risbe. Vse te nastavitve, lahko kasneje spremenite v nastavitvah programa.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Enota:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Privzeta velikost papirja:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimalna pika:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Barva ozadja:</translation>
     </message>
 </context>
 </TS>

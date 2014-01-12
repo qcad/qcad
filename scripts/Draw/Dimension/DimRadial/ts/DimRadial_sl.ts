@@ -6,22 +6,22 @@
     <message>
         <location filename="../DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi entiteto loka ali kroga</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokacijaali kot kotirne črte</translation>
     </message>
     <message>
         <location filename="../DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Radialno</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw radial dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Narši radialno kotiranje</translation>
     </message>
 </context>
 </TS>

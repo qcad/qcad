@@ -6,27 +6,27 @@
     <message>
         <location filename="../Arc3P.js" line="+62"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Začetna točka</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Točka na loku</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Končna točka</translation>
     </message>
     <message>
         <location filename="../Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;3 točke</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši lok iz treh točk</translation>
     </message>
 </context>
 </TS>

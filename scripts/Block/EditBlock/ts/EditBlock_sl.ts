@@ -6,12 +6,12 @@
     <message>
         <location filename="../EditBlockInit.js" line="+3"/>
         <source>&amp;Edit Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uredi blok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit contents of selected block</source>
-        <translation type="unfinished"></translation>
+        <translation>Uredi vsebino izbranega bloka</translation>
     </message>
 </context>
 </TS>

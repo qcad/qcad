@@ -6,27 +6,27 @@
     <message>
         <location filename="../Information.js" line="+265"/>
         <source>Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja informacij</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show information tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja informacij</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Podatki</translation>
     </message>
     <message>
         <location filename="../Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj meritev na risbo</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Višina teksta:</translation>
     </message>
 </context>
 </TS>

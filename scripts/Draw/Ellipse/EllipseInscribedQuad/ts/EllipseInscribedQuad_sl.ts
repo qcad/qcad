@@ -6,32 +6,32 @@
     <message>
         <location filename="../EllipseInscribedQuad.js" line="+82"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>Prva črta</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Druga črta</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Third line</source>
-        <translation type="unfinished"></translation>
+        <translation>Tretja črta</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Fourth line</source>
-        <translation type="unfinished"></translation>
+        <translation>Četrta črta</translation>
     </message>
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>Včrtan v štirikotnik</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši elipso včrtano v štirikotnik</translation>
     </message>
 </context>
 </TS>

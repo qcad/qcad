@@ -6,27 +6,27 @@
     <message>
         <location filename="../Hatch.js" line="+55"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nobena obroba ni izbrana.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zanka ni zaklučena na točki %1/%2.</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
     </message>
     <message>
         <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Š&amp;rafura</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw hatch or solid fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši šrafuro ali polnilo</translation>
     </message>
 </context>
 <context>
@@ -34,42 +34,42 @@
     <message>
         <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Šrafura</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrsta</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Polnilo</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzorec šrafure</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Predogled</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzorec</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kot:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razmerje:</translation>
     </message>
 </context>
 </TS>

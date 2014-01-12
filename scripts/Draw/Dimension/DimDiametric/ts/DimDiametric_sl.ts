@@ -6,22 +6,22 @@
     <message>
         <location filename="../DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi entiteto lok ali krog</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokacija ali kot kotirne črte</translation>
     </message>
     <message>
         <location filename="../DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Diametrično</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši diametrično kotiranje</translation>
     </message>
 </context>
 </TS>

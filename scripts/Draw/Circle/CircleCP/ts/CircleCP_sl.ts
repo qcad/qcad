@@ -6,22 +6,22 @@
     <message>
         <location filename="../CircleCP.js" line="+56"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Središče</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on circle or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Točka na krogu ali  polmeru</translation>
     </message>
     <message>
         <location filename="../CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Središče, točka</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši krog iz centra ter točke na krogu</translation>
     </message>
 </context>
 </TS>

@@ -6,122 +6,122 @@
     <message>
         <location filename="../PrintPreview.js" line="+142"/>
         <source>Drag to move paper</source>
-        <translation type="unfinished"></translation>
+        <translation>Povleci za premik papirja</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location line="+368"/>
         <source>Export to PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvozi v PDF</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Exporting to %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvažam v %1...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Export complete: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvoz uspel: %1</translation>
     </message>
     <message>
         <location filename="../PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapri predogled tiskanja</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation type="unfinished"></translation>
+        <translation>Natisni...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvozi kot PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Povečava:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Razmerje risbe</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Premakni pozicijo papirja</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Samodejno prilagodi risbo na papir(je)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Samodejno v center</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Navpično</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Vodoravno</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation type="unfinished"></translation>
+        <translation>Samodejna povečava na stran</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Barvno</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Sivine</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Črno / Belo</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži robove paprija</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation type="unfinished"></translation>
+        <translation>Natisni oznake za rezanje</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži več nastavitev</translation>
     </message>
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation type="unfinished"></translation>
+        <translation>Predogled &amp;tiskanja</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Preview how current drawing would be printed</source>
-        <translation type="unfinished"></translation>
+        <translation>Predoglek, kako bo trenutna risba natisnjena</translation>
     </message>
 </context>
 </TS>

@@ -6,52 +6,52 @@
     <message>
         <location filename="../SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
-        <translation type="unfinished"></translation>
+        <translation>Prva kontrolna točka</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Next control point</source>
-        <translation type="unfinished"></translation>
+        <translation>Naslednja kontrolna točka</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location filename="../SplineControlPoints.ui" line="+23"/>
         <source>Undo Last Control Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Razveljavi prejšnjo kontrolno točko</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stopinje:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Choose Spline Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi stopnjo krivulje</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Tick for Closed Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Označi za zaključeno krivuljo</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaključeno</translation>
     </message>
     <message>
         <location filename="../SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Krivulja (kontrolne točke)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši krivuljo iz kontrolnih točk</translation>
     </message>
 </context>
 </TS>

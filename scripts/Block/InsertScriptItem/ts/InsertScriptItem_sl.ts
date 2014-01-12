@@ -6,12 +6,12 @@
     <message>
         <location filename="../InsertScriptItem.js" line="+65"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozicija</translation>
     </message>
     <message>
         <location filename="../InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Vstavi &amp;Skripto</translation>
     </message>
 </context>
 </TS>

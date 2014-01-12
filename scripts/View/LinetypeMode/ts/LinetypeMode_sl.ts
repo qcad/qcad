@@ -6,7 +6,7 @@
     <message>
         <location filename="../LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tipi črt temelječi na zaslonu</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../Modify.js" line="+105"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja za urejanje</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show modification tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja za urejanje</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uredi</translation>
     </message>
 </context>
 <context>
@@ -24,12 +24,12 @@
     <message>
         <location filename="../ModifyCorner.js" line="+69"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi prvo entiteto</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi drugo entiteto</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../Transform.js" line="+38"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>To orodje potrebuje izbor</translation>
     </message>
 </context>
 </TS>

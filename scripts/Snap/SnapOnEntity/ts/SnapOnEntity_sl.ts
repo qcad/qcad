@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Na entiteti</translation>
     </message>
 </context>
 </TS>

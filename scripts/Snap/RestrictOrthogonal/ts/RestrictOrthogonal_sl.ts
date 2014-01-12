@@ -6,7 +6,7 @@
     <message>
         <location filename="../RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation type="unfinished"></translation>
+        <translation>Omeji &amp;ortogonalno</translation>
     </message>
 </context>
 </TS>

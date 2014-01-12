@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToggleStatusBarInit.js" line="+2"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Statusna vrstica</translation>
     </message>
 </context>
 </TS>

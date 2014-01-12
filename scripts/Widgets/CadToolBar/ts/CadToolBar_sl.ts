@@ -6,37 +6,37 @@
     <message>
         <location filename="../CadToolBar.js" line="+49"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradniki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>CAD vrstica</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Toggle Title Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Preklopi naslovno vrstico</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost ikon:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Piksel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stolpci:</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../CadToolBarPanel.js" line="+76"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazaj</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Število:</translation>
     </message>
     <message>
         <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kocentično (&amp;skozi točko)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric circle through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši kocentrični krog, skozi točko</translation>
     </message>
 </context>
 </TS>

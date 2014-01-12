@@ -6,32 +6,32 @@
     <message>
         <location filename="../DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Izhodišče prvega podaljška</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Izhodišče drugega podaljška</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokacija kotirne črte</translation>
     </message>
     <message>
         <location filename="../DimRotated.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kot:</translation>
     </message>
     <message>
         <location filename="../DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rotirana (linearno)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši linearno kotiranje pod določenim kotom</translation>
     </message>
 </context>
 </TS>

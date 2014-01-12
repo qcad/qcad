@@ -6,12 +6,12 @@
     <message>
         <location filename="../DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Navpično</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw vertical dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši kotiranje navpično</translation>
     </message>
 </context>
 </TS>

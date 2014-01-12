@@ -6,22 +6,22 @@
     <message>
         <location filename="../RecentFiles.js" line="+37"/>
         <source>Load/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Naloži/Shrani</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedavne datoteke</translation>
     </message>
     <message>
         <location filename="../RecentFilesInit.js" line="+47"/>
         <source>&amp;Clear List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Počisti seznam</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Open &amp;Recent</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri &amp;nedavno</translation>
     </message>
 </context>
 </TS>

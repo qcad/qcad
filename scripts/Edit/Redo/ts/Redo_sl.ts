@@ -6,7 +6,7 @@
     <message>
         <location filename="../RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uveljavi</translation>
     </message>
 </context>
 </TS>

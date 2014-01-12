@@ -6,17 +6,17 @@
     <message>
         <location filename="../EditText.js" line="+61"/>
         <source>Choose text</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi tekst</translation>
     </message>
     <message>
         <location filename="../EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation type="unfinished"></translation>
+        <translation>Uredi te&amp;kst</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>Uredi tekst</translation>
     </message>
 </context>
 </TS>

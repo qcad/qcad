@@ -6,22 +6,22 @@
     <message>
         <location filename="../LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Pritisni za začetek risanja</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Spusti za končanje risanja</translation>
     </message>
     <message>
         <location filename="../LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prostoročna črta</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw freehand line</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši prostoročno črto</translation>
     </message>
 </context>
 </TS>

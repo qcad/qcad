@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Pošlji v o&amp;zadje</translation>
     </message>
 </context>
 </TS>

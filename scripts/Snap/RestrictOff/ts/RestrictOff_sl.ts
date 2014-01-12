@@ -6,7 +6,7 @@
     <message>
         <location filename="../RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Omejitve &amp;izklop</translation>
     </message>
 </context>
 </TS>

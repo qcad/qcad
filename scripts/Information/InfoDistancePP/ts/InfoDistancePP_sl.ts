@@ -6,42 +6,42 @@
     <message>
         <location filename="../InfoDistancePP.js" line="+53"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Prva točka</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Druga točka</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razdalja:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta X:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta Y:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kot:</translation>
     </message>
     <message>
         <location filename="../InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Razdalja od &amp;točke do točke</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../EditMainDrawingInit.js" line="+3"/>
         <source>&amp;Return to Main Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vrnitev na glavno risbo</translation>
     </message>
 </context>
 </TS>

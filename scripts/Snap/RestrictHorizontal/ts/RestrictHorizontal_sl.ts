@@ -6,7 +6,7 @@
     <message>
         <location filename="../RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Omeji &amp;vodoravno</translation>
     </message>
 </context>
 </TS>

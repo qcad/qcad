@@ -6,42 +6,42 @@
     <message>
         <location filename="../DrawPolyline.js" line="+63"/>
         <source>First vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvi lom</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Naslednji lom</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaključena lomljenka</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>RAzveljavi prejšnji segment</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Arc segment with radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Segment loka s polmerom:</translation>
     </message>
     <message>
         <location filename="../DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nariši lomljenko</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši lomljenko sestavljeno iz segmentov črt ter lokov</translation>
     </message>
 </context>
 </TS>

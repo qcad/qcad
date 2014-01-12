@@ -6,12 +6,12 @@
     <message>
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Videz grafike</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Barve</translation>
     </message>
 </context>
 <context>
@@ -19,87 +19,87 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+35"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ozadje:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kazalni križec:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Inactive Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Neaktivni kazalni križec:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Izhodišče:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Relative Zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Relativna ničla:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Referenčna točka:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mreža:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Meta Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabelarična mreža:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Zoom Box:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polje za povečavo:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbor:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Selection Box Border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rob okvirja izbire:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Selection Box:</source>
-        <translation type="unfinished"></translation>
+        <translation>Okvir izbire:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection Box:</source>
-        <translation type="unfinished"></translation>
+        <translation>Navzkrižni okvir izbire:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auxiliary Shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomožne oblike:</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Info Label Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ozadje informacijskih napisov:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Info Label Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisava informacijskih napisov:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Measurement Tools:</source>
-        <translation type="unfinished"></translation>
+        <translation>Merilna orodja:</translation>
     </message>
 </context>
 </TS>

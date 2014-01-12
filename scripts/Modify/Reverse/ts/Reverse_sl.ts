@@ -6,7 +6,7 @@
     <message>
         <location filename="../ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Obratno</translation>
     </message>
 </context>
 </TS>

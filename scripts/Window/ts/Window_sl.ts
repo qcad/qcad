@@ -6,7 +6,7 @@
     <message>
         <location filename="../Window.js" line="+107"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Okno</translation>
     </message>
 </context>
 </TS>

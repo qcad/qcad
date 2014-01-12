@@ -6,102 +6,102 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Ravnila in drsniki</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži ravnila</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži drsnike</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kazalec</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži kazalni križec</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži velik kazalni križec</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Samodejna povečava</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Margin (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Rob (px):</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Color Adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagoditev barv</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepreči belo na bel / črno na črn zaslon</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prag svetlosti barv:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrste črt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Povečava vzorca ko je debelina črte 0.00mm:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Auto switch linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Samodejno preklopi način črt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>Optimizacija</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Number of preview entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Število entitet v predogledu:</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Text height display threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prag prikaza višine besedila:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbor</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Lepljivi način</translation>
     </message>
 </context>
 <context>
@@ -109,12 +109,12 @@
     <message>
         <location filename="../GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Izgled grafike</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Izgled</translation>
     </message>
 </context>
 </TS>

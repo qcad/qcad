@@ -6,7 +6,7 @@
     <message>
         <location filename="../Help.js" line="+57"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Po&amp;moč</translation>
     </message>
 </context>
 </TS>

@@ -6,32 +6,32 @@
     <message>
         <location filename="../LineTangent1.js" line="+62"/>
         <source>Choose start point of tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberite začetno točko tangente</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberite krog, lok ali elipso</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>No tangent possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangenta ni mogoča.</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne morem narisat tangete iz točke znotraj kroga do kroga</translation>
     </message>
     <message>
         <location filename="../LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangenta (točka, krog)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw tangent (point, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši tangento (točka, krog)</translation>
     </message>
 </context>
 </TS>

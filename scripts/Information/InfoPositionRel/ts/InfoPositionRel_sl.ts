@@ -6,7 +6,7 @@
     <message>
         <location filename="../InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Relativna pozicija</translation>
     </message>
 </context>
 </TS>

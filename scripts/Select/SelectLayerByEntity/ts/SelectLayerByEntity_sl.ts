@@ -6,17 +6,17 @@
     <message>
         <location filename="../SelectLayerByEntity.js" line="+63"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi entiteto na plasti</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Način:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Zamenjaj trenutni izbor</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -24,32 +24,32 @@
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="unfinished"></translation>
+        <translation>NačinIzbire</translation>
     </message>
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj k trenutnemu izboru</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Odštej iz trenutnega izbora</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Presečišče z trenutnim izborom</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished"></translation>
+        <translation>(Od-)Izberi &amp;plast</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished"></translation>
+        <translation>(Od-)Izberi vse entitete na isti plasti</translation>
     </message>
 </context>
 </TS>

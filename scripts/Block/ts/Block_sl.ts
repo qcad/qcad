@@ -6,7 +6,7 @@
     <message>
         <location filename="../Block.js" line="+49"/>
         <source>&amp;Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Blok</translation>
     </message>
 </context>
 <context>
@@ -14,32 +14,32 @@
     <message>
         <location filename="../BlockDialog.js" line="+93"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Presledki spredaj ali zadaj.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime bloka je prazno.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Block already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok že obstaja.</translation>
     </message>
     <message>
         <location filename="../BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Podatki bloka</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Block name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime bloka:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>block 1</source>
-        <translation type="unfinished"></translation>
+        <translation>blok 1</translation>
     </message>
 </context>
 </TS>

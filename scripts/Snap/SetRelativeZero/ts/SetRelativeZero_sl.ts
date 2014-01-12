@@ -6,12 +6,12 @@
     <message>
         <location filename="../SetRelativeZero.js" line="+50"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozicija</translation>
     </message>
     <message>
         <location filename="../SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavi &amp;relativno ničlo</translation>
     </message>
 </context>
 </TS>

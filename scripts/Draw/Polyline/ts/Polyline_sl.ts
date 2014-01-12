@@ -6,17 +6,17 @@
     <message>
         <location filename="../Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja lomljenke</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show polyline tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja lomljenke</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lomljenka</translation>
     </message>
 </context>
 </TS>

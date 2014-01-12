@@ -6,17 +6,17 @@
     <message>
         <location filename="../ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Število:</translation>
     </message>
     <message>
         <location filename="../ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncentrično (&amp;skozi točko)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši koncentrični lok skozi točko</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prejšnji pogled</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapiram risbo...</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>Brez naslova</translation>
     </message>
 </context>
 <context>
@@ -22,67 +22,67 @@
     <message>
         <location filename="../NewFile.js" line="+120"/>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpiram...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri uvozu</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot open file</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne morem odpret datoteke</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretvorba ni mogoča. Preverite datotečni format ter končnico.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Preverite vaše pravice dostopa, datotečni format ter končnico datoteke.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka je prazna</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Opened drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Odprta risba</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Untitled %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Brez naslova %1</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation>Samo za branje</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Želite shranit spremembe v&lt;br&gt;&apos;%1&apos; ?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vse spremembe bodo izkubljene, če jih ne shranite.</translation>
     </message>
     <message>
         <location filename="../NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nova</translation>
     </message>
 </context>
 </TS>

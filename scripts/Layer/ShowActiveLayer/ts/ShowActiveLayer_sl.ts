@@ -6,7 +6,7 @@
     <message>
         <location filename="../ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži &amp;le aktivne</translation>
     </message>
 </context>
 </TS>
