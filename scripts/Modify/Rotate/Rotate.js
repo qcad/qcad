@@ -127,6 +127,7 @@ Rotate.prototype.pickCoordinate = function(event, preview) {
 
             // define angle with mouse:
             if (this.angleByMouse===true) {
+                di.setRelativeZero(this.centerPoint);
                 this.setState(Rotate.State.SettingReferencePoint);
             }
 
@@ -149,7 +150,6 @@ Rotate.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            di.setRelativeZero(this.referencePoint);
             this.setState(Rotate.State.SettingTargetPoint);
         }
         break;
