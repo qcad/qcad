@@ -6,27 +6,27 @@
     <message>
         <location filename="../Projection.js" line="+75"/>
         <source>Projection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja projekcij</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show projection tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja projekcij</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Projekcija</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Refernenčna točka</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciljna točka</translation>
     </message>
 </context>
 </TS>

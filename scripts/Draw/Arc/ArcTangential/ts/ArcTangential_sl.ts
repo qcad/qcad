@@ -6,27 +6,27 @@
     <message>
         <location filename="../ArcTangential.js" line="+63"/>
         <source>Choose base line or base arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi nosilno črto ali nosilni lok</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Choose end point of arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi končno točko loka</translation>
     </message>
     <message>
         <location filename="../ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Radij:</translation>
     </message>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangencialno povezano</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw arc tangential to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Izriši lok tangencialno na nosilni element</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Javi &amp;napako(hrošča)</translation>
     </message>
 </context>
 </TS>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vodoravno</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw horizontal dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši kotiranje vodoravno</translation>
     </message>
 </context>
 </TS>

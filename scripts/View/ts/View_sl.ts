@@ -6,7 +6,7 @@
     <message>
         <location filename="../View.js" line="+53"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pogled</translation>
     </message>
 </context>
 </TS>

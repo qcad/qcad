@@ -6,12 +6,12 @@
     <message>
         <location filename="../LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Navpična črta</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw vertical line</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši navpično črto</translation>
     </message>
 </context>
 </TS>

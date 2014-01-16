@@ -6,7 +6,7 @@
     <message>
         <location filename="../CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zapri vse</translation>
     </message>
 </context>
 </TS>

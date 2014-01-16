@@ -6,7 +6,7 @@
     <message>
         <location filename="../EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uredi plast</translation>
     </message>
 </context>
 </TS>

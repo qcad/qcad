@@ -6,22 +6,22 @@
     <message>
         <location filename="../DefaultNavigation.js" line="+46"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Izgled grafike</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigacija</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>Povečava (miškin kolešček)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>Drsenje (Drsna pločica, multi funkijska miška)</translation>
     </message>
 </context>
 <context>
@@ -29,17 +29,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="unfinished"></translation>
+        <translation>Miškin kolešček / dvoprstno drsenje:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable pan gesture</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogoči geste pisala</translation>
     </message>
 </context>
 </TS>

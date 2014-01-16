@@ -6,22 +6,22 @@
     <message>
         <location filename="../CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razdalja:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Število:</translation>
     </message>
     <message>
         <location filename="../CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kocentrično (z razdaljo)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši kocentrični krog</translation>
     </message>
 </context>
 </TS>

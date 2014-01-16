@@ -6,17 +6,17 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+47"/>
         <source>Status Bar Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisava statusne vrstice:</translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+27"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradniki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Statusna vrstica</translation>
     </message>
 </context>
 </TS>

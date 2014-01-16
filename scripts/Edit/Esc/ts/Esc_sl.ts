@@ -6,7 +6,7 @@
     <message>
         <location filename="../EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Izhod</translation>
     </message>
 </context>
 </TS>

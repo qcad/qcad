@@ -6,7 +6,7 @@
     <message>
         <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show all</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prikaži vse</translation>
     </message>
 </context>
 </TS>

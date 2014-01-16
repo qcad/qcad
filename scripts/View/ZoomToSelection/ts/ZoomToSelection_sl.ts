@@ -6,12 +6,12 @@
     <message>
         <location filename="../ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nič ni izbrano.</translation>
     </message>
     <message>
         <location filename="../ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Povečaj do &amp;izbora</translation>
     </message>
 </context>
 </TS>

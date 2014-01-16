@@ -6,12 +6,12 @@
     <message>
         <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dodaj prazen blok</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Add new empty block</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj prazen blok</translation>
     </message>
 </context>
 </TS>

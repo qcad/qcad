@@ -6,37 +6,37 @@
     <message>
         <location filename="../Line2P.js" line="+60"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Prva točka</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Next point</source>
-        <translation type="unfinished"></translation>
+        <translation>Naslednja točka</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location filename="../Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaključi sekvenco</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Razveljavi prejšnji segment</translation>
     </message>
     <message>
         <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Črta iz &amp;2 točk</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši črto ali zaporedje črt</translation>
     </message>
 </context>
 </TS>

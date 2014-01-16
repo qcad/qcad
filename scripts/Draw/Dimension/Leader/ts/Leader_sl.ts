@@ -6,27 +6,27 @@
     <message>
         <location filename="../Leader.js" line="+59"/>
         <source>Arrow position</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozicija puščice</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Naslednji lom</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vodilo</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši vodilo (zaporedje črt s puščico)</translation>
     </message>
 </context>
 </TS>

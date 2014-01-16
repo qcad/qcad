@@ -6,33 +6,33 @@
     <message>
         <location filename="../SelectionDisplay.js" line="+56"/>
         <source>No selected entities.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni izbranih entitet.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Entitete</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>on</source>
-        <translation type="unfinished"></translation>
+        <translation>na</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layer &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Plast &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Plasti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Selected entities:
 %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbrane entitete: %1.</translation>
     </message>
 </context>
 </TS>

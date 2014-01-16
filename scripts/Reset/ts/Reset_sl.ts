@@ -7,12 +7,12 @@
         <location filename="../ResetInit.js" line="+5"/>
         <location filename="../ResetPostInit.js" line="+11"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponovni zagon</translation>
     </message>
     <message>
         <location filename="../ResetPostInit.js" line="-9"/>
         <source>&amp;Reset / Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ponovni zagon / čakanje</translation>
     </message>
 </context>
 </TS>

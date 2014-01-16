@@ -6,32 +6,32 @@
     <message>
         <location filename="../LinePolygonCP.js" line="+58"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Središče</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished"></translation>
+        <translation>Vogalna točka</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location filename="../LinePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vogali:</translation>
     </message>
     <message>
         <location filename="../LinePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pol&amp;igon (središče, točka)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši navadni poligon iz središča in vogalne točke</translation>
     </message>
 </context>
 </TS>

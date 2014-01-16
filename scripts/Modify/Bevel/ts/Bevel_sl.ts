@@ -6,37 +6,37 @@
     <message>
         <location filename="../Bevel.js" line="+53"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbrani entiteti ne morem prirezat.</translation>
     </message>
     <message>
         <location line="+220"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvo entiteto ni mogoče skrajšat.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugo entiteto ni mogoče skrajšat.</translation>
     </message>
     <message>
         <location filename="../Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrajšaj</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolžina 1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolžina 2:</translation>
     </message>
     <message>
         <location filename="../BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Odsek / Odrez</translation>
     </message>
 </context>
 </TS>

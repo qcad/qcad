@@ -6,12 +6,12 @@
     <message>
         <location filename="../LayerList.js" line="+215"/>
         <source>&amp;Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Seznam plasti</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam plasti</translation>
     </message>
 </context>
 </TS>

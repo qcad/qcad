@@ -6,27 +6,27 @@
     <message>
         <location filename="../InfoDistanceEP.js" line="+53"/>
         <source>Specify entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Določi entiteto</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>Določi točko</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location line="+73"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razdalja:</translation>
     </message>
     <message>
         <location filename="../InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Razdalja &amp;entiteta do točke</translation>
     </message>
 </context>
 </TS>

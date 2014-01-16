@@ -6,7 +6,7 @@
     <message>
         <location filename="../AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj s&amp;loj</translation>
     </message>
 </context>
 </TS>

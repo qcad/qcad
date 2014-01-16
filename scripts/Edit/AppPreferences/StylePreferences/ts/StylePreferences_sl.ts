@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Videz:</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../StylePreferences.js" line="+26"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Razporeditev</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Styles</source>
-        <translation type="unfinished"></translation>
+        <translation>Videz</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -27,7 +27,7 @@
         <location line="+29"/>
         <location line="+22"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Brez</translation>
     </message>
 </context>
 </TS>

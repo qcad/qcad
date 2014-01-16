@@ -6,7 +6,7 @@
     <message>
         <location filename="../TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation type="unfinished"></translation>
+        <translation>Poreži &amp;obe</translation>
     </message>
 </context>
 </TS>

@@ -6,23 +6,23 @@
     <message>
         <location filename="../LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Privzeto za nove risbe</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip črte</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Splošno</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mera globalnega tipa črte:</translation>
     </message>
 </context>
 </TS>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Polna elipsa</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši polno elipso iz centra, glavne točke ter razmerja</translation>
     </message>
 </context>
 </TS>

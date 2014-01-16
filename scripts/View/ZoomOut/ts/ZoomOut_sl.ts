@@ -6,7 +6,7 @@
     <message>
         <location filename="../ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pomanjšaj</translation>
     </message>
 </context>
 </TS>

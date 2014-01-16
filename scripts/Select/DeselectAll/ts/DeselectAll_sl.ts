@@ -6,12 +6,12 @@
     <message>
         <location filename="../DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Razveljavi izbor</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Deselect all entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Razveljavi izbor vseh entitet</translation>
     </message>
 </context>
 </TS>

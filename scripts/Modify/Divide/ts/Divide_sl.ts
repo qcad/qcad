@@ -6,27 +6,27 @@
     <message>
         <location filename="../Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi črto, lok, krog, elipso ali krivuljo</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi črto, lok, krog ali elipso</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>Določi točko</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Določi drugo točko</translation>
     </message>
     <message>
         <location filename="../DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Razdeli</translation>
     </message>
 </context>
 </TS>

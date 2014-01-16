@@ -6,22 +6,22 @@
     <message>
         <location filename="../ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razdalja:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Število:</translation>
     </message>
     <message>
         <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Koncentrično (z razdaljo)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši koncentrični lok</translation>
     </message>
 </context>
 </TS>

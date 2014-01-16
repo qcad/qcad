@@ -6,23 +6,24 @@
     <message>
         <location filename="../AbstractPreferences.js" line="+41"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitve aplikacije</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitve risbe</translation>
     </message>
     <message>
         <location line="+241"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>Potreben je ponovni zagon</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>QCAD je potrebno ponovno zagnat,
+da bodo spremembe začele delovat.</translation>
     </message>
 </context>
 <context>
@@ -30,7 +31,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../ClipboardOperation.js" line="+41"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Referenčna točka</translation>
     </message>
 </context>
 <context>
@@ -38,7 +39,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../Edit.js" line="+53"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uredi</translation>
     </message>
 </context>
 <context>
@@ -48,32 +49,32 @@ the preference changes to take effect.</source>
         <location line="+85"/>
         <location line="+21"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitve</translation>
     </message>
     <message>
         <location line="-88"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Clear Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Počisti iskanje</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Expand Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Razširi drevo</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Združi drevo</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Obnovi na privzete vrednosti</translation>
     </message>
 </context>
 </TS>
