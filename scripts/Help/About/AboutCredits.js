@@ -17,6 +17,7 @@ var credits =
     [
         "Translations",
         [ "Tanaka Hidemune",  "Japanese translation and user reference manual." ],
+        [ "Miha ('miharix')",  "Slovenian translation." ],
     ],
     [
         "Testing, feedback and minor fixes",
