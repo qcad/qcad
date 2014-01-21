@@ -251,7 +251,8 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
         return;
     }
 
-    if (arc.getAngleLength()<0.05) {
+    // arc threshold is configurable (FS#1012):
+    if (arc.getAngleLength()<RSettings::getArcAngleLengthThreshold()) {
         currentPainterPath.moveTo(arc.getStartPoint());
         currentPainterPath.lineTo(arc.getEndPoint());
         return;

@@ -97,6 +97,7 @@ public:
     static bool getColorCorrection();
     static int getColorThreshold();
     static int getTextHeightThreshold();
+    static double getArcAngleLengthThreshold();
     static QString getQtVersion();
     static bool isQt(int majorVersion);
     static QString getCompilerVersion();
@@ -168,6 +169,7 @@ private:
     static int concurrentDrawing;
     static int previewEntities;
     static int limitZoomAndScroll;
+    static double arcAngleLengthThreshold;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 

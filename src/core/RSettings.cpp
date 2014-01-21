@@ -50,6 +50,7 @@ int RSettings::showLargeCrosshair = -1;
 int RSettings::concurrentDrawing = -1;
 int RSettings::previewEntities = -1;
 int RSettings::limitZoomAndScroll = -1;
+double RSettings::arcAngleLengthThreshold = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -425,6 +426,13 @@ int RSettings::getTextHeightThreshold() {
     return getValue("GraphicsView/TextHeightThreshold", 3).toInt();
 }
 
+double RSettings::getArcAngleLengthThreshold() {
+    if (arcAngleLengthThreshold<-0.9) {
+        arcAngleLengthThreshold = RMath::deg2rad(getValue("GraphicsView/ArcAngleLengthThreshold", 0.025).toDouble());
+    }
+    return arcAngleLengthThreshold;
+}
+
 QString RSettings::getQtVersion() {
     return qVersion();
 }
@@ -777,6 +785,7 @@ void RSettings::resetCache() {
     concurrentDrawing = -1;
     previewEntities = -1;
     limitZoomAndScroll = -1;
+    arcAngleLengthThreshold = -1;
     cache.clear();
 }
 

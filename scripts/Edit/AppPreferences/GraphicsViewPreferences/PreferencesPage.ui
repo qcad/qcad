@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>597</width>
-    <height>548</height>
+    <width>651</width>
+    <height>610</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>595</width>
-     <height>546</height>
+     <width>649</width>
+     <height>608</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -330,7 +330,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Text height display threshold:</string>
+          <string>Text height display threshold (px):</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -339,6 +339,75 @@
        </item>
        <item row="1" column="1">
         <widget class="QSpinBox" name="TextHeightThreshold"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Display arcs as lines below this angle (degrees):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="ArcAngleLengthThreshold">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1.0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2.0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">3.0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">3.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">4.0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">4.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5.0</string>
+          </property>
+         </item>
+        </widget>
        </item>
       </layout>
      </widget>
