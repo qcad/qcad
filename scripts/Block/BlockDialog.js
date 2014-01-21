@@ -57,10 +57,12 @@ BlockDialog.prototype.show = function() {
 
     this.dialog.show();
 
-    var c = 0;
-    while (!this.validate()) {
-        ++c;
-        blockName.text = "block " + c;
+    if (isNull(this.block)) {
+        var c = 0;
+        while (!this.validate()) {
+            ++c;
+            blockName.text = "block " + c;
+        }
     }
 
     if (this.dialog.exec()) {
@@ -94,10 +96,17 @@ BlockDialog.prototype.validate = function() {
         acceptable = false;
     }
 
-    if (validator.validate(leBlockName.text, pos) != QValidator.Acceptable) {
+    if (leBlockName.text.isEmpty()) {
         message.text = "<font color='red'>" + qsTr("Block name is empty.") + "</font>";
         acceptable = false;
     }
+    else {
+        if (validator.validate(leBlockName.text, pos) != QValidator.Acceptable) {
+            message.text = "<font color='red'>" + qsTr("Block name is invalid.") + "</font>";
+            acceptable = false;
+        }
+    }
+
     if (this.document.hasBlock(leBlockName.text)) {
         if (isNull(this.block) ||
             this.block.getName().toLowerCase() != leBlockName.text.toLowerCase()) {
@@ -106,6 +115,7 @@ BlockDialog.prototype.validate = function() {
             acceptable = false;
         }
     }
+
     widgets["ButtonBox"].button(QDialogButtonBox.Ok).enabled = acceptable;
     return acceptable;
 };

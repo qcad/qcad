@@ -128,6 +128,8 @@ private:
     virtual void setVariableInt(const std::string& key, int value, int code);
     virtual void setVariableDouble(const std::string& key, double value, int code);
 
+    static QString decode(const QString& str);
+
 private:
     static QString getEncoding(const QString& str);
 

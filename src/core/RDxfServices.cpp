@@ -2144,3 +2144,37 @@ int RDxfServices::widthToNumber(RLineweight::Lineweight w) {
     }
     return (int)w;
 }
+
+QString RDxfServices::escapeUnicode(const QString& str) {
+    QString ret;
+
+    for (int i=0; i<str.length(); i++) {
+        QChar ch = str.at(i);
+        ushort uc = ch.unicode();
+        if (uc>127) {
+            ret += QString("\\U+%1").arg(uc, 4, 16, QChar('0'));
+        }
+        else {
+            ret += ch;
+        }
+    }
+
+    return ret;
+}
+
+QString RDxfServices::parseUnicode(const QString& str) {
+    QString ret = str;
+    QRegExp reg;
+    reg.setPattern("\\\\[Uu]\\+([0-9a-fA-F]{4})");
+    int ucPos = 0;
+    bool ok = true;
+    int uc = 0;
+    while ((ucPos = reg.indexIn(ret, 0)) != -1) {
+        uc = reg.cap(1).toInt(&ok, 16);
+        if (!ok) {
+            break;
+        }
+        ret.replace(ucPos, reg.matchedLength(), QChar(uc));
+    }
+    return ret;
+}

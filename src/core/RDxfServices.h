@@ -109,6 +109,9 @@ public:
     static int getCodeForVariable(RS::KnownVariable v);
     static bool isVariable2D(RS::KnownVariable v);
 
+    static QString escapeUnicode(const QString& str);
+    static QString parseUnicode(const QString& str);
+
 private:
     bool qcad2GotDIMZIN;
     bool qcad2GotDIMAZIN;

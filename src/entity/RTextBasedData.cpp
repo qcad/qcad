@@ -22,6 +22,7 @@
 #include <QTextDocument>
 
 #include "RColor.h"
+#include "RDxfServices.h"
 #include "RFont.h"
 #include "RFontList.h"
 #include "RTextBasedData.h"
@@ -383,17 +384,7 @@ QString RTextBasedData::getEscapedText(bool escUnicode) const {
 }
 
 QString RTextBasedData::escapeUnicode(const QString& str) {
-    QString ret;
-    for (int i=0; i<str.length(); i++) {
-        ushort ch = str.at(i).unicode();
-        if (ch>127) {
-            ret+=QString("\\U+%1").arg(ch, 4, 16, QChar('0'));
-        }
-        else {
-            ret+=str.at(i);
-        }
-    }
-    return ret;
+    return RDxfServices::escapeUnicode(str);
 }
 
 // "lo\C4;\H2.5;rem\P\C1;\fBaskerville|b0|i0|c0|p34;backslash:\FAPNORM.SHX|c0;\\semicolon:;\Pdolor\Psit\~amet\Plorem \Sipsum/dolor; sit\~amet"

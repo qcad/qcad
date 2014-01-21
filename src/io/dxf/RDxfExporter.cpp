@@ -246,7 +246,8 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
             }
 
             dxf.writeBlockRecord(*dw,
-                std::string((const char*)blk->getName().toLatin1()));
+                std::string((const char*)RDxfExporter::escapeUnicode(blk->getName()))
+            );
         }
         dw->tableEnd();
     }
@@ -309,7 +310,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         variables.sort();
         for (int i=0; i<variables.size(); i++) {
             QString key = variables[i];
-            handles.insert(key, dxf.writeDictionaryEntry(*dw, std::string((const char*)key.toLatin1())));
+            handles.insert(key, dxf.writeDictionaryEntry(*dw, std::string((const char*)RDxfExporter::escapeUnicode(key))));
         }
         for (int i=0; i<variables.size(); i++) {
             QString key = variables[i];
@@ -326,18 +327,18 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
                     dxf.writeXRecord(*dw, handles.value(key), value.toBool());
                     break;
                 case QVariant::String:
-                    dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)value.toString().toLatin1()));
+                    dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(value.toString())));
                     break;
                 case QVariant::Font:
                     if (value.canConvert<QFont>()) {
                         QFont f = value.value<QFont>();
-                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)f.toString().toLatin1()));
+                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(f.toString())));
                     }
                     break;
                 case QVariant::UserType:
                     if (value.canConvert<RColor>()) {
                         RColor c = value.value<RColor>();
-                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)c.getName().toLatin1()));
+                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(c.getName())));
                     }
                     break;
                 default:
@@ -404,7 +405,7 @@ void RDxfExporter::writeVariables() {
         QString name = RDxfServices::variableToString(var);
 
         // skip unsupported variables:
-        if (!DL_Dxf::checkVariable(name.toLatin1(), dxf.getVersion())) {
+        if (!DL_Dxf::checkVariable(name.toUtf8(), dxf.getVersion())) {
             continue;
         }
 
@@ -427,21 +428,21 @@ void RDxfExporter::writeVariables() {
 
         switch (value.type()) {
         case QVariant::Int:
-            dw->dxfString(9, (const char*)name.toLatin1());
+            dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));
             dw->dxfInt(code, value.toInt());
             break;
         case QVariant::Double:
-            dw->dxfString(9, (const char*)name.toLatin1());
+            dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));
             dw->dxfReal(code, value.toDouble());
             break;
         case QVariant::String:
-            dw->dxfString(9, (const char*)name.toLatin1());
-            dw->dxfString(code, (const char*)value.toString().toLatin1());
+            dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));
+            dw->dxfString(code, (const char*)RDxfExporter::escapeUnicode(value.toString()));
             break;
         case QVariant::UserType:
             if (value.canConvert<RVector>()) {
                 RVector v = value.value<RVector>();
-                dw->dxfString(9, (const char*)name.toLatin1());
+                dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));
                 dw->dxfReal(code, v.x);
                 dw->dxfReal(code+10, v.y);
                 if (RDxfServices::isVariable2D(var)==false) {
@@ -458,13 +459,13 @@ void RDxfExporter::writeVariables() {
     (graphic->getVariableDict());
     for (it=graphic->getVariableDict().begin(); it!=graphic->getVariableDict().end(); ++it) {
         // exclude variables that are not known to DXF 12:
-        if (!DL_Dxf::checkVariable(it.key().toLatin1(), dxf.getVersion())) {
+        if (!DL_Dxf::checkVariable(it.key().toUtf8(), dxf.getVersion())) {
             continue;
         }
 
         if (it.key()!="$ACADVER" && it.key()!="$HANDSEED") {
 
-            dw->dxfString(9, (const char*) it.key().toLatin1());
+            dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode( it.key()));
             switch (it.value().getType()) {
             case RS2::VariableVoid:
                 break;
@@ -476,7 +477,7 @@ void RDxfExporter::writeVariables() {
                 break;
             case RS2::VariableString:
                 dw->dxfString(it.value().getCode(),
-                             (const char*) it.value().getString().toLatin1());
+                             (const char*)RDxfExporter::escapeUnicode( it.value().getString()));
                 break;
             case RS2::VariableVector:
                 dw->dxfReal(it.value().getCode(),
@@ -494,7 +495,7 @@ void RDxfExporter::writeVariables() {
     RS_Layer* current = graphic->getActiveLayer();
     if (current!=NULL) {
         dw->dxfString(9, "$CLAYER");
-        dw->dxfString(8, (const char*)current->getName().toLatin1());
+        dw->dxfString(8, (const char*)RDxfExporter::escapeUnicode(current->getName()));
     }
     dw->sectionEnd();
     */
@@ -503,7 +504,7 @@ void RDxfExporter::writeVariables() {
 void RDxfExporter::writeLinetype(const RLinetype& lt) {
     dxf.writeLineType(
         *dw,
-        DL_LineTypeData((const char*)lt.getName().toLatin1(), 0));
+        DL_LineTypeData((const char*)RDxfExporter::escapeUnicode(lt.getName()), 0));
 }
 
 void RDxfExporter::writeLayer(const RLayer& l) {
@@ -522,13 +523,13 @@ void RDxfExporter::writeLayer(const RLayer& l) {
 
     dxf.writeLayer(
         *dw,
-        DL_LayerData((const char*)l.getName().toLatin1(),
+        DL_LayerData((const char*)RDxfExporter::escapeUnicode(l.getName()),
                      l.isFrozen() + (l.isLocked()<<2)),
         DL_Attributes(std::string(""),
                       colorSign * RDxfServices::colorToNumber(l.getColor(), dxfColors),
                       RDxfServices::colorToNumber24(l.getColor()),
                       RDxfServices::widthToNumber(l.getLineweight()),
-                      (const char*)lt->getName().toLatin1()));
+                      (const char*)RDxfExporter::escapeUnicode(lt->getName())));
 }
 
 void RDxfExporter::writeBlock(const RBlock& b) {
@@ -541,14 +542,14 @@ void RDxfExporter::writeBlock(const RBlock& b) {
         }
     }
 
-    dxf.writeBlock(*dw, DL_BlockData((const char*)blockName.toLatin1(), 0,
+    dxf.writeBlock(*dw, DL_BlockData((const char*)RDxfExporter::escapeUnicode(blockName), 0,
                                       b.getOrigin().x,
                                       b.getOrigin().y,
                                       b.getOrigin().z));
 
     // entities in model space are stored in section ENTITIES, not in block:
     if (blockName.toLower()==RBlock::modelSpaceName.toLower()) {
-        dxf.writeEndBlock(*dw, (const char*)b.getName().toLatin1());
+        dxf.writeEndBlock(*dw, (const char*)RDxfExporter::escapeUnicode(b.getName()));
         return;
     }
 
@@ -559,7 +560,7 @@ void RDxfExporter::writeBlock(const RBlock& b) {
     for (it=list.begin(); it!=list.end(); it++) {
         writeEntity(*it);
     }
-    dxf.writeEndBlock(*dw, (const char*)b.getName().toLatin1());
+    dxf.writeEndBlock(*dw, (const char*)RDxfExporter::escapeUnicode(b.getName()));
 }
 
 void RDxfExporter::writeEntity(REntity::Id id) {
@@ -906,8 +907,8 @@ void RDxfExporter::writeText(const RTextEntity& t) {
                             0,
                             hJust, vJust,
                             (const char*)toDxfString(
-                                t->getText(), formatType).toLatin1(),
-                            (const char*)t->getStyle().toLatin1(),
+                                t->getText(), formatType).toUtf8(),
+                            (const char*)RDxfExporter::escapeUnicode(t->getStyle()),
                             t->getAngle()),
                 attributes);
         }
@@ -943,8 +944,8 @@ void RDxfExporter::writeSimpleText(const RTextEntity& t) {
                 0,    // text gen flags
                 0,    // h just
                 0,    // v just
-                (const char*)t.getEscapedText(true).toLatin1(),
-                (const char*)styleName.toLatin1(),
+                (const char*)RDxfExporter::escapeUnicode(t.getEscapedText(true)),
+                (const char*)RDxfExporter::escapeUnicode(styleName),
                 t.getAngle());
 
     if (t.getHAlign()==RS::HAlignAlign && t.getVAlign()==RS::VAlignBottom) {
@@ -1063,8 +1064,8 @@ void RDxfExporter::writeMText(const RTextEntity& t) {
                              drawingDirection,
                              lineSpacingStyle,
                              t.getLineSpacingFactor(),
-                             (const char*)t.getEscapedText(true).toLatin1(),
-                             (const char*)styleName.toLatin1(),
+                             (const char*)RDxfExporter::escapeUnicode(t.getEscapedText(true)),
+                             (const char*)RDxfExporter::escapeUnicode(styleName),
                              t.getAngle()),
                 attributes);
 }
@@ -1141,9 +1142,9 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                              attachmentPoint,
                              d.getLineSpacingStyle(),
                              d.getLineSpacingFactor(),
-                             (const char*)text.toLatin1(),
+                             (const char*)RDxfExporter::escapeUnicode(text),
                              // TODO: dim style:
-                             (const char*)d.getFontName().toLatin1(),
+                             (const char*)RDxfExporter::escapeUnicode(d.getFontName()),
                              d.getTextAngle(),
                              d.getLinearFactor());
 
@@ -1318,7 +1319,7 @@ void RDxfExporter::writeHatch(const RHatchEntity& h) {
                       h.isSolid(),
                       h.getScale(),
                       RMath::rad2deg(h.getAngle()),
-                      (const char*)h.getPatternName().toLatin1(),
+                      (const char*)RDxfExporter::escapeUnicode(h.getPatternName()),
                       h.getOriginPoint().x, h.getOriginPoint().y);
 
     dxf.writeHatch1(*dw, data, attributes);
@@ -1522,7 +1523,7 @@ void RDxfExporter::writeImageDef(const RImageEntity& img) {
     dxf.writeImageDef(
         *dw,
         handle,
-        DL_ImageData((const char*)img.getFileName().toLatin1(),
+        DL_ImageData((const char*)RDxfExporter::escapeUnicode(img.getFileName()),
                      img.getInsertionPoint().x,
                      img.getInsertionPoint().y,
                      0.0,
@@ -1552,7 +1553,7 @@ void RDxfExporter::writeBlockReference(const RBlockReferenceEntity& br) {
 
     dxf.writeInsert(
         *dw,
-        DL_InsertData((const char*)blockName.toLatin1(),
+        DL_InsertData((const char*)RDxfExporter::escapeUnicode(blockName),
                       br.getPosition().x,
                       br.getPosition().y,
                       0.0,
@@ -1600,26 +1601,30 @@ DL_Attributes RDxfExporter::getEntityAttributes(const REntity& entity) {
     // Width:
     int width = RDxfServices::widthToNumber(entity.getLineweight());
 
-    DL_Attributes attrib((const char*)layerName.toLatin1(),
+    DL_Attributes attrib((const char*)RDxfExporter::escapeUnicode(layerName),
                          color,
                          color24,
                          width,
-                         (const char*)lineType.toLatin1());
+                         (const char*)RDxfExporter::escapeUnicode(lineType));
 
     return attrib;
 }
 
 DL_StyleData RDxfExporter::getStyle(const RTextEntity& entity) {
     QString name = QString("textstyle%1").arg(textStyleCounter++);
-    return DL_StyleData((const char*)name.toLatin1(),
+    return DL_StyleData((const char*)RDxfExporter::escapeUnicode(name),
         0,    // flags
         0.0,  // fixed height (not fixed)
         1.0,  // width factor
         0.0,  // oblique angle
         0,    // text generation flags
         entity.getTextHeight(),  // last height used
-        (const char*)entity.getFontName().toLatin1(),    // primary font file
+        (const char*)RDxfExporter::escapeUnicode(entity.getFontName()),    // primary font file
         ""                       // big font file
         );
 }
 
+QByteArray RDxfExporter::escapeUnicode(const QString& str) {
+    // DXF R15: DWGCODEPAGE==ANSI_1252 means latin1:
+    return RDxfServices::escapeUnicode(str).toLatin1();
+}

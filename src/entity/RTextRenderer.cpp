@@ -22,6 +22,7 @@
 #include <QTextDocument>
 
 #include "RColor.h"
+#include "RDxfServices.h"
 #include "RFont.h"
 #include "RFontList.h"
 #include "RTextRenderer.h"
@@ -140,20 +141,19 @@ void RTextRenderer::renderSimple() {
     // diameter:
     text.replace(QRegExp(RTextRenderer::rxDiameter), RTextRenderer::chDiameter);
     // unicode:
-    QRegExp reg;
-    reg.setPattern(rxUnicode);
-    int ucPos = 0;
-    bool ok = true;
-    int uc = 0;
-    while ((ucPos = reg.indexIn(text, 0)) != -1) {
-        uc = reg.cap(1).toInt(&ok, 16);
-        if (!ok) {
-            break;
-        }
-        text.replace(ucPos, reg.matchedLength(), QChar(uc));
-        //list << rx.cap(1);
-        //pos += rx.matchedLength();
-    }
+    text = RDxfServices::parseUnicode(text);
+//    QRegExp reg;
+//    reg.setPattern(rxUnicode);
+//    int ucPos = 0;
+//    bool ok = true;
+//    int uc = 0;
+//    while ((ucPos = reg.indexIn(text, 0)) != -1) {
+//        uc = reg.cap(1).toInt(&ok, 16);
+//        if (!ok) {
+//            break;
+//        }
+//        text.replace(ucPos, reg.matchedLength(), QChar(uc));
+//    }
 
     bool leadingSpaces = false;
     bool trailingSpaces = false;

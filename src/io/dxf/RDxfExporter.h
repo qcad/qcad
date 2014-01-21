@@ -107,6 +107,8 @@ public:
         Q_UNUSED(triangle)
     }
 
+    static QByteArray escapeUnicode(const QString& str);
+
 private:
     DL_Attributes getEntityAttributes(const REntity& entity);
     DL_StyleData getStyle(const RTextEntity& entity);

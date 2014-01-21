@@ -157,7 +157,8 @@ void RDxfImporter::processCodeValuePair(unsigned int groupCode, char* groupValue
 
 
 void RDxfImporter::addLayer(const DL_LayerData& data) {
-    QString layerName = data.name.c_str();
+    QString layerName = decode(data.name.c_str());
+
     bool frozen = (attributes.getColor()<0 || data.flags&0x01);
     bool locked = data.flags&0x04;
     attributes.setColor(abs(attributes.getColor()));
@@ -194,7 +195,8 @@ void RDxfImporter::addLayer(const DL_LayerData& data) {
 }
 
 void RDxfImporter::addBlock(const DL_BlockData& data) {
-    QString blockName = QString(data.name.c_str());
+    QString blockName = decode(data.name.c_str());
+
 
     /*
     if (blockName.toLower()=="*paper_space0" ||
@@ -321,18 +323,19 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     }
 
     // Layer:
-    if (attributes.getLayer().empty()) {
+    QString layerName = decode(attributes.getLayer().c_str());
+    if (layerName.isEmpty()) {
         qWarning() << "RDxfImporter::importEntity: default to layer: '0'";
         entity->setLayerId(document->getLayerId("0"));
     } else {
         // add layer in case it doesn't exist:
-        if (document->queryLayer(attributes.getLayer().c_str()).isNull()) {
+        if (document->queryLayer(layerName).isNull()) {
             qWarning() << "RDxfImporter::importEntity: "
-                << "creating layer: " << attributes.getLayer().c_str();
+                << "creating layer: " << layerName;
             addLayer(DL_LayerData(attributes.getLayer(), 0));
         }
 
-        entity->setLayerId(document->getLayerId(attributes.getLayer().c_str()));
+        entity->setLayerId(document->getLayerId(layerName));
     }
 
     // Color:
@@ -354,7 +357,7 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     }
 
     // Linetype:
-    QString linetypeName = attributes.getLineType().c_str();
+    QString linetypeName = decode(attributes.getLineType().c_str());
     RLinetype::Id linetypeId = document->getLinetypeId(linetypeName);
     if (linetypeId==RLinetype::INVALID_ID) {
         qWarning() << "RDxfImporter::importEntity: "
@@ -489,7 +492,7 @@ void RDxfImporter::addKnot(const DL_KnotData& data) {
 }
 
 void RDxfImporter::addInsert(const DL_InsertData& data) {
-    QString blockName = data.name.c_str();
+    QString blockName = decode(data.name.c_str());
     if (blockName.left(3)=="A$C") {
         return;
     }
@@ -543,7 +546,7 @@ void RDxfImporter::addTextStyle(const DL_StyleData& data) {
 
     RDxfTextStyle s;
 
-    s.font = data.primaryFontFile.c_str();
+    s.font = decode(data.primaryFontFile.c_str());
     if (s.font.isEmpty()) {
         s.font = xDataFont;
     }
@@ -551,7 +554,7 @@ void RDxfImporter::addTextStyle(const DL_StyleData& data) {
     s.italic = xDataFlags&0x1000000;
     s.bold = xDataFlags&0x2000000;
 
-    textStyles.insert(QString(data.name.c_str()), s);
+    textStyles.insert(decode(data.name.c_str()), s);
 }
 
 void RDxfImporter::addMTextChunk(const std::string& text) {
@@ -566,11 +569,11 @@ void RDxfImporter::addMText(const DL_MTextData& data) {
     RS::TextDrawingDirection dir;
     RS::TextLineSpacingStyle lss;
 
-    RDxfTextStyle s = textStyles.value(data.style.c_str(), RDxfTextStyle());
+    RDxfTextStyle s = textStyles.value(decode(data.style.c_str()), RDxfTextStyle());
 
     // QCAD 2 compat: use style name as font name:
     if (s.font.isEmpty()) {
-        s.font = data.style.c_str();
+        s.font = decode(data.style.c_str());
     }
 
     if (data.attachmentPoint<=3) {
@@ -665,11 +668,11 @@ void RDxfImporter::addText(const DL_TextData& data) {
     //RVector refPoint;
     //double angle = data.angle;
 
-    RDxfTextStyle s = textStyles.value(data.style.c_str(), RDxfTextStyle());
+    RDxfTextStyle s = textStyles.value(decode(data.style.c_str()), RDxfTextStyle());
 
     // QCAD 2 compat: use style name as font name:
     if (s.font.isEmpty()) {
-        s.font = data.style.c_str();
+        s.font = decode(data.style.c_str());
     }
 
     RVector alignmentPoint(data.apx, data.apy);
@@ -964,7 +967,7 @@ void RDxfImporter::addLeaderVertex(const DL_LeaderVertexData& data) {
 }
 
 void RDxfImporter::addHatch(const DL_HatchData& data) {
-    QString patternName = data.pattern.c_str();
+    QString patternName = decode(data.pattern.c_str());
     double angle = RMath::deg2rad(data.angle);
     double scale = data.scale;
 
@@ -1148,7 +1151,7 @@ void RDxfImporter::linkImage(const DL_ImageDefData& data) {
         return;
     }
 
-    QString filePath = data.file.c_str();
+    QString filePath = decode(data.file.c_str());
 
     QList<RObject::Id> imageData = images.values(handle);
     for (int i=0; i<imageData.length(); i++) {
@@ -1182,7 +1185,7 @@ void RDxfImporter::addXRecordString(int code, const std::string& value) {
     if (variableKey.isEmpty()) {
         return;
     }
-    document->setVariable(variableKey, value.c_str());
+    document->setVariable(variableKey, decode(value.c_str()));
 }
 
 void RDxfImporter::addXRecordReal(int code, double value) {
@@ -1207,7 +1210,7 @@ void RDxfImporter::addXRecordBool(int code, bool value) {
 }
 
 void RDxfImporter::addXDataApp(const std::string& appId) {
-    xDataAppId = appId.c_str();
+    xDataAppId = decode(appId.c_str());
     xData.insert(xDataAppId, QList<QPair<int, QVariant> >());
 }
 
@@ -1217,7 +1220,7 @@ void RDxfImporter::addXDataString(int code, const std::string& value) {
         return;
     }
 
-    xData[xDataAppId].append(QPair<int, QVariant>(code, value.c_str()));
+    xData[xDataAppId].append(QPair<int, QVariant>(code, decode(value.c_str())));
 }
 
 void RDxfImporter::addXDataReal(int code, double value) {
@@ -1258,7 +1261,7 @@ void RDxfImporter::addDictionaryEntry(const DL_DictionaryEntryData& data) {
 void RDxfImporter::setVariableVector(const std::string& key,
                                      double v1, double v2, double v3, int code) {
 
-    RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
+    RS::KnownVariable v = dxfServices.stringToVariable(decode(key.c_str()));
     if (v!=RS::INVALID) {
         document->setKnownVariable(v, RVector(v1, v2, v3));
     }
@@ -1421,3 +1424,6 @@ int RDxfImporter::getXDataInt(const QString& appId, int code, int pos) {
     return 0;
 }
 
+QString RDxfImporter::decode(const QString& str) {
+    return RDxfServices::parseUnicode(str);
+}
