@@ -869,15 +869,28 @@ bool RSpline::scale(const RVector& scaleFactors, const RVector& center) {
 }
 
 bool RSpline::mirror(const RLine& axis) {
+    RVector sp = getStartPoint();
+    RVector ep = getEndPoint();
+
     for (int i=0; i<controlPoints.size(); i++) {
         controlPoints[i].mirror(axis);
     }
     for (int i=0; i<fitPoints.size(); i++) {
         fitPoints[i].mirror(axis);
     }
-    tangentStart.mirror(axis);
-    tangentEnd.mirror(axis);
+
+    RVector absTan = sp+tangentStart;
+    absTan.mirror(axis);
+    sp.mirror(axis);
+    tangentStart = absTan-sp;
+
+    absTan = ep+tangentEnd;
+    absTan.mirror(axis);
+    ep.mirror(axis);
+    tangentEnd = absTan-ep;
+
     update();
+
     return true;
 }
 
@@ -1408,11 +1421,13 @@ void RSpline::print(QDebug dbg) const {
     dbg.nospace() << ", periodic: " << isPeriodic();
     dbg.nospace() << ", start point: " << getStartPoint();
     dbg.nospace() << ", end point: " << getEndPoint();
+    dbg.nospace() << ", start tan: " << getTangentAtStart();
+    dbg.nospace() << ", end tan: " << getTangentAtEnd();
 
     QList<RVector> controlPoints = getControlPointsWrapped();
     dbg.nospace() << ",\ncontrolPoints (" << controlPoints.count() << "): ";
     for (int i=0; i<controlPoints.count(); ++i) {
-        dbg.nospace() << i << ": " << controlPoints.at(i);
+        dbg.nospace() << i << ": " << controlPoints.at(i) << ", ";
     }
 
     QList<RVector> fitPoints = getFitPoints();
