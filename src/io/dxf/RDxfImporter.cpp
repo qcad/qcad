@@ -136,6 +136,40 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
 
     RImporter::endImport();
 
+    // set block reference IDs in the end to support nested blocks (FS#1016):
+    RSpatialIndex& si = document->getSpatialIndex();
+    QSet<REntity::Id> ids = document->queryAllBlockReferences();
+    QSet<REntity::Id>::const_iterator it;
+    for (it=ids.constBegin(); it!=ids.constEnd(); it++) {
+        RBlockReferenceEntity::Id id = *it;
+        QSharedPointer<REntity> entity = document->queryEntityDirect(id);
+        if (entity.isNull()) {
+            continue;
+        }
+        QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+        if (blockRef.isNull()) {
+            continue;
+        }
+
+        QList<RBox> bbs = blockRef->getBoundingBoxes();
+        QVariant v = blockRef->getCustomProperty("", "block");
+        if (!v.isValid()) {
+            continue;
+        }
+        QString blockName = v.toString();
+        RBlock::Id blockId = document->getBlockId(blockName);
+
+        if (blockId==RBlock::INVALID_ID) {
+            continue;
+        }
+
+        blockRef->setReferencedBlockId(blockId);
+
+        si.removeFromIndex(blockRef->getId(), bbs);
+        si.addToIndex(blockRef->getId(), blockRef->getBoundingBoxes());
+    }
+
+
     // add some variables that need to be there for DXF drawings:
     /*
     TODO
@@ -497,12 +531,14 @@ void RDxfImporter::addInsert(const DL_InsertData& data) {
         return;
     }
 
-    RBlock::Id blockId = document->getBlockId(blockName);
-    if (blockId==RBlock::INVALID_ID) {
-        qWarning() << "RDxfImporter::import: "
-                   << "block reference references invalid block: " << blockName;
-        return;
-    }
+    RBlock::Id blockId = RBlock::INVALID_ID;
+
+//    RBlock::Id blockId = document->getBlockId(blockName);
+//    if (blockId==RBlock::INVALID_ID) {
+//        qWarning() << "RDxfImporter::import: "
+//                   << "block reference references invalid block: " << blockName;
+//        return;
+//    }
 
     RVector insertionPoint(data.ipx, data.ipy);
     RVector scale(data.sx, data.sy);
@@ -518,6 +554,7 @@ void RDxfImporter::addInsert(const DL_InsertData& data) {
                     )
             )
     );
+    entity->setCustomProperty("", "block", blockName);
     importEntity(entity);
 }
 
