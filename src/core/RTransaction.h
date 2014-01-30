@@ -113,6 +113,10 @@ public:
         blockRecursionDetectionDisabled = on;
     }
 
+    void setKeepHandles(bool on) {
+        keepHandles = on;
+    }
+
     /**
      * \return True if this transaction should store undo / redo information
      *      for later undo / redo functionality.
@@ -319,6 +323,11 @@ protected:
      * True to disable block recursion detection (performance gain for loading).
      */
     bool blockRecursionDetectionDisabled;
+
+    /**
+     * True to keep existing object handles (importers).
+     */
+    bool keepHandles;
 
     QMap<RObject::Id, RObject::Id> cloneIds;
 };

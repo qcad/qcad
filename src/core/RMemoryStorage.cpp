@@ -755,7 +755,7 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
     return false;
 }
 
-bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion) {
+bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion, bool keepHandles) {
     if (object.isNull()) {
         return false;
     }
@@ -801,7 +801,12 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     // assign new object ID to new objects:
     if (object->getId() == RObject::INVALID_ID) {
         setObjectId(*object, getNewObjectId());
-        setObjectHandle(*object, getNewObjectHandle());
+
+        // only set new handle if handle is not set already:
+        if (!keepHandles || object->getHandle()==RObject::INVALID_HANDLE) {
+            setObjectHandle(*object, getNewObjectHandle());
+        }
+
         // assign draw order to new entities:
         if (!entity.isNull()) {
             entity->setDrawOrder(getMaxDrawOrder());

@@ -47,7 +47,7 @@ void RStorage::setObjectId(RObject& object, RObject::Id objectId) {
 void RStorage::setObjectHandle(RObject& object, RObject::Handle objectHandle) {
     object.setHandle(objectHandle);
     if (objectHandle>handleCounter) {
-        handleCounter = objectHandle;
+        handleCounter = objectHandle+1;
     }
 }
 

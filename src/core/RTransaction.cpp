@@ -35,7 +35,8 @@ RTransaction::RTransaction()
       spatialIndexDisabled(false),
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
-      blockRecursionDetectionDisabled(false) {
+      blockRecursionDetectionDisabled(false),
+      keepHandles(false) {
 }
 
 
@@ -54,7 +55,8 @@ RTransaction::RTransaction(RStorage& storage)
       spatialIndexDisabled(false),
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
-      blockRecursionDetectionDisabled(false) {
+      blockRecursionDetectionDisabled(false),
+      keepHandles(false) {
 }
 
 
@@ -84,7 +86,8 @@ RTransaction::RTransaction(
       spatialIndexDisabled(false),
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
-      blockRecursionDetectionDisabled(false) {
+      blockRecursionDetectionDisabled(false),
+      keepHandles(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -114,7 +117,8 @@ RTransaction::RTransaction(
       spatialIndexDisabled(false),
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
-      blockRecursionDetectionDisabled(false) {
+      blockRecursionDetectionDisabled(false),
+      keepHandles(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -671,7 +675,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             onlyChanges = false;
         }
 
-        ret = storage->saveObject(object, !blockRecursionDetectionDisabled);
+        ret = storage->saveObject(object, !blockRecursionDetectionDisabled, keepHandles);
 
         if (!ret) {
             qCritical() << "RTransaction::addObject: saveObject() failed for object: ";

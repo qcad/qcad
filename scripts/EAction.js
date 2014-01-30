@@ -469,7 +469,9 @@ EAction.prototype.escapeEvent = function() {
  * Called when the user presses a key. By default, the event is ignored.
  */
 EAction.prototype.keyPressEvent = function(event) {
-    event.ignore();
+    if (!isNull(event)) {
+        event.ignore();
+    }
 };
 
 /**

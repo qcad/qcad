@@ -99,7 +99,7 @@ public:
     virtual RBox getSelectionBox();
 
     virtual bool removeObject(QSharedPointer<RObject> object);
-    virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true);
+    virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true, bool keepHandles = false);
     bool checkRecursion(
         RBlock::Id blockId, RBlock::Id potentialChildBlockId
     );
