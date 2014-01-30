@@ -131,6 +131,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="groundReferencedBlockId"
+    cppName="groundReferencedBlockId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="getReferencedBlockId"
     cppName="getReferencedBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

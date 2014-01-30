@@ -102,8 +102,15 @@ Block.showHide = function(show, obj, blockId) {
  */
 Block.prototype.editBlock = function(blockName) {
     var di = this.getDocumentInterface();
-    var doc = this.getDocument();
-    var views = this.getGraphicsViews();
+    //var doc = this.getDocument();
+    //var views = this.getGraphicsViews();
+
+    Block.editBlock(di, blockName);
+};
+
+Block.editBlock = function(di, blockName) {
+    var doc = di.getDocument();
+    var views = EAction.getGraphicsViews(di);
 
     var i, view, blockZoom;
 

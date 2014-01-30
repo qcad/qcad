@@ -129,6 +129,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getTextHeightThreshold, "getTextHeightThreshold");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getArcAngleLengthThreshold, "getArcAngleLengthThreshold");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getQtVersion, "getQtVersion");
             
             REcmaHelper::registerFunction(&engine, &ctor, isQt, "isQt");
@@ -1820,6 +1822,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getTextHeightThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getArcAngleLengthThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getArcAngleLengthThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getArcAngleLengthThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        RSettings::
+       getArcAngleLengthThreshold();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getArcAngleLengthThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getArcAngleLengthThreshold", context, engine);
             return result;
         }
          QScriptValue

@@ -1,2 +1,2 @@
 NAME = MiscDraw
-SOURCES = ../Misc.js
+SOURCES = ../MiscDraw.js

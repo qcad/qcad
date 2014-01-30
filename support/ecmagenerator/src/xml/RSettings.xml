@@ -205,6 +205,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="getArcAngleLengthThreshold"
+    cppName="getArcAngleLengthThreshold" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
     <method name="getQtVersion" cppName="getQtVersion"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

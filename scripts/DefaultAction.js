@@ -409,11 +409,21 @@ DefaultAction.prototype.selectEntity = function(entityId, add) {
  * Called when the user selects a single entity.
  */
 DefaultAction.prototype.entityDoubleClicked = function(entityId) {
-    if (isNull(this.document)) {
+    if (isNull(this.document) || isNull(this.di)) {
         return;
     }
 
     var entity = this.document.queryEntity(entityId);
-    include("scripts/Modify/EditText/EditText.js");
-    EditText.editText(entity);
+
+    if (isTextEntity(entity) ||
+        isAttributeEntity(entity) ||
+        isAttributeDefinitionEntity(entity)) {
+
+        include("scripts/Modify/EditText/EditText.js");
+        EditText.editText(entity);
+    }
+    else if (isBlockReferenceEntity(entity)) {
+        include("scripts/Block/Block.js");
+        Block.editBlock(this.di, entity.getReferencedBlockName());
+    }
 };

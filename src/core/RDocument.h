@@ -129,6 +129,7 @@ public:
 
     QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
+    QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
     QSharedPointer<REntity> queryEntity(REntity::Id entityId) const;
     QSharedPointer<REntity> queryEntityDirect(REntity::Id entityId) const;
     QSharedPointer<RUcs> queryUcs(RUcs::Id ucsId) const;

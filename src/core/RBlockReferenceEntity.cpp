@@ -398,5 +398,6 @@ void RBlockReferenceEntity::print(QDebug dbg) const {
     dbg.nospace() << ", scale: " << getScaleFactors();
     dbg.nospace() << ", rotation: " << getRotation();
     dbg.nospace() << ", referencedBlockId: " << getReferencedBlockId();
+    dbg.nospace() << ", referenced block name: " << getDocument()->getBlockName(getReferencedBlockId());
     dbg.nospace() << ")";
 }

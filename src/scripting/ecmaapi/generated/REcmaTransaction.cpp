@@ -70,6 +70,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setBlockRecursionDetectionDisabled, "setBlockRecursionDetectionDisabled");
             
+            REcmaHelper::registerFunction(&engine, proto, setKeepHandles, "setKeepHandles");
+            
             REcmaHelper::registerFunction(&engine, proto, isUndoable, "isUndoable");
             
             REcmaHelper::registerFunction(&engine, proto, isFailed, "isFailed");
@@ -944,6 +946,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTransaction::setBlockRecursionDetectionDisabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransaction::setKeepHandles
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::setKeepHandles", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::setKeepHandles";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("setKeepHandles", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setKeepHandles(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.setKeepHandles().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::setKeepHandles", context, engine);
             return result;
         }
          QScriptValue

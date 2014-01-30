@@ -126,6 +126,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isVariable2D, "isVariable2D");
             
+            REcmaHelper::registerFunction(&engine, &ctor, escapeUnicode, "escapeUnicode");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, parseUnicode, "parseUnicode");
+            
 
     // static properties:
     
@@ -1984,6 +1988,106 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDxfServices::isVariable2D", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::escapeUnicode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::escapeUnicode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::escapeUnicode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RDxfServices::
+       escapeUnicode(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.escapeUnicode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::escapeUnicode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::parseUnicode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::parseUnicode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::parseUnicode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RDxfServices::
+       parseUnicode(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.parseUnicode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::parseUnicode", context, engine);
             return result;
         }
          QScriptValue REcmaDxfServices::toString

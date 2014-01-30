@@ -165,6 +165,7 @@ public:
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const {
         return queryObject(objectId);
     }
+    virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const = 0;
 
     /**
      * \return A pointer to the enitity with the given \c entityId

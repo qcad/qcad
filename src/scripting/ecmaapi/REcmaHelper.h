@@ -208,6 +208,7 @@ static QScriptValue toScriptValue(QScriptEngine* engine, RGraphicsView* cppValue
 static QScriptValue toScriptValue(QScriptEngine* engine, RGraphicsScene* cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, RShape* cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, QSharedPointer<RShape>& cppValue);
+static QScriptValue toScriptValue(QScriptEngine* engine, QSharedPointer<RObject>& cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, QSharedPointer<REntity>& cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, REntity* cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, QSharedPointer<REntityData>& cppValue);
@@ -231,6 +232,17 @@ static QScriptValue tryCast(QScriptEngine* engine, RShape* cppValue) {
     T* shape = dynamic_cast<T*>(cppValue);
     if (shape!=NULL) {
         return qScriptValueFromValue(engine, shape);
+    }
+    else {
+        return QScriptValue();
+    }
+}
+
+template<class T>
+static QScriptValue tryCast(QScriptEngine* engine, QSharedPointer<RObject>& cppValue) {
+    QSharedPointer<T> obj = cppValue.dynamicCast<T>();
+    if (!obj.isNull()) {
+        return qScriptValueFromValue(engine, obj);
     }
     else {
         return QScriptValue();

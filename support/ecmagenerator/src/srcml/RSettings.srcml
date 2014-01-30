@@ -412,6 +412,13 @@ dir="./core" filename="RSettings.h">
   <function_decl>
   <type>
     <name>static</name>
+    <name>double</name>
+  </type>
+  <name>getArcAngleLengthThreshold</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
     <name>QString</name>
   </type>
   <name>getQtVersion</name>
@@ -1004,6 +1011,14 @@ dir="./core" filename="RSettings.h">
       <name>int</name>
     </type>
     <name>limitZoomAndScroll</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>double</name>
+    </type>
+    <name>arcAngleLengthThreshold</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

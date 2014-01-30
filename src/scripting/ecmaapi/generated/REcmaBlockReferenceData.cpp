@@ -91,6 +91,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setReferencedBlockId, "setReferencedBlockId");
             
+            REcmaHelper::registerFunction(&engine, proto, groundReferencedBlockId, "groundReferencedBlockId");
+            
             REcmaHelper::registerFunction(&engine, proto, getReferencedBlockId, "getReferencedBlockId");
             
             REcmaHelper::registerFunction(&engine, proto, setReferencedBlockName, "setReferencedBlockName");
@@ -1622,6 +1624,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceData::setReferencedBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::groundReferencedBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::groundReferencedBlockId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::groundReferencedBlockId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("groundReferencedBlockId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->groundReferencedBlockId();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.groundReferencedBlockId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::groundReferencedBlockId", context, engine);
             return result;
         }
          QScriptValue

@@ -598,7 +598,22 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <argument_list>(
       <argument>triangle</argument>)</argument_list>
     </macro>}</block>
-  </function></public>
+  </function>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QByteArray</name>
+  </type>
+  <name>escapeUnicode</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>str</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <function_decl>
   <type>

@@ -620,6 +620,11 @@ EAction.prototype.getGraphicsViews = function() {
         return [];
     }
 
+    return EAction.getGraphicsViews(di);
+
+};
+
+EAction.getGraphicsViews = function(di) {
     var ret = [];
     var scenes = di.getGraphicsScenes();
     for (var i=0; i<scenes.length; i++) {
@@ -627,7 +632,7 @@ EAction.prototype.getGraphicsViews = function() {
         ret = ret.concat(views);
     }
     return ret;
-};
+}
 
 EAction.prototype.getGraphicsView = function() {
     var di = this.getDocumentInterface();

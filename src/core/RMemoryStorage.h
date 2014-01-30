@@ -66,6 +66,7 @@ public:
     //virtual QSet<REntity::Id> queryViewEntities(RView::Id viewId);
 
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
+    virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
     virtual QSharedPointer<REntity> queryEntity(REntity::Id objectId) const;
     virtual QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(const QString& layerName) const;

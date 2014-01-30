@@ -81,6 +81,9 @@
         setReferencedBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        groundReferencedBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReferencedBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

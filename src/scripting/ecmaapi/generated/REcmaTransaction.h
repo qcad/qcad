@@ -64,6 +64,9 @@
         setBlockRecursionDetectionDisabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setKeepHandles
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isUndoable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

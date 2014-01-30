@@ -17,12 +17,19 @@
 	<entry key="RGraphicsView::ColorMode" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RColor::Mode" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RObject::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RObject::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="REntity::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="REntity::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RBlockReferenceEntity::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RBlockReferenceEntity::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLayer::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RLayer::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RBlock::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RBlock::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RView::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RView::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RUcs::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RUcs::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RSnap::Status" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="RS::AngleFormat" value="toNumber()" testFunction="isNumber()" cast="int" />
@@ -44,6 +51,7 @@
 
 	<entry key="RLineweight::Lineweight" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLinetype::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RLinetype::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RDocumentInterface::IoErrorCode" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="Qt::DropActions" value="toNumber()" testFunction="isNumber()" cast="int" />

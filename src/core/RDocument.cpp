@@ -1017,6 +1017,9 @@ QSharedPointer<RObject> RDocument::queryObjectDirect(RObject::Id objectId) const
     return storage.queryObjectDirect(objectId);
 }
 
+QSharedPointer<RObject> RDocument::queryObjectByHandle(RObject::Handle objectHandle) const {
+    return storage.queryObjectByHandle(objectHandle);
+}
 
 /**
  * Queries the entity with the given ID.
@@ -1026,7 +1029,6 @@ QSharedPointer<RObject> RDocument::queryObjectDirect(RObject::Id objectId) const
 QSharedPointer<REntity> RDocument::queryEntity(REntity::Id entityId) const {
     return storage.queryEntity(entityId);
 }
-
 
 /**
  * Queries the entity with the given ID.

@@ -108,6 +108,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryObject, "queryObject");
             
+            REcmaHelper::registerFunction(&engine, proto, queryObjectByHandle, "queryObjectByHandle");
+            
             REcmaHelper::registerFunction(&engine, proto, queryEntity, "queryEntity");
             
             REcmaHelper::registerFunction(&engine, proto, queryLayer, "queryLayer");
@@ -1643,8 +1645,8 @@
         
                self->queryObject(a0);
         // return type: QSharedPointer < RObject >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -1655,6 +1657,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryObject", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::queryObjectByHandle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::queryObjectByHandle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryObjectByHandle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("queryObjectByHandle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Handle */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Handle
+                    a0 =
+                    (RObject::Handle)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
+        
+               self->queryObjectByHandle(a0);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryObjectByHandle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryObjectByHandle", context, engine);
             return result;
         }
          QScriptValue
@@ -3602,6 +3664,92 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RObject > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RObject > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RObject * o0 = 
+                    qscriptvalue_cast < RObject * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < RObject >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RObject >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RObject >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  RObject .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type  RObject .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RObject > 
+                    //a0 =
+                    //QSharedPointer < RObject >(o0->clone());
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->saveObject(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.saveObject().",
                    context);
@@ -5287,8 +5435,8 @@
         
                self->queryObjectDirect(a0);
         // return type: QSharedPointer < RObject >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 

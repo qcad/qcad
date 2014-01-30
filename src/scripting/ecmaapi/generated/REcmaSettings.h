@@ -151,6 +151,9 @@
         getTextHeightThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getArcAngleLengthThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getQtVersion
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

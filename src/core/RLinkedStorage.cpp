@@ -134,6 +134,14 @@ QSharedPointer<REntity> RLinkedStorage::queryEntity(REntity::Id objectId) const 
     return RMemoryStorage::queryEntity(objectId);
 }
 
+QSharedPointer<RObject> RLinkedStorage::queryObjectByHandle(RObject::Handle objectHandle) const {
+    QSharedPointer<RObject> ret = backStorage->queryObjectByHandle(objectHandle);
+    if (ret.isNull()) {
+        ret = RMemoryStorage::queryObjectByHandle(objectHandle);
+    }
+    return ret;
+}
+
 QSharedPointer<REntity> RLinkedStorage::queryEntityDirect(REntity::Id objectId) const {
     if (!entityMap.contains(objectId)) {
         return backStorage->queryEntityDirect(objectId);

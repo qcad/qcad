@@ -684,6 +684,36 @@ dir="./core" filename="RDxfServices.h">
       </type>
       <name>v</name>
     </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>escapeUnicode</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>str</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>parseUnicode</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>str</name>
+    </decl>
   </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>

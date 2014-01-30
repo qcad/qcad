@@ -248,5 +248,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="v" isConst="false" />
       </variant>
     </method>
+    <method name="escapeUnicode" cppName="escapeUnicode"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="str"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="parseUnicode" cppName="parseUnicode"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="str"
+        isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

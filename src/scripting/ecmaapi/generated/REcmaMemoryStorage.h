@@ -107,6 +107,9 @@
         queryObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryObjectByHandle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

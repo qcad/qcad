@@ -210,6 +210,28 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RShape* cppValue)
     return qScriptValueFromValue(engine, cppValue);
 }
 
+QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RObject>& cppValue) {
+
+    QSharedPointer<REntity> entity = cppValue.dynamicCast<REntity>();
+    if (!entity.isNull()) {
+        return toScriptValue(engine, entity);
+    }
+
+    QScriptValue v;
+    v = tryCast<RLayer>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RBlock>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RLinetype>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RUcs>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RView>(engine, cppValue);
+    if (v.isValid()) return v;
+
+    return qScriptValueFromValue(engine, cppValue);
+}
+
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<REntity>& cppValue) {
     QScriptValue v;
 

@@ -356,6 +356,24 @@ QSharedPointer<RObject> RMemoryStorage::queryObjectDirect(RObject::Id objectId) 
     return objectMap[objectId];
 }
 
+QSharedPointer<RObject> RMemoryStorage::queryObjectByHandle(RObject::Handle objectHandle) const {
+    QSharedPointer<RObject> ret;
+
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it=objectMap.constBegin(); it!=objectMap.constEnd(); it++) {
+        QSharedPointer<RObject> obj = it.value();
+        if (obj.isNull()) {
+            continue;
+        }
+        if (obj->getHandle()==objectHandle) {
+            ret = QSharedPointer<RObject>(obj->clone());
+            break;
+        }
+    }
+
+    return ret;
+}
+
 QSharedPointer<REntity> RMemoryStorage::queryEntity(REntity::Id objectId) const {
     if (!entityMap.contains(objectId)) {
         return QSharedPointer<REntity> ();

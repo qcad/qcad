@@ -61,6 +61,7 @@ public:
 
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     virtual QSharedPointer<REntity> queryEntity(REntity::Id objectId) const;
+    virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
     virtual QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
     virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;

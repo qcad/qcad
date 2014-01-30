@@ -344,8 +344,8 @@
         
                self->addObject(a0);
         // return type: QSharedPointer < RObject >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -417,8 +417,8 @@
         ,
     a1);
         // return type: QSharedPointer < RObject >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -503,8 +503,8 @@
         ,
     a2);
         // return type: QSharedPointer < RObject >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 

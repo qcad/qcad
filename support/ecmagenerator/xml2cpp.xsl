@@ -1292,6 +1292,10 @@
                 // Shared pointer to entity data, cast to best match:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
             </xsl:when>
+            <xsl:when test="starts-with($returnType, 'QSharedPointer') and contains($returnType, 'RObject')">
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            </xsl:when>
             <xsl:when test="starts-with($returnType, 'QSharedPointer') and contains($returnType, 'REntity')">
                 // Shared pointer to entity, cast to best match:
                 result = REcmaHelper::toScriptValue(engine, cppResult);

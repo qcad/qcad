@@ -135,6 +135,12 @@
         ;static  QScriptValue
         isVariable2D
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        escapeUnicode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        parseUnicode
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

@@ -174,6 +174,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="objectId" isConst="false" />
       </variant>
     </method>
+    <method name="queryObjectByHandle"
+    cppName="queryObjectByHandle" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false">
+        <arg type="RObject::Handle" typeName="RObject::Handle"
+        name="objectHandle" isConst="false" />
+      </variant>
+    </method>
     <method name="queryEntity" cppName="queryEntity"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -758,6 +767,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="bool" typeName="bool" name="checkBlockRecursion"
         hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="keepHandles"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="deleteObject" cppName="deleteObject"

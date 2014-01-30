@@ -491,8 +491,8 @@
         
                self->getHandle();
         // return type: RObject::Handle
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // standard Type
+                result = QScriptValue(cppResult);
             
     } else
 

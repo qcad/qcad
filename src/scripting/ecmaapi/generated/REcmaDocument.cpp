@@ -123,6 +123,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryObjectDirect, "queryObjectDirect");
             
+            REcmaHelper::registerFunction(&engine, proto, queryObjectByHandle, "queryObjectByHandle");
+            
             REcmaHelper::registerFunction(&engine, proto, queryEntity, "queryEntity");
             
             REcmaHelper::registerFunction(&engine, proto, queryEntityDirect, "queryEntityDirect");
@@ -2901,8 +2903,8 @@
         
                self->queryObject(a0);
         // return type: QSharedPointer < RObject >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -2961,8 +2963,8 @@
         
                self->queryObjectDirect(a0);
         // return type: QSharedPointer < RObject >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -2973,6 +2975,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::queryObjectDirect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::queryObjectByHandle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryObjectByHandle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryObjectByHandle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryObjectByHandle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Handle */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Handle
+                    a0 =
+                    (RObject::Handle)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
+        
+               self->queryObjectByHandle(a0);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryObjectByHandle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryObjectByHandle", context, engine);
             return result;
         }
          QScriptValue
