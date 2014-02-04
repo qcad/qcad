@@ -64,12 +64,12 @@
     <message>
         <location filename="../Line2PEx.js" line="440"/>
         <source>t</source>
-        <translation type="unfinished"></translation>
+        <translation>t</translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="448"/>
         <source>d</source>
-        <translation type="unfinished"></translation>
+        <translation>d</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="23"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../Line2PEx.ui" line="30"/>
         <source>C</source>
-        <translation type="unfinished"></translation>
+        <translation>C</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="43"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../Line2PEx.ui" line="50"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="63"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../Line2PEx.ui" line="70"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="84"/>
@@ -115,7 +115,7 @@
     <message>
         <location filename="../Line2PEx.ui" line="90"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="119"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../Line2PEx.ui" line="142"/>
         <source>D</source>
-        <translation type="unfinished"></translation>
+        <translation>D</translation>
     </message>
     <message>
         <source>Line from &amp;2 Points</source>

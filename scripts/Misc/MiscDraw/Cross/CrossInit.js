@@ -3,7 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Cross.js");
     action.setIcon(basePath + "/Cross.svg");
-    action.setStatusTip(qsTranslate("Cross", "Draw centreline cross in Arc, Circle or Ellipses"));
+    action.setStatusTip(qsTranslate("Cross", "Draw centreline cross in arc, circle or ellipses"));
     action.setDefaultShortcut(new QKeySequence("c,s"));
     action.setDefaultCommands(["cross", "cs"]);
     action.setSortOrder(310);

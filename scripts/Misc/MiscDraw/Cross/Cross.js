@@ -50,7 +50,7 @@ Cross.prototype.setState = function(state) {
     this.setCrosshairCursor();
 
     var appWin = RMainWindowQt.getMainWindow();
-    var trEntity = qsTr("Select Arc, Circle, Ellipse or Elliptical arc");
+    var trEntity = qsTr("Select arc, circle, ellipse or elliptical arc");
     this.setCommandPrompt(trEntity);
     this.setLeftMouseTip(trEntity);
     this.setRightMouseTip(EAction.trCancel);
