@@ -23,42 +23,42 @@
 <context>
     <name>SnapDistanceManual</name>
     <message>
-        <location filename="../SnapDistanceManual.js" line="31"/>
+        <location filename="../SnapDistanceManual.js" line="+31"/>
         <source>Specify first point to measure distance from</source>
         <translation>Indiquer le premier point</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.js" line="62"/>
+        <location line="+31"/>
         <source>Second point</source>
         <translation>Deuxième point</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManualInit.js" line="2"/>
+        <location filename="../SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
         <translation>&amp;Distance manuellement</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManualInit.js" line="7"/>
+        <location line="+5"/>
         <source>Snap distance between 2 points</source>
         <translation>Accrochage distance entre deux points</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="17"/>
+        <location filename="../SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
         <translation>Distance:</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="86"/>
+        <location line="+69"/>
         <source>Distance</source>
         <translation>Distance</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="91"/>
+        <location line="+5"/>
         <source>Percentage</source>
         <translation>Pourcentage</translation>
     </message>
     <message>
-        <location filename="../SnapDistanceManual.ui" line="96"/>
+        <location line="+5"/>
         <source>Fraction</source>
         <translation>Fraction</translation>
     </message>

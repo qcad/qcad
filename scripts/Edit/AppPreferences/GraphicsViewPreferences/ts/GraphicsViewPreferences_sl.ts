@@ -39,7 +39,7 @@
         <translation>Samodejna povečava</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Margin (px):</source>
         <translation>Rob (px):</translation>
     </message>
@@ -90,11 +90,20 @@
     </message>
     <message>
         <location line="+58"/>
-        <source>Text height display threshold:</source>
-        <translation>Prag prikaza višine besedila:</translation>
+        <source>Text height display threshold (px):</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+13"/>
+        <source>Display arcs as lines below this angle (degrees):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text height display threshold:</source>
+        <translation type="obsolete">Prag prikaza višine besedila:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

@@ -10,14 +10,10 @@
     </message>
     <message>
         <location filename="../Line2PEx.js" line="94"/>
+        <location filename="../Line2PEx.js" line="102"/>
         <location filename="../Line2PEx.js" line="104"/>
         <location filename="../Line2PEx.js" line="107"/>
         <source>Next point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Line2PEx.js" line="95"/>
-        <source>Close/</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -26,18 +22,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="97"/>
-        <source>/Redo</source>
+        <location filename="../Line2PEx.js" line="95"/>
+        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../Line2PEx.js" line="97"/>
         <location filename="../Line2PEx.js" line="99"/>
         <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="102"/>
-        <source>Next point or </source>
+        <source>or</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -51,22 +48,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="427"/>
+        <location filename="../Line2PEx.js" line="428"/>
         <source>undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="432"/>
+        <location filename="../Line2PEx.js" line="434"/>
         <source>redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="437"/>
+        <location filename="../Line2PEx.js" line="440"/>
         <source>t</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="444"/>
+        <location filename="../Line2PEx.js" line="448"/>
         <source>d</source>
         <translation type="unfinished"></translation>
     </message>
@@ -133,7 +130,7 @@
     </message>
     <message>
         <location filename="../Line2PExInit.js" line="2"/>
-        <source>Line from &amp;2 Points</source>
+        <source>Line from &amp;2 Points (extended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

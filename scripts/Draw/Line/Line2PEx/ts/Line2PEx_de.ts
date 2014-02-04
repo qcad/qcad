@@ -6,74 +6,75 @@
     <message>
         <location filename="../Line2PEx.js" line="87"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Erster Punkt</translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="94"/>
+        <location filename="../Line2PEx.js" line="102"/>
         <location filename="../Line2PEx.js" line="104"/>
         <location filename="../Line2PEx.js" line="107"/>
         <source>Next point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Line2PEx.js" line="95"/>
-        <source>Close/</source>
-        <translation type="unfinished"></translation>
+        <translation>Nächster Punkt</translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="96"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Rückgängig</translation>
+    </message>
+    <message>
+        <location filename="../Line2PEx.js" line="95"/>
+        <source>Close</source>
+        <translation>Schließen</translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="97"/>
-        <source>/Redo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Line2PEx.js" line="99"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiederherstellen</translation>
+    </message>
+    <message>
+        <source>Next point or </source>
+        <translation type="obsolete">Nächster Punkt</translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="102"/>
-        <source>Next point or </source>
-        <translation type="unfinished"></translation>
+        <source>or</source>
+        <translation>oder</translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="108"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Fertig</translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="422"/>
         <source>close</source>
-        <translation type="unfinished"></translation>
+        <translation>schliessen</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="427"/>
+        <location filename="../Line2PEx.js" line="428"/>
         <source>undo</source>
-        <translation type="unfinished"></translation>
+        <translation>rückgängig</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="432"/>
+        <location filename="../Line2PEx.js" line="434"/>
         <source>redo</source>
-        <translation type="unfinished"></translation>
+        <translation>wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="437"/>
+        <location filename="../Line2PEx.js" line="440"/>
         <source>t</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="444"/>
+        <location filename="../Line2PEx.js" line="448"/>
         <source>d</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="23"/>
         <source>Close Sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>Sequenz schliessen</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="30"/>
@@ -83,7 +84,7 @@
     <message>
         <location filename="../Line2PEx.ui" line="43"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Letztes Segment rückgängig</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="50"/>
@@ -93,7 +94,7 @@
     <message>
         <location filename="../Line2PEx.ui" line="63"/>
         <source>Redo Line Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Letztes Segment wiederherstellen</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="70"/>
@@ -104,12 +105,12 @@
         <location filename="../Line2PEx.ui" line="84"/>
         <location filename="../Line2PEx.ui" line="100"/>
         <source>Restrict to multiple of this angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschränken auf Vielfaches dieses Winkels</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="87"/>
         <source>Restrict &amp;to multiple of</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beschränken auf Vielfaches von</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="90"/>
@@ -119,12 +120,12 @@
     <message>
         <location filename="../Line2PEx.ui" line="119"/>
         <source>degrees</source>
-        <translation type="unfinished"></translation>
+        <translation>Grad</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="139"/>
         <source>&amp;Display Angles</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Winkel anzeigen</translation>
     </message>
     <message>
         <location filename="../Line2PEx.ui" line="142"/>
@@ -132,14 +133,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PExInit.js" line="2"/>
         <source>Line from &amp;2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Linie von &amp;2 Punkten</translation>
+    </message>
+    <message>
+        <location filename="../Line2PExInit.js" line="2"/>
+        <source>Line from &amp;2 Points (extended)</source>
+        <translation>Linie von &amp;2 Punkten (erweitert)</translation>
     </message>
     <message>
         <location filename="../Line2PExInit.js" line="6"/>
         <source>Draw single line or sequence of lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Einzelne Linie oder Liniensequenz</translation>
     </message>
 </context>
 </TS>

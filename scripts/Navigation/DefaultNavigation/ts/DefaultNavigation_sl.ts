@@ -36,5 +36,10 @@
         <source>Enable pan gesture</source>
         <translation>Omogoči geste pisala</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <source>Limit zoom and scroll to prevent overflows</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

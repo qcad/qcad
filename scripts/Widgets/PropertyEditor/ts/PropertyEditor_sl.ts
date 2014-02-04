@@ -32,7 +32,7 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+137"/>
         <source>No Selection</source>
         <translation>Ni izbrano</translation>
     </message>
@@ -72,53 +72,43 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Left</source>
-        <translation>Levo</translation>
+        <translation type="obsolete">Levo</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Center</source>
-        <translation>Sredina</translation>
+        <translation type="obsolete">Sredina</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Right</source>
-        <translation>Desno</translation>
+        <translation type="obsolete">Desno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Aligned</source>
-        <translation>Poravnano</translation>
+        <translation type="obsolete">Poravnano</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+9"/>
         <source>Middle</source>
-        <translation>Sredina</translation>
+        <translation type="obsolete">Sredina</translation>
     </message>
     <message>
-        <location line="-9"/>
         <source>Fit</source>
-        <translation>Prilagodi</translation>
+        <translation type="obsolete">Prilagodi</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Top</source>
-        <translation>Vrh</translation>
+        <translation type="obsolete">Vrh</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Base</source>
-        <translation>Baza</translation>
+        <translation type="obsolete">Baza</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Bottom</source>
-        <translation>Dno</translation>
+        <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+150"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -138,7 +128,7 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+309"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Urejevalec lastnosti</translation>

@@ -53,7 +53,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+381"/>
+        <location line="+388"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>
@@ -234,6 +234,52 @@
         <source>Measured value</source>
         <translation>Izmerjena vrednost</translation>
     </message>
+    <message>
+        <location line="+89"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Center</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Aligned</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+7"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Base</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -266,7 +312,17 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+572"/>
+        <location filename="../library.js" line="+607"/>
+        <source>Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Entities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>3dFaces</source>
         <translation>3dPovršine</translation>
     </message>
@@ -324,6 +380,16 @@
         <location line="+0"/>
         <source>Circle</source>
         <translation>Krožnica</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimensions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -474,6 +540,11 @@
         <location line="+0"/>
         <source>Spline</source>
         <translation>Krivulja</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Text based</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

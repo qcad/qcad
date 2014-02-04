@@ -12,7 +12,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+93"/>
+        <location filename="../BlockDialog.js" line="+95"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22,7 +22,12 @@
         <translation>ブロック名が空です。</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>Block name is invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Block already exists.</source>
         <translation>ブロックは既に存在します。</translation>
     </message>

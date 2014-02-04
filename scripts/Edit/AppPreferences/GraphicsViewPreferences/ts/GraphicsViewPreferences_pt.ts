@@ -110,11 +110,20 @@
     </message>
     <message>
         <location line="+58"/>
-        <source>Text height display threshold:</source>
-        <translation>Mostrar limite para o texto:</translation>
+        <source>Text height display threshold (px):</source>
+        <translation>Mostrar limite para o texto (px):</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+13"/>
+        <source>Display arcs as lines below this angle (degrees):</source>
+        <translation>Arcos Resultados por linhas abaixo deste ângulo (graus):</translation>
+    </message>
+    <message>
+        <source>Text height display threshold:</source>
+        <translation type="obsolete">Mostrar limite para o texto:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Selecção</translation>
     </message>

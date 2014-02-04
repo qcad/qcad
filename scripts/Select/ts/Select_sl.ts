@@ -19,7 +19,7 @@
         <translation>Pano orodij izbire</translation>
     </message>
     <message>
-        <location line="+154"/>
+        <location line="+157"/>
         <source>&amp;Select</source>
         <translation>&amp;Izberi</translation>
     </message>

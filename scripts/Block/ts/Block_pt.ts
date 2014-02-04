@@ -15,7 +15,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+93"/>
+        <location filename="../BlockDialog.js" line="+95"/>
         <source>Leading or trailing spaces.</source>
         <translation>Esquerda ou à direita espaços.</translation>
     </message>
@@ -26,7 +26,12 @@
         <translation>Nome do bloco está vazio.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>Block name is invalid.</source>
+        <translation>Nome do bloco não é válido.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Block already exists.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bloco já existe.</translation>

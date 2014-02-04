@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Line2PEx", "Line from &2 Points"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Line2PEx", "Line from &2 Points (extended)"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Line2PEx.js");
     action.setIcon(basePath + "/Line2PEx.svg");

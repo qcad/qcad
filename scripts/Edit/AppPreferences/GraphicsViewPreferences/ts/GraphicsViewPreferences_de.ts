@@ -110,11 +110,20 @@
     </message>
     <message>
         <location line="+58"/>
-        <source>Text height display threshold:</source>
-        <translation>Anzeigegrenzwert für Texte:</translation>
+        <source>Text height display threshold (px):</source>
+        <translation>Anzeigegrenzwert für Texte (px):</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+13"/>
+        <source>Display arcs as lines below this angle (degrees):</source>
+        <translation>Bögen als Linien anzeigen falls Winkel kleiner als (Grad):</translation>
+    </message>
+    <message>
+        <source>Text height display threshold:</source>
+        <translation type="obsolete">Anzeigegrenzwert für Texte:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>

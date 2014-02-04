@@ -10,15 +10,15 @@
     </message>
     <message>
         <location filename="../Line2PEx.js" line="94"/>
+        <location filename="../Line2PEx.js" line="102"/>
         <location filename="../Line2PEx.js" line="104"/>
         <location filename="../Line2PEx.js" line="107"/>
         <source>Next point</source>
         <translation>Naslednja točka</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="95"/>
         <source>Close/</source>
-        <translation>Zaključi/</translation>
+        <translation type="obsolete">Zaključi/</translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="96"/>
@@ -26,19 +26,28 @@
         <translation>Razveljavi</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="97"/>
         <source>/Redo</source>
-        <translation>/Uveljavi</translation>
+        <translation type="obsolete">/Uveljavi</translation>
     </message>
     <message>
+        <location filename="../Line2PEx.js" line="95"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Line2PEx.js" line="97"/>
         <location filename="../Line2PEx.js" line="99"/>
         <source>Redo</source>
         <translation>Razveljavi</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="102"/>
         <source>Next point or </source>
-        <translation>Naslednja točka ali </translation>
+        <translation type="obsolete">Naslednja točka ali </translation>
+    </message>
+    <message>
+        <location filename="../Line2PEx.js" line="102"/>
+        <source>or</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Line2PEx.js" line="108"/>
@@ -51,22 +60,22 @@
         <translation>zapri</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="427"/>
+        <location filename="../Line2PEx.js" line="428"/>
         <source>undo</source>
         <translation>razveljavi</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="432"/>
+        <location filename="../Line2PEx.js" line="434"/>
         <source>redo</source>
         <translation>uveljavi</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="437"/>
+        <location filename="../Line2PEx.js" line="440"/>
         <source>t</source>
         <translation>t</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="444"/>
+        <location filename="../Line2PEx.js" line="448"/>
         <source>d</source>
         <translation>d</translation>
     </message>
@@ -132,9 +141,13 @@
         <translation>D</translation>
     </message>
     <message>
-        <location filename="../Line2PExInit.js" line="2"/>
         <source>Line from &amp;2 Points</source>
-        <translation>Črta iz &amp;2 točk</translation>
+        <translation type="obsolete">Črta iz &amp;2 točk</translation>
+    </message>
+    <message>
+        <location filename="../Line2PExInit.js" line="2"/>
+        <source>Line from &amp;2 Points (extended)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Line2PExInit.js" line="6"/>
