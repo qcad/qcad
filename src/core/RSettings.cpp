@@ -428,7 +428,7 @@ int RSettings::getTextHeightThreshold() {
 
 double RSettings::getArcAngleLengthThreshold() {
     if (arcAngleLengthThreshold<-0.9) {
-        arcAngleLengthThreshold = RMath::deg2rad(getValue("GraphicsView/ArcAngleLengthThreshold", 0.025).toDouble());
+        arcAngleLengthThreshold = RMath::deg2rad(getValue("GraphicsView/ArcAngleLengthThreshold", 0.0).toDouble());
     }
     return arcAngleLengthThreshold;
 }

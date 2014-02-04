@@ -943,6 +943,10 @@ LibraryBrowser.updateFsView = function(dirPath, model) {
     var sourcePath = LibraryBrowser.getCurrentSourcePath();
     var sourceItem = ItemPeer.getItemFromPath(sourcePath, undefined, ["id"]);
 
+    if (isNull(sourceItem)) {
+        return;
+    }
+
     // sync dir:
     LibraryBrowser.sync(dirPath, undefined, undefined, 1);
 
