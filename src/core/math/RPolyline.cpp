@@ -83,13 +83,18 @@ void RPolyline::normalize() {
     QList<RVector> newVertices;
     QList<double> newBulges;
 
+    RVector vPrev;
+
     for (int i=0; i<vertices.size(); i++) {
-        RVector v = vertices.at(i);
+        RVector v = vertices[i];
         double b = bulges.at(i);
-        if (i==0 || !v.equalsFuzzy(vertices.at(i-1))) {
+
+        if (i==0 || !v.equalsFuzzy(vPrev)) {
             newVertices.append(v);
             newBulges.append(b);
         }
+
+        vPrev = v;
     }
 
     vertices = newVertices;
