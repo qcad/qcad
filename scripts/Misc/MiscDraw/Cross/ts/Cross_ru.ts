@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pl_PL">
+<TS version="2.0" language="ru_RU">
 <context>
     <name>Cross</name>
+    <message>
+        <location filename="../Cross.js" line="53"/>
+        <source>Select arc, circle, ellipse or elliptical arc</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <location filename="../CrossInit.js" line="2"/>
         <source>Centreline Cross</source>
@@ -11,11 +16,6 @@
     <message>
         <location filename="../CrossInit.js" line="6"/>
         <source>Draw centreline cross in arc, circle or ellipses</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Cross.js" line="53"/>
-        <source>Select arc, circle, ellipse or elliptical arc</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

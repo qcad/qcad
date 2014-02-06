@@ -4,10 +4,6 @@
 <context>
     <name>RestrictOrthogonal</name>
     <message>
-        <source>Restrict &amp;Orthogonal</source>
-        <translation type="obsolete">&amp;Orthogonal einschränken</translation>
-    </message>
-    <message>
         <location filename="../RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
         <translation>&amp;Orthogonal einschränken</translation>

@@ -32,11 +32,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Cross.ui" line="68"/>
-        <source>0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Cross.ui" line="106"/>
         <source>Extension</source>
         <translation type="unfinished"></translation>
