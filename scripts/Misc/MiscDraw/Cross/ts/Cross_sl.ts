@@ -6,17 +6,17 @@
     <message>
         <location filename="../CrossInit.js" line="2"/>
         <source>Centreline Cross</source>
-        <translation type="unfinished"></translation>
+        <translation>Križ središčnice</translation>
     </message>
     <message>
         <location filename="../CrossInit.js" line="6"/>
         <source>Draw centreline cross in arc, circle or ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši križ središčnice loku, krogu ali elipsi</translation>
     </message>
     <message>
         <location filename="../Cross.js" line="53"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi lok, krog, elipso ali lok elipse</translation>
     </message>
 </context>
 <context>
@@ -24,27 +24,27 @@
     <message>
         <location filename="../Cross.ui" line="17"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location filename="../Cross.ui" line="49"/>
         <source>Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location filename="../Cross.ui" line="106"/>
         <source>Extension</source>
-        <translation type="unfinished"></translation>
+        <translation>Podaljšek</translation>
     </message>
     <message>
         <location filename="../Cross.ui" line="111"/>
         <source>Total length</source>
-        <translation type="unfinished"></translation>
+        <translation>Celotna dolžina</translation>
     </message>
     <message>
         <location filename="../Cross.ui" line="126"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kot:</translation>
     </message>
 </context>
 </TS>
