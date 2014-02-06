@@ -8,4 +8,4 @@ var viewports = Viewport.getViewports(widget, documentInterface);
 Viewport.initializeViewports(viewports);
 
 // init event handlers for drag and drop and scrolling:
-Viewport.initEventHandler(viewports);
+//Viewport.initEventHandler(viewports);

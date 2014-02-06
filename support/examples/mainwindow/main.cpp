@@ -32,8 +32,8 @@ int main(int argc, char **argv)
     RPluginLoader::loadPlugins(true);
 
     // show main window:
-    MainWindow window;
-    window.show();
+    MainWindow* window = new MainWindow();
+    window->show();
 
     // exec:
     int ret = app->exec();
