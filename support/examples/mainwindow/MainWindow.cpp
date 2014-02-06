@@ -31,10 +31,15 @@ MainWindow::MainWindow(QWidget *parent)
     // this widget contains a child called 'Viewport00'. This child
     // widget will be filled with our graphics display with scroll
     // bars, etc.
-    QFile file("support/examples/mainwindow/MyDisplay.ui");
-    file.open(QIODevice::ReadOnly);
-    QUiLoader loader;
-    QWidget* widget = loader.load(&file, this);
+    QString uiFileName = "support/examples/mainwindow/MyDisplay.ui";
+    QFile file(uiFileName);
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning() << "Cannot open file " << uiFileName;
+        return;
+    }
+
+    QUiLoader* loader = new QUiLoader();
+    QWidget* widget = loader->load(&file, this);
     file.close();
 
     setCentralWidget(widget);
@@ -46,11 +51,10 @@ MainWindow::MainWindow(QWidget *parent)
     documentInterface = new RDocumentInterface(*document);
 
     // import a DXF file into the drawing:
-    documentInterface->importFile("support/examples/mainwindow/drawing_file_to_display.dxf");
+    //documentInterface->importFile("support/examples/mainwindow/drawing_file_to_display.dxf");
 
     // operation used to add various objects:
     RAddObjectOperation* op;
-
 
     // add a layer 'MyLayer':
     QSharedPointer<RLayer> layer = 
