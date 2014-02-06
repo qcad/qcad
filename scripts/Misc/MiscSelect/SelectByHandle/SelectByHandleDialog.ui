@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Find / Replace</string>
+   <string>Selection by Handle</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

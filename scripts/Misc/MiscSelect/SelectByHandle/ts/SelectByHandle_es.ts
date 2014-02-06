@@ -23,7 +23,7 @@
     <name>SelectByHandleDialog</name>
     <message>
         <location filename="../SelectByHandleDialog.ui" line="+17"/>
-        <source>Find / Replace</source>
+        <source>Selection by Handle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
