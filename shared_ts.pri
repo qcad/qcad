@@ -8,7 +8,9 @@ TRANSLATIONS = \
 	$$PWD/ts/$${NAME}_fr.ts \
 	$$PWD/ts/$${NAME}_it.ts \
 	$$PWD/ts/$${NAME}_ja.ts \
+	$$PWD/ts/$${NAME}_nl.ts \
 	$$PWD/ts/$${NAME}_pl.ts \
 	$$PWD/ts/$${NAME}_pt.ts \
+	$$PWD/ts/$${NAME}_ru.ts \
 	$$PWD/ts/$${NAME}_sl.ts
 

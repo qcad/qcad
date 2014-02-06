@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1101"/>
+        <location line="+1105"/>
         <location filename="../LibraryBrowserInit.js" line="+18"/>
         <source>Library Browser</source>
         <translation>Explorateur de la bibliothèque</translation>
     </message>
     <message>
-        <location line="-1093"/>
+        <location line="-1097"/>
         <source>Icon</source>
         <translation>Icône</translation>
     </message>
@@ -93,7 +93,7 @@
         <translation>Page %1 de %2</translation>
     </message>
     <message>
-        <location line="+215"/>
+        <location line="+219"/>
         <source>Updating icons...</source>
         <translation>Régénérer icônes...</translation>
     </message>

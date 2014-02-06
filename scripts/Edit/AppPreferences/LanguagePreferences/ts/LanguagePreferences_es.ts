@@ -22,7 +22,7 @@
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="+43"/>
+        <location filename="../LanguagePreferences.js" line="+44"/>
         <source>Language Settings</source>
         <translation>Configuración de idioma</translation>
     </message>

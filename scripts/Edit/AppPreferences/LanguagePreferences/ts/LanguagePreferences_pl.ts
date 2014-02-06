@@ -13,7 +13,7 @@
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="+43"/>
+        <location filename="../LanguagePreferences.js" line="+44"/>
         <source>Language Settings</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Ustawienia językowe</translation>
