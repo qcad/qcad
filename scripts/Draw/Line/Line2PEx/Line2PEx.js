@@ -94,9 +94,9 @@ Line2PEx.prototype.setPrompt = function() {
 
     case Line2PEx.State.SettingNextPoint:
         promptStr = qsTr("Next point");
-        cStr = (this.pointList.length >= 3) ? qsTr("Close/") : "";
+        cStr = (this.pointList.length >= 3) ? qsTr("Close") + "/" : "";
         uStr = (this.pointList.length >= 2) ? qsTr("Undo") : "";
-        rStr = (this.redoList.length >= 1) ? qsTr("/Redo") : "";
+        rStr = (this.redoList.length >= 1) ? "/" + qsTr("Redo") : "";
         if (uStr === "" && rStr !== "") {
             rStr = qsTr("Redo");
         }
