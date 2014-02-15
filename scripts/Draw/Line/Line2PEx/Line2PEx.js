@@ -37,6 +37,7 @@ function Line2PEx(guiAction) {
     this.cmd = "";
     this.restrict = undefined;
     this.display = undefined;
+    this.rzpos = undefined;
 
     this.setUiOptions("Line2PEx.ui");
 };
@@ -55,6 +56,7 @@ Line2PEx.prototype.beginEvent = function() {
     this.restrict = ob.checked;
     ob = objectFromPath("MainWindow::Options::Display");
     this.display = ob.checked;
+
     this.setState(Line2PEx.State.SettingFirstPoint);
     this.checkButtonStates();
 };
@@ -92,14 +94,14 @@ Line2PEx.prototype.setPrompt = function() {
 
     case Line2PEx.State.SettingNextPoint:
         promptStr = qsTr("Next point");
-        cStr = (this.pointList.length >= 3) ? qsTr("Close") + "/" : "";
+        cStr = (this.pointList.length >= 3) ? qsTr("Close/") : "";
         uStr = (this.pointList.length >= 2) ? qsTr("Undo") : "";
-        rStr = (this.redoList.length >= 1) ? "/" + qsTr("Redo") : "";
+        rStr = (this.redoList.length >= 1) ? qsTr("/Redo") : "";
         if (uStr === "" && rStr !== "") {
             rStr = qsTr("Redo");
         }
         if ((cStr !== "") || (uStr !== "") || (rStr !== "")) {
-            promptStr = qsTr("Next point") + " " + qsTr("or") + " [" + cStr + uStr + rStr + "]";
+            promptStr = qsTr("Next point or ") + "[" + cStr + uStr + rStr + "]";
         } else {
             promptStr = qsTr("Next point");
         }
@@ -113,7 +115,20 @@ Line2PEx.prototype.setPrompt = function() {
 
 Line2PEx.prototype.showUiOptions = function(resume) {
     Draw.prototype.showUiOptions.call(this, resume);
+
+    // restore relative zero position when returning from another command
+    var di = this.getDocumentInterface();
+    if (!isNull(this.rzpos) && this.rzpos.isValid()) {
+        di.setRelativeZero(this.rzpos);
+    }
     this.checkButtonStates();
+};
+
+Line2PEx.prototype.hideUiOptions = function(saveSettings) {
+    // store relative zero position
+    var di = this.getDocumentInterface();
+    this.rzpos = di.getRelativeZero();
+    Draw.prototype.hideUiOptions.call(this, saveSettings);
 };
 
 Line2PEx.prototype.escapeEvent = function() {
@@ -141,7 +156,26 @@ Line2PEx.prototype.keyPressEvent = function(event) {
             di.previewOperation(this.getOperation(true));
         }
     } else {
-        EAction.prototype.keyPressEvent.call(this);
+        EAction.prototype.keyPressEvent(event);
+    }
+};
+
+Line2PEx.prototype.keyReleaseEvent = function(event) {
+    var di = this.getDocumentInterface();
+
+    if ((event.key() === Qt.Key_Z.valueOf()) && (event.modifiers().valueOf() === Qt.AltModifier.valueOf())) {
+        var ob = objectFromPath("MainWindow::Options::groupBox");
+        ob.enabled = !ob.enabled;
+
+        // need to save relative zero position
+        // so it can be restored when returning from another command
+        if (ob.enabled === false) {
+            this.rzpos = di.getRelativeZero();
+        } else {
+            di.setRelativeZero(this.rzpos);
+        }
+    } else {
+        EAction.prototype.keyReleaseEvent(event);
     }
 };
 
@@ -170,14 +204,13 @@ Line2PEx.prototype.coordinateEvent = function(event) {
             if (this.cmd.contains(cartCoordSep) || this.cmd.contains(polCoordSep)) {
                 break;
             } else if (isNumber(value)) {       // if distance entered, use it
-                pos = this.restrictToAngle(di.getRelativeZero(), event.getModelPosition(), de.value, true);
+                pos = this.restrictToAngle(di.getRelativeZero(), event.getModelPosition(), RMath.eval(de.text), true);
             } else {
-                pos = this.restrictToAngle(di.getRelativeZero(), event.getModelPosition(), de.value, false);
+                pos = this.restrictToAngle(di.getRelativeZero(), event.getModelPosition(), RMath.eval(de.text), false);
             }
             if (!isNull(pos) && pos.isValid()) {
                 event.setModelPosition(pos);
             }
-            // this.pickCoordinate(event, false);
         }
         break;
     }
@@ -198,7 +231,7 @@ Line2PEx.prototype.coordinateEventPreview = function(event) {
             var de = objectFromPath("MainWindow::Options::Degrees");
 
             // set 'isDistance' to false for preview
-            var pos = this.restrictToAngle(di.getRelativeZero(), event.getModelPosition(), de.value, false);
+            var pos = this.restrictToAngle(di.getRelativeZero(), event.getModelPosition(), RMath.eval(de.text), false);
             if (!isNull(pos) && pos.isValid()) {
                 event.setModelPosition(pos);
             }
@@ -222,7 +255,7 @@ Line2PEx.prototype.displayAngle = function(relativeZero, pos, view) {
 
     var ang = relativeZero.getAngleTo(pos);
     ang = RMath.rad2deg(ang);
-    ang = sprintf("%.1f", ang);
+    ang = sprintf("%.3f", ang);
     graphicsview.clearTextLabels();
     var dx = graphicsview.mapDistanceFromView(10);
     var dy = graphicsview.mapDistanceFromView(30);
@@ -236,7 +269,7 @@ Line2PEx.prototype.displayAngle = function(relativeZero, pos, view) {
  * Params
  *  relativeZero
  *  pos             - the co-ordinate to change
- *  snapang         - the angle multiplier
+ *  snapang         - the angle multiplier in degrees
  *  isDistance      - boolean indicating if user entered a distance
  *                    if true then use that distance (dist)
  *                    if false then adjust the distance to the long side of a right-
@@ -253,6 +286,10 @@ Line2PEx.prototype.restrictToAngle = function(relativeZero, pos, snapang, isDist
     var ang = relativeZero.getAngleTo(pos);
     var dist = relativeZero.getDistanceTo(pos);
     var pdist = dist;
+    if (snapang < 0.0) {
+        snapang = Math.abs(snapang);
+    }
+
     if (snapang > 0.0) {
         ang = RMath.rad2deg(ang);
         var mang = Math.round(ang / snapang) * snapang;
@@ -391,7 +428,7 @@ Line2PEx.prototype.slotDisplayChanged = function(value) {
 
 Line2PEx.prototype.checkButtonStates = function() {
     var w;
-    
+
     w = objectFromPath("MainWindow::Options::Close");
     w.enabled = (this.pointList.length >= 3) ? true : false;
 
