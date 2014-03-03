@@ -6,6 +6,7 @@ SUBDIRS = \
     DimensionSettings \
     GridSettings \
     PageSettings \
+    PointDisplaySettings \
     UnitSettings \
     LinetypeSettings \
     ViewportSettings

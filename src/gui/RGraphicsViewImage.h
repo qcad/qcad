@@ -259,6 +259,14 @@ public:
 
 
 protected:
+    double getPointSize(double pSize);
+    virtual void drawDot(QPainter* painter, QPointF pt);
+    virtual void drawPlus(QPainter* painter, QPointF pt, double pSize);
+    virtual void drawEx(QPainter* painter, QPointF pt, double pSize);
+    virtual void drawVBar(QPainter* painter, QPointF pt, double pSize);
+    virtual void drawCircle(QPainter* painter, QPointF pt, double pSize);
+    virtual void drawSquare(QPainter* painter, QPointF pt, double pSize);
+
     virtual void paintImage(QPainter* painter, RImageData& image);
     virtual void paintOrigin(QPaintDevice& device);
     virtual void paintErase(QPaintDevice& device, const QRect& rect = QRect());

@@ -38,7 +38,6 @@
 #include "RWheelEvent.h"
 
 
-
 RGraphicsViewImage::RGraphicsViewImage()
     : RGraphicsView(),
       panOptimization(false),
@@ -947,33 +946,142 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
 
         // draw points:
         if (path.hasPoints()) {
+            double pSize = getDocument()->getKnownVariable(RS::PDSIZE, 0).toDouble();
+            pSize = getPointSize(pSize);
+            int pMode = getDocument()->getKnownVariable(RS::PDMODE, 0).toInt();
+
             // FS#481: for printing, point size does not depend on current viewing factor:
-            RVector one;
-            if (isPrinting()) {
-                //one = path.getPen().widthF();
-                one = printPointSize / 2;
+            if (isPrinting() || isPrintPreview()) {
+                pMode = 0;
             }
             else {
-                double oneMapped = mapDistanceFromView(1.0);
-                one = RVector(oneMapped,oneMapped);
+                // When not printing, set pen width to zero so when zooming in
+                // the lines don't turn into a blob
+                QPen pen = painter->pen();
+                pen.setWidth(0);
+                painter->setPen(pen);
+
             }
+
+            // if PDMODE = 1 nothing is drawn
+            // we are in an while loop, so continue
+            if (pMode == 1) {
+                continue;
+            }
+
+            // do ANDs once, outside loop
+            int rslt7 = pMode & 7;
+            int rslt32 = pMode & 32;
+            int rslt64 = pMode & 64;
             QList<RVector> points = path.getPoints();
             QList<RVector>::iterator it;
             for (it=points.begin(); it<points.end(); it++) {
-
-                // a dot can be easily mistaken for a grid point / is often
-                // invisible, so we draw a small cross instead:
-                painter->drawLine(
-                    QPointF((*it).x-one.x, (*it).y),
-                    QPointF((*it).x+one.x, (*it).y)
-                );
-                painter->drawLine(
-                    QPointF((*it).x, (*it).y-one.y),
-                    QPointF((*it).x, (*it).y+one.y)
-                );
+                //int rslt = pMode & 7;
+                if (rslt7 == 0) {
+                    drawDot(painter, QPointF((*it).x, (*it).y));
+                } else if (rslt7 == 2) {
+                    drawPlus(painter, QPointF((*it).x, (*it).y), pSize);
+                } else if (rslt7 == 3) {
+                    drawEx(painter, QPointF((*it).x, (*it).y), pSize);
+                } else if (rslt7 == 4) {
+                    drawVBar(painter, QPointF((*it).x, (*it).y), pSize);
+                }
+                //rslt = pMode & 32;
+                if (rslt32 == 32) {
+                    drawCircle(painter, QPointF((*it).x, (*it).y), pSize);
+                }
+                //rslt = pMode & 64;
+                if (rslt64 == 64) {
+                    drawSquare(painter, QPointF((*it).x, (*it).y), pSize);
+                }
             }
         }
     }
+}
+
+double RGraphicsViewImage::getPointSize(double pSize) {
+    int ht = getHeight();
+    if (pSize == 0) {
+        return ht * 5 / 100;
+    } else if (pSize < 0) {
+        return fabs(ht * pSize / 100);
+    } else {
+        return pSize;
+    }
+}
+
+void RGraphicsViewImage::drawDot(QPainter* painter, QPointF pt) {
+    qreal r;
+    if (isPrinting() || isPrintPreview()) {
+        r = mapDistanceFromView(1.0);
+    } else {
+        r = mapDistanceFromView(1.5);
+    }
+    painter->setBrush(painter->pen().color());
+    painter->drawEllipse(pt, r, r);
+    painter->setBrush(Qt::NoBrush);
+}
+
+void RGraphicsViewImage::drawPlus(QPainter* painter, QPointF pt, double pSize) {
+    qreal size = pSize / 2;
+    size = mapDistanceFromView(size);
+    painter->drawLine(
+        QPointF(pt.x() - size, pt.y()),
+        QPointF(pt.x() + size, pt.y())
+    );
+    painter->drawLine(
+        QPointF(pt.x(), pt.y() - size),
+        QPointF(pt.x(), pt.y() + size)
+    );
+}
+
+void RGraphicsViewImage::drawEx(QPainter* painter, QPointF pt, double pSize) {
+    qreal size = pSize / 2;
+    size = mapDistanceFromView(size);
+    painter->drawLine(
+        QPointF(pt.x() - size, pt.y() + size),
+        QPointF(pt.x() + size, pt.y() - size)
+    );
+    painter->drawLine(
+        QPointF(pt.x() + size, pt.y() + size),
+        QPointF(pt.x() - size, pt.y() - size)
+    );
+}
+
+void RGraphicsViewImage::drawVBar(QPainter* painter, QPointF pt, double pSize) {
+    qreal size = (pSize * 0.8) / 2 ;
+    size = mapDistanceFromView(size);
+    painter->drawLine(
+        QPointF(pt.x(), pt.y()),
+        QPointF(pt.x(), pt.y() + size)
+    );
+}
+
+void RGraphicsViewImage::drawCircle(QPainter* painter, QPointF pt, double pSize) {
+    qreal size = (pSize * 0.8) / 2;
+    size = mapDistanceFromView(size);
+    painter->drawEllipse(pt, size, size);
+}
+
+void RGraphicsViewImage::drawSquare(QPainter* painter, QPointF pt, double pSize) {
+    qreal size = (pSize * 0.8) / 2;
+    size = mapDistanceFromView(size);
+    painter->drawLine(
+        QPointF(pt.x() - size, pt.y() + size),
+        QPointF(pt.x() + size, pt.y() + size)
+    );
+    painter->drawLine(
+        QPointF(pt.x() + size, pt.y() + size),
+        QPointF(pt.x() + size, pt.y() - size)
+    );
+    painter->drawLine(
+        QPointF(pt.x() + size, pt.y() - size),
+        QPointF(pt.x() - size, pt.y() - size)
+    );
+    painter->drawLine(
+        QPointF(pt.x() - size, pt.y() - size),
+        QPointF(pt.x() - size, pt.y() + size)
+    );
 }
 
 void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {

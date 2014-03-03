@@ -4,18 +4,19 @@ var credits =
         "Programming",
         [ "Andrew Mustun",    "Main developer." 
                               ],
-        [ "Matthias Melcher", "Drawing box joint lines, " +
-                              "drawing dovetail joint lines, " +
+        [ "Matthias Melcher", "Drawing box joint lines,<br>" +
+                              "drawing dovetail joint lines,<br>" +
                               "MOL file import." 
                               ],
-        [ "Robert S.",        "Direct distance entry, " +
-                              "Snap > X/Y from Points, " +
-                              "Snap > Y/X from Points, " +
-                              "Snap > Distance Manual, " +
-                              "Misc > Drawing > Centerline Cross, " +
-                              "Draw > Line > Line from 2 Points (LX)"
+        [ "Robert S.",        "Direct distance entry,<br>" +
+                              "Snap > X/Y from Points,<br>" +
+                              "Snap > Y/X from Points,<br>" +
+                              "Snap > Distance Manual,<br>" +
+                              "Misc > Drawing > Centerline Cross,<br>" +
+                              "Draw > Line > Line from 2 Points (LX)<br>" +
+                              "Edit > Drawing Preferences > General > Point Display"
                               ],
-        [ "Tamas Tevesz",     "Port to FreeBSD, " +
+        [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +
                               "various improvements and fixes." ],
     ],
     [
