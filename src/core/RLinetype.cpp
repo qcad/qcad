@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RLinetype.h"
+#include "RSettings.h"
 
 RPropertyTypeId RLinetype::PropertyName;
 QList<QPair<QString, RLinetype> > RLinetype::list;
@@ -137,6 +138,10 @@ QString RLinetype::getTitle(const RLinetype& linetype) {
 }
 
 QIcon RLinetype::getIcon(const RLinetype& linetype) {
+    if (!RSettings::isGuiEnabled()) {
+        return QIcon();
+    }
+
     if (iconMap.contains(linetype)) {
         return iconMap[linetype];
     }

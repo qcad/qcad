@@ -118,7 +118,7 @@ int main(int argc, char *argv[]) {
 
     bool guiEnabled = true;
     for (int i=1; i<argc; i++) {
-        if (!strcmp(argv[i], "-no-gui")) {
+        if (!strcmp(argv[i], "-no-gui") || !strcmp(argv[i], "-help")) {
             guiEnabled = false;
         }
     }
