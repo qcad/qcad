@@ -6,33 +6,33 @@
     <message>
         <location filename="../PointDisplaySettings.js" line="25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Privzeto za nove risbe</translation>
     </message>
     <message>
         <location filename="../PointDisplaySettings.js" line="25"/>
         <location filename="../PointDisplaySettings.js" line="27"/>
         <source>Point Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz pike</translation>
     </message>
     <message>
         <location filename="../PointDisplaySettings.js" line="27"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Splošno</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="26"/>
         <source>Size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="71"/>
         <source>Mode: </source>
-        <translation type="unfinished"></translation>
+        <translation>Način: </translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="78"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
 </context>
 </TS>
