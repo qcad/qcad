@@ -26,7 +26,7 @@
     <item row="0" column="0">
      <widget class="QGroupBox" name="groupBox_3">
       <property name="title">
-       <string>View 1</string>
+       <string>Viewport 1</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -178,7 +178,7 @@
     <item row="0" column="1">
      <widget class="QGroupBox" name="groupBox_4">
       <property name="title">
-       <string>View 2</string>
+       <string>Viewport 2</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
@@ -330,7 +330,7 @@
     <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox_7">
       <property name="title">
-       <string>View 3</string>
+       <string>Viewport 3</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
@@ -482,7 +482,7 @@
     <item row="1" column="1">
      <widget class="QGroupBox" name="groupBox_10">
       <property name="title">
-       <string>View 4</string>
+       <string>Viewport 4</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
