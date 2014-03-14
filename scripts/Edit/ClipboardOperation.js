@@ -82,10 +82,11 @@ ClipboardOperation.prototype.getOperation = function(preview) {
  * Applies the operation returned by this.getOperation.
  */
 ClipboardOperation.prototype.applyOperation = function() {
-    RDocumentInterface.getClipboard().getDocument().setUnit(this.getDocument().getUnit());
-    RDocumentInterface.getClipboard().applyOperation(this.getOperation(false));
-    RDocumentInterface.getClipboard().getDocument().setUnit(this.getDocument().getUnit());
-    RDocumentInterface.getClipboard().autoZoom();
+    var clipBoard = RDocumentInterface.getClipboard();
+    clipBoard.getDocument().setUnit(this.getDocument().getUnit());
+    clipBoard.applyOperation(this.getOperation(false));
+    clipBoard.getDocument().setUnit(this.getDocument().getUnit());
+    clipBoard.autoZoom();
 
     if (this.cut) {
         var op = new RDeleteSelectionOperation();
