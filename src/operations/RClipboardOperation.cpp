@@ -326,9 +326,10 @@ void RClipboardOperation::copyEntity(
     // entity is a block reference:
     // add entities of the block the block reference refers to (the block
     // definition is then added automatically):
+    // if block contents has already been copied, do nothing
     RBlockReferenceEntity* blockRef =
         dynamic_cast<RBlockReferenceEntity*>(&entity);
-    if (blockRef!=NULL) {
+    if (blockRef!=NULL && !copiedBlockContents.contains(blockRef->getReferencedBlockId())) {
         QSharedPointer<RBlock> refBlock =
             src.queryBlock(blockRef->getReferencedBlockId());
         if (refBlock.isNull()) {
@@ -336,6 +337,8 @@ void RClipboardOperation::copyEntity(
                 "entity references a NULL block.");
             return;
         }
+
+        copiedBlockContents.insert(blockRef->getReferencedBlockId());
 
         // TODO: don't do this twice:
         //qDebug() << "RClipboardOperation::copyToDocument: copying block: " << refBlock->getName();
@@ -351,6 +354,7 @@ void RClipboardOperation::copyEntity(
                 if (e.isNull()) {
                     continue;
                 }
+
                 copyEntity(
                     *e.data(),
                     src, dest,

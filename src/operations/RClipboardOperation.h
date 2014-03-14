@@ -95,7 +95,7 @@ protected:
 private:
     mutable QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     mutable QMap<QString, QSharedPointer<RBlock> > copiedBlocks;
-
+    mutable QSet<RBlock::Id> copiedBlockContents;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)
