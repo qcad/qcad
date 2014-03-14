@@ -575,7 +575,7 @@ int RSettings::getPreviewEntities() {
 
 bool RSettings::getLimitZoomAndScroll() {
     if (limitZoomAndScroll==-1) {
-        limitZoomAndScroll = getValue("GraphicsViewNavigation/LimitZoomAndScroll", QVariant(true)).toBool();
+        limitZoomAndScroll = getValue("GraphicsViewNavigation/LimitZoomAndScroll", QVariant(false)).toBool();
     }
     return (bool)limitZoomAndScroll;
 }
