@@ -470,7 +470,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             // other properties:
             else {
                 var gridLayout;
-                var groupBox;
+                var groupBox = undefined;
                 if (propertyTypeId.isCustom()) {
                     // block reference attributes:
                     if (propertyTypeId.getCustomPropertyTitle()==="Attributes") {
@@ -493,7 +493,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
 
                 // for the first property of a new property group,
                 // add group title and index controls if the property is a list:
-                if (pi===0) {
+                if (pi===0 && !isNull(gridLayout) && !isNull(groupBox)) {
                     // create group label:
                     if (!onlyChanges && group.length!==0 &&
                             // situation with two splines, one with fit points,
@@ -525,17 +525,19 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                 }
 
                 // don't display any Z values:
-                var controls;
-                if (title==="Z" && !propertyTypeId.isCustom()) {
-                    controls = undefined;
-                }
-                else {
-                    controls = this.initControls(propertyTypeId, onlyChanges);
+                var controls = undefined;
+                if (!isNull(gridLayout)) {
+                    if (title==="Z" && !propertyTypeId.isCustom()) {
+                        controls = undefined;
+                    }
+                    else {
+                        controls = this.initControls(propertyTypeId, onlyChanges);
+                    }
                 }
 
                 // add property name and controls to layout:
                 if (!onlyChanges) {
-                    if (!isNull(controls)) {
+                    if (!isNull(controls) && !isNull(gridLayout)) {
                         row = gridLayout.rowCount();
                         var localTitle = title;
                         if (propertyTypeId.isCustom() && group!==RSettings.getAppId()) {
