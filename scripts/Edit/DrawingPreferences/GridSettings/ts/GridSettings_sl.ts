@@ -32,9 +32,13 @@
 <context>
     <name>scrollArea</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>View 1</source>
-        <translation>Pogled 1</translation>
+        <translation type="vanished">Pogled 1</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+29"/>
+        <source>Viewport 1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -94,18 +98,30 @@
     </message>
     <message>
         <location line="-390"/>
+        <source>Viewport 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+152"/>
+        <source>Viewport 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+152"/>
+        <source>Viewport 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>View 2</source>
-        <translation>Pogled 2</translation>
+        <translation type="vanished">Pogled 2</translation>
     </message>
     <message>
-        <location line="+152"/>
         <source>View 3</source>
-        <translation>Pogled 3</translation>
+        <translation type="vanished">Pogled 3</translation>
     </message>
     <message>
-        <location line="+152"/>
         <source>View 4</source>
-        <translation>Pogled 4</translation>
+        <translation type="vanished">Pogled 4</translation>
     </message>
 </context>
 </TS>

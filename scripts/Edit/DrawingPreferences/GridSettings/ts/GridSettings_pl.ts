@@ -111,9 +111,13 @@ Przyciąganie automatyczne</translatorcomment>
 <context>
     <name>scrollArea</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>View 1</source>
-        <translation type="unfinished">Zobacz 1</translation>
+        <translation type="obsolete">Zobacz 1</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+29"/>
+        <source>Viewport 1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -173,18 +177,30 @@ Przyciąganie automatyczne</translatorcomment>
     </message>
     <message>
         <location line="-390"/>
+        <source>Viewport 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+152"/>
+        <source>Viewport 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+152"/>
+        <source>Viewport 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>View 2</source>
-        <translation type="unfinished">Zobacz 2</translation>
+        <translation type="obsolete">Zobacz 2</translation>
     </message>
     <message>
-        <location line="+152"/>
         <source>View 3</source>
-        <translation type="unfinished">Zobacz 3</translation>
+        <translation type="obsolete">Zobacz 3</translation>
     </message>
     <message>
-        <location line="+152"/>
         <source>View 4</source>
-        <translation type="unfinished">Zobacz 4</translation>
+        <translation type="obsolete">Zobacz 4</translation>
     </message>
 </context>
 </TS>

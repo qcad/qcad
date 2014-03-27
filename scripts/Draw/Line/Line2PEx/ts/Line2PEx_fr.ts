@@ -4,127 +4,137 @@
 <context>
     <name>Line2PEx</name>
     <message>
-        <location filename="../Line2PEx.js" line="87"/>
+        <location filename="../Line2PEx.js" line="89"/>
         <source>First point</source>
         <translation>Premier point</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="94"/>
-        <location filename="../Line2PEx.js" line="102"/>
-        <location filename="../Line2PEx.js" line="104"/>
-        <location filename="../Line2PEx.js" line="107"/>
+        <location filename="../Line2PEx.js" line="96"/>
+        <location filename="../Line2PEx.js" line="106"/>
+        <location filename="../Line2PEx.js" line="109"/>
         <source>Next point</source>
         <translation>Point suivant</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="96"/>
+        <location filename="../Line2PEx.js" line="98"/>
         <source>Undo</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="95"/>
+        <location filename="../Line2PEx.js" line="97"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="97"/>
         <location filename="../Line2PEx.js" line="99"/>
+        <location filename="../Line2PEx.js" line="101"/>
         <source>Redo</source>
         <translation>Rétablir</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="102"/>
         <source>or</source>
-        <translation>ou</translation>
+        <translation type="obsolete">ou</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="108"/>
+        <location filename="../Line2PEx.js" line="104"/>
+        <source>Next point or </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Line2PEx.js" line="110"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="422"/>
+        <location filename="../Line2PEx.js" line="459"/>
         <source>close</source>
         <translation>fermer</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="428"/>
+        <location filename="../Line2PEx.js" line="465"/>
         <source>undo</source>
         <translation>annuler</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="434"/>
+        <location filename="../Line2PEx.js" line="471"/>
         <source>redo</source>
         <translation>rétablir</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="440"/>
+        <location filename="../Line2PEx.js" line="477"/>
         <source>t</source>
         <translation>t</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="448"/>
+        <location filename="../Line2PEx.js" line="485"/>
         <source>d</source>
         <translation>d</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="23"/>
+        <location filename="../Line2PEx.ui" line="26"/>
         <source>Close Sequence</source>
         <translation>Fermer la séquence</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="30"/>
+        <location filename="../Line2PEx.ui" line="34"/>
         <source>C</source>
         <translation>C</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="43"/>
+        <location filename="../Line2PEx.ui" line="41"/>
         <source>Undo Previous Segment</source>
         <translation>Annuler dernier segment</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="50"/>
+        <location filename="../Line2PEx.ui" line="49"/>
         <source>U</source>
         <translation>U</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="63"/>
         <source>Redo Line Segment</source>
-        <translation>Rétablir dernier segment</translation>
+        <translation type="obsolete">Rétablir dernier segment</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="70"/>
+        <location filename="../Line2PEx.ui" line="64"/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="84"/>
-        <location filename="../Line2PEx.ui" line="100"/>
         <source>Restrict to multiple of this angle</source>
-        <translation>Restreindre à un multiple de cet angle</translation>
+        <translation type="obsolete">Restreindre à un multiple de cet angle</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="87"/>
+        <location filename="../Line2PEx.ui" line="56"/>
+        <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Line2PEx.ui" line="78"/>
         <source>Restrict &amp;to multiple of</source>
         <translation>&amp;Restreindre à un multiple de</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="90"/>
+        <location filename="../Line2PEx.ui" line="81"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="119"/>
+        <location filename="../Line2PEx.ui" line="94"/>
+        <source>15.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Line2PEx.ui" line="107"/>
         <source>degrees</source>
         <translation>degrés</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="139"/>
+        <location filename="../Line2PEx.ui" line="124"/>
         <source>&amp;Display Angles</source>
         <translation>&amp;Afficher angles</translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="142"/>
+        <location filename="../Line2PEx.ui" line="127"/>
         <source>D</source>
         <translation>D</translation>
     </message>

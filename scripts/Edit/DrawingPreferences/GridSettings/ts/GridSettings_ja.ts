@@ -33,8 +33,8 @@
     <name>scrollArea</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
-        <source>View 1</source>
-        <translation></translation>
+        <source>Viewport 1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -94,18 +94,18 @@
     </message>
     <message>
         <location line="-390"/>
-        <source>View 2</source>
-        <translation></translation>
+        <source>Viewport 2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+152"/>
-        <source>View 3</source>
-        <translation></translation>
+        <source>Viewport 3</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+152"/>
-        <source>View 4</source>
-        <translation></translation>
+        <source>Viewport 4</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

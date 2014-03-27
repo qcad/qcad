@@ -56,7 +56,7 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+59"/>
         <source>Remove this property from selected objects</source>
         <translation>Eigenschaft von ausgewählten Objekten entfernen</translation>
     </message>
@@ -181,7 +181,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-869"/>
+        <location filename="../PropertyEditor.js" line="-871"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

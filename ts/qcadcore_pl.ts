@@ -154,32 +154,32 @@
     <message>
         <location line="+2"/>
         <source>Dark Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciemnoczerwony</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciemnozielone</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Granatowy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciemny błękit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciemny purpurowy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciemny żółty</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -263,7 +263,7 @@
     <message>
         <location filename="../src/core/REntity.cpp" line="+1"/>
         <source>Block ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok ID</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -297,32 +297,32 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Granica</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dół</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Góra</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
         <source>Custom</source>
-        <translation type="unfinished">Niestandardowy</translation>
+        <translation>Niestandardowy</translation>
     </message>
 </context>
 <context>
@@ -344,12 +344,12 @@
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Mrożony</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>Zamknięty</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -370,7 +370,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+46"/>
+        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
         <translation>Według warstwy</translation>
     </message>

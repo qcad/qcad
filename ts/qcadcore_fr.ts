@@ -539,7 +539,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+46"/>
+        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--

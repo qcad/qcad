@@ -36,7 +36,7 @@ ExMainWindow.prototype.beginEvent = function() {
     mw.show();
 
     var tb = mw.addToolBar("MyToolBar");
-    tb.addAction(new QIcon(ExMainWindow.includeBasePath + "/MyAction.svg"), "MyAction");
+    tb.addAction(new QIcon(ExMainWindow.includeBasePath + "/MyAction.png"), "MyAction");
 
     this.terminate();
 };

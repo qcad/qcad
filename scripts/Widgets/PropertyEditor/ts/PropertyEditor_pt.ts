@@ -88,7 +88,7 @@ Trocar para a próxima camada</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+59"/>
         <source>Remove this property from selected objects</source>
         <translation>Remover esta propriedade a partir de objetos selecionados</translation>
     </message>

@@ -32,7 +32,7 @@
         <translation>Geometria</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+279"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-435"/>
+        <location line="-437"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -99,7 +99,7 @@ Nessuna selezione</translatorcomment>
         <translation>Indice</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+59"/>
         <source>Remove this property from selected objects</source>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>

@@ -402,7 +402,7 @@ Wskaż początek drugiej linii rozszerzenia
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation type="unfinished"></translation>
+        <translation>Etykieta auto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -417,7 +417,7 @@ Wskaż początek drugiej linii rozszerzenia
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Etykieta pozycji auto</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
@@ -626,12 +626,12 @@ Wskaż następny punkt kontrolny</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished"></translation>
+        <translation>Knot wektor</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished"></translation>
+        <translation>Knot</translation>
     </message>
     <message>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="-7"/>
@@ -645,12 +645,12 @@ Wskaż następny punkt kontrolny</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Zwykły tekst</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -693,12 +693,12 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+82"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+81"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Etykieta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished"></translation>
+        <translation>Podpowiedź</translation>
     </message>
 </context>
 </TS>

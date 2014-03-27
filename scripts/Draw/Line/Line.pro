@@ -2,6 +2,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     ts \
     Line2P \
+    Line2PEx \
     LineAngle \
     LineBisector \
     LineFreehand \

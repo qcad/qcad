@@ -39,7 +39,7 @@ Tipo de línea:</translatorcomment>
         <translation>Geometría</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+279"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -68,7 +68,7 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-435"/>
+        <location line="-437"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -111,7 +111,7 @@ Valor indexado</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+59"/>
         <source>Remove this property from selected objects</source>
         <translation>Retire esta propiedad de los objetos seleccionados</translation>
     </message>
