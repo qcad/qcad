@@ -121,7 +121,7 @@ SelectIntersectedEntities.prototype.coordinateEvent = function(event) {
         this.selectEntities();
         di.setRelativeZero(this.point2);
         this.point1 = this.point2;
-        this.state = this.State.SettingPoint1;
+        this.setState(this.State.SettingPoint1);
         break;
     }
 };
