@@ -14,7 +14,8 @@ var credits =
                               "Snap > Distance Manual,<br>" +
                               "Misc > Drawing > Centerline Cross,<br>" +
                               "Draw > Line > Line from 2 Points (LX)<br>" +
-                              "Edit > Drawing Preferences > General > Point Display"
+                              "Edit > Drawing Preferences > General > Point Display<br>" +
+                              "Modify > Break out Manual"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +
                               "various improvements and fixes." ],
