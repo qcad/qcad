@@ -2,6 +2,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     AutoTrim \
     Bevel \
+    BreakOutManual \
     BreakOut \
     Divide \
     EditText \
