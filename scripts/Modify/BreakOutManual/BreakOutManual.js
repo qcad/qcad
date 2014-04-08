@@ -74,7 +74,7 @@ BreakOutManual.prototype.setState = function(state) {
     switch (this.state) {
     case BreakOutManual.State.SettingShape:
         di.setClickMode(RAction.PickEntity);
-        var trFirstPoint = qsTr("Select entity to break");
+        var trFirstPoint = qsTr("Choose line, arc, circle or ellipse to break up");
         this.setCommandPrompt(trFirstPoint);
         this.setLeftMouseTip(trFirstPoint);
         this.setRightMouseTip(EAction.trCancel);
@@ -82,7 +82,7 @@ BreakOutManual.prototype.setState = function(state) {
     case BreakOutManual.State.SettingPoint1:
         this.point2 = undefined;
         di.setClickMode(RAction.PickCoordinate);
-        var trSecondPoint = qsTr("Select first break point");
+        var trSecondPoint = qsTr("First break point");
         this.setCommandPrompt(trSecondPoint);
         this.setLeftMouseTip(trSecondPoint);
         this.setRightMouseTip(qsTr("Done"));
@@ -90,14 +90,14 @@ BreakOutManual.prototype.setState = function(state) {
     case BreakOutManual.State.SettingPoint2:
         this.point4 = undefined;
         di.setClickMode(RAction.PickCoordinate);
-        var trThirdPoint = qsTr("Select second break point");
+        var trThirdPoint = qsTr("Second break point");
         this.setCommandPrompt(trThirdPoint);
         this.setLeftMouseTip(trThirdPoint);
         this.setRightMouseTip(qsTr("Done"));
         break;
     case BreakOutManual.State.SelectCircleEllipsePart:
         di.setClickMode(RAction.PickEntity);
-        var cepos = qsTr("Select the part of the circle/ellipse to remove");
+        var cepos = qsTr("Click the part of the circle or ellipse to remove");
         this.setCommandPrompt(cepos);
         this.setLeftMouseTip(cepos);
         this.setRightMouseTip(qsTr("Done"));

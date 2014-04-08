@@ -5,12 +5,12 @@
     <name>BreakOutManual</name>
     <message>
         <location filename="../BreakOutManual.js" line="77"/>
-        <source>Select entity to break</source>
+        <source>Choose line, arc, circle or ellipse to break up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../BreakOutManual.js" line="85"/>
-        <source>Select first break point</source>
+        <source>First break point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -22,12 +22,12 @@
     </message>
     <message>
         <location filename="../BreakOutManual.js" line="93"/>
-        <source>Select second break point</source>
+        <source>Second break point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../BreakOutManual.js" line="100"/>
-        <source>Select the part of the circle/ellipse to remove</source>
+        <source>Click the part of the circle or ellipse to remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -36,7 +36,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../BreakInit.js" line="2"/>
+        <location filename="../BreakOutManualInit.js" line="2"/>
         <source>&amp;Break out Manual</source>
         <translation type="unfinished"></translation>
     </message>
