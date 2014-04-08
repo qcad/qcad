@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>Grid</name>
     <message>
@@ -80,12 +80,12 @@
     <name>scrollArea</name>
     <message>
         <source>View 1</source>
-        <translation type="vanished">Ansicht 1</translation>
+        <translation>Ansicht 1</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansicht 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -146,29 +146,29 @@
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansicht 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansicht 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansicht 4</translation>
     </message>
     <message>
         <source>View 2</source>
-        <translation type="vanished">Ansicht 2</translation>
+        <translation>Ansicht 2</translation>
     </message>
     <message>
         <source>View 3</source>
-        <translation type="vanished">Ansicht 3</translation>
+        <translation>Ansicht 3</translation>
     </message>
     <message>
         <source>View 4</source>
-        <translation type="vanished">Ansicht 4</translation>
+        <translation>Ansicht 4</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>Grid</name>
     <message>
@@ -80,12 +80,12 @@
     <name>scrollArea</name>
     <message>
         <source>View 1</source>
-        <translation type="vanished">Visualizza 1</translation>
+        <translation>Visualizza 1</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -146,29 +146,29 @@
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza 4</translation>
     </message>
     <message>
         <source>View 2</source>
-        <translation type="vanished">Visualizza 2</translation>
+        <translation>Visualizza 2</translation>
     </message>
     <message>
         <source>View 3</source>
-        <translation type="vanished">Visualizza 3</translation>
+        <translation>Visualizza 3</translation>
     </message>
     <message>
         <source>View 4</source>
-        <translation type="vanished">Visualizza 4</translation>
+        <translation>Visualizza 4</translation>
     </message>
 </context>
 </TS>

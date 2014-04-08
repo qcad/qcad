@@ -1,138 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="hu_HU">
+<TS version="2.1" language="hu_HU">
 <context>
     <name>Line2PEx</name>
     <message>
-        <location filename="../Line2PEx.js" line="89"/>
+        <location filename="../Line2PEx.js" line="+89"/>
         <source>First point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="96"/>
-        <location filename="../Line2PEx.js" line="106"/>
-        <location filename="../Line2PEx.js" line="109"/>
+        <location line="+7"/>
+        <location line="+10"/>
+        <location line="+3"/>
         <source>Next point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="97"/>
+        <location line="-12"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="98"/>
+        <location line="+1"/>
         <source>Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="99"/>
-        <location filename="../Line2PEx.js" line="101"/>
+        <location line="+1"/>
+        <location line="+2"/>
         <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="104"/>
+        <location line="+3"/>
         <source>Next point or </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="110"/>
+        <location line="+6"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="459"/>
+        <location line="+349"/>
         <source>close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="465"/>
+        <location line="+6"/>
         <source>undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="471"/>
+        <location line="+6"/>
         <source>redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="477"/>
+        <location line="+6"/>
         <source>t</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.js" line="485"/>
+        <location line="+8"/>
         <source>d</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="26"/>
+        <location filename="../Line2PEx.ui" line="+20"/>
         <source>Close Sequence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="34"/>
+        <location line="+8"/>
         <source>C</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="41"/>
+        <location line="+7"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="49"/>
+        <location line="+8"/>
         <source>U</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="56"/>
+        <location line="+7"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="64"/>
+        <location line="+8"/>
         <source>R</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="78"/>
+        <location line="+14"/>
         <source>Restrict &amp;to multiple of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="81"/>
+        <location line="+3"/>
         <source>T</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="94"/>
-        <source>15.0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Line2PEx.ui" line="107"/>
+        <location line="+26"/>
         <source>degrees</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="124"/>
+        <location line="+17"/>
         <source>&amp;Display Angles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PEx.ui" line="127"/>
+        <location line="+3"/>
         <source>D</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PExInit.js" line="2"/>
+        <location filename="../Line2PExInit.js" line="+2"/>
         <source>Line from &amp;2 Points (extended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line2PExInit.js" line="6"/>
+        <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished"></translation>
     </message>

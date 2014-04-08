@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>Grid</name>
     <message>
@@ -111,12 +111,12 @@ Salta automaticamente</translatorcomment>
     <name>scrollArea</name>
     <message>
         <source>View 1</source>
-        <translation type="vanished">Exiba 1</translation>
+        <translation>Exiba 1</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Exiba 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -177,29 +177,29 @@ Salta automaticamente</translatorcomment>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Exiba 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Exiba 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Exiba 4</translation>
     </message>
     <message>
         <source>View 2</source>
-        <translation type="vanished">Exiba 2</translation>
+        <translation>Exiba 2</translation>
     </message>
     <message>
         <source>View 3</source>
-        <translation type="vanished">Exiba 3</translation>
+        <translation>Exiba 3</translation>
     </message>
     <message>
         <source>View 4</source>
-        <translation type="vanished">Exiba 4</translation>
+        <translation>Exiba 4</translation>
     </message>
 </context>
 </TS>
