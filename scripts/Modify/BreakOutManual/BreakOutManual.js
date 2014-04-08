@@ -19,7 +19,7 @@
 
 include("../Modify.js");
 
-function Break(guiAction) {
+function BreakOutManual(guiAction) {
     Modify.call(this, guiAction);
 
     this.entity = undefined;
@@ -32,54 +32,54 @@ function Break(guiAction) {
     this.point4 = undefined;
     this.removeSegment = true;
 
-    this.setUiOptions("Break.ui");
+    this.setUiOptions("BreakOutManual.ui");
 }
 
-Break.prototype = new Modify();
+BreakOutManual.prototype = new Modify();
 
-Break.State = {
+BreakOutManual.State = {
     SettingShape : 0,
     SettingPoint1 : 1,
     SettingPoint2 : 2,
     SelectCircleEllipsePart : 3
 };
 
-Break.prototype.beginEvent = function() {
+BreakOutManual.prototype.beginEvent = function() {
     Modify.prototype.beginEvent.call(this);
-    this.setState(Break.State.SettingShape);
+    this.setState(BreakOutManual.State.SettingShape);
 };
 
-Break.prototype.escapeEvent = function() {
+BreakOutManual.prototype.escapeEvent = function() {
     switch (this.state) {
-    case Break.State.SettingShape:
+    case BreakOutManual.State.SettingShape:
         EAction.prototype.escapeEvent.call(this);
         return;
-    case Break.State.SettingPoint1:
-        this.setState(Break.State.SettingShape);
+    case BreakOutManual.State.SettingPoint1:
+        this.setState(BreakOutManual.State.SettingShape);
         break;
-    case Break.State.SettingPoint2:
-        this.setState(Break.State.SettingPoint1);
+    case BreakOutManual.State.SettingPoint2:
+        this.setState(BreakOutManual.State.SettingPoint1);
         break;
-    case Break.State.SelectCircleEllipsePart:
-        this.setState(Break.State.SettingShape);
+    case BreakOutManual.State.SelectCircleEllipsePart:
+        this.setState(BreakOutManual.State.SettingShape);
         break;
     }
 };
 
-Break.prototype.setState = function(state) {
+BreakOutManual.prototype.setState = function(state) {
     Modify.prototype.setState.call(this, state);
     var di = this.getDocumentInterface();
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
-    case Break.State.SettingShape:
+    case BreakOutManual.State.SettingShape:
         di.setClickMode(RAction.PickEntity);
         var trFirstPoint = qsTr("Select entity to break");
         this.setCommandPrompt(trFirstPoint);
         this.setLeftMouseTip(trFirstPoint);
         this.setRightMouseTip(EAction.trCancel);
         break;
-    case Break.State.SettingPoint1:
+    case BreakOutManual.State.SettingPoint1:
         this.point2 = undefined;
         di.setClickMode(RAction.PickCoordinate);
         var trSecondPoint = qsTr("Select first break point");
@@ -87,7 +87,7 @@ Break.prototype.setState = function(state) {
         this.setLeftMouseTip(trSecondPoint);
         this.setRightMouseTip(qsTr("Done"));
         break;
-    case Break.State.SettingPoint2:
+    case BreakOutManual.State.SettingPoint2:
         this.point4 = undefined;
         di.setClickMode(RAction.PickCoordinate);
         var trThirdPoint = qsTr("Select second break point");
@@ -95,7 +95,7 @@ Break.prototype.setState = function(state) {
         this.setLeftMouseTip(trThirdPoint);
         this.setRightMouseTip(qsTr("Done"));
         break;
-    case Break.State.SelectCircleEllipsePart:
+    case BreakOutManual.State.SelectCircleEllipsePart:
         di.setClickMode(RAction.PickEntity);
         var cepos = qsTr("Select the part of the circle/ellipse to remove");
         this.setCommandPrompt(cepos);
@@ -108,7 +108,7 @@ Break.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
-Break.prototype.pickEntity = function(event, preview) {
+BreakOutManual.prototype.pickEntity = function(event, preview) {
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
     var entityId = event.getEntityId();
@@ -123,7 +123,7 @@ Break.prototype.pickEntity = function(event, preview) {
     di.highlightEntity(this.entity.getId());
 
     switch (this.state) {
-    case Break.State.SettingShape:
+    case BreakOutManual.State.SettingShape:
         var cond = isLineEntity(entity) ||
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
@@ -147,24 +147,24 @@ Break.prototype.pickEntity = function(event, preview) {
         }
         if (!preview) {
             this.shape = entity.getClosestShape(pos);
-            this.setState(Break.State.SettingPoint1);
+            this.setState(BreakOutManual.State.SettingPoint1);
         }
         break;
-    case Break.State.SelectCircleEllipsePart:
+    case BreakOutManual.State.SelectCircleEllipsePart:
         if (!preview) {
             if (this.entity.getDrawOrder() === this.cedo1 || this.entity.getDrawOrder() === this.cedo2) {
                 var op = new RDeleteObjectOperation(this.entity);
                 if (!isNull(op)) {
                     di.applyOperation(op);
                 }
-                this.setState(Break.State.SettingShape);
+                this.setState(BreakOutManual.State.SettingShape);
             }
         }
         break;
     }
 };
 
-Break.prototype.pickCoordinate = function(event, preview) {
+BreakOutManual.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
     var line;
     var op;
@@ -173,7 +173,7 @@ Break.prototype.pickCoordinate = function(event, preview) {
         return;
     }
     switch (this.state) {
-    case Break.State.SettingPoint1:
+    case BreakOutManual.State.SettingPoint1:
         this.point1 = event.getModelPosition();
         if (!isValidVector(this.point1)) {
             return;
@@ -193,10 +193,10 @@ Break.prototype.pickCoordinate = function(event, preview) {
             line = new RLine(this.point1, this.point2);
             di.addAuxShapeToPreview(line);
         } else  {
-            this.setState(Break.State.SettingPoint2);
+            this.setState(BreakOutManual.State.SettingPoint2);
         }
         break;
-    case Break.State.SettingPoint2:
+    case BreakOutManual.State.SettingPoint2:
         this.point3 = event.getModelPosition();
         if (!isValidVector(this.point3)) {
             return;
@@ -223,22 +223,22 @@ Break.prototype.pickCoordinate = function(event, preview) {
 
             if ((isCircleEntity(this.entity) || isFullEllipseEntity(this.entity)) && this.removeSegment) {
                 if (this.point2.equalsFuzzy(this.point4)) {
-                    this.setState(Break.State.SettingShape);
+                    this.setState(BreakOutManual.State.SettingShape);
                 } else {
                     this.cedo1 = this.getDocument().getStorage().getMaxDrawOrder() - 1;
                     this.cedo2 = this.getDocument().getStorage().getMaxDrawOrder() - 2;
-                    this.setState(Break.State.SelectCircleEllipsePart);
+                    this.setState(BreakOutManual.State.SelectCircleEllipsePart);
                 }
             } else {
-                this.setState(Break.State.SettingShape);
+                this.setState(BreakOutManual.State.SettingShape);
             }
         }
         break;
 	}
 };
 
-Break.prototype.getOperation = function(preview) {
-    var newSegments = Break.autoTrim(this.shape, this.point2, this.point4);
+BreakOutManual.prototype.getOperation = function(preview) {
+    var newSegments = BreakOutManual.autoTrim(this.shape, this.point2, this.point4);
 
     if (isNull(newSegments)) {
         return undefined;
@@ -285,7 +285,7 @@ Break.prototype.getOperation = function(preview) {
     return op;
 };
 
-Break.prototype.slotRemoveSegmentChanged = function(value) {
+BreakOutManual.prototype.slotRemoveSegmentChanged = function(value) {
     this.removeSegment = value;
 };
 
@@ -299,7 +299,7 @@ Break.prototype.slotRemoveSegmentChanged = function(value) {
  * The second shape is the rest at the end of the shape.
  * The third shape is the segment self in its new shape.
  */
-Break.autoTrim = function(shape, brkpt1, brkpt2) {
+BreakOutManual.autoTrim = function(shape, brkpt1, brkpt2) {
     var cutPos1 = brkpt1;
     var cutPos2 = brkpt2;
 
