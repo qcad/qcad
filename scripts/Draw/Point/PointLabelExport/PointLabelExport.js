@@ -21,7 +21,7 @@ include("scripts/File/File.js");
 include("../PointLabel/PointLabel.js");
 
 /**
- * This action exports the block list as CSV file.
+ * This action exports point labels as CSV file.
  */
 function PointLabelExport(guiAction) {
     EAction.call(this, guiAction);
