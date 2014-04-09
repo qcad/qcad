@@ -34,7 +34,7 @@ ExText.prototype.beginEvent = function() {
 
     // create an operation for adding objects:
     var op = new RAddObjectsOperation();
-    // create a point entity and add it to the operation:
+    // create a text entity and add it to the operation:
     var text = new RTextEntity(
         this.getDocument(),
         new RTextData(
