@@ -1011,6 +1011,7 @@ Array.prototype.unique = function() {
 /**
  * \return True if this array contains the given value or object 'obj'.
  * \param method Name of method to call from obj to compare it to anther object.
+ * Opptional,  defaults to == operator for the comparison.
  */
 Array.prototype.contains = function(obj, method) {
     for (var i = 0; i < this.length; i++) {
@@ -1633,6 +1634,17 @@ function stripDirtyFlag(title) {
 
 function addDirtyFlag(title) {
     return "[*] " + title;
+}
+
+function hasPlugin(name) {
+    for (var i=0; i<RPluginLoader.countPlugins(); i++) {
+        var pluginInfo = RPluginLoader.getPluginInfo(i);
+        var n = pluginInfo.get("Name", "");
+        if (n===name) {
+            return true;
+        }
+    }
+    return false;
 }
 
 

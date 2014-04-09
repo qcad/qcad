@@ -65,7 +65,7 @@ public:
     /**
      * \return An RPluginInfo object with at least the following keys:
      * - 'Version' - Version string
-     * - 'About' - Plugin name
+     * - 'Name' - Plugin name
      * - 'Description' - Longer description of the plugin
      * - 'License' - Licensing information (e.g. 'GPLv3', 'proprietary', ...)
      * - 'URL' - URL where more information about the plugin can be found
