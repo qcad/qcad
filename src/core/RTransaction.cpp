@@ -218,6 +218,7 @@ void RTransaction::undo(RDocument* document) {
 
             // toggle undo status of affected object:
             if (object->isUndone()) {
+                // object was deleted and is now restored:
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 object->setUndone(false);
                 if (!spatialIndexDisabled && !entity.isNull()) {
@@ -225,6 +226,7 @@ void RTransaction::undo(RDocument* document) {
                 }
             }
             else {
+                // object was created and is now undone:
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
                     document->removeFromSpatialIndex(entity);
@@ -775,8 +777,7 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
         return;
     }
 
-    affectedObjectIds.append(object->getId());
-
+    // first add block as affected object (needs to be handled before entities in it):
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
     if (!entity.isNull()) {
         if (!affectedObjectIds.contains(entity->getBlockId())) {
@@ -784,10 +785,13 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
             addAffectedObject(entity->getBlockId());
 
             // all block references of the block this entity is in are affected:
-            QSet<REntity::Id> affectedBlockRefs = storage->queryBlockReferences(entity->getBlockId());
-            addAffectedObjects(affectedBlockRefs);
+            QSet<REntity::Id> affectedBlockRefIds = storage->queryBlockReferences(entity->getBlockId());
+            addAffectedObjects(affectedBlockRefIds);
         }
     }
+
+    // add object after block:
+    affectedObjectIds.append(object->getId());
 }
 
 void RTransaction::deleteObject(RObject::Id objectId, RDocument* document) {
@@ -883,11 +887,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
         }
     }
 
-    // if an entity is deleted, the block definition it was in is affected:
-    if (!entity.isNull()) {
-        addAffectedObject(entity->getBlockId());
-    }
-
+    // add affected object to list (also adds block the object is in):
     addAffectedObject(objectId);
     statusChanges.insert(objectId);
 

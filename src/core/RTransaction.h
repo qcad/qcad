@@ -247,7 +247,7 @@ protected:
     QList<RObject::Id> affectedObjectIds;
 
     /**
-     * List of IDs of all block references that need to be .
+     * List of IDs of all block references that need to be updated.
      */
     QList<RObject::Id> overwrittenBlockReferences;
 
