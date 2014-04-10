@@ -1,4 +1,6 @@
 TEMPLATE = subdirs
 SUBDIRS = \
     ts \
-    Point1P
+    Point1P \
+    PointLabel \
+    PointLabelExport
