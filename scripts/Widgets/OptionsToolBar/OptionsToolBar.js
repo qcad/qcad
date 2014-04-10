@@ -38,6 +38,9 @@ OptionsToolBar.postInit = function(basePath) {
     if (RS.getSystemId()==="osx") {
         h = 42;
     }
+    else if (RS.getSystemId()==="linux") {
+        h = 38;
+    }
     optionsToolBar.setFixedHeight(h);
 
     var flags = new Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea);
