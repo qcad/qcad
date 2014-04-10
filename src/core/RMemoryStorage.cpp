@@ -284,13 +284,6 @@ QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::E
 }
 
 bool RMemoryStorage::hasChildEntities(REntity::Id parentId) {
-//    QSharedPointer<REntity> parent = queryEntityDirect(parentId).dynamicCast<REntity>();
-//    if (parent.isNull()) {
-//        qWarning() << "RMemoryStorage::hasChildEntities: "
-//            << "ID does not refer to an entity: " << parentId;
-//        return false;
-//    }
-
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
@@ -560,12 +553,7 @@ void RMemoryStorage::selectAllEntites(QSet<REntity::Id>* affectedEntities) {
         QSharedPointer<REntity> e = *it;
         if (!e.isNull() && !e->isSelected() &&
             e->getBlockId()==currentBlock && e->isEditable()) {
-            //!isLayerLocked(e->getLayerId()) && !isLayerFrozen(e->getLayerId())) {
 
-//            if (affectedEntities != NULL) {
-//                affectedEntities->insert(e->getId());
-//            }
-//            e->setSelected(true);
             setEntitySelected(e, true, affectedEntities);
         }
     }
@@ -632,6 +620,8 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
  * Selects first the top most parent in the entity hierarchy and then
  * all children of it. This is necessary for attributes which are
  * children of block references.
+ *
+ * @todo Improve performance for selecting many block references
  */
 void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     QSet<REntity::Id>* affectedEntities, bool onlyDescend) {
@@ -655,6 +645,12 @@ void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     }
 
     // if this is a parent, select all child entities (attributes for block ref):
+    // only block references can have child entities (attributes):
+    if (entity->getType()!=RS::EntityBlockRef) {
+        return;
+    }
+
+    // TODO: improve performance for selecting block references (cache child ids):
     if (hasChildEntities(entity->getId())) {
         QSet<REntity::Id> childIds = queryChildEntities(entity->getId());
         QSet<REntity::Id>::iterator it;
