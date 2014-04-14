@@ -52,6 +52,10 @@ PointMarkList.update = function(document, transaction) {
         return;
     }
 
+    var appWin = RMainWindowQt.getMainWindow();
+    var pointMarkTree = appWin.findChild("PointMarkTree");
+    pointMarkTree.clear();
+
     // find out what has changed:
     var objIds = transaction.getAffectedObjects();
     for (var i=0; i<objIds.length; i++) {
@@ -66,9 +70,21 @@ PointMarkList.update = function(document, transaction) {
             continue;
         }
 
+        var label = PointMark.getMarkLabel(document, objId);
+        var pos = blockRef.getPosition();
+
         // block ref is a benchmark:
         if (handle===blockRef.getHandle()) {
-
+            var item = new QTreeWidgetItem(
+                [
+                    label,
+                    RUnit.doubleToString(pos.x, 2),
+                    RUnit.doubleToString(pos.y, 2),
+                    RUnit.doubleToString(pos.z, 2),
+                    blockRef.getLayerName()
+                ]
+            );
+            pointMarkTree.addTopLevelItem(item);
         }
         // block ref is a point marker:
         else {

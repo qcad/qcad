@@ -120,7 +120,7 @@ PointMark.queryAllMarks = function(doc) {
     return ret;
 };
 
-PointMark.getMarkerLabel = function(doc, blockRefId) {
+PointMark.getMarkLabel = function(doc, blockRefId) {
     var blockAttribIds = doc.queryChildEntities(blockRefId);
     if (blockAttribIds.length!==1) {
         return "";

@@ -73,7 +73,7 @@ PointMarkDraw.prototype.beginEvent = function() {
         }
 
         // get label:
-        var label = PointMark.getMarkerLabel(doc, blockRef.getId());
+        var label = PointMark.getMarkLabel(doc, blockRef.getId());
         var matches = label.match(/\d+$/);
         if (matches.length!==1) {
             continue;
