@@ -56,8 +56,8 @@ PointMarkList.update = function(document, transaction) {
     var objIds = transaction.getAffectedObjects();
     for (var i=0; i<objIds.length; i++) {
         var objId = objIds[i];
-        var obj = document.queryObjectDirect(objId);
-        if (!isBlockReferenceEntity(obj)) {
+        var blockRef = document.queryObjectDirect(objId);
+        if (!isBlockReferenceEntity(blockRef)) {
             continue;
         }
 
