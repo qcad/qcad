@@ -201,7 +201,7 @@ bool RGraphicsView::zoomToSelection() {
         return false;
     }
     RBox selectionBox = document->getSelectionBox();
-    if (selectionBox.isValid()) {
+    if (selectionBox.isValid() && selectionBox.getWidth()>RS::PointTolerance && selectionBox.getHeight()>RS::PointTolerance) {
         zoomTo(selectionBox, getMargin());
         return true;
     }

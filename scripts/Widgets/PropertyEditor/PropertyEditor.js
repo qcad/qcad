@@ -1155,7 +1155,8 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
     p.setColor(QPalette.Base, new QColor("#eeeeee"));
     control.palette = p;
     control.readOnly = true;
-    control.enabled = false;
+    // leave enebaled to allow copy / page (20140411):
+    //control.enabled = false;
 };
 
 /**
