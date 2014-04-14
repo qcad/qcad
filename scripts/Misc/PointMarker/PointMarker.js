@@ -97,3 +97,38 @@ PointMarker.getTitle = function() {
 PointMarker.prototype.getTitle = function() {
     return PointMarker.getTitle();
 };
+
+PointMarker.queryAllMarks = function(doc) {
+    var ret = [];
+
+    var ids = doc.queryAllBlockReferences();
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+        var blockRef = doc.queryEntityDirect(id);
+        if (isNull(blockRef)) {
+            continue;
+        }
+
+        var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
+        if (isNull(handle)) {
+            continue;
+        }
+
+        ret.push(id);
+    }
+
+    return ret;
+};
+
+PointMarker.getMarkerLabel = function(doc, blockRefId) {
+    var blockAttribIds = doc.queryChildEntities(blockRefId);
+    if (blockAttribIds.length!==1) {
+        return "";
+    }
+    var attrib = doc.queryEntityDirect(blockAttribIds[0]);
+    if (isNull(attrib)) {
+        return "";
+    }
+
+    return attrib.getPlainText();
+};

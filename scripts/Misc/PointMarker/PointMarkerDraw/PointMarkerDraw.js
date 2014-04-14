@@ -17,19 +17,22 @@
  * along with QCAD.
  */
 
-include("scripts/EAction.js");
+include("../PointMarker.js");
 
 /**
  * \class PointMarkerDraw
- * \brief Point marker with label (block with block attribute)).
- * \ingroup ecma_draw_point
+ * \brief Point marker with label (block with block attribute).
+ * \ingroup ecma_misc_pointmarker
  */
 function PointMarkerDraw(guiAction) {
     EAction.call(this, guiAction);
 
     this.label = "";
-    this.benchmark = new RVector(0,0);
-    this.benchmarkName = "";
+    this.pos = new RVector(0,0);
+    this.benchmarkPos = new RVector(0,0);
+    this.benchmarkCounter = -1;
+    this.pointCounter = -1;
+    this.benchmarkHandle = RObject.INVALID_ID;
     this.autoAppendCounter = true;
     this.textHeight = 10;
 
@@ -42,8 +45,7 @@ PointMarkerDraw.State = {
     SettingOrigin : 0,
     SettingPosition : 1
 };
-//PointMarkerDraw.labelBlockName = "qcad_point_label";
-PointMarkerDraw.labelLayerName = "qcad_point_label";
+PointMarkerDraw.labelLayerName = "pt_layer";
 PointMarkerDraw.dataPath = "libraries/default/Tools/PointMarker";
 
 PointMarkerDraw.prototype = new EAction();
@@ -51,6 +53,45 @@ PointMarkerDraw.includeBasePath = includeBasePath;
 
 PointMarkerDraw.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
+
+    // init benchmark counter:
+    this.benchmarkCounter = 1;
+    this.pointCounter = 1;
+    var doc = this.getDocument();
+    var markIds = PointMarker.queryAllMarks(doc);
+    for (var i=0; i<markIds.length; i++) {
+        var id = markIds[i];
+        var blockRef = doc.queryEntityDirect(id);
+        if (isNull(blockRef)) {
+            continue;
+        }
+
+        // get handle:
+        var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
+        if (isNull(handle)) {
+            continue;
+        }
+        handle = parseInt(handle, 16);
+
+        // get label:
+        var label = PointMarker.getMarkerLabel(doc, blockRef.getId());
+        var matches = label.match(/\d+$/);
+        if (matches.length!==1) {
+            continue;
+        }
+
+        // parse label number:
+        var num = parseInt(matches[0]);
+
+        // block ref is a benchmark:
+        if (handle===blockRef.getHandle()) {
+            // bench mark (refers to itself as benchmark):
+            this.benchmarkCounter = Math.max(this.benchmarkCounter, num+1);
+        }
+//        else {
+//            this.pointCounter = Math.max(this.pointCounter, num);
+//        }
+    }
 
     // load bench mark:
     this.diBM = new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexNavel()));
@@ -60,25 +101,7 @@ PointMarkerDraw.prototype.beginEvent = function() {
     this.diPoint = new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexNavel()));
     this.diPoint.importFile(PointMarkerDraw.dataPath + "/point.dxf");
 
-//    // fill block definition:
-//    var op = new RAddObjectsOperation();
-
-//    // point:
-//    var point = new RPointEntity(this.docBlock, new RPointData(new RVector(0,0)));
-//    op.addObject(point);
-
-//    // text label:
-//    var attDef = new RAttributeDefinitionEntity(
-//        this.docBlock,
-//        new RAttributeDefinitionData(
-//            this.getTextData(""),
-//            "label",                 // tag
-//            "Label"                  // prompt
-//        )
-//    );
-//    op.addObject(attDef);
-//    this.diBlock.applyOperation(op);
-
+    // start with setting the bechmark (origin):
     this.setState(PointMarkerDraw.State.SettingOrigin);
 };
 
@@ -91,7 +114,7 @@ PointMarkerDraw.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case PointMarkerDraw.State.SettingOrigin:
-        var trPos = qsTr("Origin");
+        var trPos = qsTr("Benchmark (Origin)");
         this.setCommandPrompt(trPos);
         this.setLeftMouseTip(trPos);
         this.setRightMouseTip(EAction.trCancel);
@@ -119,264 +142,143 @@ PointMarkerDraw.prototype.escapeEvent = function() {
     }
 };
 
-//PointMarkerDraw.prototype.coordinateEvent = function(event) {
 PointMarkerDraw.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
-    var pos = event.getModelPosition();
-    var op;
+    this.pos = event.getModelPosition();
+    var op, i, transaction, objIds, objId, obj;
 
     switch (this.state) {
     case PointMarkerDraw.State.SettingOrigin:
-        this.benchmark = pos;
-        //this.updateLabel(this.diBM);
-        this.benchmarkName = this.getLabel();
+        this.benchmarkPos = this.pos;
+        //this.updateLabel(this.diBM, true, preview);
 
         // insert bench mark symbol with label:
-        op = new RPasteOperation(this.diBM.getDocument());
-        op.setAttribute("label", this.benchmarkName);
-        op.setOffset(pos);
-        //op.setBlockName("_benchmark");
-        op.setOverwriteBlocks(false);
         if (preview) {
-            di.previewOperation(op);
+            this.updatePreview();
         }
         else {
-            di.applyOperation(op);
-            di.setRelativeZero(pos);
+            op = this.getOperation(false);
+            transaction = di.applyOperation(op);
+            di.setRelativeZero(this.pos);
+
+            objIds = transaction.getAffectedObjects();
+            for (i=0; i<objIds.length; i++) {
+                objId = objIds[i];
+                obj = doc.queryObjectDirect(objId);
+                if (isBlockReferenceEntity(obj)) {
+                    this.benchmarkHandle = "0x" + obj.getHandle().toString(16);
+                    // benchmark refers to itself as benchmark:
+                    obj.setCustomProperty("QCAD", "benchmark", this.benchmarkHandle);
+                }
+            }
+
             this.setState(PointMarkerDraw.State.SettingPosition);
         }
         break;
 
     case PointMarkerDraw.State.SettingPosition:
         // insert point symbol with label:
-        //this.updateLabel(this.diPoint);
-
-        // set custom property that points to benchmark:
-        var ids = doc.queryAllEntities();
-        for (var i=0; i<ids.length; i++) {
-            var id = ids[i];
-            var entity = doc.queryEntityDirect(id);
-            if (isBlockReferenceEntity(entity)) {
-//                var data = entity.getData();
-//                data.setText(this.label);
-//                entity.setData(data);
-                entity.setCustomProperty("QCAD", "benchmark", this.benchmarkName);
-                break;
-            }
-        }
+        //this.updateLabel(this.diPoint, false, preview);
 
         // insert point mark:
-        op = new RPasteOperation(this.diPoint.getDocument());
-        op.setAttribute("label", this.getLabel());
-        op.setOffset(pos);
-        //op.setBlockName("_point");
-        op.setOverwriteBlocks(false);
         if (preview) {
-            di.previewOperation(op);
+            this.updatePreview();
         }
         else {
-            di.applyOperation(op);
-            // leave relative zero at origin
-            //var blockRef = doc.queryEntity(doc.getStorage().getMaxObjectId());
-            //if (!isNull(blockRef)) {
-                //blockRef.setCustomProperty("QCAD", "benchmark", this.benchmarkName);
-                //op = new RAddObjectOperation(blockRef);
-            //}
+            op = this.getOperation(false);
+            transaction = di.applyOperation(op);
+            objIds = transaction.getAffectedObjects();
+            for (i=0; i<objIds.length; i++) {
+                objId = objIds[i];
+                obj = doc.queryObjectDirect(objId);
+                if (isBlockReferenceEntity(obj)) {
+                    // point mark refers to benchmark:
+                    obj.setCustomProperty("QCAD", "benchmark", this.benchmarkHandle);
+                }
+            }
         }
         break;
     }
-
-
-//    operation.setOffset(event.getModelPosition());
-//    if (!isNull(this.blockName)) {
-//        operation.setBlockName(this.blockName);
-//    }
-//    operation.setScale(this.scale);
-//    operation.setRotation(this.rotation);
-//    operation.setFlipHorizontal(this.flipHorizontal);
-//    operation.setFlipVertical(this.flipVertical);
-//    operation.setToCurrentLayer(this.toCurrentLayer);
-//    operation.setOverwriteLayers(this.overwriteLayers);
-//    operation.setOverwriteBlocks(this.overwriteBlocks);
-
-    // add block if it does not exists already:
-    //var block = this.addBlockDefinition();
-    //var blockId = doc.getBlockId(PointMarkerDraw.labelBlockName);
-
-    //if (blockId===RObject.INVALID_ID) {
-    //    return;
-    //}
-
-    // add block reference:
-//    var op = new RAddObjectsOperation();
-//    var blockRef = new RBlockReferenceEntity(
-//        doc,
-//        new RBlockReferenceData(
-//            blockId,
-//            pos,
-//            new RVector(1,1),
-//            0
-//        )
-//    );
-//    op.addObject(blockRef);
-
-//    var blockRefId = doc.getStorage().getMaxObjectId();
-
-    // add block attribute:
-//    var att = new RAttributeEntity(
-//        doc,
-//        new RAttributeData(this.getTextData(this.label), blockRefId, "label")
-//    );
-//    blockRef.applyTransformationTo(att);
-
-    // assign values to attributes:
-    //att.setText(this.label);
-//    op.addObject(att);
-
-//    di.applyOperation(op);
 };
 
 /**
- * Finds the block attribute in the
+ * Finds the block attribute in the given document interface and adjusts its text.
  */
-//PointMarkerDraw.prototype.updateLabel = function(di) {
-//    var doc = di.getDocument();
-//    var ids = doc.queryAllEntities();
-//    for (var i=0; i<ids.length; i++) {
-//        var id = ids[i];
-//        var entity = doc.queryEntityDirect(id);
-//        if (isTextEntity(entity)) {
-//            var data = entity.getData();
-//            data.setText(this.label);
-//            entity.setData(data);
-//            break;
-//        }
-//    }
-//}
-
-PointMarkerDraw.prototype.getLabel = function() {
-    var ret = this.label;
-    if (this.autoAppendCounter) {
-        ret += "01";
+PointMarkerDraw.prototype.updateLabel = function(di, benchmark, preview) {
+    var doc = di.getDocument();
+    var ids = doc.queryAllEntities();
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+        var entity = doc.queryEntityDirect(id);
+        if (isAttributeEntity(entity)) {
+            var data = entity.getData();
+            data.setText(this.getLabel(benchmark, preview));
+            entity.setData(data);
+            break;
+        }
     }
+}
+
+PointMarkerDraw.prototype.getLabel = function(benchmark, preview) {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    if (isNull(optionsToolBar)) {
+        return "";
+    }
+
+    var te = optionsToolBar.findChild("Label");
+    var ret = te.text;
+
+    if (this.autoAppendCounter) {
+        if (benchmark) {
+            ret += this.benchmarkCounter;
+            if (!preview) {
+                this.benchmarkCounter++;
+            }
+        }
+        else {
+            ret += this.pointCounter;
+            if (!preview) {
+                this.pointCounter++;
+            }
+        }
+    }
+
     return ret;
 };
 
 PointMarkerDraw.prototype.getOperation = function(preview) {
-    return undefined;
+    var op;
 
-    var op = new RPasteOperation(this.docBlock);
-
-    op.setOffset(event.getModelPosition());
-    //if (!isNull(this.blockName)) {
-        op.setBlockName(PointMarkerDraw.labelBlockName);
-    //}
-//    op.setScale(this.scale);
-//    op.setRotation(this.rotation);
-//    op.setFlipHorizontal(this.flipHorizontal);
-//    op.setFlipVertical(this.flipVertical);
-//    op.setToCurrentLayer(this.toCurrentLayer);
-//    op.setOverwriteLayers(this.overwriteLayers);
-//    op.setOverwriteBlocks(this.overwriteBlocks);
-
-    // assign values to attributes:
-    var ids = this.docItem.queryAllEntities();
-    for (var i=0; i<ids.length; i++) {
-        var id = ids[i];
-        var attDef = this.docItem.queryEntity(id);
-        if (!isAttributeDefinitionEntity(attDef)) {
-            continue;
-        }
-
-        var tag = attDef.getTag();
-        if (!isNull(this.attributes[tag])) {
-            op.setAttribute(tag, this.attributes[tag]);
-        }
+    switch (this.state) {
+    case PointMarkerDraw.State.SettingOrigin:
+        this.updateLabel(this.diBM, true, preview);
+        op = new RPasteOperation(this.diBM.getDocument());
+        break;
+    case PointMarkerDraw.State.SettingPosition:
+        this.updateLabel(this.diPoint, true, preview);
+        op = new RPasteOperation(this.diPoint.getDocument());
+        break;
+    default:
+        return undefined;
     }
+
+    op.setOffset(this.pos);
+    op.setOverwriteBlocks(false);
 
     return op;
 };
 
-/*
-PointMarkerDraw.prototype.addBlockDefinition = function(di) {
-    var op;
-    //var di = this.getDocumentInterface();
-    //var doc = this.getDocument();
-    var doc = di.getDocument();
-
-    var block = doc.queryBlock(PointMarkerDraw.labelBlockName);
-    if (!isNull(block)) {
-        return block;
-    }
-
-    // create block definition:
-    block = new RBlock(doc, PointMarkerDraw.labelBlockName, new RVector(0,0));
-    op = new RAddObjectOperation(block);
-    di.applyOperation(op);
-
-    var previousBlockName = doc.queryCurrentBlock().getName();
-
-    // activate new block definition:
-    di.setCurrentBlock(PointMarkerDraw.labelBlockName);
-
-    // fill block definition:
-    op = new RAddObjectsOperation();
-
-    // point:
-    var point = new RPointEntity(doc, new RPointData(new RVector(0,0)));
-    op.addObject(point);
-
-    // text label:
-    var attDef = new RAttributeDefinitionEntity(
-        doc,
-        new RAttributeDefinitionData(
-            this.getTextData(""),
-            "label",                 // tag
-            "Label"                  // prompt
-        )
-    );
-    op.addObject(attDef);
-    di.applyOperation(op);
-
-    // switch back to previous block:
-    di.setCurrentBlock(previousBlockName);
-
-    return block;
-};
-*/
-
-PointMarkerDraw.prototype.getTextData = function(label) {
-    return new RTextBasedData(
-        new RVector(0,2),    // position
-        new RVector(0,2),    // alignment point
-        2.0,                 // height
-        100.0,               // text width (ignored for now)
-        RS.VAlignBottom,     // alignments
-        RS.HAlignCenter,
-        RS.LeftToRight,
-        RS.Exact,
-        1.0,                 // line spacing factor
-        label,               // the text
-        "Standard",          // font
-        false,               // bold
-        false,               // italic
-        0.0,                 // angle
-        true                 // simple text without formatting
-    );
-};
-
 PointMarkerDraw.prototype.slotLabelChanged = function(value) {
-    this.label = value;
-    //this.updatePreview(true);
+    this.updatePreview(true);
 };
 
 PointMarkerDraw.prototype.slotAutoAppendCounterChanged = function(value) {
     this.autoAppendCounter = value;
-    //this.updatePreview(true);
+    this.updatePreview(true);
 };
 
 PointMarkerDraw.prototype.slotTextHeightChanged = function(value) {
     this.textHeight = value;
-    //this.updatePreview(true);
+    this.updatePreview(true);
 };

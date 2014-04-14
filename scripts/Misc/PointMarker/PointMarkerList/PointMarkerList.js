@@ -46,6 +46,29 @@ PointMarkerList.prototype.finishEvent = function() {
     this.getGuiAction().setChecked(dock.visible);
 };
 
+PointMarkerList.update = function(document, transaction) {
+    //qDebug("update point marker list: ", document);
+    if (isNull(document) || isNull(transaction)) {
+        return;
+    }
+
+    var objIds = transaction.getAffectedObjects();
+    for (var i=0; i<objIds.length; i++) {
+        var objId = objIds[i];
+        var obj = document.queryObjectDirect(objId);
+        if (!isBlockReferenceEntity(obj)) {
+            continue;
+        }
+
+        var p = obj.getCustomProperty("QCAD", "benchmark", undefined);
+        if (isNull(p)) {
+            continue;
+        }
+
+        qDebug("point marker found...");
+    }
+};
+
 PointMarkerList.init = function(basePath) {
     var appWin = RMainWindowQt.getMainWindow();
 
@@ -56,17 +79,9 @@ PointMarkerList.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("g,t"));
     action.setDefaultCommands(["gt"]);
     action.setSortOrder(10000);
-    //var separator = new RGuiAction("", appWin);
-    //separator.setSeparator(true);
-    //separator.setSortOrder(action.getSortOrder()-1);
-    //separator.addToMenu(View.getMenu());
     EAction.addGuiActionTo(action, Widgets, true, true, false);
 
     var formWidget = WidgetFactory.createWidget(basePath, "PointMarkerList.ui");
-    var layout = formWidget.findChild("verticalLayout");
-    //var layerList = new RPointMarkerListQt(layout);
-    //layerList.objectName = "PointMarkerList";
-    //layout.addWidget(layerList, 1, 0);
 
     var dock = new RDockWidget(qsTr("Point Marker List"), appWin);
     dock.objectName = "PointMarkerDock";
@@ -75,4 +90,9 @@ PointMarkerList.init = function(basePath) {
 
     dock.shown.connect(function() { action.setChecked(true); });
     dock.hidden.connect(function() { action.setChecked(false); });
+
+    // create a transaction listener to keep widget up to date:
+    var adapter = new RTransactionListenerAdapter();
+    appWin.addTransactionListener(adapter);
+    adapter.transactionUpdated.connect(PointMarkerList, "update");
 };
