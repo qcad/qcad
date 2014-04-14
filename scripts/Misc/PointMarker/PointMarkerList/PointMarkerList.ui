@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PointMarkerList</class>
+ <widget class="QWidget" name="PointMarkerList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>406</width>
+    <height>412</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTreeWidget" name="PointMarkerTree">
+     <attribute name="headerDefaultSectionSize">
+      <number>40</number>
+     </attribute>
+     <attribute name="headerHighlightSections">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Label</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string notr="true">X</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string notr="true">Y</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string notr="true">Z</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Layer</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
