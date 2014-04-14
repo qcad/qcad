@@ -17,14 +17,14 @@
  * along with QCAD.
  */
 
-include("../PointMarker.js");
+include("../PointMark.js");
 
 /**
- * \class PointMarkerDraw
+ * \class PointMarkDraw
  * \brief Point marker with label (block with block attribute).
- * \ingroup ecma_misc_pointmarker
+ * \ingroup ecma_misc_pointmark
  */
-function PointMarkerDraw(guiAction) {
+function PointMarkDraw(guiAction) {
     EAction.call(this, guiAction);
 
     this.label = "";
@@ -37,28 +37,28 @@ function PointMarkerDraw(guiAction) {
     this.textHeight = 10;
 
     if (!isNull(guiAction)) {
-        this.setUiOptions("PointMarkerDraw.ui");
+        this.setUiOptions("PointMarkDraw.ui");
     }
 }
 
-PointMarkerDraw.State = {
+PointMarkDraw.State = {
     SettingOrigin : 0,
     SettingPosition : 1
 };
-PointMarkerDraw.labelLayerName = "pt_layer";
-PointMarkerDraw.dataPath = "libraries/default/Tools/PointMarker";
+PointMarkDraw.labelLayerName = "pt_layer";
+PointMarkDraw.dataPath = "libraries/default/Tools/PointMark";
 
-PointMarkerDraw.prototype = new EAction();
-PointMarkerDraw.includeBasePath = includeBasePath;
+PointMarkDraw.prototype = new EAction();
+PointMarkDraw.includeBasePath = includeBasePath;
 
-PointMarkerDraw.prototype.beginEvent = function() {
+PointMarkDraw.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     // init benchmark counter:
     this.benchmarkCounter = 1;
     this.pointCounter = 1;
     var doc = this.getDocument();
-    var markIds = PointMarker.queryAllMarks(doc);
+    var markIds = PointMark.queryAllMarks(doc);
     for (var i=0; i<markIds.length; i++) {
         var id = markIds[i];
         var blockRef = doc.queryEntityDirect(id);
@@ -66,15 +66,14 @@ PointMarkerDraw.prototype.beginEvent = function() {
             continue;
         }
 
-        // get handle:
-        var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
-        if (isNull(handle)) {
+        // get benchmark handle as int:
+        var handle = PointMark.getBenchmarkHandle(blockRef);
+        if (handle===RObject.INVALID_HANDLE) {
             continue;
         }
-        handle = parseInt(handle, 16);
 
         // get label:
-        var label = PointMarker.getMarkerLabel(doc, blockRef.getId());
+        var label = PointMark.getMarkerLabel(doc, blockRef.getId());
         var matches = label.match(/\d+$/);
         if (matches.length!==1) {
             continue;
@@ -95,17 +94,17 @@ PointMarkerDraw.prototype.beginEvent = function() {
 
     // load bench mark:
     this.diBM = new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexNavel()));
-    this.diBM.importFile(PointMarkerDraw.dataPath + "/benchmark.dxf");
+    this.diBM.importFile(PointMarkDraw.dataPath + "/benchmark.dxf");
 
     // load point symbol:
     this.diPoint = new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexNavel()));
-    this.diPoint.importFile(PointMarkerDraw.dataPath + "/point.dxf");
+    this.diPoint.importFile(PointMarkDraw.dataPath + "/point.dxf");
 
     // start with setting the bechmark (origin):
-    this.setState(PointMarkerDraw.State.SettingOrigin);
+    this.setState(PointMarkDraw.State.SettingOrigin);
 };
 
-PointMarkerDraw.prototype.setState = function(state) {
+PointMarkDraw.prototype.setState = function(state) {
     EAction.prototype.setState.call(this, state);
 
     this.setCrosshairCursor();
@@ -113,13 +112,13 @@ PointMarkerDraw.prototype.setState = function(state) {
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
-    case PointMarkerDraw.State.SettingOrigin:
+    case PointMarkDraw.State.SettingOrigin:
         var trPos = qsTr("Benchmark (Origin)");
         this.setCommandPrompt(trPos);
         this.setLeftMouseTip(trPos);
         this.setRightMouseTip(EAction.trCancel);
         break;
-    case PointMarkerDraw.State.SettingPosition:
+    case PointMarkDraw.State.SettingPosition:
         var trPos = qsTr("Position");
         this.setCommandPrompt(trPos);
         this.setLeftMouseTip(trPos);
@@ -130,28 +129,27 @@ PointMarkerDraw.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
-PointMarkerDraw.prototype.escapeEvent = function() {
+PointMarkDraw.prototype.escapeEvent = function() {
     switch (this.state) {
-    case PointMarkerDraw.State.SettingOrigin:
+    case PointMarkDraw.State.SettingOrigin:
         EAction.prototype.escapeEvent.call(this);
         break;
 
-    case PointMarkerDraw.State.SettingPosition:
-        this.setState(PointMarkerDraw.State.SettingOrigin);
+    case PointMarkDraw.State.SettingPosition:
+        this.setState(PointMarkDraw.State.SettingOrigin);
         break;
     }
 };
 
-PointMarkerDraw.prototype.pickCoordinate = function(event, preview) {
+PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
     this.pos = event.getModelPosition();
     var op, i, transaction, objIds, objId, obj;
 
     switch (this.state) {
-    case PointMarkerDraw.State.SettingOrigin:
+    case PointMarkDraw.State.SettingOrigin:
         this.benchmarkPos = this.pos;
-        //this.updateLabel(this.diBM, true, preview);
 
         // insert bench mark symbol with label:
         if (preview) {
@@ -173,14 +171,11 @@ PointMarkerDraw.prototype.pickCoordinate = function(event, preview) {
                 }
             }
 
-            this.setState(PointMarkerDraw.State.SettingPosition);
+            this.setState(PointMarkDraw.State.SettingPosition);
         }
         break;
 
-    case PointMarkerDraw.State.SettingPosition:
-        // insert point symbol with label:
-        //this.updateLabel(this.diPoint, false, preview);
-
+    case PointMarkDraw.State.SettingPosition:
         // insert point mark:
         if (preview) {
             this.updatePreview();
@@ -205,7 +200,7 @@ PointMarkerDraw.prototype.pickCoordinate = function(event, preview) {
 /**
  * Finds the block attribute in the given document interface and adjusts its text.
  */
-PointMarkerDraw.prototype.updateLabel = function(di, benchmark, preview) {
+PointMarkDraw.prototype.updateLabel = function(di, benchmark, preview) {
     var doc = di.getDocument();
     var ids = doc.queryAllEntities();
     for (var i=0; i<ids.length; i++) {
@@ -220,7 +215,12 @@ PointMarkerDraw.prototype.updateLabel = function(di, benchmark, preview) {
     }
 }
 
-PointMarkerDraw.prototype.getLabel = function(benchmark, preview) {
+/**
+ * \return Complete label for next marker.
+ * \param benchmark True for benchmarks (origins).
+ * \param preview False for final call (increments counter).
+ */
+PointMarkDraw.prototype.getLabel = function(benchmark, preview) {
     var optionsToolBar = EAction.getOptionsToolBar();
     if (isNull(optionsToolBar)) {
         return "";
@@ -247,15 +247,15 @@ PointMarkerDraw.prototype.getLabel = function(benchmark, preview) {
     return ret;
 };
 
-PointMarkerDraw.prototype.getOperation = function(preview) {
+PointMarkDraw.prototype.getOperation = function(preview) {
     var op;
 
     switch (this.state) {
-    case PointMarkerDraw.State.SettingOrigin:
+    case PointMarkDraw.State.SettingOrigin:
         this.updateLabel(this.diBM, true, preview);
         op = new RPasteOperation(this.diBM.getDocument());
         break;
-    case PointMarkerDraw.State.SettingPosition:
+    case PointMarkDraw.State.SettingPosition:
         this.updateLabel(this.diPoint, true, preview);
         op = new RPasteOperation(this.diPoint.getDocument());
         break;
@@ -269,16 +269,16 @@ PointMarkerDraw.prototype.getOperation = function(preview) {
     return op;
 };
 
-PointMarkerDraw.prototype.slotLabelChanged = function(value) {
+PointMarkDraw.prototype.slotLabelChanged = function(value) {
     this.updatePreview(true);
 };
 
-PointMarkerDraw.prototype.slotAutoAppendCounterChanged = function(value) {
+PointMarkDraw.prototype.slotAutoAppendCounterChanged = function(value) {
     this.autoAppendCounter = value;
     this.updatePreview(true);
 };
 
-PointMarkerDraw.prototype.slotTextHeightChanged = function(value) {
+PointMarkDraw.prototype.slotTextHeightChanged = function(value) {
     this.textHeight = value;
     this.updatePreview(true);
 };

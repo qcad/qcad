@@ -18,18 +18,18 @@
  */
 include("scripts/EAction.js");
 include("scripts/File/File.js");
-include("../PointMarker/PointMarker.js");
+include("../PointMark/PointMark.js");
 
 /**
  * This action exports point labels as CSV file.
  */
-function PointMarkerExport(guiAction) {
+function PointMarkExport(guiAction) {
     EAction.call(this, guiAction);
 }
 
-PointMarkerExport.prototype = new EAction();
+PointMarkExport.prototype = new EAction();
 
-PointMarkerExport.prototype.beginEvent = function() {
+PointMarkExport.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     var fileName = this.getFileName();
@@ -50,7 +50,7 @@ PointMarkerExport.prototype.beginEvent = function() {
     ts.writeString("X\tY\tLabel");
 
     var doc = this.getDocument();
-    var blockId = doc.getBlockId(PointMarker.labelBlockName);
+    var blockId = doc.getBlockId(PointMark.labelBlockName);
     var blockRefIds = doc.queryBlockReferences(blockId);
     var entity;
 
@@ -91,13 +91,13 @@ PointMarkerExport.prototype.beginEvent = function() {
     this.terminate();
 };
 
-PointMarkerExport.prototype.getFileName = function() {
+PointMarkExport.prototype.getFileName = function() {
     var drawingFileName = this.getDocument().getFileName();
     var fi;
     var fileName;
     var initialPath = "";
     if (drawingFileName.length === 0) {
-        var path = RSettings.getStringValue("PointMarkerExport/Path", QDir.homePath());
+        var path = RSettings.getStringValue("PointMarkExport/Path", QDir.homePath());
         fi = new QFileInfo(path);
         initialPath = fi.absoluteFilePath() + QDir.separator
                 + stripDirtyFlag(EAction.getMdiChild().windowTitle) + ".csv";
@@ -118,7 +118,7 @@ PointMarkerExport.prototype.getFileName = function() {
         return undefined;
     }
     if (drawingFileName.length === 0) {
-        RSettings.setValue("PointMarkerExport/Path", new QFileInfo(fileName).absolutePath());
+        RSettings.setValue("PointMarkExport/Path", new QFileInfo(fileName).absolutePath());
     }
 
     return fileName;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PointMarkerList</class>
- <widget class="QWidget" name="PointMarkerList">
+ <class>PointMarkList</class>
+ <widget class="QWidget" name="PointMarkList">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -27,7 +27,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QTreeWidget" name="PointMarkerTree">
+    <widget class="QTreeWidget" name="PointMarkTree">
      <attribute name="headerDefaultSectionSize">
       <number>40</number>
      </attribute>

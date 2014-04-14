@@ -4,7 +4,7 @@ SUBDIRS = \
     MiscBlock \
     MiscDraw \
     MiscSelect \
-    PointMarker \
+    PointMark \
     Screencast \
     Tutorials \
     ts

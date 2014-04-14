@@ -18,7 +18,7 @@
  */
 
 /**
- * \defgroup ecma_misc_point PointMarker Marker Tools
+ * \defgroup ecma_misc_point PointMark Marker Tools
  * \ingroup ecma_misc
  *
  * \brief This module contains ECMAScript implementations of 
@@ -27,78 +27,78 @@
 include("../Misc.js");
 
 /**
- * \class PointMarker
+ * \class PointMark
  * \brief Base class for all point marker tools.
  * \ingroup ecma_misc_point
  */
-function PointMarker(guiAction) {
+function PointMark(guiAction) {
     Misc.call(this, guiAction);
 }
 
-PointMarker.prototype = new Misc();
-PointMarker.includeBasePath = includeBasePath;
+PointMark.prototype = new Misc();
+PointMark.includeBasePath = includeBasePath;
 
-PointMarker.prototype.beginEvent = function() {
+PointMark.prototype.beginEvent = function() {
     Misc.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="PointMarkerMenu") {
-        EAction.showCadToolBarPanel("PointMarkerToolsPanel");
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="PointMarkMenu") {
+        EAction.showCadToolBarPanel("PointMarkToolsPanel");
         this.terminate();
     }
 };
 
-PointMarker.getMenu = function() {
+PointMark.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
         20000,
-        PointMarker.getTitle(),
-        "pointmarker",
-        PointMarker.includeBasePath + "/PointMarker.svg"
+        PointMark.getTitle(),
+        "pointmark",
+        PointMark.includeBasePath + "/PointMark.svg"
     );
-    menu.setProperty("scriptFile", PointMarker.includeBasePath + "/PointMarker.js");
+    menu.setProperty("scriptFile", PointMark.includeBasePath + "/PointMark.js");
     return menu;
 };
 
-PointMarker.getToolBar = function() {
-    var tb = EAction.getToolBar(PointMarker.getTitle(), "PointMarker");
+PointMark.getToolBar = function() {
+    var tb = EAction.getToolBar(PointMark.getTitle(), "PointMark");
     tb.visible = false;
     return tb;
 };
 
-PointMarker.getCadToolBarPanel = function() {
+PointMark.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "PointMarkerMenu";
+    var actionName = "PointMarkMenu";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
-        var action = new RGuiAction(qsTr("PointMarker Tools"), mtb);
-        action.setScriptFile(PointMarker.includeBasePath + "/PointMarker.js");
+        var action = new RGuiAction(qsTr("PointMark Tools"), mtb);
+        action.setScriptFile(PointMark.includeBasePath + "/PointMark.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(PointMarker.includeBasePath + "/PointMarker.svg");
+        action.setIcon(PointMark.includeBasePath + "/PointMark.svg");
         action.setStatusTip(qsTr("Show point marker tools"));
         action.setDefaultShortcut(new QKeySequence("w,t"));
         action.setNoState();
         action.setProperty("SortOrder", 20000);
-        action.setDefaultCommands(["pointmarkermenu"]);
+        action.setDefaultCommands(["pointmarkmenu"]);
         CadToolBarPanel.prototype.addAction.call(mtb, action);
     }
 
     var tb = EAction.getCadToolBarPanel(
-        PointMarker.getTitle(),
-        "PointMarkerToolsPanel",
+        PointMark.getTitle(),
+        "PointMarkToolsPanel",
         true
     );
     return tb;
 };
 
-PointMarker.getTitle = function() {
+PointMark.getTitle = function() {
     return qsTr("&Point Marker");
 };
 
-PointMarker.prototype.getTitle = function() {
-    return PointMarker.getTitle();
+PointMark.prototype.getTitle = function() {
+    return PointMark.getTitle();
 };
 
-PointMarker.queryAllMarks = function(doc) {
+PointMark.queryAllMarks = function(doc) {
     var ret = [];
 
     var ids = doc.queryAllBlockReferences();
@@ -120,7 +120,7 @@ PointMarker.queryAllMarks = function(doc) {
     return ret;
 };
 
-PointMarker.getMarkerLabel = function(doc, blockRefId) {
+PointMark.getMarkerLabel = function(doc, blockRefId) {
     var blockAttribIds = doc.queryChildEntities(blockRefId);
     if (blockAttribIds.length!==1) {
         return "";
@@ -131,4 +131,12 @@ PointMarker.getMarkerLabel = function(doc, blockRefId) {
     }
 
     return attrib.getPlainText();
+};
+
+PointMark.getBenchmarkHandle = function(blockRef) {
+    var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
+    if (isNull(handle)) {
+        return RObject.INVALID_HANDLE;
+    }
+    return parseInt(handle, 16);
 };
