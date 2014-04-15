@@ -41,8 +41,8 @@ ColorPreferences.applyPreferences = function(doc, mdiChild) {
         var views = scene.getGraphicsViews();
         for (var vi = 0; vi<views.length; ++vi) {
             var view = views[vi];
-            // setting bg color to invalid will automatically update it:
             if (!view.isPrintPreview()) {
+                // setting bg color to invalid will automatically update it:
                 view.setBackgroundColor(new QColor());
             }
             view.regenerate(false);

@@ -619,24 +619,30 @@ PrintPreview.prototype.slotFullColorChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
-    Print.setColorMode(EAction.getDocument(), RGraphicsView.FullColor);
-    this.colorModeUpdate();
+    if (checked) {
+        Print.setColorMode(EAction.getDocument(), RGraphicsView.FullColor);
+        this.colorModeUpdate();
+    }
 };
 
 PrintPreview.prototype.slotBlackWhiteChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
-    Print.setColorMode(EAction.getDocument(), RGraphicsView.BlackWhite);
-    this.colorModeUpdate();
+    if (checked) {
+        Print.setColorMode(EAction.getDocument(), RGraphicsView.BlackWhite);
+        this.colorModeUpdate();
+    }
 };
 
 PrintPreview.prototype.slotGrayscaleChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
-    Print.setColorMode(EAction.getDocument(), RGraphicsView.GrayScale);
-    this.colorModeUpdate();
+    if (checked) {
+        Print.setColorMode(EAction.getDocument(), RGraphicsView.GrayScale);
+        this.colorModeUpdate();
+    }
 };
 
 PrintPreview.prototype.colorModeUpdate = function() {
