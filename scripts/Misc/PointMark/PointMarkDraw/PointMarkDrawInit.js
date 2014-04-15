@@ -3,13 +3,13 @@ function init(basePath) {
         return;
     }
 
-    var action = new RGuiAction(qsTranslate("PointMarkDraw", "&Point Mark with Label"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("PointMarkDraw", "&Add Point Marks"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/PointMarkDraw.js");
     action.setIcon(basePath + "/PointMarkDraw.svg");
-    action.setStatusTip(qsTranslate("PointMarkDraw", "Draw point mark with label"));
+    action.setStatusTip(qsTranslate("PointMarkDraw", "Draw bench mark and point marks"));
     action.setDefaultShortcut(new QKeySequence("p,k"));
     action.setDefaultCommands(["pointmark"]);
-    action.setSortOrder(1000);
+    action.setSortOrder(100);
     EAction.addGuiActionTo(action, PointMark, true, true, true, true);
 }

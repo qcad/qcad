@@ -7,9 +7,9 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/PointMarkExport.js");
     action.setIcon(basePath + "/PointMarkExport.svg");
-    action.setStatusTip(qsTranslate("PointMarkExport", "Export point mark as CSV file"));
+    action.setStatusTip(qsTranslate("PointMarkExport", "Export point marks as CSV file"));
     action.setDefaultShortcut(new QKeySequence("p,x"));
     action.setDefaultCommands(["pointmarkexport"]);
-    action.setSortOrder(1100);
-    EAction.addGuiActionTo(action, Point, true, true, true);
+    action.setSortOrder(200);
+    EAction.addGuiActionTo(action, PointMark, true, true, true);
 }

@@ -18,6 +18,7 @@
  */
 
 include("../PointMark.js");
+include("scripts/sprintf.js");
 
 /**
  * \class PointMarkDraw
@@ -42,10 +43,9 @@ function PointMarkDraw(guiAction) {
 }
 
 PointMarkDraw.State = {
-    SettingOrigin : 0,
-    SettingPosition : 1
+    SettingBenchmarkPosition : 0,
+    SettingPointPosition : 1
 };
-PointMarkDraw.labelLayerName = "pt_layer";
 PointMarkDraw.dataPath = "libraries/default/Tools/PointMark";
 
 PointMarkDraw.prototype = new EAction();
@@ -53,6 +53,10 @@ PointMarkDraw.includeBasePath = includeBasePath;
 
 PointMarkDraw.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
+
+    var appWin = RMainWindowQt.getMainWindow();
+    var dock = appWin.findChild("PointMarkDock");
+    dock.visible = true;
 
     // init benchmark counter:
     this.benchmarkCounter = 1;
@@ -101,7 +105,7 @@ PointMarkDraw.prototype.beginEvent = function() {
     this.diPoint.importFile(PointMarkDraw.dataPath + "/point.dxf");
 
     // start with setting the bechmark (origin):
-    this.setState(PointMarkDraw.State.SettingOrigin);
+    this.setState(PointMarkDraw.State.SettingBenchmarkPosition);
 };
 
 PointMarkDraw.prototype.setState = function(state) {
@@ -112,13 +116,14 @@ PointMarkDraw.prototype.setState = function(state) {
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
-    case PointMarkDraw.State.SettingOrigin:
+    case PointMarkDraw.State.SettingBenchmarkPosition:
+        this.pointCounter = 1;
         var trPos = qsTr("Benchmark (Origin)");
         this.setCommandPrompt(trPos);
         this.setLeftMouseTip(trPos);
         this.setRightMouseTip(EAction.trCancel);
         break;
-    case PointMarkDraw.State.SettingPosition:
+    case PointMarkDraw.State.SettingPointPosition:
         var trPos = qsTr("Position");
         this.setCommandPrompt(trPos);
         this.setLeftMouseTip(trPos);
@@ -131,12 +136,12 @@ PointMarkDraw.prototype.setState = function(state) {
 
 PointMarkDraw.prototype.escapeEvent = function() {
     switch (this.state) {
-    case PointMarkDraw.State.SettingOrigin:
+    case PointMarkDraw.State.SettingBenchmarkPosition:
         EAction.prototype.escapeEvent.call(this);
         break;
 
-    case PointMarkDraw.State.SettingPosition:
-        this.setState(PointMarkDraw.State.SettingOrigin);
+    case PointMarkDraw.State.SettingPointPosition:
+        this.setState(PointMarkDraw.State.SettingBenchmarkPosition);
         break;
     }
 };
@@ -148,7 +153,7 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
     var op, i, transaction, objIds, objId, obj;
 
     switch (this.state) {
-    case PointMarkDraw.State.SettingOrigin:
+    case PointMarkDraw.State.SettingBenchmarkPosition:
         this.benchmarkPos = this.pos;
 
         // insert bench mark symbol with label:
@@ -171,11 +176,11 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
                 }
             }
 
-            this.setState(PointMarkDraw.State.SettingPosition);
+            this.setState(PointMarkDraw.State.SettingPointPosition);
         }
         break;
 
-    case PointMarkDraw.State.SettingPosition:
+    case PointMarkDraw.State.SettingPointPosition:
         // insert point mark:
         if (preview) {
             this.updatePreview();
@@ -226,22 +231,24 @@ PointMarkDraw.prototype.getLabel = function(benchmark, preview) {
         return "";
     }
 
-    var te = optionsToolBar.findChild("Label");
+    var te = optionsToolBar.findChild(benchmark ? "BenchmarkLabel" : "PointLabel");
     var ret = te.text;
 
     if (this.autoAppendCounter) {
+        var num = "";
         if (benchmark) {
-            ret += this.benchmarkCounter;
+            num = sprintf("%03d", this.benchmarkCounter);
             if (!preview) {
                 this.benchmarkCounter++;
             }
         }
         else {
-            ret += this.pointCounter;
+            num = sprintf("%03d", this.pointCounter);
             if (!preview) {
                 this.pointCounter++;
             }
         }
+        ret += num;
     }
 
     return ret;
@@ -251,12 +258,12 @@ PointMarkDraw.prototype.getOperation = function(preview) {
     var op;
 
     switch (this.state) {
-    case PointMarkDraw.State.SettingOrigin:
+    case PointMarkDraw.State.SettingBenchmarkPosition:
         this.updateLabel(this.diBM, true, preview);
         op = new RPasteOperation(this.diBM.getDocument());
         break;
-    case PointMarkDraw.State.SettingPosition:
-        this.updateLabel(this.diPoint, true, preview);
+    case PointMarkDraw.State.SettingPointPosition:
+        this.updateLabel(this.diPoint, false, preview);
         op = new RPasteOperation(this.diPoint.getDocument());
         break;
     default:
@@ -269,7 +276,11 @@ PointMarkDraw.prototype.getOperation = function(preview) {
     return op;
 };
 
-PointMarkDraw.prototype.slotLabelChanged = function(value) {
+PointMarkDraw.prototype.slotPointLabelChanged = function(value) {
+    this.updatePreview(true);
+};
+
+PointMarkDraw.prototype.slotBenchmarkLabelChanged = function(value) {
     this.updatePreview(true);
 };
 

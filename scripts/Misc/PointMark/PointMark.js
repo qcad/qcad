@@ -18,17 +18,17 @@
  */
 
 /**
- * \defgroup ecma_misc_point PointMark Marker Tools
+ * \defgroup ecma_misc_point PointMark Mark Tools
  * \ingroup ecma_misc
  *
  * \brief This module contains ECMAScript implementations of 
- * point marker drawing, export and visualization tools.
+ * point mark drawing, export and visualization tools.
  */
 include("../Misc.js");
 
 /**
  * \class PointMark
- * \brief Base class for all point marker tools.
+ * \brief Base class for all point mark tools.
  * \ingroup ecma_misc_point
  */
 function PointMark(guiAction) {
@@ -74,7 +74,7 @@ PointMark.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(PointMark.includeBasePath + "/PointMark.svg");
-        action.setStatusTip(qsTr("Show point marker tools"));
+        action.setStatusTip(qsTr("Show point mark tools"));
         action.setDefaultShortcut(new QKeySequence("w,t"));
         action.setNoState();
         action.setProperty("SortOrder", 20000);
@@ -91,7 +91,7 @@ PointMark.getCadToolBarPanel = function() {
 };
 
 PointMark.getTitle = function() {
-    return qsTr("&Point Marker");
+    return qsTr("&Point Mark");
 };
 
 PointMark.prototype.getTitle = function() {
@@ -139,4 +139,74 @@ PointMark.getBenchmarkHandle = function(blockRef) {
         return RObject.INVALID_HANDLE;
     }
     return parseInt(handle, 16);
+};
+
+/**
+ * \return List of all point marks including bechmarks with
+ * position and label in the format:
+ *
+ * [
+ *   [ ["BM001",RVector(0,0,0),"pt_layer","0xb1"], ["POINT001",RVector(10,5,0),"pt_layer","0xb2"], ... ],
+ *   [ ["BM002",RVector(0,0,0),"pt_layer","0xc1"], ["POINT001",RVector(-7,2,0),"pt_layer","0xc2"], ... ],
+ *   ...
+ * ]
+ */
+PointMark.getPointMarkTree = function(doc) {
+    var ret = [];
+
+    var handleMap = {};
+    var i;
+
+    var objIds = doc.queryAllBlockReferences();
+    for (var p=0; p<2; p++) {
+        for (i=0; i<objIds.length; i++) {
+            var objId = objIds[i];
+            var blockRef = doc.queryObjectDirect(objId);
+            if (!isBlockReferenceEntity(blockRef)) {
+                continue;
+            }
+
+            // get benchmark handle from custom property:
+            var bmHandle = PointMark.getBenchmarkHandle(blockRef);
+            if (bmHandle===RObject.INVALID_HANDLE) {
+                continue;
+            }
+
+            if (p==0 && bmHandle!==blockRef.getHandle()) {
+                continue;
+            }
+
+            if (p==1 && bmHandle===blockRef.getHandle()) {
+                continue;
+            }
+
+            // query benchmark:
+            var bm = doc.queryObjectByHandle(bmHandle);
+            if (isNull(bm)) {
+                continue;
+            }
+
+            var label = PointMark.getMarkLabel(doc, objId);
+            var pos = blockRef.getPosition().operator_subtract(bm.getPosition());
+
+            if (p===0) {
+                // benchmark found:
+                ret.push([[label,pos,blockRef.getLayerName(),bmHandle]]);
+                handleMap[bmHandle] = ret.length-1;
+            }
+            else {
+                // point mark found:
+                if (isNull(handleMap[bmHandle])) {
+                    continue;
+                }
+                if (isNull(ret[handleMap[bmHandle]])) {
+                    continue;
+                }
+
+                ret[handleMap[bmHandle]].push([label,pos,blockRef.getLayerName(),bmHandle]);
+            }
+        }
+    }
+
+    return ret;
 };

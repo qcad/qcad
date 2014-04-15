@@ -12,7 +12,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="PointMarkExport.svg">
+   sodipodi:docname="PointMarkDraw.svg">
   <metadata
      id="metadata26">
     <rdf:RDF>
@@ -38,13 +38,14 @@
      inkscape:window-height="1187"
      id="namedview24"
      showgrid="true"
-     inkscape:zoom="1.3037281"
-     inkscape:cx="237.36386"
-     inkscape:cy="152.83432"
+     inkscape:zoom="0.921875"
+     inkscape:cx="348.20339"
+     inkscape:cy="181.15254"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="svg2"
+     inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
        id="grid3005"
@@ -56,40 +57,106 @@
        spacingy="8px" />
   </sodipodi:namedview>
   <defs
-     id="defs4" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:square"
-     inkscape:connector-curvature="0"
-     id="path20"
-     d="M 144,392 C 144,392 240,392 240,392" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:square"
-     inkscape:connector-curvature="0"
-     id="path22"
-     d="M 192,440 192,344" />
+     id="defs4">
+    <marker
+       id="DistanceX"
+       orient="auto"
+       refX="0.0"
+       refY="0.0"
+       style="overflow:visible">
+      <path
+         d="M 3,-3 L -3,3 M 0,-5 L  0,5"
+         style="stroke:#000000; stroke-width:0.5"
+         id="path3090" />
+    </marker>
+    <pattern
+       height="8"
+       id="Hatch"
+       patternUnits="userSpaceOnUse"
+       width="8"
+       x="0"
+       y="0">
+      <path
+         d="M8 4 l-4,4"
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         id="path3093" />
+      <path
+         d="M6 2 l-4,4"
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         id="path3095" />
+      <path
+         d="M4 0 l-4,4"
+         linecap="square"
+         stroke="#000000"
+         stroke-width="0.25"
+         id="path3097" />
+    </pattern>
+    <symbol
+       id="*Model_Space" />
+    <symbol
+       id="*Paper_Space" />
+    <symbol
+       id="*Paper_Space0" />
+    <symbol
+       id="_benchmark">
+      <text
+         style="font-size: 42.5px; fill: #000000; font-family: Arial"
+         x="-44.549956"
+         y="938.976378"
+         sodipodi:linespacing="125%"
+         id="text3103">
+        <tspan
+           sodipodi:role="line"
+           id="tspan3105">Labellabel</tspan>
+      </text>
+      <path
+         d="M 0.000000,1009.842520 L 0.000000,1052.362205 L 42.519685,1052.362205 A 42.519685,42.519685 0.0 0 0 0.000000,1094.881890 z M -0.000000,1052.362205 L -42.519685,1052.362205 A 42.519685,42.519685 0.0 0 0 0.000000,1009.842520 L -0.000000,1052.362205 z "
+         style="fill:#000000"
+         id="path3107" />
+      <path
+         d="M 42.519685,1052.362205 A 42.519685,42.519685 -0.000000 1 0 -42.519685,1052.362205 42.519685,42.519685 -0.000000 1 0 42.519685,1052.362205 z"
+         style="stroke:#000000;fill:none"
+         id="path3109" />
+    </symbol>
+  </defs>
+  <text
+     sodipodi:linespacing="125%"
+     id="text3978"
+     y="200"
+     x="23.987167"
+     style="font-size:233.49264526px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Planer;-inkscape-font-specification:Planer"
+       y="200"
+       x="23.987167"
+       id="tspan3980"
+       sodipodi:role="line">BM</tspan></text>
   <g
-     style="font-size:233.7046051px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     id="text3007"
-     transform="translate(-64,0)">
+     id="g3200"
+     transform="matrix(0.66666666,0,0,0.66666666,5.333338,189.33334)">
     <path
-       d="M 181.39345,194.76939 117.8258,194.76939 C 126.23916,167.42598 135.35365,137.27803 143.53331,109.93462 144.70183,107.83128 147.27258,105.26053 149.60963,105.26053 151.94667,105.26053 154.51742,107.59758 155.68595,109.93462 L 181.39345,194.76939 M 168.07229,105.96164 C 165.73525,98.015695 158.49039,92.406776 149.60963,92.406776 140.96256,92.406776 133.48401,98.015695 131.14696,105.96164 116.89099,153.40363 102.16758,200.61206 88.145314,247.82034 87.91161,248.52145 87.91161,249.22257 87.91161,249.92368 87.91161,252.96184 90.949773,256 93.987929,256 96.792382,256 99.363136,253.89666 100.29795,251.79332 L 113.85282,207.15574 184.89902,207.15574 199.155,251.79332 C 200.08982,253.66295 202.66057,256 204.99762,256 208.50318,256 211.30764,252.96184 211.30764,249.92368 211.30764,249.68998 211.07394,248.75516 211.07394,248.52145 L 168.07229,105.96164"
-       style="font-weight:bold;font-family:Planer;-inkscape-font-specification:Planer Bold"
-       id="path3074"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       id="path3162"
+       d="M 256,64 C 362.03868,64 448,149.96132 448,256 L 256,256 256,64 z M 256,256 256,448 C 149.96133,448 64,362.03867 64,256 L 256,256 z"
+       style="fill:#000000;stroke:#000000;stroke-width:0.0075;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     <path
-       d="M 234.8899,246.18441 C 234.8899,251.3259 239.56399,256 244.70549,256 L 285.6038,256 C 312.94721,256 322.76283,229.12395 322.76283,212.06353 L 322.76283,176.07303 C 322.76283,151.30036 305.70237,137.04436 286.0712,137.04436 L 247.27624,137.04436 247.27624,100.58644 C 247.27624,96.847168 244.47178,94.276413 240.96622,94.276413 237.69435,94.276413 234.8899,96.847168 234.8899,100.58644 L 234.8899,246.18441 M 247.27624,148.72959 286.0712,148.72959 C 299.15865,148.72959 310.37648,159.71372 310.37648,176.07303 L 310.37648,211.36242 C 310.37648,230.52618 299.85976,243.61366 285.6038,243.61366 L 247.27624,243.61366 247.27624,148.72959"
-       style="font-weight:bold;font-family:Planer;-inkscape-font-specification:Planer Bold"
-       id="path3076"
-       inkscape:connector-curvature="0" />
-    <path
-       d="M 391.83716,137.04436 C 360.98818,137.04436 346.26476,153.40371 346.26476,184.7201 L 346.26476,206.68833 C 346.26476,240.34176 361.22188,256 391.83716,256 L 418.24578,256 C 421.75134,256 424.08839,253.42925 424.08839,250.15738 424.08839,246.88552 421.75134,244.31477 418.24578,244.31477 L 391.83716,244.31477 C 369.63524,244.31477 358.4174,230.99358 358.4174,206.92203 L 358.4174,184.7201 C 358.4174,161.81707 368.46672,148.72959 391.83716,148.72959 L 418.24578,148.72959 C 421.75134,148.72959 424.08839,146.39254 424.08839,142.88697 424.08839,139.61511 421.75134,137.04436 418.24578,137.04436 L 391.83716,137.04436"
-       style="font-weight:bold;font-family:Planer;-inkscape-font-specification:Planer Bold"
-       id="path3078"
-       inkscape:connector-curvature="0" />
+       transform="matrix(-0.75,0,0,0.75,448,64)"
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:16.00000016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3171"
+       sodipodi:cx="256"
+       sodipodi:cy="256"
+       sodipodi:rx="256"
+       sodipodi:ry="256"
+       d="M 512,256 C 512,397.3849 397.3849,512 256,512 114.6151,512 0,397.3849 0,256 0,114.6151 114.6151,0 256,0 397.3849,0 512,114.6151 512,256 z" />
   </g>
   <path
      style="fill:#ff0000;stroke:#000000;stroke-width:11.98999977"
      inkscape:connector-curvature="0"
-     d="M 495.84,388.776 399.92,292.856 399.92,360 304,360 304,417.552 399.92,417.552 399.92,484.696 495.84,388.776 z"
+     d="M 498.98305,256 403.06315,160.08 403.06315,227.224 307.1431,227.224 307.1431,284.776 403.06315,284.776 403.06315,351.92 498.98305,256 z"
      id="path3336" />
 </svg>

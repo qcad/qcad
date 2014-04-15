@@ -85,6 +85,7 @@ PointMarkList.itemClicked = function(item, col) {
 };
 
 PointMarkList.updateFromDocument = function(di) {
+    qDebug("PointMarkList.updateFromDocument");
     var appWin = RMainWindowQt.getMainWindow();
     var pointMarkTree = appWin.findChild("PointMarkTree");
     pointMarkTree.clear();
@@ -94,72 +95,50 @@ PointMarkList.updateFromDocument = function(di) {
         return;
     }
 
+    var tree = PointMark.getPointMarkTree(di.getDocument());
     var item;
 
-    var doc = di.getDocument();
-    var objIds = doc.queryAllBlockReferences();
-    for (var p=0; p<2; p++) {
-        for (var i=0; i<objIds.length; i++) {
-            var objId = objIds[i];
-            var blockRef = doc.queryObjectDirect(objId);
-            if (!isBlockReferenceEntity(blockRef)) {
-                continue;
-            }
+    for (var i=0; i<tree.length; i++) {
+        var list = tree[i];
 
-            var bmHandle = PointMark.getBenchmarkHandle(blockRef);
-            if (bmHandle===RObject.INVALID_HANDLE) {
-                continue;
-            }
-
-            var label = PointMark.getMarkLabel(doc, objId);
-            var pos = blockRef.getPosition();
-
+        var rootItem = undefined;
+        for (var k=0; k<list.length; k++) {
             item = new QTreeWidgetItem(
                 [
-                    label,
-                    RUnit.doubleToString(pos.x, 2),
-                    RUnit.doubleToString(pos.y, 2),
-                    RUnit.doubleToString(pos.z, 2),
-                    blockRef.getLayerName()
+                    list[k][0],
+                    RUnit.doubleToString(list[k][1].x, 0.01),
+                    RUnit.doubleToString(list[k][1].y, 0.01),
+                    RUnit.doubleToString(list[k][1].z, 0.01),
+                    list[k][2]
                 ]
             );
-            item.setData(0, Qt.UserRole, blockRef.getHandle());
+            item.setData(0, Qt.UserRole, list[k][3]);
+            item.setTextAlignment(1, Qt.AlignRight);
+            item.setTextAlignment(2, Qt.AlignRight);
+            item.setTextAlignment(3, Qt.AlignRight);
 
-            // block ref is a benchmark:
-            if (p==0) {
-                if (bmHandle===blockRef.getHandle()) {
-                    item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Benchmark.svg"));
-                    pointMarkTree.addTopLevelItem(item);
-                }
+            if (k===0) {
+                item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Benchmark.svg"));
+                pointMarkTree.addTopLevelItem(item);
+                rootItem = item;
             }
-            // block ref is a point marker:
             else {
-                if (bmHandle!==blockRef.getHandle()) {
-                    item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Point.svg"));
-                    // look up benchmark item:
-                    var bmItem = undefined;
-                    for (var k=0; k<pointMarkTree.topLevelItemCount; k++) {
-                        bmItem = pointMarkTree.topLevelItem(k);
-                        if (isNull(bmItem)) {
-                            continue;
-                        }
-
-                        if (bmItem.data(0, Qt.UserRole)===bmHandle) {
-                            break;
-                        }
-                    }
-
-                    if (!isNull(bmItem)) {
-                        bmItem.setExpanded(true);
-                        bmItem.addChild(item);
-                        bmItem.sortChildren(0, Qt.AscendingOrder);
-                    }
+                if (isNull(rootItem)) {
+                    continue;
                 }
+
+                item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Point.svg"));
+                rootItem.setExpanded(true);
+                rootItem.addChild(item);
+                rootItem.sortChildren(0, Qt.AscendingOrder);
             }
         }
     }
 
     pointMarkTree.sortItems(0, Qt.AscendingOrder);
+    for (var col=0; col<4; col++) {
+        pointMarkTree.resizeColumnToContents(col);
+    }
 };
 
 PointMarkList.updateFromTransaction = function(doc, transaction) {
@@ -206,7 +185,7 @@ PointMarkList.updateFromTransaction = function(doc, transaction) {
             );
             pointMarkTree.addTopLevelItem(item);
         }
-        // block ref is a point marker:
+        // block ref is a point mark:
         else {
 
         }
@@ -217,28 +196,39 @@ PointMarkList.updateFromTransaction = function(doc, transaction) {
 PointMarkList.init = function(basePath) {
     var appWin = RMainWindowQt.getMainWindow();
 
-    var action = new RGuiAction(qsTr("&Point Marker List"), appWin);
+    var action = new RGuiAction(qsTr("&Show / Hide Point Mark List"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/PointMarkList.js");
     action.setIcon(basePath + "/PointMarkList.svg");
     action.setDefaultShortcut(new QKeySequence("g,t"));
     action.setDefaultCommands(["gt"]);
     action.setSortOrder(10000);
-    EAction.addGuiActionTo(action, Widgets, true, true, false);
+    EAction.addGuiActionTo(action, PointMark, true, true, false);
 
     var formWidget = WidgetFactory.createWidget(basePath, "PointMarkList.ui");
 
     var pointMarkTree = formWidget.findChild("PointMarkTree");
     pointMarkTree.itemClicked.connect(PointMarkList, "itemClicked");
-    pointMarkTree.header().resizeSection(0, 200);
+    pointMarkTree.header().resizeSection(0, 150);
+    pointMarkTree.header().resizeSection(1, 80);
+    pointMarkTree.header().resizeSection(2, 80);
+    pointMarkTree.header().resizeSection(3, 80);
 
-    var dock = new RDockWidget(qsTr("Point Marker List"), appWin);
+    var widgets = getWidgets(formWidget);
+    widgets["PointMarkDraw"].setDefaultAction(
+            RGuiAction.getByScriptFile("scripts/Misc/PointMark/PointMarkDraw/PointMarkDraw.js"));
+    widgets["PointMarkExport"].setDefaultAction(
+            RGuiAction.getByScriptFile("scripts/Misc/PointMark/PointMarkExport/PointMarkExport.js"));
+
+    var dock = new RDockWidget(qsTr("Point Mark List"), appWin);
     dock.objectName = "PointMarkDock";
     dock.setWidget(formWidget);
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
 
     dock.shown.connect(function() { action.setChecked(true); });
     dock.hidden.connect(function() { action.setChecked(false); });
+
+    dock.visible = false;
 
     // create a transaction listener to keep widget up to date:
     var tAdapter = new RTransactionListenerAdapter();

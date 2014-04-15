@@ -21,7 +21,7 @@ include("scripts/File/File.js");
 include("../PointMark/PointMark.js");
 
 /**
- * This action exports point labels as CSV file.
+ * This action exports bench marks and point marks as CSV file.
  */
 function PointMarkExport(guiAction) {
     EAction.call(this, guiAction);
@@ -50,40 +50,20 @@ PointMarkExport.prototype.beginEvent = function() {
     ts.writeString("X\tY\tLabel");
 
     var doc = this.getDocument();
-    var blockId = doc.getBlockId(PointMark.labelBlockName);
-    var blockRefIds = doc.queryBlockReferences(blockId);
-    var entity;
+    var tree = PointMark.getPointMarkTree(doc);
+    var item;
 
-    for (var i=0; i<blockRefIds.length; ++i) {
-        var id = blockRefIds[i];
-        entity = doc.queryEntity(id);
-        if (entity.isNull()) {
-            continue;
+    for (var i=0; i<tree.length; i++) {
+        var list = tree[i];
+
+        for (var k=0; k<list.length; k++) {
+            ts.writeString(
+                "\n%1\t%2\t%3"
+                .arg(list[k][1].x)
+                .arg(list[k][1].y)
+                .arg(list[k][0])
+            );
         }
-
-        if (!isBlockReferenceEntity(entity)) {
-            continue;
-        }
-
-        var attributeIds = doc.queryChildEntities(id, RS.EntityAttribute);
-        if (attributeIds.length!==1) {
-            // ignore block reference without attributes or more than one attribute:
-            continue;
-        }
-
-        var attributeId = attributeIds[0];
-        var attribute = doc.queryEntityDirect(attributeId);
-        if (isNull(attribute)) {
-            // child is not an attribute:
-            continue;
-        }
-
-        ts.writeString(
-            "\n%1\t%2\t%3"
-            .arg(entity.getPosition().x)
-            .arg(entity.getPosition().y)
-            .arg(attribute.getPlainText())
-        );
     }
 
     file.close();
