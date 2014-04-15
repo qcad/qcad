@@ -203,7 +203,7 @@ PointMark.getPointMarkTree = function(doc) {
                     continue;
                 }
 
-                ret[handleMap[bmHandle]].push([label,pos,blockRef.getLayerName(),bmHandle]);
+                ret[handleMap[bmHandle]].push([label,pos,blockRef.getLayerName(),blockRef.getHandle()]);
             }
         }
     }

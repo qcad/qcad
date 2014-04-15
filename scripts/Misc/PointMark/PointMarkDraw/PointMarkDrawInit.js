@@ -11,5 +11,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("p,k"));
     action.setDefaultCommands(["pointmark"]);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, PointMark, true, true, true, true);
+    EAction.addGuiActionTo(action, PointMark, true, true, false);
 }

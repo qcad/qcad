@@ -18,7 +18,7 @@
  */
 include("scripts/EAction.js");
 include("scripts/File/File.js");
-include("../PointMark/PointMark.js");
+include("../PointMark.js");
 
 /**
  * This action exports bench marks and point marks as CSV file.
