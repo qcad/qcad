@@ -147,7 +147,10 @@ Print.prototype.print = function(pdfFile) {
     }
 
     var painter = new QPainter();
-    painter.begin(printer);
+    if (!painter.begin(printer)) {
+        printer.destroy();
+        return false;
+    }
 
     // scale factor from drawing unit to mm:
     var unitScale = Print.getUnitScale(this.document);
@@ -264,6 +267,8 @@ Print.prototype.print = function(pdfFile) {
 
     this.view.setBackgroundColor(bgColor);
     this.view.setPrinting(false);
+
+    return true;
 };
 
 /**

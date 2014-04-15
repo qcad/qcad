@@ -519,13 +519,18 @@ PrintPreview.slotPdfExport = function() {
 
     appWin.handleUserMessage(qsTr("Exporting to %1...").arg(pdfFile));
 
-    PrintPreview.slotPrint(pdfFile);
+    var success = PrintPreview.slotPrint(pdfFile);
 
-    appWin.handleUserMessage(qsTr("Export complete: %1").arg(pdfFile));
+    if (success) {
+        appWin.handleUserMessage(qsTr("Export complete: %1").arg(pdfFile));
+    }
+    else {
+        appWin.handleUserWarning(qsTr("Export failed (cannot open file for writing): %1").arg(pdfFile));
+    }
 };
 
 PrintPreview.prototype.slotPrint = function(pdfFile) {
-    PrintPreview.slotPrint(pdfFile);
+    return PrintPreview.slotPrint(pdfFile);
 };
 
 /**
@@ -535,7 +540,7 @@ PrintPreview.slotPrint = function(pdfFile) {
     var mdiChild = EAction.getMdiChild();
     var view = mdiChild.getLastKnownViewWithFocus();
     var print = new Print(undefined, EAction.getDocument(), view);
-    print.print(pdfFile);
+    return print.print(pdfFile);
 };
 
 /**
