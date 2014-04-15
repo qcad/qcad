@@ -46,21 +46,58 @@ PointMarkList.prototype.finishEvent = function() {
     this.getGuiAction().setChecked(dock.visible);
 };
 
-PointMarkList.update = function(document, transaction) {
-    //qDebug("update point marker list: ", document);
-    if (isNull(document) || isNull(transaction)) {
+PointMarkList.itemClicked = function(item, col) {
+    var handle = item.data(0, Qt.UserRole);
+    var di = EAction.getDocumentInterface();
+    if (isNull(di)) {
         return;
     }
 
+    // find block reference and bounding box:
+    var doc = di.getDocument();
+    var blockRef = doc.queryObjectByHandle(handle);
+    if (!isBlockReferenceEntity(blockRef)) {
+        return;
+    }
+    var box = blockRef.getBoundingBox();
+
+    // find attribute(s):
+    var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
+    if (attribIds.length!==0) {
+        for (var i=0; i<attribIds.length; i++) {
+            var attribId = attribIds[i];
+            var attrib = doc.queryEntityDirect(attribId);
+            if (!isAttributeEntity(attrib)) {
+                continue;
+            }
+
+            box.growToInclude(attrib.getBoundingBox());
+        }
+    }
+
+    var view = di.getLastKnownViewWithFocus();
+    if (isNull(view)) {
+        return;
+    }
+
+    view.zoomTo(box, Math.min(view.getWidth(), view.getHeight())*0.4);
+};
+
+PointMarkList.updateFromDocument = function(di) {
     var appWin = RMainWindowQt.getMainWindow();
     var pointMarkTree = appWin.findChild("PointMarkTree");
     pointMarkTree.clear();
 
-    // find out what has changed:
-    var objIds = transaction.getAffectedObjects();
+    if (isNull(di)) {
+        // no document open, abort.
+        return;
+    }
+
+    var doc = di.getDocument();
+    var objIds = doc.queryAllBlockReferences();
     for (var i=0; i<objIds.length; i++) {
         var objId = objIds[i];
-        var blockRef = document.queryObjectDirect(objId);
+        var blockRef = doc.queryObjectDirect(objId);
         if (!isBlockReferenceEntity(blockRef)) {
             continue;
         }
@@ -70,7 +107,59 @@ PointMarkList.update = function(document, transaction) {
             continue;
         }
 
-        var label = PointMark.getMarkLabel(document, objId);
+        var label = PointMark.getMarkLabel(doc, objId);
+        var pos = blockRef.getPosition();
+
+        // block ref is a benchmark:
+        if (handle===blockRef.getHandle()) {
+            var item = new QTreeWidgetItem(
+                [
+                    label,
+                    RUnit.doubleToString(pos.x, 2),
+                    RUnit.doubleToString(pos.y, 2),
+                    RUnit.doubleToString(pos.z, 2),
+                    blockRef.getLayerName()
+                ]
+            );
+            item.setData(0, Qt.UserRole, handle);
+            pointMarkTree.addTopLevelItem(item);
+        }
+        // block ref is a point marker:
+        else {
+
+        }
+    }
+};
+
+PointMarkList.updateFromTransaction = function(doc, transaction) {
+    // TODO: find out if any marks were affected at all:
+    PointMarkList.updateFromDocument(EAction.getDocumentInterface());
+    return;
+
+    /*
+
+    if (isNull(doc) || isNull(transaction)) {
+        return;
+    }
+
+    var appWin = RMainWindowQt.getMainWindow();
+    var pointMarkTree = appWin.findChild("PointMarkTree");
+
+    // find out what has changed:
+    var objIds = transaction.getAffectedObjects();
+    for (var i=0; i<objIds.length; i++) {
+        var objId = objIds[i];
+        var blockRef = doc.queryObjectDirect(objId);
+        if (!isBlockReferenceEntity(blockRef)) {
+            continue;
+        }
+
+        var handle = PointMark.getBenchmarkHandle(blockRef);
+        if (handle===RObject.INVALID_HANDLE) {
+            continue;
+        }
+
+        var label = PointMark.getMarkLabel(doc, objId);
         var pos = blockRef.getPosition();
 
         // block ref is a benchmark:
@@ -90,9 +179,8 @@ PointMarkList.update = function(document, transaction) {
         else {
 
         }
-
-        qDebug("point marker found...");
     }
+    */
 };
 
 PointMarkList.init = function(basePath) {
@@ -109,6 +197,9 @@ PointMarkList.init = function(basePath) {
 
     var formWidget = WidgetFactory.createWidget(basePath, "PointMarkList.ui");
 
+    var pointMarkTree = formWidget.findChild("PointMarkTree");
+    pointMarkTree.itemClicked.connect(PointMarkList, "itemClicked");
+
     var dock = new RDockWidget(qsTr("Point Marker List"), appWin);
     dock.objectName = "PointMarkDock";
     dock.setWidget(formWidget);
@@ -118,7 +209,11 @@ PointMarkList.init = function(basePath) {
     dock.hidden.connect(function() { action.setChecked(false); });
 
     // create a transaction listener to keep widget up to date:
-    var adapter = new RTransactionListenerAdapter();
-    appWin.addTransactionListener(adapter);
-    adapter.transactionUpdated.connect(PointMarkList, "update");
+    var tAdapter = new RTransactionListenerAdapter();
+    appWin.addTransactionListener(tAdapter);
+    tAdapter.transactionUpdated.connect(PointMarkList, "updateFromTransaction");
+
+    var fAdapter = new RFocusListenerAdapter();
+    appWin.addFocusListener(fAdapter);
+    fAdapter.focusUpdated.connect(PointMarkList, "updateFromDocument");
 };
