@@ -65,17 +65,21 @@ BlockDialog.prototype.show = function() {
         }
     }
 
-    if (this.dialog.exec()) {
-        var text = blockName.text.trim();
-        if (!isNull(this.block)) {
-            this.block.setName(text);
-            return this.block;
-        }
-        this.dialog.setAttribute(Qt.WA_DeleteOnClose);
-        this.dialog.close();
-        var block = new RBlock(this.document, text, new RVector(0,0));
-        return block;
+    if (!this.dialog.exec()) {
+        this.dialog.destroy();
+        return undefined;
     }
+
+    var text = blockName.text.trim();
+    if (!isNull(this.block)) {
+        this.block.setName(text);
+        return this.block;
+    }
+    this.dialog.setAttribute(Qt.WA_DeleteOnClose);
+    this.dialog.close();
+    var block = new RBlock(this.document, text, new RVector(0,0));
+    this.dialog.destroy();
+    return block;
 };
 
 /**

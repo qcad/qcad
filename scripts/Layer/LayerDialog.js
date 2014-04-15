@@ -90,27 +90,32 @@ LayerDialog.prototype.show = function() {
         layerName.text = "layer " + c;
     }
 
-    if (this.dialog.exec()) {
-        var text = layerName.text.trim();
-        var clr = cbColor.getColor();
-        var lw = cbLineweight.getLineweight();
-        lt = cbLinetype.getLinetype();
-        var ltId = this.document.getLinetypeId(lt.getName());
-        if (!isNull(this.layer)) {
-            this.layer.setName(text);
-            this.layer.setColor(clr);
-            this.layer.setLinetypeId(ltId);
-            this.layer.setLineweight(lw);
-            this.initLayer(this.dialog, this.layer);
-            return this.layer;
-        }
-        this.dialog.setAttribute(Qt.WA_DeleteOnClose);
-        this.dialog.close();
-        var layer = new RLayer(this.document, text, false, false,
-                clr, ltId, lw);
-        this.initLayer(this.dialog, layer);
-        return layer;
+    if (!this.dialog.exec()) {
+        this.dialog.destroy();
+        return undefined;
     }
+
+    var text = layerName.text.trim();
+    var clr = cbColor.getColor();
+    var lw = cbLineweight.getLineweight();
+    lt = cbLinetype.getLinetype();
+    var ltId = this.document.getLinetypeId(lt.getName());
+    if (!isNull(this.layer)) {
+        this.layer.setName(text);
+        this.layer.setColor(clr);
+        this.layer.setLinetypeId(ltId);
+        this.layer.setLineweight(lw);
+        this.initLayer(this.dialog, this.layer);
+        return this.layer;
+    }
+    this.dialog.setAttribute(Qt.WA_DeleteOnClose);
+    this.dialog.close();
+    var layer = new RLayer(this.document, text, false, false,
+            clr, ltId, lw);
+    this.initLayer(this.dialog, layer);
+    this.dialog.destroy();
+
+    return layer;
 };
 
 /**

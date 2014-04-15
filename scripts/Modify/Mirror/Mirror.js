@@ -131,6 +131,7 @@ Mirror.prototype.showDialog = function() {
     var dialog = WidgetFactory.createDialog(Mirror.includeBasePath, "MirrorDialog.ui");
     WidgetFactory.restoreState(dialog);
     if (!dialog.exec()) {
+        dialog.destroy();
         return false;
     }
 
@@ -146,6 +147,7 @@ Mirror.prototype.showDialog = function() {
 
     WidgetFactory.saveState(dialog);
 
+    dialog.destroy();
     return true;
 };
 

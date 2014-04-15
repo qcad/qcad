@@ -64,6 +64,7 @@ CheckForUpdates.prototype.beginEvent = function() {
     dialog.exec();
 
     WidgetFactory.saveState(dialog);
+    dialog.destroy();
 };
 
 CheckForUpdates.prototype.openUrl = function(url) {

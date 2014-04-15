@@ -1177,6 +1177,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     var valueEdit = dialog.findChild("Value");
 
     if (!dialog.exec()) {
+        dialog.destroy();
         return;
     }
 
@@ -1186,6 +1187,8 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     // trigger change property operation for custom property:
     this.propertyChanged(new RPropertyTypeId(RSettings.getAppId(), name), value, this.entityTypeFilter);
     this.onlyChangesOverride = false;
+
+    dialog.destroy();
 };
 
 

@@ -152,6 +152,7 @@ Translate.prototype.showDialog = function() {
     var dialog = WidgetFactory.createDialog(Translate.includeBasePath, "TranslateDialog.ui");
     WidgetFactory.restoreState(dialog);
     if (!dialog.exec()) {
+        dialog.destroy();
         return false;
     }
 
@@ -170,6 +171,7 @@ Translate.prototype.showDialog = function() {
 
     WidgetFactory.saveState(dialog);
 
+    dialog.destroy();
     return true;
 };
 

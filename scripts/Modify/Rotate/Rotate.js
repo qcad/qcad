@@ -182,6 +182,7 @@ Rotate.prototype.showDialog = function() {
     var dialog = WidgetFactory.createDialog(Rotate.includeBasePath, "RotateDialog.ui");
     WidgetFactory.restoreState(dialog);
     if (!dialog.exec()) {
+        dialog.destroy();
         return false;
     }
 
@@ -209,6 +210,7 @@ Rotate.prototype.showDialog = function() {
 
     WidgetFactory.saveState(dialog);
 
+    dialog.destroy();
     return true;
 }
 

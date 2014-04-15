@@ -126,6 +126,7 @@ public:
 
     void setFontName(const QString& fontName) {
         this->fontName = fontName;
+        update();
     }
 
     bool isBold() const {
@@ -134,6 +135,7 @@ public:
 
     void setBold(bool on) {
         bold = on;
+        update();
     }
 
     bool isItalic() const {
@@ -142,6 +144,7 @@ public:
 
     void setItalic(bool on) {
         italic = on;
+        update();
     }
 
     double getTextHeight() const {
@@ -150,6 +153,7 @@ public:
 
     void setTextHeight(double h) {
         this->textHeight = h;
+        update();
     }
 
     /**
@@ -161,10 +165,12 @@ public:
 
     void setTextWidth(double w) {
         this->textWidth = w;
+        update();
     }
 
     void setVAlign(RS::VAlign valign) {
         this->verticalAlignment = valign;
+        update();
     }
 
     RS::VAlign getVAlign() const {
@@ -173,6 +179,7 @@ public:
 
     void setHAlign(RS::HAlign halign) {
         this->horizontalAlignment = halign;
+        update();
     }
 
     RS::HAlign getHAlign() const {
@@ -181,6 +188,7 @@ public:
 
     void setDrawingDirection(RS::TextDrawingDirection drawingDirection) {
         this->drawingDirection = drawingDirection;
+        update();
     }
 
     RS::TextDrawingDirection getDrawingDirection() const {
@@ -189,6 +197,7 @@ public:
 
     void setLineSpacingStyle(RS::TextLineSpacingStyle lineSpacingStyle) {
         this->lineSpacingStyle = lineSpacingStyle;
+        update();
     }
 
     RS::TextLineSpacingStyle getLineSpacingStyle() const {
@@ -197,6 +206,7 @@ public:
 
     void setLineSpacingFactor(double lineSpacingFactor) {
         this->lineSpacingFactor = lineSpacingFactor;
+        update();
     }
 
     double getLineSpacingFactor() const {
@@ -205,6 +215,7 @@ public:
 
     void setAngle(double angle) {
         this->angle = angle;
+        update();
     }
 
     double getAngle() const {
@@ -213,6 +224,7 @@ public:
 
     void setSimple(bool on) {
         simple = on;
+        update();
     }
 
     bool isSimple() const {

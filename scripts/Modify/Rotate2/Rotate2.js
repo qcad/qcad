@@ -154,6 +154,7 @@ Rotate2.prototype.showDialog = function() {
     }
 
     if (!dialog.exec()) {
+        dialog.destroy();
         return false;
     }
 
@@ -174,6 +175,7 @@ Rotate2.prototype.showDialog = function() {
 
     WidgetFactory.saveState(dialog);
 
+    dialog.destroy();
     return true;
 };
 

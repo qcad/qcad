@@ -35,6 +35,7 @@ SelectByHandle.prototype.beginEvent = function() {
     var dialog = WidgetFactory.createDialog(SelectByHandle.includeBasePath, "SelectByHandleDialog.ui");
 
     if (!dialog.exec()) {
+        dialog.destroy();
         this.terminate();
         return;
     }
@@ -56,5 +57,6 @@ SelectByHandle.prototype.beginEvent = function() {
         EAction.handleUserMessage(qsTr("Object is not an entity: ") + obj);
     }
 
+    dialog.destroy();
     this.terminate();
 };

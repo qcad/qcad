@@ -72,6 +72,7 @@ SvgImport.prototype.beginEvent = function() {
     var resolutionCombo = dialog.findChild("Resolution");
 
     if (!dialog.exec()) {
+        dialog.destroy();
         this.terminate();
         return;
     }
@@ -90,10 +91,10 @@ SvgImport.prototype.beginEvent = function() {
         di.autoZoom();
     }
 
-    var appWin = EAction.getMainWindow();
     if (!isNull(appWin)) {
         appWin.notifyListeners();
     }
     
+    dialog.destroy();
     this.terminate();
 };

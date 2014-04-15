@@ -91,6 +91,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     var res = this.dialog.exec();
     this.documentInterface.destroy();
     if (!res) {
+        this.dialog.destroy();
         return undefined;
     }
 
@@ -102,6 +103,8 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     hatchDataOut.setScale(editScale.getValue());
     hatchDataOut.setSolid(radioSolid.checked);
     hatchDataOut.setPatternName(radioSolid.checked ? "SOLID" : comboPattern.currentText);
+
+    this.dialog.destroy();
     return hatchDataOut;
 };
 

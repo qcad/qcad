@@ -403,6 +403,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     // exec text dialog:
     if (!this.dialog.exec()) {
         // dialog canceled:
+        this.dialog.destroy();
         return undefined;
     }
 
@@ -484,6 +485,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     RSettings.setValue("TextDialog/HAlignment", textDataOut.getHAlign());
     RSettings.setValue("TextDialog/MainFont", textDataOut.getFontName());
 
+    this.dialog.destroy();
     return textDataOut;
 };
 

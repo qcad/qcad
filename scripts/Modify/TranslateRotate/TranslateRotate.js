@@ -51,6 +51,7 @@ TranslateRotate.prototype.showDialog = function() {
     widgets["Angle"].setValue(this.angle);
 
     if (!dialog.exec()) {
+        dialog.destroy();
         return false;
     }
 
@@ -69,6 +70,7 @@ TranslateRotate.prototype.showDialog = function() {
 
     WidgetFactory.saveState(dialog);
 
+    dialog.destroy();
     return true;
 };
 

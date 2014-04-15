@@ -149,6 +149,8 @@ FirstStart.prototype.showDialog = function() {
         var settings = RSettings.getQSettings();
         settings.sync();
     }
+
+    formWidget.destroy();
 };
 
 FirstStart.prototype.changeLanguage = function(code) {

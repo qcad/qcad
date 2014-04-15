@@ -344,5 +344,6 @@ NewFile.closeRequested = function(mdiChild) {
     else {
         mdiChild.setCloseEventRejected();
     }
+    dialog.destroy();
 };
 
