@@ -395,6 +395,7 @@ function postInitAddOns(addOns, splash) {
 function main() {
     qApp.organizationName = "QCAD";
     qApp.organizationDomain = "QCAD.org";
+    qApp.applicationName = "QCAD";
     qApp.applicationVersion = RSettings.getVersionString();
 
     var i;
@@ -426,8 +427,6 @@ function main() {
         RSettings.setXDataEnabled(true);
     }
 
-    // in test mode, clean up first:
-    qApp.applicationName = "QCAD";
     // app name for ini file differs to avoid conflict with
     // older QCAD versions:
     RSettings.setApplicationName("QCAD3");

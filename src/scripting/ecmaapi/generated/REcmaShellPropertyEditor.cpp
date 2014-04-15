@@ -82,7 +82,7 @@
     
     
       void REcmaShellPropertyEditor::updateFromDocument(
-                RDocument * document, bool onlyChanges, RS::EntityType entityTypeFilter
+                RDocument * document, bool onlyChanges, RS::EntityType entityTypeFilter, bool manual
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellPropertyEditor::updateFromDocument", engine);
@@ -95,7 +95,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=3*/
+                    || _q_function.property("length").toInt32()!=4*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RPropertyEditor::updateFromDocument";
@@ -108,7 +108,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RPropertyEditor::updateFromDocument(
-                            document, onlyChanges, entityTypeFilter
+                            document, onlyChanges, entityTypeFilter, manual
                         );
 
                         // block recursion again:
@@ -151,6 +151,15 @@
         << qScriptValueFromValue(engine, 
 
         entityTypeFilter
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        manual
         )
       
                             )

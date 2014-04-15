@@ -287,7 +287,7 @@ void RGraphicsView::zoomTo(const RBox& window, int margin) {
 
     f.x = f.y = qMin(f.x, f.y);
 
-    if (f.x < 1.0e-6) {
+    if (RSettings::getLimitZoomAndScroll() && f.x < 1.0e-6) {
         //f.x = f.y = 1.0;
         return;
     }

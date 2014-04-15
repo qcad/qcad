@@ -27,17 +27,18 @@
     }
 
     
-        // primary base class RFocusListener:
+        // primary base class QObject:
         
             QScriptValue dpt = engine.defaultPrototype(
-                qMetaTypeId<RFocusListener*>());
+                qMetaTypeId<QObject*>());
 
             if (dpt.isValid()) {
                 proto->setPrototype(dpt);
             }
           
         /*
-        
+        REcmaFocusListener::init(engine, proto);
+          
         */
     
 
@@ -50,6 +51,9 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
+        // conversion for base class QObject
+        REcmaHelper::registerFunction(&engine, proto, getQObject, "getQObject");
+        
         // conversion for base class RFocusListener
         REcmaHelper::registerFunction(&engine, proto, getRFocusListener, "getRFocusListener");
         
@@ -62,6 +66,12 @@
     REcmaHelper::registerFunction(&engine, proto, getBaseClasses, "getBaseClasses");
     
 
+        // properties of secondary base class RFocusListener:
+        
+
+        // methods of secondary base class RFocusListener:
+        
+
     // properties:
     
 
@@ -73,6 +83,10 @@
             qMetaTypeId<RFocusListenerAdapter*>(), *proto);
 
         
+                        qScriptRegisterMetaType<
+                        RFocusListenerAdapter*>(
+                        &engine, toScriptValue, fromScriptValue, *proto);
+                    
     
 
     QScriptValue ctor = engine.newFunction(create, *proto, 2);
@@ -122,17 +136,14 @@
     // call C++ constructor:
     
             // non-copyable class:
-            REcmaShellFocusListenerAdapter
+            RFocusListenerAdapter
                     * cppResult =
                     new
-                    REcmaShellFocusListenerAdapter
+                    RFocusListenerAdapter
                     ();
                 
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                    result = engine->newQObject(context->thisObject(), cppResult);
                 
-        cppResult->__qtscript_self = result;
-    
     } else 
 
     {
@@ -146,7 +157,16 @@
     
 
     // conversion functions for base classes:
-     QScriptValue REcmaFocusListenerAdapter::getRFocusListener(QScriptContext *context,
+     QScriptValue REcmaFocusListenerAdapter::getQObject(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                QObject* cppResult =
+                    qscriptvalue_cast<RFocusListenerAdapter*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
+             QScriptValue REcmaFocusListenerAdapter::getRFocusListener(QScriptContext *context,
             QScriptEngine *engine)
         
             {
@@ -171,12 +191,19 @@
     {
         QStringList list;
         
+        list.append("QObject");
+    
         list.append("RFocusListener");
     
 
         return qScriptValueFromSequence(engine, list);
     }
     
+        // properties of secondary base class RFocusListener:
+        
+
+        // methods of secondary base class RFocusListener:
+        
 
     // properties:
     
@@ -304,12 +331,12 @@
 
             return self;
         }
-        REcmaShellFocusListenerAdapter* REcmaFocusListenerAdapter::getSelfShell(const QString& fName, QScriptContext* context)
+        RFocusListenerAdapter* REcmaFocusListenerAdapter::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RFocusListenerAdapter* selfBase = getSelf(fName, context);
-                REcmaShellFocusListenerAdapter* self = dynamic_cast<REcmaShellFocusListenerAdapter*>(selfBase);
-                //return REcmaHelper::scriptValueTo<REcmaShellFocusListenerAdapter >(context->thisObject());
+                RFocusListenerAdapter* self = dynamic_cast<RFocusListenerAdapter*>(selfBase);
+                //return REcmaHelper::scriptValueTo<RFocusListenerAdapter >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RFocusListenerAdapter.%1(): "
                     "This object is not a RFocusListenerAdapter").arg(fName),
@@ -321,4 +348,23 @@
 
 
         }
-        
+         void fromScriptValue(const QScriptValue& value,
+        RFocusListenerAdapter*
+        &out) {
+            QObject* o = value.toQObject();
+            out = qobject_cast<
+            RFocusListenerAdapter*>(o);
+        }
+     QScriptValue toScriptValue(QScriptEngine *engine,
+        RFocusListenerAdapter*
+        const &in){
+            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
+            QScriptEngine::PreferExistingWrapperObject);
+            /*
+            if(s.isNull()){
+               REcmaHelper::throwError("This object is null.", engine->currentContext());
+            }
+            */
+            return s;
+        }
+    

@@ -167,7 +167,7 @@ void RPropertyEditor::removeAllButThese(
  * objects that are selected for editing in the given document.
  */
 void RPropertyEditor::updateFromDocument(RDocument* document,
-    bool onlyChanges, RS::EntityType entityTypeFilter) {
+    bool onlyChanges, RS::EntityType entityTypeFilter, bool manual) {
 
     if (updatesDisabled) {
         return;
@@ -188,6 +188,36 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
     // add all properties of the entities in the given document:
     QSet<RObject::Id> entityIds = document->querySelectedEntities();
     QSet<RObject::Id>::iterator it;
+
+    // only block ref and attributes selected: default to filter block ref:
+    if (entityTypeFilter==RS::EntityAll && !manual) {
+        bool foundBlockRef = false;
+        bool foundAttribute = false;
+        for (it = entityIds.begin(); it != entityIds.end(); ++it) {
+            QSharedPointer<REntity> entity = document->queryEntityDirect(*it);
+            if (entity.isNull()) {
+                continue;
+            }
+
+            if (!foundBlockRef && entity->getType()==RS::EntityBlockRef) {
+                foundBlockRef = true;
+                if (foundAttribute) {
+                    break;
+                }
+            }
+            if (!foundAttribute && entity->getType()!=RS::EntityAttribute) {
+                foundAttribute = true;
+                if (foundBlockRef) {
+                    break;
+                }
+            }
+        }
+
+        if (foundBlockRef && foundAttribute) {
+            entityTypeFilter = RS::EntityBlockRef;
+        }
+    }
+
     for (it = entityIds.begin(); it != entityIds.end(); ++it) {
         QSharedPointer<REntity> entity = document->queryEntityDirect(*it);
         if (entity.isNull()) {

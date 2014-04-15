@@ -26,19 +26,27 @@ filename="RFocusListenerAdapter.h">
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RFocusListener.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocumentInterface</name>;</class_decl>
-  <comment type="block">/** * \brief Abstract base class for
-  classes that are interested in the current * focus. * * \ingroup
-  ecma * \scriptable * \generateScriptShell */</comment>
+  <comment type="block">/** * \ingroup ecma * \scriptable * \ g e
+  nerateScriptShell */</comment>
   <class>class 
   <name>RFocusListenerAdapter</name>
   <super>: 
   <specifier>public</specifier>
+  <name>QObject</name>, 
+  <specifier>public</specifier>
   <name>RFocusListener</name></super>
   <block>{
-  <private type="default"></private>
+  <private type="default">
+    <macro>
+      <name>Q_OBJECT</name>
+    </macro>
+  </private>
   <public>public: 
   <destructor>
     <specifier>virtual</specifier>
@@ -46,9 +54,6 @@ filename="RFocusListenerAdapter.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </destructor>
-  <comment type="block">/** * Called by the document whenever the
-  focus changed from one MDI * to another. * * \param di The
-  document interface that has now the focus. */</comment>
   <function>
     <type>
       <name>virtual</name>
@@ -64,12 +69,35 @@ filename="RFocusListenerAdapter.h">
       </decl>
     </param>)</parameter_list>
     <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>di</argument>)</argument_list>
-    </macro>}</block>
-  </function></public>}</block>;</class>
+    <function_decl>
+    <type>
+      <name>emit</name>
+    </type>
+    <name>focusUpdated</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>di</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</function_decl>}</block>
+  </function>
+  <label>
+  <name>signals</name>:</label>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>focusUpdated</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>di</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

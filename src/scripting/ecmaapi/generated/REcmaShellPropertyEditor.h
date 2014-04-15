@@ -40,7 +40,8 @@
     
       void updateFromDocument(
                 RDocument * document, bool onlyChanges, RS::EntityType entityTypeFilter
-        = RS :: EntityAll
+        = RS :: EntityAll, bool manual
+        =  false
             );
         
     

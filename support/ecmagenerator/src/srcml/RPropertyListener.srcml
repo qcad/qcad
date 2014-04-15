@@ -100,6 +100,18 @@ dir="./core" filename="RPropertyListener.h">
         <name>EntityAll</name></name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>manual</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
   <comment type="block">/** * This method is called if only the

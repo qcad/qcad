@@ -854,7 +854,7 @@ dir="./core" filename="RTransaction.h">
     <name>affectedObjectIds</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * List of IDs of all block references
-  that need to be . */</comment>
+  that need to be updated. */</comment>
   <decl_stmt>
   <decl>
     <type>

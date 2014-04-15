@@ -51,7 +51,7 @@ public:
 
     // from RPropertyListener interface:
     virtual void updateFromDocument(RDocument* document, bool onlyChanges,
-            RS::EntityType entityTypeFilter = RS::EntityAll);
+            RS::EntityType entityTypeFilter = RS::EntityAll, bool manual = false);
     virtual void updateFromObject(RObject* object, RDocument* document = NULL);
     virtual void clearEditor();
     void propertyChanged(RPropertyTypeId propertyTypeId, QVariant propertyValue,

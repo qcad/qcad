@@ -120,7 +120,7 @@ the GNU General Public License * along with QCAD. */</comment>
     <specifier>= 0</specifier>;</function_decl>
     <comment type="block">/** * \return An RPluginInfo object with
     at least the following keys: * - 'Version' - Version string * -
-    'About' - Plugin name * - 'Description' - Longer description of
+    'Name' - Plugin name * - 'Description' - Longer description of
     the plugin * - 'License' - Licensing information (e.g. 'GPLv3',
     'proprietary', ...) * - 'URL' - URL where more information
     about the plugin can be found * * This is typically used by an

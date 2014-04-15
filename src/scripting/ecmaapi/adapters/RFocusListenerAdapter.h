@@ -21,6 +21,7 @@
 #define RFOCUSLISTENERADAPTER_H
 
 #include <QMetaType>
+#include <QObject>
 
 #include "RFocusListener.h"
 
@@ -29,24 +30,22 @@ class RDocumentInterface;
 
 
 /**
- * \brief Abstract base class for classes that are interested in the current 
- * focus.
- *
  * \ingroup ecma
  * \scriptable
- * \generateScriptShell
+ * \ g  e nerateScriptShell
  */
-class RFocusListenerAdapter : public RFocusListener {
+class RFocusListenerAdapter : public QObject, public RFocusListener {
+Q_OBJECT
+
 public:
     virtual ~RFocusListenerAdapter() {}
 
-    /**
-     * Called by the document whenever the focus changed from one MDI
-     * to another.
-     *
-     * \param di The document interface that has now the focus.
-     */
-    virtual void updateFocus(RDocumentInterface* di) { Q_UNUSED(di) }
+    virtual void updateFocus(RDocumentInterface* di) {
+        emit focusUpdated(di);
+    }
+
+signals:
+    void focusUpdated(RDocumentInterface* di);
 };
 
 Q_DECLARE_METATYPE(RFocusListenerAdapter*)

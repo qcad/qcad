@@ -479,6 +479,82 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getPointSize" cppName="getPointSize"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="pSize"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="drawDot" cppName="drawDot" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="QPointF" typeName="QPointF" name="pt"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="drawPlus" cppName="drawPlus"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="QPointF" typeName="QPointF" name="pt"
+        isConst="false" />
+        <arg type="double" typeName="double" name="pSize"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="drawEx" cppName="drawEx" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="QPointF" typeName="QPointF" name="pt"
+        isConst="false" />
+        <arg type="double" typeName="double" name="pSize"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="drawVBar" cppName="drawVBar"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="QPointF" typeName="QPointF" name="pt"
+        isConst="false" />
+        <arg type="double" typeName="double" name="pSize"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="drawCircle" cppName="drawCircle"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="QPointF" typeName="QPointF" name="pt"
+        isConst="false" />
+        <arg type="double" typeName="double" name="pSize"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="drawSquare" cppName="drawSquare"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="QPointF" typeName="QPointF" name="pt"
+        isConst="false" />
+        <arg type="double" typeName="double" name="pSize"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="paintImage" cppName="paintImage"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

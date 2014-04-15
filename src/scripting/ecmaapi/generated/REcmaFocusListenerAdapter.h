@@ -12,7 +12,7 @@
         #include <QDebug>
 
         
-                #include "REcmaShellFocusListenerAdapter.h"
+                #include "RFocusListenerAdapter.h"
             
 
         /**
@@ -28,7 +28,9 @@
     ;
 
     // conversion functions for base classes:
-    static  QScriptValue getRFocusListener(QScriptContext *context,
+    static  QScriptValue getQObject(QScriptContext *context,
+            QScriptEngine *engine)
+        ;static  QScriptValue getRFocusListener(QScriptContext *context,
             QScriptEngine *engine)
         ;
 
@@ -39,6 +41,11 @@
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
         ;
+        // properties of secondary base class RFocusListener:
+        
+
+        // methods of secondary base class RFocusListener:
+        
 
     // properties:
     
@@ -51,7 +58,26 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RFocusListenerAdapter* getSelf(const QString& fName, QScriptContext* context)
-    ;static REcmaShellFocusListenerAdapter* getSelfShell(const QString& fName, QScriptContext* context)
-    ;};
+    ;static RFocusListenerAdapter* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static  void fromScriptValue(const QScriptValue& value,
+        RFocusListenerAdapter*
+        &out) {
+            QObject* o = value.toQObject();
+            out = qobject_cast<
+            RFocusListenerAdapter*>(o);
+        }
+    static  QScriptValue toScriptValue(QScriptEngine *engine,
+        RFocusListenerAdapter*
+        const &in){
+            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
+            QScriptEngine::PreferExistingWrapperObject);
+            /*
+            if(s.isNull()){
+               REcmaHelper::throwError("This object is null.", engine->currentContext());
+            }
+            */
+            return s;
+        }
+    };
     #endif
     
