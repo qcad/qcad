@@ -93,26 +93,27 @@ PointMarkList.updateFromDocument = function(di) {
         return;
     }
 
+    var item;
+
     var doc = di.getDocument();
     var objIds = doc.queryAllBlockReferences();
-    for (var i=0; i<objIds.length; i++) {
-        var objId = objIds[i];
-        var blockRef = doc.queryObjectDirect(objId);
-        if (!isBlockReferenceEntity(blockRef)) {
-            continue;
-        }
+    for (var p=0; p<2; p++) {
+        for (var i=0; i<objIds.length; i++) {
+            var objId = objIds[i];
+            var blockRef = doc.queryObjectDirect(objId);
+            if (!isBlockReferenceEntity(blockRef)) {
+                continue;
+            }
 
-        var handle = PointMark.getBenchmarkHandle(blockRef);
-        if (handle===RObject.INVALID_HANDLE) {
-            continue;
-        }
+            var bmHandle = PointMark.getBenchmarkHandle(blockRef);
+            if (bmHandle===RObject.INVALID_HANDLE) {
+                continue;
+            }
 
-        var label = PointMark.getMarkLabel(doc, objId);
-        var pos = blockRef.getPosition();
+            var label = PointMark.getMarkLabel(doc, objId);
+            var pos = blockRef.getPosition();
 
-        // block ref is a benchmark:
-        if (handle===blockRef.getHandle()) {
-            var item = new QTreeWidgetItem(
+            item = new QTreeWidgetItem(
                 [
                     label,
                     RUnit.doubleToString(pos.x, 2),
@@ -121,12 +122,36 @@ PointMarkList.updateFromDocument = function(di) {
                     blockRef.getLayerName()
                 ]
             );
-            item.setData(0, Qt.UserRole, handle);
-            pointMarkTree.addTopLevelItem(item);
-        }
-        // block ref is a point marker:
-        else {
+            item.setData(0, Qt.UserRole, blockRef.getHandle());
 
+            // block ref is a benchmark:
+            if (p==0) {
+                if (bmHandle===blockRef.getHandle()) {
+                    pointMarkTree.addTopLevelItem(item);
+                }
+            }
+            // block ref is a point marker:
+            else {
+                if (bmHandle!==blockRef.getHandle()) {
+                    // look up benchmark item:
+                    var bmItem = undefined;
+                    for (var k=0; k<pointMarkTree.topLevelItemCount; k++) {
+                        bmItem = pointMarkTree.topLevelItem(k);
+                        if (isNull(bmItem)) {
+                            continue;
+                        }
+
+                        if (bmItem.data(0, Qt.UserRole)===bmHandle) {
+                            break;
+                        }
+                    }
+
+                    if (!isNull(bmItem)) {
+                        bmItem.setExpanded(true);
+                        bmItem.addChild(item);
+                    }
+                }
+            }
         }
     }
 };
@@ -199,6 +224,7 @@ PointMarkList.init = function(basePath) {
 
     var pointMarkTree = formWidget.findChild("PointMarkTree");
     pointMarkTree.itemClicked.connect(PointMarkList, "itemClicked");
+    pointMarkTree.header().resizeSection(0, 200);
 
     var dock = new RDockWidget(qsTr("Point Marker List"), appWin);
     dock.objectName = "PointMarkDock";
