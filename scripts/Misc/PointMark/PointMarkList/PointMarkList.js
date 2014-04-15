@@ -24,6 +24,7 @@ function PointMarkList(guiAction) {
 }
 
 PointMarkList.prototype = new Widgets();
+PointMarkList.includeBasePath = includeBasePath;
 
 /**
  * Shows / hides the layer list.
@@ -127,12 +128,14 @@ PointMarkList.updateFromDocument = function(di) {
             // block ref is a benchmark:
             if (p==0) {
                 if (bmHandle===blockRef.getHandle()) {
+                    item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Benchmark.svg"));
                     pointMarkTree.addTopLevelItem(item);
                 }
             }
             // block ref is a point marker:
             else {
                 if (bmHandle!==blockRef.getHandle()) {
+                    item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Point.svg"));
                     // look up benchmark item:
                     var bmItem = undefined;
                     for (var k=0; k<pointMarkTree.topLevelItemCount; k++) {
@@ -149,11 +152,14 @@ PointMarkList.updateFromDocument = function(di) {
                     if (!isNull(bmItem)) {
                         bmItem.setExpanded(true);
                         bmItem.addChild(item);
+                        bmItem.sortChildren(0, Qt.AscendingOrder);
                     }
                 }
             }
         }
     }
+
+    pointMarkTree.sortItems(0, Qt.AscendingOrder);
 };
 
 PointMarkList.updateFromTransaction = function(doc, transaction) {
