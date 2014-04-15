@@ -54,6 +54,12 @@
    </item>
    <item>
     <widget class="QComboBox" name="ReferencePoint">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="ForceSaveIndex" stdset="0">
       <bool>true</bool>
      </property>
