@@ -87,7 +87,7 @@ PointMarkExport.prototype.getFileName = function() {
     }
 
     var appWin = EAction.getMainWindow();
-    var ret = File.getSaveFileName(appWin, qsTr("Export Point Label (CSV)"),
+    var ret = File.getSaveFileName(appWin, qsTr("Export Point Mark List (CSV)"),
                                    initialPath, [ qsTr("CSV") + " (*.csv)" ]);
     if (isNull(ret)) {
         return undefined;

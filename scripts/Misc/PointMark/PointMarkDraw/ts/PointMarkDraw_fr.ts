@@ -11,16 +11,11 @@
     <message>
         <location filename="../PointMarkDraw.js" line="127"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location filename="../PointMarkDraw.ui" line="17"/>
         <source>Benchmark Label:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../PointMarkDraw.ui" line="36"/>
-        <source>BM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -29,22 +24,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PointMarkDraw.ui" line="81"/>
-        <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../PointMarkDraw.ui" line="84"/>
-        <source>POINT</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../PointMarkDraw.ui" line="98"/>
+        <location filename="../PointMarkDraw.ui" line="95"/>
         <source>Auto append counter to label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PointMarkDraw.ui" line="101"/>
+        <location filename="../PointMarkDraw.ui" line="98"/>
         <source>Add counter</source>
         <translation type="unfinished"></translation>
     </message>

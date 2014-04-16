@@ -6,25 +6,22 @@
     <message>
         <location filename="../PointMarkList.js" line="199"/>
         <source>&amp;Show / Hide Point Mark List</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste mit Punktmarkierungen &amp;anzeigen / verbergen</translation>
     </message>
     <message>
         <location filename="../PointMarkList.js" line="223"/>
         <source>Point Mark List</source>
-        <translation type="unfinished"></translation>
+        <translation>Punktmarkierungen</translation>
     </message>
-</context>
-<context>
-    <name>PointMarkWidget</name>
     <message>
         <location filename="../PointMarkList.ui" line="78"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschriftung</translation>
     </message>
     <message>
         <location filename="../PointMarkList.ui" line="98"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer</translation>
     </message>
 </context>
 </TS>

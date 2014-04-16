@@ -69,7 +69,7 @@ PointMark.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
     var actionName = "PointMarkMenu";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
-        var action = new RGuiAction(qsTr("PointMark Tools"), mtb);
+        var action = new RGuiAction(qsTr("Point Mark Tools"), mtb);
         action.setScriptFile(PointMark.includeBasePath + "/PointMark.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);

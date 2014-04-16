@@ -13,9 +13,6 @@
         <source>Point Mark List</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>PointMarkWidget</name>
     <message>
         <location filename="../PointMarkList.ui" line="78"/>
         <source>Label</source>

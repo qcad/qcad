@@ -33,7 +33,7 @@
       </size>
      </property>
      <property name="text">
-      <string>BM</string>
+      <string notr="true">BM</string>
      </property>
     </widget>
    </item>
@@ -77,11 +77,8 @@
        <height>0</height>
       </size>
      </property>
-     <property name="toolTip">
-      <string>Enter fixed label or leave empty for automatic label</string>
-     </property>
      <property name="text">
-      <string>POINT</string>
+      <string notr="true">POINT</string>
      </property>
     </widget>
    </item>
