@@ -39,10 +39,10 @@
      id="namedview24"
      showgrid="true"
      inkscape:zoom="0.921875"
-     inkscape:cx="-134.70406"
+     inkscape:cx="-328.87355"
      inkscape:cy="206.31848"
-     inkscape:window-x="309"
-     inkscape:window-y="10"
+     inkscape:window-x="318"
+     inkscape:window-y="48"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2">
     <inkscape:grid
@@ -123,18 +123,18 @@
     </marker>
   </defs>
   <path
-     style="fill:#000000;stroke:#000000;stroke-width:0.0075;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-     d="M 256,64 C 362.03868,64 448,149.96132 448,256 L 256,256 256,64 z M 256,256 256,448 C 149.96133,448 64,362.03867 64,256 L 256,256 z"
-     id="path3162"
-     inkscape:connector-curvature="0" />
-  <path
      d="M 512,256 A 256,256 0 1 1 0,256 256,256 0 1 1 512,256 z"
      sodipodi:ry="256"
      sodipodi:rx="256"
      sodipodi:cy="256"
      sodipodi:cx="256"
      id="path3171"
-     style="fill:none;stroke:#000000;stroke-width:10.66666698;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+     style="fill:#ffffff;stroke:#000000;stroke-width:10.66666698000000046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
      sodipodi:type="arc"
      transform="matrix(-0.75,0,0,0.75,448,64)" />
+  <path
+     style="fill:#000000;stroke:#000000;stroke-width:0.0075;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+     d="M 256,64 C 362.03868,64 448,149.96132 448,256 L 256,256 256,64 z M 256,256 256,448 C 149.96133,448 64,362.03867 64,256 L 256,256 z"
+     id="path3162"
+     inkscape:connector-curvature="0" />
 </svg>

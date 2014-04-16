@@ -12,7 +12,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="PointMarkDraw.svg">
+   sodipodi:docname="PointMarkExport.svg">
   <metadata
      id="metadata26">
     <rdf:RDF>
@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,12 +39,12 @@
      id="namedview24"
      showgrid="true"
      inkscape:zoom="0.921875"
-     inkscape:cx="348.20339"
+     inkscape:cx="154.0339"
      inkscape:cy="181.15254"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="573"
+     inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="g3200"
      inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
@@ -123,36 +123,36 @@
          id="path3109" />
     </symbol>
   </defs>
-  <text
-     sodipodi:linespacing="125%"
-     id="text3978"
-     y="200"
-     x="23.987167"
+  <g
      style="font-size:233.49264526px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     xml:space="preserve"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Planer;-inkscape-font-specification:Planer"
-       y="200"
-       x="23.987167"
-       id="tspan3980"
-       sodipodi:role="line">BM</tspan></text>
+     id="text3978">
+    <path
+       d="M 147.73827,154.93592 C 147.73827,137.1905 137.46458,122.01345 122.75456,114.3082 134.66267,106.60295 141.43397,94.461309 141.43397,79.284302 141.43397,55.701569 122.28755,36.555148 98.704814,36.555148 L 46.168969,36.555148 C 40.098166,36.555148 35.6618,40.991515 35.6618,47.062317 L 35.6618,189.49283 C 35.6618,195.56363 40.098166,200 46.168969,200 L 102.4407,200 C 127.65788,200 147.73827,179.91961 147.73827,154.93592 M 102.4407,121.77996 C 120.41961,121.77996 135.59665,136.72351 135.59665,154.93592 135.59665,172.91484 120.41961,187.85838 102.4407,187.85838 L 48.270402,187.85838 48.270402,121.77996 102.4407,121.77996 M 48.270402,109.40485 48.270402,48.930259 98.704814,48.930259 C 115.51627,48.930259 129.05886,62.472849 129.05886,79.284302 129.05886,95.862264 115.51627,109.40485 98.704814,109.40485 L 48.270402,109.40485"
+       style="font-family:Planer;-inkscape-font-specification:Planer"
+       id="path3032" />
+    <path
+       d="M 171.10577,193.6957 C 171.10577,197.19808 173.90768,200 177.41007,200 181.14595,200 183.71437,197.19808 183.71437,193.6957 L 183.71437,53.366619 C 183.71437,51.031695 185.58232,49.163751 187.91724,49.163751 189.55169,49.163751 191.18614,50.564709 191.65312,52.199156 L 233.91529,193.92919 C 235.08275,197.43158 237.88467,200 242.32103,200 246.52389,200 249.32581,197.43158 250.49327,193.92919 265.43678,146.76372 280.84733,99.13113 296.02433,51.965663 296.25783,50.331216 297.65878,49.163751 299.52672,49.163751 301.86165,49.163751 303.72959,51.031695 303.72959,53.366619 L 303.72959,193.6957 C 303.72959,197.19808 306.29801,200 310.03389,200 313.53628,200 316.33819,197.19808 316.33819,193.6957 L 316.33819,53.366619 C 316.33819,44.260415 308.63293,36.555148 299.52672,36.555148 292.28846,36.555148 285.51716,41.225008 283.41573,47.762795 269.87317,90.725399 255.86359,133.92162 242.32103,177.35121 L 204.02823,48.229781 C 201.9268,41.225008 195.389,36.555148 187.91724,36.555148 178.81104,36.555148 171.10577,44.260415 171.10577,53.366619 L 171.10577,193.6957"
+       style="font-family:Planer;-inkscape-font-specification:Planer"
+       id="path3034" />
+  </g>
   <g
      id="g3200"
      transform="matrix(0.66666666,0,0,0.66666666,5.333338,189.33334)">
     <path
-       inkscape:connector-curvature="0"
-       id="path3162"
-       d="M 256,64 C 362.03868,64 448,149.96132 448,256 L 256,256 256,64 z M 256,256 256,448 C 149.96133,448 64,362.03867 64,256 L 256,256 z"
-       style="fill:#000000;stroke:#000000;stroke-width:0.0075;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-    <path
        transform="matrix(-0.75,0,0,0.75,448,64)"
        sodipodi:type="arc"
-       style="fill:none;stroke:#000000;stroke-width:16.00000016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#ffffff;stroke:#000000;stroke-width:16.00000015999999903;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="path3171"
        sodipodi:cx="256"
        sodipodi:cy="256"
        sodipodi:rx="256"
        sodipodi:ry="256"
        d="M 512,256 C 512,397.3849 397.3849,512 256,512 114.6151,512 0,397.3849 0,256 0,114.6151 114.6151,0 256,0 397.3849,0 512,114.6151 512,256 z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3162"
+       d="M 256,64 C 362.03868,64 448,149.96132 448,256 L 256,256 256,64 z M 256,256 256,448 C 149.96133,448 64,362.03867 64,256 L 256,256 z"
+       style="fill:#000000;stroke:#000000;stroke-width:0.0075;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
   </g>
   <path
      style="fill:#ff0000;stroke:#000000;stroke-width:11.98999977"
