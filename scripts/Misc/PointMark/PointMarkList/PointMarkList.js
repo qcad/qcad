@@ -85,7 +85,6 @@ PointMarkList.itemClicked = function(item, col) {
 };
 
 PointMarkList.updateFromDocument = function(di) {
-    qDebug("PointMarkList.updateFromDocument");
     var appWin = RMainWindowQt.getMainWindow();
     var pointMarkTree = appWin.findChild("PointMarkTree");
     pointMarkTree.clear();
@@ -194,6 +193,10 @@ PointMarkList.updateFromTransaction = function(doc, transaction) {
 };
 
 PointMarkList.init = function(basePath) {
+    if (!hasPlugin("DWG")) {
+        return;
+    }
+
     var appWin = RMainWindowQt.getMainWindow();
 
     var action = new RGuiAction(qsTr("&Show / Hide Point Mark List"), appWin);

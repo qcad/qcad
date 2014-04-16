@@ -204,9 +204,13 @@ LayerList.uninit = function() {
     action.visible = false;
     var appWin = RMainWindowQt.getMainWindow();
     var layerList = appWin.findChild("LayerList");
-    appWin.removeLayerListener(layerList.property("listener"));
+    if (!isNull(layerList)) {
+        appWin.removeLayerListener(layerList.property("listener"));
+    }
     var basicDock = appWin.findChild("LayerListDock");
-    basicDock.destroy();
+    if (!isNull(basicDock)) {
+        basicDock.destroy();
+    }
 };
 
 LayerList.init = function(basePath) {
