@@ -34,12 +34,9 @@ OptionsToolBar.postInit = function(basePath) {
     var sh = EAction.getMainWindow().findChild("FileToolBar").sizeHint;
 
     // fixed height to prevent FS#652 (can happen at least on Windows and Linux):
-    var h = 32;
+    var h = 38;
     if (RS.getSystemId()==="osx") {
         h = 42;
-    }
-    else if (RS.getSystemId()==="linux") {
-        h = 38;
     }
     optionsToolBar.setFixedHeight(h);
 
