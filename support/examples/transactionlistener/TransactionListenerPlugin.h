@@ -10,6 +10,9 @@ class TransactionListenerPlugin : public QObject, public RPluginInterface, publi
 {
     Q_OBJECT
     Q_INTERFACES(RPluginInterface)
+#if QT_VERSION >= 0x050000
+    Q_PLUGIN_METADATA(IID "org.qcad.transactionlistener")
+#endif
 
 public:
     virtual bool init();

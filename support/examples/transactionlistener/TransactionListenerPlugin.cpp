@@ -70,6 +70,8 @@ void TransactionListenerPlugin::updateTransactionListener(RDocument* document, R
     qDebug() << "End of list";
 }
 
+#if QT_VERSION < 0x050000
 QT_BEGIN_NAMESPACE
 Q_EXPORT_PLUGIN2(example, TransactionListenerPlugin)
 QT_END_NAMESPACE
+#endif
