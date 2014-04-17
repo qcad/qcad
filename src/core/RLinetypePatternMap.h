@@ -38,6 +38,8 @@
 class QCADCORE_EXPORT RLinetypePatternMap: public QMap<QString, RLinetypePattern> {
 public:
     RLinetypePatternMap();
+    RLinetypePatternMap(const RLinetypePatternMap*) {}
+
     static RLinetypePattern getPattern(const QString& name);
     static QList<RLinetypePattern> getPatterns();
 

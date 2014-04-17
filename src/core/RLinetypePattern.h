@@ -26,6 +26,8 @@
 #include <math.h>
 
 #include <QMetaType>
+#include <QString>
+#include <QList>
 #include <QVector>
 
 

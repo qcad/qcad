@@ -48,7 +48,13 @@ void RClipboardOperation::copy(
         bool preview,
         const RQMapQStringQString& attributes) const {
 
-    double unitScale = RUnit::convert(1.0, src.getUnit(), dest.getUnit());
+    double unitScale;
+    if (src.getUnit()==RS::None) {
+        unitScale = 1.0;
+    }
+    else {
+        unitScale = RUnit::convert(1.0, src.getUnit(), dest.getUnit());
+    }
 
     if (clear) {
         dest.clear();
