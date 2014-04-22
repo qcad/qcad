@@ -54,48 +54,6 @@ PointMarkDraw.includeBasePath = includeBasePath;
 PointMarkDraw.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    var appWin = RMainWindowQt.getMainWindow();
-    var dock = appWin.findChild("PointMarkDock");
-    dock.visible = true;
-
-    // init benchmark counter:
-    this.benchmarkCounter = 1;
-    this.pointCounter = 1;
-    var doc = this.getDocument();
-    var markIds = PointMark.queryAllMarks(doc);
-    for (var i=0; i<markIds.length; i++) {
-        var id = markIds[i];
-        var blockRef = doc.queryEntityDirect(id);
-        if (isNull(blockRef)) {
-            continue;
-        }
-
-        // get benchmark handle as int:
-        var handle = PointMark.getBenchmarkHandle(blockRef);
-        if (handle===RObject.INVALID_HANDLE) {
-            continue;
-        }
-
-        // get label:
-        var label = PointMark.getMarkLabel(doc, blockRef.getId());
-        var matches = label.match(/\d+$/);
-        if (matches.length!==1) {
-            continue;
-        }
-
-        // parse label number:
-        var num = parseInt(matches[0]);
-
-        // block ref is a benchmark:
-        if (handle===blockRef.getHandle()) {
-            // bench mark (refers to itself as benchmark):
-            this.benchmarkCounter = Math.max(this.benchmarkCounter, num+1);
-        }
-//        else {
-//            this.pointCounter = Math.max(this.pointCounter, num);
-//        }
-    }
-
     // load bench mark:
     this.diBM = new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexNavel()));
     this.diBM.importFile(PointMarkDraw.dataPath + "/benchmark.dxf");
@@ -106,6 +64,60 @@ PointMarkDraw.prototype.beginEvent = function() {
 
     // start with setting the bechmark (origin):
     this.setState(PointMarkDraw.State.SettingBenchmarkPosition);
+};
+
+PointMarkDraw.prototype.initUiOptions = function(resume) {
+    var appWin = RMainWindowQt.getMainWindow();
+    var dock = appWin.findChild("PointMarkDock");
+    if (isNull(dock)) {
+        return;
+    }
+    dock.visible = true;
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    if (isNull(optionsToolBar)) {
+        return;
+    }
+    var benchmarkCombo = optionsToolBar.findChild("");
+
+    var doc = this.getDocument();
+    var markIds = PointMark.queryAllMarks(doc);
+    var i, id, blockRef, handle, label;
+
+    // init benchmark counter and combo box:
+    this.benchmarkCounter = 1;
+    this.pointCounter = 1;
+    for (i=0; i<markIds.length; i++) {
+        id = markIds[i];
+        blockRef = doc.queryEntityDirect(id);
+        if (isNull(blockRef)) {
+            continue;
+        }
+
+        // get benchmark handle as int:
+        handle = PointMark.getBenchmarkHandle(blockRef);
+        if (handle===RObject.INVALID_HANDLE) {
+            continue;
+        }
+
+        // get label:
+        label = PointMark.getMarkLabel(doc, blockRef.getId());
+        var matches = label.match(/\d+$/);
+        if (matches.length!==1) {
+            continue;
+        }
+
+        // parse label number:
+        var num = parseInt(matches[0]);
+
+        // block ref is a benchmark (refers to itself as benchmark):
+        if (handle===blockRef.getHandle()) {
+            this.benchmarkCounter = Math.max(this.benchmarkCounter, num+1);
+        }
+    //        else {
+    //            this.pointCounter = Math.max(this.pointCounter, num);
+    //        }
+    }
 };
 
 PointMarkDraw.prototype.setState = function(state) {
@@ -218,7 +230,7 @@ PointMarkDraw.prototype.updateLabel = function(di, benchmark, preview) {
             break;
         }
     }
-}
+};
 
 /**
  * \return Complete label for next marker.

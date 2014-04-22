@@ -98,6 +98,9 @@ PointMark.prototype.getTitle = function() {
     return PointMark.getTitle();
 };
 
+/**
+ * \return All block references representing benchmarks or point marks.
+ */
 PointMark.queryAllMarks = function(doc) {
     var ret = [];
 
@@ -120,6 +123,9 @@ PointMark.queryAllMarks = function(doc) {
     return ret;
 };
 
+/**
+ * \return String representing label of the given benchmark or point mark.
+ */
 PointMark.getMarkLabel = function(doc, blockRefId) {
     var blockAttribIds = doc.queryChildEntities(blockRefId);
     if (blockAttribIds.length!==1) {
@@ -133,6 +139,9 @@ PointMark.getMarkLabel = function(doc, blockRefId) {
     return attrib.getPlainText();
 };
 
+/**
+ * \return Nummerical benchmark handle the given point mark or benchmark refers to.
+ */
 PointMark.getBenchmarkHandle = function(blockRef) {
     var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
     if (isNull(handle)) {
@@ -157,7 +166,8 @@ PointMark.getPointMarkTree = function(doc) {
     var handleMap = {};
     var i;
 
-    var objIds = doc.queryAllBlockReferences();
+    //var objIds = doc.queryAllBlockReferences();
+    var objIds = PointMark.queryAllMarks(doc);
     for (var p=0; p<2; p++) {
         for (i=0; i<objIds.length; i++) {
             var objId = objIds[i];
@@ -172,10 +182,12 @@ PointMark.getPointMarkTree = function(doc) {
                 continue;
             }
 
+            // first loop, not a benchmark:
             if (p==0 && bmHandle!==blockRef.getHandle()) {
                 continue;
             }
 
+            // second loop, not a point mark:
             if (p==1 && bmHandle===blockRef.getHandle()) {
                 continue;
             }
