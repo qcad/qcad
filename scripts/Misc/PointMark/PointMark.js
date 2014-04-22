@@ -99,9 +99,14 @@ PointMark.prototype.getTitle = function() {
 };
 
 /**
- * \return All block references representing benchmarks or point marks.
+ * \return All block reference IDs representing benchmarks or point marks.
+ * \param type 'b', 'p', 'a' (benchmarks, points, all [default])
  */
-PointMark.queryAllMarks = function(doc) {
+PointMark.queryAllMarkIds = function(doc, type) {
+    if (isNull(type)) {
+        type='a';
+    }
+
     var ret = [];
 
     var ids = doc.queryAllBlockReferences();
@@ -112,12 +117,25 @@ PointMark.queryAllMarks = function(doc) {
             continue;
         }
 
-        var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
+        var handle = PointMark.getBenchmarkHandle(blockRef);
         if (isNull(handle)) {
             continue;
         }
 
-        ret.push(id);
+        if (type==='a') {
+            ret.push(id);
+            continue;
+        }
+
+        if (type==='b' && handle===blockRef.getHandle()) {
+            ret.push(id);
+            continue;
+        }
+
+        if (type==='p' && handle!==blockRef.getHandle()) {
+            ret.push(id);
+            continue;
+        }
     }
 
     return ret;
@@ -167,7 +185,7 @@ PointMark.getPointMarkTree = function(doc) {
     var i;
 
     //var objIds = doc.queryAllBlockReferences();
-    var objIds = PointMark.queryAllMarks(doc);
+    var objIds = PointMark.queryAllMarkIds(doc);
     for (var p=0; p<2; p++) {
         for (i=0; i<objIds.length; i++) {
             var objId = objIds[i];
@@ -194,7 +212,7 @@ PointMark.getPointMarkTree = function(doc) {
 
             // query benchmark:
             var bm = doc.queryObjectByHandle(bmHandle);
-            if (isNull(bm)) {
+            if (isNull(bm) || !isBlockReferenceEntity(bm)) {
                 continue;
             }
 

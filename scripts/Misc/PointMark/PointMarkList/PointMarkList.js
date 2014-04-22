@@ -60,28 +60,35 @@ PointMarkList.itemClicked = function(item, col) {
     if (!isBlockReferenceEntity(blockRef)) {
         return;
     }
-    var box = blockRef.getBoundingBox();
 
-    // find attribute(s):
-    var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
-    if (attribIds.length!==0) {
-        for (var i=0; i<attribIds.length; i++) {
-            var attribId = attribIds[i];
-            var attrib = doc.queryEntityDirect(attribId);
-            if (!isAttributeEntity(attrib)) {
-                continue;
-            }
+    di.selectEntity(blockRef.getId());
 
-            box.growToInclude(attrib.getBoundingBox());
-        }
-    }
+    // zoom to point:
+//    var box = blockRef.getBoundingBox();
+
+//    // find attribute(s):
+//    var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
+//    if (attribIds.length!==0) {
+//        for (var i=0; i<attribIds.length; i++) {
+//            var attribId = attribIds[i];
+//            var attrib = doc.queryEntityDirect(attribId);
+//            if (!isAttributeEntity(attrib)) {
+//                continue;
+//            }
+
+//            box.growToInclude(attrib.getBoundingBox());
+//        }
+//    }
 
     var view = di.getLastKnownViewWithFocus();
     if (isNull(view)) {
         return;
     }
 
-    view.zoomTo(box, Math.min(view.getWidth(), view.getHeight())*0.4);
+//    view.zoomTo(box, Math.min(view.getWidth(), view.getHeight())*0.4);
+
+    // only pan to point:
+    view.centerToPoint(blockRef.getPosition());
 };
 
 PointMarkList.updateFromDocument = function(di) {

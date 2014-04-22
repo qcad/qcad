@@ -6,11 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>659</width>
-    <height>46</height>
+    <width>875</width>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Benchmark:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="Benchmark"/>
+   </item>
+   <item>
+    <widget class="QToolButton" name="AddBenchmark">
+     <property name="icon">
+      <iconset>
+       <normaloff>AddBenchmark.svg</normaloff>AddBenchmark.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
