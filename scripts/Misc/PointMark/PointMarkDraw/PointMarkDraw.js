@@ -144,29 +144,24 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
         // parse label number:
         var num = parseInt(matches[0], 10);
 
-        // benchmark mode and block ref is a benchmark
+        // block ref is a benchmark
         // (refers to itself as benchmark):
-        //if (this.state===PointMarkDraw.State.SettingBenchmarkPosition) {
-            if (handle===blockRef.getHandle()) {
-                this.benchmarkCounter = Math.max(this.benchmarkCounter, num+1);
+        if (handle===blockRef.getHandle()) {
+            this.benchmarkCounter = Math.max(this.benchmarkCounter, num+1);
 
-                if (benchmarkCombo.findData(handle)===-1) {
-                    benchmarkCombo.addItem(label, handle);
-                }
-                continue;
+            if (benchmarkCombo.findData(handle)===-1) {
+                benchmarkCombo.addItem(label, handle);
             }
-        //}
+            continue;
+        }
 
-        // point mode and block ref is a point that refers to the selected
+        if (handle!==this.benchmarkHandle) {
+            continue;
+        }
+
+        // block ref is a point that refers to the selected
         // bench mark:
-        //else {
-            if (handle!==this.benchmarkHandle) {
-                continue;
-            }
-            //if (handle!==blockRef.getHandle()) {
-                this.pointCounter = Math.max(this.pointCounter, num+1);
-            //}
-        //}
+        this.pointCounter = Math.max(this.pointCounter, num+1);
     }
 
     benchmarkCombo.currentIndex = benchmarkCombo.findData(this.benchmarkHandle);
