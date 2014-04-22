@@ -34,7 +34,7 @@ GridSettings.getPreferencesCategory = function(appPreferences) {
 GridSettings.updateUnit = function(unit) {
     var unitSymbol = "";
     if (isString(unit)) {
-        unit = parseInt(unit);
+        unit = parseInt(unit, 10);
     }
 
     unitSymbol = RUnit.unitToSymbol(unit);
@@ -92,7 +92,7 @@ GridSettings.updateUnit = function(unit) {
 GridSettings.updateLinearFormat = function(linearFormat) {
     var unitSymbol = "";
     if (isString(linearFormat)) {
-        linearFormat = parseInt(linearFormat);
+        linearFormat = parseInt(linearFormat, 10);
     }
 
     var i;

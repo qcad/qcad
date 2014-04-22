@@ -141,7 +141,7 @@ BitmapExport.prototype.getProperties = function() {
                         return;
                     }
 
-                    var res = parseInt(str);
+                    var res = parseInt(str, 10);
                     if (isNaN(res)) {
                         return;
                     }
