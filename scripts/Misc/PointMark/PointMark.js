@@ -186,6 +186,8 @@ PointMark.getPointMarkTree = function(doc) {
 
     //var objIds = doc.queryAllBlockReferences();
     var objIds = PointMark.queryAllMarkIds(doc);
+
+    // two passes: add benchmarks, add points:
     for (var p=0; p<2; p++) {
         for (i=0; i<objIds.length; i++) {
             var objId = objIds[i];
@@ -236,6 +238,27 @@ PointMark.getPointMarkTree = function(doc) {
                 ret[handleMap[bmHandle]].push([label,pos,blockRef.getLayerName(),blockRef.getHandle()]);
             }
         }
+    }
+
+    // sort by benchmark:
+    ret.sort(function(a,b) {
+        if (a[0].length===0) return -1;
+        if (b[0].length===0) return 1;
+
+        if (a[0][0] < b[0][0]) return -1;
+        if (a[0][0] > b[0][0]) return 1;
+        return 0;
+    });
+
+    // sort by points:
+    for (i=0; i<ret.length; i++) {
+        ret[i] = [ret[i][0]].concat(
+            ret[i].slice(1).sort(function(a,b) {
+                if (a[0] < b[0]) return -1;
+                if (a[0] > b[0]) return 1;
+                return 0;
+            })
+        );
     }
 
     return ret;

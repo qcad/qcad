@@ -27,34 +27,7 @@
     <number>0</number>
    </property>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Benchmark:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBox">
-       <item>
-        <property name="text">
-         <string>All</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>BM001</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>BM002</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
+    <layout class="QHBoxLayout" name="horizontalLayout_2"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">

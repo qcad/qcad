@@ -114,7 +114,6 @@ PointMarkList.updateFromDocument = function(di) {
 
     if (!isNull(currentItem) && isNull(selectedHandle)) {
         selectedHandle = currentItem.data(0, Qt.UserRole);
-        qDebug("current item is: 0x", selectedHandle.toString(16));
     }
 
     treeWidget.clear();
@@ -159,7 +158,7 @@ PointMarkList.updateFromDocument = function(di) {
                 item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Point.svg"));
                 rootItem.setExpanded(true);
                 rootItem.addChild(item);
-                rootItem.sortChildren(0, Qt.AscendingOrder);
+                //rootItem.sortChildren(0, Qt.AscendingOrder);
             }
 
             if (list[k][3]===selectedHandle) {
@@ -168,7 +167,7 @@ PointMarkList.updateFromDocument = function(di) {
         }
     }
 
-    treeWidget.sortItems(0, Qt.AscendingOrder);
+    //treeWidget.sortItems(0, Qt.AscendingOrder);
     for (var col=0; col<4; col++) {
         treeWidget.resizeColumnToContents(col);
     }

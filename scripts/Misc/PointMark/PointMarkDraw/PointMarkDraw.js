@@ -31,15 +31,11 @@ function PointMarkDraw(guiAction) {
     this.label = "";
     this.pos = RVector.invalid;
     this.benchmarkPos = new RVector(0,0);
-    this.benchmarkCounter = -1;
-    this.pointCounter = -1;
+    this.benchmarkCounter = 1;
+    this.pointCounter = 1;
     this.benchmarkHandle = RObject.INVALID_ID;
     this.autoAppendCounter = true;
     this.textHeight = 10;
-
-    //if (!isNull(guiAction)) {
-    //    this.setUiOptions("PointMarkDraw.ui");
-    //}
 }
 
 PointMarkDraw.State = {
@@ -391,21 +387,12 @@ PointMarkDraw.prototype.slotTextHeightChanged = function(value) {
 };
 
 PointMarkDraw.prototype.slotBenchmarkChanged = function(value) {
-    //this.textHeight = value;
-    qDebug("PointMarkDraw.prototype.slotBenchmarkChanged: ", value);
-
     if (value===-1) {
-        qDebug("value is -1");
         return;
     }
 
-//    if (value===1) {
-//        debugger;
-//    }
-
     var benchmarkCombo = PointMarkDraw.getBenchmarkCombo();
     if (isNull(benchmarkCombo)) {
-        qDebug("no combo");
         return;
     }
 
@@ -416,19 +403,15 @@ PointMarkDraw.prototype.slotBenchmarkChanged = function(value) {
     // keep selection in tree widget in sync:
     var treeWidget = PointMark.getTreeWidget();
     if (isNull(treeWidget) || !treeWidget.visible) {
-        qDebug("no tree widget");
         return;
     }
 
-    qDebug("items: ", treeWidget.topLevelItemCount);
     for (var i=0; i<treeWidget.topLevelItemCount; i++) {
         var item = treeWidget.topLevelItem(i);
         if (item.data(0, Qt.UserRole)!==this.benchmarkHandle) {
-            qDebug("no match: ", item.data(0, Qt.UserRole));
             continue;
         }
 
-        qDebug("setting current item to: 0x", this.benchmarkHandle.toString(16));
         treeWidget.setCurrentItem(item);
     }
 };
@@ -452,7 +435,6 @@ PointMarkDraw.getBenchmarkCombo = function() {
 };
 
 PointMarkDraw.setBenchmark = function(handle) {
-    qDebug("PointMarkDraw.setBenchmark: 0x", handle.toString(16));
     var benchmarkCombo = PointMarkDraw.getBenchmarkCombo();
     if (isNull(benchmarkCombo)) {
         return;
@@ -462,8 +444,6 @@ PointMarkDraw.setBenchmark = function(handle) {
     if (idx!==-1) {
         benchmarkCombo.currentIndex = idx;
     }
-
-    //this.benchmarkHandle = handle;
 };
 
 PointMarkDraw.getBenchmark = function() {
