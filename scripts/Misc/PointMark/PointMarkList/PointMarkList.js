@@ -17,7 +17,8 @@
  * along with QCAD.
  */
 
-include("../../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
+include("../PointMarkDraw/PointMarkDraw.js");
 
 function PointMarkList(guiAction) {
     Widgets.call(this, guiAction);
@@ -63,7 +64,12 @@ PointMarkList.itemClicked = function(item, col) {
 
     di.selectEntity(blockRef.getId());
 
-    // zoom to point:
+    // if we are drawing marks, set benchmark:
+    if (PointMark.getBenchmarkHandle(blockRef)===handle) {
+        PointMarkDraw.setBenchmark(handle);
+    }
+
+    // zoom to mark:
 //    var box = blockRef.getBoundingBox();
 
 //    // find attribute(s):
@@ -87,25 +93,31 @@ PointMarkList.itemClicked = function(item, col) {
 
 //    view.zoomTo(box, Math.min(view.getWidth(), view.getHeight())*0.4);
 
-    // only pan to point:
+    // only pan to mark:
     view.centerToPoint(blockRef.getPosition());
 };
 
 PointMarkList.updateFromDocument = function(di) {
     var appWin = RMainWindowQt.getMainWindow();
-    var pointMarkTree = appWin.findChild("PointMarkTree");
-    pointMarkTree.clear();
+    var treeWidget = appWin.findChild("PointMarkTree");
+    var currentItem = treeWidget.currentItem();
+    var selectedHandle = undefined;
+    if (!isNull(currentItem)) {
+        selectedHandle = currentItem.data(0, Qt.UserRole);
+    }
+
+    treeWidget.clear();
 
     if (isNull(di)) {
         // no document open, abort.
         return;
     }
 
-    var tree = PointMark.getPointMarkTree(di.getDocument());
+    var treeData = PointMark.getPointMarkTree(di.getDocument());
     var item;
 
-    for (var i=0; i<tree.length; i++) {
-        var list = tree[i];
+    for (var i=0; i<treeData.length; i++) {
+        var list = treeData[i];
 
         var rootItem = undefined;
         for (var k=0; k<list.length; k++) {
@@ -125,7 +137,7 @@ PointMarkList.updateFromDocument = function(di) {
 
             if (k===0) {
                 item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Benchmark.svg"));
-                pointMarkTree.addTopLevelItem(item);
+                treeWidget.addTopLevelItem(item);
                 rootItem = item;
             }
             else {
@@ -138,12 +150,16 @@ PointMarkList.updateFromDocument = function(di) {
                 rootItem.addChild(item);
                 rootItem.sortChildren(0, Qt.AscendingOrder);
             }
+
+            if (list[k][3]===selectedHandle) {
+                treeWidget.setCurrentItem(item);
+            }
         }
     }
 
-    pointMarkTree.sortItems(0, Qt.AscendingOrder);
+    treeWidget.sortItems(0, Qt.AscendingOrder);
     for (var col=0; col<4; col++) {
-        pointMarkTree.resizeColumnToContents(col);
+        treeWidget.resizeColumnToContents(col);
     }
 };
 

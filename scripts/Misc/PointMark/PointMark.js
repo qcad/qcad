@@ -240,3 +240,19 @@ PointMark.getPointMarkTree = function(doc) {
 
     return ret;
 };
+
+PointMark.getDock = function() {
+    var appWin = RMainWindowQt.getMainWindow();
+    if (isNull(appWin)) {
+        return undefined;
+    }
+    return appWin.findChild("PointMarkDock");
+};
+
+PointMark.getTreeWidget = function() {
+    var dock = PointMark.getDock();
+    if (isNull(dock)) {
+        return undefined;
+    }
+    return dock.findChild("PointMarkTree");
+};

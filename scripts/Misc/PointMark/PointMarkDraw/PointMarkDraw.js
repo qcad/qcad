@@ -29,7 +29,7 @@ function PointMarkDraw(guiAction) {
     EAction.call(this, guiAction);
 
     this.label = "";
-    this.pos = new RVector(0,0);
+    this.pos = RVector.invalid;
     this.benchmarkPos = new RVector(0,0);
     this.benchmarkCounter = -1;
     this.pointCounter = -1;
@@ -70,19 +70,18 @@ PointMarkDraw.prototype.beginEvent = function() {
     if (benchmarkIds.length===0) {
         // no benchmarks yet, start with adding a benchmark:
         this.setState(PointMarkDraw.State.SettingBenchmarkPosition);
-        return;
     }
     else {
         var blockRef = doc.queryObjectDirect(benchmarkIds[benchmarkIds.length-1]);
         if (isNull(blockRef) || !isBlockReferenceEntity(blockRef)) {
             this.setState(PointMarkDraw.State.SettingBenchmarkPosition);
-            return;
         }
-
-        // got already a benchmark, start with adding points:
-        this.benchmarkHandle = blockRef.getHandle();
-        qDebug("PointMarkDraw.prototype.beginEvent: this.benchmarkHandle: ", this.benchmarkHandle);
-        this.setState(PointMarkDraw.State.SettingPointPosition);
+        else {
+            // got already a benchmark, start with adding points:
+            this.benchmarkHandle = blockRef.getHandle();
+            qDebug("PointMarkDraw.prototype.beginEvent: this.benchmarkHandle: ", this.benchmarkHandle);
+            this.setState(PointMarkDraw.State.SettingPointPosition);
+        }
     }
 
     EAction.prototype.beginEvent.call(this);
@@ -95,19 +94,23 @@ PointMarkDraw.prototype.beginEvent = function() {
 };
 
 PointMarkDraw.prototype.initUiOptions = function(resume) {
-    var appWin = RMainWindowQt.getMainWindow();
-    var dock = appWin.findChild("PointMarkDock");
+    qDebug("initUiOptions");
+
+    var dock = PointMark.getDock();
     if (isNull(dock)) {
+        qDebug("no dock");
         return;
     }
     dock.visible = true;
 
     var optionsToolBar = EAction.getOptionsToolBar();
     if (isNull(optionsToolBar)) {
+        qDebug("no options tool bar");
         return;
     }
     var benchmarkCombo = optionsToolBar.findChild("Benchmark");
     if (isNull(benchmarkCombo)) {
+        qDebug("no benchmark combo");
         return;
     }
     benchmarkCombo.blockSignals(true);
@@ -162,6 +165,16 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
         // block ref is a point that refers to the selected
         // bench mark:
         this.pointCounter = Math.max(this.pointCounter, num+1);
+    }
+
+    var treeWidget = PointMark.getTreeWidget();
+    if (!isNull(treeWidget)) {
+        for (i=0; i<treeWidget.topLevelItemCount; i++) {
+            var item = treeWidget.topLevelItem(i);
+            if (item.data(0, Qt.UserRole)===this.benchmarkHandle) {
+                treeWidget.setCurrentItem(item);
+            }
+        }
     }
 
     benchmarkCombo.currentIndex = benchmarkCombo.findData(this.benchmarkHandle);
@@ -323,6 +336,10 @@ PointMarkDraw.prototype.getLabel = function(benchmark, preview) {
 };
 
 PointMarkDraw.prototype.getOperation = function(preview) {
+    if (!isValidVector(this.pos)) {
+        return undefined;
+    }
+
     var op;
 
     switch (this.state) {
@@ -340,6 +357,8 @@ PointMarkDraw.prototype.getOperation = function(preview) {
 
     op.setOffset(this.pos);
     op.setOverwriteBlocks(false);
+    // update symbols (TODO):
+    //op.setOverwriteBlocks(true);
 
     return op;
 };
@@ -370,11 +389,7 @@ PointMarkDraw.prototype.slotBenchmarkChanged = function(value) {
         return;
     }
 
-    var optionsToolBar = EAction.getOptionsToolBar();
-    if (isNull(optionsToolBar)) {
-        return;
-    }
-    var benchmarkCombo = optionsToolBar.findChild("Benchmark");
+    var benchmarkCombo = PointMarkDraw.getBenchmarkCombo();
     if (isNull(benchmarkCombo)) {
         return;
     }
@@ -390,5 +405,33 @@ PointMarkDraw.prototype.slotBenchmarkChanged = function(value) {
 };
 
 PointMarkDraw.prototype.slotAddBenchmark = function() {
+    var benchmarkCombo = PointMarkDraw.getBenchmarkCombo();
+    if (isNull(benchmarkCombo)) {
+        return;
+    }
+    benchmarkCombo.currentIndex = -1;
+
     this.setState(PointMarkDraw.State.SettingBenchmarkPosition);
+};
+
+PointMarkDraw.getBenchmarkCombo = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    if (isNull(optionsToolBar)) {
+        return undefined;
+    }
+    return optionsToolBar.findChild("Benchmark");
+};
+
+PointMarkDraw.setBenchmark = function(handle) {
+    var benchmarkCombo = PointMarkDraw.getBenchmarkCombo();
+    if (isNull(benchmarkCombo)) {
+        return;
+    }
+
+    var idx = benchmarkCombo.findData(handle);
+    if (idx!==-1) {
+        benchmarkCombo.currentIndex = idx;
+    }
+
+    //this.benchmarkHandle = handle;
 };

@@ -23,6 +23,9 @@
    </item>
    <item>
     <widget class="QToolButton" name="AddBenchmark">
+     <property name="toolTip">
+      <string>Add new benchmark</string>
+     </property>
      <property name="icon">
       <iconset>
        <normaloff>AddBenchmark.svg</normaloff>AddBenchmark.svg</iconset>
