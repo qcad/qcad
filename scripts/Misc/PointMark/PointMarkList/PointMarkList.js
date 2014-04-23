@@ -62,9 +62,11 @@ PointMarkList.itemClicked = function(item, col) {
         return;
     }
 
-    di.selectEntity(blockRef.getId());
+    if (!blockRef.isSelected()) {
+        di.selectEntity(blockRef.getId());
+    }
 
-    // if we are drawing marks, set benchmark:
+    // if we are drawing marks, set current parent benchmark:
     if (PointMark.getBenchmarkHandle(blockRef)===handle) {
         PointMarkDraw.setBenchmark(handle);
     }
@@ -98,12 +100,21 @@ PointMarkList.itemClicked = function(item, col) {
 };
 
 PointMarkList.updateFromDocument = function(di) {
+
     var appWin = RMainWindowQt.getMainWindow();
+    var dock = appWin.findChild("PointMarkDock");
+    if (!dock.visible) {
+        return;
+    }
+
     var treeWidget = appWin.findChild("PointMarkTree");
     var currentItem = treeWidget.currentItem();
-    var selectedHandle = undefined;
-    if (!isNull(currentItem)) {
+
+    var selectedHandle = PointMarkDraw.getBenchmark();
+
+    if (!isNull(currentItem) && isNull(selectedHandle)) {
         selectedHandle = currentItem.data(0, Qt.UserRole);
+        qDebug("current item is: 0x", selectedHandle.toString(16));
     }
 
     treeWidget.clear();
@@ -233,6 +244,7 @@ PointMarkList.init = function(basePath) {
 
     var formWidget = WidgetFactory.createWidget(basePath, "PointMarkList.ui");
 
+    // set up tree widget:
     var pointMarkTree = formWidget.findChild("PointMarkTree");
     pointMarkTree.itemClicked.connect(PointMarkList, "itemClicked");
     pointMarkTree.header().resizeSection(0, 150);
@@ -240,20 +252,25 @@ PointMarkList.init = function(basePath) {
     pointMarkTree.header().resizeSection(2, 80);
     pointMarkTree.header().resizeSection(3, 80);
 
+    // set up tool buttons:
     var widgets = getWidgets(formWidget);
     widgets["PointMarkDraw"].setDefaultAction(
             RGuiAction.getByScriptFile("scripts/Misc/PointMark/PointMarkDraw/PointMarkDraw.js"));
     widgets["PointMarkExport"].setDefaultAction(
             RGuiAction.getByScriptFile("scripts/Misc/PointMark/PointMarkExport/PointMarkExport.js"));
 
+    // set up dock widget:
     var dock = new RDockWidget(qsTr("Point Mark List"), appWin);
     dock.objectName = "PointMarkDock";
     dock.setWidget(formWidget);
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
-
-    dock.shown.connect(function() { action.setChecked(true); });
-    dock.hidden.connect(function() { action.setChecked(false); });
-
+    dock.shown.connect(function() {
+        action.setChecked(true);
+        PointMarkList.updateFromDocument(EAction.getDocumentInterface());
+    });
+    dock.hidden.connect(function() {
+        action.setChecked(false);
+    });
     dock.visible = false;
 
     // create a transaction listener to keep widget up to date:
@@ -261,6 +278,7 @@ PointMarkList.init = function(basePath) {
     appWin.addTransactionListener(tAdapter);
     tAdapter.transactionUpdated.connect(PointMarkList, "updateFromTransaction");
 
+    // create a focus listener to keep widget up to date if document changes:
     var fAdapter = new RFocusListenerAdapter();
     appWin.addFocusListener(fAdapter);
     fAdapter.focusUpdated.connect(PointMarkList, "updateFromDocument");

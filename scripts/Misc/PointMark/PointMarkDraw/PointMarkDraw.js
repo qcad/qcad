@@ -37,9 +37,9 @@ function PointMarkDraw(guiAction) {
     this.autoAppendCounter = true;
     this.textHeight = 10;
 
-    if (!isNull(guiAction)) {
-        this.setUiOptions("PointMarkDraw.ui");
-    }
+    //if (!isNull(guiAction)) {
+    //    this.setUiOptions("PointMarkDraw.ui");
+    //}
 }
 
 PointMarkDraw.State = {
@@ -66,6 +66,8 @@ PointMarkDraw.prototype.beginEvent = function() {
         return;
     }
 
+    EAction.prototype.beginEvent.call(this);
+
     var benchmarkIds = PointMark.queryAllMarkIds(doc, 'b');
     if (benchmarkIds.length===0) {
         // no benchmarks yet, start with adding a benchmark:
@@ -79,12 +81,11 @@ PointMarkDraw.prototype.beginEvent = function() {
         else {
             // got already a benchmark, start with adding points:
             this.benchmarkHandle = blockRef.getHandle();
-            qDebug("PointMarkDraw.prototype.beginEvent: this.benchmarkHandle: ", this.benchmarkHandle);
             this.setState(PointMarkDraw.State.SettingPointPosition);
         }
     }
 
-    EAction.prototype.beginEvent.call(this);
+    //this.showUiOptions();
 
 //    var optionsToolBar = EAction.getOptionsToolBar();
 //    if (isNull(optionsToolBar)) {
@@ -94,23 +95,18 @@ PointMarkDraw.prototype.beginEvent = function() {
 };
 
 PointMarkDraw.prototype.initUiOptions = function(resume) {
-    qDebug("initUiOptions");
-
     var dock = PointMark.getDock();
     if (isNull(dock)) {
-        qDebug("no dock");
         return;
     }
     dock.visible = true;
 
     var optionsToolBar = EAction.getOptionsToolBar();
     if (isNull(optionsToolBar)) {
-        qDebug("no options tool bar");
         return;
     }
     var benchmarkCombo = optionsToolBar.findChild("Benchmark");
     if (isNull(benchmarkCombo)) {
-        qDebug("no benchmark combo");
         return;
     }
     benchmarkCombo.blockSignals(true);
@@ -154,6 +150,7 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
 
             if (benchmarkCombo.findData(handle)===-1) {
                 benchmarkCombo.addItem(label, handle);
+                benchmarkCombo.model().sort(0);
             }
             continue;
         }
@@ -167,28 +164,28 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
         this.pointCounter = Math.max(this.pointCounter, num+1);
     }
 
-    var treeWidget = PointMark.getTreeWidget();
-    if (!isNull(treeWidget)) {
-        for (i=0; i<treeWidget.topLevelItemCount; i++) {
-            var item = treeWidget.topLevelItem(i);
-            if (item.data(0, Qt.UserRole)===this.benchmarkHandle) {
-                treeWidget.setCurrentItem(item);
-            }
-        }
-    }
+//    var treeWidget = PointMark.getTreeWidget();
+//    if (!isNull(treeWidget)) {
+//        for (i=0; i<treeWidget.topLevelItemCount; i++) {
+//            var item = treeWidget.topLevelItem(i);
+//            if (item.data(0, Qt.UserRole)===this.benchmarkHandle) {
+//                treeWidget.setCurrentItem(item);
+//            }
+//        }
+//    }
 
     benchmarkCombo.currentIndex = benchmarkCombo.findData(this.benchmarkHandle);
-    qDebug("PointMarkDraw.prototype.initUiOptions: this.benchmarkHandle: ", this.benchmarkHandle);
     benchmarkCombo.blockSignals(false);
 };
 
-PointMarkDraw.prototype.setState = function(state) {
-    EAction.prototype.setState.call(this, state);
+PointMarkDraw.prototype.initState = function(state) {
+    EAction.prototype.initState.call(this, state);
 
     this.setCrosshairCursor();
     this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
 
     var appWin = RMainWindowQt.getMainWindow();
+
     switch (this.state) {
     case PointMarkDraw.State.SettingBenchmarkPosition:
         this.pointCounter = 1;
@@ -196,14 +193,25 @@ PointMarkDraw.prototype.setState = function(state) {
         this.setCommandPrompt(trBM);
         this.setLeftMouseTip(trBM);
         this.setRightMouseTip(EAction.trCancel);
+        this.setUiOptions("PointMarkDrawBenchmark.ui");
+        //PointMarkDraw.showBenchmarkLabelControls();
         break;
+
     case PointMarkDraw.State.SettingPointPosition:
         var trPos = qsTr("Position");
         this.setCommandPrompt(trPos);
         this.setLeftMouseTip(trPos);
         this.setRightMouseTip(EAction.trBack);
+        this.setUiOptions("PointMarkDraw.ui");
+        //debugger;
+        //PointMarkDraw.showPointLabelControls();
         break;
     }
+
+    this.hideUiOptions(true);
+    //this.optionWidgetActions = undefined;
+    this.showUiOptions();
+    this.initUiOptions(false);
 
     EAction.showSnapTools();
 };
@@ -245,9 +253,10 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
                 objId = objIds[i];
                 obj = doc.queryObjectDirect(objId);
                 if (isBlockReferenceEntity(obj)) {
-                    this.benchmarkHandle = obj.getHandle();
                     // benchmark refers to itself as benchmark:
+                    this.benchmarkHandle = obj.getHandle();
                     obj.setCustomProperty("QCAD", "benchmark", "0x" + this.benchmarkHandle.toString(16));
+                    PointMarkDraw.setBenchmark(obj.getHandle());
                 }
             }
 
@@ -386,11 +395,17 @@ PointMarkDraw.prototype.slotBenchmarkChanged = function(value) {
     qDebug("PointMarkDraw.prototype.slotBenchmarkChanged: ", value);
 
     if (value===-1) {
+        qDebug("value is -1");
         return;
     }
 
+//    if (value===1) {
+//        debugger;
+//    }
+
     var benchmarkCombo = PointMarkDraw.getBenchmarkCombo();
     if (isNull(benchmarkCombo)) {
+        qDebug("no combo");
         return;
     }
 
@@ -398,10 +413,24 @@ PointMarkDraw.prototype.slotBenchmarkChanged = function(value) {
     this.initUiOptions(false);
     this.updatePreview(true);
 
-    // new benchmark:
-    //if (value===0) {
+    // keep selection in tree widget in sync:
+    var treeWidget = PointMark.getTreeWidget();
+    if (isNull(treeWidget) || !treeWidget.visible) {
+        qDebug("no tree widget");
+        return;
+    }
 
-    //}
+    qDebug("items: ", treeWidget.topLevelItemCount);
+    for (var i=0; i<treeWidget.topLevelItemCount; i++) {
+        var item = treeWidget.topLevelItem(i);
+        if (item.data(0, Qt.UserRole)!==this.benchmarkHandle) {
+            qDebug("no match: ", item.data(0, Qt.UserRole));
+            continue;
+        }
+
+        qDebug("setting current item to: 0x", this.benchmarkHandle.toString(16));
+        treeWidget.setCurrentItem(item);
+    }
 };
 
 PointMarkDraw.prototype.slotAddBenchmark = function() {
@@ -423,6 +452,7 @@ PointMarkDraw.getBenchmarkCombo = function() {
 };
 
 PointMarkDraw.setBenchmark = function(handle) {
+    qDebug("PointMarkDraw.setBenchmark: 0x", handle.toString(16));
     var benchmarkCombo = PointMarkDraw.getBenchmarkCombo();
     if (isNull(benchmarkCombo)) {
         return;
@@ -435,3 +465,42 @@ PointMarkDraw.setBenchmark = function(handle) {
 
     //this.benchmarkHandle = handle;
 };
+
+PointMarkDraw.getBenchmark = function() {
+    var benchmarkCombo = PointMarkDraw.getBenchmarkCombo();
+    if (isNull(benchmarkCombo)) {
+        return undefined;
+    }
+
+    if (benchmarkCombo.currentIndex===-1) {
+        return undefined;
+    }
+
+    return benchmarkCombo.itemData(benchmarkCombo.currentIndex);
+};
+
+//PointMarkDraw.showBenchmarkLabelControls = function() {
+//    PointMarkDraw.showControls([/*"SPointLabel",*/ "LPointLabel", "PointLabel"], false);
+//    PointMarkDraw.showControls([/*"SBenchmarkLabel",*/ "LBenchmarkLabel", "BenchmarkLabel"], true);
+//};
+
+//PointMarkDraw.showPointLabelControls = function() {
+//    PointMarkDraw.showControls([/*"SBenchmarkLabel",*/ "LBenchmarkLabel", "BenchmarkLabel"], false);
+//    PointMarkDraw.showControls([/*"SPointLabel",*/ "LPointLabel", "PointLabel"], true);
+//};
+
+//PointMarkDraw.showControls = function(names, show) {
+//    var optionsToolBar = EAction.getOptionsToolBar();
+//    if (isNull(optionsToolBar)) {
+//        return;
+//    }
+//    for (var i=0; i<names.length; i++) {
+//        var w = optionsToolBar.findChild(names[i]);
+//        if (isNull(w)) {
+//            debugger;
+//            continue;
+//        }
+
+//        w.visible = show;
+//    }
+//};

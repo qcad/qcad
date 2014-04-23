@@ -47,7 +47,7 @@ PointMarkExport.prototype.beginEvent = function() {
     }
 
     var ts = new QTextStream(file);
-    ts.writeString("X\tY\tLabel");
+    ts.writeString("NAME,E(x),N(y),z,DESC");
 
     var doc = this.getDocument();
     var tree = PointMark.getPointMarkTree(doc);
@@ -57,11 +57,18 @@ PointMarkExport.prototype.beginEvent = function() {
         var list = tree[i];
 
         for (var k=0; k<list.length; k++) {
+            var label = list[k][0];
+
+            // prevent commas in data fields:
+            label = label.replace(/,/g, '_');
+
             ts.writeString(
-                "\n%1\t%2\t%3"
-                .arg(list[k][1].x)
-                .arg(list[k][1].y)
-                .arg(list[k][0])
+                "\n%1,%2,%3,%4,%5"
+                .arg(label)
+                .arg(sprintf("%.12f", list[k][1].x))
+                .arg(sprintf("%.12f", list[k][1].y))
+                .arg(0.0)
+                .arg(label)
             );
         }
     }

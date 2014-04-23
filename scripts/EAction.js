@@ -176,8 +176,8 @@ EAction.prototype.mouseReleaseEvent = function(event) {
  * Sets the UI options toolbar content for this tool. By default, a tool shows
  * the options toolbar defined in "DefaultOptions.ui".
  * 
- * \param uiFile A path to a single UI file or an array of UI file paths. \param
- * split If true, the options are split up into multiple toolbars.
+ * \param uiFile A path to a single UI file or an array of UI file paths.
+ * \param split If true, the options are split up into multiple toolbars.
  */
 EAction.prototype.setUiOptions = function(uiFile, split) {
     if (isNull(split)) {
