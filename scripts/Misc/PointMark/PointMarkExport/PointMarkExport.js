@@ -124,8 +124,6 @@ PointMarkExport.prototype.getFileName = function() {
         initialPath = fi.path() + QDir.separator + fi.completeBaseName() + unitPostfix + ".csv";
     }
 
-    qDebug("initialPath: ", initialPath);
-
     var appWin = EAction.getMainWindow();
     var ret = File.getSaveFileName(appWin, qsTr("Export Point Mark List (CSV)"),
                                    initialPath, [ qsTr("CSV") + " (*.csv)" ]);
