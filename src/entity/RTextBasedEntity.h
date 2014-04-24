@@ -135,6 +135,10 @@ public:
         return getData().getTextHeight();
     }
 
+    void setTextHeight(double h) {
+        getData().setTextHeight(h);
+    }
+
     double getTextWidth() const {
         return getData().getTextWidth();
     }

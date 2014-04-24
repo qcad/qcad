@@ -103,6 +103,9 @@
         getTextHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setTextHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTextWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

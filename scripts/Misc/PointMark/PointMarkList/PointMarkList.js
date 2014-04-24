@@ -225,6 +225,9 @@ PointMarkList.updateFromTransaction = function(doc, transaction) {
     */
 };
 
+/**
+ * Called when user adjusts scale factor of point marks.
+ */
 PointMarkList.setScale = function(str) {
     var f = parseFloat(str, 10);
 
@@ -250,6 +253,55 @@ PointMarkList.setScale = function(str) {
 
     di.applyOperation(op);
 };
+
+/**
+ * Called when user adjusts label size.
+ */
+PointMarkList.setLabelSize = function(str) {
+    if (str.length===0) {
+        return;
+    }
+    var h = parseFloat(str, 10);
+    if (h<RS.PointTolerance) {
+        return;
+    }
+
+    var di = EAction.getDocumentInterface();
+    if (isNull(di)) {
+        return;
+    }
+    var doc = di.getDocument();
+
+    var op = new RAddObjectsOperation();
+    var ids = PointMark.queryAllMarkIds(doc, 'a');
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+
+        var blockRef = doc.queryEntity(id);
+        if (isNull(blockRef) || !isBlockReferenceEntity(blockRef)) {
+            continue;
+        }
+
+        var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
+        if (attribIds.length===0) {
+            continue;
+        }
+
+        for (var k=0; k<attribIds.length; k++) {
+            var attribId = attribIds[k];
+            var attrib = doc.queryEntity(attribId);
+            if (isNull(attrib)) {
+                continue;
+            }
+
+            attrib.setTextHeight(h);
+            op.addObject(attrib);
+        }
+    }
+
+    di.applyOperation(op);
+};
+
 
 PointMarkList.init = function(basePath) {
     if (!hasPlugin("DWG")) {
@@ -278,8 +330,10 @@ PointMarkList.init = function(basePath) {
     pointMarkTree.header().resizeSection(3, 80);
 
     var scaleCombo = formWidget.findChild("Scale");
-    //scaleCombo["currentIndexChanged(QString)"].connect(PointMarkList, "setScale");
     scaleCombo["editTextChanged"].connect(PointMarkList, "setScale");
+
+    var labelSizeCombo = formWidget.findChild("LabelSize");
+    labelSizeCombo["editTextChanged"].connect(PointMarkList, "setLabelSize");
 
     // set up tool buttons:
     var widgets = getWidgets(formWidget);

@@ -141,6 +141,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="setTextHeight" cppName="setTextHeight"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="h"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getTextWidth" cppName="getTextWidth"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
