@@ -913,6 +913,8 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
         control.addItem(qsTr("No"), false);
         control.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
         control.focusPolicy = Qt.ClickFocus;
+        control.minimumWidth = 50;
+        control.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
     }
 
     if (attributes.isMixed()) {
@@ -967,6 +969,8 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             control = new QComboBox(this.geometryGroup);
             control.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
             control.focusPolicy = Qt.ClickFocus;
+            control.minimumWidth = 50;
+            control.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
         }
 
         control.objectName = objectName;

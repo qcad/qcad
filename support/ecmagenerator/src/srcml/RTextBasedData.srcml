@@ -710,7 +710,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>fontName</name>= 
-    <name>fontName</name></expr>;</expr_stmt>}</block>
+    <name>fontName</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -743,7 +747,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr_stmt>
     <expr>
     <name>bold</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
+    <name>on</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -776,7 +784,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr_stmt>
     <expr>
     <name>italic</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
+    <name>on</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -810,7 +822,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>textHeight</name>= 
-    <name>h</name></expr>;</expr_stmt>}</block>
+    <name>h</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <comment type="block">/** * Width of the text box used for line
   wrapping (not supported). */</comment>
@@ -846,7 +862,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>textWidth</name>= 
-    <name>w</name></expr>;</expr_stmt>}</block>
+    <name>w</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -869,7 +889,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>verticalAlignment</name>= 
-    <name>valign</name></expr>;</expr_stmt>}</block>
+    <name>valign</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -907,7 +931,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>horizontalAlignment</name>= 
-    <name>halign</name></expr>;</expr_stmt>}</block>
+    <name>halign</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -945,7 +973,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>drawingDirection</name>= 
-    <name>drawingDirection</name></expr>;</expr_stmt>}</block>
+    <name>drawingDirection</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -983,7 +1015,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>lineSpacingStyle</name>= 
-    <name>lineSpacingStyle</name></expr>;</expr_stmt>}</block>
+    <name>lineSpacingStyle</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -1019,7 +1055,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>lineSpacingFactor</name>= 
-    <name>lineSpacingFactor</name></expr>;</expr_stmt>}</block>
+    <name>lineSpacingFactor</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -1053,7 +1093,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr>
     <name>this</name>-&gt;
     <name>angle</name>= 
-    <name>angle</name></expr>;</expr_stmt>}</block>
+    <name>angle</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>
@@ -1086,7 +1130,11 @@ dir="./entity" filename="RTextBasedData.h">
     <expr_stmt>
     <expr>
     <name>simple</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
+    <name>on</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>

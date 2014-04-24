@@ -104,6 +104,10 @@ public:
         return data.getScaleFactors();
     }
 
+    void setScaleFactors(const RVector sf) {
+        data.setScaleFactors(sf);
+    }
+
     double getRotation() const {
         return data.getRotation();
     }

@@ -480,6 +480,35 @@ dir="./core" filename="RBlockReferenceEntity.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setScaleFactors</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>const</name>
+          <name>RVector</name>
+        </type>
+        <name>sf</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setScaleFactors</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>sf</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
       <name>double</name>
     </type>
     <name>getRotation</name>

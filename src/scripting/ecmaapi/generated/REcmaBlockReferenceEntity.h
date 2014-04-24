@@ -80,6 +80,9 @@
         getScaleFactors
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setScaleFactors
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getRotation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
