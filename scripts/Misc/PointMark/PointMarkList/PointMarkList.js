@@ -225,6 +225,32 @@ PointMarkList.updateFromTransaction = function(doc, transaction) {
     */
 };
 
+PointMarkList.setScale = function(str) {
+    var f = parseFloat(str, 10);
+
+    var di = EAction.getDocumentInterface();
+    if (isNull(di)) {
+        return;
+    }
+    var doc = di.getDocument();
+
+    var op = new RAddObjectsOperation();
+    var ids = PointMark.queryAllMarkIds(doc, 'a');
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+
+        var blockRef = doc.queryEntity(id);
+        if (isNull(blockRef) || !isBlockReferenceEntity(blockRef)) {
+            continue;
+        }
+
+        blockRef.setScaleFactors(new RVector(f,f,f));
+        op.addObject(blockRef);
+    }
+
+    di.applyOperation(op);
+};
+
 PointMarkList.init = function(basePath) {
     if (!hasPlugin("DWG")) {
         return;
@@ -250,6 +276,10 @@ PointMarkList.init = function(basePath) {
     pointMarkTree.header().resizeSection(1, 80);
     pointMarkTree.header().resizeSection(2, 80);
     pointMarkTree.header().resizeSection(3, 80);
+
+    var scaleCombo = formWidget.findChild("Scale");
+    //scaleCombo["currentIndexChanged(QString)"].connect(PointMarkList, "setScale");
+    scaleCombo["editTextChanged"].connect(PointMarkList, "setScale");
 
     // set up tool buttons:
     var widgets = getWidgets(formWidget);

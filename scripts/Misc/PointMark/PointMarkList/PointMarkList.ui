@@ -27,7 +27,47 @@
     <number>0</number>
    </property>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Scale factor:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="Scale">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">1.0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.25</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.05</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -35,7 +75,7 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QToolButton" name="PointMarkDraw">
+      <widget class="QToolButton" name="PointMarkExport">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -51,7 +91,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="PointMarkExport">
+      <widget class="QToolButton" name="PointMarkDraw">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>

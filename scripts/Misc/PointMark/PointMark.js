@@ -118,7 +118,7 @@ PointMark.queryAllMarkIds = function(doc, type) {
         }
 
         var handle = PointMark.getBenchmarkHandle(blockRef);
-        if (isNull(handle)) {
+        if (handle===RObject.INVALID_HANDLE) {
             continue;
         }
 
