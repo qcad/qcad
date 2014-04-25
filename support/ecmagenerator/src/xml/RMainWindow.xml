@@ -207,6 +207,35 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="addInterTransactionListener"
+    cppName="addInterTransactionListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RInterTransactionListener *"
+        typeName="RInterTransactionListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removeInterTransactionListener"
+    cppName="removeInterTransactionListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RInterTransactionListener *"
+        typeName="RInterTransactionListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyInterTransactionListeners"
+    cppName="notifyInterTransactionListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="addSnapListener" cppName="addSnapListener"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
