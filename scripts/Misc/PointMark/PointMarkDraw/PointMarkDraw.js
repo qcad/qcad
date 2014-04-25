@@ -130,7 +130,7 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
         }
 
         // get label:
-        label = PointMark.getMarkLabel(doc, blockRef.getId());
+        label = PointMark.getMarkLabelText(doc, blockRef.getId());
         var matches = label.match(/\d+$/);
         if (matches.length!==1) {
             continue;
@@ -251,7 +251,7 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
                 if (isBlockReferenceEntity(obj)) {
                     // benchmark refers to itself as benchmark:
                     this.benchmarkHandle = obj.getHandle();
-                    obj.setCustomProperty("QCAD", "benchmark", "0x" + this.benchmarkHandle.toString(16));
+                    PointMark.setBenchmarkHandle(obj, this.benchmarkHandle);
                     PointMarkDraw.setBenchmark(obj.getHandle());
                 }
             }
@@ -276,7 +276,7 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
                 obj = doc.queryObjectDirect(objId);
                 if (isBlockReferenceEntity(obj)) {
                     // point mark refers to benchmark:
-                    obj.setCustomProperty("QCAD", "benchmark", "0x" + this.benchmarkHandle.toString(16));
+                    PointMark.setBenchmarkHandle(obj, this.benchmarkHandle);
                 }
             }
         }

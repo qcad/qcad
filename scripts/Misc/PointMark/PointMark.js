@@ -145,11 +145,18 @@ PointMark.queryAllMarkIds = function(doc, type) {
  * \return String representing label of the given benchmark or point mark.
  */
 PointMark.getMarkLabel = function(doc, blockRefId) {
-    var blockAttribIds = doc.queryChildEntities(blockRefId);
+    var blockAttribIds = doc.queryChildEntities(blockRefId, RS.EntityAttribute);
     if (blockAttribIds.length!==1) {
-        return "";
+        return undefined;
     }
-    var attrib = doc.queryEntityDirect(blockAttribIds[0]);
+    return doc.queryEntityDirect(blockAttribIds[0]);
+};
+
+/**
+ * \return String representing label of the given benchmark or point mark.
+ */
+PointMark.getMarkLabelText = function(doc, blockRefId) {
+    var attrib = PointMark.getMarkLabel(doc, blockRefId);
     if (isNull(attrib)) {
         return "";
     }
@@ -158,7 +165,7 @@ PointMark.getMarkLabel = function(doc, blockRefId) {
 };
 
 /**
- * \return Nummerical benchmark handle the given point mark or benchmark refers to.
+ * \return Nummerical benchmark handle the given point mark or benchmark refers to or -1.
  */
 PointMark.getBenchmarkHandle = function(blockRef) {
     var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
@@ -166,6 +173,25 @@ PointMark.getBenchmarkHandle = function(blockRef) {
         return RObject.INVALID_HANDLE;
     }
     return parseInt(handle, 16);
+};
+
+PointMark.setBenchmarkHandle = function(blockRef, handle) {
+    blockRef.setCustomProperty("QCAD", "benchmark", "0x" + handle.toString(16));
+};
+
+/**
+ * \return Nummerical leader handle the given point mark or benchmark refers to or -1.
+ */
+PointMark.getLeaderHandle = function(blockRef) {
+    var handle = blockRef.getCustomProperty("QCAD", "leader", undefined);
+    if (isNull(handle)) {
+        return RObject.INVALID_HANDLE;
+    }
+    return parseInt(handle, 16);
+};
+
+PointMark.setLeaderHandle = function(blockRef, handle) {
+    blockRef.setCustomProperty("QCAD", "leader", "0x" + handle.toString(16));
 };
 
 /**
@@ -218,7 +244,7 @@ PointMark.getPointMarkTree = function(doc) {
                 continue;
             }
 
-            var label = PointMark.getMarkLabel(doc, objId);
+            var label = PointMark.getMarkLabelText(doc, objId);
             var pos = blockRef.getPosition().operator_subtract(bm.getPosition());
 
             if (p===0) {
