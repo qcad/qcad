@@ -132,6 +132,7 @@ HEADERS = \
     RGrid.h \
     RGuiAction.h \
     RImporter.h \
+    RInterTransactionListener.h \
     RInputEvent.h \
     RLayer.h \
     RLayerListener.h \

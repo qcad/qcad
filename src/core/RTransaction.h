@@ -117,6 +117,22 @@ public:
         keepHandles = on;
     }
 
+//    void setUndoing(bool on) {
+//        undoing = on;
+//    }
+
+    bool isUndoing() {
+        return undoing;
+    }
+
+//    void setRedoing(bool on) {
+//        redoing = on;
+//    }
+
+    bool isRedoing() {
+        return redoing;
+    }
+
     /**
      * \return True if this transaction should store undo / redo information
      *      for later undo / redo functionality.
@@ -130,24 +146,17 @@ public:
     }
 
     /**
-     * Applies this command to the document.
+     * Redo undone changes.
      */
-    virtual void redo(RDocument* objectContainer = NULL);
+    virtual void redo(RDocument* document = NULL);
 
     /**
      * Reverts a change to the document. After undo() is called, the state of
      * the document should be the same as before redo() was called.
      */
-    virtual void undo(RDocument* objectContainer = NULL);
+    virtual void undo(RDocument* document = NULL);
 
-    /**
-     * Previews this transaction (as it would be applied) by exporting the result to
-     * the given exporter. The exporter typically exports into the preview of a
-     * graphics scene.
-     */
-    //virtual void preview(RExporter& /*exporter*/) const {}
-
-    void end();
+    void end(RDocument* document);
 
     void updateOverwrittenBlockReferences();
 
@@ -222,7 +231,7 @@ protected:
     bool addPropertyChange(RObject::Id objectId, const RPropertyChange& propertyChange);
     //void appendChild(RTransaction& t);
 
-    void commit();
+    void commit(RDocument* document);
     void rollback();
 
 protected:
@@ -330,6 +339,9 @@ protected:
     bool keepHandles;
 
     QMap<RObject::Id, RObject::Id> cloneIds;
+
+    bool undoing;
+    bool redoing;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RTransaction& t);

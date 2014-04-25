@@ -19,6 +19,7 @@
 #include "RDocument.h"
 #include "RExporter.h"
 #include "RLinkedStorage.h"
+#include "RMainWindow.h"
 #include "RMemoryStorage.h"
 #include "RStorage.h"
 #include "RTransaction.h"
@@ -36,7 +37,9 @@ RTransaction::RTransaction()
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
-      keepHandles(false) {
+      keepHandles(false),
+      undoing(false),
+      redoing(false) {
 }
 
 
@@ -56,7 +59,9 @@ RTransaction::RTransaction(RStorage& storage)
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
-      keepHandles(false) {
+      keepHandles(false),
+      undoing(false),
+      redoing(false) {
 }
 
 
@@ -87,7 +92,9 @@ RTransaction::RTransaction(
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
-      keepHandles(false) {
+      keepHandles(false),
+      undoing(false),
+      redoing(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -118,7 +125,9 @@ RTransaction::RTransaction(
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
-      keepHandles(false) {
+      keepHandles(false),
+      undoing(false),
+      redoing(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -137,6 +146,10 @@ RTransaction::~RTransaction() {
  * (Re-)applies this transaction to the document.
  */
 void RTransaction::redo(RDocument* document) {
+    if (document==NULL) {
+        return;
+    }
+
     // iterate through all objects that were affected by this transaction:
     for (int k=0; k<affectedObjectIds.size(); ++k) {
         RObject::Id objId = affectedObjectIds[k];
@@ -199,6 +212,7 @@ void RTransaction::redo(RDocument* document) {
     }
 
     updateOverwrittenBlockReferences();
+    undoing = true;
 }
 
 
@@ -207,6 +221,10 @@ void RTransaction::redo(RDocument* document) {
  * Undoes this transaction.
  */
 void RTransaction::undo(RDocument* document) {
+    if (document==NULL) {
+        return;
+    }
+
     // iterate through all objects that were affected by this transaction:
     for (int k=affectedObjectIds.size()-1; k>=0; --k) {
         RObject::Id objId = affectedObjectIds[k];
@@ -271,6 +289,7 @@ void RTransaction::undo(RDocument* document) {
     }
 
     updateOverwrittenBlockReferences();
+    undoing = true;
 }
 
 /**
@@ -299,10 +318,15 @@ void RTransaction::endCycle() {
 /**
  * Saves this command to the storage of the document.
  */
-void RTransaction::commit() {
+void RTransaction::commit(RDocument* document) {
     if (failed) {
         //qWarning() << "RTransaction::commit: transaction is in state 'failed'";
         //return;
+    }
+
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+    if (mainWindow!=NULL) {
+        mainWindow->notifyInterTransactionListeners(document, this);
     }
 
     if (affectedObjectIds.size()>0) {
@@ -327,13 +351,13 @@ void RTransaction::rollback() {
     storage->rollbackTransaction();
 }
 
-void RTransaction::end() {
+void RTransaction::end(RDocument* document) {
     // 20111028: always commit for now
     // (paste partly to locked layer: at least paste what can be pasted)
     //if (failed) {
     //    rollback();
     //} else {
-        commit();
+        commit(document);
     //}
 }
 

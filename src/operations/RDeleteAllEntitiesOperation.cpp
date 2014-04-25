@@ -33,7 +33,7 @@ RTransaction RDeleteAllEntitiesOperation::apply(RDocument& document, bool previe
         transaction.deleteObject(i.next(), &document);
     }
 
-    transaction.end();
+    transaction.end(&document);
     return transaction;
 }
 

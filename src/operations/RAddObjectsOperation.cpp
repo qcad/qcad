@@ -123,9 +123,10 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
         transaction.addObject(
             addedObjects[i].object,
             addedObjects[i].useCurrentAttributes,
-            addedObjects[i].forceNew);
+            addedObjects[i].forceNew
+        );
     }
 
-    transaction.end();
+    transaction.end(&document);
     return transaction;
 }

@@ -50,7 +50,7 @@ RTransaction RCopyOperation::apply(RDocument& document, bool preview) const {
         preview
     );
 
-    transaction.end();
+    transaction.end(&document);
     return transaction;
 }
 

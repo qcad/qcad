@@ -52,7 +52,7 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
         attributes
     );
 
-    transaction.end();
+    transaction.end(&document);
 
     return transaction;
 }

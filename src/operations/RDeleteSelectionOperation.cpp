@@ -35,7 +35,7 @@ RTransaction RDeleteSelectionOperation::apply(RDocument& document, bool preview)
         transaction.deleteObject(*it, &document);
     }
 
-    transaction.end();
+    transaction.end(&document);
     return transaction;
 }
 

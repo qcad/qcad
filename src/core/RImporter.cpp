@@ -84,7 +84,7 @@ void RImporter::importObject(RObject* object) {
  * after importing entities into the document.
  */
 void RImporter::endImport() {
-    transaction.end();
+    transaction.end(document);
 
     // ground all directly recursive block references:
     int counter = 0;

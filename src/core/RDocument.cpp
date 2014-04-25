@@ -104,7 +104,7 @@ void RDocument::init() {
 
     modelSpaceBlockId = getBlockId(RBlock::modelSpaceName);
 
-    t.end();
+    t.end(this);
 
     // caching for faster operations:
     linetypeByLayerId = queryLinetype("BYLAYER")->getId();

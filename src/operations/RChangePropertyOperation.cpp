@@ -76,7 +76,7 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
         }
     }
 
-    transaction.end();
+    transaction.end(&document);
 
     //RDebug::stopTimer("RChangePropertyOperation::apply");
 

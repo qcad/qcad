@@ -67,6 +67,12 @@
         setKeepHandles
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isUndoing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isRedoing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isUndoable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

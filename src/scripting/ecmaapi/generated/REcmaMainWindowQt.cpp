@@ -135,6 +135,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, notifyTransactionListeners, "notifyTransactionListeners");
             
+            REcmaHelper::registerFunction(&engine, proto, addInterTransactionListener, "addInterTransactionListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeInterTransactionListener, "removeInterTransactionListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyInterTransactionListeners, "notifyInterTransactionListeners");
+            
             REcmaHelper::registerFunction(&engine, proto, addSnapListener, "addSnapListener");
             
             REcmaHelper::registerFunction(&engine, proto, removeSnapListener, "removeSnapListener");
@@ -1674,6 +1680,246 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyTransactionListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::addInterTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::addInterTransactionListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::addInterTransactionListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("addInterTransactionListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RInterTransactionListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RInterTransactionListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RInterTransactionListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RInterTransactionListener *RInterTransactionListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addInterTransactionListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.addInterTransactionListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::addInterTransactionListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::removeInterTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeInterTransactionListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeInterTransactionListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeInterTransactionListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RInterTransactionListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RInterTransactionListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RInterTransactionListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RInterTransactionListener *RInterTransactionListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeInterTransactionListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeInterTransactionListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeInterTransactionListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::notifyInterTransactionListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::notifyInterTransactionListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::notifyInterTransactionListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("notifyInterTransactionListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyInterTransactionListeners(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+                    // argument is pointer
+                    RTransaction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyInterTransactionListeners(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.notifyInterTransactionListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyInterTransactionListeners", context, engine);
             return result;
         }
          QScriptValue

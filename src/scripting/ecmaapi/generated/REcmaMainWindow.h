@@ -118,6 +118,15 @@
         notifyTransactionListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addInterTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeInterTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyInterTransactionListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addSnapListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
