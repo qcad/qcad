@@ -127,7 +127,7 @@ QSet<RObject::Id> RMemoryStorage::queryAllObjects() {
     return result;
 }
 
-QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks) {
+QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) {
     QSet<REntity::Id> result;
     result.reserve(entityMap.count());
     RBlock::Id currentBlock = getCurrentBlockId();
@@ -141,6 +141,9 @@ QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks) 
             continue;
         }
         if (!allBlocks && e->getBlockId() != currentBlock) {
+            continue;
+        }
+        if (type!=RS::EntityAll && e->getType()!=type) {
             continue;
         }
 //        if (!includeFrozenLayers) {

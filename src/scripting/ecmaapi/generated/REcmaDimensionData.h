@@ -111,6 +111,9 @@
         mirror
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimscale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimexo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

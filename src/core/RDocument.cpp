@@ -613,8 +613,8 @@ QSet<RObject::Id> RDocument::queryAllObjects() const {
  *
  * \return Set of entity IDs.
  */
-QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks) const {
-    return storage.queryAllEntities(undone, allBlocks);
+QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) const {
+    return storage.queryAllEntities(undone, allBlocks, type);
 }
 
 

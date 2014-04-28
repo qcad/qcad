@@ -49,7 +49,7 @@ public:
     //virtual QList<REntity::Id> orderBackToFront(const QSet<REntity::Id>& entityIds);
 
     virtual QSet<RObject::Id> queryAllObjects();
-    virtual QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false);
+    virtual QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll);
     virtual QSet<RUcs::Id> queryAllUcs();
     virtual QSet<RLayer::Id> queryAllLayers(bool undone = false);
     virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false);
