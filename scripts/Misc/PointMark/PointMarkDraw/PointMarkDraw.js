@@ -245,6 +245,7 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
             di.setRelativeZero(this.pos);
 
             objIds = transaction.getAffectedObjects();
+            //var leader = undefined;
             for (i=0; i<objIds.length; i++) {
                 objId = objIds[i];
                 obj = doc.queryObjectDirect(objId);
@@ -254,7 +255,10 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
                     PointMark.setBenchmarkHandle(obj, this.benchmarkHandle);
                     PointMarkDraw.setBenchmark(obj.getHandle());
                 }
+                //if (isLeaderEntity(obj)) {
+                //}
             }
+            this.linkLeader(doc, objIds);
 
             // update combo box with possible benchmarks to use as origin:
             this.initUiOptions();
@@ -279,9 +283,40 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
                     PointMark.setBenchmarkHandle(obj, this.benchmarkHandle);
                 }
             }
+            this.linkLeader(doc, objIds);
         }
         break;
     }
+};
+
+PointMarkDraw.prototype.linkLeader = function(doc, objIds) {
+    var objId, obj;
+    var blockRefHandle = undefined;
+    var attributeHandle = undefined;
+    var leader = undefined;
+
+    for (var i=0; i<objIds.length; i++) {
+        objId = objIds[i];
+        obj = doc.queryObjectDirect(objId);
+
+        if (isLeaderEntity(obj)) {
+            leader = obj;
+        }
+
+        if (isBlockReferenceEntity(obj)) {
+            blockRefHandle = obj.getHandle();
+        }
+        if (isAttributeEntity(obj)) {
+            attributeHandle = obj.getHandle();
+        }
+    }
+
+    if (isNull(leader) || isNull(blockRefHandle) || isNull(attributeHandle)) {
+        return;
+    }
+
+    PointMark.setFromHandle(leader, attributeHandle);
+    PointMark.setToHandle(leader, blockRefHandle);
 };
 
 /**
@@ -340,6 +375,9 @@ PointMarkDraw.prototype.getLabel = function(benchmark, preview) {
     return ret;
 };
 
+/**
+ * \return Paste operation for benchmark symbol or point symbol with label.
+ */
 PointMarkDraw.prototype.getOperation = function(preview) {
     if (!isValidVector(this.pos)) {
         return undefined;

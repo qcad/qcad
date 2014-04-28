@@ -194,7 +194,57 @@ PointMarkList.updateLeaders = function(doc, transaction) {
 
     var i, objIds, objId, leader, blockRef;
 
-    // update leaders:
+    var affectedIds = transaction.getAffectedObjects();
+
+    // update existing leaders:
+    // query all auto leaders:
+    objIds = PointMark.queryAllAutoLeaders(doc);
+    for (i=0; i<objIds.length; i++) {
+        objId = objIds[i];
+        leader = doc.queryObject(objId);
+        if (!isLeaderEntity(leader)) {
+            continue;
+        }
+
+        // attribute:
+        var fromHandle = PointMark.getFromHandle(leader);
+        var fromEntity = doc.queryObjectByHandle(fromHandle);
+
+        if (!isAttributeEntity(fromEntity)) {
+            continue;
+        }
+
+        // block ref:
+        var toHandle = PointMark.getToHandle(leader);
+        var toEntity = doc.queryObjectByHandle(toHandle);
+
+        if (!isBlockReferenceEntity(toEntity)) {
+            continue;
+        }
+
+        if (isNull(fromEntity) || isNull(toEntity)) {
+            continue;
+        }
+
+        // check if one of the linked entities has changed:
+        if (!affectedIds.contains(fromEntity.getId()) &&
+            !affectedIds.contains(toEntity.getId())) {
+            // leader remains unchanged:
+            continue;
+        }
+
+        // update leader position:
+        leader.clear();
+        leader.appendVertex(toEntity.getPosition());
+        leader.appendVertex(fromEntity.getAlignmentPoint());
+
+        transaction.addObject(leader);
+        //found = true;
+    }
+
+
+    /*
+    // create missing leaders (on load only):
     //var op = new RAddObjectsOperation();
     if (isNull(transaction) || transaction.getText()==="Importing") {
         // loading drawing: update all:
@@ -277,6 +327,7 @@ PointMarkList.updateLeaders = function(doc, transaction) {
 //            leader.removeCustomProperty("QCAD", "blockRefId");
 //        }
 //    }
+    */
 };
 
 /**

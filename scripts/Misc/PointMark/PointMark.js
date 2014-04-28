@@ -142,6 +142,36 @@ PointMark.queryAllMarkIds = function(doc, type) {
 };
 
 /**
+ * \return All leader IDs representing auto updated leaders between two entities.
+ */
+PointMark.queryAllAutoLeaders = function(doc) {
+    var ret = [];
+
+    var ids = doc.queryAllEntities(false, false, RS.EntityLeader);
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+        var leader = doc.queryEntityDirect(id);
+        if (isNull(leader) || !isLeaderEntity(leader)) {
+            continue;
+        }
+
+        var handle1 = PointMark.getFromHandle(leader);
+        if (handle1===RObject.INVALID_HANDLE) {
+            continue;
+        }
+
+        var handle2 = PointMark.getToHandle(leader);
+        if (handle2===RObject.INVALID_HANDLE) {
+            continue;
+        }
+
+        ret.push(id);
+    }
+
+    return ret;
+};
+
+/**
  * \return String representing label of the given benchmark or point mark.
  */
 PointMark.getMarkLabel = function(doc, blockRefId) {
@@ -180,19 +210,49 @@ PointMark.setBenchmarkHandle = function(blockRef, handle) {
 };
 
 /**
- * \return Nummerical leader handle the given point mark or benchmark refers to or -1.
+ * \return Nummerical handle of entity to which to draw the leader.
  */
-PointMark.getLeaderHandle = function(blockRef) {
-    var handle = blockRef.getCustomProperty("QCAD", "leader", undefined);
+PointMark.getToHandle = function(leader) {
+    var handle = leader.getCustomProperty("QCAD", "to", undefined);
     if (isNull(handle)) {
         return RObject.INVALID_HANDLE;
     }
     return parseInt(handle, 16);
 };
 
-PointMark.setLeaderHandle = function(blockRef, handle) {
-    blockRef.setCustomProperty("QCAD", "leader", "0x" + handle.toString(16));
+PointMark.setToHandle = function(leader, handle) {
+    leader.setCustomProperty("QCAD", "to", "0x" + handle.toString(16));
 };
+
+/**
+ * \return Nummerical handle of entity from which to draw the leader.
+ */
+PointMark.getFromHandle = function(leader) {
+    var handle = leader.getCustomProperty("QCAD", "from", undefined);
+    if (isNull(handle)) {
+        return RObject.INVALID_HANDLE;
+    }
+    return parseInt(handle, 16);
+};
+
+PointMark.setFromHandle = function(leader, handle) {
+    leader.setCustomProperty("QCAD", "from", "0x" + handle.toString(16));
+};
+
+/**
+ * \return Nummerical leader handle the given point mark or benchmark refers to or -1.
+ */
+//PointMark.getLeaderHandle = function(blockRef) {
+//    var handle = blockRef.getCustomProperty("QCAD", "leader", undefined);
+//    if (isNull(handle)) {
+//        return RObject.INVALID_HANDLE;
+//    }
+//    return parseInt(handle, 16);
+//};
+
+//PointMark.setLeaderHandle = function(blockRef, handle) {
+//    blockRef.setCustomProperty("QCAD", "leader", "0x" + handle.toString(16));
+//};
 
 /**
  * \return List of all point marks including bechmarks with
