@@ -129,6 +129,7 @@ public:
     virtual bool scale(const RVector& scaleFactors, const RVector& center);
     virtual bool mirror(const RLine& axis);
 
+    double getDimscale() const;
     double getDimexo() const;
     double getDimexe() const;
     double getDimasz() const;

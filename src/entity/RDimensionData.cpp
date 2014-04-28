@@ -216,6 +216,16 @@ bool RDimensionData::mirror(const RLine& axis) {
     return true;
 }
 
+double RDimensionData::getDimscale() const {
+    double dimscale = 1.0;
+
+    if (document!=NULL) {
+        dimscale = document->getKnownVariable(RS::DIMSCALE, dimscale).toDouble();
+    }
+
+    return dimscale;
+}
+
 double RDimensionData::getDimexo() const {
     double dimexo = 0.625;
 
@@ -223,7 +233,7 @@ double RDimensionData::getDimexo() const {
         dimexo = document->getKnownVariable(RS::DIMEXO, dimexo).toDouble();
     }
 
-    return dimexo;
+    return dimexo * getDimscale();
 }
 
 double RDimensionData::getDimexe() const {
@@ -233,7 +243,7 @@ double RDimensionData::getDimexe() const {
         dimexe = document->getKnownVariable(RS::DIMEXE, dimexe).toDouble();
     }
 
-   return dimexe;
+   return dimexe * getDimscale();
 }
 
 double RDimensionData::getDimasz() const {
@@ -243,7 +253,7 @@ double RDimensionData::getDimasz() const {
         dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
     }
 
-    return dimasz;
+    return dimasz * getDimscale();
 }
 
 double RDimensionData::getDimgap() const {
@@ -253,7 +263,7 @@ double RDimensionData::getDimgap() const {
         dimgap = document->getKnownVariable(RS::DIMGAP, dimgap).toDouble();
     }
 
-    return dimgap;
+    return dimgap * getDimscale();
 }
 
 double RDimensionData::getDimtxt() const {
@@ -263,7 +273,7 @@ double RDimensionData::getDimtxt() const {
         dimtxt = document->getKnownVariable(RS::DIMTXT, dimtxt).toDouble();
     }
 
-    return dimtxt;
+    return dimtxt * getDimscale();
 }
 
 bool RDimensionData::useArchTick() const {
