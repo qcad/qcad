@@ -99,7 +99,10 @@ PointMarkList.itemClicked = function(item, col) {
     view.centerToPoint(blockRef.getPosition());
 };
 
-PointMarkList.updateFromDocument = function(di) {
+PointMarkList.updateFromDocument = function(doc) {
+    if (isOfType(doc, RDocumentInterface)) {
+        doc = doc.getDocument();
+    }
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("PointMarkDock");
@@ -118,12 +121,12 @@ PointMarkList.updateFromDocument = function(di) {
 
     treeWidget.clear();
 
-    if (isNull(di)) {
+    if (isNull(doc)) {
         // no document open, abort.
         return;
     }
 
-    var treeData = PointMark.getPointMarkTree(di.getDocument());
+    var treeData = PointMark.getPointMarkTree(doc);
     var item;
 
     for (var i=0; i<treeData.length; i++) {
@@ -173,10 +176,10 @@ PointMarkList.updateFromDocument = function(di) {
     }
 };
 
-PointMarkList.updateFromTransaction = function(transaction) {
+PointMarkList.updateFromTransaction = function(doc, transaction) {
     //qDebug("PointMarkList.updateFromTransaction: ", transaction);
     // TODO: find out if any marks were affected at all:
-    PointMarkList.updateFromDocument();
+    PointMarkList.updateFromDocument(doc);
 };
 
 PointMarkList.updateLeaders = function(doc, transaction) {
@@ -194,6 +197,7 @@ PointMarkList.updateLeaders = function(doc, transaction) {
     // update leaders:
     //var op = new RAddObjectsOperation();
     if (isNull(transaction) || transaction.getText()==="Importing") {
+        // loading drawing: update all:
         objIds = PointMark.queryAllMarkIds(doc);
     }
     else {
@@ -209,7 +213,7 @@ PointMarkList.updateLeaders = function(doc, transaction) {
     for (i=0; i<objIds.length; i++) {
         objId = objIds[i];
         blockRef = doc.queryObjectDirect(objId);
-        qDebug(blockRef);
+        //qDebug(blockRef);
         if (!isBlockReferenceEntity(blockRef)) {
             continue;
         }
@@ -241,7 +245,8 @@ PointMarkList.updateLeaders = function(doc, transaction) {
         leader.clear();
         leader.appendVertex(blockRef.getPosition());
         leader.appendVertex(attrib.getPosition());
-        //leader.setCustomProperty("QCAD", "blockRefId", blockRef.getId());
+        leader.setCustomProperty("QCAD", "From", "0x" + attrib.getHandle().toString(16));
+        leader.setCustomProperty("QCAD", "To", "0x" + blockRef.getHandle().toString(16));
         //op.addObject(leader);
 
         transaction.addObject(leader);

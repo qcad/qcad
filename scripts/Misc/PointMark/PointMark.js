@@ -228,24 +228,48 @@ PointMark.getPointMarkTree = function(doc) {
                 continue;
             }
 
-            // first loop, not a benchmark:
+            // first pass, not a benchmark:
             if (p==0 && bmHandle!==blockRef.getHandle()) {
                 continue;
             }
 
-            // second loop, not a point mark:
+            // second pass, not a point mark:
             if (p==1 && bmHandle===blockRef.getHandle()) {
                 continue;
             }
 
             // query benchmark:
             var bm = doc.queryObjectByHandle(bmHandle);
+            var bmPos;
             if (isNull(bm) || !isBlockReferenceEntity(bm)) {
-                continue;
+                if (isNull(handleMap[bmHandle])) {
+                    // add dummy benchmark entry on the fly:
+                    bmPos = new RVector(0,0);
+                    ret.push([[qsTr("Missing Benchmark") + " (0x" + bmHandle.toString(16) + ")",bmPos,blockRef.getLayerName(),bmHandle]]);
+                    handleMap[bmHandle] = ret.length-1;
+                    //qDebug("orphaned point mark (000): ", blockRef);
+                    //continue;
+                }
+                else {
+                    if (isNull(ret[handleMap[bmHandle]]) || ret[handleMap[bmHandle]].length===0) {
+                        debugger;
+                        continue;
+                    }
+                    if (isNull(ret[handleMap[bmHandle]][0]) || ret[handleMap[bmHandle]][0].length!==4) {
+                        debugger;
+                        continue;
+                    }
+
+                    bmPos = ret[handleMap[bmHandle]][0][1];
+                    //qDebug("existing dummy BM:", ret[handleMap[bmHandle]][0][0]);
+                }
+            }
+            else {
+                bmPos = bm.getPosition();
             }
 
             var label = PointMark.getMarkLabelText(doc, objId);
-            var pos = blockRef.getPosition().operator_subtract(bm.getPosition());
+            var pos = blockRef.getPosition().operator_subtract(bmPos);
 
             if (p===0) {
                 // benchmark found:
@@ -255,9 +279,11 @@ PointMark.getPointMarkTree = function(doc) {
             else {
                 // point mark found:
                 if (isNull(handleMap[bmHandle])) {
+                    qDebug("orphaned point mark (001): ", blockRef);
                     continue;
                 }
                 if (isNull(ret[handleMap[bmHandle]])) {
+                    qDebug("orphaned point mark (002): ", blockRef);
                     continue;
                 }
 
@@ -276,7 +302,7 @@ PointMark.getPointMarkTree = function(doc) {
         return 0;
     });
 
-    // sort by points:
+    // sort each group by points:
     for (i=0; i<ret.length; i++) {
         ret[i] = [ret[i][0]].concat(
             ret[i].slice(1).sort(function(a,b) {
@@ -286,6 +312,18 @@ PointMark.getPointMarkTree = function(doc) {
             })
         );
     }
+
+    // debugging:
+//    for (i=0; i<ret.length; i++) {
+//        for (var k=0; k<ret[i].length; k++) {
+//            if (k===0) {
+//                qDebug(ret[i][k]);
+//            }
+//            else {
+//                qDebug("\t" + ret[i][k]);
+//            }
+//        }
+//    }
 
     return ret;
 };

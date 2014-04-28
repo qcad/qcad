@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>302</width>
+    <width>306</width>
     <height>327</height>
    </rect>
   </property>
@@ -29,6 +29,12 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <property name="spacing">
+      <number>4</number>
+     </property>
+     <property name="leftMargin">
+      <number>4</number>
+     </property>
+     <property name="rightMargin">
       <number>4</number>
      </property>
      <item>
@@ -159,7 +165,7 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QToolButton" name="PointMarkExport">
+      <widget class="QToolButton" name="PointMarkDraw">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -175,7 +181,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="PointMarkDraw">
+      <widget class="QToolButton" name="PointMarkExport">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
