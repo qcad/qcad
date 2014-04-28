@@ -358,13 +358,15 @@ PointMarkDraw.prototype.getLabel = function(benchmark, preview) {
     if (this.autoAppendCounter) {
         var num = "";
         if (benchmark) {
-            num = sprintf("%03d", this.benchmarkCounter);
+            //num = sprintf("%03d", this.benchmarkCounter);
+            num = this.benchmarkCounter.toString();
             if (!preview) {
                 this.benchmarkCounter++;
             }
         }
         else {
-            num = sprintf("%03d", this.pointCounter);
+            //num = sprintf("%03d", this.pointCounter);
+            num = this.pointCounter.toString();
             if (!preview) {
                 this.pointCounter++;
             }
