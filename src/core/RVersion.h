@@ -28,6 +28,6 @@
 #define R_QCAD_VERSION_MAJOR    3
 #define R_QCAD_VERSION_MINOR    4
 #define R_QCAD_VERSION_REV      7
-#define R_QCAD_VERSION_BUILD    2
+#define R_QCAD_VERSION_BUILD    3
 
 #endif
