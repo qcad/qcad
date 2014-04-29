@@ -100,6 +100,9 @@
         getVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         removeLastVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
