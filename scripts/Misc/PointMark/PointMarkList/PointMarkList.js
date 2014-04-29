@@ -183,9 +183,6 @@ PointMarkList.updateFromTransaction = function(doc, transaction) {
 };
 
 PointMarkList.updateLeaders = function(doc, transaction) {
-    //qDebug("PointMarkList.updateLeaders: ", transaction);
-    //var doc = di.getDocument();
-    //debugger;
     if (isNull(doc)) {
         qDebug("PointMarkList.updateLeaders: doc is NULL");
         return;
@@ -209,39 +206,70 @@ PointMarkList.updateLeaders = function(doc, transaction) {
         // attribute:
         var attributeHandle = PointMark.getFromHandle(leader);
         var attribute = doc.queryObjectByHandle(attributeHandle);
-        if (!isAttributeEntity(attribute)) {
-            continue;
+        var attributeId = RObject.INVALID_ID;
+        if (isAttributeEntity(attribute) && !attribute.isUndone()) {
+            attributeId = attribute.getId();
         }
 
         // block ref:
         var blockRefHandle = PointMark.getToHandle(leader);
         var blockRef = doc.queryObjectByHandle(blockRefHandle);
-        if (!isBlockReferenceEntity(blockRef)) {
-            continue;
+        var blockRefId = RObject.INVALID_ID;
+        if (isBlockReferenceEntity(blockRef) && !blockRef.isUndone()) {
+            blockRefId = blockRef.getId();
         }
 
         // check if one of the linked entities has changed:
-        if (!affectedIds.contains(attribute.getId()) &&
-            !affectedIds.contains(blockRef.getId())) {
+        if (!affectedIds.contains(attributeId) &&
+            !affectedIds.contains(blockRefId)) {
             // leader remains unchanged:
             continue;
         }
 
+        var sp = leader.getStartPoint();
+        var ep = leader.getEndPoint();
+
         // update leader position:
         leader.clear();
-        leader.appendVertex(blockRef.getPosition());
-        leader.appendVertex(attribute.getAlignmentPoint());
+        if (blockRefId!==RObject.INVALID_ID) {
+            leader.appendVertex(blockRef.getPosition());
+        }
+        else {
+            leader.appendVertex(sp);
+        }
+        if (attributeId!==RObject.INVALID_ID) {
+            leader.appendVertex(attribute.getAlignmentPoint());
+        }
+        else {
+            leader.appendVertex(ep);
+        }
         transaction.addObject(leader, false);
 
-        // update attribute alignment:
-        if (blockRef.getPosition().getAngleTo(attribute.getAlignmentPoint()) < Math.PI/4) {
-            qDebug("updating attribute text alignment");
-            attribute.setHAlign(RS.HAlignLeft);
-            attribute.setVAlign(RS.VAlignMiddle);
+        if (attributeId!==RObject.INVALID_ID) {
+            // update attribute alignment based on angle:
+            var ang = blockRef.getPosition().getAngleTo(attribute.getAlignmentPoint());
+            // top:
+            if (RMath.isAngleBetween(ang, Math.PI/4*1, Math.PI/4*3, false)) {
+                attribute.setHAlign(RS.HAlignCenter);
+                attribute.setVAlign(RS.VAlignBottom);
+            }
+            // bottom:
+            else if (RMath.isAngleBetween(ang, Math.PI/4*5, Math.PI/4*7, false)) {
+                attribute.setHAlign(RS.HAlignCenter);
+                attribute.setVAlign(RS.VAlignTop);
+            }
+            // right:
+            else if (RMath.isAngleBetween(ang, Math.PI/4*7, Math.PI/4*1, false)) {
+                attribute.setHAlign(RS.HAlignLeft);
+                attribute.setVAlign(RS.VAlignMiddle);
+            }
+            // left:
+            else if (RMath.isAngleBetween(ang, Math.PI/4*3, Math.PI/4*5, false)) {
+                attribute.setHAlign(RS.HAlignRight);
+                attribute.setVAlign(RS.VAlignMiddle);
+            }
             transaction.addObject(attribute, false);
         }
-
-        //found = true;
     }
 
 
