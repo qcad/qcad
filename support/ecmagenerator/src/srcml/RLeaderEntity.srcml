@@ -499,8 +499,28 @@ dir="./entity" filename="RLeaderEntity.h">
         <name>RVector</name>&amp;</type>
         <name>vertex</name>
       </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>bulge</name>=
+      <init>
+        <expr>0.0</expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{ 
+    <constructor_decl>
+    <name>Q_UNUSED</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bulge</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>
     <expr_stmt>
     <expr>
     <name>data</name>.
@@ -527,8 +547,28 @@ dir="./entity" filename="RLeaderEntity.h">
         <name>RVector</name>&amp;</type>
         <name>vertex</name>
       </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>bulge</name>=
+      <init>
+        <expr>0.0</expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{ 
+    <constructor_decl>
+    <name>Q_UNUSED</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bulge</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>
     <expr_stmt>
     <expr>
     <name>data</name>.
@@ -611,6 +651,47 @@ dir="./entity" filename="RLeaderEntity.h">
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setVertexAt</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>int</name>
+        </type>
+        <name>i</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>v</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setVertexAt</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>i</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>v</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
   </function>
   <function>
     <type>

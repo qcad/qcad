@@ -111,6 +111,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="vertex"
         isConst="true" />
+        <arg type="double" typeName="double" name="bulge"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="prependVertex" cppName="prependVertex"
@@ -119,6 +121,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="vertex"
         isConst="true" />
+        <arg type="double" typeName="double" name="bulge"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="insertVertex" cppName="insertVertex"
@@ -136,6 +140,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="setVertexAt" cppName="setVertexAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
       </variant>
     </method>
     <method name="removeLastVertex" cppName="removeLastVertex"
