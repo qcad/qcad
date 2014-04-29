@@ -90,7 +90,7 @@
       <string>Auto append counter to label</string>
      </property>
      <property name="text">
-      <string>Add counter</string>
+      <string>Add Counter</string>
      </property>
      <property name="checked">
       <bool>true</bool>
