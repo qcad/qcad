@@ -114,7 +114,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getVAlign, "getVAlign");
             
+            REcmaHelper::registerFunction(&engine, proto, setVAlign, "setVAlign");
+            
             REcmaHelper::registerFunction(&engine, proto, getHAlign, "getHAlign");
+            
+            REcmaHelper::registerFunction(&engine, proto, setHAlign, "setHAlign");
             
             REcmaHelper::registerFunction(&engine, proto, getFontName, "getFontName");
             
@@ -1948,6 +1952,61 @@
             return result;
         }
          QScriptValue
+        REcmaTextBasedEntity::setVAlign
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedEntity::setVAlign", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedEntity::setVAlign";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("setVAlign", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::VAlign */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::VAlign
+                    a0 =
+                    (RS::VAlign)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setVAlign(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.setVAlign().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedEntity::setVAlign", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTextBasedEntity::getHAlign
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1994,6 +2053,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedEntity::getHAlign", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedEntity::setHAlign
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedEntity::setHAlign", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedEntity::setHAlign";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("setHAlign", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::HAlign */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::HAlign
+                    a0 =
+                    (RS::HAlign)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setHAlign(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.setHAlign().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedEntity::setHAlign", context, engine);
             return result;
         }
          QScriptValue

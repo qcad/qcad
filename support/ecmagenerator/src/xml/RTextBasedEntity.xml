@@ -166,9 +166,23 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RS::VAlign" isPureVirtual="false" />
     </method>
+    <method name="setVAlign" cppName="setVAlign" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::VAlign" typeName="RS::VAlign" name="va"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getHAlign" cppName="getHAlign" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RS::HAlign" isPureVirtual="false" />
+    </method>
+    <method name="setHAlign" cppName="setHAlign" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::HAlign" typeName="RS::HAlign" name="ha"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getFontName" cppName="getFontName"
     specifier="public" isStatic="false" isVirtual="false"

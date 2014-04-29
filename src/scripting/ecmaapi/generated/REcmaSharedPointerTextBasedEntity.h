@@ -118,7 +118,13 @@
         getVAlign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setVAlign
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHAlign
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setHAlign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getFontName
