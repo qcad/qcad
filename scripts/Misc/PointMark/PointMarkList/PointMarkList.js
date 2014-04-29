@@ -226,23 +226,24 @@ PointMarkList.updateLeaders = function(doc, transaction) {
             continue;
         }
 
-        var sp = leader.getStartPoint();
-        var ep = leader.getEndPoint();
+        var line = new RLine(leader.getStartPoint(), leader.getEndPoint());
 
         // update leader position:
         leader.clear();
         if (blockRefId!==RObject.INVALID_ID) {
-            leader.appendVertex(blockRef.getPosition());
-        }
-        else {
-            leader.appendVertex(sp);
+            line.setStartPoint(blockRef.getPosition());
         }
         if (attributeId!==RObject.INVALID_ID) {
-            leader.appendVertex(attribute.getAlignmentPoint());
+            line.setEndPoint(attribute.getAlignmentPoint());
+            // gap to attribute:
+            var ep = line.getPointsWithDistanceToEnd(attribute.getHeight()/4, RS.FromEnd);
+            if (ep.length===1) {
+                line.setEndPoint(ep[0]);
+            }
         }
-        else {
-            leader.appendVertex(ep);
-        }
+
+        leader.appendVertex(line.getStartPoint());
+        leader.appendVertex(line.getEndPoint());
         transaction.addObject(leader, false);
 
         if (attributeId!==RObject.INVALID_ID) {
