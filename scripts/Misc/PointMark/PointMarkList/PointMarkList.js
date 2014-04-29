@@ -192,7 +192,7 @@ PointMarkList.updateLeaders = function(doc, transaction) {
     }
     var storage = doc.getStorage();
 
-    var i, objIds, objId, leader, blockRef;
+    var i, objIds, objId, leader;
 
     var affectedIds = transaction.getAffectedObjects();
 
@@ -207,38 +207,40 @@ PointMarkList.updateLeaders = function(doc, transaction) {
         }
 
         // attribute:
-        var fromHandle = PointMark.getFromHandle(leader);
-        var fromEntity = doc.queryObjectByHandle(fromHandle);
-
-        if (!isAttributeEntity(fromEntity)) {
+        var attributeHandle = PointMark.getFromHandle(leader);
+        var attribute = doc.queryObjectByHandle(attributeHandle);
+        if (!isAttributeEntity(attribute)) {
             continue;
         }
 
         // block ref:
-        var toHandle = PointMark.getToHandle(leader);
-        var toEntity = doc.queryObjectByHandle(toHandle);
-
-        if (!isBlockReferenceEntity(toEntity)) {
-            continue;
-        }
-
-        if (isNull(fromEntity) || isNull(toEntity)) {
+        var blockRefHandle = PointMark.getToHandle(leader);
+        var blockRef = doc.queryObjectByHandle(blockRefHandle);
+        if (!isBlockReferenceEntity(blockRef)) {
             continue;
         }
 
         // check if one of the linked entities has changed:
-        if (!affectedIds.contains(fromEntity.getId()) &&
-            !affectedIds.contains(toEntity.getId())) {
+        if (!affectedIds.contains(attribute.getId()) &&
+            !affectedIds.contains(blockRef.getId())) {
             // leader remains unchanged:
             continue;
         }
 
         // update leader position:
         leader.clear();
-        leader.appendVertex(toEntity.getPosition());
-        leader.appendVertex(fromEntity.getAlignmentPoint());
+        leader.appendVertex(blockRef.getPosition());
+        leader.appendVertex(attribute.getAlignmentPoint());
+        transaction.addObject(leader, false);
 
-        transaction.addObject(leader);
+        // update attribute alignment:
+        if (blockRef.getPosition().getAngleTo(attribute.getAlignmentPoint()) < Math.PI/4) {
+            qDebug("updating attribute text alignment");
+            attribute.setHAlign(RS.HAlignLeft);
+            attribute.setVAlign(RS.VAlignMiddle);
+            transaction.addObject(attribute, false);
+        }
+
         //found = true;
     }
 

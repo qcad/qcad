@@ -131,13 +131,17 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
 
         // get label:
         label = PointMark.getMarkLabelText(doc, blockRef.getId());
-        var matches = label.match(/\d+$/);
-        if (matches.length!==1) {
-            continue;
-        }
 
-        // parse label number:
-        var num = parseInt(matches[0], 10);
+        var matches = label.match(/\d+$/);
+        var num;
+        if (!isNull(matches) && matches.length===1) {
+            // parse label number:
+            num = parseInt(matches[0], 10);
+        }
+        else {
+            // no number in label: ignore:
+            num = -1;
+        }
 
         // block ref is a benchmark
         // (refers to itself as benchmark):
