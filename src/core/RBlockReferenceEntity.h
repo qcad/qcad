@@ -142,6 +142,10 @@ public:
         return data.applyTransformationTo(entity);
     }
 
+    RVector mapToBlock(const RVector& v) const {
+        return data.mapToBlock(v);
+    }
+
     /**
      * \nonscriptable
      */

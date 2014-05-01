@@ -995,10 +995,12 @@ void RExporter::exportArcSegment(const RArc& arc) {
     double a2 = arc.getEndAngle();
     RVector center = arc.getCenter();
     double radius = arc.getRadius();
+
+    // 20140501: not needed anymore since arcs are exported with dynamic line segment lengths:
     // avoid huge radius and slow down to almost stand-still:
-    if (radius>1.0e6) {
-        return;
-    }
+//    if (radius>1.0e6) {
+//        return;
+//    }
 
     double aStep;
     if (radius<1.0e-3) {
