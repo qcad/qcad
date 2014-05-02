@@ -209,12 +209,12 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                                 //qDebug("blockId", blockId);
                                 var res = doc.queryIntersectedEntitiesXY(box, true, false, blockId);
                                 //qDebug("res: ", res);
-                                this.d1Model = pBlock;
-                                this.blockRefId = entityId;
                                 this.entityInBlockId = doc.queryClosestXY(res, pBlock, range, false);
                                 var entityInBlock = doc.queryEntityDirect(this.entityInBlockId);
                                 if (!isNull(entityInBlock) && entityInBlock.getCustomProperty("QCAD", "InBlockEasyDragAndDrop", "0")==="1") {
                                     //qDebug("this.entityInBlockId: ", this.entityInBlockId);
+                                    this.d1Model = pBlock;
+                                    this.blockRefId = entityId;
                                     this.setState(DefaultAction.State.MovingEntityInBlock);
                                     break;
                                 }
@@ -272,6 +272,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             var range = view.mapDistanceFromView(this.rangePixels);
 
             var entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
+            //qDebug(entityId);
             if (entityId !== -1) {
                 if (add && this.document.isSelected(entityId)) {
                     this.deselectEntity(entityId);

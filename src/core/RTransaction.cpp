@@ -188,6 +188,7 @@ void RTransaction::redo(RDocument* document) {
             if (document!=NULL) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
+                    //qDebug() << "si: remove: " << *entity;
                     document->removeFromSpatialIndex(entity);
                 }
             }
@@ -205,13 +206,19 @@ void RTransaction::redo(RDocument* document) {
             if (document!=NULL) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
+                    // entity of the block might have changed (in block drag and drop):
+                    if (entity->getType()==RS::EntityBlockRef) {
+                        //entity->update();
+                        affectedBlockReferenceIds.append(objId);
+                    }
+                    //qDebug() << "si: add: " << *entity;
                     document->addToSpatialIndex(entity);
                 }
             }
         }
     }
 
-    updateOverwrittenBlockReferences();
+    updateAffectedBlockReferences();
     undoing = true;
 }
 
@@ -282,13 +289,18 @@ void RTransaction::undo(RDocument* document) {
             if (document!=NULL) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
+                    // entity of the block might have changed (in block drag and drop):
+                    if (entity->getType()==RS::EntityBlockRef) {
+                        //entity->update();
+                        affectedBlockReferenceIds.append(objId);
+                    }
                     document->addToSpatialIndex(entity);
                 }
             }
         }
     }
 
-    updateOverwrittenBlockReferences();
+    updateAffectedBlockReferences();
     undoing = true;
 }
 
@@ -338,7 +350,7 @@ void RTransaction::commit(RDocument* document) {
         qWarning() << "RTransaction::commit: last cycle not closed";
     }
 
-    updateOverwrittenBlockReferences();
+    updateAffectedBlockReferences();
 }
 
 void RTransaction::fail() {
@@ -361,11 +373,11 @@ void RTransaction::end(RDocument* document) {
     //}
 }
 
-void RTransaction::updateOverwrittenBlockReferences() {
+void RTransaction::updateAffectedBlockReferences() {
     // update spatial index entries of block references which reference
     // overwritten blocks:
     QList<RObject::Id>::iterator it;
-    for (it=overwrittenBlockReferences.begin(); it!=overwrittenBlockReferences.end(); ++it) {
+    for (it=affectedBlockReferenceIds.begin(); it!=affectedBlockReferenceIds.end(); ++it) {
         QSharedPointer<REntity> entity = storage->queryEntityDirect(*it);
         if (entity.isNull()) {
             continue;
@@ -426,7 +438,7 @@ bool RTransaction::overwriteBlock(QSharedPointer<RBlock> block) {
             if (!e.isNull() && !e->isUndone()) {
                 e->setReferencedBlockId(block->getId());
                 addObject(e, false);
-                overwrittenBlockReferences.append(*it);
+                affectedBlockReferenceIds.append(*it);
             }
         }
     }

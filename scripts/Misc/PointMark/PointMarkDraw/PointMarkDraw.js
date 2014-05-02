@@ -418,9 +418,10 @@ PointMarkDraw.prototype.getOperation = function(preview) {
 
     op.setOffset(this.pos);
     op.setOverwriteBlocks(false);
-    op.setScale(doc.getVariable("PointMarkScale", 1.0));
     // update symbols (TODO):
     //op.setOverwriteBlocks(true);
+    op.setScale(doc.getVariable("PointMarkScale", 1.0));
+    op.setBlockName("dummy");
 
     return op;
 };

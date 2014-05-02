@@ -158,7 +158,7 @@ public:
 
     void end(RDocument* document);
 
-    void updateOverwrittenBlockReferences();
+    void updateAffectedBlockReferences();
 
     /**
      * Sets the ID of this transaction. Typically called by a storage which manages
@@ -258,7 +258,7 @@ protected:
     /**
      * List of IDs of all block references that need to be updated.
      */
-    QList<RObject::Id> overwrittenBlockReferences;
+    QList<RObject::Id> affectedBlockReferenceIds;
 
     /**
      * Map of properties that are changed by this transaction. For every
