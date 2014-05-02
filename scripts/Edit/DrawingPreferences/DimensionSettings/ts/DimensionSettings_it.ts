@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -24,7 +24,7 @@
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location line="+87"/>
+        <location line="+88"/>
         <source>Scientific</source>
         <translation>Scientifica</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+138"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>
@@ -84,12 +84,12 @@
         <translation>L&apos;unità di disegno deve essere &apos;Inch&apos; per visualizzare le etichette in formati di dimensione &apos;architettonica&apos; o &apos;Engineering&apos;. Formato cambiato in &apos;decimale&apos;.</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+20"/>
+        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
         <translation>Misure</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Keep proportions</source>
         <translation>Mantiene proporzioni</translation>
     </message>
@@ -119,7 +119,12 @@
         <translation>Dimensione Freccia:</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+95"/>
+        <source>Size scale factor:</source>
+        <translation>Fattore di Scala:</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
         <translation>Stile freccia</translation>
     </message>
@@ -154,13 +159,13 @@
         <translation>&amp;Precisione:</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+62"/>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
         <translation>Mostra zeri finali</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
         <translation>Quota angolare</translation>
     </message>
@@ -170,12 +175,12 @@
         <translation>&amp;Formato:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
         <translation>&amp;Precisione:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
         <translation>Anteprima</translation>

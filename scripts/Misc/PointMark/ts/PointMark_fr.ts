@@ -4,18 +4,23 @@
 <context>
     <name>PointMark</name>
     <message>
-        <location filename="../PointMark.js" line="72"/>
+        <location filename="../PointMark.js" line="+72"/>
         <source>Point Mark Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PointMark.js" line="77"/>
+        <location line="+5"/>
         <source>Show point mark tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PointMark.js" line="94"/>
+        <location line="+17"/>
         <source>&amp;Point Mark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+217"/>
+        <source>Missing Benchmark</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

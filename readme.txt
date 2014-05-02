@@ -1,6 +1,6 @@
-QCAD 3.4
+QCAD 3.5
 
-This is QCAD version 3.4.
+This is QCAD version 3.5.
 
 QCAD is an application for computer aided drafting (CAD) in two dimensions (2D).
 

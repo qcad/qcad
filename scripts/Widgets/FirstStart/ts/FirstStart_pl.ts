@@ -10,7 +10,7 @@
         <translation type="unfinished">Pierwszy start</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+185"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

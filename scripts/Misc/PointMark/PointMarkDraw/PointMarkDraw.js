@@ -326,15 +326,23 @@ PointMarkDraw.prototype.linkLeader = function(doc, objIds) {
 /**
  * Finds the block attribute in the given document interface and adjusts its text.
  */
-PointMarkDraw.prototype.updateLabel = function(di, benchmark, preview) {
-    var doc = di.getDocument();
-    var ids = doc.queryAllEntities();
+PointMarkDraw.prototype.updateLabel = function(diSrc, benchmark, preview) {
+    var doc = this.getDocument();
+    var scale = isNull(doc) ? 1.0 : doc.getVariable("PointMarkScale", 1.0);
+    if (scale<1.0e-6) {
+        scale = 1.0;
+    }
+    var labelSize = isNull(doc) ? 1.0 : doc.getVariable("PointMarkLabelSize", 1.0) / scale;
+
+    var docSrc = diSrc.getDocument();
+    var ids = docSrc.queryAllEntities();
     for (var i=0; i<ids.length; i++) {
         var id = ids[i];
-        var entity = doc.queryEntityDirect(id);
+        var entity = docSrc.queryEntityDirect(id);
         if (isAttributeEntity(entity)) {
             var data = entity.getData();
             data.setText(this.getLabel(benchmark, preview));
+            data.setTextHeight(labelSize);
             entity.setData(data);
             break;
         }
@@ -388,6 +396,10 @@ PointMarkDraw.prototype.getOperation = function(preview) {
     if (!isValidVector(this.pos)) {
         return undefined;
     }
+    var doc = this.getDocument();
+    if (isNull(doc)) {
+        return undefined;
+    }
 
     var op;
 
@@ -406,6 +418,7 @@ PointMarkDraw.prototype.getOperation = function(preview) {
 
     op.setOffset(this.pos);
     op.setOverwriteBlocks(false);
+    op.setScale(doc.getVariable("PointMarkScale", 1.0));
     // update symbols (TODO):
     //op.setOverwriteBlocks(true);
 

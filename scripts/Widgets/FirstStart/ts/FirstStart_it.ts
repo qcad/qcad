@@ -4,7 +4,7 @@
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../FirstStart.js" line="+218"/>
+        <location filename="../FirstStart.js" line="+220"/>
         <source>Black</source>
         <translation>Nero</translation>
     </message>
@@ -24,12 +24,12 @@
         <translation type="obsolete">Benvenuti a QCAD</translation>
     </message>
     <message>
-        <location line="-188"/>
+        <location line="-190"/>
         <source>%1 First Start</source>
         <translation>%1 primo avvio</translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+191"/>
         <source>Welcome to %1</source>
         <translation>Benvenuti a %1</translation>
     </message>

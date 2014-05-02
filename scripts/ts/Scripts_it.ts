@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../DefaultAction.js" line="+82"/>
+        <location filename="../DefaultAction.js" line="+86"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Selezionare entità o regione</translation>
@@ -32,6 +32,11 @@
         <source>Specify target point of selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Specificare il punto finale della selezione</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Move entity to desired location</source>
+        <translation>Spostare entità</translation>
     </message>
 </context>
 <context>

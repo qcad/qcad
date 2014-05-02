@@ -20,7 +20,7 @@
         <translation>寸法</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+86"/>
         <source>Scientific</source>
         <translation>科学</translation>
     </message>
@@ -70,7 +70,7 @@
         <translation>測量</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+138"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
     </message>
@@ -80,12 +80,12 @@
         <translation>寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+20"/>
+        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
         <translation>サイズ</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Keep proportions</source>
         <translation>比率を維持</translation>
     </message>
@@ -115,7 +115,12 @@
         <translation>矢印のサイズ:</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+95"/>
+        <source>Size scale factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
         <translation>矢印のスタイル</translation>
     </message>
@@ -150,13 +155,13 @@
         <translation>&amp;r 正確さ:</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+62"/>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
         <translation>末尾のゼロを表示</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
         <translation>角度寸法</translation>
     </message>
@@ -166,12 +171,12 @@
         <translation>&amp;o フォーマット:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
         <translation>&amp;c 正確さ:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
         <translation>プレビュー</translation>

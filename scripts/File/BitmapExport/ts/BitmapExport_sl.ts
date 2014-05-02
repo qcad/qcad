@@ -14,7 +14,7 @@
         <translation>Izvozi kot bitno sliko</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+126"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>Napaka pri generiranju slike &apos;%1&apos;: %2</translation>
     </message>

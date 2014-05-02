@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -24,7 +24,7 @@
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+87"/>
+        <location line="+88"/>
         <source>Scientific</source>
         <translation>Scientifique</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>Unités de géomètre</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+138"/>
         <source>Unit / Format</source>
         <translation>Unité / format</translation>
     </message>
@@ -84,12 +84,12 @@
         <translation>L&apos;unité de dessin doivent être &apos;Inch&apos; pour afficher des étiquettes de dimension dans des formats &apos;architecturale&apos; ou &apos;ingénierie&apos;. Format changé en &apos;décimal&apos;.</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+20"/>
+        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
         <translation>Tailles</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Keep proportions</source>
         <translation>Garder les proportions</translation>
     </message>
@@ -119,7 +119,12 @@
         <translation>Taille de flèche :</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+95"/>
+        <source>Size scale factor:</source>
+        <translation>Facteur d&apos;échelle :</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
         <translation>Style de flèche</translation>
     </message>
@@ -154,13 +159,13 @@
         <translation>P&amp;récision :</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+62"/>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
         <translation>Afficher les zéros de fin</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
         <translation>Cotation angulaire</translation>
     </message>
@@ -170,12 +175,12 @@
         <translation>&amp;Format :</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
         <translation>P&amp;récision :</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
         <translation>Prévisualisation</translation>

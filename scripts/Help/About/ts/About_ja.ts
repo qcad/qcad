@@ -9,7 +9,7 @@
         <translation>%1について</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+67"/>
         <source>Plugins</source>
         <translation>プラグイン</translation>
     </message>

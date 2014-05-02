@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+126"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation type="unfinished"></translation>
     </message>

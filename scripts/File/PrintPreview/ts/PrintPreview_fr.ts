@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>Frame</name>
     <message>
@@ -39,9 +39,14 @@
         <translation>Exportation vers %1...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Export complete: %1</source>
         <translation>Exportation terminée : %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Export failed (cannot open file for writing): %1</source>
+        <translation>Echec de l&apos;exportation (Impossible d&apos;ouvrir le fichier) : %1</translation>
     </message>
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>

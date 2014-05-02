@@ -67,7 +67,7 @@
         <translation>Vse</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+21"/>
         <source>Add custom property to selected objects</source>
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
@@ -108,7 +108,7 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+136"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -128,7 +128,7 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+317"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Urejevalec lastnosti</translation>

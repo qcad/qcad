@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -31,7 +31,7 @@ Dimensão Alinhada</translatorcomment>
         <translation>Padrões para novos desenhos</translation>
     </message>
     <message>
-        <location line="+87"/>
+        <location line="+88"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -115,7 +115,7 @@ Unidades de topógrafo</translatorcomment>
         <translation>Unidades de topógrafo</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+138"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Unidade / format</translation>
@@ -127,7 +127,7 @@ Unidades de topógrafo</translatorcomment>
         <translation>A unidade de desenho deve ser &apos;Inch&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+20"/>
+        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -136,7 +136,7 @@ Tamanhos das imagens</translatorcomment>
         <translation>Tamanhos</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Keep proportions</source>
         <translatorcomment>--exact match--
 --file: Image_pt.ts--
@@ -184,7 +184,12 @@ Tamanho da seta:</translatorcomment>
         <translation>Tamanho da seta:</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+95"/>
+        <source>Size scale factor:</source>
+        <translation>Fator de escala:</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
         <translatorcomment>--google--
 Estilo da Seta:
@@ -237,8 +242,8 @@ Espessura Arquitetônica</translatorcomment>
         <translation>P&amp;recisão:</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+62"/>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -246,7 +251,7 @@ Exibe zeros à esquerda</translatorcomment>
         <translation>Exibe zeros à esquerda</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cotas angulares</translation>
@@ -260,7 +265,7 @@ Exibe zeros à esquerda</translatorcomment>
         <translation>F&amp;ormato:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -268,7 +273,7 @@ Pre&amp;cisão:</translatorcomment>
         <translation>Pre&amp;cisão:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
         <translatorcomment>--exact match--

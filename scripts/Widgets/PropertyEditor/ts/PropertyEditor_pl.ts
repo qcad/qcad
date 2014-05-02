@@ -110,7 +110,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+21"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -188,7 +188,7 @@ Dół - prawo</translatorcomment>
         <translation type="obsolete">W dół</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+136"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -223,7 +223,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+317"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

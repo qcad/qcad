@@ -100,6 +100,7 @@ PointMarkList.itemClicked = function(item, col) {
 };
 
 PointMarkList.updateFromDocument = function(doc) {
+    return;
     if (isOfType(doc, RDocumentInterface)) {
         doc = doc.getDocument();
     }
@@ -111,6 +112,11 @@ PointMarkList.updateFromDocument = function(doc) {
     }
 
     var treeWidget = appWin.findChild("PointMarkTree");
+    var scaleCombo = appWin.findChild("Scale");
+    var labelSizeCombo = appWin.findChild("LabelSize");
+    scaleCombo.setEditText(isNull(doc) ? 1.0 : doc.getVariable("PointMarkScale", 1.0));
+    labelSizeCombo.setEditText(isNull(doc) ? 1.0 : doc.getVariable("PointMarkLabelSize", 1.0));
+
     var currentItem = treeWidget.currentItem();
 
     var selectedHandle = PointMarkDraw.getBenchmark();
@@ -147,6 +153,9 @@ PointMarkList.updateFromDocument = function(doc) {
             item.setTextAlignment(1, Qt.AlignRight);
             item.setTextAlignment(2, Qt.AlignRight);
             item.setTextAlignment(3, Qt.AlignRight);
+            // make editable:
+            //var flags = new Qt.ItemFlags(item.flags() | Qt.ItemIsEditable);
+            //item.setFlags(flags);
 
             if (k===0) {
                 item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Benchmark.svg"));
@@ -183,6 +192,7 @@ PointMarkList.updateFromTransaction = function(doc, transaction) {
 };
 
 PointMarkList.updateLeaders = function(doc, transaction) {
+    return;
     if (isNull(doc)) {
         qDebug("PointMarkList.updateLeaders: doc is NULL");
         return;
@@ -388,6 +398,8 @@ PointMarkList.setScale = function(str) {
     }
 
     di.applyOperation(op);
+
+    doc.setVariable("PointMarkScale", f);
 };
 
 /**
@@ -436,6 +448,8 @@ PointMarkList.setLabelSize = function(str) {
     }
 
     di.applyOperation(op);
+
+    doc.setVariable("PointMarkLabelSize", h);
 };
 
 
