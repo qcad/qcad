@@ -92,6 +92,14 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
         if (block.isNull()) {
             continue;
         }
+
+        // hide anonymous blocks:
+        if (RSettings.getBoolValue("BlockList/HideInternalBlocks", false)===true) {
+            if (block.getName().toLowerCase().startsWith("a$c") && block.getName().length===13) {
+                continue;
+            }
+        }
+
         var item = new QListWidgetItem(block.getName(), this);
         var iconName =
             //this.basePath + "/blockstatus_%1.svg"
@@ -242,6 +250,16 @@ function BlockList(guiAction) {
 }
 
 BlockList.prototype = new Widgets();
+
+BlockList.getPreferencesCategory = function() {
+    return [ qsTr("Widgets"), qsTr("Block List") ];
+};
+
+BlockList.applyPreferences = function(doc, mdiChild) {
+    var appWin = RMainWindowQt.getMainWindow();
+    appWin.notifyBlockListeners(EAction.getDocumentInterface());
+};
+
 
 /**
  * Shows / hides the layer list.

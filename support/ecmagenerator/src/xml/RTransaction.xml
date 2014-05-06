@@ -141,8 +141,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="document" isConst="false" />
       </variant>
     </method>
-    <method name="updateOverwrittenBlockReferences"
-    cppName="updateOverwrittenBlockReferences" specifier="public"
+    <method name="updateAffectedBlockReferences"
+    cppName="updateAffectedBlockReferences" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>

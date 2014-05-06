@@ -48,7 +48,11 @@ PointMarkList.prototype.finishEvent = function() {
     this.getGuiAction().setChecked(dock.visible);
 };
 
-PointMarkList.itemClicked = function(item, col) {
+PointMarkList.itemClicked = function(item, prevItem) {
+    if (isNull(item)) {
+        return;
+    }
+
     var handle = item.data(0, Qt.UserRole);
     var di = EAction.getDocumentInterface();
     if (isNull(di)) {
@@ -100,7 +104,6 @@ PointMarkList.itemClicked = function(item, col) {
 };
 
 PointMarkList.updateFromDocument = function(doc) {
-    return;
     if (isOfType(doc, RDocumentInterface)) {
         doc = doc.getDocument();
     }
@@ -115,7 +118,7 @@ PointMarkList.updateFromDocument = function(doc) {
     var scaleCombo = appWin.findChild("Scale");
     var labelSizeCombo = appWin.findChild("LabelSize");
     scaleCombo.setEditText(isNull(doc) ? 1.0 : doc.getVariable("PointMarkScale", 1.0));
-    labelSizeCombo.setEditText(isNull(doc) ? 1.0 : doc.getVariable("PointMarkLabelSize", 1.0));
+    //labelSizeCombo.setEditText(isNull(doc) ? 1.0 : doc.getVariable("PointMarkLabelSize", 1.0));
 
     var currentItem = treeWidget.currentItem();
 
@@ -125,12 +128,22 @@ PointMarkList.updateFromDocument = function(doc) {
         selectedHandle = currentItem.data(0, Qt.UserRole);
     }
 
-    treeWidget.clear();
-
     if (isNull(doc)) {
         // no document open, abort.
+        treeWidget.blockSignals(true);
+        treeWidget.clear();
+        treeWidget.blockSignals(false);
         return;
     }
+
+    if (doc.getCurrentBlockId()!==doc.getModelSpaceBlockId()) {
+        // not in model space:
+        return;
+    }
+
+    treeWidget.blockSignals(true);
+    treeWidget.clear();
+    treeWidget.blockSignals(false);
 
     var treeData = PointMark.getPointMarkTree(doc);
     var item;
@@ -183,6 +196,8 @@ PointMarkList.updateFromDocument = function(doc) {
     for (var col=0; col<4; col++) {
         treeWidget.resizeColumnToContents(col);
     }
+
+    treeWidget.blockSignals(false);
 };
 
 PointMarkList.updateFromTransaction = function(doc, transaction) {
@@ -192,73 +207,103 @@ PointMarkList.updateFromTransaction = function(doc, transaction) {
 };
 
 PointMarkList.updateLeaders = function(doc, transaction) {
-    return;
     if (isNull(doc)) {
         qDebug("PointMarkList.updateLeaders: doc is NULL");
         return;
     }
     var storage = doc.getStorage();
 
-    var i, objIds, objId, leader;
+    //var i, attributeId, attribute;
+    //objIds,
 
     var affectedIds = transaction.getAffectedObjects();
 
     // update existing leaders:
     // query all auto leaders:
-    objIds = PointMark.queryAllAutoLeaders(doc);
-    for (i=0; i<objIds.length; i++) {
-        objId = objIds[i];
-        leader = doc.queryObject(objId);
-        if (!isLeaderEntity(leader)) {
+    //objIds = PointMark.queryAllAutoLeaders(doc);
+    for (var i=0; i<affectedIds.length; i++) {
+        var attributeId = affectedIds[i];
+
+        // is the object an attribute:
+        var attribute = doc.queryObject(attributeId);
+        if (!isAttributeEntity(attribute) || !getInBlockEasyDragAndDrop(attribute)) {
+            continue;
+        }
+
+        // is the attribute in a point mark block:
+        var blockId = attribute.getBlockId();
+        var blockName = doc.getBlockName(blockId);
+        if (!blockName.toLowerCase().startsWith("a$")) {
+            continue;
+        }
+
+        // query block entities:
+        var entityIds = doc.queryBlockEntities(blockId);
+
+        // find leader:
+        var leader = undefined;
+        for (var k=0; k<entityIds.length; k++) {
+            var entityId = entityIds[k];
+            leader = doc.queryEntity(entityId);
+            if (!isLeaderEntity(leader)) {
+                continue;
+            }
+            else {
+                break;
+            }
+        }
+
+        if (isNull(leader)) {
             continue;
         }
 
         // attribute:
-        var attributeHandle = PointMark.getFromHandle(leader);
-        var attribute = doc.queryObjectByHandle(attributeHandle);
-        var attributeId = RObject.INVALID_ID;
-        if (isAttributeEntity(attribute) && !attribute.isUndone()) {
-            attributeId = attribute.getId();
-        }
+//        var attributeHandle = PointMark.getFromHandle(attribute);
+//        var attribute = doc.queryObjectByHandle(attributeHandle);
+//        var attributeId = RObject.INVALID_ID;
+//        if (isAttributeEntity(attribute) && !attribute.isUndone()) {
+//            attributeId = attribute.getId();
+//        }
 
         // block ref:
-        var blockRefHandle = PointMark.getToHandle(leader);
-        var blockRef = doc.queryObjectByHandle(blockRefHandle);
-        var blockRefId = RObject.INVALID_ID;
-        if (isBlockReferenceEntity(blockRef) && !blockRef.isUndone()) {
-            blockRefId = blockRef.getId();
-        }
+//        var blockRefHandle = PointMark.getToHandle(attribute);
+//        var blockRef = doc.queryObjectByHandle(blockRefHandle);
+//        var blockRefId = RObject.INVALID_ID;
+//        if (isBlockReferenceEntity(blockRef) && !blockRef.isUndone()) {
+//            blockRefId = blockRef.getId();
+//        }
 
         // check if one of the linked entities has changed:
-        if (!affectedIds.contains(attributeId) &&
-            !affectedIds.contains(blockRefId)) {
-            // leader remains unchanged:
-            continue;
-        }
+//        if (!affectedIds.contains(attributeId) &&
+//            !affectedIds.contains(blockRefId)) {
+//            // leader remains unchanged:
+//            continue;
+//        }
 
         var line = new RLine(leader.getStartPoint(), leader.getEndPoint());
 
         // update leader position:
         leader.clear();
-        if (blockRefId!==RObject.INVALID_ID) {
-            line.setStartPoint(blockRef.getPosition());
-        }
-        if (attributeId!==RObject.INVALID_ID) {
+        //if (blockRefId!==RObject.INVALID_ID) {
+            line.setStartPoint(new RVector(0,0));
+        //}
+        //if (attributeId!==RObject.INVALID_ID) {
             line.setEndPoint(attribute.getAlignmentPoint());
             // gap to attribute:
             var ep = line.getPointsWithDistanceToEnd(attribute.getHeight()/4, RS.FromEnd);
             if (ep.length===1) {
                 line.setEndPoint(ep[0]);
             }
-        }
+        //}
 
         leader.appendVertex(line.getStartPoint());
         leader.appendVertex(line.getEndPoint());
+
         transaction.addObject(leader, false);
 
-        if (attributeId!==RObject.INVALID_ID) {
+        //if (attributeId!==RObject.INVALID_ID) {
             // update attribute alignment based on angle:
-            var ang = blockRef.getPosition().getAngleTo(attribute.getAlignmentPoint());
+            var ang = attribute.getAlignmentPoint().getAngle();
             // top:
             if (RMath.isAngleBetween(ang, Math.PI/4*1, Math.PI/4*3, false)) {
                 attribute.setHAlign(RS.HAlignCenter);
@@ -280,7 +325,7 @@ PointMarkList.updateLeaders = function(doc, transaction) {
                 attribute.setVAlign(RS.VAlignMiddle);
             }
             transaction.addObject(attribute, false);
-        }
+        //}
     }
 
 
@@ -394,7 +439,7 @@ PointMarkList.setScale = function(str) {
         }
 
         blockRef.setScaleFactors(new RVector(f,f,f));
-        op.addObject(blockRef);
+        op.addObject(blockRef, false);
     }
 
     di.applyOperation(op);
@@ -405,52 +450,52 @@ PointMarkList.setScale = function(str) {
 /**
  * Called when user adjusts label size.
  */
-PointMarkList.setLabelSize = function(str) {
-    if (str.length===0) {
-        return;
-    }
-    var h = parseFloat(str, 10);
-    if (h<RS.PointTolerance) {
-        return;
-    }
+//PointMarkList.setLabelSize = function(str) {
+//    if (str.length===0) {
+//        return;
+//    }
+//    var h = parseFloat(str, 10);
+//    if (h<RS.PointTolerance) {
+//        return;
+//    }
 
-    var di = EAction.getDocumentInterface();
-    if (isNull(di)) {
-        return;
-    }
-    var doc = di.getDocument();
+//    var di = EAction.getDocumentInterface();
+//    if (isNull(di)) {
+//        return;
+//    }
+//    var doc = di.getDocument();
 
-    var op = new RAddObjectsOperation();
-    var ids = PointMark.queryAllMarkIds(doc, 'a');
-    for (var i=0; i<ids.length; i++) {
-        var id = ids[i];
+//    var op = new RAddObjectsOperation();
+//    var ids = PointMark.queryAllMarkIds(doc, 'a');
+//    for (var i=0; i<ids.length; i++) {
+//        var id = ids[i];
 
-        var blockRef = doc.queryEntity(id);
-        if (isNull(blockRef) || !isBlockReferenceEntity(blockRef)) {
-            continue;
-        }
+//        var blockRef = doc.queryEntity(id);
+//        if (isNull(blockRef) || !isBlockReferenceEntity(blockRef)) {
+//            continue;
+//        }
 
-        var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
-        if (attribIds.length===0) {
-            continue;
-        }
+//        var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
+//        if (attribIds.length===0) {
+//            continue;
+//        }
 
-        for (var k=0; k<attribIds.length; k++) {
-            var attribId = attribIds[k];
-            var attrib = doc.queryEntity(attribId);
-            if (isNull(attrib)) {
-                continue;
-            }
+//        for (var k=0; k<attribIds.length; k++) {
+//            var attribId = attribIds[k];
+//            var attrib = doc.queryEntity(attribId);
+//            if (isNull(attrib)) {
+//                continue;
+//            }
 
-            attrib.setTextHeight(h);
-            op.addObject(attrib);
-        }
-    }
+//            attrib.setTextHeight(h);
+//            op.addObject(attrib);
+//        }
+//    }
 
-    di.applyOperation(op);
+//    di.applyxOperation(op);
 
-    doc.setVariable("PointMarkLabelSize", h);
-};
+//    doc.setVariable("PointMarkLabelSize", h);
+//};
 
 
 PointMarkList.init = function(basePath) {
@@ -473,17 +518,20 @@ PointMarkList.init = function(basePath) {
 
     // set up tree widget:
     var pointMarkTree = formWidget.findChild("PointMarkTree");
-    pointMarkTree.itemClicked.connect(PointMarkList, "itemClicked");
+    //pointMarkTree.itemClicked.connect(PointMarkList, "itemClicked");
+    pointMarkTree.currentItemChanged.connect(PointMarkList, "itemClicked");
     pointMarkTree.header().resizeSection(0, 150);
     pointMarkTree.header().resizeSection(1, 80);
     pointMarkTree.header().resizeSection(2, 80);
     pointMarkTree.header().resizeSection(3, 80);
 
     var scaleCombo = formWidget.findChild("Scale");
-    scaleCombo["editTextChanged"].connect(PointMarkList, "setScale");
+    scaleCombo.insertPolicy = QComboBox.InsertAtTop;
+    scaleCombo["currentIndexChanged(QString)"].connect(PointMarkList, "setScale");
 
-    var labelSizeCombo = formWidget.findChild("LabelSize");
-    labelSizeCombo["editTextChanged"].connect(PointMarkList, "setLabelSize");
+//    var labelSizeCombo = formWidget.findChild("LabelSize");
+//    labelSizeCombo.insertPolicy = QComboBox.InsertAtTop;
+//    labelSizeCombo["currentIndexChanged(QString)"].connect(PointMarkList, "setLabelSize");
 
     // set up tool buttons:
     var widgets = getWidgets(formWidget);

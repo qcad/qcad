@@ -117,6 +117,10 @@ PointMark.queryAllMarkIds = function(doc, type) {
             continue;
         }
 
+        if (blockRef.getBlockId()!==doc.getCurrentBlockId()) {
+            continue;
+        }
+
         var handle = PointMark.getBenchmarkHandle(blockRef);
         if (handle===RObject.INVALID_HANDLE) {
             continue;
@@ -144,42 +148,57 @@ PointMark.queryAllMarkIds = function(doc, type) {
 /**
  * \return All leader IDs representing auto updated leaders between two entities.
  */
-PointMark.queryAllAutoLeaders = function(doc) {
-    var ret = [];
+//PointMark.queryAllAutoLeaders = function(doc) {
+//    var ret = [];
 
-    var ids = doc.queryAllEntities(false, false, RS.EntityLeader);
-    for (var i=0; i<ids.length; i++) {
-        var id = ids[i];
-        var leader = doc.queryEntityDirect(id);
-        if (isNull(leader) || !isLeaderEntity(leader)) {
-            continue;
-        }
+//    var ids = doc.queryAllEntities(false, false, RS.EntityLeader);
+//    for (var i=0; i<ids.length; i++) {
+//        var id = ids[i];
+//        var leader = doc.queryEntityDirect(id);
+//        if (isNull(leader) || !isLeaderEntity(leader)) {
+//            continue;
+//        }
 
-        var handle1 = PointMark.getFromHandle(leader);
-        if (handle1===RObject.INVALID_HANDLE) {
-            continue;
-        }
+//        var handle1 = PointMark.getFromHandle(leader);
+//        if (handle1===RObject.INVALID_HANDLE) {
+//            continue;
+//        }
 
-        var handle2 = PointMark.getToHandle(leader);
-        if (handle2===RObject.INVALID_HANDLE) {
-            continue;
-        }
+//        var handle2 = PointMark.getToHandle(leader);
+//        if (handle2===RObject.INVALID_HANDLE) {
+//            continue;
+//        }
 
-        ret.push(id);
-    }
+//        ret.push(id);
+//    }
 
-    return ret;
-};
+//    return ret;
+//};
 
 /**
  * \return String representing label of the given benchmark or point mark.
  */
 PointMark.getMarkLabel = function(doc, blockRefId) {
-    var blockAttribIds = doc.queryChildEntities(blockRefId, RS.EntityAttribute);
-    if (blockAttribIds.length!==1) {
+    var blockRef = doc.queryEntityDirect(blockRefId);
+    if (isNull(blockRef)) {
         return undefined;
     }
-    return doc.queryEntityDirect(blockAttribIds[0]);
+
+    var entityIds = doc.queryBlockEntities(blockRef.getReferencedBlockId());
+    for (var i=0; i<entityIds.length; i++) {
+        var label = doc.queryEntityDirect(entityIds[i]);
+        if (isAttributeEntity(label)) {
+            return label;
+        }
+    }
+
+    return undefined;
+
+//    var blockAttribIds = doc.queryChildEntities(blockRefId, RS.EntityAttribute);
+//    if (blockAttribIds.length!==1) {
+//        return undefined;
+//    }
+//    return doc.queryEntityDirect(blockAttribIds[0]);
 };
 
 /**
@@ -378,16 +397,16 @@ PointMark.getPointMarkTree = function(doc) {
 //    }
 
     // debugging:
-//    for (i=0; i<ret.length; i++) {
-//        for (var k=0; k<ret[i].length; k++) {
-//            if (k===0) {
-//                qDebug(ret[i][k]);
-//            }
-//            else {
-//                qDebug("\t" + ret[i][k]);
-//            }
-//        }
-//    }
+    for (i=0; i<ret.length; i++) {
+        for (var k=0; k<ret[i].length; k++) {
+            if (k===0) {
+                qDebug(ret[i][k]);
+            }
+            else {
+                qDebug("\t" + ret[i][k]);
+            }
+        }
+    }
 
     return ret;
 };

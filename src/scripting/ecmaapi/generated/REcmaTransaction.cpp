@@ -86,7 +86,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, end, "end");
             
-            REcmaHelper::registerFunction(&engine, proto, updateOverwrittenBlockReferences, "updateOverwrittenBlockReferences");
+            REcmaHelper::registerFunction(&engine, proto, updateAffectedBlockReferences, "updateAffectedBlockReferences");
             
             REcmaHelper::registerFunction(&engine, proto, setId, "setId");
             
@@ -1422,19 +1422,19 @@
             return result;
         }
          QScriptValue
-        REcmaTransaction::updateOverwrittenBlockReferences
+        REcmaTransaction::updateAffectedBlockReferences
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTransaction::updateOverwrittenBlockReferences", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::updateOverwrittenBlockReferences";
+            //REcmaHelper::functionStart("REcmaTransaction::updateAffectedBlockReferences", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::updateAffectedBlockReferences";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RTransaction* self = 
-                        getSelf("updateOverwrittenBlockReferences", context);
+                        getSelf("updateAffectedBlockReferences", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1453,16 +1453,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->updateOverwrittenBlockReferences();
+               self->updateAffectedBlockReferences();
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.updateOverwrittenBlockReferences().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.updateAffectedBlockReferences().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTransaction::updateOverwrittenBlockReferences", context, engine);
+            //REcmaHelper::functionEnd("REcmaTransaction::updateAffectedBlockReferences", context, engine);
             return result;
         }
          QScriptValue

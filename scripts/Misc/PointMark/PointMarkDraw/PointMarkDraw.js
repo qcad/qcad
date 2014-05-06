@@ -253,7 +253,7 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
             for (i=0; i<objIds.length; i++) {
                 objId = objIds[i];
                 obj = doc.queryObjectDirect(objId);
-                if (isBlockReferenceEntity(obj)) {
+                if (isBlockReferenceEntity(obj) && obj.getBlockId()===doc.getCurrentBlockId()) {
                     // benchmark refers to itself as benchmark:
                     this.benchmarkHandle = obj.getHandle();
                     PointMark.setBenchmarkHandle(obj, this.benchmarkHandle);
@@ -262,7 +262,7 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
                 //if (isLeaderEntity(obj)) {
                 //}
             }
-            this.linkLeader(doc, objIds);
+            //this.linkLeader(doc, objIds);
 
             // update combo box with possible benchmarks to use as origin:
             this.initUiOptions();
@@ -282,46 +282,47 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
             for (i=0; i<objIds.length; i++) {
                 objId = objIds[i];
                 obj = doc.queryObjectDirect(objId);
-                if (isBlockReferenceEntity(obj)) {
+                if (isBlockReferenceEntity(obj) && obj.getBlockId()===doc.getCurrentBlockId()) {
                     // point mark refers to benchmark:
                     PointMark.setBenchmarkHandle(obj, this.benchmarkHandle);
+                    break;
                 }
             }
-            this.linkLeader(doc, objIds);
+            //this.linkLeader(doc, objIds);
         }
         break;
     }
 };
 
-PointMarkDraw.prototype.linkLeader = function(doc, objIds) {
-    var objId, obj;
-    var blockRefHandle = undefined;
-    var attributeHandle = undefined;
-    var leader = undefined;
+//PointMarkDraw.prototype.linkLeader = function(doc, objIds) {
+//    var objId, obj;
+//    var blockRefHandle = undefined;
+//    var attributeHandle = undefined;
+//    var leader = undefined;
 
-    for (var i=0; i<objIds.length; i++) {
-        objId = objIds[i];
-        obj = doc.queryObjectDirect(objId);
+//    for (var i=0; i<objIds.length; i++) {
+//        objId = objIds[i];
+//        obj = doc.queryObjectDirect(objId);
 
-        if (isLeaderEntity(obj)) {
-            leader = obj;
-        }
+//        if (isLeaderEntity(obj)) {
+//            leader = obj;
+//        }
 
-        if (isBlockReferenceEntity(obj)) {
-            blockRefHandle = obj.getHandle();
-        }
-        if (isAttributeEntity(obj)) {
-            attributeHandle = obj.getHandle();
-        }
-    }
+//        if (isBlockReferenceEntity(obj)) {
+//            blockRefHandle = obj.getHandle();
+//        }
+//        if (isAttributeEntity(obj)) {
+//            attributeHandle = obj.getHandle();
+//        }
+//    }
 
-    if (isNull(leader) || isNull(blockRefHandle) || isNull(attributeHandle)) {
-        return;
-    }
+//    if (isNull(leader) || isNull(blockRefHandle) || isNull(attributeHandle)) {
+//        return;
+//    }
 
-    PointMark.setFromHandle(leader, attributeHandle);
-    PointMark.setToHandle(leader, blockRefHandle);
-};
+//    PointMark.setFromHandle(leader, attributeHandle);
+//    PointMark.setToHandle(leader, blockRefHandle);
+//};
 
 /**
  * Finds the block attribute in the given document interface and adjusts its text.
@@ -332,7 +333,7 @@ PointMarkDraw.prototype.updateLabel = function(diSrc, benchmark, preview) {
     if (scale<1.0e-6) {
         scale = 1.0;
     }
-    var labelSize = isNull(doc) ? 1.0 : doc.getVariable("PointMarkLabelSize", 1.0) / scale;
+    //var labelSize = isNull(doc) ? 1.0 : doc.getVariable("PointMarkLabelSize", 1.0) / scale;
 
     var docSrc = diSrc.getDocument();
     var ids = docSrc.queryAllEntities();
@@ -342,7 +343,7 @@ PointMarkDraw.prototype.updateLabel = function(diSrc, benchmark, preview) {
         if (isAttributeEntity(entity)) {
             var data = entity.getData();
             data.setText(this.getLabel(benchmark, preview));
-            data.setTextHeight(labelSize);
+            //data.setTextHeight(labelSize);
             entity.setData(data);
             break;
         }
@@ -418,10 +419,12 @@ PointMarkDraw.prototype.getOperation = function(preview) {
 
     op.setOffset(this.pos);
     op.setOverwriteBlocks(false);
+    op.setToCurrentLayer(false);
     // update symbols (TODO):
     //op.setOverwriteBlocks(true);
     op.setScale(doc.getVariable("PointMarkScale", 1.0));
-    op.setBlockName("dummy");
+    op.setBlockName(doc.getTempBlockName());
+    op.setLayerName("pt_layer");
 
     return op;
 };
@@ -470,7 +473,10 @@ PointMarkDraw.prototype.slotBenchmarkChanged = function(value) {
             continue;
         }
 
+        treeWidget.blockSignals(true);
         treeWidget.setCurrentItem(item);
+        treeWidget.blockSignals(false);
+        break;
     }
 };
 

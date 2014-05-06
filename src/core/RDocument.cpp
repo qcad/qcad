@@ -380,7 +380,7 @@ void RDocument::setCurrentColor(const RColor& color) {
     storage.setCurrentColor(color);
 }
 
-RColor RDocument::getCurrentColor() {
+RColor RDocument::getCurrentColor() const {
     return storage.getCurrentColor();
 }
 
@@ -388,7 +388,7 @@ void RDocument::setCurrentLineweight(RLineweight::Lineweight lw) {
     storage.setCurrentLineweight(lw);
 }
 
-RLineweight::Lineweight RDocument::getCurrentLineweight() {
+RLineweight::Lineweight RDocument::getCurrentLineweight() const {
     return storage.getCurrentLineweight();
 }
 
@@ -396,7 +396,7 @@ void RDocument::setCurrentLinetype(RLinetype lt) {
     storage.setCurrentLinetype(lt);
 }
 
-RLinetype RDocument::getCurrentLinetype() {
+RLinetype RDocument::getCurrentLinetype() const {
     return storage.getCurrentLinetype();
 }
 
@@ -412,7 +412,7 @@ QSharedPointer<RBlock> RDocument::queryCurrentBlock() {
     return storage.queryCurrentBlock();
 }
 
-RBlock::Id RDocument::getCurrentBlockId() {
+RBlock::Id RDocument::getCurrentBlockId() const {
     return storage.getCurrentBlockId();
 }
 
@@ -448,6 +448,17 @@ void RDocument::setCurrentBlock(const QString& blockName) {
     setCurrentBlock(id);
 }
 
+QString RDocument::getTempBlockName() const {
+    do {
+        int p1 = qrand() % 100000;
+        int p2 = qrand() % 100000;
+        QString blockName = QString("A$C%1%2").arg(p1, 5, 10, QChar('0')).arg(p2, 5, 10, QChar('0'));
+        if (!hasBlock(blockName)) {
+            return blockName;
+        }
+    } while(true);
+}
+
 QString RDocument::getBlockName(RBlock::Id blockId) const {
     return storage.getBlockName(blockId);
 }
@@ -464,7 +475,7 @@ void RDocument::setCurrentView(const QString& viewName) {
     storage.setCurrentView(viewName);
 }
 
-RView::Id RDocument::getCurrentViewId() {
+RView::Id RDocument::getCurrentViewId() const {
     return storage.getCurrentViewId();
 }
 
@@ -472,7 +483,7 @@ QSharedPointer<RView> RDocument::queryCurrentView() {
     return storage.queryCurrentView();
 }
 
-bool RDocument::hasView(const QString& viewName) {
+bool RDocument::hasView(const QString& viewName) const {
     return storage.hasView(viewName);
 }
 
@@ -488,23 +499,23 @@ QSet<QString> RDocument::getViewNames() const {
     return storage.getViewNames();
 }
 
-bool RDocument::hasLayer(const QString& layerName) {
+bool RDocument::hasLayer(const QString& layerName) const {
     return storage.hasLayer(layerName);
 }
 
-RLayer::Id RDocument::getLayerId(const QString& layerName) {
+RLayer::Id RDocument::getLayerId(const QString& layerName) const {
     return storage.getLayerId(layerName);
 }
 
-bool RDocument::hasBlock(const QString& blockName) {
+bool RDocument::hasBlock(const QString& blockName) const {
     return storage.hasBlock(blockName);
 }
 
-bool RDocument::hasLinetype(const QString& linetypeName) {
+bool RDocument::hasLinetype(const QString& linetypeName) const {
     return storage.hasLinetype(linetypeName);
 }
 
-RBlock::Id RDocument::getBlockId(const QString& blockName) {
+RBlock::Id RDocument::getBlockId(const QString& blockName) const {
     return storage.getBlockId(blockName);
 }
 
@@ -512,23 +523,23 @@ RBlock::Id RDocument::getModelSpaceBlockId() const {
     return modelSpaceBlockId;
 }
 
-QString RDocument::getLinetypeName(RLinetype::Id linetypeId) {
+QString RDocument::getLinetypeName(RLinetype::Id linetypeId) const {
     return storage.getLinetypeName(linetypeId);
 }
 
-RLinetype::Id RDocument::getLinetypeId(const QString& linetypeName) {
+RLinetype::Id RDocument::getLinetypeId(const QString& linetypeName) const {
     return storage.getLinetypeId(linetypeName);
 }
 
-QSet<QString> RDocument::getLinetypeNames() {
+QSet<QString> RDocument::getLinetypeNames() const {
     return storage.getLinetypeNames();
 }
 
-bool RDocument::isByLayer(RLinetype::Id linetypeId) {
+bool RDocument::isByLayer(RLinetype::Id linetypeId) const {
     return linetypeId == linetypeByLayerId;
 }
 
-bool RDocument::isByBlock(RLinetype::Id linetypeId) {
+bool RDocument::isByBlock(RLinetype::Id linetypeId) const {
     return linetypeId == linetypeByBlockId;
 }
 

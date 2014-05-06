@@ -726,6 +726,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RView::Id" isPureVirtual="false" />
     </method>
+    <method name="getTempBlockName" cppName="getTempBlockName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getBlockName" cppName="getBlockName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

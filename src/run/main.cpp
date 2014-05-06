@@ -24,6 +24,7 @@
 #include <QFileInfo>
 #include <QImageReader>
 #include <QTextStream>
+#include <QTime>
 #include <QSqlDatabase>
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
@@ -100,6 +101,9 @@ int main(int argc, char *argv[]) {
         QFont::insertSubstitution(".Lucida Grande UI", "Lucida Grande");
     }
 #endif
+
+    QTime time = QTime::currentTime();
+    qsrand((uint)time.msec());
 
     QStringList originalArguments;
     for (int i=0; i<argc; i++) {

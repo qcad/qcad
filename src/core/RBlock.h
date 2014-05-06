@@ -100,6 +100,16 @@ public:
         }
     }
 
+    bool isAnonymous() const {
+        return anonymous;
+    }
+
+    void setAnonymous(bool on) {
+        if (QString::compare(name, modelSpaceName, Qt::CaseInsensitive)!=0) {
+            anonymous = on;
+        }
+    }
+
     void setOrigin(const RVector& origin) {
         this->origin = origin;
     }
@@ -129,6 +139,7 @@ protected:
 private:
     QString name;
     bool frozen;
+    bool anonymous;
     RVector origin;
 
     //QList<RAttributeDefinition> attributeDefinitions;

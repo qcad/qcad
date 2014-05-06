@@ -97,7 +97,7 @@ About.prototype.initAboutApp = function(webView) {
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
             + "<p/>"
             + "<p>%1 is free (open source) software.<br/>".arg(qApp.applicationName)
-            + "This means that everyone can <a href='http://www.qcad.org/contribute'>get involved!</a></p>".arg(qApp.applicationName)
+            + "This means that everyone can <a href='http://www.qcad.org/contribute'>get involved!</a></p>"
             + "<p>Plugins and script add-ons are subject to their respective license (see 'About Plugins' tab).</p>"
             + "<p/>"
             + "<p>Internet: <a href='http://%1'>%1</a></p>".arg(qApp.organizationDomain)

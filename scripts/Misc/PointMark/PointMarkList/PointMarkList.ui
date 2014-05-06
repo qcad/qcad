@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>306</width>
-    <height>327</height>
+    <width>310</width>
+    <height>335</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -27,18 +27,21 @@
     <number>0</number>
    </property>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <property name="spacing">
-      <number>4</number>
-     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <property name="leftMargin">
-      <number>4</number>
+      <number>12</number>
      </property>
      <property name="rightMargin">
-      <number>4</number>
+      <number>12</number>
      </property>
      <item>
       <widget class="QLabel" name="label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
         <string>Symbol Scale:</string>
        </property>
@@ -46,12 +49,6 @@
      </item>
      <item>
       <widget class="QComboBox" name="Scale">
-       <property name="minimumSize">
-        <size>
-         <width>64</width>
-         <height>0</height>
-        </size>
-       </property>
        <property name="editable">
         <bool>true</bool>
        </property>
@@ -133,113 +130,10 @@
        </item>
       </widget>
      </item>
-     <item>
-      <widget class="Line" name="line">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Text Height:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="LabelSize">
-       <property name="minimumSize">
-        <size>
-         <width>64</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="editable">
-        <bool>true</bool>
-       </property>
-       <property name="currentText">
-        <string notr="true">1</string>
-       </property>
-       <property name="currentIndex">
-        <number>5</number>
-       </property>
-       <item>
-        <property name="text">
-         <string notr="true">0.1</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.3</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.4</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.5</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">1</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">5</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">10</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">20</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">50</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">100</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">200</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">250</string>
-        </property>
-       </item>
-      </widget>
-     </item>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <property name="spacing">
       <number>0</number>
      </property>

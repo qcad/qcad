@@ -235,6 +235,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentViewId, "getCurrentViewId");
             
+            REcmaHelper::registerFunction(&engine, proto, getTempBlockName, "getTempBlockName");
+            
             REcmaHelper::registerFunction(&engine, proto, getBlockName, "getBlockName");
             
             REcmaHelper::registerFunction(&engine, proto, getBlockNames, "getBlockNames");
@@ -6775,6 +6777,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getCurrentViewId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getTempBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getTempBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getTempBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getTempBlockName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getTempBlockName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getTempBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getTempBlockName", context, engine);
             return result;
         }
          QScriptValue

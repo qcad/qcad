@@ -107,6 +107,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBlockName, "getBlockName");
             
+            REcmaHelper::registerFunction(&engine, proto, setLayerName, "setLayerName");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayerName, "getLayerName");
+            
             REcmaHelper::registerFunction(&engine, proto, setAttribute, "setAttribute");
             
             REcmaHelper::registerFunction(&engine, proto, apply, "apply");
@@ -1227,6 +1231,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPasteOperation::getBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPasteOperation::setLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPasteOperation::setLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPasteOperation* self = 
+                        getSelf("setLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLayerName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPasteOperation::setLayerName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPasteOperation::getLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPasteOperation::getLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPasteOperation* self = 
+                        getSelf("getLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLayerName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPasteOperation::getLayerName", context, engine);
             return result;
         }
          QScriptValue

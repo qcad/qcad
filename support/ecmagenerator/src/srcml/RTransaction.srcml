@@ -473,7 +473,7 @@ dir="./core" filename="RTransaction.h">
   <type>
     <name>void</name>
   </type>
-  <name>updateOverwrittenBlockReferences</name>
+  <name>updateAffectedBlockReferences</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <comment type="block">/** * Sets the ID of this transaction.
   Typically called by a storage which manages * transaction IDs.
@@ -903,7 +903,7 @@ dir="./core" filename="RTransaction.h">
         <name>Id</name></name>
       </argument>&gt;</argument_list></name>
     </type>
-    <name>overwrittenBlockReferences</name>
+    <name>affectedBlockReferenceIds</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * Map of properties that are changed by
   this transaction. For every * undoable, a whole list of

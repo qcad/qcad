@@ -88,7 +88,7 @@
         end
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        updateOverwrittenBlockReferences
+        updateAffectedBlockReferences
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setId

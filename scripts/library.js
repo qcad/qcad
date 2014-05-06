@@ -1647,6 +1647,18 @@ function hasPlugin(name) {
     return false;
 }
 
+/**
+ * Enable / disable easy drag and drop for the given entity.
+ * Entities tagged for easy drag and drop can be moved by dragging
+ * them while a block reference is selected.
+ */
+function setInBlockEasyDragAndDrop(entity, v) {
+    return entity.setCustomProperty("QCAD", "InBlockEasyDragAndDrop", v ? "1" : "0");
+}
+
+function getInBlockEasyDragAndDrop(entity) {
+    return entity.getCustomProperty("QCAD", "InBlockEasyDragAndDrop", "0")==="1";
+}
 
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
@@ -1654,4 +1666,3 @@ if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
         return this.plainText;
     }
 }
-

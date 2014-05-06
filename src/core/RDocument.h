@@ -214,47 +214,48 @@ public:
     RLayer::Id getCurrentLayerId();
 
     void setCurrentColor(const RColor& color);
-    RColor getCurrentColor();
+    RColor getCurrentColor() const;
 
     void setCurrentLineweight(RLineweight::Lineweight lw);
-    RLineweight::Lineweight getCurrentLineweight();
+    RLineweight::Lineweight getCurrentLineweight() const;
 
     void setCurrentLinetype(RLinetype lt);
-    RLinetype getCurrentLinetype();
+    RLinetype getCurrentLinetype() const;
 
     QSharedPointer<RBlock> queryCurrentBlock();
     void setCurrentBlock(RBlock::Id blockId);
     void setCurrentBlock(const QString& blockName);
-    RBlock::Id getCurrentBlockId();
+    RBlock::Id getCurrentBlockId() const;
 
     QSharedPointer<RView> queryCurrentView();
     void setCurrentView(RView::Id viewId);
     void setCurrentView(const QString& viewName);
-    RView::Id getCurrentViewId();
+    RView::Id getCurrentViewId() const;
 
+    QString getTempBlockName() const;
     QString getBlockName(RBlock::Id blockId) const;
     QSet<QString> getBlockNames() const;
     QString getLayerName(RLayer::Id layerId) const;
     QSet<QString> getLayerNames() const;
     QSet<QString> getViewNames() const;
 
-    bool hasLayer(const QString& layerName);
-    bool hasBlock(const QString& blockName);
-    bool hasView(const QString& viewName);
-    bool hasLinetype(const QString& linetypeName);
+    bool hasLayer(const QString& layerName) const;
+    bool hasBlock(const QString& blockName) const;
+    bool hasView(const QString& viewName) const;
+    bool hasLinetype(const QString& linetypeName) const;
 
-    RLayer::Id getLayerId(const QString& layerName);
-    RBlock::Id getBlockId(const QString& blockName);
+    RLayer::Id getLayerId(const QString& layerName) const;
+    RBlock::Id getBlockId(const QString& blockName) const;
     RBlock::Id getModelSpaceBlockId() const;
 
-    RLinetype::Id getLinetypeId(const QString& linetypeName);
-    RLinetype::Id getLinetypeByLayerId() {
+    RLinetype::Id getLinetypeId(const QString& linetypeName) const;
+    RLinetype::Id getLinetypeByLayerId() const {
         return linetypeByLayerId;
     }
-    QString getLinetypeName(RLinetype::Id linetypeId);
-    QSet<QString> getLinetypeNames();
-    bool isByLayer(RLinetype::Id linetypeId);
-    bool isByBlock(RLinetype::Id linetypeId);
+    QString getLinetypeName(RLinetype::Id linetypeId) const;
+    QSet<QString> getLinetypeNames() const;
+    bool isByLayer(RLinetype::Id linetypeId) const;
+    bool isByBlock(RLinetype::Id linetypeId) const;
 
     RLineweight::Lineweight getMaxLineweight() const;
 

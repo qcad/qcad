@@ -181,9 +181,9 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                 // if the dragging started on top of an entity,
                 // start moving the entity:
                 entityId = view.getClosestEntity(this.d1Screen, this.rangePixels, false);
-                if (entityId !== RObject.INVALID_ID && this.document.hasSelection()) {
 
-                    // in block drag and drop:
+                // in block easy drag and drop:
+                if (entityId !== RObject.INVALID_ID) {
                     var doc = this.getDocument();
                     if (!isNull(doc)) {
                         var entity = doc.queryEntityDirect(entityId);
@@ -193,26 +193,14 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                             if (!isNull(block)) {
                                 // cursor, mapped to block coordinates:
                                 var pBlock = entity.mapToBlock(this.d1Model);
-//                                qDebug("coord1", pBlock);
-//                                pBlock.move(entity.getPosition().getNegated());
-//                                pBlock.rotate(-entity.getRotation());
-//                                var sf = entity.getScaleFactors();
-//                                pBlock.scale(new RVector(1/sf.x, 1/sf.y));
-//                                pBlock.move(block.getOrigin());
-                                //qDebug("coord2", pBlock);
                                 var box = new RBox(
                                     pBlock.operator_subtract(new RVector(range,range)),
                                     pBlock.operator_add(new RVector(range,range))
                                 );
-                                //qDebug("range", range);
-                                //qDebug("box", box);
-                                //qDebug("blockId", blockId);
                                 var res = doc.queryIntersectedEntitiesXY(box, true, false, blockId);
-                                //qDebug("res: ", res);
                                 this.entityInBlockId = doc.queryClosestXY(res, pBlock, range, false);
                                 var entityInBlock = doc.queryEntityDirect(this.entityInBlockId);
-                                if (!isNull(entityInBlock) && entityInBlock.getCustomProperty("QCAD", "InBlockEasyDragAndDrop", "0")==="1") {
-                                    //qDebug("this.entityInBlockId: ", this.entityInBlockId);
+                                if (!isNull(entityInBlock) && getInBlockEasyDragAndDrop(entityInBlock)) {
                                     this.d1Model = pBlock;
                                     this.blockRefId = entityId;
                                     this.setState(DefaultAction.State.MovingEntityInBlock);
@@ -221,7 +209,9 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                             }
                         }
                     }
+                }
 
+                if (entityId !== RObject.INVALID_ID && this.document.hasSelection()) {
                     // move start point of dragging operation to closest
                     // reference point:
                     // TODO: use auto snap instead here (optional?):
@@ -407,6 +397,7 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
         }
         break;
 
+    // easy in block entity drag and drop (point mark labels):
     case DefaultAction.State.MovingEntityInBlock:
         var doc = this.getDocument();
         if (isNull(doc)) {
@@ -417,28 +408,12 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
             break;
         }
         this.d2Model = blockRef.mapToBlock(event.getModelPosition());
-        //qDebug("moving label from: ", this.d1Model);
-        //qDebug("moving label to: ", this.d2Model);
         var entityInBlock = doc.queryEntity(this.entityInBlockId);
         entityInBlock.move(this.d2Model.operator_subtract(this.d1Model));
         operation = new RAddObjectsOperation();
         operation.addObject(entityInBlock, false);
-        //blockRef.move(new RVector(1,1));
-        //blockRef.update();
-        //operation.addObject(block, false);
-        //operation.addObject(blockRef, false);
-        //operation = new RMoveSelectionOperation(this.d1Model, this.d2Model);
-        //var currentBlockId = doc.getCurrentBlockId();
-        //doc.setCurrentBlock(blockRef.getReferencedBlockId());
         if (preview) {
             this.di.previewOperation(operation);
-            //this.di.applyOperation(operation);
-//            var scenes = this.di.getGraphicsScenes();
-//            for (var i=0; i<scenes.length; i++) {
-//                scenes[i].beginPreview();
-//                scenes[i].exportEntity(blockRef.data(), true, false);
-//                scenes[i].endPreview();
-//            }
         }
         else {
             doc.removeFromSpatialIndex(blockRef);
@@ -447,10 +422,6 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
             doc.addToSpatialIndex(blockRef);
             this.setState(DefaultAction.State.Neutral);
         }
-        //doc.setCurrentBlock(currentBlockId);
-        //this.di.clearPreview();
-        //this.di.repaintViews();
-        //CadToolBar.back();
         break;
 
     default:

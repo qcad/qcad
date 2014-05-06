@@ -42,6 +42,7 @@ void RClipboardOperation::copy(
         bool overwriteLayers,
         bool overwriteBlocks,
         const QString& blockName,
+        const QString& layerName,
         RTransaction& transaction,
         bool selectionOnly, bool clear,
         bool toModelSpaceBlock,
@@ -222,7 +223,12 @@ void RClipboardOperation::copy(
     // copying of entire block complete, insert block reference now since
     // we now have the boudning box for the spatial index:
     if (!refp.isNull()) {
-        transaction.addObject(refp, /* useCurrentAttributes =*/ true);
+        bool useCurrentAttributes = true;
+        if (!layerName.isEmpty()) {
+            useCurrentAttributes = false;
+            refp->setLayerId(dest.getLayerId(layerName));
+        }
+        transaction.addObject(refp, useCurrentAttributes);
 
         // fix parent ID of attributes created by the new inserted block:
         REntity::Id refId = refp->getId();

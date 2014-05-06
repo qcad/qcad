@@ -524,9 +524,9 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                     }
                 }
 
-                // don't display any Z values:
                 var controls = undefined;
                 if (!isNull(gridLayout)) {
+                    // don't display any Z values:
                     if (title==="Z" && !propertyTypeId.isCustom()) {
                         controls = undefined;
                     }
