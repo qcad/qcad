@@ -397,16 +397,16 @@ PointMark.getPointMarkTree = function(doc) {
 //    }
 
     // debugging:
-    for (i=0; i<ret.length; i++) {
-        for (var k=0; k<ret[i].length; k++) {
-            if (k===0) {
-                qDebug(ret[i][k]);
-            }
-            else {
-                qDebug("\t" + ret[i][k]);
-            }
-        }
-    }
+//    for (i=0; i<ret.length; i++) {
+//        for (var k=0; k<ret[i].length; k++) {
+//            if (k===0) {
+//                qDebug(ret[i][k]);
+//            }
+//            else {
+//                qDebug("\t" + ret[i][k]);
+//            }
+//        }
+//    }
 
     return ret;
 };

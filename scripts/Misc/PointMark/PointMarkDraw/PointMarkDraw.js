@@ -30,6 +30,8 @@ function PointMarkDraw(guiAction) {
 
     this.label = "";
     this.pos = RVector.invalid;
+    this.x = 0.0;
+    this.y = 0.0;
     this.benchmarkPos = new RVector(0,0);
     this.benchmarkCounter = 1;
     this.pointCounter = 1;
@@ -535,12 +537,14 @@ PointMarkDraw.prototype.slotAddBenchmark = function() {
 
 PointMarkDraw.prototype.slotXChanged = function(v) {
     this.x = v;
-    this.update();
+    this.pos = this.getCoordinate();
+    this.updatePreview(true);
 };
 
 PointMarkDraw.prototype.slotYChanged = function(v) {
     this.y = v;
-    this.update();
+    this.pos = this.getCoordinate();
+    this.updatePreview(true);
 };
 
 PointMarkDraw.prototype.slotSet = function(v) {
@@ -564,10 +568,16 @@ PointMarkDraw.prototype.getCoordinateEvent = function() {
     if (isNull(scene)) {
         return undefined;
     }
-    var pos = new RVector(this.x, this.y).operator_add(di.getRelativeZero());
-    return new RCoordinateEvent(pos, scene, view.getRGraphicsView());
+    return new RCoordinateEvent(this.getCoordinate(), scene, view.getRGraphicsView());
 };
 
+PointMarkDraw.prototype.getCoordinate = function() {
+    var di = this.getDocumentInterface();
+    if (isNull(di)) {
+        return new RVector(0,0);
+    }
+    return new RVector(this.x, this.y).operator_add(di.getRelativeZero());
+};
 
 PointMarkDraw.getBenchmarkCombo = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
