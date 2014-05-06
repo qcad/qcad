@@ -171,41 +171,6 @@
      </item>
     </layout>
    </item>
-   <item>
-    <widget class="QTreeWidget" name="PointMarkTree">
-     <attribute name="headerDefaultSectionSize">
-      <number>40</number>
-     </attribute>
-     <attribute name="headerHighlightSections">
-      <bool>false</bool>
-     </attribute>
-     <column>
-      <property name="text">
-       <string>Label</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string notr="true">X</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string notr="true">Y</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string notr="true">Z</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Layer</string>
-      </property>
-     </column>
-    </widget>
-   </item>
   </layout>
  </widget>
  <resources/>

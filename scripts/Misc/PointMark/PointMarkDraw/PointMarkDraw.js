@@ -36,6 +36,7 @@ function PointMarkDraw(guiAction) {
     this.benchmarkHandle = RObject.INVALID_ID;
     this.autoAppendCounter = true;
     this.textHeight = 10;
+    this.errorLabel = "";
 }
 
 PointMarkDraw.State = {
@@ -110,12 +111,14 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
     //benchmarkCombo.setProperty("Loaded", true);
 
     var doc = this.getDocument();
+    var di = this.getDocumentInterface();
     var markIds = PointMark.queryAllMarkIds(doc);
     var i, id, blockRef, handle, label;
 
     // init benchmark counter and combo box:
-    this.benchmarkCounter = 1;
-    this.pointCounter = 1;
+    this.benchmarkCounter = 0;
+    this.pointCounter = 0;
+    var lastPos = RVector.invalid;
     for (i=0; i<markIds.length; i++) {
         id = markIds[i];
         blockRef = doc.queryEntityDirect(id);
@@ -146,7 +149,7 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
         // block ref is a benchmark
         // (refers to itself as benchmark):
         if (handle===blockRef.getHandle()) {
-            this.benchmarkCounter = Math.max(this.benchmarkCounter, num+1);
+            this.benchmarkCounter = Math.max(this.benchmarkCounter, num);
 
             if (benchmarkCombo.findData(handle)===-1) {
                 benchmarkCombo.addItem(label, handle);
@@ -161,21 +164,31 @@ PointMarkDraw.prototype.initUiOptions = function(resume) {
 
         // block ref is a point that refers to the selected
         // bench mark:
-        this.pointCounter = Math.max(this.pointCounter, num+1);
+        if (num>this.pointCounter) {
+            this.pointCounter = num;
+            if (!isNull(di)) {
+                lastPos = blockRef.getPosition();
+            }
+        }
     }
 
-//    var treeWidget = PointMark.getTreeWidget();
-//    if (!isNull(treeWidget)) {
-//        for (i=0; i<treeWidget.topLevelItemCount; i++) {
-//            var item = treeWidget.topLevelItem(i);
-//            if (item.data(0, Qt.UserRole)===this.benchmarkHandle) {
-//                treeWidget.setCurrentItem(item);
-//            }
-//        }
-//    }
+    if (lastPos.isValid()) {
+        di.setRelativeZero(lastPos);
+    }
+    this.benchmarkCounter++;
+    this.pointCounter++;
 
     benchmarkCombo.currentIndex = benchmarkCombo.findData(this.benchmarkHandle);
     benchmarkCombo.blockSignals(false);
+
+    // init Set button:
+    var setButton = optionsToolBar.findChild("Set");
+    setButton.shortcut = new QKeySequence("Return");
+    setButton.toolTip =
+        RGuiAction.formatToolTip(
+            qsTr("Set relative coordinate"),
+            setButton.shortcut.toString()
+        );
 };
 
 PointMarkDraw.prototype.initState = function(state) {
@@ -235,6 +248,12 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
     this.pos = event.getModelPosition();
     var op, i, transaction, objIds, objId, obj;
 
+    if (!preview) {
+        if (this.check) {
+
+        }
+    }
+
     switch (this.state) {
     case PointMarkDraw.State.SettingBenchmarkPosition:
         this.benchmarkPos = this.pos;
@@ -245,11 +264,15 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
         }
         else {
             op = this.getOperation(false);
+            if (isNull(op)) {
+                this.showWarningDupliacateLabel();
+                break;
+            }
+
             transaction = di.applyOperation(op);
             di.setRelativeZero(this.pos);
 
             objIds = transaction.getAffectedObjects();
-            //var leader = undefined;
             for (i=0; i<objIds.length; i++) {
                 objId = objIds[i];
                 obj = doc.queryObjectDirect(objId);
@@ -259,10 +282,7 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
                     PointMark.setBenchmarkHandle(obj, this.benchmarkHandle);
                     PointMarkDraw.setBenchmark(obj.getHandle());
                 }
-                //if (isLeaderEntity(obj)) {
-                //}
             }
-            //this.linkLeader(doc, objIds);
 
             // update combo box with possible benchmarks to use as origin:
             this.initUiOptions();
@@ -277,7 +297,13 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
         }
         else {
             op = this.getOperation(false);
+            if (isNull(op)) {
+                this.showWarningDupliacateLabel();
+                break;
+            }
             transaction = di.applyOperation(op);
+            di.setRelativeZero(this.pos);
+
             objIds = transaction.getAffectedObjects();
             for (i=0; i<objIds.length; i++) {
                 objId = objIds[i];
@@ -326,8 +352,11 @@ PointMarkDraw.prototype.pickCoordinate = function(event, preview) {
 
 /**
  * Finds the block attribute in the given document interface and adjusts its text.
+ *
+ * \return True if the label is unique and can be created.
  */
 PointMarkDraw.prototype.updateLabel = function(diSrc, benchmark, preview) {
+    var ret = true;
     var doc = this.getDocument();
     var scale = isNull(doc) ? 1.0 : doc.getVariable("PointMarkScale", 1.0);
     if (scale<1.0e-6) {
@@ -342,12 +371,20 @@ PointMarkDraw.prototype.updateLabel = function(diSrc, benchmark, preview) {
         var entity = docSrc.queryEntityDirect(id);
         if (isAttributeEntity(entity)) {
             var data = entity.getData();
-            data.setText(this.getLabel(benchmark, preview));
+            var label = this.getLabel(benchmark, preview);
+            data.setText(label);
             //data.setTextHeight(labelSize);
             entity.setData(data);
+
+            if (!PointMark.isLabelUnique(doc, this.benchmarkHandle, label)) {
+                this.errorLabel = label;
+                ret = false;
+            }
             break;
         }
     }
+
+    return ret;
 };
 
 /**
@@ -403,17 +440,22 @@ PointMarkDraw.prototype.getOperation = function(preview) {
     }
 
     var op;
+    var ok;
 
     switch (this.state) {
     case PointMarkDraw.State.SettingBenchmarkPosition:
-        this.updateLabel(this.diBM, true, preview);
+        ok = this.updateLabel(this.diBM, true, preview);
         op = new RPasteOperation(this.diBM.getDocument());
         break;
     case PointMarkDraw.State.SettingPointPosition:
-        this.updateLabel(this.diPoint, false, preview);
+        ok = this.updateLabel(this.diPoint, false, preview);
         op = new RPasteOperation(this.diPoint.getDocument());
         break;
     default:
+        return undefined;
+    }
+
+    if (!ok && !preview) {
         return undefined;
     }
 
@@ -425,6 +467,7 @@ PointMarkDraw.prototype.getOperation = function(preview) {
     op.setScale(doc.getVariable("PointMarkScale", 1.0));
     op.setBlockName(doc.getTempBlockName());
     op.setLayerName("pt_layer");
+
 
     return op;
 };
@@ -490,6 +533,42 @@ PointMarkDraw.prototype.slotAddBenchmark = function() {
     this.setState(PointMarkDraw.State.SettingBenchmarkPosition);
 };
 
+PointMarkDraw.prototype.slotXChanged = function(v) {
+    this.x = v;
+    this.update();
+};
+
+PointMarkDraw.prototype.slotYChanged = function(v) {
+    this.y = v;
+    this.update();
+};
+
+PointMarkDraw.prototype.slotSet = function(v) {
+    var ce = this.getCoordinateEvent();
+    if (!isNull(ce)) {
+        var di = this.getDocumentInterface();
+        di.coordinateEvent(ce);
+    }
+};
+
+PointMarkDraw.prototype.getCoordinateEvent = function() {
+    var di = this.getDocumentInterface();
+    if (isNull(di)) {
+        return undefined;
+    }
+    var view = di.getGraphicsViewWithFocus();
+    if (isNull(view)) {
+        return undefined;
+    }
+    var scene = view.getScene();
+    if (isNull(scene)) {
+        return undefined;
+    }
+    var pos = new RVector(this.x, this.y).operator_add(di.getRelativeZero());
+    return new RCoordinateEvent(pos, scene, view.getRGraphicsView());
+};
+
+
 PointMarkDraw.getBenchmarkCombo = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
     if (isNull(optionsToolBar)) {
@@ -548,3 +627,12 @@ PointMarkDraw.getBenchmark = function() {
 //        w.visible = show;
 //    }
 //};
+
+PointMarkDraw.prototype.showWarningDupliacateLabel = function() {
+    var dlg = new QMessageBox(QMessageBox.Warning,
+            qsTr("Duplicate Label"),
+            "",
+            QMessageBox.OK);
+    dlg.text = qsTr("Label '%1' already exists. Please choose another label.").arg(this.errorLabel);
+    dlg.exec();
+};

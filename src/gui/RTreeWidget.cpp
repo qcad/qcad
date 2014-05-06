@@ -46,6 +46,9 @@ void RTreeWidget::contextMenuEvent(QContextMenuEvent* e) {
         if (item!=NULL) {
             setCurrentItem(item);
             emit itemClicked(item, 0);
+
+            int index = header()->logicalIndexAt(e->pos());
+            emit contextMenuRequested(item, index);
         }
     }
     e->ignore();

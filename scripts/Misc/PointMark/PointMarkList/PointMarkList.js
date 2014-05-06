@@ -20,6 +20,7 @@
 include("scripts/WidgetFactory.js");
 include("../PointMarkDraw/PointMarkDraw.js");
 
+
 function PointMarkList(guiAction) {
     Widgets.call(this, guiAction);
 }
@@ -517,13 +518,25 @@ PointMarkList.init = function(basePath) {
     var formWidget = WidgetFactory.createWidget(basePath, "PointMarkList.ui");
 
     // set up tree widget:
-    var pointMarkTree = formWidget.findChild("PointMarkTree");
-    //pointMarkTree.itemClicked.connect(PointMarkList, "itemClicked");
-    pointMarkTree.currentItemChanged.connect(PointMarkList, "itemClicked");
-    pointMarkTree.header().resizeSection(0, 150);
-    pointMarkTree.header().resizeSection(1, 80);
-    pointMarkTree.header().resizeSection(2, 80);
-    pointMarkTree.header().resizeSection(3, 80);
+    //var treeWidget = formWidget.findChild("PointMarkTree");
+    var treeWidget = new RTreeWidget(formWidget);
+    treeWidget.objectName = "PointMarkTree";
+    formWidget.layout().addWidget(treeWidget, 0, 0);
+    treeWidget.columnCount = 5;
+    treeWidget.setHeaderLabels([qsTr("Label"), "X", "Y", "Z", "Layer"]);
+    treeWidget.header().resizeSection(0, 50);
+    treeWidget.header().resizeSection(1, 20);
+    treeWidget.header().resizeSection(2, 20);
+    treeWidget.header().resizeSection(3, 20);
+
+    treeWidget.itemClicked.connect(PointMarkList, "itemClicked");
+    //treeWidget.currentItemChanged.connect(PointMarkList, "itemClicked");
+
+//  context menu for promoting points (on hold):
+//    treeWidget.contextMenuRequested.connect(
+//        function() {
+//        }
+//    );
 
     var scaleCombo = formWidget.findChild("Scale");
     scaleCombo.insertPolicy = QComboBox.InsertAtTop;

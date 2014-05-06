@@ -411,6 +411,32 @@ PointMark.getPointMarkTree = function(doc) {
     return ret;
 };
 
+/**
+ * \return True if the given text is a unique label.
+ */
+PointMark.isLabelUnique = function(doc, benchmarkHandle, text) {
+    var objIds = PointMark.queryAllMarkIds(doc);
+    for (var i=0; i<objIds.length; i++) {
+        var objId = objIds[i];
+        var blockRef = doc.queryObjectDirect(objId);
+        if (!isBlockReferenceEntity(blockRef)) {
+            continue;
+        }
+
+        var bmHandle = PointMark.getBenchmarkHandle(blockRef);
+        if (bmHandle!==benchmarkHandle) {
+            continue;
+        }
+
+        var label = PointMark.getMarkLabelText(doc, objId);
+        if (label.toLowerCase()===text.toLowerCase()) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
 PointMark.getDock = function() {
     var appWin = RMainWindowQt.getMainWindow();
     if (isNull(appWin)) {
