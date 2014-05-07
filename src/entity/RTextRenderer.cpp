@@ -861,7 +861,7 @@ void RTextRenderer::render() {
         reg.setPattern(rxFontChangeTtf);
         if (reg.exactMatch(formatting)) {
             setBlockFont(reg.cap(1));
-            for (int k=2; k<reg.captureCount()-1; k++) {
+            for (int k=2; k<reg.captureCount()-1; k+=2) {
                 // code: i, b, c, p
                 QString code = reg.cap(k);
                 // value: 0/1
