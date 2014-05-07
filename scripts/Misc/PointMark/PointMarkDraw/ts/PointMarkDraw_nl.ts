@@ -4,13 +4,28 @@
 <context>
     <name>PointMarkDraw</name>
     <message>
-        <location filename="../PointMarkDraw.js" line="+192"/>
+        <location filename="../PointMarkDraw.js" line="+191"/>
+        <source>Set relative coordinate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Benchmark (Origin)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+427"/>
+        <source>Duplicate Label</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Label &apos;%1&apos; already exists. Please choose another label.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -36,6 +51,26 @@
     <message>
         <location line="+3"/>
         <source>Add Counter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>X Coordinate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Y Coordinate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
