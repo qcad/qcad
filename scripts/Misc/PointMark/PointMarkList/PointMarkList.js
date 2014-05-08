@@ -519,7 +519,7 @@ PointMarkList.init = function(basePath) {
 
     // set up tree widget:
     //var treeWidget = formWidget.findChild("PointMarkTree");
-    var treeWidget = new RTreeWidget(formWidget);
+    var treeWidget = new QTreeWidget(formWidget);
     treeWidget.objectName = "PointMarkTree";
     formWidget.layout().addWidget(treeWidget, 0, 0);
     treeWidget.columnCount = 5;
