@@ -169,12 +169,23 @@ About.prototype.initAboutPlugins = function(webView) {
             if (!isNull(text)) {
                 url = new QUrl(text);
                 if (url.isValid()) {
-                    html += this.getTableRow(
-                        qsTr("Internet:"),
-                        "<a href='%2'>%3</a>"
-                            .arg(url.toString()).arg(url.host().replace(/^www./, "")),
-                        false
-                    );
+                    if (!RSettings.isQt(5)) {
+                        html += this.getTableRow(
+                            qsTr("Internet:"),
+                            "<a href='%2'>%3</a>"
+                                .arg(url.toString()).arg(url.host().replace(/^www./, "")),
+                            false
+                        );
+                    }
+                    else {
+                        // TODO Qt5:
+                        html += this.getTableRow(
+                            qsTr("Internet:"),
+                            "<a href='%2'>%3</a>"
+                                .arg(url.toString()).arg(url.toString()),
+                            false
+                        );
+                    }
                 }
             }
 
