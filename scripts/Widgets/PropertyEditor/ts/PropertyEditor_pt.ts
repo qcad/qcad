@@ -108,7 +108,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+21"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
@@ -191,7 +191,7 @@ Centro abaixo</translatorcomment>
         <translation type="obsolete">Fundo</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+136"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: SnapAuto_pt.ts--
@@ -232,7 +232,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+317"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

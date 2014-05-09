@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -20,7 +20,7 @@
         <translation>Dimenzija</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+86"/>
         <source>Scientific</source>
         <translation>Znanstveno</translation>
     </message>
@@ -70,7 +70,7 @@
         <translation>Geodetske enote</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+138"/>
         <source>Unit / Format</source>
         <translation>Enota / Zapis</translation>
     </message>
@@ -80,12 +80,12 @@
         <translation>Enota risbe mora biti v inčih, za prikaz kotiranj ter napisov v arhitekturni ali inžinerski obliki. Zapis spremenljen v desetiški.</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+20"/>
+        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
         <translation>Velikosti</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Keep proportions</source>
         <translation>Ohrani razmerja</translation>
     </message>
@@ -115,7 +115,12 @@
         <translation>Velikost puščice:</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+95"/>
+        <source>Size scale factor:</source>
+        <translation>Faktor povečave:</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
         <translation>Slog puščice</translation>
     </message>
@@ -150,13 +155,13 @@
         <translation>Na&amp;tančnost:</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+62"/>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
         <translation>Prikaži tudi ničle</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
         <translation>Zapisi kotov</translation>
     </message>
@@ -166,12 +171,12 @@
         <translation>O&amp;blika:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
         <translation>Nata&amp;nčnost:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
         <translation>Predogled</translation>

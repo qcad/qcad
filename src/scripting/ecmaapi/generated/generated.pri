@@ -99,6 +99,8 @@ HEADERS += \
     $$PWD/REcmaImageEntity.h \
     $$PWD/REcmaImporter.h \
     $$PWD/REcmaInputEvent.h \
+    $$PWD/REcmaInterTransactionListener.h \
+    $$PWD/REcmaInterTransactionListenerAdapter.h \
     $$PWD/REcmaLayer.h \
     $$PWD/REcmaLayerListener.h \
     $$PWD/REcmaLayerListenerAdapter.h \
@@ -400,6 +402,8 @@ SOURCES += \
     $$PWD/REcmaImageEntity.cpp \
     $$PWD/REcmaImporter.cpp \
     $$PWD/REcmaInputEvent.cpp \
+    $$PWD/REcmaInterTransactionListener.cpp \
+    $$PWD/REcmaInterTransactionListenerAdapter.cpp \
     $$PWD/REcmaLayer.cpp \
     $$PWD/REcmaLayerListener.cpp \
     $$PWD/REcmaLayerListenerAdapter.cpp \

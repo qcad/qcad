@@ -43,7 +43,7 @@ RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) c
         }
         transaction.deleteObject(list[i], &document);
     }
-    transaction.end();
+    transaction.end(&document);
     return transaction;
 }
 

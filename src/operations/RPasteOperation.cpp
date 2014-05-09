@@ -45,6 +45,7 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
         toCurrentLayer, /*toCurrentBlock=*/ true,
         overwriteLayers, overwriteBlocks,
         blockName,
+        layerName,
         transaction,
         false, false,
         false,           // toModelSpace (paste to current block, not model space)
@@ -52,7 +53,7 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
         attributes
     );
 
-    transaction.end();
+    transaction.end(&document);
 
     return transaction;
 }

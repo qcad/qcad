@@ -1621,11 +1621,13 @@ void RDocumentInterface::previewOperation(const ROperation* operation) {
         QList<RObject::Id> obj = transaction.getAffectedObjects();
         QList<RObject::Id>::iterator oit;
         for (oit=obj.begin(); oit!=obj.end(); ++oit) {
-            QSharedPointer<REntity> e = previewDocument->queryEntityDirect(*oit);
+            QSharedPointer<REntity> e = previewDocument->queryEntity(*oit);
 
             if (e.isNull()) {
                 continue;
             }
+
+            e->setDocument(previewDocument);
 
             if (!ls->isInBackStorage(e->getBlockId())) {
                 continue;

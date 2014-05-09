@@ -257,7 +257,7 @@ void RTextBasedData::setText(const QString& text) {
 
 QList<RVector> RTextBasedData::getReferencePoints(
         RS::ProjectionRenderingHint hint) const {
-    Q_UNUSED(hint)
+    Q_UNUSED(hint);
 
     QList<RVector> ret;
 
@@ -286,6 +286,11 @@ bool RTextBasedData::moveReferencePoint(const RVector& referencePoint,
     bool ret = false;
     if (referencePoint.equalsFuzzy(position)) {
         position = targetPoint;
+        ret = true;
+        update();
+    }
+    if (referencePoint.equalsFuzzy(alignmentPoint)) {
+        alignmentPoint = targetPoint;
         ret = true;
         update();
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>PrintPreview</name>
     <message>
@@ -24,9 +24,14 @@
         <translation>Izvažam v %1...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Export complete: %1</source>
         <translation>Izvoz uspel: %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Export failed (cannot open file for writing): %1</source>
+        <translation>Izvoz neuspešen (v datoteko ni mogoče pisati): %1</translation>
     </message>
     <message>
         <location filename="../PrintPreview.ui" line="+17"/>

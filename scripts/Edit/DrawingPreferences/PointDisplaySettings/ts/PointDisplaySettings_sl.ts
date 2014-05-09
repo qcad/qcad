@@ -31,7 +31,7 @@
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost (piksli):</translation>
     </message>
     <message>
         <source>0</source>

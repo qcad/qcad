@@ -24,7 +24,7 @@
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location line="+87"/>
+        <location line="+88"/>
         <source>Scientific</source>
         <translation>Científico</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>Unidades de medición</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+138"/>
         <source>Unit / Format</source>
         <translation>Unidades / formato</translation>
     </message>
@@ -84,12 +84,12 @@
         <translation>La unidad de dibujo debe ser &apos;Inch&apos; para mostrar las etiquetas de dimensión en los formatos &apos;Arquitectónico&apos; o &apos;Ingenieril&apos;. Formato cambiado a &apos;decimal&apos;.</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+20"/>
+        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
         <translation>Tamaños</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Keep proportions</source>
         <translation>Mantener proporciones</translation>
     </message>
@@ -119,7 +119,12 @@
         <translation>Tamaño flecha:</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+95"/>
+        <source>Size scale factor:</source>
+        <translation>Factor de escala:</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
         <translation>Estilo flecha</translation>
     </message>
@@ -154,13 +159,13 @@
         <translation>P&amp;recisión:</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+62"/>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
         <translation>Mostrar ceros a la derecha</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
         <translation>Dimensión angular</translation>
     </message>
@@ -170,12 +175,12 @@
         <translation>F&amp;ormato:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
         <translation>Pre&amp;cisión:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
         <translation>Previsualización</translation>

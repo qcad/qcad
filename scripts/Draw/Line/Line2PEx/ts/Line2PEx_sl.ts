@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Line2PEx</name>
     <message>
@@ -31,7 +31,7 @@
     <message>
         <location line="-1"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaključi</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -42,7 +42,7 @@
     <message>
         <location line="+3"/>
         <source>Next point or </source>
-        <translation type="unfinished">Naslednja točka ali </translation>
+        <translation>Naslednja točka ali </translation>
     </message>
     <message>
         <location line="+6"/>
@@ -110,7 +110,7 @@
     <message>
         <location line="-8"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../Line2PExInit.js" line="+2"/>
         <source>Line from &amp;2 Points (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Črta iz &amp;2 točk (razširjeno)</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>BitmapExport</name>
     <message>
@@ -14,7 +14,7 @@
         <translation>Izvozi kot bitno sliko</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+126"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>Napaka pri generiranju slike &apos;%1&apos;: %2</translation>
     </message>
@@ -46,7 +46,7 @@
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation>Pikslov na mersko&lt;br&gt; enoto risanja</translation>
+        <translation>Pikslov na mersko&lt;br&gt; enoto risanja:</translation>
     </message>
     <message>
         <location line="+72"/>

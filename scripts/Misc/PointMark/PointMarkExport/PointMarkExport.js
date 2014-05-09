@@ -32,6 +32,20 @@ PointMarkExport.prototype = new EAction();
 PointMarkExport.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
+    var appWin = RMainWindowQt.getMainWindow();
+    var treeWidget = appWin.findChild("PointMarkTree");
+    var exportBenchmarkHandle = undefined;
+    if (!isNull(treeWidget)) {
+        var currentItem = treeWidget.currentItem();
+        if (!isNull(currentItem)) {
+            if (!isNull(currentItem.parent())) {
+                currentItem = currentItem.parent();
+            }
+
+            exportBenchmarkHandle = currentItem.data(0, Qt.UserRole);
+        }
+    }
+
     var fileName = this.getFileName();
 
     if (isNull(fileName)) {
@@ -47,7 +61,7 @@ PointMarkExport.prototype.beginEvent = function() {
     }
 
     var ts = new QTextStream(file);
-    ts.writeString("X\tY\tLabel");
+    ts.writeString("NAME,E(x),N(y),z,DESC");
 
     var doc = this.getDocument();
     var tree = PointMark.getPointMarkTree(doc);
@@ -56,12 +70,26 @@ PointMarkExport.prototype.beginEvent = function() {
     for (var i=0; i<tree.length; i++) {
         var list = tree[i];
 
+        if (!isNull(exportBenchmarkHandle)) {
+            if (list.length>0 && list[0][3]!==exportBenchmarkHandle) {
+                // skip other benchmarks than the selected one:
+                continue;
+            }
+        }
+
         for (var k=0; k<list.length; k++) {
+            var label = list[k][0];
+
+            // prevent commas in data fields:
+            label = label.replace(/,/g, '_');
+
             ts.writeString(
-                "\n%1\t%2\t%3"
-                .arg(list[k][1].x)
-                .arg(list[k][1].y)
-                .arg(list[k][0])
+                "\n%1,%2,%3,%4,%5"
+                .arg(label)
+                .arg(sprintf("%.12f", list[k][1].x))
+                .arg(sprintf("%.12f", list[k][1].y))
+                .arg(0.0)
+                .arg(label)
             );
         }
     }
@@ -72,7 +100,17 @@ PointMarkExport.prototype.beginEvent = function() {
 };
 
 PointMarkExport.prototype.getFileName = function() {
-    var drawingFileName = this.getDocument().getFileName();
+    var doc = this.getDocument();
+    var drawingFileName = doc.getFileName();
+
+    var unitPostfix = RUnit.unitToName(doc.getUnit(), false).toLowerCase();
+    if (unitPostfix==="none") {
+        unitPostfix = "";
+    }
+    else {
+        unitPostfix = "_" + unitPostfix;
+    }
+
     var fi;
     var fileName;
     var initialPath = "";
@@ -80,10 +118,10 @@ PointMarkExport.prototype.getFileName = function() {
         var path = RSettings.getStringValue("PointMarkExport/Path", QDir.homePath());
         fi = new QFileInfo(path);
         initialPath = fi.absoluteFilePath() + QDir.separator
-                + stripDirtyFlag(EAction.getMdiChild().windowTitle) + ".csv";
+                + stripDirtyFlag(EAction.getMdiChild().windowTitle) + unitPostfix + ".csv";
     } else {
         fi = new QFileInfo(drawingFileName);
-        initialPath = fi.path() + QDir.separator + fi.completeBaseName() + ".csv";
+        initialPath = fi.path() + QDir.separator + fi.completeBaseName() + unitPostfix + ".csv";
     }
 
     var appWin = EAction.getMainWindow();

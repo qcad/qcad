@@ -4,7 +4,7 @@
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../DefaultAction.js" line="+82"/>
+        <location filename="../DefaultAction.js" line="+86"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz jednostkę lub region</translation>
@@ -32,6 +32,11 @@
         <source>Specify target point of selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Określ punkt docelowy wybór</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Move entity to desired location</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

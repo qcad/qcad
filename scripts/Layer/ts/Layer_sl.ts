@@ -12,7 +12,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+131"/>
+        <location filename="../LayerDialog.js" line="+136"/>
         <source>Leading or trailing spaces.</source>
         <translation>Presledki spredaj ali zadaj.</translation>
     </message>

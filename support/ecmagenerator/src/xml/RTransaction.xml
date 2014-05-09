@@ -101,6 +101,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isUndoing" cppName="isUndoing" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isRedoing" cppName="isRedoing" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="isUndoable" cppName="isUndoable"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -114,7 +122,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocument *" typeName="RDocument *"
-        name="objectContainer" hasDefault="true" default=" NULL"
+        name="document" hasDefault="true" default=" NULL"
         isConst="false" />
       </variant>
     </method>
@@ -122,16 +130,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocument *" typeName="RDocument *"
-        name="objectContainer" hasDefault="true" default=" NULL"
+        name="document" hasDefault="true" default=" NULL"
         isConst="false" />
       </variant>
     </method>
     <method name="end" cppName="end" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+      </variant>
     </method>
-    <method name="updateOverwrittenBlockReferences"
-    cppName="updateOverwrittenBlockReferences" specifier="public"
+    <method name="updateAffectedBlockReferences"
+    cppName="updateAffectedBlockReferences" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
@@ -258,7 +269,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="commit" cppName="commit" specifier="protected"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+      </variant>
     </method>
     <method name="rollback" cppName="rollback"
     specifier="protected" isStatic="false" isVirtual="false"

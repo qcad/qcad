@@ -291,6 +291,22 @@ dir="./core" filename="RDocument.h">
         <name>false</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>EntityType</name></name>
+    </type>
+    <name>type</name>=
+    <init>
+      <expr>
+        <name>
+        <name>RS</name>::
+        <name>EntityAll</name></name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
@@ -1681,7 +1697,8 @@ dir="./core" filename="RDocument.h">
     <name>RColor</name>
   </type>
   <name>getCurrentColor</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -1705,7 +1722,8 @@ dir="./core" filename="RDocument.h">
     <name>Lineweight</name></name>
   </type>
   <name>getCurrentLineweight</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -1725,7 +1743,8 @@ dir="./core" filename="RDocument.h">
     <name>RLinetype</name>
   </type>
   <name>getCurrentLinetype</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>QSharedPointer
@@ -1773,7 +1792,8 @@ dir="./core" filename="RDocument.h">
     <name>Id</name></name>
   </type>
   <name>getCurrentBlockId</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>QSharedPointer
@@ -1821,7 +1841,15 @@ dir="./core" filename="RDocument.h">
     <name>Id</name></name>
   </type>
   <name>getCurrentViewId</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QString</name>
+  </type>
+  <name>getTempBlockName</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>QString</name>
@@ -1902,7 +1930,8 @@ dir="./core" filename="RDocument.h">
       <name>QString</name>&amp;</type>
       <name>layerName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>
@@ -1916,7 +1945,8 @@ dir="./core" filename="RDocument.h">
       <name>QString</name>&amp;</type>
       <name>blockName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>
@@ -1930,7 +1960,8 @@ dir="./core" filename="RDocument.h">
       <name>QString</name>&amp;</type>
       <name>viewName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>
@@ -1944,7 +1975,8 @@ dir="./core" filename="RDocument.h">
       <name>QString</name>&amp;</type>
       <name>linetypeName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>
@@ -1960,7 +1992,8 @@ dir="./core" filename="RDocument.h">
       <name>QString</name>&amp;</type>
       <name>layerName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>
@@ -1976,7 +2009,8 @@ dir="./core" filename="RDocument.h">
       <name>QString</name>&amp;</type>
       <name>blockName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>
@@ -2001,7 +2035,8 @@ dir="./core" filename="RDocument.h">
       <name>QString</name>&amp;</type>
       <name>linetypeName</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>
@@ -2010,6 +2045,7 @@ dir="./core" filename="RDocument.h">
     </type>
     <name>getLinetypeByLayerId</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
@@ -2031,7 +2067,8 @@ dir="./core" filename="RDocument.h">
       </type>
       <name>linetypeId</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>QSet
@@ -2041,7 +2078,8 @@ dir="./core" filename="RDocument.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getLinetypeNames</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>
@@ -2057,7 +2095,8 @@ dir="./core" filename="RDocument.h">
       </type>
       <name>linetypeId</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>
@@ -2073,7 +2112,8 @@ dir="./core" filename="RDocument.h">
       </type>
       <name>linetypeId</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>

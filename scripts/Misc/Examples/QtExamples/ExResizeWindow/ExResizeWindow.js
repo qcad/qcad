@@ -43,7 +43,7 @@ ExResizeWindow.prototype.beginEvent = function() {
     if (match.length===3) {
         var appWin = RMainWindowQt.getMainWindow();
         var titleBarHeight = 22;
-        appWin.resize(parseInt(match[1]), parseInt(match[2]) - titleBarHeight);
+        appWin.resize(parseInt(match[1], 10), parseInt(match[2], 10) - titleBarHeight);
     }
 
     dialog.destroy();

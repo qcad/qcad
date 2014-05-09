@@ -36,7 +36,7 @@ dir="./core" filename="RVersion.h">
   <name>R_QCAD_VERSION_REV</name>7</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_BUILD</name>0</cpp:define>
+  <name>R_QCAD_VERSION_BUILD</name>3</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

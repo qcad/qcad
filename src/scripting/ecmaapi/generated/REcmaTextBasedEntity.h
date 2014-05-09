@@ -101,6 +101,9 @@
         getTextHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setTextHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTextWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -113,7 +116,13 @@
         getVAlign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setVAlign
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHAlign
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setHAlign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getFontName

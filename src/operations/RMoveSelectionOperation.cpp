@@ -55,7 +55,7 @@ RTransaction RMoveSelectionOperation::apply(RDocument& document, bool preview) c
         }
     }
 
-    transaction.end();
+    transaction.end(&document);
 
     return transaction;
 }

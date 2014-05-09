@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../DefaultAction.js" line="+82"/>
+        <location filename="../DefaultAction.js" line="+86"/>
         <source>Select entity or region</source>
         <translation>Izberi entiteto ali regijo</translation>
     </message>
@@ -27,6 +27,11 @@
         <location line="+7"/>
         <source>Specify target point of selection</source>
         <translation>Določi ciljno točko od izbora</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Move entity to desired location</source>
+        <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
 </context>
 <context>
@@ -237,48 +242,48 @@
     <message>
         <location line="+89"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Levo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Center</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Desno</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>Poravnano</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagodi</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Zgoraj</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Izhodišče</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Spodaj</translation>
     </message>
 </context>
 <context>
@@ -314,12 +319,12 @@
     <message>
         <location filename="../library.js" line="+607"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Entiteta</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Entitete</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -384,12 +389,12 @@
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimenzije</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimenzija</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -544,7 +549,7 @@
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished"></translation>
+        <translation>Temelječe na besedilu</translation>
     </message>
     <message>
         <location line="+2"/>

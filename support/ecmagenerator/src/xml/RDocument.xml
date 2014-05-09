@@ -84,6 +84,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" false" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
         hasDefault="true" default=" false" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" hasDefault="true" default="RS :: EntityAll"
+        isConst="false" />
       </variant>
     </method>
     <method name="queryAllUcs" cppName="queryAllUcs"
@@ -722,6 +725,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RView::Id" isPureVirtual="false" />
+    </method>
+    <method name="getTempBlockName" cppName="getTempBlockName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
     </method>
     <method name="getBlockName" cppName="getBlockName"
     specifier="public" isStatic="false" isVirtual="false"

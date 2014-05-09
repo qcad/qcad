@@ -154,8 +154,9 @@ Information.prototype.addGridTicks = function(op, view, point1, point2, preview)
             linearFormat==RS.FractionalStacked ||
             linearFormat==RS.Architectural ||
             linearFormat==RS.Fractional) {
+
+            minV = new RVector(1.0/128, 1.0/128);
         }
-        minV = new RVector(1.0/128, 1.0/128);
     }
     var spacings = ROrthoGrid.getIdealGridSpacing(view, 10, minV, new RVector(Number.NaN, Number.NaN));
     var gridSpacing = spacings[0];

@@ -32,9 +32,9 @@ QSet<RObject::Id> RLinkedStorage::queryAllObjects() {
             .unite(backStorage->queryAllObjects());
 }
 
-QSet<REntity::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks) {
-    return RMemoryStorage::queryAllEntities(undone, allBlocks)
-            .unite(backStorage->queryAllEntities(undone, allBlocks));
+QSet<REntity::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) {
+    return RMemoryStorage::queryAllEntities(undone, allBlocks, type)
+            .unite(backStorage->queryAllEntities(undone, allBlocks, type));
 }
 
 QSet<RUcs::Id> RLinkedStorage::queryAllUcs() {
@@ -135,9 +135,9 @@ QSharedPointer<REntity> RLinkedStorage::queryEntity(REntity::Id objectId) const 
 }
 
 QSharedPointer<RObject> RLinkedStorage::queryObjectByHandle(RObject::Handle objectHandle) const {
-    QSharedPointer<RObject> ret = backStorage->queryObjectByHandle(objectHandle);
+    QSharedPointer<RObject> ret = RMemoryStorage::queryObjectByHandle(objectHandle);
     if (ret.isNull()) {
-        ret = RMemoryStorage::queryObjectByHandle(objectHandle);
+        ret = backStorage->queryObjectByHandle(objectHandle);
     }
     return ret;
 }

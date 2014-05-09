@@ -123,6 +123,7 @@ public:
 
     QSharedPointer<REntity> queryEntity(REntity::Id entityId) const;
     bool applyTransformationTo(REntity& entity) const;
+    RVector mapToBlock(const RVector& v) const;
 
 private:
     mutable RBlock::Id referencedBlockId;

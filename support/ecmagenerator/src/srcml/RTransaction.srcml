@@ -357,6 +357,36 @@ dir="./core" filename="RTransaction.h">
     <name>keepHandles</name>= 
     <name>on</name></expr>;</expr_stmt>}</block>
   </function>
+  <comment type="line">// void setUndoing(bool on) {</comment>
+  <comment type="line">// undoing = on;</comment>
+  <comment type="line">// }</comment>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isUndoing</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>undoing</name>
+    </expr>;</return>}</block>
+  </function>
+  <comment type="line">// void setRedoing(bool on) {</comment>
+  <comment type="line">// redoing = on;</comment>
+  <comment type="line">// }</comment>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isRedoing</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>redoing</name>
+    </expr>;</return>}</block>
+  </function>
   <comment type="block">/** * \return True if this transaction
   should store undo / redo information * for later undo / redo
   functionality. */</comment>
@@ -386,8 +416,7 @@ dir="./core" filename="RTransaction.h">
       <name>failed</name>
     </expr>;</return>}</block>
   </function>
-  <comment type="block">/** * Applies this command to the document.
-  */</comment>
+  <comment type="block">/** * Redo undone changes. */</comment>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -399,7 +428,7 @@ dir="./core" filename="RTransaction.h">
     <decl>
     <type>
     <name>RDocument</name>*</type>
-    <name>objectContainer</name>=
+    <name>document</name>=
     <init>
       <expr>
         <name>NULL</name>
@@ -420,30 +449,31 @@ dir="./core" filename="RTransaction.h">
     <decl>
     <type>
     <name>RDocument</name>*</type>
-    <name>objectContainer</name>=
+    <name>document</name>=
     <init>
       <expr>
         <name>NULL</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Previews this transaction (as it
-  would be applied) by exporting the result to * the given
-  exporter. The exporter typically exports into the preview of a *
-  graphics scene. */</comment>
-  <comment type="line">//virtual void preview(RExporter&amp;
-  /*exporter*/) const {}</comment>
   <function_decl>
   <type>
     <name>void</name>
   </type>
   <name>end</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>*</type>
+      <name>document</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
   </type>
-  <name>updateOverwrittenBlockReferences</name>
+  <name>updateAffectedBlockReferences</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <comment type="block">/** * Sets the ID of this transaction.
   Typically called by a storage which manages * transaction IDs.
@@ -804,7 +834,14 @@ dir="./core" filename="RTransaction.h">
     <name>void</name>
   </type>
   <name>commit</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>*</type>
+      <name>document</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -866,7 +903,7 @@ dir="./core" filename="RTransaction.h">
         <name>Id</name></name>
       </argument>&gt;</argument_list></name>
     </type>
-    <name>overwrittenBlockReferences</name>
+    <name>affectedBlockReferenceIds</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * Map of properties that are changed by
   this transaction. For every * undoable, a whole list of
@@ -1030,6 +1067,20 @@ dir="./core" filename="RTransaction.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>cloneIds</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>undoing</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>redoing</name>
   </decl>;</decl_stmt></protected>}</block>;</class>
   <function_decl>
   <type>

@@ -104,6 +104,10 @@ public:
         return data.getScaleFactors();
     }
 
+    void setScaleFactors(const RVector sf) {
+        data.setScaleFactors(sf);
+    }
+
     double getRotation() const {
         return data.getRotation();
     }
@@ -136,6 +140,10 @@ public:
 
     bool applyTransformationTo(REntity& entity) const {
         return data.applyTransformationTo(entity);
+    }
+
+    RVector mapToBlock(const RVector& v) const {
+        return data.mapToBlock(v);
     }
 
     /**

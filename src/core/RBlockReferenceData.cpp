@@ -242,6 +242,26 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
     return true;
 }
 
+RVector RBlockReferenceData::mapToBlock(const RVector& v) const {
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block.isNull()) {
+        qWarning("RBlockReferenceData::mapToBlock: "
+            "block %d is NULL", referencedBlockId);
+        return RVector::invalid;
+    }
+
+    RVector ret = v;
+
+    ret.move(-position);
+    ret.rotate(-rotation);
+    if (fabs(scaleFactors.x)>RS::PointTolerance && fabs(scaleFactors.y)>RS::PointTolerance) {
+        ret.scale(RVector(1/scaleFactors.x, 1/scaleFactors.y));
+    }
+    ret.move(block->getOrigin());
+
+    return ret;
+}
+
 QList<RVector> RBlockReferenceData::getInternalReferencePoints(
         RS::ProjectionRenderingHint hint) const {
 

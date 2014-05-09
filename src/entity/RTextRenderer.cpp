@@ -55,7 +55,13 @@ QString RTextRenderer::rxObliqueAngleChange = "\\\\Q(\\d*\\.?\\d+);";
 QString RTextRenderer::rxTrackChange = "\\\\T(\\d*\\.?\\d+);";
 QString RTextRenderer::rxAlignmentChange = "\\\\A(\\d+);";
 QString RTextRenderer::rxFontChangeCad = "(?:\\\\F([^|]*)\\|c(\\d+);|\\\\F([^|;]*);)";
-QString RTextRenderer::rxFontChangeTtf = "\\\\f([^|]*)\\|b(\\d+)\\|i(\\d+)\\|c(\\d+)\\|p(\\d+);";
+//QString RTextRenderer::rxFontChangeTtf = "\\\\f([^|]*)\\|b(\\d+)\\|i(\\d+)\\|c(\\d+)\\|p(\\d+);";
+QString RTextRenderer::rxFontChangeTtf = "\\\\f([^|]*)"
+                                         "(?:\\|([bicp])(\\d+))?"
+                                         "(?:\\|([bicp])(\\d+))?"
+                                         "(?:\\|([bicp])(\\d+))?"
+                                         "(?:\\|([bicp])(\\d+))?"
+                                         ";";
 QString RTextRenderer::rxBeginBlock = "\\{";
 QString RTextRenderer::rxEndBlock = "\\}";
 QString RTextRenderer::rxBackslash = "\\\\\\\\";
@@ -181,7 +187,7 @@ void RTextRenderer::renderSimple() {
     blockFont.push(fontName);
     blockBold.push(bold);
     blockItalic.push(italic);
-    useCadFont.push(RFontList::isCadFont(blockFont.top()));
+    useCadFont.push(RFontList::isCadFont(getBlockFont()));
     openTags.push(QStringList());
 
     double horizontalAdvance = 0.0;
@@ -503,7 +509,7 @@ void RTextRenderer::render() {
 
                     // transform to scale text from 1.0 to current text height:
                     QTransform sizeTransform;
-                    sizeTransform.scale(blockHeight.top(), blockHeight.top());
+                    sizeTransform.scale(getBlockHeight(), getBlockHeight());
 
                     // transform for current block due to xCursor position:
                     QTransform blockTransform;
@@ -513,8 +519,8 @@ void RTextRenderer::render() {
                     QTransform allTransforms = sizeTransform;
                     allTransforms *= blockTransform;
 
-                    maxAscent = qMax(maxAscent, ascent * blockHeight.top());
-                    minDescent = qMin(minDescent, descent * blockHeight.top());
+                    maxAscent = qMax(maxAscent, ascent * getBlockHeight());
+                    minDescent = qMin(minDescent, descent * getBlockHeight());
 
                     // transform paths of current block and append to paths
                     // of current text line:
@@ -524,12 +530,12 @@ void RTextRenderer::render() {
                         linePaths.append(p);
                     }
 
-                    xCursor += horizontalAdvance * blockHeight.top();
+                    xCursor += horizontalAdvance * getBlockHeight();
                 }
             }
 
             // empty text, might be line feed, we need ascent, descent anyway:
-            else if (lineFeed || paragraphFeed || end) {
+            else if ((lineFeed || paragraphFeed || end) && !blockHeight.isEmpty()) {
                 if (target==PainterPaths) {
                     double horizontalAdvance = 0.0;
                     double horizontalAdvanceNoSpacing = 0.0;
@@ -543,8 +549,8 @@ void RTextRenderer::render() {
                                 horizontalAdvanceNoSpacing,
                                 ascent, descent);
 
-                    maxAscent = qMax(maxAscent, ascent * blockHeight.top());
-                    minDescent = qMin(minDescent, descent * blockHeight.top());
+                    maxAscent = qMax(maxAscent, ascent * getBlockHeight());
+                    minDescent = qMin(minDescent, descent * getBlockHeight());
                 }
             }
 
@@ -588,20 +594,20 @@ void RTextRenderer::render() {
                                     ascent, descent);
 
                         if (s==0) {
-                            maxAscent = qMax(maxAscent, ascent * blockHeight.top() * heightFactor + blockHeight.top()*(1.0-heightFactor));
+                            maxAscent = qMax(maxAscent, ascent * getBlockHeight() * heightFactor + getBlockHeight()*(1.0-heightFactor));
                         }
                         else {
-                            minDescent = qMin(minDescent, descent * blockHeight.top() * heightFactor);
+                            minDescent = qMin(minDescent, descent * getBlockHeight() * heightFactor);
                         }
 
                         // transform to scale text from 1.0 to current text height * 0.4:
                         QTransform sizeTransform;
-                        sizeTransform.scale(blockHeight.top()*heightFactor, blockHeight.top()*heightFactor);
+                        sizeTransform.scale(getBlockHeight()*heightFactor, getBlockHeight()*heightFactor);
 
                         // move top text more to the right for italic texts:
                         double xOffset = 0.0;
-                        if (s==0 && blockItalic.top()==true) {
-                            double y = blockHeight.top()*(1.0-heightFactor);
+                        if (s==0 && getBlockItalic()==true) {
+                            double y = getBlockHeight()*(1.0-heightFactor);
                             // assume italic means roughly 12 degrees:
                             xOffset = tan(RMath::deg2rad(12)) * y;
                         }
@@ -610,9 +616,9 @@ void RTextRenderer::render() {
                         // and top or bottom text position:
                         QTransform blockTransform;
                         blockTransform.translate(xCursor + xOffset,
-                                                 s==0 ? blockHeight.top()*(1.0-heightFactor) : 0.0);
+                                                 s==0 ? getBlockHeight()*(1.0-heightFactor) : 0.0);
 
-                        horizontalAdvance[s] += xOffset / (blockHeight.top() * heightFactor);
+                        horizontalAdvance[s] += xOffset / (getBlockHeight() * heightFactor);
 
                         // combine transforms for current text block:
                         QTransform allTransforms = sizeTransform;
@@ -627,7 +633,7 @@ void RTextRenderer::render() {
                         }
                     }
 
-                    xCursor += qMax(horizontalAdvance[0], horizontalAdvance[1]) * blockHeight.top() * heightFactor;
+                    xCursor += qMax(horizontalAdvance[0], horizontalAdvance[1]) * getBlockHeight() * heightFactor;
                 }
 
                 if (target==RichText) {
@@ -661,7 +667,9 @@ void RTextRenderer::render() {
             QTextLayout::FormatRange fr;
             fr.start = 0;
             fr.length = 0;
-            fr.format = currentFormat.top();
+            if (!currentFormat.isEmpty()) {
+                fr.format = currentFormat.top();
+            }
             formats.append(fr);
 
             // handle text line.
@@ -852,17 +860,28 @@ void RTextRenderer::render() {
         // font change (TTF):
         reg.setPattern(rxFontChangeTtf);
         if (reg.exactMatch(formatting)) {
-            blockFont.top() = reg.cap(1);
-            blockBold.top() = (reg.cap(2).toInt()!=0);
-            blockItalic.top() = (reg.cap(3).toInt()!=0);
-            useCadFont.top() = false;
+            setBlockFont(reg.cap(1));
+            for (int k=2; k<reg.captureCount()-1; k+=2) {
+                // code: i, b, c, p
+                QString code = reg.cap(k);
+                // value: 0/1
+                int value = reg.cap(k+1).toInt();
+
+                if (code.toLower()=="b") {
+                    setBlockBold(value!=0);
+                }
+                else if (code.toLower()=="i") {
+                    setBlockItalic(value!=0);
+                }
+            }
+            setUseCadFont(false);
             blockChangedHeightOrFont = true;
 
             if (target==RichText) {
                 QString style;
-                style += QString("font-family:%1;").arg(blockFont.top());
-                style += QString("font-weight:%1;").arg(blockBold.top() ? "bold" : "normal");
-                style += QString("font-style:%1;").arg(blockItalic.top() ? "italic" : "normal");
+                style += QString("font-family:%1;").arg(getBlockFont());
+                style += QString("font-weight:%1;").arg(getBlockBold() ? "bold" : "normal");
+                style += QString("font-style:%1;").arg(getBlockItalic() ? "italic" : "normal");
                 richText += QString("<span style=\"%1\">").arg(style);
                 openTags.top().append("span");
             }
@@ -872,10 +891,10 @@ void RTextRenderer::render() {
         // font change (CAD):
         reg.setPattern(rxFontChangeCad);
         if (reg.exactMatch(formatting)) {
-            blockFont.top() = reg.cap(1);
-            useCadFont.top() = true;
+            setBlockFont(reg.cap(1));
+            setUseCadFont(true);
             if (xCursor>RS::PointTolerance) {
-                RFont* f = RFontList::get(blockFont.top());
+                RFont* f = RFontList::get(getBlockFont());
                 if (f!=NULL && f->isValid()) {
                     xCursor += f->getLetterSpacing() / 9.0;
                 }
@@ -884,7 +903,7 @@ void RTextRenderer::render() {
 
             if (target==RichText) {
                 QString style;
-                style += QString("font-family:%1;").arg(blockFont.top());
+                style += QString("font-family:%1;").arg(getBlockFont());
                 richText += QString("<span style=\"%1\">").arg(style);
                 openTags.top().append("span");
             }
@@ -897,16 +916,20 @@ void RTextRenderer::render() {
             bool factor = reg.cap(2)=="x";
 
             if (factor) {
-                blockHeight.top() *= reg.cap(1).toDouble();
+                if (!blockHeight.isEmpty()) {
+                    setBlockHeight(getBlockHeight() * reg.cap(1).toDouble());
+                }
             }
             else {
-                blockHeight.top() = reg.cap(1).toDouble();
+                if (!blockHeight.isEmpty()) {
+                    setBlockHeight(reg.cap(1).toDouble());
+                }
             }
             blockChangedHeightOrFont = true;
 
-            if (target==RichText) {
+            if (target==RichText && !blockHeight.isEmpty() && !openTags.isEmpty()) {
                 QString style;
-                style += QString("font-size:%1pt;").arg(blockHeight.top() * fontHeightFactor);
+                style += QString("font-size:%1pt;").arg(getBlockHeight() * fontHeightFactor);
                 richText += QString("<span style=\"%1\">").arg(style);
                 openTags.top().append("span");
             }
@@ -920,12 +943,12 @@ void RTextRenderer::render() {
         // start format block:
         reg.setPattern(rxBeginBlock);
         if (reg.exactMatch(formatting)) {
-            currentFormat.push(currentFormat.top());
-            blockFont.push(blockFont.top());
-            blockBold.push(blockBold.top());
-            blockItalic.push(blockItalic.top());
-            blockHeight.push(blockHeight.top());
-            useCadFont.push(useCadFont.top());
+            currentFormat.push(getCurrentFormat());
+            blockFont.push(getBlockFont());
+            blockBold.push(getBlockBold());
+            blockItalic.push(getBlockItalic());
+            blockHeight.push(getBlockHeight());
+            useCadFont.push(getUseCadFont());
             if (target==RichText) {
                 openTags.push(QStringList());
             }
@@ -936,23 +959,39 @@ void RTextRenderer::render() {
         // end format block:
         reg.setPattern(rxEndBlock);
         if (reg.exactMatch(formatting)) {
-            currentFormat.pop();
-            fr.format = currentFormat.top();
-            formats.append(fr);
-            blockFont.pop();
-            blockBold.pop();
-            blockItalic.pop();
-            blockHeight.pop();
-            useCadFont.pop();
+            if (!currentFormat.isEmpty()) {
+                currentFormat.pop();
+            }
+            if (!currentFormat.isEmpty()) {
+                fr.format = currentFormat.top();
+                formats.append(fr);
+            }
+            if (!blockFont.isEmpty()) {
+                blockFont.pop();
+            }
+            if (!blockBold.isEmpty()) {
+                blockBold.pop();
+            }
+            if (!blockItalic.isEmpty()) {
+                blockItalic.pop();
+            }
+            if (!blockHeight.isEmpty()) {
+                blockHeight.pop();
+            }
+            if (!useCadFont.isEmpty()) {
+                useCadFont.pop();
+            }
             blockChangedHeightOrFont = false;
 
             if (target==RichText) {
                 // close all tags that were opened in this block:
-                for (int i=openTags.top().size()-1; i>=0; --i) {
-                    QString tag = openTags.top().at(i);
-                    richText += QString("</%1>").arg(tag);
+                if (!openTags.isEmpty()) {
+                    for (int i=openTags.top().size()-1; i>=0; --i) {
+                        QString tag = openTags.top().at(i);
+                        richText += QString("</%1>").arg(tag);
+                    }
+                    openTags.pop();
                 }
-                openTags.pop();
             }
 
             continue;
@@ -962,18 +1001,20 @@ void RTextRenderer::render() {
         reg.setPattern(rxColorChangeIndex);
         if (reg.exactMatch(formatting)) {
             RColor blockColor = RColor::createFromCadIndex(reg.cap(1));
-            if (blockColor.isByLayer()) {
-                currentFormat.top().setForeground(RColor::CompatByLayer);
-            } else if (blockColor.isByBlock()) {
-                currentFormat.top().setForeground(RColor::CompatByBlock);
+            if (!currentFormat.isEmpty()) {
+                if (blockColor.isByLayer()) {
+                    currentFormat.top().setForeground(RColor::CompatByLayer);
+                } else if (blockColor.isByBlock()) {
+                    currentFormat.top().setForeground(RColor::CompatByBlock);
+                }
+                else {
+                    currentFormat.top().setForeground(blockColor);
+                }
+                fr.format = currentFormat.top();
+                formats.append(fr);
             }
-            else {
-                currentFormat.top().setForeground(blockColor);
-            }
-            fr.format = currentFormat.top();
-            formats.append(fr);
 
-            if (target==RichText) {
+            if (target==RichText && !openTags.isEmpty()) {
                 QString style;
                 style += QString("color:%1;").arg(blockColor.name());
                 richText += QString("<span style=\"%1\">").arg(style);
@@ -986,11 +1027,13 @@ void RTextRenderer::render() {
         reg.setPattern(rxColorChangeCustom);
         if (reg.exactMatch(formatting)) {
             RColor blockColor = RColor::createFromCadCustom(reg.cap(1));
-            currentFormat.top().setForeground(blockColor);
-            fr.format = currentFormat.top();
-            formats.append(fr);
+            if (!currentFormat.isEmpty()) {
+                currentFormat.top().setForeground(blockColor);
+                fr.format = currentFormat.top();
+                formats.append(fr);
+            }
 
-            if (target==RichText) {
+            if (target==RichText && !openTags.isEmpty()) {
                 QString style;
                 style += QString("color:%1;").arg(blockColor.name());
                 richText += QString("<span style=\"%1\">").arg(style);
@@ -1048,9 +1091,11 @@ void RTextRenderer::render() {
 
     if (target==RichText) {
         // close all tags that were opened:
-        for (int i=openTags.top().size()-1; i>=0; --i) {
-            QString tag = openTags.top().at(i);
-            richText += QString("</%1>").arg(tag);
+        if (!openTags.isEmpty()) {
+            for (int i=openTags.top().size()-1; i>=0; --i) {
+                QString tag = openTags.top().at(i);
+                richText += QString("</%1>").arg(tag);
+            }
         }
     }
 }
@@ -1063,7 +1108,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlock(
     double& ascent,
     double& descent) {
 
-    if (useCadFont.top()) {
+    if (getUseCadFont()) {
         return getPainterPathsForBlockCad(
                     blockText,
                     formats,
@@ -1124,11 +1169,11 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
 //        }
 //    }
 
-    QFont font(blockFont.top());
+    QFont font(getBlockFont());
     // drawing with a 1pt font will freak out Windows:
     font.setPointSizeF(100.0);
-    font.setBold(blockBold.top());
-    font.setItalic(blockItalic.top());
+    font.setBold(getBlockBold());
+    font.setItalic(getBlockItalic());
 
     // bounding boxes for 1.0 height font:
     QRectF boxA = getCharacterRect(font, 'A');
@@ -1207,10 +1252,16 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
 
     QList<RPainterPath> ret;
 
-    RFont* font = RFontList::get(blockFont.top());
+    RFont* font = RFontList::get(getBlockFont());
     if (font==NULL || !font->isValid()) {
-        qWarning() << "RTextRenderer::getPainterPathsForBlockCad: "
+        if (blockFont.isEmpty()) {
+            qWarning() << "RTextRenderer::getPainterPathsForBlockCad: "
+                   << "invalid font: stack empty - using 'standard' instead...";
+        }
+        else {
+            qWarning() << "RTextRenderer::getPainterPathsForBlockCad: "
                    << "invalid font: " << blockFont.top() << " - using 'standard' instead...";
+        }
 
         // 20120309: resort to standard font (better than nothing):
         font = RFontList::get("standard");

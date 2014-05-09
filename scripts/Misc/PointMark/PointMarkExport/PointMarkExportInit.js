@@ -3,7 +3,7 @@ function init(basePath) {
         return;
     }
 
-    var action = new RGuiAction(qsTranslate("PointMarkExport", "&Export Point Mark List"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("PointMarkExport", "&Export Selected Benchmark with Points"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/PointMarkExport.js");
     action.setIcon(basePath + "/PointMarkExport.svg");

@@ -734,6 +734,37 @@ dir="./entity" filename="RTextBasedEntity.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setTextHeight</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>h</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>setTextHeight</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>h</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
       <name>double</name>
     </type>
     <name>getTextWidth</name>
@@ -812,6 +843,39 @@ dir="./entity" filename="RTextBasedEntity.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setVAlign</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>
+          <name>RS</name>::
+          <name>VAlign</name></name>
+        </type>
+        <name>va</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>setVAlign</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>va</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
       <name>
       <name>RS</name>::
       <name>HAlign</name></name>
@@ -830,6 +894,39 @@ dir="./entity" filename="RTextBasedEntity.h">
       <name>getHAlign</name>
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setHAlign</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>
+          <name>RS</name>::
+          <name>HAlign</name></name>
+        </type>
+        <name>ha</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>setHAlign</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>ha</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
   </function>
   <function>
     <type>

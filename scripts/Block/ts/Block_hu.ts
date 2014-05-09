@@ -12,7 +12,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+95"/>
+        <location filename="../BlockDialog.js" line="+99"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished"></translation>
     </message>

@@ -60,10 +60,15 @@ lugares:\</translatorcomment>
         <translation>Exportando para %1...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Export complete: %1</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Exportação completa: %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Export failed (cannot open file for writing): %1</source>
+        <translation>Exportação falhou (Não é possível abrir arquivo): %1</translation>
     </message>
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>

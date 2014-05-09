@@ -1,421 +1,481 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>DimensionSettings</class>
- <widget class="QWidget" name="DimensionSettings">
+ <widget class="QScrollArea" name="DimensionSettings">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>504</width>
-    <height>515</height>
+    <width>592</width>
+    <height>605</height>
    </rect>
   </property>
-  <property name="widgetResizable" stdset="0">
+  <property name="widgetResizable">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QGroupBox" name="DimensionSizes">
-     <property name="title">
-      <string>Sizes</string>
-     </property>
-     <layout class="QVBoxLayout">
-      <property name="topMargin">
-       <number>5</number>
+  <widget class="QWidget" name="scrollAreaWidgetContents">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>590</width>
+     <height>603</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="DimensionSizes">
+      <property name="title">
+       <string>Sizes</string>
       </property>
-      <item>
-       <widget class="QCheckBox" name="KeepProportions">
-        <property name="text">
-         <string>Keep proportions</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QGridLayout" name="_2">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string>Text height:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="QLabel" name="DimUnit3">
-          <property name="text">
-           <string notr="true">units</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_4">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string>Extension line offset:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QLabel" name="DimUnit2">
-          <property name="text">
-           <string notr="true">units</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string>Extension line extension:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QLabel" name="DimUnit1">
-          <property name="text">
-           <string notr="true">units</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="label_5">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string>Dimension line gap:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="2">
-         <widget class="QLabel" name="DimUnit5">
-          <property name="text">
-           <string notr="true">units</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="2">
-         <widget class="QLabel" name="DimUnit4">
-          <property name="text">
-           <string notr="true">units</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="label_6">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string>Arrow size:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="RMathLineEdit" name="DIMTXT">
-          <property name="text">
-           <string notr="true">2.5</string>
-          </property>
-          <property name="angle" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="defaultUnit" stdset="0">
-           <number>0</number>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="RMathLineEdit" name="DIMEXE">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string notr="true">1.25</string>
-          </property>
-          <property name="angle" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="defaultUnit" stdset="0">
-           <number>0</number>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="RMathLineEdit" name="DIMEXO">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string notr="true">0.625</string>
-          </property>
-          <property name="angle" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="defaultUnit" stdset="0">
-           <number>0</number>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="RMathLineEdit" name="DIMGAP">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string notr="true">0.625</string>
-          </property>
-          <property name="angle" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="defaultUnit" stdset="0">
-           <number>0</number>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="RMathLineEdit" name="DIMASZ">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string notr="true">2.5</string>
-          </property>
-          <property name="angle" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="defaultUnit" stdset="0">
-           <number>0</number>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="ArrowStyle">
-     <property name="title">
-      <string>Arrow Style</string>
-     </property>
-     <layout class="QHBoxLayout" name="_3">
-      <property name="topMargin">
-       <number>5</number>
-      </property>
-      <property name="bottomMargin">
-       <number>5</number>
-      </property>
-      <item>
-       <widget class="QRadioButton" name="Arrow">
-        <property name="text">
-         <string>Arrow</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="ArchitecturalTick">
-        <property name="text">
-         <string>Architectural Tick</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="gbDimensionFormat">
-     <property name="title">
-      <string>Label Format</string>
-     </property>
-     <layout class="QGridLayout" name="_4">
-      <item row="0" column="0">
-       <widget class="QGroupBox" name="gbLength">
-        <property name="title">
-         <string>Linear Dimensions</string>
-        </property>
-        <layout class="QVBoxLayout" name="_5">
-         <item>
-          <layout class="QGridLayout" name="_6">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>&amp;Format:</string>
-             </property>
-             <property name="buddy">
-              <cstring>LinearFormat</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_9">
-             <property name="text">
-              <string>P&amp;recision:</string>
-             </property>
-             <property name="buddy">
-              <cstring>LinearPrecision</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QComboBox" name="LinearPrecision"/>
-           </item>
-           <item row="0" column="1">
-            <widget class="QComboBox" name="LinearFormat"/>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="LinearShowTrailingZeros">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="KeepProportions">
+         <property name="text">
+          <string>Keep proportions</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
            <property name="text">
-            <string>Show trailing zeros</string>
+            <string>Text height:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="DimUnit3">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Extension line offset:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="DimUnit2">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Extension line extension:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="DimUnit1">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Dimension line gap:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="DimUnit5">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="DimUnit4">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Arrow size:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="RMathLineEdit" name="DIMTXT">
+           <property name="text">
+            <string notr="true">2.5</string>
+           </property>
+           <property name="angle" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="defaultUnit" stdset="0">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="RMathLineEdit" name="DIMEXE">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">1.25</string>
+           </property>
+           <property name="angle" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="defaultUnit" stdset="0">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="RMathLineEdit" name="DIMEXO">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">0.625</string>
+           </property>
+           <property name="angle" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="defaultUnit" stdset="0">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="RMathLineEdit" name="DIMGAP">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">0.625</string>
+           </property>
+           <property name="angle" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="defaultUnit" stdset="0">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="RMathLineEdit" name="DIMASZ">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">2.5</string>
+           </property>
+           <property name="angle" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="defaultUnit" stdset="0">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>Size scale factor:</string>
            </property>
           </widget>
          </item>
          <item>
-          <spacer>
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
+          <widget class="RMathLineEdit" name="DIMSCALE">
+           <property name="text">
+            <string notr="true">1.0</string>
            </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Expanding</enum>
+           <property name="angle" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="defaultUnit" stdset="0">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>51</width>
-             <height>16</height>
+             <width>40</width>
+             <height>20</height>
             </size>
            </property>
           </spacer>
          </item>
         </layout>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QGroupBox" name="gbAngle">
-        <property name="title">
-         <string>Angular Dimensions</string>
-        </property>
-        <layout class="QVBoxLayout" name="_7">
-         <item>
-          <layout class="QGridLayout" name="_8">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_10">
-             <property name="text">
-              <string>F&amp;ormat:</string>
-             </property>
-             <property name="buddy">
-              <cstring>AngularFormat</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QComboBox" name="AngularFormat"/>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Pre&amp;cision:</string>
-             </property>
-             <property name="buddy">
-              <cstring>AngularPrecision</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QComboBox" name="AngularPrecision"/>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="AngularShowTrailingZeros">
-           <property name="text">
-            <string>Show trailing zeros</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer>
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Expanding</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>51</width>
-             <height>16</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QGroupBox" name="gbLengthPreview">
-        <property name="title">
-         <string>Preview</string>
-        </property>
-        <layout class="QVBoxLayout" name="_9">
-         <property name="topMargin">
-          <number>5</number>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="ArrowStyle">
+      <property name="title">
+       <string>Arrow Style</string>
+      </property>
+      <layout class="QHBoxLayout" name="_3">
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QRadioButton" name="Arrow">
+         <property name="text">
+          <string>Arrow</string>
          </property>
-         <item>
-          <widget class="QLabel" name="LinearPreview">
-           <property name="text">
-            <string notr="true">linear</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QGroupBox" name="gbAnglePreview">
-        <property name="title">
-         <string>Preview</string>
-        </property>
-        <layout class="QVBoxLayout" name="_10">
-         <property name="topMargin">
-          <number>5</number>
+         <property name="checked">
+          <bool>true</bool>
          </property>
-         <item>
-          <widget class="QLabel" name="AngularPreview">
-           <property name="text">
-            <string notr="true">angular</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-  </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="ArchitecturalTick">
+         <property name="text">
+          <string>Architectural Tick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="gbDimensionFormat">
+      <property name="title">
+       <string>Label Format</string>
+      </property>
+      <layout class="QGridLayout" name="_4">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="gbLength">
+         <property name="title">
+          <string>Linear Dimensions</string>
+         </property>
+         <layout class="QVBoxLayout" name="_5">
+          <item>
+           <layout class="QGridLayout" name="_6">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>&amp;Format:</string>
+              </property>
+              <property name="buddy">
+               <cstring>LinearFormat</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>P&amp;recision:</string>
+              </property>
+              <property name="buddy">
+               <cstring>LinearPrecision</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="LinearPrecision">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="LinearFormat">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="LinearShowTrailingZeros">
+            <property name="text">
+             <string>Show trailing zeros</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="gbAngle">
+         <property name="title">
+          <string>Angular Dimensions</string>
+         </property>
+         <layout class="QVBoxLayout" name="_7">
+          <item>
+           <layout class="QGridLayout" name="_8">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>F&amp;ormat:</string>
+              </property>
+              <property name="buddy">
+               <cstring>AngularFormat</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="AngularFormat">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Pre&amp;cision:</string>
+              </property>
+              <property name="buddy">
+               <cstring>AngularPrecision</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="AngularPrecision">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="AngularShowTrailingZeros">
+            <property name="text">
+             <string>Show trailing zeros</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="gbLengthPreview">
+         <property name="title">
+          <string>Preview</string>
+         </property>
+         <layout class="QVBoxLayout" name="_9">
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="LinearPreview">
+            <property name="text">
+             <string notr="true">linear</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QGroupBox" name="gbAnglePreview">
+         <property name="title">
+          <string>Preview</string>
+         </property>
+         <layout class="QVBoxLayout" name="_10">
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="AngularPreview">
+            <property name="text">
+             <string notr="true">angular</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>

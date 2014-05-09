@@ -54,6 +54,7 @@ protected:
 
 signals:
     void itemColumnClicked(QTreeWidgetItem* item, int column);
+    void contextMenuRequested(QTreeWidgetItem* item, int column);
 
 private:
     QVariant itemPressedData;

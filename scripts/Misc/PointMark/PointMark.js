@@ -99,9 +99,14 @@ PointMark.prototype.getTitle = function() {
 };
 
 /**
- * \return All block references representing benchmarks or point marks.
+ * \return All block reference IDs representing benchmarks or point marks.
+ * \param type 'b', 'p', 'a' (benchmarks, points, all [default])
  */
-PointMark.queryAllMarks = function(doc) {
+PointMark.queryAllMarkIds = function(doc, type) {
+    if (isNull(type)) {
+        type='a';
+    }
+
     var ret = [];
 
     var ids = doc.queryAllBlockReferences();
@@ -112,26 +117,95 @@ PointMark.queryAllMarks = function(doc) {
             continue;
         }
 
-        var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
-        if (isNull(handle)) {
+        if (blockRef.getBlockId()!==doc.getCurrentBlockId()) {
             continue;
         }
 
-        ret.push(id);
+        var handle = PointMark.getBenchmarkHandle(blockRef);
+        if (handle===RObject.INVALID_HANDLE) {
+            continue;
+        }
+
+        if (type==='a') {
+            ret.push(id);
+            continue;
+        }
+
+        if (type==='b' && handle===blockRef.getHandle()) {
+            ret.push(id);
+            continue;
+        }
+
+        if (type==='p' && handle!==blockRef.getHandle()) {
+            ret.push(id);
+            continue;
+        }
     }
 
     return ret;
 };
 
 /**
+ * \return All leader IDs representing auto updated leaders between two entities.
+ */
+//PointMark.queryAllAutoLeaders = function(doc) {
+//    var ret = [];
+
+//    var ids = doc.queryAllEntities(false, false, RS.EntityLeader);
+//    for (var i=0; i<ids.length; i++) {
+//        var id = ids[i];
+//        var leader = doc.queryEntityDirect(id);
+//        if (isNull(leader) || !isLeaderEntity(leader)) {
+//            continue;
+//        }
+
+//        var handle1 = PointMark.getFromHandle(leader);
+//        if (handle1===RObject.INVALID_HANDLE) {
+//            continue;
+//        }
+
+//        var handle2 = PointMark.getToHandle(leader);
+//        if (handle2===RObject.INVALID_HANDLE) {
+//            continue;
+//        }
+
+//        ret.push(id);
+//    }
+
+//    return ret;
+//};
+
+/**
  * \return String representing label of the given benchmark or point mark.
  */
 PointMark.getMarkLabel = function(doc, blockRefId) {
-    var blockAttribIds = doc.queryChildEntities(blockRefId);
-    if (blockAttribIds.length!==1) {
-        return "";
+    var blockRef = doc.queryEntityDirect(blockRefId);
+    if (isNull(blockRef)) {
+        return undefined;
     }
-    var attrib = doc.queryEntityDirect(blockAttribIds[0]);
+
+    var entityIds = doc.queryBlockEntities(blockRef.getReferencedBlockId());
+    for (var i=0; i<entityIds.length; i++) {
+        var label = doc.queryEntityDirect(entityIds[i]);
+        if (isAttributeEntity(label)) {
+            return label;
+        }
+    }
+
+    return undefined;
+
+//    var blockAttribIds = doc.queryChildEntities(blockRefId, RS.EntityAttribute);
+//    if (blockAttribIds.length!==1) {
+//        return undefined;
+//    }
+//    return doc.queryEntityDirect(blockAttribIds[0]);
+};
+
+/**
+ * \return String representing label of the given benchmark or point mark.
+ */
+PointMark.getMarkLabelText = function(doc, blockRefId) {
+    var attrib = PointMark.getMarkLabel(doc, blockRefId);
     if (isNull(attrib)) {
         return "";
     }
@@ -140,7 +214,7 @@ PointMark.getMarkLabel = function(doc, blockRefId) {
 };
 
 /**
- * \return Nummerical benchmark handle the given point mark or benchmark refers to.
+ * \return Nummerical benchmark handle the given point mark or benchmark refers to or -1.
  */
 PointMark.getBenchmarkHandle = function(blockRef) {
     var handle = blockRef.getCustomProperty("QCAD", "benchmark", undefined);
@@ -149,6 +223,55 @@ PointMark.getBenchmarkHandle = function(blockRef) {
     }
     return parseInt(handle, 16);
 };
+
+PointMark.setBenchmarkHandle = function(blockRef, handle) {
+    blockRef.setCustomProperty("QCAD", "benchmark", "0x" + handle.toString(16));
+};
+
+/**
+ * \return Nummerical handle of entity to which to draw the leader.
+ */
+PointMark.getToHandle = function(leader) {
+    var handle = leader.getCustomProperty("QCAD", "to", undefined);
+    if (isNull(handle)) {
+        return RObject.INVALID_HANDLE;
+    }
+    return parseInt(handle, 16);
+};
+
+PointMark.setToHandle = function(leader, handle) {
+    leader.setCustomProperty("QCAD", "to", "0x" + handle.toString(16));
+};
+
+/**
+ * \return Nummerical handle of entity from which to draw the leader.
+ */
+PointMark.getFromHandle = function(leader) {
+    var handle = leader.getCustomProperty("QCAD", "from", undefined);
+    if (isNull(handle)) {
+        return RObject.INVALID_HANDLE;
+    }
+    return parseInt(handle, 16);
+};
+
+PointMark.setFromHandle = function(leader, handle) {
+    leader.setCustomProperty("QCAD", "from", "0x" + handle.toString(16));
+};
+
+/**
+ * \return Nummerical leader handle the given point mark or benchmark refers to or -1.
+ */
+//PointMark.getLeaderHandle = function(blockRef) {
+//    var handle = blockRef.getCustomProperty("QCAD", "leader", undefined);
+//    if (isNull(handle)) {
+//        return RObject.INVALID_HANDLE;
+//    }
+//    return parseInt(handle, 16);
+//};
+
+//PointMark.setLeaderHandle = function(blockRef, handle) {
+//    blockRef.setCustomProperty("QCAD", "leader", "0x" + handle.toString(16));
+//};
 
 /**
  * \return List of all point marks including bechmarks with
@@ -167,7 +290,12 @@ PointMark.getPointMarkTree = function(doc) {
     var i;
 
     //var objIds = doc.queryAllBlockReferences();
-    var objIds = PointMark.queryAllMarks(doc);
+    var objIds = PointMark.queryAllMarkIds(doc);
+
+    // same order as drawing order:
+    objIds = doc.getStorage().orderBackToFront(objIds);
+
+    // two passes: add benchmarks, add points:
     for (var p=0; p<2; p++) {
         for (i=0; i<objIds.length; i++) {
             var objId = objIds[i];
@@ -182,24 +310,48 @@ PointMark.getPointMarkTree = function(doc) {
                 continue;
             }
 
-            // first loop, not a benchmark:
+            // first pass, not a benchmark:
             if (p==0 && bmHandle!==blockRef.getHandle()) {
                 continue;
             }
 
-            // second loop, not a point mark:
+            // second pass, not a point mark:
             if (p==1 && bmHandle===blockRef.getHandle()) {
                 continue;
             }
 
             // query benchmark:
             var bm = doc.queryObjectByHandle(bmHandle);
-            if (isNull(bm)) {
-                continue;
+            var bmPos;
+            if (isNull(bm) || !isBlockReferenceEntity(bm)) {
+                if (isNull(handleMap[bmHandle])) {
+                    // add dummy benchmark entry on the fly:
+                    bmPos = new RVector(0,0);
+                    ret.push([[qsTr("Missing Benchmark") + " (0x" + bmHandle.toString(16) + ")",bmPos,blockRef.getLayerName(),bmHandle]]);
+                    handleMap[bmHandle] = ret.length-1;
+                    //qDebug("orphaned point mark (000): ", blockRef);
+                    //continue;
+                }
+                else {
+                    if (isNull(ret[handleMap[bmHandle]]) || ret[handleMap[bmHandle]].length===0) {
+                        debugger;
+                        continue;
+                    }
+                    if (isNull(ret[handleMap[bmHandle]][0]) || ret[handleMap[bmHandle]][0].length!==4) {
+                        debugger;
+                        continue;
+                    }
+
+                    bmPos = ret[handleMap[bmHandle]][0][1];
+                    //qDebug("existing dummy BM:", ret[handleMap[bmHandle]][0][0]);
+                }
+            }
+            else {
+                bmPos = bm.getPosition();
             }
 
-            var label = PointMark.getMarkLabel(doc, objId);
-            var pos = blockRef.getPosition().operator_subtract(bm.getPosition());
+            var label = PointMark.getMarkLabelText(doc, objId);
+            var pos = blockRef.getPosition().operator_subtract(bmPos);
 
             if (p===0) {
                 // benchmark found:
@@ -209,9 +361,11 @@ PointMark.getPointMarkTree = function(doc) {
             else {
                 // point mark found:
                 if (isNull(handleMap[bmHandle])) {
+                    qDebug("orphaned point mark (001): ", blockRef);
                     continue;
                 }
                 if (isNull(ret[handleMap[bmHandle]])) {
+                    qDebug("orphaned point mark (002): ", blockRef);
                     continue;
                 }
 
@@ -220,5 +374,81 @@ PointMark.getPointMarkTree = function(doc) {
         }
     }
 
+    // 20140428: no sorting / use creation order:
+    // sort by benchmark:
+//    ret.sort(function(a,b) {
+//        if (a[0].length===0) return -1;
+//        if (b[0].length===0) return 1;
+
+//        if (a[0][0] < b[0][0]) return -1;
+//        if (a[0][0] > b[0][0]) return 1;
+//        return 0;
+//    });
+
+    // sort each group by points:
+//    for (i=0; i<ret.length; i++) {
+//        ret[i] = [ret[i][0]].concat(
+//            ret[i].slice(1).sort(function(a,b) {
+//                if (a[0] < b[0]) return -1;
+//                if (a[0] > b[0]) return 1;
+//                return 0;
+//            })
+//        );
+//    }
+
+    // debugging:
+//    for (i=0; i<ret.length; i++) {
+//        for (var k=0; k<ret[i].length; k++) {
+//            if (k===0) {
+//                qDebug(ret[i][k]);
+//            }
+//            else {
+//                qDebug("\t" + ret[i][k]);
+//            }
+//        }
+//    }
+
     return ret;
+};
+
+/**
+ * \return True if the given text is a unique label.
+ */
+PointMark.isLabelUnique = function(doc, benchmarkHandle, text) {
+    var objIds = PointMark.queryAllMarkIds(doc);
+    for (var i=0; i<objIds.length; i++) {
+        var objId = objIds[i];
+        var blockRef = doc.queryObjectDirect(objId);
+        if (!isBlockReferenceEntity(blockRef)) {
+            continue;
+        }
+
+        var bmHandle = PointMark.getBenchmarkHandle(blockRef);
+        if (bmHandle!==benchmarkHandle) {
+            continue;
+        }
+
+        var label = PointMark.getMarkLabelText(doc, objId);
+        if (label.toLowerCase()===text.toLowerCase()) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+PointMark.getDock = function() {
+    var appWin = RMainWindowQt.getMainWindow();
+    if (isNull(appWin)) {
+        return undefined;
+    }
+    return appWin.findChild("PointMarkDock");
+};
+
+PointMark.getTreeWidget = function() {
+    var dock = PointMark.getDock();
+    if (isNull(dock)) {
+        return undefined;
+    }
+    return dock.findChild("PointMarkTree");
 };

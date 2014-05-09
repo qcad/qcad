@@ -36,6 +36,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="QString &amp;" typeName="QString"
         name="blockName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
         <arg type="RTransaction &amp;" typeName="RTransaction"
         name="transaction" isConst="false" />
         <arg type="bool" typeName="bool" name="selectionOnly"

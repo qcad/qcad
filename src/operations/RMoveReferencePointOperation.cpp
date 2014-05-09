@@ -52,7 +52,7 @@ RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool previ
         }
     }
         
-    transaction.end();
+    transaction.end(&document);
 
     return transaction;
 }

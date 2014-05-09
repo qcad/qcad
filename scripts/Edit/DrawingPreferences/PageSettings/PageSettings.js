@@ -153,7 +153,7 @@ PageSettings.updatePaperUnit = function(unit) {
     PageSettings.paperUnit = unit;
     var unitSymbol = "";
     if (isString(unit)) {
-        unit = parseInt(unit);
+        unit = parseInt(unit, 10);
     }
 
     unitSymbol = RUnit.unitToSymbol(unit);

@@ -214,6 +214,31 @@ void RMainWindow::notifyTransactionListeners(RDocument* document, RTransaction* 
 }
 
 /**
+ * Adds a listener for transaction in progress events.
+ */
+void RMainWindow::addInterTransactionListener(RInterTransactionListener* l) {
+    if (l != NULL) {
+        interTransactionListeners.push_back(l);
+    } else {
+        qWarning("RMainWindow::addInterTransactionListener(): Listener is NULL.");
+    }
+}
+
+void RMainWindow::removeInterTransactionListener(RInterTransactionListener* l) {
+    interTransactionListeners.removeAll(l);
+}
+
+/**
+ * Notifies all transaction in progress listeners.
+ */
+void RMainWindow::notifyInterTransactionListeners(RDocument* document, RTransaction* transaction) {
+    QList<RInterTransactionListener*>::iterator it;
+    for (it = interTransactionListeners.begin(); it != interTransactionListeners.end(); ++it) {
+        (*it)->updateInterTransactionListener(document, transaction);
+    }
+}
+
+/**
  * Adds a listener for snap mode changes. This can for example be 
  * a snap status widget.
  */

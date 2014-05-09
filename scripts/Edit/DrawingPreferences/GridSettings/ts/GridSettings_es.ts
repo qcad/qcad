@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>Grid</name>
     <message>
@@ -80,7 +80,7 @@
     <name>scrollArea</name>
     <message>
         <source>View 1</source>
-        <translation>Ver 1</translation>
+        <translation type="vanished">Ver 1</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
@@ -160,15 +160,15 @@
     </message>
     <message>
         <source>View 2</source>
-        <translation>Ver 2</translation>
+        <translation type="vanished">Ver 2</translation>
     </message>
     <message>
         <source>View 3</source>
-        <translation>Ver 3</translation>
+        <translation type="vanished">Ver 3</translation>
     </message>
     <message>
         <source>View 4</source>
-        <translation>Ver 4</translation>
+        <translation type="vanished">Ver 4</translation>
     </message>
 </context>
 </TS>

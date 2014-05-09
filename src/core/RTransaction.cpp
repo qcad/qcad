@@ -19,6 +19,7 @@
 #include "RDocument.h"
 #include "RExporter.h"
 #include "RLinkedStorage.h"
+#include "RMainWindow.h"
 #include "RMemoryStorage.h"
 #include "RStorage.h"
 #include "RTransaction.h"
@@ -36,7 +37,9 @@ RTransaction::RTransaction()
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
-      keepHandles(false) {
+      keepHandles(false),
+      undoing(false),
+      redoing(false) {
 }
 
 
@@ -56,7 +59,9 @@ RTransaction::RTransaction(RStorage& storage)
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
-      keepHandles(false) {
+      keepHandles(false),
+      undoing(false),
+      redoing(false) {
 }
 
 
@@ -87,7 +92,9 @@ RTransaction::RTransaction(
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
-      keepHandles(false) {
+      keepHandles(false),
+      undoing(false),
+      redoing(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -118,7 +125,9 @@ RTransaction::RTransaction(
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
-      keepHandles(false) {
+      keepHandles(false),
+      undoing(false),
+      redoing(false) {
 
 //    if (parent!=NULL) {
 //        parent->appendChild(*this);
@@ -137,6 +146,10 @@ RTransaction::~RTransaction() {
  * (Re-)applies this transaction to the document.
  */
 void RTransaction::redo(RDocument* document) {
+    if (document==NULL) {
+        return;
+    }
+
     // iterate through all objects that were affected by this transaction:
     for (int k=0; k<affectedObjectIds.size(); ++k) {
         RObject::Id objId = affectedObjectIds[k];
@@ -175,6 +188,7 @@ void RTransaction::redo(RDocument* document) {
             if (document!=NULL) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
+                    //qDebug() << "si: remove: " << *entity;
                     document->removeFromSpatialIndex(entity);
                 }
             }
@@ -192,13 +206,20 @@ void RTransaction::redo(RDocument* document) {
             if (document!=NULL) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
+                    // entity of the block might have changed (in block drag and drop):
+                    if (entity->getType()==RS::EntityBlockRef) {
+                        //entity->update();
+                        affectedBlockReferenceIds.append(objId);
+                    }
+                    //qDebug() << "si: add: " << *entity;
                     document->addToSpatialIndex(entity);
                 }
             }
         }
     }
 
-    updateOverwrittenBlockReferences();
+    updateAffectedBlockReferences();
+    undoing = true;
 }
 
 
@@ -207,6 +228,10 @@ void RTransaction::redo(RDocument* document) {
  * Undoes this transaction.
  */
 void RTransaction::undo(RDocument* document) {
+    if (document==NULL) {
+        return;
+    }
+
     // iterate through all objects that were affected by this transaction:
     for (int k=affectedObjectIds.size()-1; k>=0; --k) {
         RObject::Id objId = affectedObjectIds[k];
@@ -264,13 +289,19 @@ void RTransaction::undo(RDocument* document) {
             if (document!=NULL) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
+                    // entity of the block might have changed (in block drag and drop):
+                    if (entity->getType()==RS::EntityBlockRef) {
+                        //entity->update();
+                        affectedBlockReferenceIds.append(objId);
+                    }
                     document->addToSpatialIndex(entity);
                 }
             }
         }
     }
 
-    updateOverwrittenBlockReferences();
+    updateAffectedBlockReferences();
+    undoing = true;
 }
 
 /**
@@ -299,10 +330,15 @@ void RTransaction::endCycle() {
 /**
  * Saves this command to the storage of the document.
  */
-void RTransaction::commit() {
+void RTransaction::commit(RDocument* document) {
     if (failed) {
         //qWarning() << "RTransaction::commit: transaction is in state 'failed'";
         //return;
+    }
+
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+    if (mainWindow!=NULL) {
+        mainWindow->notifyInterTransactionListeners(document, this);
     }
 
     if (affectedObjectIds.size()>0) {
@@ -314,7 +350,7 @@ void RTransaction::commit() {
         qWarning() << "RTransaction::commit: last cycle not closed";
     }
 
-    updateOverwrittenBlockReferences();
+    updateAffectedBlockReferences();
 }
 
 void RTransaction::fail() {
@@ -327,21 +363,21 @@ void RTransaction::rollback() {
     storage->rollbackTransaction();
 }
 
-void RTransaction::end() {
+void RTransaction::end(RDocument* document) {
     // 20111028: always commit for now
     // (paste partly to locked layer: at least paste what can be pasted)
     //if (failed) {
     //    rollback();
     //} else {
-        commit();
+        commit(document);
     //}
 }
 
-void RTransaction::updateOverwrittenBlockReferences() {
+void RTransaction::updateAffectedBlockReferences() {
     // update spatial index entries of block references which reference
     // overwritten blocks:
     QList<RObject::Id>::iterator it;
-    for (it=overwrittenBlockReferences.begin(); it!=overwrittenBlockReferences.end(); ++it) {
+    for (it=affectedBlockReferenceIds.begin(); it!=affectedBlockReferenceIds.end(); ++it) {
         QSharedPointer<REntity> entity = storage->queryEntityDirect(*it);
         if (entity.isNull()) {
             continue;
@@ -402,7 +438,7 @@ bool RTransaction::overwriteBlock(QSharedPointer<RBlock> block) {
             if (!e.isNull() && !e->isUndone()) {
                 e->setReferencedBlockId(block->getId());
                 addObject(e, false);
-                overwrittenBlockReferences.append(*it);
+                affectedBlockReferenceIds.append(*it);
             }
         }
     }

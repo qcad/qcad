@@ -4,19 +4,24 @@
 <context>
     <name>PointMark</name>
     <message>
-        <location filename="../PointMark.js" line="72"/>
+        <location filename="../PointMark.js" line="+72"/>
         <source>Point Mark Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja točk označevanja</translation>
     </message>
     <message>
-        <location filename="../PointMark.js" line="77"/>
+        <location line="+5"/>
         <source>Show point mark tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja točk označevanja</translation>
     </message>
     <message>
-        <location filename="../PointMark.js" line="94"/>
+        <location line="+17"/>
         <source>&amp;Point Mark</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Točka označevanja</translation>
+    </message>
+    <message>
+        <location line="+236"/>
+        <source>Missing Benchmark</source>
+        <translation>Manjka izhodišče</translation>
     </message>
 </context>
 </TS>

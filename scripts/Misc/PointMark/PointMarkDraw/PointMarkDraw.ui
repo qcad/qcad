@@ -6,46 +6,41 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>659</width>
-    <height>46</height>
+    <width>772</width>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="label">
      <property name="text">
-      <string>Benchmark Label:</string>
+      <string>Benchmark:</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="BenchmarkLabel">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+    <widget class="QComboBox" name="Benchmark"/>
+   </item>
+   <item>
+    <widget class="QToolButton" name="AddBenchmark">
+     <property name="toolTip">
+      <string>Add new benchmark</string>
      </property>
-     <property name="minimumSize">
-      <size>
-       <width>50</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="text">
-      <string notr="true">BM</string>
+     <property name="icon">
+      <iconset>
+       <normaloff>AddBenchmark.svg</normaloff>AddBenchmark.svg</iconset>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line_2">
+    <widget class="Line" name="SPointLabel">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="LPointLabel">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -95,10 +90,77 @@
       <string>Auto append counter to label</string>
      </property>
      <property name="text">
-      <string>Add counter</string>
+      <string>Add Counter</string>
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>X:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="X">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>X Coordinate</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Y:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Y">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Y Coordinate</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Set">
+     <property name="icon">
+      <iconset>
+       <normaloff>Tick.svg</normaloff>Tick.svg</iconset>
      </property>
     </widget>
    </item>

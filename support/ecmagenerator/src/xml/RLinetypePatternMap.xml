@@ -9,6 +9,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" />
     <constructor>
       <variant />
+      <variant>
+        <arg type="RLinetypePatternMap *"
+        typeName="RLinetypePatternMap *" name="" isConst="true" />
+      </variant>
     </constructor>
     <method name="getPattern" cppName="getPattern"
     specifier="public" isStatic="true" isVirtual="false"

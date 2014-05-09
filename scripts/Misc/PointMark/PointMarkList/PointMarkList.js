@@ -17,7 +17,9 @@
  * along with QCAD.
  */
 
-include("../../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
+include("../PointMarkDraw/PointMarkDraw.js");
+
 
 function PointMarkList(guiAction) {
     Widgets.call(this, guiAction);
@@ -47,7 +49,11 @@ PointMarkList.prototype.finishEvent = function() {
     this.getGuiAction().setChecked(dock.visible);
 };
 
-PointMarkList.itemClicked = function(item, col) {
+PointMarkList.itemClicked = function(item, prevItem) {
+    if (isNull(item)) {
+        return;
+    }
+
     var handle = item.data(0, Qt.UserRole);
     var di = EAction.getDocumentInterface();
     if (isNull(di)) {
@@ -60,45 +66,91 @@ PointMarkList.itemClicked = function(item, col) {
     if (!isBlockReferenceEntity(blockRef)) {
         return;
     }
-    var box = blockRef.getBoundingBox();
 
-    // find attribute(s):
-    var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
-    if (attribIds.length!==0) {
-        for (var i=0; i<attribIds.length; i++) {
-            var attribId = attribIds[i];
-            var attrib = doc.queryEntityDirect(attribId);
-            if (!isAttributeEntity(attrib)) {
-                continue;
-            }
-
-            box.growToInclude(attrib.getBoundingBox());
-        }
+    if (!blockRef.isSelected()) {
+        di.selectEntity(blockRef.getId());
     }
+
+    // if we are drawing marks, set current parent benchmark:
+    if (PointMark.getBenchmarkHandle(blockRef)===handle) {
+        PointMarkDraw.setBenchmark(handle);
+    }
+
+    // zoom to mark:
+//    var box = blockRef.getBoundingBox();
+
+//    // find attribute(s):
+//    var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
+//    if (attribIds.length!==0) {
+//        for (var i=0; i<attribIds.length; i++) {
+//            var attribId = attribIds[i];
+//            var attrib = doc.queryEntityDirect(attribId);
+//            if (!isAttributeEntity(attrib)) {
+//                continue;
+//            }
+
+//            box.growToInclude(attrib.getBoundingBox());
+//        }
+//    }
 
     var view = di.getLastKnownViewWithFocus();
     if (isNull(view)) {
         return;
     }
 
-    view.zoomTo(box, Math.min(view.getWidth(), view.getHeight())*0.4);
+//    view.zoomTo(box, Math.min(view.getWidth(), view.getHeight())*0.4);
+
+    // only pan to mark:
+    view.centerToPoint(blockRef.getPosition());
 };
 
-PointMarkList.updateFromDocument = function(di) {
-    var appWin = RMainWindowQt.getMainWindow();
-    var pointMarkTree = appWin.findChild("PointMarkTree");
-    pointMarkTree.clear();
+PointMarkList.updateFromDocument = function(doc) {
+    if (isOfType(doc, RDocumentInterface)) {
+        doc = doc.getDocument();
+    }
 
-    if (isNull(di)) {
-        // no document open, abort.
+    var appWin = RMainWindowQt.getMainWindow();
+    var dock = appWin.findChild("PointMarkDock");
+    if (!dock.visible) {
         return;
     }
 
-    var tree = PointMark.getPointMarkTree(di.getDocument());
+    var treeWidget = appWin.findChild("PointMarkTree");
+    var scaleCombo = appWin.findChild("Scale");
+    var labelSizeCombo = appWin.findChild("LabelSize");
+    scaleCombo.setEditText(isNull(doc) ? 1.0 : doc.getVariable("PointMarkScale", 1.0));
+    //labelSizeCombo.setEditText(isNull(doc) ? 1.0 : doc.getVariable("PointMarkLabelSize", 1.0));
+
+    var currentItem = treeWidget.currentItem();
+
+    var selectedHandle = PointMarkDraw.getBenchmark();
+
+    if (!isNull(currentItem) && isNull(selectedHandle)) {
+        selectedHandle = currentItem.data(0, Qt.UserRole);
+    }
+
+    if (isNull(doc)) {
+        // no document open, abort.
+        treeWidget.blockSignals(true);
+        treeWidget.clear();
+        treeWidget.blockSignals(false);
+        return;
+    }
+
+    if (doc.getCurrentBlockId()!==doc.getModelSpaceBlockId()) {
+        // not in model space:
+        return;
+    }
+
+    treeWidget.blockSignals(true);
+    treeWidget.clear();
+    treeWidget.blockSignals(false);
+
+    var treeData = PointMark.getPointMarkTree(doc);
     var item;
 
-    for (var i=0; i<tree.length; i++) {
-        var list = tree[i];
+    for (var i=0; i<treeData.length; i++) {
+        var list = treeData[i];
 
         var rootItem = undefined;
         for (var k=0; k<list.length; k++) {
@@ -115,10 +167,13 @@ PointMarkList.updateFromDocument = function(di) {
             item.setTextAlignment(1, Qt.AlignRight);
             item.setTextAlignment(2, Qt.AlignRight);
             item.setTextAlignment(3, Qt.AlignRight);
+            // make editable:
+            //var flags = new Qt.ItemFlags(item.flags() | Qt.ItemIsEditable);
+            //item.setFlags(flags);
 
             if (k===0) {
                 item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Benchmark.svg"));
-                pointMarkTree.addTopLevelItem(item);
+                treeWidget.addTopLevelItem(item);
                 rootItem = item;
             }
             else {
@@ -129,68 +184,320 @@ PointMarkList.updateFromDocument = function(di) {
                 item.setIcon(0, new QIcon(PointMarkList.includeBasePath + "/Point.svg"));
                 rootItem.setExpanded(true);
                 rootItem.addChild(item);
-                rootItem.sortChildren(0, Qt.AscendingOrder);
+                //rootItem.sortChildren(0, Qt.AscendingOrder);
+            }
+
+            if (list[k][3]===selectedHandle) {
+                treeWidget.setCurrentItem(item);
             }
         }
     }
 
-    pointMarkTree.sortItems(0, Qt.AscendingOrder);
+    //treeWidget.sortItems(0, Qt.AscendingOrder);
     for (var col=0; col<4; col++) {
-        pointMarkTree.resizeColumnToContents(col);
+        treeWidget.resizeColumnToContents(col);
     }
+
+    treeWidget.blockSignals(false);
 };
 
 PointMarkList.updateFromTransaction = function(doc, transaction) {
+    //qDebug("PointMarkList.updateFromTransaction: ", transaction);
     // TODO: find out if any marks were affected at all:
-    PointMarkList.updateFromDocument(EAction.getDocumentInterface());
-    return;
+    PointMarkList.updateFromDocument(doc);
+};
 
-    /*
-
-    if (isNull(doc) || isNull(transaction)) {
+PointMarkList.updateLeaders = function(doc, transaction) {
+    if (isNull(doc)) {
+        qDebug("PointMarkList.updateLeaders: doc is NULL");
         return;
     }
+    var storage = doc.getStorage();
 
-    var appWin = RMainWindowQt.getMainWindow();
-    var pointMarkTree = appWin.findChild("PointMarkTree");
+    //var i, attributeId, attribute;
+    //objIds,
 
-    // find out what has changed:
-    var objIds = transaction.getAffectedObjects();
-    for (var i=0; i<objIds.length; i++) {
-        var objId = objIds[i];
-        var blockRef = doc.queryObjectDirect(objId);
+    var affectedIds = transaction.getAffectedObjects();
+
+    // update existing leaders:
+    // query all auto leaders:
+    //objIds = PointMark.queryAllAutoLeaders(doc);
+    for (var i=0; i<affectedIds.length; i++) {
+        var attributeId = affectedIds[i];
+
+        // is the object an attribute:
+        var attribute = doc.queryObject(attributeId);
+        if (!isAttributeEntity(attribute) || !getInBlockEasyDragAndDrop(attribute)) {
+            continue;
+        }
+
+        // is the attribute in a point mark block:
+        var blockId = attribute.getBlockId();
+        var blockName = doc.getBlockName(blockId);
+        if (!blockName.toLowerCase().startsWith("a$")) {
+            continue;
+        }
+
+        // query block entities:
+        var entityIds = doc.queryBlockEntities(blockId);
+
+        // find leader:
+        var leader = undefined;
+        for (var k=0; k<entityIds.length; k++) {
+            var entityId = entityIds[k];
+            leader = doc.queryEntity(entityId);
+            if (!isLeaderEntity(leader)) {
+                continue;
+            }
+            else {
+                break;
+            }
+        }
+
+        if (isNull(leader)) {
+            continue;
+        }
+
+        // attribute:
+//        var attributeHandle = PointMark.getFromHandle(attribute);
+//        var attribute = doc.queryObjectByHandle(attributeHandle);
+//        var attributeId = RObject.INVALID_ID;
+//        if (isAttributeEntity(attribute) && !attribute.isUndone()) {
+//            attributeId = attribute.getId();
+//        }
+
+        // block ref:
+//        var blockRefHandle = PointMark.getToHandle(attribute);
+//        var blockRef = doc.queryObjectByHandle(blockRefHandle);
+//        var blockRefId = RObject.INVALID_ID;
+//        if (isBlockReferenceEntity(blockRef) && !blockRef.isUndone()) {
+//            blockRefId = blockRef.getId();
+//        }
+
+        // check if one of the linked entities has changed:
+//        if (!affectedIds.contains(attributeId) &&
+//            !affectedIds.contains(blockRefId)) {
+//            // leader remains unchanged:
+//            continue;
+//        }
+
+        var line = new RLine(leader.getStartPoint(), leader.getEndPoint());
+
+        // update leader position:
+        leader.clear();
+        //if (blockRefId!==RObject.INVALID_ID) {
+            line.setStartPoint(new RVector(0,0));
+        //}
+        //if (attributeId!==RObject.INVALID_ID) {
+            line.setEndPoint(attribute.getAlignmentPoint());
+            // gap to attribute:
+            var ep = line.getPointsWithDistanceToEnd(attribute.getHeight()/4, RS.FromEnd);
+            if (ep.length===1) {
+                line.setEndPoint(ep[0]);
+            }
+        //}
+
+        leader.appendVertex(line.getStartPoint());
+        leader.appendVertex(line.getEndPoint());
+
+        transaction.addObject(leader, false);
+
+        //if (attributeId!==RObject.INVALID_ID) {
+            // update attribute alignment based on angle:
+            var ang = attribute.getAlignmentPoint().getAngle();
+            // top:
+            if (RMath.isAngleBetween(ang, Math.PI/4*1, Math.PI/4*3, false)) {
+                attribute.setHAlign(RS.HAlignCenter);
+                attribute.setVAlign(RS.VAlignBottom);
+            }
+            // bottom:
+            else if (RMath.isAngleBetween(ang, Math.PI/4*5, Math.PI/4*7, false)) {
+                attribute.setHAlign(RS.HAlignCenter);
+                attribute.setVAlign(RS.VAlignTop);
+            }
+            // right:
+            else if (RMath.isAngleBetween(ang, Math.PI/4*7, Math.PI/4*1, false)) {
+                attribute.setHAlign(RS.HAlignLeft);
+                attribute.setVAlign(RS.VAlignMiddle);
+            }
+            // left:
+            else if (RMath.isAngleBetween(ang, Math.PI/4*3, Math.PI/4*5, false)) {
+                attribute.setHAlign(RS.HAlignRight);
+                attribute.setVAlign(RS.VAlignMiddle);
+            }
+            transaction.addObject(attribute, false);
+        //}
+    }
+
+
+    /*
+    // create missing leaders (on load only):
+    //var op = new RAddObjectsOperation();
+    if (isNull(transaction) || transaction.getText()==="Importing") {
+        // loading drawing: update all:
+        objIds = PointMark.queryAllMarkIds(doc);
+    }
+    else {
+        // ignore undo / redo (handled internally):
+        if (transaction.isUndoing() || transaction.isRedoing()) {
+            return;
+        }
+
+        objIds = transaction.getAffectedObjects();
+        transaction.setKeepHandles(true);
+    }
+    var found = false;
+    for (i=0; i<objIds.length; i++) {
+        objId = objIds[i];
+        blockRef = doc.queryObjectDirect(objId);
+        //qDebug(blockRef);
         if (!isBlockReferenceEntity(blockRef)) {
             continue;
         }
 
-        var handle = PointMark.getBenchmarkHandle(blockRef);
-        if (handle===RObject.INVALID_HANDLE) {
+        //debugger;
+
+        // not a point mark:
+        if (PointMark.getBenchmarkHandle(blockRef)===RObject.INVALID_HANDLE) {
             continue;
         }
 
-        var label = PointMark.getMarkLabel(doc, objId);
-        var pos = blockRef.getPosition();
-
-        // block ref is a benchmark:
-        if (handle===blockRef.getHandle()) {
-            var item = new QTreeWidgetItem(
-                [
-                    label,
-                    RUnit.doubleToString(pos.x, 2),
-                    RUnit.doubleToString(pos.y, 2),
-                    RUnit.doubleToString(pos.z, 2),
-                    blockRef.getLayerName()
-                ]
-            );
-            pointMarkTree.addTopLevelItem(item);
+        // query block attrib:
+        var attrib = PointMark.getMarkLabel(doc, blockRef.getId());
+        if (isNull(attrib)) {
+            continue;
         }
-        // block ref is a point mark:
-        else {
 
+        // get leader handle from custom property:
+        var leaderHandle = PointMark.getLeaderHandle(blockRef);
+
+        // query leader:
+        leader = doc.queryObjectByHandle(leaderHandle);
+        if (isNull(leader) || !isLeaderEntity(leader)) {
+            // no leader exists for this mark: create new leader with fixed handle:
+            leader = new RLeaderEntity(doc, new RLeaderData(new RPolyline(), false));
+            storage.setObjectHandle(leader, storage.getNewObjectHandle());
         }
+
+        leader.clear();
+        leader.appendVertex(blockRef.getPosition());
+        leader.appendVertex(attrib.getPosition());
+        leader.setCustomProperty("QCAD", "From", "0x" + attrib.getHandle().toString(16));
+        leader.setCustomProperty("QCAD", "To", "0x" + blockRef.getHandle().toString(16));
+        //op.addObject(leader);
+
+        transaction.addObject(leader);
+        found = true;
     }
+
+//    if (found) {
+//        // adjust leaders:
+//        var trans = EAction.getDocumentInterface().applyOperation(op);
+
+//        // link block refs to leaders:
+//        objIds = trans.getAffectedObjects();
+//        for (i=0; i<objIds.length; i++) {
+//            objId = objIds[i];
+//            leader = doc.queryObjectDirect(objId);
+//            if (!isLeaderEntity(leader)) {
+//                continue;
+//            }
+
+//            var blockRefId = leader.getCustomProperty("QCAD", "blockRefId", RObject.INVALID_ID);
+//            if (blockRefId===RObject.INVALID_ID) {
+//                debugger;
+//                continue;
+//            }
+
+//            blockRef = doc.queryObjectDirect(blockRefId);
+//            PointMark.setLeaderHandle(blockRef, leader.getHandle());
+//            leader.removeCustomProperty("QCAD", "blockRefId");
+//        }
+//    }
     */
 };
+
+/**
+ * Called when user adjusts scale factor of point marks.
+ */
+PointMarkList.setScale = function(str) {
+    var f = parseFloat(str, 10);
+
+    var di = EAction.getDocumentInterface();
+    if (isNull(di)) {
+        return;
+    }
+    var doc = di.getDocument();
+
+    var op = new RAddObjectsOperation();
+    var ids = PointMark.queryAllMarkIds(doc, 'a');
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+
+        var blockRef = doc.queryEntity(id);
+        if (isNull(blockRef) || !isBlockReferenceEntity(blockRef)) {
+            continue;
+        }
+
+        blockRef.setScaleFactors(new RVector(f,f,f));
+        op.addObject(blockRef, false);
+    }
+
+    di.applyOperation(op);
+
+    doc.setVariable("PointMarkScale", f);
+};
+
+/**
+ * Called when user adjusts label size.
+ */
+//PointMarkList.setLabelSize = function(str) {
+//    if (str.length===0) {
+//        return;
+//    }
+//    var h = parseFloat(str, 10);
+//    if (h<RS.PointTolerance) {
+//        return;
+//    }
+
+//    var di = EAction.getDocumentInterface();
+//    if (isNull(di)) {
+//        return;
+//    }
+//    var doc = di.getDocument();
+
+//    var op = new RAddObjectsOperation();
+//    var ids = PointMark.queryAllMarkIds(doc, 'a');
+//    for (var i=0; i<ids.length; i++) {
+//        var id = ids[i];
+
+//        var blockRef = doc.queryEntity(id);
+//        if (isNull(blockRef) || !isBlockReferenceEntity(blockRef)) {
+//            continue;
+//        }
+
+//        var attribIds = doc.queryChildEntities(blockRef.getId(), RS.EntityAttribute);
+//        if (attribIds.length===0) {
+//            continue;
+//        }
+
+//        for (var k=0; k<attribIds.length; k++) {
+//            var attribId = attribIds[k];
+//            var attrib = doc.queryEntity(attribId);
+//            if (isNull(attrib)) {
+//                continue;
+//            }
+
+//            attrib.setTextHeight(h);
+//            op.addObject(attrib);
+//        }
+//    }
+
+//    di.applyxOperation(op);
+
+//    doc.setVariable("PointMarkLabelSize", h);
+//};
+
 
 PointMarkList.init = function(basePath) {
     if (!hasPlugin("DWG")) {
@@ -210,27 +517,54 @@ PointMarkList.init = function(basePath) {
 
     var formWidget = WidgetFactory.createWidget(basePath, "PointMarkList.ui");
 
-    var pointMarkTree = formWidget.findChild("PointMarkTree");
-    pointMarkTree.itemClicked.connect(PointMarkList, "itemClicked");
-    pointMarkTree.header().resizeSection(0, 150);
-    pointMarkTree.header().resizeSection(1, 80);
-    pointMarkTree.header().resizeSection(2, 80);
-    pointMarkTree.header().resizeSection(3, 80);
+    // set up tree widget:
+    //var treeWidget = formWidget.findChild("PointMarkTree");
+    var treeWidget = new QTreeWidget(formWidget);
+    treeWidget.objectName = "PointMarkTree";
+    formWidget.layout().addWidget(treeWidget, 0, 0);
+    treeWidget.columnCount = 5;
+    treeWidget.setHeaderLabels([qsTr("Label"), "X", "Y", "Z", "Layer"]);
+    treeWidget.header().resizeSection(0, 50);
+    treeWidget.header().resizeSection(1, 20);
+    treeWidget.header().resizeSection(2, 20);
+    treeWidget.header().resizeSection(3, 20);
 
+    treeWidget.itemClicked.connect(PointMarkList, "itemClicked");
+    //treeWidget.currentItemChanged.connect(PointMarkList, "itemClicked");
+
+//  context menu for promoting points (on hold):
+//    treeWidget.contextMenuRequested.connect(
+//        function() {
+//        }
+//    );
+
+    var scaleCombo = formWidget.findChild("Scale");
+    scaleCombo.insertPolicy = QComboBox.InsertAtTop;
+    scaleCombo["currentIndexChanged(QString)"].connect(PointMarkList, "setScale");
+
+//    var labelSizeCombo = formWidget.findChild("LabelSize");
+//    labelSizeCombo.insertPolicy = QComboBox.InsertAtTop;
+//    labelSizeCombo["currentIndexChanged(QString)"].connect(PointMarkList, "setLabelSize");
+
+    // set up tool buttons:
     var widgets = getWidgets(formWidget);
     widgets["PointMarkDraw"].setDefaultAction(
             RGuiAction.getByScriptFile("scripts/Misc/PointMark/PointMarkDraw/PointMarkDraw.js"));
     widgets["PointMarkExport"].setDefaultAction(
             RGuiAction.getByScriptFile("scripts/Misc/PointMark/PointMarkExport/PointMarkExport.js"));
 
+    // set up dock widget:
     var dock = new RDockWidget(qsTr("Point Mark List"), appWin);
     dock.objectName = "PointMarkDock";
     dock.setWidget(formWidget);
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
-
-    dock.shown.connect(function() { action.setChecked(true); });
-    dock.hidden.connect(function() { action.setChecked(false); });
-
+    dock.shown.connect(function() {
+        action.setChecked(true);
+        PointMarkList.updateFromDocument(EAction.getDocumentInterface());
+    });
+    dock.hidden.connect(function() {
+        action.setChecked(false);
+    });
     dock.visible = false;
 
     // create a transaction listener to keep widget up to date:
@@ -238,6 +572,12 @@ PointMarkList.init = function(basePath) {
     appWin.addTransactionListener(tAdapter);
     tAdapter.transactionUpdated.connect(PointMarkList, "updateFromTransaction");
 
+    // create a transaction listener to add / adjust leaders:
+    var tiAdapter = new RInterTransactionListenerAdapter();
+    appWin.addInterTransactionListener(tiAdapter);
+    tiAdapter.transactionInProgress.connect(PointMarkList, "updateLeaders");
+
+    // create a focus listener to keep widget up to date if document changes:
     var fAdapter = new RFocusListenerAdapter();
     appWin.addFocusListener(fAdapter);
     fAdapter.focusUpdated.connect(PointMarkList, "updateFromDocument");

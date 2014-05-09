@@ -28,6 +28,9 @@ dir="./core" filename="RMainWindow.h">
   <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RInterTransactionListener.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -438,6 +441,56 @@ dir="./core" filename="RMainWindow.h">
     <name>void</name>
   </type>
   <name>notifyTransactionListeners</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocument</name>*</type>
+      <name>document</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>addInterTransactionListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RInterTransactionListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>removeInterTransactionListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RInterTransactionListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>notifyInterTransactionListeners</name>
   <parameter_list>(
   <param>
     <decl>
@@ -1285,6 +1338,17 @@ dir="./core" filename="RMainWindow.h">
       RTransactionListener</name>*</argument>&gt;</argument_list></name>
     </type>
     <name>transactionListeners</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+      <name>
+      RInterTransactionListener</name>*</argument>&gt;</argument_list></name>
+    </type>
+    <name>interTransactionListeners</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

@@ -29,7 +29,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation type="unfinished">Wymiar</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+86"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -113,7 +113,7 @@ Jednostki geometryczne</translatorcomment>
         <translation type="unfinished">Jednostki geometryczne</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+138"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka / Format</translation>
@@ -125,7 +125,7 @@ Jednostki geometryczne</translatorcomment>
         <translation type="unfinished">Jednostka rysunek musi być &quot;Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+20"/>
+        <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -134,7 +134,7 @@ Rozmiary</translatorcomment>
         <translation type="unfinished">Rozmiary</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Keep proportions</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -182,7 +182,12 @@ Rozmiar strzałki:</translatorcomment>
         <translation type="unfinished">Rozmiar strzałki:</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+95"/>
+        <source>Size scale factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
         <translatorcomment>--google--
 Styl strzałki:
@@ -235,8 +240,8 @@ Strzałka architektoniczna</translatorcomment>
         <translation type="unfinished">&amp;Dokładność:</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+62"/>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -244,7 +249,7 @@ Pokaż końcowe zera</translatorcomment>
         <translation type="unfinished">Pokaż końcowe zera</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiary kątowe</translation>
@@ -258,7 +263,7 @@ F&amp;ormat:</translatorcomment>
         <translation type="unfinished">F&amp;ormat:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -266,7 +271,7 @@ F&amp;ormat:</translatorcomment>
         <translation type="unfinished">&amp;Dokładność:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
         <translatorcomment>--exact match--

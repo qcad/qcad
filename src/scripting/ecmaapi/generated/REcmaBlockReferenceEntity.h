@@ -80,6 +80,9 @@
         getScaleFactors
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setScaleFactors
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getRotation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -99,6 +102,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         applyTransformationTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        mapToBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

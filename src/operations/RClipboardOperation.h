@@ -47,8 +47,7 @@ public:
     virtual ~RClipboardOperation() {}
     
 protected:
-    void copy(
-        RDocument& src, RDocument& dest,
+    void copy(RDocument& src, RDocument& dest,
         const RVector& offset,
         double scale,
         double rotation,
@@ -59,6 +58,7 @@ protected:
         bool overwriteLayers,
         bool overwriteBlocks,
         const QString& blockName,
+        const QString& layerName,
         RTransaction& transaction,
         bool selectionOnly, bool clear,
         bool toModelSpaceBlock,

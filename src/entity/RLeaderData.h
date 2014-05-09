@@ -94,9 +94,12 @@ public:
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
         Q_UNUSED(queryBox)
 
-        return QList<QSharedPointer<RShape> >()
-                << QSharedPointer<RShape>(new RPolyline(*this))
-                << QSharedPointer<RShape>(new RTriangle(getArrowShape()));
+        QList<QSharedPointer<RShape> > ret;
+        ret << QSharedPointer<RShape>(new RPolyline(*this));
+        if (arrowHead) {
+            ret << QSharedPointer<RShape>(new RTriangle(getArrowShape()));
+        }
+        return ret;
     }
 
     RTriangle getArrowShape() const;

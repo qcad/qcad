@@ -426,7 +426,7 @@ LibraryBrowser.linkClicked = function(url) {
     // type is 'c' for category or 't' for tag:
     var type = fragment[0];
 
-    var id = parseInt(fragment.substring(1));
+    var id = parseInt(fragment.substring(1), 10);
 
     if (type==='t') {
         // toggle tag:

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>299</width>
-    <height>369</height>
+    <width>310</width>
+    <height>335</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -28,6 +28,112 @@
    </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="leftMargin">
+      <number>12</number>
+     </property>
+     <property name="rightMargin">
+      <number>12</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Symbol Scale:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="Scale">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentText">
+        <string notr="true">1</string>
+       </property>
+       <property name="currentIndex">
+        <number>5</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">0.01</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.05</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.25</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">50</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">100</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">150</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">200</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">250</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <property name="spacing">
       <number>0</number>
      </property>
@@ -64,41 +170,6 @@
       </widget>
      </item>
     </layout>
-   </item>
-   <item>
-    <widget class="QTreeWidget" name="PointMarkTree">
-     <attribute name="headerDefaultSectionSize">
-      <number>40</number>
-     </attribute>
-     <attribute name="headerHighlightSections">
-      <bool>false</bool>
-     </attribute>
-     <column>
-      <property name="text">
-       <string>Label</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string notr="true">X</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string notr="true">Y</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string notr="true">Z</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Layer</string>
-      </property>
-     </column>
-    </widget>
    </item>
   </layout>
  </widget>

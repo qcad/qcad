@@ -47,7 +47,7 @@
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+52"/>
         <source>Add custom property to selected objects</source>
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation type="obsolete">Milieu</translation>
     </message>
     <message>
-        <location line="-437"/>
+        <location line="-435"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -136,7 +136,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+157"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -165,7 +165,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+317"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Éditeur de propriétés</translation>

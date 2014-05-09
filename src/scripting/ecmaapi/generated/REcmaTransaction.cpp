@@ -72,6 +72,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setKeepHandles, "setKeepHandles");
             
+            REcmaHelper::registerFunction(&engine, proto, isUndoing, "isUndoing");
+            
+            REcmaHelper::registerFunction(&engine, proto, isRedoing, "isRedoing");
+            
             REcmaHelper::registerFunction(&engine, proto, isUndoable, "isUndoable");
             
             REcmaHelper::registerFunction(&engine, proto, isFailed, "isFailed");
@@ -82,7 +86,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, end, "end");
             
-            REcmaHelper::registerFunction(&engine, proto, updateOverwrittenBlockReferences, "updateOverwrittenBlockReferences");
+            REcmaHelper::registerFunction(&engine, proto, updateAffectedBlockReferences, "updateAffectedBlockReferences");
             
             REcmaHelper::registerFunction(&engine, proto, setId, "setId");
             
@@ -1004,6 +1008,104 @@
             return result;
         }
          QScriptValue
+        REcmaTransaction::isUndoing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::isUndoing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::isUndoing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("isUndoing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isUndoing();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.isUndoing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::isUndoing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransaction::isRedoing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::isRedoing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::isRedoing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("isRedoing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isRedoing();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.isRedoing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::isRedoing", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTransaction::isUndoable
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1280,16 +1382,34 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+    
     ){
     // prepare arguments:
     
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->end();
+               self->end(a0);
     } else
 
 
@@ -1302,19 +1422,19 @@
             return result;
         }
          QScriptValue
-        REcmaTransaction::updateOverwrittenBlockReferences
+        REcmaTransaction::updateAffectedBlockReferences
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTransaction::updateOverwrittenBlockReferences", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::updateOverwrittenBlockReferences";
+            //REcmaHelper::functionStart("REcmaTransaction::updateAffectedBlockReferences", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::updateAffectedBlockReferences";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RTransaction* self = 
-                        getSelf("updateOverwrittenBlockReferences", context);
+                        getSelf("updateAffectedBlockReferences", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1333,16 +1453,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->updateOverwrittenBlockReferences();
+               self->updateAffectedBlockReferences();
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.updateOverwrittenBlockReferences().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.updateAffectedBlockReferences().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTransaction::updateOverwrittenBlockReferences", context, engine);
+            //REcmaHelper::functionEnd("REcmaTransaction::updateAffectedBlockReferences", context, engine);
             return result;
         }
          QScriptValue

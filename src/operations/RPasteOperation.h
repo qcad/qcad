@@ -95,6 +95,12 @@ public:
     QString getBlockName() {
         return this->blockName;
     }
+    void setLayerName(const QString& layerName) {
+        this->layerName = layerName;
+    }
+    QString getLayerName() {
+        return this->layerName;
+    }
     void setAttribute(const QString& tag, const QString& value) {
         attributes.insert(tag, value);
     }
@@ -114,6 +120,7 @@ private:
     bool overwriteLayers;
     bool overwriteBlocks;
     QString blockName;
+    QString layerName;
     QMap<QString, QString> attributes;
 };
 

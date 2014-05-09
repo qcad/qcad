@@ -35,7 +35,8 @@ DimensionSettings.dimx = [
             ["DIMEXE", RS.DIMEXE, 0.5],
             ["DIMEXO", RS.DIMEXO, 0.25],
             ["DIMGAP", RS.DIMGAP, 0.25],
-            ["DIMASZ", RS.DIMASZ, 1.0]
+            ["DIMASZ", RS.DIMASZ, 1.0],
+            ["DIMSCALE", RS.DIMSCALE, undefined],
         ];
 
 /**
@@ -266,7 +267,9 @@ DimensionSettings.keepProportions = function(value, widgets) {
     if (widgets["KeepProportions"].checked) {
         for (var i=1; i<DimensionSettings.dimx.length; i++) {
             var item = DimensionSettings.dimx[i];
-            widgets[item[0]].setValue(value*item[2]);
+            if (!isNull(item[2])) {
+                widgets[item[0]].setValue(value*item[2]);
+            }
         }
     }
 };

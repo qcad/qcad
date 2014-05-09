@@ -94,6 +94,6 @@ RTransaction RMixedOperation::apply(RDocument& document, bool preview) const {
         }
     }
 
-    transaction.end();
+    transaction.end(&document);
     return transaction;
 }

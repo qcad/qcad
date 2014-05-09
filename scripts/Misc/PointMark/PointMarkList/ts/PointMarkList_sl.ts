@@ -4,24 +4,24 @@
 <context>
     <name>PointMarkList</name>
     <message>
-        <location filename="../PointMarkList.js" line="199"/>
+        <location filename="../PointMarkList.js" line="+509"/>
         <source>&amp;Show / Hide Point Mark List</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži / &amp;Skrij seznam točk označevanja</translation>
     </message>
     <message>
-        <location filename="../PointMarkList.js" line="223"/>
+        <location line="+48"/>
         <source>Point Mark List</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam točk označevanja</translation>
     </message>
     <message>
-        <location filename="../PointMarkList.ui" line="78"/>
+        <location filename="../PointMarkList.ui" line="+46"/>
+        <source>Symbol Scale:</source>
+        <translation>Velikost simbola:</translation>
+    </message>
+    <message>
+        <location filename="../PointMarkList.js" line="-31"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../PointMarkList.ui" line="98"/>
-        <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Napis</translation>
     </message>
 </context>
 </TS>

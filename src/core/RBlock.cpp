@@ -27,6 +27,7 @@ RPropertyTypeId RBlock::PropertyFrozen;
 RBlock::RBlock() :
     RObject(),
     frozen(false),
+    anonymous(false),
     origin(RVector::invalid) {
 }
 
@@ -35,6 +36,7 @@ RBlock::RBlock(RDocument* document, const QString& name,
     RObject(document),
     name(name.trimmed()),
     frozen(false),
+    anonymous(false),
     origin(origin) {
 }
 
@@ -114,5 +116,7 @@ void RBlock::print(QDebug dbg) const {
     RObject::print(dbg);
     dbg.nospace() << ", name: " << getName()
             << ", origin: " << getOrigin()
+            << ", frozen: " << isFrozen()
+            << ", anonymouse: " << isAnonymous()
             << ")";
 }

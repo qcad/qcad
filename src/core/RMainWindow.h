@@ -24,6 +24,7 @@
 
 #include <QMutex>
 
+#include "RInterTransactionListener.h"
 #include "RTransactionListener.h"
 #include "RPropertyEvent.h"
 #include "RMessageHandler.h"
@@ -119,6 +120,10 @@ public:
     void addTransactionListener(RTransactionListener* l);
     void removeTransactionListener(RTransactionListener* l);
     void notifyTransactionListeners(RDocument* document, RTransaction* transaction = NULL);
+
+    void addInterTransactionListener(RInterTransactionListener* l);
+    void removeInterTransactionListener(RInterTransactionListener* l);
+    void notifyInterTransactionListeners(RDocument* document, RTransaction* transaction = NULL);
 
     void addSnapListener(RSnapListener* l);
     void removeSnapListener(RSnapListener* l);
@@ -248,6 +253,7 @@ protected:
     QList<RViewListener*> viewListeners;
     QList<RPenListener*> penListeners;
     QList<RTransactionListener*> transactionListeners;
+    QList<RInterTransactionListener*> interTransactionListeners;
     QList<RSnapListener*> snapListeners;
     QList<RFocusListener*> focusListeners;
     QList<RViewFocusListener*> viewFocusListeners;

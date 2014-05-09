@@ -43,6 +43,7 @@ RTransaction RCopyOperation::apply(RDocument& document, bool preview) const {
         true,                 // overwriteLayers
         false,                // overwriteBlocks
         QString(),            // blockName
+        QString(),            // layerName
         transaction,
         true,                 // selectionOnly
         true,                 // clear
@@ -50,7 +51,7 @@ RTransaction RCopyOperation::apply(RDocument& document, bool preview) const {
         preview
     );
 
-    transaction.end();
+    transaction.end(&document);
     return transaction;
 }
 

@@ -218,5 +218,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="mapToBlock" cppName="mapToBlock"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

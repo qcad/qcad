@@ -67,12 +67,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+21"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+136"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>
@@ -92,7 +92,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+317"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation type="unfinished"></translation>

@@ -103,6 +103,84 @@ private:
     QString getRichTextForBlock(const QString& blockText,
                                 const QList<QTextLayout::FormatRange>& formats);
 
+    void setBlockFont(const QString& f) {
+        if (!blockFont.isEmpty()) {
+            blockFont.top() = f;
+        }
+    }
+
+    QString getBlockFont() const {
+        if (!blockFont.isEmpty()) {
+            return blockFont.top();
+        }
+        return "";
+    }
+
+    void setUseCadFont(bool on) {
+        if (!useCadFont.isEmpty()) {
+            useCadFont.top() = on;
+        }
+    }
+
+    bool getUseCadFont() const {
+        if (!useCadFont.isEmpty()) {
+            return useCadFont.top();
+        }
+        return false;
+    }
+
+    void setBlockBold(bool on) {
+        if (!blockBold.isEmpty()) {
+            blockBold.top() = on;
+        }
+    }
+
+    bool getBlockBold() const {
+        if (!blockBold.isEmpty()) {
+            return blockBold.top();
+        }
+        return false;
+    }
+
+    void setBlockItalic(bool on) {
+        if (!blockItalic.isEmpty()) {
+            blockItalic.top() = on;
+        }
+    }
+
+    bool getBlockItalic() const {
+        if (!blockItalic.isEmpty()) {
+            return blockItalic.top();
+        }
+        return false;
+    }
+
+    void setBlockHeight(double h) {
+        if (!blockHeight.isEmpty()) {
+            blockHeight.top() = h;
+        }
+    }
+
+    double getBlockHeight() const {
+        if (!blockHeight.isEmpty()) {
+            return blockHeight.top();
+        }
+        return 1.0;
+    }
+
+    void setCurrentFormat(QTextCharFormat f) {
+        if (!currentFormat.isEmpty()) {
+            currentFormat.top() = f;
+        }
+    }
+
+    QTextCharFormat getCurrentFormat() const {
+        if (!currentFormat.isEmpty()) {
+            return currentFormat.top();
+        }
+        return QTextCharFormat();
+    }
+
 public:
     static QString rxLineFeed;
     static QString rxParagraphFeed;

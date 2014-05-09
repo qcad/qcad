@@ -9,7 +9,7 @@
         <translation>%1 初回実行</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+185"/>
         <source>Black</source>
         <translation>黒</translation>
     </message>

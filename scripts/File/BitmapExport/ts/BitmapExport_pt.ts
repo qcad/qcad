@@ -19,7 +19,7 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <translation>Exportação como bitmap</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+126"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Erro ao gerar arquivo Bitmap &apos;%1&apos;: %2</translation>

@@ -135,6 +135,8 @@
 #include "REcmaImageEntity.h"
 #include "REcmaImporter.h"
 #include "REcmaInputEvent.h"
+#include "REcmaInterTransactionListener.h"
+#include "REcmaInterTransactionListenerAdapter.h"
 #include "REcmaLayer.h"
 #include "REcmaLayerListener.h"
 #include "REcmaLayerListenerAdapter.h"
@@ -508,6 +510,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSelectionListenerAdapter::init(*engine);
     REcmaTransactionListener::init(*engine);
     REcmaTransactionListenerAdapter::init(*engine);
+    REcmaInterTransactionListener::init(*engine);
+    REcmaInterTransactionListenerAdapter::init(*engine);
     REcmaSnapListener::init(*engine);
 
     REcmaGuiAction::init(*engine);

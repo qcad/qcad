@@ -434,7 +434,7 @@ ItemPeer.getIdsByTagIdsRecursive = function(tagIds) {
 
     var ret2 = [];
     for (var i=0; i<ret.length; i++) {
-        ret2.push(parseInt(ret[i]));
+        ret2.push(parseInt(ret[i], 10));
     }
     ret2.sortNumerical();
     return ret2;

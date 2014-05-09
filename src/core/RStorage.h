@@ -94,7 +94,7 @@ public:
      * \return A set of all entity IDs of the document.
      */
     virtual QSet<REntity::Id> queryAllEntities(bool undone = false,
-            bool allBlocks = false) = 0;
+            bool allBlocks = false, RS::EntityType type = RS::EntityAll) = 0;
 
     /**
      * \return A set of all UCS IDs of the document.

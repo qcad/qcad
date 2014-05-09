@@ -86,7 +86,7 @@ dir="./operations" filename="RClipboardOperation.h">
     <name>void</name>
   </type>
   <name>copy</name>
-  <parameter_list>( 
+  <parameter_list>(
   <param>
     <decl>
       <type>
@@ -179,6 +179,14 @@ dir="./operations" filename="RClipboardOperation.h">
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>blockName</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>layerName</name>
     </decl>
   </param>, 
   <param>

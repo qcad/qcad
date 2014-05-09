@@ -135,6 +135,10 @@ public:
         return getData().getTextHeight();
     }
 
+    void setTextHeight(double h) {
+        getData().setTextHeight(h);
+    }
+
     double getTextWidth() const {
         return getData().getTextWidth();
     }
@@ -150,8 +154,16 @@ public:
         return getData().getVAlign();
     }
 
+    void setVAlign(RS::VAlign va) {
+        getData().setVAlign(va);
+    }
+
     RS::HAlign getHAlign() const {
         return getData().getHAlign();
+    }
+
+    void setHAlign(RS::HAlign ha) {
+        getData().setHAlign(ha);
     }
 
     QString getFontName() const {

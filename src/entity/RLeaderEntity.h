@@ -111,11 +111,13 @@ public:
         return data.countVertices();
     }
 
-    void appendVertex(const RVector& vertex) {
+    void appendVertex(const RVector& vertex, double bulge=0.0) {
+        Q_UNUSED(bulge);
         data.appendVertex(vertex);
     }
 
-    void prependVertex(const RVector& vertex) {
+    void prependVertex(const RVector& vertex, double bulge=0.0) {
+        Q_UNUSED(bulge);
         data.prependVertex(vertex);
     }
 
@@ -125,6 +127,10 @@ public:
 
     RVector getVertexAt(int i) const {
         return data.getVertexAt(i);
+    }
+
+    void setVertexAt(int i, const RVector& v) {
+        data.setVertexAt(i, v);
     }
 
     void removeLastVertex() {

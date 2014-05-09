@@ -291,6 +291,9 @@
         getCurrentViewId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTempBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

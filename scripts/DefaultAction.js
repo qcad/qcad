@@ -38,9 +38,10 @@ DefaultAction.State = {
     Dragging : 1,
     SettingCorner2 : 2,
     MovingEntity : 3,
-    SettingEntity : 4,
-    MovingReference : 5,
-    SettingReference : 6
+    MovingEntityInBlock : 4,
+    SettingEntity : 5,
+    MovingReference : 6,
+    SettingReference : 7
 };
 
 DefaultAction.prototype.beginEvent = function() {
@@ -54,6 +55,8 @@ DefaultAction.prototype.beginEvent = function() {
     this.di = this.getDocumentInterface();
     this.document = this.getDocument();
     this.setState(DefaultAction.State.Neutral);
+    this.blockRefId = RObject.INVALID_ID;
+    this.entityInBlockId = RObject.INVALID_ID;
 };
 
 DefaultAction.prototype.setState = function(state) {
@@ -64,6 +67,7 @@ DefaultAction.prototype.setState = function(state) {
     if (this.state === DefaultAction.State.MovingReference
             || this.state === DefaultAction.State.SettingReference
             || this.state === DefaultAction.State.MovingEntity
+            || this.state === DefaultAction.State.MovingEntityInBlock
             || this.state === DefaultAction.State.SettingEntity) {
         this.di.setClickMode(RAction.PickCoordinate);
         this.setCrosshairCursor();
@@ -108,6 +112,11 @@ DefaultAction.prototype.setState = function(state) {
                 qsTr("Specify target point of selection")
         );
         this.setRightMouseTip("");
+        break;
+    case DefaultAction.State.MovingEntityInBlock:
+        this.setLeftMouseTip(
+                qsTr("Move entity to desired location")
+        );
         break;
     default:
         break;
@@ -171,7 +180,55 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                 // if the dragging started on top of an entity,
                 // start moving the entity:
                 entityId = view.getClosestEntity(this.d1Screen, this.rangePixels, false);
-                if (entityId !== -1 && this.document.hasSelection()) {
+
+                // in block easy drag and drop:
+                if (entityId !== RObject.INVALID_ID) {
+                    var doc = this.getDocument();
+                    if (!isNull(doc)) {
+                        var entity = doc.queryEntityDirect(entityId);
+                        if (isBlockReferenceEntity(entity)) {
+                            var blockId = entity.getReferencedBlockId();
+                            var block = doc.queryBlock(blockId);
+                            if (!isNull(block)) {
+                                // cursor, mapped to block coordinates:
+                                var pBlock = entity.mapToBlock(this.d1Model);
+                                var box = new RBox(
+                                    pBlock.operator_subtract(new RVector(range,range)),
+                                    pBlock.operator_add(new RVector(range,range))
+                                );
+                                var res = doc.queryIntersectedEntitiesXY(box, true, false, blockId);
+                                var entityInBlockId;
+                                if (res.length===1) {
+                                    entityInBlockId = res[0];
+                                }
+                                else {
+                                    entityInBlockId = doc.queryClosestXY(res, pBlock, range*2, false);
+                                }
+                                var entityInBlock = doc.queryEntityDirect(entityInBlockId);
+                                if (!isNull(entityInBlock) && getInBlockEasyDragAndDrop(entityInBlock)) {
+                                    var refP = entityInBlock.getReferencePoints();
+                                    if (refP.length>0) {
+                                        this.d1Model = refP[0]; //entity.mapToBlock(refP[0]);
+                                    }
+                                    else {
+                                        this.d1Model = pBlock;
+                                    }
+                                    this.entityInBlockId = entityInBlockId;
+                                    this.blockRefId = entityId;
+                                    this.setState(DefaultAction.State.MovingEntityInBlock);
+                                    var guiAction = RGuiAction.getByScriptFile("scripts/Snap/SnapFree/SnapFree.js");
+                                    if (!isNull(guiAction)) {
+                                        guiAction.slotTrigger();
+                                    }
+                                    this.di.setSnap(new RSnapFree());
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (entityId !== RObject.INVALID_ID && this.document.hasSelection()) {
                     // move start point of dragging operation to closest
                     // reference point:
                     // TODO: use auto snap instead here (optional?):
@@ -199,11 +256,41 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         );
         break;
 
+    // easy in block entity drag and drop (point mark labels):
+//    case DefaultAction.State.MovingEntityInBlock:
+//        this.moveEntityInBlock(event.getModelPosition(), true);
+//        break;
+
     default:
         break;
     }
 };
 
+//DefaultAction.prototype.moveEntityInBlock = function(pos, preview) {
+//    var doc = this.getDocument();
+//    if (isNull(doc)) {
+//        break;
+//    }
+//    var blockRef = doc.queryEntity(this.blockRefId);
+//    if (isNull(blockRef)) {
+//        break;
+//    }
+//    this.d2Model = blockRef.mapToBlock(pos);
+//    var entityInBlock = doc.queryEntity(this.entityInBlockId);
+//    entityInBlock.move(this.d2Model.operator_subtract(this.d1Model));
+//    var operation = new RAddObjectsOperation();
+//    operation.addObject(entityInBlock, false);
+//    if (preview) {
+//        this.di.previewOperation(operation);
+//    }
+//    else {
+//        doc.removeFromSpatialIndex(blockRef);
+//        this.di.applyOperation(operation);
+//        blockRef.update();
+//        doc.addToSpatialIndex(blockRef);
+//        this.setState(DefaultAction.State.Neutral);
+//    }
+//};
 
 DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
@@ -222,6 +309,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             var range = view.mapDistanceFromView(this.rangePixels);
 
             var entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
+            //qDebug(entityId);
             if (entityId !== -1) {
                 if (add && this.document.isSelected(entityId)) {
                     this.deselectEntity(entityId);
@@ -259,11 +347,16 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             this.setState(DefaultAction.State.Neutral);
             break;
 
+        // easy in block entity drag and drop (point mark labels):
+//        case DefaultAction.State.MovingEntityInBlock:
+//            this.moveEntityInBlock(event.getModelPosition(), false);
+//            break;
+
         default:
             break;
         }
     } else if (event.button() == Qt.RightButton) {
-        if (this.state!=DefaultAction.State.Neutral) {
+        if (this.state!==DefaultAction.State.Neutral && this.state!==DefaultAction.State.MovingEntityInBlock) {
             this.di.clearPreview();
             this.di.repaintViews();
             this.setState(DefaultAction.State.Neutral);
@@ -306,59 +399,154 @@ DefaultAction.prototype.escapeEvent = function(event) {
     this.setState(DefaultAction.State.Neutral);
 };
 
-DefaultAction.prototype.coordinateEvent = function(event) {
-    var operation;
-
-    switch (this.state) {
-    case DefaultAction.State.MovingReference:
-        this.setState(DefaultAction.State.SettingReference);
-        break;
-    case DefaultAction.State.SettingReference:
-        this.d2Model = event.getModelPosition();
-        operation = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
-        this.di.applyOperation(operation);
-        this.di.clearPreview();
-        this.di.repaintViews();
-        CadToolBar.back();
-        this.setState(DefaultAction.State.Neutral);
-        break;
-    case DefaultAction.State.MovingEntity:
-        this.setState(DefaultAction.State.SettingEntity);
-        break;
-    case DefaultAction.State.SettingEntity:
-        this.d2Model = event.getModelPosition();
-        operation = new RMoveSelectionOperation(this.d1Model, this.d2Model);
-        this.di.applyOperation(operation);
-        this.di.clearPreview();
-        this.di.repaintViews();
-        CadToolBar.back();
-        this.setState(DefaultAction.State.Neutral);
-        break;
-    default:
-        break;
-    }
-};
-
-DefaultAction.prototype.coordinateEventPreview = function(event) {
+DefaultAction.prototype.pickCoordinate = function(event, preview) {
     var operation;
 
     switch (this.state) {
     case DefaultAction.State.MovingReference:
     case DefaultAction.State.SettingReference:
-        this.d2Model = event.getModelPosition();
-        operation = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
-        this.di.previewOperation(operation);
+        if (preview) {
+            this.d2Model = event.getModelPosition();
+            operation = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
+            this.di.previewOperation(operation);
+        }
+        else {
+            if (this.state===DefaultAction.State.MovingReference) {
+                this.setState(DefaultAction.State.SettingReference);
+            }
+            else {
+                this.d2Model = event.getModelPosition();
+                operation = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
+                this.di.applyOperation(operation);
+                this.di.clearPreview();
+                this.di.repaintViews();
+                CadToolBar.back();
+                this.setState(DefaultAction.State.Neutral);
+            }
+        }
         break;
+
     case DefaultAction.State.MovingEntity:
     case DefaultAction.State.SettingEntity:
-        this.d2Model = event.getModelPosition();
-        operation = new RMoveSelectionOperation(this.d1Model, this.d2Model);
-        this.di.previewOperation(operation);
+        if (preview) {
+            this.d2Model = event.getModelPosition();
+            operation = new RMoveSelectionOperation(this.d1Model, this.d2Model);
+            this.di.previewOperation(operation);
+        }
+        else {
+            if (this.state===DefaultAction.State.MovingEntity) {
+                this.setState(DefaultAction.State.SettingEntity);
+            }
+            else {
+                this.d2Model = event.getModelPosition();
+                operation = new RMoveSelectionOperation(this.d1Model, this.d2Model);
+                this.di.applyOperation(operation);
+                this.di.clearPreview();
+                this.di.repaintViews();
+                CadToolBar.back();
+                this.setState(DefaultAction.State.Neutral);
+            }
+        }
         break;
+
+    // easy in block entity drag and drop (point mark labels):
+    case DefaultAction.State.MovingEntityInBlock:
+        var doc = this.getDocument();
+        if (isNull(doc)) {
+            break;
+        }
+        var blockRef = doc.queryEntity(this.blockRefId);
+        if (isNull(blockRef)) {
+            break;
+        }
+        this.d2Model = blockRef.mapToBlock(event.getModelPosition());
+        var entityInBlock = doc.queryEntity(this.entityInBlockId);
+        entityInBlock.move(this.d2Model.operator_subtract(this.d1Model));
+        operation = new RAddObjectsOperation();
+        operation.addObject(entityInBlock, false);
+        if (preview) {
+            this.di.previewOperation(operation);
+        }
+        else {
+            doc.removeFromSpatialIndex(blockRef);
+            this.di.applyOperation(operation);
+            blockRef.update();
+            doc.addToSpatialIndex(blockRef);
+            this.setState(DefaultAction.State.Neutral);
+            var guiAction = RGuiAction.getByScriptFile("scripts/Snap/SnapAuto/SnapAuto.js");
+            if (!isNull(guiAction)) {
+                guiAction.slotTrigger();
+            }
+            this.di.setSnap(new RSnapAuto());
+        }
+        break;
+
     default:
         break;
     }
 };
+
+//DefaultAction.prototype.coordinateEvent = function(event) {
+//    var operation;
+
+//    switch (this.state) {
+//    case DefaultAction.State.MovingReference:
+//        this.setState(DefaultAction.State.SettingReference);
+//        break;
+//    case DefaultAction.State.SettingReference:
+//        this.d2Model = event.getModelPosition();
+//        operation = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
+//        this.di.applyOperation(operation);
+//        this.di.clearPreview();
+//        this.di.repaintViews();
+//        CadToolBar.back();
+//        this.setState(DefaultAction.State.Neutral);
+//        break;
+//    case DefaultAction.State.MovingEntity:
+//        this.setState(DefaultAction.State.SettingEntity);
+//        break;
+//    case DefaultAction.State.MovingEntityInBlock:
+//        var doc = this.getDocument();
+//        if (isNull(doc)) {
+//            break;
+//        }
+//        var blockRef = doc.queryEntityDirect(this.blockRefId);
+//        if (isNull(blockRef)) {
+//            break;
+//        }
+//        this.d2Model = blockRef.mapToBlock(event.getModelPosition());
+//        qDebug("moving label from: ", this.d1Model);
+//        qDebug("moving label to: ", this.d2Model);
+//        var entityInBlock = doc.queryEntity(this.entityInBlockId);
+//        entityInBlock.move(this.d2Model.operator_subtract(this.d1Model));
+//        operation = new RAddObjectOperation(entityInBlock);
+//        //operation = new RMoveSelectionOperation(this.d1Model, this.d2Model);
+//        var currentBlockId = doc.getCurrentBlockId();
+//        doc.setCurrentBlock(blockRef.getReferencedBlockId());
+//        this.di.applyOperation(operation);
+//        doc.setCurrentBlock(currentBlockId);
+//        //this.di.clearPreview();
+//        //this.di.repaintViews();
+//        //CadToolBar.back();
+//        this.setState(DefaultAction.State.Neutral);
+//        break;
+//    case DefaultAction.State.SettingEntity:
+//        this.d2Model = event.getModelPosition();
+//        operation = new RMoveSelectionOperation(this.d1Model, this.d2Model);
+//        this.di.applyOperation(operation);
+//        this.di.clearPreview();
+//        this.di.repaintViews();
+//        CadToolBar.back();
+//        this.setState(DefaultAction.State.Neutral);
+//        break;
+//    default:
+//        break;
+//    }
+//};
+
+//DefaultAction.prototype.coordinateEventPreview = function(event) {
+
+//};
 
 
 /**
@@ -419,11 +607,15 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId) {
         isAttributeEntity(entity) ||
         isAttributeDefinitionEntity(entity)) {
 
-        include("scripts/Modify/EditText/EditText.js");
-        EditText.editText(entity);
+        if (RSettings.getBoolValue("GraphicsView/DoubleClickEditText", true)===true) {
+            include("scripts/Modify/EditText/EditText.js");
+            EditText.editText(entity);
+        }
     }
     else if (isBlockReferenceEntity(entity)) {
-        include("scripts/Block/Block.js");
-        Block.editBlock(this.di, entity.getReferencedBlockName());
+        if (RSettings.getBoolValue("GraphicsView/DoubleClickEditBlock", false)===true) {
+            include("scripts/Block/Block.js");
+            Block.editBlock(this.di, entity.getReferencedBlockName());
+        }
     }
 };

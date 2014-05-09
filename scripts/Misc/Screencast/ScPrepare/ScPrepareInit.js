@@ -1,4 +1,7 @@
 function init(basePath) {
+    // disabled for now:
+    return;
+
     var action = new RGuiAction("&Prepare Window Position", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ScPrepare.js");

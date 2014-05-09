@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RInterTransactionListenerAdapter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QObject" specifier="public" />
+    <baseClass name="RInterTransactionListener"
+    specifier="public" />
+    <method name="updateInterTransactionListener"
+    cppName="updateInterTransactionListener" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *" name="doc"
+        hasDefault="true" default=" NULL" isConst="false" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

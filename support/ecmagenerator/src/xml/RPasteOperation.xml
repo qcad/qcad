@@ -125,6 +125,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="setLayerName" cppName="setLayerName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getLayerName" cppName="getLayerName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="setAttribute" cppName="setAttribute"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

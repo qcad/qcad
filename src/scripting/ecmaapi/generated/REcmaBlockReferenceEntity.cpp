@@ -90,6 +90,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getScaleFactors, "getScaleFactors");
             
+            REcmaHelper::registerFunction(&engine, proto, setScaleFactors, "setScaleFactors");
+            
             REcmaHelper::registerFunction(&engine, proto, getRotation, "getRotation");
             
             REcmaHelper::registerFunction(&engine, proto, setReferencedBlockId, "setReferencedBlockId");
@@ -103,6 +105,8 @@
             REcmaHelper::registerFunction(&engine, proto, queryEntity, "queryEntity");
             
             REcmaHelper::registerFunction(&engine, proto, applyTransformationTo, "applyTransformationTo");
+            
+            REcmaHelper::registerFunction(&engine, proto, mapToBlock, "mapToBlock");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RBlockReferenceEntity*>(), *proto);
@@ -1407,6 +1411,73 @@
             return result;
         }
          QScriptValue
+        REcmaBlockReferenceEntity::setScaleFactors
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceEntity::setScaleFactors", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceEntity::setScaleFactors";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("setScaleFactors", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScaleFactors(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setScaleFactors().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::setScaleFactors", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaBlockReferenceEntity::getRotation
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1807,6 +1878,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::applyTransformationTo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceEntity::mapToBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceEntity::mapToBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceEntity::mapToBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("mapToBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->mapToBlock(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.mapToBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::mapToBlock", context, engine);
             return result;
         }
          QScriptValue REcmaBlockReferenceEntity::toString

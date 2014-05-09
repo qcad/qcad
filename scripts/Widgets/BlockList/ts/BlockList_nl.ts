@@ -4,9 +4,15 @@
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../BlockList.js" line="+274"/>
+        <location filename="../BlockList.js" line="+255"/>
+        <location line="+37"/>
         <location line="+34"/>
         <source>Block List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-71"/>
+        <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

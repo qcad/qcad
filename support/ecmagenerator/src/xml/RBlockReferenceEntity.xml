@@ -99,6 +99,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
+    <method name="setScaleFactors" cppName="setScaleFactors"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector" typeName="RVector" name="sf"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getRotation" cppName="getRotation"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -145,6 +153,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="REntity &amp;" typeName="REntity" name="entity"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="mapToBlock" cppName="mapToBlock"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
       </variant>
     </method>
     <property name="PropertyCustom" type="RPropertyTypeId"
