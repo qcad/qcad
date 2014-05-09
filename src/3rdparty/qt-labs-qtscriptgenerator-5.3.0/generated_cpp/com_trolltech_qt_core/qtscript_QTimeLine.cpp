@@ -81,8 +81,8 @@ static QScriptValue qtscript_QTimeLine_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QTimeLine*)
 Q_DECLARE_METATYPE(QtScriptShell_QTimeLine*)
-Q_DECLARE_METATYPE(QTimeLine::Direction)
 Q_DECLARE_METATYPE(QTimeLine::State)
+Q_DECLARE_METATYPE(QTimeLine::Direction)
 Q_DECLARE_METATYPE(QTimeLine::CurveShape)
 
 static QScriptValue qtscript_create_enum_class_helper(
@@ -97,73 +97,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QTimeLine::Direction
-//
-
-static const QTimeLine::Direction qtscript_QTimeLine_Direction_values[] = {
-    QTimeLine::Forward
-    , QTimeLine::Backward
-};
-
-static const char * const qtscript_QTimeLine_Direction_keys[] = {
-    "Forward"
-    , "Backward"
-};
-
-static QString qtscript_QTimeLine_Direction_toStringHelper(QTimeLine::Direction value)
-{
-    if ((value >= QTimeLine::Forward) && (value <= QTimeLine::Backward))
-        return qtscript_QTimeLine_Direction_keys[static_cast<int>(value)-static_cast<int>(QTimeLine::Forward)];
-    return QString();
-}
-
-static QScriptValue qtscript_QTimeLine_Direction_toScriptValue(QScriptEngine *engine, const QTimeLine::Direction &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTimeLine"));
-    return clazz.property(qtscript_QTimeLine_Direction_toStringHelper(value));
-}
-
-static void qtscript_QTimeLine_Direction_fromScriptValue(const QScriptValue &value, QTimeLine::Direction &out)
-{
-    out = qvariant_cast<QTimeLine::Direction>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTimeLine_Direction(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QTimeLine::Forward) && (arg <= QTimeLine::Backward))
-        return qScriptValueFromValue(engine,  static_cast<QTimeLine::Direction>(arg));
-    return context->throwError(QString::fromLatin1("Direction(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTimeLine_Direction_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTimeLine::Direction value = qscriptvalue_cast<QTimeLine::Direction>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTimeLine_Direction_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTimeLine::Direction value = qscriptvalue_cast<QTimeLine::Direction>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTimeLine_Direction_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTimeLine_Direction_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTimeLine_Direction,
-        qtscript_QTimeLine_Direction_valueOf, qtscript_QTimeLine_Direction_toString);
-    qScriptRegisterMetaType<QTimeLine::Direction>(engine, qtscript_QTimeLine_Direction_toScriptValue,
-        qtscript_QTimeLine_Direction_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTimeLine_Direction_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTimeLine_Direction_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -230,6 +163,73 @@ static QScriptValue qtscript_create_QTimeLine_State_class(QScriptEngine *engine,
     for (int i = 0; i < 3; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QTimeLine_State_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QTimeLine_State_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QTimeLine::Direction
+//
+
+static const QTimeLine::Direction qtscript_QTimeLine_Direction_values[] = {
+    QTimeLine::Forward
+    , QTimeLine::Backward
+};
+
+static const char * const qtscript_QTimeLine_Direction_keys[] = {
+    "Forward"
+    , "Backward"
+};
+
+static QString qtscript_QTimeLine_Direction_toStringHelper(QTimeLine::Direction value)
+{
+    if ((value >= QTimeLine::Forward) && (value <= QTimeLine::Backward))
+        return qtscript_QTimeLine_Direction_keys[static_cast<int>(value)-static_cast<int>(QTimeLine::Forward)];
+    return QString();
+}
+
+static QScriptValue qtscript_QTimeLine_Direction_toScriptValue(QScriptEngine *engine, const QTimeLine::Direction &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTimeLine"));
+    return clazz.property(qtscript_QTimeLine_Direction_toStringHelper(value));
+}
+
+static void qtscript_QTimeLine_Direction_fromScriptValue(const QScriptValue &value, QTimeLine::Direction &out)
+{
+    out = qvariant_cast<QTimeLine::Direction>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTimeLine_Direction(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QTimeLine::Forward) && (arg <= QTimeLine::Backward))
+        return qScriptValueFromValue(engine,  static_cast<QTimeLine::Direction>(arg));
+    return context->throwError(QString::fromLatin1("Direction(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTimeLine_Direction_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTimeLine::Direction value = qscriptvalue_cast<QTimeLine::Direction>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTimeLine_Direction_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTimeLine::Direction value = qscriptvalue_cast<QTimeLine::Direction>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTimeLine_Direction_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTimeLine_Direction_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTimeLine_Direction,
+        qtscript_QTimeLine_Direction_valueOf, qtscript_QTimeLine_Direction_toString);
+    qScriptRegisterMetaType<QTimeLine::Direction>(engine, qtscript_QTimeLine_Direction_toScriptValue,
+        qtscript_QTimeLine_Direction_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTimeLine_Direction_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTimeLine_Direction_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -492,10 +492,10 @@ QScriptValue qtscript_create_QTimeLine_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QTimeLine_static_call, proto, qtscript_QTimeLine_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("Direction"),
-        qtscript_create_QTimeLine_Direction_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("State"),
         qtscript_create_QTimeLine_State_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Direction"),
+        qtscript_create_QTimeLine_Direction_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("CurveShape"),
         qtscript_create_QTimeLine_CurveShape_class(engine, ctor));
     return ctor;

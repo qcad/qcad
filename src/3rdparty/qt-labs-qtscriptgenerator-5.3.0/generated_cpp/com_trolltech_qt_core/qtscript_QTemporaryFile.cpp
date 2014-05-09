@@ -9,9 +9,13 @@
 #include <qtemporaryfile.h>
 #include <QVariant>
 #include <qbytearray.h>
+#include <qcoreevent.h>
 #include <qfile.h>
+#include <qlist.h>
 #include <qobject.h>
 #include <qtemporaryfile.h>
+
+#include "qtscriptshell_QTemporaryFile.h"
 
 static const char * const qtscript_QTemporaryFile_function_names[] = {
     "QTemporaryFile"
@@ -70,6 +74,7 @@ static QScriptValue qtscript_QTemporaryFile_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QTemporaryFile*)
+Q_DECLARE_METATYPE(QtScriptShell_QTemporaryFile*)
 Q_DECLARE_METATYPE(QFile*)
 
 //
@@ -166,26 +171,30 @@ static QScriptValue qtscript_QTemporaryFile_static_call(QScriptContext *context,
         return context->throwError(QString::fromLatin1("QTemporaryFile(): Did you forget to construct with 'new'?"));
     }
     if (context->argumentCount() == 0) {
-        QTemporaryFile* _q_cpp_result = new QTemporaryFile();
-        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+        QtScriptShell_QTemporaryFile* _q_cpp_result = new QtScriptShell_QTemporaryFile();
+        QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QTemporaryFile*)_q_cpp_result, QScriptEngine::AutoOwnership);
+        _q_cpp_result->__qtscript_self = _q_result;
         return _q_result;
     } else if (context->argumentCount() == 1) {
         if (context->argument(0).isQObject()) {
             QObject* _q_arg0 = context->argument(0).toQObject();
-            QTemporaryFile* _q_cpp_result = new QTemporaryFile(_q_arg0);
-            QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+            QtScriptShell_QTemporaryFile* _q_cpp_result = new QtScriptShell_QTemporaryFile(_q_arg0);
+            QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QTemporaryFile*)_q_cpp_result, QScriptEngine::AutoOwnership);
+            _q_cpp_result->__qtscript_self = _q_result;
             return _q_result;
         } else if (context->argument(0).isString()) {
             QString _q_arg0 = context->argument(0).toString();
-            QTemporaryFile* _q_cpp_result = new QTemporaryFile(_q_arg0);
-            QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+            QtScriptShell_QTemporaryFile* _q_cpp_result = new QtScriptShell_QTemporaryFile(_q_arg0);
+            QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QTemporaryFile*)_q_cpp_result, QScriptEngine::AutoOwnership);
+            _q_cpp_result->__qtscript_self = _q_result;
             return _q_result;
         }
     } else if (context->argumentCount() == 2) {
         QString _q_arg0 = context->argument(0).toString();
         QObject* _q_arg1 = context->argument(1).toQObject();
-        QTemporaryFile* _q_cpp_result = new QTemporaryFile(_q_arg0, _q_arg1);
-        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+        QtScriptShell_QTemporaryFile* _q_cpp_result = new QtScriptShell_QTemporaryFile(_q_arg0, _q_arg1);
+        QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QTemporaryFile*)_q_cpp_result, QScriptEngine::AutoOwnership);
+        _q_cpp_result->__qtscript_self = _q_result;
         return _q_result;
     }
     break;
@@ -194,7 +203,7 @@ static QScriptValue qtscript_QTemporaryFile_static_call(QScriptContext *context,
     if (context->argumentCount() == 1) {
         if (qscriptvalue_cast<QFile*>(context->argument(0))) {
 
-        QFile & _q_arg0 = *qscriptvalue_cast<QFile*>(context->argument(0));
+            QFile & _q_arg0 = *qscriptvalue_cast<QFile*>(context->argument(0));
                     QTemporaryFile* _q_result = QTemporaryFile::createLocalFile(_q_arg0);
             return qScriptValueFromValue(context->engine(), _q_result);
         } else if (context->argument(0).isString()) {
@@ -209,8 +218,8 @@ static QScriptValue qtscript_QTemporaryFile_static_call(QScriptContext *context,
     if (context->argumentCount() == 1) {
         if (qscriptvalue_cast<QFile*>(context->argument(0))) {
 
-        QFile & _q_arg0 = *qscriptvalue_cast<QFile*>(context->argument(0));
-                    QTemporaryFile* _q_result = QTemporaryFile::createNativeFile(_q_arg0);
+            QFile & _q_arg0 = *qscriptvalue_cast<QFile*>(context->argument(0));
+                      QTemporaryFile* _q_result = QTemporaryFile::createNativeFile(_q_arg0);
             return qScriptValueFromValue(context->engine(), _q_result);
         } else if (context->argument(0).isString()) {
             QString _q_arg0 = context->argument(0).toString();
@@ -228,6 +237,16 @@ static QScriptValue qtscript_QTemporaryFile_static_call(QScriptContext *context,
         qtscript_QTemporaryFile_function_signatures[_id]);
 }
 
+static QScriptValue qtscript_QTemporaryFile_toScriptValue(QScriptEngine *engine, QTemporaryFile* const &in)
+{
+    return engine->newQObject(in, QScriptEngine::QtOwnership, QScriptEngine::PreferExistingWrapperObject);
+}
+
+static void qtscript_QTemporaryFile_fromScriptValue(const QScriptValue &value, QTemporaryFile* &out)
+{
+    out = qobject_cast<QTemporaryFile*>(value.toQObject());
+}
+
 QScriptValue qtscript_create_QTemporaryFile_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QTemporaryFile*>(), QScriptValue());
@@ -240,7 +259,8 @@ QScriptValue qtscript_create_QTemporaryFile_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    engine->setDefaultPrototype(qMetaTypeId<QTemporaryFile*>(), proto);
+    qScriptRegisterMetaType<QTemporaryFile*>(engine, qtscript_QTemporaryFile_toScriptValue, 
+        qtscript_QTemporaryFile_fromScriptValue, proto);
 
     QScriptValue ctor = engine->newFunction(qtscript_QTemporaryFile_static_call, proto, qtscript_QTemporaryFile_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));

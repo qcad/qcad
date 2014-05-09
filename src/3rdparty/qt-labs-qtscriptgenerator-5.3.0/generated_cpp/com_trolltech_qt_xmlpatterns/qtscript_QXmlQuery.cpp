@@ -8,17 +8,12 @@
 
 #include <qxmlquery.h>
 #include <QVariant>
-#include <qabstractmessagehandler.h>
-#include <qabstracturiresolver.h>
-#include <qabstractxmlnodemodel.h>
-#include <qiodevice.h>
-#include <qnetworkaccessmanager.h>
-#include <qstringlist.h>
-#include <qurl.h>
-#include <qxmlname.h>
+#include <QXmlResultItems>
+#include <QAbstractMessageHandler>
+#include <QNetworkAccessManager>
+#include <QAbstractUriResolver>
 #include <qxmlnamepool.h>
 #include <qxmlquery.h>
-#include <qxmlresultitems.h>
 
 static const char * const qtscript_QXmlQuery_function_names[] = {
     "QXmlQuery"
@@ -104,6 +99,8 @@ Q_DECLARE_METATYPE(QXmlQuery)
 Q_DECLARE_METATYPE(QXmlQuery*)
 Q_DECLARE_METATYPE(QXmlQuery::QueryLanguage)
 Q_DECLARE_METATYPE(QIODevice*)
+//Q_DECLARE_METATYPE(QXmlItem)
+//Q_DECLARE_METATYPE(QXmlName)
 Q_DECLARE_METATYPE(QString*)
 Q_DECLARE_METATYPE(QStringList*)
 Q_DECLARE_METATYPE(QXmlResultItems*)

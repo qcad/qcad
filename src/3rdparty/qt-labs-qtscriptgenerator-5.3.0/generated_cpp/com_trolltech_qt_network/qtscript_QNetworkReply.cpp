@@ -188,10 +188,16 @@ static const QNetworkReply::NetworkError qtscript_QNetworkReply_NetworkError_val
     , QNetworkReply::ContentNotFoundError
     , QNetworkReply::AuthenticationRequiredError
     , QNetworkReply::ContentReSendError
+    , QNetworkReply::ContentConflictError
+    , QNetworkReply::ContentGoneError
     , QNetworkReply::UnknownContentError
     , QNetworkReply::ProtocolUnknownError
     , QNetworkReply::ProtocolInvalidOperationError
     , QNetworkReply::ProtocolFailure
+    , QNetworkReply::InternalServerError
+    , QNetworkReply::OperationNotImplementedError
+    , QNetworkReply::ServiceUnavailableError
+    , QNetworkReply::UnknownServerError
 };
 
 static const char * const qtscript_QNetworkReply_NetworkError_keys[] = {
@@ -217,10 +223,16 @@ static const char * const qtscript_QNetworkReply_NetworkError_keys[] = {
     , "ContentNotFoundError"
     , "AuthenticationRequiredError"
     , "ContentReSendError"
+    , "ContentConflictError"
+    , "ContentGoneError"
     , "UnknownContentError"
     , "ProtocolUnknownError"
     , "ProtocolInvalidOperationError"
     , "ProtocolFailure"
+    , "InternalServerError"
+    , "OperationNotImplementedError"
+    , "ServiceUnavailableError"
+    , "UnknownServerError"
 };
 
 static QString qtscript_QNetworkReply_NetworkError_toStringHelper(QNetworkReply::NetworkError value)
@@ -274,7 +286,7 @@ static QScriptValue qtscript_create_QNetworkReply_NetworkError_class(QScriptEngi
         qtscript_QNetworkReply_NetworkError_valueOf, qtscript_QNetworkReply_NetworkError_toString);
     qScriptRegisterMetaType<QNetworkReply::NetworkError>(engine, qtscript_QNetworkReply_NetworkError_toScriptValue,
         qtscript_QNetworkReply_NetworkError_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 26; ++i) {
+    for (int i = 0; i < 32; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QNetworkReply_NetworkError_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QNetworkReply_NetworkError_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);

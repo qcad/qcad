@@ -1013,11 +1013,15 @@ WidgetFactory.initWebView = function(webView, linkHandler, slot) {
         webSettings.setFontSize(QWebSettings.DefaultFontSize, EAction.getMainWindow().font.pointSize());
     }
 
-    // make web view transparent:
-    var palette = webView.palette;
-    palette.setBrush(QPalette.Base, new QColor(0,0,0,0));
-    webPage.palette = palette;
-    webView.setAttribute(Qt.WA_OpaquePaintEvent, false);
+
+    if (!RSettings.isQt(5)) {
+        // make web view transparent:
+        var palette = webView.palette;
+        palette.setBrush(QPalette.Base, new QColor(0,0,0,0));
+        webPage.palette = palette;
+
+        webView.setAttribute(Qt.WA_OpaquePaintEvent, false);
+    }
 };
 
 WidgetFactory.initLayerCombo = function(comboBox, doc) {

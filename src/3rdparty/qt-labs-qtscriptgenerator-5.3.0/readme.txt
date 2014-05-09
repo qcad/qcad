@@ -1,2 +1,2 @@
 Based on:
-https://github.com/svalaskevicius/qtscriptgenerator
+https://github.com/shibukawa/qtscriptgenerator

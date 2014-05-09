@@ -45,94 +45,94 @@ static QScriptValue qtscript_Qt_throw_ambiguity_error_helper(
         .arg(functionName).arg(fullSignatures.join(QLatin1String("\n"))));
 }
 
-Q_DECLARE_METATYPE(Qt::TextElideMode)
+Q_DECLARE_METATYPE(Qt::UIEffect)
+Q_DECLARE_METATYPE(Qt::InputMethodQuery)
 Q_DECLARE_METATYPE(Qt::LayoutDirection)
+Q_DECLARE_METATYPE(Qt::ConnectionType)
+Q_DECLARE_METATYPE(Qt::CursorShape)
+Q_DECLARE_METATYPE(Qt::CheckState)
+Q_DECLARE_METATYPE(Qt::SortOrder)
+Q_DECLARE_METATYPE(Qt::ApplicationAttribute)
+Q_DECLARE_METATYPE(Qt::FillRule)
+Q_DECLARE_METATYPE(Qt::FocusPolicy)
+Q_DECLARE_METATYPE(Qt::TimeSpec)
+Q_DECLARE_METATYPE(Qt::DayOfWeek)
+Q_DECLARE_METATYPE(Qt::ScreenOrientation)
+Q_DECLARE_METATYPE(Qt::TextElideMode)
+Q_DECLARE_METATYPE(Qt::MatchFlag)
+Q_DECLARE_METATYPE(QFlags<Qt::MatchFlag>)
+Q_DECLARE_METATYPE(Qt::BGMode)
+Q_DECLARE_METATYPE(Qt::WindowType)
+Q_DECLARE_METATYPE(QFlags<Qt::WindowType>)
+Q_DECLARE_METATYPE(Qt::FocusReason)
+Q_DECLARE_METATYPE(Qt::SizeMode)
+Q_DECLARE_METATYPE(Qt::ItemDataRole)
+Q_DECLARE_METATYPE(Qt::AlignmentFlag)
+Q_DECLARE_METATYPE(QFlags<Qt::AlignmentFlag>)
+Q_DECLARE_METATYPE(Qt::DockWidgetArea)
+Q_DECLARE_METATYPE(QFlags<Qt::DockWidgetArea>)
 Q_DECLARE_METATYPE(Qt::MaskMode)
+Q_DECLARE_METATYPE(Qt::TransformationMode)
+Q_DECLARE_METATYPE(Qt::TimerType)
+Q_DECLARE_METATYPE(Qt::EventPriority)
+Q_DECLARE_METATYPE(Qt::ArrowType)
+Q_DECLARE_METATYPE(Qt::ShortcutContext)
+Q_DECLARE_METATYPE(Qt::WindowState)
+Q_DECLARE_METATYPE(QFlags<Qt::WindowState>)
+Q_DECLARE_METATYPE(Qt::AspectRatioMode)
 Q_DECLARE_METATYPE(Qt::DockWidgetAreaSizes)
-Q_DECLARE_METATYPE(Qt::PenJoinStyle)
+Q_DECLARE_METATYPE(Qt::DateFormat)
+Q_DECLARE_METATYPE(Qt::NavigationMode)
+Q_DECLARE_METATYPE(Qt::WidgetAttribute)
+Q_DECLARE_METATYPE(Qt::ClipOperation)
+Q_DECLARE_METATYPE(Qt::PenStyle)
+Q_DECLARE_METATYPE(Qt::WindowModality)
+Q_DECLARE_METATYPE(Qt::BrushStyle)
+Q_DECLARE_METATYPE(Qt::TextFlag)
+Q_DECLARE_METATYPE(Qt::SizeHint)
+Q_DECLARE_METATYPE(Qt::Axis)
+Q_DECLARE_METATYPE(Qt::CoordinateSystem)
+Q_DECLARE_METATYPE(Qt::FindChildOption)
+Q_DECLARE_METATYPE(Qt::CaseSensitivity)
+Q_DECLARE_METATYPE(Qt::DropAction)
+Q_DECLARE_METATYPE(QFlags<Qt::DropAction>)
+Q_DECLARE_METATYPE(Qt::ContextMenuPolicy)
+Q_DECLARE_METATYPE(Qt::KeyboardModifier)
+Q_DECLARE_METATYPE(QFlags<Qt::KeyboardModifier>)
+Q_DECLARE_METATYPE(Qt::WhiteSpaceMode)
+Q_DECLARE_METATYPE(Qt::Corner)
+Q_DECLARE_METATYPE(Qt::TextFormat)
+Q_DECLARE_METATYPE(Qt::ScrollBarPolicy)
+Q_DECLARE_METATYPE(Qt::ItemFlag)
+Q_DECLARE_METATYPE(QFlags<Qt::ItemFlag>)
 Q_DECLARE_METATYPE(Qt::MouseButton)
 Q_DECLARE_METATYPE(QFlags<Qt::MouseButton>)
 Q_DECLARE_METATYPE(Qt::Orientation)
 Q_DECLARE_METATYPE(QFlags<Qt::Orientation>)
 Q_DECLARE_METATYPE(Qt::GlobalColor)
-Q_DECLARE_METATYPE(Qt::EventPriority)
-Q_DECLARE_METATYPE(Qt::GestureFlag)
-Q_DECLARE_METATYPE(QFlags<Qt::GestureFlag>)
-Q_DECLARE_METATYPE(Qt::ToolBarArea)
-Q_DECLARE_METATYPE(QFlags<Qt::ToolBarArea>)
-Q_DECLARE_METATYPE(Qt::ContextMenuPolicy)
-Q_DECLARE_METATYPE(Qt::AlignmentFlag)
-Q_DECLARE_METATYPE(QFlags<Qt::AlignmentFlag>)
-Q_DECLARE_METATYPE(Qt::ConnectionType)
-Q_DECLARE_METATYPE(Qt::PenCapStyle)
-Q_DECLARE_METATYPE(Qt::Corner)
-Q_DECLARE_METATYPE(Qt::AnchorPoint)
-Q_DECLARE_METATYPE(Qt::DateFormat)
-Q_DECLARE_METATYPE(Qt::ImageConversionFlag)
-Q_DECLARE_METATYPE(QFlags<Qt::ImageConversionFlag>)
-Q_DECLARE_METATYPE(Qt::PenStyle)
-Q_DECLARE_METATYPE(Qt::CoordinateSystem)
-Q_DECLARE_METATYPE(Qt::TextFlag)
-Q_DECLARE_METATYPE(Qt::ItemDataRole)
-Q_DECLARE_METATYPE(Qt::DropAction)
-Q_DECLARE_METATYPE(QFlags<Qt::DropAction>)
-Q_DECLARE_METATYPE(Qt::BrushStyle)
-Q_DECLARE_METATYPE(Qt::KeyboardModifier)
-Q_DECLARE_METATYPE(QFlags<Qt::KeyboardModifier>)
-Q_DECLARE_METATYPE(Qt::SizeHint)
-Q_DECLARE_METATYPE(Qt::DockWidgetArea)
-Q_DECLARE_METATYPE(QFlags<Qt::DockWidgetArea>)
-Q_DECLARE_METATYPE(Qt::ClipOperation)
-Q_DECLARE_METATYPE(Qt::CursorShape)
-Q_DECLARE_METATYPE(Qt::ShortcutContext)
-Q_DECLARE_METATYPE(Qt::DayOfWeek)
-Q_DECLARE_METATYPE(Qt::TextInteractionFlag)
-Q_DECLARE_METATYPE(QFlags<Qt::TextInteractionFlag>)
-Q_DECLARE_METATYPE(Qt::SortOrder)
-Q_DECLARE_METATYPE(Qt::WindowFrameSection)
-Q_DECLARE_METATYPE(Qt::ItemFlag)
-Q_DECLARE_METATYPE(QFlags<Qt::ItemFlag>)
-Q_DECLARE_METATYPE(Qt::FocusPolicy)
-Q_DECLARE_METATYPE(Qt::AspectRatioMode)
-Q_DECLARE_METATYPE(Qt::TextFormat)
-Q_DECLARE_METATYPE(Qt::ItemSelectionMode)
-Q_DECLARE_METATYPE(Qt::MatchFlag)
-Q_DECLARE_METATYPE(QFlags<Qt::MatchFlag>)
-Q_DECLARE_METATYPE(Qt::WidgetAttribute)
-Q_DECLARE_METATYPE(Qt::FocusReason)
-Q_DECLARE_METATYPE(Qt::NavigationMode)
-Q_DECLARE_METATYPE(Qt::ToolBarAreaSizes)
-Q_DECLARE_METATYPE(Qt::ArrowType)
-Q_DECLARE_METATYPE(Qt::WindowModality)
-Q_DECLARE_METATYPE(Qt::FindChildOption)
-Q_DECLARE_METATYPE(Qt::ScreenOrientation)
-Q_DECLARE_METATYPE(Qt::TimerType)
-Q_DECLARE_METATYPE(Qt::CaseSensitivity)
-Q_DECLARE_METATYPE(Qt::BGMode)
-Q_DECLARE_METATYPE(Qt::TileRule)
-Q_DECLARE_METATYPE(Qt::UIEffect)
-Q_DECLARE_METATYPE(Qt::ScrollBarPolicy)
-Q_DECLARE_METATYPE(Qt::InputMethodQuery)
-Q_DECLARE_METATYPE(Qt::ApplicationAttribute)
-Q_DECLARE_METATYPE(Qt::WhiteSpaceMode)
-Q_DECLARE_METATYPE(Qt::WindowState)
-Q_DECLARE_METATYPE(QFlags<Qt::WindowState>)
 Q_DECLARE_METATYPE(Qt::TouchPointState)
 Q_DECLARE_METATYPE(QFlags<Qt::TouchPointState>)
 Q_DECLARE_METATYPE(Qt::CursorMoveStyle)
 Q_DECLARE_METATYPE(Qt::InputMethodHint)
 Q_DECLARE_METATYPE(QFlags<Qt::InputMethodHint>)
-Q_DECLARE_METATYPE(Qt::CheckState)
+Q_DECLARE_METATYPE(Qt::ImageConversionFlag)
+Q_DECLARE_METATYPE(QFlags<Qt::ImageConversionFlag>)
+Q_DECLARE_METATYPE(Qt::WindowFrameSection)
+Q_DECLARE_METATYPE(Qt::GestureFlag)
+Q_DECLARE_METATYPE(QFlags<Qt::GestureFlag>)
+Q_DECLARE_METATYPE(Qt::ToolBarArea)
+Q_DECLARE_METATYPE(QFlags<Qt::ToolBarArea>)
+Q_DECLARE_METATYPE(Qt::PenCapStyle)
 Q_DECLARE_METATYPE(Qt::HitTestAccuracy)
-Q_DECLARE_METATYPE(Qt::FillRule)
-Q_DECLARE_METATYPE(Qt::TimeSpec)
-Q_DECLARE_METATYPE(Qt::WindowType)
-Q_DECLARE_METATYPE(QFlags<Qt::WindowType>)
-Q_DECLARE_METATYPE(Qt::SizeMode)
-Q_DECLARE_METATYPE(Qt::Axis)
+Q_DECLARE_METATYPE(Qt::TextInteractionFlag)
+Q_DECLARE_METATYPE(QFlags<Qt::TextInteractionFlag>)
 Q_DECLARE_METATYPE(Qt::Key)
+Q_DECLARE_METATYPE(Qt::AnchorPoint)
+Q_DECLARE_METATYPE(Qt::ItemSelectionMode)
+Q_DECLARE_METATYPE(Qt::TileRule)
+Q_DECLARE_METATYPE(Qt::ToolBarAreaSizes)
+Q_DECLARE_METATYPE(Qt::PenJoinStyle)
 Q_DECLARE_METATYPE(Qt::ToolButtonStyle)
-Q_DECLARE_METATYPE(Qt::TransformationMode)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -166,71 +166,176 @@ static QScriptValue qtscript_create_flags_class_helper(
 }
 
 //
-// Qt::TextElideMode
+// Qt::UIEffect
 //
 
-static const Qt::TextElideMode qtscript_Qt_TextElideMode_values[] = {
-    Qt::ElideLeft
-    , Qt::ElideRight
-    , Qt::ElideMiddle
-    , Qt::ElideNone
+static const Qt::UIEffect qtscript_Qt_UIEffect_values[] = {
+    Qt::UI_General
+    , Qt::UI_AnimateMenu
+    , Qt::UI_FadeMenu
+    , Qt::UI_AnimateCombo
+    , Qt::UI_AnimateTooltip
+    , Qt::UI_FadeTooltip
+    , Qt::UI_AnimateToolBox
 };
 
-static const char * const qtscript_Qt_TextElideMode_keys[] = {
-    "ElideLeft"
-    , "ElideRight"
-    , "ElideMiddle"
-    , "ElideNone"
+static const char * const qtscript_Qt_UIEffect_keys[] = {
+    "UI_General"
+    , "UI_AnimateMenu"
+    , "UI_FadeMenu"
+    , "UI_AnimateCombo"
+    , "UI_AnimateTooltip"
+    , "UI_FadeTooltip"
+    , "UI_AnimateToolBox"
 };
 
-static QString qtscript_Qt_TextElideMode_toStringHelper(Qt::TextElideMode value)
+static QString qtscript_Qt_UIEffect_toStringHelper(Qt::UIEffect value)
 {
-    if ((value >= Qt::ElideLeft) && (value <= Qt::ElideNone))
-        return qtscript_Qt_TextElideMode_keys[static_cast<int>(value)-static_cast<int>(Qt::ElideLeft)];
+    if ((value >= Qt::UI_General) && (value <= Qt::UI_AnimateToolBox))
+        return qtscript_Qt_UIEffect_keys[static_cast<int>(value)-static_cast<int>(Qt::UI_General)];
     return QString();
 }
 
-static QScriptValue qtscript_Qt_TextElideMode_toScriptValue(QScriptEngine *engine, const Qt::TextElideMode &value)
+static QScriptValue qtscript_Qt_UIEffect_toScriptValue(QScriptEngine *engine, const Qt::UIEffect &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_TextElideMode_toStringHelper(value));
+    return clazz.property(qtscript_Qt_UIEffect_toStringHelper(value));
 }
 
-static void qtscript_Qt_TextElideMode_fromScriptValue(const QScriptValue &value, Qt::TextElideMode &out)
+static void qtscript_Qt_UIEffect_fromScriptValue(const QScriptValue &value, Qt::UIEffect &out)
 {
-    out = qvariant_cast<Qt::TextElideMode>(value.toVariant());
+    out = qvariant_cast<Qt::UIEffect>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_Qt_TextElideMode(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_Qt_UIEffect(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::ElideLeft) && (arg <= Qt::ElideNone))
-        return qScriptValueFromValue(engine,  static_cast<Qt::TextElideMode>(arg));
-    return context->throwError(QString::fromLatin1("TextElideMode(): invalid enum value (%0)").arg(arg));
+    if ((arg >= Qt::UI_General) && (arg <= Qt::UI_AnimateToolBox))
+        return qScriptValueFromValue(engine,  static_cast<Qt::UIEffect>(arg));
+    return context->throwError(QString::fromLatin1("UIEffect(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_Qt_TextElideMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_UIEffect_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::TextElideMode value = qscriptvalue_cast<Qt::TextElideMode>(context->thisObject());
+    Qt::UIEffect value = qscriptvalue_cast<Qt::UIEffect>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_Qt_TextElideMode_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_UIEffect_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::TextElideMode value = qscriptvalue_cast<Qt::TextElideMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_TextElideMode_toStringHelper(value));
+    Qt::UIEffect value = qscriptvalue_cast<Qt::UIEffect>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_UIEffect_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_Qt_TextElideMode_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_Qt_UIEffect_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_TextElideMode,
-        qtscript_Qt_TextElideMode_valueOf, qtscript_Qt_TextElideMode_toString);
-    qScriptRegisterMetaType<Qt::TextElideMode>(engine, qtscript_Qt_TextElideMode_toScriptValue,
-        qtscript_Qt_TextElideMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TextElideMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_TextElideMode_values[i])),
+        engine, qtscript_construct_Qt_UIEffect,
+        qtscript_Qt_UIEffect_valueOf, qtscript_Qt_UIEffect_toString);
+    qScriptRegisterMetaType<Qt::UIEffect>(engine, qtscript_Qt_UIEffect_toScriptValue,
+        qtscript_Qt_UIEffect_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 7; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_UIEffect_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_UIEffect_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::InputMethodQuery
+//
+
+static const Qt::InputMethodQuery qtscript_Qt_InputMethodQuery_values[] = {
+    Qt::ImPlatformData
+    , Qt::ImQueryAll
+    , Qt::ImEnabled
+    , Qt::ImCursorRectangle
+    , Qt::ImFont
+    , Qt::ImCursorPosition
+    , Qt::ImSurroundingText
+    , Qt::ImCurrentSelection
+    , Qt::ImMaximumTextLength
+    , Qt::ImAnchorPosition
+    , Qt::ImQueryInput
+    , Qt::ImHints
+    , Qt::ImPreferredLanguage
+    , Qt::ImAbsolutePosition
+    , Qt::ImTextBeforeCursor
+    , Qt::ImTextAfterCursor
+};
+
+static const char * const qtscript_Qt_InputMethodQuery_keys[] = {
+    "ImPlatformData"
+    , "ImQueryAll"
+    , "ImEnabled"
+    , "ImCursorRectangle"
+    , "ImFont"
+    , "ImCursorPosition"
+    , "ImSurroundingText"
+    , "ImCurrentSelection"
+    , "ImMaximumTextLength"
+    , "ImAnchorPosition"
+    , "ImQueryInput"
+    , "ImHints"
+    , "ImPreferredLanguage"
+    , "ImAbsolutePosition"
+    , "ImTextBeforeCursor"
+    , "ImTextAfterCursor"
+};
+
+static QString qtscript_Qt_InputMethodQuery_toStringHelper(Qt::InputMethodQuery value)
+{
+    for (int i = 0; i < 16; ++i) {
+        if (qtscript_Qt_InputMethodQuery_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_InputMethodQuery_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_InputMethodQuery_toScriptValue(QScriptEngine *engine, const Qt::InputMethodQuery &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_InputMethodQuery_toStringHelper(value));
+}
+
+static void qtscript_Qt_InputMethodQuery_fromScriptValue(const QScriptValue &value, Qt::InputMethodQuery &out)
+{
+    out = qvariant_cast<Qt::InputMethodQuery>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_InputMethodQuery(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 16; ++i) {
+        if (qtscript_Qt_InputMethodQuery_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::InputMethodQuery>(arg));
+    }
+    return context->throwError(QString::fromLatin1("InputMethodQuery(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_InputMethodQuery_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::InputMethodQuery value = qscriptvalue_cast<Qt::InputMethodQuery>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_InputMethodQuery_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::InputMethodQuery value = qscriptvalue_cast<Qt::InputMethodQuery>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_InputMethodQuery_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_InputMethodQuery_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_InputMethodQuery,
+        qtscript_Qt_InputMethodQuery_valueOf, qtscript_Qt_InputMethodQuery_toString);
+    qScriptRegisterMetaType<Qt::InputMethodQuery>(engine, qtscript_Qt_InputMethodQuery_toScriptValue,
+        qtscript_Qt_InputMethodQuery_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 16; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_InputMethodQuery_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_InputMethodQuery_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -306,6 +411,1899 @@ static QScriptValue qtscript_create_Qt_LayoutDirection_class(QScriptEngine *engi
 }
 
 //
+// Qt::ConnectionType
+//
+
+static const Qt::ConnectionType qtscript_Qt_ConnectionType_values[] = {
+    Qt::AutoConnection
+    , Qt::DirectConnection
+    , Qt::QueuedConnection
+    , Qt::BlockingQueuedConnection
+    , Qt::UniqueConnection
+};
+
+static const char * const qtscript_Qt_ConnectionType_keys[] = {
+    "AutoConnection"
+    , "DirectConnection"
+    , "QueuedConnection"
+    , "BlockingQueuedConnection"
+    , "UniqueConnection"
+};
+
+static QString qtscript_Qt_ConnectionType_toStringHelper(Qt::ConnectionType value)
+{
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_ConnectionType_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_ConnectionType_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ConnectionType_toScriptValue(QScriptEngine *engine, const Qt::ConnectionType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ConnectionType_toStringHelper(value));
+}
+
+static void qtscript_Qt_ConnectionType_fromScriptValue(const QScriptValue &value, Qt::ConnectionType &out)
+{
+    out = qvariant_cast<Qt::ConnectionType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ConnectionType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_ConnectionType_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::ConnectionType>(arg));
+    }
+    return context->throwError(QString::fromLatin1("ConnectionType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ConnectionType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ConnectionType value = qscriptvalue_cast<Qt::ConnectionType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ConnectionType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ConnectionType value = qscriptvalue_cast<Qt::ConnectionType>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ConnectionType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ConnectionType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ConnectionType,
+        qtscript_Qt_ConnectionType_valueOf, qtscript_Qt_ConnectionType_toString);
+    qScriptRegisterMetaType<Qt::ConnectionType>(engine, qtscript_Qt_ConnectionType_toScriptValue,
+        qtscript_Qt_ConnectionType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ConnectionType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ConnectionType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::CursorShape
+//
+
+static const Qt::CursorShape qtscript_Qt_CursorShape_values[] = {
+    Qt::ArrowCursor
+    , Qt::UpArrowCursor
+    , Qt::CrossCursor
+    , Qt::WaitCursor
+    , Qt::IBeamCursor
+    , Qt::SizeVerCursor
+    , Qt::SizeHorCursor
+    , Qt::SizeBDiagCursor
+    , Qt::SizeFDiagCursor
+    , Qt::SizeAllCursor
+    , Qt::BlankCursor
+    , Qt::SplitVCursor
+    , Qt::SplitHCursor
+    , Qt::PointingHandCursor
+    , Qt::ForbiddenCursor
+    , Qt::WhatsThisCursor
+    , Qt::BusyCursor
+    , Qt::OpenHandCursor
+    , Qt::ClosedHandCursor
+    , Qt::DragCopyCursor
+    , Qt::DragMoveCursor
+    , Qt::DragLinkCursor
+    , Qt::BitmapCursor
+    , Qt::CustomCursor
+};
+
+static const char * const qtscript_Qt_CursorShape_keys[] = {
+    "ArrowCursor"
+    , "UpArrowCursor"
+    , "CrossCursor"
+    , "WaitCursor"
+    , "IBeamCursor"
+    , "SizeVerCursor"
+    , "SizeHorCursor"
+    , "SizeBDiagCursor"
+    , "SizeFDiagCursor"
+    , "SizeAllCursor"
+    , "BlankCursor"
+    , "SplitVCursor"
+    , "SplitHCursor"
+    , "PointingHandCursor"
+    , "ForbiddenCursor"
+    , "WhatsThisCursor"
+    , "BusyCursor"
+    , "OpenHandCursor"
+    , "ClosedHandCursor"
+    , "DragCopyCursor"
+    , "DragMoveCursor"
+    , "DragLinkCursor"
+    , "BitmapCursor"
+    , "CustomCursor"
+};
+
+static QString qtscript_Qt_CursorShape_toStringHelper(Qt::CursorShape value)
+{
+    for (int i = 0; i < 24; ++i) {
+        if (qtscript_Qt_CursorShape_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_CursorShape_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_CursorShape_toScriptValue(QScriptEngine *engine, const Qt::CursorShape &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_CursorShape_toStringHelper(value));
+}
+
+static void qtscript_Qt_CursorShape_fromScriptValue(const QScriptValue &value, Qt::CursorShape &out)
+{
+    out = qvariant_cast<Qt::CursorShape>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_CursorShape(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 24; ++i) {
+        if (qtscript_Qt_CursorShape_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::CursorShape>(arg));
+    }
+    return context->throwError(QString::fromLatin1("CursorShape(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_CursorShape_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::CursorShape value = qscriptvalue_cast<Qt::CursorShape>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_CursorShape_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::CursorShape value = qscriptvalue_cast<Qt::CursorShape>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_CursorShape_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_CursorShape_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_CursorShape,
+        qtscript_Qt_CursorShape_valueOf, qtscript_Qt_CursorShape_toString);
+    qScriptRegisterMetaType<Qt::CursorShape>(engine, qtscript_Qt_CursorShape_toScriptValue,
+        qtscript_Qt_CursorShape_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 24; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_CursorShape_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_CursorShape_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::CheckState
+//
+
+static const Qt::CheckState qtscript_Qt_CheckState_values[] = {
+    Qt::Unchecked
+    , Qt::PartiallyChecked
+    , Qt::Checked
+};
+
+static const char * const qtscript_Qt_CheckState_keys[] = {
+    "Unchecked"
+    , "PartiallyChecked"
+    , "Checked"
+};
+
+static QString qtscript_Qt_CheckState_toStringHelper(Qt::CheckState value)
+{
+    if ((value >= Qt::Unchecked) && (value <= Qt::Checked))
+        return qtscript_Qt_CheckState_keys[static_cast<int>(value)-static_cast<int>(Qt::Unchecked)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_CheckState_toScriptValue(QScriptEngine *engine, const Qt::CheckState &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_CheckState_toStringHelper(value));
+}
+
+static void qtscript_Qt_CheckState_fromScriptValue(const QScriptValue &value, Qt::CheckState &out)
+{
+    out = qvariant_cast<Qt::CheckState>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_CheckState(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::Unchecked) && (arg <= Qt::Checked))
+        return qScriptValueFromValue(engine,  static_cast<Qt::CheckState>(arg));
+    return context->throwError(QString::fromLatin1("CheckState(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_CheckState_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::CheckState value = qscriptvalue_cast<Qt::CheckState>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_CheckState_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::CheckState value = qscriptvalue_cast<Qt::CheckState>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_CheckState_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_CheckState_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_CheckState,
+        qtscript_Qt_CheckState_valueOf, qtscript_Qt_CheckState_toString);
+    qScriptRegisterMetaType<Qt::CheckState>(engine, qtscript_Qt_CheckState_toScriptValue,
+        qtscript_Qt_CheckState_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_CheckState_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_CheckState_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::SortOrder
+//
+
+static const Qt::SortOrder qtscript_Qt_SortOrder_values[] = {
+    Qt::AscendingOrder
+    , Qt::DescendingOrder
+};
+
+static const char * const qtscript_Qt_SortOrder_keys[] = {
+    "AscendingOrder"
+    , "DescendingOrder"
+};
+
+static QString qtscript_Qt_SortOrder_toStringHelper(Qt::SortOrder value)
+{
+    if ((value >= Qt::AscendingOrder) && (value <= Qt::DescendingOrder))
+        return qtscript_Qt_SortOrder_keys[static_cast<int>(value)-static_cast<int>(Qt::AscendingOrder)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_SortOrder_toScriptValue(QScriptEngine *engine, const Qt::SortOrder &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_SortOrder_toStringHelper(value));
+}
+
+static void qtscript_Qt_SortOrder_fromScriptValue(const QScriptValue &value, Qt::SortOrder &out)
+{
+    out = qvariant_cast<Qt::SortOrder>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_SortOrder(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::AscendingOrder) && (arg <= Qt::DescendingOrder))
+        return qScriptValueFromValue(engine,  static_cast<Qt::SortOrder>(arg));
+    return context->throwError(QString::fromLatin1("SortOrder(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_SortOrder_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::SortOrder value = qscriptvalue_cast<Qt::SortOrder>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_SortOrder_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::SortOrder value = qscriptvalue_cast<Qt::SortOrder>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_SortOrder_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_SortOrder_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_SortOrder,
+        qtscript_Qt_SortOrder_valueOf, qtscript_Qt_SortOrder_toString);
+    qScriptRegisterMetaType<Qt::SortOrder>(engine, qtscript_Qt_SortOrder_toScriptValue,
+        qtscript_Qt_SortOrder_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_SortOrder_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_SortOrder_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ApplicationAttribute
+//
+
+static const Qt::ApplicationAttribute qtscript_Qt_ApplicationAttribute_values[] = {
+    Qt::AA_ImmediateWidgetCreation
+    , Qt::AA_MSWindowsUseDirect3DByDefault
+    , Qt::AA_DontShowIconsInMenus
+    , Qt::AA_NativeWindows
+    , Qt::AA_DontCreateNativeWidgetSiblings
+    , Qt::AA_MacPluginApplication
+    , Qt::AA_DontUseNativeMenuBar
+    , Qt::AA_MacDontSwapCtrlAndMeta
+    , Qt::AA_Use96Dpi
+    , Qt::AA_X11InitThreads
+    , Qt::AA_SynthesizeTouchForUnhandledMouseEvents
+    , Qt::AA_SynthesizeMouseForUnhandledTouchEvents
+    , Qt::AA_UseHighDpiPixmaps
+    , Qt::AA_ForceRasterWidgets
+    , Qt::AA_UseDesktopOpenGL
+    , Qt::AA_UseOpenGLES
+    , Qt::AA_AttributeCount
+};
+
+static const char * const qtscript_Qt_ApplicationAttribute_keys[] = {
+    "AA_ImmediateWidgetCreation"
+    , "AA_MSWindowsUseDirect3DByDefault"
+    , "AA_DontShowIconsInMenus"
+    , "AA_NativeWindows"
+    , "AA_DontCreateNativeWidgetSiblings"
+    , "AA_MacPluginApplication"
+    , "AA_DontUseNativeMenuBar"
+    , "AA_MacDontSwapCtrlAndMeta"
+    , "AA_Use96Dpi"
+    , "AA_X11InitThreads"
+    , "AA_SynthesizeTouchForUnhandledMouseEvents"
+    , "AA_SynthesizeMouseForUnhandledTouchEvents"
+    , "AA_UseHighDpiPixmaps"
+    , "AA_ForceRasterWidgets"
+    , "AA_UseDesktopOpenGL"
+    , "AA_UseOpenGLES"
+    , "AA_AttributeCount"
+};
+
+static QString qtscript_Qt_ApplicationAttribute_toStringHelper(Qt::ApplicationAttribute value)
+{
+    for (int i = 0; i < 17; ++i) {
+        if (qtscript_Qt_ApplicationAttribute_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_ApplicationAttribute_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ApplicationAttribute_toScriptValue(QScriptEngine *engine, const Qt::ApplicationAttribute &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ApplicationAttribute_toStringHelper(value));
+}
+
+static void qtscript_Qt_ApplicationAttribute_fromScriptValue(const QScriptValue &value, Qt::ApplicationAttribute &out)
+{
+    out = qvariant_cast<Qt::ApplicationAttribute>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ApplicationAttribute(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 17; ++i) {
+        if (qtscript_Qt_ApplicationAttribute_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::ApplicationAttribute>(arg));
+    }
+    return context->throwError(QString::fromLatin1("ApplicationAttribute(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ApplicationAttribute_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ApplicationAttribute value = qscriptvalue_cast<Qt::ApplicationAttribute>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ApplicationAttribute_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ApplicationAttribute value = qscriptvalue_cast<Qt::ApplicationAttribute>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ApplicationAttribute_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ApplicationAttribute_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ApplicationAttribute,
+        qtscript_Qt_ApplicationAttribute_valueOf, qtscript_Qt_ApplicationAttribute_toString);
+    qScriptRegisterMetaType<Qt::ApplicationAttribute>(engine, qtscript_Qt_ApplicationAttribute_toScriptValue,
+        qtscript_Qt_ApplicationAttribute_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 17; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ApplicationAttribute_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ApplicationAttribute_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::FillRule
+//
+
+static const Qt::FillRule qtscript_Qt_FillRule_values[] = {
+    Qt::OddEvenFill
+    , Qt::WindingFill
+};
+
+static const char * const qtscript_Qt_FillRule_keys[] = {
+    "OddEvenFill"
+    , "WindingFill"
+};
+
+static QString qtscript_Qt_FillRule_toStringHelper(Qt::FillRule value)
+{
+    if ((value >= Qt::OddEvenFill) && (value <= Qt::WindingFill))
+        return qtscript_Qt_FillRule_keys[static_cast<int>(value)-static_cast<int>(Qt::OddEvenFill)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_FillRule_toScriptValue(QScriptEngine *engine, const Qt::FillRule &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_FillRule_toStringHelper(value));
+}
+
+static void qtscript_Qt_FillRule_fromScriptValue(const QScriptValue &value, Qt::FillRule &out)
+{
+    out = qvariant_cast<Qt::FillRule>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_FillRule(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::OddEvenFill) && (arg <= Qt::WindingFill))
+        return qScriptValueFromValue(engine,  static_cast<Qt::FillRule>(arg));
+    return context->throwError(QString::fromLatin1("FillRule(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_FillRule_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::FillRule value = qscriptvalue_cast<Qt::FillRule>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_FillRule_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::FillRule value = qscriptvalue_cast<Qt::FillRule>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_FillRule_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_FillRule_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_FillRule,
+        qtscript_Qt_FillRule_valueOf, qtscript_Qt_FillRule_toString);
+    qScriptRegisterMetaType<Qt::FillRule>(engine, qtscript_Qt_FillRule_toScriptValue,
+        qtscript_Qt_FillRule_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_FillRule_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_FillRule_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::FocusPolicy
+//
+
+static const Qt::FocusPolicy qtscript_Qt_FocusPolicy_values[] = {
+    Qt::NoFocus
+    , Qt::TabFocus
+    , Qt::ClickFocus
+    , Qt::StrongFocus
+    , Qt::WheelFocus
+};
+
+static const char * const qtscript_Qt_FocusPolicy_keys[] = {
+    "NoFocus"
+    , "TabFocus"
+    , "ClickFocus"
+    , "StrongFocus"
+    , "WheelFocus"
+};
+
+static QString qtscript_Qt_FocusPolicy_toStringHelper(Qt::FocusPolicy value)
+{
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_FocusPolicy_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_FocusPolicy_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_FocusPolicy_toScriptValue(QScriptEngine *engine, const Qt::FocusPolicy &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_FocusPolicy_toStringHelper(value));
+}
+
+static void qtscript_Qt_FocusPolicy_fromScriptValue(const QScriptValue &value, Qt::FocusPolicy &out)
+{
+    out = qvariant_cast<Qt::FocusPolicy>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_FocusPolicy(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_FocusPolicy_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::FocusPolicy>(arg));
+    }
+    return context->throwError(QString::fromLatin1("FocusPolicy(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_FocusPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::FocusPolicy value = qscriptvalue_cast<Qt::FocusPolicy>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_FocusPolicy_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::FocusPolicy value = qscriptvalue_cast<Qt::FocusPolicy>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_FocusPolicy_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_FocusPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_FocusPolicy,
+        qtscript_Qt_FocusPolicy_valueOf, qtscript_Qt_FocusPolicy_toString);
+    qScriptRegisterMetaType<Qt::FocusPolicy>(engine, qtscript_Qt_FocusPolicy_toScriptValue,
+        qtscript_Qt_FocusPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_FocusPolicy_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_FocusPolicy_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::TimeSpec
+//
+
+static const Qt::TimeSpec qtscript_Qt_TimeSpec_values[] = {
+    Qt::LocalTime
+    , Qt::UTC
+    , Qt::OffsetFromUTC
+    , Qt::TimeZone
+};
+
+static const char * const qtscript_Qt_TimeSpec_keys[] = {
+    "LocalTime"
+    , "UTC"
+    , "OffsetFromUTC"
+    , "TimeZone"
+};
+
+static QString qtscript_Qt_TimeSpec_toStringHelper(Qt::TimeSpec value)
+{
+    if ((value >= Qt::LocalTime) && (value <= Qt::TimeZone))
+        return qtscript_Qt_TimeSpec_keys[static_cast<int>(value)-static_cast<int>(Qt::LocalTime)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_TimeSpec_toScriptValue(QScriptEngine *engine, const Qt::TimeSpec &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_TimeSpec_toStringHelper(value));
+}
+
+static void qtscript_Qt_TimeSpec_fromScriptValue(const QScriptValue &value, Qt::TimeSpec &out)
+{
+    out = qvariant_cast<Qt::TimeSpec>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_TimeSpec(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::LocalTime) && (arg <= Qt::TimeZone))
+        return qScriptValueFromValue(engine,  static_cast<Qt::TimeSpec>(arg));
+    return context->throwError(QString::fromLatin1("TimeSpec(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_TimeSpec_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TimeSpec value = qscriptvalue_cast<Qt::TimeSpec>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_TimeSpec_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TimeSpec value = qscriptvalue_cast<Qt::TimeSpec>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_TimeSpec_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_TimeSpec_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_TimeSpec,
+        qtscript_Qt_TimeSpec_valueOf, qtscript_Qt_TimeSpec_toString);
+    qScriptRegisterMetaType<Qt::TimeSpec>(engine, qtscript_Qt_TimeSpec_toScriptValue,
+        qtscript_Qt_TimeSpec_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TimeSpec_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_TimeSpec_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::DayOfWeek
+//
+
+static const Qt::DayOfWeek qtscript_Qt_DayOfWeek_values[] = {
+    Qt::Monday
+    , Qt::Tuesday
+    , Qt::Wednesday
+    , Qt::Thursday
+    , Qt::Friday
+    , Qt::Saturday
+    , Qt::Sunday
+};
+
+static const char * const qtscript_Qt_DayOfWeek_keys[] = {
+    "Monday"
+    , "Tuesday"
+    , "Wednesday"
+    , "Thursday"
+    , "Friday"
+    , "Saturday"
+    , "Sunday"
+};
+
+static QString qtscript_Qt_DayOfWeek_toStringHelper(Qt::DayOfWeek value)
+{
+    if ((value >= Qt::Monday) && (value <= Qt::Sunday))
+        return qtscript_Qt_DayOfWeek_keys[static_cast<int>(value)-static_cast<int>(Qt::Monday)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_DayOfWeek_toScriptValue(QScriptEngine *engine, const Qt::DayOfWeek &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_DayOfWeek_toStringHelper(value));
+}
+
+static void qtscript_Qt_DayOfWeek_fromScriptValue(const QScriptValue &value, Qt::DayOfWeek &out)
+{
+    out = qvariant_cast<Qt::DayOfWeek>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_DayOfWeek(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::Monday) && (arg <= Qt::Sunday))
+        return qScriptValueFromValue(engine,  static_cast<Qt::DayOfWeek>(arg));
+    return context->throwError(QString::fromLatin1("DayOfWeek(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_DayOfWeek_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DayOfWeek value = qscriptvalue_cast<Qt::DayOfWeek>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_DayOfWeek_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DayOfWeek value = qscriptvalue_cast<Qt::DayOfWeek>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_DayOfWeek_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_DayOfWeek_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_DayOfWeek,
+        qtscript_Qt_DayOfWeek_valueOf, qtscript_Qt_DayOfWeek_toString);
+    qScriptRegisterMetaType<Qt::DayOfWeek>(engine, qtscript_Qt_DayOfWeek_toScriptValue,
+        qtscript_Qt_DayOfWeek_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 7; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_DayOfWeek_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_DayOfWeek_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ScreenOrientation
+//
+
+static const Qt::ScreenOrientation qtscript_Qt_ScreenOrientation_values[] = {
+    Qt::PrimaryOrientation
+    , Qt::PortraitOrientation
+    , Qt::LandscapeOrientation
+    , Qt::InvertedPortraitOrientation
+    , Qt::InvertedLandscapeOrientation
+};
+
+static const char * const qtscript_Qt_ScreenOrientation_keys[] = {
+    "PrimaryOrientation"
+    , "PortraitOrientation"
+    , "LandscapeOrientation"
+    , "InvertedPortraitOrientation"
+    , "InvertedLandscapeOrientation"
+};
+
+static QString qtscript_Qt_ScreenOrientation_toStringHelper(Qt::ScreenOrientation value)
+{
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_ScreenOrientation_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_ScreenOrientation_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ScreenOrientation_toScriptValue(QScriptEngine *engine, const Qt::ScreenOrientation &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ScreenOrientation_toStringHelper(value));
+}
+
+static void qtscript_Qt_ScreenOrientation_fromScriptValue(const QScriptValue &value, Qt::ScreenOrientation &out)
+{
+    out = qvariant_cast<Qt::ScreenOrientation>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ScreenOrientation(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_ScreenOrientation_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::ScreenOrientation>(arg));
+    }
+    return context->throwError(QString::fromLatin1("ScreenOrientation(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ScreenOrientation_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ScreenOrientation value = qscriptvalue_cast<Qt::ScreenOrientation>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ScreenOrientation_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ScreenOrientation value = qscriptvalue_cast<Qt::ScreenOrientation>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ScreenOrientation_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ScreenOrientation_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ScreenOrientation,
+        qtscript_Qt_ScreenOrientation_valueOf, qtscript_Qt_ScreenOrientation_toString);
+    qScriptRegisterMetaType<Qt::ScreenOrientation>(engine, qtscript_Qt_ScreenOrientation_toScriptValue,
+        qtscript_Qt_ScreenOrientation_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ScreenOrientation_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ScreenOrientation_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::TextElideMode
+//
+
+static const Qt::TextElideMode qtscript_Qt_TextElideMode_values[] = {
+    Qt::ElideLeft
+    , Qt::ElideRight
+    , Qt::ElideMiddle
+    , Qt::ElideNone
+};
+
+static const char * const qtscript_Qt_TextElideMode_keys[] = {
+    "ElideLeft"
+    , "ElideRight"
+    , "ElideMiddle"
+    , "ElideNone"
+};
+
+static QString qtscript_Qt_TextElideMode_toStringHelper(Qt::TextElideMode value)
+{
+    if ((value >= Qt::ElideLeft) && (value <= Qt::ElideNone))
+        return qtscript_Qt_TextElideMode_keys[static_cast<int>(value)-static_cast<int>(Qt::ElideLeft)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_TextElideMode_toScriptValue(QScriptEngine *engine, const Qt::TextElideMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_TextElideMode_toStringHelper(value));
+}
+
+static void qtscript_Qt_TextElideMode_fromScriptValue(const QScriptValue &value, Qt::TextElideMode &out)
+{
+    out = qvariant_cast<Qt::TextElideMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_TextElideMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::ElideLeft) && (arg <= Qt::ElideNone))
+        return qScriptValueFromValue(engine,  static_cast<Qt::TextElideMode>(arg));
+    return context->throwError(QString::fromLatin1("TextElideMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_TextElideMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TextElideMode value = qscriptvalue_cast<Qt::TextElideMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_TextElideMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TextElideMode value = qscriptvalue_cast<Qt::TextElideMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_TextElideMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_TextElideMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_TextElideMode,
+        qtscript_Qt_TextElideMode_valueOf, qtscript_Qt_TextElideMode_toString);
+    qScriptRegisterMetaType<Qt::TextElideMode>(engine, qtscript_Qt_TextElideMode_toScriptValue,
+        qtscript_Qt_TextElideMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TextElideMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_TextElideMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::MatchFlag
+//
+
+static const Qt::MatchFlag qtscript_Qt_MatchFlag_values[] = {
+    Qt::MatchExactly
+    , Qt::MatchContains
+    , Qt::MatchStartsWith
+    , Qt::MatchEndsWith
+    , Qt::MatchRegExp
+    , Qt::MatchWildcard
+    , Qt::MatchFixedString
+    , Qt::MatchCaseSensitive
+    , Qt::MatchWrap
+    , Qt::MatchRecursive
+};
+
+static const char * const qtscript_Qt_MatchFlag_keys[] = {
+    "MatchExactly"
+    , "MatchContains"
+    , "MatchStartsWith"
+    , "MatchEndsWith"
+    , "MatchRegExp"
+    , "MatchWildcard"
+    , "MatchFixedString"
+    , "MatchCaseSensitive"
+    , "MatchWrap"
+    , "MatchRecursive"
+};
+
+static QString qtscript_Qt_MatchFlag_toStringHelper(Qt::MatchFlag value)
+{
+    for (int i = 0; i < 10; ++i) {
+        if (qtscript_Qt_MatchFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_MatchFlag_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_MatchFlag_toScriptValue(QScriptEngine *engine, const Qt::MatchFlag &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_MatchFlag_toStringHelper(value));
+}
+
+static void qtscript_Qt_MatchFlag_fromScriptValue(const QScriptValue &value, Qt::MatchFlag &out)
+{
+    out = qvariant_cast<Qt::MatchFlag>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_MatchFlag(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 10; ++i) {
+        if (qtscript_Qt_MatchFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::MatchFlag>(arg));
+    }
+    return context->throwError(QString::fromLatin1("MatchFlag(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_MatchFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::MatchFlag value = qscriptvalue_cast<Qt::MatchFlag>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_MatchFlag_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::MatchFlag value = qscriptvalue_cast<Qt::MatchFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_MatchFlag_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_MatchFlag_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_MatchFlag,
+        qtscript_Qt_MatchFlag_valueOf, qtscript_Qt_MatchFlag_toString);
+    qScriptRegisterMetaType<Qt::MatchFlag>(engine, qtscript_Qt_MatchFlag_toScriptValue,
+        qtscript_Qt_MatchFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 10; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_MatchFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_MatchFlag_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::MatchFlags
+//
+
+static QScriptValue qtscript_Qt_MatchFlags_toScriptValue(QScriptEngine *engine, const Qt::MatchFlags &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_MatchFlags_fromScriptValue(const QScriptValue &value, Qt::MatchFlags &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::MatchFlags>())
+        out = qvariant_cast<Qt::MatchFlags>(var);
+    else if (var.userType() == qMetaTypeId<Qt::MatchFlag>())
+        out = qvariant_cast<Qt::MatchFlag>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_MatchFlags(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::MatchFlags result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::MatchFlags>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::MatchFlag>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("MatchFlags(): argument %0 is not of type MatchFlag").arg(i));
+            }
+            result |= qvariant_cast<Qt::MatchFlag>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_MatchFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::MatchFlags value = qscriptvalue_cast<Qt::MatchFlags>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_MatchFlags_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::MatchFlags value = qscriptvalue_cast<Qt::MatchFlags>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 10; ++i) {
+        if ((value & qtscript_Qt_MatchFlag_values[i]) == qtscript_Qt_MatchFlag_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_MatchFlag_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_MatchFlags_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::MatchFlags>() == otherObj.value<Qt::MatchFlags>())));
+}
+
+static QScriptValue qtscript_create_Qt_MatchFlags_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_MatchFlags, qtscript_Qt_MatchFlags_valueOf,
+        qtscript_Qt_MatchFlags_toString, qtscript_Qt_MatchFlags_equals);
+    qScriptRegisterMetaType<Qt::MatchFlags>(engine, qtscript_Qt_MatchFlags_toScriptValue,
+        qtscript_Qt_MatchFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::BGMode
+//
+
+static const Qt::BGMode qtscript_Qt_BGMode_values[] = {
+    Qt::TransparentMode
+    , Qt::OpaqueMode
+};
+
+static const char * const qtscript_Qt_BGMode_keys[] = {
+    "TransparentMode"
+    , "OpaqueMode"
+};
+
+static QString qtscript_Qt_BGMode_toStringHelper(Qt::BGMode value)
+{
+    if ((value >= Qt::TransparentMode) && (value <= Qt::OpaqueMode))
+        return qtscript_Qt_BGMode_keys[static_cast<int>(value)-static_cast<int>(Qt::TransparentMode)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_BGMode_toScriptValue(QScriptEngine *engine, const Qt::BGMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_BGMode_toStringHelper(value));
+}
+
+static void qtscript_Qt_BGMode_fromScriptValue(const QScriptValue &value, Qt::BGMode &out)
+{
+    out = qvariant_cast<Qt::BGMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_BGMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::TransparentMode) && (arg <= Qt::OpaqueMode))
+        return qScriptValueFromValue(engine,  static_cast<Qt::BGMode>(arg));
+    return context->throwError(QString::fromLatin1("BGMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_BGMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::BGMode value = qscriptvalue_cast<Qt::BGMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_BGMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::BGMode value = qscriptvalue_cast<Qt::BGMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_BGMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_BGMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_BGMode,
+        qtscript_Qt_BGMode_valueOf, qtscript_Qt_BGMode_toString);
+    qScriptRegisterMetaType<Qt::BGMode>(engine, qtscript_Qt_BGMode_toScriptValue,
+        qtscript_Qt_BGMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_BGMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_BGMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::WindowType
+//
+
+static const Qt::WindowType qtscript_Qt_WindowType_values[] = {
+    Qt::WindowFullscreenButtonHint
+    , Qt::Widget
+    , Qt::Window
+    , Qt::Dialog
+    , Qt::Sheet
+    , Qt::Drawer
+    , Qt::Popup
+    , Qt::Tool
+    , Qt::ToolTip
+    , Qt::SplashScreen
+    , Qt::Desktop
+    , Qt::SubWindow
+    , Qt::ForeignWindow
+    , Qt::CoverWindow
+    , Qt::WindowType_Mask
+    , Qt::MSWindowsFixedSizeDialogHint
+    , Qt::MSWindowsOwnDC
+    , Qt::BypassWindowManagerHint
+    , Qt::FramelessWindowHint
+    , Qt::WindowTitleHint
+    , Qt::WindowSystemMenuHint
+    , Qt::WindowMinimizeButtonHint
+    , Qt::WindowMaximizeButtonHint
+    , Qt::WindowMinMaxButtonsHint
+    , Qt::WindowContextHelpButtonHint
+    , Qt::WindowShadeButtonHint
+    , Qt::WindowStaysOnTopHint
+    , Qt::WindowTransparentForInput
+    , Qt::WindowOverridesSystemGestures
+    , Qt::WindowDoesNotAcceptFocus
+    , Qt::CustomizeWindowHint
+    , Qt::WindowStaysOnBottomHint
+    , Qt::WindowCloseButtonHint
+    , Qt::MacWindowToolBarButtonHint
+    , Qt::BypassGraphicsProxyWidget
+    , Qt::NoDropShadowWindowHint
+};
+
+static const char * const qtscript_Qt_WindowType_keys[] = {
+    "WindowFullscreenButtonHint"
+    , "Widget"
+    , "Window"
+    , "Dialog"
+    , "Sheet"
+    , "Drawer"
+    , "Popup"
+    , "Tool"
+    , "ToolTip"
+    , "SplashScreen"
+    , "Desktop"
+    , "SubWindow"
+    , "ForeignWindow"
+    , "CoverWindow"
+    , "WindowType_Mask"
+    , "MSWindowsFixedSizeDialogHint"
+    , "MSWindowsOwnDC"
+    , "BypassWindowManagerHint"
+    , "FramelessWindowHint"
+    , "WindowTitleHint"
+    , "WindowSystemMenuHint"
+    , "WindowMinimizeButtonHint"
+    , "WindowMaximizeButtonHint"
+    , "WindowMinMaxButtonsHint"
+    , "WindowContextHelpButtonHint"
+    , "WindowShadeButtonHint"
+    , "WindowStaysOnTopHint"
+    , "WindowTransparentForInput"
+    , "WindowOverridesSystemGestures"
+    , "WindowDoesNotAcceptFocus"
+    , "CustomizeWindowHint"
+    , "WindowStaysOnBottomHint"
+    , "WindowCloseButtonHint"
+    , "MacWindowToolBarButtonHint"
+    , "BypassGraphicsProxyWidget"
+    , "NoDropShadowWindowHint"
+};
+
+static QString qtscript_Qt_WindowType_toStringHelper(Qt::WindowType value)
+{
+    for (int i = 0; i < 36; ++i) {
+        if (qtscript_Qt_WindowType_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_WindowType_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_WindowType_toScriptValue(QScriptEngine *engine, const Qt::WindowType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_WindowType_toStringHelper(value));
+}
+
+static void qtscript_Qt_WindowType_fromScriptValue(const QScriptValue &value, Qt::WindowType &out)
+{
+    out = qvariant_cast<Qt::WindowType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_WindowType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 36; ++i) {
+        if (qtscript_Qt_WindowType_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::WindowType>(arg));
+    }
+    return context->throwError(QString::fromLatin1("WindowType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_WindowType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowType value = qscriptvalue_cast<Qt::WindowType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_WindowType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowType value = qscriptvalue_cast<Qt::WindowType>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_WindowType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_WindowType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_WindowType,
+        qtscript_Qt_WindowType_valueOf, qtscript_Qt_WindowType_toString);
+    qScriptRegisterMetaType<Qt::WindowType>(engine, qtscript_Qt_WindowType_toScriptValue,
+        qtscript_Qt_WindowType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 36; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WindowType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_WindowType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::WindowFlags
+//
+
+static QScriptValue qtscript_Qt_WindowFlags_toScriptValue(QScriptEngine *engine, const Qt::WindowFlags &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_WindowFlags_fromScriptValue(const QScriptValue &value, Qt::WindowFlags &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::WindowFlags>())
+        out = qvariant_cast<Qt::WindowFlags>(var);
+    else if (var.userType() == qMetaTypeId<Qt::WindowType>())
+        out = qvariant_cast<Qt::WindowType>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_WindowFlags(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowFlags result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::WindowFlags>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::WindowType>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("WindowFlags(): argument %0 is not of type WindowType").arg(i));
+            }
+            result |= qvariant_cast<Qt::WindowType>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_WindowFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowFlags value = qscriptvalue_cast<Qt::WindowFlags>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_WindowFlags_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowFlags value = qscriptvalue_cast<Qt::WindowFlags>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 36; ++i) {
+        if ((value & qtscript_Qt_WindowType_values[i]) == qtscript_Qt_WindowType_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_WindowType_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_WindowFlags_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::WindowFlags>() == otherObj.value<Qt::WindowFlags>())));
+}
+
+static QScriptValue qtscript_create_Qt_WindowFlags_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_WindowFlags, qtscript_Qt_WindowFlags_valueOf,
+        qtscript_Qt_WindowFlags_toString, qtscript_Qt_WindowFlags_equals);
+    qScriptRegisterMetaType<Qt::WindowFlags>(engine, qtscript_Qt_WindowFlags_toScriptValue,
+        qtscript_Qt_WindowFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::FocusReason
+//
+
+static const Qt::FocusReason qtscript_Qt_FocusReason_values[] = {
+    Qt::MouseFocusReason
+    , Qt::TabFocusReason
+    , Qt::BacktabFocusReason
+    , Qt::ActiveWindowFocusReason
+    , Qt::PopupFocusReason
+    , Qt::ShortcutFocusReason
+    , Qt::MenuBarFocusReason
+    , Qt::OtherFocusReason
+    , Qt::NoFocusReason
+};
+
+static const char * const qtscript_Qt_FocusReason_keys[] = {
+    "MouseFocusReason"
+    , "TabFocusReason"
+    , "BacktabFocusReason"
+    , "ActiveWindowFocusReason"
+    , "PopupFocusReason"
+    , "ShortcutFocusReason"
+    , "MenuBarFocusReason"
+    , "OtherFocusReason"
+    , "NoFocusReason"
+};
+
+static QString qtscript_Qt_FocusReason_toStringHelper(Qt::FocusReason value)
+{
+    if ((value >= Qt::MouseFocusReason) && (value <= Qt::NoFocusReason))
+        return qtscript_Qt_FocusReason_keys[static_cast<int>(value)-static_cast<int>(Qt::MouseFocusReason)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_FocusReason_toScriptValue(QScriptEngine *engine, const Qt::FocusReason &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_FocusReason_toStringHelper(value));
+}
+
+static void qtscript_Qt_FocusReason_fromScriptValue(const QScriptValue &value, Qt::FocusReason &out)
+{
+    out = qvariant_cast<Qt::FocusReason>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_FocusReason(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::MouseFocusReason) && (arg <= Qt::NoFocusReason))
+        return qScriptValueFromValue(engine,  static_cast<Qt::FocusReason>(arg));
+    return context->throwError(QString::fromLatin1("FocusReason(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_FocusReason_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::FocusReason value = qscriptvalue_cast<Qt::FocusReason>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_FocusReason_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::FocusReason value = qscriptvalue_cast<Qt::FocusReason>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_FocusReason_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_FocusReason_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_FocusReason,
+        qtscript_Qt_FocusReason_valueOf, qtscript_Qt_FocusReason_toString);
+    qScriptRegisterMetaType<Qt::FocusReason>(engine, qtscript_Qt_FocusReason_toScriptValue,
+        qtscript_Qt_FocusReason_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 9; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_FocusReason_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_FocusReason_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::SizeMode
+//
+
+static const Qt::SizeMode qtscript_Qt_SizeMode_values[] = {
+    Qt::AbsoluteSize
+    , Qt::RelativeSize
+};
+
+static const char * const qtscript_Qt_SizeMode_keys[] = {
+    "AbsoluteSize"
+    , "RelativeSize"
+};
+
+static QString qtscript_Qt_SizeMode_toStringHelper(Qt::SizeMode value)
+{
+    if ((value >= Qt::AbsoluteSize) && (value <= Qt::RelativeSize))
+        return qtscript_Qt_SizeMode_keys[static_cast<int>(value)-static_cast<int>(Qt::AbsoluteSize)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_SizeMode_toScriptValue(QScriptEngine *engine, const Qt::SizeMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_SizeMode_toStringHelper(value));
+}
+
+static void qtscript_Qt_SizeMode_fromScriptValue(const QScriptValue &value, Qt::SizeMode &out)
+{
+    out = qvariant_cast<Qt::SizeMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_SizeMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::AbsoluteSize) && (arg <= Qt::RelativeSize))
+        return qScriptValueFromValue(engine,  static_cast<Qt::SizeMode>(arg));
+    return context->throwError(QString::fromLatin1("SizeMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_SizeMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::SizeMode value = qscriptvalue_cast<Qt::SizeMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_SizeMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::SizeMode value = qscriptvalue_cast<Qt::SizeMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_SizeMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_SizeMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_SizeMode,
+        qtscript_Qt_SizeMode_valueOf, qtscript_Qt_SizeMode_toString);
+    qScriptRegisterMetaType<Qt::SizeMode>(engine, qtscript_Qt_SizeMode_toScriptValue,
+        qtscript_Qt_SizeMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_SizeMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_SizeMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ItemDataRole
+//
+
+static const Qt::ItemDataRole qtscript_Qt_ItemDataRole_values[] = {
+    Qt::DisplayRole
+    , Qt::DecorationRole
+    , Qt::EditRole
+    , Qt::ToolTipRole
+    , Qt::StatusTipRole
+    , Qt::WhatsThisRole
+    , Qt::FontRole
+    , Qt::TextAlignmentRole
+    , Qt::BackgroundColorRole
+    , Qt::TextColorRole
+    , Qt::CheckStateRole
+    , Qt::AccessibleTextRole
+    , Qt::AccessibleDescriptionRole
+    , Qt::SizeHintRole
+    , Qt::InitialSortOrderRole
+    , Qt::DisplayPropertyRole
+    , Qt::DecorationPropertyRole
+    , Qt::ToolTipPropertyRole
+    , Qt::StatusTipPropertyRole
+    , Qt::WhatsThisPropertyRole
+    , Qt::UserRole
+};
+
+static const char * const qtscript_Qt_ItemDataRole_keys[] = {
+    "DisplayRole"
+    , "DecorationRole"
+    , "EditRole"
+    , "ToolTipRole"
+    , "StatusTipRole"
+    , "WhatsThisRole"
+    , "FontRole"
+    , "TextAlignmentRole"
+    , "BackgroundColorRole"
+    , "TextColorRole"
+    , "CheckStateRole"
+    , "AccessibleTextRole"
+    , "AccessibleDescriptionRole"
+    , "SizeHintRole"
+    , "InitialSortOrderRole"
+    , "DisplayPropertyRole"
+    , "DecorationPropertyRole"
+    , "ToolTipPropertyRole"
+    , "StatusTipPropertyRole"
+    , "WhatsThisPropertyRole"
+    , "UserRole"
+};
+
+static QString qtscript_Qt_ItemDataRole_toStringHelper(Qt::ItemDataRole value)
+{
+    for (int i = 0; i < 21; ++i) {
+        if (qtscript_Qt_ItemDataRole_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_ItemDataRole_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ItemDataRole_toScriptValue(QScriptEngine *engine, const Qt::ItemDataRole &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ItemDataRole_toStringHelper(value));
+}
+
+static void qtscript_Qt_ItemDataRole_fromScriptValue(const QScriptValue &value, Qt::ItemDataRole &out)
+{
+    out = qvariant_cast<Qt::ItemDataRole>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ItemDataRole(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 21; ++i) {
+        if (qtscript_Qt_ItemDataRole_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::ItemDataRole>(arg));
+    }
+    return context->throwError(QString::fromLatin1("ItemDataRole(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ItemDataRole_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemDataRole value = qscriptvalue_cast<Qt::ItemDataRole>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ItemDataRole_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemDataRole value = qscriptvalue_cast<Qt::ItemDataRole>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ItemDataRole_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ItemDataRole_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ItemDataRole,
+        qtscript_Qt_ItemDataRole_valueOf, qtscript_Qt_ItemDataRole_toString);
+    qScriptRegisterMetaType<Qt::ItemDataRole>(engine, qtscript_Qt_ItemDataRole_toScriptValue,
+        qtscript_Qt_ItemDataRole_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 21; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ItemDataRole_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ItemDataRole_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::AlignmentFlag
+//
+
+static const Qt::AlignmentFlag qtscript_Qt_AlignmentFlag_values[] = {
+    Qt::AlignLeft
+    , Qt::AlignRight
+    , Qt::AlignHCenter
+    , Qt::AlignJustify
+    , Qt::AlignAbsolute
+    , Qt::AlignHorizontal_Mask
+    , Qt::AlignTop
+    , Qt::AlignBottom
+    , Qt::AlignVCenter
+    , Qt::AlignCenter
+    , Qt::AlignBaseline
+    , Qt::AlignVertical_Mask
+};
+
+static const char * const qtscript_Qt_AlignmentFlag_keys[] = {
+    "AlignLeft"
+    , "AlignRight"
+    , "AlignHCenter"
+    , "AlignJustify"
+    , "AlignAbsolute"
+    , "AlignHorizontal_Mask"
+    , "AlignTop"
+    , "AlignBottom"
+    , "AlignVCenter"
+    , "AlignCenter"
+    , "AlignBaseline"
+    , "AlignVertical_Mask"
+};
+
+static QString qtscript_Qt_AlignmentFlag_toStringHelper(Qt::AlignmentFlag value)
+{
+    for (int i = 0; i < 12; ++i) {
+        if (qtscript_Qt_AlignmentFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_AlignmentFlag_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_AlignmentFlag_toScriptValue(QScriptEngine *engine, const Qt::AlignmentFlag &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_AlignmentFlag_toStringHelper(value));
+}
+
+static void qtscript_Qt_AlignmentFlag_fromScriptValue(const QScriptValue &value, Qt::AlignmentFlag &out)
+{
+    out = qvariant_cast<Qt::AlignmentFlag>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_AlignmentFlag(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 12; ++i) {
+        if (qtscript_Qt_AlignmentFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::AlignmentFlag>(arg));
+    }
+    return context->throwError(QString::fromLatin1("AlignmentFlag(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_AlignmentFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::AlignmentFlag value = qscriptvalue_cast<Qt::AlignmentFlag>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_AlignmentFlag_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::AlignmentFlag value = qscriptvalue_cast<Qt::AlignmentFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_AlignmentFlag_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_AlignmentFlag_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_AlignmentFlag,
+        qtscript_Qt_AlignmentFlag_valueOf, qtscript_Qt_AlignmentFlag_toString);
+    qScriptRegisterMetaType<Qt::AlignmentFlag>(engine, qtscript_Qt_AlignmentFlag_toScriptValue,
+        qtscript_Qt_AlignmentFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 12; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_AlignmentFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_AlignmentFlag_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::Alignment
+//
+
+static QScriptValue qtscript_Qt_Alignment_toScriptValue(QScriptEngine *engine, const Qt::Alignment &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_Alignment_fromScriptValue(const QScriptValue &value, Qt::Alignment &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::Alignment>())
+        out = qvariant_cast<Qt::Alignment>(var);
+    else if (var.userType() == qMetaTypeId<Qt::AlignmentFlag>())
+        out = qvariant_cast<Qt::AlignmentFlag>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_Alignment(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::Alignment result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::Alignment>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::AlignmentFlag>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("Alignment(): argument %0 is not of type AlignmentFlag").arg(i));
+            }
+            result |= qvariant_cast<Qt::AlignmentFlag>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_Alignment_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::Alignment value = qscriptvalue_cast<Qt::Alignment>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_Alignment_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::Alignment value = qscriptvalue_cast<Qt::Alignment>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 12; ++i) {
+        if ((value & qtscript_Qt_AlignmentFlag_values[i]) == qtscript_Qt_AlignmentFlag_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_AlignmentFlag_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_Alignment_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::Alignment>() == otherObj.value<Qt::Alignment>())));
+}
+
+static QScriptValue qtscript_create_Qt_Alignment_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_Alignment, qtscript_Qt_Alignment_valueOf,
+        qtscript_Qt_Alignment_toString, qtscript_Qt_Alignment_equals);
+    qScriptRegisterMetaType<Qt::Alignment>(engine, qtscript_Qt_Alignment_toScriptValue,
+        qtscript_Qt_Alignment_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::DockWidgetArea
+//
+
+static const Qt::DockWidgetArea qtscript_Qt_DockWidgetArea_values[] = {
+    Qt::NoDockWidgetArea
+    , Qt::LeftDockWidgetArea
+    , Qt::RightDockWidgetArea
+    , Qt::TopDockWidgetArea
+    , Qt::BottomDockWidgetArea
+    , Qt::DockWidgetArea_Mask
+};
+
+static const char * const qtscript_Qt_DockWidgetArea_keys[] = {
+    "NoDockWidgetArea"
+    , "LeftDockWidgetArea"
+    , "RightDockWidgetArea"
+    , "TopDockWidgetArea"
+    , "BottomDockWidgetArea"
+    , "DockWidgetArea_Mask"
+};
+
+static QString qtscript_Qt_DockWidgetArea_toStringHelper(Qt::DockWidgetArea value)
+{
+    for (int i = 0; i < 6; ++i) {
+        if (qtscript_Qt_DockWidgetArea_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_DockWidgetArea_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_DockWidgetArea_toScriptValue(QScriptEngine *engine, const Qt::DockWidgetArea &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_DockWidgetArea_toStringHelper(value));
+}
+
+static void qtscript_Qt_DockWidgetArea_fromScriptValue(const QScriptValue &value, Qt::DockWidgetArea &out)
+{
+    out = qvariant_cast<Qt::DockWidgetArea>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_DockWidgetArea(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 6; ++i) {
+        if (qtscript_Qt_DockWidgetArea_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::DockWidgetArea>(arg));
+    }
+    return context->throwError(QString::fromLatin1("DockWidgetArea(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_DockWidgetArea_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DockWidgetArea value = qscriptvalue_cast<Qt::DockWidgetArea>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_DockWidgetArea_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DockWidgetArea value = qscriptvalue_cast<Qt::DockWidgetArea>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_DockWidgetArea_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_DockWidgetArea_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_DockWidgetArea,
+        qtscript_Qt_DockWidgetArea_valueOf, qtscript_Qt_DockWidgetArea_toString);
+    qScriptRegisterMetaType<Qt::DockWidgetArea>(engine, qtscript_Qt_DockWidgetArea_toScriptValue,
+        qtscript_Qt_DockWidgetArea_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 6; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_DockWidgetArea_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_DockWidgetArea_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::DockWidgetAreas
+//
+
+static QScriptValue qtscript_Qt_DockWidgetAreas_toScriptValue(QScriptEngine *engine, const Qt::DockWidgetAreas &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_DockWidgetAreas_fromScriptValue(const QScriptValue &value, Qt::DockWidgetAreas &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::DockWidgetAreas>())
+        out = qvariant_cast<Qt::DockWidgetAreas>(var);
+    else if (var.userType() == qMetaTypeId<Qt::DockWidgetArea>())
+        out = qvariant_cast<Qt::DockWidgetArea>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_DockWidgetAreas(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DockWidgetAreas result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::DockWidgetAreas>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::DockWidgetArea>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("DockWidgetAreas(): argument %0 is not of type DockWidgetArea").arg(i));
+            }
+            result |= qvariant_cast<Qt::DockWidgetArea>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_DockWidgetAreas_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DockWidgetAreas value = qscriptvalue_cast<Qt::DockWidgetAreas>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_DockWidgetAreas_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DockWidgetAreas value = qscriptvalue_cast<Qt::DockWidgetAreas>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 6; ++i) {
+        if ((value & qtscript_Qt_DockWidgetArea_values[i]) == qtscript_Qt_DockWidgetArea_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_DockWidgetArea_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_DockWidgetAreas_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::DockWidgetAreas>() == otherObj.value<Qt::DockWidgetAreas>())));
+}
+
+static QScriptValue qtscript_create_Qt_DockWidgetAreas_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_DockWidgetAreas, qtscript_Qt_DockWidgetAreas_valueOf,
+        qtscript_Qt_DockWidgetAreas_toString, qtscript_Qt_DockWidgetAreas_equals);
+    qScriptRegisterMetaType<Qt::DockWidgetAreas>(engine, qtscript_Qt_DockWidgetAreas_toScriptValue,
+        qtscript_Qt_DockWidgetAreas_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
 // Qt::MaskMode
 //
 
@@ -367,6 +2365,577 @@ static QScriptValue qtscript_create_Qt_MaskMode_class(QScriptEngine *engine, QSc
     for (int i = 0; i < 2; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_Qt_MaskMode_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_Qt_MaskMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::TransformationMode
+//
+
+static const Qt::TransformationMode qtscript_Qt_TransformationMode_values[] = {
+    Qt::FastTransformation
+    , Qt::SmoothTransformation
+};
+
+static const char * const qtscript_Qt_TransformationMode_keys[] = {
+    "FastTransformation"
+    , "SmoothTransformation"
+};
+
+static QString qtscript_Qt_TransformationMode_toStringHelper(Qt::TransformationMode value)
+{
+    if ((value >= Qt::FastTransformation) && (value <= Qt::SmoothTransformation))
+        return qtscript_Qt_TransformationMode_keys[static_cast<int>(value)-static_cast<int>(Qt::FastTransformation)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_TransformationMode_toScriptValue(QScriptEngine *engine, const Qt::TransformationMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_TransformationMode_toStringHelper(value));
+}
+
+static void qtscript_Qt_TransformationMode_fromScriptValue(const QScriptValue &value, Qt::TransformationMode &out)
+{
+    out = qvariant_cast<Qt::TransformationMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_TransformationMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::FastTransformation) && (arg <= Qt::SmoothTransformation))
+        return qScriptValueFromValue(engine,  static_cast<Qt::TransformationMode>(arg));
+    return context->throwError(QString::fromLatin1("TransformationMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_TransformationMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TransformationMode value = qscriptvalue_cast<Qt::TransformationMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_TransformationMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TransformationMode value = qscriptvalue_cast<Qt::TransformationMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_TransformationMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_TransformationMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_TransformationMode,
+        qtscript_Qt_TransformationMode_valueOf, qtscript_Qt_TransformationMode_toString);
+    qScriptRegisterMetaType<Qt::TransformationMode>(engine, qtscript_Qt_TransformationMode_toScriptValue,
+        qtscript_Qt_TransformationMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TransformationMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_TransformationMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::TimerType
+//
+
+static const Qt::TimerType qtscript_Qt_TimerType_values[] = {
+    Qt::PreciseTimer
+    , Qt::CoarseTimer
+    , Qt::VeryCoarseTimer
+};
+
+static const char * const qtscript_Qt_TimerType_keys[] = {
+    "PreciseTimer"
+    , "CoarseTimer"
+    , "VeryCoarseTimer"
+};
+
+static QString qtscript_Qt_TimerType_toStringHelper(Qt::TimerType value)
+{
+    if ((value >= Qt::PreciseTimer) && (value <= Qt::VeryCoarseTimer))
+        return qtscript_Qt_TimerType_keys[static_cast<int>(value)-static_cast<int>(Qt::PreciseTimer)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_TimerType_toScriptValue(QScriptEngine *engine, const Qt::TimerType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_TimerType_toStringHelper(value));
+}
+
+static void qtscript_Qt_TimerType_fromScriptValue(const QScriptValue &value, Qt::TimerType &out)
+{
+    out = qvariant_cast<Qt::TimerType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_TimerType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::PreciseTimer) && (arg <= Qt::VeryCoarseTimer))
+        return qScriptValueFromValue(engine,  static_cast<Qt::TimerType>(arg));
+    return context->throwError(QString::fromLatin1("TimerType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_TimerType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TimerType value = qscriptvalue_cast<Qt::TimerType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_TimerType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TimerType value = qscriptvalue_cast<Qt::TimerType>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_TimerType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_TimerType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_TimerType,
+        qtscript_Qt_TimerType_valueOf, qtscript_Qt_TimerType_toString);
+    qScriptRegisterMetaType<Qt::TimerType>(engine, qtscript_Qt_TimerType_toScriptValue,
+        qtscript_Qt_TimerType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TimerType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_TimerType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::EventPriority
+//
+
+static const Qt::EventPriority qtscript_Qt_EventPriority_values[] = {
+    Qt::LowEventPriority
+    , Qt::NormalEventPriority
+    , Qt::HighEventPriority
+};
+
+static const char * const qtscript_Qt_EventPriority_keys[] = {
+    "LowEventPriority"
+    , "NormalEventPriority"
+    , "HighEventPriority"
+};
+
+static QString qtscript_Qt_EventPriority_toStringHelper(Qt::EventPriority value)
+{
+    if ((value >= Qt::LowEventPriority) && (value <= Qt::HighEventPriority))
+        return qtscript_Qt_EventPriority_keys[static_cast<int>(value)-static_cast<int>(Qt::LowEventPriority)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_EventPriority_toScriptValue(QScriptEngine *engine, const Qt::EventPriority &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_EventPriority_toStringHelper(value));
+}
+
+static void qtscript_Qt_EventPriority_fromScriptValue(const QScriptValue &value, Qt::EventPriority &out)
+{
+    out = qvariant_cast<Qt::EventPriority>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_EventPriority(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::LowEventPriority) && (arg <= Qt::HighEventPriority))
+        return qScriptValueFromValue(engine,  static_cast<Qt::EventPriority>(arg));
+    return context->throwError(QString::fromLatin1("EventPriority(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_EventPriority_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::EventPriority value = qscriptvalue_cast<Qt::EventPriority>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_EventPriority_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::EventPriority value = qscriptvalue_cast<Qt::EventPriority>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_EventPriority_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_EventPriority_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_EventPriority,
+        qtscript_Qt_EventPriority_valueOf, qtscript_Qt_EventPriority_toString);
+    qScriptRegisterMetaType<Qt::EventPriority>(engine, qtscript_Qt_EventPriority_toScriptValue,
+        qtscript_Qt_EventPriority_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_EventPriority_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_EventPriority_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ArrowType
+//
+
+static const Qt::ArrowType qtscript_Qt_ArrowType_values[] = {
+    Qt::NoArrow
+    , Qt::UpArrow
+    , Qt::DownArrow
+    , Qt::LeftArrow
+    , Qt::RightArrow
+};
+
+static const char * const qtscript_Qt_ArrowType_keys[] = {
+    "NoArrow"
+    , "UpArrow"
+    , "DownArrow"
+    , "LeftArrow"
+    , "RightArrow"
+};
+
+static QString qtscript_Qt_ArrowType_toStringHelper(Qt::ArrowType value)
+{
+    if ((value >= Qt::NoArrow) && (value <= Qt::RightArrow))
+        return qtscript_Qt_ArrowType_keys[static_cast<int>(value)-static_cast<int>(Qt::NoArrow)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ArrowType_toScriptValue(QScriptEngine *engine, const Qt::ArrowType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ArrowType_toStringHelper(value));
+}
+
+static void qtscript_Qt_ArrowType_fromScriptValue(const QScriptValue &value, Qt::ArrowType &out)
+{
+    out = qvariant_cast<Qt::ArrowType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ArrowType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::NoArrow) && (arg <= Qt::RightArrow))
+        return qScriptValueFromValue(engine,  static_cast<Qt::ArrowType>(arg));
+    return context->throwError(QString::fromLatin1("ArrowType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ArrowType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ArrowType value = qscriptvalue_cast<Qt::ArrowType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ArrowType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ArrowType value = qscriptvalue_cast<Qt::ArrowType>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ArrowType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ArrowType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ArrowType,
+        qtscript_Qt_ArrowType_valueOf, qtscript_Qt_ArrowType_toString);
+    qScriptRegisterMetaType<Qt::ArrowType>(engine, qtscript_Qt_ArrowType_toScriptValue,
+        qtscript_Qt_ArrowType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ArrowType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ArrowType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ShortcutContext
+//
+
+static const Qt::ShortcutContext qtscript_Qt_ShortcutContext_values[] = {
+    Qt::WidgetShortcut
+    , Qt::WindowShortcut
+    , Qt::ApplicationShortcut
+    , Qt::WidgetWithChildrenShortcut
+};
+
+static const char * const qtscript_Qt_ShortcutContext_keys[] = {
+    "WidgetShortcut"
+    , "WindowShortcut"
+    , "ApplicationShortcut"
+    , "WidgetWithChildrenShortcut"
+};
+
+static QString qtscript_Qt_ShortcutContext_toStringHelper(Qt::ShortcutContext value)
+{
+    if ((value >= Qt::WidgetShortcut) && (value <= Qt::WidgetWithChildrenShortcut))
+        return qtscript_Qt_ShortcutContext_keys[static_cast<int>(value)-static_cast<int>(Qt::WidgetShortcut)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ShortcutContext_toScriptValue(QScriptEngine *engine, const Qt::ShortcutContext &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ShortcutContext_toStringHelper(value));
+}
+
+static void qtscript_Qt_ShortcutContext_fromScriptValue(const QScriptValue &value, Qt::ShortcutContext &out)
+{
+    out = qvariant_cast<Qt::ShortcutContext>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ShortcutContext(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::WidgetShortcut) && (arg <= Qt::WidgetWithChildrenShortcut))
+        return qScriptValueFromValue(engine,  static_cast<Qt::ShortcutContext>(arg));
+    return context->throwError(QString::fromLatin1("ShortcutContext(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ShortcutContext_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ShortcutContext value = qscriptvalue_cast<Qt::ShortcutContext>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ShortcutContext_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ShortcutContext value = qscriptvalue_cast<Qt::ShortcutContext>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ShortcutContext_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ShortcutContext_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ShortcutContext,
+        qtscript_Qt_ShortcutContext_valueOf, qtscript_Qt_ShortcutContext_toString);
+    qScriptRegisterMetaType<Qt::ShortcutContext>(engine, qtscript_Qt_ShortcutContext_toScriptValue,
+        qtscript_Qt_ShortcutContext_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ShortcutContext_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ShortcutContext_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::WindowState
+//
+
+static const Qt::WindowState qtscript_Qt_WindowState_values[] = {
+    Qt::WindowNoState
+    , Qt::WindowMinimized
+    , Qt::WindowMaximized
+    , Qt::WindowFullScreen
+    , Qt::WindowActive
+};
+
+static const char * const qtscript_Qt_WindowState_keys[] = {
+    "WindowNoState"
+    , "WindowMinimized"
+    , "WindowMaximized"
+    , "WindowFullScreen"
+    , "WindowActive"
+};
+
+static QString qtscript_Qt_WindowState_toStringHelper(Qt::WindowState value)
+{
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_WindowState_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_WindowState_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_WindowState_toScriptValue(QScriptEngine *engine, const Qt::WindowState &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_WindowState_toStringHelper(value));
+}
+
+static void qtscript_Qt_WindowState_fromScriptValue(const QScriptValue &value, Qt::WindowState &out)
+{
+    out = qvariant_cast<Qt::WindowState>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_WindowState(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_WindowState_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::WindowState>(arg));
+    }
+    return context->throwError(QString::fromLatin1("WindowState(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_WindowState_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowState value = qscriptvalue_cast<Qt::WindowState>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_WindowState_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowState value = qscriptvalue_cast<Qt::WindowState>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_WindowState_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_WindowState_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_WindowState,
+        qtscript_Qt_WindowState_valueOf, qtscript_Qt_WindowState_toString);
+    qScriptRegisterMetaType<Qt::WindowState>(engine, qtscript_Qt_WindowState_toScriptValue,
+        qtscript_Qt_WindowState_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WindowState_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_WindowState_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::WindowStates
+//
+
+static QScriptValue qtscript_Qt_WindowStates_toScriptValue(QScriptEngine *engine, const Qt::WindowStates &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_WindowStates_fromScriptValue(const QScriptValue &value, Qt::WindowStates &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::WindowStates>())
+        out = qvariant_cast<Qt::WindowStates>(var);
+    else if (var.userType() == qMetaTypeId<Qt::WindowState>())
+        out = qvariant_cast<Qt::WindowState>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_WindowStates(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowStates result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::WindowStates>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::WindowState>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("WindowStates(): argument %0 is not of type WindowState").arg(i));
+            }
+            result |= qvariant_cast<Qt::WindowState>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_WindowStates_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowStates value = qscriptvalue_cast<Qt::WindowStates>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_WindowStates_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowStates value = qscriptvalue_cast<Qt::WindowStates>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 5; ++i) {
+        if ((value & qtscript_Qt_WindowState_values[i]) == qtscript_Qt_WindowState_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_WindowState_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_WindowStates_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::WindowStates>() == otherObj.value<Qt::WindowStates>())));
+}
+
+static QScriptValue qtscript_create_Qt_WindowStates_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_WindowStates, qtscript_Qt_WindowStates_valueOf,
+        qtscript_Qt_WindowStates_toString, qtscript_Qt_WindowStates_equals);
+    qScriptRegisterMetaType<Qt::WindowStates>(engine, qtscript_Qt_WindowStates_toScriptValue,
+        qtscript_Qt_WindowStates_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::AspectRatioMode
+//
+
+static const Qt::AspectRatioMode qtscript_Qt_AspectRatioMode_values[] = {
+    Qt::IgnoreAspectRatio
+    , Qt::KeepAspectRatio
+    , Qt::KeepAspectRatioByExpanding
+};
+
+static const char * const qtscript_Qt_AspectRatioMode_keys[] = {
+    "IgnoreAspectRatio"
+    , "KeepAspectRatio"
+    , "KeepAspectRatioByExpanding"
+};
+
+static QString qtscript_Qt_AspectRatioMode_toStringHelper(Qt::AspectRatioMode value)
+{
+    if ((value >= Qt::IgnoreAspectRatio) && (value <= Qt::KeepAspectRatioByExpanding))
+        return qtscript_Qt_AspectRatioMode_keys[static_cast<int>(value)-static_cast<int>(Qt::IgnoreAspectRatio)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_AspectRatioMode_toScriptValue(QScriptEngine *engine, const Qt::AspectRatioMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_AspectRatioMode_toStringHelper(value));
+}
+
+static void qtscript_Qt_AspectRatioMode_fromScriptValue(const QScriptValue &value, Qt::AspectRatioMode &out)
+{
+    out = qvariant_cast<Qt::AspectRatioMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_AspectRatioMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::IgnoreAspectRatio) && (arg <= Qt::KeepAspectRatioByExpanding))
+        return qScriptValueFromValue(engine,  static_cast<Qt::AspectRatioMode>(arg));
+    return context->throwError(QString::fromLatin1("AspectRatioMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_AspectRatioMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::AspectRatioMode value = qscriptvalue_cast<Qt::AspectRatioMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_AspectRatioMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::AspectRatioMode value = qscriptvalue_cast<Qt::AspectRatioMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_AspectRatioMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_AspectRatioMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_AspectRatioMode,
+        qtscript_Qt_AspectRatioMode_valueOf, qtscript_Qt_AspectRatioMode_toString);
+    qScriptRegisterMetaType<Qt::AspectRatioMode>(engine, qtscript_Qt_AspectRatioMode_toScriptValue,
+        qtscript_Qt_AspectRatioMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_AspectRatioMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_AspectRatioMode_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -438,79 +3007,2185 @@ static QScriptValue qtscript_create_Qt_DockWidgetAreaSizes_class(QScriptEngine *
 }
 
 //
-// Qt::PenJoinStyle
+// Qt::GestureType
 //
 
-static const Qt::PenJoinStyle qtscript_Qt_PenJoinStyle_values[] = {
-    Qt::MiterJoin
-    , Qt::BevelJoin
-    , Qt::RoundJoin
-    , Qt::SvgMiterJoin
-    , Qt::MPenJoinStyle
+static const Qt::GestureType qtscript_Qt_GestureType_values[] = {
+    Qt::TapGesture
+    , Qt::TapAndHoldGesture
+    , Qt::PanGesture
+    , Qt::PinchGesture
+    , Qt::SwipeGesture
+    , Qt::CustomGesture
+    , Qt::LastGestureType
 };
 
-static const char * const qtscript_Qt_PenJoinStyle_keys[] = {
-    "MiterJoin"
-    , "BevelJoin"
-    , "RoundJoin"
-    , "SvgMiterJoin"
-    , "MPenJoinStyle"
+static const char * const qtscript_Qt_GestureType_keys[] = {
+    "TapGesture"
+    , "TapAndHoldGesture"
+    , "PanGesture"
+    , "PinchGesture"
+    , "SwipeGesture"
+    , "CustomGesture"
+    , "LastGestureType"
 };
 
-static QString qtscript_Qt_PenJoinStyle_toStringHelper(Qt::PenJoinStyle value)
+static QString qtscript_Qt_GestureType_toStringHelper(Qt::GestureType value)
 {
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_PenJoinStyle_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_PenJoinStyle_keys[i]);
+    for (int i = 0; i < 7; ++i) {
+        if (qtscript_Qt_GestureType_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_GestureType_keys[i]);
     }
     return QString();
 }
 
-static QScriptValue qtscript_Qt_PenJoinStyle_toScriptValue(QScriptEngine *engine, const Qt::PenJoinStyle &value)
+static QScriptValue qtscript_Qt_GestureType_toScriptValue(QScriptEngine *engine, const Qt::GestureType &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_PenJoinStyle_toStringHelper(value));
+    return clazz.property(qtscript_Qt_GestureType_toStringHelper(value));
 }
 
-static void qtscript_Qt_PenJoinStyle_fromScriptValue(const QScriptValue &value, Qt::PenJoinStyle &out)
+static void qtscript_Qt_GestureType_fromScriptValue(const QScriptValue &value, Qt::GestureType &out)
 {
-    out = qvariant_cast<Qt::PenJoinStyle>(value.toVariant());
+    out = qvariant_cast<Qt::GestureType>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_Qt_PenJoinStyle(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_Qt_GestureType(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_PenJoinStyle_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::PenJoinStyle>(arg));
+    for (int i = 0; i < 7; ++i) {
+        if (qtscript_Qt_GestureType_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::GestureType>(arg));
     }
-    return context->throwError(QString::fromLatin1("PenJoinStyle(): invalid enum value (%0)").arg(arg));
+    return context->throwError(QString::fromLatin1("GestureType(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_Qt_PenJoinStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_GestureType_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::PenJoinStyle value = qscriptvalue_cast<Qt::PenJoinStyle>(context->thisObject());
+    Qt::GestureType value = qscriptvalue_cast<Qt::GestureType>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_Qt_PenJoinStyle_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_GestureType_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::PenJoinStyle value = qscriptvalue_cast<Qt::PenJoinStyle>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_PenJoinStyle_toStringHelper(value));
+    Qt::GestureType value = qscriptvalue_cast<Qt::GestureType>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_GestureType_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_Qt_PenJoinStyle_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_Qt_GestureType_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_PenJoinStyle,
-        qtscript_Qt_PenJoinStyle_valueOf, qtscript_Qt_PenJoinStyle_toString);
-    qScriptRegisterMetaType<Qt::PenJoinStyle>(engine, qtscript_Qt_PenJoinStyle_toScriptValue,
-        qtscript_Qt_PenJoinStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_PenJoinStyle_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_PenJoinStyle_values[i])),
+        engine, qtscript_construct_Qt_GestureType,
+        qtscript_Qt_GestureType_valueOf, qtscript_Qt_GestureType_toString);
+    qScriptRegisterMetaType<Qt::GestureType>(engine, qtscript_Qt_GestureType_toScriptValue,
+        qtscript_Qt_GestureType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 7; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_GestureType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_GestureType_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
+    return ctor;
+}
+
+//
+// Qt::DateFormat
+//
+
+static const Qt::DateFormat qtscript_Qt_DateFormat_values[] = {
+    Qt::TextDate
+    , Qt::ISODate
+    , Qt::SystemLocaleDate
+    , Qt::LocaleDate
+    , Qt::SystemLocaleShortDate
+    , Qt::SystemLocaleLongDate
+    , Qt::DefaultLocaleShortDate
+    , Qt::DefaultLocaleLongDate
+    , Qt::RFC2822Date
+};
+
+static const char * const qtscript_Qt_DateFormat_keys[] = {
+    "TextDate"
+    , "ISODate"
+    , "SystemLocaleDate"
+    , "LocaleDate"
+    , "SystemLocaleShortDate"
+    , "SystemLocaleLongDate"
+    , "DefaultLocaleShortDate"
+    , "DefaultLocaleLongDate"
+    , "RFC2822Date"
+};
+
+static QString qtscript_Qt_DateFormat_toStringHelper(Qt::DateFormat value)
+{
+    if ((value >= Qt::TextDate) && (value <= Qt::RFC2822Date))
+        return qtscript_Qt_DateFormat_keys[static_cast<int>(value)-static_cast<int>(Qt::TextDate)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_DateFormat_toScriptValue(QScriptEngine *engine, const Qt::DateFormat &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_DateFormat_toStringHelper(value));
+}
+
+static void qtscript_Qt_DateFormat_fromScriptValue(const QScriptValue &value, Qt::DateFormat &out)
+{
+    out = qvariant_cast<Qt::DateFormat>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_DateFormat(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::TextDate) && (arg <= Qt::RFC2822Date))
+        return qScriptValueFromValue(engine,  static_cast<Qt::DateFormat>(arg));
+    return context->throwError(QString::fromLatin1("DateFormat(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_DateFormat_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DateFormat value = qscriptvalue_cast<Qt::DateFormat>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_DateFormat_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DateFormat value = qscriptvalue_cast<Qt::DateFormat>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_DateFormat_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_DateFormat_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_DateFormat,
+        qtscript_Qt_DateFormat_valueOf, qtscript_Qt_DateFormat_toString);
+    qScriptRegisterMetaType<Qt::DateFormat>(engine, qtscript_Qt_DateFormat_toScriptValue,
+        qtscript_Qt_DateFormat_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 9; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_DateFormat_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_DateFormat_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::GestureState
+//
+
+static const Qt::GestureState qtscript_Qt_GestureState_values[] = {
+    Qt::NoGesture
+    , Qt::GestureStarted
+    , Qt::GestureUpdated
+    , Qt::GestureFinished
+    , Qt::GestureCanceled
+};
+
+static const char * const qtscript_Qt_GestureState_keys[] = {
+    "NoGesture"
+    , "GestureStarted"
+    , "GestureUpdated"
+    , "GestureFinished"
+    , "GestureCanceled"
+};
+
+static QString qtscript_Qt_GestureState_toStringHelper(Qt::GestureState value)
+{
+    if ((value >= Qt::NoGesture) && (value <= Qt::GestureCanceled))
+        return qtscript_Qt_GestureState_keys[static_cast<int>(value)-static_cast<int>(Qt::NoGesture)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_GestureState_toScriptValue(QScriptEngine *engine, const Qt::GestureState &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_GestureState_toStringHelper(value));
+}
+
+static void qtscript_Qt_GestureState_fromScriptValue(const QScriptValue &value, Qt::GestureState &out)
+{
+    out = qvariant_cast<Qt::GestureState>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_GestureState(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::NoGesture) && (arg <= Qt::GestureCanceled))
+        return qScriptValueFromValue(engine,  static_cast<Qt::GestureState>(arg));
+    return context->throwError(QString::fromLatin1("GestureState(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_GestureState_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::GestureState value = qscriptvalue_cast<Qt::GestureState>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_GestureState_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::GestureState value = qscriptvalue_cast<Qt::GestureState>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_GestureState_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_GestureState_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_GestureState,
+        qtscript_Qt_GestureState_valueOf, qtscript_Qt_GestureState_toString);
+    qScriptRegisterMetaType<Qt::GestureState>(engine, qtscript_Qt_GestureState_toScriptValue,
+        qtscript_Qt_GestureState_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_GestureState_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_GestureState_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::NavigationMode
+//
+
+static const Qt::NavigationMode qtscript_Qt_NavigationMode_values[] = {
+    Qt::NavigationModeNone
+    , Qt::NavigationModeKeypadTabOrder
+    , Qt::NavigationModeKeypadDirectional
+    , Qt::NavigationModeCursorAuto
+    , Qt::NavigationModeCursorForceVisible
+};
+
+static const char * const qtscript_Qt_NavigationMode_keys[] = {
+    "NavigationModeNone"
+    , "NavigationModeKeypadTabOrder"
+    , "NavigationModeKeypadDirectional"
+    , "NavigationModeCursorAuto"
+    , "NavigationModeCursorForceVisible"
+};
+
+static QString qtscript_Qt_NavigationMode_toStringHelper(Qt::NavigationMode value)
+{
+    if ((value >= Qt::NavigationModeNone) && (value <= Qt::NavigationModeCursorForceVisible))
+        return qtscript_Qt_NavigationMode_keys[static_cast<int>(value)-static_cast<int>(Qt::NavigationModeNone)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_NavigationMode_toScriptValue(QScriptEngine *engine, const Qt::NavigationMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_NavigationMode_toStringHelper(value));
+}
+
+static void qtscript_Qt_NavigationMode_fromScriptValue(const QScriptValue &value, Qt::NavigationMode &out)
+{
+    out = qvariant_cast<Qt::NavigationMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_NavigationMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::NavigationModeNone) && (arg <= Qt::NavigationModeCursorForceVisible))
+        return qScriptValueFromValue(engine,  static_cast<Qt::NavigationMode>(arg));
+    return context->throwError(QString::fromLatin1("NavigationMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_NavigationMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::NavigationMode value = qscriptvalue_cast<Qt::NavigationMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_NavigationMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::NavigationMode value = qscriptvalue_cast<Qt::NavigationMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_NavigationMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_NavigationMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_NavigationMode,
+        qtscript_Qt_NavigationMode_valueOf, qtscript_Qt_NavigationMode_toString);
+    qScriptRegisterMetaType<Qt::NavigationMode>(engine, qtscript_Qt_NavigationMode_toScriptValue,
+        qtscript_Qt_NavigationMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_NavigationMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_NavigationMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::WidgetAttribute
+//
+
+static const Qt::WidgetAttribute qtscript_Qt_WidgetAttribute_values[] = {
+    Qt::WA_Disabled
+    , Qt::WA_UnderMouse
+    , Qt::WA_MouseTracking
+    , Qt::WA_ContentsPropagated
+    , Qt::WA_OpaquePaintEvent
+    , Qt::WA_StaticContents
+    , Qt::WA_LaidOut
+    , Qt::WA_PaintOnScreen
+    , Qt::WA_NoSystemBackground
+    , Qt::WA_UpdatesDisabled
+    , Qt::WA_Mapped
+    , Qt::WA_MacNoClickThrough
+    , Qt::WA_InputMethodEnabled
+    , Qt::WA_WState_Visible
+    , Qt::WA_WState_Hidden
+    , Qt::WA_ForceDisabled
+    , Qt::WA_KeyCompression
+    , Qt::WA_PendingMoveEvent
+    , Qt::WA_PendingResizeEvent
+    , Qt::WA_SetPalette
+    , Qt::WA_SetFont
+    , Qt::WA_SetCursor
+    , Qt::WA_NoChildEventsFromChildren
+    , Qt::WA_WindowModified
+    , Qt::WA_Resized
+    , Qt::WA_Moved
+    , Qt::WA_PendingUpdate
+    , Qt::WA_InvalidSize
+    , Qt::WA_MacBrushedMetal
+    , Qt::WA_CustomWhatsThis
+    , Qt::WA_LayoutOnEntireRect
+    , Qt::WA_OutsideWSRange
+    , Qt::WA_GrabbedShortcut
+    , Qt::WA_TransparentForMouseEvents
+    , Qt::WA_PaintUnclipped
+    , Qt::WA_SetWindowIcon
+    , Qt::WA_NoMouseReplay
+    , Qt::WA_DeleteOnClose
+    , Qt::WA_RightToLeft
+    , Qt::WA_SetLayoutDirection
+    , Qt::WA_NoChildEventsForParent
+    , Qt::WA_ForceUpdatesDisabled
+    , Qt::WA_WState_Created
+    , Qt::WA_WState_CompressKeys
+    , Qt::WA_WState_InPaintEvent
+    , Qt::WA_WState_Reparented
+    , Qt::WA_WState_ConfigPending
+    , Qt::WA_WState_Polished
+    , Qt::WA_WState_DND
+    , Qt::WA_WState_OwnSizePolicy
+    , Qt::WA_WState_ExplicitShowHide
+    , Qt::WA_ShowModal
+    , Qt::WA_MouseNoMask
+    , Qt::WA_GroupLeader
+    , Qt::WA_NoMousePropagation
+    , Qt::WA_Hover
+    , Qt::WA_InputMethodTransparent
+    , Qt::WA_QuitOnClose
+    , Qt::WA_KeyboardFocusChange
+    , Qt::WA_AcceptDrops
+    , Qt::WA_DropSiteRegistered
+    , Qt::WA_WindowPropagation
+    , Qt::WA_NoX11EventCompression
+    , Qt::WA_TintedBackground
+    , Qt::WA_X11OpenGLOverlay
+    , Qt::WA_AlwaysShowToolTips
+    , Qt::WA_MacOpaqueSizeGrip
+    , Qt::WA_SetStyle
+    , Qt::WA_SetLocale
+    , Qt::WA_MacShowFocusRect
+    , Qt::WA_MacNormalSize
+    , Qt::WA_MacSmallSize
+    , Qt::WA_MacMiniSize
+    , Qt::WA_LayoutUsesWidgetRect
+    , Qt::WA_StyledBackground
+    , Qt::WA_MSWindowsUseDirect3D
+    , Qt::WA_CanHostQMdiSubWindowTitleBar
+    , Qt::WA_MacAlwaysShowToolWindow
+    , Qt::WA_StyleSheet
+    , Qt::WA_ShowWithoutActivating
+    , Qt::WA_X11BypassTransientForHint
+    , Qt::WA_NativeWindow
+    , Qt::WA_DontCreateNativeAncestors
+    , Qt::WA_MacVariableSize
+    , Qt::WA_DontShowOnScreen
+    , Qt::WA_X11NetWmWindowTypeDesktop
+    , Qt::WA_X11NetWmWindowTypeDock
+    , Qt::WA_X11NetWmWindowTypeToolBar
+    , Qt::WA_X11NetWmWindowTypeMenu
+    , Qt::WA_X11NetWmWindowTypeUtility
+    , Qt::WA_X11NetWmWindowTypeSplash
+    , Qt::WA_X11NetWmWindowTypeDialog
+    , Qt::WA_X11NetWmWindowTypeDropDownMenu
+    , Qt::WA_X11NetWmWindowTypePopupMenu
+    , Qt::WA_X11NetWmWindowTypeToolTip
+    , Qt::WA_X11NetWmWindowTypeNotification
+    , Qt::WA_X11NetWmWindowTypeCombo
+    , Qt::WA_X11NetWmWindowTypeDND
+    , Qt::WA_MacFrameworkScaled
+    , Qt::WA_SetWindowModality
+    , Qt::WA_WState_WindowOpacitySet
+    , Qt::WA_TranslucentBackground
+    , Qt::WA_AcceptTouchEvents
+    , Qt::WA_WState_AcceptedTouchBeginEvent
+    , Qt::WA_TouchPadAcceptSingleTouchEvents
+    , Qt::WA_X11DoNotAcceptFocus
+    , Qt::WA_MacNoShadow
+    , Qt::WA_AttributeCount
+};
+
+static const char * const qtscript_Qt_WidgetAttribute_keys[] = {
+    "WA_Disabled"
+    , "WA_UnderMouse"
+    , "WA_MouseTracking"
+    , "WA_ContentsPropagated"
+    , "WA_OpaquePaintEvent"
+    , "WA_StaticContents"
+    , "WA_LaidOut"
+    , "WA_PaintOnScreen"
+    , "WA_NoSystemBackground"
+    , "WA_UpdatesDisabled"
+    , "WA_Mapped"
+    , "WA_MacNoClickThrough"
+    , "WA_InputMethodEnabled"
+    , "WA_WState_Visible"
+    , "WA_WState_Hidden"
+    , "WA_ForceDisabled"
+    , "WA_KeyCompression"
+    , "WA_PendingMoveEvent"
+    , "WA_PendingResizeEvent"
+    , "WA_SetPalette"
+    , "WA_SetFont"
+    , "WA_SetCursor"
+    , "WA_NoChildEventsFromChildren"
+    , "WA_WindowModified"
+    , "WA_Resized"
+    , "WA_Moved"
+    , "WA_PendingUpdate"
+    , "WA_InvalidSize"
+    , "WA_MacBrushedMetal"
+    , "WA_CustomWhatsThis"
+    , "WA_LayoutOnEntireRect"
+    , "WA_OutsideWSRange"
+    , "WA_GrabbedShortcut"
+    , "WA_TransparentForMouseEvents"
+    , "WA_PaintUnclipped"
+    , "WA_SetWindowIcon"
+    , "WA_NoMouseReplay"
+    , "WA_DeleteOnClose"
+    , "WA_RightToLeft"
+    , "WA_SetLayoutDirection"
+    , "WA_NoChildEventsForParent"
+    , "WA_ForceUpdatesDisabled"
+    , "WA_WState_Created"
+    , "WA_WState_CompressKeys"
+    , "WA_WState_InPaintEvent"
+    , "WA_WState_Reparented"
+    , "WA_WState_ConfigPending"
+    , "WA_WState_Polished"
+    , "WA_WState_DND"
+    , "WA_WState_OwnSizePolicy"
+    , "WA_WState_ExplicitShowHide"
+    , "WA_ShowModal"
+    , "WA_MouseNoMask"
+    , "WA_GroupLeader"
+    , "WA_NoMousePropagation"
+    , "WA_Hover"
+    , "WA_InputMethodTransparent"
+    , "WA_QuitOnClose"
+    , "WA_KeyboardFocusChange"
+    , "WA_AcceptDrops"
+    , "WA_DropSiteRegistered"
+    , "WA_WindowPropagation"
+    , "WA_NoX11EventCompression"
+    , "WA_TintedBackground"
+    , "WA_X11OpenGLOverlay"
+    , "WA_AlwaysShowToolTips"
+    , "WA_MacOpaqueSizeGrip"
+    , "WA_SetStyle"
+    , "WA_SetLocale"
+    , "WA_MacShowFocusRect"
+    , "WA_MacNormalSize"
+    , "WA_MacSmallSize"
+    , "WA_MacMiniSize"
+    , "WA_LayoutUsesWidgetRect"
+    , "WA_StyledBackground"
+    , "WA_MSWindowsUseDirect3D"
+    , "WA_CanHostQMdiSubWindowTitleBar"
+    , "WA_MacAlwaysShowToolWindow"
+    , "WA_StyleSheet"
+    , "WA_ShowWithoutActivating"
+    , "WA_X11BypassTransientForHint"
+    , "WA_NativeWindow"
+    , "WA_DontCreateNativeAncestors"
+    , "WA_MacVariableSize"
+    , "WA_DontShowOnScreen"
+    , "WA_X11NetWmWindowTypeDesktop"
+    , "WA_X11NetWmWindowTypeDock"
+    , "WA_X11NetWmWindowTypeToolBar"
+    , "WA_X11NetWmWindowTypeMenu"
+    , "WA_X11NetWmWindowTypeUtility"
+    , "WA_X11NetWmWindowTypeSplash"
+    , "WA_X11NetWmWindowTypeDialog"
+    , "WA_X11NetWmWindowTypeDropDownMenu"
+    , "WA_X11NetWmWindowTypePopupMenu"
+    , "WA_X11NetWmWindowTypeToolTip"
+    , "WA_X11NetWmWindowTypeNotification"
+    , "WA_X11NetWmWindowTypeCombo"
+    , "WA_X11NetWmWindowTypeDND"
+    , "WA_MacFrameworkScaled"
+    , "WA_SetWindowModality"
+    , "WA_WState_WindowOpacitySet"
+    , "WA_TranslucentBackground"
+    , "WA_AcceptTouchEvents"
+    , "WA_WState_AcceptedTouchBeginEvent"
+    , "WA_TouchPadAcceptSingleTouchEvents"
+    , "WA_X11DoNotAcceptFocus"
+    , "WA_MacNoShadow"
+    , "WA_AttributeCount"
+};
+
+static QString qtscript_Qt_WidgetAttribute_toStringHelper(Qt::WidgetAttribute value)
+{
+    for (int i = 0; i < 108; ++i) {
+        if (qtscript_Qt_WidgetAttribute_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_WidgetAttribute_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_WidgetAttribute_toScriptValue(QScriptEngine *engine, const Qt::WidgetAttribute &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_WidgetAttribute_toStringHelper(value));
+}
+
+static void qtscript_Qt_WidgetAttribute_fromScriptValue(const QScriptValue &value, Qt::WidgetAttribute &out)
+{
+    out = qvariant_cast<Qt::WidgetAttribute>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_WidgetAttribute(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 108; ++i) {
+        if (qtscript_Qt_WidgetAttribute_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::WidgetAttribute>(arg));
+    }
+    return context->throwError(QString::fromLatin1("WidgetAttribute(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_WidgetAttribute_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WidgetAttribute value = qscriptvalue_cast<Qt::WidgetAttribute>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_WidgetAttribute_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WidgetAttribute value = qscriptvalue_cast<Qt::WidgetAttribute>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_WidgetAttribute_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_WidgetAttribute_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_WidgetAttribute,
+        qtscript_Qt_WidgetAttribute_valueOf, qtscript_Qt_WidgetAttribute_toString);
+    qScriptRegisterMetaType<Qt::WidgetAttribute>(engine, qtscript_Qt_WidgetAttribute_toScriptValue,
+        qtscript_Qt_WidgetAttribute_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 108; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WidgetAttribute_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_WidgetAttribute_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ClipOperation
+//
+
+static const Qt::ClipOperation qtscript_Qt_ClipOperation_values[] = {
+    Qt::NoClip
+    , Qt::ReplaceClip
+    , Qt::IntersectClip
+};
+
+static const char * const qtscript_Qt_ClipOperation_keys[] = {
+    "NoClip"
+    , "ReplaceClip"
+    , "IntersectClip"
+};
+
+static QString qtscript_Qt_ClipOperation_toStringHelper(Qt::ClipOperation value)
+{
+    if ((value >= Qt::NoClip) && (value <= Qt::IntersectClip))
+        return qtscript_Qt_ClipOperation_keys[static_cast<int>(value)-static_cast<int>(Qt::NoClip)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ClipOperation_toScriptValue(QScriptEngine *engine, const Qt::ClipOperation &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ClipOperation_toStringHelper(value));
+}
+
+static void qtscript_Qt_ClipOperation_fromScriptValue(const QScriptValue &value, Qt::ClipOperation &out)
+{
+    out = qvariant_cast<Qt::ClipOperation>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ClipOperation(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::NoClip) && (arg <= Qt::IntersectClip))
+        return qScriptValueFromValue(engine,  static_cast<Qt::ClipOperation>(arg));
+    return context->throwError(QString::fromLatin1("ClipOperation(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ClipOperation_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ClipOperation value = qscriptvalue_cast<Qt::ClipOperation>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ClipOperation_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ClipOperation value = qscriptvalue_cast<Qt::ClipOperation>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ClipOperation_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ClipOperation_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ClipOperation,
+        qtscript_Qt_ClipOperation_valueOf, qtscript_Qt_ClipOperation_toString);
+    qScriptRegisterMetaType<Qt::ClipOperation>(engine, qtscript_Qt_ClipOperation_toScriptValue,
+        qtscript_Qt_ClipOperation_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ClipOperation_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ClipOperation_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::PenStyle
+//
+
+static const Qt::PenStyle qtscript_Qt_PenStyle_values[] = {
+    Qt::NoPen
+    , Qt::SolidLine
+    , Qt::DashLine
+    , Qt::DotLine
+    , Qt::DashDotLine
+    , Qt::DashDotDotLine
+    , Qt::CustomDashLine
+    , Qt::MPenStyle
+};
+
+static const char * const qtscript_Qt_PenStyle_keys[] = {
+    "NoPen"
+    , "SolidLine"
+    , "DashLine"
+    , "DotLine"
+    , "DashDotLine"
+    , "DashDotDotLine"
+    , "CustomDashLine"
+    , "MPenStyle"
+};
+
+static QString qtscript_Qt_PenStyle_toStringHelper(Qt::PenStyle value)
+{
+    for (int i = 0; i < 8; ++i) {
+        if (qtscript_Qt_PenStyle_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_PenStyle_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_PenStyle_toScriptValue(QScriptEngine *engine, const Qt::PenStyle &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_PenStyle_toStringHelper(value));
+}
+
+static void qtscript_Qt_PenStyle_fromScriptValue(const QScriptValue &value, Qt::PenStyle &out)
+{
+    out = qvariant_cast<Qt::PenStyle>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_PenStyle(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 8; ++i) {
+        if (qtscript_Qt_PenStyle_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::PenStyle>(arg));
+    }
+    return context->throwError(QString::fromLatin1("PenStyle(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_PenStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::PenStyle value = qscriptvalue_cast<Qt::PenStyle>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_PenStyle_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::PenStyle value = qscriptvalue_cast<Qt::PenStyle>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_PenStyle_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_PenStyle_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_PenStyle,
+        qtscript_Qt_PenStyle_valueOf, qtscript_Qt_PenStyle_toString);
+    qScriptRegisterMetaType<Qt::PenStyle>(engine, qtscript_Qt_PenStyle_toScriptValue,
+        qtscript_Qt_PenStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 8; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_PenStyle_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_PenStyle_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::WindowModality
+//
+
+static const Qt::WindowModality qtscript_Qt_WindowModality_values[] = {
+    Qt::NonModal
+    , Qt::WindowModal
+    , Qt::ApplicationModal
+};
+
+static const char * const qtscript_Qt_WindowModality_keys[] = {
+    "NonModal"
+    , "WindowModal"
+    , "ApplicationModal"
+};
+
+static QString qtscript_Qt_WindowModality_toStringHelper(Qt::WindowModality value)
+{
+    if ((value >= Qt::NonModal) && (value <= Qt::ApplicationModal))
+        return qtscript_Qt_WindowModality_keys[static_cast<int>(value)-static_cast<int>(Qt::NonModal)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_WindowModality_toScriptValue(QScriptEngine *engine, const Qt::WindowModality &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_WindowModality_toStringHelper(value));
+}
+
+static void qtscript_Qt_WindowModality_fromScriptValue(const QScriptValue &value, Qt::WindowModality &out)
+{
+    out = qvariant_cast<Qt::WindowModality>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_WindowModality(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::NonModal) && (arg <= Qt::ApplicationModal))
+        return qScriptValueFromValue(engine,  static_cast<Qt::WindowModality>(arg));
+    return context->throwError(QString::fromLatin1("WindowModality(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_WindowModality_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowModality value = qscriptvalue_cast<Qt::WindowModality>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_WindowModality_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowModality value = qscriptvalue_cast<Qt::WindowModality>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_WindowModality_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_WindowModality_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_WindowModality,
+        qtscript_Qt_WindowModality_valueOf, qtscript_Qt_WindowModality_toString);
+    qScriptRegisterMetaType<Qt::WindowModality>(engine, qtscript_Qt_WindowModality_toScriptValue,
+        qtscript_Qt_WindowModality_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WindowModality_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_WindowModality_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::BrushStyle
+//
+
+static const Qt::BrushStyle qtscript_Qt_BrushStyle_values[] = {
+    Qt::NoBrush
+    , Qt::SolidPattern
+    , Qt::Dense1Pattern
+    , Qt::Dense2Pattern
+    , Qt::Dense3Pattern
+    , Qt::Dense4Pattern
+    , Qt::Dense5Pattern
+    , Qt::Dense6Pattern
+    , Qt::Dense7Pattern
+    , Qt::HorPattern
+    , Qt::VerPattern
+    , Qt::CrossPattern
+    , Qt::BDiagPattern
+    , Qt::FDiagPattern
+    , Qt::DiagCrossPattern
+    , Qt::LinearGradientPattern
+    , Qt::RadialGradientPattern
+    , Qt::ConicalGradientPattern
+    , Qt::TexturePattern
+};
+
+static const char * const qtscript_Qt_BrushStyle_keys[] = {
+    "NoBrush"
+    , "SolidPattern"
+    , "Dense1Pattern"
+    , "Dense2Pattern"
+    , "Dense3Pattern"
+    , "Dense4Pattern"
+    , "Dense5Pattern"
+    , "Dense6Pattern"
+    , "Dense7Pattern"
+    , "HorPattern"
+    , "VerPattern"
+    , "CrossPattern"
+    , "BDiagPattern"
+    , "FDiagPattern"
+    , "DiagCrossPattern"
+    , "LinearGradientPattern"
+    , "RadialGradientPattern"
+    , "ConicalGradientPattern"
+    , "TexturePattern"
+};
+
+static QString qtscript_Qt_BrushStyle_toStringHelper(Qt::BrushStyle value)
+{
+    for (int i = 0; i < 19; ++i) {
+        if (qtscript_Qt_BrushStyle_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_BrushStyle_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_BrushStyle_toScriptValue(QScriptEngine *engine, const Qt::BrushStyle &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_BrushStyle_toStringHelper(value));
+}
+
+static void qtscript_Qt_BrushStyle_fromScriptValue(const QScriptValue &value, Qt::BrushStyle &out)
+{
+    out = qvariant_cast<Qt::BrushStyle>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_BrushStyle(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 19; ++i) {
+        if (qtscript_Qt_BrushStyle_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::BrushStyle>(arg));
+    }
+    return context->throwError(QString::fromLatin1("BrushStyle(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_BrushStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::BrushStyle value = qscriptvalue_cast<Qt::BrushStyle>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_BrushStyle_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::BrushStyle value = qscriptvalue_cast<Qt::BrushStyle>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_BrushStyle_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_BrushStyle_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_BrushStyle,
+        qtscript_Qt_BrushStyle_valueOf, qtscript_Qt_BrushStyle_toString);
+    qScriptRegisterMetaType<Qt::BrushStyle>(engine, qtscript_Qt_BrushStyle_toScriptValue,
+        qtscript_Qt_BrushStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 19; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_BrushStyle_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_BrushStyle_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::TextFlag
+//
+
+static const Qt::TextFlag qtscript_Qt_TextFlag_values[] = {
+    Qt::TextSingleLine
+    , Qt::TextDontClip
+    , Qt::TextExpandTabs
+    , Qt::TextShowMnemonic
+    , Qt::TextWordWrap
+    , Qt::TextWrapAnywhere
+    , Qt::TextDontPrint
+    , Qt::TextHideMnemonic
+    , Qt::TextJustificationForced
+    , Qt::TextForceLeftToRight
+    , Qt::TextForceRightToLeft
+    , Qt::TextLongestVariant
+    , Qt::TextBypassShaping
+    , Qt::TextIncludeTrailingSpaces
+};
+
+static const char * const qtscript_Qt_TextFlag_keys[] = {
+    "TextSingleLine"
+    , "TextDontClip"
+    , "TextExpandTabs"
+    , "TextShowMnemonic"
+    , "TextWordWrap"
+    , "TextWrapAnywhere"
+    , "TextDontPrint"
+    , "TextHideMnemonic"
+    , "TextJustificationForced"
+    , "TextForceLeftToRight"
+    , "TextForceRightToLeft"
+    , "TextLongestVariant"
+    , "TextBypassShaping"
+    , "TextIncludeTrailingSpaces"
+};
+
+static QString qtscript_Qt_TextFlag_toStringHelper(Qt::TextFlag value)
+{
+    for (int i = 0; i < 14; ++i) {
+        if (qtscript_Qt_TextFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_TextFlag_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_TextFlag_toScriptValue(QScriptEngine *engine, const Qt::TextFlag &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_TextFlag_toStringHelper(value));
+}
+
+static void qtscript_Qt_TextFlag_fromScriptValue(const QScriptValue &value, Qt::TextFlag &out)
+{
+    out = qvariant_cast<Qt::TextFlag>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_TextFlag(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 14; ++i) {
+        if (qtscript_Qt_TextFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::TextFlag>(arg));
+    }
+    return context->throwError(QString::fromLatin1("TextFlag(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_TextFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TextFlag value = qscriptvalue_cast<Qt::TextFlag>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_TextFlag_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TextFlag value = qscriptvalue_cast<Qt::TextFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_TextFlag_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_TextFlag_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_TextFlag,
+        qtscript_Qt_TextFlag_valueOf, qtscript_Qt_TextFlag_toString);
+    qScriptRegisterMetaType<Qt::TextFlag>(engine, qtscript_Qt_TextFlag_toScriptValue,
+        qtscript_Qt_TextFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 14; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TextFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_TextFlag_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::SizeHint
+//
+
+static const Qt::SizeHint qtscript_Qt_SizeHint_values[] = {
+    Qt::MinimumSize
+    , Qt::PreferredSize
+    , Qt::MaximumSize
+    , Qt::MinimumDescent
+    , Qt::NSizeHints
+};
+
+static const char * const qtscript_Qt_SizeHint_keys[] = {
+    "MinimumSize"
+    , "PreferredSize"
+    , "MaximumSize"
+    , "MinimumDescent"
+    , "NSizeHints"
+};
+
+static QString qtscript_Qt_SizeHint_toStringHelper(Qt::SizeHint value)
+{
+    if ((value >= Qt::MinimumSize) && (value <= Qt::NSizeHints))
+        return qtscript_Qt_SizeHint_keys[static_cast<int>(value)-static_cast<int>(Qt::MinimumSize)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_SizeHint_toScriptValue(QScriptEngine *engine, const Qt::SizeHint &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_SizeHint_toStringHelper(value));
+}
+
+static void qtscript_Qt_SizeHint_fromScriptValue(const QScriptValue &value, Qt::SizeHint &out)
+{
+    out = qvariant_cast<Qt::SizeHint>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_SizeHint(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::MinimumSize) && (arg <= Qt::NSizeHints))
+        return qScriptValueFromValue(engine,  static_cast<Qt::SizeHint>(arg));
+    return context->throwError(QString::fromLatin1("SizeHint(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_SizeHint_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::SizeHint value = qscriptvalue_cast<Qt::SizeHint>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_SizeHint_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::SizeHint value = qscriptvalue_cast<Qt::SizeHint>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_SizeHint_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_SizeHint_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_SizeHint,
+        qtscript_Qt_SizeHint_valueOf, qtscript_Qt_SizeHint_toString);
+    qScriptRegisterMetaType<Qt::SizeHint>(engine, qtscript_Qt_SizeHint_toScriptValue,
+        qtscript_Qt_SizeHint_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_SizeHint_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_SizeHint_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::Axis
+//
+
+static const Qt::Axis qtscript_Qt_Axis_values[] = {
+    Qt::XAxis
+    , Qt::YAxis
+    , Qt::ZAxis
+};
+
+static const char * const qtscript_Qt_Axis_keys[] = {
+    "XAxis"
+    , "YAxis"
+    , "ZAxis"
+};
+
+static QString qtscript_Qt_Axis_toStringHelper(Qt::Axis value)
+{
+    if ((value >= Qt::XAxis) && (value <= Qt::ZAxis))
+        return qtscript_Qt_Axis_keys[static_cast<int>(value)-static_cast<int>(Qt::XAxis)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_Axis_toScriptValue(QScriptEngine *engine, const Qt::Axis &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_Axis_toStringHelper(value));
+}
+
+static void qtscript_Qt_Axis_fromScriptValue(const QScriptValue &value, Qt::Axis &out)
+{
+    out = qvariant_cast<Qt::Axis>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_Axis(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::XAxis) && (arg <= Qt::ZAxis))
+        return qScriptValueFromValue(engine,  static_cast<Qt::Axis>(arg));
+    return context->throwError(QString::fromLatin1("Axis(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_Axis_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::Axis value = qscriptvalue_cast<Qt::Axis>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_Axis_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::Axis value = qscriptvalue_cast<Qt::Axis>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_Axis_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_Axis_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_Axis,
+        qtscript_Qt_Axis_valueOf, qtscript_Qt_Axis_toString);
+    qScriptRegisterMetaType<Qt::Axis>(engine, qtscript_Qt_Axis_toScriptValue,
+        qtscript_Qt_Axis_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_Axis_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_Axis_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::CoordinateSystem
+//
+
+static const Qt::CoordinateSystem qtscript_Qt_CoordinateSystem_values[] = {
+    Qt::DeviceCoordinates
+    , Qt::LogicalCoordinates
+};
+
+static const char * const qtscript_Qt_CoordinateSystem_keys[] = {
+    "DeviceCoordinates"
+    , "LogicalCoordinates"
+};
+
+static QString qtscript_Qt_CoordinateSystem_toStringHelper(Qt::CoordinateSystem value)
+{
+    if ((value >= Qt::DeviceCoordinates) && (value <= Qt::LogicalCoordinates))
+        return qtscript_Qt_CoordinateSystem_keys[static_cast<int>(value)-static_cast<int>(Qt::DeviceCoordinates)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_CoordinateSystem_toScriptValue(QScriptEngine *engine, const Qt::CoordinateSystem &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_CoordinateSystem_toStringHelper(value));
+}
+
+static void qtscript_Qt_CoordinateSystem_fromScriptValue(const QScriptValue &value, Qt::CoordinateSystem &out)
+{
+    out = qvariant_cast<Qt::CoordinateSystem>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_CoordinateSystem(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::DeviceCoordinates) && (arg <= Qt::LogicalCoordinates))
+        return qScriptValueFromValue(engine,  static_cast<Qt::CoordinateSystem>(arg));
+    return context->throwError(QString::fromLatin1("CoordinateSystem(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_CoordinateSystem_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::CoordinateSystem value = qscriptvalue_cast<Qt::CoordinateSystem>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_CoordinateSystem_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::CoordinateSystem value = qscriptvalue_cast<Qt::CoordinateSystem>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_CoordinateSystem_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_CoordinateSystem_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_CoordinateSystem,
+        qtscript_Qt_CoordinateSystem_valueOf, qtscript_Qt_CoordinateSystem_toString);
+    qScriptRegisterMetaType<Qt::CoordinateSystem>(engine, qtscript_Qt_CoordinateSystem_toScriptValue,
+        qtscript_Qt_CoordinateSystem_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_CoordinateSystem_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_CoordinateSystem_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::FindChildOption
+//
+
+static const Qt::FindChildOption qtscript_Qt_FindChildOption_values[] = {
+    Qt::FindDirectChildrenOnly
+    , Qt::FindChildrenRecursively
+};
+
+static const char * const qtscript_Qt_FindChildOption_keys[] = {
+    "FindDirectChildrenOnly"
+    , "FindChildrenRecursively"
+};
+
+static QString qtscript_Qt_FindChildOption_toStringHelper(Qt::FindChildOption value)
+{
+    if ((value >= Qt::FindDirectChildrenOnly) && (value <= Qt::FindChildrenRecursively))
+        return qtscript_Qt_FindChildOption_keys[static_cast<int>(value)-static_cast<int>(Qt::FindDirectChildrenOnly)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_FindChildOption_toScriptValue(QScriptEngine *engine, const Qt::FindChildOption &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_FindChildOption_toStringHelper(value));
+}
+
+static void qtscript_Qt_FindChildOption_fromScriptValue(const QScriptValue &value, Qt::FindChildOption &out)
+{
+    out = qvariant_cast<Qt::FindChildOption>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_FindChildOption(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::FindDirectChildrenOnly) && (arg <= Qt::FindChildrenRecursively))
+        return qScriptValueFromValue(engine,  static_cast<Qt::FindChildOption>(arg));
+    return context->throwError(QString::fromLatin1("FindChildOption(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_FindChildOption_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::FindChildOption value = qscriptvalue_cast<Qt::FindChildOption>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_FindChildOption_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::FindChildOption value = qscriptvalue_cast<Qt::FindChildOption>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_FindChildOption_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_FindChildOption_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_FindChildOption,
+        qtscript_Qt_FindChildOption_valueOf, qtscript_Qt_FindChildOption_toString);
+    qScriptRegisterMetaType<Qt::FindChildOption>(engine, qtscript_Qt_FindChildOption_toScriptValue,
+        qtscript_Qt_FindChildOption_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_FindChildOption_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_FindChildOption_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::CaseSensitivity
+//
+
+static const Qt::CaseSensitivity qtscript_Qt_CaseSensitivity_values[] = {
+    Qt::CaseInsensitive
+    , Qt::CaseSensitive
+};
+
+static const char * const qtscript_Qt_CaseSensitivity_keys[] = {
+    "CaseInsensitive"
+    , "CaseSensitive"
+};
+
+static QString qtscript_Qt_CaseSensitivity_toStringHelper(Qt::CaseSensitivity value)
+{
+    if ((value >= Qt::CaseInsensitive) && (value <= Qt::CaseSensitive))
+        return qtscript_Qt_CaseSensitivity_keys[static_cast<int>(value)-static_cast<int>(Qt::CaseInsensitive)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_CaseSensitivity_toScriptValue(QScriptEngine *engine, const Qt::CaseSensitivity &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_CaseSensitivity_toStringHelper(value));
+}
+
+static void qtscript_Qt_CaseSensitivity_fromScriptValue(const QScriptValue &value, Qt::CaseSensitivity &out)
+{
+    out = qvariant_cast<Qt::CaseSensitivity>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_CaseSensitivity(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::CaseInsensitive) && (arg <= Qt::CaseSensitive))
+        return qScriptValueFromValue(engine,  static_cast<Qt::CaseSensitivity>(arg));
+    return context->throwError(QString::fromLatin1("CaseSensitivity(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_CaseSensitivity_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::CaseSensitivity value = qscriptvalue_cast<Qt::CaseSensitivity>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_CaseSensitivity_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::CaseSensitivity value = qscriptvalue_cast<Qt::CaseSensitivity>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_CaseSensitivity_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_CaseSensitivity_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_CaseSensitivity,
+        qtscript_Qt_CaseSensitivity_valueOf, qtscript_Qt_CaseSensitivity_toString);
+    qScriptRegisterMetaType<Qt::CaseSensitivity>(engine, qtscript_Qt_CaseSensitivity_toScriptValue,
+        qtscript_Qt_CaseSensitivity_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_CaseSensitivity_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_CaseSensitivity_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::DropAction
+//
+
+static const Qt::DropAction qtscript_Qt_DropAction_values[] = {
+    Qt::IgnoreAction
+    , Qt::CopyAction
+    , Qt::MoveAction
+    , Qt::LinkAction
+    , Qt::ActionMask
+    , Qt::TargetMoveAction
+};
+
+static const char * const qtscript_Qt_DropAction_keys[] = {
+    "IgnoreAction"
+    , "CopyAction"
+    , "MoveAction"
+    , "LinkAction"
+    , "ActionMask"
+    , "TargetMoveAction"
+};
+
+static QString qtscript_Qt_DropAction_toStringHelper(Qt::DropAction value)
+{
+    for (int i = 0; i < 6; ++i) {
+        if (qtscript_Qt_DropAction_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_DropAction_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_DropAction_toScriptValue(QScriptEngine *engine, const Qt::DropAction &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_DropAction_toStringHelper(value));
+}
+
+static void qtscript_Qt_DropAction_fromScriptValue(const QScriptValue &value, Qt::DropAction &out)
+{
+    out = qvariant_cast<Qt::DropAction>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_DropAction(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 6; ++i) {
+        if (qtscript_Qt_DropAction_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::DropAction>(arg));
+    }
+    return context->throwError(QString::fromLatin1("DropAction(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_DropAction_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DropAction value = qscriptvalue_cast<Qt::DropAction>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_DropAction_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DropAction value = qscriptvalue_cast<Qt::DropAction>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_DropAction_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_DropAction_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_DropAction,
+        qtscript_Qt_DropAction_valueOf, qtscript_Qt_DropAction_toString);
+    qScriptRegisterMetaType<Qt::DropAction>(engine, qtscript_Qt_DropAction_toScriptValue,
+        qtscript_Qt_DropAction_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 6; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_DropAction_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_DropAction_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::DropActions
+//
+
+static QScriptValue qtscript_Qt_DropActions_toScriptValue(QScriptEngine *engine, const Qt::DropActions &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_DropActions_fromScriptValue(const QScriptValue &value, Qt::DropActions &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::DropActions>())
+        out = qvariant_cast<Qt::DropActions>(var);
+    else if (var.userType() == qMetaTypeId<Qt::DropAction>())
+        out = qvariant_cast<Qt::DropAction>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_DropActions(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DropActions result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::DropActions>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::DropAction>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("DropActions(): argument %0 is not of type DropAction").arg(i));
+            }
+            result |= qvariant_cast<Qt::DropAction>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_DropActions_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DropActions value = qscriptvalue_cast<Qt::DropActions>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_DropActions_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::DropActions value = qscriptvalue_cast<Qt::DropActions>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 6; ++i) {
+        if ((value & qtscript_Qt_DropAction_values[i]) == qtscript_Qt_DropAction_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_DropAction_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_DropActions_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::DropActions>() == otherObj.value<Qt::DropActions>())));
+}
+
+static QScriptValue qtscript_create_Qt_DropActions_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_DropActions, qtscript_Qt_DropActions_valueOf,
+        qtscript_Qt_DropActions_toString, qtscript_Qt_DropActions_equals);
+    qScriptRegisterMetaType<Qt::DropActions>(engine, qtscript_Qt_DropActions_toScriptValue,
+        qtscript_Qt_DropActions_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::ContextMenuPolicy
+//
+
+static const Qt::ContextMenuPolicy qtscript_Qt_ContextMenuPolicy_values[] = {
+    Qt::NoContextMenu
+    , Qt::DefaultContextMenu
+    , Qt::ActionsContextMenu
+    , Qt::CustomContextMenu
+    , Qt::PreventContextMenu
+};
+
+static const char * const qtscript_Qt_ContextMenuPolicy_keys[] = {
+    "NoContextMenu"
+    , "DefaultContextMenu"
+    , "ActionsContextMenu"
+    , "CustomContextMenu"
+    , "PreventContextMenu"
+};
+
+static QString qtscript_Qt_ContextMenuPolicy_toStringHelper(Qt::ContextMenuPolicy value)
+{
+    if ((value >= Qt::NoContextMenu) && (value <= Qt::PreventContextMenu))
+        return qtscript_Qt_ContextMenuPolicy_keys[static_cast<int>(value)-static_cast<int>(Qt::NoContextMenu)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ContextMenuPolicy_toScriptValue(QScriptEngine *engine, const Qt::ContextMenuPolicy &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ContextMenuPolicy_toStringHelper(value));
+}
+
+static void qtscript_Qt_ContextMenuPolicy_fromScriptValue(const QScriptValue &value, Qt::ContextMenuPolicy &out)
+{
+    out = qvariant_cast<Qt::ContextMenuPolicy>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ContextMenuPolicy(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::NoContextMenu) && (arg <= Qt::PreventContextMenu))
+        return qScriptValueFromValue(engine,  static_cast<Qt::ContextMenuPolicy>(arg));
+    return context->throwError(QString::fromLatin1("ContextMenuPolicy(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ContextMenuPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ContextMenuPolicy value = qscriptvalue_cast<Qt::ContextMenuPolicy>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ContextMenuPolicy_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ContextMenuPolicy value = qscriptvalue_cast<Qt::ContextMenuPolicy>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ContextMenuPolicy_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ContextMenuPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ContextMenuPolicy,
+        qtscript_Qt_ContextMenuPolicy_valueOf, qtscript_Qt_ContextMenuPolicy_toString);
+    qScriptRegisterMetaType<Qt::ContextMenuPolicy>(engine, qtscript_Qt_ContextMenuPolicy_toScriptValue,
+        qtscript_Qt_ContextMenuPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ContextMenuPolicy_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ContextMenuPolicy_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::KeyboardModifier
+//
+
+static const Qt::KeyboardModifier qtscript_Qt_KeyboardModifier_values[] = {
+    Qt::KeyboardModifierMask
+    , Qt::NoModifier
+    , Qt::ShiftModifier
+    , Qt::ControlModifier
+    , Qt::AltModifier
+    , Qt::MetaModifier
+    , Qt::KeypadModifier
+    , Qt::GroupSwitchModifier
+};
+
+static const char * const qtscript_Qt_KeyboardModifier_keys[] = {
+    "KeyboardModifierMask"
+    , "NoModifier"
+    , "ShiftModifier"
+    , "ControlModifier"
+    , "AltModifier"
+    , "MetaModifier"
+    , "KeypadModifier"
+    , "GroupSwitchModifier"
+};
+
+static QString qtscript_Qt_KeyboardModifier_toStringHelper(Qt::KeyboardModifier value)
+{
+    for (int i = 0; i < 8; ++i) {
+        if (qtscript_Qt_KeyboardModifier_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_KeyboardModifier_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_KeyboardModifier_toScriptValue(QScriptEngine *engine, const Qt::KeyboardModifier &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_KeyboardModifier_toStringHelper(value));
+}
+
+static void qtscript_Qt_KeyboardModifier_fromScriptValue(const QScriptValue &value, Qt::KeyboardModifier &out)
+{
+    out = qvariant_cast<Qt::KeyboardModifier>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_KeyboardModifier(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 8; ++i) {
+        if (qtscript_Qt_KeyboardModifier_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::KeyboardModifier>(arg));
+    }
+    return context->throwError(QString::fromLatin1("KeyboardModifier(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_KeyboardModifier_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::KeyboardModifier value = qscriptvalue_cast<Qt::KeyboardModifier>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_KeyboardModifier_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::KeyboardModifier value = qscriptvalue_cast<Qt::KeyboardModifier>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_KeyboardModifier_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_KeyboardModifier_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_KeyboardModifier,
+        qtscript_Qt_KeyboardModifier_valueOf, qtscript_Qt_KeyboardModifier_toString);
+    qScriptRegisterMetaType<Qt::KeyboardModifier>(engine, qtscript_Qt_KeyboardModifier_toScriptValue,
+        qtscript_Qt_KeyboardModifier_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 8; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_KeyboardModifier_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_KeyboardModifier_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::KeyboardModifiers
+//
+
+static QScriptValue qtscript_Qt_KeyboardModifiers_toScriptValue(QScriptEngine *engine, const Qt::KeyboardModifiers &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_KeyboardModifiers_fromScriptValue(const QScriptValue &value, Qt::KeyboardModifiers &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::KeyboardModifiers>())
+        out = qvariant_cast<Qt::KeyboardModifiers>(var);
+    else if (var.userType() == qMetaTypeId<Qt::KeyboardModifier>())
+        out = qvariant_cast<Qt::KeyboardModifier>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_KeyboardModifiers(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::KeyboardModifiers result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::KeyboardModifiers>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::KeyboardModifier>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("KeyboardModifiers(): argument %0 is not of type KeyboardModifier").arg(i));
+            }
+            result |= qvariant_cast<Qt::KeyboardModifier>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_KeyboardModifiers_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::KeyboardModifiers value = qscriptvalue_cast<Qt::KeyboardModifiers>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_KeyboardModifiers_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::KeyboardModifiers value = qscriptvalue_cast<Qt::KeyboardModifiers>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 8; ++i) {
+        if ((value & qtscript_Qt_KeyboardModifier_values[i]) == qtscript_Qt_KeyboardModifier_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_KeyboardModifier_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_KeyboardModifiers_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::KeyboardModifiers>() == otherObj.value<Qt::KeyboardModifiers>())));
+}
+
+static QScriptValue qtscript_create_Qt_KeyboardModifiers_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_KeyboardModifiers, qtscript_Qt_KeyboardModifiers_valueOf,
+        qtscript_Qt_KeyboardModifiers_toString, qtscript_Qt_KeyboardModifiers_equals);
+    qScriptRegisterMetaType<Qt::KeyboardModifiers>(engine, qtscript_Qt_KeyboardModifiers_toScriptValue,
+        qtscript_Qt_KeyboardModifiers_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::WhiteSpaceMode
+//
+
+static const Qt::WhiteSpaceMode qtscript_Qt_WhiteSpaceMode_values[] = {
+    Qt::WhiteSpaceModeUndefined
+    , Qt::WhiteSpaceNormal
+    , Qt::WhiteSpacePre
+    , Qt::WhiteSpaceNoWrap
+};
+
+static const char * const qtscript_Qt_WhiteSpaceMode_keys[] = {
+    "WhiteSpaceModeUndefined"
+    , "WhiteSpaceNormal"
+    , "WhiteSpacePre"
+    , "WhiteSpaceNoWrap"
+};
+
+static QString qtscript_Qt_WhiteSpaceMode_toStringHelper(Qt::WhiteSpaceMode value)
+{
+    if ((value >= Qt::WhiteSpaceModeUndefined) && (value <= Qt::WhiteSpaceNoWrap))
+        return qtscript_Qt_WhiteSpaceMode_keys[static_cast<int>(value)-static_cast<int>(Qt::WhiteSpaceModeUndefined)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_WhiteSpaceMode_toScriptValue(QScriptEngine *engine, const Qt::WhiteSpaceMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_WhiteSpaceMode_toStringHelper(value));
+}
+
+static void qtscript_Qt_WhiteSpaceMode_fromScriptValue(const QScriptValue &value, Qt::WhiteSpaceMode &out)
+{
+    out = qvariant_cast<Qt::WhiteSpaceMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_WhiteSpaceMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::WhiteSpaceModeUndefined) && (arg <= Qt::WhiteSpaceNoWrap))
+        return qScriptValueFromValue(engine,  static_cast<Qt::WhiteSpaceMode>(arg));
+    return context->throwError(QString::fromLatin1("WhiteSpaceMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_WhiteSpaceMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WhiteSpaceMode value = qscriptvalue_cast<Qt::WhiteSpaceMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_WhiteSpaceMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WhiteSpaceMode value = qscriptvalue_cast<Qt::WhiteSpaceMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_WhiteSpaceMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_WhiteSpaceMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_WhiteSpaceMode,
+        qtscript_Qt_WhiteSpaceMode_valueOf, qtscript_Qt_WhiteSpaceMode_toString);
+    qScriptRegisterMetaType<Qt::WhiteSpaceMode>(engine, qtscript_Qt_WhiteSpaceMode_toScriptValue,
+        qtscript_Qt_WhiteSpaceMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WhiteSpaceMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_WhiteSpaceMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::Corner
+//
+
+static const Qt::Corner qtscript_Qt_Corner_values[] = {
+    Qt::TopLeftCorner
+    , Qt::TopRightCorner
+    , Qt::BottomLeftCorner
+    , Qt::BottomRightCorner
+};
+
+static const char * const qtscript_Qt_Corner_keys[] = {
+    "TopLeftCorner"
+    , "TopRightCorner"
+    , "BottomLeftCorner"
+    , "BottomRightCorner"
+};
+
+static QString qtscript_Qt_Corner_toStringHelper(Qt::Corner value)
+{
+    if ((value >= Qt::TopLeftCorner) && (value <= Qt::BottomRightCorner))
+        return qtscript_Qt_Corner_keys[static_cast<int>(value)-static_cast<int>(Qt::TopLeftCorner)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_Corner_toScriptValue(QScriptEngine *engine, const Qt::Corner &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_Corner_toStringHelper(value));
+}
+
+static void qtscript_Qt_Corner_fromScriptValue(const QScriptValue &value, Qt::Corner &out)
+{
+    out = qvariant_cast<Qt::Corner>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_Corner(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::TopLeftCorner) && (arg <= Qt::BottomRightCorner))
+        return qScriptValueFromValue(engine,  static_cast<Qt::Corner>(arg));
+    return context->throwError(QString::fromLatin1("Corner(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_Corner_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::Corner value = qscriptvalue_cast<Qt::Corner>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_Corner_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::Corner value = qscriptvalue_cast<Qt::Corner>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_Corner_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_Corner_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_Corner,
+        qtscript_Qt_Corner_valueOf, qtscript_Qt_Corner_toString);
+    qScriptRegisterMetaType<Qt::Corner>(engine, qtscript_Qt_Corner_toScriptValue,
+        qtscript_Qt_Corner_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_Corner_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_Corner_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::TextFormat
+//
+
+static const Qt::TextFormat qtscript_Qt_TextFormat_values[] = {
+    Qt::PlainText
+    , Qt::RichText
+    , Qt::AutoText
+};
+
+static const char * const qtscript_Qt_TextFormat_keys[] = {
+    "PlainText"
+    , "RichText"
+    , "AutoText"
+};
+
+static QString qtscript_Qt_TextFormat_toStringHelper(Qt::TextFormat value)
+{
+    if ((value >= Qt::PlainText) && (value <= Qt::AutoText))
+        return qtscript_Qt_TextFormat_keys[static_cast<int>(value)-static_cast<int>(Qt::PlainText)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_TextFormat_toScriptValue(QScriptEngine *engine, const Qt::TextFormat &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_TextFormat_toStringHelper(value));
+}
+
+static void qtscript_Qt_TextFormat_fromScriptValue(const QScriptValue &value, Qt::TextFormat &out)
+{
+    out = qvariant_cast<Qt::TextFormat>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_TextFormat(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::PlainText) && (arg <= Qt::AutoText))
+        return qScriptValueFromValue(engine,  static_cast<Qt::TextFormat>(arg));
+    return context->throwError(QString::fromLatin1("TextFormat(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_TextFormat_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TextFormat value = qscriptvalue_cast<Qt::TextFormat>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_TextFormat_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TextFormat value = qscriptvalue_cast<Qt::TextFormat>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_TextFormat_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_TextFormat_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_TextFormat,
+        qtscript_Qt_TextFormat_valueOf, qtscript_Qt_TextFormat_toString);
+    qScriptRegisterMetaType<Qt::TextFormat>(engine, qtscript_Qt_TextFormat_toScriptValue,
+        qtscript_Qt_TextFormat_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TextFormat_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_TextFormat_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ScrollBarPolicy
+//
+
+static const Qt::ScrollBarPolicy qtscript_Qt_ScrollBarPolicy_values[] = {
+    Qt::ScrollBarAsNeeded
+    , Qt::ScrollBarAlwaysOff
+    , Qt::ScrollBarAlwaysOn
+};
+
+static const char * const qtscript_Qt_ScrollBarPolicy_keys[] = {
+    "ScrollBarAsNeeded"
+    , "ScrollBarAlwaysOff"
+    , "ScrollBarAlwaysOn"
+};
+
+static QString qtscript_Qt_ScrollBarPolicy_toStringHelper(Qt::ScrollBarPolicy value)
+{
+    if ((value >= Qt::ScrollBarAsNeeded) && (value <= Qt::ScrollBarAlwaysOn))
+        return qtscript_Qt_ScrollBarPolicy_keys[static_cast<int>(value)-static_cast<int>(Qt::ScrollBarAsNeeded)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ScrollBarPolicy_toScriptValue(QScriptEngine *engine, const Qt::ScrollBarPolicy &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ScrollBarPolicy_toStringHelper(value));
+}
+
+static void qtscript_Qt_ScrollBarPolicy_fromScriptValue(const QScriptValue &value, Qt::ScrollBarPolicy &out)
+{
+    out = qvariant_cast<Qt::ScrollBarPolicy>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ScrollBarPolicy(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::ScrollBarAsNeeded) && (arg <= Qt::ScrollBarAlwaysOn))
+        return qScriptValueFromValue(engine,  static_cast<Qt::ScrollBarPolicy>(arg));
+    return context->throwError(QString::fromLatin1("ScrollBarPolicy(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ScrollBarPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ScrollBarPolicy value = qscriptvalue_cast<Qt::ScrollBarPolicy>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ScrollBarPolicy_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ScrollBarPolicy value = qscriptvalue_cast<Qt::ScrollBarPolicy>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ScrollBarPolicy_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ScrollBarPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ScrollBarPolicy,
+        qtscript_Qt_ScrollBarPolicy_valueOf, qtscript_Qt_ScrollBarPolicy_toString);
+    qScriptRegisterMetaType<Qt::ScrollBarPolicy>(engine, qtscript_Qt_ScrollBarPolicy_toScriptValue,
+        qtscript_Qt_ScrollBarPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ScrollBarPolicy_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ScrollBarPolicy_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ItemFlag
+//
+
+static const Qt::ItemFlag qtscript_Qt_ItemFlag_values[] = {
+    Qt::NoItemFlags
+    , Qt::ItemIsSelectable
+    , Qt::ItemIsEditable
+    , Qt::ItemIsDragEnabled
+    , Qt::ItemIsDropEnabled
+    , Qt::ItemIsUserCheckable
+    , Qt::ItemIsEnabled
+    , Qt::ItemIsTristate
+    , Qt::ItemNeverHasChildren
+};
+
+static const char * const qtscript_Qt_ItemFlag_keys[] = {
+    "NoItemFlags"
+    , "ItemIsSelectable"
+    , "ItemIsEditable"
+    , "ItemIsDragEnabled"
+    , "ItemIsDropEnabled"
+    , "ItemIsUserCheckable"
+    , "ItemIsEnabled"
+    , "ItemIsTristate"
+    , "ItemNeverHasChildren"
+};
+
+static QString qtscript_Qt_ItemFlag_toStringHelper(Qt::ItemFlag value)
+{
+    for (int i = 0; i < 9; ++i) {
+        if (qtscript_Qt_ItemFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_ItemFlag_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ItemFlag_toScriptValue(QScriptEngine *engine, const Qt::ItemFlag &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ItemFlag_toStringHelper(value));
+}
+
+static void qtscript_Qt_ItemFlag_fromScriptValue(const QScriptValue &value, Qt::ItemFlag &out)
+{
+    out = qvariant_cast<Qt::ItemFlag>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ItemFlag(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 9; ++i) {
+        if (qtscript_Qt_ItemFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::ItemFlag>(arg));
+    }
+    return context->throwError(QString::fromLatin1("ItemFlag(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ItemFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemFlag value = qscriptvalue_cast<Qt::ItemFlag>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ItemFlag_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemFlag value = qscriptvalue_cast<Qt::ItemFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ItemFlag_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ItemFlag_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ItemFlag,
+        qtscript_Qt_ItemFlag_valueOf, qtscript_Qt_ItemFlag_toString);
+    qScriptRegisterMetaType<Qt::ItemFlag>(engine, qtscript_Qt_ItemFlag_toScriptValue,
+        qtscript_Qt_ItemFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 9; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ItemFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ItemFlag_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ItemFlags
+//
+
+static QScriptValue qtscript_Qt_ItemFlags_toScriptValue(QScriptEngine *engine, const Qt::ItemFlags &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_ItemFlags_fromScriptValue(const QScriptValue &value, Qt::ItemFlags &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::ItemFlags>())
+        out = qvariant_cast<Qt::ItemFlags>(var);
+    else if (var.userType() == qMetaTypeId<Qt::ItemFlag>())
+        out = qvariant_cast<Qt::ItemFlag>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_ItemFlags(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemFlags result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::ItemFlags>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::ItemFlag>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("ItemFlags(): argument %0 is not of type ItemFlag").arg(i));
+            }
+            result |= qvariant_cast<Qt::ItemFlag>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_ItemFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemFlags value = qscriptvalue_cast<Qt::ItemFlags>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ItemFlags_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemFlags value = qscriptvalue_cast<Qt::ItemFlags>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 9; ++i) {
+        if ((value & qtscript_Qt_ItemFlag_values[i]) == qtscript_Qt_ItemFlag_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_ItemFlag_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_ItemFlags_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::ItemFlags>() == otherObj.value<Qt::ItemFlags>())));
+}
+
+static QScriptValue qtscript_create_Qt_ItemFlags_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_ItemFlags, qtscript_Qt_ItemFlags_valueOf,
+        qtscript_Qt_ItemFlags_toString, qtscript_Qt_ItemFlags_equals);
+    qScriptRegisterMetaType<Qt::ItemFlags>(engine, qtscript_Qt_ItemFlags_toScriptValue,
+        qtscript_Qt_ItemFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
     return ctor;
 }
 
@@ -964,5108 +5639,6 @@ static QScriptValue qtscript_create_Qt_GlobalColor_class(QScriptEngine *engine, 
 }
 
 //
-// Qt::EventPriority
-//
-
-static const Qt::EventPriority qtscript_Qt_EventPriority_values[] = {
-    Qt::LowEventPriority
-    , Qt::NormalEventPriority
-    , Qt::HighEventPriority
-};
-
-static const char * const qtscript_Qt_EventPriority_keys[] = {
-    "LowEventPriority"
-    , "NormalEventPriority"
-    , "HighEventPriority"
-};
-
-static QString qtscript_Qt_EventPriority_toStringHelper(Qt::EventPriority value)
-{
-    if ((value >= Qt::LowEventPriority) && (value <= Qt::HighEventPriority))
-        return qtscript_Qt_EventPriority_keys[static_cast<int>(value)-static_cast<int>(Qt::LowEventPriority)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_EventPriority_toScriptValue(QScriptEngine *engine, const Qt::EventPriority &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_EventPriority_toStringHelper(value));
-}
-
-static void qtscript_Qt_EventPriority_fromScriptValue(const QScriptValue &value, Qt::EventPriority &out)
-{
-    out = qvariant_cast<Qt::EventPriority>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_EventPriority(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::LowEventPriority) && (arg <= Qt::HighEventPriority))
-        return qScriptValueFromValue(engine,  static_cast<Qt::EventPriority>(arg));
-    return context->throwError(QString::fromLatin1("EventPriority(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_EventPriority_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::EventPriority value = qscriptvalue_cast<Qt::EventPriority>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_EventPriority_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::EventPriority value = qscriptvalue_cast<Qt::EventPriority>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_EventPriority_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_EventPriority_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_EventPriority,
-        qtscript_Qt_EventPriority_valueOf, qtscript_Qt_EventPriority_toString);
-    qScriptRegisterMetaType<Qt::EventPriority>(engine, qtscript_Qt_EventPriority_toScriptValue,
-        qtscript_Qt_EventPriority_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_EventPriority_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_EventPriority_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::GestureFlag
-//
-
-static const Qt::GestureFlag qtscript_Qt_GestureFlag_values[] = {
-    Qt::DontStartGestureOnChildren
-    , Qt::ReceivePartialGestures
-    , Qt::IgnoredGesturesPropagateToParent
-};
-
-static const char * const qtscript_Qt_GestureFlag_keys[] = {
-    "DontStartGestureOnChildren"
-    , "ReceivePartialGestures"
-    , "IgnoredGesturesPropagateToParent"
-};
-
-static QString qtscript_Qt_GestureFlag_toStringHelper(Qt::GestureFlag value)
-{
-    for (int i = 0; i < 3; ++i) {
-        if (qtscript_Qt_GestureFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_GestureFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_GestureFlag_toScriptValue(QScriptEngine *engine, const Qt::GestureFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_GestureFlag_toStringHelper(value));
-}
-
-static void qtscript_Qt_GestureFlag_fromScriptValue(const QScriptValue &value, Qt::GestureFlag &out)
-{
-    out = qvariant_cast<Qt::GestureFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_GestureFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 3; ++i) {
-        if (qtscript_Qt_GestureFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::GestureFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("GestureFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_GestureFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::GestureFlag value = qscriptvalue_cast<Qt::GestureFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_GestureFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::GestureFlag value = qscriptvalue_cast<Qt::GestureFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_GestureFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_GestureFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_GestureFlag,
-        qtscript_Qt_GestureFlag_valueOf, qtscript_Qt_GestureFlag_toString);
-    qScriptRegisterMetaType<Qt::GestureFlag>(engine, qtscript_Qt_GestureFlag_toScriptValue,
-        qtscript_Qt_GestureFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_GestureFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_GestureFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::GestureFlags
-//
-
-static QScriptValue qtscript_Qt_GestureFlags_toScriptValue(QScriptEngine *engine, const Qt::GestureFlags &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_GestureFlags_fromScriptValue(const QScriptValue &value, Qt::GestureFlags &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::GestureFlags>())
-        out = qvariant_cast<Qt::GestureFlags>(var);
-    else if (var.userType() == qMetaTypeId<Qt::GestureFlag>())
-        out = qvariant_cast<Qt::GestureFlag>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_GestureFlags(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::GestureFlags result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::GestureFlags>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::GestureFlag>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("GestureFlags(): argument %0 is not of type GestureFlag").arg(i));
-            }
-            result |= qvariant_cast<Qt::GestureFlag>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_GestureFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::GestureFlags value = qscriptvalue_cast<Qt::GestureFlags>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_GestureFlags_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::GestureFlags value = qscriptvalue_cast<Qt::GestureFlags>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 3; ++i) {
-        if ((value & qtscript_Qt_GestureFlag_values[i]) == qtscript_Qt_GestureFlag_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_GestureFlag_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_GestureFlags_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::GestureFlags>() == otherObj.value<Qt::GestureFlags>())));
-}
-
-static QScriptValue qtscript_create_Qt_GestureFlags_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_GestureFlags, qtscript_Qt_GestureFlags_valueOf,
-        qtscript_Qt_GestureFlags_toString, qtscript_Qt_GestureFlags_equals);
-    qScriptRegisterMetaType<Qt::GestureFlags>(engine, qtscript_Qt_GestureFlags_toScriptValue,
-        qtscript_Qt_GestureFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::ToolBarArea
-//
-
-static const Qt::ToolBarArea qtscript_Qt_ToolBarArea_values[] = {
-    Qt::NoToolBarArea
-    , Qt::LeftToolBarArea
-    , Qt::RightToolBarArea
-    , Qt::TopToolBarArea
-    , Qt::BottomToolBarArea
-    , Qt::ToolBarArea_Mask
-};
-
-static const char * const qtscript_Qt_ToolBarArea_keys[] = {
-    "NoToolBarArea"
-    , "LeftToolBarArea"
-    , "RightToolBarArea"
-    , "TopToolBarArea"
-    , "BottomToolBarArea"
-    , "ToolBarArea_Mask"
-};
-
-static QString qtscript_Qt_ToolBarArea_toStringHelper(Qt::ToolBarArea value)
-{
-    for (int i = 0; i < 6; ++i) {
-        if (qtscript_Qt_ToolBarArea_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_ToolBarArea_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ToolBarArea_toScriptValue(QScriptEngine *engine, const Qt::ToolBarArea &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ToolBarArea_toStringHelper(value));
-}
-
-static void qtscript_Qt_ToolBarArea_fromScriptValue(const QScriptValue &value, Qt::ToolBarArea &out)
-{
-    out = qvariant_cast<Qt::ToolBarArea>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ToolBarArea(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 6; ++i) {
-        if (qtscript_Qt_ToolBarArea_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::ToolBarArea>(arg));
-    }
-    return context->throwError(QString::fromLatin1("ToolBarArea(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ToolBarArea_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ToolBarArea value = qscriptvalue_cast<Qt::ToolBarArea>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ToolBarArea_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ToolBarArea value = qscriptvalue_cast<Qt::ToolBarArea>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ToolBarArea_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ToolBarArea_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ToolBarArea,
-        qtscript_Qt_ToolBarArea_valueOf, qtscript_Qt_ToolBarArea_toString);
-    qScriptRegisterMetaType<Qt::ToolBarArea>(engine, qtscript_Qt_ToolBarArea_toScriptValue,
-        qtscript_Qt_ToolBarArea_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 6; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ToolBarArea_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ToolBarArea_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ToolBarAreas
-//
-
-static QScriptValue qtscript_Qt_ToolBarAreas_toScriptValue(QScriptEngine *engine, const Qt::ToolBarAreas &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_ToolBarAreas_fromScriptValue(const QScriptValue &value, Qt::ToolBarAreas &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::ToolBarAreas>())
-        out = qvariant_cast<Qt::ToolBarAreas>(var);
-    else if (var.userType() == qMetaTypeId<Qt::ToolBarArea>())
-        out = qvariant_cast<Qt::ToolBarArea>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_ToolBarAreas(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ToolBarAreas result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::ToolBarAreas>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::ToolBarArea>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("ToolBarAreas(): argument %0 is not of type ToolBarArea").arg(i));
-            }
-            result |= qvariant_cast<Qt::ToolBarArea>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_ToolBarAreas_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ToolBarAreas value = qscriptvalue_cast<Qt::ToolBarAreas>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ToolBarAreas_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ToolBarAreas value = qscriptvalue_cast<Qt::ToolBarAreas>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 6; ++i) {
-        if ((value & qtscript_Qt_ToolBarArea_values[i]) == qtscript_Qt_ToolBarArea_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_ToolBarArea_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_ToolBarAreas_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::ToolBarAreas>() == otherObj.value<Qt::ToolBarAreas>())));
-}
-
-static QScriptValue qtscript_create_Qt_ToolBarAreas_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_ToolBarAreas, qtscript_Qt_ToolBarAreas_valueOf,
-        qtscript_Qt_ToolBarAreas_toString, qtscript_Qt_ToolBarAreas_equals);
-    qScriptRegisterMetaType<Qt::ToolBarAreas>(engine, qtscript_Qt_ToolBarAreas_toScriptValue,
-        qtscript_Qt_ToolBarAreas_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::ContextMenuPolicy
-//
-
-static const Qt::ContextMenuPolicy qtscript_Qt_ContextMenuPolicy_values[] = {
-    Qt::NoContextMenu
-    , Qt::DefaultContextMenu
-    , Qt::ActionsContextMenu
-    , Qt::CustomContextMenu
-    , Qt::PreventContextMenu
-};
-
-static const char * const qtscript_Qt_ContextMenuPolicy_keys[] = {
-    "NoContextMenu"
-    , "DefaultContextMenu"
-    , "ActionsContextMenu"
-    , "CustomContextMenu"
-    , "PreventContextMenu"
-};
-
-static QString qtscript_Qt_ContextMenuPolicy_toStringHelper(Qt::ContextMenuPolicy value)
-{
-    if ((value >= Qt::NoContextMenu) && (value <= Qt::PreventContextMenu))
-        return qtscript_Qt_ContextMenuPolicy_keys[static_cast<int>(value)-static_cast<int>(Qt::NoContextMenu)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ContextMenuPolicy_toScriptValue(QScriptEngine *engine, const Qt::ContextMenuPolicy &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ContextMenuPolicy_toStringHelper(value));
-}
-
-static void qtscript_Qt_ContextMenuPolicy_fromScriptValue(const QScriptValue &value, Qt::ContextMenuPolicy &out)
-{
-    out = qvariant_cast<Qt::ContextMenuPolicy>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ContextMenuPolicy(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::NoContextMenu) && (arg <= Qt::PreventContextMenu))
-        return qScriptValueFromValue(engine,  static_cast<Qt::ContextMenuPolicy>(arg));
-    return context->throwError(QString::fromLatin1("ContextMenuPolicy(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ContextMenuPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ContextMenuPolicy value = qscriptvalue_cast<Qt::ContextMenuPolicy>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ContextMenuPolicy_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ContextMenuPolicy value = qscriptvalue_cast<Qt::ContextMenuPolicy>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ContextMenuPolicy_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ContextMenuPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ContextMenuPolicy,
-        qtscript_Qt_ContextMenuPolicy_valueOf, qtscript_Qt_ContextMenuPolicy_toString);
-    qScriptRegisterMetaType<Qt::ContextMenuPolicy>(engine, qtscript_Qt_ContextMenuPolicy_toScriptValue,
-        qtscript_Qt_ContextMenuPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ContextMenuPolicy_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ContextMenuPolicy_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::AlignmentFlag
-//
-
-static const Qt::AlignmentFlag qtscript_Qt_AlignmentFlag_values[] = {
-    Qt::AlignLeft
-    , Qt::AlignRight
-    , Qt::AlignHCenter
-    , Qt::AlignJustify
-    , Qt::AlignAbsolute
-    , Qt::AlignHorizontal_Mask
-    , Qt::AlignTop
-    , Qt::AlignBottom
-    , Qt::AlignVCenter
-    , Qt::AlignCenter
-    , Qt::AlignVertical_Mask
-};
-
-static const char * const qtscript_Qt_AlignmentFlag_keys[] = {
-    "AlignLeft"
-    , "AlignRight"
-    , "AlignHCenter"
-    , "AlignJustify"
-    , "AlignAbsolute"
-    , "AlignHorizontal_Mask"
-    , "AlignTop"
-    , "AlignBottom"
-    , "AlignVCenter"
-    , "AlignCenter"
-    , "AlignVertical_Mask"
-};
-
-static QString qtscript_Qt_AlignmentFlag_toStringHelper(Qt::AlignmentFlag value)
-{
-    for (int i = 0; i < 11; ++i) {
-        if (qtscript_Qt_AlignmentFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_AlignmentFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_AlignmentFlag_toScriptValue(QScriptEngine *engine, const Qt::AlignmentFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_AlignmentFlag_toStringHelper(value));
-}
-
-static void qtscript_Qt_AlignmentFlag_fromScriptValue(const QScriptValue &value, Qt::AlignmentFlag &out)
-{
-    out = qvariant_cast<Qt::AlignmentFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_AlignmentFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 11; ++i) {
-        if (qtscript_Qt_AlignmentFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::AlignmentFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("AlignmentFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_AlignmentFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::AlignmentFlag value = qscriptvalue_cast<Qt::AlignmentFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_AlignmentFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::AlignmentFlag value = qscriptvalue_cast<Qt::AlignmentFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_AlignmentFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_AlignmentFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_AlignmentFlag,
-        qtscript_Qt_AlignmentFlag_valueOf, qtscript_Qt_AlignmentFlag_toString);
-    qScriptRegisterMetaType<Qt::AlignmentFlag>(engine, qtscript_Qt_AlignmentFlag_toScriptValue,
-        qtscript_Qt_AlignmentFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 11; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_AlignmentFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_AlignmentFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::Alignment
-//
-
-static QScriptValue qtscript_Qt_Alignment_toScriptValue(QScriptEngine *engine, const Qt::Alignment &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_Alignment_fromScriptValue(const QScriptValue &value, Qt::Alignment &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::Alignment>())
-        out = qvariant_cast<Qt::Alignment>(var);
-    else if (var.userType() == qMetaTypeId<Qt::AlignmentFlag>())
-        out = qvariant_cast<Qt::AlignmentFlag>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_Alignment(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::Alignment result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::Alignment>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::AlignmentFlag>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("Alignment(): argument %0 is not of type AlignmentFlag").arg(i));
-            }
-            result |= qvariant_cast<Qt::AlignmentFlag>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_Alignment_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::Alignment value = qscriptvalue_cast<Qt::Alignment>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_Alignment_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::Alignment value = qscriptvalue_cast<Qt::Alignment>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 11; ++i) {
-        if ((value & qtscript_Qt_AlignmentFlag_values[i]) == qtscript_Qt_AlignmentFlag_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_AlignmentFlag_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_Alignment_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::Alignment>() == otherObj.value<Qt::Alignment>())));
-}
-
-static QScriptValue qtscript_create_Qt_Alignment_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_Alignment, qtscript_Qt_Alignment_valueOf,
-        qtscript_Qt_Alignment_toString, qtscript_Qt_Alignment_equals);
-    qScriptRegisterMetaType<Qt::Alignment>(engine, qtscript_Qt_Alignment_toScriptValue,
-        qtscript_Qt_Alignment_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::ConnectionType
-//
-
-static const Qt::ConnectionType qtscript_Qt_ConnectionType_values[] = {
-    Qt::AutoConnection
-    , Qt::DirectConnection
-    , Qt::QueuedConnection
-    , Qt::BlockingQueuedConnection
-    , Qt::UniqueConnection
-};
-
-static const char * const qtscript_Qt_ConnectionType_keys[] = {
-    "AutoConnection"
-    , "DirectConnection"
-    , "QueuedConnection"
-    , "BlockingQueuedConnection"
-    , "UniqueConnection"
-};
-
-static QString qtscript_Qt_ConnectionType_toStringHelper(Qt::ConnectionType value)
-{
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_ConnectionType_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_ConnectionType_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ConnectionType_toScriptValue(QScriptEngine *engine, const Qt::ConnectionType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ConnectionType_toStringHelper(value));
-}
-
-static void qtscript_Qt_ConnectionType_fromScriptValue(const QScriptValue &value, Qt::ConnectionType &out)
-{
-    out = qvariant_cast<Qt::ConnectionType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ConnectionType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_ConnectionType_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::ConnectionType>(arg));
-    }
-    return context->throwError(QString::fromLatin1("ConnectionType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ConnectionType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ConnectionType value = qscriptvalue_cast<Qt::ConnectionType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ConnectionType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ConnectionType value = qscriptvalue_cast<Qt::ConnectionType>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ConnectionType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ConnectionType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ConnectionType,
-        qtscript_Qt_ConnectionType_valueOf, qtscript_Qt_ConnectionType_toString);
-    qScriptRegisterMetaType<Qt::ConnectionType>(engine, qtscript_Qt_ConnectionType_toScriptValue,
-        qtscript_Qt_ConnectionType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ConnectionType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ConnectionType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::PenCapStyle
-//
-
-static const Qt::PenCapStyle qtscript_Qt_PenCapStyle_values[] = {
-    Qt::FlatCap
-    , Qt::SquareCap
-    , Qt::RoundCap
-    , Qt::MPenCapStyle
-};
-
-static const char * const qtscript_Qt_PenCapStyle_keys[] = {
-    "FlatCap"
-    , "SquareCap"
-    , "RoundCap"
-    , "MPenCapStyle"
-};
-
-static QString qtscript_Qt_PenCapStyle_toStringHelper(Qt::PenCapStyle value)
-{
-    for (int i = 0; i < 4; ++i) {
-        if (qtscript_Qt_PenCapStyle_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_PenCapStyle_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_PenCapStyle_toScriptValue(QScriptEngine *engine, const Qt::PenCapStyle &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_PenCapStyle_toStringHelper(value));
-}
-
-static void qtscript_Qt_PenCapStyle_fromScriptValue(const QScriptValue &value, Qt::PenCapStyle &out)
-{
-    out = qvariant_cast<Qt::PenCapStyle>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_PenCapStyle(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 4; ++i) {
-        if (qtscript_Qt_PenCapStyle_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::PenCapStyle>(arg));
-    }
-    return context->throwError(QString::fromLatin1("PenCapStyle(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_PenCapStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::PenCapStyle value = qscriptvalue_cast<Qt::PenCapStyle>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_PenCapStyle_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::PenCapStyle value = qscriptvalue_cast<Qt::PenCapStyle>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_PenCapStyle_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_PenCapStyle_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_PenCapStyle,
-        qtscript_Qt_PenCapStyle_valueOf, qtscript_Qt_PenCapStyle_toString);
-    qScriptRegisterMetaType<Qt::PenCapStyle>(engine, qtscript_Qt_PenCapStyle_toScriptValue,
-        qtscript_Qt_PenCapStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_PenCapStyle_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_PenCapStyle_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::Corner
-//
-
-static const Qt::Corner qtscript_Qt_Corner_values[] = {
-    Qt::TopLeftCorner
-    , Qt::TopRightCorner
-    , Qt::BottomLeftCorner
-    , Qt::BottomRightCorner
-};
-
-static const char * const qtscript_Qt_Corner_keys[] = {
-    "TopLeftCorner"
-    , "TopRightCorner"
-    , "BottomLeftCorner"
-    , "BottomRightCorner"
-};
-
-static QString qtscript_Qt_Corner_toStringHelper(Qt::Corner value)
-{
-    if ((value >= Qt::TopLeftCorner) && (value <= Qt::BottomRightCorner))
-        return qtscript_Qt_Corner_keys[static_cast<int>(value)-static_cast<int>(Qt::TopLeftCorner)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_Corner_toScriptValue(QScriptEngine *engine, const Qt::Corner &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_Corner_toStringHelper(value));
-}
-
-static void qtscript_Qt_Corner_fromScriptValue(const QScriptValue &value, Qt::Corner &out)
-{
-    out = qvariant_cast<Qt::Corner>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_Corner(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::TopLeftCorner) && (arg <= Qt::BottomRightCorner))
-        return qScriptValueFromValue(engine,  static_cast<Qt::Corner>(arg));
-    return context->throwError(QString::fromLatin1("Corner(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_Corner_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::Corner value = qscriptvalue_cast<Qt::Corner>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_Corner_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::Corner value = qscriptvalue_cast<Qt::Corner>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_Corner_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_Corner_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_Corner,
-        qtscript_Qt_Corner_valueOf, qtscript_Qt_Corner_toString);
-    qScriptRegisterMetaType<Qt::Corner>(engine, qtscript_Qt_Corner_toScriptValue,
-        qtscript_Qt_Corner_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_Corner_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_Corner_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::AnchorPoint
-//
-
-static const Qt::AnchorPoint qtscript_Qt_AnchorPoint_values[] = {
-    Qt::AnchorLeft
-    , Qt::AnchorHorizontalCenter
-    , Qt::AnchorRight
-    , Qt::AnchorTop
-    , Qt::AnchorVerticalCenter
-    , Qt::AnchorBottom
-};
-
-static const char * const qtscript_Qt_AnchorPoint_keys[] = {
-    "AnchorLeft"
-    , "AnchorHorizontalCenter"
-    , "AnchorRight"
-    , "AnchorTop"
-    , "AnchorVerticalCenter"
-    , "AnchorBottom"
-};
-
-static QString qtscript_Qt_AnchorPoint_toStringHelper(Qt::AnchorPoint value)
-{
-    if ((value >= Qt::AnchorLeft) && (value <= Qt::AnchorBottom))
-        return qtscript_Qt_AnchorPoint_keys[static_cast<int>(value)-static_cast<int>(Qt::AnchorLeft)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_AnchorPoint_toScriptValue(QScriptEngine *engine, const Qt::AnchorPoint &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_AnchorPoint_toStringHelper(value));
-}
-
-static void qtscript_Qt_AnchorPoint_fromScriptValue(const QScriptValue &value, Qt::AnchorPoint &out)
-{
-    out = qvariant_cast<Qt::AnchorPoint>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_AnchorPoint(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::AnchorLeft) && (arg <= Qt::AnchorBottom))
-        return qScriptValueFromValue(engine,  static_cast<Qt::AnchorPoint>(arg));
-    return context->throwError(QString::fromLatin1("AnchorPoint(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_AnchorPoint_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::AnchorPoint value = qscriptvalue_cast<Qt::AnchorPoint>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_AnchorPoint_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::AnchorPoint value = qscriptvalue_cast<Qt::AnchorPoint>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_AnchorPoint_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_AnchorPoint_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_AnchorPoint,
-        qtscript_Qt_AnchorPoint_valueOf, qtscript_Qt_AnchorPoint_toString);
-    qScriptRegisterMetaType<Qt::AnchorPoint>(engine, qtscript_Qt_AnchorPoint_toScriptValue,
-        qtscript_Qt_AnchorPoint_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 6; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_AnchorPoint_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_AnchorPoint_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::DateFormat
-//
-
-static const Qt::DateFormat qtscript_Qt_DateFormat_values[] = {
-    Qt::TextDate
-    , Qt::ISODate
-    , Qt::SystemLocaleDate
-    , Qt::LocaleDate
-    , Qt::SystemLocaleShortDate
-    , Qt::SystemLocaleLongDate
-    , Qt::DefaultLocaleShortDate
-    , Qt::DefaultLocaleLongDate
-};
-
-static const char * const qtscript_Qt_DateFormat_keys[] = {
-    "TextDate"
-    , "ISODate"
-    , "SystemLocaleDate"
-    , "LocaleDate"
-    , "SystemLocaleShortDate"
-    , "SystemLocaleLongDate"
-    , "DefaultLocaleShortDate"
-    , "DefaultLocaleLongDate"
-};
-
-static QString qtscript_Qt_DateFormat_toStringHelper(Qt::DateFormat value)
-{
-    if ((value >= Qt::TextDate) && (value <= Qt::DefaultLocaleLongDate))
-        return qtscript_Qt_DateFormat_keys[static_cast<int>(value)-static_cast<int>(Qt::TextDate)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_DateFormat_toScriptValue(QScriptEngine *engine, const Qt::DateFormat &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_DateFormat_toStringHelper(value));
-}
-
-static void qtscript_Qt_DateFormat_fromScriptValue(const QScriptValue &value, Qt::DateFormat &out)
-{
-    out = qvariant_cast<Qt::DateFormat>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_DateFormat(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::TextDate) && (arg <= Qt::DefaultLocaleLongDate))
-        return qScriptValueFromValue(engine,  static_cast<Qt::DateFormat>(arg));
-    return context->throwError(QString::fromLatin1("DateFormat(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_DateFormat_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DateFormat value = qscriptvalue_cast<Qt::DateFormat>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_DateFormat_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DateFormat value = qscriptvalue_cast<Qt::DateFormat>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_DateFormat_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_DateFormat_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_DateFormat,
-        qtscript_Qt_DateFormat_valueOf, qtscript_Qt_DateFormat_toString);
-    qScriptRegisterMetaType<Qt::DateFormat>(engine, qtscript_Qt_DateFormat_toScriptValue,
-        qtscript_Qt_DateFormat_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 8; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_DateFormat_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_DateFormat_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ImageConversionFlag
-//
-
-static const Qt::ImageConversionFlag qtscript_Qt_ImageConversionFlag_values[] = {
-    Qt::AutoColor
-    , Qt::MonoOnly
-    , Qt::ColorMode_Mask
-    , Qt::OrderedAlphaDither
-    , Qt::DiffuseAlphaDither
-    , Qt::AlphaDither_Mask
-    , Qt::OrderedDither
-    , Qt::ThresholdDither
-    , Qt::Dither_Mask
-    , Qt::PreferDither
-    , Qt::AvoidDither
-    , Qt::DitherMode_Mask
-    , Qt::NoOpaqueDetection
-    , Qt::NoFormatConversion
-};
-
-static const char * const qtscript_Qt_ImageConversionFlag_keys[] = {
-    "AutoColor"
-    , "MonoOnly"
-    , "ColorMode_Mask"
-    , "OrderedAlphaDither"
-    , "DiffuseAlphaDither"
-    , "AlphaDither_Mask"
-    , "OrderedDither"
-    , "ThresholdDither"
-    , "Dither_Mask"
-    , "PreferDither"
-    , "AvoidDither"
-    , "DitherMode_Mask"
-    , "NoOpaqueDetection"
-    , "NoFormatConversion"
-};
-
-static QString qtscript_Qt_ImageConversionFlag_toStringHelper(Qt::ImageConversionFlag value)
-{
-    for (int i = 0; i < 14; ++i) {
-        if (qtscript_Qt_ImageConversionFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_ImageConversionFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ImageConversionFlag_toScriptValue(QScriptEngine *engine, const Qt::ImageConversionFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ImageConversionFlag_toStringHelper(value));
-}
-
-static void qtscript_Qt_ImageConversionFlag_fromScriptValue(const QScriptValue &value, Qt::ImageConversionFlag &out)
-{
-    out = qvariant_cast<Qt::ImageConversionFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ImageConversionFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 14; ++i) {
-        if (qtscript_Qt_ImageConversionFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::ImageConversionFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("ImageConversionFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ImageConversionFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ImageConversionFlag value = qscriptvalue_cast<Qt::ImageConversionFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ImageConversionFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ImageConversionFlag value = qscriptvalue_cast<Qt::ImageConversionFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ImageConversionFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ImageConversionFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ImageConversionFlag,
-        qtscript_Qt_ImageConversionFlag_valueOf, qtscript_Qt_ImageConversionFlag_toString);
-    qScriptRegisterMetaType<Qt::ImageConversionFlag>(engine, qtscript_Qt_ImageConversionFlag_toScriptValue,
-        qtscript_Qt_ImageConversionFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 14; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ImageConversionFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ImageConversionFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ImageConversionFlags
-//
-
-static QScriptValue qtscript_Qt_ImageConversionFlags_toScriptValue(QScriptEngine *engine, const Qt::ImageConversionFlags &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_ImageConversionFlags_fromScriptValue(const QScriptValue &value, Qt::ImageConversionFlags &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::ImageConversionFlags>())
-        out = qvariant_cast<Qt::ImageConversionFlags>(var);
-    else if (var.userType() == qMetaTypeId<Qt::ImageConversionFlag>())
-        out = qvariant_cast<Qt::ImageConversionFlag>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_ImageConversionFlags(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ImageConversionFlags result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::ImageConversionFlags>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::ImageConversionFlag>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("ImageConversionFlags(): argument %0 is not of type ImageConversionFlag").arg(i));
-            }
-            result |= qvariant_cast<Qt::ImageConversionFlag>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_ImageConversionFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ImageConversionFlags value = qscriptvalue_cast<Qt::ImageConversionFlags>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ImageConversionFlags_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ImageConversionFlags value = qscriptvalue_cast<Qt::ImageConversionFlags>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 14; ++i) {
-        if ((value & qtscript_Qt_ImageConversionFlag_values[i]) == qtscript_Qt_ImageConversionFlag_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_ImageConversionFlag_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_ImageConversionFlags_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::ImageConversionFlags>() == otherObj.value<Qt::ImageConversionFlags>())));
-}
-
-static QScriptValue qtscript_create_Qt_ImageConversionFlags_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_ImageConversionFlags, qtscript_Qt_ImageConversionFlags_valueOf,
-        qtscript_Qt_ImageConversionFlags_toString, qtscript_Qt_ImageConversionFlags_equals);
-    qScriptRegisterMetaType<Qt::ImageConversionFlags>(engine, qtscript_Qt_ImageConversionFlags_toScriptValue,
-        qtscript_Qt_ImageConversionFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::PenStyle
-//
-
-static const Qt::PenStyle qtscript_Qt_PenStyle_values[] = {
-    Qt::NoPen
-    , Qt::SolidLine
-    , Qt::DashLine
-    , Qt::DotLine
-    , Qt::DashDotLine
-    , Qt::DashDotDotLine
-    , Qt::CustomDashLine
-    , Qt::MPenStyle
-};
-
-static const char * const qtscript_Qt_PenStyle_keys[] = {
-    "NoPen"
-    , "SolidLine"
-    , "DashLine"
-    , "DotLine"
-    , "DashDotLine"
-    , "DashDotDotLine"
-    , "CustomDashLine"
-    , "MPenStyle"
-};
-
-static QString qtscript_Qt_PenStyle_toStringHelper(Qt::PenStyle value)
-{
-    for (int i = 0; i < 8; ++i) {
-        if (qtscript_Qt_PenStyle_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_PenStyle_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_PenStyle_toScriptValue(QScriptEngine *engine, const Qt::PenStyle &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_PenStyle_toStringHelper(value));
-}
-
-static void qtscript_Qt_PenStyle_fromScriptValue(const QScriptValue &value, Qt::PenStyle &out)
-{
-    out = qvariant_cast<Qt::PenStyle>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_PenStyle(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 8; ++i) {
-        if (qtscript_Qt_PenStyle_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::PenStyle>(arg));
-    }
-    return context->throwError(QString::fromLatin1("PenStyle(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_PenStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::PenStyle value = qscriptvalue_cast<Qt::PenStyle>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_PenStyle_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::PenStyle value = qscriptvalue_cast<Qt::PenStyle>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_PenStyle_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_PenStyle_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_PenStyle,
-        qtscript_Qt_PenStyle_valueOf, qtscript_Qt_PenStyle_toString);
-    qScriptRegisterMetaType<Qt::PenStyle>(engine, qtscript_Qt_PenStyle_toScriptValue,
-        qtscript_Qt_PenStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 8; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_PenStyle_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_PenStyle_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::CoordinateSystem
-//
-
-static const Qt::CoordinateSystem qtscript_Qt_CoordinateSystem_values[] = {
-    Qt::DeviceCoordinates
-    , Qt::LogicalCoordinates
-};
-
-static const char * const qtscript_Qt_CoordinateSystem_keys[] = {
-    "DeviceCoordinates"
-    , "LogicalCoordinates"
-};
-
-static QString qtscript_Qt_CoordinateSystem_toStringHelper(Qt::CoordinateSystem value)
-{
-    if ((value >= Qt::DeviceCoordinates) && (value <= Qt::LogicalCoordinates))
-        return qtscript_Qt_CoordinateSystem_keys[static_cast<int>(value)-static_cast<int>(Qt::DeviceCoordinates)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_CoordinateSystem_toScriptValue(QScriptEngine *engine, const Qt::CoordinateSystem &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_CoordinateSystem_toStringHelper(value));
-}
-
-static void qtscript_Qt_CoordinateSystem_fromScriptValue(const QScriptValue &value, Qt::CoordinateSystem &out)
-{
-    out = qvariant_cast<Qt::CoordinateSystem>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_CoordinateSystem(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::DeviceCoordinates) && (arg <= Qt::LogicalCoordinates))
-        return qScriptValueFromValue(engine,  static_cast<Qt::CoordinateSystem>(arg));
-    return context->throwError(QString::fromLatin1("CoordinateSystem(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_CoordinateSystem_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::CoordinateSystem value = qscriptvalue_cast<Qt::CoordinateSystem>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_CoordinateSystem_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::CoordinateSystem value = qscriptvalue_cast<Qt::CoordinateSystem>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_CoordinateSystem_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_CoordinateSystem_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_CoordinateSystem,
-        qtscript_Qt_CoordinateSystem_valueOf, qtscript_Qt_CoordinateSystem_toString);
-    qScriptRegisterMetaType<Qt::CoordinateSystem>(engine, qtscript_Qt_CoordinateSystem_toScriptValue,
-        qtscript_Qt_CoordinateSystem_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_CoordinateSystem_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_CoordinateSystem_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::TextFlag
-//
-
-static const Qt::TextFlag qtscript_Qt_TextFlag_values[] = {
-    Qt::TextSingleLine
-    , Qt::TextDontClip
-    , Qt::TextExpandTabs
-    , Qt::TextShowMnemonic
-    , Qt::TextWordWrap
-    , Qt::TextWrapAnywhere
-    , Qt::TextDontPrint
-    , Qt::TextHideMnemonic
-    , Qt::TextJustificationForced
-    , Qt::TextForceLeftToRight
-    , Qt::TextForceRightToLeft
-    , Qt::TextLongestVariant
-    , Qt::TextBypassShaping
-    , Qt::TextIncludeTrailingSpaces
-};
-
-static const char * const qtscript_Qt_TextFlag_keys[] = {
-    "TextSingleLine"
-    , "TextDontClip"
-    , "TextExpandTabs"
-    , "TextShowMnemonic"
-    , "TextWordWrap"
-    , "TextWrapAnywhere"
-    , "TextDontPrint"
-    , "TextHideMnemonic"
-    , "TextJustificationForced"
-    , "TextForceLeftToRight"
-    , "TextForceRightToLeft"
-    , "TextLongestVariant"
-    , "TextBypassShaping"
-    , "TextIncludeTrailingSpaces"
-};
-
-static QString qtscript_Qt_TextFlag_toStringHelper(Qt::TextFlag value)
-{
-    for (int i = 0; i < 14; ++i) {
-        if (qtscript_Qt_TextFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_TextFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_TextFlag_toScriptValue(QScriptEngine *engine, const Qt::TextFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_TextFlag_toStringHelper(value));
-}
-
-static void qtscript_Qt_TextFlag_fromScriptValue(const QScriptValue &value, Qt::TextFlag &out)
-{
-    out = qvariant_cast<Qt::TextFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_TextFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 14; ++i) {
-        if (qtscript_Qt_TextFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::TextFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("TextFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_TextFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextFlag value = qscriptvalue_cast<Qt::TextFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_TextFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextFlag value = qscriptvalue_cast<Qt::TextFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_TextFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_TextFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_TextFlag,
-        qtscript_Qt_TextFlag_valueOf, qtscript_Qt_TextFlag_toString);
-    qScriptRegisterMetaType<Qt::TextFlag>(engine, qtscript_Qt_TextFlag_toScriptValue,
-        qtscript_Qt_TextFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 14; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TextFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_TextFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ItemDataRole
-//
-
-static const Qt::ItemDataRole qtscript_Qt_ItemDataRole_values[] = {
-    Qt::DisplayRole
-    , Qt::DecorationRole
-    , Qt::EditRole
-    , Qt::ToolTipRole
-    , Qt::StatusTipRole
-    , Qt::WhatsThisRole
-    , Qt::FontRole
-    , Qt::TextAlignmentRole
-    , Qt::BackgroundColorRole
-    , Qt::TextColorRole
-    , Qt::CheckStateRole
-    , Qt::AccessibleTextRole
-    , Qt::AccessibleDescriptionRole
-    , Qt::SizeHintRole
-    , Qt::InitialSortOrderRole
-    , Qt::DisplayPropertyRole
-    , Qt::DecorationPropertyRole
-    , Qt::ToolTipPropertyRole
-    , Qt::StatusTipPropertyRole
-    , Qt::WhatsThisPropertyRole
-    , Qt::UserRole
-};
-
-static const char * const qtscript_Qt_ItemDataRole_keys[] = {
-    "DisplayRole"
-    , "DecorationRole"
-    , "EditRole"
-    , "ToolTipRole"
-    , "StatusTipRole"
-    , "WhatsThisRole"
-    , "FontRole"
-    , "TextAlignmentRole"
-    , "BackgroundColorRole"
-    , "TextColorRole"
-    , "CheckStateRole"
-    , "AccessibleTextRole"
-    , "AccessibleDescriptionRole"
-    , "SizeHintRole"
-    , "InitialSortOrderRole"
-    , "DisplayPropertyRole"
-    , "DecorationPropertyRole"
-    , "ToolTipPropertyRole"
-    , "StatusTipPropertyRole"
-    , "WhatsThisPropertyRole"
-    , "UserRole"
-};
-
-static QString qtscript_Qt_ItemDataRole_toStringHelper(Qt::ItemDataRole value)
-{
-    for (int i = 0; i < 21; ++i) {
-        if (qtscript_Qt_ItemDataRole_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_ItemDataRole_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ItemDataRole_toScriptValue(QScriptEngine *engine, const Qt::ItemDataRole &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ItemDataRole_toStringHelper(value));
-}
-
-static void qtscript_Qt_ItemDataRole_fromScriptValue(const QScriptValue &value, Qt::ItemDataRole &out)
-{
-    out = qvariant_cast<Qt::ItemDataRole>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ItemDataRole(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 21; ++i) {
-        if (qtscript_Qt_ItemDataRole_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::ItemDataRole>(arg));
-    }
-    return context->throwError(QString::fromLatin1("ItemDataRole(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ItemDataRole_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemDataRole value = qscriptvalue_cast<Qt::ItemDataRole>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ItemDataRole_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemDataRole value = qscriptvalue_cast<Qt::ItemDataRole>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ItemDataRole_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ItemDataRole_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ItemDataRole,
-        qtscript_Qt_ItemDataRole_valueOf, qtscript_Qt_ItemDataRole_toString);
-    qScriptRegisterMetaType<Qt::ItemDataRole>(engine, qtscript_Qt_ItemDataRole_toScriptValue,
-        qtscript_Qt_ItemDataRole_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 21; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ItemDataRole_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ItemDataRole_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::DropAction
-//
-
-static const Qt::DropAction qtscript_Qt_DropAction_values[] = {
-    Qt::IgnoreAction
-    , Qt::CopyAction
-    , Qt::MoveAction
-    , Qt::LinkAction
-    , Qt::ActionMask
-    , Qt::TargetMoveAction
-};
-
-static const char * const qtscript_Qt_DropAction_keys[] = {
-    "IgnoreAction"
-    , "CopyAction"
-    , "MoveAction"
-    , "LinkAction"
-    , "ActionMask"
-    , "TargetMoveAction"
-};
-
-static QString qtscript_Qt_DropAction_toStringHelper(Qt::DropAction value)
-{
-    for (int i = 0; i < 6; ++i) {
-        if (qtscript_Qt_DropAction_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_DropAction_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_DropAction_toScriptValue(QScriptEngine *engine, const Qt::DropAction &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_DropAction_toStringHelper(value));
-}
-
-static void qtscript_Qt_DropAction_fromScriptValue(const QScriptValue &value, Qt::DropAction &out)
-{
-    out = qvariant_cast<Qt::DropAction>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_DropAction(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 6; ++i) {
-        if (qtscript_Qt_DropAction_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::DropAction>(arg));
-    }
-    return context->throwError(QString::fromLatin1("DropAction(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_DropAction_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DropAction value = qscriptvalue_cast<Qt::DropAction>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_DropAction_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DropAction value = qscriptvalue_cast<Qt::DropAction>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_DropAction_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_DropAction_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_DropAction,
-        qtscript_Qt_DropAction_valueOf, qtscript_Qt_DropAction_toString);
-    qScriptRegisterMetaType<Qt::DropAction>(engine, qtscript_Qt_DropAction_toScriptValue,
-        qtscript_Qt_DropAction_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 6; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_DropAction_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_DropAction_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::DropActions
-//
-
-static QScriptValue qtscript_Qt_DropActions_toScriptValue(QScriptEngine *engine, const Qt::DropActions &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_DropActions_fromScriptValue(const QScriptValue &value, Qt::DropActions &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::DropActions>())
-        out = qvariant_cast<Qt::DropActions>(var);
-    else if (var.userType() == qMetaTypeId<Qt::DropAction>())
-        out = qvariant_cast<Qt::DropAction>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_DropActions(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DropActions result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::DropActions>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::DropAction>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("DropActions(): argument %0 is not of type DropAction").arg(i));
-            }
-            result |= qvariant_cast<Qt::DropAction>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_DropActions_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DropActions value = qscriptvalue_cast<Qt::DropActions>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_DropActions_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DropActions value = qscriptvalue_cast<Qt::DropActions>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 6; ++i) {
-        if ((value & qtscript_Qt_DropAction_values[i]) == qtscript_Qt_DropAction_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_DropAction_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_DropActions_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::DropActions>() == otherObj.value<Qt::DropActions>())));
-}
-
-static QScriptValue qtscript_create_Qt_DropActions_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_DropActions, qtscript_Qt_DropActions_valueOf,
-        qtscript_Qt_DropActions_toString, qtscript_Qt_DropActions_equals);
-    qScriptRegisterMetaType<Qt::DropActions>(engine, qtscript_Qt_DropActions_toScriptValue,
-        qtscript_Qt_DropActions_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::BrushStyle
-//
-
-static const Qt::BrushStyle qtscript_Qt_BrushStyle_values[] = {
-    Qt::NoBrush
-    , Qt::SolidPattern
-    , Qt::Dense1Pattern
-    , Qt::Dense2Pattern
-    , Qt::Dense3Pattern
-    , Qt::Dense4Pattern
-    , Qt::Dense5Pattern
-    , Qt::Dense6Pattern
-    , Qt::Dense7Pattern
-    , Qt::HorPattern
-    , Qt::VerPattern
-    , Qt::CrossPattern
-    , Qt::BDiagPattern
-    , Qt::FDiagPattern
-    , Qt::DiagCrossPattern
-    , Qt::LinearGradientPattern
-    , Qt::RadialGradientPattern
-    , Qt::ConicalGradientPattern
-    , Qt::TexturePattern
-};
-
-static const char * const qtscript_Qt_BrushStyle_keys[] = {
-    "NoBrush"
-    , "SolidPattern"
-    , "Dense1Pattern"
-    , "Dense2Pattern"
-    , "Dense3Pattern"
-    , "Dense4Pattern"
-    , "Dense5Pattern"
-    , "Dense6Pattern"
-    , "Dense7Pattern"
-    , "HorPattern"
-    , "VerPattern"
-    , "CrossPattern"
-    , "BDiagPattern"
-    , "FDiagPattern"
-    , "DiagCrossPattern"
-    , "LinearGradientPattern"
-    , "RadialGradientPattern"
-    , "ConicalGradientPattern"
-    , "TexturePattern"
-};
-
-static QString qtscript_Qt_BrushStyle_toStringHelper(Qt::BrushStyle value)
-{
-    for (int i = 0; i < 19; ++i) {
-        if (qtscript_Qt_BrushStyle_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_BrushStyle_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_BrushStyle_toScriptValue(QScriptEngine *engine, const Qt::BrushStyle &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_BrushStyle_toStringHelper(value));
-}
-
-static void qtscript_Qt_BrushStyle_fromScriptValue(const QScriptValue &value, Qt::BrushStyle &out)
-{
-    out = qvariant_cast<Qt::BrushStyle>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_BrushStyle(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 19; ++i) {
-        if (qtscript_Qt_BrushStyle_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::BrushStyle>(arg));
-    }
-    return context->throwError(QString::fromLatin1("BrushStyle(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_BrushStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::BrushStyle value = qscriptvalue_cast<Qt::BrushStyle>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_BrushStyle_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::BrushStyle value = qscriptvalue_cast<Qt::BrushStyle>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_BrushStyle_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_BrushStyle_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_BrushStyle,
-        qtscript_Qt_BrushStyle_valueOf, qtscript_Qt_BrushStyle_toString);
-    qScriptRegisterMetaType<Qt::BrushStyle>(engine, qtscript_Qt_BrushStyle_toScriptValue,
-        qtscript_Qt_BrushStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 19; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_BrushStyle_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_BrushStyle_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::KeyboardModifier
-//
-
-static const Qt::KeyboardModifier qtscript_Qt_KeyboardModifier_values[] = {
-    Qt::KeyboardModifierMask
-    , Qt::NoModifier
-    , Qt::ShiftModifier
-    , Qt::ControlModifier
-    , Qt::AltModifier
-    , Qt::MetaModifier
-    , Qt::KeypadModifier
-    , Qt::GroupSwitchModifier
-};
-
-static const char * const qtscript_Qt_KeyboardModifier_keys[] = {
-    "KeyboardModifierMask"
-    , "NoModifier"
-    , "ShiftModifier"
-    , "ControlModifier"
-    , "AltModifier"
-    , "MetaModifier"
-    , "KeypadModifier"
-    , "GroupSwitchModifier"
-};
-
-static QString qtscript_Qt_KeyboardModifier_toStringHelper(Qt::KeyboardModifier value)
-{
-    for (int i = 0; i < 8; ++i) {
-        if (qtscript_Qt_KeyboardModifier_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_KeyboardModifier_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_KeyboardModifier_toScriptValue(QScriptEngine *engine, const Qt::KeyboardModifier &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_KeyboardModifier_toStringHelper(value));
-}
-
-static void qtscript_Qt_KeyboardModifier_fromScriptValue(const QScriptValue &value, Qt::KeyboardModifier &out)
-{
-    out = qvariant_cast<Qt::KeyboardModifier>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_KeyboardModifier(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 8; ++i) {
-        if (qtscript_Qt_KeyboardModifier_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::KeyboardModifier>(arg));
-    }
-    return context->throwError(QString::fromLatin1("KeyboardModifier(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_KeyboardModifier_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::KeyboardModifier value = qscriptvalue_cast<Qt::KeyboardModifier>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_KeyboardModifier_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::KeyboardModifier value = qscriptvalue_cast<Qt::KeyboardModifier>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_KeyboardModifier_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_KeyboardModifier_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_KeyboardModifier,
-        qtscript_Qt_KeyboardModifier_valueOf, qtscript_Qt_KeyboardModifier_toString);
-    qScriptRegisterMetaType<Qt::KeyboardModifier>(engine, qtscript_Qt_KeyboardModifier_toScriptValue,
-        qtscript_Qt_KeyboardModifier_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 8; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_KeyboardModifier_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_KeyboardModifier_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::KeyboardModifiers
-//
-
-static QScriptValue qtscript_Qt_KeyboardModifiers_toScriptValue(QScriptEngine *engine, const Qt::KeyboardModifiers &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_KeyboardModifiers_fromScriptValue(const QScriptValue &value, Qt::KeyboardModifiers &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::KeyboardModifiers>())
-        out = qvariant_cast<Qt::KeyboardModifiers>(var);
-    else if (var.userType() == qMetaTypeId<Qt::KeyboardModifier>())
-        out = qvariant_cast<Qt::KeyboardModifier>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_KeyboardModifiers(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::KeyboardModifiers result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::KeyboardModifiers>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::KeyboardModifier>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("KeyboardModifiers(): argument %0 is not of type KeyboardModifier").arg(i));
-            }
-            result |= qvariant_cast<Qt::KeyboardModifier>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_KeyboardModifiers_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::KeyboardModifiers value = qscriptvalue_cast<Qt::KeyboardModifiers>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_KeyboardModifiers_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::KeyboardModifiers value = qscriptvalue_cast<Qt::KeyboardModifiers>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 8; ++i) {
-        if ((value & qtscript_Qt_KeyboardModifier_values[i]) == qtscript_Qt_KeyboardModifier_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_KeyboardModifier_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_KeyboardModifiers_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::KeyboardModifiers>() == otherObj.value<Qt::KeyboardModifiers>())));
-}
-
-static QScriptValue qtscript_create_Qt_KeyboardModifiers_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_KeyboardModifiers, qtscript_Qt_KeyboardModifiers_valueOf,
-        qtscript_Qt_KeyboardModifiers_toString, qtscript_Qt_KeyboardModifiers_equals);
-    qScriptRegisterMetaType<Qt::KeyboardModifiers>(engine, qtscript_Qt_KeyboardModifiers_toScriptValue,
-        qtscript_Qt_KeyboardModifiers_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::SizeHint
-//
-
-static const Qt::SizeHint qtscript_Qt_SizeHint_values[] = {
-    Qt::MinimumSize
-    , Qt::PreferredSize
-    , Qt::MaximumSize
-    , Qt::MinimumDescent
-    , Qt::NSizeHints
-};
-
-static const char * const qtscript_Qt_SizeHint_keys[] = {
-    "MinimumSize"
-    , "PreferredSize"
-    , "MaximumSize"
-    , "MinimumDescent"
-    , "NSizeHints"
-};
-
-static QString qtscript_Qt_SizeHint_toStringHelper(Qt::SizeHint value)
-{
-    if ((value >= Qt::MinimumSize) && (value <= Qt::NSizeHints))
-        return qtscript_Qt_SizeHint_keys[static_cast<int>(value)-static_cast<int>(Qt::MinimumSize)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_SizeHint_toScriptValue(QScriptEngine *engine, const Qt::SizeHint &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_SizeHint_toStringHelper(value));
-}
-
-static void qtscript_Qt_SizeHint_fromScriptValue(const QScriptValue &value, Qt::SizeHint &out)
-{
-    out = qvariant_cast<Qt::SizeHint>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_SizeHint(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::MinimumSize) && (arg <= Qt::NSizeHints))
-        return qScriptValueFromValue(engine,  static_cast<Qt::SizeHint>(arg));
-    return context->throwError(QString::fromLatin1("SizeHint(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_SizeHint_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::SizeHint value = qscriptvalue_cast<Qt::SizeHint>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_SizeHint_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::SizeHint value = qscriptvalue_cast<Qt::SizeHint>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_SizeHint_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_SizeHint_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_SizeHint,
-        qtscript_Qt_SizeHint_valueOf, qtscript_Qt_SizeHint_toString);
-    qScriptRegisterMetaType<Qt::SizeHint>(engine, qtscript_Qt_SizeHint_toScriptValue,
-        qtscript_Qt_SizeHint_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_SizeHint_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_SizeHint_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::DockWidgetArea
-//
-
-static const Qt::DockWidgetArea qtscript_Qt_DockWidgetArea_values[] = {
-    Qt::NoDockWidgetArea
-    , Qt::LeftDockWidgetArea
-    , Qt::RightDockWidgetArea
-    , Qt::TopDockWidgetArea
-    , Qt::BottomDockWidgetArea
-    , Qt::DockWidgetArea_Mask
-};
-
-static const char * const qtscript_Qt_DockWidgetArea_keys[] = {
-    "NoDockWidgetArea"
-    , "LeftDockWidgetArea"
-    , "RightDockWidgetArea"
-    , "TopDockWidgetArea"
-    , "BottomDockWidgetArea"
-    , "DockWidgetArea_Mask"
-};
-
-static QString qtscript_Qt_DockWidgetArea_toStringHelper(Qt::DockWidgetArea value)
-{
-    for (int i = 0; i < 6; ++i) {
-        if (qtscript_Qt_DockWidgetArea_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_DockWidgetArea_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_DockWidgetArea_toScriptValue(QScriptEngine *engine, const Qt::DockWidgetArea &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_DockWidgetArea_toStringHelper(value));
-}
-
-static void qtscript_Qt_DockWidgetArea_fromScriptValue(const QScriptValue &value, Qt::DockWidgetArea &out)
-{
-    out = qvariant_cast<Qt::DockWidgetArea>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_DockWidgetArea(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 6; ++i) {
-        if (qtscript_Qt_DockWidgetArea_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::DockWidgetArea>(arg));
-    }
-    return context->throwError(QString::fromLatin1("DockWidgetArea(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_DockWidgetArea_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DockWidgetArea value = qscriptvalue_cast<Qt::DockWidgetArea>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_DockWidgetArea_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DockWidgetArea value = qscriptvalue_cast<Qt::DockWidgetArea>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_DockWidgetArea_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_DockWidgetArea_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_DockWidgetArea,
-        qtscript_Qt_DockWidgetArea_valueOf, qtscript_Qt_DockWidgetArea_toString);
-    qScriptRegisterMetaType<Qt::DockWidgetArea>(engine, qtscript_Qt_DockWidgetArea_toScriptValue,
-        qtscript_Qt_DockWidgetArea_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 6; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_DockWidgetArea_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_DockWidgetArea_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::DockWidgetAreas
-//
-
-static QScriptValue qtscript_Qt_DockWidgetAreas_toScriptValue(QScriptEngine *engine, const Qt::DockWidgetAreas &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_DockWidgetAreas_fromScriptValue(const QScriptValue &value, Qt::DockWidgetAreas &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::DockWidgetAreas>())
-        out = qvariant_cast<Qt::DockWidgetAreas>(var);
-    else if (var.userType() == qMetaTypeId<Qt::DockWidgetArea>())
-        out = qvariant_cast<Qt::DockWidgetArea>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_DockWidgetAreas(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DockWidgetAreas result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::DockWidgetAreas>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::DockWidgetArea>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("DockWidgetAreas(): argument %0 is not of type DockWidgetArea").arg(i));
-            }
-            result |= qvariant_cast<Qt::DockWidgetArea>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_DockWidgetAreas_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DockWidgetAreas value = qscriptvalue_cast<Qt::DockWidgetAreas>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_DockWidgetAreas_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DockWidgetAreas value = qscriptvalue_cast<Qt::DockWidgetAreas>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 6; ++i) {
-        if ((value & qtscript_Qt_DockWidgetArea_values[i]) == qtscript_Qt_DockWidgetArea_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_DockWidgetArea_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_DockWidgetAreas_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::DockWidgetAreas>() == otherObj.value<Qt::DockWidgetAreas>())));
-}
-
-static QScriptValue qtscript_create_Qt_DockWidgetAreas_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_DockWidgetAreas, qtscript_Qt_DockWidgetAreas_valueOf,
-        qtscript_Qt_DockWidgetAreas_toString, qtscript_Qt_DockWidgetAreas_equals);
-    qScriptRegisterMetaType<Qt::DockWidgetAreas>(engine, qtscript_Qt_DockWidgetAreas_toScriptValue,
-        qtscript_Qt_DockWidgetAreas_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::ClipOperation
-//
-
-static const Qt::ClipOperation qtscript_Qt_ClipOperation_values[] = {
-    Qt::NoClip
-    , Qt::ReplaceClip
-    , Qt::IntersectClip
-};
-
-static const char * const qtscript_Qt_ClipOperation_keys[] = {
-    "NoClip"
-    , "ReplaceClip"
-    , "IntersectClip"
-};
-
-static QString qtscript_Qt_ClipOperation_toStringHelper(Qt::ClipOperation value)
-{
-    if ((value >= Qt::NoClip) && (value <= Qt::IntersectClip))
-        return qtscript_Qt_ClipOperation_keys[static_cast<int>(value)-static_cast<int>(Qt::NoClip)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ClipOperation_toScriptValue(QScriptEngine *engine, const Qt::ClipOperation &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ClipOperation_toStringHelper(value));
-}
-
-static void qtscript_Qt_ClipOperation_fromScriptValue(const QScriptValue &value, Qt::ClipOperation &out)
-{
-    out = qvariant_cast<Qt::ClipOperation>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ClipOperation(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::NoClip) && (arg <= Qt::IntersectClip))
-        return qScriptValueFromValue(engine,  static_cast<Qt::ClipOperation>(arg));
-    return context->throwError(QString::fromLatin1("ClipOperation(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ClipOperation_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ClipOperation value = qscriptvalue_cast<Qt::ClipOperation>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ClipOperation_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ClipOperation value = qscriptvalue_cast<Qt::ClipOperation>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ClipOperation_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ClipOperation_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ClipOperation,
-        qtscript_Qt_ClipOperation_valueOf, qtscript_Qt_ClipOperation_toString);
-    qScriptRegisterMetaType<Qt::ClipOperation>(engine, qtscript_Qt_ClipOperation_toScriptValue,
-        qtscript_Qt_ClipOperation_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ClipOperation_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ClipOperation_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::CursorShape
-//
-
-static const Qt::CursorShape qtscript_Qt_CursorShape_values[] = {
-    Qt::ArrowCursor
-    , Qt::UpArrowCursor
-    , Qt::CrossCursor
-    , Qt::WaitCursor
-    , Qt::IBeamCursor
-    , Qt::SizeVerCursor
-    , Qt::SizeHorCursor
-    , Qt::SizeBDiagCursor
-    , Qt::SizeFDiagCursor
-    , Qt::SizeAllCursor
-    , Qt::BlankCursor
-    , Qt::SplitVCursor
-    , Qt::SplitHCursor
-    , Qt::PointingHandCursor
-    , Qt::ForbiddenCursor
-    , Qt::WhatsThisCursor
-    , Qt::BusyCursor
-    , Qt::OpenHandCursor
-    , Qt::ClosedHandCursor
-    , Qt::DragCopyCursor
-    , Qt::DragMoveCursor
-    , Qt::DragLinkCursor
-    , Qt::BitmapCursor
-    , Qt::CustomCursor
-};
-
-static const char * const qtscript_Qt_CursorShape_keys[] = {
-    "ArrowCursor"
-    , "UpArrowCursor"
-    , "CrossCursor"
-    , "WaitCursor"
-    , "IBeamCursor"
-    , "SizeVerCursor"
-    , "SizeHorCursor"
-    , "SizeBDiagCursor"
-    , "SizeFDiagCursor"
-    , "SizeAllCursor"
-    , "BlankCursor"
-    , "SplitVCursor"
-    , "SplitHCursor"
-    , "PointingHandCursor"
-    , "ForbiddenCursor"
-    , "WhatsThisCursor"
-    , "BusyCursor"
-    , "OpenHandCursor"
-    , "ClosedHandCursor"
-    , "DragCopyCursor"
-    , "DragMoveCursor"
-    , "DragLinkCursor"
-    , "BitmapCursor"
-    , "CustomCursor"
-};
-
-static QString qtscript_Qt_CursorShape_toStringHelper(Qt::CursorShape value)
-{
-    for (int i = 0; i < 24; ++i) {
-        if (qtscript_Qt_CursorShape_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_CursorShape_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_CursorShape_toScriptValue(QScriptEngine *engine, const Qt::CursorShape &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_CursorShape_toStringHelper(value));
-}
-
-static void qtscript_Qt_CursorShape_fromScriptValue(const QScriptValue &value, Qt::CursorShape &out)
-{
-    out = qvariant_cast<Qt::CursorShape>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_CursorShape(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 24; ++i) {
-        if (qtscript_Qt_CursorShape_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::CursorShape>(arg));
-    }
-    return context->throwError(QString::fromLatin1("CursorShape(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_CursorShape_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::CursorShape value = qscriptvalue_cast<Qt::CursorShape>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_CursorShape_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::CursorShape value = qscriptvalue_cast<Qt::CursorShape>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_CursorShape_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_CursorShape_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_CursorShape,
-        qtscript_Qt_CursorShape_valueOf, qtscript_Qt_CursorShape_toString);
-    qScriptRegisterMetaType<Qt::CursorShape>(engine, qtscript_Qt_CursorShape_toScriptValue,
-        qtscript_Qt_CursorShape_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 24; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_CursorShape_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_CursorShape_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ShortcutContext
-//
-
-static const Qt::ShortcutContext qtscript_Qt_ShortcutContext_values[] = {
-    Qt::WidgetShortcut
-    , Qt::WindowShortcut
-    , Qt::ApplicationShortcut
-    , Qt::WidgetWithChildrenShortcut
-};
-
-static const char * const qtscript_Qt_ShortcutContext_keys[] = {
-    "WidgetShortcut"
-    , "WindowShortcut"
-    , "ApplicationShortcut"
-    , "WidgetWithChildrenShortcut"
-};
-
-static QString qtscript_Qt_ShortcutContext_toStringHelper(Qt::ShortcutContext value)
-{
-    if ((value >= Qt::WidgetShortcut) && (value <= Qt::WidgetWithChildrenShortcut))
-        return qtscript_Qt_ShortcutContext_keys[static_cast<int>(value)-static_cast<int>(Qt::WidgetShortcut)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ShortcutContext_toScriptValue(QScriptEngine *engine, const Qt::ShortcutContext &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ShortcutContext_toStringHelper(value));
-}
-
-static void qtscript_Qt_ShortcutContext_fromScriptValue(const QScriptValue &value, Qt::ShortcutContext &out)
-{
-    out = qvariant_cast<Qt::ShortcutContext>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ShortcutContext(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::WidgetShortcut) && (arg <= Qt::WidgetWithChildrenShortcut))
-        return qScriptValueFromValue(engine,  static_cast<Qt::ShortcutContext>(arg));
-    return context->throwError(QString::fromLatin1("ShortcutContext(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ShortcutContext_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ShortcutContext value = qscriptvalue_cast<Qt::ShortcutContext>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ShortcutContext_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ShortcutContext value = qscriptvalue_cast<Qt::ShortcutContext>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ShortcutContext_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ShortcutContext_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ShortcutContext,
-        qtscript_Qt_ShortcutContext_valueOf, qtscript_Qt_ShortcutContext_toString);
-    qScriptRegisterMetaType<Qt::ShortcutContext>(engine, qtscript_Qt_ShortcutContext_toScriptValue,
-        qtscript_Qt_ShortcutContext_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ShortcutContext_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ShortcutContext_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::DayOfWeek
-//
-
-static const Qt::DayOfWeek qtscript_Qt_DayOfWeek_values[] = {
-    Qt::Monday
-    , Qt::Tuesday
-    , Qt::Wednesday
-    , Qt::Thursday
-    , Qt::Friday
-    , Qt::Saturday
-    , Qt::Sunday
-};
-
-static const char * const qtscript_Qt_DayOfWeek_keys[] = {
-    "Monday"
-    , "Tuesday"
-    , "Wednesday"
-    , "Thursday"
-    , "Friday"
-    , "Saturday"
-    , "Sunday"
-};
-
-static QString qtscript_Qt_DayOfWeek_toStringHelper(Qt::DayOfWeek value)
-{
-    if ((value >= Qt::Monday) && (value <= Qt::Sunday))
-        return qtscript_Qt_DayOfWeek_keys[static_cast<int>(value)-static_cast<int>(Qt::Monday)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_DayOfWeek_toScriptValue(QScriptEngine *engine, const Qt::DayOfWeek &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_DayOfWeek_toStringHelper(value));
-}
-
-static void qtscript_Qt_DayOfWeek_fromScriptValue(const QScriptValue &value, Qt::DayOfWeek &out)
-{
-    out = qvariant_cast<Qt::DayOfWeek>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_DayOfWeek(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::Monday) && (arg <= Qt::Sunday))
-        return qScriptValueFromValue(engine,  static_cast<Qt::DayOfWeek>(arg));
-    return context->throwError(QString::fromLatin1("DayOfWeek(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_DayOfWeek_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DayOfWeek value = qscriptvalue_cast<Qt::DayOfWeek>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_DayOfWeek_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::DayOfWeek value = qscriptvalue_cast<Qt::DayOfWeek>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_DayOfWeek_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_DayOfWeek_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_DayOfWeek,
-        qtscript_Qt_DayOfWeek_valueOf, qtscript_Qt_DayOfWeek_toString);
-    qScriptRegisterMetaType<Qt::DayOfWeek>(engine, qtscript_Qt_DayOfWeek_toScriptValue,
-        qtscript_Qt_DayOfWeek_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 7; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_DayOfWeek_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_DayOfWeek_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::TextInteractionFlag
-//
-
-static const Qt::TextInteractionFlag qtscript_Qt_TextInteractionFlag_values[] = {
-    Qt::NoTextInteraction
-    , Qt::TextSelectableByMouse
-    , Qt::TextSelectableByKeyboard
-    , Qt::LinksAccessibleByMouse
-    , Qt::LinksAccessibleByKeyboard
-    , Qt::TextBrowserInteraction
-    , Qt::TextEditable
-    , Qt::TextEditorInteraction
-};
-
-static const char * const qtscript_Qt_TextInteractionFlag_keys[] = {
-    "NoTextInteraction"
-    , "TextSelectableByMouse"
-    , "TextSelectableByKeyboard"
-    , "LinksAccessibleByMouse"
-    , "LinksAccessibleByKeyboard"
-    , "TextBrowserInteraction"
-    , "TextEditable"
-    , "TextEditorInteraction"
-};
-
-static QString qtscript_Qt_TextInteractionFlag_toStringHelper(Qt::TextInteractionFlag value)
-{
-    for (int i = 0; i < 8; ++i) {
-        if (qtscript_Qt_TextInteractionFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_TextInteractionFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_TextInteractionFlag_toScriptValue(QScriptEngine *engine, const Qt::TextInteractionFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_TextInteractionFlag_toStringHelper(value));
-}
-
-static void qtscript_Qt_TextInteractionFlag_fromScriptValue(const QScriptValue &value, Qt::TextInteractionFlag &out)
-{
-    out = qvariant_cast<Qt::TextInteractionFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_TextInteractionFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 8; ++i) {
-        if (qtscript_Qt_TextInteractionFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::TextInteractionFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("TextInteractionFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_TextInteractionFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextInteractionFlag value = qscriptvalue_cast<Qt::TextInteractionFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_TextInteractionFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextInteractionFlag value = qscriptvalue_cast<Qt::TextInteractionFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_TextInteractionFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_TextInteractionFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_TextInteractionFlag,
-        qtscript_Qt_TextInteractionFlag_valueOf, qtscript_Qt_TextInteractionFlag_toString);
-    qScriptRegisterMetaType<Qt::TextInteractionFlag>(engine, qtscript_Qt_TextInteractionFlag_toScriptValue,
-        qtscript_Qt_TextInteractionFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 8; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TextInteractionFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_TextInteractionFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::TextInteractionFlags
-//
-
-static QScriptValue qtscript_Qt_TextInteractionFlags_toScriptValue(QScriptEngine *engine, const Qt::TextInteractionFlags &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_TextInteractionFlags_fromScriptValue(const QScriptValue &value, Qt::TextInteractionFlags &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::TextInteractionFlags>())
-        out = qvariant_cast<Qt::TextInteractionFlags>(var);
-    else if (var.userType() == qMetaTypeId<Qt::TextInteractionFlag>())
-        out = qvariant_cast<Qt::TextInteractionFlag>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_TextInteractionFlags(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextInteractionFlags result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::TextInteractionFlags>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::TextInteractionFlag>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("TextInteractionFlags(): argument %0 is not of type TextInteractionFlag").arg(i));
-            }
-            result |= qvariant_cast<Qt::TextInteractionFlag>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_TextInteractionFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextInteractionFlags value = qscriptvalue_cast<Qt::TextInteractionFlags>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_TextInteractionFlags_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextInteractionFlags value = qscriptvalue_cast<Qt::TextInteractionFlags>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 8; ++i) {
-        if ((value & qtscript_Qt_TextInteractionFlag_values[i]) == qtscript_Qt_TextInteractionFlag_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_TextInteractionFlag_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_TextInteractionFlags_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::TextInteractionFlags>() == otherObj.value<Qt::TextInteractionFlags>())));
-}
-
-static QScriptValue qtscript_create_Qt_TextInteractionFlags_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_TextInteractionFlags, qtscript_Qt_TextInteractionFlags_valueOf,
-        qtscript_Qt_TextInteractionFlags_toString, qtscript_Qt_TextInteractionFlags_equals);
-    qScriptRegisterMetaType<Qt::TextInteractionFlags>(engine, qtscript_Qt_TextInteractionFlags_toScriptValue,
-        qtscript_Qt_TextInteractionFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::SortOrder
-//
-
-static const Qt::SortOrder qtscript_Qt_SortOrder_values[] = {
-    Qt::AscendingOrder
-    , Qt::DescendingOrder
-};
-
-static const char * const qtscript_Qt_SortOrder_keys[] = {
-    "AscendingOrder"
-    , "DescendingOrder"
-};
-
-static QString qtscript_Qt_SortOrder_toStringHelper(Qt::SortOrder value)
-{
-    if ((value >= Qt::AscendingOrder) && (value <= Qt::DescendingOrder))
-        return qtscript_Qt_SortOrder_keys[static_cast<int>(value)-static_cast<int>(Qt::AscendingOrder)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_SortOrder_toScriptValue(QScriptEngine *engine, const Qt::SortOrder &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_SortOrder_toStringHelper(value));
-}
-
-static void qtscript_Qt_SortOrder_fromScriptValue(const QScriptValue &value, Qt::SortOrder &out)
-{
-    out = qvariant_cast<Qt::SortOrder>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_SortOrder(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::AscendingOrder) && (arg <= Qt::DescendingOrder))
-        return qScriptValueFromValue(engine,  static_cast<Qt::SortOrder>(arg));
-    return context->throwError(QString::fromLatin1("SortOrder(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_SortOrder_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::SortOrder value = qscriptvalue_cast<Qt::SortOrder>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_SortOrder_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::SortOrder value = qscriptvalue_cast<Qt::SortOrder>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_SortOrder_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_SortOrder_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_SortOrder,
-        qtscript_Qt_SortOrder_valueOf, qtscript_Qt_SortOrder_toString);
-    qScriptRegisterMetaType<Qt::SortOrder>(engine, qtscript_Qt_SortOrder_toScriptValue,
-        qtscript_Qt_SortOrder_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_SortOrder_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_SortOrder_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::WindowFrameSection
-//
-
-static const Qt::WindowFrameSection qtscript_Qt_WindowFrameSection_values[] = {
-    Qt::NoSection
-    , Qt::LeftSection
-    , Qt::TopLeftSection
-    , Qt::TopSection
-    , Qt::TopRightSection
-    , Qt::RightSection
-    , Qt::BottomRightSection
-    , Qt::BottomSection
-    , Qt::BottomLeftSection
-    , Qt::TitleBarArea
-};
-
-static const char * const qtscript_Qt_WindowFrameSection_keys[] = {
-    "NoSection"
-    , "LeftSection"
-    , "TopLeftSection"
-    , "TopSection"
-    , "TopRightSection"
-    , "RightSection"
-    , "BottomRightSection"
-    , "BottomSection"
-    , "BottomLeftSection"
-    , "TitleBarArea"
-};
-
-static QString qtscript_Qt_WindowFrameSection_toStringHelper(Qt::WindowFrameSection value)
-{
-    if ((value >= Qt::NoSection) && (value <= Qt::TitleBarArea))
-        return qtscript_Qt_WindowFrameSection_keys[static_cast<int>(value)-static_cast<int>(Qt::NoSection)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_WindowFrameSection_toScriptValue(QScriptEngine *engine, const Qt::WindowFrameSection &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_WindowFrameSection_toStringHelper(value));
-}
-
-static void qtscript_Qt_WindowFrameSection_fromScriptValue(const QScriptValue &value, Qt::WindowFrameSection &out)
-{
-    out = qvariant_cast<Qt::WindowFrameSection>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_WindowFrameSection(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::NoSection) && (arg <= Qt::TitleBarArea))
-        return qScriptValueFromValue(engine,  static_cast<Qt::WindowFrameSection>(arg));
-    return context->throwError(QString::fromLatin1("WindowFrameSection(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_WindowFrameSection_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowFrameSection value = qscriptvalue_cast<Qt::WindowFrameSection>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_WindowFrameSection_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowFrameSection value = qscriptvalue_cast<Qt::WindowFrameSection>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_WindowFrameSection_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_WindowFrameSection_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_WindowFrameSection,
-        qtscript_Qt_WindowFrameSection_valueOf, qtscript_Qt_WindowFrameSection_toString);
-    qScriptRegisterMetaType<Qt::WindowFrameSection>(engine, qtscript_Qt_WindowFrameSection_toScriptValue,
-        qtscript_Qt_WindowFrameSection_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 10; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WindowFrameSection_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_WindowFrameSection_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ItemFlag
-//
-
-static const Qt::ItemFlag qtscript_Qt_ItemFlag_values[] = {
-    Qt::NoItemFlags
-    , Qt::ItemIsSelectable
-    , Qt::ItemIsEditable
-    , Qt::ItemIsDragEnabled
-    , Qt::ItemIsDropEnabled
-    , Qt::ItemIsUserCheckable
-    , Qt::ItemIsEnabled
-    , Qt::ItemIsTristate
-    , Qt::ItemNeverHasChildren
-};
-
-static const char * const qtscript_Qt_ItemFlag_keys[] = {
-    "NoItemFlags"
-    , "ItemIsSelectable"
-    , "ItemIsEditable"
-    , "ItemIsDragEnabled"
-    , "ItemIsDropEnabled"
-    , "ItemIsUserCheckable"
-    , "ItemIsEnabled"
-    , "ItemIsTristate"
-    , "ItemNeverHasChildren"
-};
-
-static QString qtscript_Qt_ItemFlag_toStringHelper(Qt::ItemFlag value)
-{
-    for (int i = 0; i < 9; ++i) {
-        if (qtscript_Qt_ItemFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_ItemFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ItemFlag_toScriptValue(QScriptEngine *engine, const Qt::ItemFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ItemFlag_toStringHelper(value));
-}
-
-static void qtscript_Qt_ItemFlag_fromScriptValue(const QScriptValue &value, Qt::ItemFlag &out)
-{
-    out = qvariant_cast<Qt::ItemFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ItemFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 9; ++i) {
-        if (qtscript_Qt_ItemFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::ItemFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("ItemFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ItemFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemFlag value = qscriptvalue_cast<Qt::ItemFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ItemFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemFlag value = qscriptvalue_cast<Qt::ItemFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ItemFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ItemFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ItemFlag,
-        qtscript_Qt_ItemFlag_valueOf, qtscript_Qt_ItemFlag_toString);
-    qScriptRegisterMetaType<Qt::ItemFlag>(engine, qtscript_Qt_ItemFlag_toScriptValue,
-        qtscript_Qt_ItemFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 9; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ItemFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ItemFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ItemFlags
-//
-
-static QScriptValue qtscript_Qt_ItemFlags_toScriptValue(QScriptEngine *engine, const Qt::ItemFlags &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_ItemFlags_fromScriptValue(const QScriptValue &value, Qt::ItemFlags &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::ItemFlags>())
-        out = qvariant_cast<Qt::ItemFlags>(var);
-    else if (var.userType() == qMetaTypeId<Qt::ItemFlag>())
-        out = qvariant_cast<Qt::ItemFlag>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_ItemFlags(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemFlags result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::ItemFlags>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::ItemFlag>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("ItemFlags(): argument %0 is not of type ItemFlag").arg(i));
-            }
-            result |= qvariant_cast<Qt::ItemFlag>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_ItemFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemFlags value = qscriptvalue_cast<Qt::ItemFlags>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ItemFlags_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemFlags value = qscriptvalue_cast<Qt::ItemFlags>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 9; ++i) {
-        if ((value & qtscript_Qt_ItemFlag_values[i]) == qtscript_Qt_ItemFlag_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_ItemFlag_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_ItemFlags_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::ItemFlags>() == otherObj.value<Qt::ItemFlags>())));
-}
-
-static QScriptValue qtscript_create_Qt_ItemFlags_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_ItemFlags, qtscript_Qt_ItemFlags_valueOf,
-        qtscript_Qt_ItemFlags_toString, qtscript_Qt_ItemFlags_equals);
-    qScriptRegisterMetaType<Qt::ItemFlags>(engine, qtscript_Qt_ItemFlags_toScriptValue,
-        qtscript_Qt_ItemFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::FocusPolicy
-//
-
-static const Qt::FocusPolicy qtscript_Qt_FocusPolicy_values[] = {
-    Qt::NoFocus
-    , Qt::TabFocus
-    , Qt::ClickFocus
-    , Qt::StrongFocus
-    , Qt::WheelFocus
-};
-
-static const char * const qtscript_Qt_FocusPolicy_keys[] = {
-    "NoFocus"
-    , "TabFocus"
-    , "ClickFocus"
-    , "StrongFocus"
-    , "WheelFocus"
-};
-
-static QString qtscript_Qt_FocusPolicy_toStringHelper(Qt::FocusPolicy value)
-{
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_FocusPolicy_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_FocusPolicy_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_FocusPolicy_toScriptValue(QScriptEngine *engine, const Qt::FocusPolicy &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_FocusPolicy_toStringHelper(value));
-}
-
-static void qtscript_Qt_FocusPolicy_fromScriptValue(const QScriptValue &value, Qt::FocusPolicy &out)
-{
-    out = qvariant_cast<Qt::FocusPolicy>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_FocusPolicy(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_FocusPolicy_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::FocusPolicy>(arg));
-    }
-    return context->throwError(QString::fromLatin1("FocusPolicy(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_FocusPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::FocusPolicy value = qscriptvalue_cast<Qt::FocusPolicy>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_FocusPolicy_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::FocusPolicy value = qscriptvalue_cast<Qt::FocusPolicy>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_FocusPolicy_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_FocusPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_FocusPolicy,
-        qtscript_Qt_FocusPolicy_valueOf, qtscript_Qt_FocusPolicy_toString);
-    qScriptRegisterMetaType<Qt::FocusPolicy>(engine, qtscript_Qt_FocusPolicy_toScriptValue,
-        qtscript_Qt_FocusPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_FocusPolicy_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_FocusPolicy_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::AspectRatioMode
-//
-
-static const Qt::AspectRatioMode qtscript_Qt_AspectRatioMode_values[] = {
-    Qt::IgnoreAspectRatio
-    , Qt::KeepAspectRatio
-    , Qt::KeepAspectRatioByExpanding
-};
-
-static const char * const qtscript_Qt_AspectRatioMode_keys[] = {
-    "IgnoreAspectRatio"
-    , "KeepAspectRatio"
-    , "KeepAspectRatioByExpanding"
-};
-
-static QString qtscript_Qt_AspectRatioMode_toStringHelper(Qt::AspectRatioMode value)
-{
-    if ((value >= Qt::IgnoreAspectRatio) && (value <= Qt::KeepAspectRatioByExpanding))
-        return qtscript_Qt_AspectRatioMode_keys[static_cast<int>(value)-static_cast<int>(Qt::IgnoreAspectRatio)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_AspectRatioMode_toScriptValue(QScriptEngine *engine, const Qt::AspectRatioMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_AspectRatioMode_toStringHelper(value));
-}
-
-static void qtscript_Qt_AspectRatioMode_fromScriptValue(const QScriptValue &value, Qt::AspectRatioMode &out)
-{
-    out = qvariant_cast<Qt::AspectRatioMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_AspectRatioMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::IgnoreAspectRatio) && (arg <= Qt::KeepAspectRatioByExpanding))
-        return qScriptValueFromValue(engine,  static_cast<Qt::AspectRatioMode>(arg));
-    return context->throwError(QString::fromLatin1("AspectRatioMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_AspectRatioMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::AspectRatioMode value = qscriptvalue_cast<Qt::AspectRatioMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_AspectRatioMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::AspectRatioMode value = qscriptvalue_cast<Qt::AspectRatioMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_AspectRatioMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_AspectRatioMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_AspectRatioMode,
-        qtscript_Qt_AspectRatioMode_valueOf, qtscript_Qt_AspectRatioMode_toString);
-    qScriptRegisterMetaType<Qt::AspectRatioMode>(engine, qtscript_Qt_AspectRatioMode_toScriptValue,
-        qtscript_Qt_AspectRatioMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_AspectRatioMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_AspectRatioMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::TextFormat
-//
-
-static const Qt::TextFormat qtscript_Qt_TextFormat_values[] = {
-    Qt::PlainText
-    , Qt::RichText
-    , Qt::AutoText
-};
-
-static const char * const qtscript_Qt_TextFormat_keys[] = {
-    "PlainText"
-    , "RichText"
-    , "AutoText"
-};
-
-static QString qtscript_Qt_TextFormat_toStringHelper(Qt::TextFormat value)
-{
-    if ((value >= Qt::PlainText) && (value <= Qt::AutoText))
-        return qtscript_Qt_TextFormat_keys[static_cast<int>(value)-static_cast<int>(Qt::PlainText)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_TextFormat_toScriptValue(QScriptEngine *engine, const Qt::TextFormat &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_TextFormat_toStringHelper(value));
-}
-
-static void qtscript_Qt_TextFormat_fromScriptValue(const QScriptValue &value, Qt::TextFormat &out)
-{
-    out = qvariant_cast<Qt::TextFormat>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_TextFormat(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::PlainText) && (arg <= Qt::AutoText))
-        return qScriptValueFromValue(engine,  static_cast<Qt::TextFormat>(arg));
-    return context->throwError(QString::fromLatin1("TextFormat(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_TextFormat_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextFormat value = qscriptvalue_cast<Qt::TextFormat>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_TextFormat_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TextFormat value = qscriptvalue_cast<Qt::TextFormat>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_TextFormat_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_TextFormat_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_TextFormat,
-        qtscript_Qt_TextFormat_valueOf, qtscript_Qt_TextFormat_toString);
-    qScriptRegisterMetaType<Qt::TextFormat>(engine, qtscript_Qt_TextFormat_toScriptValue,
-        qtscript_Qt_TextFormat_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TextFormat_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_TextFormat_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ItemSelectionMode
-//
-
-static const Qt::ItemSelectionMode qtscript_Qt_ItemSelectionMode_values[] = {
-    Qt::ContainsItemShape
-    , Qt::IntersectsItemShape
-    , Qt::ContainsItemBoundingRect
-    , Qt::IntersectsItemBoundingRect
-};
-
-static const char * const qtscript_Qt_ItemSelectionMode_keys[] = {
-    "ContainsItemShape"
-    , "IntersectsItemShape"
-    , "ContainsItemBoundingRect"
-    , "IntersectsItemBoundingRect"
-};
-
-static QString qtscript_Qt_ItemSelectionMode_toStringHelper(Qt::ItemSelectionMode value)
-{
-    if ((value >= Qt::ContainsItemShape) && (value <= Qt::IntersectsItemBoundingRect))
-        return qtscript_Qt_ItemSelectionMode_keys[static_cast<int>(value)-static_cast<int>(Qt::ContainsItemShape)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ItemSelectionMode_toScriptValue(QScriptEngine *engine, const Qt::ItemSelectionMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ItemSelectionMode_toStringHelper(value));
-}
-
-static void qtscript_Qt_ItemSelectionMode_fromScriptValue(const QScriptValue &value, Qt::ItemSelectionMode &out)
-{
-    out = qvariant_cast<Qt::ItemSelectionMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ItemSelectionMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::ContainsItemShape) && (arg <= Qt::IntersectsItemBoundingRect))
-        return qScriptValueFromValue(engine,  static_cast<Qt::ItemSelectionMode>(arg));
-    return context->throwError(QString::fromLatin1("ItemSelectionMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ItemSelectionMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemSelectionMode value = qscriptvalue_cast<Qt::ItemSelectionMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ItemSelectionMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ItemSelectionMode value = qscriptvalue_cast<Qt::ItemSelectionMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ItemSelectionMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ItemSelectionMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ItemSelectionMode,
-        qtscript_Qt_ItemSelectionMode_valueOf, qtscript_Qt_ItemSelectionMode_toString);
-    qScriptRegisterMetaType<Qt::ItemSelectionMode>(engine, qtscript_Qt_ItemSelectionMode_toScriptValue,
-        qtscript_Qt_ItemSelectionMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ItemSelectionMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ItemSelectionMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::MatchFlag
-//
-
-static const Qt::MatchFlag qtscript_Qt_MatchFlag_values[] = {
-    Qt::MatchExactly
-    , Qt::MatchContains
-    , Qt::MatchStartsWith
-    , Qt::MatchEndsWith
-    , Qt::MatchRegExp
-    , Qt::MatchWildcard
-    , Qt::MatchFixedString
-    , Qt::MatchCaseSensitive
-    , Qt::MatchWrap
-    , Qt::MatchRecursive
-};
-
-static const char * const qtscript_Qt_MatchFlag_keys[] = {
-    "MatchExactly"
-    , "MatchContains"
-    , "MatchStartsWith"
-    , "MatchEndsWith"
-    , "MatchRegExp"
-    , "MatchWildcard"
-    , "MatchFixedString"
-    , "MatchCaseSensitive"
-    , "MatchWrap"
-    , "MatchRecursive"
-};
-
-static QString qtscript_Qt_MatchFlag_toStringHelper(Qt::MatchFlag value)
-{
-    for (int i = 0; i < 10; ++i) {
-        if (qtscript_Qt_MatchFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_MatchFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_MatchFlag_toScriptValue(QScriptEngine *engine, const Qt::MatchFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_MatchFlag_toStringHelper(value));
-}
-
-static void qtscript_Qt_MatchFlag_fromScriptValue(const QScriptValue &value, Qt::MatchFlag &out)
-{
-    out = qvariant_cast<Qt::MatchFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_MatchFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 10; ++i) {
-        if (qtscript_Qt_MatchFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::MatchFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("MatchFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_MatchFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::MatchFlag value = qscriptvalue_cast<Qt::MatchFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_MatchFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::MatchFlag value = qscriptvalue_cast<Qt::MatchFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_MatchFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_MatchFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_MatchFlag,
-        qtscript_Qt_MatchFlag_valueOf, qtscript_Qt_MatchFlag_toString);
-    qScriptRegisterMetaType<Qt::MatchFlag>(engine, qtscript_Qt_MatchFlag_toScriptValue,
-        qtscript_Qt_MatchFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 10; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_MatchFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_MatchFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::MatchFlags
-//
-
-static QScriptValue qtscript_Qt_MatchFlags_toScriptValue(QScriptEngine *engine, const Qt::MatchFlags &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_MatchFlags_fromScriptValue(const QScriptValue &value, Qt::MatchFlags &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::MatchFlags>())
-        out = qvariant_cast<Qt::MatchFlags>(var);
-    else if (var.userType() == qMetaTypeId<Qt::MatchFlag>())
-        out = qvariant_cast<Qt::MatchFlag>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_MatchFlags(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::MatchFlags result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::MatchFlags>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::MatchFlag>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("MatchFlags(): argument %0 is not of type MatchFlag").arg(i));
-            }
-            result |= qvariant_cast<Qt::MatchFlag>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_MatchFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::MatchFlags value = qscriptvalue_cast<Qt::MatchFlags>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_MatchFlags_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::MatchFlags value = qscriptvalue_cast<Qt::MatchFlags>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 10; ++i) {
-        if ((value & qtscript_Qt_MatchFlag_values[i]) == qtscript_Qt_MatchFlag_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_MatchFlag_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_MatchFlags_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::MatchFlags>() == otherObj.value<Qt::MatchFlags>())));
-}
-
-static QScriptValue qtscript_create_Qt_MatchFlags_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_MatchFlags, qtscript_Qt_MatchFlags_valueOf,
-        qtscript_Qt_MatchFlags_toString, qtscript_Qt_MatchFlags_equals);
-    qScriptRegisterMetaType<Qt::MatchFlags>(engine, qtscript_Qt_MatchFlags_toScriptValue,
-        qtscript_Qt_MatchFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::WidgetAttribute
-//
-
-static const Qt::WidgetAttribute qtscript_Qt_WidgetAttribute_values[] = {
-    Qt::WA_Disabled
-    , Qt::WA_UnderMouse
-    , Qt::WA_MouseTracking
-    , Qt::WA_ContentsPropagated
-    , Qt::WA_OpaquePaintEvent
-    , Qt::WA_StaticContents
-    , Qt::WA_LaidOut
-    , Qt::WA_PaintOnScreen
-    , Qt::WA_NoSystemBackground
-    , Qt::WA_UpdatesDisabled
-    , Qt::WA_Mapped
-    , Qt::WA_MacNoClickThrough
-    , Qt::WA_InputMethodEnabled
-    , Qt::WA_WState_Visible
-    , Qt::WA_WState_Hidden
-    , Qt::WA_ForceDisabled
-    , Qt::WA_KeyCompression
-    , Qt::WA_PendingMoveEvent
-    , Qt::WA_PendingResizeEvent
-    , Qt::WA_SetPalette
-    , Qt::WA_SetFont
-    , Qt::WA_SetCursor
-    , Qt::WA_NoChildEventsFromChildren
-    , Qt::WA_WindowModified
-    , Qt::WA_Resized
-    , Qt::WA_Moved
-    , Qt::WA_PendingUpdate
-    , Qt::WA_InvalidSize
-    , Qt::WA_MacBrushedMetal
-    , Qt::WA_CustomWhatsThis
-    , Qt::WA_LayoutOnEntireRect
-    , Qt::WA_OutsideWSRange
-    , Qt::WA_GrabbedShortcut
-    , Qt::WA_TransparentForMouseEvents
-    , Qt::WA_PaintUnclipped
-    , Qt::WA_SetWindowIcon
-    , Qt::WA_NoMouseReplay
-    , Qt::WA_DeleteOnClose
-    , Qt::WA_RightToLeft
-    , Qt::WA_SetLayoutDirection
-    , Qt::WA_NoChildEventsForParent
-    , Qt::WA_ForceUpdatesDisabled
-    , Qt::WA_WState_Created
-    , Qt::WA_WState_CompressKeys
-    , Qt::WA_WState_InPaintEvent
-    , Qt::WA_WState_Reparented
-    , Qt::WA_WState_ConfigPending
-    , Qt::WA_WState_Polished
-    , Qt::WA_WState_DND
-    , Qt::WA_WState_OwnSizePolicy
-    , Qt::WA_WState_ExplicitShowHide
-    , Qt::WA_ShowModal
-    , Qt::WA_MouseNoMask
-    , Qt::WA_GroupLeader
-    , Qt::WA_NoMousePropagation
-    , Qt::WA_Hover
-    , Qt::WA_InputMethodTransparent
-    , Qt::WA_QuitOnClose
-    , Qt::WA_KeyboardFocusChange
-    , Qt::WA_AcceptDrops
-    , Qt::WA_DropSiteRegistered
-    , Qt::WA_WindowPropagation
-    , Qt::WA_NoX11EventCompression
-    , Qt::WA_TintedBackground
-    , Qt::WA_X11OpenGLOverlay
-    , Qt::WA_AlwaysShowToolTips
-    , Qt::WA_MacOpaqueSizeGrip
-    , Qt::WA_SetStyle
-    , Qt::WA_SetLocale
-    , Qt::WA_MacShowFocusRect
-    , Qt::WA_MacNormalSize
-    , Qt::WA_MacSmallSize
-    , Qt::WA_MacMiniSize
-    , Qt::WA_LayoutUsesWidgetRect
-    , Qt::WA_StyledBackground
-    , Qt::WA_MSWindowsUseDirect3D
-    , Qt::WA_CanHostQMdiSubWindowTitleBar
-    , Qt::WA_MacAlwaysShowToolWindow
-    , Qt::WA_StyleSheet
-    , Qt::WA_ShowWithoutActivating
-    , Qt::WA_X11BypassTransientForHint
-    , Qt::WA_NativeWindow
-    , Qt::WA_DontCreateNativeAncestors
-    , Qt::WA_MacVariableSize
-    , Qt::WA_DontShowOnScreen
-    , Qt::WA_X11NetWmWindowTypeDesktop
-    , Qt::WA_X11NetWmWindowTypeDock
-    , Qt::WA_X11NetWmWindowTypeToolBar
-    , Qt::WA_X11NetWmWindowTypeMenu
-    , Qt::WA_X11NetWmWindowTypeUtility
-    , Qt::WA_X11NetWmWindowTypeSplash
-    , Qt::WA_X11NetWmWindowTypeDialog
-    , Qt::WA_X11NetWmWindowTypeDropDownMenu
-    , Qt::WA_X11NetWmWindowTypePopupMenu
-    , Qt::WA_X11NetWmWindowTypeToolTip
-    , Qt::WA_X11NetWmWindowTypeNotification
-    , Qt::WA_X11NetWmWindowTypeCombo
-    , Qt::WA_X11NetWmWindowTypeDND
-    , Qt::WA_MacFrameworkScaled
-    , Qt::WA_SetWindowModality
-    , Qt::WA_WState_WindowOpacitySet
-    , Qt::WA_TranslucentBackground
-    , Qt::WA_AcceptTouchEvents
-    , Qt::WA_WState_AcceptedTouchBeginEvent
-    , Qt::WA_TouchPadAcceptSingleTouchEvents
-    , Qt::WA_X11DoNotAcceptFocus
-    , Qt::WA_MacNoShadow
-    , Qt::WA_AttributeCount
-};
-
-static const char * const qtscript_Qt_WidgetAttribute_keys[] = {
-    "WA_Disabled"
-    , "WA_UnderMouse"
-    , "WA_MouseTracking"
-    , "WA_ContentsPropagated"
-    , "WA_OpaquePaintEvent"
-    , "WA_StaticContents"
-    , "WA_LaidOut"
-    , "WA_PaintOnScreen"
-    , "WA_NoSystemBackground"
-    , "WA_UpdatesDisabled"
-    , "WA_Mapped"
-    , "WA_MacNoClickThrough"
-    , "WA_InputMethodEnabled"
-    , "WA_WState_Visible"
-    , "WA_WState_Hidden"
-    , "WA_ForceDisabled"
-    , "WA_KeyCompression"
-    , "WA_PendingMoveEvent"
-    , "WA_PendingResizeEvent"
-    , "WA_SetPalette"
-    , "WA_SetFont"
-    , "WA_SetCursor"
-    , "WA_NoChildEventsFromChildren"
-    , "WA_WindowModified"
-    , "WA_Resized"
-    , "WA_Moved"
-    , "WA_PendingUpdate"
-    , "WA_InvalidSize"
-    , "WA_MacBrushedMetal"
-    , "WA_CustomWhatsThis"
-    , "WA_LayoutOnEntireRect"
-    , "WA_OutsideWSRange"
-    , "WA_GrabbedShortcut"
-    , "WA_TransparentForMouseEvents"
-    , "WA_PaintUnclipped"
-    , "WA_SetWindowIcon"
-    , "WA_NoMouseReplay"
-    , "WA_DeleteOnClose"
-    , "WA_RightToLeft"
-    , "WA_SetLayoutDirection"
-    , "WA_NoChildEventsForParent"
-    , "WA_ForceUpdatesDisabled"
-    , "WA_WState_Created"
-    , "WA_WState_CompressKeys"
-    , "WA_WState_InPaintEvent"
-    , "WA_WState_Reparented"
-    , "WA_WState_ConfigPending"
-    , "WA_WState_Polished"
-    , "WA_WState_DND"
-    , "WA_WState_OwnSizePolicy"
-    , "WA_WState_ExplicitShowHide"
-    , "WA_ShowModal"
-    , "WA_MouseNoMask"
-    , "WA_GroupLeader"
-    , "WA_NoMousePropagation"
-    , "WA_Hover"
-    , "WA_InputMethodTransparent"
-    , "WA_QuitOnClose"
-    , "WA_KeyboardFocusChange"
-    , "WA_AcceptDrops"
-    , "WA_DropSiteRegistered"
-    , "WA_WindowPropagation"
-    , "WA_NoX11EventCompression"
-    , "WA_TintedBackground"
-    , "WA_X11OpenGLOverlay"
-    , "WA_AlwaysShowToolTips"
-    , "WA_MacOpaqueSizeGrip"
-    , "WA_SetStyle"
-    , "WA_SetLocale"
-    , "WA_MacShowFocusRect"
-    , "WA_MacNormalSize"
-    , "WA_MacSmallSize"
-    , "WA_MacMiniSize"
-    , "WA_LayoutUsesWidgetRect"
-    , "WA_StyledBackground"
-    , "WA_MSWindowsUseDirect3D"
-    , "WA_CanHostQMdiSubWindowTitleBar"
-    , "WA_MacAlwaysShowToolWindow"
-    , "WA_StyleSheet"
-    , "WA_ShowWithoutActivating"
-    , "WA_X11BypassTransientForHint"
-    , "WA_NativeWindow"
-    , "WA_DontCreateNativeAncestors"
-    , "WA_MacVariableSize"
-    , "WA_DontShowOnScreen"
-    , "WA_X11NetWmWindowTypeDesktop"
-    , "WA_X11NetWmWindowTypeDock"
-    , "WA_X11NetWmWindowTypeToolBar"
-    , "WA_X11NetWmWindowTypeMenu"
-    , "WA_X11NetWmWindowTypeUtility"
-    , "WA_X11NetWmWindowTypeSplash"
-    , "WA_X11NetWmWindowTypeDialog"
-    , "WA_X11NetWmWindowTypeDropDownMenu"
-    , "WA_X11NetWmWindowTypePopupMenu"
-    , "WA_X11NetWmWindowTypeToolTip"
-    , "WA_X11NetWmWindowTypeNotification"
-    , "WA_X11NetWmWindowTypeCombo"
-    , "WA_X11NetWmWindowTypeDND"
-    , "WA_MacFrameworkScaled"
-    , "WA_SetWindowModality"
-    , "WA_WState_WindowOpacitySet"
-    , "WA_TranslucentBackground"
-    , "WA_AcceptTouchEvents"
-    , "WA_WState_AcceptedTouchBeginEvent"
-    , "WA_TouchPadAcceptSingleTouchEvents"
-    , "WA_X11DoNotAcceptFocus"
-    , "WA_MacNoShadow"
-    , "WA_AttributeCount"
-};
-
-static QString qtscript_Qt_WidgetAttribute_toStringHelper(Qt::WidgetAttribute value)
-{
-    for (int i = 0; i < 108; ++i) {
-        if (qtscript_Qt_WidgetAttribute_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_WidgetAttribute_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_WidgetAttribute_toScriptValue(QScriptEngine *engine, const Qt::WidgetAttribute &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_WidgetAttribute_toStringHelper(value));
-}
-
-static void qtscript_Qt_WidgetAttribute_fromScriptValue(const QScriptValue &value, Qt::WidgetAttribute &out)
-{
-    out = qvariant_cast<Qt::WidgetAttribute>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_WidgetAttribute(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 108; ++i) {
-        if (qtscript_Qt_WidgetAttribute_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::WidgetAttribute>(arg));
-    }
-    return context->throwError(QString::fromLatin1("WidgetAttribute(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_WidgetAttribute_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WidgetAttribute value = qscriptvalue_cast<Qt::WidgetAttribute>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_WidgetAttribute_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WidgetAttribute value = qscriptvalue_cast<Qt::WidgetAttribute>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_WidgetAttribute_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_WidgetAttribute_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_WidgetAttribute,
-        qtscript_Qt_WidgetAttribute_valueOf, qtscript_Qt_WidgetAttribute_toString);
-    qScriptRegisterMetaType<Qt::WidgetAttribute>(engine, qtscript_Qt_WidgetAttribute_toScriptValue,
-        qtscript_Qt_WidgetAttribute_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 108; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WidgetAttribute_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_WidgetAttribute_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::FocusReason
-//
-
-static const Qt::FocusReason qtscript_Qt_FocusReason_values[] = {
-    Qt::MouseFocusReason
-    , Qt::TabFocusReason
-    , Qt::BacktabFocusReason
-    , Qt::ActiveWindowFocusReason
-    , Qt::PopupFocusReason
-    , Qt::ShortcutFocusReason
-    , Qt::MenuBarFocusReason
-    , Qt::OtherFocusReason
-    , Qt::NoFocusReason
-};
-
-static const char * const qtscript_Qt_FocusReason_keys[] = {
-    "MouseFocusReason"
-    , "TabFocusReason"
-    , "BacktabFocusReason"
-    , "ActiveWindowFocusReason"
-    , "PopupFocusReason"
-    , "ShortcutFocusReason"
-    , "MenuBarFocusReason"
-    , "OtherFocusReason"
-    , "NoFocusReason"
-};
-
-static QString qtscript_Qt_FocusReason_toStringHelper(Qt::FocusReason value)
-{
-    if ((value >= Qt::MouseFocusReason) && (value <= Qt::NoFocusReason))
-        return qtscript_Qt_FocusReason_keys[static_cast<int>(value)-static_cast<int>(Qt::MouseFocusReason)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_FocusReason_toScriptValue(QScriptEngine *engine, const Qt::FocusReason &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_FocusReason_toStringHelper(value));
-}
-
-static void qtscript_Qt_FocusReason_fromScriptValue(const QScriptValue &value, Qt::FocusReason &out)
-{
-    out = qvariant_cast<Qt::FocusReason>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_FocusReason(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::MouseFocusReason) && (arg <= Qt::NoFocusReason))
-        return qScriptValueFromValue(engine,  static_cast<Qt::FocusReason>(arg));
-    return context->throwError(QString::fromLatin1("FocusReason(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_FocusReason_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::FocusReason value = qscriptvalue_cast<Qt::FocusReason>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_FocusReason_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::FocusReason value = qscriptvalue_cast<Qt::FocusReason>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_FocusReason_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_FocusReason_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_FocusReason,
-        qtscript_Qt_FocusReason_valueOf, qtscript_Qt_FocusReason_toString);
-    qScriptRegisterMetaType<Qt::FocusReason>(engine, qtscript_Qt_FocusReason_toScriptValue,
-        qtscript_Qt_FocusReason_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 9; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_FocusReason_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_FocusReason_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::NavigationMode
-//
-
-static const Qt::NavigationMode qtscript_Qt_NavigationMode_values[] = {
-    Qt::NavigationModeNone
-    , Qt::NavigationModeKeypadTabOrder
-    , Qt::NavigationModeKeypadDirectional
-    , Qt::NavigationModeCursorAuto
-    , Qt::NavigationModeCursorForceVisible
-};
-
-static const char * const qtscript_Qt_NavigationMode_keys[] = {
-    "NavigationModeNone"
-    , "NavigationModeKeypadTabOrder"
-    , "NavigationModeKeypadDirectional"
-    , "NavigationModeCursorAuto"
-    , "NavigationModeCursorForceVisible"
-};
-
-static QString qtscript_Qt_NavigationMode_toStringHelper(Qt::NavigationMode value)
-{
-    if ((value >= Qt::NavigationModeNone) && (value <= Qt::NavigationModeCursorForceVisible))
-        return qtscript_Qt_NavigationMode_keys[static_cast<int>(value)-static_cast<int>(Qt::NavigationModeNone)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_NavigationMode_toScriptValue(QScriptEngine *engine, const Qt::NavigationMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_NavigationMode_toStringHelper(value));
-}
-
-static void qtscript_Qt_NavigationMode_fromScriptValue(const QScriptValue &value, Qt::NavigationMode &out)
-{
-    out = qvariant_cast<Qt::NavigationMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_NavigationMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::NavigationModeNone) && (arg <= Qt::NavigationModeCursorForceVisible))
-        return qScriptValueFromValue(engine,  static_cast<Qt::NavigationMode>(arg));
-    return context->throwError(QString::fromLatin1("NavigationMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_NavigationMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::NavigationMode value = qscriptvalue_cast<Qt::NavigationMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_NavigationMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::NavigationMode value = qscriptvalue_cast<Qt::NavigationMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_NavigationMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_NavigationMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_NavigationMode,
-        qtscript_Qt_NavigationMode_valueOf, qtscript_Qt_NavigationMode_toString);
-    qScriptRegisterMetaType<Qt::NavigationMode>(engine, qtscript_Qt_NavigationMode_toScriptValue,
-        qtscript_Qt_NavigationMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_NavigationMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_NavigationMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ToolBarAreaSizes
-//
-
-static const Qt::ToolBarAreaSizes qtscript_Qt_ToolBarAreaSizes_values[] = {
-    Qt::NToolBarAreas
-};
-
-static const char * const qtscript_Qt_ToolBarAreaSizes_keys[] = {
-    "NToolBarAreas"
-};
-
-static QString qtscript_Qt_ToolBarAreaSizes_toStringHelper(Qt::ToolBarAreaSizes value)
-{
-    if ((value >= Qt::NToolBarAreas) && (value <= Qt::NToolBarAreas))
-        return qtscript_Qt_ToolBarAreaSizes_keys[static_cast<int>(value)-static_cast<int>(Qt::NToolBarAreas)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ToolBarAreaSizes_toScriptValue(QScriptEngine *engine, const Qt::ToolBarAreaSizes &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ToolBarAreaSizes_toStringHelper(value));
-}
-
-static void qtscript_Qt_ToolBarAreaSizes_fromScriptValue(const QScriptValue &value, Qt::ToolBarAreaSizes &out)
-{
-    out = qvariant_cast<Qt::ToolBarAreaSizes>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ToolBarAreaSizes(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::NToolBarAreas) && (arg <= Qt::NToolBarAreas))
-        return qScriptValueFromValue(engine,  static_cast<Qt::ToolBarAreaSizes>(arg));
-    return context->throwError(QString::fromLatin1("ToolBarAreaSizes(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ToolBarAreaSizes_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ToolBarAreaSizes value = qscriptvalue_cast<Qt::ToolBarAreaSizes>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ToolBarAreaSizes_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ToolBarAreaSizes value = qscriptvalue_cast<Qt::ToolBarAreaSizes>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ToolBarAreaSizes_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ToolBarAreaSizes_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ToolBarAreaSizes,
-        qtscript_Qt_ToolBarAreaSizes_valueOf, qtscript_Qt_ToolBarAreaSizes_toString);
-    qScriptRegisterMetaType<Qt::ToolBarAreaSizes>(engine, qtscript_Qt_ToolBarAreaSizes_toScriptValue,
-        qtscript_Qt_ToolBarAreaSizes_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 1; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ToolBarAreaSizes_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ToolBarAreaSizes_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::GestureState
-//
-
-static const Qt::GestureState qtscript_Qt_GestureState_values[] = {
-    Qt::NoGesture
-    , Qt::GestureStarted
-    , Qt::GestureUpdated
-    , Qt::GestureFinished
-    , Qt::GestureCanceled
-};
-
-static const char * const qtscript_Qt_GestureState_keys[] = {
-    "NoGesture"
-    , "GestureStarted"
-    , "GestureUpdated"
-    , "GestureFinished"
-    , "GestureCanceled"
-};
-
-static QString qtscript_Qt_GestureState_toStringHelper(Qt::GestureState value)
-{
-    if ((value >= Qt::NoGesture) && (value <= Qt::GestureCanceled))
-        return qtscript_Qt_GestureState_keys[static_cast<int>(value)-static_cast<int>(Qt::NoGesture)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_GestureState_toScriptValue(QScriptEngine *engine, const Qt::GestureState &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_GestureState_toStringHelper(value));
-}
-
-static void qtscript_Qt_GestureState_fromScriptValue(const QScriptValue &value, Qt::GestureState &out)
-{
-    out = qvariant_cast<Qt::GestureState>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_GestureState(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::NoGesture) && (arg <= Qt::GestureCanceled))
-        return qScriptValueFromValue(engine,  static_cast<Qt::GestureState>(arg));
-    return context->throwError(QString::fromLatin1("GestureState(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_GestureState_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::GestureState value = qscriptvalue_cast<Qt::GestureState>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_GestureState_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::GestureState value = qscriptvalue_cast<Qt::GestureState>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_GestureState_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_GestureState_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_GestureState,
-        qtscript_Qt_GestureState_valueOf, qtscript_Qt_GestureState_toString);
-    qScriptRegisterMetaType<Qt::GestureState>(engine, qtscript_Qt_GestureState_toScriptValue,
-        qtscript_Qt_GestureState_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_GestureState_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_GestureState_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ArrowType
-//
-
-static const Qt::ArrowType qtscript_Qt_ArrowType_values[] = {
-    Qt::NoArrow
-    , Qt::UpArrow
-    , Qt::DownArrow
-    , Qt::LeftArrow
-    , Qt::RightArrow
-};
-
-static const char * const qtscript_Qt_ArrowType_keys[] = {
-    "NoArrow"
-    , "UpArrow"
-    , "DownArrow"
-    , "LeftArrow"
-    , "RightArrow"
-};
-
-static QString qtscript_Qt_ArrowType_toStringHelper(Qt::ArrowType value)
-{
-    if ((value >= Qt::NoArrow) && (value <= Qt::RightArrow))
-        return qtscript_Qt_ArrowType_keys[static_cast<int>(value)-static_cast<int>(Qt::NoArrow)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ArrowType_toScriptValue(QScriptEngine *engine, const Qt::ArrowType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ArrowType_toStringHelper(value));
-}
-
-static void qtscript_Qt_ArrowType_fromScriptValue(const QScriptValue &value, Qt::ArrowType &out)
-{
-    out = qvariant_cast<Qt::ArrowType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ArrowType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::NoArrow) && (arg <= Qt::RightArrow))
-        return qScriptValueFromValue(engine,  static_cast<Qt::ArrowType>(arg));
-    return context->throwError(QString::fromLatin1("ArrowType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ArrowType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ArrowType value = qscriptvalue_cast<Qt::ArrowType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ArrowType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ArrowType value = qscriptvalue_cast<Qt::ArrowType>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ArrowType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ArrowType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ArrowType,
-        qtscript_Qt_ArrowType_valueOf, qtscript_Qt_ArrowType_toString);
-    qScriptRegisterMetaType<Qt::ArrowType>(engine, qtscript_Qt_ArrowType_toScriptValue,
-        qtscript_Qt_ArrowType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ArrowType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ArrowType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::WindowModality
-//
-
-static const Qt::WindowModality qtscript_Qt_WindowModality_values[] = {
-    Qt::NonModal
-    , Qt::WindowModal
-    , Qt::ApplicationModal
-};
-
-static const char * const qtscript_Qt_WindowModality_keys[] = {
-    "NonModal"
-    , "WindowModal"
-    , "ApplicationModal"
-};
-
-static QString qtscript_Qt_WindowModality_toStringHelper(Qt::WindowModality value)
-{
-    if ((value >= Qt::NonModal) && (value <= Qt::ApplicationModal))
-        return qtscript_Qt_WindowModality_keys[static_cast<int>(value)-static_cast<int>(Qt::NonModal)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_WindowModality_toScriptValue(QScriptEngine *engine, const Qt::WindowModality &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_WindowModality_toStringHelper(value));
-}
-
-static void qtscript_Qt_WindowModality_fromScriptValue(const QScriptValue &value, Qt::WindowModality &out)
-{
-    out = qvariant_cast<Qt::WindowModality>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_WindowModality(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::NonModal) && (arg <= Qt::ApplicationModal))
-        return qScriptValueFromValue(engine,  static_cast<Qt::WindowModality>(arg));
-    return context->throwError(QString::fromLatin1("WindowModality(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_WindowModality_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowModality value = qscriptvalue_cast<Qt::WindowModality>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_WindowModality_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowModality value = qscriptvalue_cast<Qt::WindowModality>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_WindowModality_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_WindowModality_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_WindowModality,
-        qtscript_Qt_WindowModality_valueOf, qtscript_Qt_WindowModality_toString);
-    qScriptRegisterMetaType<Qt::WindowModality>(engine, qtscript_Qt_WindowModality_toScriptValue,
-        qtscript_Qt_WindowModality_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WindowModality_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_WindowModality_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::FindChildOption
-//
-
-static const Qt::FindChildOption qtscript_Qt_FindChildOption_values[] = {
-    Qt::FindDirectChildrenOnly
-    , Qt::FindChildrenRecursively
-};
-
-static const char * const qtscript_Qt_FindChildOption_keys[] = {
-    "FindDirectChildrenOnly"
-    , "FindChildrenRecursively"
-};
-
-static QString qtscript_Qt_FindChildOption_toStringHelper(Qt::FindChildOption value)
-{
-    if ((value >= Qt::FindDirectChildrenOnly) && (value <= Qt::FindChildrenRecursively))
-        return qtscript_Qt_FindChildOption_keys[static_cast<int>(value)-static_cast<int>(Qt::FindDirectChildrenOnly)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_FindChildOption_toScriptValue(QScriptEngine *engine, const Qt::FindChildOption &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_FindChildOption_toStringHelper(value));
-}
-
-static void qtscript_Qt_FindChildOption_fromScriptValue(const QScriptValue &value, Qt::FindChildOption &out)
-{
-    out = qvariant_cast<Qt::FindChildOption>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_FindChildOption(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::FindDirectChildrenOnly) && (arg <= Qt::FindChildrenRecursively))
-        return qScriptValueFromValue(engine,  static_cast<Qt::FindChildOption>(arg));
-    return context->throwError(QString::fromLatin1("FindChildOption(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_FindChildOption_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::FindChildOption value = qscriptvalue_cast<Qt::FindChildOption>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_FindChildOption_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::FindChildOption value = qscriptvalue_cast<Qt::FindChildOption>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_FindChildOption_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_FindChildOption_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_FindChildOption,
-        qtscript_Qt_FindChildOption_valueOf, qtscript_Qt_FindChildOption_toString);
-    qScriptRegisterMetaType<Qt::FindChildOption>(engine, qtscript_Qt_FindChildOption_toScriptValue,
-        qtscript_Qt_FindChildOption_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_FindChildOption_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_FindChildOption_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ScreenOrientation
-//
-
-static const Qt::ScreenOrientation qtscript_Qt_ScreenOrientation_values[] = {
-    Qt::PrimaryOrientation
-    , Qt::PortraitOrientation
-    , Qt::LandscapeOrientation
-    , Qt::InvertedPortraitOrientation
-    , Qt::InvertedLandscapeOrientation
-};
-
-static const char * const qtscript_Qt_ScreenOrientation_keys[] = {
-    "PrimaryOrientation"
-    , "PortraitOrientation"
-    , "LandscapeOrientation"
-    , "InvertedPortraitOrientation"
-    , "InvertedLandscapeOrientation"
-};
-
-static QString qtscript_Qt_ScreenOrientation_toStringHelper(Qt::ScreenOrientation value)
-{
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_ScreenOrientation_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_ScreenOrientation_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ScreenOrientation_toScriptValue(QScriptEngine *engine, const Qt::ScreenOrientation &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ScreenOrientation_toStringHelper(value));
-}
-
-static void qtscript_Qt_ScreenOrientation_fromScriptValue(const QScriptValue &value, Qt::ScreenOrientation &out)
-{
-    out = qvariant_cast<Qt::ScreenOrientation>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ScreenOrientation(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_ScreenOrientation_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::ScreenOrientation>(arg));
-    }
-    return context->throwError(QString::fromLatin1("ScreenOrientation(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ScreenOrientation_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ScreenOrientation value = qscriptvalue_cast<Qt::ScreenOrientation>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ScreenOrientation_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ScreenOrientation value = qscriptvalue_cast<Qt::ScreenOrientation>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ScreenOrientation_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ScreenOrientation_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ScreenOrientation,
-        qtscript_Qt_ScreenOrientation_valueOf, qtscript_Qt_ScreenOrientation_toString);
-    qScriptRegisterMetaType<Qt::ScreenOrientation>(engine, qtscript_Qt_ScreenOrientation_toScriptValue,
-        qtscript_Qt_ScreenOrientation_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ScreenOrientation_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ScreenOrientation_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::TimerType
-//
-
-static const Qt::TimerType qtscript_Qt_TimerType_values[] = {
-    Qt::PreciseTimer
-    , Qt::CoarseTimer
-    , Qt::VeryCoarseTimer
-};
-
-static const char * const qtscript_Qt_TimerType_keys[] = {
-    "PreciseTimer"
-    , "CoarseTimer"
-    , "VeryCoarseTimer"
-};
-
-static QString qtscript_Qt_TimerType_toStringHelper(Qt::TimerType value)
-{
-    if ((value >= Qt::PreciseTimer) && (value <= Qt::VeryCoarseTimer))
-        return qtscript_Qt_TimerType_keys[static_cast<int>(value)-static_cast<int>(Qt::PreciseTimer)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_TimerType_toScriptValue(QScriptEngine *engine, const Qt::TimerType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_TimerType_toStringHelper(value));
-}
-
-static void qtscript_Qt_TimerType_fromScriptValue(const QScriptValue &value, Qt::TimerType &out)
-{
-    out = qvariant_cast<Qt::TimerType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_TimerType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::PreciseTimer) && (arg <= Qt::VeryCoarseTimer))
-        return qScriptValueFromValue(engine,  static_cast<Qt::TimerType>(arg));
-    return context->throwError(QString::fromLatin1("TimerType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_TimerType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TimerType value = qscriptvalue_cast<Qt::TimerType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_TimerType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TimerType value = qscriptvalue_cast<Qt::TimerType>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_TimerType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_TimerType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_TimerType,
-        qtscript_Qt_TimerType_valueOf, qtscript_Qt_TimerType_toString);
-    qScriptRegisterMetaType<Qt::TimerType>(engine, qtscript_Qt_TimerType_toScriptValue,
-        qtscript_Qt_TimerType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TimerType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_TimerType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::CaseSensitivity
-//
-
-static const Qt::CaseSensitivity qtscript_Qt_CaseSensitivity_values[] = {
-    Qt::CaseInsensitive
-    , Qt::CaseSensitive
-};
-
-static const char * const qtscript_Qt_CaseSensitivity_keys[] = {
-    "CaseInsensitive"
-    , "CaseSensitive"
-};
-
-static QString qtscript_Qt_CaseSensitivity_toStringHelper(Qt::CaseSensitivity value)
-{
-    if ((value >= Qt::CaseInsensitive) && (value <= Qt::CaseSensitive))
-        return qtscript_Qt_CaseSensitivity_keys[static_cast<int>(value)-static_cast<int>(Qt::CaseInsensitive)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_CaseSensitivity_toScriptValue(QScriptEngine *engine, const Qt::CaseSensitivity &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_CaseSensitivity_toStringHelper(value));
-}
-
-static void qtscript_Qt_CaseSensitivity_fromScriptValue(const QScriptValue &value, Qt::CaseSensitivity &out)
-{
-    out = qvariant_cast<Qt::CaseSensitivity>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_CaseSensitivity(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::CaseInsensitive) && (arg <= Qt::CaseSensitive))
-        return qScriptValueFromValue(engine,  static_cast<Qt::CaseSensitivity>(arg));
-    return context->throwError(QString::fromLatin1("CaseSensitivity(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_CaseSensitivity_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::CaseSensitivity value = qscriptvalue_cast<Qt::CaseSensitivity>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_CaseSensitivity_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::CaseSensitivity value = qscriptvalue_cast<Qt::CaseSensitivity>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_CaseSensitivity_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_CaseSensitivity_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_CaseSensitivity,
-        qtscript_Qt_CaseSensitivity_valueOf, qtscript_Qt_CaseSensitivity_toString);
-    qScriptRegisterMetaType<Qt::CaseSensitivity>(engine, qtscript_Qt_CaseSensitivity_toScriptValue,
-        qtscript_Qt_CaseSensitivity_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_CaseSensitivity_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_CaseSensitivity_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::BGMode
-//
-
-static const Qt::BGMode qtscript_Qt_BGMode_values[] = {
-    Qt::TransparentMode
-    , Qt::OpaqueMode
-};
-
-static const char * const qtscript_Qt_BGMode_keys[] = {
-    "TransparentMode"
-    , "OpaqueMode"
-};
-
-static QString qtscript_Qt_BGMode_toStringHelper(Qt::BGMode value)
-{
-    if ((value >= Qt::TransparentMode) && (value <= Qt::OpaqueMode))
-        return qtscript_Qt_BGMode_keys[static_cast<int>(value)-static_cast<int>(Qt::TransparentMode)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_BGMode_toScriptValue(QScriptEngine *engine, const Qt::BGMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_BGMode_toStringHelper(value));
-}
-
-static void qtscript_Qt_BGMode_fromScriptValue(const QScriptValue &value, Qt::BGMode &out)
-{
-    out = qvariant_cast<Qt::BGMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_BGMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::TransparentMode) && (arg <= Qt::OpaqueMode))
-        return qScriptValueFromValue(engine,  static_cast<Qt::BGMode>(arg));
-    return context->throwError(QString::fromLatin1("BGMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_BGMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::BGMode value = qscriptvalue_cast<Qt::BGMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_BGMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::BGMode value = qscriptvalue_cast<Qt::BGMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_BGMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_BGMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_BGMode,
-        qtscript_Qt_BGMode_valueOf, qtscript_Qt_BGMode_toString);
-    qScriptRegisterMetaType<Qt::BGMode>(engine, qtscript_Qt_BGMode_toScriptValue,
-        qtscript_Qt_BGMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_BGMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_BGMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::TileRule
-//
-
-static const Qt::TileRule qtscript_Qt_TileRule_values[] = {
-    Qt::StretchTile
-    , Qt::RepeatTile
-    , Qt::RoundTile
-};
-
-static const char * const qtscript_Qt_TileRule_keys[] = {
-    "StretchTile"
-    , "RepeatTile"
-    , "RoundTile"
-};
-
-static QString qtscript_Qt_TileRule_toStringHelper(Qt::TileRule value)
-{
-    if ((value >= Qt::StretchTile) && (value <= Qt::RoundTile))
-        return qtscript_Qt_TileRule_keys[static_cast<int>(value)-static_cast<int>(Qt::StretchTile)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_TileRule_toScriptValue(QScriptEngine *engine, const Qt::TileRule &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_TileRule_toStringHelper(value));
-}
-
-static void qtscript_Qt_TileRule_fromScriptValue(const QScriptValue &value, Qt::TileRule &out)
-{
-    out = qvariant_cast<Qt::TileRule>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_TileRule(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::StretchTile) && (arg <= Qt::RoundTile))
-        return qScriptValueFromValue(engine,  static_cast<Qt::TileRule>(arg));
-    return context->throwError(QString::fromLatin1("TileRule(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_TileRule_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TileRule value = qscriptvalue_cast<Qt::TileRule>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_TileRule_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TileRule value = qscriptvalue_cast<Qt::TileRule>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_TileRule_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_TileRule_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_TileRule,
-        qtscript_Qt_TileRule_valueOf, qtscript_Qt_TileRule_toString);
-    qScriptRegisterMetaType<Qt::TileRule>(engine, qtscript_Qt_TileRule_toScriptValue,
-        qtscript_Qt_TileRule_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TileRule_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_TileRule_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::UIEffect
-//
-
-static const Qt::UIEffect qtscript_Qt_UIEffect_values[] = {
-    Qt::UI_General
-    , Qt::UI_AnimateMenu
-    , Qt::UI_FadeMenu
-    , Qt::UI_AnimateCombo
-    , Qt::UI_AnimateTooltip
-    , Qt::UI_FadeTooltip
-    , Qt::UI_AnimateToolBox
-};
-
-static const char * const qtscript_Qt_UIEffect_keys[] = {
-    "UI_General"
-    , "UI_AnimateMenu"
-    , "UI_FadeMenu"
-    , "UI_AnimateCombo"
-    , "UI_AnimateTooltip"
-    , "UI_FadeTooltip"
-    , "UI_AnimateToolBox"
-};
-
-static QString qtscript_Qt_UIEffect_toStringHelper(Qt::UIEffect value)
-{
-    if ((value >= Qt::UI_General) && (value <= Qt::UI_AnimateToolBox))
-        return qtscript_Qt_UIEffect_keys[static_cast<int>(value)-static_cast<int>(Qt::UI_General)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_UIEffect_toScriptValue(QScriptEngine *engine, const Qt::UIEffect &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_UIEffect_toStringHelper(value));
-}
-
-static void qtscript_Qt_UIEffect_fromScriptValue(const QScriptValue &value, Qt::UIEffect &out)
-{
-    out = qvariant_cast<Qt::UIEffect>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_UIEffect(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::UI_General) && (arg <= Qt::UI_AnimateToolBox))
-        return qScriptValueFromValue(engine,  static_cast<Qt::UIEffect>(arg));
-    return context->throwError(QString::fromLatin1("UIEffect(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_UIEffect_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::UIEffect value = qscriptvalue_cast<Qt::UIEffect>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_UIEffect_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::UIEffect value = qscriptvalue_cast<Qt::UIEffect>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_UIEffect_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_UIEffect_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_UIEffect,
-        qtscript_Qt_UIEffect_valueOf, qtscript_Qt_UIEffect_toString);
-    qScriptRegisterMetaType<Qt::UIEffect>(engine, qtscript_Qt_UIEffect_toScriptValue,
-        qtscript_Qt_UIEffect_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 7; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_UIEffect_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_UIEffect_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ScrollBarPolicy
-//
-
-static const Qt::ScrollBarPolicy qtscript_Qt_ScrollBarPolicy_values[] = {
-    Qt::ScrollBarAsNeeded
-    , Qt::ScrollBarAlwaysOff
-    , Qt::ScrollBarAlwaysOn
-};
-
-static const char * const qtscript_Qt_ScrollBarPolicy_keys[] = {
-    "ScrollBarAsNeeded"
-    , "ScrollBarAlwaysOff"
-    , "ScrollBarAlwaysOn"
-};
-
-static QString qtscript_Qt_ScrollBarPolicy_toStringHelper(Qt::ScrollBarPolicy value)
-{
-    if ((value >= Qt::ScrollBarAsNeeded) && (value <= Qt::ScrollBarAlwaysOn))
-        return qtscript_Qt_ScrollBarPolicy_keys[static_cast<int>(value)-static_cast<int>(Qt::ScrollBarAsNeeded)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ScrollBarPolicy_toScriptValue(QScriptEngine *engine, const Qt::ScrollBarPolicy &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ScrollBarPolicy_toStringHelper(value));
-}
-
-static void qtscript_Qt_ScrollBarPolicy_fromScriptValue(const QScriptValue &value, Qt::ScrollBarPolicy &out)
-{
-    out = qvariant_cast<Qt::ScrollBarPolicy>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ScrollBarPolicy(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::ScrollBarAsNeeded) && (arg <= Qt::ScrollBarAlwaysOn))
-        return qScriptValueFromValue(engine,  static_cast<Qt::ScrollBarPolicy>(arg));
-    return context->throwError(QString::fromLatin1("ScrollBarPolicy(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ScrollBarPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ScrollBarPolicy value = qscriptvalue_cast<Qt::ScrollBarPolicy>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ScrollBarPolicy_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ScrollBarPolicy value = qscriptvalue_cast<Qt::ScrollBarPolicy>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ScrollBarPolicy_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ScrollBarPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ScrollBarPolicy,
-        qtscript_Qt_ScrollBarPolicy_valueOf, qtscript_Qt_ScrollBarPolicy_toString);
-    qScriptRegisterMetaType<Qt::ScrollBarPolicy>(engine, qtscript_Qt_ScrollBarPolicy_toScriptValue,
-        qtscript_Qt_ScrollBarPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ScrollBarPolicy_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ScrollBarPolicy_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::InputMethodQuery
-//
-
-static const Qt::InputMethodQuery qtscript_Qt_InputMethodQuery_values[] = {
-    Qt::ImPlatformData
-    , Qt::ImQueryAll
-    , Qt::ImEnabled
-    , Qt::ImCursorRectangle
-    , Qt::ImFont
-    , Qt::ImCursorPosition
-    , Qt::ImSurroundingText
-    , Qt::ImCurrentSelection
-    , Qt::ImMaximumTextLength
-    , Qt::ImAnchorPosition
-    , Qt::ImQueryInput
-    , Qt::ImHints
-    , Qt::ImPreferredLanguage
-};
-
-static const char * const qtscript_Qt_InputMethodQuery_keys[] = {
-    "ImPlatformData"
-    , "ImQueryAll"
-    , "ImEnabled"
-    , "ImCursorRectangle"
-    , "ImFont"
-    , "ImCursorPosition"
-    , "ImSurroundingText"
-    , "ImCurrentSelection"
-    , "ImMaximumTextLength"
-    , "ImAnchorPosition"
-    , "ImQueryInput"
-    , "ImHints"
-    , "ImPreferredLanguage"
-};
-
-static QString qtscript_Qt_InputMethodQuery_toStringHelper(Qt::InputMethodQuery value)
-{
-    for (int i = 0; i < 13; ++i) {
-        if (qtscript_Qt_InputMethodQuery_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_InputMethodQuery_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_InputMethodQuery_toScriptValue(QScriptEngine *engine, const Qt::InputMethodQuery &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_InputMethodQuery_toStringHelper(value));
-}
-
-static void qtscript_Qt_InputMethodQuery_fromScriptValue(const QScriptValue &value, Qt::InputMethodQuery &out)
-{
-    out = qvariant_cast<Qt::InputMethodQuery>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_InputMethodQuery(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 13; ++i) {
-        if (qtscript_Qt_InputMethodQuery_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::InputMethodQuery>(arg));
-    }
-    return context->throwError(QString::fromLatin1("InputMethodQuery(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_InputMethodQuery_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::InputMethodQuery value = qscriptvalue_cast<Qt::InputMethodQuery>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_InputMethodQuery_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::InputMethodQuery value = qscriptvalue_cast<Qt::InputMethodQuery>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_InputMethodQuery_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_InputMethodQuery_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_InputMethodQuery,
-        qtscript_Qt_InputMethodQuery_valueOf, qtscript_Qt_InputMethodQuery_toString);
-    qScriptRegisterMetaType<Qt::InputMethodQuery>(engine, qtscript_Qt_InputMethodQuery_toScriptValue,
-        qtscript_Qt_InputMethodQuery_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 13; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_InputMethodQuery_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_InputMethodQuery_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::ApplicationAttribute
-//
-
-static const Qt::ApplicationAttribute qtscript_Qt_ApplicationAttribute_values[] = {
-    Qt::AA_ImmediateWidgetCreation
-    , Qt::AA_MSWindowsUseDirect3DByDefault
-    , Qt::AA_DontShowIconsInMenus
-    , Qt::AA_NativeWindows
-    , Qt::AA_DontCreateNativeWidgetSiblings
-    , Qt::AA_MacPluginApplication
-    , Qt::AA_DontUseNativeMenuBar
-    , Qt::AA_MacDontSwapCtrlAndMeta
-    , Qt::AA_Use96Dpi
-    , Qt::AA_X11InitThreads
-    , Qt::AA_SynthesizeTouchForUnhandledMouseEvents
-    , Qt::AA_SynthesizeMouseForUnhandledTouchEvents
-    , Qt::AA_UseHighDpiPixmaps
-    , Qt::AA_AttributeCount
-};
-
-static const char * const qtscript_Qt_ApplicationAttribute_keys[] = {
-    "AA_ImmediateWidgetCreation"
-    , "AA_MSWindowsUseDirect3DByDefault"
-    , "AA_DontShowIconsInMenus"
-    , "AA_NativeWindows"
-    , "AA_DontCreateNativeWidgetSiblings"
-    , "AA_MacPluginApplication"
-    , "AA_DontUseNativeMenuBar"
-    , "AA_MacDontSwapCtrlAndMeta"
-    , "AA_Use96Dpi"
-    , "AA_X11InitThreads"
-    , "AA_SynthesizeTouchForUnhandledMouseEvents"
-    , "AA_SynthesizeMouseForUnhandledTouchEvents"
-    , "AA_UseHighDpiPixmaps"
-    , "AA_AttributeCount"
-};
-
-static QString qtscript_Qt_ApplicationAttribute_toStringHelper(Qt::ApplicationAttribute value)
-{
-    for (int i = 0; i < 14; ++i) {
-        if (qtscript_Qt_ApplicationAttribute_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_ApplicationAttribute_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_ApplicationAttribute_toScriptValue(QScriptEngine *engine, const Qt::ApplicationAttribute &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_ApplicationAttribute_toStringHelper(value));
-}
-
-static void qtscript_Qt_ApplicationAttribute_fromScriptValue(const QScriptValue &value, Qt::ApplicationAttribute &out)
-{
-    out = qvariant_cast<Qt::ApplicationAttribute>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_ApplicationAttribute(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 14; ++i) {
-        if (qtscript_Qt_ApplicationAttribute_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::ApplicationAttribute>(arg));
-    }
-    return context->throwError(QString::fromLatin1("ApplicationAttribute(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_ApplicationAttribute_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ApplicationAttribute value = qscriptvalue_cast<Qt::ApplicationAttribute>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_ApplicationAttribute_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::ApplicationAttribute value = qscriptvalue_cast<Qt::ApplicationAttribute>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_ApplicationAttribute_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_ApplicationAttribute_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_ApplicationAttribute,
-        qtscript_Qt_ApplicationAttribute_valueOf, qtscript_Qt_ApplicationAttribute_toString);
-    qScriptRegisterMetaType<Qt::ApplicationAttribute>(engine, qtscript_Qt_ApplicationAttribute_toScriptValue,
-        qtscript_Qt_ApplicationAttribute_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 14; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ApplicationAttribute_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_ApplicationAttribute_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::WhiteSpaceMode
-//
-
-static const Qt::WhiteSpaceMode qtscript_Qt_WhiteSpaceMode_values[] = {
-    Qt::WhiteSpaceModeUndefined
-    , Qt::WhiteSpaceNormal
-    , Qt::WhiteSpacePre
-    , Qt::WhiteSpaceNoWrap
-};
-
-static const char * const qtscript_Qt_WhiteSpaceMode_keys[] = {
-    "WhiteSpaceModeUndefined"
-    , "WhiteSpaceNormal"
-    , "WhiteSpacePre"
-    , "WhiteSpaceNoWrap"
-};
-
-static QString qtscript_Qt_WhiteSpaceMode_toStringHelper(Qt::WhiteSpaceMode value)
-{
-    if ((value >= Qt::WhiteSpaceModeUndefined) && (value <= Qt::WhiteSpaceNoWrap))
-        return qtscript_Qt_WhiteSpaceMode_keys[static_cast<int>(value)-static_cast<int>(Qt::WhiteSpaceModeUndefined)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_WhiteSpaceMode_toScriptValue(QScriptEngine *engine, const Qt::WhiteSpaceMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_WhiteSpaceMode_toStringHelper(value));
-}
-
-static void qtscript_Qt_WhiteSpaceMode_fromScriptValue(const QScriptValue &value, Qt::WhiteSpaceMode &out)
-{
-    out = qvariant_cast<Qt::WhiteSpaceMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_WhiteSpaceMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::WhiteSpaceModeUndefined) && (arg <= Qt::WhiteSpaceNoWrap))
-        return qScriptValueFromValue(engine,  static_cast<Qt::WhiteSpaceMode>(arg));
-    return context->throwError(QString::fromLatin1("WhiteSpaceMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_WhiteSpaceMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WhiteSpaceMode value = qscriptvalue_cast<Qt::WhiteSpaceMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_WhiteSpaceMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WhiteSpaceMode value = qscriptvalue_cast<Qt::WhiteSpaceMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_WhiteSpaceMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_WhiteSpaceMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_WhiteSpaceMode,
-        qtscript_Qt_WhiteSpaceMode_valueOf, qtscript_Qt_WhiteSpaceMode_toString);
-    qScriptRegisterMetaType<Qt::WhiteSpaceMode>(engine, qtscript_Qt_WhiteSpaceMode_toScriptValue,
-        qtscript_Qt_WhiteSpaceMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WhiteSpaceMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_WhiteSpaceMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::WindowState
-//
-
-static const Qt::WindowState qtscript_Qt_WindowState_values[] = {
-    Qt::WindowNoState
-    , Qt::WindowMinimized
-    , Qt::WindowMaximized
-    , Qt::WindowFullScreen
-    , Qt::WindowActive
-};
-
-static const char * const qtscript_Qt_WindowState_keys[] = {
-    "WindowNoState"
-    , "WindowMinimized"
-    , "WindowMaximized"
-    , "WindowFullScreen"
-    , "WindowActive"
-};
-
-static QString qtscript_Qt_WindowState_toStringHelper(Qt::WindowState value)
-{
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_WindowState_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_WindowState_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_WindowState_toScriptValue(QScriptEngine *engine, const Qt::WindowState &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_WindowState_toStringHelper(value));
-}
-
-static void qtscript_Qt_WindowState_fromScriptValue(const QScriptValue &value, Qt::WindowState &out)
-{
-    out = qvariant_cast<Qt::WindowState>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_WindowState(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 5; ++i) {
-        if (qtscript_Qt_WindowState_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::WindowState>(arg));
-    }
-    return context->throwError(QString::fromLatin1("WindowState(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_WindowState_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowState value = qscriptvalue_cast<Qt::WindowState>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_WindowState_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowState value = qscriptvalue_cast<Qt::WindowState>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_WindowState_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_WindowState_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_WindowState,
-        qtscript_Qt_WindowState_valueOf, qtscript_Qt_WindowState_toString);
-    qScriptRegisterMetaType<Qt::WindowState>(engine, qtscript_Qt_WindowState_toScriptValue,
-        qtscript_Qt_WindowState_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WindowState_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_WindowState_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::WindowStates
-//
-
-static QScriptValue qtscript_Qt_WindowStates_toScriptValue(QScriptEngine *engine, const Qt::WindowStates &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_Qt_WindowStates_fromScriptValue(const QScriptValue &value, Qt::WindowStates &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::WindowStates>())
-        out = qvariant_cast<Qt::WindowStates>(var);
-    else if (var.userType() == qMetaTypeId<Qt::WindowState>())
-        out = qvariant_cast<Qt::WindowState>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_Qt_WindowStates(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowStates result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::WindowStates>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::WindowState>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("WindowStates(): argument %0 is not of type WindowState").arg(i));
-            }
-            result |= qvariant_cast<Qt::WindowState>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_Qt_WindowStates_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowStates value = qscriptvalue_cast<Qt::WindowStates>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_WindowStates_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowStates value = qscriptvalue_cast<Qt::WindowStates>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 5; ++i) {
-        if ((value & qtscript_Qt_WindowState_values[i]) == qtscript_Qt_WindowState_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_WindowState_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_Qt_WindowStates_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::WindowStates>() == otherObj.value<Qt::WindowStates>())));
-}
-
-static QScriptValue qtscript_create_Qt_WindowStates_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_WindowStates, qtscript_Qt_WindowStates_valueOf,
-        qtscript_Qt_WindowStates_toString, qtscript_Qt_WindowStates_equals);
-    qScriptRegisterMetaType<Qt::WindowStates>(engine, qtscript_Qt_WindowStates_toScriptValue,
-        qtscript_Qt_WindowStates_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
 // Qt::TouchPointState
 //
 
@@ -6469,150 +6042,633 @@ static QScriptValue qtscript_create_Qt_InputMethodHints_class(QScriptEngine *eng
 }
 
 //
-// Qt::CheckState
+// Qt::ImageConversionFlag
 //
 
-static const Qt::CheckState qtscript_Qt_CheckState_values[] = {
-    Qt::Unchecked
-    , Qt::PartiallyChecked
-    , Qt::Checked
+static const Qt::ImageConversionFlag qtscript_Qt_ImageConversionFlag_values[] = {
+    Qt::AutoColor
+    , Qt::MonoOnly
+    , Qt::ColorMode_Mask
+    , Qt::OrderedAlphaDither
+    , Qt::DiffuseAlphaDither
+    , Qt::AlphaDither_Mask
+    , Qt::OrderedDither
+    , Qt::ThresholdDither
+    , Qt::Dither_Mask
+    , Qt::PreferDither
+    , Qt::AvoidDither
+    , Qt::DitherMode_Mask
+    , Qt::NoOpaqueDetection
+    , Qt::NoFormatConversion
 };
 
-static const char * const qtscript_Qt_CheckState_keys[] = {
-    "Unchecked"
-    , "PartiallyChecked"
-    , "Checked"
+static const char * const qtscript_Qt_ImageConversionFlag_keys[] = {
+    "AutoColor"
+    , "MonoOnly"
+    , "ColorMode_Mask"
+    , "OrderedAlphaDither"
+    , "DiffuseAlphaDither"
+    , "AlphaDither_Mask"
+    , "OrderedDither"
+    , "ThresholdDither"
+    , "Dither_Mask"
+    , "PreferDither"
+    , "AvoidDither"
+    , "DitherMode_Mask"
+    , "NoOpaqueDetection"
+    , "NoFormatConversion"
 };
 
-static QString qtscript_Qt_CheckState_toStringHelper(Qt::CheckState value)
+static QString qtscript_Qt_ImageConversionFlag_toStringHelper(Qt::ImageConversionFlag value)
 {
-    if ((value >= Qt::Unchecked) && (value <= Qt::Checked))
-        return qtscript_Qt_CheckState_keys[static_cast<int>(value)-static_cast<int>(Qt::Unchecked)];
+    for (int i = 0; i < 14; ++i) {
+        if (qtscript_Qt_ImageConversionFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_ImageConversionFlag_keys[i]);
+    }
     return QString();
 }
 
-static QScriptValue qtscript_Qt_CheckState_toScriptValue(QScriptEngine *engine, const Qt::CheckState &value)
+static QScriptValue qtscript_Qt_ImageConversionFlag_toScriptValue(QScriptEngine *engine, const Qt::ImageConversionFlag &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_CheckState_toStringHelper(value));
+    return clazz.property(qtscript_Qt_ImageConversionFlag_toStringHelper(value));
 }
 
-static void qtscript_Qt_CheckState_fromScriptValue(const QScriptValue &value, Qt::CheckState &out)
+static void qtscript_Qt_ImageConversionFlag_fromScriptValue(const QScriptValue &value, Qt::ImageConversionFlag &out)
 {
-    out = qvariant_cast<Qt::CheckState>(value.toVariant());
+    out = qvariant_cast<Qt::ImageConversionFlag>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_Qt_CheckState(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_Qt_ImageConversionFlag(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::Unchecked) && (arg <= Qt::Checked))
-        return qScriptValueFromValue(engine,  static_cast<Qt::CheckState>(arg));
-    return context->throwError(QString::fromLatin1("CheckState(): invalid enum value (%0)").arg(arg));
+    for (int i = 0; i < 14; ++i) {
+        if (qtscript_Qt_ImageConversionFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::ImageConversionFlag>(arg));
+    }
+    return context->throwError(QString::fromLatin1("ImageConversionFlag(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_Qt_CheckState_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_ImageConversionFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::CheckState value = qscriptvalue_cast<Qt::CheckState>(context->thisObject());
+    Qt::ImageConversionFlag value = qscriptvalue_cast<Qt::ImageConversionFlag>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_Qt_CheckState_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_ImageConversionFlag_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::CheckState value = qscriptvalue_cast<Qt::CheckState>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_CheckState_toStringHelper(value));
+    Qt::ImageConversionFlag value = qscriptvalue_cast<Qt::ImageConversionFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ImageConversionFlag_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_Qt_CheckState_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_Qt_ImageConversionFlag_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_CheckState,
-        qtscript_Qt_CheckState_valueOf, qtscript_Qt_CheckState_toString);
-    qScriptRegisterMetaType<Qt::CheckState>(engine, qtscript_Qt_CheckState_toScriptValue,
-        qtscript_Qt_CheckState_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_CheckState_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_CheckState_values[i])),
+        engine, qtscript_construct_Qt_ImageConversionFlag,
+        qtscript_Qt_ImageConversionFlag_valueOf, qtscript_Qt_ImageConversionFlag_toString);
+    qScriptRegisterMetaType<Qt::ImageConversionFlag>(engine, qtscript_Qt_ImageConversionFlag_toScriptValue,
+        qtscript_Qt_ImageConversionFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 14; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ImageConversionFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ImageConversionFlag_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
 }
 
 //
-// Qt::GestureType
+// Qt::ImageConversionFlags
 //
 
-static const Qt::GestureType qtscript_Qt_GestureType_values[] = {
-    Qt::TapGesture
-    , Qt::TapAndHoldGesture
-    , Qt::PanGesture
-    , Qt::PinchGesture
-    , Qt::SwipeGesture
-    , Qt::CustomGesture
-    , Qt::LastGestureType
-};
-
-static const char * const qtscript_Qt_GestureType_keys[] = {
-    "TapGesture"
-    , "TapAndHoldGesture"
-    , "PanGesture"
-    , "PinchGesture"
-    , "SwipeGesture"
-    , "CustomGesture"
-    , "LastGestureType"
-};
-
-static QString qtscript_Qt_GestureType_toStringHelper(Qt::GestureType value)
+static QScriptValue qtscript_Qt_ImageConversionFlags_toScriptValue(QScriptEngine *engine, const Qt::ImageConversionFlags &value)
 {
-    for (int i = 0; i < 7; ++i) {
-        if (qtscript_Qt_GestureType_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_GestureType_keys[i]);
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_ImageConversionFlags_fromScriptValue(const QScriptValue &value, Qt::ImageConversionFlags &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::ImageConversionFlags>())
+        out = qvariant_cast<Qt::ImageConversionFlags>(var);
+    else if (var.userType() == qMetaTypeId<Qt::ImageConversionFlag>())
+        out = qvariant_cast<Qt::ImageConversionFlag>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_ImageConversionFlags(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ImageConversionFlags result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::ImageConversionFlags>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::ImageConversionFlag>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("ImageConversionFlags(): argument %0 is not of type ImageConversionFlag").arg(i));
+            }
+            result |= qvariant_cast<Qt::ImageConversionFlag>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_ImageConversionFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ImageConversionFlags value = qscriptvalue_cast<Qt::ImageConversionFlags>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ImageConversionFlags_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ImageConversionFlags value = qscriptvalue_cast<Qt::ImageConversionFlags>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 14; ++i) {
+        if ((value & qtscript_Qt_ImageConversionFlag_values[i]) == qtscript_Qt_ImageConversionFlag_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_ImageConversionFlag_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_ImageConversionFlags_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::ImageConversionFlags>() == otherObj.value<Qt::ImageConversionFlags>())));
+}
+
+static QScriptValue qtscript_create_Qt_ImageConversionFlags_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_ImageConversionFlags, qtscript_Qt_ImageConversionFlags_valueOf,
+        qtscript_Qt_ImageConversionFlags_toString, qtscript_Qt_ImageConversionFlags_equals);
+    qScriptRegisterMetaType<Qt::ImageConversionFlags>(engine, qtscript_Qt_ImageConversionFlags_toScriptValue,
+        qtscript_Qt_ImageConversionFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::WindowFrameSection
+//
+
+static const Qt::WindowFrameSection qtscript_Qt_WindowFrameSection_values[] = {
+    Qt::NoSection
+    , Qt::LeftSection
+    , Qt::TopLeftSection
+    , Qt::TopSection
+    , Qt::TopRightSection
+    , Qt::RightSection
+    , Qt::BottomRightSection
+    , Qt::BottomSection
+    , Qt::BottomLeftSection
+    , Qt::TitleBarArea
+};
+
+static const char * const qtscript_Qt_WindowFrameSection_keys[] = {
+    "NoSection"
+    , "LeftSection"
+    , "TopLeftSection"
+    , "TopSection"
+    , "TopRightSection"
+    , "RightSection"
+    , "BottomRightSection"
+    , "BottomSection"
+    , "BottomLeftSection"
+    , "TitleBarArea"
+};
+
+static QString qtscript_Qt_WindowFrameSection_toStringHelper(Qt::WindowFrameSection value)
+{
+    if ((value >= Qt::NoSection) && (value <= Qt::TitleBarArea))
+        return qtscript_Qt_WindowFrameSection_keys[static_cast<int>(value)-static_cast<int>(Qt::NoSection)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_WindowFrameSection_toScriptValue(QScriptEngine *engine, const Qt::WindowFrameSection &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_WindowFrameSection_toStringHelper(value));
+}
+
+static void qtscript_Qt_WindowFrameSection_fromScriptValue(const QScriptValue &value, Qt::WindowFrameSection &out)
+{
+    out = qvariant_cast<Qt::WindowFrameSection>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_WindowFrameSection(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::NoSection) && (arg <= Qt::TitleBarArea))
+        return qScriptValueFromValue(engine,  static_cast<Qt::WindowFrameSection>(arg));
+    return context->throwError(QString::fromLatin1("WindowFrameSection(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_WindowFrameSection_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowFrameSection value = qscriptvalue_cast<Qt::WindowFrameSection>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_WindowFrameSection_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::WindowFrameSection value = qscriptvalue_cast<Qt::WindowFrameSection>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_WindowFrameSection_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_WindowFrameSection_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_WindowFrameSection,
+        qtscript_Qt_WindowFrameSection_valueOf, qtscript_Qt_WindowFrameSection_toString);
+    qScriptRegisterMetaType<Qt::WindowFrameSection>(engine, qtscript_Qt_WindowFrameSection_toScriptValue,
+        qtscript_Qt_WindowFrameSection_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 10; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WindowFrameSection_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_WindowFrameSection_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::GestureFlag
+//
+
+static const Qt::GestureFlag qtscript_Qt_GestureFlag_values[] = {
+    Qt::DontStartGestureOnChildren
+    , Qt::ReceivePartialGestures
+    , Qt::IgnoredGesturesPropagateToParent
+};
+
+static const char * const qtscript_Qt_GestureFlag_keys[] = {
+    "DontStartGestureOnChildren"
+    , "ReceivePartialGestures"
+    , "IgnoredGesturesPropagateToParent"
+};
+
+static QString qtscript_Qt_GestureFlag_toStringHelper(Qt::GestureFlag value)
+{
+    for (int i = 0; i < 3; ++i) {
+        if (qtscript_Qt_GestureFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_GestureFlag_keys[i]);
     }
     return QString();
 }
 
-static QScriptValue qtscript_Qt_GestureType_toScriptValue(QScriptEngine *engine, const Qt::GestureType &value)
+static QScriptValue qtscript_Qt_GestureFlag_toScriptValue(QScriptEngine *engine, const Qt::GestureFlag &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_GestureType_toStringHelper(value));
+    return clazz.property(qtscript_Qt_GestureFlag_toStringHelper(value));
 }
 
-static void qtscript_Qt_GestureType_fromScriptValue(const QScriptValue &value, Qt::GestureType &out)
+static void qtscript_Qt_GestureFlag_fromScriptValue(const QScriptValue &value, Qt::GestureFlag &out)
 {
-    out = qvariant_cast<Qt::GestureType>(value.toVariant());
+    out = qvariant_cast<Qt::GestureFlag>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_Qt_GestureType(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_Qt_GestureFlag(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 7; ++i) {
-        if (qtscript_Qt_GestureType_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::GestureType>(arg));
+    for (int i = 0; i < 3; ++i) {
+        if (qtscript_Qt_GestureFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::GestureFlag>(arg));
     }
-    return context->throwError(QString::fromLatin1("GestureType(): invalid enum value (%0)").arg(arg));
+    return context->throwError(QString::fromLatin1("GestureFlag(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_Qt_GestureType_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_GestureFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::GestureType value = qscriptvalue_cast<Qt::GestureType>(context->thisObject());
+    Qt::GestureFlag value = qscriptvalue_cast<Qt::GestureFlag>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_Qt_GestureType_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_GestureFlag_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::GestureType value = qscriptvalue_cast<Qt::GestureType>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_GestureType_toStringHelper(value));
+    Qt::GestureFlag value = qscriptvalue_cast<Qt::GestureFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_GestureFlag_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_Qt_GestureType_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_Qt_GestureFlag_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_GestureType,
-        qtscript_Qt_GestureType_valueOf, qtscript_Qt_GestureType_toString);
-    qScriptRegisterMetaType<Qt::GestureType>(engine, qtscript_Qt_GestureType_toScriptValue,
-        qtscript_Qt_GestureType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 7; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_GestureType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_GestureType_values[i])),
+        engine, qtscript_construct_Qt_GestureFlag,
+        qtscript_Qt_GestureFlag_valueOf, qtscript_Qt_GestureFlag_toString);
+    qScriptRegisterMetaType<Qt::GestureFlag>(engine, qtscript_Qt_GestureFlag_toScriptValue,
+        qtscript_Qt_GestureFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_GestureFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_GestureFlag_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::GestureFlags
+//
+
+static QScriptValue qtscript_Qt_GestureFlags_toScriptValue(QScriptEngine *engine, const Qt::GestureFlags &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_GestureFlags_fromScriptValue(const QScriptValue &value, Qt::GestureFlags &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::GestureFlags>())
+        out = qvariant_cast<Qt::GestureFlags>(var);
+    else if (var.userType() == qMetaTypeId<Qt::GestureFlag>())
+        out = qvariant_cast<Qt::GestureFlag>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_GestureFlags(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::GestureFlags result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::GestureFlags>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::GestureFlag>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("GestureFlags(): argument %0 is not of type GestureFlag").arg(i));
+            }
+            result |= qvariant_cast<Qt::GestureFlag>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_GestureFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::GestureFlags value = qscriptvalue_cast<Qt::GestureFlags>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_GestureFlags_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::GestureFlags value = qscriptvalue_cast<Qt::GestureFlags>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 3; ++i) {
+        if ((value & qtscript_Qt_GestureFlag_values[i]) == qtscript_Qt_GestureFlag_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_GestureFlag_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_GestureFlags_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::GestureFlags>() == otherObj.value<Qt::GestureFlags>())));
+}
+
+static QScriptValue qtscript_create_Qt_GestureFlags_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_GestureFlags, qtscript_Qt_GestureFlags_valueOf,
+        qtscript_Qt_GestureFlags_toString, qtscript_Qt_GestureFlags_equals);
+    qScriptRegisterMetaType<Qt::GestureFlags>(engine, qtscript_Qt_GestureFlags_toScriptValue,
+        qtscript_Qt_GestureFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::ToolBarArea
+//
+
+static const Qt::ToolBarArea qtscript_Qt_ToolBarArea_values[] = {
+    Qt::NoToolBarArea
+    , Qt::LeftToolBarArea
+    , Qt::RightToolBarArea
+    , Qt::TopToolBarArea
+    , Qt::BottomToolBarArea
+    , Qt::ToolBarArea_Mask
+};
+
+static const char * const qtscript_Qt_ToolBarArea_keys[] = {
+    "NoToolBarArea"
+    , "LeftToolBarArea"
+    , "RightToolBarArea"
+    , "TopToolBarArea"
+    , "BottomToolBarArea"
+    , "ToolBarArea_Mask"
+};
+
+static QString qtscript_Qt_ToolBarArea_toStringHelper(Qt::ToolBarArea value)
+{
+    for (int i = 0; i < 6; ++i) {
+        if (qtscript_Qt_ToolBarArea_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_ToolBarArea_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ToolBarArea_toScriptValue(QScriptEngine *engine, const Qt::ToolBarArea &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ToolBarArea_toStringHelper(value));
+}
+
+static void qtscript_Qt_ToolBarArea_fromScriptValue(const QScriptValue &value, Qt::ToolBarArea &out)
+{
+    out = qvariant_cast<Qt::ToolBarArea>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ToolBarArea(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 6; ++i) {
+        if (qtscript_Qt_ToolBarArea_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::ToolBarArea>(arg));
+    }
+    return context->throwError(QString::fromLatin1("ToolBarArea(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ToolBarArea_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ToolBarArea value = qscriptvalue_cast<Qt::ToolBarArea>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ToolBarArea_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ToolBarArea value = qscriptvalue_cast<Qt::ToolBarArea>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ToolBarArea_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ToolBarArea_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ToolBarArea,
+        qtscript_Qt_ToolBarArea_valueOf, qtscript_Qt_ToolBarArea_toString);
+    qScriptRegisterMetaType<Qt::ToolBarArea>(engine, qtscript_Qt_ToolBarArea_toScriptValue,
+        qtscript_Qt_ToolBarArea_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 6; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ToolBarArea_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ToolBarArea_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ToolBarAreas
+//
+
+static QScriptValue qtscript_Qt_ToolBarAreas_toScriptValue(QScriptEngine *engine, const Qt::ToolBarAreas &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_Qt_ToolBarAreas_fromScriptValue(const QScriptValue &value, Qt::ToolBarAreas &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<Qt::ToolBarAreas>())
+        out = qvariant_cast<Qt::ToolBarAreas>(var);
+    else if (var.userType() == qMetaTypeId<Qt::ToolBarArea>())
+        out = qvariant_cast<Qt::ToolBarArea>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_Qt_ToolBarAreas(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ToolBarAreas result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<Qt::ToolBarAreas>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<Qt::ToolBarArea>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("ToolBarAreas(): argument %0 is not of type ToolBarArea").arg(i));
+            }
+            result |= qvariant_cast<Qt::ToolBarArea>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_Qt_ToolBarAreas_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ToolBarAreas value = qscriptvalue_cast<Qt::ToolBarAreas>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ToolBarAreas_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ToolBarAreas value = qscriptvalue_cast<Qt::ToolBarAreas>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 6; ++i) {
+        if ((value & qtscript_Qt_ToolBarArea_values[i]) == qtscript_Qt_ToolBarArea_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_Qt_ToolBarArea_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_Qt_ToolBarAreas_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<Qt::ToolBarAreas>() == otherObj.value<Qt::ToolBarAreas>())));
+}
+
+static QScriptValue qtscript_create_Qt_ToolBarAreas_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_Qt_ToolBarAreas, qtscript_Qt_ToolBarAreas_valueOf,
+        qtscript_Qt_ToolBarAreas_toString, qtscript_Qt_ToolBarAreas_equals);
+    qScriptRegisterMetaType<Qt::ToolBarAreas>(engine, qtscript_Qt_ToolBarAreas_toScriptValue,
+        qtscript_Qt_ToolBarAreas_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// Qt::PenCapStyle
+//
+
+static const Qt::PenCapStyle qtscript_Qt_PenCapStyle_values[] = {
+    Qt::FlatCap
+    , Qt::SquareCap
+    , Qt::RoundCap
+    , Qt::MPenCapStyle
+};
+
+static const char * const qtscript_Qt_PenCapStyle_keys[] = {
+    "FlatCap"
+    , "SquareCap"
+    , "RoundCap"
+    , "MPenCapStyle"
+};
+
+static QString qtscript_Qt_PenCapStyle_toStringHelper(Qt::PenCapStyle value)
+{
+    for (int i = 0; i < 4; ++i) {
+        if (qtscript_Qt_PenCapStyle_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_PenCapStyle_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_PenCapStyle_toScriptValue(QScriptEngine *engine, const Qt::PenCapStyle &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_PenCapStyle_toStringHelper(value));
+}
+
+static void qtscript_Qt_PenCapStyle_fromScriptValue(const QScriptValue &value, Qt::PenCapStyle &out)
+{
+    out = qvariant_cast<Qt::PenCapStyle>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_PenCapStyle(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 4; ++i) {
+        if (qtscript_Qt_PenCapStyle_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::PenCapStyle>(arg));
+    }
+    return context->throwError(QString::fromLatin1("PenCapStyle(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_PenCapStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::PenCapStyle value = qscriptvalue_cast<Qt::PenCapStyle>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_PenCapStyle_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::PenCapStyle value = qscriptvalue_cast<Qt::PenCapStyle>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_PenCapStyle_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_PenCapStyle_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_PenCapStyle,
+        qtscript_Qt_PenCapStyle_valueOf, qtscript_Qt_PenCapStyle_toString);
+    qScriptRegisterMetaType<Qt::PenCapStyle>(engine, qtscript_Qt_PenCapStyle_toScriptValue,
+        qtscript_Qt_PenCapStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_PenCapStyle_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_PenCapStyle_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -6686,487 +6742,161 @@ static QScriptValue qtscript_create_Qt_HitTestAccuracy_class(QScriptEngine *engi
 }
 
 //
-// Qt::FillRule
+// Qt::TextInteractionFlag
 //
 
-static const Qt::FillRule qtscript_Qt_FillRule_values[] = {
-    Qt::OddEvenFill
-    , Qt::WindingFill
+static const Qt::TextInteractionFlag qtscript_Qt_TextInteractionFlag_values[] = {
+    Qt::NoTextInteraction
+    , Qt::TextSelectableByMouse
+    , Qt::TextSelectableByKeyboard
+    , Qt::LinksAccessibleByMouse
+    , Qt::LinksAccessibleByKeyboard
+    , Qt::TextBrowserInteraction
+    , Qt::TextEditable
+    , Qt::TextEditorInteraction
 };
 
-static const char * const qtscript_Qt_FillRule_keys[] = {
-    "OddEvenFill"
-    , "WindingFill"
+static const char * const qtscript_Qt_TextInteractionFlag_keys[] = {
+    "NoTextInteraction"
+    , "TextSelectableByMouse"
+    , "TextSelectableByKeyboard"
+    , "LinksAccessibleByMouse"
+    , "LinksAccessibleByKeyboard"
+    , "TextBrowserInteraction"
+    , "TextEditable"
+    , "TextEditorInteraction"
 };
 
-static QString qtscript_Qt_FillRule_toStringHelper(Qt::FillRule value)
+static QString qtscript_Qt_TextInteractionFlag_toStringHelper(Qt::TextInteractionFlag value)
 {
-    if ((value >= Qt::OddEvenFill) && (value <= Qt::WindingFill))
-        return qtscript_Qt_FillRule_keys[static_cast<int>(value)-static_cast<int>(Qt::OddEvenFill)];
+    for (int i = 0; i < 8; ++i) {
+        if (qtscript_Qt_TextInteractionFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_TextInteractionFlag_keys[i]);
+    }
     return QString();
 }
 
-static QScriptValue qtscript_Qt_FillRule_toScriptValue(QScriptEngine *engine, const Qt::FillRule &value)
+static QScriptValue qtscript_Qt_TextInteractionFlag_toScriptValue(QScriptEngine *engine, const Qt::TextInteractionFlag &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_FillRule_toStringHelper(value));
+    return clazz.property(qtscript_Qt_TextInteractionFlag_toStringHelper(value));
 }
 
-static void qtscript_Qt_FillRule_fromScriptValue(const QScriptValue &value, Qt::FillRule &out)
+static void qtscript_Qt_TextInteractionFlag_fromScriptValue(const QScriptValue &value, Qt::TextInteractionFlag &out)
 {
-    out = qvariant_cast<Qt::FillRule>(value.toVariant());
+    out = qvariant_cast<Qt::TextInteractionFlag>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_Qt_FillRule(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_Qt_TextInteractionFlag(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::OddEvenFill) && (arg <= Qt::WindingFill))
-        return qScriptValueFromValue(engine,  static_cast<Qt::FillRule>(arg));
-    return context->throwError(QString::fromLatin1("FillRule(): invalid enum value (%0)").arg(arg));
+    for (int i = 0; i < 8; ++i) {
+        if (qtscript_Qt_TextInteractionFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::TextInteractionFlag>(arg));
+    }
+    return context->throwError(QString::fromLatin1("TextInteractionFlag(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_Qt_FillRule_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_TextInteractionFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::FillRule value = qscriptvalue_cast<Qt::FillRule>(context->thisObject());
+    Qt::TextInteractionFlag value = qscriptvalue_cast<Qt::TextInteractionFlag>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_Qt_FillRule_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_TextInteractionFlag_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::FillRule value = qscriptvalue_cast<Qt::FillRule>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_FillRule_toStringHelper(value));
+    Qt::TextInteractionFlag value = qscriptvalue_cast<Qt::TextInteractionFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_TextInteractionFlag_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_Qt_FillRule_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_Qt_TextInteractionFlag_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_FillRule,
-        qtscript_Qt_FillRule_valueOf, qtscript_Qt_FillRule_toString);
-    qScriptRegisterMetaType<Qt::FillRule>(engine, qtscript_Qt_FillRule_toScriptValue,
-        qtscript_Qt_FillRule_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_FillRule_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_FillRule_values[i])),
+        engine, qtscript_construct_Qt_TextInteractionFlag,
+        qtscript_Qt_TextInteractionFlag_valueOf, qtscript_Qt_TextInteractionFlag_toString);
+    qScriptRegisterMetaType<Qt::TextInteractionFlag>(engine, qtscript_Qt_TextInteractionFlag_toScriptValue,
+        qtscript_Qt_TextInteractionFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 8; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TextInteractionFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_TextInteractionFlag_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
 }
 
 //
-// Qt::TimeSpec
+// Qt::TextInteractionFlags
 //
 
-static const Qt::TimeSpec qtscript_Qt_TimeSpec_values[] = {
-    Qt::LocalTime
-    , Qt::UTC
-    , Qt::OffsetFromUTC
-};
-
-static const char * const qtscript_Qt_TimeSpec_keys[] = {
-    "LocalTime"
-    , "UTC"
-    , "OffsetFromUTC"
-};
-
-static QString qtscript_Qt_TimeSpec_toStringHelper(Qt::TimeSpec value)
-{
-    if ((value >= Qt::LocalTime) && (value <= Qt::OffsetFromUTC))
-        return qtscript_Qt_TimeSpec_keys[static_cast<int>(value)-static_cast<int>(Qt::LocalTime)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_TimeSpec_toScriptValue(QScriptEngine *engine, const Qt::TimeSpec &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_TimeSpec_toStringHelper(value));
-}
-
-static void qtscript_Qt_TimeSpec_fromScriptValue(const QScriptValue &value, Qt::TimeSpec &out)
-{
-    out = qvariant_cast<Qt::TimeSpec>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_TimeSpec(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::LocalTime) && (arg <= Qt::OffsetFromUTC))
-        return qScriptValueFromValue(engine,  static_cast<Qt::TimeSpec>(arg));
-    return context->throwError(QString::fromLatin1("TimeSpec(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_TimeSpec_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TimeSpec value = qscriptvalue_cast<Qt::TimeSpec>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_TimeSpec_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TimeSpec value = qscriptvalue_cast<Qt::TimeSpec>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_TimeSpec_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_TimeSpec_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_TimeSpec,
-        qtscript_Qt_TimeSpec_valueOf, qtscript_Qt_TimeSpec_toString);
-    qScriptRegisterMetaType<Qt::TimeSpec>(engine, qtscript_Qt_TimeSpec_toScriptValue,
-        qtscript_Qt_TimeSpec_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TimeSpec_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_TimeSpec_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::WindowType
-//
-
-static const Qt::WindowType qtscript_Qt_WindowType_values[] = {
-    Qt::WindowFullscreenButtonHint
-    , Qt::Widget
-    , Qt::Window
-    , Qt::Dialog
-    , Qt::Sheet
-    , Qt::Drawer
-    , Qt::Popup
-    , Qt::Tool
-    , Qt::ToolTip
-    , Qt::SplashScreen
-    , Qt::Desktop
-    , Qt::SubWindow
-    , Qt::ForeignWindow
-    , Qt::WindowType_Mask
-    , Qt::MSWindowsFixedSizeDialogHint
-    , Qt::MSWindowsOwnDC
-    , Qt::BypassWindowManagerHint
-    , Qt::FramelessWindowHint
-    , Qt::WindowTitleHint
-    , Qt::WindowSystemMenuHint
-    , Qt::WindowMinimizeButtonHint
-    , Qt::WindowMaximizeButtonHint
-    , Qt::WindowMinMaxButtonsHint
-    , Qt::WindowContextHelpButtonHint
-    , Qt::WindowShadeButtonHint
-    , Qt::WindowStaysOnTopHint
-    , Qt::WindowTransparentForInput
-    , Qt::WindowOverridesSystemGestures
-    , Qt::WindowDoesNotAcceptFocus
-    , Qt::CustomizeWindowHint
-    , Qt::WindowStaysOnBottomHint
-    , Qt::WindowCloseButtonHint
-    , Qt::MacWindowToolBarButtonHint
-    , Qt::BypassGraphicsProxyWidget
-    , Qt::NoDropShadowWindowHint
-};
-
-static const char * const qtscript_Qt_WindowType_keys[] = {
-    "WindowFullscreenButtonHint"
-    , "Widget"
-    , "Window"
-    , "Dialog"
-    , "Sheet"
-    , "Drawer"
-    , "Popup"
-    , "Tool"
-    , "ToolTip"
-    , "SplashScreen"
-    , "Desktop"
-    , "SubWindow"
-    , "ForeignWindow"
-    , "WindowType_Mask"
-    , "MSWindowsFixedSizeDialogHint"
-    , "MSWindowsOwnDC"
-    , "BypassWindowManagerHint"
-    , "FramelessWindowHint"
-    , "WindowTitleHint"
-    , "WindowSystemMenuHint"
-    , "WindowMinimizeButtonHint"
-    , "WindowMaximizeButtonHint"
-    , "WindowMinMaxButtonsHint"
-    , "WindowContextHelpButtonHint"
-    , "WindowShadeButtonHint"
-    , "WindowStaysOnTopHint"
-    , "WindowTransparentForInput"
-    , "WindowOverridesSystemGestures"
-    , "WindowDoesNotAcceptFocus"
-    , "CustomizeWindowHint"
-    , "WindowStaysOnBottomHint"
-    , "WindowCloseButtonHint"
-    , "MacWindowToolBarButtonHint"
-    , "BypassGraphicsProxyWidget"
-    , "NoDropShadowWindowHint"
-};
-
-static QString qtscript_Qt_WindowType_toStringHelper(Qt::WindowType value)
-{
-    for (int i = 0; i < 35; ++i) {
-        if (qtscript_Qt_WindowType_values[i] == value)
-            return QString::fromLatin1(qtscript_Qt_WindowType_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_WindowType_toScriptValue(QScriptEngine *engine, const Qt::WindowType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_WindowType_toStringHelper(value));
-}
-
-static void qtscript_Qt_WindowType_fromScriptValue(const QScriptValue &value, Qt::WindowType &out)
-{
-    out = qvariant_cast<Qt::WindowType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_WindowType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 35; ++i) {
-        if (qtscript_Qt_WindowType_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<Qt::WindowType>(arg));
-    }
-    return context->throwError(QString::fromLatin1("WindowType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_WindowType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowType value = qscriptvalue_cast<Qt::WindowType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_WindowType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::WindowType value = qscriptvalue_cast<Qt::WindowType>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_WindowType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_WindowType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_WindowType,
-        qtscript_Qt_WindowType_valueOf, qtscript_Qt_WindowType_toString);
-    qScriptRegisterMetaType<Qt::WindowType>(engine, qtscript_Qt_WindowType_toScriptValue,
-        qtscript_Qt_WindowType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 35; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_WindowType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_WindowType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::WindowFlags
-//
-
-static QScriptValue qtscript_Qt_WindowFlags_toScriptValue(QScriptEngine *engine, const Qt::WindowFlags &value)
+static QScriptValue qtscript_Qt_TextInteractionFlags_toScriptValue(QScriptEngine *engine, const Qt::TextInteractionFlags &value)
 {
     return engine->newVariant(qVariantFromValue(value));
 }
 
-static void qtscript_Qt_WindowFlags_fromScriptValue(const QScriptValue &value, Qt::WindowFlags &out)
+static void qtscript_Qt_TextInteractionFlags_fromScriptValue(const QScriptValue &value, Qt::TextInteractionFlags &out)
 {
     QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<Qt::WindowFlags>())
-        out = qvariant_cast<Qt::WindowFlags>(var);
-    else if (var.userType() == qMetaTypeId<Qt::WindowType>())
-        out = qvariant_cast<Qt::WindowType>(var);
+    if (var.userType() == qMetaTypeId<Qt::TextInteractionFlags>())
+        out = qvariant_cast<Qt::TextInteractionFlags>(var);
+    else if (var.userType() == qMetaTypeId<Qt::TextInteractionFlag>())
+        out = qvariant_cast<Qt::TextInteractionFlag>(var);
     else
         out = 0;
 }
 
-static QScriptValue qtscript_construct_Qt_WindowFlags(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_Qt_TextInteractionFlags(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::WindowFlags result = 0;
+    Qt::TextInteractionFlags result = 0;
     if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<Qt::WindowFlags>(context->argument(0).toInt32());
+        result = static_cast<Qt::TextInteractionFlags>(context->argument(0).toInt32());
     } else {
         for (int i = 0; i < context->argumentCount(); ++i) {
             QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<Qt::WindowType>()) {
+            if (v.userType() != qMetaTypeId<Qt::TextInteractionFlag>()) {
                 return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("WindowFlags(): argument %0 is not of type WindowType").arg(i));
+                    QString::fromLatin1("TextInteractionFlags(): argument %0 is not of type TextInteractionFlag").arg(i));
             }
-            result |= qvariant_cast<Qt::WindowType>(v);
+            result |= qvariant_cast<Qt::TextInteractionFlag>(v);
         }
    }
     return engine->newVariant(qVariantFromValue(result));
 }
 
-static QScriptValue qtscript_Qt_WindowFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_TextInteractionFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::WindowFlags value = qscriptvalue_cast<Qt::WindowFlags>(context->thisObject());
+    Qt::TextInteractionFlags value = qscriptvalue_cast<Qt::TextInteractionFlags>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_Qt_WindowFlags_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_TextInteractionFlags_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    Qt::WindowFlags value = qscriptvalue_cast<Qt::WindowFlags>(context->thisObject());
+    Qt::TextInteractionFlags value = qscriptvalue_cast<Qt::TextInteractionFlags>(context->thisObject());
     QString result;
-    for (int i = 0; i < 35; ++i) {
-        if ((value & qtscript_Qt_WindowType_values[i]) == qtscript_Qt_WindowType_values[i]) {
+    for (int i = 0; i < 8; ++i) {
+        if ((value & qtscript_Qt_TextInteractionFlag_values[i]) == qtscript_Qt_TextInteractionFlag_values[i]) {
             if (!result.isEmpty())
                 result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_Qt_WindowType_keys[i]));
+            result.append(QString::fromLatin1(qtscript_Qt_TextInteractionFlag_keys[i]));
         }
     }
     return QScriptValue(engine, result);
 }
 
-static QScriptValue qtscript_Qt_WindowFlags_equals(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_Qt_TextInteractionFlags_equals(QScriptContext *context, QScriptEngine *engine)
 {
     QVariant thisObj = context->thisObject().toVariant();
     QVariant otherObj = context->argument(0).toVariant();
     return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<Qt::WindowFlags>() == otherObj.value<Qt::WindowFlags>())));
+                                 (thisObj.value<Qt::TextInteractionFlags>() == otherObj.value<Qt::TextInteractionFlags>())));
 }
 
-static QScriptValue qtscript_create_Qt_WindowFlags_class(QScriptEngine *engine)
+static QScriptValue qtscript_create_Qt_TextInteractionFlags_class(QScriptEngine *engine)
 {
     QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_Qt_WindowFlags, qtscript_Qt_WindowFlags_valueOf,
-        qtscript_Qt_WindowFlags_toString, qtscript_Qt_WindowFlags_equals);
-    qScriptRegisterMetaType<Qt::WindowFlags>(engine, qtscript_Qt_WindowFlags_toScriptValue,
-        qtscript_Qt_WindowFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// Qt::SizeMode
-//
-
-static const Qt::SizeMode qtscript_Qt_SizeMode_values[] = {
-    Qt::AbsoluteSize
-    , Qt::RelativeSize
-};
-
-static const char * const qtscript_Qt_SizeMode_keys[] = {
-    "AbsoluteSize"
-    , "RelativeSize"
-};
-
-static QString qtscript_Qt_SizeMode_toStringHelper(Qt::SizeMode value)
-{
-    if ((value >= Qt::AbsoluteSize) && (value <= Qt::RelativeSize))
-        return qtscript_Qt_SizeMode_keys[static_cast<int>(value)-static_cast<int>(Qt::AbsoluteSize)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_SizeMode_toScriptValue(QScriptEngine *engine, const Qt::SizeMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_SizeMode_toStringHelper(value));
-}
-
-static void qtscript_Qt_SizeMode_fromScriptValue(const QScriptValue &value, Qt::SizeMode &out)
-{
-    out = qvariant_cast<Qt::SizeMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_SizeMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::AbsoluteSize) && (arg <= Qt::RelativeSize))
-        return qScriptValueFromValue(engine,  static_cast<Qt::SizeMode>(arg));
-    return context->throwError(QString::fromLatin1("SizeMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_SizeMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::SizeMode value = qscriptvalue_cast<Qt::SizeMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_SizeMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::SizeMode value = qscriptvalue_cast<Qt::SizeMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_SizeMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_SizeMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_SizeMode,
-        qtscript_Qt_SizeMode_valueOf, qtscript_Qt_SizeMode_toString);
-    qScriptRegisterMetaType<Qt::SizeMode>(engine, qtscript_Qt_SizeMode_toScriptValue,
-        qtscript_Qt_SizeMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_SizeMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_SizeMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// Qt::Axis
-//
-
-static const Qt::Axis qtscript_Qt_Axis_values[] = {
-    Qt::XAxis
-    , Qt::YAxis
-    , Qt::ZAxis
-};
-
-static const char * const qtscript_Qt_Axis_keys[] = {
-    "XAxis"
-    , "YAxis"
-    , "ZAxis"
-};
-
-static QString qtscript_Qt_Axis_toStringHelper(Qt::Axis value)
-{
-    if ((value >= Qt::XAxis) && (value <= Qt::ZAxis))
-        return qtscript_Qt_Axis_keys[static_cast<int>(value)-static_cast<int>(Qt::XAxis)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_Axis_toScriptValue(QScriptEngine *engine, const Qt::Axis &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_Axis_toStringHelper(value));
-}
-
-static void qtscript_Qt_Axis_fromScriptValue(const QScriptValue &value, Qt::Axis &out)
-{
-    out = qvariant_cast<Qt::Axis>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_Axis(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::XAxis) && (arg <= Qt::ZAxis))
-        return qScriptValueFromValue(engine,  static_cast<Qt::Axis>(arg));
-    return context->throwError(QString::fromLatin1("Axis(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_Axis_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::Axis value = qscriptvalue_cast<Qt::Axis>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_Axis_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::Axis value = qscriptvalue_cast<Qt::Axis>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_Axis_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_Axis_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_Axis,
-        qtscript_Qt_Axis_valueOf, qtscript_Qt_Axis_toString);
-    qScriptRegisterMetaType<Qt::Axis>(engine, qtscript_Qt_Axis_toScriptValue,
-        qtscript_Qt_Axis_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_Axis_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_Axis_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
+        engine, qtscript_construct_Qt_TextInteractionFlags, qtscript_Qt_TextInteractionFlags_valueOf,
+        qtscript_Qt_TextInteractionFlags_toString, qtscript_Qt_TextInteractionFlags_equals);
+    qScriptRegisterMetaType<Qt::TextInteractionFlags>(engine, qtscript_Qt_TextInteractionFlags_toScriptValue,
+        qtscript_Qt_TextInteractionFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
     return ctor;
 }
 
@@ -7520,6 +7250,15 @@ static const Qt::Key qtscript_Qt_Key_values[] = {
     , Qt::Key_TouchpadOn
     , Qt::Key_TouchpadOff
     , Qt::Key_MicMute
+    , Qt::Key_Red
+    , Qt::Key_Green
+    , Qt::Key_Yellow
+    , Qt::Key_Blue
+    , Qt::Key_ChannelUp
+    , Qt::Key_ChannelDown
+    , Qt::Key_Guide
+    , Qt::Key_Info
+    , Qt::Key_Settings
     , Qt::Key_AltGr
     , Qt::Key_Multi_key
     , Qt::Key_Kanji
@@ -7583,6 +7322,7 @@ static const Qt::Key qtscript_Qt_Key_values[] = {
     , Qt::Key_Sleep
     , Qt::Key_Play
     , Qt::Key_Zoom
+    , Qt::Key_Exit
     , Qt::Key_Context1
     , Qt::Key_Context2
     , Qt::Key_Context3
@@ -7944,6 +7684,15 @@ static const char * const qtscript_Qt_Key_keys[] = {
     , "Key_TouchpadOn"
     , "Key_TouchpadOff"
     , "Key_MicMute"
+    , "Key_Red"
+    , "Key_Green"
+    , "Key_Yellow"
+    , "Key_Blue"
+    , "Key_ChannelUp"
+    , "Key_ChannelDown"
+    , "Key_Guide"
+    , "Key_Info"
+    , "Key_Settings"
     , "Key_AltGr"
     , "Key_Multi_key"
     , "Key_Kanji"
@@ -8007,6 +7756,7 @@ static const char * const qtscript_Qt_Key_keys[] = {
     , "Key_Sleep"
     , "Key_Play"
     , "Key_Zoom"
+    , "Key_Exit"
     , "Key_Context1"
     , "Key_Context2"
     , "Key_Context3"
@@ -8024,7 +7774,7 @@ static const char * const qtscript_Qt_Key_keys[] = {
 
 static QString qtscript_Qt_Key_toStringHelper(Qt::Key value)
 {
-    for (int i = 0; i < 421; ++i) {
+    for (int i = 0; i < 431; ++i) {
         if (qtscript_Qt_Key_values[i] == value)
             return QString::fromLatin1(qtscript_Qt_Key_keys[i]);
     }
@@ -8045,7 +7795,7 @@ static void qtscript_Qt_Key_fromScriptValue(const QScriptValue &value, Qt::Key &
 static QScriptValue qtscript_construct_Qt_Key(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 421; ++i) {
+    for (int i = 0; i < 431; ++i) {
         if (qtscript_Qt_Key_values[i] == arg)
             return qScriptValueFromValue(engine,  static_cast<Qt::Key>(arg));
     }
@@ -8071,9 +7821,366 @@ static QScriptValue qtscript_create_Qt_Key_class(QScriptEngine *engine, QScriptV
         qtscript_Qt_Key_valueOf, qtscript_Qt_Key_toString);
     qScriptRegisterMetaType<Qt::Key>(engine, qtscript_Qt_Key_toScriptValue,
         qtscript_Qt_Key_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 421; ++i) {
+    for (int i = 0; i < 431; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_Qt_Key_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_Qt_Key_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::AnchorPoint
+//
+
+static const Qt::AnchorPoint qtscript_Qt_AnchorPoint_values[] = {
+    Qt::AnchorLeft
+    , Qt::AnchorHorizontalCenter
+    , Qt::AnchorRight
+    , Qt::AnchorTop
+    , Qt::AnchorVerticalCenter
+    , Qt::AnchorBottom
+};
+
+static const char * const qtscript_Qt_AnchorPoint_keys[] = {
+    "AnchorLeft"
+    , "AnchorHorizontalCenter"
+    , "AnchorRight"
+    , "AnchorTop"
+    , "AnchorVerticalCenter"
+    , "AnchorBottom"
+};
+
+static QString qtscript_Qt_AnchorPoint_toStringHelper(Qt::AnchorPoint value)
+{
+    if ((value >= Qt::AnchorLeft) && (value <= Qt::AnchorBottom))
+        return qtscript_Qt_AnchorPoint_keys[static_cast<int>(value)-static_cast<int>(Qt::AnchorLeft)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_AnchorPoint_toScriptValue(QScriptEngine *engine, const Qt::AnchorPoint &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_AnchorPoint_toStringHelper(value));
+}
+
+static void qtscript_Qt_AnchorPoint_fromScriptValue(const QScriptValue &value, Qt::AnchorPoint &out)
+{
+    out = qvariant_cast<Qt::AnchorPoint>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_AnchorPoint(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::AnchorLeft) && (arg <= Qt::AnchorBottom))
+        return qScriptValueFromValue(engine,  static_cast<Qt::AnchorPoint>(arg));
+    return context->throwError(QString::fromLatin1("AnchorPoint(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_AnchorPoint_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::AnchorPoint value = qscriptvalue_cast<Qt::AnchorPoint>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_AnchorPoint_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::AnchorPoint value = qscriptvalue_cast<Qt::AnchorPoint>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_AnchorPoint_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_AnchorPoint_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_AnchorPoint,
+        qtscript_Qt_AnchorPoint_valueOf, qtscript_Qt_AnchorPoint_toString);
+    qScriptRegisterMetaType<Qt::AnchorPoint>(engine, qtscript_Qt_AnchorPoint_toScriptValue,
+        qtscript_Qt_AnchorPoint_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 6; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_AnchorPoint_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_AnchorPoint_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ItemSelectionMode
+//
+
+static const Qt::ItemSelectionMode qtscript_Qt_ItemSelectionMode_values[] = {
+    Qt::ContainsItemShape
+    , Qt::IntersectsItemShape
+    , Qt::ContainsItemBoundingRect
+    , Qt::IntersectsItemBoundingRect
+};
+
+static const char * const qtscript_Qt_ItemSelectionMode_keys[] = {
+    "ContainsItemShape"
+    , "IntersectsItemShape"
+    , "ContainsItemBoundingRect"
+    , "IntersectsItemBoundingRect"
+};
+
+static QString qtscript_Qt_ItemSelectionMode_toStringHelper(Qt::ItemSelectionMode value)
+{
+    if ((value >= Qt::ContainsItemShape) && (value <= Qt::IntersectsItemBoundingRect))
+        return qtscript_Qt_ItemSelectionMode_keys[static_cast<int>(value)-static_cast<int>(Qt::ContainsItemShape)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ItemSelectionMode_toScriptValue(QScriptEngine *engine, const Qt::ItemSelectionMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ItemSelectionMode_toStringHelper(value));
+}
+
+static void qtscript_Qt_ItemSelectionMode_fromScriptValue(const QScriptValue &value, Qt::ItemSelectionMode &out)
+{
+    out = qvariant_cast<Qt::ItemSelectionMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ItemSelectionMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::ContainsItemShape) && (arg <= Qt::IntersectsItemBoundingRect))
+        return qScriptValueFromValue(engine,  static_cast<Qt::ItemSelectionMode>(arg));
+    return context->throwError(QString::fromLatin1("ItemSelectionMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ItemSelectionMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemSelectionMode value = qscriptvalue_cast<Qt::ItemSelectionMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ItemSelectionMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ItemSelectionMode value = qscriptvalue_cast<Qt::ItemSelectionMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ItemSelectionMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ItemSelectionMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ItemSelectionMode,
+        qtscript_Qt_ItemSelectionMode_valueOf, qtscript_Qt_ItemSelectionMode_toString);
+    qScriptRegisterMetaType<Qt::ItemSelectionMode>(engine, qtscript_Qt_ItemSelectionMode_toScriptValue,
+        qtscript_Qt_ItemSelectionMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ItemSelectionMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ItemSelectionMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::TileRule
+//
+
+static const Qt::TileRule qtscript_Qt_TileRule_values[] = {
+    Qt::StretchTile
+    , Qt::RepeatTile
+    , Qt::RoundTile
+};
+
+static const char * const qtscript_Qt_TileRule_keys[] = {
+    "StretchTile"
+    , "RepeatTile"
+    , "RoundTile"
+};
+
+static QString qtscript_Qt_TileRule_toStringHelper(Qt::TileRule value)
+{
+    if ((value >= Qt::StretchTile) && (value <= Qt::RoundTile))
+        return qtscript_Qt_TileRule_keys[static_cast<int>(value)-static_cast<int>(Qt::StretchTile)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_TileRule_toScriptValue(QScriptEngine *engine, const Qt::TileRule &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_TileRule_toStringHelper(value));
+}
+
+static void qtscript_Qt_TileRule_fromScriptValue(const QScriptValue &value, Qt::TileRule &out)
+{
+    out = qvariant_cast<Qt::TileRule>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_TileRule(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::StretchTile) && (arg <= Qt::RoundTile))
+        return qScriptValueFromValue(engine,  static_cast<Qt::TileRule>(arg));
+    return context->throwError(QString::fromLatin1("TileRule(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_TileRule_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TileRule value = qscriptvalue_cast<Qt::TileRule>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_TileRule_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::TileRule value = qscriptvalue_cast<Qt::TileRule>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_TileRule_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_TileRule_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_TileRule,
+        qtscript_Qt_TileRule_valueOf, qtscript_Qt_TileRule_toString);
+    qScriptRegisterMetaType<Qt::TileRule>(engine, qtscript_Qt_TileRule_toScriptValue,
+        qtscript_Qt_TileRule_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TileRule_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_TileRule_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::ToolBarAreaSizes
+//
+
+static const Qt::ToolBarAreaSizes qtscript_Qt_ToolBarAreaSizes_values[] = {
+    Qt::NToolBarAreas
+};
+
+static const char * const qtscript_Qt_ToolBarAreaSizes_keys[] = {
+    "NToolBarAreas"
+};
+
+static QString qtscript_Qt_ToolBarAreaSizes_toStringHelper(Qt::ToolBarAreaSizes value)
+{
+    if ((value >= Qt::NToolBarAreas) && (value <= Qt::NToolBarAreas))
+        return qtscript_Qt_ToolBarAreaSizes_keys[static_cast<int>(value)-static_cast<int>(Qt::NToolBarAreas)];
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_ToolBarAreaSizes_toScriptValue(QScriptEngine *engine, const Qt::ToolBarAreaSizes &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_ToolBarAreaSizes_toStringHelper(value));
+}
+
+static void qtscript_Qt_ToolBarAreaSizes_fromScriptValue(const QScriptValue &value, Qt::ToolBarAreaSizes &out)
+{
+    out = qvariant_cast<Qt::ToolBarAreaSizes>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_ToolBarAreaSizes(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= Qt::NToolBarAreas) && (arg <= Qt::NToolBarAreas))
+        return qScriptValueFromValue(engine,  static_cast<Qt::ToolBarAreaSizes>(arg));
+    return context->throwError(QString::fromLatin1("ToolBarAreaSizes(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_ToolBarAreaSizes_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ToolBarAreaSizes value = qscriptvalue_cast<Qt::ToolBarAreaSizes>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_ToolBarAreaSizes_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::ToolBarAreaSizes value = qscriptvalue_cast<Qt::ToolBarAreaSizes>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_ToolBarAreaSizes_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_ToolBarAreaSizes_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_ToolBarAreaSizes,
+        qtscript_Qt_ToolBarAreaSizes_valueOf, qtscript_Qt_ToolBarAreaSizes_toString);
+    qScriptRegisterMetaType<Qt::ToolBarAreaSizes>(engine, qtscript_Qt_ToolBarAreaSizes_toScriptValue,
+        qtscript_Qt_ToolBarAreaSizes_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 1; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_ToolBarAreaSizes_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_ToolBarAreaSizes_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// Qt::PenJoinStyle
+//
+
+static const Qt::PenJoinStyle qtscript_Qt_PenJoinStyle_values[] = {
+    Qt::MiterJoin
+    , Qt::BevelJoin
+    , Qt::RoundJoin
+    , Qt::SvgMiterJoin
+    , Qt::MPenJoinStyle
+};
+
+static const char * const qtscript_Qt_PenJoinStyle_keys[] = {
+    "MiterJoin"
+    , "BevelJoin"
+    , "RoundJoin"
+    , "SvgMiterJoin"
+    , "MPenJoinStyle"
+};
+
+static QString qtscript_Qt_PenJoinStyle_toStringHelper(Qt::PenJoinStyle value)
+{
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_PenJoinStyle_values[i] == value)
+            return QString::fromLatin1(qtscript_Qt_PenJoinStyle_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_Qt_PenJoinStyle_toScriptValue(QScriptEngine *engine, const Qt::PenJoinStyle &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
+    return clazz.property(qtscript_Qt_PenJoinStyle_toStringHelper(value));
+}
+
+static void qtscript_Qt_PenJoinStyle_fromScriptValue(const QScriptValue &value, Qt::PenJoinStyle &out)
+{
+    out = qvariant_cast<Qt::PenJoinStyle>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_Qt_PenJoinStyle(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 5; ++i) {
+        if (qtscript_Qt_PenJoinStyle_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<Qt::PenJoinStyle>(arg));
+    }
+    return context->throwError(QString::fromLatin1("PenJoinStyle(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_Qt_PenJoinStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::PenJoinStyle value = qscriptvalue_cast<Qt::PenJoinStyle>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_Qt_PenJoinStyle_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    Qt::PenJoinStyle value = qscriptvalue_cast<Qt::PenJoinStyle>(context->thisObject());
+    return QScriptValue(engine, qtscript_Qt_PenJoinStyle_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_Qt_PenJoinStyle_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_Qt_PenJoinStyle,
+        qtscript_Qt_PenJoinStyle_valueOf, qtscript_Qt_PenJoinStyle_toString);
+    qScriptRegisterMetaType<Qt::PenJoinStyle>(engine, qtscript_Qt_PenJoinStyle_toScriptValue,
+        qtscript_Qt_PenJoinStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_Qt_PenJoinStyle_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_Qt_PenJoinStyle_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -8153,73 +8260,6 @@ static QScriptValue qtscript_create_Qt_ToolButtonStyle_class(QScriptEngine *engi
 }
 
 //
-// Qt::TransformationMode
-//
-
-static const Qt::TransformationMode qtscript_Qt_TransformationMode_values[] = {
-    Qt::FastTransformation
-    , Qt::SmoothTransformation
-};
-
-static const char * const qtscript_Qt_TransformationMode_keys[] = {
-    "FastTransformation"
-    , "SmoothTransformation"
-};
-
-static QString qtscript_Qt_TransformationMode_toStringHelper(Qt::TransformationMode value)
-{
-    if ((value >= Qt::FastTransformation) && (value <= Qt::SmoothTransformation))
-        return qtscript_Qt_TransformationMode_keys[static_cast<int>(value)-static_cast<int>(Qt::FastTransformation)];
-    return QString();
-}
-
-static QScriptValue qtscript_Qt_TransformationMode_toScriptValue(QScriptEngine *engine, const Qt::TransformationMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("Qt"));
-    return clazz.property(qtscript_Qt_TransformationMode_toStringHelper(value));
-}
-
-static void qtscript_Qt_TransformationMode_fromScriptValue(const QScriptValue &value, Qt::TransformationMode &out)
-{
-    out = qvariant_cast<Qt::TransformationMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_Qt_TransformationMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= Qt::FastTransformation) && (arg <= Qt::SmoothTransformation))
-        return qScriptValueFromValue(engine,  static_cast<Qt::TransformationMode>(arg));
-    return context->throwError(QString::fromLatin1("TransformationMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_Qt_TransformationMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TransformationMode value = qscriptvalue_cast<Qt::TransformationMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_Qt_TransformationMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    Qt::TransformationMode value = qscriptvalue_cast<Qt::TransformationMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_Qt_TransformationMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_Qt_TransformationMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_Qt_TransformationMode,
-        qtscript_Qt_TransformationMode_valueOf, qtscript_Qt_TransformationMode_toString);
-    qScriptRegisterMetaType<Qt::TransformationMode>(engine, qtscript_Qt_TransformationMode_toScriptValue,
-        qtscript_Qt_TransformationMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_Qt_TransformationMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_Qt_TransformationMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
 // Qt
 //
 
@@ -8248,16 +8288,130 @@ QScriptValue qtscript_create_Qt_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_Qt_static_call, proto, qtscript_Qt_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("TextElideMode"),
-        qtscript_create_Qt_TextElideMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("UIEffect"),
+        qtscript_create_Qt_UIEffect_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("InputMethodQuery"),
+        qtscript_create_Qt_InputMethodQuery_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("LayoutDirection"),
         qtscript_create_Qt_LayoutDirection_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ConnectionType"),
+        qtscript_create_Qt_ConnectionType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("CursorShape"),
+        qtscript_create_Qt_CursorShape_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("CheckState"),
+        qtscript_create_Qt_CheckState_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("SortOrder"),
+        qtscript_create_Qt_SortOrder_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ApplicationAttribute"),
+        qtscript_create_Qt_ApplicationAttribute_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("FillRule"),
+        qtscript_create_Qt_FillRule_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("FocusPolicy"),
+        qtscript_create_Qt_FocusPolicy_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TimeSpec"),
+        qtscript_create_Qt_TimeSpec_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("DayOfWeek"),
+        qtscript_create_Qt_DayOfWeek_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ScreenOrientation"),
+        qtscript_create_Qt_ScreenOrientation_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TextElideMode"),
+        qtscript_create_Qt_TextElideMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("MatchFlag"),
+        qtscript_create_Qt_MatchFlag_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("MatchFlags"),
+        qtscript_create_Qt_MatchFlags_class(engine));
+    ctor.setProperty(QString::fromLatin1("BGMode"),
+        qtscript_create_Qt_BGMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("WindowType"),
+        qtscript_create_Qt_WindowType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("WindowFlags"),
+        qtscript_create_Qt_WindowFlags_class(engine));
+    ctor.setProperty(QString::fromLatin1("FocusReason"),
+        qtscript_create_Qt_FocusReason_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("SizeMode"),
+        qtscript_create_Qt_SizeMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ItemDataRole"),
+        qtscript_create_Qt_ItemDataRole_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("AlignmentFlag"),
+        qtscript_create_Qt_AlignmentFlag_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Alignment"),
+        qtscript_create_Qt_Alignment_class(engine));
+    ctor.setProperty(QString::fromLatin1("DockWidgetArea"),
+        qtscript_create_Qt_DockWidgetArea_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("DockWidgetAreas"),
+        qtscript_create_Qt_DockWidgetAreas_class(engine));
     ctor.setProperty(QString::fromLatin1("MaskMode"),
         qtscript_create_Qt_MaskMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TransformationMode"),
+        qtscript_create_Qt_TransformationMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TimerType"),
+        qtscript_create_Qt_TimerType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("EventPriority"),
+        qtscript_create_Qt_EventPriority_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ArrowType"),
+        qtscript_create_Qt_ArrowType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ShortcutContext"),
+        qtscript_create_Qt_ShortcutContext_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("WindowState"),
+        qtscript_create_Qt_WindowState_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("WindowStates"),
+        qtscript_create_Qt_WindowStates_class(engine));
+    ctor.setProperty(QString::fromLatin1("AspectRatioMode"),
+        qtscript_create_Qt_AspectRatioMode_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("DockWidgetAreaSizes"),
         qtscript_create_Qt_DockWidgetAreaSizes_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("PenJoinStyle"),
-        qtscript_create_Qt_PenJoinStyle_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("GestureType"),
+        qtscript_create_Qt_GestureType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("DateFormat"),
+        qtscript_create_Qt_DateFormat_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("GestureState"),
+        qtscript_create_Qt_GestureState_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("NavigationMode"),
+        qtscript_create_Qt_NavigationMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("WidgetAttribute"),
+        qtscript_create_Qt_WidgetAttribute_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ClipOperation"),
+        qtscript_create_Qt_ClipOperation_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("PenStyle"),
+        qtscript_create_Qt_PenStyle_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("WindowModality"),
+        qtscript_create_Qt_WindowModality_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("BrushStyle"),
+        qtscript_create_Qt_BrushStyle_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TextFlag"),
+        qtscript_create_Qt_TextFlag_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("SizeHint"),
+        qtscript_create_Qt_SizeHint_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Axis"),
+        qtscript_create_Qt_Axis_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("CoordinateSystem"),
+        qtscript_create_Qt_CoordinateSystem_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("FindChildOption"),
+        qtscript_create_Qt_FindChildOption_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("CaseSensitivity"),
+        qtscript_create_Qt_CaseSensitivity_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("DropAction"),
+        qtscript_create_Qt_DropAction_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("DropActions"),
+        qtscript_create_Qt_DropActions_class(engine));
+    ctor.setProperty(QString::fromLatin1("ContextMenuPolicy"),
+        qtscript_create_Qt_ContextMenuPolicy_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("KeyboardModifier"),
+        qtscript_create_Qt_KeyboardModifier_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("KeyboardModifiers"),
+        qtscript_create_Qt_KeyboardModifiers_class(engine));
+    ctor.setProperty(QString::fromLatin1("WhiteSpaceMode"),
+        qtscript_create_Qt_WhiteSpaceMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Corner"),
+        qtscript_create_Qt_Corner_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TextFormat"),
+        qtscript_create_Qt_TextFormat_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ScrollBarPolicy"),
+        qtscript_create_Qt_ScrollBarPolicy_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ItemFlag"),
+        qtscript_create_Qt_ItemFlag_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ItemFlags"),
+        qtscript_create_Qt_ItemFlags_class(engine));
     ctor.setProperty(QString::fromLatin1("MouseButton"),
         qtscript_create_Qt_MouseButton_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("MouseButtons"),
@@ -8268,132 +8422,6 @@ QScriptValue qtscript_create_Qt_class(QScriptEngine *engine)
         qtscript_create_Qt_Orientations_class(engine));
     ctor.setProperty(QString::fromLatin1("GlobalColor"),
         qtscript_create_Qt_GlobalColor_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("EventPriority"),
-        qtscript_create_Qt_EventPriority_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("GestureFlag"),
-        qtscript_create_Qt_GestureFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("GestureFlags"),
-        qtscript_create_Qt_GestureFlags_class(engine));
-    ctor.setProperty(QString::fromLatin1("ToolBarArea"),
-        qtscript_create_Qt_ToolBarArea_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ToolBarAreas"),
-        qtscript_create_Qt_ToolBarAreas_class(engine));
-    ctor.setProperty(QString::fromLatin1("ContextMenuPolicy"),
-        qtscript_create_Qt_ContextMenuPolicy_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("AlignmentFlag"),
-        qtscript_create_Qt_AlignmentFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("Alignment"),
-        qtscript_create_Qt_Alignment_class(engine));
-    ctor.setProperty(QString::fromLatin1("ConnectionType"),
-        qtscript_create_Qt_ConnectionType_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("PenCapStyle"),
-        qtscript_create_Qt_PenCapStyle_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("Corner"),
-        qtscript_create_Qt_Corner_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("AnchorPoint"),
-        qtscript_create_Qt_AnchorPoint_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("DateFormat"),
-        qtscript_create_Qt_DateFormat_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ImageConversionFlag"),
-        qtscript_create_Qt_ImageConversionFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ImageConversionFlags"),
-        qtscript_create_Qt_ImageConversionFlags_class(engine));
-    ctor.setProperty(QString::fromLatin1("PenStyle"),
-        qtscript_create_Qt_PenStyle_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("CoordinateSystem"),
-        qtscript_create_Qt_CoordinateSystem_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TextFlag"),
-        qtscript_create_Qt_TextFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ItemDataRole"),
-        qtscript_create_Qt_ItemDataRole_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("DropAction"),
-        qtscript_create_Qt_DropAction_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("DropActions"),
-        qtscript_create_Qt_DropActions_class(engine));
-    ctor.setProperty(QString::fromLatin1("BrushStyle"),
-        qtscript_create_Qt_BrushStyle_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("KeyboardModifier"),
-        qtscript_create_Qt_KeyboardModifier_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("KeyboardModifiers"),
-        qtscript_create_Qt_KeyboardModifiers_class(engine));
-    ctor.setProperty(QString::fromLatin1("SizeHint"),
-        qtscript_create_Qt_SizeHint_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("DockWidgetArea"),
-        qtscript_create_Qt_DockWidgetArea_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("DockWidgetAreas"),
-        qtscript_create_Qt_DockWidgetAreas_class(engine));
-    ctor.setProperty(QString::fromLatin1("ClipOperation"),
-        qtscript_create_Qt_ClipOperation_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("CursorShape"),
-        qtscript_create_Qt_CursorShape_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ShortcutContext"),
-        qtscript_create_Qt_ShortcutContext_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("DayOfWeek"),
-        qtscript_create_Qt_DayOfWeek_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TextInteractionFlag"),
-        qtscript_create_Qt_TextInteractionFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TextInteractionFlags"),
-        qtscript_create_Qt_TextInteractionFlags_class(engine));
-    ctor.setProperty(QString::fromLatin1("SortOrder"),
-        qtscript_create_Qt_SortOrder_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("WindowFrameSection"),
-        qtscript_create_Qt_WindowFrameSection_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ItemFlag"),
-        qtscript_create_Qt_ItemFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ItemFlags"),
-        qtscript_create_Qt_ItemFlags_class(engine));
-    ctor.setProperty(QString::fromLatin1("FocusPolicy"),
-        qtscript_create_Qt_FocusPolicy_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("AspectRatioMode"),
-        qtscript_create_Qt_AspectRatioMode_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TextFormat"),
-        qtscript_create_Qt_TextFormat_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ItemSelectionMode"),
-        qtscript_create_Qt_ItemSelectionMode_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("MatchFlag"),
-        qtscript_create_Qt_MatchFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("MatchFlags"),
-        qtscript_create_Qt_MatchFlags_class(engine));
-    ctor.setProperty(QString::fromLatin1("WidgetAttribute"),
-        qtscript_create_Qt_WidgetAttribute_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("FocusReason"),
-        qtscript_create_Qt_FocusReason_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("NavigationMode"),
-        qtscript_create_Qt_NavigationMode_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ToolBarAreaSizes"),
-        qtscript_create_Qt_ToolBarAreaSizes_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("GestureState"),
-        qtscript_create_Qt_GestureState_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ArrowType"),
-        qtscript_create_Qt_ArrowType_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("WindowModality"),
-        qtscript_create_Qt_WindowModality_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("FindChildOption"),
-        qtscript_create_Qt_FindChildOption_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ScreenOrientation"),
-        qtscript_create_Qt_ScreenOrientation_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TimerType"),
-        qtscript_create_Qt_TimerType_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("CaseSensitivity"),
-        qtscript_create_Qt_CaseSensitivity_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("BGMode"),
-        qtscript_create_Qt_BGMode_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TileRule"),
-        qtscript_create_Qt_TileRule_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("UIEffect"),
-        qtscript_create_Qt_UIEffect_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ScrollBarPolicy"),
-        qtscript_create_Qt_ScrollBarPolicy_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("InputMethodQuery"),
-        qtscript_create_Qt_InputMethodQuery_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("ApplicationAttribute"),
-        qtscript_create_Qt_ApplicationAttribute_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("WhiteSpaceMode"),
-        qtscript_create_Qt_WhiteSpaceMode_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("WindowState"),
-        qtscript_create_Qt_WindowState_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("WindowStates"),
-        qtscript_create_Qt_WindowStates_class(engine));
     ctor.setProperty(QString::fromLatin1("TouchPointState"),
         qtscript_create_Qt_TouchPointState_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("TouchPointStates"),
@@ -8404,29 +8432,41 @@ QScriptValue qtscript_create_Qt_class(QScriptEngine *engine)
         qtscript_create_Qt_InputMethodHint_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("InputMethodHints"),
         qtscript_create_Qt_InputMethodHints_class(engine));
-    ctor.setProperty(QString::fromLatin1("CheckState"),
-        qtscript_create_Qt_CheckState_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("GestureType"),
-        qtscript_create_Qt_GestureType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ImageConversionFlag"),
+        qtscript_create_Qt_ImageConversionFlag_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ImageConversionFlags"),
+        qtscript_create_Qt_ImageConversionFlags_class(engine));
+    ctor.setProperty(QString::fromLatin1("WindowFrameSection"),
+        qtscript_create_Qt_WindowFrameSection_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("GestureFlag"),
+        qtscript_create_Qt_GestureFlag_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("GestureFlags"),
+        qtscript_create_Qt_GestureFlags_class(engine));
+    ctor.setProperty(QString::fromLatin1("ToolBarArea"),
+        qtscript_create_Qt_ToolBarArea_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ToolBarAreas"),
+        qtscript_create_Qt_ToolBarAreas_class(engine));
+    ctor.setProperty(QString::fromLatin1("PenCapStyle"),
+        qtscript_create_Qt_PenCapStyle_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("HitTestAccuracy"),
         qtscript_create_Qt_HitTestAccuracy_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("FillRule"),
-        qtscript_create_Qt_FillRule_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TimeSpec"),
-        qtscript_create_Qt_TimeSpec_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("WindowType"),
-        qtscript_create_Qt_WindowType_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("WindowFlags"),
-        qtscript_create_Qt_WindowFlags_class(engine));
-    ctor.setProperty(QString::fromLatin1("SizeMode"),
-        qtscript_create_Qt_SizeMode_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("Axis"),
-        qtscript_create_Qt_Axis_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TextInteractionFlag"),
+        qtscript_create_Qt_TextInteractionFlag_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TextInteractionFlags"),
+        qtscript_create_Qt_TextInteractionFlags_class(engine));
     ctor.setProperty(QString::fromLatin1("Key"),
         qtscript_create_Qt_Key_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("AnchorPoint"),
+        qtscript_create_Qt_AnchorPoint_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ItemSelectionMode"),
+        qtscript_create_Qt_ItemSelectionMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TileRule"),
+        qtscript_create_Qt_TileRule_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("ToolBarAreaSizes"),
+        qtscript_create_Qt_ToolBarAreaSizes_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("PenJoinStyle"),
+        qtscript_create_Qt_PenJoinStyle_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("ToolButtonStyle"),
         qtscript_create_Qt_ToolButtonStyle_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TransformationMode"),
-        qtscript_create_Qt_TransformationMode_class(engine, ctor));
     return ctor;
 }

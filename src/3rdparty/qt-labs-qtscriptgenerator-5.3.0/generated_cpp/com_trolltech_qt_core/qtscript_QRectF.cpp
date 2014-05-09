@@ -97,7 +97,7 @@ static const char * const qtscript_QRectF_function_signatures[] = {
     , "QPointF p"
     , "qreal pos"
     , "qreal pos"
-    , "QPointF p\nqreal x, qreal t"
+    , "QPointF p\nqreal x, qreal y"
     , "qreal pos"
     , "QPointF p"
     , "QPointF p"

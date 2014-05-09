@@ -79,9 +79,9 @@ static const QMetaObject *qtscript_QGradient_metaObject()
 
 Q_DECLARE_METATYPE(QGradient)
 Q_DECLARE_METATYPE(QGradient*)
-Q_DECLARE_METATYPE(QGradient::CoordinateMode)
 Q_DECLARE_METATYPE(QGradient::Type)
 Q_DECLARE_METATYPE(QGradient::Spread)
+Q_DECLARE_METATYPE(QGradient::CoordinateMode)
 template <> \
 struct QMetaTypeId< QPair<qreal,QColor > > \
 { \
@@ -119,81 +119,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QGradient::CoordinateMode
-//
-
-static const QGradient::CoordinateMode qtscript_QGradient_CoordinateMode_values[] = {
-    QGradient::LogicalMode
-    , QGradient::StretchToDeviceMode
-    , QGradient::ObjectBoundingMode
-};
-
-static const char * const qtscript_QGradient_CoordinateMode_keys[] = {
-    "LogicalMode"
-    , "StretchToDeviceMode"
-    , "ObjectBoundingMode"
-};
-
-static QString qtscript_QGradient_CoordinateMode_toStringHelper(QGradient::CoordinateMode value)
-{
-    const QMetaObject *meta = qtscript_QGradient_metaObject();
-    int idx = meta->indexOfEnumerator("CoordinateMode");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    return QString::fromLatin1(menum.valueToKey(value));
-}
-
-static QScriptValue qtscript_QGradient_CoordinateMode_toScriptValue(QScriptEngine *engine, const QGradient::CoordinateMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QGradient"));
-    return clazz.property(qtscript_QGradient_CoordinateMode_toStringHelper(value));
-}
-
-static void qtscript_QGradient_CoordinateMode_fromScriptValue(const QScriptValue &value, QGradient::CoordinateMode &out)
-{
-    out = qvariant_cast<QGradient::CoordinateMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QGradient_CoordinateMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    const QMetaObject *meta = qtscript_QGradient_metaObject();
-    int idx = meta->indexOfEnumerator("CoordinateMode");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    if (menum.valueToKey(arg) != 0)
-        return qScriptValueFromValue(engine,  static_cast<QGradient::CoordinateMode>(arg));
-    return context->throwError(QString::fromLatin1("CoordinateMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QGradient_CoordinateMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QGradient::CoordinateMode value = qscriptvalue_cast<QGradient::CoordinateMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QGradient_CoordinateMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QGradient::CoordinateMode value = qscriptvalue_cast<QGradient::CoordinateMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_QGradient_CoordinateMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QGradient_CoordinateMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QGradient_CoordinateMode,
-        qtscript_QGradient_CoordinateMode_valueOf, qtscript_QGradient_CoordinateMode_toString);
-    qScriptRegisterMetaType<QGradient::CoordinateMode>(engine, qtscript_QGradient_CoordinateMode_toScriptValue,
-        qtscript_QGradient_CoordinateMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QGradient_CoordinateMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QGradient_CoordinateMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -343,6 +268,81 @@ static QScriptValue qtscript_create_QGradient_Spread_class(QScriptEngine *engine
     for (int i = 0; i < 3; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QGradient_Spread_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QGradient_Spread_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QGradient::CoordinateMode
+//
+
+static const QGradient::CoordinateMode qtscript_QGradient_CoordinateMode_values[] = {
+    QGradient::LogicalMode
+    , QGradient::StretchToDeviceMode
+    , QGradient::ObjectBoundingMode
+};
+
+static const char * const qtscript_QGradient_CoordinateMode_keys[] = {
+    "LogicalMode"
+    , "StretchToDeviceMode"
+    , "ObjectBoundingMode"
+};
+
+static QString qtscript_QGradient_CoordinateMode_toStringHelper(QGradient::CoordinateMode value)
+{
+    const QMetaObject *meta = qtscript_QGradient_metaObject();
+    int idx = meta->indexOfEnumerator("CoordinateMode");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    return QString::fromLatin1(menum.valueToKey(value));
+}
+
+static QScriptValue qtscript_QGradient_CoordinateMode_toScriptValue(QScriptEngine *engine, const QGradient::CoordinateMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QGradient"));
+    return clazz.property(qtscript_QGradient_CoordinateMode_toStringHelper(value));
+}
+
+static void qtscript_QGradient_CoordinateMode_fromScriptValue(const QScriptValue &value, QGradient::CoordinateMode &out)
+{
+    out = qvariant_cast<QGradient::CoordinateMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QGradient_CoordinateMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    const QMetaObject *meta = qtscript_QGradient_metaObject();
+    int idx = meta->indexOfEnumerator("CoordinateMode");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    if (menum.valueToKey(arg) != 0)
+        return qScriptValueFromValue(engine,  static_cast<QGradient::CoordinateMode>(arg));
+    return context->throwError(QString::fromLatin1("CoordinateMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QGradient_CoordinateMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QGradient::CoordinateMode value = qscriptvalue_cast<QGradient::CoordinateMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QGradient_CoordinateMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QGradient::CoordinateMode value = qscriptvalue_cast<QGradient::CoordinateMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_QGradient_CoordinateMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QGradient_CoordinateMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QGradient_CoordinateMode,
+        qtscript_QGradient_CoordinateMode_valueOf, qtscript_QGradient_CoordinateMode_toString);
+    qScriptRegisterMetaType<QGradient::CoordinateMode>(engine, qtscript_QGradient_CoordinateMode_toScriptValue,
+        qtscript_QGradient_CoordinateMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QGradient_CoordinateMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QGradient_CoordinateMode_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -499,11 +499,11 @@ QScriptValue qtscript_create_QGradient_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QGradient_static_call, proto, qtscript_QGradient_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("CoordinateMode"),
-        qtscript_create_QGradient_CoordinateMode_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Type"),
         qtscript_create_QGradient_Type_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Spread"),
         qtscript_create_QGradient_Spread_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("CoordinateMode"),
+        qtscript_create_QGradient_CoordinateMode_class(engine, ctor));
     return ctor;
 }

@@ -15,6 +15,7 @@ SOURCES += \
            $$PWD/qtscript_QWebPluginFactory_MimeType.cpp \
            $$PWD/qtscript_QWebPluginFactory_Plugin.cpp \
            $$PWD/qtscript_QWebSettings.cpp \
+           $$PWD/qtscript_WebCore.cpp \
            $$PWD/qtscriptshell_QWebHistoryInterface.cpp \
            $$PWD/qtscriptshell_QWebPluginFactory.cpp \
            $$PWD/qtscriptshell_QWebPluginFactory_ExtensionOption.cpp \

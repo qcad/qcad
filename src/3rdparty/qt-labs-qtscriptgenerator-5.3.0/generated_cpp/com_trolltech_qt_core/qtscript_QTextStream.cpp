@@ -203,11 +203,11 @@ static QScriptValue qtscript_QTextStream_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QTextStream*)
 Q_DECLARE_METATYPE(QtScriptShell_QTextStream*)
-Q_DECLARE_METATYPE(QTextStream::Status)
 Q_DECLARE_METATYPE(QTextStream::FieldAlignment)
 Q_DECLARE_METATYPE(QTextStream::RealNumberNotation)
 Q_DECLARE_METATYPE(QTextStream::NumberFlag)
 Q_DECLARE_METATYPE(QFlags<QTextStream::NumberFlag>)
+Q_DECLARE_METATYPE(QTextStream::Status)
 Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(QIODevice*)
 Q_DECLARE_METATYPE(signed int)
@@ -243,77 +243,6 @@ static QScriptValue qtscript_create_flags_class_helper(
     proto.setProperty(QString::fromLatin1("equals"),
         engine->newFunction(equals), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto);
-}
-
-//
-// QTextStream::Status
-//
-
-static const QTextStream::Status qtscript_QTextStream_Status_values[] = {
-    QTextStream::Ok
-    , QTextStream::ReadPastEnd
-    , QTextStream::ReadCorruptData
-    , QTextStream::WriteFailed
-};
-
-static const char * const qtscript_QTextStream_Status_keys[] = {
-    "Ok"
-    , "ReadPastEnd"
-    , "ReadCorruptData"
-    , "WriteFailed"
-};
-
-static QString qtscript_QTextStream_Status_toStringHelper(QTextStream::Status value)
-{
-    if ((value >= QTextStream::Ok) && (value <= QTextStream::WriteFailed))
-        return qtscript_QTextStream_Status_keys[static_cast<int>(value)-static_cast<int>(QTextStream::Ok)];
-    return QString();
-}
-
-static QScriptValue qtscript_QTextStream_Status_toScriptValue(QScriptEngine *engine, const QTextStream::Status &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextStream"));
-    return clazz.property(qtscript_QTextStream_Status_toStringHelper(value));
-}
-
-static void qtscript_QTextStream_Status_fromScriptValue(const QScriptValue &value, QTextStream::Status &out)
-{
-    out = qvariant_cast<QTextStream::Status>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTextStream_Status(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QTextStream::Ok) && (arg <= QTextStream::WriteFailed))
-        return qScriptValueFromValue(engine,  static_cast<QTextStream::Status>(arg));
-    return context->throwError(QString::fromLatin1("Status(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTextStream_Status_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextStream::Status value = qscriptvalue_cast<QTextStream::Status>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextStream_Status_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextStream::Status value = qscriptvalue_cast<QTextStream::Status>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTextStream_Status_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTextStream_Status_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTextStream_Status,
-        qtscript_QTextStream_Status_valueOf, qtscript_QTextStream_Status_toString);
-    qScriptRegisterMetaType<QTextStream::Status>(engine, qtscript_QTextStream_Status_toScriptValue,
-        qtscript_QTextStream_Status_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTextStream_Status_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTextStream_Status_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -606,6 +535,77 @@ static QScriptValue qtscript_create_QTextStream_NumberFlags_class(QScriptEngine 
         qtscript_QTextStream_NumberFlags_toString, qtscript_QTextStream_NumberFlags_equals);
     qScriptRegisterMetaType<QTextStream::NumberFlags>(engine, qtscript_QTextStream_NumberFlags_toScriptValue,
         qtscript_QTextStream_NumberFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// QTextStream::Status
+//
+
+static const QTextStream::Status qtscript_QTextStream_Status_values[] = {
+    QTextStream::Ok
+    , QTextStream::ReadPastEnd
+    , QTextStream::ReadCorruptData
+    , QTextStream::WriteFailed
+};
+
+static const char * const qtscript_QTextStream_Status_keys[] = {
+    "Ok"
+    , "ReadPastEnd"
+    , "ReadCorruptData"
+    , "WriteFailed"
+};
+
+static QString qtscript_QTextStream_Status_toStringHelper(QTextStream::Status value)
+{
+    if ((value >= QTextStream::Ok) && (value <= QTextStream::WriteFailed))
+        return qtscript_QTextStream_Status_keys[static_cast<int>(value)-static_cast<int>(QTextStream::Ok)];
+    return QString();
+}
+
+static QScriptValue qtscript_QTextStream_Status_toScriptValue(QScriptEngine *engine, const QTextStream::Status &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextStream"));
+    return clazz.property(qtscript_QTextStream_Status_toStringHelper(value));
+}
+
+static void qtscript_QTextStream_Status_fromScriptValue(const QScriptValue &value, QTextStream::Status &out)
+{
+    out = qvariant_cast<QTextStream::Status>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTextStream_Status(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QTextStream::Ok) && (arg <= QTextStream::WriteFailed))
+        return qScriptValueFromValue(engine,  static_cast<QTextStream::Status>(arg));
+    return context->throwError(QString::fromLatin1("Status(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTextStream_Status_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextStream::Status value = qscriptvalue_cast<QTextStream::Status>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextStream_Status_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextStream::Status value = qscriptvalue_cast<QTextStream::Status>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTextStream_Status_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTextStream_Status_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTextStream_Status,
+        qtscript_QTextStream_Status_valueOf, qtscript_QTextStream_Status_toString);
+    qScriptRegisterMetaType<QTextStream::Status>(engine, qtscript_QTextStream_Status_toScriptValue,
+        qtscript_QTextStream_Status_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTextStream_Status_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTextStream_Status_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
     return ctor;
 }
 
@@ -1145,8 +1145,6 @@ QScriptValue qtscript_create_QTextStream_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QTextStream_static_call, proto, qtscript_QTextStream_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("Status"),
-        qtscript_create_QTextStream_Status_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("FieldAlignment"),
         qtscript_create_QTextStream_FieldAlignment_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("RealNumberNotation"),
@@ -1155,5 +1153,7 @@ QScriptValue qtscript_create_QTextStream_class(QScriptEngine *engine)
         qtscript_create_QTextStream_NumberFlag_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("NumberFlags"),
         qtscript_create_QTextStream_NumberFlags_class(engine));
+    ctor.setProperty(QString::fromLatin1("Status"),
+        qtscript_create_QTextStream_Status_class(engine, ctor));
     return ctor;
 }

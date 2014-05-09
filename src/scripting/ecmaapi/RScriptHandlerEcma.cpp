@@ -328,8 +328,14 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     // iterate through module list and break if one module cannot be loaded
     QStringList modules;
+
+#if QT_VERSION >= 0x050000
+    modules << "qt.core" << "qt.gui" << "qt.widgets" << "qt.uitools" << "qt.webkit"
+            << "qt.webkitwidgets" << "qt.sql" << "qt.xml" << "qt.xmlpatterns";
+#else
     modules << "qt.core" << "qt.gui" << "qt.uitools" << "qt.webkit" << "qt.sql"
             << "qt.svg" << "qt.xml" << "qt.xmlpatterns";
+#endif
 
 #ifndef Q_OS_WIN32
     // NOTE: qt.network wrapper does not compile under Windows (SSL problems)

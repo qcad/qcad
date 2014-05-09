@@ -360,8 +360,8 @@ static QScriptValue qtscript_QPainter_throw_ambiguity_error_helper(
 Q_DECLARE_METATYPE(QPainter*)
 Q_DECLARE_METATYPE(QPainter::RenderHint)
 Q_DECLARE_METATYPE(QFlags<QPainter::RenderHint>)
-Q_DECLARE_METATYPE(QPainter::PixmapFragmentHint)
 Q_DECLARE_METATYPE(QPainter::CompositionMode)
+Q_DECLARE_METATYPE(QPainter::PixmapFragmentHint)
 Q_DECLARE_METATYPE(Qt::BGMode)
 Q_DECLARE_METATYPE(QPaintDevice*)
 Q_DECLARE_METATYPE(QTextOption)
@@ -575,71 +575,6 @@ static QScriptValue qtscript_create_QPainter_RenderHints_class(QScriptEngine *en
 }
 
 //
-// QPainter::PixmapFragmentHint
-//
-
-static const QPainter::PixmapFragmentHint qtscript_QPainter_PixmapFragmentHint_values[] = {
-    QPainter::OpaqueHint
-};
-
-static const char * const qtscript_QPainter_PixmapFragmentHint_keys[] = {
-    "OpaqueHint"
-};
-
-static QString qtscript_QPainter_PixmapFragmentHint_toStringHelper(QPainter::PixmapFragmentHint value)
-{
-    if ((value >= QPainter::OpaqueHint) && (value <= QPainter::OpaqueHint))
-        return qtscript_QPainter_PixmapFragmentHint_keys[static_cast<int>(value)-static_cast<int>(QPainter::OpaqueHint)];
-    return QString();
-}
-
-static QScriptValue qtscript_QPainter_PixmapFragmentHint_toScriptValue(QScriptEngine *engine, const QPainter::PixmapFragmentHint &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QPainter"));
-    return clazz.property(qtscript_QPainter_PixmapFragmentHint_toStringHelper(value));
-}
-
-static void qtscript_QPainter_PixmapFragmentHint_fromScriptValue(const QScriptValue &value, QPainter::PixmapFragmentHint &out)
-{
-    out = qvariant_cast<QPainter::PixmapFragmentHint>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QPainter_PixmapFragmentHint(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QPainter::OpaqueHint) && (arg <= QPainter::OpaqueHint))
-        return qScriptValueFromValue(engine,  static_cast<QPainter::PixmapFragmentHint>(arg));
-    return context->throwError(QString::fromLatin1("PixmapFragmentHint(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QPainter_PixmapFragmentHint_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QPainter::PixmapFragmentHint value = qscriptvalue_cast<QPainter::PixmapFragmentHint>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QPainter_PixmapFragmentHint_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QPainter::PixmapFragmentHint value = qscriptvalue_cast<QPainter::PixmapFragmentHint>(context->thisObject());
-    return QScriptValue(engine, qtscript_QPainter_PixmapFragmentHint_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QPainter_PixmapFragmentHint_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QPainter_PixmapFragmentHint,
-        qtscript_QPainter_PixmapFragmentHint_valueOf, qtscript_QPainter_PixmapFragmentHint_toString);
-    qScriptRegisterMetaType<QPainter::PixmapFragmentHint>(engine, qtscript_QPainter_PixmapFragmentHint_toScriptValue,
-        qtscript_QPainter_PixmapFragmentHint_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 1; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QPainter_PixmapFragmentHint_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QPainter_PixmapFragmentHint_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
 // QPainter::CompositionMode
 //
 
@@ -773,6 +708,71 @@ static QScriptValue qtscript_create_QPainter_CompositionMode_class(QScriptEngine
     for (int i = 0; i < 38; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QPainter_CompositionMode_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QPainter_CompositionMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QPainter::PixmapFragmentHint
+//
+
+static const QPainter::PixmapFragmentHint qtscript_QPainter_PixmapFragmentHint_values[] = {
+    QPainter::OpaqueHint
+};
+
+static const char * const qtscript_QPainter_PixmapFragmentHint_keys[] = {
+    "OpaqueHint"
+};
+
+static QString qtscript_QPainter_PixmapFragmentHint_toStringHelper(QPainter::PixmapFragmentHint value)
+{
+    if ((value >= QPainter::OpaqueHint) && (value <= QPainter::OpaqueHint))
+        return qtscript_QPainter_PixmapFragmentHint_keys[static_cast<int>(value)-static_cast<int>(QPainter::OpaqueHint)];
+    return QString();
+}
+
+static QScriptValue qtscript_QPainter_PixmapFragmentHint_toScriptValue(QScriptEngine *engine, const QPainter::PixmapFragmentHint &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QPainter"));
+    return clazz.property(qtscript_QPainter_PixmapFragmentHint_toStringHelper(value));
+}
+
+static void qtscript_QPainter_PixmapFragmentHint_fromScriptValue(const QScriptValue &value, QPainter::PixmapFragmentHint &out)
+{
+    out = qvariant_cast<QPainter::PixmapFragmentHint>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QPainter_PixmapFragmentHint(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QPainter::OpaqueHint) && (arg <= QPainter::OpaqueHint))
+        return qScriptValueFromValue(engine,  static_cast<QPainter::PixmapFragmentHint>(arg));
+    return context->throwError(QString::fromLatin1("PixmapFragmentHint(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QPainter_PixmapFragmentHint_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QPainter::PixmapFragmentHint value = qscriptvalue_cast<QPainter::PixmapFragmentHint>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QPainter_PixmapFragmentHint_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QPainter::PixmapFragmentHint value = qscriptvalue_cast<QPainter::PixmapFragmentHint>(context->thisObject());
+    return QScriptValue(engine, qtscript_QPainter_PixmapFragmentHint_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QPainter_PixmapFragmentHint_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QPainter_PixmapFragmentHint,
+        qtscript_QPainter_PixmapFragmentHint_valueOf, qtscript_QPainter_PixmapFragmentHint_toString);
+    qScriptRegisterMetaType<QPainter::PixmapFragmentHint>(engine, qtscript_QPainter_PixmapFragmentHint_toScriptValue,
+        qtscript_QPainter_PixmapFragmentHint_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 1; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QPainter_PixmapFragmentHint_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QPainter_PixmapFragmentHint_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -2667,9 +2667,9 @@ QScriptValue qtscript_create_QPainter_class(QScriptEngine *engine)
         qtscript_create_QPainter_RenderHint_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("RenderHints"),
         qtscript_create_QPainter_RenderHints_class(engine));
-    ctor.setProperty(QString::fromLatin1("PixmapFragmentHint"),
-        qtscript_create_QPainter_PixmapFragmentHint_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("CompositionMode"),
         qtscript_create_QPainter_CompositionMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("PixmapFragmentHint"),
+        qtscript_create_QPainter_PixmapFragmentHint_class(engine, ctor));
     return ctor;
 }

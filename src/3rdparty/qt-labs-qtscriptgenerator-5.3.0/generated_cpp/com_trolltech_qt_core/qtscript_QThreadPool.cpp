@@ -22,6 +22,7 @@ static const char * const qtscript_QThreadPool_function_names[] = {
     // static
     , "globalInstance"
     // prototype
+    , "clear"
     , "releaseThread"
     , "reserveThread"
     , "start"
@@ -37,6 +38,7 @@ static const char * const qtscript_QThreadPool_function_signatures[] = {
     // prototype
     , ""
     , ""
+    , ""
     , "QRunnable runnable, int priority"
     , "QRunnable runnable"
     , "int msecs"
@@ -48,6 +50,7 @@ static const int qtscript_QThreadPool_function_lengths[] = {
     // static
     , 0
     // prototype
+    , 0
     , 0
     , 0
     , 2
@@ -85,7 +88,7 @@ static QScriptValue qtscript_QThreadPool_prototype_call(QScriptContext *context,
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 5;
+        _id = 0xBABE0000 + 6;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -99,19 +102,26 @@ static QScriptValue qtscript_QThreadPool_prototype_call(QScriptContext *context,
     switch (_id) {
     case 0:
     if (context->argumentCount() == 0) {
-        _q_self->releaseThread();
+        _q_self->clear();
         return context->engine()->undefinedValue();
     }
     break;
 
     case 1:
     if (context->argumentCount() == 0) {
-        _q_self->reserveThread();
+        _q_self->releaseThread();
         return context->engine()->undefinedValue();
     }
     break;
 
     case 2:
+    if (context->argumentCount() == 0) {
+        _q_self->reserveThread();
+        return context->engine()->undefinedValue();
+    }
+    break;
+
+    case 3:
     if (context->argumentCount() == 1) {
         QRunnable* _q_arg0 = qscriptvalue_cast<QRunnable*>(context->argument(0));
         _q_self->start(_q_arg0);
@@ -125,7 +135,7 @@ static QScriptValue qtscript_QThreadPool_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 3:
+    case 4:
     if (context->argumentCount() == 1) {
         QRunnable* _q_arg0 = qscriptvalue_cast<QRunnable*>(context->argument(0));
         bool _q_result = _q_self->tryStart(_q_arg0);
@@ -133,7 +143,7 @@ static QScriptValue qtscript_QThreadPool_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 4:
+    case 5:
     if (context->argumentCount() == 0) {
         bool _q_result = _q_self->waitForDone();
         return QScriptValue(context->engine(), _q_result);
@@ -145,7 +155,7 @@ static QScriptValue qtscript_QThreadPool_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 5: {
+    case 6: {
     QString result = QString::fromLatin1("QThreadPool");
     return QScriptValue(context->engine(), result);
     }
@@ -212,7 +222,7 @@ QScriptValue qtscript_create_QThreadPool_class(QScriptEngine *engine)
     engine->setDefaultPrototype(qMetaTypeId<QThreadPool*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QThreadPool*)0));
     proto.setPrototype(engine->defaultPrototype(qMetaTypeId<QObject*>()));
-    for (int i = 0; i < 6; ++i) {
+    for (int i = 0; i < 7; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QThreadPool_prototype_call, qtscript_QThreadPool_function_lengths[i+2]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
         proto.setProperty(QString::fromLatin1(qtscript_QThreadPool_function_names[i+2]),

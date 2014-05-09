@@ -61,8 +61,8 @@ static QScriptValue qtscript_QSystemSemaphore_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QSystemSemaphore*)
-Q_DECLARE_METATYPE(QSystemSemaphore::AccessMode)
 Q_DECLARE_METATYPE(QSystemSemaphore::SystemSemaphoreError)
+Q_DECLARE_METATYPE(QSystemSemaphore::AccessMode)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -76,73 +76,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QSystemSemaphore::AccessMode
-//
-
-static const QSystemSemaphore::AccessMode qtscript_QSystemSemaphore_AccessMode_values[] = {
-    QSystemSemaphore::Open
-    , QSystemSemaphore::Create
-};
-
-static const char * const qtscript_QSystemSemaphore_AccessMode_keys[] = {
-    "Open"
-    , "Create"
-};
-
-static QString qtscript_QSystemSemaphore_AccessMode_toStringHelper(QSystemSemaphore::AccessMode value)
-{
-    if ((value >= QSystemSemaphore::Open) && (value <= QSystemSemaphore::Create))
-        return qtscript_QSystemSemaphore_AccessMode_keys[static_cast<int>(value)-static_cast<int>(QSystemSemaphore::Open)];
-    return QString();
-}
-
-static QScriptValue qtscript_QSystemSemaphore_AccessMode_toScriptValue(QScriptEngine *engine, const QSystemSemaphore::AccessMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSystemSemaphore"));
-    return clazz.property(qtscript_QSystemSemaphore_AccessMode_toStringHelper(value));
-}
-
-static void qtscript_QSystemSemaphore_AccessMode_fromScriptValue(const QScriptValue &value, QSystemSemaphore::AccessMode &out)
-{
-    out = qvariant_cast<QSystemSemaphore::AccessMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QSystemSemaphore_AccessMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QSystemSemaphore::Open) && (arg <= QSystemSemaphore::Create))
-        return qScriptValueFromValue(engine,  static_cast<QSystemSemaphore::AccessMode>(arg));
-    return context->throwError(QString::fromLatin1("AccessMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QSystemSemaphore_AccessMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QSystemSemaphore::AccessMode value = qscriptvalue_cast<QSystemSemaphore::AccessMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QSystemSemaphore_AccessMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QSystemSemaphore::AccessMode value = qscriptvalue_cast<QSystemSemaphore::AccessMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_QSystemSemaphore_AccessMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QSystemSemaphore_AccessMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QSystemSemaphore_AccessMode,
-        qtscript_QSystemSemaphore_AccessMode_valueOf, qtscript_QSystemSemaphore_AccessMode_toString);
-    qScriptRegisterMetaType<QSystemSemaphore::AccessMode>(engine, qtscript_QSystemSemaphore_AccessMode_toScriptValue,
-        qtscript_QSystemSemaphore_AccessMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QSystemSemaphore_AccessMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QSystemSemaphore_AccessMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -217,6 +150,73 @@ static QScriptValue qtscript_create_QSystemSemaphore_SystemSemaphoreError_class(
     for (int i = 0; i < 7; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QSystemSemaphore_SystemSemaphoreError_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QSystemSemaphore_SystemSemaphoreError_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QSystemSemaphore::AccessMode
+//
+
+static const QSystemSemaphore::AccessMode qtscript_QSystemSemaphore_AccessMode_values[] = {
+    QSystemSemaphore::Open
+    , QSystemSemaphore::Create
+};
+
+static const char * const qtscript_QSystemSemaphore_AccessMode_keys[] = {
+    "Open"
+    , "Create"
+};
+
+static QString qtscript_QSystemSemaphore_AccessMode_toStringHelper(QSystemSemaphore::AccessMode value)
+{
+    if ((value >= QSystemSemaphore::Open) && (value <= QSystemSemaphore::Create))
+        return qtscript_QSystemSemaphore_AccessMode_keys[static_cast<int>(value)-static_cast<int>(QSystemSemaphore::Open)];
+    return QString();
+}
+
+static QScriptValue qtscript_QSystemSemaphore_AccessMode_toScriptValue(QScriptEngine *engine, const QSystemSemaphore::AccessMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSystemSemaphore"));
+    return clazz.property(qtscript_QSystemSemaphore_AccessMode_toStringHelper(value));
+}
+
+static void qtscript_QSystemSemaphore_AccessMode_fromScriptValue(const QScriptValue &value, QSystemSemaphore::AccessMode &out)
+{
+    out = qvariant_cast<QSystemSemaphore::AccessMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QSystemSemaphore_AccessMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QSystemSemaphore::Open) && (arg <= QSystemSemaphore::Create))
+        return qScriptValueFromValue(engine,  static_cast<QSystemSemaphore::AccessMode>(arg));
+    return context->throwError(QString::fromLatin1("AccessMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QSystemSemaphore_AccessMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QSystemSemaphore::AccessMode value = qscriptvalue_cast<QSystemSemaphore::AccessMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QSystemSemaphore_AccessMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QSystemSemaphore::AccessMode value = qscriptvalue_cast<QSystemSemaphore::AccessMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_QSystemSemaphore_AccessMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QSystemSemaphore_AccessMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QSystemSemaphore_AccessMode,
+        qtscript_QSystemSemaphore_AccessMode_valueOf, qtscript_QSystemSemaphore_AccessMode_toString);
+    qScriptRegisterMetaType<QSystemSemaphore::AccessMode>(engine, qtscript_QSystemSemaphore_AccessMode_toScriptValue,
+        qtscript_QSystemSemaphore_AccessMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QSystemSemaphore_AccessMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QSystemSemaphore_AccessMode_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -377,9 +377,9 @@ QScriptValue qtscript_create_QSystemSemaphore_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QSystemSemaphore_static_call, proto, qtscript_QSystemSemaphore_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("AccessMode"),
-        qtscript_create_QSystemSemaphore_AccessMode_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("SystemSemaphoreError"),
         qtscript_create_QSystemSemaphore_SystemSemaphoreError_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("AccessMode"),
+        qtscript_create_QSystemSemaphore_AccessMode_class(engine, ctor));
     return ctor;
 }

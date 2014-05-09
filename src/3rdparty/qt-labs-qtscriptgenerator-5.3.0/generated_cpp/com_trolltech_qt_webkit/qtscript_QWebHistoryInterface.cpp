@@ -8,10 +8,6 @@
 
 #include <qwebhistoryinterface.h>
 #include <QVariant>
-#include <qbytearray.h>
-#include <qcoreevent.h>
-#include <qlist.h>
-#include <qobject.h>
 #include <qwebhistoryinterface.h>
 
 #include "qtscriptshell_QWebHistoryInterface.h"
@@ -130,13 +126,13 @@ static QScriptValue qtscript_QWebHistoryInterface_static_call(QScriptContext *co
     }
     if (context->argumentCount() == 0) {
         QtScriptShell_QWebHistoryInterface* _q_cpp_result = new QtScriptShell_QWebHistoryInterface();
-        QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QWebHistoryInterface*)_q_cpp_result, QScriptEngine::AutoOwnership);
+        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue((QWebHistoryInterface*)_q_cpp_result));
         _q_cpp_result->__qtscript_self = _q_result;
         return _q_result;
     } else if (context->argumentCount() == 1) {
         QObject* _q_arg0 = context->argument(0).toQObject();
         QtScriptShell_QWebHistoryInterface* _q_cpp_result = new QtScriptShell_QWebHistoryInterface(_q_arg0);
-        QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QWebHistoryInterface*)_q_cpp_result, QScriptEngine::AutoOwnership);
+        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue((QWebHistoryInterface*)_q_cpp_result));
         _q_cpp_result->__qtscript_self = _q_result;
         return _q_result;
     }
@@ -165,21 +161,10 @@ static QScriptValue qtscript_QWebHistoryInterface_static_call(QScriptContext *co
         qtscript_QWebHistoryInterface_function_signatures[_id]);
 }
 
-static QScriptValue qtscript_QWebHistoryInterface_toScriptValue(QScriptEngine *engine, QWebHistoryInterface* const &in)
-{
-    return engine->newQObject(in, QScriptEngine::QtOwnership, QScriptEngine::PreferExistingWrapperObject);
-}
-
-static void qtscript_QWebHistoryInterface_fromScriptValue(const QScriptValue &value, QWebHistoryInterface* &out)
-{
-    out = qobject_cast<QWebHistoryInterface*>(value.toQObject());
-}
-
 QScriptValue qtscript_create_QWebHistoryInterface_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QWebHistoryInterface*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QWebHistoryInterface*)0));
-    proto.setPrototype(engine->defaultPrototype(qMetaTypeId<QObject*>()));
     for (int i = 0; i < 3; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QWebHistoryInterface_prototype_call, qtscript_QWebHistoryInterface_function_lengths[i+3]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
@@ -187,8 +172,7 @@ QScriptValue qtscript_create_QWebHistoryInterface_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    qScriptRegisterMetaType<QWebHistoryInterface*>(engine, qtscript_QWebHistoryInterface_toScriptValue, 
-        qtscript_QWebHistoryInterface_fromScriptValue, proto);
+    engine->setDefaultPrototype(qMetaTypeId<QWebHistoryInterface*>(), proto);
 
     QScriptValue ctor = engine->newFunction(qtscript_QWebHistoryInterface_static_call, proto, qtscript_QWebHistoryInterface_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));

@@ -27,14 +27,17 @@ static const char * const qtscript_QDateTime_function_names[] = {
     , "addYears"
     , "date"
     , "daysTo"
+    , "isDaylightTime"
     , "isNull"
     , "isValid"
     , "msecsTo"
+    , "offsetFromUtc"
     , "equals"
     , "operator_less"
     , "secsTo"
     , "setDate"
     , "setMSecsSinceEpoch"
+    , "setOffsetFromUtc"
     , "setTime"
     , "setTimeSpec"
     , "setTime_t"
@@ -42,8 +45,10 @@ static const char * const qtscript_QDateTime_function_names[] = {
     , "swap"
     , "time"
     , "timeSpec"
+    , "timeZoneAbbreviation"
     , "toLocalTime"
     , "toMSecsSinceEpoch"
+    , "toOffsetFromUtc"
     , "toString"
     , "toTimeSpec"
     , "toTime_t"
@@ -52,14 +57,14 @@ static const char * const qtscript_QDateTime_function_names[] = {
 };
 
 static const char * const qtscript_QDateTime_function_signatures[] = {
-    "\nQDate arg__1\nQDate arg__1, QTime arg__2, TimeSpec spec\nQDateTime other"
+    "\nQDate arg__1\nQDate arg__1, QTime arg__2, TimeSpec spec\nQDate date, QTime time, TimeSpec spec, int offsetSeconds\nQDateTime other"
     // static
     , ""
     , ""
     , ""
-    , "qint64 msecs"
+    , "qint64 msecs\nqint64 msecs, TimeSpec spec, int offsetFromUtc"
     , "String s, DateFormat f\nString s, String format"
-    , "uint secsSince1Jan1970UTC"
+    , "uint secsSince1Jan1970UTC\nuint secsSince1Jan1970UTC, TimeSpec spec, int offsetFromUtc"
     // prototype
     , "qint64 days"
     , "qint64 msecs"
@@ -70,12 +75,15 @@ static const char * const qtscript_QDateTime_function_signatures[] = {
     , "QDateTime arg__1"
     , ""
     , ""
+    , ""
     , "QDateTime arg__1"
+    , ""
     , "QDateTime other"
     , "QDateTime other"
     , "QDateTime arg__1"
     , "QDate date"
     , "qint64 msecs"
+    , "int offsetSeconds"
     , "QTime time"
     , "TimeSpec spec"
     , "uint secsSince1Jan1970UTC"
@@ -85,6 +93,8 @@ static const char * const qtscript_QDateTime_function_signatures[] = {
     , ""
     , ""
     , ""
+    , ""
+    , "int offsetSeconds"
     , "DateFormat f\nString format"
     , "TimeSpec spec"
     , ""
@@ -93,14 +103,14 @@ static const char * const qtscript_QDateTime_function_signatures[] = {
 };
 
 static const int qtscript_QDateTime_function_lengths[] = {
-    3
+    4
     // static
     , 0
     , 0
     , 0
-    , 1
+    , 3
     , 2
-    , 1
+    , 3
     // prototype
     , 1
     , 1
@@ -111,6 +121,9 @@ static const int qtscript_QDateTime_function_lengths[] = {
     , 1
     , 0
     , 0
+    , 0
+    , 1
+    , 0
     , 1
     , 1
     , 1
@@ -126,6 +139,8 @@ static const int qtscript_QDateTime_function_lengths[] = {
     , 0
     , 0
     , 0
+    , 0
+    , 1
     , 1
     , 1
     , 0
@@ -162,7 +177,7 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 29;
+        _id = 0xBABE0000 + 34;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -231,19 +246,26 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
 
     case 7:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isNull();
+        bool _q_result = _q_self->isDaylightTime();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 8:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isValid();
+        bool _q_result = _q_self->isNull();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 9:
+    if (context->argumentCount() == 0) {
+        bool _q_result = _q_self->isValid();
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 10:
     if (context->argumentCount() == 1) {
         QDateTime _q_arg0 = context->argument(0).toDateTime();
         qint64 _q_result = _q_self->msecsTo(_q_arg0);
@@ -251,18 +273,9 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 10:
-    if (context->argumentCount() == 1) {
-        QDateTime _q_arg0 = context->argument(0).toDateTime();
-        bool _q_result = _q_self->operator==(_q_arg0);
-        return QScriptValue(context->engine(), _q_result);
-    }
-    break;
-
     case 11:
-    if (context->argumentCount() == 1) {
-        QDateTime _q_arg0 = context->argument(0).toDateTime();
-        bool _q_result = _q_self->operator<(_q_arg0);
+    if (context->argumentCount() == 0) {
+        int _q_result = _q_self->offsetFromUtc();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
@@ -270,12 +283,28 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     case 12:
     if (context->argumentCount() == 1) {
         QDateTime _q_arg0 = context->argument(0).toDateTime();
+        bool _q_result = _q_self->operator==(_q_arg0);
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 13:
+    if (context->argumentCount() == 1) {
+        QDateTime _q_arg0 = context->argument(0).toDateTime();
+        bool _q_result = _q_self->operator<(_q_arg0);
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 14:
+    if (context->argumentCount() == 1) {
+        QDateTime _q_arg0 = context->argument(0).toDateTime();
         qint64 _q_result = _q_self->secsTo(_q_arg0);
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 13:
+    case 15:
     if (context->argumentCount() == 1) {
         QDate _q_arg0 = qscriptvalue_cast<QDate>(context->argument(0));
         _q_self->setDate(_q_arg0);
@@ -283,7 +312,7 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 14:
+    case 16:
     if (context->argumentCount() == 1) {
         qint64 _q_arg0 = qscriptvalue_cast<qint64>(context->argument(0));
         _q_self->setMSecsSinceEpoch(_q_arg0);
@@ -291,7 +320,15 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 15:
+    case 17:
+    if (context->argumentCount() == 1) {
+        int _q_arg0 = context->argument(0).toInt32();
+        _q_self->setOffsetFromUtc(_q_arg0);
+        return context->engine()->undefinedValue();
+    }
+    break;
+
+    case 18:
     if (context->argumentCount() == 1) {
         QTime _q_arg0 = qscriptvalue_cast<QTime>(context->argument(0));
         _q_self->setTime(_q_arg0);
@@ -299,7 +336,7 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 16:
+    case 19:
     if (context->argumentCount() == 1) {
         Qt::TimeSpec _q_arg0 = qscriptvalue_cast<Qt::TimeSpec>(context->argument(0));
         _q_self->setTimeSpec(_q_arg0);
@@ -307,7 +344,7 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 17:
+    case 20:
     if (context->argumentCount() == 1) {
         uint _q_arg0 = context->argument(0).toUInt32();
         _q_self->setTime_t(_q_arg0);
@@ -315,7 +352,7 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 18:
+    case 21:
     if (context->argumentCount() == 1) {
         int _q_arg0 = context->argument(0).toInt32();
         _q_self->setUtcOffset(_q_arg0);
@@ -323,7 +360,7 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 19:
+    case 22:
     if (context->argumentCount() == 1) {
         QDateTime _q_arg0 = context->argument(0).toDateTime();
         _q_self->swap(_q_arg0);
@@ -331,35 +368,50 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 20:
+    case 23:
     if (context->argumentCount() == 0) {
         QTime _q_result = _q_self->time();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 21:
+    case 24:
     if (context->argumentCount() == 0) {
         Qt::TimeSpec _q_result = _q_self->timeSpec();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 22:
+    case 25:
+    if (context->argumentCount() == 0) {
+        QString _q_result = _q_self->timeZoneAbbreviation();
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 26:
     if (context->argumentCount() == 0) {
         QDateTime _q_result = _q_self->toLocalTime();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 23:
+    case 27:
     if (context->argumentCount() == 0) {
         qint64 _q_result = _q_self->toMSecsSinceEpoch();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 24:
+    case 28:
+    if (context->argumentCount() == 1) {
+        int _q_arg0 = context->argument(0).toInt32();
+        QDateTime _q_result = _q_self->toOffsetFromUtc(_q_arg0);
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 29:
     if (context->argumentCount() == 0) {
         QString _q_result = _q_self->toString();
         return QScriptValue(context->engine(), _q_result);
@@ -377,7 +429,7 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 25:
+    case 30:
     if (context->argumentCount() == 1) {
         Qt::TimeSpec _q_arg0 = qscriptvalue_cast<Qt::TimeSpec>(context->argument(0));
         QDateTime _q_result = _q_self->toTimeSpec(_q_arg0);
@@ -385,21 +437,21 @@ static QScriptValue qtscript_QDateTime_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 26:
+    case 31:
     if (context->argumentCount() == 0) {
         uint _q_result = _q_self->toTime_t();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 27:
+    case 32:
     if (context->argumentCount() == 0) {
         QDateTime _q_result = _q_self->toUTC();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 28:
+    case 33:
     if (context->argumentCount() == 0) {
         int _q_result = _q_self->utcOffset();
         return QScriptValue(context->engine(), _q_result);
@@ -453,6 +505,14 @@ static QScriptValue qtscript_QDateTime_static_call(QScriptContext *context, QScr
         QDateTime _q_cpp_result(_q_arg0, _q_arg1, _q_arg2);
         QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
         return _q_result;
+    } else if (context->argumentCount() == 4) {
+        QDate _q_arg0 = qscriptvalue_cast<QDate>(context->argument(0));
+        QTime _q_arg1 = qscriptvalue_cast<QTime>(context->argument(1));
+        Qt::TimeSpec _q_arg2 = qscriptvalue_cast<Qt::TimeSpec>(context->argument(2));
+        int _q_arg3 = context->argument(3).toInt32();
+        QDateTime _q_cpp_result(_q_arg0, _q_arg1, _q_arg2, _q_arg3);
+        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+        return _q_result;
     }
     break;
 
@@ -481,6 +541,19 @@ static QScriptValue qtscript_QDateTime_static_call(QScriptContext *context, QScr
     if (context->argumentCount() == 1) {
         qint64 _q_arg0 = qscriptvalue_cast<qint64>(context->argument(0));
         QDateTime _q_result = QDateTime::fromMSecsSinceEpoch(_q_arg0);
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    if (context->argumentCount() == 2) {
+        qint64 _q_arg0 = qscriptvalue_cast<qint64>(context->argument(0));
+        Qt::TimeSpec _q_arg1 = qscriptvalue_cast<Qt::TimeSpec>(context->argument(1));
+        QDateTime _q_result = QDateTime::fromMSecsSinceEpoch(_q_arg0, _q_arg1);
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    if (context->argumentCount() == 3) {
+        qint64 _q_arg0 = qscriptvalue_cast<qint64>(context->argument(0));
+        Qt::TimeSpec _q_arg1 = qscriptvalue_cast<Qt::TimeSpec>(context->argument(1));
+        int _q_arg2 = context->argument(2).toInt32();
+        QDateTime _q_result = QDateTime::fromMSecsSinceEpoch(_q_arg0, _q_arg1, _q_arg2);
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
@@ -514,6 +587,19 @@ static QScriptValue qtscript_QDateTime_static_call(QScriptContext *context, QScr
         QDateTime _q_result = QDateTime::fromTime_t(_q_arg0);
         return qScriptValueFromValue(context->engine(), _q_result);
     }
+    if (context->argumentCount() == 2) {
+        uint _q_arg0 = context->argument(0).toUInt32();
+        Qt::TimeSpec _q_arg1 = qscriptvalue_cast<Qt::TimeSpec>(context->argument(1));
+        QDateTime _q_result = QDateTime::fromTime_t(_q_arg0, _q_arg1);
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    if (context->argumentCount() == 3) {
+        uint _q_arg0 = context->argument(0).toUInt32();
+        Qt::TimeSpec _q_arg1 = qscriptvalue_cast<Qt::TimeSpec>(context->argument(1));
+        int _q_arg2 = context->argument(2).toInt32();
+        QDateTime _q_result = QDateTime::fromTime_t(_q_arg0, _q_arg1, _q_arg2);
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
     break;
 
     default:
@@ -528,7 +614,7 @@ QScriptValue qtscript_create_QDateTime_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QDateTime*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QDateTime*)0));
-    for (int i = 0; i < 29; ++i) {
+    for (int i = 0; i < 34; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QDateTime_prototype_call, qtscript_QDateTime_function_lengths[i+7]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
         proto.setProperty(QString::fromLatin1(qtscript_QDateTime_function_names[i+7]),

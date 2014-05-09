@@ -8,12 +8,14 @@
 
 #include <qtextobject.h>
 #include <QTextBlock>
+#include <QTextLayout>
 #include <QVariant>
 #include <qtextdocument.h>
 #include <qtextformat.h>
 #include <qtextlayout.h>
 #include <qtextlist.h>
 #include <qtextobject.h>
+#include <qvector.h>
 
 static const char * const qtscript_QTextBlock_function_names[] = {
     "QTextBlock"
@@ -49,6 +51,7 @@ static const char * const qtscript_QTextBlock_function_names[] = {
     , "setVisible"
     , "text"
     , "textDirection"
+    , "textFormats"
     , "textList"
     , "userData"
     , "userState"
@@ -87,6 +90,7 @@ static const char * const qtscript_QTextBlock_function_signatures[] = {
     , "QTextBlockUserData data"
     , "int state"
     , "bool visible"
+    , ""
     , ""
     , ""
     , ""
@@ -133,6 +137,7 @@ static const int qtscript_QTextBlock_function_lengths[] = {
     , 0
     , 0
     , 0
+    , 0
 };
 
 static QScriptValue qtscript_QTextBlock_throw_ambiguity_error_helper(
@@ -155,6 +160,8 @@ Q_DECLARE_METATYPE(const QTextDocument*)
 Q_DECLARE_METATYPE(QTextLayout*)
 Q_DECLARE_METATYPE(QTextBlockUserData*)
 Q_DECLARE_METATYPE(Qt::LayoutDirection)
+Q_DECLARE_METATYPE(QTextLayout::FormatRange)
+Q_DECLARE_METATYPE(QVector<QTextLayout::FormatRange >)
 Q_DECLARE_METATYPE(QTextList*)
 
 //
@@ -171,7 +178,7 @@ static QScriptValue qtscript_QTextBlock_prototype_call(QScriptContext *context, 
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 33;
+        _id = 0xBABE0000 + 34;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -403,26 +410,33 @@ static QScriptValue qtscript_QTextBlock_prototype_call(QScriptContext *context, 
 
     case 30:
     if (context->argumentCount() == 0) {
-        QTextList* _q_result = _q_self->textList();
-        return qScriptValueFromValue(context->engine(), _q_result);
+        QVector<QTextLayout::FormatRange > _q_result = _q_self->textFormats();
+        return qScriptValueFromSequence(context->engine(), _q_result);
     }
     break;
 
     case 31:
     if (context->argumentCount() == 0) {
-        QTextBlockUserData* _q_result = _q_self->userData();
+        QTextList* _q_result = _q_self->textList();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
     case 32:
     if (context->argumentCount() == 0) {
+        QTextBlockUserData* _q_result = _q_self->userData();
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 33:
+    if (context->argumentCount() == 0) {
         int _q_result = _q_self->userState();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 33: {
+    case 34: {
     QString result = QString::fromLatin1("QTextBlock");
     return QScriptValue(context->engine(), result);
     }
@@ -469,7 +483,7 @@ QScriptValue qtscript_create_QTextBlock_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QTextBlock*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QTextBlock*)0));
-    for (int i = 0; i < 34; ++i) {
+    for (int i = 0; i < 35; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QTextBlock_prototype_call, qtscript_QTextBlock_function_lengths[i+1]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
         proto.setProperty(QString::fromLatin1(qtscript_QTextBlock_function_names[i+1]),

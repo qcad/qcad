@@ -9,7 +9,6 @@
 #include <qsourcelocation.h>
 #include <QVariant>
 #include <qsourcelocation.h>
-#include <qurl.h>
 
 static const char * const qtscript_QSourceLocation_function_names[] = {
     "QSourceLocation"
@@ -67,6 +66,7 @@ static QScriptValue qtscript_QSourceLocation_throw_ambiguity_error_helper(
         .arg(functionName).arg(fullSignatures.join(QLatin1String("\n"))));
 }
 
+//Q_DECLARE_METATYPE(QSourceLocation)
 Q_DECLARE_METATYPE(QSourceLocation*)
 
 //

@@ -156,12 +156,15 @@ int main(int argc, char *argv[])
     QStringList extensions;
     extensions << "qt.core"
                << "qt.gui"
+               << "qt.widgets"
+               << "qt.printsupport"
                << "qt.xml"
                << "qt.svg"
                << "qt.network"
                << "qt.sql"
                << "qt.opengl"
                << "qt.webkit"
+               << "qt.webkitwidgets"
                << "qt.xmlpatterns"
                << "qt.uitools";
     QStringList failExtensions;

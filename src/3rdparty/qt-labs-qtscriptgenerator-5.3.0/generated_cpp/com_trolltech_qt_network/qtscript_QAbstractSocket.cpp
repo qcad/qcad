@@ -124,11 +124,11 @@ static const QMetaObject *qtscript_QAbstractSocket_metaObject()
 
 Q_DECLARE_METATYPE(QAbstractSocket*)
 Q_DECLARE_METATYPE(QtScriptShell_QAbstractSocket*)
-Q_DECLARE_METATYPE(QAbstractSocket::NetworkLayerProtocol)
-Q_DECLARE_METATYPE(QAbstractSocket::PauseMode)
-Q_DECLARE_METATYPE(QAbstractSocket::SocketOption)
 Q_DECLARE_METATYPE(QAbstractSocket::BindFlag)
+Q_DECLARE_METATYPE(QAbstractSocket::SocketOption)
+Q_DECLARE_METATYPE(QAbstractSocket::PauseMode)
 Q_DECLARE_METATYPE(QAbstractSocket::SocketType)
+Q_DECLARE_METATYPE(QAbstractSocket::NetworkLayerProtocol)
 Q_DECLARE_METATYPE(QHostAddress)
 Q_DECLARE_METATYPE(QFlags<QIODevice::OpenModeFlag>)
 Q_DECLARE_METATYPE(QIODevice*)
@@ -145,6 +145,314 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
+}
+
+//
+// QAbstractSocket::BindFlag
+//
+
+static const QAbstractSocket::BindFlag qtscript_QAbstractSocket_BindFlag_values[] = {
+    QAbstractSocket::DefaultForPlatform
+    , QAbstractSocket::ShareAddress
+    , QAbstractSocket::DontShareAddress
+    , QAbstractSocket::ReuseAddressHint
+};
+
+static const char * const qtscript_QAbstractSocket_BindFlag_keys[] = {
+    "DefaultForPlatform"
+    , "ShareAddress"
+    , "DontShareAddress"
+    , "ReuseAddressHint"
+};
+
+static QString qtscript_QAbstractSocket_BindFlag_toStringHelper(QAbstractSocket::BindFlag value)
+{
+    for (int i = 0; i < 4; ++i) {
+        if (qtscript_QAbstractSocket_BindFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_QAbstractSocket_BindFlag_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_QAbstractSocket_BindFlag_toScriptValue(QScriptEngine *engine, const QAbstractSocket::BindFlag &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
+    return clazz.property(qtscript_QAbstractSocket_BindFlag_toStringHelper(value));
+}
+
+static void qtscript_QAbstractSocket_BindFlag_fromScriptValue(const QScriptValue &value, QAbstractSocket::BindFlag &out)
+{
+    out = qvariant_cast<QAbstractSocket::BindFlag>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QAbstractSocket_BindFlag(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 4; ++i) {
+        if (qtscript_QAbstractSocket_BindFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::BindFlag>(arg));
+    }
+    return context->throwError(QString::fromLatin1("BindFlag(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QAbstractSocket_BindFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractSocket::BindFlag value = qscriptvalue_cast<QAbstractSocket::BindFlag>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QAbstractSocket_BindFlag_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractSocket::BindFlag value = qscriptvalue_cast<QAbstractSocket::BindFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_QAbstractSocket_BindFlag_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QAbstractSocket_BindFlag_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QAbstractSocket_BindFlag,
+        qtscript_QAbstractSocket_BindFlag_valueOf, qtscript_QAbstractSocket_BindFlag_toString);
+    qScriptRegisterMetaType<QAbstractSocket::BindFlag>(engine, qtscript_QAbstractSocket_BindFlag_toScriptValue,
+        qtscript_QAbstractSocket_BindFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_BindFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_BindFlag_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QAbstractSocket::SocketOption
+//
+
+static const QAbstractSocket::SocketOption qtscript_QAbstractSocket_SocketOption_values[] = {
+    QAbstractSocket::LowDelayOption
+    , QAbstractSocket::KeepAliveOption
+    , QAbstractSocket::MulticastTtlOption
+    , QAbstractSocket::MulticastLoopbackOption
+    , QAbstractSocket::TypeOfServiceOption
+    , QAbstractSocket::SendBufferSizeSocketOption
+    , QAbstractSocket::ReceiveBufferSizeSocketOption
+};
+
+static const char * const qtscript_QAbstractSocket_SocketOption_keys[] = {
+    "LowDelayOption"
+    , "KeepAliveOption"
+    , "MulticastTtlOption"
+    , "MulticastLoopbackOption"
+    , "TypeOfServiceOption"
+    , "SendBufferSizeSocketOption"
+    , "ReceiveBufferSizeSocketOption"
+};
+
+static QString qtscript_QAbstractSocket_SocketOption_toStringHelper(QAbstractSocket::SocketOption value)
+{
+    const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
+    int idx = meta->indexOfEnumerator("SocketOption");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    return QString::fromLatin1(menum.valueToKey(value));
+}
+
+static QScriptValue qtscript_QAbstractSocket_SocketOption_toScriptValue(QScriptEngine *engine, const QAbstractSocket::SocketOption &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
+    return clazz.property(qtscript_QAbstractSocket_SocketOption_toStringHelper(value));
+}
+
+static void qtscript_QAbstractSocket_SocketOption_fromScriptValue(const QScriptValue &value, QAbstractSocket::SocketOption &out)
+{
+    out = qvariant_cast<QAbstractSocket::SocketOption>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QAbstractSocket_SocketOption(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
+    int idx = meta->indexOfEnumerator("SocketOption");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    if (menum.valueToKey(arg) != 0)
+        return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::SocketOption>(arg));
+    return context->throwError(QString::fromLatin1("SocketOption(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QAbstractSocket_SocketOption_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractSocket::SocketOption value = qscriptvalue_cast<QAbstractSocket::SocketOption>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QAbstractSocket_SocketOption_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractSocket::SocketOption value = qscriptvalue_cast<QAbstractSocket::SocketOption>(context->thisObject());
+    return QScriptValue(engine, qtscript_QAbstractSocket_SocketOption_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QAbstractSocket_SocketOption_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QAbstractSocket_SocketOption,
+        qtscript_QAbstractSocket_SocketOption_valueOf, qtscript_QAbstractSocket_SocketOption_toString);
+    qScriptRegisterMetaType<QAbstractSocket::SocketOption>(engine, qtscript_QAbstractSocket_SocketOption_toScriptValue,
+        qtscript_QAbstractSocket_SocketOption_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 7; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_SocketOption_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_SocketOption_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QAbstractSocket::PauseMode
+//
+
+static const QAbstractSocket::PauseMode qtscript_QAbstractSocket_PauseMode_values[] = {
+    QAbstractSocket::PauseNever
+    , QAbstractSocket::PauseOnSslErrors
+};
+
+static const char * const qtscript_QAbstractSocket_PauseMode_keys[] = {
+    "PauseNever"
+    , "PauseOnSslErrors"
+};
+
+static QString qtscript_QAbstractSocket_PauseMode_toStringHelper(QAbstractSocket::PauseMode value)
+{
+    if ((value >= QAbstractSocket::PauseNever) && (value <= QAbstractSocket::PauseOnSslErrors))
+        return qtscript_QAbstractSocket_PauseMode_keys[static_cast<int>(value)-static_cast<int>(QAbstractSocket::PauseNever)];
+    return QString();
+}
+
+static QScriptValue qtscript_QAbstractSocket_PauseMode_toScriptValue(QScriptEngine *engine, const QAbstractSocket::PauseMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
+    return clazz.property(qtscript_QAbstractSocket_PauseMode_toStringHelper(value));
+}
+
+static void qtscript_QAbstractSocket_PauseMode_fromScriptValue(const QScriptValue &value, QAbstractSocket::PauseMode &out)
+{
+    out = qvariant_cast<QAbstractSocket::PauseMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QAbstractSocket_PauseMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QAbstractSocket::PauseNever) && (arg <= QAbstractSocket::PauseOnSslErrors))
+        return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::PauseMode>(arg));
+    return context->throwError(QString::fromLatin1("PauseMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QAbstractSocket_PauseMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractSocket::PauseMode value = qscriptvalue_cast<QAbstractSocket::PauseMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QAbstractSocket_PauseMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractSocket::PauseMode value = qscriptvalue_cast<QAbstractSocket::PauseMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_QAbstractSocket_PauseMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QAbstractSocket_PauseMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QAbstractSocket_PauseMode,
+        qtscript_QAbstractSocket_PauseMode_valueOf, qtscript_QAbstractSocket_PauseMode_toString);
+    qScriptRegisterMetaType<QAbstractSocket::PauseMode>(engine, qtscript_QAbstractSocket_PauseMode_toScriptValue,
+        qtscript_QAbstractSocket_PauseMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_PauseMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_PauseMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QAbstractSocket::SocketState
+//
+
+static const QAbstractSocket::SocketState qtscript_QAbstractSocket_SocketState_values[] = {
+    QAbstractSocket::UnconnectedState
+    , QAbstractSocket::HostLookupState
+    , QAbstractSocket::ConnectingState
+    , QAbstractSocket::ConnectedState
+    , QAbstractSocket::BoundState
+    , QAbstractSocket::ListeningState
+    , QAbstractSocket::ClosingState
+};
+
+static const char * const qtscript_QAbstractSocket_SocketState_keys[] = {
+    "UnconnectedState"
+    , "HostLookupState"
+    , "ConnectingState"
+    , "ConnectedState"
+    , "BoundState"
+    , "ListeningState"
+    , "ClosingState"
+};
+
+static QString qtscript_QAbstractSocket_SocketState_toStringHelper(QAbstractSocket::SocketState value)
+{
+    const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
+    int idx = meta->indexOfEnumerator("SocketState");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    return QString::fromLatin1(menum.valueToKey(value));
+}
+
+static QScriptValue qtscript_QAbstractSocket_SocketState_toScriptValue(QScriptEngine *engine, const QAbstractSocket::SocketState &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
+    return clazz.property(qtscript_QAbstractSocket_SocketState_toStringHelper(value));
+}
+
+static void qtscript_QAbstractSocket_SocketState_fromScriptValue(const QScriptValue &value, QAbstractSocket::SocketState &out)
+{
+    out = qvariant_cast<QAbstractSocket::SocketState>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QAbstractSocket_SocketState(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
+    int idx = meta->indexOfEnumerator("SocketState");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    if (menum.valueToKey(arg) != 0)
+        return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::SocketState>(arg));
+    return context->throwError(QString::fromLatin1("SocketState(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QAbstractSocket_SocketState_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractSocket::SocketState value = qscriptvalue_cast<QAbstractSocket::SocketState>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QAbstractSocket_SocketState_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractSocket::SocketState value = qscriptvalue_cast<QAbstractSocket::SocketState>(context->thisObject());
+    return QScriptValue(engine, qtscript_QAbstractSocket_SocketState_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QAbstractSocket_SocketState_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QAbstractSocket_SocketState,
+        qtscript_QAbstractSocket_SocketState_valueOf, qtscript_QAbstractSocket_SocketState_toString);
+    qScriptRegisterMetaType<QAbstractSocket::SocketState>(engine, qtscript_QAbstractSocket_SocketState_toScriptValue,
+        qtscript_QAbstractSocket_SocketState_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 7; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_SocketState_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_SocketState_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
 }
 
 //
@@ -265,304 +573,6 @@ static QScriptValue qtscript_create_QAbstractSocket_SocketError_class(QScriptEng
 }
 
 //
-// QAbstractSocket::NetworkLayerProtocol
-//
-
-static const QAbstractSocket::NetworkLayerProtocol qtscript_QAbstractSocket_NetworkLayerProtocol_values[] = {
-    QAbstractSocket::UnknownNetworkLayerProtocol
-    , QAbstractSocket::IPv4Protocol
-    , QAbstractSocket::IPv6Protocol
-    , QAbstractSocket::AnyIPProtocol
-};
-
-static const char * const qtscript_QAbstractSocket_NetworkLayerProtocol_keys[] = {
-    "UnknownNetworkLayerProtocol"
-    , "IPv4Protocol"
-    , "IPv6Protocol"
-    , "AnyIPProtocol"
-};
-
-static QString qtscript_QAbstractSocket_NetworkLayerProtocol_toStringHelper(QAbstractSocket::NetworkLayerProtocol value)
-{
-    const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
-    int idx = meta->indexOfEnumerator("NetworkLayerProtocol");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    return QString::fromLatin1(menum.valueToKey(value));
-}
-
-static QScriptValue qtscript_QAbstractSocket_NetworkLayerProtocol_toScriptValue(QScriptEngine *engine, const QAbstractSocket::NetworkLayerProtocol &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
-    return clazz.property(qtscript_QAbstractSocket_NetworkLayerProtocol_toStringHelper(value));
-}
-
-static void qtscript_QAbstractSocket_NetworkLayerProtocol_fromScriptValue(const QScriptValue &value, QAbstractSocket::NetworkLayerProtocol &out)
-{
-    out = qvariant_cast<QAbstractSocket::NetworkLayerProtocol>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QAbstractSocket_NetworkLayerProtocol(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
-    int idx = meta->indexOfEnumerator("NetworkLayerProtocol");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    if (menum.valueToKey(arg) != 0)
-        return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::NetworkLayerProtocol>(arg));
-    return context->throwError(QString::fromLatin1("NetworkLayerProtocol(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QAbstractSocket_NetworkLayerProtocol_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractSocket::NetworkLayerProtocol value = qscriptvalue_cast<QAbstractSocket::NetworkLayerProtocol>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QAbstractSocket_NetworkLayerProtocol_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractSocket::NetworkLayerProtocol value = qscriptvalue_cast<QAbstractSocket::NetworkLayerProtocol>(context->thisObject());
-    return QScriptValue(engine, qtscript_QAbstractSocket_NetworkLayerProtocol_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QAbstractSocket_NetworkLayerProtocol_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QAbstractSocket_NetworkLayerProtocol,
-        qtscript_QAbstractSocket_NetworkLayerProtocol_valueOf, qtscript_QAbstractSocket_NetworkLayerProtocol_toString);
-    qScriptRegisterMetaType<QAbstractSocket::NetworkLayerProtocol>(engine, qtscript_QAbstractSocket_NetworkLayerProtocol_toScriptValue,
-        qtscript_QAbstractSocket_NetworkLayerProtocol_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_NetworkLayerProtocol_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_NetworkLayerProtocol_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QAbstractSocket::PauseMode
-//
-
-static const QAbstractSocket::PauseMode qtscript_QAbstractSocket_PauseMode_values[] = {
-    QAbstractSocket::PauseNever
-    , QAbstractSocket::PauseOnSslErrors
-};
-
-static const char * const qtscript_QAbstractSocket_PauseMode_keys[] = {
-    "PauseNever"
-    , "PauseOnSslErrors"
-};
-
-static QString qtscript_QAbstractSocket_PauseMode_toStringHelper(QAbstractSocket::PauseMode value)
-{
-    if ((value >= QAbstractSocket::PauseNever) && (value <= QAbstractSocket::PauseOnSslErrors))
-        return qtscript_QAbstractSocket_PauseMode_keys[static_cast<int>(value)-static_cast<int>(QAbstractSocket::PauseNever)];
-    return QString();
-}
-
-static QScriptValue qtscript_QAbstractSocket_PauseMode_toScriptValue(QScriptEngine *engine, const QAbstractSocket::PauseMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
-    return clazz.property(qtscript_QAbstractSocket_PauseMode_toStringHelper(value));
-}
-
-static void qtscript_QAbstractSocket_PauseMode_fromScriptValue(const QScriptValue &value, QAbstractSocket::PauseMode &out)
-{
-    out = qvariant_cast<QAbstractSocket::PauseMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QAbstractSocket_PauseMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QAbstractSocket::PauseNever) && (arg <= QAbstractSocket::PauseOnSslErrors))
-        return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::PauseMode>(arg));
-    return context->throwError(QString::fromLatin1("PauseMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QAbstractSocket_PauseMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractSocket::PauseMode value = qscriptvalue_cast<QAbstractSocket::PauseMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QAbstractSocket_PauseMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractSocket::PauseMode value = qscriptvalue_cast<QAbstractSocket::PauseMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_QAbstractSocket_PauseMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QAbstractSocket_PauseMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QAbstractSocket_PauseMode,
-        qtscript_QAbstractSocket_PauseMode_valueOf, qtscript_QAbstractSocket_PauseMode_toString);
-    qScriptRegisterMetaType<QAbstractSocket::PauseMode>(engine, qtscript_QAbstractSocket_PauseMode_toScriptValue,
-        qtscript_QAbstractSocket_PauseMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_PauseMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_PauseMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QAbstractSocket::SocketOption
-//
-
-static const QAbstractSocket::SocketOption qtscript_QAbstractSocket_SocketOption_values[] = {
-    QAbstractSocket::LowDelayOption
-    , QAbstractSocket::KeepAliveOption
-    , QAbstractSocket::MulticastTtlOption
-    , QAbstractSocket::MulticastLoopbackOption
-    , QAbstractSocket::TypeOfServiceOption
-};
-
-static const char * const qtscript_QAbstractSocket_SocketOption_keys[] = {
-    "LowDelayOption"
-    , "KeepAliveOption"
-    , "MulticastTtlOption"
-    , "MulticastLoopbackOption"
-    , "TypeOfServiceOption"
-};
-
-static QString qtscript_QAbstractSocket_SocketOption_toStringHelper(QAbstractSocket::SocketOption value)
-{
-    const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
-    int idx = meta->indexOfEnumerator("SocketOption");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    return QString::fromLatin1(menum.valueToKey(value));
-}
-
-static QScriptValue qtscript_QAbstractSocket_SocketOption_toScriptValue(QScriptEngine *engine, const QAbstractSocket::SocketOption &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
-    return clazz.property(qtscript_QAbstractSocket_SocketOption_toStringHelper(value));
-}
-
-static void qtscript_QAbstractSocket_SocketOption_fromScriptValue(const QScriptValue &value, QAbstractSocket::SocketOption &out)
-{
-    out = qvariant_cast<QAbstractSocket::SocketOption>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QAbstractSocket_SocketOption(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
-    int idx = meta->indexOfEnumerator("SocketOption");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    if (menum.valueToKey(arg) != 0)
-        return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::SocketOption>(arg));
-    return context->throwError(QString::fromLatin1("SocketOption(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QAbstractSocket_SocketOption_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractSocket::SocketOption value = qscriptvalue_cast<QAbstractSocket::SocketOption>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QAbstractSocket_SocketOption_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractSocket::SocketOption value = qscriptvalue_cast<QAbstractSocket::SocketOption>(context->thisObject());
-    return QScriptValue(engine, qtscript_QAbstractSocket_SocketOption_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QAbstractSocket_SocketOption_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QAbstractSocket_SocketOption,
-        qtscript_QAbstractSocket_SocketOption_valueOf, qtscript_QAbstractSocket_SocketOption_toString);
-    qScriptRegisterMetaType<QAbstractSocket::SocketOption>(engine, qtscript_QAbstractSocket_SocketOption_toScriptValue,
-        qtscript_QAbstractSocket_SocketOption_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_SocketOption_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_SocketOption_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QAbstractSocket::BindFlag
-//
-
-static const QAbstractSocket::BindFlag qtscript_QAbstractSocket_BindFlag_values[] = {
-    QAbstractSocket::DefaultForPlatform
-    , QAbstractSocket::ShareAddress
-    , QAbstractSocket::DontShareAddress
-    , QAbstractSocket::ReuseAddressHint
-};
-
-static const char * const qtscript_QAbstractSocket_BindFlag_keys[] = {
-    "DefaultForPlatform"
-    , "ShareAddress"
-    , "DontShareAddress"
-    , "ReuseAddressHint"
-};
-
-static QString qtscript_QAbstractSocket_BindFlag_toStringHelper(QAbstractSocket::BindFlag value)
-{
-    for (int i = 0; i < 4; ++i) {
-        if (qtscript_QAbstractSocket_BindFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_QAbstractSocket_BindFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_QAbstractSocket_BindFlag_toScriptValue(QScriptEngine *engine, const QAbstractSocket::BindFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
-    return clazz.property(qtscript_QAbstractSocket_BindFlag_toStringHelper(value));
-}
-
-static void qtscript_QAbstractSocket_BindFlag_fromScriptValue(const QScriptValue &value, QAbstractSocket::BindFlag &out)
-{
-    out = qvariant_cast<QAbstractSocket::BindFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QAbstractSocket_BindFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 4; ++i) {
-        if (qtscript_QAbstractSocket_BindFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::BindFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("BindFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QAbstractSocket_BindFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractSocket::BindFlag value = qscriptvalue_cast<QAbstractSocket::BindFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QAbstractSocket_BindFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractSocket::BindFlag value = qscriptvalue_cast<QAbstractSocket::BindFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_QAbstractSocket_BindFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QAbstractSocket_BindFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QAbstractSocket_BindFlag,
-        qtscript_QAbstractSocket_BindFlag_valueOf, qtscript_QAbstractSocket_BindFlag_toString);
-    qScriptRegisterMetaType<QAbstractSocket::BindFlag>(engine, qtscript_QAbstractSocket_BindFlag_toScriptValue,
-        qtscript_QAbstractSocket_BindFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_BindFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_BindFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
 // QAbstractSocket::SocketType
 //
 
@@ -638,83 +648,77 @@ static QScriptValue qtscript_create_QAbstractSocket_SocketType_class(QScriptEngi
 }
 
 //
-// QAbstractSocket::SocketState
+// QAbstractSocket::NetworkLayerProtocol
 //
 
-static const QAbstractSocket::SocketState qtscript_QAbstractSocket_SocketState_values[] = {
-    QAbstractSocket::UnconnectedState
-    , QAbstractSocket::HostLookupState
-    , QAbstractSocket::ConnectingState
-    , QAbstractSocket::ConnectedState
-    , QAbstractSocket::BoundState
-    , QAbstractSocket::ListeningState
-    , QAbstractSocket::ClosingState
+static const QAbstractSocket::NetworkLayerProtocol qtscript_QAbstractSocket_NetworkLayerProtocol_values[] = {
+    QAbstractSocket::UnknownNetworkLayerProtocol
+    , QAbstractSocket::IPv4Protocol
+    , QAbstractSocket::IPv6Protocol
+    , QAbstractSocket::AnyIPProtocol
 };
 
-static const char * const qtscript_QAbstractSocket_SocketState_keys[] = {
-    "UnconnectedState"
-    , "HostLookupState"
-    , "ConnectingState"
-    , "ConnectedState"
-    , "BoundState"
-    , "ListeningState"
-    , "ClosingState"
+static const char * const qtscript_QAbstractSocket_NetworkLayerProtocol_keys[] = {
+    "UnknownNetworkLayerProtocol"
+    , "IPv4Protocol"
+    , "IPv6Protocol"
+    , "AnyIPProtocol"
 };
 
-static QString qtscript_QAbstractSocket_SocketState_toStringHelper(QAbstractSocket::SocketState value)
+static QString qtscript_QAbstractSocket_NetworkLayerProtocol_toStringHelper(QAbstractSocket::NetworkLayerProtocol value)
 {
     const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
-    int idx = meta->indexOfEnumerator("SocketState");
+    int idx = meta->indexOfEnumerator("NetworkLayerProtocol");
     Q_ASSERT(idx != -1);
     QMetaEnum menum = meta->enumerator(idx);
     return QString::fromLatin1(menum.valueToKey(value));
 }
 
-static QScriptValue qtscript_QAbstractSocket_SocketState_toScriptValue(QScriptEngine *engine, const QAbstractSocket::SocketState &value)
+static QScriptValue qtscript_QAbstractSocket_NetworkLayerProtocol_toScriptValue(QScriptEngine *engine, const QAbstractSocket::NetworkLayerProtocol &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractSocket"));
-    return clazz.property(qtscript_QAbstractSocket_SocketState_toStringHelper(value));
+    return clazz.property(qtscript_QAbstractSocket_NetworkLayerProtocol_toStringHelper(value));
 }
 
-static void qtscript_QAbstractSocket_SocketState_fromScriptValue(const QScriptValue &value, QAbstractSocket::SocketState &out)
+static void qtscript_QAbstractSocket_NetworkLayerProtocol_fromScriptValue(const QScriptValue &value, QAbstractSocket::NetworkLayerProtocol &out)
 {
-    out = qvariant_cast<QAbstractSocket::SocketState>(value.toVariant());
+    out = qvariant_cast<QAbstractSocket::NetworkLayerProtocol>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_QAbstractSocket_SocketState(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_QAbstractSocket_NetworkLayerProtocol(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
     const QMetaObject *meta = qtscript_QAbstractSocket_metaObject();
-    int idx = meta->indexOfEnumerator("SocketState");
+    int idx = meta->indexOfEnumerator("NetworkLayerProtocol");
     Q_ASSERT(idx != -1);
     QMetaEnum menum = meta->enumerator(idx);
     if (menum.valueToKey(arg) != 0)
-        return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::SocketState>(arg));
-    return context->throwError(QString::fromLatin1("SocketState(): invalid enum value (%0)").arg(arg));
+        return qScriptValueFromValue(engine,  static_cast<QAbstractSocket::NetworkLayerProtocol>(arg));
+    return context->throwError(QString::fromLatin1("NetworkLayerProtocol(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_QAbstractSocket_SocketState_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QAbstractSocket_NetworkLayerProtocol_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    QAbstractSocket::SocketState value = qscriptvalue_cast<QAbstractSocket::SocketState>(context->thisObject());
+    QAbstractSocket::NetworkLayerProtocol value = qscriptvalue_cast<QAbstractSocket::NetworkLayerProtocol>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_QAbstractSocket_SocketState_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QAbstractSocket_NetworkLayerProtocol_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    QAbstractSocket::SocketState value = qscriptvalue_cast<QAbstractSocket::SocketState>(context->thisObject());
-    return QScriptValue(engine, qtscript_QAbstractSocket_SocketState_toStringHelper(value));
+    QAbstractSocket::NetworkLayerProtocol value = qscriptvalue_cast<QAbstractSocket::NetworkLayerProtocol>(context->thisObject());
+    return QScriptValue(engine, qtscript_QAbstractSocket_NetworkLayerProtocol_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_QAbstractSocket_SocketState_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_QAbstractSocket_NetworkLayerProtocol_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QAbstractSocket_SocketState,
-        qtscript_QAbstractSocket_SocketState_valueOf, qtscript_QAbstractSocket_SocketState_toString);
-    qScriptRegisterMetaType<QAbstractSocket::SocketState>(engine, qtscript_QAbstractSocket_SocketState_toScriptValue,
-        qtscript_QAbstractSocket_SocketState_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 7; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_SocketState_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_SocketState_values[i])),
+        engine, qtscript_construct_QAbstractSocket_NetworkLayerProtocol,
+        qtscript_QAbstractSocket_NetworkLayerProtocol_valueOf, qtscript_QAbstractSocket_NetworkLayerProtocol_toString);
+    qScriptRegisterMetaType<QAbstractSocket::NetworkLayerProtocol>(engine, qtscript_QAbstractSocket_NetworkLayerProtocol_toScriptValue,
+        qtscript_QAbstractSocket_NetworkLayerProtocol_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractSocket_NetworkLayerProtocol_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QAbstractSocket_NetworkLayerProtocol_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -1022,19 +1026,19 @@ QScriptValue qtscript_create_QAbstractSocket_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QAbstractSocket_static_call, proto, qtscript_QAbstractSocket_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("SocketError"),
-        qtscript_create_QAbstractSocket_SocketError_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("NetworkLayerProtocol"),
-        qtscript_create_QAbstractSocket_NetworkLayerProtocol_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("PauseMode"),
-        qtscript_create_QAbstractSocket_PauseMode_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("SocketOption"),
-        qtscript_create_QAbstractSocket_SocketOption_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("BindFlag"),
         qtscript_create_QAbstractSocket_BindFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("SocketType"),
-        qtscript_create_QAbstractSocket_SocketType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("SocketOption"),
+        qtscript_create_QAbstractSocket_SocketOption_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("PauseMode"),
+        qtscript_create_QAbstractSocket_PauseMode_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("SocketState"),
         qtscript_create_QAbstractSocket_SocketState_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("SocketError"),
+        qtscript_create_QAbstractSocket_SocketError_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("SocketType"),
+        qtscript_create_QAbstractSocket_SocketType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("NetworkLayerProtocol"),
+        qtscript_create_QAbstractSocket_NetworkLayerProtocol_class(engine, ctor));
     return ctor;
 }

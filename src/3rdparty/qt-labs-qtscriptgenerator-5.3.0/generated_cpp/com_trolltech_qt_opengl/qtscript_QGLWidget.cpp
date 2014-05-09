@@ -7,7 +7,6 @@
 #include <__package_shared.h>
 
 #include <qgl.h>
-#include <QIconEngine>
 #include <QImage>
 #include <QPixmap>
 #include <QVariant>
@@ -23,6 +22,7 @@
 #include <qglcolormap.h>
 #include <qgraphicseffect.h>
 #include <qgraphicsproxywidget.h>
+#include <qicon.h>
 #include <qimage.h>
 #include <qkeysequence.h>
 #include <qlayout.h>

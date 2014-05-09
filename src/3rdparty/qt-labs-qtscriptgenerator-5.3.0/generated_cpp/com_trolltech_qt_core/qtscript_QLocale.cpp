@@ -220,15 +220,15 @@ static const QMetaObject *qtscript_QLocale_metaObject()
 }
 
 Q_DECLARE_METATYPE(QLocale*)
-Q_DECLARE_METATYPE(QLocale::Language)
-Q_DECLARE_METATYPE(QLocale::Country)
 Q_DECLARE_METATYPE(QLocale::Script)
-Q_DECLARE_METATYPE(QLocale::QuotationStyle)
-Q_DECLARE_METATYPE(QLocale::FormatType)
 Q_DECLARE_METATYPE(QLocale::CurrencySymbolFormat)
+Q_DECLARE_METATYPE(QLocale::QuotationStyle)
 Q_DECLARE_METATYPE(QLocale::MeasurementSystem)
+Q_DECLARE_METATYPE(QLocale::FormatType)
+Q_DECLARE_METATYPE(QLocale::Language)
 Q_DECLARE_METATYPE(QLocale::NumberOption)
 Q_DECLARE_METATYPE(QFlags<QLocale::NumberOption>)
+Q_DECLARE_METATYPE(QLocale::Country)
 Q_DECLARE_METATYPE(Qt::DayOfWeek)
 Q_DECLARE_METATYPE(QStringRef)
 Q_DECLARE_METATYPE(Qt::LayoutDirection)
@@ -269,6 +269,559 @@ static QScriptValue qtscript_create_flags_class_helper(
     proto.setProperty(QString::fromLatin1("equals"),
         engine->newFunction(equals), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto);
+}
+
+//
+// QLocale::Script
+//
+
+static const QLocale::Script qtscript_QLocale_Script_values[] = {
+    QLocale::AnyScript
+    , QLocale::ArabicScript
+    , QLocale::CyrillicScript
+    , QLocale::DeseretScript
+    , QLocale::GurmukhiScript
+    , QLocale::SimplifiedHanScript
+    , QLocale::TraditionalHanScript
+    , QLocale::LatinScript
+    , QLocale::MongolianScript
+    , QLocale::TifinaghScript
+    , QLocale::ArmenianScript
+    , QLocale::BengaliScript
+    , QLocale::CherokeeScript
+    , QLocale::DevanagariScript
+    , QLocale::EthiopicScript
+    , QLocale::GeorgianScript
+    , QLocale::GreekScript
+    , QLocale::GujaratiScript
+    , QLocale::HebrewScript
+    , QLocale::JapaneseScript
+    , QLocale::KhmerScript
+    , QLocale::KannadaScript
+    , QLocale::KoreanScript
+    , QLocale::LaoScript
+    , QLocale::MalayalamScript
+    , QLocale::MyanmarScript
+    , QLocale::OriyaScript
+    , QLocale::TamilScript
+    , QLocale::TeluguScript
+    , QLocale::ThaanaScript
+    , QLocale::ThaiScript
+    , QLocale::TibetanScript
+    , QLocale::SinhalaScript
+    , QLocale::SyriacScript
+    , QLocale::YiScript
+    , QLocale::VaiScript
+    , QLocale::AvestanScript
+    , QLocale::BalineseScript
+    , QLocale::BamumScript
+    , QLocale::BatakScript
+    , QLocale::BopomofoScript
+    , QLocale::BrahmiScript
+    , QLocale::BugineseScript
+    , QLocale::BuhidScript
+    , QLocale::CanadianAboriginalScript
+    , QLocale::CarianScript
+    , QLocale::ChakmaScript
+    , QLocale::ChamScript
+    , QLocale::CopticScript
+    , QLocale::CypriotScript
+    , QLocale::EgyptianHieroglyphsScript
+    , QLocale::FraserScript
+    , QLocale::GlagoliticScript
+    , QLocale::GothicScript
+    , QLocale::HanScript
+    , QLocale::HangulScript
+    , QLocale::HanunooScript
+    , QLocale::ImperialAramaicScript
+    , QLocale::InscriptionalPahlaviScript
+    , QLocale::InscriptionalParthianScript
+    , QLocale::JavaneseScript
+    , QLocale::KaithiScript
+    , QLocale::KatakanaScript
+    , QLocale::KayahLiScript
+    , QLocale::KharoshthiScript
+    , QLocale::LannaScript
+    , QLocale::LepchaScript
+    , QLocale::LimbuScript
+    , QLocale::LinearBScript
+    , QLocale::LycianScript
+    , QLocale::LydianScript
+    , QLocale::MandaeanScript
+    , QLocale::MeiteiMayekScript
+    , QLocale::MeroiticScript
+    , QLocale::MeroiticCursiveScript
+    , QLocale::NkoScript
+    , QLocale::NewTaiLueScript
+    , QLocale::OghamScript
+    , QLocale::OlChikiScript
+    , QLocale::OldItalicScript
+    , QLocale::OldPersianScript
+    , QLocale::OldSouthArabianScript
+    , QLocale::OrkhonScript
+    , QLocale::OsmanyaScript
+    , QLocale::PhagsPaScript
+    , QLocale::PhoenicianScript
+    , QLocale::PollardPhoneticScript
+    , QLocale::RejangScript
+    , QLocale::RunicScript
+    , QLocale::SamaritanScript
+    , QLocale::SaurashtraScript
+    , QLocale::SharadaScript
+    , QLocale::ShavianScript
+    , QLocale::SoraSompengScript
+    , QLocale::CuneiformScript
+    , QLocale::SundaneseScript
+    , QLocale::SylotiNagriScript
+    , QLocale::TagalogScript
+    , QLocale::TagbanwaScript
+    , QLocale::TaiLeScript
+    , QLocale::TaiVietScript
+    , QLocale::TakriScript
+    , QLocale::UgariticScript
+    , QLocale::BrailleScript
+    , QLocale::HiraganaScript
+};
+
+static const char * const qtscript_QLocale_Script_keys[] = {
+    "AnyScript"
+    , "ArabicScript"
+    , "CyrillicScript"
+    , "DeseretScript"
+    , "GurmukhiScript"
+    , "SimplifiedHanScript"
+    , "TraditionalHanScript"
+    , "LatinScript"
+    , "MongolianScript"
+    , "TifinaghScript"
+    , "ArmenianScript"
+    , "BengaliScript"
+    , "CherokeeScript"
+    , "DevanagariScript"
+    , "EthiopicScript"
+    , "GeorgianScript"
+    , "GreekScript"
+    , "GujaratiScript"
+    , "HebrewScript"
+    , "JapaneseScript"
+    , "KhmerScript"
+    , "KannadaScript"
+    , "KoreanScript"
+    , "LaoScript"
+    , "MalayalamScript"
+    , "MyanmarScript"
+    , "OriyaScript"
+    , "TamilScript"
+    , "TeluguScript"
+    , "ThaanaScript"
+    , "ThaiScript"
+    , "TibetanScript"
+    , "SinhalaScript"
+    , "SyriacScript"
+    , "YiScript"
+    , "VaiScript"
+    , "AvestanScript"
+    , "BalineseScript"
+    , "BamumScript"
+    , "BatakScript"
+    , "BopomofoScript"
+    , "BrahmiScript"
+    , "BugineseScript"
+    , "BuhidScript"
+    , "CanadianAboriginalScript"
+    , "CarianScript"
+    , "ChakmaScript"
+    , "ChamScript"
+    , "CopticScript"
+    , "CypriotScript"
+    , "EgyptianHieroglyphsScript"
+    , "FraserScript"
+    , "GlagoliticScript"
+    , "GothicScript"
+    , "HanScript"
+    , "HangulScript"
+    , "HanunooScript"
+    , "ImperialAramaicScript"
+    , "InscriptionalPahlaviScript"
+    , "InscriptionalParthianScript"
+    , "JavaneseScript"
+    , "KaithiScript"
+    , "KatakanaScript"
+    , "KayahLiScript"
+    , "KharoshthiScript"
+    , "LannaScript"
+    , "LepchaScript"
+    , "LimbuScript"
+    , "LinearBScript"
+    , "LycianScript"
+    , "LydianScript"
+    , "MandaeanScript"
+    , "MeiteiMayekScript"
+    , "MeroiticScript"
+    , "MeroiticCursiveScript"
+    , "NkoScript"
+    , "NewTaiLueScript"
+    , "OghamScript"
+    , "OlChikiScript"
+    , "OldItalicScript"
+    , "OldPersianScript"
+    , "OldSouthArabianScript"
+    , "OrkhonScript"
+    , "OsmanyaScript"
+    , "PhagsPaScript"
+    , "PhoenicianScript"
+    , "PollardPhoneticScript"
+    , "RejangScript"
+    , "RunicScript"
+    , "SamaritanScript"
+    , "SaurashtraScript"
+    , "SharadaScript"
+    , "ShavianScript"
+    , "SoraSompengScript"
+    , "CuneiformScript"
+    , "SundaneseScript"
+    , "SylotiNagriScript"
+    , "TagalogScript"
+    , "TagbanwaScript"
+    , "TaiLeScript"
+    , "TaiVietScript"
+    , "TakriScript"
+    , "UgariticScript"
+    , "BrailleScript"
+    , "HiraganaScript"
+};
+
+static QString qtscript_QLocale_Script_toStringHelper(QLocale::Script value)
+{
+    if ((value >= QLocale::AnyScript) && (value <= QLocale::HiraganaScript))
+        return qtscript_QLocale_Script_keys[static_cast<int>(value)-static_cast<int>(QLocale::AnyScript)];
+    return QString();
+}
+
+static QScriptValue qtscript_QLocale_Script_toScriptValue(QScriptEngine *engine, const QLocale::Script &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
+    return clazz.property(qtscript_QLocale_Script_toStringHelper(value));
+}
+
+static void qtscript_QLocale_Script_fromScriptValue(const QScriptValue &value, QLocale::Script &out)
+{
+    out = qvariant_cast<QLocale::Script>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QLocale_Script(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QLocale::AnyScript) && (arg <= QLocale::HiraganaScript))
+        return qScriptValueFromValue(engine,  static_cast<QLocale::Script>(arg));
+    return context->throwError(QString::fromLatin1("Script(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QLocale_Script_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::Script value = qscriptvalue_cast<QLocale::Script>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QLocale_Script_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::Script value = qscriptvalue_cast<QLocale::Script>(context->thisObject());
+    return QScriptValue(engine, qtscript_QLocale_Script_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QLocale_Script_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QLocale_Script,
+        qtscript_QLocale_Script_valueOf, qtscript_QLocale_Script_toString);
+    qScriptRegisterMetaType<QLocale::Script>(engine, qtscript_QLocale_Script_toScriptValue,
+        qtscript_QLocale_Script_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 105; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_Script_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QLocale_Script_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QLocale::CurrencySymbolFormat
+//
+
+static const QLocale::CurrencySymbolFormat qtscript_QLocale_CurrencySymbolFormat_values[] = {
+    QLocale::CurrencyIsoCode
+    , QLocale::CurrencySymbol
+    , QLocale::CurrencyDisplayName
+};
+
+static const char * const qtscript_QLocale_CurrencySymbolFormat_keys[] = {
+    "CurrencyIsoCode"
+    , "CurrencySymbol"
+    , "CurrencyDisplayName"
+};
+
+static QString qtscript_QLocale_CurrencySymbolFormat_toStringHelper(QLocale::CurrencySymbolFormat value)
+{
+    if ((value >= QLocale::CurrencyIsoCode) && (value <= QLocale::CurrencyDisplayName))
+        return qtscript_QLocale_CurrencySymbolFormat_keys[static_cast<int>(value)-static_cast<int>(QLocale::CurrencyIsoCode)];
+    return QString();
+}
+
+static QScriptValue qtscript_QLocale_CurrencySymbolFormat_toScriptValue(QScriptEngine *engine, const QLocale::CurrencySymbolFormat &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
+    return clazz.property(qtscript_QLocale_CurrencySymbolFormat_toStringHelper(value));
+}
+
+static void qtscript_QLocale_CurrencySymbolFormat_fromScriptValue(const QScriptValue &value, QLocale::CurrencySymbolFormat &out)
+{
+    out = qvariant_cast<QLocale::CurrencySymbolFormat>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QLocale_CurrencySymbolFormat(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QLocale::CurrencyIsoCode) && (arg <= QLocale::CurrencyDisplayName))
+        return qScriptValueFromValue(engine,  static_cast<QLocale::CurrencySymbolFormat>(arg));
+    return context->throwError(QString::fromLatin1("CurrencySymbolFormat(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QLocale_CurrencySymbolFormat_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::CurrencySymbolFormat value = qscriptvalue_cast<QLocale::CurrencySymbolFormat>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QLocale_CurrencySymbolFormat_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::CurrencySymbolFormat value = qscriptvalue_cast<QLocale::CurrencySymbolFormat>(context->thisObject());
+    return QScriptValue(engine, qtscript_QLocale_CurrencySymbolFormat_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QLocale_CurrencySymbolFormat_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QLocale_CurrencySymbolFormat,
+        qtscript_QLocale_CurrencySymbolFormat_valueOf, qtscript_QLocale_CurrencySymbolFormat_toString);
+    qScriptRegisterMetaType<QLocale::CurrencySymbolFormat>(engine, qtscript_QLocale_CurrencySymbolFormat_toScriptValue,
+        qtscript_QLocale_CurrencySymbolFormat_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_CurrencySymbolFormat_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QLocale_CurrencySymbolFormat_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QLocale::QuotationStyle
+//
+
+static const QLocale::QuotationStyle qtscript_QLocale_QuotationStyle_values[] = {
+    QLocale::StandardQuotation
+    , QLocale::AlternateQuotation
+};
+
+static const char * const qtscript_QLocale_QuotationStyle_keys[] = {
+    "StandardQuotation"
+    , "AlternateQuotation"
+};
+
+static QString qtscript_QLocale_QuotationStyle_toStringHelper(QLocale::QuotationStyle value)
+{
+    if ((value >= QLocale::StandardQuotation) && (value <= QLocale::AlternateQuotation))
+        return qtscript_QLocale_QuotationStyle_keys[static_cast<int>(value)-static_cast<int>(QLocale::StandardQuotation)];
+    return QString();
+}
+
+static QScriptValue qtscript_QLocale_QuotationStyle_toScriptValue(QScriptEngine *engine, const QLocale::QuotationStyle &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
+    return clazz.property(qtscript_QLocale_QuotationStyle_toStringHelper(value));
+}
+
+static void qtscript_QLocale_QuotationStyle_fromScriptValue(const QScriptValue &value, QLocale::QuotationStyle &out)
+{
+    out = qvariant_cast<QLocale::QuotationStyle>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QLocale_QuotationStyle(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QLocale::StandardQuotation) && (arg <= QLocale::AlternateQuotation))
+        return qScriptValueFromValue(engine,  static_cast<QLocale::QuotationStyle>(arg));
+    return context->throwError(QString::fromLatin1("QuotationStyle(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QLocale_QuotationStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::QuotationStyle value = qscriptvalue_cast<QLocale::QuotationStyle>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QLocale_QuotationStyle_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::QuotationStyle value = qscriptvalue_cast<QLocale::QuotationStyle>(context->thisObject());
+    return QScriptValue(engine, qtscript_QLocale_QuotationStyle_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QLocale_QuotationStyle_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QLocale_QuotationStyle,
+        qtscript_QLocale_QuotationStyle_valueOf, qtscript_QLocale_QuotationStyle_toString);
+    qScriptRegisterMetaType<QLocale::QuotationStyle>(engine, qtscript_QLocale_QuotationStyle_toScriptValue,
+        qtscript_QLocale_QuotationStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_QuotationStyle_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QLocale_QuotationStyle_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QLocale::MeasurementSystem
+//
+
+static const QLocale::MeasurementSystem qtscript_QLocale_MeasurementSystem_values[] = {
+    QLocale::MetricSystem
+    , QLocale::ImperialUSSystem
+    , QLocale::ImperialUKSystem
+};
+
+static const char * const qtscript_QLocale_MeasurementSystem_keys[] = {
+    "MetricSystem"
+    , "ImperialUSSystem"
+    , "ImperialUKSystem"
+};
+
+static QString qtscript_QLocale_MeasurementSystem_toStringHelper(QLocale::MeasurementSystem value)
+{
+    const QMetaObject *meta = qtscript_QLocale_metaObject();
+    int idx = meta->indexOfEnumerator("MeasurementSystem");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    return QString::fromLatin1(menum.valueToKey(value));
+}
+
+static QScriptValue qtscript_QLocale_MeasurementSystem_toScriptValue(QScriptEngine *engine, const QLocale::MeasurementSystem &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
+    return clazz.property(qtscript_QLocale_MeasurementSystem_toStringHelper(value));
+}
+
+static void qtscript_QLocale_MeasurementSystem_fromScriptValue(const QScriptValue &value, QLocale::MeasurementSystem &out)
+{
+    out = qvariant_cast<QLocale::MeasurementSystem>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QLocale_MeasurementSystem(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    const QMetaObject *meta = qtscript_QLocale_metaObject();
+    int idx = meta->indexOfEnumerator("MeasurementSystem");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    if (menum.valueToKey(arg) != 0)
+        return qScriptValueFromValue(engine,  static_cast<QLocale::MeasurementSystem>(arg));
+    return context->throwError(QString::fromLatin1("MeasurementSystem(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QLocale_MeasurementSystem_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::MeasurementSystem value = qscriptvalue_cast<QLocale::MeasurementSystem>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QLocale_MeasurementSystem_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::MeasurementSystem value = qscriptvalue_cast<QLocale::MeasurementSystem>(context->thisObject());
+    return QScriptValue(engine, qtscript_QLocale_MeasurementSystem_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QLocale_MeasurementSystem_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QLocale_MeasurementSystem,
+        qtscript_QLocale_MeasurementSystem_valueOf, qtscript_QLocale_MeasurementSystem_toString);
+    qScriptRegisterMetaType<QLocale::MeasurementSystem>(engine, qtscript_QLocale_MeasurementSystem_toScriptValue,
+        qtscript_QLocale_MeasurementSystem_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_MeasurementSystem_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QLocale_MeasurementSystem_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QLocale::FormatType
+//
+
+static const QLocale::FormatType qtscript_QLocale_FormatType_values[] = {
+    QLocale::LongFormat
+    , QLocale::ShortFormat
+    , QLocale::NarrowFormat
+};
+
+static const char * const qtscript_QLocale_FormatType_keys[] = {
+    "LongFormat"
+    , "ShortFormat"
+    , "NarrowFormat"
+};
+
+static QString qtscript_QLocale_FormatType_toStringHelper(QLocale::FormatType value)
+{
+    if ((value >= QLocale::LongFormat) && (value <= QLocale::NarrowFormat))
+        return qtscript_QLocale_FormatType_keys[static_cast<int>(value)-static_cast<int>(QLocale::LongFormat)];
+    return QString();
+}
+
+static QScriptValue qtscript_QLocale_FormatType_toScriptValue(QScriptEngine *engine, const QLocale::FormatType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
+    return clazz.property(qtscript_QLocale_FormatType_toStringHelper(value));
+}
+
+static void qtscript_QLocale_FormatType_fromScriptValue(const QScriptValue &value, QLocale::FormatType &out)
+{
+    out = qvariant_cast<QLocale::FormatType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QLocale_FormatType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QLocale::LongFormat) && (arg <= QLocale::NarrowFormat))
+        return qScriptValueFromValue(engine,  static_cast<QLocale::FormatType>(arg));
+    return context->throwError(QString::fromLatin1("FormatType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QLocale_FormatType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::FormatType value = qscriptvalue_cast<QLocale::FormatType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QLocale_FormatType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::FormatType value = qscriptvalue_cast<QLocale::FormatType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QLocale_FormatType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QLocale_FormatType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QLocale_FormatType,
+        qtscript_QLocale_FormatType_valueOf, qtscript_QLocale_FormatType_toString);
+    qScriptRegisterMetaType<QLocale::FormatType>(engine, qtscript_QLocale_FormatType_toScriptValue,
+        qtscript_QLocale_FormatType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_FormatType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QLocale_FormatType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
 }
 
 //
@@ -588,6 +1141,9 @@ static const QLocale::Language qtscript_QLocale_Language_values[] = {
     , QLocale::TaiDam
     , QLocale::TaiNua
     , QLocale::Ugaritic
+    , QLocale::Akoose
+    , QLocale::Lakota
+    , QLocale::StandardMoroccanTamazight
 };
 
 static const char * const qtscript_QLocale_Language_keys[] = {
@@ -903,6 +1459,9 @@ static const char * const qtscript_QLocale_Language_keys[] = {
     , "TaiDam"
     , "TaiNua"
     , "Ugaritic"
+    , "Akoose"
+    , "Lakota"
+    , "StandardMoroccanTamazight"
 };
 
 static QString qtscript_QLocale_Language_toStringHelper(QLocale::Language value)
@@ -956,11 +1515,154 @@ static QScriptValue qtscript_create_QLocale_Language_class(QScriptEngine *engine
         qtscript_QLocale_Language_valueOf, qtscript_QLocale_Language_toString);
     qScriptRegisterMetaType<QLocale::Language>(engine, qtscript_QLocale_Language_toScriptValue,
         qtscript_QLocale_Language_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 312; ++i) {
+    for (int i = 0; i < 315; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QLocale_Language_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QLocale_Language_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
+    return ctor;
+}
+
+//
+// QLocale::NumberOption
+//
+
+static const QLocale::NumberOption qtscript_QLocale_NumberOption_values[] = {
+    QLocale::OmitGroupSeparator
+    , QLocale::RejectGroupSeparator
+};
+
+static const char * const qtscript_QLocale_NumberOption_keys[] = {
+    "OmitGroupSeparator"
+    , "RejectGroupSeparator"
+};
+
+static QString qtscript_QLocale_NumberOption_toStringHelper(QLocale::NumberOption value)
+{
+    if ((value >= QLocale::OmitGroupSeparator) && (value <= QLocale::RejectGroupSeparator))
+        return qtscript_QLocale_NumberOption_keys[static_cast<int>(value)-static_cast<int>(QLocale::OmitGroupSeparator)];
+    return QString();
+}
+
+static QScriptValue qtscript_QLocale_NumberOption_toScriptValue(QScriptEngine *engine, const QLocale::NumberOption &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
+    return clazz.property(qtscript_QLocale_NumberOption_toStringHelper(value));
+}
+
+static void qtscript_QLocale_NumberOption_fromScriptValue(const QScriptValue &value, QLocale::NumberOption &out)
+{
+    out = qvariant_cast<QLocale::NumberOption>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QLocale_NumberOption(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QLocale::OmitGroupSeparator) && (arg <= QLocale::RejectGroupSeparator))
+        return qScriptValueFromValue(engine,  static_cast<QLocale::NumberOption>(arg));
+    return context->throwError(QString::fromLatin1("NumberOption(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QLocale_NumberOption_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::NumberOption value = qscriptvalue_cast<QLocale::NumberOption>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QLocale_NumberOption_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::NumberOption value = qscriptvalue_cast<QLocale::NumberOption>(context->thisObject());
+    return QScriptValue(engine, qtscript_QLocale_NumberOption_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QLocale_NumberOption_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QLocale_NumberOption,
+        qtscript_QLocale_NumberOption_valueOf, qtscript_QLocale_NumberOption_toString);
+    qScriptRegisterMetaType<QLocale::NumberOption>(engine, qtscript_QLocale_NumberOption_toScriptValue,
+        qtscript_QLocale_NumberOption_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_NumberOption_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QLocale_NumberOption_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QLocale::NumberOptions
+//
+
+static QScriptValue qtscript_QLocale_NumberOptions_toScriptValue(QScriptEngine *engine, const QLocale::NumberOptions &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_QLocale_NumberOptions_fromScriptValue(const QScriptValue &value, QLocale::NumberOptions &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<QLocale::NumberOptions>())
+        out = qvariant_cast<QLocale::NumberOptions>(var);
+    else if (var.userType() == qMetaTypeId<QLocale::NumberOption>())
+        out = qvariant_cast<QLocale::NumberOption>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_QLocale_NumberOptions(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::NumberOptions result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<QLocale::NumberOptions>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<QLocale::NumberOption>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("NumberOptions(): argument %0 is not of type NumberOption").arg(i));
+            }
+            result |= qvariant_cast<QLocale::NumberOption>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_QLocale_NumberOptions_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::NumberOptions value = qscriptvalue_cast<QLocale::NumberOptions>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QLocale_NumberOptions_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QLocale::NumberOptions value = qscriptvalue_cast<QLocale::NumberOptions>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 2; ++i) {
+        if ((value & qtscript_QLocale_NumberOption_values[i]) == qtscript_QLocale_NumberOption_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_QLocale_NumberOption_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_QLocale_NumberOptions_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<QLocale::NumberOptions>() == otherObj.value<QLocale::NumberOptions>())));
+}
+
+static QScriptValue qtscript_create_QLocale_NumberOptions_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_QLocale_NumberOptions, qtscript_QLocale_NumberOptions_valueOf,
+        qtscript_QLocale_NumberOptions_toString, qtscript_QLocale_NumberOptions_equals);
+    qScriptRegisterMetaType<QLocale::NumberOptions>(engine, qtscript_QLocale_NumberOptions_toScriptValue,
+        qtscript_QLocale_NumberOptions_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
     return ctor;
 }
 
@@ -1226,6 +1928,7 @@ static const QLocale::Country qtscript_QLocale_Country_values[] = {
     , QLocale::SouthSudan
     , QLocale::Bonaire
     , QLocale::SintMaarten
+    , QLocale::Kosovo
 };
 
 static const char * const qtscript_QLocale_Country_keys[] = {
@@ -1486,6 +2189,7 @@ static const char * const qtscript_QLocale_Country_keys[] = {
     , "SouthSudan"
     , "Bonaire"
     , "SintMaarten"
+    , "Kosovo"
 };
 
 static QString qtscript_QLocale_Country_toStringHelper(QLocale::Country value)
@@ -1539,707 +2243,11 @@ static QScriptValue qtscript_create_QLocale_Country_class(QScriptEngine *engine,
         qtscript_QLocale_Country_valueOf, qtscript_QLocale_Country_toString);
     qScriptRegisterMetaType<QLocale::Country>(engine, qtscript_QLocale_Country_toScriptValue,
         qtscript_QLocale_Country_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 257; ++i) {
+    for (int i = 0; i < 258; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QLocale_Country_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QLocale_Country_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
-    return ctor;
-}
-
-//
-// QLocale::Script
-//
-
-static const QLocale::Script qtscript_QLocale_Script_values[] = {
-    QLocale::AnyScript
-    , QLocale::ArabicScript
-    , QLocale::CyrillicScript
-    , QLocale::DeseretScript
-    , QLocale::GurmukhiScript
-    , QLocale::SimplifiedHanScript
-    , QLocale::TraditionalHanScript
-    , QLocale::LatinScript
-    , QLocale::MongolianScript
-    , QLocale::TifinaghScript
-    , QLocale::ArmenianScript
-    , QLocale::BengaliScript
-    , QLocale::CherokeeScript
-    , QLocale::DevanagariScript
-    , QLocale::EthiopicScript
-    , QLocale::GeorgianScript
-    , QLocale::GreekScript
-    , QLocale::GujaratiScript
-    , QLocale::HebrewScript
-    , QLocale::JapaneseScript
-    , QLocale::KhmerScript
-    , QLocale::KannadaScript
-    , QLocale::KoreanScript
-    , QLocale::LaoScript
-    , QLocale::MalayalamScript
-    , QLocale::MyanmarScript
-    , QLocale::OriyaScript
-    , QLocale::TamilScript
-    , QLocale::TeluguScript
-    , QLocale::ThaanaScript
-    , QLocale::ThaiScript
-    , QLocale::TibetanScript
-    , QLocale::SinhalaScript
-    , QLocale::SyriacScript
-    , QLocale::YiScript
-    , QLocale::VaiScript
-    , QLocale::AvestanScript
-    , QLocale::BalineseScript
-    , QLocale::BamumScript
-    , QLocale::BatakScript
-    , QLocale::BopomofoScript
-    , QLocale::BrahmiScript
-    , QLocale::BugineseScript
-    , QLocale::BuhidScript
-    , QLocale::CanadianAboriginalScript
-    , QLocale::CarianScript
-    , QLocale::ChakmaScript
-    , QLocale::ChamScript
-    , QLocale::CopticScript
-    , QLocale::CypriotScript
-    , QLocale::EgyptianHieroglyphsScript
-    , QLocale::FraserScript
-    , QLocale::GlagoliticScript
-    , QLocale::GothicScript
-    , QLocale::HanScript
-    , QLocale::HangulScript
-    , QLocale::HanunooScript
-    , QLocale::ImperialAramaicScript
-    , QLocale::InscriptionalPahlaviScript
-    , QLocale::InscriptionalParthianScript
-    , QLocale::JavaneseScript
-    , QLocale::KaithiScript
-    , QLocale::KatakanaScript
-    , QLocale::KayahLiScript
-    , QLocale::KharoshthiScript
-    , QLocale::LannaScript
-    , QLocale::LepchaScript
-    , QLocale::LimbuScript
-    , QLocale::LinearBScript
-    , QLocale::LycianScript
-    , QLocale::LydianScript
-    , QLocale::MandaeanScript
-    , QLocale::MeiteiMayekScript
-    , QLocale::MeroiticScript
-    , QLocale::MeroiticCursiveScript
-    , QLocale::NkoScript
-    , QLocale::NewTaiLueScript
-    , QLocale::OghamScript
-    , QLocale::OlChikiScript
-    , QLocale::OldItalicScript
-    , QLocale::OldPersianScript
-    , QLocale::OldSouthArabianScript
-    , QLocale::OrkhonScript
-    , QLocale::OsmanyaScript
-    , QLocale::PhagsPaScript
-    , QLocale::PhoenicianScript
-    , QLocale::PollardPhoneticScript
-    , QLocale::RejangScript
-    , QLocale::RunicScript
-    , QLocale::SamaritanScript
-    , QLocale::SaurashtraScript
-    , QLocale::SharadaScript
-    , QLocale::ShavianScript
-    , QLocale::SoraSompengScript
-    , QLocale::CuneiformScript
-    , QLocale::SundaneseScript
-    , QLocale::SylotiNagriScript
-    , QLocale::TagalogScript
-    , QLocale::TagbanwaScript
-    , QLocale::TaiLeScript
-    , QLocale::TaiVietScript
-    , QLocale::TakriScript
-    , QLocale::UgariticScript
-    , QLocale::BrailleScript
-    , QLocale::HiraganaScript
-};
-
-static const char * const qtscript_QLocale_Script_keys[] = {
-    "AnyScript"
-    , "ArabicScript"
-    , "CyrillicScript"
-    , "DeseretScript"
-    , "GurmukhiScript"
-    , "SimplifiedHanScript"
-    , "TraditionalHanScript"
-    , "LatinScript"
-    , "MongolianScript"
-    , "TifinaghScript"
-    , "ArmenianScript"
-    , "BengaliScript"
-    , "CherokeeScript"
-    , "DevanagariScript"
-    , "EthiopicScript"
-    , "GeorgianScript"
-    , "GreekScript"
-    , "GujaratiScript"
-    , "HebrewScript"
-    , "JapaneseScript"
-    , "KhmerScript"
-    , "KannadaScript"
-    , "KoreanScript"
-    , "LaoScript"
-    , "MalayalamScript"
-    , "MyanmarScript"
-    , "OriyaScript"
-    , "TamilScript"
-    , "TeluguScript"
-    , "ThaanaScript"
-    , "ThaiScript"
-    , "TibetanScript"
-    , "SinhalaScript"
-    , "SyriacScript"
-    , "YiScript"
-    , "VaiScript"
-    , "AvestanScript"
-    , "BalineseScript"
-    , "BamumScript"
-    , "BatakScript"
-    , "BopomofoScript"
-    , "BrahmiScript"
-    , "BugineseScript"
-    , "BuhidScript"
-    , "CanadianAboriginalScript"
-    , "CarianScript"
-    , "ChakmaScript"
-    , "ChamScript"
-    , "CopticScript"
-    , "CypriotScript"
-    , "EgyptianHieroglyphsScript"
-    , "FraserScript"
-    , "GlagoliticScript"
-    , "GothicScript"
-    , "HanScript"
-    , "HangulScript"
-    , "HanunooScript"
-    , "ImperialAramaicScript"
-    , "InscriptionalPahlaviScript"
-    , "InscriptionalParthianScript"
-    , "JavaneseScript"
-    , "KaithiScript"
-    , "KatakanaScript"
-    , "KayahLiScript"
-    , "KharoshthiScript"
-    , "LannaScript"
-    , "LepchaScript"
-    , "LimbuScript"
-    , "LinearBScript"
-    , "LycianScript"
-    , "LydianScript"
-    , "MandaeanScript"
-    , "MeiteiMayekScript"
-    , "MeroiticScript"
-    , "MeroiticCursiveScript"
-    , "NkoScript"
-    , "NewTaiLueScript"
-    , "OghamScript"
-    , "OlChikiScript"
-    , "OldItalicScript"
-    , "OldPersianScript"
-    , "OldSouthArabianScript"
-    , "OrkhonScript"
-    , "OsmanyaScript"
-    , "PhagsPaScript"
-    , "PhoenicianScript"
-    , "PollardPhoneticScript"
-    , "RejangScript"
-    , "RunicScript"
-    , "SamaritanScript"
-    , "SaurashtraScript"
-    , "SharadaScript"
-    , "ShavianScript"
-    , "SoraSompengScript"
-    , "CuneiformScript"
-    , "SundaneseScript"
-    , "SylotiNagriScript"
-    , "TagalogScript"
-    , "TagbanwaScript"
-    , "TaiLeScript"
-    , "TaiVietScript"
-    , "TakriScript"
-    , "UgariticScript"
-    , "BrailleScript"
-    , "HiraganaScript"
-};
-
-static QString qtscript_QLocale_Script_toStringHelper(QLocale::Script value)
-{
-    if ((value >= QLocale::AnyScript) && (value <= QLocale::HiraganaScript))
-        return qtscript_QLocale_Script_keys[static_cast<int>(value)-static_cast<int>(QLocale::AnyScript)];
-    return QString();
-}
-
-static QScriptValue qtscript_QLocale_Script_toScriptValue(QScriptEngine *engine, const QLocale::Script &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
-    return clazz.property(qtscript_QLocale_Script_toStringHelper(value));
-}
-
-static void qtscript_QLocale_Script_fromScriptValue(const QScriptValue &value, QLocale::Script &out)
-{
-    out = qvariant_cast<QLocale::Script>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QLocale_Script(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QLocale::AnyScript) && (arg <= QLocale::HiraganaScript))
-        return qScriptValueFromValue(engine,  static_cast<QLocale::Script>(arg));
-    return context->throwError(QString::fromLatin1("Script(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QLocale_Script_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::Script value = qscriptvalue_cast<QLocale::Script>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QLocale_Script_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::Script value = qscriptvalue_cast<QLocale::Script>(context->thisObject());
-    return QScriptValue(engine, qtscript_QLocale_Script_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QLocale_Script_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QLocale_Script,
-        qtscript_QLocale_Script_valueOf, qtscript_QLocale_Script_toString);
-    qScriptRegisterMetaType<QLocale::Script>(engine, qtscript_QLocale_Script_toScriptValue,
-        qtscript_QLocale_Script_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 105; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_Script_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QLocale_Script_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QLocale::QuotationStyle
-//
-
-static const QLocale::QuotationStyle qtscript_QLocale_QuotationStyle_values[] = {
-    QLocale::StandardQuotation
-    , QLocale::AlternateQuotation
-};
-
-static const char * const qtscript_QLocale_QuotationStyle_keys[] = {
-    "StandardQuotation"
-    , "AlternateQuotation"
-};
-
-static QString qtscript_QLocale_QuotationStyle_toStringHelper(QLocale::QuotationStyle value)
-{
-    if ((value >= QLocale::StandardQuotation) && (value <= QLocale::AlternateQuotation))
-        return qtscript_QLocale_QuotationStyle_keys[static_cast<int>(value)-static_cast<int>(QLocale::StandardQuotation)];
-    return QString();
-}
-
-static QScriptValue qtscript_QLocale_QuotationStyle_toScriptValue(QScriptEngine *engine, const QLocale::QuotationStyle &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
-    return clazz.property(qtscript_QLocale_QuotationStyle_toStringHelper(value));
-}
-
-static void qtscript_QLocale_QuotationStyle_fromScriptValue(const QScriptValue &value, QLocale::QuotationStyle &out)
-{
-    out = qvariant_cast<QLocale::QuotationStyle>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QLocale_QuotationStyle(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QLocale::StandardQuotation) && (arg <= QLocale::AlternateQuotation))
-        return qScriptValueFromValue(engine,  static_cast<QLocale::QuotationStyle>(arg));
-    return context->throwError(QString::fromLatin1("QuotationStyle(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QLocale_QuotationStyle_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::QuotationStyle value = qscriptvalue_cast<QLocale::QuotationStyle>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QLocale_QuotationStyle_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::QuotationStyle value = qscriptvalue_cast<QLocale::QuotationStyle>(context->thisObject());
-    return QScriptValue(engine, qtscript_QLocale_QuotationStyle_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QLocale_QuotationStyle_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QLocale_QuotationStyle,
-        qtscript_QLocale_QuotationStyle_valueOf, qtscript_QLocale_QuotationStyle_toString);
-    qScriptRegisterMetaType<QLocale::QuotationStyle>(engine, qtscript_QLocale_QuotationStyle_toScriptValue,
-        qtscript_QLocale_QuotationStyle_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_QuotationStyle_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QLocale_QuotationStyle_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QLocale::FormatType
-//
-
-static const QLocale::FormatType qtscript_QLocale_FormatType_values[] = {
-    QLocale::LongFormat
-    , QLocale::ShortFormat
-    , QLocale::NarrowFormat
-};
-
-static const char * const qtscript_QLocale_FormatType_keys[] = {
-    "LongFormat"
-    , "ShortFormat"
-    , "NarrowFormat"
-};
-
-static QString qtscript_QLocale_FormatType_toStringHelper(QLocale::FormatType value)
-{
-    if ((value >= QLocale::LongFormat) && (value <= QLocale::NarrowFormat))
-        return qtscript_QLocale_FormatType_keys[static_cast<int>(value)-static_cast<int>(QLocale::LongFormat)];
-    return QString();
-}
-
-static QScriptValue qtscript_QLocale_FormatType_toScriptValue(QScriptEngine *engine, const QLocale::FormatType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
-    return clazz.property(qtscript_QLocale_FormatType_toStringHelper(value));
-}
-
-static void qtscript_QLocale_FormatType_fromScriptValue(const QScriptValue &value, QLocale::FormatType &out)
-{
-    out = qvariant_cast<QLocale::FormatType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QLocale_FormatType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QLocale::LongFormat) && (arg <= QLocale::NarrowFormat))
-        return qScriptValueFromValue(engine,  static_cast<QLocale::FormatType>(arg));
-    return context->throwError(QString::fromLatin1("FormatType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QLocale_FormatType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::FormatType value = qscriptvalue_cast<QLocale::FormatType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QLocale_FormatType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::FormatType value = qscriptvalue_cast<QLocale::FormatType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QLocale_FormatType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QLocale_FormatType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QLocale_FormatType,
-        qtscript_QLocale_FormatType_valueOf, qtscript_QLocale_FormatType_toString);
-    qScriptRegisterMetaType<QLocale::FormatType>(engine, qtscript_QLocale_FormatType_toScriptValue,
-        qtscript_QLocale_FormatType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_FormatType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QLocale_FormatType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QLocale::CurrencySymbolFormat
-//
-
-static const QLocale::CurrencySymbolFormat qtscript_QLocale_CurrencySymbolFormat_values[] = {
-    QLocale::CurrencyIsoCode
-    , QLocale::CurrencySymbol
-    , QLocale::CurrencyDisplayName
-};
-
-static const char * const qtscript_QLocale_CurrencySymbolFormat_keys[] = {
-    "CurrencyIsoCode"
-    , "CurrencySymbol"
-    , "CurrencyDisplayName"
-};
-
-static QString qtscript_QLocale_CurrencySymbolFormat_toStringHelper(QLocale::CurrencySymbolFormat value)
-{
-    if ((value >= QLocale::CurrencyIsoCode) && (value <= QLocale::CurrencyDisplayName))
-        return qtscript_QLocale_CurrencySymbolFormat_keys[static_cast<int>(value)-static_cast<int>(QLocale::CurrencyIsoCode)];
-    return QString();
-}
-
-static QScriptValue qtscript_QLocale_CurrencySymbolFormat_toScriptValue(QScriptEngine *engine, const QLocale::CurrencySymbolFormat &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
-    return clazz.property(qtscript_QLocale_CurrencySymbolFormat_toStringHelper(value));
-}
-
-static void qtscript_QLocale_CurrencySymbolFormat_fromScriptValue(const QScriptValue &value, QLocale::CurrencySymbolFormat &out)
-{
-    out = qvariant_cast<QLocale::CurrencySymbolFormat>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QLocale_CurrencySymbolFormat(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QLocale::CurrencyIsoCode) && (arg <= QLocale::CurrencyDisplayName))
-        return qScriptValueFromValue(engine,  static_cast<QLocale::CurrencySymbolFormat>(arg));
-    return context->throwError(QString::fromLatin1("CurrencySymbolFormat(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QLocale_CurrencySymbolFormat_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::CurrencySymbolFormat value = qscriptvalue_cast<QLocale::CurrencySymbolFormat>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QLocale_CurrencySymbolFormat_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::CurrencySymbolFormat value = qscriptvalue_cast<QLocale::CurrencySymbolFormat>(context->thisObject());
-    return QScriptValue(engine, qtscript_QLocale_CurrencySymbolFormat_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QLocale_CurrencySymbolFormat_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QLocale_CurrencySymbolFormat,
-        qtscript_QLocale_CurrencySymbolFormat_valueOf, qtscript_QLocale_CurrencySymbolFormat_toString);
-    qScriptRegisterMetaType<QLocale::CurrencySymbolFormat>(engine, qtscript_QLocale_CurrencySymbolFormat_toScriptValue,
-        qtscript_QLocale_CurrencySymbolFormat_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_CurrencySymbolFormat_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QLocale_CurrencySymbolFormat_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QLocale::MeasurementSystem
-//
-
-static const QLocale::MeasurementSystem qtscript_QLocale_MeasurementSystem_values[] = {
-    QLocale::MetricSystem
-    , QLocale::ImperialUSSystem
-    , QLocale::ImperialUKSystem
-};
-
-static const char * const qtscript_QLocale_MeasurementSystem_keys[] = {
-    "MetricSystem"
-    , "ImperialUSSystem"
-    , "ImperialUKSystem"
-};
-
-static QString qtscript_QLocale_MeasurementSystem_toStringHelper(QLocale::MeasurementSystem value)
-{
-    const QMetaObject *meta = qtscript_QLocale_metaObject();
-    int idx = meta->indexOfEnumerator("MeasurementSystem");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    return QString::fromLatin1(menum.valueToKey(value));
-}
-
-static QScriptValue qtscript_QLocale_MeasurementSystem_toScriptValue(QScriptEngine *engine, const QLocale::MeasurementSystem &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
-    return clazz.property(qtscript_QLocale_MeasurementSystem_toStringHelper(value));
-}
-
-static void qtscript_QLocale_MeasurementSystem_fromScriptValue(const QScriptValue &value, QLocale::MeasurementSystem &out)
-{
-    out = qvariant_cast<QLocale::MeasurementSystem>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QLocale_MeasurementSystem(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    const QMetaObject *meta = qtscript_QLocale_metaObject();
-    int idx = meta->indexOfEnumerator("MeasurementSystem");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    if (menum.valueToKey(arg) != 0)
-        return qScriptValueFromValue(engine,  static_cast<QLocale::MeasurementSystem>(arg));
-    return context->throwError(QString::fromLatin1("MeasurementSystem(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QLocale_MeasurementSystem_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::MeasurementSystem value = qscriptvalue_cast<QLocale::MeasurementSystem>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QLocale_MeasurementSystem_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::MeasurementSystem value = qscriptvalue_cast<QLocale::MeasurementSystem>(context->thisObject());
-    return QScriptValue(engine, qtscript_QLocale_MeasurementSystem_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QLocale_MeasurementSystem_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QLocale_MeasurementSystem,
-        qtscript_QLocale_MeasurementSystem_valueOf, qtscript_QLocale_MeasurementSystem_toString);
-    qScriptRegisterMetaType<QLocale::MeasurementSystem>(engine, qtscript_QLocale_MeasurementSystem_toScriptValue,
-        qtscript_QLocale_MeasurementSystem_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_MeasurementSystem_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QLocale_MeasurementSystem_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QLocale::NumberOption
-//
-
-static const QLocale::NumberOption qtscript_QLocale_NumberOption_values[] = {
-    QLocale::OmitGroupSeparator
-    , QLocale::RejectGroupSeparator
-};
-
-static const char * const qtscript_QLocale_NumberOption_keys[] = {
-    "OmitGroupSeparator"
-    , "RejectGroupSeparator"
-};
-
-static QString qtscript_QLocale_NumberOption_toStringHelper(QLocale::NumberOption value)
-{
-    if ((value >= QLocale::OmitGroupSeparator) && (value <= QLocale::RejectGroupSeparator))
-        return qtscript_QLocale_NumberOption_keys[static_cast<int>(value)-static_cast<int>(QLocale::OmitGroupSeparator)];
-    return QString();
-}
-
-static QScriptValue qtscript_QLocale_NumberOption_toScriptValue(QScriptEngine *engine, const QLocale::NumberOption &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QLocale"));
-    return clazz.property(qtscript_QLocale_NumberOption_toStringHelper(value));
-}
-
-static void qtscript_QLocale_NumberOption_fromScriptValue(const QScriptValue &value, QLocale::NumberOption &out)
-{
-    out = qvariant_cast<QLocale::NumberOption>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QLocale_NumberOption(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QLocale::OmitGroupSeparator) && (arg <= QLocale::RejectGroupSeparator))
-        return qScriptValueFromValue(engine,  static_cast<QLocale::NumberOption>(arg));
-    return context->throwError(QString::fromLatin1("NumberOption(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QLocale_NumberOption_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::NumberOption value = qscriptvalue_cast<QLocale::NumberOption>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QLocale_NumberOption_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::NumberOption value = qscriptvalue_cast<QLocale::NumberOption>(context->thisObject());
-    return QScriptValue(engine, qtscript_QLocale_NumberOption_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QLocale_NumberOption_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QLocale_NumberOption,
-        qtscript_QLocale_NumberOption_valueOf, qtscript_QLocale_NumberOption_toString);
-    qScriptRegisterMetaType<QLocale::NumberOption>(engine, qtscript_QLocale_NumberOption_toScriptValue,
-        qtscript_QLocale_NumberOption_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QLocale_NumberOption_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QLocale_NumberOption_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QLocale::NumberOptions
-//
-
-static QScriptValue qtscript_QLocale_NumberOptions_toScriptValue(QScriptEngine *engine, const QLocale::NumberOptions &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_QLocale_NumberOptions_fromScriptValue(const QScriptValue &value, QLocale::NumberOptions &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<QLocale::NumberOptions>())
-        out = qvariant_cast<QLocale::NumberOptions>(var);
-    else if (var.userType() == qMetaTypeId<QLocale::NumberOption>())
-        out = qvariant_cast<QLocale::NumberOption>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_QLocale_NumberOptions(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::NumberOptions result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<QLocale::NumberOptions>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<QLocale::NumberOption>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("NumberOptions(): argument %0 is not of type NumberOption").arg(i));
-            }
-            result |= qvariant_cast<QLocale::NumberOption>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_QLocale_NumberOptions_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::NumberOptions value = qscriptvalue_cast<QLocale::NumberOptions>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QLocale_NumberOptions_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QLocale::NumberOptions value = qscriptvalue_cast<QLocale::NumberOptions>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 2; ++i) {
-        if ((value & qtscript_QLocale_NumberOption_values[i]) == qtscript_QLocale_NumberOption_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_QLocale_NumberOption_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_QLocale_NumberOptions_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<QLocale::NumberOptions>() == otherObj.value<QLocale::NumberOptions>())));
-}
-
-static QScriptValue qtscript_create_QLocale_NumberOptions_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_QLocale_NumberOptions, qtscript_QLocale_NumberOptions_valueOf,
-        qtscript_QLocale_NumberOptions_toString, qtscript_QLocale_NumberOptions_equals);
-    qScriptRegisterMetaType<QLocale::NumberOptions>(engine, qtscript_QLocale_NumberOptions_toScriptValue,
-        qtscript_QLocale_NumberOptions_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
     return ctor;
 }
 
@@ -3254,23 +3262,23 @@ QScriptValue qtscript_create_QLocale_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    ctor.setProperty(QString::fromLatin1("Language"),
-        qtscript_create_QLocale_Language_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("Country"),
-        qtscript_create_QLocale_Country_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Script"),
         qtscript_create_QLocale_Script_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("QuotationStyle"),
-        qtscript_create_QLocale_QuotationStyle_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("FormatType"),
-        qtscript_create_QLocale_FormatType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("CurrencySymbolFormat"),
         qtscript_create_QLocale_CurrencySymbolFormat_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("QuotationStyle"),
+        qtscript_create_QLocale_QuotationStyle_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("MeasurementSystem"),
         qtscript_create_QLocale_MeasurementSystem_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("FormatType"),
+        qtscript_create_QLocale_FormatType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Language"),
+        qtscript_create_QLocale_Language_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("NumberOption"),
         qtscript_create_QLocale_NumberOption_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("NumberOptions"),
         qtscript_create_QLocale_NumberOptions_class(engine));
+    ctor.setProperty(QString::fromLatin1("Country"),
+        qtscript_create_QLocale_Country_class(engine, ctor));
     return ctor;
 }

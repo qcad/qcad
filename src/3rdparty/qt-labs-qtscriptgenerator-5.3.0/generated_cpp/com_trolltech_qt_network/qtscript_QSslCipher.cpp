@@ -30,7 +30,7 @@ static const char * const qtscript_QSslCipher_function_names[] = {
 };
 
 static const char * const qtscript_QSslCipher_function_signatures[] = {
-    "\nQSslCipher other\nString name, SslProtocol protocol"
+    "\nQSslCipher other\nString name\nString name, SslProtocol protocol"
     // static
     // prototype
     , ""
@@ -225,10 +225,17 @@ static QScriptValue qtscript_QSslCipher_static_call(QScriptContext *context, QSc
         QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
         return _q_result;
     } else if (context->argumentCount() == 1) {
-        QSslCipher _q_arg0 = qscriptvalue_cast<QSslCipher>(context->argument(0));
-        QSslCipher _q_cpp_result(_q_arg0);
-        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
-        return _q_result;
+        if ((qMetaTypeId<QSslCipher>() == context->argument(0).toVariant().userType())) {
+            QSslCipher _q_arg0 = qscriptvalue_cast<QSslCipher>(context->argument(0));
+            QSslCipher _q_cpp_result(_q_arg0);
+            QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+            return _q_result;
+        } else if (context->argument(0).isString()) {
+            QString _q_arg0 = context->argument(0).toString();
+            QSslCipher _q_cpp_result(_q_arg0);
+            QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+            return _q_result;
+        }
     } else if (context->argumentCount() == 2) {
         QString _q_arg0 = context->argument(0).toString();
         QSsl::SslProtocol _q_arg1 = qscriptvalue_cast<QSsl::SslProtocol>(context->argument(1));

@@ -134,9 +134,9 @@ static QScriptValue qtscript_QSqlDriver_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QSqlDriver*)
 Q_DECLARE_METATYPE(QtScriptShell_QSqlDriver*)
-Q_DECLARE_METATYPE(QSqlDriver::IdentifierType)
 Q_DECLARE_METATYPE(QSqlDriver::DriverFeature)
 Q_DECLARE_METATYPE(QSqlDriver::StatementType)
+Q_DECLARE_METATYPE(QSqlDriver::IdentifierType)
 Q_DECLARE_METATYPE(QSqlResult*)
 Q_DECLARE_METATYPE(QSqlField)
 Q_DECLARE_METATYPE(QSqlError)
@@ -157,73 +157,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QSqlDriver::IdentifierType
-//
-
-static const QSqlDriver::IdentifierType qtscript_QSqlDriver_IdentifierType_values[] = {
-    QSqlDriver::FieldName
-    , QSqlDriver::TableName
-};
-
-static const char * const qtscript_QSqlDriver_IdentifierType_keys[] = {
-    "FieldName"
-    , "TableName"
-};
-
-static QString qtscript_QSqlDriver_IdentifierType_toStringHelper(QSqlDriver::IdentifierType value)
-{
-    if ((value >= QSqlDriver::FieldName) && (value <= QSqlDriver::TableName))
-        return qtscript_QSqlDriver_IdentifierType_keys[static_cast<int>(value)-static_cast<int>(QSqlDriver::FieldName)];
-    return QString();
-}
-
-static QScriptValue qtscript_QSqlDriver_IdentifierType_toScriptValue(QScriptEngine *engine, const QSqlDriver::IdentifierType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSqlDriver"));
-    return clazz.property(qtscript_QSqlDriver_IdentifierType_toStringHelper(value));
-}
-
-static void qtscript_QSqlDriver_IdentifierType_fromScriptValue(const QScriptValue &value, QSqlDriver::IdentifierType &out)
-{
-    out = qvariant_cast<QSqlDriver::IdentifierType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QSqlDriver_IdentifierType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QSqlDriver::FieldName) && (arg <= QSqlDriver::TableName))
-        return qScriptValueFromValue(engine,  static_cast<QSqlDriver::IdentifierType>(arg));
-    return context->throwError(QString::fromLatin1("IdentifierType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QSqlDriver_IdentifierType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QSqlDriver::IdentifierType value = qscriptvalue_cast<QSqlDriver::IdentifierType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QSqlDriver_IdentifierType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QSqlDriver::IdentifierType value = qscriptvalue_cast<QSqlDriver::IdentifierType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QSqlDriver_IdentifierType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QSqlDriver_IdentifierType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QSqlDriver_IdentifierType,
-        qtscript_QSqlDriver_IdentifierType_valueOf, qtscript_QSqlDriver_IdentifierType_toString);
-    qScriptRegisterMetaType<QSqlDriver::IdentifierType>(engine, qtscript_QSqlDriver_IdentifierType_toScriptValue,
-        qtscript_QSqlDriver_IdentifierType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QSqlDriver_IdentifierType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QSqlDriver_IdentifierType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -387,6 +320,73 @@ static QScriptValue qtscript_create_QSqlDriver_StatementType_class(QScriptEngine
     for (int i = 0; i < 5; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QSqlDriver_StatementType_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QSqlDriver_StatementType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QSqlDriver::IdentifierType
+//
+
+static const QSqlDriver::IdentifierType qtscript_QSqlDriver_IdentifierType_values[] = {
+    QSqlDriver::FieldName
+    , QSqlDriver::TableName
+};
+
+static const char * const qtscript_QSqlDriver_IdentifierType_keys[] = {
+    "FieldName"
+    , "TableName"
+};
+
+static QString qtscript_QSqlDriver_IdentifierType_toStringHelper(QSqlDriver::IdentifierType value)
+{
+    if ((value >= QSqlDriver::FieldName) && (value <= QSqlDriver::TableName))
+        return qtscript_QSqlDriver_IdentifierType_keys[static_cast<int>(value)-static_cast<int>(QSqlDriver::FieldName)];
+    return QString();
+}
+
+static QScriptValue qtscript_QSqlDriver_IdentifierType_toScriptValue(QScriptEngine *engine, const QSqlDriver::IdentifierType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSqlDriver"));
+    return clazz.property(qtscript_QSqlDriver_IdentifierType_toStringHelper(value));
+}
+
+static void qtscript_QSqlDriver_IdentifierType_fromScriptValue(const QScriptValue &value, QSqlDriver::IdentifierType &out)
+{
+    out = qvariant_cast<QSqlDriver::IdentifierType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QSqlDriver_IdentifierType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QSqlDriver::FieldName) && (arg <= QSqlDriver::TableName))
+        return qScriptValueFromValue(engine,  static_cast<QSqlDriver::IdentifierType>(arg));
+    return context->throwError(QString::fromLatin1("IdentifierType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QSqlDriver_IdentifierType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QSqlDriver::IdentifierType value = qscriptvalue_cast<QSqlDriver::IdentifierType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QSqlDriver_IdentifierType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QSqlDriver::IdentifierType value = qscriptvalue_cast<QSqlDriver::IdentifierType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QSqlDriver_IdentifierType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QSqlDriver_IdentifierType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QSqlDriver_IdentifierType,
+        qtscript_QSqlDriver_IdentifierType_valueOf, qtscript_QSqlDriver_IdentifierType_toString);
+    qScriptRegisterMetaType<QSqlDriver::IdentifierType>(engine, qtscript_QSqlDriver_IdentifierType_toScriptValue,
+        qtscript_QSqlDriver_IdentifierType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QSqlDriver_IdentifierType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QSqlDriver_IdentifierType_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -724,11 +724,11 @@ QScriptValue qtscript_create_QSqlDriver_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QSqlDriver_static_call, proto, qtscript_QSqlDriver_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("IdentifierType"),
-        qtscript_create_QSqlDriver_IdentifierType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("DriverFeature"),
         qtscript_create_QSqlDriver_DriverFeature_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("StatementType"),
         qtscript_create_QSqlDriver_StatementType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("IdentifierType"),
+        qtscript_create_QSqlDriver_IdentifierType_class(engine, ctor));
     return ctor;
 }

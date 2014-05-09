@@ -203,8 +203,8 @@ static QScriptValue qtscript_QXmlStreamReader_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QXmlStreamReader*)
 Q_DECLARE_METATYPE(QXmlStreamReader::ReadElementTextBehaviour)
-Q_DECLARE_METATYPE(QXmlStreamReader::TokenType)
 Q_DECLARE_METATYPE(QXmlStreamReader::Error)
+Q_DECLARE_METATYPE(QXmlStreamReader::TokenType)
 Q_DECLARE_METATYPE(QXmlStreamNamespaceDeclaration)
 Q_DECLARE_METATYPE(QVector<QXmlStreamNamespaceDeclaration >)
 Q_DECLARE_METATYPE(QXmlStreamAttributes)
@@ -300,6 +300,79 @@ static QScriptValue qtscript_create_QXmlStreamReader_ReadElementTextBehaviour_cl
 }
 
 //
+// QXmlStreamReader::Error
+//
+
+static const QXmlStreamReader::Error qtscript_QXmlStreamReader_Error_values[] = {
+    QXmlStreamReader::NoError
+    , QXmlStreamReader::UnexpectedElementError
+    , QXmlStreamReader::CustomError
+    , QXmlStreamReader::NotWellFormedError
+    , QXmlStreamReader::PrematureEndOfDocumentError
+};
+
+static const char * const qtscript_QXmlStreamReader_Error_keys[] = {
+    "NoError"
+    , "UnexpectedElementError"
+    , "CustomError"
+    , "NotWellFormedError"
+    , "PrematureEndOfDocumentError"
+};
+
+static QString qtscript_QXmlStreamReader_Error_toStringHelper(QXmlStreamReader::Error value)
+{
+    if ((value >= QXmlStreamReader::NoError) && (value <= QXmlStreamReader::PrematureEndOfDocumentError))
+        return qtscript_QXmlStreamReader_Error_keys[static_cast<int>(value)-static_cast<int>(QXmlStreamReader::NoError)];
+    return QString();
+}
+
+static QScriptValue qtscript_QXmlStreamReader_Error_toScriptValue(QScriptEngine *engine, const QXmlStreamReader::Error &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QXmlStreamReader"));
+    return clazz.property(qtscript_QXmlStreamReader_Error_toStringHelper(value));
+}
+
+static void qtscript_QXmlStreamReader_Error_fromScriptValue(const QScriptValue &value, QXmlStreamReader::Error &out)
+{
+    out = qvariant_cast<QXmlStreamReader::Error>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QXmlStreamReader_Error(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QXmlStreamReader::NoError) && (arg <= QXmlStreamReader::PrematureEndOfDocumentError))
+        return qScriptValueFromValue(engine,  static_cast<QXmlStreamReader::Error>(arg));
+    return context->throwError(QString::fromLatin1("Error(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QXmlStreamReader_Error_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QXmlStreamReader::Error value = qscriptvalue_cast<QXmlStreamReader::Error>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QXmlStreamReader_Error_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QXmlStreamReader::Error value = qscriptvalue_cast<QXmlStreamReader::Error>(context->thisObject());
+    return QScriptValue(engine, qtscript_QXmlStreamReader_Error_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QXmlStreamReader_Error_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QXmlStreamReader_Error,
+        qtscript_QXmlStreamReader_Error_valueOf, qtscript_QXmlStreamReader_Error_toString);
+    qScriptRegisterMetaType<QXmlStreamReader::Error>(engine, qtscript_QXmlStreamReader_Error_toScriptValue,
+        qtscript_QXmlStreamReader_Error_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 5; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QXmlStreamReader_Error_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QXmlStreamReader_Error_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
 // QXmlStreamReader::TokenType
 //
 
@@ -379,79 +452,6 @@ static QScriptValue qtscript_create_QXmlStreamReader_TokenType_class(QScriptEngi
     for (int i = 0; i < 11; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QXmlStreamReader_TokenType_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QXmlStreamReader_TokenType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QXmlStreamReader::Error
-//
-
-static const QXmlStreamReader::Error qtscript_QXmlStreamReader_Error_values[] = {
-    QXmlStreamReader::NoError
-    , QXmlStreamReader::UnexpectedElementError
-    , QXmlStreamReader::CustomError
-    , QXmlStreamReader::NotWellFormedError
-    , QXmlStreamReader::PrematureEndOfDocumentError
-};
-
-static const char * const qtscript_QXmlStreamReader_Error_keys[] = {
-    "NoError"
-    , "UnexpectedElementError"
-    , "CustomError"
-    , "NotWellFormedError"
-    , "PrematureEndOfDocumentError"
-};
-
-static QString qtscript_QXmlStreamReader_Error_toStringHelper(QXmlStreamReader::Error value)
-{
-    if ((value >= QXmlStreamReader::NoError) && (value <= QXmlStreamReader::PrematureEndOfDocumentError))
-        return qtscript_QXmlStreamReader_Error_keys[static_cast<int>(value)-static_cast<int>(QXmlStreamReader::NoError)];
-    return QString();
-}
-
-static QScriptValue qtscript_QXmlStreamReader_Error_toScriptValue(QScriptEngine *engine, const QXmlStreamReader::Error &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QXmlStreamReader"));
-    return clazz.property(qtscript_QXmlStreamReader_Error_toStringHelper(value));
-}
-
-static void qtscript_QXmlStreamReader_Error_fromScriptValue(const QScriptValue &value, QXmlStreamReader::Error &out)
-{
-    out = qvariant_cast<QXmlStreamReader::Error>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QXmlStreamReader_Error(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QXmlStreamReader::NoError) && (arg <= QXmlStreamReader::PrematureEndOfDocumentError))
-        return qScriptValueFromValue(engine,  static_cast<QXmlStreamReader::Error>(arg));
-    return context->throwError(QString::fromLatin1("Error(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QXmlStreamReader_Error_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QXmlStreamReader::Error value = qscriptvalue_cast<QXmlStreamReader::Error>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QXmlStreamReader_Error_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QXmlStreamReader::Error value = qscriptvalue_cast<QXmlStreamReader::Error>(context->thisObject());
-    return QScriptValue(engine, qtscript_QXmlStreamReader_Error_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QXmlStreamReader_Error_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QXmlStreamReader_Error,
-        qtscript_QXmlStreamReader_Error_valueOf, qtscript_QXmlStreamReader_Error_toString);
-    qScriptRegisterMetaType<QXmlStreamReader::Error>(engine, qtscript_QXmlStreamReader_Error_toScriptValue,
-        qtscript_QXmlStreamReader_Error_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 5; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QXmlStreamReader_Error_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QXmlStreamReader_Error_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -991,9 +991,9 @@ QScriptValue qtscript_create_QXmlStreamReader_class(QScriptEngine *engine)
 
     ctor.setProperty(QString::fromLatin1("ReadElementTextBehaviour"),
         qtscript_create_QXmlStreamReader_ReadElementTextBehaviour_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TokenType"),
-        qtscript_create_QXmlStreamReader_TokenType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Error"),
         qtscript_create_QXmlStreamReader_Error_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("TokenType"),
+        qtscript_create_QXmlStreamReader_TokenType_class(engine, ctor));
     return ctor;
 }

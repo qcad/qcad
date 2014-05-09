@@ -9,6 +9,7 @@
 #include <qcursor.h>
 #include <qfont.h>
 #include <qguiapplication.h>
+#include <qicon.h>
 #include <qlist.h>
 #include <qobject.h>
 #include <qpalette.h>

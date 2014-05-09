@@ -143,12 +143,12 @@ static QScriptValue qtscript_QPaintEngine_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QPaintEngine*)
 Q_DECLARE_METATYPE(QtScriptShell_QPaintEngine*)
-Q_DECLARE_METATYPE(QPaintEngine::DirtyFlag)
-Q_DECLARE_METATYPE(QFlags<QPaintEngine::DirtyFlag>)
-Q_DECLARE_METATYPE(QPaintEngine::PaintEngineFeature)
-Q_DECLARE_METATYPE(QFlags<QPaintEngine::PaintEngineFeature>)
 Q_DECLARE_METATYPE(QPaintEngine::Type)
 Q_DECLARE_METATYPE(QPaintEngine::PolygonDrawMode)
+Q_DECLARE_METATYPE(QPaintEngine::PaintEngineFeature)
+Q_DECLARE_METATYPE(QFlags<QPaintEngine::PaintEngineFeature>)
+Q_DECLARE_METATYPE(QPaintEngine::DirtyFlag)
+Q_DECLARE_METATYPE(QFlags<QPaintEngine::DirtyFlag>)
 Q_DECLARE_METATYPE(QPaintDevice*)
 Q_DECLARE_METATYPE(QFlags<Qt::ImageConversionFlag>)
 Q_DECLARE_METATYPE(const QLine*)
@@ -194,173 +194,180 @@ static QScriptValue qtscript_create_flags_class_helper(
 }
 
 //
-// QPaintEngine::DirtyFlag
+// QPaintEngine::Type
 //
 
-static const QPaintEngine::DirtyFlag qtscript_QPaintEngine_DirtyFlag_values[] = {
-    QPaintEngine::DirtyPen
-    , QPaintEngine::DirtyBrush
-    , QPaintEngine::DirtyBrushOrigin
-    , QPaintEngine::DirtyFont
-    , QPaintEngine::DirtyBackground
-    , QPaintEngine::DirtyBackgroundMode
-    , QPaintEngine::DirtyTransform
-    , QPaintEngine::DirtyClipRegion
-    , QPaintEngine::DirtyClipPath
-    , QPaintEngine::DirtyHints
-    , QPaintEngine::DirtyCompositionMode
-    , QPaintEngine::DirtyClipEnabled
-    , QPaintEngine::DirtyOpacity
-    , QPaintEngine::AllDirty
+static const QPaintEngine::Type qtscript_QPaintEngine_Type_values[] = {
+    QPaintEngine::X11
+    , QPaintEngine::Windows
+    , QPaintEngine::QuickDraw
+    , QPaintEngine::CoreGraphics
+    , QPaintEngine::MacPrinter
+    , QPaintEngine::QWindowSystem
+    , QPaintEngine::PostScript
+    , QPaintEngine::OpenGL
+    , QPaintEngine::Picture
+    , QPaintEngine::SVG
+    , QPaintEngine::Raster
+    , QPaintEngine::Direct3D
+    , QPaintEngine::Pdf
+    , QPaintEngine::OpenVG
+    , QPaintEngine::OpenGL2
+    , QPaintEngine::PaintBuffer
+    , QPaintEngine::Blitter
+    , QPaintEngine::Direct2D
+    , QPaintEngine::User
+    , QPaintEngine::MaxUser
 };
 
-static const char * const qtscript_QPaintEngine_DirtyFlag_keys[] = {
-    "DirtyPen"
-    , "DirtyBrush"
-    , "DirtyBrushOrigin"
-    , "DirtyFont"
-    , "DirtyBackground"
-    , "DirtyBackgroundMode"
-    , "DirtyTransform"
-    , "DirtyClipRegion"
-    , "DirtyClipPath"
-    , "DirtyHints"
-    , "DirtyCompositionMode"
-    , "DirtyClipEnabled"
-    , "DirtyOpacity"
-    , "AllDirty"
+static const char * const qtscript_QPaintEngine_Type_keys[] = {
+    "X11"
+    , "Windows"
+    , "QuickDraw"
+    , "CoreGraphics"
+    , "MacPrinter"
+    , "QWindowSystem"
+    , "PostScript"
+    , "OpenGL"
+    , "Picture"
+    , "SVG"
+    , "Raster"
+    , "Direct3D"
+    , "Pdf"
+    , "OpenVG"
+    , "OpenGL2"
+    , "PaintBuffer"
+    , "Blitter"
+    , "Direct2D"
+    , "User"
+    , "MaxUser"
 };
 
-static QString qtscript_QPaintEngine_DirtyFlag_toStringHelper(QPaintEngine::DirtyFlag value)
+static QString qtscript_QPaintEngine_Type_toStringHelper(QPaintEngine::Type value)
 {
-    for (int i = 0; i < 14; ++i) {
-        if (qtscript_QPaintEngine_DirtyFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_QPaintEngine_DirtyFlag_keys[i]);
+    for (int i = 0; i < 20; ++i) {
+        if (qtscript_QPaintEngine_Type_values[i] == value)
+            return QString::fromLatin1(qtscript_QPaintEngine_Type_keys[i]);
     }
     return QString();
 }
 
-static QScriptValue qtscript_QPaintEngine_DirtyFlag_toScriptValue(QScriptEngine *engine, const QPaintEngine::DirtyFlag &value)
+static QScriptValue qtscript_QPaintEngine_Type_toScriptValue(QScriptEngine *engine, const QPaintEngine::Type &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QPaintEngine"));
-    return clazz.property(qtscript_QPaintEngine_DirtyFlag_toStringHelper(value));
+    return clazz.property(qtscript_QPaintEngine_Type_toStringHelper(value));
 }
 
-static void qtscript_QPaintEngine_DirtyFlag_fromScriptValue(const QScriptValue &value, QPaintEngine::DirtyFlag &out)
+static void qtscript_QPaintEngine_Type_fromScriptValue(const QScriptValue &value, QPaintEngine::Type &out)
 {
-    out = qvariant_cast<QPaintEngine::DirtyFlag>(value.toVariant());
+    out = qvariant_cast<QPaintEngine::Type>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_QPaintEngine_DirtyFlag(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_QPaintEngine_Type(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 14; ++i) {
-        if (qtscript_QPaintEngine_DirtyFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<QPaintEngine::DirtyFlag>(arg));
+    for (int i = 0; i < 20; ++i) {
+        if (qtscript_QPaintEngine_Type_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<QPaintEngine::Type>(arg));
     }
-    return context->throwError(QString::fromLatin1("DirtyFlag(): invalid enum value (%0)").arg(arg));
+    return context->throwError(QString::fromLatin1("Type(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_QPaintEngine_DirtyFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QPaintEngine_Type_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    QPaintEngine::DirtyFlag value = qscriptvalue_cast<QPaintEngine::DirtyFlag>(context->thisObject());
+    QPaintEngine::Type value = qscriptvalue_cast<QPaintEngine::Type>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_QPaintEngine_DirtyFlag_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QPaintEngine_Type_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    QPaintEngine::DirtyFlag value = qscriptvalue_cast<QPaintEngine::DirtyFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_QPaintEngine_DirtyFlag_toStringHelper(value));
+    QPaintEngine::Type value = qscriptvalue_cast<QPaintEngine::Type>(context->thisObject());
+    return QScriptValue(engine, qtscript_QPaintEngine_Type_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_QPaintEngine_DirtyFlag_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_QPaintEngine_Type_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QPaintEngine_DirtyFlag,
-        qtscript_QPaintEngine_DirtyFlag_valueOf, qtscript_QPaintEngine_DirtyFlag_toString);
-    qScriptRegisterMetaType<QPaintEngine::DirtyFlag>(engine, qtscript_QPaintEngine_DirtyFlag_toScriptValue,
-        qtscript_QPaintEngine_DirtyFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 14; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QPaintEngine_DirtyFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QPaintEngine_DirtyFlag_values[i])),
+        engine, qtscript_construct_QPaintEngine_Type,
+        qtscript_QPaintEngine_Type_valueOf, qtscript_QPaintEngine_Type_toString);
+    qScriptRegisterMetaType<QPaintEngine::Type>(engine, qtscript_QPaintEngine_Type_toScriptValue,
+        qtscript_QPaintEngine_Type_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 20; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QPaintEngine_Type_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QPaintEngine_Type_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
 }
 
 //
-// QPaintEngine::DirtyFlags
+// QPaintEngine::PolygonDrawMode
 //
 
-static QScriptValue qtscript_QPaintEngine_DirtyFlags_toScriptValue(QScriptEngine *engine, const QPaintEngine::DirtyFlags &value)
+static const QPaintEngine::PolygonDrawMode qtscript_QPaintEngine_PolygonDrawMode_values[] = {
+    QPaintEngine::OddEvenMode
+    , QPaintEngine::WindingMode
+    , QPaintEngine::ConvexMode
+    , QPaintEngine::PolylineMode
+};
+
+static const char * const qtscript_QPaintEngine_PolygonDrawMode_keys[] = {
+    "OddEvenMode"
+    , "WindingMode"
+    , "ConvexMode"
+    , "PolylineMode"
+};
+
+static QString qtscript_QPaintEngine_PolygonDrawMode_toStringHelper(QPaintEngine::PolygonDrawMode value)
 {
-    return engine->newVariant(qVariantFromValue(value));
+    if ((value >= QPaintEngine::OddEvenMode) && (value <= QPaintEngine::PolylineMode))
+        return qtscript_QPaintEngine_PolygonDrawMode_keys[static_cast<int>(value)-static_cast<int>(QPaintEngine::OddEvenMode)];
+    return QString();
 }
 
-static void qtscript_QPaintEngine_DirtyFlags_fromScriptValue(const QScriptValue &value, QPaintEngine::DirtyFlags &out)
+static QScriptValue qtscript_QPaintEngine_PolygonDrawMode_toScriptValue(QScriptEngine *engine, const QPaintEngine::PolygonDrawMode &value)
 {
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<QPaintEngine::DirtyFlags>())
-        out = qvariant_cast<QPaintEngine::DirtyFlags>(var);
-    else if (var.userType() == qMetaTypeId<QPaintEngine::DirtyFlag>())
-        out = qvariant_cast<QPaintEngine::DirtyFlag>(var);
-    else
-        out = 0;
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QPaintEngine"));
+    return clazz.property(qtscript_QPaintEngine_PolygonDrawMode_toStringHelper(value));
 }
 
-static QScriptValue qtscript_construct_QPaintEngine_DirtyFlags(QScriptContext *context, QScriptEngine *engine)
+static void qtscript_QPaintEngine_PolygonDrawMode_fromScriptValue(const QScriptValue &value, QPaintEngine::PolygonDrawMode &out)
 {
-    QPaintEngine::DirtyFlags result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<QPaintEngine::DirtyFlags>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<QPaintEngine::DirtyFlag>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("DirtyFlags(): argument %0 is not of type DirtyFlag").arg(i));
-            }
-            result |= qvariant_cast<QPaintEngine::DirtyFlag>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
+    out = qvariant_cast<QPaintEngine::PolygonDrawMode>(value.toVariant());
 }
 
-static QScriptValue qtscript_QPaintEngine_DirtyFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_QPaintEngine_PolygonDrawMode(QScriptContext *context, QScriptEngine *engine)
 {
-    QPaintEngine::DirtyFlags value = qscriptvalue_cast<QPaintEngine::DirtyFlags>(context->thisObject());
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QPaintEngine::OddEvenMode) && (arg <= QPaintEngine::PolylineMode))
+        return qScriptValueFromValue(engine,  static_cast<QPaintEngine::PolygonDrawMode>(arg));
+    return context->throwError(QString::fromLatin1("PolygonDrawMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QPaintEngine_PolygonDrawMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QPaintEngine::PolygonDrawMode value = qscriptvalue_cast<QPaintEngine::PolygonDrawMode>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_QPaintEngine_DirtyFlags_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QPaintEngine_PolygonDrawMode_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    QPaintEngine::DirtyFlags value = qscriptvalue_cast<QPaintEngine::DirtyFlags>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 14; ++i) {
-        if ((value & qtscript_QPaintEngine_DirtyFlag_values[i]) == qtscript_QPaintEngine_DirtyFlag_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_QPaintEngine_DirtyFlag_keys[i]));
-        }
+    QPaintEngine::PolygonDrawMode value = qscriptvalue_cast<QPaintEngine::PolygonDrawMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_QPaintEngine_PolygonDrawMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QPaintEngine_PolygonDrawMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QPaintEngine_PolygonDrawMode,
+        qtscript_QPaintEngine_PolygonDrawMode_valueOf, qtscript_QPaintEngine_PolygonDrawMode_toString);
+    qScriptRegisterMetaType<QPaintEngine::PolygonDrawMode>(engine, qtscript_QPaintEngine_PolygonDrawMode_toScriptValue,
+        qtscript_QPaintEngine_PolygonDrawMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QPaintEngine_PolygonDrawMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QPaintEngine_PolygonDrawMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_QPaintEngine_DirtyFlags_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<QPaintEngine::DirtyFlags>() == otherObj.value<QPaintEngine::DirtyFlags>())));
-}
-
-static QScriptValue qtscript_create_QPaintEngine_DirtyFlags_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_QPaintEngine_DirtyFlags, qtscript_QPaintEngine_DirtyFlags_valueOf,
-        qtscript_QPaintEngine_DirtyFlags_toString, qtscript_QPaintEngine_DirtyFlags_equals);
-    qScriptRegisterMetaType<QPaintEngine::DirtyFlags>(engine, qtscript_QPaintEngine_DirtyFlags_toScriptValue,
-        qtscript_QPaintEngine_DirtyFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
     return ctor;
 }
 
@@ -548,178 +555,173 @@ static QScriptValue qtscript_create_QPaintEngine_PaintEngineFeatures_class(QScri
 }
 
 //
-// QPaintEngine::Type
+// QPaintEngine::DirtyFlag
 //
 
-static const QPaintEngine::Type qtscript_QPaintEngine_Type_values[] = {
-    QPaintEngine::X11
-    , QPaintEngine::Windows
-    , QPaintEngine::QuickDraw
-    , QPaintEngine::CoreGraphics
-    , QPaintEngine::MacPrinter
-    , QPaintEngine::QWindowSystem
-    , QPaintEngine::PostScript
-    , QPaintEngine::OpenGL
-    , QPaintEngine::Picture
-    , QPaintEngine::SVG
-    , QPaintEngine::Raster
-    , QPaintEngine::Direct3D
-    , QPaintEngine::Pdf
-    , QPaintEngine::OpenVG
-    , QPaintEngine::OpenGL2
-    , QPaintEngine::PaintBuffer
-    , QPaintEngine::Blitter
-    , QPaintEngine::User
-    , QPaintEngine::MaxUser
+static const QPaintEngine::DirtyFlag qtscript_QPaintEngine_DirtyFlag_values[] = {
+    QPaintEngine::DirtyPen
+    , QPaintEngine::DirtyBrush
+    , QPaintEngine::DirtyBrushOrigin
+    , QPaintEngine::DirtyFont
+    , QPaintEngine::DirtyBackground
+    , QPaintEngine::DirtyBackgroundMode
+    , QPaintEngine::DirtyTransform
+    , QPaintEngine::DirtyClipRegion
+    , QPaintEngine::DirtyClipPath
+    , QPaintEngine::DirtyHints
+    , QPaintEngine::DirtyCompositionMode
+    , QPaintEngine::DirtyClipEnabled
+    , QPaintEngine::DirtyOpacity
+    , QPaintEngine::AllDirty
 };
 
-static const char * const qtscript_QPaintEngine_Type_keys[] = {
-    "X11"
-    , "Windows"
-    , "QuickDraw"
-    , "CoreGraphics"
-    , "MacPrinter"
-    , "QWindowSystem"
-    , "PostScript"
-    , "OpenGL"
-    , "Picture"
-    , "SVG"
-    , "Raster"
-    , "Direct3D"
-    , "Pdf"
-    , "OpenVG"
-    , "OpenGL2"
-    , "PaintBuffer"
-    , "Blitter"
-    , "User"
-    , "MaxUser"
+static const char * const qtscript_QPaintEngine_DirtyFlag_keys[] = {
+    "DirtyPen"
+    , "DirtyBrush"
+    , "DirtyBrushOrigin"
+    , "DirtyFont"
+    , "DirtyBackground"
+    , "DirtyBackgroundMode"
+    , "DirtyTransform"
+    , "DirtyClipRegion"
+    , "DirtyClipPath"
+    , "DirtyHints"
+    , "DirtyCompositionMode"
+    , "DirtyClipEnabled"
+    , "DirtyOpacity"
+    , "AllDirty"
 };
 
-static QString qtscript_QPaintEngine_Type_toStringHelper(QPaintEngine::Type value)
+static QString qtscript_QPaintEngine_DirtyFlag_toStringHelper(QPaintEngine::DirtyFlag value)
 {
-    for (int i = 0; i < 19; ++i) {
-        if (qtscript_QPaintEngine_Type_values[i] == value)
-            return QString::fromLatin1(qtscript_QPaintEngine_Type_keys[i]);
+    for (int i = 0; i < 14; ++i) {
+        if (qtscript_QPaintEngine_DirtyFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_QPaintEngine_DirtyFlag_keys[i]);
     }
     return QString();
 }
 
-static QScriptValue qtscript_QPaintEngine_Type_toScriptValue(QScriptEngine *engine, const QPaintEngine::Type &value)
+static QScriptValue qtscript_QPaintEngine_DirtyFlag_toScriptValue(QScriptEngine *engine, const QPaintEngine::DirtyFlag &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QPaintEngine"));
-    return clazz.property(qtscript_QPaintEngine_Type_toStringHelper(value));
+    return clazz.property(qtscript_QPaintEngine_DirtyFlag_toStringHelper(value));
 }
 
-static void qtscript_QPaintEngine_Type_fromScriptValue(const QScriptValue &value, QPaintEngine::Type &out)
+static void qtscript_QPaintEngine_DirtyFlag_fromScriptValue(const QScriptValue &value, QPaintEngine::DirtyFlag &out)
 {
-    out = qvariant_cast<QPaintEngine::Type>(value.toVariant());
+    out = qvariant_cast<QPaintEngine::DirtyFlag>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_QPaintEngine_Type(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_QPaintEngine_DirtyFlag(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 19; ++i) {
-        if (qtscript_QPaintEngine_Type_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<QPaintEngine::Type>(arg));
+    for (int i = 0; i < 14; ++i) {
+        if (qtscript_QPaintEngine_DirtyFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<QPaintEngine::DirtyFlag>(arg));
     }
-    return context->throwError(QString::fromLatin1("Type(): invalid enum value (%0)").arg(arg));
+    return context->throwError(QString::fromLatin1("DirtyFlag(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_QPaintEngine_Type_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QPaintEngine_DirtyFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    QPaintEngine::Type value = qscriptvalue_cast<QPaintEngine::Type>(context->thisObject());
+    QPaintEngine::DirtyFlag value = qscriptvalue_cast<QPaintEngine::DirtyFlag>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_QPaintEngine_Type_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QPaintEngine_DirtyFlag_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    QPaintEngine::Type value = qscriptvalue_cast<QPaintEngine::Type>(context->thisObject());
-    return QScriptValue(engine, qtscript_QPaintEngine_Type_toStringHelper(value));
+    QPaintEngine::DirtyFlag value = qscriptvalue_cast<QPaintEngine::DirtyFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_QPaintEngine_DirtyFlag_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_QPaintEngine_Type_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_QPaintEngine_DirtyFlag_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QPaintEngine_Type,
-        qtscript_QPaintEngine_Type_valueOf, qtscript_QPaintEngine_Type_toString);
-    qScriptRegisterMetaType<QPaintEngine::Type>(engine, qtscript_QPaintEngine_Type_toScriptValue,
-        qtscript_QPaintEngine_Type_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 19; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QPaintEngine_Type_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QPaintEngine_Type_values[i])),
+        engine, qtscript_construct_QPaintEngine_DirtyFlag,
+        qtscript_QPaintEngine_DirtyFlag_valueOf, qtscript_QPaintEngine_DirtyFlag_toString);
+    qScriptRegisterMetaType<QPaintEngine::DirtyFlag>(engine, qtscript_QPaintEngine_DirtyFlag_toScriptValue,
+        qtscript_QPaintEngine_DirtyFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 14; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QPaintEngine_DirtyFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QPaintEngine_DirtyFlag_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
 }
 
 //
-// QPaintEngine::PolygonDrawMode
+// QPaintEngine::DirtyFlags
 //
 
-static const QPaintEngine::PolygonDrawMode qtscript_QPaintEngine_PolygonDrawMode_values[] = {
-    QPaintEngine::OddEvenMode
-    , QPaintEngine::WindingMode
-    , QPaintEngine::ConvexMode
-    , QPaintEngine::PolylineMode
-};
-
-static const char * const qtscript_QPaintEngine_PolygonDrawMode_keys[] = {
-    "OddEvenMode"
-    , "WindingMode"
-    , "ConvexMode"
-    , "PolylineMode"
-};
-
-static QString qtscript_QPaintEngine_PolygonDrawMode_toStringHelper(QPaintEngine::PolygonDrawMode value)
+static QScriptValue qtscript_QPaintEngine_DirtyFlags_toScriptValue(QScriptEngine *engine, const QPaintEngine::DirtyFlags &value)
 {
-    if ((value >= QPaintEngine::OddEvenMode) && (value <= QPaintEngine::PolylineMode))
-        return qtscript_QPaintEngine_PolygonDrawMode_keys[static_cast<int>(value)-static_cast<int>(QPaintEngine::OddEvenMode)];
-    return QString();
+    return engine->newVariant(qVariantFromValue(value));
 }
 
-static QScriptValue qtscript_QPaintEngine_PolygonDrawMode_toScriptValue(QScriptEngine *engine, const QPaintEngine::PolygonDrawMode &value)
+static void qtscript_QPaintEngine_DirtyFlags_fromScriptValue(const QScriptValue &value, QPaintEngine::DirtyFlags &out)
 {
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QPaintEngine"));
-    return clazz.property(qtscript_QPaintEngine_PolygonDrawMode_toStringHelper(value));
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<QPaintEngine::DirtyFlags>())
+        out = qvariant_cast<QPaintEngine::DirtyFlags>(var);
+    else if (var.userType() == qMetaTypeId<QPaintEngine::DirtyFlag>())
+        out = qvariant_cast<QPaintEngine::DirtyFlag>(var);
+    else
+        out = 0;
 }
 
-static void qtscript_QPaintEngine_PolygonDrawMode_fromScriptValue(const QScriptValue &value, QPaintEngine::PolygonDrawMode &out)
+static QScriptValue qtscript_construct_QPaintEngine_DirtyFlags(QScriptContext *context, QScriptEngine *engine)
 {
-    out = qvariant_cast<QPaintEngine::PolygonDrawMode>(value.toVariant());
+    QPaintEngine::DirtyFlags result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<QPaintEngine::DirtyFlags>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<QPaintEngine::DirtyFlag>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("DirtyFlags(): argument %0 is not of type DirtyFlag").arg(i));
+            }
+            result |= qvariant_cast<QPaintEngine::DirtyFlag>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
 }
 
-static QScriptValue qtscript_construct_QPaintEngine_PolygonDrawMode(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QPaintEngine_DirtyFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QPaintEngine::OddEvenMode) && (arg <= QPaintEngine::PolylineMode))
-        return qScriptValueFromValue(engine,  static_cast<QPaintEngine::PolygonDrawMode>(arg));
-    return context->throwError(QString::fromLatin1("PolygonDrawMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QPaintEngine_PolygonDrawMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QPaintEngine::PolygonDrawMode value = qscriptvalue_cast<QPaintEngine::PolygonDrawMode>(context->thisObject());
+    QPaintEngine::DirtyFlags value = qscriptvalue_cast<QPaintEngine::DirtyFlags>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_QPaintEngine_PolygonDrawMode_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QPaintEngine_DirtyFlags_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    QPaintEngine::PolygonDrawMode value = qscriptvalue_cast<QPaintEngine::PolygonDrawMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_QPaintEngine_PolygonDrawMode_toStringHelper(value));
+    QPaintEngine::DirtyFlags value = qscriptvalue_cast<QPaintEngine::DirtyFlags>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 14; ++i) {
+        if ((value & qtscript_QPaintEngine_DirtyFlag_values[i]) == qtscript_QPaintEngine_DirtyFlag_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_QPaintEngine_DirtyFlag_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
 }
 
-static QScriptValue qtscript_create_QPaintEngine_PolygonDrawMode_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_QPaintEngine_DirtyFlags_equals(QScriptContext *context, QScriptEngine *engine)
 {
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QPaintEngine_PolygonDrawMode,
-        qtscript_QPaintEngine_PolygonDrawMode_valueOf, qtscript_QPaintEngine_PolygonDrawMode_toString);
-    qScriptRegisterMetaType<QPaintEngine::PolygonDrawMode>(engine, qtscript_QPaintEngine_PolygonDrawMode_toScriptValue,
-        qtscript_QPaintEngine_PolygonDrawMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QPaintEngine_PolygonDrawMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QPaintEngine_PolygonDrawMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<QPaintEngine::DirtyFlags>() == otherObj.value<QPaintEngine::DirtyFlags>())));
+}
+
+static QScriptValue qtscript_create_QPaintEngine_DirtyFlags_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_QPaintEngine_DirtyFlags, qtscript_QPaintEngine_DirtyFlags_valueOf,
+        qtscript_QPaintEngine_DirtyFlags_toString, qtscript_QPaintEngine_DirtyFlags_equals);
+    qScriptRegisterMetaType<QPaintEngine::DirtyFlags>(engine, qtscript_QPaintEngine_DirtyFlags_toScriptValue,
+        qtscript_QPaintEngine_DirtyFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
     return ctor;
 }
 
@@ -1097,17 +1099,17 @@ QScriptValue qtscript_create_QPaintEngine_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QPaintEngine_static_call, proto, qtscript_QPaintEngine_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("DirtyFlag"),
-        qtscript_create_QPaintEngine_DirtyFlag_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("DirtyFlags"),
-        qtscript_create_QPaintEngine_DirtyFlags_class(engine));
-    ctor.setProperty(QString::fromLatin1("PaintEngineFeature"),
-        qtscript_create_QPaintEngine_PaintEngineFeature_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("PaintEngineFeatures"),
-        qtscript_create_QPaintEngine_PaintEngineFeatures_class(engine));
     ctor.setProperty(QString::fromLatin1("Type"),
         qtscript_create_QPaintEngine_Type_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("PolygonDrawMode"),
         qtscript_create_QPaintEngine_PolygonDrawMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("PaintEngineFeature"),
+        qtscript_create_QPaintEngine_PaintEngineFeature_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("PaintEngineFeatures"),
+        qtscript_create_QPaintEngine_PaintEngineFeatures_class(engine));
+    ctor.setProperty(QString::fromLatin1("DirtyFlag"),
+        qtscript_create_QPaintEngine_DirtyFlag_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("DirtyFlags"),
+        qtscript_create_QPaintEngine_DirtyFlags_class(engine));
     return ctor;
 }

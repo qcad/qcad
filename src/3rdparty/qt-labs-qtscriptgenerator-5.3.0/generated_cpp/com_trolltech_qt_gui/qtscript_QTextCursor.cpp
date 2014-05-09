@@ -233,9 +233,9 @@ static QScriptValue qtscript_QTextCursor_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QTextCursor)
 Q_DECLARE_METATYPE(QTextCursor*)
-Q_DECLARE_METATYPE(QTextCursor::MoveOperation)
-Q_DECLARE_METATYPE(QTextCursor::MoveMode)
 Q_DECLARE_METATYPE(QTextCursor::SelectionType)
+Q_DECLARE_METATYPE(QTextCursor::MoveMode)
+Q_DECLARE_METATYPE(QTextCursor::MoveOperation)
 Q_DECLARE_METATYPE(QTextBlock)
 Q_DECLARE_METATYPE(QTextCharFormat)
 Q_DECLARE_METATYPE(QTextBlockFormat)
@@ -264,6 +264,144 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
+}
+
+//
+// QTextCursor::SelectionType
+//
+
+static const QTextCursor::SelectionType qtscript_QTextCursor_SelectionType_values[] = {
+    QTextCursor::WordUnderCursor
+    , QTextCursor::LineUnderCursor
+    , QTextCursor::BlockUnderCursor
+    , QTextCursor::Document
+};
+
+static const char * const qtscript_QTextCursor_SelectionType_keys[] = {
+    "WordUnderCursor"
+    , "LineUnderCursor"
+    , "BlockUnderCursor"
+    , "Document"
+};
+
+static QString qtscript_QTextCursor_SelectionType_toStringHelper(QTextCursor::SelectionType value)
+{
+    if ((value >= QTextCursor::WordUnderCursor) && (value <= QTextCursor::Document))
+        return qtscript_QTextCursor_SelectionType_keys[static_cast<int>(value)-static_cast<int>(QTextCursor::WordUnderCursor)];
+    return QString();
+}
+
+static QScriptValue qtscript_QTextCursor_SelectionType_toScriptValue(QScriptEngine *engine, const QTextCursor::SelectionType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextCursor"));
+    return clazz.property(qtscript_QTextCursor_SelectionType_toStringHelper(value));
+}
+
+static void qtscript_QTextCursor_SelectionType_fromScriptValue(const QScriptValue &value, QTextCursor::SelectionType &out)
+{
+    out = qvariant_cast<QTextCursor::SelectionType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTextCursor_SelectionType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QTextCursor::WordUnderCursor) && (arg <= QTextCursor::Document))
+        return qScriptValueFromValue(engine,  static_cast<QTextCursor::SelectionType>(arg));
+    return context->throwError(QString::fromLatin1("SelectionType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTextCursor_SelectionType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextCursor::SelectionType value = qscriptvalue_cast<QTextCursor::SelectionType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextCursor_SelectionType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextCursor::SelectionType value = qscriptvalue_cast<QTextCursor::SelectionType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTextCursor_SelectionType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTextCursor_SelectionType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTextCursor_SelectionType,
+        qtscript_QTextCursor_SelectionType_valueOf, qtscript_QTextCursor_SelectionType_toString);
+    qScriptRegisterMetaType<QTextCursor::SelectionType>(engine, qtscript_QTextCursor_SelectionType_toScriptValue,
+        qtscript_QTextCursor_SelectionType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTextCursor_SelectionType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTextCursor_SelectionType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QTextCursor::MoveMode
+//
+
+static const QTextCursor::MoveMode qtscript_QTextCursor_MoveMode_values[] = {
+    QTextCursor::MoveAnchor
+    , QTextCursor::KeepAnchor
+};
+
+static const char * const qtscript_QTextCursor_MoveMode_keys[] = {
+    "MoveAnchor"
+    , "KeepAnchor"
+};
+
+static QString qtscript_QTextCursor_MoveMode_toStringHelper(QTextCursor::MoveMode value)
+{
+    if ((value >= QTextCursor::MoveAnchor) && (value <= QTextCursor::KeepAnchor))
+        return qtscript_QTextCursor_MoveMode_keys[static_cast<int>(value)-static_cast<int>(QTextCursor::MoveAnchor)];
+    return QString();
+}
+
+static QScriptValue qtscript_QTextCursor_MoveMode_toScriptValue(QScriptEngine *engine, const QTextCursor::MoveMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextCursor"));
+    return clazz.property(qtscript_QTextCursor_MoveMode_toStringHelper(value));
+}
+
+static void qtscript_QTextCursor_MoveMode_fromScriptValue(const QScriptValue &value, QTextCursor::MoveMode &out)
+{
+    out = qvariant_cast<QTextCursor::MoveMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTextCursor_MoveMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QTextCursor::MoveAnchor) && (arg <= QTextCursor::KeepAnchor))
+        return qScriptValueFromValue(engine,  static_cast<QTextCursor::MoveMode>(arg));
+    return context->throwError(QString::fromLatin1("MoveMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTextCursor_MoveMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextCursor::MoveMode value = qscriptvalue_cast<QTextCursor::MoveMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextCursor_MoveMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextCursor::MoveMode value = qscriptvalue_cast<QTextCursor::MoveMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTextCursor_MoveMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTextCursor_MoveMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTextCursor_MoveMode,
+        qtscript_QTextCursor_MoveMode_valueOf, qtscript_QTextCursor_MoveMode_toString);
+    qScriptRegisterMetaType<QTextCursor::MoveMode>(engine, qtscript_QTextCursor_MoveMode_toScriptValue,
+        qtscript_QTextCursor_MoveMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTextCursor_MoveMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTextCursor_MoveMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
 }
 
 //
@@ -374,144 +512,6 @@ static QScriptValue qtscript_create_QTextCursor_MoveOperation_class(QScriptEngin
     for (int i = 0; i < 25; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QTextCursor_MoveOperation_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QTextCursor_MoveOperation_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QTextCursor::MoveMode
-//
-
-static const QTextCursor::MoveMode qtscript_QTextCursor_MoveMode_values[] = {
-    QTextCursor::MoveAnchor
-    , QTextCursor::KeepAnchor
-};
-
-static const char * const qtscript_QTextCursor_MoveMode_keys[] = {
-    "MoveAnchor"
-    , "KeepAnchor"
-};
-
-static QString qtscript_QTextCursor_MoveMode_toStringHelper(QTextCursor::MoveMode value)
-{
-    if ((value >= QTextCursor::MoveAnchor) && (value <= QTextCursor::KeepAnchor))
-        return qtscript_QTextCursor_MoveMode_keys[static_cast<int>(value)-static_cast<int>(QTextCursor::MoveAnchor)];
-    return QString();
-}
-
-static QScriptValue qtscript_QTextCursor_MoveMode_toScriptValue(QScriptEngine *engine, const QTextCursor::MoveMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextCursor"));
-    return clazz.property(qtscript_QTextCursor_MoveMode_toStringHelper(value));
-}
-
-static void qtscript_QTextCursor_MoveMode_fromScriptValue(const QScriptValue &value, QTextCursor::MoveMode &out)
-{
-    out = qvariant_cast<QTextCursor::MoveMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTextCursor_MoveMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QTextCursor::MoveAnchor) && (arg <= QTextCursor::KeepAnchor))
-        return qScriptValueFromValue(engine,  static_cast<QTextCursor::MoveMode>(arg));
-    return context->throwError(QString::fromLatin1("MoveMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTextCursor_MoveMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextCursor::MoveMode value = qscriptvalue_cast<QTextCursor::MoveMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextCursor_MoveMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextCursor::MoveMode value = qscriptvalue_cast<QTextCursor::MoveMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTextCursor_MoveMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTextCursor_MoveMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTextCursor_MoveMode,
-        qtscript_QTextCursor_MoveMode_valueOf, qtscript_QTextCursor_MoveMode_toString);
-    qScriptRegisterMetaType<QTextCursor::MoveMode>(engine, qtscript_QTextCursor_MoveMode_toScriptValue,
-        qtscript_QTextCursor_MoveMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTextCursor_MoveMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTextCursor_MoveMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QTextCursor::SelectionType
-//
-
-static const QTextCursor::SelectionType qtscript_QTextCursor_SelectionType_values[] = {
-    QTextCursor::WordUnderCursor
-    , QTextCursor::LineUnderCursor
-    , QTextCursor::BlockUnderCursor
-    , QTextCursor::Document
-};
-
-static const char * const qtscript_QTextCursor_SelectionType_keys[] = {
-    "WordUnderCursor"
-    , "LineUnderCursor"
-    , "BlockUnderCursor"
-    , "Document"
-};
-
-static QString qtscript_QTextCursor_SelectionType_toStringHelper(QTextCursor::SelectionType value)
-{
-    if ((value >= QTextCursor::WordUnderCursor) && (value <= QTextCursor::Document))
-        return qtscript_QTextCursor_SelectionType_keys[static_cast<int>(value)-static_cast<int>(QTextCursor::WordUnderCursor)];
-    return QString();
-}
-
-static QScriptValue qtscript_QTextCursor_SelectionType_toScriptValue(QScriptEngine *engine, const QTextCursor::SelectionType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextCursor"));
-    return clazz.property(qtscript_QTextCursor_SelectionType_toStringHelper(value));
-}
-
-static void qtscript_QTextCursor_SelectionType_fromScriptValue(const QScriptValue &value, QTextCursor::SelectionType &out)
-{
-    out = qvariant_cast<QTextCursor::SelectionType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTextCursor_SelectionType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QTextCursor::WordUnderCursor) && (arg <= QTextCursor::Document))
-        return qScriptValueFromValue(engine,  static_cast<QTextCursor::SelectionType>(arg));
-    return context->throwError(QString::fromLatin1("SelectionType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTextCursor_SelectionType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextCursor::SelectionType value = qscriptvalue_cast<QTextCursor::SelectionType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextCursor_SelectionType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextCursor::SelectionType value = qscriptvalue_cast<QTextCursor::SelectionType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTextCursor_SelectionType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTextCursor_SelectionType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTextCursor_SelectionType,
-        qtscript_QTextCursor_SelectionType_valueOf, qtscript_QTextCursor_SelectionType_toString);
-    qScriptRegisterMetaType<QTextCursor::SelectionType>(engine, qtscript_QTextCursor_SelectionType_toScriptValue,
-        qtscript_QTextCursor_SelectionType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTextCursor_SelectionType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTextCursor_SelectionType_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -1149,11 +1149,11 @@ QScriptValue qtscript_create_QTextCursor_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QTextCursor_static_call, proto, qtscript_QTextCursor_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("MoveOperation"),
-        qtscript_create_QTextCursor_MoveOperation_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("MoveMode"),
-        qtscript_create_QTextCursor_MoveMode_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("SelectionType"),
         qtscript_create_QTextCursor_SelectionType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("MoveMode"),
+        qtscript_create_QTextCursor_MoveMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("MoveOperation"),
+        qtscript_create_QTextCursor_MoveOperation_class(engine, ctor));
     return ctor;
 }

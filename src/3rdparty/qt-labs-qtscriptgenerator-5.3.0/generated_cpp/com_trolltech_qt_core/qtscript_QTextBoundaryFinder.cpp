@@ -77,9 +77,9 @@ static QScriptValue qtscript_QTextBoundaryFinder_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QTextBoundaryFinder)
 Q_DECLARE_METATYPE(QTextBoundaryFinder*)
-Q_DECLARE_METATYPE(QTextBoundaryFinder::BoundaryType)
 Q_DECLARE_METATYPE(QTextBoundaryFinder::BoundaryReason)
 Q_DECLARE_METATYPE(QFlags<QTextBoundaryFinder::BoundaryReason>)
+Q_DECLARE_METATYPE(QTextBoundaryFinder::BoundaryType)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -110,77 +110,6 @@ static QScriptValue qtscript_create_flags_class_helper(
     proto.setProperty(QString::fromLatin1("equals"),
         engine->newFunction(equals), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto);
-}
-
-//
-// QTextBoundaryFinder::BoundaryType
-//
-
-static const QTextBoundaryFinder::BoundaryType qtscript_QTextBoundaryFinder_BoundaryType_values[] = {
-    QTextBoundaryFinder::Grapheme
-    , QTextBoundaryFinder::Word
-    , QTextBoundaryFinder::Sentence
-    , QTextBoundaryFinder::Line
-};
-
-static const char * const qtscript_QTextBoundaryFinder_BoundaryType_keys[] = {
-    "Grapheme"
-    , "Word"
-    , "Sentence"
-    , "Line"
-};
-
-static QString qtscript_QTextBoundaryFinder_BoundaryType_toStringHelper(QTextBoundaryFinder::BoundaryType value)
-{
-    if ((value >= QTextBoundaryFinder::Grapheme) && (value <= QTextBoundaryFinder::Line))
-        return qtscript_QTextBoundaryFinder_BoundaryType_keys[static_cast<int>(value)-static_cast<int>(QTextBoundaryFinder::Grapheme)];
-    return QString();
-}
-
-static QScriptValue qtscript_QTextBoundaryFinder_BoundaryType_toScriptValue(QScriptEngine *engine, const QTextBoundaryFinder::BoundaryType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextBoundaryFinder"));
-    return clazz.property(qtscript_QTextBoundaryFinder_BoundaryType_toStringHelper(value));
-}
-
-static void qtscript_QTextBoundaryFinder_BoundaryType_fromScriptValue(const QScriptValue &value, QTextBoundaryFinder::BoundaryType &out)
-{
-    out = qvariant_cast<QTextBoundaryFinder::BoundaryType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTextBoundaryFinder_BoundaryType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QTextBoundaryFinder::Grapheme) && (arg <= QTextBoundaryFinder::Line))
-        return qScriptValueFromValue(engine,  static_cast<QTextBoundaryFinder::BoundaryType>(arg));
-    return context->throwError(QString::fromLatin1("BoundaryType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTextBoundaryFinder_BoundaryType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextBoundaryFinder::BoundaryType value = qscriptvalue_cast<QTextBoundaryFinder::BoundaryType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextBoundaryFinder_BoundaryType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextBoundaryFinder::BoundaryType value = qscriptvalue_cast<QTextBoundaryFinder::BoundaryType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTextBoundaryFinder_BoundaryType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTextBoundaryFinder_BoundaryType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTextBoundaryFinder_BoundaryType,
-        qtscript_QTextBoundaryFinder_BoundaryType_valueOf, qtscript_QTextBoundaryFinder_BoundaryType_toString);
-    qScriptRegisterMetaType<QTextBoundaryFinder::BoundaryType>(engine, qtscript_QTextBoundaryFinder_BoundaryType_toScriptValue,
-        qtscript_QTextBoundaryFinder_BoundaryType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTextBoundaryFinder_BoundaryType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTextBoundaryFinder_BoundaryType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -335,6 +264,77 @@ static QScriptValue qtscript_create_QTextBoundaryFinder_BoundaryReasons_class(QS
         qtscript_QTextBoundaryFinder_BoundaryReasons_toString, qtscript_QTextBoundaryFinder_BoundaryReasons_equals);
     qScriptRegisterMetaType<QTextBoundaryFinder::BoundaryReasons>(engine, qtscript_QTextBoundaryFinder_BoundaryReasons_toScriptValue,
         qtscript_QTextBoundaryFinder_BoundaryReasons_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
+// QTextBoundaryFinder::BoundaryType
+//
+
+static const QTextBoundaryFinder::BoundaryType qtscript_QTextBoundaryFinder_BoundaryType_values[] = {
+    QTextBoundaryFinder::Grapheme
+    , QTextBoundaryFinder::Word
+    , QTextBoundaryFinder::Sentence
+    , QTextBoundaryFinder::Line
+};
+
+static const char * const qtscript_QTextBoundaryFinder_BoundaryType_keys[] = {
+    "Grapheme"
+    , "Word"
+    , "Sentence"
+    , "Line"
+};
+
+static QString qtscript_QTextBoundaryFinder_BoundaryType_toStringHelper(QTextBoundaryFinder::BoundaryType value)
+{
+    if ((value >= QTextBoundaryFinder::Grapheme) && (value <= QTextBoundaryFinder::Line))
+        return qtscript_QTextBoundaryFinder_BoundaryType_keys[static_cast<int>(value)-static_cast<int>(QTextBoundaryFinder::Grapheme)];
+    return QString();
+}
+
+static QScriptValue qtscript_QTextBoundaryFinder_BoundaryType_toScriptValue(QScriptEngine *engine, const QTextBoundaryFinder::BoundaryType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextBoundaryFinder"));
+    return clazz.property(qtscript_QTextBoundaryFinder_BoundaryType_toStringHelper(value));
+}
+
+static void qtscript_QTextBoundaryFinder_BoundaryType_fromScriptValue(const QScriptValue &value, QTextBoundaryFinder::BoundaryType &out)
+{
+    out = qvariant_cast<QTextBoundaryFinder::BoundaryType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTextBoundaryFinder_BoundaryType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QTextBoundaryFinder::Grapheme) && (arg <= QTextBoundaryFinder::Line))
+        return qScriptValueFromValue(engine,  static_cast<QTextBoundaryFinder::BoundaryType>(arg));
+    return context->throwError(QString::fromLatin1("BoundaryType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTextBoundaryFinder_BoundaryType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextBoundaryFinder::BoundaryType value = qscriptvalue_cast<QTextBoundaryFinder::BoundaryType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextBoundaryFinder_BoundaryType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextBoundaryFinder::BoundaryType value = qscriptvalue_cast<QTextBoundaryFinder::BoundaryType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTextBoundaryFinder_BoundaryType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTextBoundaryFinder_BoundaryType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTextBoundaryFinder_BoundaryType,
+        qtscript_QTextBoundaryFinder_BoundaryType_valueOf, qtscript_QTextBoundaryFinder_BoundaryType_toString);
+    qScriptRegisterMetaType<QTextBoundaryFinder::BoundaryType>(engine, qtscript_QTextBoundaryFinder_BoundaryType_toScriptValue,
+        qtscript_QTextBoundaryFinder_BoundaryType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTextBoundaryFinder_BoundaryType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTextBoundaryFinder_BoundaryType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
     return ctor;
 }
 
@@ -508,11 +508,11 @@ QScriptValue qtscript_create_QTextBoundaryFinder_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QTextBoundaryFinder_static_call, proto, qtscript_QTextBoundaryFinder_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("BoundaryType"),
-        qtscript_create_QTextBoundaryFinder_BoundaryType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("BoundaryReason"),
         qtscript_create_QTextBoundaryFinder_BoundaryReason_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("BoundaryReasons"),
         qtscript_create_QTextBoundaryFinder_BoundaryReasons_class(engine));
+    ctor.setProperty(QString::fromLatin1("BoundaryType"),
+        qtscript_create_QTextBoundaryFinder_BoundaryType_class(engine, ctor));
     return ctor;
 }

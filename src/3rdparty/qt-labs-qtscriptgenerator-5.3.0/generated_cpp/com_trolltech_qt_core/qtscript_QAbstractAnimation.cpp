@@ -65,8 +65,8 @@ static const QMetaObject *qtscript_QAbstractAnimation_metaObject()
 
 Q_DECLARE_METATYPE(QAbstractAnimation*)
 Q_DECLARE_METATYPE(QtScriptShell_QAbstractAnimation*)
-Q_DECLARE_METATYPE(QAbstractAnimation::Direction)
 Q_DECLARE_METATYPE(QAbstractAnimation::State)
+Q_DECLARE_METATYPE(QAbstractAnimation::Direction)
 Q_DECLARE_METATYPE(QAbstractAnimation::DeletionPolicy)
 Q_DECLARE_METATYPE(QAnimationGroup*)
 
@@ -82,79 +82,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QAbstractAnimation::Direction
-//
-
-static const QAbstractAnimation::Direction qtscript_QAbstractAnimation_Direction_values[] = {
-    QAbstractAnimation::Forward
-    , QAbstractAnimation::Backward
-};
-
-static const char * const qtscript_QAbstractAnimation_Direction_keys[] = {
-    "Forward"
-    , "Backward"
-};
-
-static QString qtscript_QAbstractAnimation_Direction_toStringHelper(QAbstractAnimation::Direction value)
-{
-    const QMetaObject *meta = qtscript_QAbstractAnimation_metaObject();
-    int idx = meta->indexOfEnumerator("Direction");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    return QString::fromLatin1(menum.valueToKey(value));
-}
-
-static QScriptValue qtscript_QAbstractAnimation_Direction_toScriptValue(QScriptEngine *engine, const QAbstractAnimation::Direction &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractAnimation"));
-    return clazz.property(qtscript_QAbstractAnimation_Direction_toStringHelper(value));
-}
-
-static void qtscript_QAbstractAnimation_Direction_fromScriptValue(const QScriptValue &value, QAbstractAnimation::Direction &out)
-{
-    out = qvariant_cast<QAbstractAnimation::Direction>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QAbstractAnimation_Direction(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    const QMetaObject *meta = qtscript_QAbstractAnimation_metaObject();
-    int idx = meta->indexOfEnumerator("Direction");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    if (menum.valueToKey(arg) != 0)
-        return qScriptValueFromValue(engine,  static_cast<QAbstractAnimation::Direction>(arg));
-    return context->throwError(QString::fromLatin1("Direction(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QAbstractAnimation_Direction_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractAnimation::Direction value = qscriptvalue_cast<QAbstractAnimation::Direction>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QAbstractAnimation_Direction_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QAbstractAnimation::Direction value = qscriptvalue_cast<QAbstractAnimation::Direction>(context->thisObject());
-    return QScriptValue(engine, qtscript_QAbstractAnimation_Direction_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QAbstractAnimation_Direction_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QAbstractAnimation_Direction,
-        qtscript_QAbstractAnimation_Direction_valueOf, qtscript_QAbstractAnimation_Direction_toString);
-    qScriptRegisterMetaType<QAbstractAnimation::Direction>(engine, qtscript_QAbstractAnimation_Direction_toScriptValue,
-        qtscript_QAbstractAnimation_Direction_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractAnimation_Direction_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QAbstractAnimation_Direction_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -227,6 +154,79 @@ static QScriptValue qtscript_create_QAbstractAnimation_State_class(QScriptEngine
     for (int i = 0; i < 3; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QAbstractAnimation_State_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QAbstractAnimation_State_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QAbstractAnimation::Direction
+//
+
+static const QAbstractAnimation::Direction qtscript_QAbstractAnimation_Direction_values[] = {
+    QAbstractAnimation::Forward
+    , QAbstractAnimation::Backward
+};
+
+static const char * const qtscript_QAbstractAnimation_Direction_keys[] = {
+    "Forward"
+    , "Backward"
+};
+
+static QString qtscript_QAbstractAnimation_Direction_toStringHelper(QAbstractAnimation::Direction value)
+{
+    const QMetaObject *meta = qtscript_QAbstractAnimation_metaObject();
+    int idx = meta->indexOfEnumerator("Direction");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    return QString::fromLatin1(menum.valueToKey(value));
+}
+
+static QScriptValue qtscript_QAbstractAnimation_Direction_toScriptValue(QScriptEngine *engine, const QAbstractAnimation::Direction &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QAbstractAnimation"));
+    return clazz.property(qtscript_QAbstractAnimation_Direction_toStringHelper(value));
+}
+
+static void qtscript_QAbstractAnimation_Direction_fromScriptValue(const QScriptValue &value, QAbstractAnimation::Direction &out)
+{
+    out = qvariant_cast<QAbstractAnimation::Direction>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QAbstractAnimation_Direction(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    const QMetaObject *meta = qtscript_QAbstractAnimation_metaObject();
+    int idx = meta->indexOfEnumerator("Direction");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    if (menum.valueToKey(arg) != 0)
+        return qScriptValueFromValue(engine,  static_cast<QAbstractAnimation::Direction>(arg));
+    return context->throwError(QString::fromLatin1("Direction(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QAbstractAnimation_Direction_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractAnimation::Direction value = qscriptvalue_cast<QAbstractAnimation::Direction>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QAbstractAnimation_Direction_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QAbstractAnimation::Direction value = qscriptvalue_cast<QAbstractAnimation::Direction>(context->thisObject());
+    return QScriptValue(engine, qtscript_QAbstractAnimation_Direction_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QAbstractAnimation_Direction_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QAbstractAnimation_Direction,
+        qtscript_QAbstractAnimation_Direction_valueOf, qtscript_QAbstractAnimation_Direction_toString);
+    qScriptRegisterMetaType<QAbstractAnimation::Direction>(engine, qtscript_QAbstractAnimation_Direction_toScriptValue,
+        qtscript_QAbstractAnimation_Direction_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QAbstractAnimation_Direction_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QAbstractAnimation_Direction_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -419,10 +419,10 @@ QScriptValue qtscript_create_QAbstractAnimation_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QAbstractAnimation_static_call, proto, qtscript_QAbstractAnimation_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("Direction"),
-        qtscript_create_QAbstractAnimation_Direction_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("State"),
         qtscript_create_QAbstractAnimation_State_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Direction"),
+        qtscript_create_QAbstractAnimation_Direction_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("DeletionPolicy"),
         qtscript_create_QAbstractAnimation_DeletionPolicy_class(engine, ctor));
     return ctor;
