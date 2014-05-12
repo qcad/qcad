@@ -184,14 +184,14 @@ public:
         return linetypeId;
     }
 
-    RLinetype::Id getLinetypeId(bool resolve,
+    virtual RLinetype::Id getLinetypeId(bool resolve,
         const QStack<RBlockReferenceEntity*>& blockRefStack) const;
 
     RLineweight::Lineweight getLineweight() const {
         return lineweight;
     }
 
-    RLineweight::Lineweight getLineweight(bool resolve,
+    virtual RLineweight::Lineweight getLineweight(bool resolve,
         const QStack<RBlockReferenceEntity*>& blockRefStack) const;
 
     double getLineweightInUnits(const QStack<RBlockReferenceEntity*>& blockRefStack) const;
@@ -204,11 +204,11 @@ public:
         this->color = color;
     }
 
-    RColor getColor() const {
+    virtual RColor getColor() const {
         return color;
     }
 
-    RColor getColor(bool resolve,
+    virtual RColor getColor(bool resolve,
         const QStack<RBlockReferenceEntity*>& blockRefStack) const;
 
     /**

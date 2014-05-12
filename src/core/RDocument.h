@@ -252,6 +252,9 @@ public:
     RLinetype::Id getLinetypeByLayerId() const {
         return linetypeByLayerId;
     }
+    RLinetype::Id getLinetypeByBlockId() const {
+        return linetypeByBlockId;
+    }
     QString getLinetypeName(RLinetype::Id linetypeId) const;
     QSet<QString> getLinetypeNames() const;
     bool isByLayer(RLinetype::Id linetypeId) const;
