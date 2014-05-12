@@ -35,8 +35,9 @@ AbstractPreferences.prototype.beginEvent = function() {
     Edit.prototype.beginEvent.call(this);
     
     this.formWidget = this.createWidget("scripts/Edit/AbstractPreferences.ui");
-    var flags = new Qt.WindowFlags(Qt.WindowTitleHint);
-    this.formWidget.setWindowFlags(flags);
+    // TODO: Qt 5: add this flag (?)
+    //var flags = new Qt.WindowFlags(Qt.WindowTitleHint);
+    //this.formWidget.setWindowFlags(flags);
     this.treeWidget = this.formWidget.findChild("twCategory");
     var title;
     if (this.appPreferences) {
