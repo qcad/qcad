@@ -382,6 +382,13 @@ bool RLinkedStorage::setUndoStatus(RObject::Id objectId, bool status) {
     return false;
 }
 
+QVariant RLinkedStorage::getKnownVariable(RS::KnownVariable key) const {
+    if (knownVariables.contains(key)) {
+        return RMemoryStorage::getKnownVariable(key);
+    }
+    return backStorage->getKnownVariable(key);
+}
+
 bool RLinkedStorage::isInBackStorage(RObject::Id objectId) {
     if (objectMap.contains(objectId)) {
         return false;

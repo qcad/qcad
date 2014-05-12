@@ -108,6 +108,8 @@ public:
     virtual bool deleteObject(RObject::Id objectId);
     virtual bool setUndoStatus(RObject::Id objectId, bool status);
 
+    QVariant getKnownVariable(RS::KnownVariable key) const;
+
     virtual bool isInBackStorage(RObject::Id object);
 
     RStorage* getBackStorage() const {
