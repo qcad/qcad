@@ -8,11 +8,14 @@
 
 #include <qsslconfiguration.h>
 #include <QVariant>
+#include <qbytearray.h>
 #include <qlist.h>
 #include <qsslcertificate.h>
 #include <qsslcipher.h>
 #include <qsslconfiguration.h>
 #include <qsslkey.h>
+
+#include "qtscriptshell_QSslConfiguration.h"
 
 static const char * const qtscript_QSslConfiguration_function_names[] = {
     "QSslConfiguration"
@@ -20,11 +23,13 @@ static const char * const qtscript_QSslConfiguration_function_names[] = {
     , "defaultConfiguration"
     , "setDefaultConfiguration"
     // prototype
+    , "allowedNextProtocols"
     , "caCertificates"
     , "ciphers"
     , "isNull"
     , "localCertificate"
     , "localCertificateChain"
+    , "nextNegotiatedProtocol"
     , "operator_assign"
     , "equals"
     , "peerCertificate"
@@ -34,6 +39,9 @@ static const char * const qtscript_QSslConfiguration_function_names[] = {
     , "privateKey"
     , "protocol"
     , "sessionCipher"
+    , "sessionTicket"
+    , "sessionTicketLifeTimeHint"
+    , "setAllowedNextProtocols"
     , "setCaCertificates"
     , "setCiphers"
     , "setLocalCertificate"
@@ -42,6 +50,7 @@ static const char * const qtscript_QSslConfiguration_function_names[] = {
     , "setPeerVerifyMode"
     , "setPrivateKey"
     , "setProtocol"
+    , "setSessionTicket"
     , "swap"
     , "toString"
 };
@@ -57,6 +66,8 @@ static const char * const qtscript_QSslConfiguration_function_signatures[] = {
     , ""
     , ""
     , ""
+    , ""
+    , ""
     , "QSslConfiguration other"
     , "QSslConfiguration other"
     , ""
@@ -66,6 +77,9 @@ static const char * const qtscript_QSslConfiguration_function_signatures[] = {
     , ""
     , ""
     , ""
+    , ""
+    , ""
+    , "List protocols"
     , "List certificates"
     , "List ciphers"
     , "QSslCertificate certificate"
@@ -74,6 +88,7 @@ static const char * const qtscript_QSslConfiguration_function_signatures[] = {
     , "PeerVerifyMode mode"
     , "QSslKey key"
     , "SslProtocol protocol"
+    , "QByteArray sessionTicket"
     , "QSslConfiguration other"
 ""
 };
@@ -89,6 +104,8 @@ static const int qtscript_QSslConfiguration_function_lengths[] = {
     , 0
     , 0
     , 0
+    , 0
+    , 0
     , 1
     , 1
     , 0
@@ -98,6 +115,10 @@ static const int qtscript_QSslConfiguration_function_lengths[] = {
     , 0
     , 0
     , 0
+    , 0
+    , 0
+    , 1
+    , 1
     , 1
     , 1
     , 1
@@ -122,6 +143,9 @@ static QScriptValue qtscript_QSslConfiguration_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QSslConfiguration*)
+Q_DECLARE_METATYPE(QtScriptShell_QSslConfiguration)
+Q_DECLARE_METATYPE(QtScriptShell_QSslConfiguration*)
+Q_DECLARE_METATYPE(QList<QByteArray >)
 Q_DECLARE_METATYPE(QList<QSslCertificate >)
 Q_DECLARE_METATYPE(QSslCipher)
 Q_DECLARE_METATYPE(QList<QSslCipher >)
@@ -143,7 +167,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 23;
+        _id = 0xBABE0000 + 29;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -157,40 +181,54 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     switch (_id) {
     case 0:
     if (context->argumentCount() == 0) {
-        QList<QSslCertificate > _q_result = _q_self->caCertificates();
+        QList<QByteArray > _q_result = _q_self->allowedNextProtocols();
         return qScriptValueFromSequence(context->engine(), _q_result);
     }
     break;
 
     case 1:
     if (context->argumentCount() == 0) {
-        QList<QSslCipher > _q_result = _q_self->ciphers();
+        QList<QSslCertificate > _q_result = _q_self->caCertificates();
         return qScriptValueFromSequence(context->engine(), _q_result);
     }
     break;
 
     case 2:
     if (context->argumentCount() == 0) {
+        QList<QSslCipher > _q_result = _q_self->ciphers();
+        return qScriptValueFromSequence(context->engine(), _q_result);
+    }
+    break;
+
+    case 3:
+    if (context->argumentCount() == 0) {
         bool _q_result = _q_self->isNull();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 3:
+    case 4:
     if (context->argumentCount() == 0) {
         QSslCertificate _q_result = _q_self->localCertificate();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 4:
+    case 5:
     if (context->argumentCount() == 0) {
         QList<QSslCertificate > _q_result = _q_self->localCertificateChain();
         return qScriptValueFromSequence(context->engine(), _q_result);
     }
     break;
 
-    case 5:
+    case 6:
+    if (context->argumentCount() == 0) {
+        QByteArray _q_result = _q_self->nextNegotiatedProtocol();
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 7:
     if (context->argumentCount() == 1) {
         QSslConfiguration _q_arg0 = qscriptvalue_cast<QSslConfiguration>(context->argument(0));
         QSslConfiguration& _q_result = _q_self->operator=(_q_arg0);
@@ -198,7 +236,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 6:
+    case 8:
     if (context->argumentCount() == 1) {
         QSslConfiguration _q_arg0 = qscriptvalue_cast<QSslConfiguration>(context->argument(0));
         bool _q_result = _q_self->operator==(_q_arg0);
@@ -206,56 +244,79 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 7:
+    case 9:
     if (context->argumentCount() == 0) {
         QSslCertificate _q_result = _q_self->peerCertificate();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 8:
+    case 10:
     if (context->argumentCount() == 0) {
         QList<QSslCertificate > _q_result = _q_self->peerCertificateChain();
         return qScriptValueFromSequence(context->engine(), _q_result);
     }
     break;
 
-    case 9:
+    case 11:
     if (context->argumentCount() == 0) {
         int _q_result = _q_self->peerVerifyDepth();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 10:
+    case 12:
     if (context->argumentCount() == 0) {
         QSslSocket::PeerVerifyMode _q_result = _q_self->peerVerifyMode();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 11:
+    case 13:
     if (context->argumentCount() == 0) {
         QSslKey _q_result = _q_self->privateKey();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 12:
+    case 14:
     if (context->argumentCount() == 0) {
         QSsl::SslProtocol _q_result = _q_self->protocol();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 13:
+    case 15:
     if (context->argumentCount() == 0) {
         QSslCipher _q_result = _q_self->sessionCipher();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 14:
+    case 16:
+    if (context->argumentCount() == 0) {
+        QByteArray _q_result = _q_self->sessionTicket();
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 17:
+    if (context->argumentCount() == 0) {
+        int _q_result = _q_self->sessionTicketLifeTimeHint();
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 18:
+    if (context->argumentCount() == 1) {
+        QList<QByteArray> _q_arg0;
+        qScriptValueToSequence(context->argument(0), _q_arg0);
+        _q_self->setAllowedNextProtocols(_q_arg0);
+        return context->engine()->undefinedValue();
+    }
+    break;
+
+    case 19:
     if (context->argumentCount() == 1) {
         QList<QSslCertificate> _q_arg0;
         qScriptValueToSequence(context->argument(0), _q_arg0);
@@ -264,7 +325,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 15:
+    case 20:
     if (context->argumentCount() == 1) {
         QList<QSslCipher> _q_arg0;
         qScriptValueToSequence(context->argument(0), _q_arg0);
@@ -273,7 +334,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 16:
+    case 21:
     if (context->argumentCount() == 1) {
         QSslCertificate _q_arg0 = qscriptvalue_cast<QSslCertificate>(context->argument(0));
         _q_self->setLocalCertificate(_q_arg0);
@@ -281,7 +342,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 17:
+    case 22:
     if (context->argumentCount() == 1) {
         QList<QSslCertificate> _q_arg0;
         qScriptValueToSequence(context->argument(0), _q_arg0);
@@ -290,7 +351,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 18:
+    case 23:
     if (context->argumentCount() == 1) {
         int _q_arg0 = context->argument(0).toInt32();
         _q_self->setPeerVerifyDepth(_q_arg0);
@@ -298,7 +359,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 19:
+    case 24:
     if (context->argumentCount() == 1) {
         QSslSocket::PeerVerifyMode _q_arg0 = qscriptvalue_cast<QSslSocket::PeerVerifyMode>(context->argument(0));
         _q_self->setPeerVerifyMode(_q_arg0);
@@ -306,7 +367,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 20:
+    case 25:
     if (context->argumentCount() == 1) {
         QSslKey _q_arg0 = qscriptvalue_cast<QSslKey>(context->argument(0));
         _q_self->setPrivateKey(_q_arg0);
@@ -314,7 +375,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 21:
+    case 26:
     if (context->argumentCount() == 1) {
         QSsl::SslProtocol _q_arg0 = qscriptvalue_cast<QSsl::SslProtocol>(context->argument(0));
         _q_self->setProtocol(_q_arg0);
@@ -322,7 +383,15 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 22:
+    case 27:
+    if (context->argumentCount() == 1) {
+        QByteArray _q_arg0 = qscriptvalue_cast<QByteArray>(context->argument(0));
+        _q_self->setSessionTicket(_q_arg0);
+        return context->engine()->undefinedValue();
+    }
+    break;
+
+    case 28:
     if (context->argumentCount() == 1) {
         QSslConfiguration _q_arg0 = qscriptvalue_cast<QSslConfiguration>(context->argument(0));
         _q_self->swap(_q_arg0);
@@ -330,7 +399,7 @@ static QScriptValue qtscript_QSslConfiguration_prototype_call(QScriptContext *co
     }
     break;
 
-    case 23: {
+    case 29: {
     QString result = QString::fromLatin1("QSslConfiguration");
     return QScriptValue(context->engine(), result);
     }
@@ -354,13 +423,15 @@ static QScriptValue qtscript_QSslConfiguration_static_call(QScriptContext *conte
         return context->throwError(QString::fromLatin1("QSslConfiguration(): Did you forget to construct with 'new'?"));
     }
     if (context->argumentCount() == 0) {
-        QSslConfiguration _q_cpp_result;
-        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+        QtScriptShell_QSslConfiguration _q_cpp_result;
+        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue((QSslConfiguration)_q_cpp_result));
+        _q_cpp_result.__qtscript_self = _q_result;
         return _q_result;
     } else if (context->argumentCount() == 1) {
         QSslConfiguration _q_arg0 = qscriptvalue_cast<QSslConfiguration>(context->argument(0));
-        QSslConfiguration _q_cpp_result(_q_arg0);
-        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+        QtScriptShell_QSslConfiguration _q_cpp_result(_q_arg0);
+        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue((QSslConfiguration)_q_cpp_result));
+        _q_cpp_result.__qtscript_self = _q_result;
         return _q_result;
     }
     break;
@@ -392,7 +463,7 @@ QScriptValue qtscript_create_QSslConfiguration_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QSslConfiguration*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QSslConfiguration*)0));
-    for (int i = 0; i < 24; ++i) {
+    for (int i = 0; i < 30; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QSslConfiguration_prototype_call, qtscript_QSslConfiguration_function_lengths[i+3]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
         proto.setProperty(QString::fromLatin1(qtscript_QSslConfiguration_function_names[i+3]),

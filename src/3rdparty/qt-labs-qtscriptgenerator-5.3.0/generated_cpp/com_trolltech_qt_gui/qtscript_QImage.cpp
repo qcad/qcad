@@ -335,6 +335,9 @@ static const QImage::Format qtscript_QImage_Format_values[] = {
     , QImage::Format_RGB888
     , QImage::Format_RGB444
     , QImage::Format_ARGB4444_Premultiplied
+    , QImage::Format_RGBX8888
+    , QImage::Format_RGBA8888
+    , QImage::Format_RGBA8888_Premultiplied
     , QImage::NImageFormats
 };
 
@@ -355,6 +358,9 @@ static const char * const qtscript_QImage_Format_keys[] = {
     , "Format_RGB888"
     , "Format_RGB444"
     , "Format_ARGB4444_Premultiplied"
+    , "Format_RGBX8888"
+    , "Format_RGBA8888"
+    , "Format_RGBA8888_Premultiplied"
     , "NImageFormats"
 };
 
@@ -403,7 +409,7 @@ static QScriptValue qtscript_create_QImage_Format_class(QScriptEngine *engine, Q
         qtscript_QImage_Format_valueOf, qtscript_QImage_Format_toString);
     qScriptRegisterMetaType<QImage::Format>(engine, qtscript_QImage_Format_toScriptValue,
         qtscript_QImage_Format_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 17; ++i) {
+    for (int i = 0; i < 20; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QImage_Format_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QImage_Format_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);

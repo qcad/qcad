@@ -8,10 +8,10 @@
 
 #include <qwebelement.h>
 #include <QVariant>
-#include <qpainter.h>
-#include <qrect.h>
-#include <qstringlist.h>
+#include <QPainter>
+#include <QtWebKitWidgets/QWebFrame>
 #include <qwebelement.h>
+#include <qwebframe.h>
 
 static const char * const qtscript_QWebElement_function_names[] = {
     "QWebElement"
@@ -207,11 +207,11 @@ static QScriptValue qtscript_QWebElement_throw_ambiguity_error_helper(
         .arg(functionName).arg(fullSignatures.join(QLatin1String("\n"))));
 }
 
+//Q_DECLARE_METATYPE(QWebElement)
 Q_DECLARE_METATYPE(QWebElement*)
 Q_DECLARE_METATYPE(QWebElement::StyleResolveStrategy)
 Q_DECLARE_METATYPE(QPainter*)
-// andrew:
-//Q_DECLARE_METATYPE(QWebFrame*)
+Q_DECLARE_METATYPE(QWebFrame*)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -796,15 +796,12 @@ static QScriptValue qtscript_QWebElement_prototype_call(QScriptContext *context,
     }
     break;
 
-    /*
-    andrew:
     case 53:
     if (context->argumentCount() == 0) {
         QWebFrame* _q_result = _q_self->webFrame();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
-    */
 
     case 54: {
     QString result = QString::fromLatin1("QWebElement");

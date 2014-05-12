@@ -246,13 +246,13 @@ static const QMetaObject *qtscript_QFont_metaObject()
 }
 
 Q_DECLARE_METATYPE(QFont*)
-Q_DECLARE_METATYPE(QFont::StyleHint)
 Q_DECLARE_METATYPE(QFont::Weight)
 Q_DECLARE_METATYPE(QFont::Capitalization)
+Q_DECLARE_METATYPE(QFont::SpacingType)
+Q_DECLARE_METATYPE(QFont::StyleHint)
+Q_DECLARE_METATYPE(QFont::Style)
 Q_DECLARE_METATYPE(QFont::StyleStrategy)
 Q_DECLARE_METATYPE(QFont::Stretch)
-Q_DECLARE_METATYPE(QFont::SpacingType)
-Q_DECLARE_METATYPE(QFont::Style)
 Q_DECLARE_METATYPE(QPaintDevice*)
 
 static QScriptValue qtscript_create_enum_class_helper(
@@ -267,87 +267,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QFont::StyleHint
-//
-
-static const QFont::StyleHint qtscript_QFont_StyleHint_values[] = {
-    QFont::Helvetica
-    , QFont::Times
-    , QFont::Courier
-    , QFont::OldEnglish
-    , QFont::System
-    , QFont::AnyStyle
-    , QFont::Cursive
-    , QFont::Monospace
-    , QFont::Fantasy
-};
-
-static const char * const qtscript_QFont_StyleHint_keys[] = {
-    "Helvetica"
-    , "Times"
-    , "Courier"
-    , "OldEnglish"
-    , "System"
-    , "AnyStyle"
-    , "Cursive"
-    , "Monospace"
-    , "Fantasy"
-};
-
-static QString qtscript_QFont_StyleHint_toStringHelper(QFont::StyleHint value)
-{
-    if ((value >= QFont::Helvetica) && (value <= QFont::Fantasy))
-        return qtscript_QFont_StyleHint_keys[static_cast<int>(value)-static_cast<int>(QFont::Helvetica)];
-    return QString();
-}
-
-static QScriptValue qtscript_QFont_StyleHint_toScriptValue(QScriptEngine *engine, const QFont::StyleHint &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QFont"));
-    return clazz.property(qtscript_QFont_StyleHint_toStringHelper(value));
-}
-
-static void qtscript_QFont_StyleHint_fromScriptValue(const QScriptValue &value, QFont::StyleHint &out)
-{
-    out = qvariant_cast<QFont::StyleHint>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QFont_StyleHint(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QFont::Helvetica) && (arg <= QFont::Fantasy))
-        return qScriptValueFromValue(engine,  static_cast<QFont::StyleHint>(arg));
-    return context->throwError(QString::fromLatin1("StyleHint(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QFont_StyleHint_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QFont::StyleHint value = qscriptvalue_cast<QFont::StyleHint>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QFont_StyleHint_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QFont::StyleHint value = qscriptvalue_cast<QFont::StyleHint>(context->thisObject());
-    return QScriptValue(engine, qtscript_QFont_StyleHint_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QFont_StyleHint_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QFont_StyleHint,
-        qtscript_QFont_StyleHint_valueOf, qtscript_QFont_StyleHint_toString);
-    qScriptRegisterMetaType<QFont::StyleHint>(engine, qtscript_QFont_StyleHint_toScriptValue,
-        qtscript_QFont_StyleHint_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 9; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QFont_StyleHint_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QFont_StyleHint_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -495,6 +414,223 @@ static QScriptValue qtscript_create_QFont_Capitalization_class(QScriptEngine *en
     for (int i = 0; i < 5; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QFont_Capitalization_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QFont_Capitalization_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QFont::SpacingType
+//
+
+static const QFont::SpacingType qtscript_QFont_SpacingType_values[] = {
+    QFont::PercentageSpacing
+    , QFont::AbsoluteSpacing
+};
+
+static const char * const qtscript_QFont_SpacingType_keys[] = {
+    "PercentageSpacing"
+    , "AbsoluteSpacing"
+};
+
+static QString qtscript_QFont_SpacingType_toStringHelper(QFont::SpacingType value)
+{
+    if ((value >= QFont::PercentageSpacing) && (value <= QFont::AbsoluteSpacing))
+        return qtscript_QFont_SpacingType_keys[static_cast<int>(value)-static_cast<int>(QFont::PercentageSpacing)];
+    return QString();
+}
+
+static QScriptValue qtscript_QFont_SpacingType_toScriptValue(QScriptEngine *engine, const QFont::SpacingType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QFont"));
+    return clazz.property(qtscript_QFont_SpacingType_toStringHelper(value));
+}
+
+static void qtscript_QFont_SpacingType_fromScriptValue(const QScriptValue &value, QFont::SpacingType &out)
+{
+    out = qvariant_cast<QFont::SpacingType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QFont_SpacingType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QFont::PercentageSpacing) && (arg <= QFont::AbsoluteSpacing))
+        return qScriptValueFromValue(engine,  static_cast<QFont::SpacingType>(arg));
+    return context->throwError(QString::fromLatin1("SpacingType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QFont_SpacingType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QFont::SpacingType value = qscriptvalue_cast<QFont::SpacingType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QFont_SpacingType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QFont::SpacingType value = qscriptvalue_cast<QFont::SpacingType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QFont_SpacingType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QFont_SpacingType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QFont_SpacingType,
+        qtscript_QFont_SpacingType_valueOf, qtscript_QFont_SpacingType_toString);
+    qScriptRegisterMetaType<QFont::SpacingType>(engine, qtscript_QFont_SpacingType_toScriptValue,
+        qtscript_QFont_SpacingType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QFont_SpacingType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QFont_SpacingType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QFont::StyleHint
+//
+
+static const QFont::StyleHint qtscript_QFont_StyleHint_values[] = {
+    QFont::Helvetica
+    , QFont::Times
+    , QFont::Courier
+    , QFont::OldEnglish
+    , QFont::System
+    , QFont::AnyStyle
+    , QFont::Cursive
+    , QFont::Monospace
+    , QFont::Fantasy
+};
+
+static const char * const qtscript_QFont_StyleHint_keys[] = {
+    "Helvetica"
+    , "Times"
+    , "Courier"
+    , "OldEnglish"
+    , "System"
+    , "AnyStyle"
+    , "Cursive"
+    , "Monospace"
+    , "Fantasy"
+};
+
+static QString qtscript_QFont_StyleHint_toStringHelper(QFont::StyleHint value)
+{
+    if ((value >= QFont::Helvetica) && (value <= QFont::Fantasy))
+        return qtscript_QFont_StyleHint_keys[static_cast<int>(value)-static_cast<int>(QFont::Helvetica)];
+    return QString();
+}
+
+static QScriptValue qtscript_QFont_StyleHint_toScriptValue(QScriptEngine *engine, const QFont::StyleHint &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QFont"));
+    return clazz.property(qtscript_QFont_StyleHint_toStringHelper(value));
+}
+
+static void qtscript_QFont_StyleHint_fromScriptValue(const QScriptValue &value, QFont::StyleHint &out)
+{
+    out = qvariant_cast<QFont::StyleHint>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QFont_StyleHint(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QFont::Helvetica) && (arg <= QFont::Fantasy))
+        return qScriptValueFromValue(engine,  static_cast<QFont::StyleHint>(arg));
+    return context->throwError(QString::fromLatin1("StyleHint(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QFont_StyleHint_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QFont::StyleHint value = qscriptvalue_cast<QFont::StyleHint>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QFont_StyleHint_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QFont::StyleHint value = qscriptvalue_cast<QFont::StyleHint>(context->thisObject());
+    return QScriptValue(engine, qtscript_QFont_StyleHint_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QFont_StyleHint_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QFont_StyleHint,
+        qtscript_QFont_StyleHint_valueOf, qtscript_QFont_StyleHint_toString);
+    qScriptRegisterMetaType<QFont::StyleHint>(engine, qtscript_QFont_StyleHint_toScriptValue,
+        qtscript_QFont_StyleHint_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 9; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QFont_StyleHint_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QFont_StyleHint_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QFont::Style
+//
+
+static const QFont::Style qtscript_QFont_Style_values[] = {
+    QFont::StyleNormal
+    , QFont::StyleItalic
+    , QFont::StyleOblique
+};
+
+static const char * const qtscript_QFont_Style_keys[] = {
+    "StyleNormal"
+    , "StyleItalic"
+    , "StyleOblique"
+};
+
+static QString qtscript_QFont_Style_toStringHelper(QFont::Style value)
+{
+    if ((value >= QFont::StyleNormal) && (value <= QFont::StyleOblique))
+        return qtscript_QFont_Style_keys[static_cast<int>(value)-static_cast<int>(QFont::StyleNormal)];
+    return QString();
+}
+
+static QScriptValue qtscript_QFont_Style_toScriptValue(QScriptEngine *engine, const QFont::Style &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QFont"));
+    return clazz.property(qtscript_QFont_Style_toStringHelper(value));
+}
+
+static void qtscript_QFont_Style_fromScriptValue(const QScriptValue &value, QFont::Style &out)
+{
+    out = qvariant_cast<QFont::Style>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QFont_Style(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QFont::StyleNormal) && (arg <= QFont::StyleOblique))
+        return qScriptValueFromValue(engine,  static_cast<QFont::Style>(arg));
+    return context->throwError(QString::fromLatin1("Style(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QFont_Style_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QFont::Style value = qscriptvalue_cast<QFont::Style>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QFont_Style_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QFont::Style value = qscriptvalue_cast<QFont::Style>(context->thisObject());
+    return QScriptValue(engine, qtscript_QFont_Style_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QFont_Style_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QFont_Style,
+        qtscript_QFont_Style_valueOf, qtscript_QFont_Style_toString);
+    qScriptRegisterMetaType<QFont::Style>(engine, qtscript_QFont_Style_toScriptValue,
+        qtscript_QFont_Style_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QFont_Style_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QFont_Style_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -673,142 +809,6 @@ static QScriptValue qtscript_create_QFont_Stretch_class(QScriptEngine *engine, Q
     for (int i = 0; i < 9; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QFont_Stretch_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QFont_Stretch_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QFont::SpacingType
-//
-
-static const QFont::SpacingType qtscript_QFont_SpacingType_values[] = {
-    QFont::PercentageSpacing
-    , QFont::AbsoluteSpacing
-};
-
-static const char * const qtscript_QFont_SpacingType_keys[] = {
-    "PercentageSpacing"
-    , "AbsoluteSpacing"
-};
-
-static QString qtscript_QFont_SpacingType_toStringHelper(QFont::SpacingType value)
-{
-    if ((value >= QFont::PercentageSpacing) && (value <= QFont::AbsoluteSpacing))
-        return qtscript_QFont_SpacingType_keys[static_cast<int>(value)-static_cast<int>(QFont::PercentageSpacing)];
-    return QString();
-}
-
-static QScriptValue qtscript_QFont_SpacingType_toScriptValue(QScriptEngine *engine, const QFont::SpacingType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QFont"));
-    return clazz.property(qtscript_QFont_SpacingType_toStringHelper(value));
-}
-
-static void qtscript_QFont_SpacingType_fromScriptValue(const QScriptValue &value, QFont::SpacingType &out)
-{
-    out = qvariant_cast<QFont::SpacingType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QFont_SpacingType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QFont::PercentageSpacing) && (arg <= QFont::AbsoluteSpacing))
-        return qScriptValueFromValue(engine,  static_cast<QFont::SpacingType>(arg));
-    return context->throwError(QString::fromLatin1("SpacingType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QFont_SpacingType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QFont::SpacingType value = qscriptvalue_cast<QFont::SpacingType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QFont_SpacingType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QFont::SpacingType value = qscriptvalue_cast<QFont::SpacingType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QFont_SpacingType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QFont_SpacingType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QFont_SpacingType,
-        qtscript_QFont_SpacingType_valueOf, qtscript_QFont_SpacingType_toString);
-    qScriptRegisterMetaType<QFont::SpacingType>(engine, qtscript_QFont_SpacingType_toScriptValue,
-        qtscript_QFont_SpacingType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QFont_SpacingType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QFont_SpacingType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QFont::Style
-//
-
-static const QFont::Style qtscript_QFont_Style_values[] = {
-    QFont::StyleNormal
-    , QFont::StyleItalic
-    , QFont::StyleOblique
-};
-
-static const char * const qtscript_QFont_Style_keys[] = {
-    "StyleNormal"
-    , "StyleItalic"
-    , "StyleOblique"
-};
-
-static QString qtscript_QFont_Style_toStringHelper(QFont::Style value)
-{
-    if ((value >= QFont::StyleNormal) && (value <= QFont::StyleOblique))
-        return qtscript_QFont_Style_keys[static_cast<int>(value)-static_cast<int>(QFont::StyleNormal)];
-    return QString();
-}
-
-static QScriptValue qtscript_QFont_Style_toScriptValue(QScriptEngine *engine, const QFont::Style &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QFont"));
-    return clazz.property(qtscript_QFont_Style_toStringHelper(value));
-}
-
-static void qtscript_QFont_Style_fromScriptValue(const QScriptValue &value, QFont::Style &out)
-{
-    out = qvariant_cast<QFont::Style>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QFont_Style(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QFont::StyleNormal) && (arg <= QFont::StyleOblique))
-        return qScriptValueFromValue(engine,  static_cast<QFont::Style>(arg));
-    return context->throwError(QString::fromLatin1("Style(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QFont_Style_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QFont::Style value = qscriptvalue_cast<QFont::Style>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QFont_Style_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QFont::Style value = qscriptvalue_cast<QFont::Style>(context->thisObject());
-    return QScriptValue(engine, qtscript_QFont_Style_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QFont_Style_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QFont_Style,
-        qtscript_QFont_Style_valueOf, qtscript_QFont_Style_toString);
-    qScriptRegisterMetaType<QFont::Style>(engine, qtscript_QFont_Style_toScriptValue,
-        qtscript_QFont_Style_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QFont_Style_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QFont_Style_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -1455,19 +1455,19 @@ QScriptValue qtscript_create_QFont_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    ctor.setProperty(QString::fromLatin1("StyleHint"),
-        qtscript_create_QFont_StyleHint_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Weight"),
         qtscript_create_QFont_Weight_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Capitalization"),
         qtscript_create_QFont_Capitalization_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("SpacingType"),
+        qtscript_create_QFont_SpacingType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("StyleHint"),
+        qtscript_create_QFont_StyleHint_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Style"),
+        qtscript_create_QFont_Style_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("StyleStrategy"),
         qtscript_create_QFont_StyleStrategy_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Stretch"),
         qtscript_create_QFont_Stretch_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("SpacingType"),
-        qtscript_create_QFont_SpacingType_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("Style"),
-        qtscript_create_QFont_Style_class(engine, ctor));
     return ctor;
 }

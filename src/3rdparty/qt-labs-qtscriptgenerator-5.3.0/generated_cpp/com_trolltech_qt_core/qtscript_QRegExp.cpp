@@ -111,8 +111,8 @@ static QScriptValue qtscript_QRegExp_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QRegExp*)
-Q_DECLARE_METATYPE(QRegExp::PatternSyntax)
 Q_DECLARE_METATYPE(QRegExp::CaretMode)
+Q_DECLARE_METATYPE(QRegExp::PatternSyntax)
 Q_DECLARE_METATYPE(Qt::CaseSensitivity)
 
 static QScriptValue qtscript_create_enum_class_helper(
@@ -127,6 +127,75 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
+}
+
+//
+// QRegExp::CaretMode
+//
+
+static const QRegExp::CaretMode qtscript_QRegExp_CaretMode_values[] = {
+    QRegExp::CaretAtZero
+    , QRegExp::CaretAtOffset
+    , QRegExp::CaretWontMatch
+};
+
+static const char * const qtscript_QRegExp_CaretMode_keys[] = {
+    "CaretAtZero"
+    , "CaretAtOffset"
+    , "CaretWontMatch"
+};
+
+static QString qtscript_QRegExp_CaretMode_toStringHelper(QRegExp::CaretMode value)
+{
+    if ((value >= QRegExp::CaretAtZero) && (value <= QRegExp::CaretWontMatch))
+        return qtscript_QRegExp_CaretMode_keys[static_cast<int>(value)-static_cast<int>(QRegExp::CaretAtZero)];
+    return QString();
+}
+
+static QScriptValue qtscript_QRegExp_CaretMode_toScriptValue(QScriptEngine *engine, const QRegExp::CaretMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QRegExp"));
+    return clazz.property(qtscript_QRegExp_CaretMode_toStringHelper(value));
+}
+
+static void qtscript_QRegExp_CaretMode_fromScriptValue(const QScriptValue &value, QRegExp::CaretMode &out)
+{
+    out = qvariant_cast<QRegExp::CaretMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QRegExp_CaretMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QRegExp::CaretAtZero) && (arg <= QRegExp::CaretWontMatch))
+        return qScriptValueFromValue(engine,  static_cast<QRegExp::CaretMode>(arg));
+    return context->throwError(QString::fromLatin1("CaretMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QRegExp_CaretMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QRegExp::CaretMode value = qscriptvalue_cast<QRegExp::CaretMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QRegExp_CaretMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QRegExp::CaretMode value = qscriptvalue_cast<QRegExp::CaretMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_QRegExp_CaretMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QRegExp_CaretMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QRegExp_CaretMode,
+        qtscript_QRegExp_CaretMode_valueOf, qtscript_QRegExp_CaretMode_toString);
+    qScriptRegisterMetaType<QRegExp::CaretMode>(engine, qtscript_QRegExp_CaretMode_toScriptValue,
+        qtscript_QRegExp_CaretMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QRegExp_CaretMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QRegExp_CaretMode_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
 }
 
 //
@@ -199,75 +268,6 @@ static QScriptValue qtscript_create_QRegExp_PatternSyntax_class(QScriptEngine *e
     for (int i = 0; i < 6; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QRegExp_PatternSyntax_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QRegExp_PatternSyntax_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QRegExp::CaretMode
-//
-
-static const QRegExp::CaretMode qtscript_QRegExp_CaretMode_values[] = {
-    QRegExp::CaretAtZero
-    , QRegExp::CaretAtOffset
-    , QRegExp::CaretWontMatch
-};
-
-static const char * const qtscript_QRegExp_CaretMode_keys[] = {
-    "CaretAtZero"
-    , "CaretAtOffset"
-    , "CaretWontMatch"
-};
-
-static QString qtscript_QRegExp_CaretMode_toStringHelper(QRegExp::CaretMode value)
-{
-    if ((value >= QRegExp::CaretAtZero) && (value <= QRegExp::CaretWontMatch))
-        return qtscript_QRegExp_CaretMode_keys[static_cast<int>(value)-static_cast<int>(QRegExp::CaretAtZero)];
-    return QString();
-}
-
-static QScriptValue qtscript_QRegExp_CaretMode_toScriptValue(QScriptEngine *engine, const QRegExp::CaretMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QRegExp"));
-    return clazz.property(qtscript_QRegExp_CaretMode_toStringHelper(value));
-}
-
-static void qtscript_QRegExp_CaretMode_fromScriptValue(const QScriptValue &value, QRegExp::CaretMode &out)
-{
-    out = qvariant_cast<QRegExp::CaretMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QRegExp_CaretMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QRegExp::CaretAtZero) && (arg <= QRegExp::CaretWontMatch))
-        return qScriptValueFromValue(engine,  static_cast<QRegExp::CaretMode>(arg));
-    return context->throwError(QString::fromLatin1("CaretMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QRegExp_CaretMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QRegExp::CaretMode value = qscriptvalue_cast<QRegExp::CaretMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QRegExp_CaretMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QRegExp::CaretMode value = qscriptvalue_cast<QRegExp::CaretMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_QRegExp_CaretMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QRegExp_CaretMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QRegExp_CaretMode,
-        qtscript_QRegExp_CaretMode_valueOf, qtscript_QRegExp_CaretMode_toString);
-    qScriptRegisterMetaType<QRegExp::CaretMode>(engine, qtscript_QRegExp_CaretMode_toScriptValue,
-        qtscript_QRegExp_CaretMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QRegExp_CaretMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QRegExp_CaretMode_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -588,9 +588,9 @@ QScriptValue qtscript_create_QRegExp_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    ctor.setProperty(QString::fromLatin1("PatternSyntax"),
-        qtscript_create_QRegExp_PatternSyntax_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("CaretMode"),
         qtscript_create_QRegExp_CaretMode_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("PatternSyntax"),
+        qtscript_create_QRegExp_PatternSyntax_class(engine, ctor));
     return ctor;
 }

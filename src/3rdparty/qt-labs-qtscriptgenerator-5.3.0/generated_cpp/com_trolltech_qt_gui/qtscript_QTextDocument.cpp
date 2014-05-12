@@ -202,11 +202,11 @@ static QScriptValue qtscript_QTextDocument_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QTextDocument*)
 Q_DECLARE_METATYPE(QtScriptShell_QTextDocument*)
-Q_DECLARE_METATYPE(QTextDocument::MetaInformation)
 Q_DECLARE_METATYPE(QTextDocument::FindFlag)
 Q_DECLARE_METATYPE(QFlags<QTextDocument::FindFlag>)
 Q_DECLARE_METATYPE(QTextDocument::ResourceType)
 Q_DECLARE_METATYPE(QTextDocument::Stacks)
+Q_DECLARE_METATYPE(QTextDocument::MetaInformation)
 Q_DECLARE_METATYPE(QVector<QTextFormat >)
 Q_DECLARE_METATYPE(QTextBlock)
 Q_DECLARE_METATYPE(Qt::CursorMoveStyle)
@@ -247,73 +247,6 @@ static QScriptValue qtscript_create_flags_class_helper(
     proto.setProperty(QString::fromLatin1("equals"),
         engine->newFunction(equals), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto);
-}
-
-//
-// QTextDocument::MetaInformation
-//
-
-static const QTextDocument::MetaInformation qtscript_QTextDocument_MetaInformation_values[] = {
-    QTextDocument::DocumentTitle
-    , QTextDocument::DocumentUrl
-};
-
-static const char * const qtscript_QTextDocument_MetaInformation_keys[] = {
-    "DocumentTitle"
-    , "DocumentUrl"
-};
-
-static QString qtscript_QTextDocument_MetaInformation_toStringHelper(QTextDocument::MetaInformation value)
-{
-    if ((value >= QTextDocument::DocumentTitle) && (value <= QTextDocument::DocumentUrl))
-        return qtscript_QTextDocument_MetaInformation_keys[static_cast<int>(value)-static_cast<int>(QTextDocument::DocumentTitle)];
-    return QString();
-}
-
-static QScriptValue qtscript_QTextDocument_MetaInformation_toScriptValue(QScriptEngine *engine, const QTextDocument::MetaInformation &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextDocument"));
-    return clazz.property(qtscript_QTextDocument_MetaInformation_toStringHelper(value));
-}
-
-static void qtscript_QTextDocument_MetaInformation_fromScriptValue(const QScriptValue &value, QTextDocument::MetaInformation &out)
-{
-    out = qvariant_cast<QTextDocument::MetaInformation>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTextDocument_MetaInformation(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QTextDocument::DocumentTitle) && (arg <= QTextDocument::DocumentUrl))
-        return qScriptValueFromValue(engine,  static_cast<QTextDocument::MetaInformation>(arg));
-    return context->throwError(QString::fromLatin1("MetaInformation(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTextDocument_MetaInformation_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextDocument::MetaInformation value = qscriptvalue_cast<QTextDocument::MetaInformation>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextDocument_MetaInformation_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextDocument::MetaInformation value = qscriptvalue_cast<QTextDocument::MetaInformation>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTextDocument_MetaInformation_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTextDocument_MetaInformation_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTextDocument_MetaInformation,
-        qtscript_QTextDocument_MetaInformation_valueOf, qtscript_QTextDocument_MetaInformation_toString);
-    qScriptRegisterMetaType<QTextDocument::MetaInformation>(engine, qtscript_QTextDocument_MetaInformation_toScriptValue,
-        qtscript_QTextDocument_MetaInformation_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTextDocument_MetaInformation_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTextDocument_MetaInformation_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -604,6 +537,73 @@ static QScriptValue qtscript_create_QTextDocument_Stacks_class(QScriptEngine *en
     for (int i = 0; i < 3; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QTextDocument_Stacks_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QTextDocument_Stacks_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QTextDocument::MetaInformation
+//
+
+static const QTextDocument::MetaInformation qtscript_QTextDocument_MetaInformation_values[] = {
+    QTextDocument::DocumentTitle
+    , QTextDocument::DocumentUrl
+};
+
+static const char * const qtscript_QTextDocument_MetaInformation_keys[] = {
+    "DocumentTitle"
+    , "DocumentUrl"
+};
+
+static QString qtscript_QTextDocument_MetaInformation_toStringHelper(QTextDocument::MetaInformation value)
+{
+    if ((value >= QTextDocument::DocumentTitle) && (value <= QTextDocument::DocumentUrl))
+        return qtscript_QTextDocument_MetaInformation_keys[static_cast<int>(value)-static_cast<int>(QTextDocument::DocumentTitle)];
+    return QString();
+}
+
+static QScriptValue qtscript_QTextDocument_MetaInformation_toScriptValue(QScriptEngine *engine, const QTextDocument::MetaInformation &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextDocument"));
+    return clazz.property(qtscript_QTextDocument_MetaInformation_toStringHelper(value));
+}
+
+static void qtscript_QTextDocument_MetaInformation_fromScriptValue(const QScriptValue &value, QTextDocument::MetaInformation &out)
+{
+    out = qvariant_cast<QTextDocument::MetaInformation>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTextDocument_MetaInformation(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QTextDocument::DocumentTitle) && (arg <= QTextDocument::DocumentUrl))
+        return qScriptValueFromValue(engine,  static_cast<QTextDocument::MetaInformation>(arg));
+    return context->throwError(QString::fromLatin1("MetaInformation(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTextDocument_MetaInformation_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextDocument::MetaInformation value = qscriptvalue_cast<QTextDocument::MetaInformation>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextDocument_MetaInformation_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextDocument::MetaInformation value = qscriptvalue_cast<QTextDocument::MetaInformation>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTextDocument_MetaInformation_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTextDocument_MetaInformation_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTextDocument_MetaInformation,
+        qtscript_QTextDocument_MetaInformation_valueOf, qtscript_QTextDocument_MetaInformation_toString);
+    qScriptRegisterMetaType<QTextDocument::MetaInformation>(engine, qtscript_QTextDocument_MetaInformation_toScriptValue,
+        qtscript_QTextDocument_MetaInformation_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTextDocument_MetaInformation_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTextDocument_MetaInformation_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -1160,8 +1160,6 @@ QScriptValue qtscript_create_QTextDocument_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QTextDocument_static_call, proto, qtscript_QTextDocument_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("MetaInformation"),
-        qtscript_create_QTextDocument_MetaInformation_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("FindFlag"),
         qtscript_create_QTextDocument_FindFlag_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("FindFlags"),
@@ -1170,5 +1168,7 @@ QScriptValue qtscript_create_QTextDocument_class(QScriptEngine *engine)
         qtscript_create_QTextDocument_ResourceType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Stacks"),
         qtscript_create_QTextDocument_Stacks_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("MetaInformation"),
+        qtscript_create_QTextDocument_MetaInformation_class(engine, ctor));
     return ctor;
 }

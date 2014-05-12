@@ -43,10 +43,10 @@ static QScriptValue qtscript_QSsl_throw_ambiguity_error_helper(
         .arg(functionName).arg(fullSignatures.join(QLatin1String("\n"))));
 }
 
-Q_DECLARE_METATYPE(QSsl::EncodingFormat)
-Q_DECLARE_METATYPE(QSsl::KeyAlgorithm)
-Q_DECLARE_METATYPE(QSsl::KeyType)
 Q_DECLARE_METATYPE(QSsl::SslProtocol)
+Q_DECLARE_METATYPE(QSsl::KeyType)
+Q_DECLARE_METATYPE(QSsl::KeyAlgorithm)
+Q_DECLARE_METATYPE(QSsl::EncodingFormat)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -60,209 +60,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QSsl::EncodingFormat
-//
-
-static const QSsl::EncodingFormat qtscript_QSsl_EncodingFormat_values[] = {
-    QSsl::Pem
-    , QSsl::Der
-};
-
-static const char * const qtscript_QSsl_EncodingFormat_keys[] = {
-    "Pem"
-    , "Der"
-};
-
-static QString qtscript_QSsl_EncodingFormat_toStringHelper(QSsl::EncodingFormat value)
-{
-    if ((value >= QSsl::Pem) && (value <= QSsl::Der))
-        return qtscript_QSsl_EncodingFormat_keys[static_cast<int>(value)-static_cast<int>(QSsl::Pem)];
-    return QString();
-}
-
-static QScriptValue qtscript_QSsl_EncodingFormat_toScriptValue(QScriptEngine *engine, const QSsl::EncodingFormat &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSsl"));
-    return clazz.property(qtscript_QSsl_EncodingFormat_toStringHelper(value));
-}
-
-static void qtscript_QSsl_EncodingFormat_fromScriptValue(const QScriptValue &value, QSsl::EncodingFormat &out)
-{
-    out = qvariant_cast<QSsl::EncodingFormat>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QSsl_EncodingFormat(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QSsl::Pem) && (arg <= QSsl::Der))
-        return qScriptValueFromValue(engine,  static_cast<QSsl::EncodingFormat>(arg));
-    return context->throwError(QString::fromLatin1("EncodingFormat(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QSsl_EncodingFormat_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QSsl::EncodingFormat value = qscriptvalue_cast<QSsl::EncodingFormat>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QSsl_EncodingFormat_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QSsl::EncodingFormat value = qscriptvalue_cast<QSsl::EncodingFormat>(context->thisObject());
-    return QScriptValue(engine, qtscript_QSsl_EncodingFormat_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QSsl_EncodingFormat_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QSsl_EncodingFormat,
-        qtscript_QSsl_EncodingFormat_valueOf, qtscript_QSsl_EncodingFormat_toString);
-    qScriptRegisterMetaType<QSsl::EncodingFormat>(engine, qtscript_QSsl_EncodingFormat_toScriptValue,
-        qtscript_QSsl_EncodingFormat_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QSsl_EncodingFormat_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QSsl_EncodingFormat_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QSsl::KeyAlgorithm
-//
-
-static const QSsl::KeyAlgorithm qtscript_QSsl_KeyAlgorithm_values[] = {
-    QSsl::Opaque
-    , QSsl::Rsa
-    , QSsl::Dsa
-};
-
-static const char * const qtscript_QSsl_KeyAlgorithm_keys[] = {
-    "Opaque"
-    , "Rsa"
-    , "Dsa"
-};
-
-static QString qtscript_QSsl_KeyAlgorithm_toStringHelper(QSsl::KeyAlgorithm value)
-{
-    if ((value >= QSsl::Opaque) && (value <= QSsl::Dsa))
-        return qtscript_QSsl_KeyAlgorithm_keys[static_cast<int>(value)-static_cast<int>(QSsl::Opaque)];
-    return QString();
-}
-
-static QScriptValue qtscript_QSsl_KeyAlgorithm_toScriptValue(QScriptEngine *engine, const QSsl::KeyAlgorithm &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSsl"));
-    return clazz.property(qtscript_QSsl_KeyAlgorithm_toStringHelper(value));
-}
-
-static void qtscript_QSsl_KeyAlgorithm_fromScriptValue(const QScriptValue &value, QSsl::KeyAlgorithm &out)
-{
-    out = qvariant_cast<QSsl::KeyAlgorithm>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QSsl_KeyAlgorithm(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QSsl::Opaque) && (arg <= QSsl::Dsa))
-        return qScriptValueFromValue(engine,  static_cast<QSsl::KeyAlgorithm>(arg));
-    return context->throwError(QString::fromLatin1("KeyAlgorithm(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QSsl_KeyAlgorithm_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QSsl::KeyAlgorithm value = qscriptvalue_cast<QSsl::KeyAlgorithm>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QSsl_KeyAlgorithm_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QSsl::KeyAlgorithm value = qscriptvalue_cast<QSsl::KeyAlgorithm>(context->thisObject());
-    return QScriptValue(engine, qtscript_QSsl_KeyAlgorithm_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QSsl_KeyAlgorithm_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QSsl_KeyAlgorithm,
-        qtscript_QSsl_KeyAlgorithm_valueOf, qtscript_QSsl_KeyAlgorithm_toString);
-    qScriptRegisterMetaType<QSsl::KeyAlgorithm>(engine, qtscript_QSsl_KeyAlgorithm_toScriptValue,
-        qtscript_QSsl_KeyAlgorithm_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QSsl_KeyAlgorithm_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QSsl_KeyAlgorithm_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QSsl::KeyType
-//
-
-static const QSsl::KeyType qtscript_QSsl_KeyType_values[] = {
-    QSsl::PrivateKey
-    , QSsl::PublicKey
-};
-
-static const char * const qtscript_QSsl_KeyType_keys[] = {
-    "PrivateKey"
-    , "PublicKey"
-};
-
-static QString qtscript_QSsl_KeyType_toStringHelper(QSsl::KeyType value)
-{
-    if ((value >= QSsl::PrivateKey) && (value <= QSsl::PublicKey))
-        return qtscript_QSsl_KeyType_keys[static_cast<int>(value)-static_cast<int>(QSsl::PrivateKey)];
-    return QString();
-}
-
-static QScriptValue qtscript_QSsl_KeyType_toScriptValue(QScriptEngine *engine, const QSsl::KeyType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSsl"));
-    return clazz.property(qtscript_QSsl_KeyType_toStringHelper(value));
-}
-
-static void qtscript_QSsl_KeyType_fromScriptValue(const QScriptValue &value, QSsl::KeyType &out)
-{
-    out = qvariant_cast<QSsl::KeyType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QSsl_KeyType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QSsl::PrivateKey) && (arg <= QSsl::PublicKey))
-        return qScriptValueFromValue(engine,  static_cast<QSsl::KeyType>(arg));
-    return context->throwError(QString::fromLatin1("KeyType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QSsl_KeyType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QSsl::KeyType value = qscriptvalue_cast<QSsl::KeyType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QSsl_KeyType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QSsl::KeyType value = qscriptvalue_cast<QSsl::KeyType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QSsl_KeyType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QSsl_KeyType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QSsl_KeyType,
-        qtscript_QSsl_KeyType_valueOf, qtscript_QSsl_KeyType_toString);
-    qScriptRegisterMetaType<QSsl::KeyType>(engine, qtscript_QSsl_KeyType_toScriptValue,
-        qtscript_QSsl_KeyType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QSsl_KeyType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QSsl_KeyType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -347,6 +144,209 @@ static QScriptValue qtscript_create_QSsl_SslProtocol_class(QScriptEngine *engine
 }
 
 //
+// QSsl::KeyType
+//
+
+static const QSsl::KeyType qtscript_QSsl_KeyType_values[] = {
+    QSsl::PrivateKey
+    , QSsl::PublicKey
+};
+
+static const char * const qtscript_QSsl_KeyType_keys[] = {
+    "PrivateKey"
+    , "PublicKey"
+};
+
+static QString qtscript_QSsl_KeyType_toStringHelper(QSsl::KeyType value)
+{
+    if ((value >= QSsl::PrivateKey) && (value <= QSsl::PublicKey))
+        return qtscript_QSsl_KeyType_keys[static_cast<int>(value)-static_cast<int>(QSsl::PrivateKey)];
+    return QString();
+}
+
+static QScriptValue qtscript_QSsl_KeyType_toScriptValue(QScriptEngine *engine, const QSsl::KeyType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSsl"));
+    return clazz.property(qtscript_QSsl_KeyType_toStringHelper(value));
+}
+
+static void qtscript_QSsl_KeyType_fromScriptValue(const QScriptValue &value, QSsl::KeyType &out)
+{
+    out = qvariant_cast<QSsl::KeyType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QSsl_KeyType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QSsl::PrivateKey) && (arg <= QSsl::PublicKey))
+        return qScriptValueFromValue(engine,  static_cast<QSsl::KeyType>(arg));
+    return context->throwError(QString::fromLatin1("KeyType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QSsl_KeyType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QSsl::KeyType value = qscriptvalue_cast<QSsl::KeyType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QSsl_KeyType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QSsl::KeyType value = qscriptvalue_cast<QSsl::KeyType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QSsl_KeyType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QSsl_KeyType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QSsl_KeyType,
+        qtscript_QSsl_KeyType_valueOf, qtscript_QSsl_KeyType_toString);
+    qScriptRegisterMetaType<QSsl::KeyType>(engine, qtscript_QSsl_KeyType_toScriptValue,
+        qtscript_QSsl_KeyType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QSsl_KeyType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QSsl_KeyType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QSsl::KeyAlgorithm
+//
+
+static const QSsl::KeyAlgorithm qtscript_QSsl_KeyAlgorithm_values[] = {
+    QSsl::Opaque
+    , QSsl::Rsa
+    , QSsl::Dsa
+};
+
+static const char * const qtscript_QSsl_KeyAlgorithm_keys[] = {
+    "Opaque"
+    , "Rsa"
+    , "Dsa"
+};
+
+static QString qtscript_QSsl_KeyAlgorithm_toStringHelper(QSsl::KeyAlgorithm value)
+{
+    if ((value >= QSsl::Opaque) && (value <= QSsl::Dsa))
+        return qtscript_QSsl_KeyAlgorithm_keys[static_cast<int>(value)-static_cast<int>(QSsl::Opaque)];
+    return QString();
+}
+
+static QScriptValue qtscript_QSsl_KeyAlgorithm_toScriptValue(QScriptEngine *engine, const QSsl::KeyAlgorithm &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSsl"));
+    return clazz.property(qtscript_QSsl_KeyAlgorithm_toStringHelper(value));
+}
+
+static void qtscript_QSsl_KeyAlgorithm_fromScriptValue(const QScriptValue &value, QSsl::KeyAlgorithm &out)
+{
+    out = qvariant_cast<QSsl::KeyAlgorithm>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QSsl_KeyAlgorithm(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QSsl::Opaque) && (arg <= QSsl::Dsa))
+        return qScriptValueFromValue(engine,  static_cast<QSsl::KeyAlgorithm>(arg));
+    return context->throwError(QString::fromLatin1("KeyAlgorithm(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QSsl_KeyAlgorithm_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QSsl::KeyAlgorithm value = qscriptvalue_cast<QSsl::KeyAlgorithm>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QSsl_KeyAlgorithm_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QSsl::KeyAlgorithm value = qscriptvalue_cast<QSsl::KeyAlgorithm>(context->thisObject());
+    return QScriptValue(engine, qtscript_QSsl_KeyAlgorithm_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QSsl_KeyAlgorithm_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QSsl_KeyAlgorithm,
+        qtscript_QSsl_KeyAlgorithm_valueOf, qtscript_QSsl_KeyAlgorithm_toString);
+    qScriptRegisterMetaType<QSsl::KeyAlgorithm>(engine, qtscript_QSsl_KeyAlgorithm_toScriptValue,
+        qtscript_QSsl_KeyAlgorithm_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QSsl_KeyAlgorithm_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QSsl_KeyAlgorithm_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QSsl::EncodingFormat
+//
+
+static const QSsl::EncodingFormat qtscript_QSsl_EncodingFormat_values[] = {
+    QSsl::Pem
+    , QSsl::Der
+};
+
+static const char * const qtscript_QSsl_EncodingFormat_keys[] = {
+    "Pem"
+    , "Der"
+};
+
+static QString qtscript_QSsl_EncodingFormat_toStringHelper(QSsl::EncodingFormat value)
+{
+    if ((value >= QSsl::Pem) && (value <= QSsl::Der))
+        return qtscript_QSsl_EncodingFormat_keys[static_cast<int>(value)-static_cast<int>(QSsl::Pem)];
+    return QString();
+}
+
+static QScriptValue qtscript_QSsl_EncodingFormat_toScriptValue(QScriptEngine *engine, const QSsl::EncodingFormat &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSsl"));
+    return clazz.property(qtscript_QSsl_EncodingFormat_toStringHelper(value));
+}
+
+static void qtscript_QSsl_EncodingFormat_fromScriptValue(const QScriptValue &value, QSsl::EncodingFormat &out)
+{
+    out = qvariant_cast<QSsl::EncodingFormat>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QSsl_EncodingFormat(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QSsl::Pem) && (arg <= QSsl::Der))
+        return qScriptValueFromValue(engine,  static_cast<QSsl::EncodingFormat>(arg));
+    return context->throwError(QString::fromLatin1("EncodingFormat(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QSsl_EncodingFormat_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QSsl::EncodingFormat value = qscriptvalue_cast<QSsl::EncodingFormat>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QSsl_EncodingFormat_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QSsl::EncodingFormat value = qscriptvalue_cast<QSsl::EncodingFormat>(context->thisObject());
+    return QScriptValue(engine, qtscript_QSsl_EncodingFormat_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QSsl_EncodingFormat_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QSsl_EncodingFormat,
+        qtscript_QSsl_EncodingFormat_valueOf, qtscript_QSsl_EncodingFormat_toString);
+    qScriptRegisterMetaType<QSsl::EncodingFormat>(engine, qtscript_QSsl_EncodingFormat_toScriptValue,
+        qtscript_QSsl_EncodingFormat_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QSsl_EncodingFormat_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QSsl_EncodingFormat_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
 // QSsl
 //
 
@@ -375,13 +375,13 @@ QScriptValue qtscript_create_QSsl_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QSsl_static_call, proto, qtscript_QSsl_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("EncodingFormat"),
-        qtscript_create_QSsl_EncodingFormat_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("KeyAlgorithm"),
-        qtscript_create_QSsl_KeyAlgorithm_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("KeyType"),
-        qtscript_create_QSsl_KeyType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("SslProtocol"),
         qtscript_create_QSsl_SslProtocol_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("KeyType"),
+        qtscript_create_QSsl_KeyType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("KeyAlgorithm"),
+        qtscript_create_QSsl_KeyAlgorithm_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("EncodingFormat"),
+        qtscript_create_QSsl_EncodingFormat_class(engine, ctor));
     return ctor;
 }

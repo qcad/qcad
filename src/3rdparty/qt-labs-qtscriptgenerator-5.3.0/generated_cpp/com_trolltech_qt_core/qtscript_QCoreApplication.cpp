@@ -33,6 +33,7 @@ static const char * const qtscript_QCoreApplication_function_names[] = {
     , "hasPendingEvents"
     , "installTranslator"
     , "instance"
+    , "isSetuidAllowed"
     , "libraryPaths"
     , "postEvent"
     , "processEvents"
@@ -43,6 +44,7 @@ static const char * const qtscript_QCoreApplication_function_names[] = {
     , "sendPostedEvents"
     , "setAttribute"
     , "setLibraryPaths"
+    , "setSetuidAllowed"
     , "startingUp"
     , "testAttribute"
     , "translate"
@@ -66,6 +68,7 @@ static const char * const qtscript_QCoreApplication_function_signatures[] = {
     , "QTranslator messageFile"
     , ""
     , ""
+    , ""
     , "QObject receiver, QEvent event, int priority"
     , "ProcessEventsFlags flags\nProcessEventsFlags flags, int maxtime"
     , "String arg__1"
@@ -75,6 +78,7 @@ static const char * const qtscript_QCoreApplication_function_signatures[] = {
     , "QObject receiver, int event_type"
     , "ApplicationAttribute attribute, bool on"
     , "List arg__1"
+    , "bool allow"
     , ""
     , "ApplicationAttribute attribute"
     , "char context, char key, char disambiguation, int n"
@@ -98,6 +102,7 @@ static const int qtscript_QCoreApplication_function_lengths[] = {
     , 1
     , 0
     , 0
+    , 0
     , 3
     , 2
     , 1
@@ -106,6 +111,7 @@ static const int qtscript_QCoreApplication_function_lengths[] = {
     , 2
     , 2
     , 2
+    , 1
     , 1
     , 0
     , 1
@@ -157,7 +163,7 @@ static QScriptValue qtscript_QCoreApplication_prototype_call(QScriptContext *con
     if (!_q_self) {
         return context->throwError(QScriptContext::TypeError,
             QString::fromLatin1("QCoreApplication.%0(): this object is not a QCoreApplication")
-            .arg(qtscript_QCoreApplication_function_names[_id+25]));
+            .arg(qtscript_QCoreApplication_function_names[_id+27]));
     }
 
     switch (_id) {
@@ -179,8 +185,8 @@ static QScriptValue qtscript_QCoreApplication_prototype_call(QScriptContext *con
     Q_ASSERT(false);
     }
     return qtscript_QCoreApplication_throw_ambiguity_error_helper(context,
-        qtscript_QCoreApplication_function_names[_id+25],
-        qtscript_QCoreApplication_function_signatures[_id+25]);
+        qtscript_QCoreApplication_function_names[_id+27],
+        qtscript_QCoreApplication_function_signatures[_id+27]);
 }
 
 static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *context, QScriptEngine *)
@@ -297,12 +303,19 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
 
     case 12:
     if (context->argumentCount() == 0) {
+        bool _q_result = QCoreApplication::isSetuidAllowed();
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 13:
+    if (context->argumentCount() == 0) {
         QStringList _q_result = QCoreApplication::libraryPaths();
         return qScriptValueFromSequence(context->engine(), _q_result);
     }
     break;
 
-    case 13:
+    case 14:
     if (context->argumentCount() == 2) {
         QObject* _q_arg0 = context->argument(0).toQObject();
         QEvent* _q_arg1 = qscriptvalue_cast<QEvent*>(context->argument(1));
@@ -318,7 +331,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 14:
+    case 15:
     if (context->argumentCount() == 0) {
         QCoreApplication::processEvents();
         return context->engine()->undefinedValue();
@@ -336,7 +349,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 15:
+    case 16:
     if (context->argumentCount() == 1) {
         QString _q_arg0 = context->argument(0).toString();
         QCoreApplication::removeLibraryPath(_q_arg0);
@@ -344,7 +357,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 16:
+    case 17:
     if (context->argumentCount() == 1) {
         QObject* _q_arg0 = context->argument(0).toQObject();
         QCoreApplication::removePostedEvents(_q_arg0);
@@ -358,7 +371,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 17:
+    case 18:
     if (context->argumentCount() == 1) {
         QTranslator* _q_arg0 = qscriptvalue_cast<QTranslator*>(context->argument(0));
         bool _q_result = QCoreApplication::removeTranslator(_q_arg0);
@@ -366,7 +379,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 18:
+    case 19:
     if (context->argumentCount() == 2) {
         QObject* _q_arg0 = context->argument(0).toQObject();
         QEvent* _q_arg1 = qscriptvalue_cast<QEvent*>(context->argument(1));
@@ -375,7 +388,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 19:
+    case 20:
     if (context->argumentCount() == 0) {
         QCoreApplication::sendPostedEvents();
         return context->engine()->undefinedValue();
@@ -393,7 +406,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 20:
+    case 21:
     if (context->argumentCount() == 1) {
         Qt::ApplicationAttribute _q_arg0 = qscriptvalue_cast<Qt::ApplicationAttribute>(context->argument(0));
         QCoreApplication::setAttribute(_q_arg0);
@@ -407,7 +420,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 21:
+    case 22:
     if (context->argumentCount() == 1) {
         QStringList _q_arg0;
         qScriptValueToSequence(context->argument(0), _q_arg0);
@@ -416,14 +429,22 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 22:
+    case 23:
+    if (context->argumentCount() == 1) {
+        bool _q_arg0 = context->argument(0).toBoolean();
+        QCoreApplication::setSetuidAllowed(_q_arg0);
+        return context->engine()->undefinedValue();
+    }
+    break;
+
+    case 24:
     if (context->argumentCount() == 0) {
         bool _q_result = QCoreApplication::startingUp();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 23:
+    case 25:
     if (context->argumentCount() == 1) {
         Qt::ApplicationAttribute _q_arg0 = qscriptvalue_cast<Qt::ApplicationAttribute>(context->argument(0));
         bool _q_result = QCoreApplication::testAttribute(_q_arg0);
@@ -431,7 +452,7 @@ static QScriptValue qtscript_QCoreApplication_static_call(QScriptContext *contex
     }
     break;
 
-    case 24:
+    case 26:
     if (context->argumentCount() == 2) {
         const char* _q_arg0 = qscriptvalue_cast<const char*>(context->argument(0));
         const char* _q_arg1 = qscriptvalue_cast<const char*>(context->argument(1));
@@ -479,9 +500,9 @@ QScriptValue qtscript_create_QCoreApplication_class(QScriptEngine *engine)
     QScriptValue proto = engine->newVariant(qVariantFromValue((QCoreApplication*)0));
     proto.setPrototype(engine->defaultPrototype(qMetaTypeId<QObject*>()));
     for (int i = 0; i < 2; ++i) {
-        QScriptValue fun = engine->newFunction(qtscript_QCoreApplication_prototype_call, qtscript_QCoreApplication_function_lengths[i+25]);
+        QScriptValue fun = engine->newFunction(qtscript_QCoreApplication_prototype_call, qtscript_QCoreApplication_function_lengths[i+27]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
-        proto.setProperty(QString::fromLatin1(qtscript_QCoreApplication_function_names[i+25]),
+        proto.setProperty(QString::fromLatin1(qtscript_QCoreApplication_function_names[i+27]),
             fun, QScriptValue::SkipInEnumeration);
     }
 
@@ -490,7 +511,7 @@ QScriptValue qtscript_create_QCoreApplication_class(QScriptEngine *engine)
 
     QScriptValue ctor = engine->newFunction(qtscript_QCoreApplication_static_call, proto, qtscript_QCoreApplication_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
-    for (int i = 0; i < 24; ++i) {
+    for (int i = 0; i < 26; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QCoreApplication_static_call,
             qtscript_QCoreApplication_function_lengths[i+1]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i+1)));

@@ -216,8 +216,8 @@ Q_DECLARE_METATYPE(QTextCharFormat)
 Q_DECLARE_METATYPE(QTextCharFormat*)
 Q_DECLARE_METATYPE(QtScriptShell_QTextCharFormat)
 Q_DECLARE_METATYPE(QtScriptShell_QTextCharFormat*)
-Q_DECLARE_METATYPE(QTextCharFormat::VerticalAlignment)
 Q_DECLARE_METATYPE(QTextCharFormat::UnderlineStyle)
+Q_DECLARE_METATYPE(QTextCharFormat::VerticalAlignment)
 Q_DECLARE_METATYPE(QFont::Capitalization)
 Q_DECLARE_METATYPE(QFont::SpacingType)
 Q_DECLARE_METATYPE(QFont::StyleHint)
@@ -236,83 +236,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QTextCharFormat::VerticalAlignment
-//
-
-static const QTextCharFormat::VerticalAlignment qtscript_QTextCharFormat_VerticalAlignment_values[] = {
-    QTextCharFormat::AlignNormal
-    , QTextCharFormat::AlignSuperScript
-    , QTextCharFormat::AlignSubScript
-    , QTextCharFormat::AlignMiddle
-    , QTextCharFormat::AlignTop
-    , QTextCharFormat::AlignBottom
-    , QTextCharFormat::AlignBaseline
-};
-
-static const char * const qtscript_QTextCharFormat_VerticalAlignment_keys[] = {
-    "AlignNormal"
-    , "AlignSuperScript"
-    , "AlignSubScript"
-    , "AlignMiddle"
-    , "AlignTop"
-    , "AlignBottom"
-    , "AlignBaseline"
-};
-
-static QString qtscript_QTextCharFormat_VerticalAlignment_toStringHelper(QTextCharFormat::VerticalAlignment value)
-{
-    if ((value >= QTextCharFormat::AlignNormal) && (value <= QTextCharFormat::AlignBaseline))
-        return qtscript_QTextCharFormat_VerticalAlignment_keys[static_cast<int>(value)-static_cast<int>(QTextCharFormat::AlignNormal)];
-    return QString();
-}
-
-static QScriptValue qtscript_QTextCharFormat_VerticalAlignment_toScriptValue(QScriptEngine *engine, const QTextCharFormat::VerticalAlignment &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextCharFormat"));
-    return clazz.property(qtscript_QTextCharFormat_VerticalAlignment_toStringHelper(value));
-}
-
-static void qtscript_QTextCharFormat_VerticalAlignment_fromScriptValue(const QScriptValue &value, QTextCharFormat::VerticalAlignment &out)
-{
-    out = qvariant_cast<QTextCharFormat::VerticalAlignment>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTextCharFormat_VerticalAlignment(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QTextCharFormat::AlignNormal) && (arg <= QTextCharFormat::AlignBaseline))
-        return qScriptValueFromValue(engine,  static_cast<QTextCharFormat::VerticalAlignment>(arg));
-    return context->throwError(QString::fromLatin1("VerticalAlignment(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTextCharFormat_VerticalAlignment_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextCharFormat::VerticalAlignment value = qscriptvalue_cast<QTextCharFormat::VerticalAlignment>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextCharFormat_VerticalAlignment_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextCharFormat::VerticalAlignment value = qscriptvalue_cast<QTextCharFormat::VerticalAlignment>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTextCharFormat_VerticalAlignment_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTextCharFormat_VerticalAlignment_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTextCharFormat_VerticalAlignment,
-        qtscript_QTextCharFormat_VerticalAlignment_valueOf, qtscript_QTextCharFormat_VerticalAlignment_toString);
-    qScriptRegisterMetaType<QTextCharFormat::VerticalAlignment>(engine, qtscript_QTextCharFormat_VerticalAlignment_toScriptValue,
-        qtscript_QTextCharFormat_VerticalAlignment_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 7; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTextCharFormat_VerticalAlignment_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTextCharFormat_VerticalAlignment_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -389,6 +312,83 @@ static QScriptValue qtscript_create_QTextCharFormat_UnderlineStyle_class(QScript
     for (int i = 0; i < 8; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QTextCharFormat_UnderlineStyle_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QTextCharFormat_UnderlineStyle_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QTextCharFormat::VerticalAlignment
+//
+
+static const QTextCharFormat::VerticalAlignment qtscript_QTextCharFormat_VerticalAlignment_values[] = {
+    QTextCharFormat::AlignNormal
+    , QTextCharFormat::AlignSuperScript
+    , QTextCharFormat::AlignSubScript
+    , QTextCharFormat::AlignMiddle
+    , QTextCharFormat::AlignTop
+    , QTextCharFormat::AlignBottom
+    , QTextCharFormat::AlignBaseline
+};
+
+static const char * const qtscript_QTextCharFormat_VerticalAlignment_keys[] = {
+    "AlignNormal"
+    , "AlignSuperScript"
+    , "AlignSubScript"
+    , "AlignMiddle"
+    , "AlignTop"
+    , "AlignBottom"
+    , "AlignBaseline"
+};
+
+static QString qtscript_QTextCharFormat_VerticalAlignment_toStringHelper(QTextCharFormat::VerticalAlignment value)
+{
+    if ((value >= QTextCharFormat::AlignNormal) && (value <= QTextCharFormat::AlignBaseline))
+        return qtscript_QTextCharFormat_VerticalAlignment_keys[static_cast<int>(value)-static_cast<int>(QTextCharFormat::AlignNormal)];
+    return QString();
+}
+
+static QScriptValue qtscript_QTextCharFormat_VerticalAlignment_toScriptValue(QScriptEngine *engine, const QTextCharFormat::VerticalAlignment &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextCharFormat"));
+    return clazz.property(qtscript_QTextCharFormat_VerticalAlignment_toStringHelper(value));
+}
+
+static void qtscript_QTextCharFormat_VerticalAlignment_fromScriptValue(const QScriptValue &value, QTextCharFormat::VerticalAlignment &out)
+{
+    out = qvariant_cast<QTextCharFormat::VerticalAlignment>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTextCharFormat_VerticalAlignment(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QTextCharFormat::AlignNormal) && (arg <= QTextCharFormat::AlignBaseline))
+        return qScriptValueFromValue(engine,  static_cast<QTextCharFormat::VerticalAlignment>(arg));
+    return context->throwError(QString::fromLatin1("VerticalAlignment(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTextCharFormat_VerticalAlignment_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextCharFormat::VerticalAlignment value = qscriptvalue_cast<QTextCharFormat::VerticalAlignment>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextCharFormat_VerticalAlignment_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextCharFormat::VerticalAlignment value = qscriptvalue_cast<QTextCharFormat::VerticalAlignment>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTextCharFormat_VerticalAlignment_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTextCharFormat_VerticalAlignment_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTextCharFormat_VerticalAlignment,
+        qtscript_QTextCharFormat_VerticalAlignment_valueOf, qtscript_QTextCharFormat_VerticalAlignment_toString);
+    qScriptRegisterMetaType<QTextCharFormat::VerticalAlignment>(engine, qtscript_QTextCharFormat_VerticalAlignment_toScriptValue,
+        qtscript_QTextCharFormat_VerticalAlignment_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 7; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTextCharFormat_VerticalAlignment_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTextCharFormat_VerticalAlignment_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -889,9 +889,9 @@ QScriptValue qtscript_create_QTextCharFormat_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QTextCharFormat_static_call, proto, qtscript_QTextCharFormat_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("VerticalAlignment"),
-        qtscript_create_QTextCharFormat_VerticalAlignment_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("UnderlineStyle"),
         qtscript_create_QTextCharFormat_UnderlineStyle_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("VerticalAlignment"),
+        qtscript_create_QTextCharFormat_VerticalAlignment_class(engine, ctor));
     return ctor;
 }

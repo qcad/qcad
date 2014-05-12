@@ -9,6 +9,7 @@ HEADERS += \
            $$PWD/qtscriptshell_QNetworkDiskCache.h \
            $$PWD/qtscriptshell_QNetworkProxyFactory.h \
            $$PWD/qtscriptshell_QNetworkReply.h \
+           $$PWD/qtscriptshell_QSslConfiguration.h \
            $$PWD/qtscriptshell_QSslSocket.h \
            $$PWD/qtscriptshell_QTcpServer.h \
            $$PWD/qtscriptshell_QTcpSocket.h \
@@ -55,6 +56,7 @@ SOURCES += \
            $$PWD/qtscriptshell_QNetworkDiskCache.cpp \
            $$PWD/qtscriptshell_QNetworkProxyFactory.cpp \
            $$PWD/qtscriptshell_QNetworkReply.cpp \
+           $$PWD/qtscriptshell_QSslConfiguration.cpp \
            $$PWD/qtscriptshell_QSslSocket.cpp \
            $$PWD/qtscriptshell_QTcpServer.cpp \
            $$PWD/qtscriptshell_QTcpSocket.cpp \

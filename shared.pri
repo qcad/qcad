@@ -3,7 +3,10 @@ contains(QT_VERSION, ^5\\..*\\..*) {
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
     QT += printsupport webkitwidgets
     #INCLUDEPATH += ~/local/qt/include/QtWebKitWidgets
-    QMAKE_CXXFLAGS += -I/Users/andrew/local/qt/include/QtWebKitWidgets
+    #QMAKE_CXXFLAGS += -I/Users/andrew/local/qt/include/QtWebKitWidgets
+}
+else {
+    QT += webkit
 }
 
 DEFINES += QCAD_DLL
@@ -69,7 +72,6 @@ QT += core \
     sql \
     svg \
     opengl \
-    webkit \
     network \
     xml \
     xmlpatterns

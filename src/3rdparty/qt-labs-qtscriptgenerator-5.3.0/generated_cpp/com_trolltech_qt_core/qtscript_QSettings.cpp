@@ -143,9 +143,9 @@ static QScriptValue qtscript_QSettings_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QSettings*)
 Q_DECLARE_METATYPE(QtScriptShell_QSettings*)
-Q_DECLARE_METATYPE(QSettings::Status)
 Q_DECLARE_METATYPE(QSettings::Scope)
 Q_DECLARE_METATYPE(QSettings::Format)
+Q_DECLARE_METATYPE(QSettings::Status)
 Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(const char*)
 
@@ -161,75 +161,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QSettings::Status
-//
-
-static const QSettings::Status qtscript_QSettings_Status_values[] = {
-    QSettings::NoError
-    , QSettings::AccessError
-    , QSettings::FormatError
-};
-
-static const char * const qtscript_QSettings_Status_keys[] = {
-    "NoError"
-    , "AccessError"
-    , "FormatError"
-};
-
-static QString qtscript_QSettings_Status_toStringHelper(QSettings::Status value)
-{
-    if ((value >= QSettings::NoError) && (value <= QSettings::FormatError))
-        return qtscript_QSettings_Status_keys[static_cast<int>(value)-static_cast<int>(QSettings::NoError)];
-    return QString();
-}
-
-static QScriptValue qtscript_QSettings_Status_toScriptValue(QScriptEngine *engine, const QSettings::Status &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSettings"));
-    return clazz.property(qtscript_QSettings_Status_toStringHelper(value));
-}
-
-static void qtscript_QSettings_Status_fromScriptValue(const QScriptValue &value, QSettings::Status &out)
-{
-    out = qvariant_cast<QSettings::Status>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QSettings_Status(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QSettings::NoError) && (arg <= QSettings::FormatError))
-        return qScriptValueFromValue(engine,  static_cast<QSettings::Status>(arg));
-    return context->throwError(QString::fromLatin1("Status(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QSettings_Status_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QSettings::Status value = qscriptvalue_cast<QSettings::Status>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QSettings_Status_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QSettings::Status value = qscriptvalue_cast<QSettings::Status>(context->thisObject());
-    return QScriptValue(engine, qtscript_QSettings_Status_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QSettings_Status_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QSettings_Status,
-        qtscript_QSettings_Status_valueOf, qtscript_QSettings_Status_toString);
-    qScriptRegisterMetaType<QSettings::Status>(engine, qtscript_QSettings_Status_toScriptValue,
-        qtscript_QSettings_Status_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QSettings_Status_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QSettings_Status_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -399,6 +330,75 @@ static QScriptValue qtscript_create_QSettings_Format_class(QScriptEngine *engine
     for (int i = 0; i < 19; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QSettings_Format_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QSettings_Format_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QSettings::Status
+//
+
+static const QSettings::Status qtscript_QSettings_Status_values[] = {
+    QSettings::NoError
+    , QSettings::AccessError
+    , QSettings::FormatError
+};
+
+static const char * const qtscript_QSettings_Status_keys[] = {
+    "NoError"
+    , "AccessError"
+    , "FormatError"
+};
+
+static QString qtscript_QSettings_Status_toStringHelper(QSettings::Status value)
+{
+    if ((value >= QSettings::NoError) && (value <= QSettings::FormatError))
+        return qtscript_QSettings_Status_keys[static_cast<int>(value)-static_cast<int>(QSettings::NoError)];
+    return QString();
+}
+
+static QScriptValue qtscript_QSettings_Status_toScriptValue(QScriptEngine *engine, const QSettings::Status &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSettings"));
+    return clazz.property(qtscript_QSettings_Status_toStringHelper(value));
+}
+
+static void qtscript_QSettings_Status_fromScriptValue(const QScriptValue &value, QSettings::Status &out)
+{
+    out = qvariant_cast<QSettings::Status>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QSettings_Status(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QSettings::NoError) && (arg <= QSettings::FormatError))
+        return qScriptValueFromValue(engine,  static_cast<QSettings::Status>(arg));
+    return context->throwError(QString::fromLatin1("Status(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QSettings_Status_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QSettings::Status value = qscriptvalue_cast<QSettings::Status>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QSettings_Status_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QSettings::Status value = qscriptvalue_cast<QSettings::Status>(context->thisObject());
+    return QScriptValue(engine, qtscript_QSettings_Status_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QSettings_Status_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QSettings_Status,
+        qtscript_QSettings_Status_valueOf, qtscript_QSettings_Status_toString);
+    qScriptRegisterMetaType<QSettings::Status>(engine, qtscript_QSettings_Status_toScriptValue,
+        qtscript_QSettings_Status_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QSettings_Status_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QSettings_Status_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -865,11 +865,11 @@ QScriptValue qtscript_create_QSettings_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    ctor.setProperty(QString::fromLatin1("Status"),
-        qtscript_create_QSettings_Status_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Scope"),
         qtscript_create_QSettings_Scope_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Format"),
         qtscript_create_QSettings_Format_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Status"),
+        qtscript_create_QSettings_Status_class(engine, ctor));
     return ctor;
 }

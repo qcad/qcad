@@ -7,10 +7,8 @@
 #include <__package_shared.h>
 
 #include <qwebsettings.h>
-#include <QIconEngine>
 #include <QVariant>
-#include <qpixmap.h>
-#include <qurl.h>
+#include <QUrl>
 #include <qwebsettings.h>
 
 static const char * const qtscript_QWebSettings_function_names[] = {
@@ -157,9 +155,9 @@ static QScriptValue qtscript_QWebSettings_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QWebSettings*)
-Q_DECLARE_METATYPE(QWebSettings::FontSize)
 Q_DECLARE_METATYPE(QWebSettings::WebAttribute)
 Q_DECLARE_METATYPE(QWebSettings::WebGraphic)
+Q_DECLARE_METATYPE(QWebSettings::FontSize)
 Q_DECLARE_METATYPE(QWebSettings::FontFamily)
 
 static QScriptValue qtscript_create_enum_class_helper(
@@ -174,77 +172,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QWebSettings::FontSize
-//
-
-static const QWebSettings::FontSize qtscript_QWebSettings_FontSize_values[] = {
-    QWebSettings::MinimumFontSize
-    , QWebSettings::MinimumLogicalFontSize
-    , QWebSettings::DefaultFontSize
-    , QWebSettings::DefaultFixedFontSize
-};
-
-static const char * const qtscript_QWebSettings_FontSize_keys[] = {
-    "MinimumFontSize"
-    , "MinimumLogicalFontSize"
-    , "DefaultFontSize"
-    , "DefaultFixedFontSize"
-};
-
-static QString qtscript_QWebSettings_FontSize_toStringHelper(QWebSettings::FontSize value)
-{
-    if ((value >= QWebSettings::MinimumFontSize) && (value <= QWebSettings::DefaultFixedFontSize))
-        return qtscript_QWebSettings_FontSize_keys[static_cast<int>(value)-static_cast<int>(QWebSettings::MinimumFontSize)];
-    return QString();
-}
-
-static QScriptValue qtscript_QWebSettings_FontSize_toScriptValue(QScriptEngine *engine, const QWebSettings::FontSize &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QWebSettings"));
-    return clazz.property(qtscript_QWebSettings_FontSize_toStringHelper(value));
-}
-
-static void qtscript_QWebSettings_FontSize_fromScriptValue(const QScriptValue &value, QWebSettings::FontSize &out)
-{
-    out = qvariant_cast<QWebSettings::FontSize>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QWebSettings_FontSize(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QWebSettings::MinimumFontSize) && (arg <= QWebSettings::DefaultFixedFontSize))
-        return qScriptValueFromValue(engine,  static_cast<QWebSettings::FontSize>(arg));
-    return context->throwError(QString::fromLatin1("FontSize(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QWebSettings_FontSize_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QWebSettings::FontSize value = qscriptvalue_cast<QWebSettings::FontSize>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QWebSettings_FontSize_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QWebSettings::FontSize value = qscriptvalue_cast<QWebSettings::FontSize>(context->thisObject());
-    return QScriptValue(engine, qtscript_QWebSettings_FontSize_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QWebSettings_FontSize_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QWebSettings_FontSize,
-        qtscript_QWebSettings_FontSize_valueOf, qtscript_QWebSettings_FontSize_toString);
-    qScriptRegisterMetaType<QWebSettings::FontSize>(engine, qtscript_QWebSettings_FontSize_toScriptValue,
-        qtscript_QWebSettings_FontSize_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QWebSettings_FontSize_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QWebSettings_FontSize_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -283,6 +210,7 @@ static const QWebSettings::WebAttribute qtscript_QWebSettings_WebAttribute_value
     , QWebSettings::ScrollAnimatorEnabled
     , QWebSettings::CaretBrowsingEnabled
     , QWebSettings::NotificationsEnabled
+    , QWebSettings::WebAudioEnabled
 };
 
 static const char * const qtscript_QWebSettings_WebAttribute_keys[] = {
@@ -317,11 +245,12 @@ static const char * const qtscript_QWebSettings_WebAttribute_keys[] = {
     , "ScrollAnimatorEnabled"
     , "CaretBrowsingEnabled"
     , "NotificationsEnabled"
+    , "WebAudioEnabled"
 };
 
 static QString qtscript_QWebSettings_WebAttribute_toStringHelper(QWebSettings::WebAttribute value)
 {
-    if ((value >= QWebSettings::AutoLoadImages) && (value <= QWebSettings::NotificationsEnabled))
+    if ((value >= QWebSettings::AutoLoadImages) && (value <= QWebSettings::WebAudioEnabled))
         return qtscript_QWebSettings_WebAttribute_keys[static_cast<int>(value)-static_cast<int>(QWebSettings::AutoLoadImages)];
     return QString();
 }
@@ -340,7 +269,7 @@ static void qtscript_QWebSettings_WebAttribute_fromScriptValue(const QScriptValu
 static QScriptValue qtscript_construct_QWebSettings_WebAttribute(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    if ((arg >= QWebSettings::AutoLoadImages) && (arg <= QWebSettings::NotificationsEnabled))
+    if ((arg >= QWebSettings::AutoLoadImages) && (arg <= QWebSettings::WebAudioEnabled))
         return qScriptValueFromValue(engine,  static_cast<QWebSettings::WebAttribute>(arg));
     return context->throwError(QString::fromLatin1("WebAttribute(): invalid enum value (%0)").arg(arg));
 }
@@ -364,7 +293,7 @@ static QScriptValue qtscript_create_QWebSettings_WebAttribute_class(QScriptEngin
         qtscript_QWebSettings_WebAttribute_valueOf, qtscript_QWebSettings_WebAttribute_toString);
     qScriptRegisterMetaType<QWebSettings::WebAttribute>(engine, qtscript_QWebSettings_WebAttribute_toScriptValue,
         qtscript_QWebSettings_WebAttribute_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 31; ++i) {
+    for (int i = 0; i < 32; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QWebSettings_WebAttribute_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QWebSettings_WebAttribute_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
@@ -446,6 +375,77 @@ static QScriptValue qtscript_create_QWebSettings_WebGraphic_class(QScriptEngine 
     for (int i = 0; i < 8; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QWebSettings_WebGraphic_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QWebSettings_WebGraphic_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QWebSettings::FontSize
+//
+
+static const QWebSettings::FontSize qtscript_QWebSettings_FontSize_values[] = {
+    QWebSettings::MinimumFontSize
+    , QWebSettings::MinimumLogicalFontSize
+    , QWebSettings::DefaultFontSize
+    , QWebSettings::DefaultFixedFontSize
+};
+
+static const char * const qtscript_QWebSettings_FontSize_keys[] = {
+    "MinimumFontSize"
+    , "MinimumLogicalFontSize"
+    , "DefaultFontSize"
+    , "DefaultFixedFontSize"
+};
+
+static QString qtscript_QWebSettings_FontSize_toStringHelper(QWebSettings::FontSize value)
+{
+    if ((value >= QWebSettings::MinimumFontSize) && (value <= QWebSettings::DefaultFixedFontSize))
+        return qtscript_QWebSettings_FontSize_keys[static_cast<int>(value)-static_cast<int>(QWebSettings::MinimumFontSize)];
+    return QString();
+}
+
+static QScriptValue qtscript_QWebSettings_FontSize_toScriptValue(QScriptEngine *engine, const QWebSettings::FontSize &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QWebSettings"));
+    return clazz.property(qtscript_QWebSettings_FontSize_toStringHelper(value));
+}
+
+static void qtscript_QWebSettings_FontSize_fromScriptValue(const QScriptValue &value, QWebSettings::FontSize &out)
+{
+    out = qvariant_cast<QWebSettings::FontSize>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QWebSettings_FontSize(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QWebSettings::MinimumFontSize) && (arg <= QWebSettings::DefaultFixedFontSize))
+        return qScriptValueFromValue(engine,  static_cast<QWebSettings::FontSize>(arg));
+    return context->throwError(QString::fromLatin1("FontSize(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QWebSettings_FontSize_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QWebSettings::FontSize value = qscriptvalue_cast<QWebSettings::FontSize>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QWebSettings_FontSize_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QWebSettings::FontSize value = qscriptvalue_cast<QWebSettings::FontSize>(context->thisObject());
+    return QScriptValue(engine, qtscript_QWebSettings_FontSize_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QWebSettings_FontSize_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QWebSettings_FontSize,
+        qtscript_QWebSettings_FontSize_valueOf, qtscript_QWebSettings_FontSize_toString);
+    qScriptRegisterMetaType<QWebSettings::FontSize>(engine, qtscript_QWebSettings_FontSize_toScriptValue,
+        qtscript_QWebSettings_FontSize_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QWebSettings_FontSize_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QWebSettings_FontSize_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -900,12 +900,12 @@ QScriptValue qtscript_create_QWebSettings_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    ctor.setProperty(QString::fromLatin1("FontSize"),
-        qtscript_create_QWebSettings_FontSize_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("WebAttribute"),
         qtscript_create_QWebSettings_WebAttribute_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("WebGraphic"),
         qtscript_create_QWebSettings_WebGraphic_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("FontSize"),
+        qtscript_create_QWebSettings_FontSize_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("FontFamily"),
         qtscript_create_QWebSettings_FontFamily_class(engine, ctor));
     return ctor;

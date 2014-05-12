@@ -2,8 +2,8 @@
 #include <QtScript/QScriptEngine>
 
 QScriptValue qtscript_create_QTextCodec_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QFutureSynchronizer_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QFutureWatcherVoid_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QFutureSynchronizer_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QFutureWatcherVoid_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTextBoundaryFinder_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QModelIndex_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QLibraryInfo_class(QScriptEngine *engine);
@@ -26,18 +26,18 @@ QScriptValue qtscript_create_QXmlStreamNotationDeclaration_class(QScriptEngine *
 QScriptValue qtscript_create_QBitArray_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QXmlStreamEntityResolver_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QSemaphore_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QFutureSynchronizerVoid_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QFutureSynchronizerVoid_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QXmlStreamEntityDeclaration_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QDate_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QEvent_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QReadWriteLock_class(QScriptEngine *engine);
 QScriptValue qtscript_create_Global_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTextStream_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QDirIterator_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QFutureWatcher_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QDirIterator_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QFutureWatcher_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QDir_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QFile_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QFutureIterator_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QFutureIterator_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QMargins_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QPersistentModelIndex_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QXmlStreamReader_class(QScriptEngine *engine);
@@ -47,13 +47,13 @@ QScriptValue qtscript_create_QProcessEnvironment_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QRectF_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTextDecoder_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QXmlStreamAttributes_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QBasicMutex_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QBasicMutex_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTime_class(QScriptEngine *engine);
 QScriptValue qtscript_create_Qt_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QFileInfo_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QXmlStreamAttribute_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QFutureVoid_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QFuture_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QFutureVoid_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QFuture_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QXmlStreamNamespaceDeclaration_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QPoint_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QSystemSemaphore_class(QScriptEngine *engine);
@@ -75,7 +75,7 @@ QScriptValue qtscript_create_QChildEvent_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QIODevice_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QMimeData_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTimer_class(QScriptEngine *engine);
-QScriptValue qtscript_create_QSocketNotifier_class(QScriptEngine *engine);
+//QScriptValue qtscript_create_QSocketNotifier_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTimeLine_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QStateMachine_SignalEvent_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QThreadPool_class(QScriptEngine *engine);
@@ -102,8 +102,8 @@ QScriptValue qtscript_create_QSequentialAnimationGroup_class(QScriptEngine *engi
 
 static const char * const qtscript_com_trolltech_qt_core_class_names[] = {
     "QTextCodec"
-    , "QFutureSynchronizer"
-    , "QFutureWatcherVoid"
+    //, "QFutureSynchronizer"
+    //, "QFutureWatcherVoid"
     , "QTextBoundaryFinder"
     , "QModelIndex"
     , "QLibraryInfo"
@@ -126,18 +126,18 @@ static const char * const qtscript_com_trolltech_qt_core_class_names[] = {
     , "QBitArray"
     , "QXmlStreamEntityResolver"
     , "QSemaphore"
-    , "QFutureSynchronizerVoid"
+    //, "QFutureSynchronizerVoid"
     , "QXmlStreamEntityDeclaration"
     , "QDate"
     , "QEvent"
     , "QReadWriteLock"
     , "Global"
     , "QTextStream"
-    , "QDirIterator"
-    , "QFutureWatcher"
+    //, "QDirIterator"
+    //, "QFutureWatcher"
     , "QDir"
     , "QFile"
-    , "QFutureIterator"
+    //, "QFutureIterator"
     , "QMargins"
     , "QPersistentModelIndex"
     , "QXmlStreamReader"
@@ -147,13 +147,13 @@ static const char * const qtscript_com_trolltech_qt_core_class_names[] = {
     , "QRectF"
     , "QTextDecoder"
     , "QXmlStreamAttributes"
-    , "QBasicMutex"
+    //, "QBasicMutex"
     , "QTime"
     , "Qt"
     , "QFileInfo"
     , "QXmlStreamAttribute"
-    , "QFutureVoid"
-    , "QFuture"
+    //, "QFutureVoid"
+    //, "QFuture"
     , "QXmlStreamNamespaceDeclaration"
     , "QPoint"
     , "QSystemSemaphore"
@@ -175,7 +175,7 @@ static const char * const qtscript_com_trolltech_qt_core_class_names[] = {
     , "QIODevice"
     , "QMimeData"
     , "QTimer"
-    , "QSocketNotifier"
+    //, "QSocketNotifier"
     , "QTimeLine"
     , "QStateMachine_SignalEvent"
     , "QThreadPool"
@@ -204,8 +204,8 @@ static const char * const qtscript_com_trolltech_qt_core_class_names[] = {
 typedef QScriptValue (*QtBindingCreator)(QScriptEngine *engine);
 static const QtBindingCreator qtscript_com_trolltech_qt_core_class_functions[] = {
     qtscript_create_QTextCodec_class
-    , qtscript_create_QFutureSynchronizer_class
-    , qtscript_create_QFutureWatcherVoid_class
+    //, qtscript_create_QFutureSynchronizer_class
+    //, qtscript_create_QFutureWatcherVoid_class
     , qtscript_create_QTextBoundaryFinder_class
     , qtscript_create_QModelIndex_class
     , qtscript_create_QLibraryInfo_class
@@ -228,18 +228,18 @@ static const QtBindingCreator qtscript_com_trolltech_qt_core_class_functions[] =
     , qtscript_create_QBitArray_class
     , qtscript_create_QXmlStreamEntityResolver_class
     , qtscript_create_QSemaphore_class
-    , qtscript_create_QFutureSynchronizerVoid_class
+    //, qtscript_create_QFutureSynchronizerVoid_class
     , qtscript_create_QXmlStreamEntityDeclaration_class
     , qtscript_create_QDate_class
     , qtscript_create_QEvent_class
     , qtscript_create_QReadWriteLock_class
     , qtscript_create_Global_class
     , qtscript_create_QTextStream_class
-    , qtscript_create_QDirIterator_class
-    , qtscript_create_QFutureWatcher_class
+    //, qtscript_create_QDirIterator_class
+    //, qtscript_create_QFutureWatcher_class
     , qtscript_create_QDir_class
     , qtscript_create_QFile_class
-    , qtscript_create_QFutureIterator_class
+    //, qtscript_create_QFutureIterator_class
     , qtscript_create_QMargins_class
     , qtscript_create_QPersistentModelIndex_class
     , qtscript_create_QXmlStreamReader_class
@@ -249,13 +249,13 @@ static const QtBindingCreator qtscript_com_trolltech_qt_core_class_functions[] =
     , qtscript_create_QRectF_class
     , qtscript_create_QTextDecoder_class
     , qtscript_create_QXmlStreamAttributes_class
-    , qtscript_create_QBasicMutex_class
+    //, qtscript_create_QBasicMutex_class
     , qtscript_create_QTime_class
     , qtscript_create_Qt_class
     , qtscript_create_QFileInfo_class
     , qtscript_create_QXmlStreamAttribute_class
-    , qtscript_create_QFutureVoid_class
-    , qtscript_create_QFuture_class
+    //, qtscript_create_QFutureVoid_class
+    //, qtscript_create_QFuture_class
     , qtscript_create_QXmlStreamNamespaceDeclaration_class
     , qtscript_create_QPoint_class
     , qtscript_create_QSystemSemaphore_class
@@ -277,7 +277,7 @@ static const QtBindingCreator qtscript_com_trolltech_qt_core_class_functions[] =
     , qtscript_create_QIODevice_class
     , qtscript_create_QMimeData_class
     , qtscript_create_QTimer_class
-    , qtscript_create_QSocketNotifier_class
+    //, qtscript_create_QSocketNotifier_class
     , qtscript_create_QTimeLine_class
     , qtscript_create_QStateMachine_SignalEvent_class
     , qtscript_create_QThreadPool_class
@@ -306,7 +306,7 @@ static const QtBindingCreator qtscript_com_trolltech_qt_core_class_functions[] =
 void qtscript_initialize_com_trolltech_qt_core_bindings(QScriptValue &extensionObject)
 {
     QScriptEngine *engine = extensionObject.engine();
-    for (int i = 0; i < 98; ++i) {
+    for (int i = 0; i < 88; ++i) {
         extensionObject.setProperty(qtscript_com_trolltech_qt_core_class_names[i],
             qtscript_com_trolltech_qt_core_class_functions[i](engine),
             QScriptValue::SkipInEnumeration);

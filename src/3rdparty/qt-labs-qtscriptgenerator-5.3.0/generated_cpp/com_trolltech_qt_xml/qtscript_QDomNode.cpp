@@ -234,8 +234,8 @@ static QScriptValue qtscript_QDomNode_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QDomNode)
 Q_DECLARE_METATYPE(QDomNode*)
-Q_DECLARE_METATYPE(QDomNode::NodeType)
 Q_DECLARE_METATYPE(QDomNode::EncodingPolicy)
+Q_DECLARE_METATYPE(QDomNode::NodeType)
 Q_DECLARE_METATYPE(QDomNodeList)
 Q_DECLARE_METATYPE(QDomElement)
 Q_DECLARE_METATYPE(QDomDocument)
@@ -264,6 +264,73 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
+}
+
+//
+// QDomNode::EncodingPolicy
+//
+
+static const QDomNode::EncodingPolicy qtscript_QDomNode_EncodingPolicy_values[] = {
+    QDomNode::EncodingFromDocument
+    , QDomNode::EncodingFromTextStream
+};
+
+static const char * const qtscript_QDomNode_EncodingPolicy_keys[] = {
+    "EncodingFromDocument"
+    , "EncodingFromTextStream"
+};
+
+static QString qtscript_QDomNode_EncodingPolicy_toStringHelper(QDomNode::EncodingPolicy value)
+{
+    if ((value >= QDomNode::EncodingFromDocument) && (value <= QDomNode::EncodingFromTextStream))
+        return qtscript_QDomNode_EncodingPolicy_keys[static_cast<int>(value)-static_cast<int>(QDomNode::EncodingFromDocument)];
+    return QString();
+}
+
+static QScriptValue qtscript_QDomNode_EncodingPolicy_toScriptValue(QScriptEngine *engine, const QDomNode::EncodingPolicy &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QDomNode"));
+    return clazz.property(qtscript_QDomNode_EncodingPolicy_toStringHelper(value));
+}
+
+static void qtscript_QDomNode_EncodingPolicy_fromScriptValue(const QScriptValue &value, QDomNode::EncodingPolicy &out)
+{
+    out = qvariant_cast<QDomNode::EncodingPolicy>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QDomNode_EncodingPolicy(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QDomNode::EncodingFromDocument) && (arg <= QDomNode::EncodingFromTextStream))
+        return qScriptValueFromValue(engine,  static_cast<QDomNode::EncodingPolicy>(arg));
+    return context->throwError(QString::fromLatin1("EncodingPolicy(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QDomNode_EncodingPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QDomNode::EncodingPolicy value = qscriptvalue_cast<QDomNode::EncodingPolicy>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QDomNode_EncodingPolicy_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QDomNode::EncodingPolicy value = qscriptvalue_cast<QDomNode::EncodingPolicy>(context->thisObject());
+    return QScriptValue(engine, qtscript_QDomNode_EncodingPolicy_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QDomNode_EncodingPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QDomNode_EncodingPolicy,
+        qtscript_QDomNode_EncodingPolicy_valueOf, qtscript_QDomNode_EncodingPolicy_toString);
+    qScriptRegisterMetaType<QDomNode::EncodingPolicy>(engine, qtscript_QDomNode_EncodingPolicy_toScriptValue,
+        qtscript_QDomNode_EncodingPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QDomNode_EncodingPolicy_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QDomNode_EncodingPolicy_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
 }
 
 //
@@ -356,73 +423,6 @@ static QScriptValue qtscript_create_QDomNode_NodeType_class(QScriptEngine *engin
     for (int i = 0; i < 14; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QDomNode_NodeType_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QDomNode_NodeType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QDomNode::EncodingPolicy
-//
-
-static const QDomNode::EncodingPolicy qtscript_QDomNode_EncodingPolicy_values[] = {
-    QDomNode::EncodingFromDocument
-    , QDomNode::EncodingFromTextStream
-};
-
-static const char * const qtscript_QDomNode_EncodingPolicy_keys[] = {
-    "EncodingFromDocument"
-    , "EncodingFromTextStream"
-};
-
-static QString qtscript_QDomNode_EncodingPolicy_toStringHelper(QDomNode::EncodingPolicy value)
-{
-    if ((value >= QDomNode::EncodingFromDocument) && (value <= QDomNode::EncodingFromTextStream))
-        return qtscript_QDomNode_EncodingPolicy_keys[static_cast<int>(value)-static_cast<int>(QDomNode::EncodingFromDocument)];
-    return QString();
-}
-
-static QScriptValue qtscript_QDomNode_EncodingPolicy_toScriptValue(QScriptEngine *engine, const QDomNode::EncodingPolicy &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QDomNode"));
-    return clazz.property(qtscript_QDomNode_EncodingPolicy_toStringHelper(value));
-}
-
-static void qtscript_QDomNode_EncodingPolicy_fromScriptValue(const QScriptValue &value, QDomNode::EncodingPolicy &out)
-{
-    out = qvariant_cast<QDomNode::EncodingPolicy>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QDomNode_EncodingPolicy(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QDomNode::EncodingFromDocument) && (arg <= QDomNode::EncodingFromTextStream))
-        return qScriptValueFromValue(engine,  static_cast<QDomNode::EncodingPolicy>(arg));
-    return context->throwError(QString::fromLatin1("EncodingPolicy(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QDomNode_EncodingPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QDomNode::EncodingPolicy value = qscriptvalue_cast<QDomNode::EncodingPolicy>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QDomNode_EncodingPolicy_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QDomNode::EncodingPolicy value = qscriptvalue_cast<QDomNode::EncodingPolicy>(context->thisObject());
-    return QScriptValue(engine, qtscript_QDomNode_EncodingPolicy_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QDomNode_EncodingPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QDomNode_EncodingPolicy,
-        qtscript_QDomNode_EncodingPolicy_valueOf, qtscript_QDomNode_EncodingPolicy_toString);
-    qScriptRegisterMetaType<QDomNode::EncodingPolicy>(engine, qtscript_QDomNode_EncodingPolicy_toScriptValue,
-        qtscript_QDomNode_EncodingPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QDomNode_EncodingPolicy_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QDomNode_EncodingPolicy_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -1006,9 +1006,9 @@ QScriptValue qtscript_create_QDomNode_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QDomNode_static_call, proto, qtscript_QDomNode_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("NodeType"),
-        qtscript_create_QDomNode_NodeType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("EncodingPolicy"),
         qtscript_create_QDomNode_EncodingPolicy_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("NodeType"),
+        qtscript_create_QDomNode_NodeType_class(engine, ctor));
     return ctor;
 }

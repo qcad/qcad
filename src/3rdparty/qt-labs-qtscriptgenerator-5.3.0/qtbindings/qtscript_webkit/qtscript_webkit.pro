@@ -1,6 +1,6 @@
 TARGET = qtscript_webkit
 include(../qtbindingsbase.pri)
-QT += network webkit
+QT += network webkit webkitwidgets
 SOURCES += plugin.cpp
 HEADERS += plugin.h
 INCLUDEPATH += ./include/

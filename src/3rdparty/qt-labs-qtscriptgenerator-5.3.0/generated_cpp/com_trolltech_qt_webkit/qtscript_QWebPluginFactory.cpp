@@ -8,12 +8,7 @@
 
 #include <qwebpluginfactory.h>
 #include <QVariant>
-#include <qbytearray.h>
-#include <qcoreevent.h>
-#include <qlist.h>
-#include <qobject.h>
-#include <qstringlist.h>
-#include <qurl.h>
+#include <QUrl>
 #include <qwebpluginfactory.h>
 
 #include "qtscriptshell_QWebPluginFactory.h"
@@ -261,13 +256,13 @@ static QScriptValue qtscript_QWebPluginFactory_static_call(QScriptContext *conte
     }
     if (context->argumentCount() == 0) {
         QtScriptShell_QWebPluginFactory* _q_cpp_result = new QtScriptShell_QWebPluginFactory();
-        QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QWebPluginFactory*)_q_cpp_result, QScriptEngine::AutoOwnership);
+        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue((QWebPluginFactory*)_q_cpp_result));
         _q_cpp_result->__qtscript_self = _q_result;
         return _q_result;
     } else if (context->argumentCount() == 1) {
         QObject* _q_arg0 = context->argument(0).toQObject();
         QtScriptShell_QWebPluginFactory* _q_cpp_result = new QtScriptShell_QWebPluginFactory(_q_arg0);
-        QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QWebPluginFactory*)_q_cpp_result, QScriptEngine::AutoOwnership);
+        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue((QWebPluginFactory*)_q_cpp_result));
         _q_cpp_result->__qtscript_self = _q_result;
         return _q_result;
     }
@@ -281,21 +276,10 @@ static QScriptValue qtscript_QWebPluginFactory_static_call(QScriptContext *conte
         qtscript_QWebPluginFactory_function_signatures[_id]);
 }
 
-static QScriptValue qtscript_QWebPluginFactory_toScriptValue(QScriptEngine *engine, QWebPluginFactory* const &in)
-{
-    return engine->newQObject(in, QScriptEngine::QtOwnership, QScriptEngine::PreferExistingWrapperObject);
-}
-
-static void qtscript_QWebPluginFactory_fromScriptValue(const QScriptValue &value, QWebPluginFactory* &out)
-{
-    out = qobject_cast<QWebPluginFactory*>(value.toQObject());
-}
-
 QScriptValue qtscript_create_QWebPluginFactory_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QWebPluginFactory*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QWebPluginFactory*)0));
-    proto.setPrototype(engine->defaultPrototype(qMetaTypeId<QObject*>()));
     for (int i = 0; i < 6; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QWebPluginFactory_prototype_call, qtscript_QWebPluginFactory_function_lengths[i+1]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
@@ -303,8 +287,7 @@ QScriptValue qtscript_create_QWebPluginFactory_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    qScriptRegisterMetaType<QWebPluginFactory*>(engine, qtscript_QWebPluginFactory_toScriptValue, 
-        qtscript_QWebPluginFactory_fromScriptValue, proto);
+    engine->setDefaultPrototype(qMetaTypeId<QWebPluginFactory*>(), proto);
 
     QScriptValue ctor = engine->newFunction(qtscript_QWebPluginFactory_static_call, proto, qtscript_QWebPluginFactory_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));

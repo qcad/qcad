@@ -43,11 +43,11 @@ static QScriptValue qtscript_QSql_throw_ambiguity_error_helper(
         .arg(functionName).arg(fullSignatures.join(QLatin1String("\n"))));
 }
 
+Q_DECLARE_METATYPE(QSql::TableType)
+Q_DECLARE_METATYPE(QSql::Location)
 Q_DECLARE_METATYPE(QSql::ParamTypeFlag)
 Q_DECLARE_METATYPE(QFlags<QSql::ParamTypeFlag>)
 Q_DECLARE_METATYPE(QSql::NumericalPrecisionPolicy)
-Q_DECLARE_METATYPE(QSql::Location)
-Q_DECLARE_METATYPE(QSql::TableType)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -78,6 +78,148 @@ static QScriptValue qtscript_create_flags_class_helper(
     proto.setProperty(QString::fromLatin1("equals"),
         engine->newFunction(equals), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto);
+}
+
+//
+// QSql::TableType
+//
+
+static const QSql::TableType qtscript_QSql_TableType_values[] = {
+    QSql::Tables
+    , QSql::SystemTables
+    , QSql::Views
+    , QSql::AllTables
+};
+
+static const char * const qtscript_QSql_TableType_keys[] = {
+    "Tables"
+    , "SystemTables"
+    , "Views"
+    , "AllTables"
+};
+
+static QString qtscript_QSql_TableType_toStringHelper(QSql::TableType value)
+{
+    for (int i = 0; i < 4; ++i) {
+        if (qtscript_QSql_TableType_values[i] == value)
+            return QString::fromLatin1(qtscript_QSql_TableType_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_QSql_TableType_toScriptValue(QScriptEngine *engine, const QSql::TableType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSql"));
+    return clazz.property(qtscript_QSql_TableType_toStringHelper(value));
+}
+
+static void qtscript_QSql_TableType_fromScriptValue(const QScriptValue &value, QSql::TableType &out)
+{
+    out = qvariant_cast<QSql::TableType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QSql_TableType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 4; ++i) {
+        if (qtscript_QSql_TableType_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<QSql::TableType>(arg));
+    }
+    return context->throwError(QString::fromLatin1("TableType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QSql_TableType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QSql::TableType value = qscriptvalue_cast<QSql::TableType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QSql_TableType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QSql::TableType value = qscriptvalue_cast<QSql::TableType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QSql_TableType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QSql_TableType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QSql_TableType,
+        qtscript_QSql_TableType_valueOf, qtscript_QSql_TableType_toString);
+    qScriptRegisterMetaType<QSql::TableType>(engine, qtscript_QSql_TableType_toScriptValue,
+        qtscript_QSql_TableType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QSql_TableType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QSql_TableType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QSql::Location
+//
+
+static const QSql::Location qtscript_QSql_Location_values[] = {
+    QSql::AfterLastRow
+    , QSql::BeforeFirstRow
+};
+
+static const char * const qtscript_QSql_Location_keys[] = {
+    "AfterLastRow"
+    , "BeforeFirstRow"
+};
+
+static QString qtscript_QSql_Location_toStringHelper(QSql::Location value)
+{
+    if ((value >= QSql::AfterLastRow) && (value <= QSql::BeforeFirstRow))
+        return qtscript_QSql_Location_keys[static_cast<int>(value)-static_cast<int>(QSql::AfterLastRow)];
+    return QString();
+}
+
+static QScriptValue qtscript_QSql_Location_toScriptValue(QScriptEngine *engine, const QSql::Location &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSql"));
+    return clazz.property(qtscript_QSql_Location_toStringHelper(value));
+}
+
+static void qtscript_QSql_Location_fromScriptValue(const QScriptValue &value, QSql::Location &out)
+{
+    out = qvariant_cast<QSql::Location>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QSql_Location(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QSql::AfterLastRow) && (arg <= QSql::BeforeFirstRow))
+        return qScriptValueFromValue(engine,  static_cast<QSql::Location>(arg));
+    return context->throwError(QString::fromLatin1("Location(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QSql_Location_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QSql::Location value = qscriptvalue_cast<QSql::Location>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QSql_Location_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QSql::Location value = qscriptvalue_cast<QSql::Location>(context->thisObject());
+    return QScriptValue(engine, qtscript_QSql_Location_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QSql_Location_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QSql_Location,
+        qtscript_QSql_Location_valueOf, qtscript_QSql_Location_toString);
+    qScriptRegisterMetaType<QSql::Location>(engine, qtscript_QSql_Location_toScriptValue,
+        qtscript_QSql_Location_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QSql_Location_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QSql_Location_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
 }
 
 //
@@ -303,148 +445,6 @@ static QScriptValue qtscript_create_QSql_NumericalPrecisionPolicy_class(QScriptE
 }
 
 //
-// QSql::Location
-//
-
-static const QSql::Location qtscript_QSql_Location_values[] = {
-    QSql::AfterLastRow
-    , QSql::BeforeFirstRow
-};
-
-static const char * const qtscript_QSql_Location_keys[] = {
-    "AfterLastRow"
-    , "BeforeFirstRow"
-};
-
-static QString qtscript_QSql_Location_toStringHelper(QSql::Location value)
-{
-    if ((value >= QSql::AfterLastRow) && (value <= QSql::BeforeFirstRow))
-        return qtscript_QSql_Location_keys[static_cast<int>(value)-static_cast<int>(QSql::AfterLastRow)];
-    return QString();
-}
-
-static QScriptValue qtscript_QSql_Location_toScriptValue(QScriptEngine *engine, const QSql::Location &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSql"));
-    return clazz.property(qtscript_QSql_Location_toStringHelper(value));
-}
-
-static void qtscript_QSql_Location_fromScriptValue(const QScriptValue &value, QSql::Location &out)
-{
-    out = qvariant_cast<QSql::Location>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QSql_Location(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QSql::AfterLastRow) && (arg <= QSql::BeforeFirstRow))
-        return qScriptValueFromValue(engine,  static_cast<QSql::Location>(arg));
-    return context->throwError(QString::fromLatin1("Location(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QSql_Location_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QSql::Location value = qscriptvalue_cast<QSql::Location>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QSql_Location_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QSql::Location value = qscriptvalue_cast<QSql::Location>(context->thisObject());
-    return QScriptValue(engine, qtscript_QSql_Location_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QSql_Location_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QSql_Location,
-        qtscript_QSql_Location_valueOf, qtscript_QSql_Location_toString);
-    qScriptRegisterMetaType<QSql::Location>(engine, qtscript_QSql_Location_toScriptValue,
-        qtscript_QSql_Location_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QSql_Location_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QSql_Location_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QSql::TableType
-//
-
-static const QSql::TableType qtscript_QSql_TableType_values[] = {
-    QSql::Tables
-    , QSql::SystemTables
-    , QSql::Views
-    , QSql::AllTables
-};
-
-static const char * const qtscript_QSql_TableType_keys[] = {
-    "Tables"
-    , "SystemTables"
-    , "Views"
-    , "AllTables"
-};
-
-static QString qtscript_QSql_TableType_toStringHelper(QSql::TableType value)
-{
-    for (int i = 0; i < 4; ++i) {
-        if (qtscript_QSql_TableType_values[i] == value)
-            return QString::fromLatin1(qtscript_QSql_TableType_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_QSql_TableType_toScriptValue(QScriptEngine *engine, const QSql::TableType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QSql"));
-    return clazz.property(qtscript_QSql_TableType_toStringHelper(value));
-}
-
-static void qtscript_QSql_TableType_fromScriptValue(const QScriptValue &value, QSql::TableType &out)
-{
-    out = qvariant_cast<QSql::TableType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QSql_TableType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 4; ++i) {
-        if (qtscript_QSql_TableType_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<QSql::TableType>(arg));
-    }
-    return context->throwError(QString::fromLatin1("TableType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QSql_TableType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QSql::TableType value = qscriptvalue_cast<QSql::TableType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QSql_TableType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QSql::TableType value = qscriptvalue_cast<QSql::TableType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QSql_TableType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QSql_TableType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QSql_TableType,
-        qtscript_QSql_TableType_valueOf, qtscript_QSql_TableType_toString);
-    qScriptRegisterMetaType<QSql::TableType>(engine, qtscript_QSql_TableType_toScriptValue,
-        qtscript_QSql_TableType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QSql_TableType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QSql_TableType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
 // QSql
 //
 
@@ -473,15 +473,15 @@ QScriptValue qtscript_create_QSql_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QSql_static_call, proto, qtscript_QSql_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
+    ctor.setProperty(QString::fromLatin1("TableType"),
+        qtscript_create_QSql_TableType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Location"),
+        qtscript_create_QSql_Location_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("ParamTypeFlag"),
         qtscript_create_QSql_ParamTypeFlag_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("ParamType"),
         qtscript_create_QSql_ParamType_class(engine));
     ctor.setProperty(QString::fromLatin1("NumericalPrecisionPolicy"),
         qtscript_create_QSql_NumericalPrecisionPolicy_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("Location"),
-        qtscript_create_QSql_Location_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("TableType"),
-        qtscript_create_QSql_TableType_class(engine, ctor));
     return ctor;
 }

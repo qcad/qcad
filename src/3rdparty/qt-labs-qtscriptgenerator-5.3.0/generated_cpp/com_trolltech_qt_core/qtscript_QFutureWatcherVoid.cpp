@@ -8,7 +8,6 @@
 
 #include <qtscriptconcurrent.h>
 #include <QVariant>
-#include <qfuture.h>
 
 #include "qtscriptshell_QFutureWatcherVoid.h"
 
@@ -16,7 +15,6 @@ static const char * const qtscript_QFutureWatcherVoid_function_names[] = {
     "QFutureWatcherVoid"
     // static
     // prototype
-    , "setFuture"
     , "toString"
 };
 
@@ -24,7 +22,6 @@ static const char * const qtscript_QFutureWatcherVoid_function_signatures[] = {
     ""
     // static
     // prototype
-    , "QFuture future"
 ""
 };
 
@@ -32,7 +29,6 @@ static const int qtscript_QFutureWatcherVoid_function_lengths[] = {
     0
     // static
     // prototype
-    , 1
     , 0
 };
 
@@ -49,7 +45,6 @@ static QScriptValue qtscript_QFutureWatcherVoid_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QtScriptVoidFutureWatcher*)
 Q_DECLARE_METATYPE(QtScriptShell_QFutureWatcherVoid*)
-Q_DECLARE_METATYPE(QtScriptVoidFuture*)
 
 //
 // QFutureWatcherVoid
@@ -65,7 +60,7 @@ static QScriptValue qtscript_QFutureWatcherVoid_prototype_call(QScriptContext *c
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 1;
+        _id = 0xBABE0000 + 0;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -77,16 +72,7 @@ static QScriptValue qtscript_QFutureWatcherVoid_prototype_call(QScriptContext *c
     }
 
     switch (_id) {
-    case 0:
-    if (context->argumentCount() == 1) {
-
-                const QtScriptVoidFuture & _q_arg0 = *qscriptvalue_cast<QtScriptVoidFuture*>(context->argument(0));
-                    _q_self->setFuture(_q_arg0);
-        return context->engine()->undefinedValue();
-    }
-    break;
-
-    case 1: {
+    case 0: {
     QString result = QString::fromLatin1("QFutureWatcherVoid");
     return QScriptValue(context->engine(), result);
     }
@@ -129,12 +115,6 @@ QScriptValue qtscript_create_QFutureWatcherVoid_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QtScriptVoidFutureWatcher*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QtScriptVoidFutureWatcher*)0));
-    for (int i = 0; i < 2; ++i) {
-        QScriptValue fun = engine->newFunction(qtscript_QFutureWatcherVoid_prototype_call, qtscript_QFutureWatcherVoid_function_lengths[i+1]);
-        fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
-        proto.setProperty(QString::fromLatin1(qtscript_QFutureWatcherVoid_function_names[i+1]),
-            fun, QScriptValue::SkipInEnumeration);
-    }
 
     engine->setDefaultPrototype(qMetaTypeId<QtScriptVoidFutureWatcher*>(), proto);
 

@@ -104,8 +104,8 @@ static QScriptValue qtscript_QTabletEvent_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QTabletEvent*)
 Q_DECLARE_METATYPE(QtScriptShell_QTabletEvent*)
-Q_DECLARE_METATYPE(QTabletEvent::PointerType)
 Q_DECLARE_METATYPE(QTabletEvent::TabletDevice)
+Q_DECLARE_METATYPE(QTabletEvent::PointerType)
 Q_DECLARE_METATYPE(QEvent::Type)
 Q_DECLARE_METATYPE(QFlags<Qt::KeyboardModifier>)
 Q_DECLARE_METATYPE(QInputEvent*)
@@ -122,77 +122,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QTabletEvent::PointerType
-//
-
-static const QTabletEvent::PointerType qtscript_QTabletEvent_PointerType_values[] = {
-    QTabletEvent::UnknownPointer
-    , QTabletEvent::Pen
-    , QTabletEvent::Cursor
-    , QTabletEvent::Eraser
-};
-
-static const char * const qtscript_QTabletEvent_PointerType_keys[] = {
-    "UnknownPointer"
-    , "Pen"
-    , "Cursor"
-    , "Eraser"
-};
-
-static QString qtscript_QTabletEvent_PointerType_toStringHelper(QTabletEvent::PointerType value)
-{
-    if ((value >= QTabletEvent::UnknownPointer) && (value <= QTabletEvent::Eraser))
-        return qtscript_QTabletEvent_PointerType_keys[static_cast<int>(value)-static_cast<int>(QTabletEvent::UnknownPointer)];
-    return QString();
-}
-
-static QScriptValue qtscript_QTabletEvent_PointerType_toScriptValue(QScriptEngine *engine, const QTabletEvent::PointerType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTabletEvent"));
-    return clazz.property(qtscript_QTabletEvent_PointerType_toStringHelper(value));
-}
-
-static void qtscript_QTabletEvent_PointerType_fromScriptValue(const QScriptValue &value, QTabletEvent::PointerType &out)
-{
-    out = qvariant_cast<QTabletEvent::PointerType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTabletEvent_PointerType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QTabletEvent::UnknownPointer) && (arg <= QTabletEvent::Eraser))
-        return qScriptValueFromValue(engine,  static_cast<QTabletEvent::PointerType>(arg));
-    return context->throwError(QString::fromLatin1("PointerType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTabletEvent_PointerType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTabletEvent::PointerType value = qscriptvalue_cast<QTabletEvent::PointerType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTabletEvent_PointerType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTabletEvent::PointerType value = qscriptvalue_cast<QTabletEvent::PointerType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTabletEvent_PointerType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTabletEvent_PointerType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTabletEvent_PointerType,
-        qtscript_QTabletEvent_PointerType_valueOf, qtscript_QTabletEvent_PointerType_toString);
-    qScriptRegisterMetaType<QTabletEvent::PointerType>(engine, qtscript_QTabletEvent_PointerType_toScriptValue,
-        qtscript_QTabletEvent_PointerType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTabletEvent_PointerType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTabletEvent_PointerType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -267,6 +196,77 @@ static QScriptValue qtscript_create_QTabletEvent_TabletDevice_class(QScriptEngin
     for (int i = 0; i < 7; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QTabletEvent_TabletDevice_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QTabletEvent_TabletDevice_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QTabletEvent::PointerType
+//
+
+static const QTabletEvent::PointerType qtscript_QTabletEvent_PointerType_values[] = {
+    QTabletEvent::UnknownPointer
+    , QTabletEvent::Pen
+    , QTabletEvent::Cursor
+    , QTabletEvent::Eraser
+};
+
+static const char * const qtscript_QTabletEvent_PointerType_keys[] = {
+    "UnknownPointer"
+    , "Pen"
+    , "Cursor"
+    , "Eraser"
+};
+
+static QString qtscript_QTabletEvent_PointerType_toStringHelper(QTabletEvent::PointerType value)
+{
+    if ((value >= QTabletEvent::UnknownPointer) && (value <= QTabletEvent::Eraser))
+        return qtscript_QTabletEvent_PointerType_keys[static_cast<int>(value)-static_cast<int>(QTabletEvent::UnknownPointer)];
+    return QString();
+}
+
+static QScriptValue qtscript_QTabletEvent_PointerType_toScriptValue(QScriptEngine *engine, const QTabletEvent::PointerType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTabletEvent"));
+    return clazz.property(qtscript_QTabletEvent_PointerType_toStringHelper(value));
+}
+
+static void qtscript_QTabletEvent_PointerType_fromScriptValue(const QScriptValue &value, QTabletEvent::PointerType &out)
+{
+    out = qvariant_cast<QTabletEvent::PointerType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTabletEvent_PointerType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QTabletEvent::UnknownPointer) && (arg <= QTabletEvent::Eraser))
+        return qScriptValueFromValue(engine,  static_cast<QTabletEvent::PointerType>(arg));
+    return context->throwError(QString::fromLatin1("PointerType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTabletEvent_PointerType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTabletEvent::PointerType value = qscriptvalue_cast<QTabletEvent::PointerType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTabletEvent_PointerType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTabletEvent::PointerType value = qscriptvalue_cast<QTabletEvent::PointerType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTabletEvent_PointerType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTabletEvent_PointerType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTabletEvent_PointerType,
+        qtscript_QTabletEvent_PointerType_valueOf, qtscript_QTabletEvent_PointerType_toString);
+    qScriptRegisterMetaType<QTabletEvent::PointerType>(engine, qtscript_QTabletEvent_PointerType_toScriptValue,
+        qtscript_QTabletEvent_PointerType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTabletEvent_PointerType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTabletEvent_PointerType_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -500,9 +500,9 @@ QScriptValue qtscript_create_QTabletEvent_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QTabletEvent_static_call, proto, qtscript_QTabletEvent_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("PointerType"),
-        qtscript_create_QTabletEvent_PointerType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("TabletDevice"),
         qtscript_create_QTabletEvent_TabletDevice_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("PointerType"),
+        qtscript_create_QTabletEvent_PointerType_class(engine, ctor));
     return ctor;
 }

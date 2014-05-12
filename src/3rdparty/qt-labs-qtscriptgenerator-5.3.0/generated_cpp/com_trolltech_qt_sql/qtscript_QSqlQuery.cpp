@@ -78,7 +78,7 @@ static const char * const qtscript_QSqlQuery_function_signatures[] = {
     , ""
     , ""
     , ""
-    , "int field"
+    , "String name\nint field"
     , ""
     , ""
     , ""
@@ -426,9 +426,15 @@ static QScriptValue qtscript_QSqlQuery_prototype_call(QScriptContext *context, Q
 
     case 14:
     if (context->argumentCount() == 1) {
-        int _q_arg0 = context->argument(0).toInt32();
-        bool _q_result = _q_self->isNull(_q_arg0);
-        return QScriptValue(context->engine(), _q_result);
+        if (context->argument(0).isString()) {
+            QString _q_arg0 = context->argument(0).toString();
+            bool _q_result = _q_self->isNull(_q_arg0);
+            return QScriptValue(context->engine(), _q_result);
+        } else if (context->argument(0).isNumber()) {
+            int _q_arg0 = context->argument(0).toInt32();
+            bool _q_result = _q_self->isNull(_q_arg0);
+            return QScriptValue(context->engine(), _q_result);
+        }
     }
     break;
 

@@ -9,8 +9,12 @@
 #include <qfile.h>
 #include <QVariant>
 #include <qbytearray.h>
+#include <qcoreevent.h>
 #include <qfile.h>
+#include <qlist.h>
 #include <qobject.h>
+
+#include "qtscriptshell_QFile.h"
 
 static const char * const qtscript_QFile_function_names[] = {
     "QFile"
@@ -20,21 +24,22 @@ static const char * const qtscript_QFile_function_names[] = {
     , "encodeName"
     , "exists"
     , "link"
+    , "permissions"
+    , "readLink"
     , "remove"
     , "rename"
     , "resize"
+    , "setPermissions"
     , "symLinkTarget"
     // prototype
     , "copy"
     , "exists"
-    , "fileName"
     , "link"
     , "open"
+    , "readLink"
     , "remove"
     , "rename"
-    , "resize"
     , "setFileName"
-    , "size"
     , "symLinkTarget"
     , "toString"
 };
@@ -47,21 +52,22 @@ static const char * const qtscript_QFile_function_signatures[] = {
     , "String fileName"
     , "String fileName"
     , "String oldname, String newName"
+    , "String filename"
+    , "String fileName"
     , "String fileName"
     , "String oldName, String newName"
     , "String filename, qint64 sz"
+    , "String filename, Permissions permissionSpec"
     , "String fileName"
     // prototype
     , "String newName"
     , ""
+    , "String newName"
+    , "int fd, OpenMode ioFlags, FileHandleFlags handleFlags"
+    , ""
     , ""
     , "String newName"
-    , "OpenMode flags"
-    , ""
-    , "String newName"
-    , "qint64 sz"
     , "String name"
-    , ""
     , ""
 ""
 };
@@ -75,20 +81,21 @@ static const int qtscript_QFile_function_lengths[] = {
     , 1
     , 2
     , 1
+    , 1
+    , 1
+    , 2
     , 2
     , 2
     , 1
     // prototype
     , 1
     , 0
+    , 1
+    , 3
+    , 0
     , 0
     , 1
     , 1
-    , 0
-    , 1
-    , 1
-    , 1
-    , 0
     , 0
     , 0
 };
@@ -105,7 +112,11 @@ static QScriptValue qtscript_QFile_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QFile*)
+Q_DECLARE_METATYPE(QtScriptShell_QFile*)
 Q_DECLARE_METATYPE(QFlags<QIODevice::OpenModeFlag>)
+Q_DECLARE_METATYPE(QFlags<QFileDevice::FileHandleFlag>)
+Q_DECLARE_METATYPE(QFlags<QFileDevice::Permission>)
+Q_DECLARE_METATYPE(QFileDevice*)
 
 //
 // QFile
@@ -121,7 +132,7 @@ static QScriptValue qtscript_QFile_prototype_call(QScriptContext *context, QScri
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 11;
+        _id = 0xBABE0000 + 9;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -129,7 +140,7 @@ static QScriptValue qtscript_QFile_prototype_call(QScriptContext *context, QScri
     if (!_q_self) {
         return context->throwError(QScriptContext::TypeError,
             QString::fromLatin1("QFile.%0(): this object is not a QFile")
-            .arg(qtscript_QFile_function_names[_id+10]));
+            .arg(qtscript_QFile_function_names[_id+13]));
     }
 
     switch (_id) {
@@ -149,13 +160,6 @@ static QScriptValue qtscript_QFile_prototype_call(QScriptContext *context, QScri
     break;
 
     case 2:
-    if (context->argumentCount() == 0) {
-        QString _q_result = _q_self->fileName();
-        return QScriptValue(context->engine(), _q_result);
-    }
-    break;
-
-    case 3:
     if (context->argumentCount() == 1) {
         QString _q_arg0 = context->argument(0).toString();
         bool _q_result = _q_self->link(_q_arg0);
@@ -163,10 +167,25 @@ static QScriptValue qtscript_QFile_prototype_call(QScriptContext *context, QScri
     }
     break;
 
+    case 3:
+    if (context->argumentCount() == 2) {
+        int _q_arg0 = context->argument(0).toInt32();
+        QFlags<QIODevice::OpenModeFlag> _q_arg1 = qscriptvalue_cast<QFlags<QIODevice::OpenModeFlag> >(context->argument(1));
+        bool _q_result = _q_self->open(_q_arg0, _q_arg1);
+        return QScriptValue(context->engine(), _q_result);
+    }
+    if (context->argumentCount() == 3) {
+        int _q_arg0 = context->argument(0).toInt32();
+        QFlags<QIODevice::OpenModeFlag> _q_arg1 = qscriptvalue_cast<QFlags<QIODevice::OpenModeFlag> >(context->argument(1));
+        QFlags<QFileDevice::FileHandleFlag> _q_arg2 = qscriptvalue_cast<QFlags<QFileDevice::FileHandleFlag> >(context->argument(2));
+        bool _q_result = _q_self->open(_q_arg0, _q_arg1, _q_arg2);
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
     case 4:
-    if (context->argumentCount() == 1) {
-        QFlags<QIODevice::OpenModeFlag> _q_arg0 = qscriptvalue_cast<QFlags<QIODevice::OpenModeFlag> >(context->argument(0));
-        bool _q_result = _q_self->open(_q_arg0);
+    if (context->argumentCount() == 0) {
+        QString _q_result = _q_self->readLink();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
@@ -188,35 +207,20 @@ static QScriptValue qtscript_QFile_prototype_call(QScriptContext *context, QScri
 
     case 7:
     if (context->argumentCount() == 1) {
-        qint64 _q_arg0 = qscriptvalue_cast<qint64>(context->argument(0));
-        bool _q_result = _q_self->resize(_q_arg0);
-        return QScriptValue(context->engine(), _q_result);
-    }
-    break;
-
-    case 8:
-    if (context->argumentCount() == 1) {
         QString _q_arg0 = context->argument(0).toString();
         _q_self->setFileName(_q_arg0);
         return context->engine()->undefinedValue();
     }
     break;
 
-    case 9:
-    if (context->argumentCount() == 0) {
-        qint64 _q_result = _q_self->size();
-        return qScriptValueFromValue(context->engine(), _q_result);
-    }
-    break;
-
-    case 10:
+    case 8:
     if (context->argumentCount() == 0) {
         QString _q_result = _q_self->symLinkTarget();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 11: {
+    case 9: {
     QString result = QString::fromLatin1("QFile");
     return QScriptValue(context->engine(), result);
     }
@@ -225,8 +229,8 @@ static QScriptValue qtscript_QFile_prototype_call(QScriptContext *context, QScri
     Q_ASSERT(false);
     }
     return qtscript_QFile_throw_ambiguity_error_helper(context,
-        qtscript_QFile_function_names[_id+10],
-        qtscript_QFile_function_signatures[_id+10]);
+        qtscript_QFile_function_names[_id+13],
+        qtscript_QFile_function_signatures[_id+13]);
 }
 
 static QScriptValue qtscript_QFile_static_call(QScriptContext *context, QScriptEngine *)
@@ -240,26 +244,30 @@ static QScriptValue qtscript_QFile_static_call(QScriptContext *context, QScriptE
         return context->throwError(QString::fromLatin1("QFile(): Did you forget to construct with 'new'?"));
     }
     if (context->argumentCount() == 0) {
-        QFile* _q_cpp_result = new QFile();
-        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+        QtScriptShell_QFile* _q_cpp_result = new QtScriptShell_QFile();
+        QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QFile*)_q_cpp_result, QScriptEngine::AutoOwnership);
+        _q_cpp_result->__qtscript_self = _q_result;
         return _q_result;
     } else if (context->argumentCount() == 1) {
         if (context->argument(0).isQObject()) {
             QObject* _q_arg0 = context->argument(0).toQObject();
-            QFile* _q_cpp_result = new QFile(_q_arg0);
-            QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+            QtScriptShell_QFile* _q_cpp_result = new QtScriptShell_QFile(_q_arg0);
+            QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QFile*)_q_cpp_result, QScriptEngine::AutoOwnership);
+            _q_cpp_result->__qtscript_self = _q_result;
             return _q_result;
         } else if (context->argument(0).isString()) {
             QString _q_arg0 = context->argument(0).toString();
-            QFile* _q_cpp_result = new QFile(_q_arg0);
-            QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+            QtScriptShell_QFile* _q_cpp_result = new QtScriptShell_QFile(_q_arg0);
+            QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QFile*)_q_cpp_result, QScriptEngine::AutoOwnership);
+            _q_cpp_result->__qtscript_self = _q_result;
             return _q_result;
         }
     } else if (context->argumentCount() == 2) {
         QString _q_arg0 = context->argument(0).toString();
         QObject* _q_arg1 = context->argument(1).toQObject();
-        QFile* _q_cpp_result = new QFile(_q_arg0, _q_arg1);
-        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+        QtScriptShell_QFile* _q_cpp_result = new QtScriptShell_QFile(_q_arg0, _q_arg1);
+        QScriptValue _q_result = context->engine()->newQObject(context->thisObject(), (QFile*)_q_cpp_result, QScriptEngine::AutoOwnership);
+        _q_cpp_result->__qtscript_self = _q_result;
         return _q_result;
     }
     break;
@@ -309,12 +317,28 @@ static QScriptValue qtscript_QFile_static_call(QScriptContext *context, QScriptE
     case 6:
     if (context->argumentCount() == 1) {
         QString _q_arg0 = context->argument(0).toString();
+        QFlags<QFileDevice::Permission> _q_result = QFile::permissions(_q_arg0);
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 7:
+    if (context->argumentCount() == 1) {
+        QString _q_arg0 = context->argument(0).toString();
+        QString _q_result = QFile::readLink(_q_arg0);
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 8:
+    if (context->argumentCount() == 1) {
+        QString _q_arg0 = context->argument(0).toString();
         bool _q_result = QFile::remove(_q_arg0);
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 7:
+    case 9:
     if (context->argumentCount() == 2) {
         QString _q_arg0 = context->argument(0).toString();
         QString _q_arg1 = context->argument(1).toString();
@@ -323,7 +347,7 @@ static QScriptValue qtscript_QFile_static_call(QScriptContext *context, QScriptE
     }
     break;
 
-    case 8:
+    case 10:
     if (context->argumentCount() == 2) {
         QString _q_arg0 = context->argument(0).toString();
         qint64 _q_arg1 = qscriptvalue_cast<qint64>(context->argument(1));
@@ -332,7 +356,16 @@ static QScriptValue qtscript_QFile_static_call(QScriptContext *context, QScriptE
     }
     break;
 
-    case 9:
+    case 11:
+    if (context->argumentCount() == 2) {
+        QString _q_arg0 = context->argument(0).toString();
+        QFlags<QFileDevice::Permission> _q_arg1 = qscriptvalue_cast<QFlags<QFileDevice::Permission> >(context->argument(1));
+        bool _q_result = QFile::setPermissions(_q_arg0, _q_arg1);
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 12:
     if (context->argumentCount() == 1) {
         QString _q_arg0 = context->argument(0).toString();
         QString _q_result = QFile::symLinkTarget(_q_arg0);
@@ -348,22 +381,34 @@ static QScriptValue qtscript_QFile_static_call(QScriptContext *context, QScriptE
         qtscript_QFile_function_signatures[_id]);
 }
 
+static QScriptValue qtscript_QFile_toScriptValue(QScriptEngine *engine, QFile* const &in)
+{
+    return engine->newQObject(in, QScriptEngine::QtOwnership, QScriptEngine::PreferExistingWrapperObject);
+}
+
+static void qtscript_QFile_fromScriptValue(const QScriptValue &value, QFile* &out)
+{
+    out = qobject_cast<QFile*>(value.toQObject());
+}
+
 QScriptValue qtscript_create_QFile_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QFile*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QFile*)0));
-    for (int i = 0; i < 12; ++i) {
-        QScriptValue fun = engine->newFunction(qtscript_QFile_prototype_call, qtscript_QFile_function_lengths[i+10]);
+    proto.setPrototype(engine->defaultPrototype(qMetaTypeId<QFileDevice*>()));
+    for (int i = 0; i < 10; ++i) {
+        QScriptValue fun = engine->newFunction(qtscript_QFile_prototype_call, qtscript_QFile_function_lengths[i+13]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
-        proto.setProperty(QString::fromLatin1(qtscript_QFile_function_names[i+10]),
+        proto.setProperty(QString::fromLatin1(qtscript_QFile_function_names[i+13]),
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    engine->setDefaultPrototype(qMetaTypeId<QFile*>(), proto);
+    qScriptRegisterMetaType<QFile*>(engine, qtscript_QFile_toScriptValue, 
+        qtscript_QFile_fromScriptValue, proto);
 
     QScriptValue ctor = engine->newFunction(qtscript_QFile_static_call, proto, qtscript_QFile_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
-    for (int i = 0; i < 9; ++i) {
+    for (int i = 0; i < 12; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QFile_static_call,
             qtscript_QFile_function_lengths[i+1]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i+1)));

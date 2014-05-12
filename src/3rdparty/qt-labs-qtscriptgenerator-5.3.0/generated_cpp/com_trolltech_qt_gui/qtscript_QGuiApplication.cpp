@@ -15,6 +15,7 @@
 #include <qcursor.h>
 #include <qfont.h>
 #include <qguiapplication.h>
+#include <qicon.h>
 #include <qlist.h>
 #include <qobject.h>
 #include <qpalette.h>
@@ -44,6 +45,7 @@ static const char * const qtscript_QGuiApplication_function_names[] = {
     , "setFont"
     , "setOverrideCursor"
     , "setPalette"
+    , "sync"
     // prototype
     , "devicePixelRatio"
     , "isSavingSession"
@@ -73,6 +75,7 @@ static const char * const qtscript_QGuiApplication_function_signatures[] = {
     , "QFont arg__1"
     , "QCursor arg__1"
     , "QPalette pal"
+    , ""
     // prototype
     , ""
     , ""
@@ -102,6 +105,7 @@ static const int qtscript_QGuiApplication_function_lengths[] = {
     , 1
     , 1
     , 1
+    , 0
     // prototype
     , 0
     , 0
@@ -153,7 +157,7 @@ static QScriptValue qtscript_QGuiApplication_prototype_call(QScriptContext *cont
     if (!_q_self) {
         return context->throwError(QScriptContext::TypeError,
             QString::fromLatin1("QGuiApplication.%0(): this object is not a QGuiApplication")
-            .arg(qtscript_QGuiApplication_function_names[_id+18]));
+            .arg(qtscript_QGuiApplication_function_names[_id+19]));
     }
 
     switch (_id) {
@@ -201,8 +205,8 @@ static QScriptValue qtscript_QGuiApplication_prototype_call(QScriptContext *cont
     Q_ASSERT(false);
     }
     return qtscript_QGuiApplication_throw_ambiguity_error_helper(context,
-        qtscript_QGuiApplication_function_names[_id+18],
-        qtscript_QGuiApplication_function_signatures[_id+18]);
+        qtscript_QGuiApplication_function_names[_id+19],
+        qtscript_QGuiApplication_function_signatures[_id+19]);
 }
 
 static QScriptValue qtscript_QGuiApplication_static_call(QScriptContext *context, QScriptEngine *)
@@ -357,6 +361,13 @@ static QScriptValue qtscript_QGuiApplication_static_call(QScriptContext *context
     }
     break;
 
+    case 18:
+    if (context->argumentCount() == 0) {
+        QGuiApplication::sync();
+        return context->engine()->undefinedValue();
+    }
+    break;
+
     default:
     Q_ASSERT(false);
     }
@@ -381,9 +392,9 @@ QScriptValue qtscript_create_QGuiApplication_class(QScriptEngine *engine)
     QScriptValue proto = engine->newVariant(qVariantFromValue((QGuiApplication*)0));
     proto.setPrototype(engine->defaultPrototype(qMetaTypeId<QCoreApplication*>()));
     for (int i = 0; i < 6; ++i) {
-        QScriptValue fun = engine->newFunction(qtscript_QGuiApplication_prototype_call, qtscript_QGuiApplication_function_lengths[i+18]);
+        QScriptValue fun = engine->newFunction(qtscript_QGuiApplication_prototype_call, qtscript_QGuiApplication_function_lengths[i+19]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
-        proto.setProperty(QString::fromLatin1(qtscript_QGuiApplication_function_names[i+18]),
+        proto.setProperty(QString::fromLatin1(qtscript_QGuiApplication_function_names[i+19]),
             fun, QScriptValue::SkipInEnumeration);
     }
 
@@ -392,7 +403,7 @@ QScriptValue qtscript_create_QGuiApplication_class(QScriptEngine *engine)
 
     QScriptValue ctor = engine->newFunction(qtscript_QGuiApplication_static_call, proto, qtscript_QGuiApplication_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
-    for (int i = 0; i < 17; ++i) {
+    for (int i = 0; i < 18; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QGuiApplication_static_call,
             qtscript_QGuiApplication_function_lengths[i+1]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i+1)));

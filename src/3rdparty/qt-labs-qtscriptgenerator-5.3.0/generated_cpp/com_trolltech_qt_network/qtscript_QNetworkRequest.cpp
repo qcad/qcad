@@ -102,11 +102,11 @@ static QScriptValue qtscript_QNetworkRequest_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QNetworkRequest*)
-Q_DECLARE_METATYPE(QNetworkRequest::LoadControl)
 Q_DECLARE_METATYPE(QNetworkRequest::CacheLoadControl)
-Q_DECLARE_METATYPE(QNetworkRequest::KnownHeaders)
-Q_DECLARE_METATYPE(QNetworkRequest::Priority)
 Q_DECLARE_METATYPE(QNetworkRequest::Attribute)
+Q_DECLARE_METATYPE(QNetworkRequest::LoadControl)
+Q_DECLARE_METATYPE(QNetworkRequest::Priority)
+Q_DECLARE_METATYPE(QNetworkRequest::KnownHeaders)
 Q_DECLARE_METATYPE(QList<QByteArray >)
 
 static QScriptValue qtscript_create_enum_class_helper(
@@ -121,6 +121,188 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
+}
+
+//
+// QNetworkRequest::CacheLoadControl
+//
+
+static const QNetworkRequest::CacheLoadControl qtscript_QNetworkRequest_CacheLoadControl_values[] = {
+    QNetworkRequest::AlwaysNetwork
+    , QNetworkRequest::PreferNetwork
+    , QNetworkRequest::PreferCache
+    , QNetworkRequest::AlwaysCache
+};
+
+static const char * const qtscript_QNetworkRequest_CacheLoadControl_keys[] = {
+    "AlwaysNetwork"
+    , "PreferNetwork"
+    , "PreferCache"
+    , "AlwaysCache"
+};
+
+static QString qtscript_QNetworkRequest_CacheLoadControl_toStringHelper(QNetworkRequest::CacheLoadControl value)
+{
+    if ((value >= QNetworkRequest::AlwaysNetwork) && (value <= QNetworkRequest::AlwaysCache))
+        return qtscript_QNetworkRequest_CacheLoadControl_keys[static_cast<int>(value)-static_cast<int>(QNetworkRequest::AlwaysNetwork)];
+    return QString();
+}
+
+static QScriptValue qtscript_QNetworkRequest_CacheLoadControl_toScriptValue(QScriptEngine *engine, const QNetworkRequest::CacheLoadControl &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QNetworkRequest"));
+    return clazz.property(qtscript_QNetworkRequest_CacheLoadControl_toStringHelper(value));
+}
+
+static void qtscript_QNetworkRequest_CacheLoadControl_fromScriptValue(const QScriptValue &value, QNetworkRequest::CacheLoadControl &out)
+{
+    out = qvariant_cast<QNetworkRequest::CacheLoadControl>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QNetworkRequest_CacheLoadControl(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QNetworkRequest::AlwaysNetwork) && (arg <= QNetworkRequest::AlwaysCache))
+        return qScriptValueFromValue(engine,  static_cast<QNetworkRequest::CacheLoadControl>(arg));
+    return context->throwError(QString::fromLatin1("CacheLoadControl(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QNetworkRequest_CacheLoadControl_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QNetworkRequest::CacheLoadControl value = qscriptvalue_cast<QNetworkRequest::CacheLoadControl>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QNetworkRequest_CacheLoadControl_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QNetworkRequest::CacheLoadControl value = qscriptvalue_cast<QNetworkRequest::CacheLoadControl>(context->thisObject());
+    return QScriptValue(engine, qtscript_QNetworkRequest_CacheLoadControl_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QNetworkRequest_CacheLoadControl_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QNetworkRequest_CacheLoadControl,
+        qtscript_QNetworkRequest_CacheLoadControl_valueOf, qtscript_QNetworkRequest_CacheLoadControl_toString);
+    qScriptRegisterMetaType<QNetworkRequest::CacheLoadControl>(engine, qtscript_QNetworkRequest_CacheLoadControl_toScriptValue,
+        qtscript_QNetworkRequest_CacheLoadControl_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 4; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QNetworkRequest_CacheLoadControl_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QNetworkRequest_CacheLoadControl_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QNetworkRequest::Attribute
+//
+
+static const QNetworkRequest::Attribute qtscript_QNetworkRequest_Attribute_values[] = {
+    QNetworkRequest::HttpStatusCodeAttribute
+    , QNetworkRequest::HttpReasonPhraseAttribute
+    , QNetworkRequest::RedirectionTargetAttribute
+    , QNetworkRequest::ConnectionEncryptedAttribute
+    , QNetworkRequest::CacheLoadControlAttribute
+    , QNetworkRequest::CacheSaveControlAttribute
+    , QNetworkRequest::SourceIsFromCacheAttribute
+    , QNetworkRequest::DoNotBufferUploadDataAttribute
+    , QNetworkRequest::HttpPipeliningAllowedAttribute
+    , QNetworkRequest::HttpPipeliningWasUsedAttribute
+    , QNetworkRequest::CustomVerbAttribute
+    , QNetworkRequest::CookieLoadControlAttribute
+    , QNetworkRequest::AuthenticationReuseAttribute
+    , QNetworkRequest::CookieSaveControlAttribute
+    , QNetworkRequest::MaximumDownloadBufferSizeAttribute
+    , QNetworkRequest::DownloadBufferAttribute
+    , QNetworkRequest::SynchronousRequestAttribute
+    , QNetworkRequest::BackgroundRequestAttribute
+    , QNetworkRequest::SpdyAllowedAttribute
+    , QNetworkRequest::SpdyWasUsedAttribute
+    , QNetworkRequest::User
+    , QNetworkRequest::UserMax
+};
+
+static const char * const qtscript_QNetworkRequest_Attribute_keys[] = {
+    "HttpStatusCodeAttribute"
+    , "HttpReasonPhraseAttribute"
+    , "RedirectionTargetAttribute"
+    , "ConnectionEncryptedAttribute"
+    , "CacheLoadControlAttribute"
+    , "CacheSaveControlAttribute"
+    , "SourceIsFromCacheAttribute"
+    , "DoNotBufferUploadDataAttribute"
+    , "HttpPipeliningAllowedAttribute"
+    , "HttpPipeliningWasUsedAttribute"
+    , "CustomVerbAttribute"
+    , "CookieLoadControlAttribute"
+    , "AuthenticationReuseAttribute"
+    , "CookieSaveControlAttribute"
+    , "MaximumDownloadBufferSizeAttribute"
+    , "DownloadBufferAttribute"
+    , "SynchronousRequestAttribute"
+    , "BackgroundRequestAttribute"
+    , "SpdyAllowedAttribute"
+    , "SpdyWasUsedAttribute"
+    , "User"
+    , "UserMax"
+};
+
+static QString qtscript_QNetworkRequest_Attribute_toStringHelper(QNetworkRequest::Attribute value)
+{
+    for (int i = 0; i < 22; ++i) {
+        if (qtscript_QNetworkRequest_Attribute_values[i] == value)
+            return QString::fromLatin1(qtscript_QNetworkRequest_Attribute_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_QNetworkRequest_Attribute_toScriptValue(QScriptEngine *engine, const QNetworkRequest::Attribute &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QNetworkRequest"));
+    return clazz.property(qtscript_QNetworkRequest_Attribute_toStringHelper(value));
+}
+
+static void qtscript_QNetworkRequest_Attribute_fromScriptValue(const QScriptValue &value, QNetworkRequest::Attribute &out)
+{
+    out = qvariant_cast<QNetworkRequest::Attribute>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QNetworkRequest_Attribute(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 22; ++i) {
+        if (qtscript_QNetworkRequest_Attribute_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<QNetworkRequest::Attribute>(arg));
+    }
+    return context->throwError(QString::fromLatin1("Attribute(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QNetworkRequest_Attribute_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QNetworkRequest::Attribute value = qscriptvalue_cast<QNetworkRequest::Attribute>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QNetworkRequest_Attribute_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QNetworkRequest::Attribute value = qscriptvalue_cast<QNetworkRequest::Attribute>(context->thisObject());
+    return QScriptValue(engine, qtscript_QNetworkRequest_Attribute_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QNetworkRequest_Attribute_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QNetworkRequest_Attribute,
+        qtscript_QNetworkRequest_Attribute_valueOf, qtscript_QNetworkRequest_Attribute_toString);
+    qScriptRegisterMetaType<QNetworkRequest::Attribute>(engine, qtscript_QNetworkRequest_Attribute_toScriptValue,
+        qtscript_QNetworkRequest_Attribute_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 22; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QNetworkRequest_Attribute_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QNetworkRequest_Attribute_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
 }
 
 //
@@ -191,71 +373,73 @@ static QScriptValue qtscript_create_QNetworkRequest_LoadControl_class(QScriptEng
 }
 
 //
-// QNetworkRequest::CacheLoadControl
+// QNetworkRequest::Priority
 //
 
-static const QNetworkRequest::CacheLoadControl qtscript_QNetworkRequest_CacheLoadControl_values[] = {
-    QNetworkRequest::AlwaysNetwork
-    , QNetworkRequest::PreferNetwork
-    , QNetworkRequest::PreferCache
-    , QNetworkRequest::AlwaysCache
+static const QNetworkRequest::Priority qtscript_QNetworkRequest_Priority_values[] = {
+    QNetworkRequest::HighPriority
+    , QNetworkRequest::NormalPriority
+    , QNetworkRequest::LowPriority
 };
 
-static const char * const qtscript_QNetworkRequest_CacheLoadControl_keys[] = {
-    "AlwaysNetwork"
-    , "PreferNetwork"
-    , "PreferCache"
-    , "AlwaysCache"
+static const char * const qtscript_QNetworkRequest_Priority_keys[] = {
+    "HighPriority"
+    , "NormalPriority"
+    , "LowPriority"
 };
 
-static QString qtscript_QNetworkRequest_CacheLoadControl_toStringHelper(QNetworkRequest::CacheLoadControl value)
+static QString qtscript_QNetworkRequest_Priority_toStringHelper(QNetworkRequest::Priority value)
 {
-    if ((value >= QNetworkRequest::AlwaysNetwork) && (value <= QNetworkRequest::AlwaysCache))
-        return qtscript_QNetworkRequest_CacheLoadControl_keys[static_cast<int>(value)-static_cast<int>(QNetworkRequest::AlwaysNetwork)];
+    for (int i = 0; i < 3; ++i) {
+        if (qtscript_QNetworkRequest_Priority_values[i] == value)
+            return QString::fromLatin1(qtscript_QNetworkRequest_Priority_keys[i]);
+    }
     return QString();
 }
 
-static QScriptValue qtscript_QNetworkRequest_CacheLoadControl_toScriptValue(QScriptEngine *engine, const QNetworkRequest::CacheLoadControl &value)
+static QScriptValue qtscript_QNetworkRequest_Priority_toScriptValue(QScriptEngine *engine, const QNetworkRequest::Priority &value)
 {
     QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QNetworkRequest"));
-    return clazz.property(qtscript_QNetworkRequest_CacheLoadControl_toStringHelper(value));
+    return clazz.property(qtscript_QNetworkRequest_Priority_toStringHelper(value));
 }
 
-static void qtscript_QNetworkRequest_CacheLoadControl_fromScriptValue(const QScriptValue &value, QNetworkRequest::CacheLoadControl &out)
+static void qtscript_QNetworkRequest_Priority_fromScriptValue(const QScriptValue &value, QNetworkRequest::Priority &out)
 {
-    out = qvariant_cast<QNetworkRequest::CacheLoadControl>(value.toVariant());
+    out = qvariant_cast<QNetworkRequest::Priority>(value.toVariant());
 }
 
-static QScriptValue qtscript_construct_QNetworkRequest_CacheLoadControl(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_construct_QNetworkRequest_Priority(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    if ((arg >= QNetworkRequest::AlwaysNetwork) && (arg <= QNetworkRequest::AlwaysCache))
-        return qScriptValueFromValue(engine,  static_cast<QNetworkRequest::CacheLoadControl>(arg));
-    return context->throwError(QString::fromLatin1("CacheLoadControl(): invalid enum value (%0)").arg(arg));
+    for (int i = 0; i < 3; ++i) {
+        if (qtscript_QNetworkRequest_Priority_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<QNetworkRequest::Priority>(arg));
+    }
+    return context->throwError(QString::fromLatin1("Priority(): invalid enum value (%0)").arg(arg));
 }
 
-static QScriptValue qtscript_QNetworkRequest_CacheLoadControl_valueOf(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QNetworkRequest_Priority_valueOf(QScriptContext *context, QScriptEngine *engine)
 {
-    QNetworkRequest::CacheLoadControl value = qscriptvalue_cast<QNetworkRequest::CacheLoadControl>(context->thisObject());
+    QNetworkRequest::Priority value = qscriptvalue_cast<QNetworkRequest::Priority>(context->thisObject());
     return QScriptValue(engine, static_cast<int>(value));
 }
 
-static QScriptValue qtscript_QNetworkRequest_CacheLoadControl_toString(QScriptContext *context, QScriptEngine *engine)
+static QScriptValue qtscript_QNetworkRequest_Priority_toString(QScriptContext *context, QScriptEngine *engine)
 {
-    QNetworkRequest::CacheLoadControl value = qscriptvalue_cast<QNetworkRequest::CacheLoadControl>(context->thisObject());
-    return QScriptValue(engine, qtscript_QNetworkRequest_CacheLoadControl_toStringHelper(value));
+    QNetworkRequest::Priority value = qscriptvalue_cast<QNetworkRequest::Priority>(context->thisObject());
+    return QScriptValue(engine, qtscript_QNetworkRequest_Priority_toStringHelper(value));
 }
 
-static QScriptValue qtscript_create_QNetworkRequest_CacheLoadControl_class(QScriptEngine *engine, QScriptValue &clazz)
+static QScriptValue qtscript_create_QNetworkRequest_Priority_class(QScriptEngine *engine, QScriptValue &clazz)
 {
     QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QNetworkRequest_CacheLoadControl,
-        qtscript_QNetworkRequest_CacheLoadControl_valueOf, qtscript_QNetworkRequest_CacheLoadControl_toString);
-    qScriptRegisterMetaType<QNetworkRequest::CacheLoadControl>(engine, qtscript_QNetworkRequest_CacheLoadControl_toScriptValue,
-        qtscript_QNetworkRequest_CacheLoadControl_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 4; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QNetworkRequest_CacheLoadControl_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QNetworkRequest_CacheLoadControl_values[i])),
+        engine, qtscript_construct_QNetworkRequest_Priority,
+        qtscript_QNetworkRequest_Priority_valueOf, qtscript_QNetworkRequest_Priority_toString);
+    qScriptRegisterMetaType<QNetworkRequest::Priority>(engine, qtscript_QNetworkRequest_Priority_toScriptValue,
+        qtscript_QNetworkRequest_Priority_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QNetworkRequest_Priority_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QNetworkRequest_Priority_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -337,186 +521,6 @@ static QScriptValue qtscript_create_QNetworkRequest_KnownHeaders_class(QScriptEn
     for (int i = 0; i < 9; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QNetworkRequest_KnownHeaders_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QNetworkRequest_KnownHeaders_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QNetworkRequest::Priority
-//
-
-static const QNetworkRequest::Priority qtscript_QNetworkRequest_Priority_values[] = {
-    QNetworkRequest::HighPriority
-    , QNetworkRequest::NormalPriority
-    , QNetworkRequest::LowPriority
-};
-
-static const char * const qtscript_QNetworkRequest_Priority_keys[] = {
-    "HighPriority"
-    , "NormalPriority"
-    , "LowPriority"
-};
-
-static QString qtscript_QNetworkRequest_Priority_toStringHelper(QNetworkRequest::Priority value)
-{
-    for (int i = 0; i < 3; ++i) {
-        if (qtscript_QNetworkRequest_Priority_values[i] == value)
-            return QString::fromLatin1(qtscript_QNetworkRequest_Priority_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_QNetworkRequest_Priority_toScriptValue(QScriptEngine *engine, const QNetworkRequest::Priority &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QNetworkRequest"));
-    return clazz.property(qtscript_QNetworkRequest_Priority_toStringHelper(value));
-}
-
-static void qtscript_QNetworkRequest_Priority_fromScriptValue(const QScriptValue &value, QNetworkRequest::Priority &out)
-{
-    out = qvariant_cast<QNetworkRequest::Priority>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QNetworkRequest_Priority(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 3; ++i) {
-        if (qtscript_QNetworkRequest_Priority_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<QNetworkRequest::Priority>(arg));
-    }
-    return context->throwError(QString::fromLatin1("Priority(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QNetworkRequest_Priority_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QNetworkRequest::Priority value = qscriptvalue_cast<QNetworkRequest::Priority>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QNetworkRequest_Priority_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QNetworkRequest::Priority value = qscriptvalue_cast<QNetworkRequest::Priority>(context->thisObject());
-    return QScriptValue(engine, qtscript_QNetworkRequest_Priority_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QNetworkRequest_Priority_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QNetworkRequest_Priority,
-        qtscript_QNetworkRequest_Priority_valueOf, qtscript_QNetworkRequest_Priority_toString);
-    qScriptRegisterMetaType<QNetworkRequest::Priority>(engine, qtscript_QNetworkRequest_Priority_toScriptValue,
-        qtscript_QNetworkRequest_Priority_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QNetworkRequest_Priority_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QNetworkRequest_Priority_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QNetworkRequest::Attribute
-//
-
-static const QNetworkRequest::Attribute qtscript_QNetworkRequest_Attribute_values[] = {
-    QNetworkRequest::HttpStatusCodeAttribute
-    , QNetworkRequest::HttpReasonPhraseAttribute
-    , QNetworkRequest::RedirectionTargetAttribute
-    , QNetworkRequest::ConnectionEncryptedAttribute
-    , QNetworkRequest::CacheLoadControlAttribute
-    , QNetworkRequest::CacheSaveControlAttribute
-    , QNetworkRequest::SourceIsFromCacheAttribute
-    , QNetworkRequest::DoNotBufferUploadDataAttribute
-    , QNetworkRequest::HttpPipeliningAllowedAttribute
-    , QNetworkRequest::HttpPipeliningWasUsedAttribute
-    , QNetworkRequest::CustomVerbAttribute
-    , QNetworkRequest::CookieLoadControlAttribute
-    , QNetworkRequest::AuthenticationReuseAttribute
-    , QNetworkRequest::CookieSaveControlAttribute
-    , QNetworkRequest::MaximumDownloadBufferSizeAttribute
-    , QNetworkRequest::DownloadBufferAttribute
-    , QNetworkRequest::SynchronousRequestAttribute
-    , QNetworkRequest::BackgroundRequestAttribute
-    , QNetworkRequest::User
-    , QNetworkRequest::UserMax
-};
-
-static const char * const qtscript_QNetworkRequest_Attribute_keys[] = {
-    "HttpStatusCodeAttribute"
-    , "HttpReasonPhraseAttribute"
-    , "RedirectionTargetAttribute"
-    , "ConnectionEncryptedAttribute"
-    , "CacheLoadControlAttribute"
-    , "CacheSaveControlAttribute"
-    , "SourceIsFromCacheAttribute"
-    , "DoNotBufferUploadDataAttribute"
-    , "HttpPipeliningAllowedAttribute"
-    , "HttpPipeliningWasUsedAttribute"
-    , "CustomVerbAttribute"
-    , "CookieLoadControlAttribute"
-    , "AuthenticationReuseAttribute"
-    , "CookieSaveControlAttribute"
-    , "MaximumDownloadBufferSizeAttribute"
-    , "DownloadBufferAttribute"
-    , "SynchronousRequestAttribute"
-    , "BackgroundRequestAttribute"
-    , "User"
-    , "UserMax"
-};
-
-static QString qtscript_QNetworkRequest_Attribute_toStringHelper(QNetworkRequest::Attribute value)
-{
-    for (int i = 0; i < 20; ++i) {
-        if (qtscript_QNetworkRequest_Attribute_values[i] == value)
-            return QString::fromLatin1(qtscript_QNetworkRequest_Attribute_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_QNetworkRequest_Attribute_toScriptValue(QScriptEngine *engine, const QNetworkRequest::Attribute &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QNetworkRequest"));
-    return clazz.property(qtscript_QNetworkRequest_Attribute_toStringHelper(value));
-}
-
-static void qtscript_QNetworkRequest_Attribute_fromScriptValue(const QScriptValue &value, QNetworkRequest::Attribute &out)
-{
-    out = qvariant_cast<QNetworkRequest::Attribute>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QNetworkRequest_Attribute(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 20; ++i) {
-        if (qtscript_QNetworkRequest_Attribute_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<QNetworkRequest::Attribute>(arg));
-    }
-    return context->throwError(QString::fromLatin1("Attribute(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QNetworkRequest_Attribute_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QNetworkRequest::Attribute value = qscriptvalue_cast<QNetworkRequest::Attribute>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QNetworkRequest_Attribute_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QNetworkRequest::Attribute value = qscriptvalue_cast<QNetworkRequest::Attribute>(context->thisObject());
-    return QScriptValue(engine, qtscript_QNetworkRequest_Attribute_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QNetworkRequest_Attribute_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QNetworkRequest_Attribute,
-        qtscript_QNetworkRequest_Attribute_valueOf, qtscript_QNetworkRequest_Attribute_toString);
-    qScriptRegisterMetaType<QNetworkRequest::Attribute>(engine, qtscript_QNetworkRequest_Attribute_toScriptValue,
-        qtscript_QNetworkRequest_Attribute_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 20; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QNetworkRequest_Attribute_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QNetworkRequest_Attribute_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -763,15 +767,15 @@ QScriptValue qtscript_create_QNetworkRequest_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QNetworkRequest_static_call, proto, qtscript_QNetworkRequest_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
-    ctor.setProperty(QString::fromLatin1("LoadControl"),
-        qtscript_create_QNetworkRequest_LoadControl_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("CacheLoadControl"),
         qtscript_create_QNetworkRequest_CacheLoadControl_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("KnownHeaders"),
-        qtscript_create_QNetworkRequest_KnownHeaders_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("Priority"),
-        qtscript_create_QNetworkRequest_Priority_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("Attribute"),
         qtscript_create_QNetworkRequest_Attribute_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("LoadControl"),
+        qtscript_create_QNetworkRequest_LoadControl_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Priority"),
+        qtscript_create_QNetworkRequest_Priority_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("KnownHeaders"),
+        qtscript_create_QNetworkRequest_KnownHeaders_class(engine, ctor));
     return ctor;
 }

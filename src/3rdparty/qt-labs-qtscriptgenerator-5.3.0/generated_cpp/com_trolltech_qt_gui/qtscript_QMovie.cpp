@@ -129,8 +129,8 @@ static const QMetaObject *qtscript_QMovie_metaObject()
 
 Q_DECLARE_METATYPE(QMovie*)
 Q_DECLARE_METATYPE(QtScriptShell_QMovie*)
-Q_DECLARE_METATYPE(QMovie::CacheMode)
 Q_DECLARE_METATYPE(QMovie::MovieState)
+Q_DECLARE_METATYPE(QMovie::CacheMode)
 Q_DECLARE_METATYPE(QIODevice*)
 Q_DECLARE_METATYPE(QList<QByteArray >)
 
@@ -146,79 +146,6 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
-}
-
-//
-// QMovie::CacheMode
-//
-
-static const QMovie::CacheMode qtscript_QMovie_CacheMode_values[] = {
-    QMovie::CacheNone
-    , QMovie::CacheAll
-};
-
-static const char * const qtscript_QMovie_CacheMode_keys[] = {
-    "CacheNone"
-    , "CacheAll"
-};
-
-static QString qtscript_QMovie_CacheMode_toStringHelper(QMovie::CacheMode value)
-{
-    const QMetaObject *meta = qtscript_QMovie_metaObject();
-    int idx = meta->indexOfEnumerator("CacheMode");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    return QString::fromLatin1(menum.valueToKey(value));
-}
-
-static QScriptValue qtscript_QMovie_CacheMode_toScriptValue(QScriptEngine *engine, const QMovie::CacheMode &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QMovie"));
-    return clazz.property(qtscript_QMovie_CacheMode_toStringHelper(value));
-}
-
-static void qtscript_QMovie_CacheMode_fromScriptValue(const QScriptValue &value, QMovie::CacheMode &out)
-{
-    out = qvariant_cast<QMovie::CacheMode>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QMovie_CacheMode(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    const QMetaObject *meta = qtscript_QMovie_metaObject();
-    int idx = meta->indexOfEnumerator("CacheMode");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    if (menum.valueToKey(arg) != 0)
-        return qScriptValueFromValue(engine,  static_cast<QMovie::CacheMode>(arg));
-    return context->throwError(QString::fromLatin1("CacheMode(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QMovie_CacheMode_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QMovie::CacheMode value = qscriptvalue_cast<QMovie::CacheMode>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QMovie_CacheMode_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QMovie::CacheMode value = qscriptvalue_cast<QMovie::CacheMode>(context->thisObject());
-    return QScriptValue(engine, qtscript_QMovie_CacheMode_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QMovie_CacheMode_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QMovie_CacheMode,
-        qtscript_QMovie_CacheMode_valueOf, qtscript_QMovie_CacheMode_toString);
-    qScriptRegisterMetaType<QMovie::CacheMode>(engine, qtscript_QMovie_CacheMode_toScriptValue,
-        qtscript_QMovie_CacheMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QMovie_CacheMode_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QMovie_CacheMode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -291,6 +218,79 @@ static QScriptValue qtscript_create_QMovie_MovieState_class(QScriptEngine *engin
     for (int i = 0; i < 3; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QMovie_MovieState_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QMovie_MovieState_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QMovie::CacheMode
+//
+
+static const QMovie::CacheMode qtscript_QMovie_CacheMode_values[] = {
+    QMovie::CacheNone
+    , QMovie::CacheAll
+};
+
+static const char * const qtscript_QMovie_CacheMode_keys[] = {
+    "CacheNone"
+    , "CacheAll"
+};
+
+static QString qtscript_QMovie_CacheMode_toStringHelper(QMovie::CacheMode value)
+{
+    const QMetaObject *meta = qtscript_QMovie_metaObject();
+    int idx = meta->indexOfEnumerator("CacheMode");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    return QString::fromLatin1(menum.valueToKey(value));
+}
+
+static QScriptValue qtscript_QMovie_CacheMode_toScriptValue(QScriptEngine *engine, const QMovie::CacheMode &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QMovie"));
+    return clazz.property(qtscript_QMovie_CacheMode_toStringHelper(value));
+}
+
+static void qtscript_QMovie_CacheMode_fromScriptValue(const QScriptValue &value, QMovie::CacheMode &out)
+{
+    out = qvariant_cast<QMovie::CacheMode>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QMovie_CacheMode(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    const QMetaObject *meta = qtscript_QMovie_metaObject();
+    int idx = meta->indexOfEnumerator("CacheMode");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    if (menum.valueToKey(arg) != 0)
+        return qScriptValueFromValue(engine,  static_cast<QMovie::CacheMode>(arg));
+    return context->throwError(QString::fromLatin1("CacheMode(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QMovie_CacheMode_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QMovie::CacheMode value = qscriptvalue_cast<QMovie::CacheMode>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QMovie_CacheMode_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QMovie::CacheMode value = qscriptvalue_cast<QMovie::CacheMode>(context->thisObject());
+    return QScriptValue(engine, qtscript_QMovie_CacheMode_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QMovie_CacheMode_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QMovie_CacheMode,
+        qtscript_QMovie_CacheMode_valueOf, qtscript_QMovie_CacheMode_toString);
+    qScriptRegisterMetaType<QMovie::CacheMode>(engine, qtscript_QMovie_CacheMode_toScriptValue,
+        qtscript_QMovie_CacheMode_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QMovie_CacheMode_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QMovie_CacheMode_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -609,9 +609,9 @@ QScriptValue qtscript_create_QMovie_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    ctor.setProperty(QString::fromLatin1("CacheMode"),
-        qtscript_create_QMovie_CacheMode_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("MovieState"),
         qtscript_create_QMovie_MovieState_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("CacheMode"),
+        qtscript_create_QMovie_CacheMode_class(engine, ctor));
     return ctor;
 }

@@ -1,7 +1,6 @@
 #include "qtscriptshell_QGLWidget.h"
 
 #include <QtScript/QScriptEngine>
-#include <QIconEngine>
 #include <QImage>
 #include <QPixmap>
 #include <QVariant>
@@ -17,6 +16,7 @@
 #include <qglcolormap.h>
 #include <qgraphicseffect.h>
 #include <qgraphicsproxywidget.h>
+#include <qicon.h>
 #include <qimage.h>
 #include <qkeysequence.h>
 #include <qlayout.h>

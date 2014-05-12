@@ -6,7 +6,7 @@
 #include <qmetaobject.h>
 #include <__package_shared.h>
 
-#include <qabstractxmlnodemodel.h>
+#include <qxmlnamepool.h>
 #include <QVariant>
 
 

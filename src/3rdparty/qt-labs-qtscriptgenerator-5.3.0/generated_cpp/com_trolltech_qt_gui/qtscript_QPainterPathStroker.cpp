@@ -9,6 +9,7 @@
 #include <qpainterpath.h>
 #include <QVariant>
 #include <qpainterpath.h>
+#include <qpen.h>
 #include <qvector.h>
 
 static const char * const qtscript_QPainterPathStroker_function_names[] = {
@@ -34,7 +35,7 @@ static const char * const qtscript_QPainterPathStroker_function_names[] = {
 };
 
 static const char * const qtscript_QPainterPathStroker_function_signatures[] = {
-    ""
+    "\nQPen pen"
     // static
     // prototype
     , ""
@@ -56,7 +57,7 @@ static const char * const qtscript_QPainterPathStroker_function_signatures[] = {
 };
 
 static const int qtscript_QPainterPathStroker_function_lengths[] = {
-    0
+    1
     // static
     // prototype
     , 0
@@ -266,6 +267,11 @@ static QScriptValue qtscript_QPainterPathStroker_static_call(QScriptContext *con
     }
     if (context->argumentCount() == 0) {
         QPainterPathStroker* _q_cpp_result = new QPainterPathStroker();
+        QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
+        return _q_result;
+    } else if (context->argumentCount() == 1) {
+        QPen _q_arg0 = qscriptvalue_cast<QPen>(context->argument(0));
+        QPainterPathStroker* _q_cpp_result = new QPainterPathStroker(_q_arg0);
         QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
         return _q_result;
     }

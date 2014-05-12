@@ -9,15 +9,18 @@
 #include <qlibraryinfo.h>
 #include <QVariant>
 #include <qdatetime.h>
+#include <qstringlist.h>
 
 static const char * const qtscript_QLibraryInfo_function_names[] = {
     "QLibraryInfo"
     // static
+    , "build"
     , "buildDate"
     , "isDebugBuild"
     , "licensedProducts"
     , "licensee"
     , "location"
+    , "platformPluginArguments"
     // prototype
     , "toString"
 };
@@ -29,7 +32,9 @@ static const char * const qtscript_QLibraryInfo_function_signatures[] = {
     , ""
     , ""
     , ""
+    , ""
     , "LibraryLocation arg__1"
+    , "String platformName"
     // prototype
 ""
 };
@@ -41,6 +46,8 @@ static const int qtscript_QLibraryInfo_function_lengths[] = {
     , 0
     , 0
     , 0
+    , 0
+    , 1
     , 1
     // prototype
     , 0
@@ -59,6 +66,7 @@ static QScriptValue qtscript_QLibraryInfo_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QLibraryInfo*)
 Q_DECLARE_METATYPE(QLibraryInfo::LibraryLocation)
+Q_DECLARE_METATYPE(const char*)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -193,7 +201,7 @@ static QScriptValue qtscript_QLibraryInfo_prototype_call(QScriptContext *context
     if (!_q_self) {
         return context->throwError(QScriptContext::TypeError,
             QString::fromLatin1("QLibraryInfo.%0(): this object is not a QLibraryInfo")
-            .arg(qtscript_QLibraryInfo_function_names[_id+6]));
+            .arg(qtscript_QLibraryInfo_function_names[_id+8]));
     }
 
     switch (_id) {
@@ -206,8 +214,8 @@ static QScriptValue qtscript_QLibraryInfo_prototype_call(QScriptContext *context
     Q_ASSERT(false);
     }
     return qtscript_QLibraryInfo_throw_ambiguity_error_helper(context,
-        qtscript_QLibraryInfo_function_names[_id+6],
-        qtscript_QLibraryInfo_function_signatures[_id+6]);
+        qtscript_QLibraryInfo_function_names[_id+8],
+        qtscript_QLibraryInfo_function_signatures[_id+8]);
 }
 
 static QScriptValue qtscript_QLibraryInfo_static_call(QScriptContext *context, QScriptEngine *)
@@ -223,37 +231,52 @@ static QScriptValue qtscript_QLibraryInfo_static_call(QScriptContext *context, Q
 
     case 1:
     if (context->argumentCount() == 0) {
-        QDate _q_result = QLibraryInfo::buildDate();
+        const char* _q_result = const_cast<const char*>(QLibraryInfo::build());
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
     case 2:
     if (context->argumentCount() == 0) {
-        bool _q_result = QLibraryInfo::isDebugBuild();
-        return QScriptValue(context->engine(), _q_result);
+        QDate _q_result = QLibraryInfo::buildDate();
+        return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
     case 3:
     if (context->argumentCount() == 0) {
-        QString _q_result = QLibraryInfo::licensedProducts();
+        bool _q_result = QLibraryInfo::isDebugBuild();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 4:
     if (context->argumentCount() == 0) {
-        QString _q_result = QLibraryInfo::licensee();
+        QString _q_result = QLibraryInfo::licensedProducts();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 5:
+    if (context->argumentCount() == 0) {
+        QString _q_result = QLibraryInfo::licensee();
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 6:
     if (context->argumentCount() == 1) {
         QLibraryInfo::LibraryLocation _q_arg0 = qscriptvalue_cast<QLibraryInfo::LibraryLocation>(context->argument(0));
         QString _q_result = QLibraryInfo::location(_q_arg0);
         return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 7:
+    if (context->argumentCount() == 1) {
+        QString _q_arg0 = context->argument(0).toString();
+        QStringList _q_result = QLibraryInfo::platformPluginArguments(_q_arg0);
+        return qScriptValueFromSequence(context->engine(), _q_result);
     }
     break;
 
@@ -274,7 +297,7 @@ QScriptValue qtscript_create_QLibraryInfo_class(QScriptEngine *engine)
 
     QScriptValue ctor = engine->newFunction(qtscript_QLibraryInfo_static_call, proto, qtscript_QLibraryInfo_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 7; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QLibraryInfo_static_call,
             qtscript_QLibraryInfo_function_lengths[i+1]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i+1)));

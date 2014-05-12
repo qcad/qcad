@@ -1015,14 +1015,21 @@ Array.prototype.unique = function() {
  */
 Array.prototype.contains = function(obj, method) {
     for (var i = 0; i < this.length; i++) {
-        if (!isFunction(this[i][method])) {
-            if (this[i] == obj) {
+        // method is a function(a,b):
+        if (isFunction(method)) {
+            if (method(this[i], obj)) {
                 return true;
             }
-        } else {
-            // method is the name of the method that compares
+        }
+        else if (isFunction(this[i][method])) {
+            // method is the name of a member method that compares
             // two objects, eg. "equals":
             if (this[i][method](obj)) {
+                return true;
+            }
+        }
+        else {
+            if (this[i] == obj) {
                 return true;
             }
         }

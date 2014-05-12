@@ -6,9 +6,9 @@
 #include <qmetaobject.h>
 #include <__package_shared.h>
 
-#include <QIconEngine>
-#include <QIconEngine>
+#include <qicon.h>
 #include <QVariant>
+#include <qicon.h>
 #include <qlist.h>
 #include <qpainter.h>
 #include <qpixmap.h>
@@ -40,7 +40,7 @@ static const char * const qtscript_QIcon_function_names[] = {
 };
 
 static const char * const qtscript_QIcon_function_signatures[] = {
-    "\nQIconEngine engine\nQIcon other\nQPixmap pixmap\nString fileName"
+    "\nQIcon other\nQPixmap pixmap\nString fileName"
     // static
     , "String name, QIcon fallback"
     , "String name"
@@ -97,12 +97,11 @@ static QScriptValue qtscript_QIcon_throw_ambiguity_error_helper(
 }
 
 Q_DECLARE_METATYPE(QIcon*)
-Q_DECLARE_METATYPE(QIcon::Mode)
 Q_DECLARE_METATYPE(QIcon::State)
+Q_DECLARE_METATYPE(QIcon::Mode)
 Q_DECLARE_METATYPE(QList<QSize >)
 Q_DECLARE_METATYPE(QPainter*)
 Q_DECLARE_METATYPE(QFlags<Qt::AlignmentFlag>)
-Q_DECLARE_METATYPE(QIconEngine*)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -116,6 +115,73 @@ static QScriptValue qtscript_create_enum_class_helper(
     proto.setProperty(QString::fromLatin1("toString"),
         engine->newFunction(toString), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto, 1);
+}
+
+//
+// QIcon::State
+//
+
+static const QIcon::State qtscript_QIcon_State_values[] = {
+    QIcon::On
+    , QIcon::Off
+};
+
+static const char * const qtscript_QIcon_State_keys[] = {
+    "On"
+    , "Off"
+};
+
+static QString qtscript_QIcon_State_toStringHelper(QIcon::State value)
+{
+    if ((value >= QIcon::On) && (value <= QIcon::Off))
+        return qtscript_QIcon_State_keys[static_cast<int>(value)-static_cast<int>(QIcon::On)];
+    return QString();
+}
+
+static QScriptValue qtscript_QIcon_State_toScriptValue(QScriptEngine *engine, const QIcon::State &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QIcon"));
+    return clazz.property(qtscript_QIcon_State_toStringHelper(value));
+}
+
+static void qtscript_QIcon_State_fromScriptValue(const QScriptValue &value, QIcon::State &out)
+{
+    out = qvariant_cast<QIcon::State>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QIcon_State(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    if ((arg >= QIcon::On) && (arg <= QIcon::Off))
+        return qScriptValueFromValue(engine,  static_cast<QIcon::State>(arg));
+    return context->throwError(QString::fromLatin1("State(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QIcon_State_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QIcon::State value = qscriptvalue_cast<QIcon::State>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QIcon_State_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QIcon::State value = qscriptvalue_cast<QIcon::State>(context->thisObject());
+    return QScriptValue(engine, qtscript_QIcon_State_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QIcon_State_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QIcon_State,
+        qtscript_QIcon_State_valueOf, qtscript_QIcon_State_toString);
+    qScriptRegisterMetaType<QIcon::State>(engine, qtscript_QIcon_State_toScriptValue,
+        qtscript_QIcon_State_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 2; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QIcon_State_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QIcon_State_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
 }
 
 //
@@ -184,73 +250,6 @@ static QScriptValue qtscript_create_QIcon_Mode_class(QScriptEngine *engine, QScr
     for (int i = 0; i < 4; ++i) {
         clazz.setProperty(QString::fromLatin1(qtscript_QIcon_Mode_keys[i]),
             engine->newVariant(qVariantFromValue(qtscript_QIcon_Mode_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QIcon::State
-//
-
-static const QIcon::State qtscript_QIcon_State_values[] = {
-    QIcon::On
-    , QIcon::Off
-};
-
-static const char * const qtscript_QIcon_State_keys[] = {
-    "On"
-    , "Off"
-};
-
-static QString qtscript_QIcon_State_toStringHelper(QIcon::State value)
-{
-    if ((value >= QIcon::On) && (value <= QIcon::Off))
-        return qtscript_QIcon_State_keys[static_cast<int>(value)-static_cast<int>(QIcon::On)];
-    return QString();
-}
-
-static QScriptValue qtscript_QIcon_State_toScriptValue(QScriptEngine *engine, const QIcon::State &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QIcon"));
-    return clazz.property(qtscript_QIcon_State_toStringHelper(value));
-}
-
-static void qtscript_QIcon_State_fromScriptValue(const QScriptValue &value, QIcon::State &out)
-{
-    out = qvariant_cast<QIcon::State>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QIcon_State(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    if ((arg >= QIcon::On) && (arg <= QIcon::Off))
-        return qScriptValueFromValue(engine,  static_cast<QIcon::State>(arg));
-    return context->throwError(QString::fromLatin1("State(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QIcon_State_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QIcon::State value = qscriptvalue_cast<QIcon::State>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QIcon_State_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QIcon::State value = qscriptvalue_cast<QIcon::State>(context->thisObject());
-    return QScriptValue(engine, qtscript_QIcon_State_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QIcon_State_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QIcon_State,
-        qtscript_QIcon_State_valueOf, qtscript_QIcon_State_toString);
-    qScriptRegisterMetaType<QIcon::State>(engine, qtscript_QIcon_State_toScriptValue,
-        qtscript_QIcon_State_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 2; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QIcon_State_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QIcon_State_values[i])),
             QScriptValue::ReadOnly | QScriptValue::Undeletable);
     }
     return ctor;
@@ -584,12 +583,7 @@ static QScriptValue qtscript_QIcon_static_call(QScriptContext *context, QScriptE
         QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
         return _q_result;
     } else if (context->argumentCount() == 1) {
-        if (qscriptvalue_cast<QIconEngine*>(context->argument(0))) {
-            QIconEngine* _q_arg0 = qscriptvalue_cast<QIconEngine*>(context->argument(0));
-            QIcon _q_cpp_result(_q_arg0);
-            QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
-            return _q_result;
-        } else if ((qMetaTypeId<QIcon>() == context->argument(0).toVariant().userType())) {
+        if ((qMetaTypeId<QIcon>() == context->argument(0).toVariant().userType())) {
             QIcon _q_arg0 = qscriptvalue_cast<QIcon>(context->argument(0));
             QIcon _q_cpp_result(_q_arg0);
             QScriptValue _q_result = context->engine()->newVariant(context->thisObject(), qVariantFromValue(_q_cpp_result));
@@ -693,9 +687,9 @@ QScriptValue qtscript_create_QIcon_class(QScriptEngine *engine)
             fun, QScriptValue::SkipInEnumeration);
     }
 
-    ctor.setProperty(QString::fromLatin1("Mode"),
-        qtscript_create_QIcon_Mode_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("State"),
         qtscript_create_QIcon_State_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("Mode"),
+        qtscript_create_QIcon_Mode_class(engine, ctor));
     return ctor;
 }

@@ -31,6 +31,7 @@ static const char * const qtscript_QTextFormat_function_names[] = {
     , "intProperty"
     , "isBlockFormat"
     , "isCharFormat"
+    , "isEmpty"
     , "isFrameFormat"
     , "isImageFormat"
     , "isListFormat"
@@ -83,6 +84,7 @@ static const char * const qtscript_QTextFormat_function_signatures[] = {
     , ""
     , "int propertyId"
     , "int propertyId"
+    , ""
     , ""
     , ""
     , ""
@@ -146,6 +148,7 @@ static const int qtscript_QTextFormat_function_lengths[] = {
     , 0
     , 0
     , 0
+    , 0
     , 1
     , 1
     , 1
@@ -193,10 +196,10 @@ static const QMetaObject *qtscript_QTextFormat_metaObject()
 }
 
 Q_DECLARE_METATYPE(QTextFormat*)
+Q_DECLARE_METATYPE(QTextFormat::Property)
+Q_DECLARE_METATYPE(QTextFormat::FormatType)
 Q_DECLARE_METATYPE(QTextFormat::PageBreakFlag)
 Q_DECLARE_METATYPE(QFlags<QTextFormat::PageBreakFlag>)
-Q_DECLARE_METATYPE(QTextFormat::FormatType)
-Q_DECLARE_METATYPE(QTextFormat::Property)
 Q_DECLARE_METATYPE(QTextFormat::ObjectTypes)
 Q_DECLARE_METATYPE(Qt::LayoutDirection)
 Q_DECLARE_METATYPE(QVector<QTextLength >)
@@ -249,238 +252,6 @@ static QScriptValue qtscript_create_flags_class_helper(
     proto.setProperty(QString::fromLatin1("equals"),
         engine->newFunction(equals), QScriptValue::SkipInEnumeration);
     return engine->newFunction(construct, proto);
-}
-
-//
-// QTextFormat::PageBreakFlag
-//
-
-static const QTextFormat::PageBreakFlag qtscript_QTextFormat_PageBreakFlag_values[] = {
-    QTextFormat::PageBreak_Auto
-    , QTextFormat::PageBreak_AlwaysBefore
-    , QTextFormat::PageBreak_AlwaysAfter
-};
-
-static const char * const qtscript_QTextFormat_PageBreakFlag_keys[] = {
-    "PageBreak_Auto"
-    , "PageBreak_AlwaysBefore"
-    , "PageBreak_AlwaysAfter"
-};
-
-static QString qtscript_QTextFormat_PageBreakFlag_toStringHelper(QTextFormat::PageBreakFlag value)
-{
-    for (int i = 0; i < 3; ++i) {
-        if (qtscript_QTextFormat_PageBreakFlag_values[i] == value)
-            return QString::fromLatin1(qtscript_QTextFormat_PageBreakFlag_keys[i]);
-    }
-    return QString();
-}
-
-static QScriptValue qtscript_QTextFormat_PageBreakFlag_toScriptValue(QScriptEngine *engine, const QTextFormat::PageBreakFlag &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextFormat"));
-    return clazz.property(qtscript_QTextFormat_PageBreakFlag_toStringHelper(value));
-}
-
-static void qtscript_QTextFormat_PageBreakFlag_fromScriptValue(const QScriptValue &value, QTextFormat::PageBreakFlag &out)
-{
-    out = qvariant_cast<QTextFormat::PageBreakFlag>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTextFormat_PageBreakFlag(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 3; ++i) {
-        if (qtscript_QTextFormat_PageBreakFlag_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<QTextFormat::PageBreakFlag>(arg));
-    }
-    return context->throwError(QString::fromLatin1("PageBreakFlag(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTextFormat_PageBreakFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextFormat::PageBreakFlag value = qscriptvalue_cast<QTextFormat::PageBreakFlag>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextFormat_PageBreakFlag_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextFormat::PageBreakFlag value = qscriptvalue_cast<QTextFormat::PageBreakFlag>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTextFormat_PageBreakFlag_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTextFormat_PageBreakFlag_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTextFormat_PageBreakFlag,
-        qtscript_QTextFormat_PageBreakFlag_valueOf, qtscript_QTextFormat_PageBreakFlag_toString);
-    qScriptRegisterMetaType<QTextFormat::PageBreakFlag>(engine, qtscript_QTextFormat_PageBreakFlag_toScriptValue,
-        qtscript_QTextFormat_PageBreakFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 3; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTextFormat_PageBreakFlag_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTextFormat_PageBreakFlag_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
-}
-
-//
-// QTextFormat::PageBreakFlags
-//
-
-static QScriptValue qtscript_QTextFormat_PageBreakFlags_toScriptValue(QScriptEngine *engine, const QTextFormat::PageBreakFlags &value)
-{
-    return engine->newVariant(qVariantFromValue(value));
-}
-
-static void qtscript_QTextFormat_PageBreakFlags_fromScriptValue(const QScriptValue &value, QTextFormat::PageBreakFlags &out)
-{
-    QVariant var = value.toVariant();
-    if (var.userType() == qMetaTypeId<QTextFormat::PageBreakFlags>())
-        out = qvariant_cast<QTextFormat::PageBreakFlags>(var);
-    else if (var.userType() == qMetaTypeId<QTextFormat::PageBreakFlag>())
-        out = qvariant_cast<QTextFormat::PageBreakFlag>(var);
-    else
-        out = 0;
-}
-
-static QScriptValue qtscript_construct_QTextFormat_PageBreakFlags(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextFormat::PageBreakFlags result = 0;
-    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
-        result = static_cast<QTextFormat::PageBreakFlags>(context->argument(0).toInt32());
-    } else {
-        for (int i = 0; i < context->argumentCount(); ++i) {
-            QVariant v = context->argument(i).toVariant();
-            if (v.userType() != qMetaTypeId<QTextFormat::PageBreakFlag>()) {
-                return context->throwError(QScriptContext::TypeError,
-                    QString::fromLatin1("PageBreakFlags(): argument %0 is not of type PageBreakFlag").arg(i));
-            }
-            result |= qvariant_cast<QTextFormat::PageBreakFlag>(v);
-        }
-   }
-    return engine->newVariant(qVariantFromValue(result));
-}
-
-static QScriptValue qtscript_QTextFormat_PageBreakFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextFormat::PageBreakFlags value = qscriptvalue_cast<QTextFormat::PageBreakFlags>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextFormat_PageBreakFlags_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextFormat::PageBreakFlags value = qscriptvalue_cast<QTextFormat::PageBreakFlags>(context->thisObject());
-    QString result;
-    for (int i = 0; i < 3; ++i) {
-        if ((value & qtscript_QTextFormat_PageBreakFlag_values[i]) == qtscript_QTextFormat_PageBreakFlag_values[i]) {
-            if (!result.isEmpty())
-                result.append(QString::fromLatin1(","));
-            result.append(QString::fromLatin1(qtscript_QTextFormat_PageBreakFlag_keys[i]));
-        }
-    }
-    return QScriptValue(engine, result);
-}
-
-static QScriptValue qtscript_QTextFormat_PageBreakFlags_equals(QScriptContext *context, QScriptEngine *engine)
-{
-    QVariant thisObj = context->thisObject().toVariant();
-    QVariant otherObj = context->argument(0).toVariant();
-    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
-                                 (thisObj.value<QTextFormat::PageBreakFlags>() == otherObj.value<QTextFormat::PageBreakFlags>())));
-}
-
-static QScriptValue qtscript_create_QTextFormat_PageBreakFlags_class(QScriptEngine *engine)
-{
-    QScriptValue ctor = qtscript_create_flags_class_helper(
-        engine, qtscript_construct_QTextFormat_PageBreakFlags, qtscript_QTextFormat_PageBreakFlags_valueOf,
-        qtscript_QTextFormat_PageBreakFlags_toString, qtscript_QTextFormat_PageBreakFlags_equals);
-    qScriptRegisterMetaType<QTextFormat::PageBreakFlags>(engine, qtscript_QTextFormat_PageBreakFlags_toScriptValue,
-        qtscript_QTextFormat_PageBreakFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    return ctor;
-}
-
-//
-// QTextFormat::FormatType
-//
-
-static const QTextFormat::FormatType qtscript_QTextFormat_FormatType_values[] = {
-    QTextFormat::InvalidFormat
-    , QTextFormat::BlockFormat
-    , QTextFormat::CharFormat
-    , QTextFormat::ListFormat
-    , QTextFormat::TableFormat
-    , QTextFormat::FrameFormat
-    , QTextFormat::UserFormat
-};
-
-static const char * const qtscript_QTextFormat_FormatType_keys[] = {
-    "InvalidFormat"
-    , "BlockFormat"
-    , "CharFormat"
-    , "ListFormat"
-    , "TableFormat"
-    , "FrameFormat"
-    , "UserFormat"
-};
-
-static QString qtscript_QTextFormat_FormatType_toStringHelper(QTextFormat::FormatType value)
-{
-    const QMetaObject *meta = qtscript_QTextFormat_metaObject();
-    int idx = meta->indexOfEnumerator("FormatType");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    return QString::fromLatin1(menum.valueToKey(value));
-}
-
-static QScriptValue qtscript_QTextFormat_FormatType_toScriptValue(QScriptEngine *engine, const QTextFormat::FormatType &value)
-{
-    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextFormat"));
-    return clazz.property(qtscript_QTextFormat_FormatType_toStringHelper(value));
-}
-
-static void qtscript_QTextFormat_FormatType_fromScriptValue(const QScriptValue &value, QTextFormat::FormatType &out)
-{
-    out = qvariant_cast<QTextFormat::FormatType>(value.toVariant());
-}
-
-static QScriptValue qtscript_construct_QTextFormat_FormatType(QScriptContext *context, QScriptEngine *engine)
-{
-    int arg = context->argument(0).toInt32();
-    const QMetaObject *meta = qtscript_QTextFormat_metaObject();
-    int idx = meta->indexOfEnumerator("FormatType");
-    Q_ASSERT(idx != -1);
-    QMetaEnum menum = meta->enumerator(idx);
-    if (menum.valueToKey(arg) != 0)
-        return qScriptValueFromValue(engine,  static_cast<QTextFormat::FormatType>(arg));
-    return context->throwError(QString::fromLatin1("FormatType(): invalid enum value (%0)").arg(arg));
-}
-
-static QScriptValue qtscript_QTextFormat_FormatType_valueOf(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextFormat::FormatType value = qscriptvalue_cast<QTextFormat::FormatType>(context->thisObject());
-    return QScriptValue(engine, static_cast<int>(value));
-}
-
-static QScriptValue qtscript_QTextFormat_FormatType_toString(QScriptContext *context, QScriptEngine *engine)
-{
-    QTextFormat::FormatType value = qscriptvalue_cast<QTextFormat::FormatType>(context->thisObject());
-    return QScriptValue(engine, qtscript_QTextFormat_FormatType_toStringHelper(value));
-}
-
-static QScriptValue qtscript_create_QTextFormat_FormatType_class(QScriptEngine *engine, QScriptValue &clazz)
-{
-    QScriptValue ctor = qtscript_create_enum_class_helper(
-        engine, qtscript_construct_QTextFormat_FormatType,
-        qtscript_QTextFormat_FormatType_valueOf, qtscript_QTextFormat_FormatType_toString);
-    qScriptRegisterMetaType<QTextFormat::FormatType>(engine, qtscript_QTextFormat_FormatType_toScriptValue,
-        qtscript_QTextFormat_FormatType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 7; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QTextFormat_FormatType_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QTextFormat_FormatType_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
-    return ctor;
 }
 
 //
@@ -711,6 +482,238 @@ static QScriptValue qtscript_create_QTextFormat_Property_class(QScriptEngine *en
 }
 
 //
+// QTextFormat::FormatType
+//
+
+static const QTextFormat::FormatType qtscript_QTextFormat_FormatType_values[] = {
+    QTextFormat::InvalidFormat
+    , QTextFormat::BlockFormat
+    , QTextFormat::CharFormat
+    , QTextFormat::ListFormat
+    , QTextFormat::TableFormat
+    , QTextFormat::FrameFormat
+    , QTextFormat::UserFormat
+};
+
+static const char * const qtscript_QTextFormat_FormatType_keys[] = {
+    "InvalidFormat"
+    , "BlockFormat"
+    , "CharFormat"
+    , "ListFormat"
+    , "TableFormat"
+    , "FrameFormat"
+    , "UserFormat"
+};
+
+static QString qtscript_QTextFormat_FormatType_toStringHelper(QTextFormat::FormatType value)
+{
+    const QMetaObject *meta = qtscript_QTextFormat_metaObject();
+    int idx = meta->indexOfEnumerator("FormatType");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    return QString::fromLatin1(menum.valueToKey(value));
+}
+
+static QScriptValue qtscript_QTextFormat_FormatType_toScriptValue(QScriptEngine *engine, const QTextFormat::FormatType &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextFormat"));
+    return clazz.property(qtscript_QTextFormat_FormatType_toStringHelper(value));
+}
+
+static void qtscript_QTextFormat_FormatType_fromScriptValue(const QScriptValue &value, QTextFormat::FormatType &out)
+{
+    out = qvariant_cast<QTextFormat::FormatType>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTextFormat_FormatType(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    const QMetaObject *meta = qtscript_QTextFormat_metaObject();
+    int idx = meta->indexOfEnumerator("FormatType");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    if (menum.valueToKey(arg) != 0)
+        return qScriptValueFromValue(engine,  static_cast<QTextFormat::FormatType>(arg));
+    return context->throwError(QString::fromLatin1("FormatType(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTextFormat_FormatType_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextFormat::FormatType value = qscriptvalue_cast<QTextFormat::FormatType>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextFormat_FormatType_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextFormat::FormatType value = qscriptvalue_cast<QTextFormat::FormatType>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTextFormat_FormatType_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTextFormat_FormatType_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTextFormat_FormatType,
+        qtscript_QTextFormat_FormatType_valueOf, qtscript_QTextFormat_FormatType_toString);
+    qScriptRegisterMetaType<QTextFormat::FormatType>(engine, qtscript_QTextFormat_FormatType_toScriptValue,
+        qtscript_QTextFormat_FormatType_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 7; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTextFormat_FormatType_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTextFormat_FormatType_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QTextFormat::PageBreakFlag
+//
+
+static const QTextFormat::PageBreakFlag qtscript_QTextFormat_PageBreakFlag_values[] = {
+    QTextFormat::PageBreak_Auto
+    , QTextFormat::PageBreak_AlwaysBefore
+    , QTextFormat::PageBreak_AlwaysAfter
+};
+
+static const char * const qtscript_QTextFormat_PageBreakFlag_keys[] = {
+    "PageBreak_Auto"
+    , "PageBreak_AlwaysBefore"
+    , "PageBreak_AlwaysAfter"
+};
+
+static QString qtscript_QTextFormat_PageBreakFlag_toStringHelper(QTextFormat::PageBreakFlag value)
+{
+    for (int i = 0; i < 3; ++i) {
+        if (qtscript_QTextFormat_PageBreakFlag_values[i] == value)
+            return QString::fromLatin1(qtscript_QTextFormat_PageBreakFlag_keys[i]);
+    }
+    return QString();
+}
+
+static QScriptValue qtscript_QTextFormat_PageBreakFlag_toScriptValue(QScriptEngine *engine, const QTextFormat::PageBreakFlag &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QTextFormat"));
+    return clazz.property(qtscript_QTextFormat_PageBreakFlag_toStringHelper(value));
+}
+
+static void qtscript_QTextFormat_PageBreakFlag_fromScriptValue(const QScriptValue &value, QTextFormat::PageBreakFlag &out)
+{
+    out = qvariant_cast<QTextFormat::PageBreakFlag>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QTextFormat_PageBreakFlag(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    for (int i = 0; i < 3; ++i) {
+        if (qtscript_QTextFormat_PageBreakFlag_values[i] == arg)
+            return qScriptValueFromValue(engine,  static_cast<QTextFormat::PageBreakFlag>(arg));
+    }
+    return context->throwError(QString::fromLatin1("PageBreakFlag(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QTextFormat_PageBreakFlag_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextFormat::PageBreakFlag value = qscriptvalue_cast<QTextFormat::PageBreakFlag>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextFormat_PageBreakFlag_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextFormat::PageBreakFlag value = qscriptvalue_cast<QTextFormat::PageBreakFlag>(context->thisObject());
+    return QScriptValue(engine, qtscript_QTextFormat_PageBreakFlag_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QTextFormat_PageBreakFlag_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QTextFormat_PageBreakFlag,
+        qtscript_QTextFormat_PageBreakFlag_valueOf, qtscript_QTextFormat_PageBreakFlag_toString);
+    qScriptRegisterMetaType<QTextFormat::PageBreakFlag>(engine, qtscript_QTextFormat_PageBreakFlag_toScriptValue,
+        qtscript_QTextFormat_PageBreakFlag_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QTextFormat_PageBreakFlag_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QTextFormat_PageBreakFlag_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
+// QTextFormat::PageBreakFlags
+//
+
+static QScriptValue qtscript_QTextFormat_PageBreakFlags_toScriptValue(QScriptEngine *engine, const QTextFormat::PageBreakFlags &value)
+{
+    return engine->newVariant(qVariantFromValue(value));
+}
+
+static void qtscript_QTextFormat_PageBreakFlags_fromScriptValue(const QScriptValue &value, QTextFormat::PageBreakFlags &out)
+{
+    QVariant var = value.toVariant();
+    if (var.userType() == qMetaTypeId<QTextFormat::PageBreakFlags>())
+        out = qvariant_cast<QTextFormat::PageBreakFlags>(var);
+    else if (var.userType() == qMetaTypeId<QTextFormat::PageBreakFlag>())
+        out = qvariant_cast<QTextFormat::PageBreakFlag>(var);
+    else
+        out = 0;
+}
+
+static QScriptValue qtscript_construct_QTextFormat_PageBreakFlags(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextFormat::PageBreakFlags result = 0;
+    if ((context->argumentCount() == 1) && context->argument(0).isNumber()) {
+        result = static_cast<QTextFormat::PageBreakFlags>(context->argument(0).toInt32());
+    } else {
+        for (int i = 0; i < context->argumentCount(); ++i) {
+            QVariant v = context->argument(i).toVariant();
+            if (v.userType() != qMetaTypeId<QTextFormat::PageBreakFlag>()) {
+                return context->throwError(QScriptContext::TypeError,
+                    QString::fromLatin1("PageBreakFlags(): argument %0 is not of type PageBreakFlag").arg(i));
+            }
+            result |= qvariant_cast<QTextFormat::PageBreakFlag>(v);
+        }
+   }
+    return engine->newVariant(qVariantFromValue(result));
+}
+
+static QScriptValue qtscript_QTextFormat_PageBreakFlags_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextFormat::PageBreakFlags value = qscriptvalue_cast<QTextFormat::PageBreakFlags>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QTextFormat_PageBreakFlags_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QTextFormat::PageBreakFlags value = qscriptvalue_cast<QTextFormat::PageBreakFlags>(context->thisObject());
+    QString result;
+    for (int i = 0; i < 3; ++i) {
+        if ((value & qtscript_QTextFormat_PageBreakFlag_values[i]) == qtscript_QTextFormat_PageBreakFlag_values[i]) {
+            if (!result.isEmpty())
+                result.append(QString::fromLatin1(","));
+            result.append(QString::fromLatin1(qtscript_QTextFormat_PageBreakFlag_keys[i]));
+        }
+    }
+    return QScriptValue(engine, result);
+}
+
+static QScriptValue qtscript_QTextFormat_PageBreakFlags_equals(QScriptContext *context, QScriptEngine *engine)
+{
+    QVariant thisObj = context->thisObject().toVariant();
+    QVariant otherObj = context->argument(0).toVariant();
+    return QScriptValue(engine, ((thisObj.userType() == otherObj.userType()) &&
+                                 (thisObj.value<QTextFormat::PageBreakFlags>() == otherObj.value<QTextFormat::PageBreakFlags>())));
+}
+
+static QScriptValue qtscript_create_QTextFormat_PageBreakFlags_class(QScriptEngine *engine)
+{
+    QScriptValue ctor = qtscript_create_flags_class_helper(
+        engine, qtscript_construct_QTextFormat_PageBreakFlags, qtscript_QTextFormat_PageBreakFlags_valueOf,
+        qtscript_QTextFormat_PageBreakFlags_toString, qtscript_QTextFormat_PageBreakFlags_equals);
+    qScriptRegisterMetaType<QTextFormat::PageBreakFlags>(engine, qtscript_QTextFormat_PageBreakFlags_toScriptValue,
+        qtscript_QTextFormat_PageBreakFlags_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    return ctor;
+}
+
+//
 // QTextFormat::ObjectTypes
 //
 
@@ -803,7 +806,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 47;
+        _id = 0xBABE0000 + 48;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -915,57 +918,56 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
 
     case 13:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isFrameFormat();
+        bool _q_result = _q_self->isEmpty();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 14:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isImageFormat();
+        bool _q_result = _q_self->isFrameFormat();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 15:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isListFormat();
+        bool _q_result = _q_self->isImageFormat();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 16:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isTableCellFormat();
+        bool _q_result = _q_self->isListFormat();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 17:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isTableFormat();
+        bool _q_result = _q_self->isTableCellFormat();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 18:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isValid();
+        bool _q_result = _q_self->isTableFormat();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 19:
     if (context->argumentCount() == 0) {
-        Qt::LayoutDirection _q_result = _q_self->layoutDirection();
-        return qScriptValueFromValue(context->engine(), _q_result);
+        bool _q_result = _q_self->isValid();
+        return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 20:
-    if (context->argumentCount() == 1) {
-        int _q_arg0 = context->argument(0).toInt32();
-        QTextLength _q_result = _q_self->lengthProperty(_q_arg0);
+    if (context->argumentCount() == 0) {
+        Qt::LayoutDirection _q_result = _q_self->layoutDirection();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
@@ -973,12 +975,20 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     case 21:
     if (context->argumentCount() == 1) {
         int _q_arg0 = context->argument(0).toInt32();
+        QTextLength _q_result = _q_self->lengthProperty(_q_arg0);
+        return qScriptValueFromValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 22:
+    if (context->argumentCount() == 1) {
+        int _q_arg0 = context->argument(0).toInt32();
         QVector<QTextLength > _q_result = _q_self->lengthVectorProperty(_q_arg0);
         return qScriptValueFromSequence(context->engine(), _q_result);
     }
     break;
 
-    case 22:
+    case 23:
     if (context->argumentCount() == 1) {
         QTextFormat _q_arg0 = qscriptvalue_cast<QTextFormat>(context->argument(0));
         _q_self->merge(_q_arg0);
@@ -986,21 +996,21 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 23:
+    case 24:
     if (context->argumentCount() == 0) {
         int _q_result = _q_self->objectIndex();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 24:
+    case 25:
     if (context->argumentCount() == 0) {
         int _q_result = _q_self->objectType();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 25:
+    case 26:
     if (context->argumentCount() == 1) {
         QTextFormat _q_arg0 = qscriptvalue_cast<QTextFormat>(context->argument(0));
         bool _q_result = _q_self->operator==(_q_arg0);
@@ -1008,7 +1018,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 26:
+    case 27:
     if (context->argumentCount() == 1) {
         int _q_arg0 = context->argument(0).toInt32();
         QPen _q_result = _q_self->penProperty(_q_arg0);
@@ -1016,14 +1026,14 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 27:
+    case 28:
     if (context->argumentCount() == 0) {
         QMap<int,QVariant > _q_result = _q_self->properties();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 28:
+    case 29:
     if (context->argumentCount() == 1) {
         int _q_arg0 = context->argument(0).toInt32();
         QVariant _q_result = _q_self->property(_q_arg0);
@@ -1031,14 +1041,14 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 29:
+    case 30:
     if (context->argumentCount() == 0) {
         int _q_result = _q_self->propertyCount();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 30:
+    case 31:
     if (context->argumentCount() == 1) {
         QBrush _q_arg0 = qscriptvalue_cast<QBrush>(context->argument(0));
         _q_self->setBackground(_q_arg0);
@@ -1046,7 +1056,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 31:
+    case 32:
     if (context->argumentCount() == 1) {
         QBrush _q_arg0 = qscriptvalue_cast<QBrush>(context->argument(0));
         _q_self->setForeground(_q_arg0);
@@ -1054,7 +1064,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 32:
+    case 33:
     if (context->argumentCount() == 1) {
         Qt::LayoutDirection _q_arg0 = qscriptvalue_cast<Qt::LayoutDirection>(context->argument(0));
         _q_self->setLayoutDirection(_q_arg0);
@@ -1062,7 +1072,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 33:
+    case 34:
     if (context->argumentCount() == 2) {
         int _q_arg0 = context->argument(0).toInt32();
         QVector<QTextLength> _q_arg1;
@@ -1072,7 +1082,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 34:
+    case 35:
     if (context->argumentCount() == 1) {
         int _q_arg0 = context->argument(0).toInt32();
         _q_self->setObjectIndex(_q_arg0);
@@ -1080,7 +1090,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 35:
+    case 36:
     if (context->argumentCount() == 1) {
         int _q_arg0 = context->argument(0).toInt32();
         _q_self->setObjectType(_q_arg0);
@@ -1088,7 +1098,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 36:
+    case 37:
     if (context->argumentCount() == 2) {
         int _q_arg0 = context->argument(0).toInt32();
         QVariant _q_arg1 = context->argument(1).toVariant();
@@ -1097,7 +1107,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 37:
+    case 38:
     if (context->argumentCount() == 1) {
         int _q_arg0 = context->argument(0).toInt32();
         QString _q_result = _q_self->stringProperty(_q_arg0);
@@ -1105,7 +1115,7 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 38:
+    case 39:
     if (context->argumentCount() == 1) {
         QTextFormat _q_arg0 = qscriptvalue_cast<QTextFormat>(context->argument(0));
         _q_self->swap(_q_arg0);
@@ -1113,63 +1123,63 @@ static QScriptValue qtscript_QTextFormat_prototype_call(QScriptContext *context,
     }
     break;
 
-    case 39:
+    case 40:
     if (context->argumentCount() == 0) {
         QTextBlockFormat _q_result = _q_self->toBlockFormat();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 40:
+    case 41:
     if (context->argumentCount() == 0) {
         QTextCharFormat _q_result = _q_self->toCharFormat();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 41:
+    case 42:
     if (context->argumentCount() == 0) {
         QTextFrameFormat _q_result = _q_self->toFrameFormat();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 42:
+    case 43:
     if (context->argumentCount() == 0) {
         QTextImageFormat _q_result = _q_self->toImageFormat();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 43:
+    case 44:
     if (context->argumentCount() == 0) {
         QTextListFormat _q_result = _q_self->toListFormat();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 44:
+    case 45:
     if (context->argumentCount() == 0) {
         QTextTableCellFormat _q_result = _q_self->toTableCellFormat();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 45:
+    case 46:
     if (context->argumentCount() == 0) {
         QTextTableFormat _q_result = _q_self->toTableFormat();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 46:
+    case 47:
     if (context->argumentCount() == 0) {
         int _q_result = _q_self->type();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 47: {
+    case 48: {
     QString result;
     QDebug d(&result);
     d << *_q_self;
@@ -1233,7 +1243,7 @@ QScriptValue qtscript_create_QTextFormat_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QTextFormat*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QTextFormat*)0));
-    for (int i = 0; i < 48; ++i) {
+    for (int i = 0; i < 49; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QTextFormat_prototype_call, qtscript_QTextFormat_function_lengths[i+1]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
         proto.setProperty(QString::fromLatin1(qtscript_QTextFormat_function_names[i+1]),
@@ -1246,14 +1256,14 @@ QScriptValue qtscript_create_QTextFormat_class(QScriptEngine *engine)
     QScriptValue ctor = engine->newFunction(qtscript_QTextFormat_static_call, proto, qtscript_QTextFormat_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
 
+    ctor.setProperty(QString::fromLatin1("Property"),
+        qtscript_create_QTextFormat_Property_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("FormatType"),
+        qtscript_create_QTextFormat_FormatType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("PageBreakFlag"),
         qtscript_create_QTextFormat_PageBreakFlag_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("PageBreakFlags"),
         qtscript_create_QTextFormat_PageBreakFlags_class(engine));
-    ctor.setProperty(QString::fromLatin1("FormatType"),
-        qtscript_create_QTextFormat_FormatType_class(engine, ctor));
-    ctor.setProperty(QString::fromLatin1("Property"),
-        qtscript_create_QTextFormat_Property_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("ObjectTypes"),
         qtscript_create_QTextFormat_ObjectTypes_class(engine, ctor));
     return ctor;

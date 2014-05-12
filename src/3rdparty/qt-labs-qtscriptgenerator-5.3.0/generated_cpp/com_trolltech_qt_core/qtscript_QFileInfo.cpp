@@ -18,6 +18,7 @@
 static const char * const qtscript_QFileInfo_function_names[] = {
     "QFileInfo"
     // static
+    , "exists"
     // prototype
     , "absoluteDir"
     , "absoluteFilePath"
@@ -51,12 +52,9 @@ static const char * const qtscript_QFileInfo_function_names[] = {
     , "lastModified"
     , "lastRead"
     , "makeAbsolute"
-    , "equals"
     , "owner"
     , "ownerId"
     , "path"
-    , "permission"
-    , "permissions"
     , "refresh"
     , "setCaching"
     , "setFile"
@@ -70,6 +68,7 @@ static const char * const qtscript_QFileInfo_function_names[] = {
 static const char * const qtscript_QFileInfo_function_signatures[] = {
     "\nQDir dir, String file\nQFile file\nQFileInfo fileinfo\nString file"
     // static
+    , "String file"
     // prototype
     , ""
     , ""
@@ -103,11 +102,8 @@ static const char * const qtscript_QFileInfo_function_signatures[] = {
     , ""
     , ""
     , ""
-    , "QFileInfo fileinfo"
     , ""
     , ""
-    , ""
-    , "Permissions permissions"
     , ""
     , ""
     , "bool on"
@@ -122,6 +118,7 @@ static const char * const qtscript_QFileInfo_function_signatures[] = {
 static const int qtscript_QFileInfo_function_lengths[] = {
     2
     // static
+    , 1
     // prototype
     , 0
     , 0
@@ -155,11 +152,8 @@ static const int qtscript_QFileInfo_function_lengths[] = {
     , 0
     , 0
     , 0
-    , 1
     , 0
     , 0
-    , 0
-    , 1
     , 0
     , 0
     , 1
@@ -184,7 +178,6 @@ static QScriptValue qtscript_QFileInfo_throw_ambiguity_error_helper(
 
 Q_DECLARE_METATYPE(QFileInfo*)
 Q_DECLARE_METATYPE(QDir)
-Q_DECLARE_METATYPE(QFlags<QFile::Permission>)
 Q_DECLARE_METATYPE(QFile*)
 
 //
@@ -201,7 +194,7 @@ static QScriptValue qtscript_QFileInfo_prototype_call(QScriptContext *context, Q
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 45;
+        _id = 0xBABE0000 + 42;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -209,7 +202,7 @@ static QScriptValue qtscript_QFileInfo_prototype_call(QScriptContext *context, Q
     if (!_q_self) {
         return context->throwError(QScriptContext::TypeError,
             QString::fromLatin1("QFileInfo.%0(): this object is not a QFileInfo")
-            .arg(qtscript_QFileInfo_function_names[_id+1]));
+            .arg(qtscript_QFileInfo_function_names[_id+2]));
     }
 
     switch (_id) {
@@ -438,57 +431,34 @@ static QScriptValue qtscript_QFileInfo_prototype_call(QScriptContext *context, Q
     break;
 
     case 32:
-    if (context->argumentCount() == 1) {
-        QFileInfo _q_arg0 = qscriptvalue_cast<QFileInfo>(context->argument(0));
-        bool _q_result = _q_self->operator==(_q_arg0);
-        return QScriptValue(context->engine(), _q_result);
-    }
-    break;
-
-    case 33:
     if (context->argumentCount() == 0) {
         QString _q_result = _q_self->owner();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 34:
+    case 33:
     if (context->argumentCount() == 0) {
         uint _q_result = _q_self->ownerId();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 35:
+    case 34:
     if (context->argumentCount() == 0) {
         QString _q_result = _q_self->path();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 36:
-    if (context->argumentCount() == 1) {
-        QFlags<QFile::Permission> _q_arg0 = qscriptvalue_cast<QFlags<QFile::Permission> >(context->argument(0));
-        bool _q_result = _q_self->permission(_q_arg0);
-        return QScriptValue(context->engine(), _q_result);
-    }
-    break;
-
-    case 37:
-    if (context->argumentCount() == 0) {
-        QFlags<QFile::Permission> _q_result = _q_self->permissions();
-        return qScriptValueFromValue(context->engine(), _q_result);
-    }
-    break;
-
-    case 38:
+    case 35:
     if (context->argumentCount() == 0) {
         _q_self->refresh();
         return context->engine()->undefinedValue();
     }
     break;
 
-    case 39:
+    case 36:
     if (context->argumentCount() == 1) {
         bool _q_arg0 = context->argument(0).toBoolean();
         _q_self->setCaching(_q_arg0);
@@ -496,7 +466,7 @@ static QScriptValue qtscript_QFileInfo_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 40:
+    case 37:
     if (context->argumentCount() == 1) {
         if (qscriptvalue_cast<QFile*>(context->argument(0))) {
 
@@ -517,21 +487,21 @@ static QScriptValue qtscript_QFileInfo_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 41:
+    case 38:
     if (context->argumentCount() == 0) {
         qint64 _q_result = _q_self->size();
         return qScriptValueFromValue(context->engine(), _q_result);
     }
     break;
 
-    case 42:
+    case 39:
     if (context->argumentCount() == 0) {
         QString _q_result = _q_self->suffix();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 43:
+    case 40:
     if (context->argumentCount() == 1) {
         QFileInfo _q_arg0 = qscriptvalue_cast<QFileInfo>(context->argument(0));
         _q_self->swap(_q_arg0);
@@ -539,14 +509,14 @@ static QScriptValue qtscript_QFileInfo_prototype_call(QScriptContext *context, Q
     }
     break;
 
-    case 44:
+    case 41:
     if (context->argumentCount() == 0) {
         QString _q_result = _q_self->symLinkTarget();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
-    case 45: {
+    case 42: {
     QString result = QString::fromLatin1("QFileInfo");
     return QScriptValue(context->engine(), result);
     }
@@ -555,8 +525,8 @@ static QScriptValue qtscript_QFileInfo_prototype_call(QScriptContext *context, Q
     Q_ASSERT(false);
     }
     return qtscript_QFileInfo_throw_ambiguity_error_helper(context,
-        qtscript_QFileInfo_function_names[_id+1],
-        qtscript_QFileInfo_function_signatures[_id+1]);
+        qtscript_QFileInfo_function_names[_id+2],
+        qtscript_QFileInfo_function_signatures[_id+2]);
 }
 
 static QScriptValue qtscript_QFileInfo_static_call(QScriptContext *context, QScriptEngine *)
@@ -600,6 +570,14 @@ static QScriptValue qtscript_QFileInfo_static_call(QScriptContext *context, QScr
     }
     break;
 
+    case 1:
+    if (context->argumentCount() == 1) {
+        QString _q_arg0 = context->argument(0).toString();
+        bool _q_result = QFileInfo::exists(_q_arg0);
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
     default:
     Q_ASSERT(false);
     }
@@ -612,10 +590,10 @@ QScriptValue qtscript_create_QFileInfo_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QFileInfo*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QFileInfo*)0));
-    for (int i = 0; i < 46; ++i) {
-        QScriptValue fun = engine->newFunction(qtscript_QFileInfo_prototype_call, qtscript_QFileInfo_function_lengths[i+1]);
+    for (int i = 0; i < 43; ++i) {
+        QScriptValue fun = engine->newFunction(qtscript_QFileInfo_prototype_call, qtscript_QFileInfo_function_lengths[i+2]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
-        proto.setProperty(QString::fromLatin1(qtscript_QFileInfo_function_names[i+1]),
+        proto.setProperty(QString::fromLatin1(qtscript_QFileInfo_function_names[i+2]),
             fun, QScriptValue::SkipInEnumeration);
     }
 
@@ -624,6 +602,13 @@ QScriptValue qtscript_create_QFileInfo_class(QScriptEngine *engine)
 
     QScriptValue ctor = engine->newFunction(qtscript_QFileInfo_static_call, proto, qtscript_QFileInfo_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));
+    for (int i = 0; i < 1; ++i) {
+        QScriptValue fun = engine->newFunction(qtscript_QFileInfo_static_call,
+            qtscript_QFileInfo_function_lengths[i+1]);
+        fun.setData(QScriptValue(engine, uint(0xBABE0000 + i+1)));
+        ctor.setProperty(QString::fromLatin1(qtscript_QFileInfo_function_names[i+1]),
+            fun, QScriptValue::SkipInEnumeration);
+    }
 
     return ctor;
 }

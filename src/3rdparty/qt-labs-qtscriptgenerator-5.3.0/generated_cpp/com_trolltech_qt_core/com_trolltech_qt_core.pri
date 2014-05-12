@@ -6,19 +6,19 @@ HEADERS += \
            $$PWD/qtscriptshell_QAbstractTableModel.h \
            $$PWD/qtscriptshell_QAbstractTransition.h \
            $$PWD/qtscriptshell_QAnimationGroup.h \
-           $$PWD/qtscriptshell_QBasicMutex.h \
            $$PWD/qtscriptshell_QBuffer.h \
            $$PWD/qtscriptshell_QChildEvent.h \
            $$PWD/qtscriptshell_QCoreApplication.h \
+           #$$PWD/qtscriptshell_QDataStream.h \
+           #$$PWD/qtscriptshell_QDirIterator.h \
            $$PWD/qtscriptshell_QEvent.h \
            $$PWD/qtscriptshell_QEventLoop.h \
            $$PWD/qtscriptshell_QEventTransition.h \
+           $$PWD/qtscriptshell_QFile.h \
            $$PWD/qtscriptshell_QFileSystemWatcher.h \
            $$PWD/qtscriptshell_QFinalState.h \
-           $$PWD/qtscriptshell_QFutureSynchronizer.h \
-           $$PWD/qtscriptshell_QFutureSynchronizerVoid.h \
-           $$PWD/qtscriptshell_QFutureWatcher.h \
-           $$PWD/qtscriptshell_QFutureWatcherVoid.h \
+           #$$PWD/qtscriptshell_QFutureSynchronizer.h \
+           #$$PWD/qtscriptshell_QFutureSynchronizerVoid.h \
            $$PWD/qtscriptshell_QHistoryState.h \
            $$PWD/qtscriptshell_QIODevice.h \
            $$PWD/qtscriptshell_QMimeData.h \
@@ -32,9 +32,12 @@ HEADERS += \
            $$PWD/qtscriptshell_QSettings.h \
            $$PWD/qtscriptshell_QSignalMapper.h \
            $$PWD/qtscriptshell_QSignalTransition.h \
+           #$$PWD/qtscriptshell_QSocketNotifier.h \
            $$PWD/qtscriptshell_QState.h \
            $$PWD/qtscriptshell_QStateMachine.h \
+           $$PWD/qtscriptshell_QTemporaryFile.h \
            $$PWD/qtscriptshell_QTextCodec.h \
+           #$$PWD/qtscriptshell_QTextCodecPlugin.h \
            $$PWD/qtscriptshell_QTextStream.h \
            $$PWD/qtscriptshell_QThreadPool.h \
            $$PWD/qtscriptshell_QTimeLine.h \
@@ -54,7 +57,6 @@ SOURCES += \
            $$PWD/qtscript_QAbstractTableModel.cpp \
            $$PWD/qtscript_QAbstractTransition.cpp \
            $$PWD/qtscript_QAnimationGroup.cpp \
-           $$PWD/qtscript_QBasicMutex.cpp \
            $$PWD/qtscript_QBasicTimer.cpp \
            $$PWD/qtscript_QBitArray.cpp \
            $$PWD/qtscript_QBuffer.cpp \
@@ -63,10 +65,11 @@ SOURCES += \
            $$PWD/qtscript_QChildEvent.cpp \
            $$PWD/qtscript_QCoreApplication.cpp \
            $$PWD/qtscript_QCryptographicHash.cpp \
+           #$$PWD/qtscript_QDataStream.cpp \
            $$PWD/qtscript_QDate.cpp \
            $$PWD/qtscript_QDateTime.cpp \
            $$PWD/qtscript_QDir.cpp \
-           $$PWD/qtscript_QDirIterator.cpp \
+           #$$PWD/qtscript_QDirIterator.cpp \
            $$PWD/qtscript_QDynamicPropertyChangeEvent.cpp \
            $$PWD/qtscript_QEasingCurve.cpp \
            $$PWD/qtscript_QEvent.cpp \
@@ -76,13 +79,13 @@ SOURCES += \
            $$PWD/qtscript_QFileInfo.cpp \
            $$PWD/qtscript_QFileSystemWatcher.cpp \
            $$PWD/qtscript_QFinalState.cpp \
-           $$PWD/qtscript_QFuture.cpp \
-           $$PWD/qtscript_QFutureIterator.cpp \
-           $$PWD/qtscript_QFutureSynchronizer.cpp \
-           $$PWD/qtscript_QFutureSynchronizerVoid.cpp \
-           $$PWD/qtscript_QFutureVoid.cpp \
-           $$PWD/qtscript_QFutureWatcher.cpp \
-           $$PWD/qtscript_QFutureWatcherVoid.cpp \
+           #$$PWD/qtscript_QFuture.cpp \
+           #$$PWD/qtscript_QFutureIterator.cpp \
+           #$$PWD/qtscript_QFutureSynchronizer.cpp \
+           #$$PWD/qtscript_QFutureSynchronizerVoid.cpp \
+           #$$PWD/qtscript_QFutureVoid.cpp \
+           #$$PWD/qtscript_QFutureWatcher.cpp \
+           #$$PWD/qtscript_QFutureWatcherVoid.cpp \
            $$PWD/qtscript_QHistoryState.cpp \
            $$PWD/qtscript_QIODevice.cpp \
            $$PWD/qtscript_QLibraryInfo.cpp \
@@ -112,7 +115,7 @@ SOURCES += \
            $$PWD/qtscript_QSignalTransition.cpp \
            $$PWD/qtscript_QSize.cpp \
            $$PWD/qtscript_QSizeF.cpp \
-           $$PWD/qtscript_QSocketNotifier.cpp \
+           #$$PWD/qtscript_QSocketNotifier.cpp \
            $$PWD/qtscript_QState.cpp \
            $$PWD/qtscript_QStateMachine.cpp \
            $$PWD/qtscript_QStateMachine_SignalEvent.cpp \
@@ -122,6 +125,7 @@ SOURCES += \
            $$PWD/qtscript_QTemporaryFile.cpp \
            $$PWD/qtscript_QTextBoundaryFinder.cpp \
            $$PWD/qtscript_QTextCodec.cpp \
+           #$$PWD/qtscript_QTextCodecPlugin.cpp \
            $$PWD/qtscript_QTextDecoder.cpp \
            $$PWD/qtscript_QTextEncoder.cpp \
            $$PWD/qtscript_QTextStream.cpp \
@@ -144,6 +148,7 @@ SOURCES += \
            $$PWD/qtscript_QXmlStreamReader.cpp \
            $$PWD/qtscript_QXmlStreamWriter.cpp \
            $$PWD/qtscript_Qt.cpp \
+           #$$PWD/qtscript_QtConcurrent.cpp \
            $$PWD/qtscriptshell_QAbstractAnimation.cpp \
            $$PWD/qtscriptshell_QAbstractItemModel.cpp \
            $$PWD/qtscriptshell_QAbstractListModel.cpp \
@@ -151,19 +156,19 @@ SOURCES += \
            $$PWD/qtscriptshell_QAbstractTableModel.cpp \
            $$PWD/qtscriptshell_QAbstractTransition.cpp \
            $$PWD/qtscriptshell_QAnimationGroup.cpp \
-           $$PWD/qtscriptshell_QBasicMutex.cpp \
            $$PWD/qtscriptshell_QBuffer.cpp \
            $$PWD/qtscriptshell_QChildEvent.cpp \
            $$PWD/qtscriptshell_QCoreApplication.cpp \
+           #$$PWD/qtscriptshell_QDataStream.cpp \
+           #$$PWD/qtscriptshell_QDirIterator.cpp \
            $$PWD/qtscriptshell_QEvent.cpp \
            $$PWD/qtscriptshell_QEventLoop.cpp \
            $$PWD/qtscriptshell_QEventTransition.cpp \
+           $$PWD/qtscriptshell_QFile.cpp \
            $$PWD/qtscriptshell_QFileSystemWatcher.cpp \
            $$PWD/qtscriptshell_QFinalState.cpp \
-           $$PWD/qtscriptshell_QFutureSynchronizer.cpp \
-           $$PWD/qtscriptshell_QFutureSynchronizerVoid.cpp \
-           $$PWD/qtscriptshell_QFutureWatcher.cpp \
-           $$PWD/qtscriptshell_QFutureWatcherVoid.cpp \
+           #$$PWD/qtscriptshell_QFutureSynchronizer.cpp \
+           #$$PWD/qtscriptshell_QFutureSynchronizerVoid.cpp \
            $$PWD/qtscriptshell_QHistoryState.cpp \
            $$PWD/qtscriptshell_QIODevice.cpp \
            $$PWD/qtscriptshell_QMimeData.cpp \
@@ -177,9 +182,12 @@ SOURCES += \
            $$PWD/qtscriptshell_QSettings.cpp \
            $$PWD/qtscriptshell_QSignalMapper.cpp \
            $$PWD/qtscriptshell_QSignalTransition.cpp \
+           #$$PWD/qtscriptshell_QSocketNotifier.cpp \
            $$PWD/qtscriptshell_QState.cpp \
            $$PWD/qtscriptshell_QStateMachine.cpp \
+           $$PWD/qtscriptshell_QTemporaryFile.cpp \
            $$PWD/qtscriptshell_QTextCodec.cpp \
+           #$$PWD/qtscriptshell_QTextCodecPlugin.cpp \
            $$PWD/qtscriptshell_QTextStream.cpp \
            $$PWD/qtscriptshell_QThreadPool.cpp \
            $$PWD/qtscriptshell_QTimeLine.cpp \
