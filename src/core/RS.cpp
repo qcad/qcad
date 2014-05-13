@@ -196,9 +196,24 @@ QString RS::getWindowManagerId() {
 
 bool RS::compare(const QVariant& v1, const QVariant& v2) {
     // 20120609: tolerance when comparing doubles (property editor)
-    // 20140513: moved up since Qt 5 can convert double to line type
+    // 20140513: handle basic types since Qt 5 thinks it can convert double, bool, int to line type
     if (v1.type()==QVariant::Double && v2.type()==QVariant::Double) {
         return fabs(v1.toDouble() - v2.toDouble()) < RS::PointTolerance;
+    }
+    if (v1.type()==QVariant::Bool && v2.type()==QVariant::Bool) {
+        return v1.toBool()==v2.toBool();
+    }
+    if (v1.type()==QVariant::Int && v2.type()==QVariant::Int) {
+        return v1.toInt()==v2.toInt();
+    }
+    if (v1.type()==QVariant::UInt && v2.type()==QVariant::UInt) {
+        return v1.toUInt()==v2.toUInt();
+    }
+    if (v1.type()==QVariant::LongLong && v2.type()==QVariant::LongLong) {
+        return v1.toLongLong()==v2.toLongLong();
+    }
+    if (v1.type()==QVariant::ULongLong && v2.type()==QVariant::ULongLong) {
+        return v1.toULongLong()==v2.toULongLong();
     }
 
     if (v1.canConvert<RColor> () && v2.canConvert<RColor> ()) {

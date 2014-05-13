@@ -40,7 +40,7 @@ Cross.State = {
 Cross.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    this.setState(Cross.State.ChoosingShape1);
+    this.setState(Cross.State.ChoosingShape);
 };
 
 Cross.prototype.setState = function(state) {

@@ -47,11 +47,15 @@ else {
             imageformats/libqsvg.dylib \
             imageformats/libqtiff.dylib \
             sqldrivers/libqsqlite.dylib \
-            sqldrivers/libqsqlodbc.dylib \
-            codecs/libqcncodecs.dylib \
-            codecs/libqjpcodecs.dylib \
-            codecs/libqkrcodecs.dylib \
-            codecs/libqtwcodecs.dylib
+            sqldrivers/libqsqlodbc.dylib
+
+        !contains(QT_VERSION, ^5\\..*\\..*) {
+            FILES += \
+                codecs/libqcncodecs.dylib \
+                codecs/libqjpcodecs.dylib \
+                codecs/libqkrcodecs.dylib \
+                codecs/libqtwcodecs.dylib
+        }
 
         contains(QT_VERSION, ^4\\.8\\..*) {
             FILES += imageformats/libqtga.dylib
@@ -73,11 +77,15 @@ else {
             imageformats/libqmng.so \
             imageformats/libqsvg.so \
             imageformats/libqtiff.so \
-            sqldrivers/libqsqlite.so \
-            codecs/libqcncodecs.so \
-            codecs/libqjpcodecs.so \
-            codecs/libqkrcodecs.so \
-            codecs/libqtwcodecs.so
+            sqldrivers/libqsqlite.so
+
+        !contains(QT_VERSION, ^5\\..*\\..*) {
+            FILES += \
+                codecs/libqcncodecs.so \
+                codecs/libqjpcodecs.so \
+                codecs/libqkrcodecs.so \
+                codecs/libqtwcodecs.so
+        }
 
         contains(QT_VERSION, ^4\\.8\\..*) {
             FILES += imageformats/libqtga.so
@@ -99,11 +107,15 @@ else {
             imageformats\\qmng4.dll \
             imageformats\\qsvg4.dll \
             imageformats\\qtiff4.dll \
-            sqldrivers\\qsqlite4.dll \
-            codecs\\qcncodecs4.dll \
-            codecs\\qjpcodecs4.dll \
-            codecs\\qkrcodecs4.dll \
-            codecs\\qtwcodecs4.dll
+            sqldrivers\\qsqlite4.dll
+
+        !contains(QT_VERSION, ^5\\..*\\..*) {
+            FILES += \
+                codecs\\qcncodecs4.dll \
+                codecs\\qjpcodecs4.dll \
+                codecs\\qkrcodecs4.dll \
+                codecs\\qtwcodecs4.dll
+        }
 
         contains(QT_VERSION, ^4\\.8\\..*) {
             FILES += imageformats\\qtga4.dll
