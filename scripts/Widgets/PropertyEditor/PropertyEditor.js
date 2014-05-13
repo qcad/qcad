@@ -527,7 +527,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                 var controls = undefined;
                 if (!isNull(gridLayout)) {
                     // don't display any Z values:
-                    if (title==="Z" && !propertyTypeId.isCustom()) {
+                    if (RSettings.getBoolValue("PropertyEditor/ShowZCoordinates", false)===false && title==="Z" && !propertyTypeId.isCustom()) {
                         controls = undefined;
                     }
                     else {
@@ -1202,6 +1202,15 @@ function PropertyEditor(guiAction) {
 }
 
 PropertyEditor.prototype = new Widgets();
+
+PropertyEditor.getPreferencesCategory = function() {
+    return [ qsTr("Widgets"), qsTr("Property Editor") ];
+};
+
+PropertyEditor.applyPreferences = function(doc, mdiChild) {
+    var appWin = RMainWindowQt.getMainWindow();
+    appWin.notifyPropertyListeners(EAction.getDocument());
+};
 
 /**
  * Shows / hides the property editor.
