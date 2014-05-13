@@ -31,6 +31,7 @@ QScriptValue qtscript_create_QTextBlock_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QGradient_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTextDocumentWriter_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTextCursor_class(QScriptEngine *engine);
+QScriptValue qtscript_create_QPaintDevice_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QPaintEngine_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QImageWriter_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QPainterPathStroker_class(QScriptEngine *engine);
@@ -142,6 +143,7 @@ static const char * const qtscript_com_trolltech_qt_gui_class_names[] = {
     , "QGradient"
     , "QTextDocumentWriter"
     , "QTextCursor"
+    , "QPaintDevice"
     , "QPaintEngine"
     , "QImageWriter"
     , "QPainterPathStroker"
@@ -255,6 +257,7 @@ static const QtBindingCreator qtscript_com_trolltech_qt_gui_class_functions[] = 
     , qtscript_create_QGradient_class
     , qtscript_create_QTextDocumentWriter_class
     , qtscript_create_QTextCursor_class
+    , qtscript_create_QPaintDevice_class
     , qtscript_create_QPaintEngine_class
     , qtscript_create_QImageWriter_class
     , qtscript_create_QPainterPathStroker_class

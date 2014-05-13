@@ -236,6 +236,7 @@ static QScriptValue qtscript_QPrinter_throw_ambiguity_error_helper(
         .arg(functionName).arg(fullSignatures.join(QLatin1String("\n"))));
 }
 
+Q_DECLARE_METATYPE(QPaintDevice*)
 Q_DECLARE_METATYPE(QPrinter*)
 Q_DECLARE_METATYPE(QtScriptShell_QPrinter*)
 Q_DECLARE_METATYPE(QPrinter::Orientation)
@@ -253,6 +254,7 @@ Q_DECLARE_METATYPE(QPaintEngine*)
 Q_DECLARE_METATYPE(QPrintEngine*)
 Q_DECLARE_METATYPE(QList<int >)
 Q_DECLARE_METATYPE(QPrinterInfo)
+Q_DECLARE_METATYPE(QPrinter::PageSize)
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -1369,7 +1371,9 @@ static QScriptValue qtscript_QPrinter_prototype_call(QScriptContext *context, QS
     case 46:
     if (context->argumentCount() == 1) {
         QPrinter::OutputFormat _q_arg0 = qscriptvalue_cast<QPrinter::OutputFormat>(context->argument(0));
+        qDebug() << "output format: " << _q_arg0;
         _q_self->setOutputFormat(_q_arg0);
+        qDebug() << "output format set to: " << _q_self->outputFormat();
         return context->engine()->undefinedValue();
     }
     break;
@@ -1411,6 +1415,13 @@ static QScriptValue qtscript_QPrinter_prototype_call(QScriptContext *context, QS
     break;
 
     case 51:
+    // andrew: begin: fix call with one argument:
+    if (context->argumentCount() == 1) {
+        QPrinter::PageSize _q_arg0 = qscriptvalue_cast<QPrinter::PageSize>(context->argument(0));
+        _q_self->setPaperSize(_q_arg0);
+        return context->engine()->undefinedValue();
+    }
+    // andrew: end
     if (context->argumentCount() == 2) {
         QSizeF _q_arg0 = qscriptvalue_cast<QSizeF>(context->argument(0));
         QPrinter::Unit _q_arg1 = qscriptvalue_cast<QPrinter::Unit>(context->argument(1));
@@ -1567,6 +1578,14 @@ QScriptValue qtscript_create_QPrinter_class(QScriptEngine *engine)
     }
 
     engine->setDefaultPrototype(qMetaTypeId<QPrinter*>(), proto);
+
+    // andrew: begin
+    // QPrinter derrived from QPagedPaintDevice:
+    QScriptValue dpt = engine->defaultPrototype(qMetaTypeId<QPaintDevice*>());
+    if (dpt.isValid()) {
+        proto.setPrototype(dpt);
+    }
+    // andrew: end
 
     QScriptValue ctor = engine->newFunction(qtscript_QPrinter_static_call, proto, qtscript_QPrinter_function_lengths[0]);
     ctor.setData(QScriptValue(engine, uint(0xBABE0000 + 0)));

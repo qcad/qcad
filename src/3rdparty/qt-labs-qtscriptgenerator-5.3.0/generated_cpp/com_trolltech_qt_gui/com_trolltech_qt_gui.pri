@@ -20,6 +20,7 @@ HEADERS += \
            $$PWD/qtscriptshell_QMovie.h \
            $$PWD/qtscriptshell_QPaintEngine.h \
            $$PWD/qtscriptshell_QPaintEngineState.h \
+           $$PWD/qtscriptshell_QPaintDevice.h \
            $$PWD/qtscriptshell_QPaintEvent.h \
            $$PWD/qtscriptshell_QPicture.h \
            $$PWD/qtscriptshell_QPixmap.h \
@@ -96,6 +97,7 @@ SOURCES += \
            $$PWD/qtscript_QMouseEvent.cpp \
            $$PWD/qtscript_QMoveEvent.cpp \
            $$PWD/qtscript_QMovie.cpp \
+           $$PWD/qtscript_QPaintDevice.cpp \
            $$PWD/qtscript_QPaintEngine.cpp \
            $$PWD/qtscript_QPaintEngineState.cpp \
            $$PWD/qtscript_QPaintEvent.cpp \
@@ -177,6 +179,7 @@ SOURCES += \
            $$PWD/qtscriptshell_QMouseEvent.cpp \
            $$PWD/qtscriptshell_QMoveEvent.cpp \
            $$PWD/qtscriptshell_QMovie.cpp \
+           $$PWD/qtscriptshell_QPaintDevice.cpp \
            $$PWD/qtscriptshell_QPaintEngine.cpp \
            $$PWD/qtscriptshell_QPaintEngineState.cpp \
            $$PWD/qtscriptshell_QPaintEvent.cpp \
