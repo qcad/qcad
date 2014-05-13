@@ -332,7 +332,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     QStringList modules;
 
 #if QT_VERSION >= 0x050000
-    modules << "qt.core" << "qt.gui" << "qt.widgets" << "qt.uitools" << "qt.webkit"
+    modules << "qt.core" << "qt.gui" << "qt.printsupport" << "qt.widgets" << "qt.uitools" << "qt.webkit"
             << "qt.webkitwidgets" << "qt.sql" << "qt.xml" << "qt.xmlpatterns";
 #else
     modules << "qt.core" << "qt.gui" << "qt.uitools" << "qt.webkit" << "qt.sql"
@@ -439,6 +439,12 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
             engine->newFunction(ecmaQLocaleScript));
     classQLocale.setProperty("scriptToString",
             engine->newFunction(ecmaQLocaleScriptToString));
+
+#if QT_VERSION >= 0x050000
+    QScriptValue classQLineEdit = globalObject.property("QLineEdit");
+    classQLineEdit.property("prototype").setProperty("validator",
+            engine->newFunction(ecmaQLineEditValidator));
+#endif
 
     QScriptValue classQt = globalObject.property("Qt");
     classQt.setProperty("escape",
@@ -1631,6 +1637,23 @@ QScriptValue RScriptHandlerEcma::ecmaQLocaleScriptToString(QScriptContext* conte
                     context);
     }
     return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQLineEditValidator(QScriptContext* context, QScriptEngine* engine) {
+    qDebug() << "RScriptHandlerEcma::ecmaQLineEditValidator";
+
+    QLineEdit* self = REcmaHelper::scriptValueTo<QLineEdit>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QLineEdit.validator(): Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 0) {
+        return throwError("Wrong number/types of arguments for QLineEdit::validator.", context);
+    }
+
+    const QValidator* cppResult = self->validator();
+    return qScriptValueFromValue(engine, cppResult);
+    //return engine->newQObject();
 }
 
 QScriptValue RScriptHandlerEcma::ecmaMSleep(QScriptContext* context,

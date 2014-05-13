@@ -195,6 +195,12 @@ QString RS::getWindowManagerId() {
 }
 
 bool RS::compare(const QVariant& v1, const QVariant& v2) {
+    // 20120609: tolerance when comparing doubles (property editor)
+    // 20140513: moved up since Qt 5 can convert double to line type
+    if (v1.type()==QVariant::Double && v2.type()==QVariant::Double) {
+        return fabs(v1.toDouble() - v2.toDouble()) < RS::PointTolerance;
+    }
+
     if (v1.canConvert<RColor> () && v2.canConvert<RColor> ()) {
         return v1.value<RColor> () == v2.value<RColor> ();
     }
@@ -207,10 +213,7 @@ bool RS::compare(const QVariant& v1, const QVariant& v2) {
     if (v1.canConvert<QList<RVector> > () && v2.canConvert<QList<RVector> > ()) {
         return v1.value<QList<RVector> > () == v2.value<QList<RVector> > ();
     }
-    // 20120609: tolerance when comparing doubles (property editor)
-    if (v1.type()==QVariant::Double && v2.type()==QVariant::Double) {
-        return fabs(v1.toDouble() - v2.toDouble()) < RS::PointTolerance;
-    }
+
     return v1 == v2;
 }
 

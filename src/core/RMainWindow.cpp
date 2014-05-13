@@ -72,37 +72,35 @@ void RMainWindow::installMessageHandler() {
 
 #if QT_VERSION >= 0x050000
 void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& message) {
-    const char* msg = (const char*)message.toLatin1();
+    //const char* msg = (const char*)message.toLatin1();
+    QByteArray localMsg = message.toLocal8Bit();
 #else
 void RMainWindow::messageHandler(QtMsgType type, const char* msg) {
+    QByteArray localMsg = msg;
 #endif
     switch (type) {
     case QtDebugMsg:
-        //getMainWindow()->handleUserMessage(msg, RS::Debug);
-        fprintf(stderr, "Debug:    %s\n", msg);
+        fprintf(stderr, "\033[36m%s:%u, %s:\033[0m\nDebug:    %s\n", context.file, context.line, context.function, localMsg.constData());
         fflush(stderr);
         break;
     case QtWarningMsg:
-        //getMainWindow()->handleUserMessage(msg, RS::Warning);
-        if (QString(msg).contains("changing class of non-QScriptObject not supported")) {
+        if (localMsg.contains("changing class of non-QScriptObject not supported")) {
             break;
         }
-        if (QString(msg).startsWith("QPainter::")) {
+        if (localMsg.startsWith("QPainter::")) {
             break;
         }
-        fprintf(stderr, "Warning:  %s\n", msg);
+        fprintf(stderr, "\033[31m%s:%u, %s:\033[0m\nWarning:  %s\n", context.file, context.line, context.function, localMsg.constData());
         fflush(stderr);
         break;
     case QtCriticalMsg:
-        //getMainWindow()->handleUserMessage(msg, RS::Critical);
-        fprintf(stderr, "Critical: %s\n", msg);
+        fprintf(stderr, "\033[31m%s:%u, %s\033[0m\nCritical: %s\n", context.file, context.line, context.function, localMsg.constData());
         fflush(stderr);
         break;
     case QtFatalMsg:
-        fprintf(stderr, "Fatal:    %s\n", msg);
+        fprintf(stderr, "\033[31m%s:%u, %s\033[0m\nFatal:    %s\n", context.file, context.line, context.function, localMsg.constData());
         fflush(stderr);
         abort();
-        break;
     }
 }
 
