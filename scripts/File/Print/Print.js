@@ -101,7 +101,7 @@ Print.prototype.print = function(pdfFile) {
                     function() {
                         Print.cancel = false;
                         Print.printDialog.close();
-                        if (RS.getSystemId()=="osx") {
+                        if (RS.getSystemId()==="osx" && !RSettings.isQt(5)) {
                             Print.printDialog.destroy();
                         }
                     });
@@ -110,15 +110,15 @@ Print.prototype.print = function(pdfFile) {
                     function() {
                         Print.cancel = true;
                         Print.printDialog.close();
-                        if (RS.getSystemId()=="osx") {
+                        if (RS.getSystemId()==="osx" && !RSettings.isQt(5)) {
                             Print.printDialog.destroy();
                         }
                     });
 
-        if (RS.getSystemId()=="osx" || RS.getSystemId()=="linux") {
+        if (RS.getSystemId()==="osx" || RS.getSystemId()==="linux") {
             Print.printDialog.exec();
         }
-        else if (RS.getSystemId()=="win") {
+        else if (RS.getSystemId()==="win") {
             // slot 'dummy' is never called:
             Print.printDialog.open(this, "dummy");
         }
