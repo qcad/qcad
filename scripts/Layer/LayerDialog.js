@@ -126,7 +126,6 @@ LayerDialog.prototype.validate = function() {
 
     var leLayerName = widgets["LayerName"];
     var message = widgets["Message"];
-    //var validator = leLayerName.validator();
     var pos = 0;
     var acceptable = true;
     message.clear();

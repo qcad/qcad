@@ -90,7 +90,6 @@ BlockDialog.prototype.validate = function() {
 
     var leBlockName = widgets["BlockName"];
     var message = widgets["Message"];
-    //var validator = leBlockName.validator();
     var pos = 0;
     var acceptable = true;
     message.clear();
