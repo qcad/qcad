@@ -43,8 +43,8 @@ BlockDialog.prototype.show = function() {
     var blockName = widgets["BlockName"];
     blockName.selectAll();
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
-    var validator = new QRegExpValidator(rx, blockName);
-    blockName.setValidator(validator);
+    this.validator = new QRegExpValidator(rx, blockName);
+    blockName.setValidator(this.validator);
     blockName.textChanged.connect(this, "validate");
 
     // init dialog to show attributes of given block:
@@ -90,7 +90,7 @@ BlockDialog.prototype.validate = function() {
 
     var leBlockName = widgets["BlockName"];
     var message = widgets["Message"];
-    var validator = leBlockName.validator();
+    //var validator = leBlockName.validator();
     var pos = 0;
     var acceptable = true;
     message.clear();
@@ -105,7 +105,7 @@ BlockDialog.prototype.validate = function() {
         acceptable = false;
     }
     else {
-        if (validator.validate(leBlockName.text, pos) != QValidator.Acceptable) {
+        if (this.validator.validate(leBlockName.text, pos) != QValidator.Acceptable) {
             message.text = "<font color='red'>" + qsTr("Block name is invalid.") + "</font>";
             acceptable = false;
         }
@@ -113,7 +113,7 @@ BlockDialog.prototype.validate = function() {
 
     if (this.document.hasBlock(leBlockName.text)) {
         if (isNull(this.block) ||
-            this.block.getName().toLowerCase() != leBlockName.text.toLowerCase()) {
+            this.block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) {
 
             message.text = "<font color='red'>" + qsTr("Block already exists.") + "</font>";
             acceptable = false;

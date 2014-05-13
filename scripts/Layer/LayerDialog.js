@@ -61,8 +61,8 @@ LayerDialog.prototype.show = function() {
     var layerName = widgets["LayerName"];
     layerName.selectAll();
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
-    var validator = new QRegExpValidator(rx, layerName);
-    layerName.setValidator(validator);
+    this.validator = new QRegExpValidator(rx, layerName);
+    layerName.setValidator(this.validator);
     layerName.textChanged.connect(this, "validate");
     var cbColor = widgets["Color"];
     var cbLineweight = widgets["Lineweight"];
@@ -126,7 +126,7 @@ LayerDialog.prototype.validate = function() {
 
     var leLayerName = widgets["LayerName"];
     var message = widgets["Message"];
-    var validator = leLayerName.validator();
+    //var validator = leLayerName.validator();
     var pos = 0;
     var acceptable = true;
     message.clear();
@@ -137,7 +137,7 @@ LayerDialog.prototype.validate = function() {
         acceptable = false;
     }
 
-    if (validator.validate(layerName, pos) != QValidator.Acceptable) {
+    if (this.validator.validate(layerName, pos) != QValidator.Acceptable) {
         message.text = "<font color='red'>" + qsTr("Layer name is empty.") + "</font>";
         acceptable = false;
     }
@@ -147,7 +147,7 @@ LayerDialog.prototype.validate = function() {
         // error if we're creating a new layer and the layer name is taken or
         // we're trying to rename a layer to an existing name
         if (isNull(this.layer) ||
-            this.layer.getName().toLowerCase() != layerName.toLowerCase()) {
+            this.layer.getName().toLowerCase() !== layerName.toLowerCase()) {
 
             message.text = "<font color='red'>" + qsTr("Layer already exists.") + "</font>";
             acceptable = false;
