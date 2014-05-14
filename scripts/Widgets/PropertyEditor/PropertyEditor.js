@@ -339,9 +339,9 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         return;
     }
 
-    var gridLayoutGeometry;
-    var gridLayoutChild;
-    var gridLayoutCustom;
+    var gridLayoutGeometry = undefined;
+    var gridLayoutChild = undefined;
+    var gridLayoutCustom = undefined;
 
     if (!onlyChanges) {
         // create geometry group box with grid layout:
@@ -388,6 +388,17 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             gridLayoutCustom.setColumnStretch(2,0);
             gridLayoutCustom.setColumnStretch(3,0);
             this.customGroup.setLayout(gridLayoutCustom);
+        }
+    }
+    else {
+        if (!isNull(this.geometryGroup)) {
+            gridLayoutGeometry = this.geometryGroup.layout();
+        }
+        if (!isNull(this.childGroup)) {
+            gridLayoutChild = this.childGroup.layout();
+        }
+        if (!isNull(this.customGroup)) {
+            gridLayoutCustom = this.customGroup.layout();
         }
     }
 
