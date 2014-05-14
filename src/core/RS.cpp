@@ -215,6 +215,9 @@ bool RS::compare(const QVariant& v1, const QVariant& v2) {
     if (v1.type()==QVariant::ULongLong && v2.type()==QVariant::ULongLong) {
         return v1.toULongLong()==v2.toULongLong();
     }
+    if (v1.type()==QVariant::String && v2.type()==QVariant::String) {
+        return v1.toString()==v2.toString();
+    }
 
     if (v1.canConvert<RColor> () && v2.canConvert<RColor> ()) {
         return v1.value<RColor> () == v2.value<RColor> ();
