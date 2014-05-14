@@ -35,6 +35,8 @@ RPropertyTypeId RDimAlignedEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimAlignedEntity::PropertyText;
 RPropertyTypeId RDimAlignedEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimAlignedEntity::PropertyLowerTolerance;
+RPropertyTypeId RDimAlignedEntity::PropertyMeasuredValue;
+
 RPropertyTypeId RDimAlignedEntity::PropertyLinearFactor;
 RPropertyTypeId RDimAlignedEntity::PropertyAutoTextPos;
 
@@ -73,6 +75,7 @@ void RDimAlignedEntity::init() {
     RDimAlignedEntity::PropertyText.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyText);
     RDimAlignedEntity::PropertyUpperTolerance.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimAlignedEntity::PropertyLowerTolerance.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyLowerTolerance);
+    RDimAlignedEntity::PropertyMeasuredValue.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimAlignedEntity::PropertyLinearFactor.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyLinearFactor);
     RDimAlignedEntity::PropertyAutoTextPos.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyAutoTextPos);

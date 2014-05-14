@@ -36,6 +36,7 @@ RPropertyTypeId RDimDiametricEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimDiametricEntity::PropertyText;
 RPropertyTypeId RDimDiametricEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimDiametricEntity::PropertyLowerTolerance;
+RPropertyTypeId RDimDiametricEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimDiametricEntity::PropertyLinearFactor;
 RPropertyTypeId RDimDiametricEntity::PropertyAutoTextPos;
@@ -74,6 +75,7 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyText.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyText);
     RDimDiametricEntity::PropertyUpperTolerance.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimDiametricEntity::PropertyLowerTolerance.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLowerTolerance);
+    RDimDiametricEntity::PropertyMeasuredValue.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimDiametricEntity::PropertyLinearFactor.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLinearFactor);
     RDimDiametricEntity::PropertyAutoTextPos.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyAutoTextPos);

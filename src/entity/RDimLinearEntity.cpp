@@ -35,6 +35,7 @@ RPropertyTypeId RDimLinearEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimLinearEntity::PropertyText;
 RPropertyTypeId RDimLinearEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimLinearEntity::PropertyLowerTolerance;
+RPropertyTypeId RDimLinearEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimLinearEntity::PropertyLinearFactor;
 RPropertyTypeId RDimLinearEntity::PropertyAutoTextPos;

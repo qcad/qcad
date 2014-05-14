@@ -35,6 +35,7 @@ RPropertyTypeId RDimRadialEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimRadialEntity::PropertyText;
 RPropertyTypeId RDimRadialEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimRadialEntity::PropertyLowerTolerance;
+RPropertyTypeId RDimRadialEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimRadialEntity::PropertyLinearFactor;
 RPropertyTypeId RDimRadialEntity::PropertyAutoTextPos;
@@ -72,6 +73,7 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyText.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyText);
     RDimRadialEntity::PropertyUpperTolerance.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimRadialEntity::PropertyLowerTolerance.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyLowerTolerance);
+    RDimRadialEntity::PropertyMeasuredValue.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimRadialEntity::PropertyLinearFactor.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyLinearFactor);
     RDimRadialEntity::PropertyAutoTextPos.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyAutoTextPos);

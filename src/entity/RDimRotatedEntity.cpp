@@ -35,6 +35,7 @@ RPropertyTypeId RDimRotatedEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimRotatedEntity::PropertyText;
 RPropertyTypeId RDimRotatedEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimRotatedEntity::PropertyLowerTolerance;
+RPropertyTypeId RDimRotatedEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimRotatedEntity::PropertyLinearFactor;
 RPropertyTypeId RDimRotatedEntity::PropertyAutoTextPos;
@@ -78,6 +79,7 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyText.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyText);
     RDimRotatedEntity::PropertyUpperTolerance.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimRotatedEntity::PropertyLowerTolerance.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLowerTolerance);
+    RDimRotatedEntity::PropertyMeasuredValue.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimRotatedEntity::PropertyLinearFactor.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLinearFactor);
     RDimRotatedEntity::PropertyAutoTextPos.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyAutoTextPos);
