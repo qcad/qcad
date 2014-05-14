@@ -379,6 +379,11 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         return;
     }
 
+    // Qt5: QWebView has no scriptable children method:
+    if (isOfType(widget, QWebView)) {
+        return;
+    }
+
     var children = widget.children();
     for ( var i = 0; i < children.length; ++i) {
         var c = children[i];
