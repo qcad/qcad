@@ -72,7 +72,6 @@ void RMainWindow::installMessageHandler() {
 
 #if QT_VERSION >= 0x050000
 void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& message) {
-    //const char* msg = (const char*)message.toLatin1();
     QByteArray localMsg = message.toLocal8Bit();
 #else
 void RMainWindow::messageHandler(QtMsgType type, const char* msg) {
