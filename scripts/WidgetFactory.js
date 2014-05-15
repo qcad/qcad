@@ -178,6 +178,11 @@ WidgetFactory.saveState = function(widget, group, document, map) {
     }
     group = (isNull(group) ? widget.objectName : group);
 
+    // Qt5: QWebView has no scriptable children method:
+    if (!isFunction(widget["children"])) {
+        return;
+    }
+
     var value;
     var data;
     var children = widget.children();
@@ -380,7 +385,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
     }
 
     // Qt5: QWebView has no scriptable children method:
-    if (isOfType(widget, QWebView)) {
+    if (!isFunction(widget["children"])) {
         return;
     }
 

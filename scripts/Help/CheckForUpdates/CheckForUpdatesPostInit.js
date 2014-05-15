@@ -3,8 +3,12 @@ function postInit() {
         return;
     }
 
+    var appWin = RMainWindowQt.getMainWindow();
+
     // check for updates at startup:
-    if (RSettings.getBoolValue("CheckForUpdates/AutoCheckUpdates", false)===true) {
+    if (RSettings.getBoolValue("CheckForUpdates/AutoCheckUpdates", false)===true &&
+        appWin.property("CheckForUpdates/Handled")!==true) {
+
         qDebug("checking for updates...");
         include("CheckForUpdates.js");
         var html = download(CheckForUpdates.getUrl(), 3000);
