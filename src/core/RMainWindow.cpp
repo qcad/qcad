@@ -73,10 +73,7 @@ void RMainWindow::installMessageHandler() {
 #if QT_VERSION >= 0x050000
 void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& message) {
     QByteArray localMsg = message.toLocal8Bit();
-#else
-void RMainWindow::messageHandler(QtMsgType type, const char* msg) {
-    QByteArray localMsg = msg;
-#endif
+
     switch (type) {
     case QtDebugMsg:
         fprintf(stderr, "\033[36m%s:%u, %s:\033[0m\nDebug:    %s\n", context.file, context.line, context.function, localMsg.constData());
@@ -102,6 +99,36 @@ void RMainWindow::messageHandler(QtMsgType type, const char* msg) {
         abort();
     }
 }
+#else
+void RMainWindow::messageHandler(QtMsgType type, const char* msg) {
+    QByteArray localMsg = msg;
+
+    switch (type) {
+    case QtDebugMsg:
+        fprintf(stderr, "Debug:    %s\n", localMsg.constData());
+        fflush(stderr);
+        break;
+    case QtWarningMsg:
+        if (localMsg.contains("changing class of non-QScriptObject not supported")) {
+            break;
+        }
+        if (localMsg.startsWith("QPainter::")) {
+            break;
+        }
+        fprintf(stderr, "Warning:  %s\n", localMsg.constData());
+        fflush(stderr);
+        break;
+    case QtCriticalMsg:
+        fprintf(stderr, "Critical: %s\n", localMsg.constData());
+        fflush(stderr);
+        break;
+    case QtFatalMsg:
+        fprintf(stderr, "Fatal:    %s\n", localMsg.constData());
+        fflush(stderr);
+        abort();
+    }
+}
+#endif
 
 /**
  * \return Pointer to the document interface of the current document
