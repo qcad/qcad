@@ -27,6 +27,7 @@ include("../Dimension.js");
 function Leader(guiAction) {
     Dimension.call(this, guiAction);
 
+    this.arrowHead = true;
     this.leaderEntity = undefined;
     this.segment = undefined;
 
@@ -93,7 +94,7 @@ Leader.prototype.escapeEvent = function() {
             // remove leader with one or zero vertices:
             if (this.leaderEntity.countVertices()<=1) {
                 var op = new RDeleteObjectOperation(this.leaderEntity, false);
-                di.applyOperation(op);
+                this.applyOperation(op);
             }
         }
 
@@ -116,20 +117,10 @@ Leader.prototype.pickCoordinate = function(event, preview) {
             point = event.getModelPosition();
 
             this.leaderEntity = new RLeaderEntity(document, new RLeaderData());
+            this.leaderEntity.setArrowHead(this.arrowHead);
             this.leaderEntity.appendVertex(point);
             op = new RAddObjectOperation(this.leaderEntity);
-            var transaction = di.applyOperation(op);
-
-            // find out ID of leader, that was added to the document:
-            var ids = transaction.getAffectedObjects();
-            for (var i=0; i<ids.length; ++i) {
-                var id = ids[i];
-                var entity = document.queryEntity(id);
-                if (isLeaderEntity(entity)) {
-                    this.leaderEntity = entity;
-                }
-            }
-
+            this.applyOperation(op);
             di.setRelativeZero(point);
             this.setState(Leader.State.SettingNextVertex);
         }
@@ -164,7 +155,7 @@ Leader.prototype.pickCoordinate = function(event, preview) {
         else {
             op = this.getOperation(false);
             if (!isNull(op)) {
-                di.applyOperation(op);
+                this.applyOperation(op);
                 di.setRelativeZero(point);
                 //this.uncheckArcSegment();
             }
@@ -203,6 +194,27 @@ Leader.prototype.getOperation = function(preview) {
 };
 
 /**
+ * Updates the leader in storage and makes sure that this.leaderEntity
+ * points to new new clone of the original entity.
+ */
+Leader.prototype.applyOperation = function(op) {
+    var di = this.getDocumentInterface();
+    var document = this.getDocument();
+    var transaction = di.applyOperation(op);
+
+    // find out ID of polyline, that was added to the document:
+    var ids = transaction.getAffectedObjects();
+    for (var i=0; i<ids.length; ++i) {
+        var id = ids[i];
+        var entity = document.queryEntity(id);
+        if (isLeaderEntity(entity)) {
+            this.leaderEntity = entity;
+            break;
+        }
+    }
+};
+
+/**
  * Called when user clicks the 'Undo' button to remove the last added vertex.
  */
 Leader.prototype.slotUndo = function() {
@@ -217,11 +229,27 @@ Leader.prototype.slotUndo = function() {
         di.clearPreview();
         var op = this.getOperation(false);
         if (!isNull(op)) {
-            di.applyOperation(op);
+            this.applyOperation(op);
         }
     }
 
     this.checkButtonStates();
+};
+
+Leader.prototype.slotArrowHeadChanged = function(v) {
+    var di = this.getDocumentInterface();
+    this.arrowHead = v;
+
+    if (!isNull(this.leaderEntity)) {
+        this.leaderEntity.setArrowHead(this.arrowHead);
+    }
+
+    di.clearPreview();
+    var op = this.getOperation(false);
+    if (!isNull(op)) {
+        this.applyOperation(op);
+    }
+    this.updatePreview();
 };
 
 /**
