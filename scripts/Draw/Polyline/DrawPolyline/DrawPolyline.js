@@ -97,7 +97,7 @@ DrawPolyline.prototype.escapeEvent = function() {
             // remove polyline with one or zero vertices:
             if (this.polylineEntity.countVertices()<=1) {
                 var op = new RDeleteObjectOperation(this.polylineEntity, false);
-                di.applyOperation(op);
+                this.applyOperation(op);
             }
         }
 
@@ -119,20 +119,10 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
         if (!preview) {
             point = event.getModelPosition();
 
-            this.polylineEntity = new RPolylineEntity(document, new RPolylineData());
-            this.polylineEntity.appendVertex(point);
-            op = new RAddObjectOperation(this.polylineEntity);
-            var transaction = di.applyOperation(op);
-
-            // find out ID of polyline, that was added to the document:
-            var ids = transaction.getAffectedObjects();
-            for (var i=0; i<ids.length; ++i) {
-                var id = ids[i];
-                var entity = document.queryEntity(id);
-                if (isPolylineEntity(entity)) {
-                    this.polylineEntity = entity;
-                }
-            }
+            var pl = new RPolylineEntity(document, new RPolylineData());
+            pl.appendVertex(point);
+            op = new RAddObjectOperation(pl);
+            this.applyOperation(op);
 
             di.setRelativeZero(point);
             this.setState(DrawPolyline.State.SettingNextVertex);
@@ -163,7 +153,7 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
                 appendPoint = this.polylineEntity.getEndPoint();
             }
 
-            if (this.arcSegment==true) {
+            if (this.arcSegment===true) {
                 var dir = 0.0;
                 if (numberOfVertices>1) {
                     if (this.prepend) {
@@ -191,8 +181,6 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
                 this.angle = this.segment.getEndAngle();
             }
             else {
-                //this.polylineEntity.setBulgeAt(numberOfVertices-1, 0.0);
-                //this.polylineEntity.appendVertex(point);
                 this.segment = new RLine(appendPoint, point);
 
                 bulge = 0.0;
@@ -204,7 +192,6 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
             // append or prepend vertex:
             if (!preview) {
                 if (this.prepend) {
-                    //this.polylineEntity.setBulgeAt(0, bulge);
                     this.polylineEntity.prependVertex(vertex, bulge);
                 }
                 else {
@@ -216,14 +203,11 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
 
         if (preview) {
             this.updatePreview();
-            //if (!isNull(this.polylineEntity)) {
-            //    this.polylineEntity.removeLastVertex();
-            //}
         }
         else {
             op = this.getOperation(false);
             if (!isNull(op)) {
-                di.applyOperation(op);
+                this.applyOperation(op);
                 di.setRelativeZero(point);
                 this.uncheckArcSegment();
             }
@@ -268,6 +252,27 @@ DrawPolyline.prototype.getOperation = function(preview) {
 };
 
 /**
+ * Updates the polyline in storage and makes sure that this.polylineEntity
+ * points to new new clone of the original entity.
+ */
+DrawPolyline.prototype.applyOperation = function(op) {
+    var di = this.getDocumentInterface();
+    var document = this.getDocument();
+    var transaction = di.applyOperation(op);
+
+    // find out ID of polyline, that was added to the document:
+    var ids = transaction.getAffectedObjects();
+    for (var i=0; i<ids.length; ++i) {
+        var id = ids[i];
+        var entity = document.queryEntity(id);
+        if (isPolylineEntity(entity)) {
+            this.polylineEntity = entity;
+            break;
+        }
+    }
+};
+
+/**
  * Called when user clicks the 'Close' button to close the polyline.
  */
 DrawPolyline.prototype.slotClose = function() {
@@ -281,7 +286,7 @@ DrawPolyline.prototype.slotClose = function() {
         this.polylineEntity.setClosed(true);
         var op = this.getOperation(false);
         if (!isNull(op)) {
-            di.applyOperation(op);
+            this.applyOperation(op);
             this.setState(DrawPolyline.State.SettingFirstVertex);
         }
     }
@@ -304,7 +309,7 @@ DrawPolyline.prototype.slotUndo = function() {
         di.clearPreview();
         var op = this.getOperation(false);
         if (!isNull(op)) {
-            di.applyOperation(op);
+            this.applyOperation(op);
         }
     }
 
