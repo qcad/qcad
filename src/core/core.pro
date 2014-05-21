@@ -57,6 +57,7 @@ SOURCES += \
     RPropertyTypeId.cpp \
     RResourceList.cpp \
     RS.cpp \
+    RSPlatform.cpp \
     RScriptAction.cpp \
     RScriptHandler.cpp \
     RScriptHandlerRegistry.cpp \
