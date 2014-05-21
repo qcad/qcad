@@ -195,7 +195,6 @@ QString RS::getWindowManagerId() {
 }
 
 bool RS::compare(const QVariant& v1, const QVariant& v2) {
-    //qDebug() << "RS::compare: " << v1 << v2;
     // 20120609: tolerance when comparing doubles (property editor)
     // 20140513: handle basic types since Qt 5 thinks it can convert double, bool, int to line type
     if (v1.type()==QVariant::Double && v2.type()==QVariant::Double) {
@@ -230,37 +229,16 @@ bool RS::compare(const QVariant& v1, const QVariant& v2) {
         return v1.value<RLineweight::Lineweight> () == v2.value<RLineweight::Lineweight> ();
     }
     if (v1.canConvert<QList<RVector> > () && v2.canConvert<QList<RVector> > ()) {
-        //qDebug() << "list 1: " << v1.value<QList<RVector> >();
-        //qDebug() << "list 2: " << v2.value<QList<RVector> >();
-        //qDebug() << "equal: " << (v1.value<QList<RVector> > () == v2.value<QList<RVector> > ());
         return v1.value<QList<RVector> > () == v2.value<QList<RVector> > ();
     }
-//    if (v1.canConvert<QList<double> > () && v2.canConvert<QList<double> > ()) {
-//        qDebug() << "list 1: " << v1.value<QList<double> >();
-//        qDebug() << "list 2: " << v2.value<QList<double> >();
-//        qDebug() << "equal: " << (v1.value<QList<double> > () == v2.value<QList<double> > ());
-//        return v1.value<QList<double> > () == v2.value<QList<double> > ();
-//    }
-
-//    if (v1.canConvert<QList<QPair<int, double> > >() && v2.canConvert<QList<QPair<int, double> > >()) {
-//        qDebug() << "list 1 len: " << v1.value<QList<QPair<int, double> > >().length();
-//        qDebug() << "list 2 len: " << v2.value<QList<QPair<int, double> > >().length();
-//        qDebug() << "list 1: " << v1.value<QList<QPair<int, double> > >();
-//        qDebug() << "list 2: " << v2.value<QList<QPair<int, double> > >();
-//        qDebug() << "equal (variant): " << (v1 == v2);
-//        qDebug() << "equal: " << (v1.value<QList<QPair<int, double> > > () == v2.value<QList<QPair<int, double> > > ());
-//        return v1.value<QList<QPair<int, double> > >() == v2.value<QList<QPair<int, double> > >();
-//        //return false;
-//    }
-
-    //qDebug() << "using ==";
     return v1 == v2;
 }
 
 bool RS::compare(const QPair<QVariant, RPropertyAttributes>& p1, const QPair<
-        QVariant, RPropertyAttributes>& p2) {
+                 QVariant, RPropertyAttributes>& p2) {
     return compare(p1.first, p2.first);
 }
+
 
 /**
  * \return Number of CPU cores available.

@@ -446,8 +446,8 @@ public:
 
 public:
     static bool compare(const QVariant& v1, const QVariant& v2);
-    static bool compare(const QPair<QVariant, RPropertyAttributes>& p1, const QPair<
-            QVariant, RPropertyAttributes>& p2);
+    static bool compare(const QPair<QVariant, RPropertyAttributes>& p1,
+                        const QPair<QVariant, RPropertyAttributes>& p2);
     static int getCpuCores();
 
     static QString getHostId();
