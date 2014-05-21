@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>REntity</name>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+71"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+62"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+83"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+89"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+81"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+83"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+81"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+82"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+81"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+81"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+87"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+75"/>
@@ -63,9 +63,6 @@
         <location filename="../src/entity/RPointEntity.cpp" line="+0"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+0"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -86,7 +83,6 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
         <source>Height</source>
         <translation>Höhe</translation>
     </message>
@@ -150,7 +146,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
@@ -260,7 +256,6 @@
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+5"/>
         <source>Angle</source>
         <translation>Winkel</translation>
     </message>
@@ -270,7 +265,7 @@
         <translation>Skalierung</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
         <translation>Einfach</translation>
     </message>
@@ -290,7 +285,17 @@
         <translation>Schrift Name</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
+        <source>Text Height</source>
+        <translation>Text Höhe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Angle</source>
+        <translation>Textwinkel</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Bold</source>
         <translation>Fett</translation>
     </message>
@@ -614,6 +619,9 @@
     </message>
     <message>
         <location line="-13"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-12"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>

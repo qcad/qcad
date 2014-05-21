@@ -10,7 +10,7 @@
         <translation type="unfinished">Skorygowany nieprawidłową nazwę bloku do&apos;&amp;#39;</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

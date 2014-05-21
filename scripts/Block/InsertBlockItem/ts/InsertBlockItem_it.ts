@@ -71,7 +71,7 @@
         <translation>Rettificato nome non valido blocco &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>

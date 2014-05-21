@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -39,7 +39,7 @@ Tipo de línea:</translatorcomment>
         <translation>Geometría</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+290"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -68,7 +68,7 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-435"/>
+        <location line="-448"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -102,7 +102,7 @@ Seleccin nula</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+148"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--
@@ -125,6 +125,11 @@ Mosaico horizontal
 ¿Realmente quiere cerrar el fichero
 %1?</translatorcomment>
         <translation>Todo</translation>
+    </message>
+    <message>
+        <location line="+603"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
     </message>
     <message>
         <source>Add Custom Property</source>
@@ -152,7 +157,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="-446"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -173,7 +178,8 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>

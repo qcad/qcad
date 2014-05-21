@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../Leader.js" line="+59"/>
+        <location filename="../Leader.js" line="+60"/>
         <source>Arrow position</source>
         <translation>Position de la flèche</translation>
     </message>
@@ -31,6 +31,16 @@
     <message>
         <source>Draw leader (line seqence with arrow)</source>
         <translation type="obsolete">Repère</translation>
+    </message>
+    <message>
+        <location filename="../Leader.ui" line="+23"/>
+        <source>Undo Last Segement</source>
+        <translation>Annuler</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arrow head</source>
+        <translation>Flèche</translation>
     </message>
 </context>
 </TS>

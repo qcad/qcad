@@ -80,7 +80,7 @@ Własne filtry</translatorcomment>
         <translation type="unfinished">Niestandardowy</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+148"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -105,12 +105,17 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
+        <location line="+603"/>
+        <source>Widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="-582"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -223,7 +228,8 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -196,7 +196,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+934"/>
+        <location filename="../WidgetFactory.js" line="+944"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
@@ -268,7 +268,7 @@
         <translation>Valor medido</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+93"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
@@ -418,6 +418,16 @@
 Elija la referencia a bloque
 Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
         <translation>Referencia de bloque</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References and Attributes</source>
+        <translation>Referencias de bloque y atributos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference and Attributes</source>
+        <translation>Referencia de bloque y atributos</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../Leader.js" line="+59"/>
+        <location filename="../Leader.js" line="+60"/>
         <source>Arrow position</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Posição da seta</translation>
@@ -38,6 +38,16 @@ Traçado: Terminado. %ld nós criados</translatorcomment>
         <source>Draw leader (line sequence with arrow)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar conduza (seqüência de linha com a seta)</translation>
+    </message>
+    <message>
+        <location filename="../Leader.ui" line="+23"/>
+        <source>Undo Last Segement</source>
+        <translation>Desfazer</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arrow head</source>
+        <translation>Seta</translation>
     </message>
 </context>
 </TS>

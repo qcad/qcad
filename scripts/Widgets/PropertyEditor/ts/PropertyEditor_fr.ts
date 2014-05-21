@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -37,7 +37,7 @@
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+148"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -50,6 +50,11 @@
         <location line="+52"/>
         <source>Add custom property to selected objects</source>
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
+    </message>
+    <message>
+        <location line="+582"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
     </message>
     <message>
         <source>Left</source>
@@ -76,7 +81,7 @@
         <translation type="obsolete">Milieu</translation>
     </message>
     <message>
-        <location line="-435"/>
+        <location line="-1030"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -102,7 +107,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+242"/>
+        <location line="+255"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -165,7 +170,8 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Éditeur de propriétés</translation>

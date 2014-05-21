@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -51,7 +51,7 @@
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+165"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -64,6 +64,11 @@
         <location line="+31"/>
         <source>All</source>
         <translation>Alle</translation>
+    </message>
+    <message>
+        <location line="+603"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
     </message>
     <message>
         <source>Add Custom Property</source>
@@ -98,7 +103,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="-582"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -135,7 +140,8 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Eigenschaften Editor</translation>
@@ -181,7 +187,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-863"/>
+        <location filename="../PropertyEditor.js" line="-885"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

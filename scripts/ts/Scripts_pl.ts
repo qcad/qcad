@@ -213,7 +213,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+934"/>
+        <location filename="../WidgetFactory.js" line="+944"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -314,7 +314,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="unfinished">Zmierzona wartość</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+93"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
@@ -443,6 +443,16 @@ Dzielenie (÷)</translatorcomment>
         <source>Block Reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nazwa bloku</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References and Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference and Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

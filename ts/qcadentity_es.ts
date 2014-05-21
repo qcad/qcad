@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>REntity</name>
     <message>
@@ -13,9 +13,6 @@
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+56"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -45,7 +42,6 @@ A&amp;nchura papel:</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+4"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -57,25 +53,25 @@ Altura del Texto:</translatorcomment>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+71"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+62"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+83"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+89"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+81"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+83"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+81"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+82"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+81"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+81"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+87"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+75"/>
@@ -98,7 +94,7 @@ Altura del Texto:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+64"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-6"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -328,7 +324,6 @@ Guardando el dibujo con nombre nuevo</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+5"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -347,7 +342,7 @@ E&amp;scala</translatorcomment>
         <translation>Escalar</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
         <translatorcomment>--google--
 Texto simple
@@ -372,7 +367,17 @@ El plugin no implementa un método %1 necesario para el ajuste simplex.</transla
         <translation>Nombre de la fuente</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
+        <source>Text Height</source>
+        <translation>Altura del texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Angle</source>
+        <translation>Ángulo del texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: Text_es.ts--
@@ -803,6 +808,9 @@ Límite inferior</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="-12"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>

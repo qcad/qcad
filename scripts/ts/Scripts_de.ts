@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -178,7 +178,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+934"/>
+        <location filename="../WidgetFactory.js" line="+944"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -248,7 +248,7 @@
         <translation>Gemessener Wert</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+93"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
@@ -401,6 +401,16 @@
         <location line="+0"/>
         <source>Block Reference</source>
         <translation>Block Referenz</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References and Attributes</source>
+        <translation type="unfinished">Block Referenzen und Attribute</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference and Attributes</source>
+        <translation>Block Referenz und Attribute</translation>
     </message>
     <message>
         <location line="+2"/>
