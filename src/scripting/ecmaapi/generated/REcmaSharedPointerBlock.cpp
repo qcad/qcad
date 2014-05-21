@@ -81,6 +81,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setFrozen, "setFrozen");
             
+            REcmaHelper::registerFunction(&engine, proto, isAnonymous, "isAnonymous");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAnonymous, "setAnonymous");
+            
             REcmaHelper::registerFunction(&engine, proto, setOrigin, "setOrigin");
             
             REcmaHelper::registerFunction(&engine, proto, getOrigin, "getOrigin");
@@ -611,6 +615,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBlock::setFrozen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::isAnonymous
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::isAnonymous", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::isAnonymous";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("isAnonymous", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isAnonymous();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isAnonymous().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::isAnonymous", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::setAnonymous
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::setAnonymous", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::setAnonymous";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("setAnonymous", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAnonymous(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setAnonymous().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::setAnonymous", context, engine);
             return result;
         }
          QScriptValue

@@ -421,6 +421,8 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             var attributes = this.getPropertyAttributes(group, title);
             var propertyTypeId = attributes.getPropertyTypeId();
 
+            //qDebug("isMixed: ", attributes.isMixed());
+
             if (isNull(value)) {
                 // invalid value means no property found:
                 continue;

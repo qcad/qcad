@@ -144,6 +144,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityBlockRefAttr",
+    QScriptValue(RS::EntityBlockRefAttr),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityPoint",
     QScriptValue(RS::EntityPoint),
     QScriptValue::ReadOnly);

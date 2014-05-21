@@ -178,6 +178,10 @@
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyLowerTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMeasuredValue",
+                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyMeasuredValue),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyOriginX",
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyOriginX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

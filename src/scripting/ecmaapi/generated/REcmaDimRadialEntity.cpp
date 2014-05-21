@@ -168,6 +168,10 @@
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyLowerTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMeasuredValue",
+                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyMeasuredValue),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyLinearFactor",
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyLinearFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

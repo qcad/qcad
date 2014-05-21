@@ -63,6 +63,12 @@
         setFrozen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isAnonymous
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAnonymous
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setOrigin
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

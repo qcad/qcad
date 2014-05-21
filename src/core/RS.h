@@ -78,6 +78,7 @@ public:
         EntityAttribute,    /**< Block attribute */
         EntityAttributeDefinition,     /**< Block attribute definition */
         EntityBlockRef,     /**< Block reference */
+        EntityBlockRefAttr, /**< Block reference with attributes */
         EntityPoint,        /**< Point */
         EntityLine,         /**< Line */
         EntityPolyline,     /**< Polyline */

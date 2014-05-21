@@ -181,6 +181,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyLowerTolerance" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyMeasuredValue" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyExtensionLine1StartX"
     type="RPropertyTypeId" isConst="false" isStatic="true" />
     <property name="PropertyExtensionLine1StartY"

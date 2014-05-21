@@ -336,6 +336,9 @@
         getLinetypeByLayerId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLinetypeByBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinetypeName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

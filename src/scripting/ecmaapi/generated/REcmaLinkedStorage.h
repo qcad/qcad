@@ -199,6 +199,9 @@
         setUndoStatus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isInBackStorage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -147,6 +147,27 @@ dir="./gui" filename="RTreeWidget.h">
       </type>
       <name>column</name>
     </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>contextMenuRequested</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QTreeWidgetItem</name>*</type>
+      <name>item</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>column</name>
+    </decl>
   </param>)</parameter_list>;</function_decl></protected>
   <private>private: 
   <decl_stmt>

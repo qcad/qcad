@@ -82,6 +82,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, setTag, "setTag");
             
+            REcmaHelper::registerFunction(&engine, proto, getLinetypeId, "getLinetypeId");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLineweight, "getLineweight");
+            
+            REcmaHelper::registerFunction(&engine, proto, getColor, "getColor");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RAttributeData*>(), *proto);
 
@@ -488,6 +494,255 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAttributeData::setTag", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAttributeData::getLinetypeId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAttributeData::getLinetypeId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::getLinetypeId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeData* self = 
+                        getSelf("getLinetypeId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QStack < RBlockReferenceEntity * > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument is reference
+                    QStack < RBlockReferenceEntity * >*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QStack < RBlockReferenceEntity * >*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < RBlockReferenceEntity * >*.",
+                               context);                    
+                    }
+                    QStack < RBlockReferenceEntity * >& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLinetype::Id'
+    RLinetype::Id cppResult =
+        
+               self->getLinetypeId(a0
+        ,
+    a1);
+        // return type: RLinetype::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.getLinetypeId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAttributeData::getLinetypeId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAttributeData::getLineweight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAttributeData::getLineweight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::getLineweight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeData* self = 
+                        getSelf("getLineweight", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QStack < RBlockReferenceEntity * > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument is reference
+                    QStack < RBlockReferenceEntity * >*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QStack < RBlockReferenceEntity * >*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < RBlockReferenceEntity * >*.",
+                               context);                    
+                    }
+                    QStack < RBlockReferenceEntity * >& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLineweight::Lineweight'
+    RLineweight::Lineweight cppResult =
+        
+               self->getLineweight(a0
+        ,
+    a1);
+        // return type: RLineweight::Lineweight
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.getLineweight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAttributeData::getLineweight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAttributeData::getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAttributeData::getColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::getColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeData* self = 
+                        getSelf("getColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QStack < RBlockReferenceEntity * > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument is reference
+                    QStack < RBlockReferenceEntity * >*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QStack < RBlockReferenceEntity * >*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < RBlockReferenceEntity * >*.",
+                               context);                    
+                    }
+                    QStack < RBlockReferenceEntity * >& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getColor(a0
+        ,
+    a1);
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.getColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAttributeData::getColor", context, engine);
             return result;
         }
          QScriptValue REcmaAttributeData::toString

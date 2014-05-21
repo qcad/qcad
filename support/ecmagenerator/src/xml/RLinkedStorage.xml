@@ -423,6 +423,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getKnownVariable" cppName="getKnownVariable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
     <method name="isInBackStorage" cppName="isInBackStorage"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

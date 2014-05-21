@@ -265,6 +265,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeByLayerId, "getLinetypeByLayerId");
             
+            REcmaHelper::registerFunction(&engine, proto, getLinetypeByBlockId, "getLinetypeByBlockId");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinetypeName, "getLinetypeName");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeNames, "getLinetypeNames");
@@ -7614,6 +7616,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getLinetypeByLayerId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getLinetypeByBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getLinetypeByBlockId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getLinetypeByBlockId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getLinetypeByBlockId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLinetype::Id'
+    RLinetype::Id cppResult =
+        
+               self->getLinetypeByBlockId();
+        // return type: RLinetype::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getLinetypeByBlockId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getLinetypeByBlockId", context, engine);
             return result;
         }
          QScriptValue

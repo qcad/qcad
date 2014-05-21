@@ -176,6 +176,10 @@
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyLowerTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMeasuredValue",
+                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyMeasuredValue),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyLinearFactor",
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyLinearFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

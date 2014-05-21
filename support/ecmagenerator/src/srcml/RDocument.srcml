@@ -2052,6 +2052,21 @@ dir="./core" filename="RDocument.h">
       <name>linetypeByLayerId</name>
     </expr>;</return>}</block>
   </function>
+  <function>
+    <type>
+      <name>
+      <name>RLinetype</name>::
+      <name>Id</name></name>
+    </type>
+    <name>getLinetypeByBlockId</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>linetypeByBlockId</name>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>QString</name>

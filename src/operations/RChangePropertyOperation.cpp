@@ -63,8 +63,19 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
         if (entity.isNull()) {
             continue;
         }
-        if (entityTypeFilter!=RS::EntityAll && entityTypeFilter!=entity->getType()) {
-            continue;
+        if (entityTypeFilter!=RS::EntityAll) {
+            // special filter for block references and attributes:
+            if (entityTypeFilter==RS::EntityBlockRefAttr) {
+                if (entity->getType()!=RS::EntityBlockRef &&
+                    entity->getType()!=RS::EntityAttribute) {
+                    continue;
+                }
+            }
+            else {
+                if (entityTypeFilter!=entity->getType()) {
+                    continue;
+                }
+            }
         }
 
         // apply operation to entity:

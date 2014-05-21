@@ -20,6 +20,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntityAttribute" />
       <value name="EntityAttributeDefinition" />
       <value name="EntityBlockRef" />
+      <value name="EntityBlockRefAttr" />
       <value name="EntityPoint" />
       <value name="EntityLine" />
       <value name="EntityPolyline" />

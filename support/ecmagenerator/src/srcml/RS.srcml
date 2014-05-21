@@ -194,6 +194,11 @@ dir="./core" filename="RS.h">
   </expr>, 
   <comment type="block">/**&lt; Block reference */</comment>
   <expr>
+    <name>EntityBlockRefAttr</name>
+  </expr>, 
+  <comment type="block">/**&lt; Block reference with attributes
+  */</comment>
+  <expr>
     <name>EntityPoint</name>
   </expr>, 
   <comment type="block">/**&lt; Point */</comment>
