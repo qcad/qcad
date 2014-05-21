@@ -36,6 +36,10 @@
 
 #if defined(Q_WS_X11)
 #include <X11/Xlib.h>
+// fix clash between X11 Bool and QVariant::Bool:
+#ifdef Bool
+#undef Bool
+#endif
 #endif
 
 const double RS::PointTolerance = 1.0e-9;
