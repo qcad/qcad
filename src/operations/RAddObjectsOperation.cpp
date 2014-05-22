@@ -34,6 +34,9 @@ RAddObjectsOperation::RAddObjectsOperation(
     }
 }
 
+RAddObjectsOperation::~RAddObjectsOperation() {
+}
+
 void RAddObjectsOperation::replaceObject(const QSharedPointer<RObject>& object,
         bool useCurrentAttributes) {
 

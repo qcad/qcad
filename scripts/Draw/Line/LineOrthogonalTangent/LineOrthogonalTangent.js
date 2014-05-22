@@ -220,9 +220,12 @@ LineOrthogonalTangent.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var op = new RAddObjectsOperation();
-    op.addObject(shapeToEntity(doc, tangent));
-    return op;
+    var e = shapeToEntity(doc, tangent);
+    if (isNull(e)) {
+        return undefined;
+    }
+
+    return new RAddObjectsOperation(e);
 };
 
 LineOrthogonalTangent.prototype.getTangent = function() {

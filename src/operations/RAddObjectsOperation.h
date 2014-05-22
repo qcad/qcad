@@ -74,8 +74,7 @@ public:
     RAddObjectsOperation(bool undoable = true);
     RAddObjectsOperation(QList<QSharedPointer<RObject> >& list,
         bool useCurrentAttributes = true, bool undoable = true);
-    virtual ~RAddObjectsOperation() {
-    }
+    virtual ~RAddObjectsOperation();
 
     /**
      * Adds the given object to this operation or replaces an object

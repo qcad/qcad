@@ -194,9 +194,11 @@ Explode.prototype.beginEvent = function() {
             for (k=0; k<newShapes.length; k++) {
                 shape = newShapes[k];
                 e = shapeToEntity(entity.getDocument(), shape);
-                e.setSelected(true);
-                e.copyAttributesFrom(entity.data());
-                op.addObject(e, false);
+                if (!isNull(e)) {
+                    e.setSelected(true);
+                    e.copyAttributesFrom(entity.data());
+                    op.addObject(e, false);
+                }
             }
 
             // add entities based on entities that resulted from the explosion:

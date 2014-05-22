@@ -245,7 +245,12 @@ EllipseInscribedQuad.prototype.getOperation = function(preview) {
 
     var doc = this.getDocument();
 
-    return new RAddObjectOperation(shapeToEntity(doc, shape));
+    var e = shapeToEntity(doc, shape);
+    if (isNull(e)) {
+        return undefined;
+    }
+
+    return new RAddObjectOperation(e);
 };
 
 EllipseInscribedQuad.prototype.getHighlightedEntities = function() {

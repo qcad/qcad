@@ -204,8 +204,10 @@ BreakOut.prototype.getOperation = function(preview) {
             if (!isNull(newSegments[2])) {
                 if (this.extend || !this.removeSegment) {
                     e = shapeToEntity(this.entity.getDocument(), newSegments[2]);
-                    e.copyAttributesFrom(this.entity.data());
-                    op.addObject(e, false);
+                    if (!isNull(e)) {
+                        e.copyAttributesFrom(this.entity.data());
+                        op.addObject(e, false);
+                    }
                 }
             }
         }
@@ -227,14 +229,18 @@ BreakOut.prototype.getOperation = function(preview) {
     if (!this.extend) {
         if (!isNull(newSegments[0])) {
             e = shapeToEntity(this.entity.getDocument(), newSegments[0]);
-            e.copyAttributesFrom(this.entity.data());
-            op.addObject(e, false);
+            if (!isNull(e)) {
+                e.copyAttributesFrom(this.entity.data());
+                op.addObject(e, false);
+            }
         }
 
         if (!isNull(newSegments[1])/* && !this.removeSegment*/) {
             e = shapeToEntity(this.entity.getDocument(), newSegments[1])
-            e.copyAttributesFrom(this.entity.data());
-            op.addObject(e, false);
+            if (!isNull(e)) {
+                e.copyAttributesFrom(this.entity.data());
+                op.addObject(e, false);
+            }
         }
     }
 

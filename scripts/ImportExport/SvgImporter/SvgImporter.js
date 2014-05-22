@@ -343,6 +343,11 @@ SvgImporter.prototype.importShape = function(shape) {
     shape.scale(new RVector(this.resolutionScale, this.resolutionScale));
 
     var entity = shapeToEntity(this.getDocument(), shape);
+
+    if (isNull(entity)) {
+        return;
+    }
+
     if (!isNull(this.style.stroke)) {
         entity.setColor(new RColor(this.style.stroke));
     }

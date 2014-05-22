@@ -304,14 +304,18 @@ Scale.prototype.transform = function(entity, k, op, preview, forceNew) {
         );
 
         var e = shapeToEntity(this.getDocument(), shape);
-        e.copyAttributesFrom(entity);
-        e.setDrawOrder(entity.getDrawOrder());
-        e.setSelected(true);
+        if (!isNull(e)) {
+            e.copyAttributesFrom(entity);
+            e.setDrawOrder(entity.getDrawOrder());
+            e.setSelected(true);
+        }
 
         if (this.copies===0) {
             op.deleteObject(entity);
         }
-        op.addObject(e, this.useCurrentAttributes, forceNew);
+        if (!isNull(e)) {
+            op.addObject(e, this.useCurrentAttributes, forceNew);
+        }
         return;
     }
 
