@@ -55,6 +55,8 @@ function usage() {
           + "                                 scripts/autostart.js. Note that with this option,\n"
           + "                                 QCAD is not started but rather the application \n"
           + "                                 implemented in the given script.\n"
+          + "-config [path]                   Reads and stores settings to QCAD3.ini at the given\n"
+          + "                                 location instead of the default location.\n"
           + "-enable-script-debugger          Enables the script debugger.\n"
           + "                                 NOT recommended as this may cause unexpected \n"
           + "                                 behavior when using QCAD.\n"
@@ -108,7 +110,8 @@ function openFiles(args, createNew) {
         // arguments with one parameter:
         if (args[i] === "-gui-style" || args[i] === "-gui-css-file"
             || args[i] === "-locale" || args[i] === "-autostart"
-            || args[i] === "-app-id" || args[i] === "-ignore") {
+            || args[i] === "-app-id" || args[i] === "-ignore"
+            || args[i] === "-config") {
             // skip 2 arguments
             if (++i>=args.length) {
                 break;
@@ -430,6 +433,16 @@ function main() {
     // app name for ini file differs to avoid conflict with
     // older QCAD versions:
     RSettings.setApplicationName("QCAD3");
+
+    // alternative path for QCAD3.ini:
+    for (i=1; i<args.length; ++i) {
+        if (args[i] === "-config") {
+            ++i;
+            if (i < args.length) {
+                QSettings.setPath(QSettings.IniFormat, QSettings.UserScope, getAbsolutePathForArg(args[i]));
+            }
+        }
+    }
 
     // ignore config file if it does not identify itself with a version
     // number or is known as being incompatible
