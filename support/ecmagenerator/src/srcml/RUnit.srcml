@@ -723,6 +723,23 @@ dir="./core" filename="RUnit.h">
   <function_decl>
   <type>
     <name>static</name>
+    <name>
+    <name>RS</name>::
+    <name>Unit</name></name>
+  </type>
+  <name>parseUnit</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>str</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
     <name>QString</name>
   </type>
   <name>unitToSymbol</name>

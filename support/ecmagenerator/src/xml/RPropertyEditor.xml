@@ -129,6 +129,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="type" isConst="false" />
       </variant>
     </method>
+    <method name="checkType" cppName="checkType" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="filter" isConst="false" />
+      </variant>
+    </method>
     <method name="updateEditor" cppName="updateEditor"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

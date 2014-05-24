@@ -86,6 +86,7 @@ public:
     static double convert(double value, RS::Unit source, RS::Unit dest);
     static RVector convert(const RVector& value, RS::Unit source, RS::Unit dest);
     static double getFactorToM(RS::Unit unit);
+    static RS::Unit parseUnit(const QString& str);
     static QString unitToSymbol(RS::Unit unit);
     static QString unitToName(RS::Unit unit, bool tr=true);
     static QString getLabel(double v, RDocument& document,

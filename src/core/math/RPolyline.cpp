@@ -402,7 +402,7 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
  * polyline is not closed (\see setClosed), false is returned.
  */
 bool RPolyline::contains(const RVector& point) const {
-    if (!closed) {
+    if (!isLogicallyClosed()) {
         return false;
     }
 

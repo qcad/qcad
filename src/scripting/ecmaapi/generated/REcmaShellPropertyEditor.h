@@ -118,6 +118,12 @@
         
     
     
+      bool checkType(
+                RS::EntityType type, RS::EntityType filter
+            );
+        
+    
+    
       void updateEditor(
                 RObject & object, bool doUpdateGui, RDocument * document
         =  NULL

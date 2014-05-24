@@ -76,6 +76,9 @@
         getFactorToM
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        parseUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         unitToSymbol
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

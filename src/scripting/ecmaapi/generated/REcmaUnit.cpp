@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getFactorToM, "getFactorToM");
             
+            REcmaHelper::registerFunction(&engine, &ctor, parseUnit, "parseUnit");
+            
             REcmaHelper::registerFunction(&engine, &ctor, unitToSymbol, "unitToSymbol");
             
             REcmaHelper::registerFunction(&engine, &ctor, unitToName, "unitToName");
@@ -3397,6 +3399,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaUnit::getFactorToM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaUnit::parseUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaUnit::parseUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaUnit::parseUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Unit'
+    RS::Unit cppResult =
+        RUnit::
+       parseUnit(a0);
+        // return type: RS::Unit
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.parseUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaUnit::parseUnit", context, engine);
             return result;
         }
          QScriptValue

@@ -153,6 +153,25 @@ bool RUnit::isMetric(RS::Unit unit) {
     return true;
 }
 
+RS::Unit RUnit::parseUnit(const QString& str) {
+    QString l = str.toLower();
+
+    for (RS::Unit u = RS::None; u<=RS::MaxUnit; u=(RS::Unit)((int)u+1)) {
+        if (l==RUnit::unitToSymbol(u).toLower() ||
+            l==RUnit::unitToName(u, true).toLower() ||
+            l==RUnit::unitToName(u, false).toLower()) {
+            return u;
+        }
+    }
+
+    if (l=="in" || l=="inches") {
+        return RS::Inch;
+    }
+    if (l=="ft" || l=="feet") {
+        return RS::Foot;
+    }
+}
+
 /**
  * @return a short string representing the given unit (e.g. "mm")
  */

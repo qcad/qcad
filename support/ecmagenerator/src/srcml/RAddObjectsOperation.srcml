@@ -330,12 +330,10 @@ dir="./operations" filename="RAddObjectsOperation.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</constructor_decl>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RAddObjectsOperation</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>
+  <destructor_decl>
+  <specifier>virtual</specifier>
+  <name>~RAddObjectsOperation</name>
+  <parameter_list>()</parameter_list>;</destructor_decl>
   <comment type="block">/** * Adds the given object to this
   operation or replaces an object * already present with the same
   ID. */</comment>
