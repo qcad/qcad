@@ -22,6 +22,7 @@
 
 #include "core_global.h"
 
+#include "RArc.h"
 #include "RExporter.h"
 #include "RPainterPath.h"
 

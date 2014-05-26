@@ -159,6 +159,6 @@ void RXLineEntity::exportEntity(RExporter& e, bool preview) const {
 void RXLineEntity::print(QDebug dbg) const {
     dbg.nospace() << "RXLineEntity(";
     REntity::print(dbg);
-    dbg.nospace() << ", startPoint: " << getStartPoint() << ", endPoint: "
-            << getEndPoint() << ")";
+    dbg.nospace() << ", startPoint: " << getBasePoint() << ", endPoint: "
+            << getDirectionVector() << ")";
 }
