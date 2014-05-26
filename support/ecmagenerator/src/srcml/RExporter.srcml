@@ -965,6 +965,24 @@ dir="./core" filename="RExporter.h">
     </decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * Exports a infinite line. Used for
+  XLines. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>exportXLine</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLine</name>&amp;</type>
+      <name>line</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
   <comment type="block">/** * Exports a point with the current
   attributes. */</comment>
   <function_decl>

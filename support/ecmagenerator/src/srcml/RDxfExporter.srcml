@@ -582,6 +582,28 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <name>virtual</name>
       <name>void</name>
     </type>
+    <name>exportXLine</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RLine</name>&amp;</type>
+        <name>line</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>line</argument>)</argument_list>
+    </macro>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
     <name>exportTriangle</name>
     <parameter_list>(
     <param>

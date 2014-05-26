@@ -721,6 +721,10 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                     break;
                 }
             }
+            if (painterPaths[p].getAlwaysRegen()==true) {
+                regen = true;
+                break;
+            }
         }
 
         if (regen) {

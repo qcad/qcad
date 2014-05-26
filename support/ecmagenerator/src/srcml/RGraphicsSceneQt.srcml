@@ -371,6 +371,21 @@ dir="./gui" filename="RGraphicsSceneQt.h">
     <name>virtual</name>
     <name>void</name>
   </type>
+  <name>exportXLine</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLine</name>&amp;</type>
+      <name>line</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
   <name>exportTriangle</name>
   <parameter_list>(
   <param>

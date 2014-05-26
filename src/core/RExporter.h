@@ -156,6 +156,11 @@ public:
     virtual void exportLineSegment(const RLine& line) = 0;
 
     /**
+     * Exports a infinite line. Used for XLines.
+     */
+    virtual void exportXLine(const RLine& line) = 0;
+
+    /**
      * Exports a point with the current attributes.
      */
     virtual void exportPoint(const RPoint& point) = 0;

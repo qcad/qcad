@@ -229,6 +229,14 @@ bool RPainterPath::getAutoRegen() const {
     return getMode(RPainterPath::AutoRegen);
 }
 
+void RPainterPath::setAlwaysRegen(bool on) {
+    setMode(RPainterPath::AlwaysRegen, on);
+}
+
+bool RPainterPath::getAlwaysRegen() const {
+    return getMode(RPainterPath::AlwaysRegen);
+}
+
 void RPainterPath::setFeatureSize(double s) {
     featureSize = s;
 }

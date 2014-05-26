@@ -46,7 +46,9 @@ SOURCES = \
     RTextBasedEntity.cpp \
     RTextData.cpp \
     RTextEntity.cpp \
-    RTextRenderer.cpp
+    RTextRenderer.cpp \
+    RXLineData.cpp \
+    RXLineEntity.cpp
 
 HEADERS = \
     RArcData.h \
@@ -95,7 +97,9 @@ HEADERS = \
     RTextBasedEntity.h \
     RTextData.h \
     RTextEntity.h \
-    RTextRenderer.h
+    RTextRenderer.h \
+    RXLineData.h \
+    RXLineEntity.h
 
 TEMPLATE = lib
 CONFIG += plugin

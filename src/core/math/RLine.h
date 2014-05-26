@@ -83,7 +83,7 @@ public:
 
     RS::Side getSideOfPoint(const RVector& point) const;
 
-    void clipToXY(const RBox& box);
+    void clipToXY(const RBox& box, bool isXLine=false);
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);

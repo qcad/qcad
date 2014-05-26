@@ -68,6 +68,7 @@
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
+#include "RXLineEntity.h"
 
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
@@ -212,6 +213,7 @@ int main(int argc, char *argv[]) {
     RPolylineEntity::init();
     RSolidEntity::init();
     RSplineEntity::init();
+    RXLineEntity::init();
 
     RTextBasedEntity::init();
     RTextEntity::init();

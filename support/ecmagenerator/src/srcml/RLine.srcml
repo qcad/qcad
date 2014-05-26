@@ -389,6 +389,18 @@ dir="./core/math" filename="RLine.h">
       <name>RBox</name>&amp;</type>
       <name>box</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isXLine</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

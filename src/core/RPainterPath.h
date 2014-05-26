@@ -52,7 +52,8 @@ public:
         Invalid = 0x04,
         FixedPenColor = 0x08,
         FixedBrushColor = 0x10,
-        AutoRegen = 0x20
+        AutoRegen = 0x20,            // arcs (regen on zoom change)
+        AlwaysRegen = 0x40           // xlines (regen always)
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -154,6 +155,9 @@ public:
 
     void setAutoRegen(bool on);
     bool getAutoRegen() const;
+
+    void setAlwaysRegen(bool on);
+    bool getAlwaysRegen() const;
 
     void setFeatureSize(double s);
     double getFeatureSize() const;

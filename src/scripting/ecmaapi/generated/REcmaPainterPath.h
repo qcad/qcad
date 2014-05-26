@@ -147,6 +147,12 @@
         getAutoRegen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAlwaysRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAlwaysRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFeatureSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -16,36 +16,31 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RXLineData.h"
+#include "RLineEntity.h"
 
-#ifndef RPAINTERPATHEXPORTER_H
-#define RPAINTERPATHEXPORTER_H
+RXLineData::RXLineData() {
+}
 
-#include "core_global.h"
-
-#include "RExporter.h"
-#include "RPainterPath.h"
-
-class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
-public:
-    virtual void exportLineSegment(const RLine& line);
-    virtual void exportXLine(const RLine& line) {
-        Q_UNUSED(line)
+RXLineData::RXLineData(RDocument* document, const RXLineData& data)
+    : RLineData(document, data) {
+    this->document = document;
+    if (document!=NULL) {
+        linetypeId = document->getLinetypeByLayerId();
     }
+}
 
-    virtual void exportPoint(const RPoint& point) {
-        Q_UNUSED(point)
-    }
-    virtual void exportArcSegment(const RArc& arc) {
-        Q_UNUSED(arc)
-    }
-    virtual void exportTriangle(const RTriangle& triangle) {
-        Q_UNUSED(triangle)
-    }
+RXLineData::RXLineData(const RLine& line) :
+    RLineData(line) {
+}
 
-    RPainterPath getPainterPath();
+RXLineData::RXLineData(const RVector& basePoint, const RVector& dir) :
+    RLineData(basePoint, basePoint + dir) {
+}
 
-private:
-    RPainterPath path;
-};
-
-#endif
+//RBox RXLineData::getBoundingBox() const {
+//    RLine line = *this;
+//    line.clipToXY(RBox(RVector(-1e6,-1e6), RVector(1e6,1e6)), true);
+//    return line.getBoundingBox();
+//    return
+//}
