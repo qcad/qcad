@@ -19,17 +19,28 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </constructor>
+    <method name="setBasePoint" cppName="setBasePoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getBasePoint" cppName="getBasePoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
-    <method name="getSecondPoint" cppName="getSecondPoint"
+    <method name="setSecondPoint" cppName="setSecondPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RVector" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
     </method>
-    <method name="getDirectionVector" cppName="getDirectionVector"
+    <method name="getSecondPoint" cppName="getSecondPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
@@ -41,6 +52,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="v"
         isConst="true" />
       </variant>
+    </method>
+    <method name="getDirectionVector" cppName="getDirectionVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
     </method>
   </class>
 </unit>

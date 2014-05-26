@@ -88,13 +88,17 @@
             
             REcmaHelper::registerFunction(&engine, proto, setShape, "setShape");
             
-            REcmaHelper::registerFunction(&engine, proto, setStartPoint, "setStartPoint");
+            REcmaHelper::registerFunction(&engine, proto, setBasePoint, "setBasePoint");
             
-            REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
+            REcmaHelper::registerFunction(&engine, proto, getBasePoint, "getBasePoint");
             
-            REcmaHelper::registerFunction(&engine, proto, setEndPoint, "setEndPoint");
+            REcmaHelper::registerFunction(&engine, proto, setSecondPoint, "setSecondPoint");
             
-            REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
+            REcmaHelper::registerFunction(&engine, proto, getSecondPoint, "getSecondPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDirectionVectorPoint, "setDirectionVectorPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDirectionVector, "getDirectionVector");
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
@@ -1343,19 +1347,19 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerXLineEntity::setStartPoint
+        REcmaSharedPointerXLineEntity::setBasePoint
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::setStartPoint", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::setStartPoint";
+            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::setBasePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::setBasePoint";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RXLineEntity* self = 
-                        getSelf("setStartPoint", context);
+                        getSelf("setBasePoint", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1397,32 +1401,32 @@
     // call C++ function:
     // return type 'void'
     
-               self->setStartPoint(a0);
+               self->setBasePoint(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.setStartPoint().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.setBasePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::setStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::setBasePoint", context, engine);
             return result;
         }
          QScriptValue
-        REcmaSharedPointerXLineEntity::getStartPoint
+        REcmaSharedPointerXLineEntity::getBasePoint
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::getStartPoint", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::getStartPoint";
+            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::getBasePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::getBasePoint";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RXLineEntity* self = 
-                        getSelf("getStartPoint", context);
+                        getSelf("getBasePoint", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1442,7 +1446,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->getStartPoint();
+               self->getBasePoint();
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -1452,26 +1456,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.getStartPoint().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.getBasePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::getStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::getBasePoint", context, engine);
             return result;
         }
          QScriptValue
-        REcmaSharedPointerXLineEntity::setEndPoint
+        REcmaSharedPointerXLineEntity::setSecondPoint
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::setEndPoint", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::setEndPoint";
+            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::setSecondPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::setSecondPoint";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RXLineEntity* self = 
-                        getSelf("setEndPoint", context);
+                        getSelf("setSecondPoint", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1513,32 +1517,32 @@
     // call C++ function:
     // return type 'void'
     
-               self->setEndPoint(a0);
+               self->setSecondPoint(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.setEndPoint().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.setSecondPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::setEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::setSecondPoint", context, engine);
             return result;
         }
          QScriptValue
-        REcmaSharedPointerXLineEntity::getEndPoint
+        REcmaSharedPointerXLineEntity::getSecondPoint
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::getEndPoint", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::getEndPoint";
+            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::getSecondPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::getSecondPoint";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RXLineEntity* self = 
-                        getSelf("getEndPoint", context);
+                        getSelf("getSecondPoint", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1558,7 +1562,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->getEndPoint();
+               self->getSecondPoint();
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -1568,10 +1572,126 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.getEndPoint().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.getSecondPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::getEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::getSecondPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerXLineEntity::setDirectionVectorPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::setDirectionVectorPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::setDirectionVectorPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineEntity* self = 
+                        getSelf("setDirectionVectorPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RXLineEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDirectionVectorPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.setDirectionVectorPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::setDirectionVectorPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerXLineEntity::getDirectionVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::getDirectionVector", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::getDirectionVector";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineEntity* self = 
+                        getSelf("getDirectionVector", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getDirectionVector();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.getDirectionVector().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::getDirectionVector", context, engine);
             return result;
         }
          QScriptValue

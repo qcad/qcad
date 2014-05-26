@@ -74,16 +74,22 @@
         setShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setStartPoint
+        setBasePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getStartPoint
+        getBasePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setEndPoint
+        setSecondPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getEndPoint
+        getSecondPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDirectionVectorPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDirectionVector
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getAngle

@@ -464,7 +464,7 @@ dir="./entity" filename="RXLineEntity.h">
     <type>
       <name>void</name>
     </type>
-    <name>setStartPoint</name>
+    <name>setBasePoint</name>
     <parameter_list>(
     <param>
       <decl>
@@ -479,7 +479,7 @@ dir="./entity" filename="RXLineEntity.h">
     <expr>
     <name>data</name>.
     <call>
-      <name>setStartPoint</name>
+      <name>setBasePoint</name>
       <argument_list>(
       <argument>
         <expr>
@@ -492,7 +492,7 @@ dir="./entity" filename="RXLineEntity.h">
     <type>
       <name>RVector</name>
     </type>
-    <name>getStartPoint</name>
+    <name>getBasePoint</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -500,7 +500,7 @@ dir="./entity" filename="RXLineEntity.h">
     <expr>
     <name>data</name>.
     <call>
-      <name>getStartPoint</name>
+      <name>getBasePoint</name>
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
   </function>
@@ -508,7 +508,7 @@ dir="./entity" filename="RXLineEntity.h">
     <type>
       <name>void</name>
     </type>
-    <name>setEndPoint</name>
+    <name>setSecondPoint</name>
     <parameter_list>(
     <param>
       <decl>
@@ -523,7 +523,7 @@ dir="./entity" filename="RXLineEntity.h">
     <expr>
     <name>data</name>.
     <call>
-      <name>setEndPoint</name>
+      <name>setSecondPoint</name>
       <argument_list>(
       <argument>
         <expr>
@@ -536,7 +536,7 @@ dir="./entity" filename="RXLineEntity.h">
     <type>
       <name>RVector</name>
     </type>
-    <name>getEndPoint</name>
+    <name>getSecondPoint</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -544,7 +544,51 @@ dir="./entity" filename="RXLineEntity.h">
     <expr>
     <name>data</name>.
     <call>
-      <name>getEndPoint</name>
+      <name>getSecondPoint</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setDirectionVectorPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>v</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setDirectionVector</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>v</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>getDirectionVector</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getDirectionVector</name>
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
   </function>

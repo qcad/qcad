@@ -47,16 +47,22 @@
 
     // public methods:
     static  QScriptValue
+        setBasePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBasePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSecondPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSecondPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDirectionVector
+        setDirectionVector
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDirectionVector
+        getDirectionVector
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

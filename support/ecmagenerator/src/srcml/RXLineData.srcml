@@ -113,6 +113,32 @@ dir="./entity" filename="RXLineData.h">
   </param>)</parameter_list>;</constructor_decl>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setBasePoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>v</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>RLine::setStartPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>v</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>}</block>
+  </function>
+  <function>
+    <type>
       <name>RVector</name>
     </type>
     <name>getBasePoint</name>
@@ -131,6 +157,32 @@ dir="./entity" filename="RXLineData.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setSecondPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>v</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>RLine::setEndPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>v</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>}</block>
+  </function>
+  <function>
+    <type>
       <name>RVector</name>
     </type>
     <name>getSecondPoint</name>
@@ -146,29 +198,6 @@ dir="./entity" filename="RXLineData.h">
         <argument_list>()</argument_list>
       </call>
     </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getDirectionVector</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>
-      <name>RLine</name>::
-      <name>getEndPoint</name></name>
-      <argument_list>()</argument_list>
-    </call>- 
-    <call>
-      <name>
-      <name>RLine</name>::
-      <name>getStartPoint</name></name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
   </function>
   <function>
     <type>
@@ -204,6 +233,29 @@ dir="./entity" filename="RXLineData.h">
         </argument>)</argument_list>
       </call>
     </expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>getDirectionVector</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>
+      <name>RLine</name>::
+      <name>getEndPoint</name></name>
+      <argument_list>()</argument_list>
+    </call>- 
+    <call>
+      <name>
+      <name>RLine</name>::
+      <name>getStartPoint</name></name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

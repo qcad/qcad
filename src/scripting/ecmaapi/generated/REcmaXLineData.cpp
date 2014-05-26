@@ -68,13 +68,17 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, setBasePoint, "setBasePoint");
+            
             REcmaHelper::registerFunction(&engine, proto, getBasePoint, "getBasePoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSecondPoint, "setSecondPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getSecondPoint, "getSecondPoint");
             
-            REcmaHelper::registerFunction(&engine, proto, getDirectionVector, "getDirectionVector");
-            
             REcmaHelper::registerFunction(&engine, proto, setDirectionVector, "setDirectionVector");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDirectionVector, "getDirectionVector");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RXLineData*>(), *proto);
@@ -352,6 +356,73 @@
 
     // public methods:
      QScriptValue
+        REcmaXLineData::setBasePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaXLineData::setBasePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaXLineData::setBasePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineData* self = 
+                        getSelf("setBasePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RXLineData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setBasePoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineData.setBasePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaXLineData::setBasePoint", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaXLineData::getBasePoint
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -401,6 +472,73 @@
             return result;
         }
          QScriptValue
+        REcmaXLineData::setSecondPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaXLineData::setSecondPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaXLineData::setSecondPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineData* self = 
+                        getSelf("setSecondPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RXLineData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSecondPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineData.setSecondPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaXLineData::setSecondPoint", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaXLineData::getSecondPoint
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -447,55 +585,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaXLineData::getSecondPoint", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaXLineData::getDirectionVector
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaXLineData::getDirectionVector", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaXLineData::getDirectionVector";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RXLineData* self = 
-                        getSelf("getDirectionVector", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
-        
-               self->getDirectionVector();
-        // return type: RVector
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineData.getDirectionVector().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaXLineData::getDirectionVector", context, engine);
             return result;
         }
          QScriptValue
@@ -563,6 +652,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaXLineData::setDirectionVector", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaXLineData::getDirectionVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaXLineData::getDirectionVector", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaXLineData::getDirectionVector";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineData* self = 
+                        getSelf("getDirectionVector", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getDirectionVector();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineData.getDirectionVector().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaXLineData::getDirectionVector", context, engine);
             return result;
         }
          QScriptValue REcmaXLineData::toString
