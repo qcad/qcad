@@ -170,6 +170,8 @@ RS::Unit RUnit::parseUnit(const QString& str) {
     if (l=="ft" || l=="feet") {
         return RS::Foot;
     }
+
+    return RS::None;
 }
 
 /**
