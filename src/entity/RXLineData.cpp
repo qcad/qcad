@@ -37,10 +37,3 @@ RXLineData::RXLineData(const RLine& line) :
 RXLineData::RXLineData(const RVector& basePoint, const RVector& dir) :
     RLineData(basePoint, basePoint + dir) {
 }
-
-//RBox RXLineData::getBoundingBox() const {
-//    RLine line = *this;
-//    line.clipToXY(RBox(RVector(-1e6,-1e6), RVector(1e6,1e6)), true);
-//    return line.getBoundingBox();
-//    return
-//}

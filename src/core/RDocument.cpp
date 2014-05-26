@@ -817,7 +817,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 
     QMap<REntity::Id, QSet<int> > candidates;
 
-    // box is completely inside the bounding box of this document:
+    // box is contains bounding box of this document:
     if (usingCurrentBlock && boxExpanded.contains(getBoundingBox())) {
         QSet<REntity::Id> ids = queryAllEntities(false, false);
         QSet<REntity::Id>::iterator it;
