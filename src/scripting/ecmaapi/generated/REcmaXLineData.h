@@ -64,6 +64,12 @@
         ;static  QScriptValue
         getDirectionVector
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVectorTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        intersectsWith
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

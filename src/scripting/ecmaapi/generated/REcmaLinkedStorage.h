@@ -73,6 +73,9 @@
         queryAllLinetypes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryInfiniteEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         querySelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

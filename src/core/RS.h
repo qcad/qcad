@@ -81,6 +81,7 @@ public:
         EntityBlockRefAttr, /**< Block reference with attributes */
         EntityPoint,        /**< Point */
         EntityLine,         /**< Line */
+        EntityXLine,        /**< XLine */
         EntityPolyline,     /**< Polyline */
         EntityArc,          /**< Arc */
         EntityCircle,       /**< Circle */

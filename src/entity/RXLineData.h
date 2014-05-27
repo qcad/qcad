@@ -71,6 +71,12 @@ public:
         return RLine::getEndPoint() - RLine::getStartPoint();
     }
 
+    virtual RVector getVectorTo(const RVector& point, bool limited = true) const {
+        return RLine::getVectorTo(point, false);
+    }
+
+    virtual bool intersectsWith(const RShape& shape) const;
+
 };
 
 Q_DECLARE_METATYPE(RXLineData*)

@@ -776,6 +776,10 @@ REntity::Id RDocument::queryClosestXY(
     return ret;
 }
 
+QSet<REntity::Id> RDocument::queryInfiniteEntities() {
+    return storage.queryInfiniteEntities();
+}
+
 /**
  * Queries all entities which are completely inside the given box.
  *
@@ -810,14 +814,24 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 
     usingCurrentBlock = (blockId == getCurrentBlockId());
 
+    // always include construction lines (XLine):
+    QMap<REntity::Id, QSet<int> > infinites;
+    {
+        QSet<REntity::Id> ids = queryInfiniteEntities();
+        QSet<REntity::Id>::iterator it;
+        for (it=ids.begin(); it!=ids.end(); it++) {
+            infinites.insert(*it, QSet<int>());
+        }
+    }
+
     // box is completely outside the bounding box of this document:
     if (usingCurrentBlock && boxExpanded.isOutside(getBoundingBox())) {
-        return QMap<REntity::Id, QSet<int> >();
+        return infinites;
     }
 
     QMap<REntity::Id, QSet<int> > candidates;
 
-    // box is contains bounding box of this document:
+    // box contains bounding box of this document:
     if (usingCurrentBlock && boxExpanded.contains(getBoundingBox())) {
         QSet<REntity::Id> ids = queryAllEntities(false, false);
         QSet<REntity::Id>::iterator it;
@@ -827,6 +841,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     }
     else {
         candidates = spatialIndex.queryIntersected(boxExpanded);
+        candidates.unite(infinites);
     }
 
     RBox boxFlattened = box;
@@ -1247,11 +1262,11 @@ bool RDocument::hasSelection() const {
 /**
  * \copydoc RStorage::getBoundingBox
  */
-RBox RDocument::getBoundingBox(bool includeHiddenLayer) {
+RBox RDocument::getBoundingBox(bool includeHiddenLayer) const {
     return storage.getBoundingBox(includeHiddenLayer);
 }
 
-RBox RDocument::getSelectionBox() {
+RBox RDocument::getSelectionBox() const {
     return storage.getSelectionBox();
 }
 

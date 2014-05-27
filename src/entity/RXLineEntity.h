@@ -77,7 +77,7 @@ public:
     }
 
     virtual RS::EntityType getType() const {
-        return RS::EntityLine;
+        return RS::EntityXLine;
     }
 
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

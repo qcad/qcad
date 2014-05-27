@@ -224,6 +224,20 @@ QSet<RLinetype::Id> RMemoryStorage::queryAllLinetypes() {
     return result;
 }
 
+QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
+    RBlock::Id currentBlock = getCurrentBlockId();
+    QSet<REntity::Id> result;
+    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (!e.isNull() && !e->isUndone() && e->getType()==RS::EntityXLine &&
+                e->getBlockId() == currentBlock) {
+            result.insert(e->getId());
+        }
+    }
+    return result;
+}
+
 QSet<REntity::Id> RMemoryStorage::querySelectedEntities() {
     RBlock::Id currentBlock = getCurrentBlockId();
     QSet<REntity::Id> result;
@@ -694,7 +708,7 @@ bool RMemoryStorage::hasSelection() const {
     return false;
 }
 
-RBox RMemoryStorage::getBoundingBox(bool includeHiddenLayer) {
+RBox RMemoryStorage::getBoundingBox(bool includeHiddenLayer) const {
     if (!boundingBoxChanged) {
         return boundingBox;
     }
@@ -702,8 +716,8 @@ RBox RMemoryStorage::getBoundingBox(bool includeHiddenLayer) {
     RBlock::Id currentBlockId = getCurrentBlockId();
     boundingBox = RBox();
     maxLineweight = RLineweight::Weight000;
-    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (e.isNull() || e->isUndone()) {
             continue;
@@ -742,11 +756,11 @@ RBox RMemoryStorage::getBoundingBox(bool includeHiddenLayer) {
     return boundingBox;
 }
 
-RBox RMemoryStorage::getSelectionBox() {
+RBox RMemoryStorage::getSelectionBox() const {
     RBlock::Id currentBlock = getCurrentBlockId();
     RBox ret;
-    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (!e.isNull() && !e->isUndone() && e->isSelected() &&
                 e->getBlockId() == currentBlock) {

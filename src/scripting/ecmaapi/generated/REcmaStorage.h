@@ -102,6 +102,9 @@
         querySelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryInfiniteEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

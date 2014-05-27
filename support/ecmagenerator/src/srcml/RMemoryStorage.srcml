@@ -278,6 +278,19 @@ dir="./core" filename="RMemoryStorage.h">
       <name>Id</name></name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>queryInfiniteEntities</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSet
+    <argument_list>&lt;
+    <argument>
+      <name>
+      <name>REntity</name>::
+      <name>Id</name></name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>querySelectedEntities</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -1022,14 +1035,16 @@ dir="./core" filename="RMemoryStorage.h">
         <name>true</name>
       </expr>
     </init></decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
     <name>RBox</name>
   </type>
   <name>getSelectionBox</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -1740,6 +1755,15 @@ dir="./core" filename="RMemoryStorage.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>mutable</name>
+      <name>RBox</name>
+    </type>
+    <name>boundingBox</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>mutable</name>
       <name>
       <name>RLineweight</name>::
       <name>Lineweight</name></name>
@@ -1749,13 +1773,7 @@ dir="./core" filename="RMemoryStorage.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>bool</name>
-    </type>
-    <name>inTransaction</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
+      <name>mutable</name>
       <name>bool</name>
     </type>
     <name>boundingBoxChanged</name>
@@ -1763,9 +1781,9 @@ dir="./core" filename="RMemoryStorage.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>RBox</name>
+      <name>bool</name>
     </type>
-    <name>boundingBox</name>
+    <name>inTransaction</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

@@ -256,7 +256,73 @@ dir="./entity" filename="RXLineData.h">
       <name>getStartPoint</name></name>
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
-  </function></public>}</block>;</class>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>RVector</name>
+    </type>
+    <name>getVectorTo</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>point</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited</name>=
+      <init>
+        <expr>
+          <name>true</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RLine</name>::
+        <name>getVectorTo</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>point</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>false</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>bool</name>
+  </type>
+  <name>intersectsWith</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RShape</name>&amp;</type>
+      <name>shape</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>
+  const</specifier>;</function_decl></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

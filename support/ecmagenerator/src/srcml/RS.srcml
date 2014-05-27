@@ -207,6 +207,10 @@ dir="./core" filename="RS.h">
   </expr>, 
   <comment type="block">/**&lt; Line */</comment>
   <expr>
+    <name>EntityXLine</name>
+  </expr>, 
+  <comment type="block">/**&lt; XLine */</comment>
+  <expr>
     <name>EntityPolyline</name>
   </expr>, 
   <comment type="block">/**&lt; Polyline */</comment>

@@ -62,6 +62,11 @@ QSet<RLinetype::Id> RLinkedStorage::queryAllLinetypes() {
             .unite(backStorage->queryAllLinetypes());
 }
 
+QSet<REntity::Id> RLinkedStorage::queryInfiniteEntities() {
+    return RMemoryStorage::queryInfiniteEntities()
+            .unite(backStorage->queryInfiniteEntities());
+}
+
 QSet<REntity::Id> RLinkedStorage::querySelectedEntities() {
     return RMemoryStorage::querySelectedEntities()
             .unite(backStorage->querySelectedEntities());

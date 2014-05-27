@@ -37,3 +37,17 @@ RXLineData::RXLineData(const RLine& line) :
 RXLineData::RXLineData(const RVector& basePoint, const RVector& dir) :
     RLineData(basePoint, basePoint + dir) {
 }
+
+bool RXLineData::intersectsWith(const RShape& shape) const {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return false;
+    }
+
+    RLine xLine = *this;
+    RBox bbox = doc->getBoundingBox();
+
+    xLine.clipToXY(bbox, true);
+
+    return xLine.intersectsWith(shape);
+}

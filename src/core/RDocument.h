@@ -105,6 +105,7 @@ public:
         const RBox& box
     );
 
+    QSet<REntity::Id> queryInfiniteEntities();
     QSet<REntity::Id> queryIntersectedEntitiesXY(
             const RBox& box,
             bool checkBoundingBoxOnly=false,
@@ -179,8 +180,8 @@ public:
 
     bool hasSelection() const;
 
-    RBox getBoundingBox(bool includeHiddenLayer = true);
-    RBox getSelectionBox();
+    RBox getBoundingBox(bool includeHiddenLayer = true) const;
+    RBox getSelectionBox() const;
 
     //void addToSpatialIndex(RObject& object, bool isNew = false);
     virtual void rebuildSpatialIndex();

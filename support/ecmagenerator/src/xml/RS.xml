@@ -23,6 +23,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntityBlockRefAttr" />
       <value name="EntityPoint" />
       <value name="EntityLine" />
+      <value name="EntityXLine" />
       <value name="EntityPolyline" />
       <value name="EntityArc" />
       <value name="EntityCircle" />

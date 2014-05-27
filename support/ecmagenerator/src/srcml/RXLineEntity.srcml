@@ -313,7 +313,7 @@ dir="./entity" filename="RXLineEntity.h">
     <expr>
       <name>
       <name>RS</name>::
-      <name>EntityLine</name></name>
+      <name>EntityXLine</name></name>
     </expr>;</return>}</block>
   </function>
   <function_decl>
