@@ -68,13 +68,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" true" isConst="false" />
       </variant>
     </method>
-    <method name="intersectsWith" cppName="intersectsWith"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="RShape &amp;" typeName="RShape" name="shape"
-        isConst="true" />
+    <method name="getShapes" cppName="getShapes" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
+        hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
       </variant>
+    </method>
+    <method name="getXLineShape" cppName="getXLineShape"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLine" isPureVirtual="false" />
     </method>
   </class>
 </unit>

@@ -68,7 +68,7 @@
         getVectorTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        intersectsWith
+        getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -82,7 +82,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, getVectorTo, "getVectorTo");
             
-            REcmaHelper::registerFunction(&engine, proto, intersectsWith, "intersectsWith");
+            REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RXLineData*>(), *proto);
@@ -837,19 +837,19 @@
             return result;
         }
          QScriptValue
-        REcmaXLineData::intersectsWith
+        REcmaXLineData::getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaXLineData::intersectsWith", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaXLineData::intersectsWith";
+            //REcmaHelper::functionStart("REcmaXLineData::getShapes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaXLineData::getShapes";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RXLineData* self = 
-                        getSelf("intersectsWith", context);
+                        getSelf("getShapes", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -859,51 +859,74 @@
                 
     
     if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getShapes();
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
     1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RShape */
+        ) /* type: RBox */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    RShape*
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
                     ap0 =
                     qscriptvalue_cast<
-                    RShape*
+                    RBox*
                         >(
                         context->argument(
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RXLineData: Argument 0 is not of type RShape*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RXLineData: Argument 0 is not of type RBox.",
                                context);                    
                     }
-                    RShape& a0 = *ap0;
+                    RBox 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
     // call C++ function:
-    // return type 'bool'
-    bool cppResult =
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
         
-               self->intersectsWith(a0);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
+               self->getShapes(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
             
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineData.intersectsWith().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineData.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaXLineData::intersectsWith", context, engine);
+            //REcmaHelper::functionEnd("REcmaXLineData::getShapes", context, engine);
             return result;
         }
          QScriptValue REcmaXLineData::toString

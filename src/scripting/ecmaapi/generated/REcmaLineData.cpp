@@ -98,8 +98,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
-            REcmaHelper::registerFunction(&engine, proto, getGeometry, "getGeometry");
-            
         engine.setDefaultPrototype(
             qMetaTypeId<RLineData*>(), *proto);
 
@@ -1328,55 +1326,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLineData::getShapes", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaLineData::getGeometry
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLineData::getGeometry", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLineData::getGeometry";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLineData* self = 
-                        getSelf("getGeometry", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RLine'
-    RLine cppResult =
-        
-               self->getGeometry();
-        // return type: RLine
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLineData.getGeometry().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLineData::getGeometry", context, engine);
             return result;
         }
          QScriptValue REcmaLineData::toString

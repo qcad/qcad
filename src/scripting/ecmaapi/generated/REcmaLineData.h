@@ -89,9 +89,6 @@
         ;static  QScriptValue
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getGeometry
-        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

@@ -502,17 +502,9 @@ dir="./entity" filename="RLineData.h">
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
   </function>
-  <function>
-    <type>
-      <name>RLine</name>
-    </type>
-    <name>getGeometry</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>*
-    <name>this</name></expr>;</return>}</block>
-  </function></public>}</block>;</class>
+  <comment type="line">// RLine getGeometry() {</comment>
+  <comment type="line">// return *this;</comment>
+  <comment type="line">// }</comment></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

@@ -72,7 +72,7 @@ RVector RSnapIntersection::snap(
 
     QMap<REntity::Id, QSet<int> >::const_iterator it1;
     for (it1=candidates.begin(); it1!=candidates.end(); it1++) {
-        QSharedPointer<REntity> e1 = document->queryEntity(it1.key());
+        QSharedPointer<REntity> e1 = document->queryEntityDirect(it1.key());
         if (e1.isNull()) {
             continue;
         }
@@ -85,7 +85,7 @@ RVector RSnapIntersection::snap(
 
         QMap<REntity::Id, QSet<int> >::const_iterator it2;
         for (it2=it1; it2!=candidates.end(); it2++) {
-            QSharedPointer<REntity> e2 = document->queryEntity(it2.key());
+            QSharedPointer<REntity> e2 = document->queryEntityDirect(it2.key());
             if (e2.isNull()) {
                 continue;
             }
@@ -96,6 +96,10 @@ RVector RSnapIntersection::snap(
             }
 
             QList<RVector> candidates = e1->getIntersectionPoints(*e2, true, queryBox);
+
+            if (candidates.isEmpty()) {
+                continue;
+            }
 
             RVector candidate = position.getClosest(candidates);
 

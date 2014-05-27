@@ -103,9 +103,9 @@ public:
                 QSharedPointer<RShape>(new RLine(*this));
     }
 
-    RLine getGeometry() {
-        return *this;
-    }
+//    RLine getGeometry() {
+//        return *this;
+//    }
 };
 
 Q_DECLARE_METATYPE(RLineData*)

@@ -47,6 +47,8 @@ public:
     RXLineData(const RLine& line);
     RXLineData(const RVector& basePoint, const RVector& dir);
 
+    virtual RBox getBoundingBox() const;
+
     void setBasePoint(const RVector& v) {
         RLine::setStartPoint(v);
     }
@@ -75,7 +77,14 @@ public:
         return RLine::getVectorTo(point, false);
     }
 
-    virtual bool intersectsWith(const RShape& shape) const;
+//    virtual bool intersectsWith(const RShape& shape) const;
+
+//    virtual QList<RVector> getIntersectionPoints(const RShape& shape, bool limited, const RBox& queryBox) const;
+
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
+
+protected:
+    RLine getXLineShape() const;
 
 };
 

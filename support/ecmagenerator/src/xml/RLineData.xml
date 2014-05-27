@@ -120,10 +120,5 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
       </variant>
     </method>
-    <method name="getGeometry" cppName="getGeometry"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="RLine" isPureVirtual="false" />
-    </method>
   </class>
 </unit>
