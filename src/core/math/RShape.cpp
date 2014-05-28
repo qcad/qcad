@@ -49,6 +49,16 @@ double RShape::getDistanceTo(const RVector& point, bool limited) const {
  * \return true if the given point is on this shape.
  */
 bool RShape::isOnShape(const RVector& point, bool limited, double tolerance) const {
+//    potential performance gain or loss:
+//    if (limited) {
+//        // point is well outside bounding box of shape:
+//        RBox bbox = getBoundingBox();
+//        bbox.grow(tolerance);
+//        if (!bbox.contains(point)) {
+//            return false;
+//        }
+//    }
+
     double d = getDistanceTo(point, limited);
     if (RMath::isNaN(d)) {
         return false;

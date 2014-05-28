@@ -87,7 +87,7 @@ public:
     bool isClosed() const;
     bool isLogicallyClosed() const;
 
-    bool contains(const RVector& point) const;
+    bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
     // TODO:
     //bool contains(const RShape& shape) const;
 

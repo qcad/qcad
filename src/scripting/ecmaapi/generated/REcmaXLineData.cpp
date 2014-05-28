@@ -68,6 +68,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
+            
             REcmaHelper::registerFunction(&engine, proto, setBasePoint, "setBasePoint");
             
             REcmaHelper::registerFunction(&engine, proto, getBasePoint, "getBasePoint");
@@ -360,6 +362,55 @@
 
     // public methods:
      QScriptValue
+        REcmaXLineData::getBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaXLineData::getBoundingBox", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaXLineData::getBoundingBox";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineData* self = 
+                        getSelf("getBoundingBox", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBox'
+    RBox cppResult =
+        
+               self->getBoundingBox();
+        // return type: RBox
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineData.getBoundingBox().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaXLineData::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaXLineData::setBasePoint
         (QScriptContext* context, QScriptEngine* engine) 
         

@@ -444,6 +444,46 @@ dir="./core/math" filename="RPolyline.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
+    <name>bool</name>
+  </type>
+  <name>isOnShape</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>point</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>limited</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>tolerance</name>=
+    <init>
+      <expr>
+        <name>RDEFAULT_TOLERANCE_1E_MIN4</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
     <name>bool</name>
   </type>
   <name>contains</name>
@@ -455,6 +495,32 @@ dir="./core/math" filename="RPolyline.h">
       <name>RVector</name>&amp;</type>
       <name>point</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>borderIsInside</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>tolerance</name>=
+    <init>
+      <expr>
+        <name>
+        <name>RS</name>::
+        <name>PointTolerance</name></name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="line">// TODO:</comment>

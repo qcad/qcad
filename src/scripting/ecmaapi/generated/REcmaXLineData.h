@@ -47,6 +47,9 @@
 
     // public methods:
     static  QScriptValue
+        getBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setBasePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

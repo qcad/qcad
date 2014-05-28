@@ -111,6 +111,14 @@ dir="./entity" filename="RXLineData.h">
       <name>dir</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RBox</name>
+  </type>
+  <name>getBoundingBox</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>void</name>
@@ -306,9 +314,9 @@ dir="./entity" filename="RXLineData.h">
       </call>
     </expr>;</return>}</block>
   </function>
-  <comment type="line">//virtual bool intersectsWith(const
+  <comment type="line">// virtual bool intersectsWith(const
   RShape&amp; shape) const;</comment>
-  <comment type="line">//virtual QList&lt;RVector&gt;
+  <comment type="line">// virtual QList&lt;RVector&gt;
   getIntersectionPoints(const RShape&amp; shape, bool limited,
   const RBox&amp; queryBox) const;</comment>
   <function_decl>

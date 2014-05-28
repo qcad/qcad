@@ -136,6 +136,9 @@
         isLogicallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isOnShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
