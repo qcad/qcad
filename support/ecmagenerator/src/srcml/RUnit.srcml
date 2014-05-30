@@ -934,7 +934,85 @@ dir="./core" filename="RUnit.h">
         <name>false</name>
       </expr>
     </init></decl>
-  </param>)</parameter_list>;</function_decl></public>}</block>;</class>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="line">// workaround: make the second version also
+  accesible by scripts:</comment>
+  <function>
+    <type>
+      <name>static</name>
+      <name>QString</name>
+    </type>
+    <name>doubleToStringDec</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>value</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+          <name>int</name>
+        </type>
+        <name>prec</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>showLeadingZeroes</name>=
+      <init>
+        <expr>
+          <name>true</name>
+        </expr>
+      </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>showTrailingZeroes</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>doubleToString</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>value</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>prec</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>showLeadingZeroes</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>showTrailingZeroes</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

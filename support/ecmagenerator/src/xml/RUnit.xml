@@ -251,5 +251,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
+    <method name="doubleToStringDec" cppName="doubleToStringDec"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>
