@@ -49,8 +49,12 @@ public:
         return new RTextLabel(*this);
     }
 
-    QString getText() const;
-    QVariant getUserData() const;
+    QString getText() const {
+        return text;
+    }
+    QVariant getUserData() const {
+        return userData;
+    }
 
 protected:
     virtual void print(QDebug dbg) const;

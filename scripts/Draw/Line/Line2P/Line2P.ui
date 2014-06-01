@@ -61,7 +61,7 @@
       </sizepolicy>
      </property>
      <property name="toolTip">
-      <string>Redo Undone Segment</string>
+      <string>Redo Segment</string>
      </property>
      <property name="icon">
       <iconset>

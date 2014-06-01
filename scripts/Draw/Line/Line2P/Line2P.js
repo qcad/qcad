@@ -38,11 +38,6 @@ function Line2P(guiAction) {
     this.point1 = undefined;
     this.point2 = undefined;
 
-    this.restrictLength = undefined;
-    this.length = undefined;
-    this.restrictAngle = undefined;
-    this.angle = undefined;
-
     this.cmd = "";
 
     this.setUiOptions(["../Line.ui", "Line2P.ui"]);
@@ -133,7 +128,8 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
         this.point2 = event.getModelPosition();
         var op = this.getOperation(preview);
         if (preview) {
-            di.previewOperation(op);
+            this.updatePreview();
+            //di.previewOperation(op);
         }
         else {
             if (!isNull(op)) {
@@ -148,9 +144,9 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
                 di.setRelativeZero(this.point2);
                 this.point1 = this.point2;
 
-                qDebug("this.pointList: ", this.pointList);
-                qDebug("this.entityIdList: ", this.entityIdList);
-                qDebug("this.pointListIndex: ", this.pointListIndex);
+//                qDebug("this.pointList: ", this.pointList);
+//                qDebug("this.entityIdList: ", this.entityIdList);
+//                qDebug("this.pointListIndex: ", this.pointListIndex);
             }
         }
         break;
@@ -160,47 +156,6 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
         this.checkButtonStates();
     }
 };
-
-/**
- * If restrict is on then change the co-ordinate to lie on the nearest multiple
- * of the specified angle.
- * If the user has entered an absolute or relative co-ordinate, then that
- * overrides restrict.
- * Calls pickCoordinate(event, false)
- */
- /*
-Line2P.prototype.coordinateEvent = function(event) {
-    var di = this.getDocumentInterface();
-    var pos = undefined;
-
-    switch (this.state) {
-    case Line2PEx.State.SettingNextPoint:
-        if (this.restrictAngle || this.restrictLength) {
-            var value = RMath.eval(this.cmd);
-            var de = objectFromPath("MainWindow::Options::Degrees");
-
-            // need this to avoid Bug FS#954
-            var cartCoordSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ',');
-            var polCoordSep = RSettings.getStringValue("Input/PolarCoordinateSeparator", '<');
-
-            // coordinates override restrict
-            if (this.cmd.contains(cartCoordSep) || this.cmd.contains(polCoordSep)) {
-                break;
-            } else if (isNumber(value)) {       // if distance entered, use it
-                pos = this.restrict(di.getRelativeZero(), event.getModelPosition(), RMath.eval(de.text), true);
-            } else {
-                pos = this.restrict(di.getRelativeZero(), event.getModelPosition(), RMath.eval(de.text), false);
-            }
-            if (!isNull(pos) && pos.isValid()) {
-                event.setModelPosition(pos);
-            }
-        }
-        break;
-    }
-
-    this.pickCoordinate(event, false);
-};
-*/
 
 Line2P.prototype.getOperation = function(preview) {
     if (!isVector(this.point1) || !isVector(this.point2)) {
@@ -229,7 +184,7 @@ Line2P.prototype.slotUndo = function() {
 
         this.pointListIndex--;
         this.point1 = this.pointList[this.pointListIndex];
-        qDebug("undone: back to point: ", this.point1);
+        di.setRelativeZero(this.point1);
 
         var id = this.entityIdList[this.pointListIndex];
         var entity = doc.queryEntity(id);
@@ -238,9 +193,9 @@ Line2P.prototype.slotUndo = function() {
         di.clearPreview();
         di.previewOperation(this.getOperation(true));
 
-        qDebug("undone: this.pointListIndex: ", this.pointListIndex);
-        qDebug("undone: this.pointList: ", this.pointList);
-        qDebug("undone: this.entityIdList: ", this.entityIdList);
+//        qDebug("undone: this.pointListIndex: ", this.pointListIndex);
+//        qDebug("undone: this.pointList: ", this.pointList);
+//        qDebug("undone: this.entityIdList: ", this.entityIdList);
     }
 
     this.checkButtonStates();
@@ -253,6 +208,7 @@ Line2P.prototype.slotRedo = function() {
 
         this.pointListIndex++;
         this.point1 = this.pointList[this.pointListIndex];
+        di.setRelativeZero(this.point1);
 
         var e = this.createLineEntity(doc, this.pointList[this.pointListIndex-1], this.pointList[this.pointListIndex]);
         var trans = di.applyOperation(new RAddObjectOperation(e));
@@ -262,51 +218,18 @@ Line2P.prototype.slotRedo = function() {
         di.clearPreview();
         di.previewOperation(this.getOperation(true));
 
-        qDebug("redone: this.pointListIndex: ", this.pointListIndex);
-        qDebug("redone: this.pointList: ", this.pointList);
-        qDebug("redone: this.entityIdList: ", this.entityIdList);
+//        qDebug("redone: this.pointListIndex: ", this.pointListIndex);
+//        qDebug("redone: this.pointList: ", this.pointList);
+//        qDebug("redone: this.entityIdList: ", this.entityIdList);
     }
 
     this.checkButtonStates();
 };
 
-//Line2P.prototype.slotRestrictChanged = function(value) {
-//    var di = this.getDocumentInterface();
-//    if (value) {
-//        var guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
-//        if (!isNull(guiAction)) {
-//            guiAction.slotTrigger();
-//        }
-//        //var s = new RRestrictAngleLengthExtension();
-//        //di.setSnapRestriction(s);
-//    }
-//    else {
-//        di.setSnapRestriction(null);
-//    }
-//};
-
-Line2P.prototype.slotRestrictAngleChanged = function(value) {
-    this.restrictAngle = value;
-};
-
-Line2P.prototype.slotAngleChanged = function(value) {
-    this.angle = value;
-};
-
-Line2P.prototype.slotRestrictLengthChanged = function(value) {
-    this.restrictLength = value;
-};
-
-Line2P.prototype.slotLengthChanged = function(value) {
-    this.length = value;
-};
-
 Line2P.prototype.checkButtonStates = function() {
-    var w;
-
     var optionsToolBar = EAction.getOptionsToolBar();
 
-    w = optionsToolBar.findChild("Undo");
+    var w = optionsToolBar.findChild("Undo");
     if (this.pointListIndex > 0) {
         w.enabled = true;
     } else {
@@ -341,10 +264,13 @@ Line2P.prototype.getLineEntityId = function(trans) {
 
 /**
  * Allows commands to be entered in command line
- * Using the 'startsWith' function allows the user to enter only as many characters
- * as needed to distinguish between commands
- * In this case only the first character is needed. (But entering 'c', 'cl', 'clo', 'clos'
- * or 'close' would all invoke the close command. Similarly with undo and redo)
+ *
+ * Note: this might be ambiguous, depending on the current locale:
+ *    "Using the 'startsWith' function allows the user to enter only as many characters
+ *    as needed to distinguish between commands
+ *    In this case only the first character is needed. (But entering 'c', 'cl', 'clo', 'clos'
+ *    or 'close' would all invoke the close command. Similarly with undo and redo)"
+ *
  */
 Line2P.prototype.commandEvent = function(event) {
     var str;
@@ -354,85 +280,21 @@ Line2P.prototype.commandEvent = function(event) {
     this.cmd = cmd;
 
     str = qsTr("close");
-    if (str.startsWith(cmd)) {
+    if (str===cmd) {
         this.slotClose();
         event.accept();
         return;
     }
     str = qsTr("undo");
-    if (str.startsWith(cmd)) {
+    if (str===cmd) {
         this.slotUndo();
         event.accept();
         return;
     }
     str = qsTr("redo");
-    if (str.startsWith(cmd)) {
+    if (str===cmd) {
         this.slotRedo();
         event.accept();
         return;
     }
-    if (cmd === qsTr("t")) {
-        var ob = objectFromPath("MainWindow::Options::Restrict");
-        ob.checked = !ob.checked
-        this.restrict = ob.checked;
-        this.slotRestrictChanged(ob.checked);
-        event.accept();
-        return;
-    }
-    if (cmd === qsTr("d")) {
-        ob = objectFromPath("MainWindow::Options::Display");
-        if (ob.enabled === true) {
-            ob.checked = !ob.checked;
-            this.display = ob.checked;
-            this.slotDisplayChanged(ob.checked);
-        }
-        event.accept();
-        return;
-    }
-};
-
-/**
- * restrictToAngle calculates the co-ordinate which lies on the nearest multiple
- * of the specified angle.
- *
- * Params
- *  relativeZero
- *  pos             - the co-ordinate to change
- *  snapang         - the angle multiplier in degrees
- *  isDistance      - boolean indicating if user entered a distance
- *                    if true then use that distance (dist)
- *                    if false then adjust the distance to the long side of a right-
- *                    angled triangle between pos, relativeZero and nearest angle (pdist)
- */
-Line2P.prototype.restrict = function(relativeZero, pos, snapang, isDistance) {
-    if (!isValidVector(relativeZero)) {           // if this is the first action
-        relativeZero = new RVector(0.0, 0.0);     // of a new drawing relativezero
-    }                                             // is not valid
-    if (relativeZero.equalsFuzzy(pos)) {
-        // cursor at same position as relative zero:
-        return RVector.invalid;
-    }
-    var ang = relativeZero.getAngleTo(pos);
-    var dist = relativeZero.getDistanceTo(pos);
-    var pdist = dist;
-    if (snapang < 0.0) {
-        snapang = Math.abs(snapang);
-    }
-
-    if (snapang > 0.0) {
-        ang = RMath.rad2deg(ang);
-        var mang = Math.round(ang / snapang) * snapang;
-        pdist = dist * Math.cos(RMath.deg2rad(Math.abs(ang - mang)));
-        ang = mang;
-        if (ang >= 360.0) ang = 0.0;
-        ang = RMath.deg2rad(ang);
-    }
-    var v = new RVector();
-    if (isDistance) {
-        v.setPolar(dist, ang);
-    } else {
-        v.setPolar(pdist, ang);
-    }
-    pos = relativeZero.operator_add(v);
-    return pos;
 };

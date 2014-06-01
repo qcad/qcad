@@ -113,20 +113,40 @@ dir="./core/math" filename="RTextLabel.h">
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
   </function>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getText</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QVariant</name>
-  </type>
-  <name>getUserData</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getText</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>text</name>
+    </expr>;</return>}</block>
+  </function>
+  <comment type="line">// Qt::Alignment getAlignment() const
+  {</comment>
+  <comment type="line">// return alignment;</comment>
+  <comment type="line">// }</comment>
+  <comment type="line">// void setAlignment(Qt::Alignment a)
+  {</comment>
+  <comment type="line">// alignment = a;</comment>
+  <comment type="line">// }</comment>
+  <function>
+    <type>
+      <name>QVariant</name>
+    </type>
+    <name>getUserData</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>userData</name>
+    </expr>;</return>}</block>
+  </function></public>
   <protected>protected: 
   <function_decl>
   <type>
@@ -152,6 +172,7 @@ dir="./core/math" filename="RTextLabel.h">
     </type>
     <name>text</name>
   </decl>;</decl_stmt>
+  <comment type="line">// Qt::Alignment alignment;</comment>
   <decl_stmt>
   <decl>
     <type>

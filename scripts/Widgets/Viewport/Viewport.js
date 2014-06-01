@@ -268,10 +268,14 @@ EventHandler.prototype.drop = function(event) {
 };
 
 EventHandler.prototype.updateTextLabel = function(painter, textLabel) {
-    this.drawInfoLabel(painter, textLabel.getPosition(), textLabel.getText());
+    this.drawInfoLabel(painter, textLabel);
 };
 
-EventHandler.prototype.drawInfoLabel = function(painter, pos, text) {
+EventHandler.prototype.drawInfoLabel = function(painter, textLabel) {
+    var pos = textLabel.getPosition();
+    var text = textLabel.getText();
+    //var align = textLabel.getAlignment();
+
     var p = this.graphicsView.mapToView(pos);
     // info labels might have individual colors in future
     // var color = RSettings.getColor("GraphicsViewColors/TextLabelColor");
@@ -281,13 +285,20 @@ EventHandler.prototype.drawInfoLabel = function(painter, pos, text) {
     if (text!=="") {
         var font = RSettings.getInfoLabelFont();
         var fm = new QFontMetrics(font);
-        //var x = p.x + 5;
-        //var y = p.y + 5;
         var w = fm.width(text)+10;
         var h = fm.height()+10;
-        //var flags = new Qt.Alignment(Qt.AlignLeft | Qt.AlignBottom);
         var flags = new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter);
+        //qDebug(flags);
         painter.setFont(font);
+
+//        var x, y;
+//        var dx = graphicsView.mapDistanceFromView(10);
+//        var dy = graphicsView.mapDistanceFromView(10);
+
+//        if (align&Qt.AlignRight) {
+
+//        }
+
         painter.drawText(p.x, p.y, w, h, flags, text, null);
     }
 };
@@ -352,28 +363,59 @@ EventHandler.prototype.drawSnapLabel = function(painter, pos, posRestriction, te
         pr = this.graphicsView.mapToView(posRestriction);
     }
     var color = RSettings.getColor("GraphicsViewColors/TextLabelColor", new RColor(249,198,31));
-    painter.setPen(new QColor(color.red(), color.green(), color.blue(), color.alpha()));
+    painter.setPen(color.toCompat());
+
+    var font = RSettings.getSnapLabelFont();
+    var fm = new QFontMetrics(font);
+    painter.setFont(font);
 
     if (text!=="") {
-        var font = RSettings.getSnapLabelFont();
-        var fm = new QFontMetrics(font);
-        var x = p.x + 5;
-        var y = p.y + 5;
-        var w = fm.width(text)+10;
-        var h = fm.height()+10;
-        var flags = new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter);
-        painter.setFont(font);
-        painter.drawText(x, y, w, h, flags, text, null);
+        painter.drawText(
+            p.x + 5, p.y + 5,
+            fm.width(text)+10, fm.height()+10,
+            new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter),
+            text, null);
     }
 
     painter.drawEllipse(p.x-5, p.y-5, 10, 10);
 
+    // restriction position:
     if (isValidVector(pr)) {
         painter.drawLine(pr.x, pr.y-5, pr.x+5, pr.y);
         painter.drawLine(pr.x+5, pr.y, pr.x, pr.y+5);
         painter.drawLine(pr.x, pr.y+5, pr.x-5, pr.y);
         painter.drawLine(pr.x-5, pr.y, pr.x, pr.y-5);
     }
+
+    // snap restriction info:
+    /*
+    // configurable (messy)?
+    var snapRes = this.documentInterface.getSnapRestriction();
+    if (isOfType(snapRes, RRestrictAngleLength)) {
+        var di = this.documentInterface;
+        var doc = this.document;
+        var rz = di.getRelativeZero();
+        var dist = rz.getDistanceTo(posRestriction);
+        var distStr = RUnit.getLabel(dist, this.document, true);
+
+        var angle = rz.getAngleTo(posRestriction);
+        var angStr = RUnit.formatAngle(angle,
+                                       doc.getAngleFormat(), Math.max(doc.getAnglePrecision(), 2),
+                                       doc.showLeadingZeroesAngle(), doc.showTrailingZeroesAngle());
+
+        var sep = RSettings.getStringValue("Input/PolarCoordinateSeparator", "<");
+
+        color = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
+        painter.setPen(color.toCompat());
+
+        text = distStr + sep + angStr;
+        painter.drawText(
+            p.x + 5, p.y - 5 - fm.height(),
+            fm.width(text)+10, fm.height()+10,
+            new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter),
+            text, null);
+    }
+    */
 };
 
 /**

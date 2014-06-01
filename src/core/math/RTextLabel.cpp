@@ -43,14 +43,6 @@ RTextLabel::RTextLabel(const RVector& position, const QString& text,
 RTextLabel::~RTextLabel() {
 }
 
-QString RTextLabel::getText() const {
-    return text;
-}
-
-QVariant RTextLabel::getUserData() const {
-    return userData;
-}
-
 void RTextLabel::print(QDebug dbg) const {
     dbg.nospace() << "RTextLabel(";
     RShape::print(dbg);
