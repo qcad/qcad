@@ -774,7 +774,9 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
                 controls[0].placeholderText = qsTr("Auto");
             }
             else if (attributes.isLabel()) {
-                WidgetFactory.initLineEdit(controls[0], false);
+                if (!attributes.isReadOnly()) {
+                    WidgetFactory.initLineEdit(controls[0], false);
+                }
             }
         }
     }
