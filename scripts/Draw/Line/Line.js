@@ -32,10 +32,18 @@ include("../Draw.js");
  */
 function Line(guiAction) {
     Draw.call(this, guiAction);
+
+    this.lineType = Line.LineType.Line;
 }
 
 Line.prototype = new Draw();
 Line.includeBasePath = includeBasePath;
+
+Line.LineType = {
+    Line : 0,
+    XLine : 1,
+    Ray : 2
+};
 
 Line.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
@@ -95,4 +103,26 @@ Line.getTitle = function() {
 
 Line.prototype.getTitle = function() {
     return Line.getTitle();
+};
+
+Line.prototype.slotLineTypeChanged = function(value) {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var lineTypeCombo = optionsToolBar.findChild("LineType");
+
+    this.lineType = lineTypeCombo.currentIndex;
+
+    this.updatePreview(true);
+};
+
+Line.prototype.createLineEntity = function(doc, p1, p2) {
+    switch (this.lineType) {
+    default:
+    case Line.LineType.Line:
+        return new RLineEntity(doc, new RLineData(p1, p2));
+    case Line.LineType.XLine:
+        return new RXLineEntity(doc, new RXLineData(p1, p2.operator_subtract(p1)));
+    case Line.LineType.Ray:
+        //return new RLineEntity(doc, new RLineData(p1, p2));
+        return undefined;
+    }
 };
