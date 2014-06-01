@@ -356,6 +356,11 @@
             );
         
     
+      void exportRay(
+                const RLine & line
+            );
+        
+    
       void exportCircle(
                 const RCircle & circle
             );

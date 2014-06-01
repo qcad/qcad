@@ -82,6 +82,7 @@ public:
         EntityPoint,        /**< Point */
         EntityLine,         /**< Line */
         EntityXLine,        /**< XLine */
+        EntityRay,          /**< Ray */
         EntityPolyline,     /**< Polyline */
         EntityArc,          /**< Arc */
         EntityCircle,       /**< Circle */

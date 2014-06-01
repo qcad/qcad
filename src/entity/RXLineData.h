@@ -77,15 +77,10 @@ public:
         return RLine::getVectorTo(point, false);
     }
 
-//    virtual bool intersectsWith(const RShape& shape) const;
-
-//    virtual QList<RVector> getIntersectionPoints(const RShape& shape, bool limited, const RBox& queryBox) const;
-
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
 
 protected:
-    RLine getXLineShape() const;
-
+    virtual RLine getXLineShape() const;
 };
 
 Q_DECLARE_METATYPE(RXLineData*)

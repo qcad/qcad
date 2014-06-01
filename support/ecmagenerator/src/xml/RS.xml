@@ -24,6 +24,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntityPoint" />
       <value name="EntityLine" />
       <value name="EntityXLine" />
+      <value name="EntityRay" />
       <value name="EntityPolyline" />
       <value name="EntityArc" />
       <value name="EntityCircle" />

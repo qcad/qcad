@@ -187,7 +187,12 @@ void RLine::clipToXY(const RBox& box, bool isXLine) {
         }
 
         if (sol.length()==2) {
-            *this = RLine(sol[0], sol[1]);
+            RLine ret = RLine(sol[0], sol[1]);
+            double diff = RMath::getAngleDifference180(ret.getAngle(), getAngle());
+            *this = ret;
+            if (fabs(diff) > 1.0e-2) {
+                reverse();
+            }
         }
         return;
     }

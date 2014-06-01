@@ -314,11 +314,6 @@ dir="./entity" filename="RXLineData.h">
       </call>
     </expr>;</return>}</block>
   </function>
-  <comment type="line">// virtual bool intersectsWith(const
-  RShape&amp; shape) const;</comment>
-  <comment type="line">// virtual QList&lt;RVector&gt;
-  getIntersectionPoints(const RShape&amp; shape, bool limited,
-  const RBox&amp; queryBox) const;</comment>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -350,6 +345,7 @@ dir="./entity" filename="RXLineData.h">
   <protected>protected: 
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>RLine</name>
   </type>
   <name>getXLineShape</name>

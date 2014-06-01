@@ -38,6 +38,8 @@ SOURCES = \
     RPointEntity.cpp \
     RPolylineData.cpp \
     RPolylineEntity.cpp \
+    RRayData.cpp \
+    RRayEntity.cpp \
     RSolidData.cpp \
     RSolidEntity.cpp \
     RSplineData.cpp \
@@ -89,6 +91,8 @@ HEADERS = \
     RPointEntity.h \
     RPolylineData.h \
     RPolylineEntity.h \
+    RRayData.h \
+    RRayEntity.h \
     RSolidData.h \
     RSolidEntity.h \
     RSplineData.h \

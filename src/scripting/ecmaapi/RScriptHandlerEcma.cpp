@@ -191,6 +191,8 @@
 #include "REcmaPropertyEvent.h"
 #include "REcmaPropertyListener.h"
 #include "REcmaPropertyTypeId.h"
+#include "REcmaRayData.h"
+#include "REcmaRayEntity.h"
 #include "REcmaRestrictAngleLength.h"
 #include "REcmaRestrictHorizontal.h"
 #include "REcmaRestrictVertical.h"
@@ -237,6 +239,7 @@
 #include "REcmaSharedPointerPointEntity.h"
 #include "REcmaSharedPointerPolyline.h"
 #include "REcmaSharedPointerPolylineEntity.h"
+#include "REcmaSharedPointerRayEntity.h"
 #include "REcmaSharedPointerShape.h"
 #include "REcmaSharedPointerSolidEntity.h"
 #include "REcmaSharedPointerSpline.h"
@@ -622,6 +625,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaXLineData::init(*engine);
     REcmaXLineEntity::init(*engine);
     REcmaSharedPointerXLineEntity::init(*engine);
+
+    REcmaRayData::init(*engine);
+    REcmaRayEntity::init(*engine);
+    REcmaSharedPointerRayEntity::init(*engine);
 
     REcmaCircleData::init(*engine);
     REcmaCircleEntity::init(*engine);

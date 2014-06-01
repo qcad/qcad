@@ -122,7 +122,6 @@ Line.prototype.createLineEntity = function(doc, p1, p2) {
     case Line.LineType.XLine:
         return new RXLineEntity(doc, new RXLineData(p1, p2.operator_subtract(p1)));
     case Line.LineType.Ray:
-        //return new RLineEntity(doc, new RLineData(p1, p2));
-        return undefined;
+        return new RRayEntity(doc, new RRayData(p1, p2.operator_subtract(p1)));
     }
 };

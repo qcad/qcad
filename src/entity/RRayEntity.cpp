@@ -16,73 +16,73 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RXLineEntity.h"
+#include "RRayEntity.h"
 #include "RExporter.h"
 #include "RLine.h"
 
-RPropertyTypeId RXLineEntity::PropertyCustom;
-RPropertyTypeId RXLineEntity::PropertyHandle;
-RPropertyTypeId RXLineEntity::PropertyType;
-RPropertyTypeId RXLineEntity::PropertyBlock;
-RPropertyTypeId RXLineEntity::PropertyLayer;
-RPropertyTypeId RXLineEntity::PropertyLinetype;
-RPropertyTypeId RXLineEntity::PropertyLineweight;
-RPropertyTypeId RXLineEntity::PropertyColor;
-RPropertyTypeId RXLineEntity::PropertyDrawOrder;
+RPropertyTypeId RRayEntity::PropertyCustom;
+RPropertyTypeId RRayEntity::PropertyHandle;
+RPropertyTypeId RRayEntity::PropertyType;
+RPropertyTypeId RRayEntity::PropertyBlock;
+RPropertyTypeId RRayEntity::PropertyLayer;
+RPropertyTypeId RRayEntity::PropertyLinetype;
+RPropertyTypeId RRayEntity::PropertyLineweight;
+RPropertyTypeId RRayEntity::PropertyColor;
+RPropertyTypeId RRayEntity::PropertyDrawOrder;
 
-RPropertyTypeId RXLineEntity::PropertyBasePointX;
-RPropertyTypeId RXLineEntity::PropertyBasePointY;
-RPropertyTypeId RXLineEntity::PropertyBasePointZ;
-RPropertyTypeId RXLineEntity::PropertySecondPointX;
-RPropertyTypeId RXLineEntity::PropertySecondPointY;
-RPropertyTypeId RXLineEntity::PropertySecondPointZ;
+RPropertyTypeId RRayEntity::PropertyBasePointX;
+RPropertyTypeId RRayEntity::PropertyBasePointY;
+RPropertyTypeId RRayEntity::PropertyBasePointZ;
+RPropertyTypeId RRayEntity::PropertySecondPointX;
+RPropertyTypeId RRayEntity::PropertySecondPointY;
+RPropertyTypeId RRayEntity::PropertySecondPointZ;
 
-RPropertyTypeId RXLineEntity::PropertyDirectionX;
-RPropertyTypeId RXLineEntity::PropertyDirectionY;
-RPropertyTypeId RXLineEntity::PropertyDirectionZ;
+RPropertyTypeId RRayEntity::PropertyDirectionX;
+RPropertyTypeId RRayEntity::PropertyDirectionY;
+RPropertyTypeId RRayEntity::PropertyDirectionZ;
 
-RPropertyTypeId RXLineEntity::PropertyAngle;
+RPropertyTypeId RRayEntity::PropertyAngle;
 
 
-RXLineEntity::RXLineEntity(RDocument* document, const RXLineData& data,
+RRayEntity::RRayEntity(RDocument* document, const RRayData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
 }
 
-RXLineEntity::~RXLineEntity() {
+RRayEntity::~RRayEntity() {
 }
 
-void RXLineEntity::setShape(const RLine& l) {
+void RRayEntity::setShape(const RLine& l) {
     data.setStartPoint(l.getStartPoint());
     data.setEndPoint(l.getEndPoint());
 }
 
-void RXLineEntity::init() {
-    RXLineEntity::PropertyCustom.generateId(typeid(RXLineEntity), RObject::PropertyCustom);
-    RXLineEntity::PropertyHandle.generateId(typeid(RXLineEntity), RObject::PropertyHandle);
-    RXLineEntity::PropertyType.generateId(typeid(RXLineEntity), REntity::PropertyType);
-    RXLineEntity::PropertyBlock.generateId(typeid(RXLineEntity), REntity::PropertyBlock);
-    RXLineEntity::PropertyLayer.generateId(typeid(RXLineEntity), REntity::PropertyLayer);
-    RXLineEntity::PropertyLinetype.generateId(typeid(RXLineEntity), REntity::PropertyLinetype);
-    RXLineEntity::PropertyLineweight.generateId(typeid(RXLineEntity), REntity::PropertyLineweight);
-    RXLineEntity::PropertyColor.generateId(typeid(RXLineEntity), REntity::PropertyColor);
-    RXLineEntity::PropertyDrawOrder.generateId(typeid(RXLineEntity), REntity::PropertyDrawOrder);
+void RRayEntity::init() {
+    RRayEntity::PropertyCustom.generateId(typeid(RRayEntity), RObject::PropertyCustom);
+    RRayEntity::PropertyHandle.generateId(typeid(RRayEntity), RObject::PropertyHandle);
+    RRayEntity::PropertyType.generateId(typeid(RRayEntity), REntity::PropertyType);
+    RRayEntity::PropertyBlock.generateId(typeid(RRayEntity), REntity::PropertyBlock);
+    RRayEntity::PropertyLayer.generateId(typeid(RRayEntity), REntity::PropertyLayer);
+    RRayEntity::PropertyLinetype.generateId(typeid(RRayEntity), REntity::PropertyLinetype);
+    RRayEntity::PropertyLineweight.generateId(typeid(RRayEntity), REntity::PropertyLineweight);
+    RRayEntity::PropertyColor.generateId(typeid(RRayEntity), REntity::PropertyColor);
+    RRayEntity::PropertyDrawOrder.generateId(typeid(RRayEntity), REntity::PropertyDrawOrder);
 
-    RXLineEntity::PropertyBasePointX.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RXLineEntity::PropertyBasePointY.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RXLineEntity::PropertyBasePointZ.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RXLineEntity::PropertySecondPointX.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RXLineEntity::PropertySecondPointY.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RXLineEntity::PropertySecondPointZ.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RRayEntity::PropertyBasePointX.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RRayEntity::PropertyBasePointY.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RRayEntity::PropertyBasePointZ.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RRayEntity::PropertySecondPointX.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RRayEntity::PropertySecondPointY.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RRayEntity::PropertySecondPointZ.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    RXLineEntity::PropertyDirectionX.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RXLineEntity::PropertyDirectionY.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RXLineEntity::PropertyDirectionZ.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RRayEntity::PropertyDirectionX.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RRayEntity::PropertyDirectionY.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RRayEntity::PropertyDirectionZ.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    RXLineEntity::PropertyAngle.generateId(typeid(RXLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RRayEntity::PropertyAngle.generateId(typeid(RRayEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
 }
 
-bool RXLineEntity::setProperty(RPropertyTypeId propertyTypeId,
+bool RRayEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
 
     bool ret = REntity::setProperty(propertyTypeId, value);
@@ -119,7 +119,7 @@ bool RXLineEntity::setProperty(RPropertyTypeId propertyTypeId,
     return ret;
 }
 
-QPair<QVariant, RPropertyAttributes> RXLineEntity::getProperty(
+QPair<QVariant, RPropertyAttributes> RRayEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
     if (propertyTypeId == PropertyBasePointX) {
@@ -154,15 +154,15 @@ QPair<QVariant, RPropertyAttributes> RXLineEntity::getProperty(
 }
 
 
-void RXLineEntity::exportEntity(RExporter& e, bool preview) const {
+void RRayEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);
 
     e.setBrush(Qt::NoBrush);
-    e.exportXLine(data);
+    e.exportRay(data);
 }
 
-void RXLineEntity::print(QDebug dbg) const {
-    dbg.nospace() << "RXLineEntity(";
+void RRayEntity::print(QDebug dbg) const {
+    dbg.nospace() << "RRayEntity(";
     REntity::print(dbg);
     dbg.nospace() << ", startPoint: " << getBasePoint() << ", endPoint: "
             << getDirectionVector() << ")";

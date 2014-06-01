@@ -82,7 +82,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getXLineShape" cppName="getXLineShape"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="RLine" isPureVirtual="false" />
     </method>

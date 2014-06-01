@@ -162,6 +162,8 @@ HEADERS += \
     $$PWD/REcmaPropertyEvent.h \
     $$PWD/REcmaPropertyListener.h \
     $$PWD/REcmaPropertyTypeId.h \
+    $$PWD/REcmaRayData.h \
+    $$PWD/REcmaRayEntity.h \
     $$PWD/REcmaRestrictAngleLength.h \
     $$PWD/REcmaRestrictHorizontal.h \
     $$PWD/REcmaRestrictOff.h \
@@ -215,6 +217,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerPointEntity.h \
     $$PWD/REcmaSharedPointerPolyline.h \
     $$PWD/REcmaSharedPointerPolylineEntity.h \
+    $$PWD/REcmaSharedPointerRayEntity.h \
     $$PWD/REcmaSharedPointerShape.h \
     $$PWD/REcmaSharedPointerSolidEntity.h \
     $$PWD/REcmaSharedPointerSpline.h \
@@ -470,6 +473,8 @@ SOURCES += \
     $$PWD/REcmaPropertyEvent.cpp \
     $$PWD/REcmaPropertyListener.cpp \
     $$PWD/REcmaPropertyTypeId.cpp \
+    $$PWD/REcmaRayData.cpp \
+    $$PWD/REcmaRayEntity.cpp \
     $$PWD/REcmaRestrictAngleLength.cpp \
     $$PWD/REcmaRestrictHorizontal.cpp \
     $$PWD/REcmaRestrictOff.cpp \
@@ -523,6 +528,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerPointEntity.cpp \
     $$PWD/REcmaSharedPointerPolyline.cpp \
     $$PWD/REcmaSharedPointerPolylineEntity.cpp \
+    $$PWD/REcmaSharedPointerRayEntity.cpp \
     $$PWD/REcmaSharedPointerShape.cpp \
     $$PWD/REcmaSharedPointerSolidEntity.cpp \
     $$PWD/REcmaSharedPointerSpline.cpp \

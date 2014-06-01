@@ -33,6 +33,10 @@ public:
         Q_UNUSED(line)
     }
 
+    virtual void exportRay(const RLine& line) {
+        Q_UNUSED(line)
+    }
+
     virtual void exportPoint(const RPoint& point) {
         Q_UNUSED(point)
     }

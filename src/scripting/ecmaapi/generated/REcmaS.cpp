@@ -164,6 +164,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityRay",
+    QScriptValue(RS::EntityRay),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityPolyline",
     QScriptValue(RS::EntityPolyline),
     QScriptValue::ReadOnly);

@@ -304,6 +304,33 @@ void RGraphicsSceneQt::exportXLine(const RLine& line) {
     }
 }
 
+void RGraphicsSceneQt::exportRay(const RLine& line) {
+    bool created = beginPath();
+
+    Q_ASSERT(currentPainterPath.isValid());
+
+    // find largest view box over all attached views:
+    RBox box;
+    QList<RGraphicsView*>::iterator it;
+    for (it=views.begin(); it!=views.end(); it++) {
+        RBox b = (*it)->getBox();
+        box.growToIncludeBox(b);
+    }
+
+    // trim line to view box:
+    RLine clippedLine = line;
+    clippedLine.clipToXY(box, true);
+    clippedLine.setStartPoint(line.getStartPoint());
+
+    exportLineSegment(clippedLine);
+
+    currentPainterPath.setAlwaysRegen(true);
+
+    if (created) {
+        endPath();
+    }
+}
+
 void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
     if (getEntity() == NULL && !exportToPreview) {
         qWarning("RGraphicsSceneQt::exportTriangle: entity is NULL");

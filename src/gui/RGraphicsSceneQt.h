@@ -80,6 +80,7 @@ public:
     virtual void exportArcSegment(const RArc& arc);
     virtual void exportLineSegment(const RLine& line);
     virtual void exportXLine(const RLine& line);
+    virtual void exportRay(const RLine& line);
     virtual void exportTriangle(const RTriangle& triangle);
     virtual void exportRectangle(const RVector& p1, const RVector& p2);
 

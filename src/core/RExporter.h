@@ -156,9 +156,14 @@ public:
     virtual void exportLineSegment(const RLine& line) = 0;
 
     /**
-     * Exports a infinite line. Used for XLines.
+     * Exports an infinite line. Used for xlines (construction lines).
      */
     virtual void exportXLine(const RLine& line) = 0;
+
+    /**
+     * Exports an infinite ray. Used for rays.
+     */
+    virtual void exportRay(const RLine& line) = 0;
 
     /**
      * Exports a point with the current attributes.

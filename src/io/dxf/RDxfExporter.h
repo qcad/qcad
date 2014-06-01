@@ -107,6 +107,10 @@ public:
         Q_UNUSED(line)
     }
 
+    virtual void exportRay(const RLine& line) {
+        Q_UNUSED(line)
+    }
+
     virtual void exportTriangle(const RTriangle& triangle) {
         Q_UNUSED(triangle)
     }

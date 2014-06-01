@@ -126,14 +126,6 @@ dir="./core/math" filename="RTextLabel.h">
       <name>text</name>
     </expr>;</return>}</block>
   </function>
-  <comment type="line">// Qt::Alignment getAlignment() const
-  {</comment>
-  <comment type="line">// return alignment;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// void setAlignment(Qt::Alignment a)
-  {</comment>
-  <comment type="line">// alignment = a;</comment>
-  <comment type="line">// }</comment>
   <function>
     <type>
       <name>QVariant</name>
@@ -172,7 +164,6 @@ dir="./core/math" filename="RTextLabel.h">
     </type>
     <name>text</name>
   </decl>;</decl_stmt>
-  <comment type="line">// Qt::Alignment alignment;</comment>
   <decl_stmt>
   <decl>
     <type>
