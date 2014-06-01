@@ -9,8 +9,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="RRestrictOrthogonal" specifier="public" />
     <constructor>
       <variant>
-        <arg type="RDocumentInterface &amp;"
-        typeName="RDocumentInterface" name="documentInterface"
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
       </variant>
     </constructor>

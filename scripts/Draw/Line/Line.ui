@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Line2P</class>
+ <widget class="QWidget" name="Line2P">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>146</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QComboBox" name="LineType">
+     <item>
+      <property name="text">
+       <string>Line</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Infinite Line</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ray</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

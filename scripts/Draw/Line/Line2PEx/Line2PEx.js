@@ -31,6 +31,8 @@ function Line2PEx(guiAction) {
 
     this.pointList = new Array();
     this.redoList = new Array();
+    this.undoList = new Array();
+
     this.point1 = undefined;
     this.point2 = undefined;
 
@@ -68,8 +70,9 @@ Line2PEx.prototype.setState = function(state) {
     this.setCrosshairCursor();
     switch (this.state) {
     case Line2PEx.State.SettingFirstPoint:
-        this.pointList = new Array();
-        this.redoList = new Array();
+        this.pointList = [];
+        this.redoList = [];
+        this.undoList = [];
         break;
     }
     this.setPrompt();
@@ -116,6 +119,9 @@ Line2PEx.prototype.setPrompt = function() {
 Line2PEx.prototype.showUiOptions = function(resume) {
     Draw.prototype.showUiOptions.call(this, resume);
 
+    var ob = objectFromPath("MainWindow::Options");
+    ob.enabled = true;
+
     // restore relative zero position when returning from another command
     var di = this.getDocumentInterface();
     if (!isNull(this.rzpos) && this.rzpos.isValid()) {
@@ -128,6 +134,10 @@ Line2PEx.prototype.hideUiOptions = function(saveSettings) {
     // store relative zero position
     var di = this.getDocumentInterface();
     this.rzpos = di.getRelativeZero();
+
+    var ob = objectFromPath("MainWindow::Options");
+    ob.enabled = true;
+
     Draw.prototype.hideUiOptions.call(this, saveSettings);
 };
 
@@ -164,7 +174,7 @@ Line2PEx.prototype.keyReleaseEvent = function(event) {
     var di = this.getDocumentInterface();
 
     if ((event.key() === Qt.Key_Z.valueOf()) && (event.modifiers().valueOf() === Qt.AltModifier.valueOf())) {
-        var ob = objectFromPath("MainWindow::Options::groupBox");
+        var ob = objectFromPath("MainWindow::Options");
         ob.enabled = !ob.enabled;
 
         // need to save relative zero position
@@ -336,7 +346,8 @@ Line2PEx.prototype.pickCoordinate = function(event, preview) {
         }
         else {
             if (!isNull(op)) {
-                di.applyOperation(op);
+                var trans = di.applyOperation(op);
+                this.undoList.push(trans);
                 this.pointList.push(this.point2);
                 di.setRelativeZero(this.point2);
                 this.point1 = this.point2;
@@ -372,12 +383,20 @@ Line2PEx.prototype.slotClose = function() {
 
 Line2PEx.prototype.slotUndo = function() {
     if (this.pointList.length >= 2) {
+        var di = this.getDocumentInterface();
+        var doc = di.getDocument();
+
         this.redoList.push(this.pointList.pop());
-        this.getDocumentInterface().undo();
+        // if, for example, a circle is drawn while drawing lines, on return, system undo
+        // deletes the circle, not last line segment
+        //di.undo();
+        var trans = this.undoList.pop();
+        trans.undo(doc);
+        di.regenerateViews(true);
         this.point1 = this.pointList[this.pointList.length - 1];
-        this.getDocumentInterface().setRelativeZero(this.point1);
-        this.getDocumentInterface().clearPreview();
-        this.getDocumentInterface().previewOperation(this.getOperation(true));
+        di.setRelativeZero(this.point1);
+        di.clearPreview();
+        di.previewOperation(this.getOperation(true));
     }
 
     this.checkButtonStates();
@@ -390,14 +409,18 @@ Line2PEx.prototype.slotUndo = function() {
  */
 Line2PEx.prototype.slotRedo = function() {
     if (this.redoList.length >= 1) {
+        var di = this.getDocumentInterface();
+        var doc = di.getDocument();
+
         this.pointList.push(this.redoList.pop());
         this.point2 = this.pointList[this.pointList.length - 1];
-        this.getDocumentInterface().applyOperation(this.getOperation(false));
-        this.getDocumentInterface().setRelativeZero(this.point2);
+        var trans = di.applyOperation(this.getOperation(false));
+        this.undoList.push(trans);
+        di.setRelativeZero(this.point2);
         this.point1 = this.point2;
         this.simulateMouseMoveEvent();
-        this.getDocumentInterface().clearPreview();
-        this.getDocumentInterface().previewOperation(this.getOperation(true));
+        di.clearPreview();
+        di.previewOperation(this.getOperation(true));
     }
 
     this.checkButtonStates();

@@ -32,7 +32,8 @@
     // Constructors:
     
       REcmaShellSnapRestriction(
-                RDocumentInterface & documentInterface
+                RDocumentInterface * documentInterface
+        =  NULL
             );
         
     

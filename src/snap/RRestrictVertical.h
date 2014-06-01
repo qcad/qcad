@@ -35,7 +35,7 @@ class RDocumentInterface;
  */
 class QCADSNAP_EXPORT RRestrictVertical : public RRestrictOrthogonal {
 public:
-    RRestrictVertical(RDocumentInterface& documentInterface)
+    RRestrictVertical(RDocumentInterface* documentInterface)
         : RRestrictOrthogonal(documentInterface) {
         mode = Vertical;
     }

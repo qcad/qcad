@@ -81,9 +81,10 @@ RDocumentInterface::~RDocumentInterface() {
         currentActions.at(i)->suspendEvent();
     }
 
-    if (currentSnap!=NULL) {
-        currentSnap->hideUiOptions();
-    }
+//    if (currentSnap!=NULL) {
+//        currentSnap->hideUiOptions();
+//    }
+
 
     while (!currentActions.isEmpty()) {
         // make sure that UI options are removed, etc:
@@ -109,6 +110,11 @@ RDocumentInterface::~RDocumentInterface() {
     if (currentSnap!=NULL) {
         currentSnap->hideUiOptions();
         delete currentSnap;
+    }
+
+    if (currentSnapRestriction!=NULL) {
+        currentSnapRestriction->hideUiOptions();
+        delete currentSnapRestriction;
     }
 
     QMapIterator<QString, RScriptHandler*> i(scriptHandlers);
@@ -337,6 +343,9 @@ void RDocumentInterface::suspend() {
     if (currentSnap!=NULL) {
         currentSnap->hideUiOptions();
     }
+    if (currentSnapRestriction!=NULL) {
+        currentSnapRestriction->hideUiOptions();
+    }
 
     suspended = true;
 }
@@ -427,6 +436,14 @@ void RDocumentInterface::setClickMode(RAction::ClickMode m) {
         }
         else {
             currentSnap->hideUiOptions();
+        }
+    }
+    if (currentSnapRestriction!=NULL) {
+        if (m==RAction::PickCoordinate) {
+            currentSnapRestriction->showUiOptions();
+        }
+        else {
+            currentSnapRestriction->hideUiOptions();
         }
     }
 }

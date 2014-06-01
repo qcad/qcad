@@ -191,6 +191,7 @@
 #include "REcmaPropertyEvent.h"
 #include "REcmaPropertyListener.h"
 #include "REcmaPropertyTypeId.h"
+#include "REcmaRestrictAngleLength.h"
 #include "REcmaRestrictHorizontal.h"
 #include "REcmaRestrictVertical.h"
 #include "REcmaRestrictOrthogonal.h"
@@ -248,6 +249,7 @@
 #include "REcmaSharedPointerTriangle.h"
 #include "REcmaSharedPointerUcs.h"
 #include "REcmaSharedPointerView.h"
+#include "REcmaSharedPointerXLineEntity.h"
 #include "REcmaSnap.h"
 #include "REcmaSnapAuto.h"
 #include "REcmaSnapCenter.h"
@@ -302,6 +304,8 @@
 #include "REcmaViewListenerAdapter.h"
 #include "REcmaWebView.h"
 #include "REcmaWheelEvent.h"
+#include "REcmaXLineData.h"
+#include "REcmaXLineEntity.h"
 
 bool RScriptHandlerEcma::alwaysLoadScripts = false;
 bool RScriptHandlerEcma::translatorInstalled = false;
@@ -552,6 +556,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSnapReference::init(*engine);
 
     REcmaSnapRestriction::init(*engine);
+    REcmaRestrictAngleLength::init(*engine);
     REcmaRestrictHorizontal::init(*engine);
     REcmaRestrictVertical::init(*engine);
     REcmaRestrictOrthogonal::init(*engine);
@@ -613,6 +618,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaLineData::init(*engine);
     REcmaLineEntity::init(*engine);
     REcmaSharedPointerLineEntity::init(*engine);
+
+    REcmaXLineData::init(*engine);
+    REcmaXLineEntity::init(*engine);
+    REcmaSharedPointerXLineEntity::init(*engine);
 
     REcmaCircleData::init(*engine);
     REcmaCircleEntity::init(*engine);

@@ -44,10 +44,14 @@ dir="./core" filename="RSnapRestriction.h">
     <parameter_list>(
     <param>
       <decl>
-        <type>
-        <name>RDocumentInterface</name>&amp;</type>
-        <name>documentInterface</name>
-      </decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>documentInterface</name>=
+      <init>
+        <expr>
+          <name>NULL</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <member_list>: 
     <call>
@@ -153,7 +157,7 @@ dir="./core" filename="RSnapRestriction.h">
   <decl_stmt>
   <decl>
     <type>
-    <name>RDocumentInterface</name>&amp;</type>
+    <name>RDocumentInterface</name>*</type>
     <name>documentInterface</name>
   </decl>;</decl_stmt>
   <decl_stmt>

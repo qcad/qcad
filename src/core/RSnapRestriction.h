@@ -36,7 +36,9 @@ class RDocumentInterface;
  */
 class QCADCORE_EXPORT RSnapRestriction {
 public:
-    RSnapRestriction(RDocumentInterface& documentInterface) : documentInterface(documentInterface), lastSnap(RVector::invalid) {}
+    RSnapRestriction(RDocumentInterface* documentInterface = NULL) :
+        documentInterface(documentInterface),
+        lastSnap(RVector::invalid) {}
     virtual ~RSnapRestriction() {}
 
     /**
@@ -57,7 +59,7 @@ public:
     }
 
 protected:
-    RDocumentInterface& documentInterface;
+    RDocumentInterface* documentInterface;
     RVector lastSnap;
 };
 

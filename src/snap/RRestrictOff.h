@@ -35,7 +35,7 @@ class RDocumentInterface;
  */
 class QCADSNAP_EXPORT RRestrictOff : public RSnapRestriction {
 public:
-    RRestrictOff(RDocumentInterface& documentInterface)
+    RRestrictOff(RDocumentInterface* documentInterface = NULL)
         : RSnapRestriction(documentInterface) {}
     virtual ~RRestrictOff() {}
 

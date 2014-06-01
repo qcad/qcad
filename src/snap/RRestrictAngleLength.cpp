@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -16,21 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RRestrictOrthogonal.h"
+#include "RRestrictAngleLength.h"
 #include "RDocumentInterface.h"
 #include "RGraphicsView.h"
 #include "ROrthoGrid.h"
 
-RVector RRestrictOrthogonal::restrictSnap(const RVector& position, const RVector& relativeZero) {
+RVector RRestrictAngleLength::restrictSnap(const RVector& position, const RVector& relativeZero) {
     RVector ret;
+    /*
     RVector retX;
     RVector retY;
 
-    if (documentInterface==NULL) {
-        return ret;
-    }
-
-    RGraphicsView* view = documentInterface->getLastKnownViewWithFocus();
+    RGraphicsView* view = documentInterface.getLastKnownViewWithFocus();
     if (view==NULL) {
         return ret;
     }
@@ -70,21 +67,32 @@ RVector RRestrictOrthogonal::restrictSnap(const RVector& position, const RVector
         retX = RVector(relativeZero.x, position.y);
         retY = RVector(position.x, relativeZero.y);
     }
+    */
+
+    double ang = relativeZero.getAngleTo(position);
+    double len = relativeZero.getDistanceTo(position);
+
+    double angRes = ang;
+    if (fabs(angle)>RS::AngleTolerance) {
+        angRes = RMath::mround((ang - baseAngle) / angle) * angle + baseAngle;
+    }
+    double lenRes = len;
+    if (fabs(length)>RS::PointTolerance) {
+        lenRes = RMath::mround((len - baseLength) / length) * length + baseLength;
+    }
 
     switch (mode) {
-    case RRestrictOrthogonal::Vertical:
-        ret = retX;
+    case RRestrictAngleLength::None:
+        ret = position;
         break;
-    case RRestrictOrthogonal::Horizonal:
-        ret = retY;
+    case RRestrictAngleLength::AngleLength:
+        ret = relativeZero + RVector::createPolar(lenRes, angRes);
         break;
-    case RRestrictOrthogonal::Orthogonal:
-        if (retX.getDistanceTo(position) > retY.getDistanceTo(position)) {
-            ret = retY;
-        }
-        else {
-            ret = retX;
-        }
+    case RRestrictAngleLength::Angle:
+        ret = relativeZero + RVector::createPolar(len, angRes);
+        break;
+    case RRestrictAngleLength::Length:
+        ret = relativeZero + RVector::createPolar(lenRes, ang);
         break;
     }
 

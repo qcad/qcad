@@ -41,7 +41,7 @@ public:
         Orthogonal
     };
 
-    RRestrictOrthogonal(RDocumentInterface& documentInterface)
+    RRestrictOrthogonal(RDocumentInterface* documentInterface)
         : RSnapRestriction(documentInterface), 
           mode(RRestrictOrthogonal::Orthogonal) {}
     virtual ~RRestrictOrthogonal() {}

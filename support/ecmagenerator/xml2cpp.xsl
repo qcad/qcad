@@ -1266,6 +1266,10 @@
                 // RGrid:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
             </xsl:when>
+            <xsl:when test="$returnType='RSnapRestriction *'">
+                // RSnapRestriction:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            </xsl:when>
             <!--
             <xsl:when test="$returnType='QList &lt; RVector &gt;'">
                 // List of RVector:

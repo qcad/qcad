@@ -162,6 +162,7 @@ HEADERS += \
     $$PWD/REcmaPropertyEvent.h \
     $$PWD/REcmaPropertyListener.h \
     $$PWD/REcmaPropertyTypeId.h \
+    $$PWD/REcmaRestrictAngleLength.h \
     $$PWD/REcmaRestrictHorizontal.h \
     $$PWD/REcmaRestrictOff.h \
     $$PWD/REcmaRestrictOrthogonal.h \
@@ -238,6 +239,7 @@ HEADERS += \
     $$PWD/REcmaShellListView.h \
     $$PWD/REcmaShellListWidget.h \
     $$PWD/REcmaShellPropertyEditor.h \
+    $$PWD/REcmaShellRestrictAngleLength.h \
     $$PWD/REcmaShellRunner.h \
     $$PWD/REcmaShellSnap.h \
     $$PWD/REcmaShellSnapDistance.h \
@@ -468,6 +470,7 @@ SOURCES += \
     $$PWD/REcmaPropertyEvent.cpp \
     $$PWD/REcmaPropertyListener.cpp \
     $$PWD/REcmaPropertyTypeId.cpp \
+    $$PWD/REcmaRestrictAngleLength.cpp \
     $$PWD/REcmaRestrictHorizontal.cpp \
     $$PWD/REcmaRestrictOff.cpp \
     $$PWD/REcmaRestrictOrthogonal.cpp \
@@ -544,6 +547,7 @@ SOURCES += \
     $$PWD/REcmaShellListView.cpp \
     $$PWD/REcmaShellListWidget.cpp \
     $$PWD/REcmaShellPropertyEditor.cpp \
+    $$PWD/REcmaShellRestrictAngleLength.cpp \
     $$PWD/REcmaShellRunner.cpp \
     $$PWD/REcmaShellSnap.cpp \
     $$PWD/REcmaShellSnapDistance.cpp \
