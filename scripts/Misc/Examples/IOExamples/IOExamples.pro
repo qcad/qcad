@@ -4,4 +4,5 @@ SUBDIRS = \
     ts \
     ExImportPoints \
     ExDumpPolyline \
+    ExRegisterFileImporter \
     MolImport

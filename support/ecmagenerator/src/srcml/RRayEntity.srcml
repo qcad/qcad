@@ -16,10 +16,10 @@ dir="./entity" filename="RRayEntity.h">
   License * along with QCAD. */</comment>
   <cpp:ifndef>#
   <cpp:directive>ifndef</cpp:directive>
-  <name>RXLINEENTITY_H</name></cpp:ifndef>
+  <name>RRAYENTITY_H</name></cpp:ifndef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RXLINEENTITY_H</name></cpp:define>
+  <name>RRAYENTITY_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"entity_global.h"</cpp:file></cpp:include>
@@ -33,7 +33,7 @@ dir="./entity" filename="RRayEntity.h">
   <name>RDocument</name>;</class_decl>
   <class_decl>class 
   <name>RExporter</name>;</class_decl>
-  <comment type="block">/** * Infinite line entity. * * \scriptable
+  <comment type="block">/** * Infinite ray entity. * * \scriptable
   * \sharedPointerSupport * \ingroup entity */</comment>
   <class>class 
   <macro>

@@ -114,6 +114,8 @@
 #include "REcmaFileExporterRegistry.h"
 #include "REcmaFileImporter.h"
 #include "REcmaFileImporterAdapter.h"
+#include "REcmaFileImporterFactory.h"
+#include "REcmaFileImporterFactoryAdapter.h"
 #include "REcmaFileImporterRegistry.h"
 #include "REcmaFileSystemModel.h"
 #include "REcmaFocusListener.h"
@@ -720,6 +722,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaFileImporter::init(*engine);
     REcmaFileImporterAdapter::init(*engine);
+    REcmaFileImporterFactory::init(*engine);
+    REcmaFileImporterFactoryAdapter::init(*engine);
     REcmaFileImporterRegistry::init(*engine);
 
     REcmaFileExporter::init(*engine);
