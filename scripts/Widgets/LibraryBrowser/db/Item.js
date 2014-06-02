@@ -95,13 +95,6 @@ Item.prototype.getCreators = function(localeName) {
     return creators;
 };
 
-/*
-Item.prototype.getMd5Sum = function() {
-    var hash = QCryptographicHash.hash(new QByteArray(this.name), QCryptographicHash.Md5);
-    return serialize(hash);
-};
-*/
-
 Item.prototype.save = function() {
     if (isNull(this.id)) {
         ItemPeer.doInsert(this);
@@ -143,43 +136,6 @@ Item.prototype.getRdfFilePath = function() {
     var fi = new QFileInfo(filePath);
     return fi.absolutePath() + QDir.separator + fi.completeBaseName() + ".rdf";
 };
-
-/*
-Item.prototype.addTags = function(tags) {
-    for ( var i = 0; i < tags.length; ++i) {
-        var tag = tags[i];
-        var locale = tag.locale;
-        if (typeof (locale) != "string") {
-            // we should never come to this point
-            debugger;
-        }
-        tag.save();
-        var ik = new ItemTag(this.id, tag.id);
-        ik.save();
-        if (locale != Locale.Neutral) {
-            var stem = RStemmer.stem(tag.text, locale);
-            var stemTag = new Tag(stem, locale, Tag.Type.Stem);
-            stemTag.save();
-            var stemIk = new ItemTag(this.id, stemTag.id);
-            stemIk.save();
-        }
-    }
-};
-
-Item.prototype.removeTags = function() {
-    return ItemTagPeer.doDeleteByItemId(this.id);
-};
-
-Item.prototype.removeTag = function(text) {
-    var ret = ItemTagPeer.doDeleteByTag(this.id, text);
-    TagPeer.removeOrphans();
-    return ret;
-};
-
-Item.prototype.getTags = function() {
-    return ItemTagPeer.doSelectByItem(this);
-};
-*/
 
 /**
  * \param small True: generate small icon for tree view,
@@ -266,10 +222,6 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
 
             // no preview available for script item:
             if (failed) {
-//                lb = new QLabel(qsTr("failed"));
-//                lb.alignment = Qt.AlignCenter;
-//                lb.resize(iconSize, iconSize);
-                //this.icon = QPixmap.grabWidget(lb);
                 this.icon = QPixmap.fromImage(view.getBuffer());
                 this.save();
                 return this.markIcon(undefined, small, !noFavoritesMark && this.isFavorite(), true, true);
@@ -281,38 +233,15 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
             qWarning("Item.js:", "getIcon(): exception:", e);
         }
 
-//        lb = new QLabel("JS");
-//        lb.scaledContents = true;
-//        lb.resize(iconSize / 3, iconSize / 3);
-//        var pixmap = new QPixmap(LibraryBrowser.basePath + "/JsFile.svg");
-//        lb.pixmap = pixmap;
-        //lb.move(iconSize - lb.width, iconSize - lb.height);
-        //var img = view.getBuffer();
-//        var painter = new QPainter();
-//        painter.begin(img);
-//        painter.drawImage(iconSize - lb.width, iconSize - lb.height, QPixmap.grabWidget(lb).toImage());
-//        painter.end();
-        //var pix = new QPixmap();
-        //pix.convertFromImage(img);
-        //this.icon = pix;
         this.icon = QPixmap.fromImage(view.getBuffer());
-        //this.hash = fi.lastModified();
         this.save();
 
         return this.markIcon(this.icon, small, !noFavoritesMark && this.isFavorite(), true, false);
     }
 
-    // not a script, import the file
-
-    // SVG file
-    if (fi.suffix().toLowerCase() === "svg") {
-        var svgImporter = new SvgImporter(doc);
-        svgImporter.importFile(fi.filePath());
-    } else {
-        // DXF file
-        if (di.importFile(fi.filePath()) != RDocumentInterface.IoErrorNoError) {
-            return this.markIcon(undefined, small, !noFavoritesMark && this.isFavorite(), false, false);
-        }
+    // not a script, import the file (DXF,DWG,SVG):
+    if (di.importFile(fi.filePath()) != RDocumentInterface.IoErrorNoError) {
+        return this.markIcon(undefined, small, !noFavoritesMark && this.isFavorite(), false, false);
     }
 
     di.regenerateScenes();
