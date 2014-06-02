@@ -304,6 +304,8 @@ SvgImporter.prototype.setTransform = function(t) {
 };
 
 SvgImporter.prototype.importFile = function(fileName) {
+    qDebug("SvgImporter.prototype.importFile");
+
     if (isNull(this.getDocument())) {
         this.setDocument(EAction.getDocument());
     }
