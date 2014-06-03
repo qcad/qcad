@@ -174,29 +174,7 @@ RS::Side RLine::getSideOfPoint(const RVector& point) const {
 }
 
 
-void RLine::clipToXY(const RBox& box, bool isXLine) {
-    if (isXLine) {
-        RPolyline pl = box.getPolyline2d();
-
-        QList<RVector> ips = RShape::getIntersectionPointsLX(*this, pl, false);
-        QList<RVector> sol;
-        for (int i=0; i<ips.length(); i++) {
-            if (pl.isOnShape(ips[i])) {
-                sol.append(ips[i]);
-            }
-        }
-
-        if (sol.length()==2) {
-            RLine ret = RLine(sol[0], sol[1]);
-            double diff = RMath::getAngleDifference180(ret.getAngle(), getAngle());
-            *this = ret;
-            if (fabs(diff) > 1.0e-2) {
-                reverse();
-            }
-        }
-        return;
-    }
-
+void RLine::clipToXY(const RBox& box) {
     double x1 = startPoint.x;
     double y1 = startPoint.y;
     double x2 = endPoint.x;

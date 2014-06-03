@@ -643,6 +643,10 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Leaders") : qsTr("Leader");
     case RS.EntityLine:
         return plural ? qsTr("Lines") : qsTr("Line");
+    case RS.EntityXLine:
+        return plural ? qsTr("Infinite Lines") : qsTr("Infinite Line");
+    case RS.EntityRay:
+        return plural ? qsTr("Rays") : qsTr("Ray");
     case RS.EntityPoint:
         return plural ? qsTr("Points") : qsTr("Point");
     case RS.EntityPolyline:

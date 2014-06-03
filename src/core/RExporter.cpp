@@ -38,6 +38,7 @@
 #include "RTriangle.h"
 #include "RUnit.h"
 #include "RView.h"
+#include "RXLine.h"
 
 class RImageData;
 

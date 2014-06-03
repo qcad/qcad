@@ -103,12 +103,12 @@ public:
         Q_UNUSED(line)
     }
 
-    virtual void exportXLine(const RLine& line) {
-        Q_UNUSED(line)
+    virtual void exportXLine(const RXLine& xLine) {
+        Q_UNUSED(xLine)
     }
 
-    virtual void exportRay(const RLine& line) {
-        Q_UNUSED(line)
+    virtual void exportRay(const RRay& ray) {
+        Q_UNUSED(ray)
     }
 
     virtual void exportTriangle(const RTriangle& triangle) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <unit xmlns="http://www.sdml.info/srcML/src"
 xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core/math" filename="RLine.h">
-  <comment type="block">/** * Copyright (c) 2011-2013 by Andrew
+dir="./core/math" filename="RXLine.h">
+  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
   Mustun. All rights reserved. * * This file is part of the QCAD
   project. * * QCAD is free software: you can redistribute it
   and/or modify * it under the terms of the GNU General Public
@@ -16,16 +16,16 @@ dir="./core/math" filename="RLine.h">
   License * along with QCAD. */</comment>
   <cpp:ifndef>#
   <cpp:directive>ifndef</cpp:directive>
-  <name>RLINE_H</name></cpp:ifndef>
+  <name>RXLINE_H</name></cpp:ifndef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RLINE_H</name></cpp:define>
+  <name>RXLINE_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"../core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDirected.h"</cpp:file></cpp:include>
+  <cpp:file>"RLine.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RS.h"</cpp:file></cpp:include>
@@ -40,14 +40,14 @@ dir="./core/math" filename="RLine.h">
   <class_decl>class 
   <name>RPolyline</name>;</class_decl>
   <comment type="block">/** * Low-level mathematical representation
-  of a line. * * \ingroup math * \scriptable *
+  of an infinite line. * * \ingroup math * \scriptable *
   \sharedPointerSupport * \copyable * \hasStreamOperator
   */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
   </macro>
-  <name>RLine</name>
+  <name>RXLine</name>
   <super>: 
   <specifier>public</specifier>
   <name>RShape</name>, 
@@ -57,17 +57,28 @@ dir="./core/math" filename="RLine.h">
   <private type="default"></private>
   <public>public: 
   <constructor_decl>
-  <name>RLine</name>
+  <name>RXLine</name>
   <parameter_list>()</parameter_list>;</constructor_decl>
   <constructor_decl>
-  <name>RLine</name>
+  <name>RXLine</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLine</name>&amp;</type>
+      <name>line</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RXLine</name>
   <parameter_list>(
   <param>
     <decl>
       <type>
       <name>const</name>
       <name>RVector</name>&amp;</type>
-      <name>startPoint</name>
+      <name>basePoint</name>
     </decl>
   </param>, 
   <param>
@@ -75,18 +86,18 @@ dir="./core/math" filename="RLine.h">
       <type>
       <name>const</name>
       <name>RVector</name>&amp;</type>
-      <name>endPoint</name>
+      <name>directionVector</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
   <constructor_decl>
-  <name>RLine</name>
+  <name>RXLine</name>
   <parameter_list>(
   <param>
     <decl>
       <type>
       <name>const</name>
       <name>RVector</name>&amp;</type>
-      <name>startPoint</name>
+      <name>basePoint</name>
     </decl>
   </param>, 
   <param>
@@ -107,12 +118,38 @@ dir="./core/math" filename="RLine.h">
   </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
   <specifier>virtual</specifier>
-  <name>~RLine</name>
+  <name>~RXLine</name>
   <parameter_list>()</parameter_list>;</destructor_decl>
   <function>
     <type>
+      <name>RLine</name>
+    </type>
+    <name>getLineShape</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>RLine</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>basePoint</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+          <name>basePoint</name>+ 
+          <name>directionVector</name></expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
     <name>virtual</name>
-    <name>RLine</name>*</type>
+    <name>RXLine</name>*</type>
     <name>clone</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
@@ -120,7 +157,7 @@ dir="./core/math" filename="RLine.h">
     <return>return 
     <expr>new 
     <call>
-      <name>RLine</name>
+      <name>RXLine</name>
       <argument_list>(
       <argument>
         <expr>*
@@ -130,26 +167,17 @@ dir="./core/math" filename="RLine.h">
   </function>
   <function_decl>
   <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>to2D</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isValid</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
     <name>RBox</name>
   </type>
   <name>getBoundingBox</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>to2D</name>
+  <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -252,17 +280,16 @@ dir="./core/math" filename="RLine.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
-    <name>virtual</name>
     <name>RVector</name>
   </type>
-  <name>getStartPoint</name>
+  <name>getBasePoint</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
   </type>
-  <name>setStartPoint</name>
+  <name>setBasePoint</name>
   <parameter_list>(
   <param>
     <decl>
@@ -274,17 +301,37 @@ dir="./core/math" filename="RLine.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>virtual</name>
     <name>RVector</name>
   </type>
-  <name>getEndPoint</name>
+  <name>getSecondPoint</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
   </type>
-  <name>setEndPoint</name>
+  <name>setSecondPoint</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>vector</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RVector</name>
+  </type>
+  <name>getDirectionVector</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setDirectionVector</name>
   <parameter_list>(
   <param>
     <decl>
@@ -310,13 +357,6 @@ dir="./core/math" filename="RLine.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
-    <name>double</name>
-  </type>
-  <name>getAngle</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
     <name>void</name>
   </type>
   <name>setLength</name>
@@ -329,6 +369,13 @@ dir="./core/math" filename="RLine.h">
       <name>l</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>double</name>
+  </type>
+  <name>getAngle</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -378,9 +425,81 @@ dir="./core/math" filename="RLine.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
+    <name>RVector</name>
+  </type>
+  <name>getStartPoint</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RVector</name>
+  </type>
+  <name>getEndPoint</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>void</name>
   </type>
-  <name>clipToXY</name>
+  <name>trimStartPoint</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>p</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>trimEndPoint</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>p</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>
+    <name>RS</name>::
+    <name>Ending</name></name>
+  </type>
+  <name>getTrimEnd</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>coord</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>trimPoint</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RLine</name>
+  </type>
+  <name>getClippedLine</name>
   <parameter_list>(
   <param>
     <decl>
@@ -389,7 +508,8 @@ dir="./core/math" filename="RLine.h">
       <name>RBox</name>&amp;</type>
       <name>box</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -479,20 +599,6 @@ dir="./core/math" filename="RLine.h">
     <name>virtual</name>
     <name>bool</name>
   </type>
-  <name>flipHorizontal</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>flipVertical</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
   <name>reverse</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -537,77 +643,6 @@ dir="./core/math" filename="RLine.h">
       <name>transform</name>
     </decl>
   </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RS</name>::
-    <name>Ending</name></name>
-  </type>
-  <name>getTrimEnd</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>coord</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>trimPoint</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>trimStartPoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>trimEndPoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getDistanceFromStart</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl></public>
   <protected>protected: 
   <function_decl>
@@ -627,50 +662,50 @@ dir="./core/math" filename="RLine.h">
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl></protected>
   <public>public: 
-  <comment type="block">/** * \getter{getStartPoint} *
-  \setter{setStartPoint} */</comment>
+  <comment type="block">/** * \getter{getBasePoint} *
+  \setter{setBasePoint} */</comment>
   <decl_stmt>
   <decl>
     <type>
       <name>RVector</name>
     </type>
-    <name>startPoint</name>
+    <name>basePoint</name>
   </decl>;</decl_stmt>
-  <comment type="block">/** * \getter{getEndPoint} *
-  \setter{setEndPoint} */</comment>
+  <comment type="block">/** * \getter{getDirectionVector} *
+  \setter{setDirectionVector} */</comment>
   <decl_stmt>
   <decl>
     <type>
       <name>RVector</name>
     </type>
-    <name>endPoint</name>
+    <name>directionVector</name>
   </decl>;</decl_stmt></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
-    <argument>const RLine*</argument>)</argument_list>
+    <argument>const RXLine*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
-    <argument>RLine*</argument>)</argument_list>
+    <argument>RXLine*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
-    <argument>RLine</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RLine&gt;</argument>)</argument_list>
+    <argument>RXLine</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>
-    QSharedPointer&lt;RLine&gt;*</argument>)</argument_list>
+    QSharedPointer&lt;RXLine&gt;</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>
+    QSharedPointer&lt;RXLine&gt;*</argument>)</argument_list>
   </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>

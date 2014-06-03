@@ -10,7 +10,9 @@
             
         // includes for base ecma wrapper classes
         
-                  #include "REcmaXLineData.h"
+                  #include "REcmaEntityData.h"
+                
+                  #include "REcmaRay.h"
                  void REcmaRayData::init(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -25,17 +27,18 @@
     }
 
     
-        // primary base class RXLineData:
+        // primary base class REntityData:
         
             QScriptValue dpt = engine.defaultPrototype(
-                qMetaTypeId<RXLineData*>());
+                qMetaTypeId<REntityData*>());
 
             if (dpt.isValid()) {
                 proto->setPrototype(dpt);
             }
           
         /*
-        
+        REcmaRay::init(engine, proto);
+          
         */
     
 
@@ -48,12 +51,6 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
-        // conversion for base class RXLineData
-        REcmaHelper::registerFunction(&engine, proto, getRXLineData, "getRXLineData");
-        
-        // conversion for base class RLineData
-        REcmaHelper::registerFunction(&engine, proto, getRLineData, "getRLineData");
-        
         // conversion for base class REntityData
         REcmaHelper::registerFunction(&engine, proto, getREntityData, "getREntityData");
         
@@ -71,7 +68,31 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getVectorTo, "getVectorTo");
+            REcmaHelper::registerFunction(&engine, proto, getRay, "getRay");
+            
+            REcmaHelper::registerFunction(&engine, proto, getBasePoint, "getBasePoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDirectionVector, "getDirectionVector");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTrimEnd, "getTrimEnd");
+            
+            REcmaHelper::registerFunction(&engine, proto, trimStartPoint, "trimStartPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, trimEndPoint, "trimEndPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, getSideOfPoint, "getSideOfPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
+            
+            REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, castToShape, "castToShape");
+            
+            REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RRayData*>(), *proto);
@@ -301,25 +322,7 @@
     
 
     // conversion functions for base classes:
-     QScriptValue REcmaRayData::getRXLineData(QScriptContext *context,
-            QScriptEngine *engine)
-        
-            {
-                RXLineData* cppResult =
-                    qscriptvalue_cast<RRayData*> (context->thisObject());
-                QScriptValue result = qScriptValueFromValue(engine, cppResult);
-                return result;
-            }
-             QScriptValue REcmaRayData::getRLineData(QScriptContext *context,
-            QScriptEngine *engine)
-        
-            {
-                RLineData* cppResult =
-                    qscriptvalue_cast<RRayData*> (context->thisObject());
-                QScriptValue result = qScriptValueFromValue(engine, cppResult);
-                return result;
-            }
-             QScriptValue REcmaRayData::getREntityData(QScriptContext *context,
+     QScriptValue REcmaRayData::getREntityData(QScriptContext *context,
             QScriptEngine *engine)
         
             {
@@ -344,10 +347,6 @@
     {
         QStringList list;
         
-        list.append("RXLineData");
-    
-        list.append("RLineData");
-    
         list.append("REntityData");
     
 
@@ -360,19 +359,361 @@
 
     // public methods:
      QScriptValue
-        REcmaRayData::getVectorTo
+        REcmaRayData::getRay
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRayData::getVectorTo", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getVectorTo";
+            //REcmaHelper::functionStart("REcmaRayData::getRay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getRay";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RRayData* self = 
-                        getSelf("getVectorTo", context);
+                        getSelf("getRay", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RRay'
+    RRay cppResult =
+        
+               self->getRay();
+        // return type: RRay
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getRay().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::getRay", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::getBasePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::getBasePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getBasePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("getBasePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getBasePoint();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getBasePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::getBasePoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::getDirectionVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::getDirectionVector", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getDirectionVector";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("getDirectionVector", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getDirectionVector();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getDirectionVector().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::getDirectionVector", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::getAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("getAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::reverse
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::reverse", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::reverse";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("reverse", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->reverse();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.reverse().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::reverse", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::getTrimEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::getTrimEnd", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getTrimEnd";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("getTrimEnd", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RRayData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RRayData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Ending'
+    RS::Ending cppResult =
+        
+               self->getTrimEnd(a0
+        ,
+    a1);
+        // return type: RS::Ending
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getTrimEnd().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::getTrimEnd", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::trimStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::trimStartPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::trimStartPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("trimStartPoint", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -412,28 +753,48 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
-        
-               self->getVectorTo(a0);
-        // return type: RVector
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
+    // return type 'void'
+    
+               self->trimStartPoint(a0);
     } else
 
 
         
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.trimStartPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::trimStartPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::trimEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::trimEndPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::trimEndPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("trimEndPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
     
     if( context->argumentCount() ==
-    2 && (
+    1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
         ) /* type: RVector */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
     
     ){
     // prepare arguments:
@@ -456,36 +817,413 @@
                     a0 = 
                     *ap0;
                 
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->trimEndPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.trimEndPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::trimEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::getSideOfPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getSideOfPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("getSideOfPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RRayData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
     // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
+    // return type 'RS::Side'
+    RS::Side cppResult =
         
-               self->getVectorTo(a0
-        ,
-    a1);
-        // return type: RVector
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+               self->getSideOfPoint(a0);
+        // return type: RS::Side
+                // standard Type
+                result = QScriptValue(cppResult);
             
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getVectorTo().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getSideOfPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRayData::getVectorTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayData::getSideOfPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::getReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::getReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("getReferencePoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getReferencePoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::ProjectionRenderingHint */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::ProjectionRenderingHint
+                    a0 =
+                    (RS::ProjectionRenderingHint)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getReferencePoints(a0);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::getReferencePoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::moveReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::moveReferencePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::moveReferencePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("moveReferencePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RRayData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RRayData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->moveReferencePoint(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.moveReferencePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::moveReferencePoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::castToShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::castToShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::castToShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("castToShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape *'
+    RShape * cppResult =
+        
+               self->castToShape();
+        // return type: RShape *
+                // RShape:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.castToShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::castToShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::getShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::getShapes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::getShapes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("getShapes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getShapes();
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RRayData: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getShapes(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.getShapes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::getShapes", context, engine);
             return result;
         }
          QScriptValue REcmaRayData::toString

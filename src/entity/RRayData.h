@@ -22,7 +22,8 @@
 
 #include "entity_global.h"
 
-#include "RXLineData.h"
+#include "REntityData.h"
+#include "RRay.h"
 
 /**
  * Stores and manages all data that defines the geometry and
@@ -31,7 +32,7 @@
  * \scriptable
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RRayData: public RXLineData {
+class QCADENTITY_EXPORT RRayData: public REntityData, protected RRay {
 
     friend class RRayEntity;
 
@@ -43,10 +44,58 @@ public:
     RRayData(const RLine& line);
     RRayData(const RVector& basePoint, const RVector& dir);
 
-    virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
+    RRay getRay() {
+        return *this;
+    }
 
-protected:
-    virtual RLine getXLineShape() const;
+    RVector getBasePoint() const {
+        return RRay::getBasePoint();
+    }
+    RVector getDirectionVector() const {
+        return RRay::getDirectionVector();
+    }
+    double getAngle() const {
+        return RRay::getAngle();
+    }
+    bool reverse() {
+        return RRay::reverse();
+    }
+
+    RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint) {
+        return RRay::getTrimEnd(coord, trimPoint);
+    }
+    void trimStartPoint(const RVector& p) {
+        return RRay::trimStartPoint(p);
+    }
+    void trimEndPoint(const RVector& p) {
+        return RRay::trimEndPoint(p);
+    }
+
+    RS::Side getSideOfPoint(const RVector& point) const {
+        return RRay::getSideOfPoint(point);
+    }
+
+    virtual QList<RVector> getReferencePoints(
+        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+
+    virtual bool moveReferencePoint(const RVector& referencePoint,
+        const RVector& targetPoint);
+
+    virtual RShape* castToShape() {
+        return this;
+    }
+
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
+        Q_UNUSED(queryBox)
+
+        return QList<QSharedPointer<RShape> >() <<
+                QSharedPointer<RShape>(new RRay(*this));
+    }
+
+//    virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
+
+//protected:
+//    virtual RLine getXLineShape() const;
 };
 
 Q_DECLARE_METATYPE(RRayData*)

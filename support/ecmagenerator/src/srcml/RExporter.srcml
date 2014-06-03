@@ -78,11 +78,15 @@ dir="./core" filename="RExporter.h">
   <class_decl>class 
   <name>RProgressHandler</name>;</class_decl>
   <class_decl>class 
+  <name>RRay</name>;</class_decl>
+  <class_decl>class 
   <name>RSpline</name>;</class_decl>
   <class_decl>class 
   <name>RTriangle</name>;</class_decl>
   <class_decl>class 
   <name>RVector</name>;</class_decl>
+  <class_decl>class 
+  <name>RXLine</name>;</class_decl>
   <comment type="block">/** * Abstract base class for exporters. *
   * Exporters export documents into files, views, etc. * * \ingroup
   core * \scriptable */</comment>
@@ -978,8 +982,8 @@ dir="./core" filename="RExporter.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>line</name>
+      <name>RXLine</name>&amp;</type>
+      <name>xLine</name>
     </decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
@@ -996,8 +1000,8 @@ dir="./core" filename="RExporter.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>line</name>
+      <name>RRay</name>&amp;</type>
+      <name>ray</name>
     </decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>

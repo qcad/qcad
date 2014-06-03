@@ -24,13 +24,10 @@
 #include "REntity.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"
-#include "RLine.h"
-#include "RPoint.h"
 #include "RSettings.h"
 #include "RSpline.h"
 #include "RTextLabel.h"
 #include "RPainterPathSource.h"
-#include "RPolyline.h"
 #include "RBlockReferenceEntity.h"
 
 
@@ -278,7 +275,7 @@ void RGraphicsSceneQt::exportLineSegment(const RLine& line) {
     currentPainterPath.lineTo(line.endPoint);
 }
 
-void RGraphicsSceneQt::exportXLine(const RLine& line) {
+void RGraphicsSceneQt::exportXLine(const RXLine& xLine) {
     bool created = beginPath();
 
     Q_ASSERT(currentPainterPath.isValid());
@@ -292,9 +289,7 @@ void RGraphicsSceneQt::exportXLine(const RLine& line) {
     }
 
     // trim line to view box:
-    RLine clippedLine = line;
-    clippedLine.clipToXY(box, true);
-
+    RLine clippedLine = xLine.getClippedLine(box);
     exportLineSegment(clippedLine);
 
     currentPainterPath.setAlwaysRegen(true);
@@ -304,7 +299,7 @@ void RGraphicsSceneQt::exportXLine(const RLine& line) {
     }
 }
 
-void RGraphicsSceneQt::exportRay(const RLine& line) {
+void RGraphicsSceneQt::exportRay(const RRay& ray) {
     bool created = beginPath();
 
     Q_ASSERT(currentPainterPath.isValid());
@@ -318,10 +313,7 @@ void RGraphicsSceneQt::exportRay(const RLine& line) {
     }
 
     // trim line to view box:
-    RLine clippedLine = line;
-    clippedLine.clipToXY(box, true);
-    clippedLine.setStartPoint(line.getStartPoint());
-
+    RLine clippedLine = ray.getClippedLine(box);
     exportLineSegment(clippedLine);
 
     currentPainterPath.setAlwaysRegen(true);

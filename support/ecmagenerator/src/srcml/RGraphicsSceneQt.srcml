@@ -65,6 +65,12 @@ dir="./gui" filename="RGraphicsSceneQt.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RRay.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RXLine.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RGraphicsViewImage</name>;</class_decl>
   <comment type="block">/** * \brief Qt based 2d graphics scene. *
@@ -377,8 +383,8 @@ dir="./gui" filename="RGraphicsSceneQt.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>line</name>
+      <name>RXLine</name>&amp;</type>
+      <name>xLine</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -392,8 +398,8 @@ dir="./gui" filename="RGraphicsSceneQt.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>line</name>
+      <name>RRay</name>&amp;</type>
+      <name>ray</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>

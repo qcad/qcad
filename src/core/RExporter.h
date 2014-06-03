@@ -46,9 +46,11 @@ class RPainterPathSource;
 class RPoint;
 class RPolyline;
 class RProgressHandler;
+class RRay;
 class RSpline;
 class RTriangle;
 class RVector;
+class RXLine;
 
 /**
  * Abstract base class for exporters.
@@ -158,12 +160,12 @@ public:
     /**
      * Exports an infinite line. Used for xlines (construction lines).
      */
-    virtual void exportXLine(const RLine& line) = 0;
+    virtual void exportXLine(const RXLine& xLine) = 0;
 
     /**
      * Exports an infinite ray. Used for rays.
      */
-    virtual void exportRay(const RLine& line) = 0;
+    virtual void exportRay(const RRay& ray) = 0;
 
     /**
      * Exports a point with the current attributes.

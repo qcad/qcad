@@ -23,25 +23,36 @@ RXLineData::RXLineData() {
 }
 
 RXLineData::RXLineData(RDocument* document, const RXLineData& data)
-    : RLineData(document, data) {
+    : REntityData(document) {
+    *this = data;
     this->document = document;
     if (document!=NULL) {
         linetypeId = document->getLinetypeByLayerId();
     }
 }
 
-RXLineData::RXLineData(const RLine& line) :
-    RLineData(line) {
+RXLineData::RXLineData(const RXLine &line) :
+    RXLine(line) {
 }
 
 RXLineData::RXLineData(const RVector& basePoint, const RVector& dir) :
-    RLineData(basePoint, basePoint + dir) {
+    RXLine(basePoint, dir) {
+}
+
+QList<RVector> RXLineData::getReferencePoints(
+        RS::ProjectionRenderingHint hint) const {
+    Q_UNUSED(hint)
+
+    QList<RVector> ret;
+    ret.append(basePoint);
+    ret.append(getSecondPoint());
+    return ret;
 }
 
 // prevent recursion
-RBox RXLineData::getBoundingBox() const {
-    return RLine::getBoundingBox();
-}
+//RBox RXLineData::getBoundingBox() const {
+//    return RLine::getBoundingBox();
+//}
 
 //bool RXLineData::intersectsWith(const RShape& shape) const {
 //    RLine xLine = getXLineShape();
@@ -70,21 +81,38 @@ RBox RXLineData::getBoundingBox() const {
 //    return xLine.getIntersectionPoints(shape, limited);
 //}
 
-RLine RXLineData::getXLineShape() const {
+//RLine RXLineData::getXLineShape() const {
 //    const RDocument* doc = getDocument();
 //    if (doc==NULL) {
 //        return RLine();
 //    }
 
-    RLine xLine = *this;
+//    RLine xLine = *this;
 //    RBox bbox = doc->getBoundingBox();
-    RBox bbox(RVector(-1e6,-1e6), RVector(1e6,1e6));
-    xLine.clipToXY(bbox, true);
-    return xLine;
-}
 
+    //RBox bbox(RVector(-1e6,-1e6), RVector(1e6,1e6));
+    //xLine.clipToXY(bbox, true);
+//    return xLine;
+//}
+
+/*
 QList<QSharedPointer<RShape> > RXLineData::getShapes(const RBox& queryBox) const {
     Q_UNUSED(queryBox)
 
     return QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(new RLine(getXLineShape()));
+}
+*/
+
+bool RXLineData::moveReferencePoint(const RVector& referencePoint,
+        const RVector& targetPoint) {
+    bool ret = false;
+    if (referencePoint.equalsFuzzy(basePoint)) {
+        basePoint = targetPoint;
+        ret = true;
+    }
+    if (referencePoint.equalsFuzzy(getSecondPoint())) {
+        setSecondPoint(targetPoint);
+        ret = true;
+    }
+    return ret;
 }

@@ -69,15 +69,15 @@ dir="./core" filename="RPainterPathExporter.h">
       <decl>
         <type>
         <name>const</name>
-        <name>RLine</name>&amp;</type>
-        <name>line</name>
+        <name>RXLine</name>&amp;</type>
+        <name>xLine</name>
       </decl>
     </param>)</parameter_list>
     <block>{ 
     <macro>
       <name>Q_UNUSED</name>
       <argument_list>(
-      <argument>line</argument>)</argument_list>
+      <argument>xLine</argument>)</argument_list>
     </macro>}</block>
   </function>
   <function>
@@ -91,15 +91,15 @@ dir="./core" filename="RPainterPathExporter.h">
       <decl>
         <type>
         <name>const</name>
-        <name>RLine</name>&amp;</type>
-        <name>line</name>
+        <name>RRay</name>&amp;</type>
+        <name>ray</name>
       </decl>
     </param>)</parameter_list>
     <block>{ 
     <macro>
       <name>Q_UNUSED</name>
       <argument_list>(
-      <argument>line</argument>)</argument_list>
+      <argument>ray</argument>)</argument_list>
     </macro>}</block>
   </function>
   <function>

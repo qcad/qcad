@@ -230,8 +230,10 @@ QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && !e->isUndone() && e->getType()==RS::EntityXLine &&
-                e->getBlockId() == currentBlock) {
+        if (!e.isNull() && !e->isUndone() &&
+            (e->getType()==RS::EntityXLine || e->getType()==RS::EntityRay) &&
+            e->getBlockId() == currentBlock) {
+
             result.insert(e->getId());
         }
     }

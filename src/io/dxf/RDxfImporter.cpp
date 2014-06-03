@@ -50,6 +50,7 @@
 #include "RModifyObjectsOperation.h"
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
+#include "RRayEntity.h"
 #include "RSettings.h"
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
@@ -58,6 +59,7 @@
 #include "RTextRenderer.h"
 #include "RVector.h"
 #include "RView.h"
+#include "RXLineEntity.h"
 
 
 RDxfImporter::RDxfImporter(RDocument& document, RMessageHandler* messageHandler, RProgressHandler* progressHandler)
@@ -435,6 +437,24 @@ void RDxfImporter::addLine(const DL_LineData& data) {
     RVector v2(data.x2, data.y2);
     QSharedPointer<RLineEntity> entity(
         new RLineEntity(document, RLineData(v1, v2))
+    );
+    importEntity(entity);
+}
+
+void RDxfImporter::addXLine(const DL_XLineData& data) {
+    RVector v1(data.bx, data.by);
+    RVector v2(data.dx, data.dy);
+    QSharedPointer<RXLineEntity> entity(
+        new RXLineEntity(document, RXLineData(v1, v2))
+    );
+    importEntity(entity);
+}
+
+void RDxfImporter::addRay(const DL_RayData& data) {
+    RVector v1(data.bx, data.by);
+    RVector v2(data.dx, data.dy);
+    QSharedPointer<RRayEntity> entity(
+        new RRayEntity(document, RRayData(v1, v2))
     );
     importEntity(entity);
 }

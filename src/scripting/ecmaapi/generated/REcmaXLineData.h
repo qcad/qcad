@@ -28,9 +28,7 @@
     ;
 
     // conversion functions for base classes:
-    static  QScriptValue getRLineData(QScriptContext *context,
-            QScriptEngine *engine)
-        ;static  QScriptValue getREntityData(QScriptContext *context,
+    static  QScriptValue getREntityData(QScriptContext *context,
             QScriptEngine *engine)
         ;
 
@@ -47,28 +45,40 @@
 
     // public methods:
     static  QScriptValue
-        getBoundingBox
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setBasePoint
+        getXLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBasePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setSecondPoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getSecondPoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDirectionVector
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getDirectionVector
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getVectorTo
+        getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        reverse
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTrimEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        trimStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        trimEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        moveReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        castToShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getShapes

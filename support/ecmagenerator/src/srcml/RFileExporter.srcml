@@ -146,7 +146,7 @@ dir="./core" filename="RFileExporter.h">
     <type>
       <name>bool</name>
     </type>
-    <name>resetModified</name>=
+    <name>setFileName</name>=
     <init>
       <expr>
         <name>true</name>

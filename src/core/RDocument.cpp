@@ -825,7 +825,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     }
 
     // box is completely outside the bounding box of this document:
-    if (usingCurrentBlock && boxExpanded.isOutside(getBoundingBox())) {
+    if (usingCurrentBlock && boxExpanded.isOutside(getBoundingBox()) && checkBoundingBoxOnly) {
         return infinites;
     }
 

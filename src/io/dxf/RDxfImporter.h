@@ -76,6 +76,8 @@ private:
     virtual void endBlock();
     virtual void addPoint(const DL_PointData& data);
     virtual void addLine(const DL_LineData& data);
+    virtual void addXLine(const DL_XLineData& data);
+    virtual void addRay(const DL_RayData& data);
     virtual void addArc(const DL_ArcData& data);
     virtual void addEllipse(const DL_EllipseData& data);
     virtual void addCircle(const DL_CircleData& data);

@@ -141,14 +141,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLine &amp;" typeName="RLine" name="line"
+        <arg type="RXLine &amp;" typeName="RXLine" name="xLine"
         isConst="true" />
       </variant>
     </method>
     <method name="exportRay" cppName="exportRay" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLine &amp;" typeName="RLine" name="line"
+        <arg type="RRay &amp;" typeName="RRay" name="ray"
         isConst="true" />
       </variant>
     </method>

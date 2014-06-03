@@ -29,6 +29,7 @@
 #include "RPolyline.h"
 #include "RShape.h"
 #include "RSpline.h"
+#include "RXLine.h"
 
 double RShape::twopi = M_PI*2;
 double RShape::epsTolerance = 1.0e-04;
@@ -180,6 +181,17 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
         if (explodable2 != NULL) {
             return getIntersectionPointsLX(*line1, *explodable2, limited);
+        }
+    }
+
+    const RXLine* xline1 = dynamic_cast<const RXLine*>(&shape1);
+    if (xline1 != NULL) {
+        if (same) {
+            return empty;
+        }
+        const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+        if (xline2 != NULL) {
+            return getIntersectionPointsLL(xline1->getLineShape(), xline2->getLineShape(), false);
         }
     }
 

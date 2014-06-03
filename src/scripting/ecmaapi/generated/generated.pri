@@ -162,6 +162,7 @@ HEADERS += \
     $$PWD/REcmaPropertyEvent.h \
     $$PWD/REcmaPropertyListener.h \
     $$PWD/REcmaPropertyTypeId.h \
+    $$PWD/REcmaRay.h \
     $$PWD/REcmaRayData.h \
     $$PWD/REcmaRayEntity.h \
     $$PWD/REcmaRestrictAngleLength.h \
@@ -217,6 +218,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerPointEntity.h \
     $$PWD/REcmaSharedPointerPolyline.h \
     $$PWD/REcmaSharedPointerPolylineEntity.h \
+    $$PWD/REcmaSharedPointerRay.h \
     $$PWD/REcmaSharedPointerRayEntity.h \
     $$PWD/REcmaSharedPointerShape.h \
     $$PWD/REcmaSharedPointerSolidEntity.h \
@@ -230,6 +232,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerTriangle.h \
     $$PWD/REcmaSharedPointerUcs.h \
     $$PWD/REcmaSharedPointerView.h \
+    $$PWD/REcmaSharedPointerXLine.h \
     $$PWD/REcmaSharedPointerXLineEntity.h \
     $$PWD/REcmaShellActionAdapter.h \
     $$PWD/REcmaShellFileExporterAdapter.h \
@@ -307,6 +310,7 @@ HEADERS += \
     $$PWD/REcmaViewListenerAdapter.h \
     $$PWD/REcmaWebView.h \
     $$PWD/REcmaWheelEvent.h \
+    $$PWD/REcmaXLine.h \
     $$PWD/REcmaXLineData.h \
     $$PWD/REcmaXLineEntity.h
 SOURCES += \
@@ -473,6 +477,7 @@ SOURCES += \
     $$PWD/REcmaPropertyEvent.cpp \
     $$PWD/REcmaPropertyListener.cpp \
     $$PWD/REcmaPropertyTypeId.cpp \
+    $$PWD/REcmaRay.cpp \
     $$PWD/REcmaRayData.cpp \
     $$PWD/REcmaRayEntity.cpp \
     $$PWD/REcmaRestrictAngleLength.cpp \
@@ -528,6 +533,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerPointEntity.cpp \
     $$PWD/REcmaSharedPointerPolyline.cpp \
     $$PWD/REcmaSharedPointerPolylineEntity.cpp \
+    $$PWD/REcmaSharedPointerRay.cpp \
     $$PWD/REcmaSharedPointerRayEntity.cpp \
     $$PWD/REcmaSharedPointerShape.cpp \
     $$PWD/REcmaSharedPointerSolidEntity.cpp \
@@ -541,6 +547,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerTriangle.cpp \
     $$PWD/REcmaSharedPointerUcs.cpp \
     $$PWD/REcmaSharedPointerView.cpp \
+    $$PWD/REcmaSharedPointerXLine.cpp \
     $$PWD/REcmaSharedPointerXLineEntity.cpp \
     $$PWD/REcmaShellActionAdapter.cpp \
     $$PWD/REcmaShellFileExporterAdapter.cpp \
@@ -618,5 +625,6 @@ SOURCES += \
     $$PWD/REcmaViewListenerAdapter.cpp \
     $$PWD/REcmaWebView.cpp \
     $$PWD/REcmaWheelEvent.cpp \
+    $$PWD/REcmaXLine.cpp \
     $$PWD/REcmaXLineData.cpp \
     $$PWD/REcmaXLineEntity.cpp

@@ -34,13 +34,13 @@ dir="./entity" filename="RXLineData.h">
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLineData.h"</cpp:file></cpp:include>
+  <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
+  <cpp:file>"RXLine.h"</cpp:file></cpp:include>
   <comment type="block">/** * Stores and manages all data that
-  defines the geometry and * appearance of a line entity. * *
-  \scriptable * \ingroup entity */</comment>
+  defines the geometry and * appearance of an infinit line (xline)
+  entity. * * \scriptable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -48,7 +48,9 @@ dir="./entity" filename="RXLineData.h">
   <name>RXLineData</name>
   <super>: 
   <specifier>public</specifier>
-  <name>RLineData</name></super>
+  <name>REntityData</name>, 
+  <specifier>protected</specifier>
+  <name>RXLine</name></super>
   <block>{
   <private type="default">
     <decl_stmt>
@@ -88,7 +90,7 @@ dir="./entity" filename="RXLineData.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLine</name>&amp;</type>
+      <name>RXLine</name>&amp;</type>
       <name>line</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
@@ -111,39 +113,16 @@ dir="./entity" filename="RXLineData.h">
       <name>dir</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RBox</name>
-  </type>
-  <name>getBoundingBox</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
-      <name>void</name>
+      <name>RXLine</name>
     </type>
-    <name>setBasePoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v</name>
-      </decl>
-    </param>)</parameter_list>
+    <name>getXLine</name>
+    <parameter_list>()</parameter_list>
     <block>{ 
-    <constructor_decl>
-    <name>RLine::setStartPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>v</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
+    <return>return 
+    <expr>*
+    <name>this</name></expr>;</return>}</block>
   </function>
   <function>
     <type>
@@ -157,90 +136,11 @@ dir="./entity" filename="RXLineData.h">
     <expr>
       <call>
         <name>
-        <name>RLine</name>::
-        <name>getStartPoint</name></name>
+        <name>RXLine</name>::
+        <name>getBasePoint</name></name>
         <argument_list>()</argument_list>
       </call>
     </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setSecondPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RLine::setEndPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>v</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getSecondPoint</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RLine</name>::
-        <name>getEndPoint</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setDirectionVector</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-      <call>
-        <name>
-        <name>RLine</name>::
-        <name>setEndPoint</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-          <call>
-            <name>
-            <name>RLine</name>::
-            <name>getStartPoint</name></name>
-            <argument_list>()</argument_list>
-          </call>+ 
-          <name>v</name></expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</expr_stmt>}</block>
   </function>
   <function>
     <type>
@@ -252,25 +152,161 @@ dir="./entity" filename="RXLineData.h">
     <block>{ 
     <return>return 
     <expr>
-    <call>
-      <name>
-      <name>RLine</name>::
-      <name>getEndPoint</name></name>
-      <argument_list>()</argument_list>
-    </call>- 
-    <call>
-      <name>
-      <name>RLine</name>::
-      <name>getStartPoint</name></name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
+      <call>
+        <name>
+        <name>RXLine</name>::
+        <name>getDirectionVector</name></name>
+        <argument_list>()</argument_list>
+      </call>
+    </expr>;</return>}</block>
   </function>
   <function>
     <type>
-      <name>virtual</name>
-      <name>RVector</name>
+      <name>double</name>
     </type>
-    <name>getVectorTo</name>
+    <name>getAngle</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RXLine</name>::
+        <name>getAngle</name></name>
+        <argument_list>()</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>reverse</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RXLine</name>::
+        <name>reverse</name></name>
+        <argument_list>()</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>Ending</name></name>
+    </type>
+    <name>getTrimEnd</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>coord</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>trimPoint</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RXLine</name>::
+        <name>getTrimEnd</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>coord</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>trimPoint</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>trimStartPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>p</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RXLine</name>::
+        <name>trimStartPoint</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>p</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>trimEndPoint</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>p</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RXLine</name>::
+        <name>trimEndPoint</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>p</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>Side</name></name>
+    </type>
+    <name>getSideOfPoint</name>
     <parameter_list>(
     <param>
       <decl>
@@ -279,18 +315,6 @@ dir="./entity" filename="RXLineData.h">
         <name>RVector</name>&amp;</type>
         <name>point</name>
       </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>limited</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -298,17 +322,12 @@ dir="./entity" filename="RXLineData.h">
     <expr>
       <call>
         <name>
-        <name>RLine</name>::
-        <name>getVectorTo</name></name>
+        <name>RXLine</name>::
+        <name>getSideOfPoint</name></name>
         <argument_list>(
         <argument>
           <expr>
             <name>point</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <name>false</name>
           </expr>
         </argument>)</argument_list>
       </call>
@@ -320,38 +339,147 @@ dir="./entity" filename="RXLineData.h">
     <name>QList
     <argument_list>&lt;
     <argument>
+      <name>RVector</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getReferencePoints</name>
+  <parameter_list>( 
+  <param>
+    <decl>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>ProjectionRenderingHint</name></name>
+    </type>
+    <name>hint</name>=
+    <init>
+      <expr>
+        <name>
+        <name>RS</name>::
+        <name>RenderTop</name></name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>bool</name>
+  </type>
+  <name>moveReferencePoint</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>referencePoint</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>targetPoint</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function>
+    <type>
+    <name>virtual</name>
+    <name>RShape</name>*</type>
+    <name>castToShape</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>this</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RShape</name>
+        </argument>&gt;</argument_list></name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>getShapes</name>
+    <parameter_list>(
+    <param>
+      <decl>
+      <type>
+      <name>const</name>
+      <name>RBox</name>&amp;</type>
+      <name>queryBox</name>=
+      <init>
+        <expr>
+          <name>RDEFAULT_RBOX</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>queryBox</argument>)</argument_list>
+    </macro>
+    <return>return 
+    <expr>
+    <call>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RShape</name>
+        </argument>&gt;</argument_list></name>
+      </argument>&gt;</argument_list></name>
+      <argument_list>()</argument_list>
+    </call>&lt;&lt; 
+    <call>
       <name>QSharedPointer
       <argument_list>&lt;
       <argument>
         <name>RShape</name>
       </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getShapes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RBox</name>&amp;</type>
-    <name>queryBox</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RBOX</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RLine</name>
-  </type>
-  <name>getXLineShape</name>
-  <parameter_list>()</parameter_list>
-  <specifier>
-  const</specifier>;</function_decl></protected>}</block>;</class>
+      <argument_list>(
+      <argument>
+        <expr>new 
+        <call>
+          <name>RXLine</name>
+          <argument_list>(
+          <argument>
+            <expr>*
+            <name>this</name></expr>
+          </argument>)</argument_list>
+        </call></expr>
+      </argument>)</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <comment type="block">/* virtual RBox getBoundingBox() const;
+  void setBasePoint(const RVector&amp; v) {
+  RLine::setStartPoint(v); } RVector getBasePoint() const { return
+  RLine::getStartPoint(); } void setSecondPoint(const RVector&amp;
+  v) { RLine::setEndPoint(v); } RVector getSecondPoint() const {
+  return RLine::getEndPoint(); } void setDirectionVector(const
+  RVector&amp; v) { RLine::setEndPoint(RLine::getStartPoint() + v);
+  } RVector getDirectionVector() const { return
+  RLine::getEndPoint() - RLine::getStartPoint(); } virtual RVector
+  getVectorTo(const RVector&amp; point, bool limited = true) const
+  { return RLine::getVectorTo(point, false); } virtual
+  QList&lt;QSharedPointer&lt;RShape&gt; &gt; getShapes(const
+  RBox&amp; queryBox = RDEFAULT_RBOX) const; */</comment>
+  <comment type="line">//protected:</comment>
+  <comment type="line">//virtual RLine getXLineShape()
+  const;</comment></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

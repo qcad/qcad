@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -17,12 +17,12 @@
  * along with QCAD.
  */
 
-#ifndef RLINE_H
-#define RLINE_H
+#ifndef RXLINE_H
+#define RXLINE_H
 
 #include "../core_global.h"
 
-#include "RDirected.h"
+#include "RLine.h"
 #include "RS.h"
 #include "RShape.h"
 #include "RVector.h"
@@ -31,7 +31,7 @@ class RBox;
 class RPolyline;
 
 /**
- * Low-level mathematical representation of a line.
+ * Low-level mathematical representation of an infinite line.
  *
  * \ingroup math
  * \scriptable
@@ -39,22 +39,24 @@ class RPolyline;
  * \copyable
  * \hasStreamOperator
  */
-class QCADCORE_EXPORT RLine: public RShape, public RDirected {
+class QCADCORE_EXPORT RXLine: public RShape, public RDirected {
 public:
-    RLine();
-    RLine(const RVector& startPoint, const RVector& endPoint);
-    RLine(const RVector& startPoint, double angle, double distance);
-    virtual ~RLine();
+    RXLine();
+    RXLine(const RLine& line);
+    RXLine(const RVector& basePoint, const RVector& directionVector);
+    RXLine(const RVector& basePoint, double angle, double distance);
+    virtual ~RXLine();
 
-    virtual RLine* clone() const {
-        return new RLine(*this);
+    RLine getLineShape() const {
+        return RLine(basePoint, basePoint + directionVector);
     }
 
-    virtual void to2D();
+    virtual RXLine* clone() const {
+        return new RXLine(*this);
+    }
 
-    bool isValid() const;
-
-    virtual RBox getBoundingBox() const;
+    RBox getBoundingBox() const;
+    void to2D();
 
     virtual QList<RVector> getEndPoints() const;
     virtual QList<RVector> getMiddlePoints() const;
@@ -62,20 +64,20 @@ public:
     virtual QList<RVector> getPointsWithDistanceToEnd(
         double distance, RS::From from = RS::FromAny) const;
 
-    virtual RVector getVectorTo(const RVector& point,
-            bool limited = true) const;
+    virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
 
-    virtual RVector getStartPoint() const;
-    void setStartPoint(const RVector& vector);
-    virtual RVector getEndPoint() const;
-    void setEndPoint(const RVector& vector);
+    RVector getBasePoint() const;
+    void setBasePoint(const RVector& vector);
+    RVector getSecondPoint() const;
+    void setSecondPoint(const RVector& vector);
+    RVector getDirectionVector() const;
+    void setDirectionVector(const RVector& vector);
 
     RVector getMiddlePoint() const;
     
     double getLength() const;
-    double getAngle() const;
-
     void setLength(double l);
+    double getAngle() const;
     void setAngle(double a);
 
     virtual double getDirection1() const;
@@ -83,44 +85,44 @@ public:
 
     RS::Side getSideOfPoint(const RVector& point) const;
 
-    void clipToXY(const RBox& box);
+    virtual RVector getStartPoint() const;
+    virtual RVector getEndPoint() const;
+
+    virtual void trimStartPoint(const RVector& p);
+    virtual void trimEndPoint(const RVector& p);
+    virtual RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint);
+
+    virtual RLine getClippedLine(const RBox& box) const;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool scale(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool mirror(const RLine& axis);
-    virtual bool flipHorizontal();
-    virtual bool flipVertical();
     virtual bool reverse();
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
-
-    virtual RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint);
-    virtual void trimStartPoint(const RVector& p);
-    virtual void trimEndPoint(const RVector& p);
-    virtual double getDistanceFromStart(const RVector& p) const;
 
 protected:
     virtual void print(QDebug dbg) const;
 
 public:
     /**
-     * \getter{getStartPoint}
-     * \setter{setStartPoint}
+     * \getter{getBasePoint}
+     * \setter{setBasePoint}
      */
-    RVector startPoint;
+    RVector basePoint;
     /**
-     * \getter{getEndPoint}
-     * \setter{setEndPoint}
+     * \getter{getDirectionVector}
+     * \setter{setDirectionVector}
      */
-    RVector endPoint;
+    RVector directionVector;
 };
 
-Q_DECLARE_METATYPE(const RLine*)
-Q_DECLARE_METATYPE(RLine*)
-Q_DECLARE_METATYPE(RLine)
-Q_DECLARE_METATYPE(QSharedPointer<RLine>)
-Q_DECLARE_METATYPE(QSharedPointer<RLine>*)
+Q_DECLARE_METATYPE(const RXLine*)
+Q_DECLARE_METATYPE(RXLine*)
+Q_DECLARE_METATYPE(RXLine)
+Q_DECLARE_METATYPE(QSharedPointer<RXLine>)
+Q_DECLARE_METATYPE(QSharedPointer<RXLine>*)
 
 #endif

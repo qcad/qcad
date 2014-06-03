@@ -25,17 +25,17 @@
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
-#include "RLineData.h"
 #include "RVector.h"
+#include "RXLine.h"
 
 /**
  * Stores and manages all data that defines the geometry and
- * appearance of a line entity.
+ * appearance of an infinit line (xline) entity.
  *
  * \scriptable
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RXLineData: public RLineData {
+class QCADENTITY_EXPORT RXLineData: public REntityData, protected RXLine {
 
     friend class RXLineEntity;
 
@@ -44,9 +44,58 @@ protected:
 
 public:
     RXLineData();
-    RXLineData(const RLine& line);
+    RXLineData(const RXLine& line);
     RXLineData(const RVector& basePoint, const RVector& dir);
 
+    RXLine getXLine() {
+        return *this;
+    }
+
+    RVector getBasePoint() const {
+        return RXLine::getBasePoint();
+    }
+    RVector getDirectionVector() const {
+        return RXLine::getDirectionVector();
+    }
+    double getAngle() const {
+        return RXLine::getAngle();
+    }
+    bool reverse() {
+        return RXLine::reverse();
+    }
+
+    RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint) {
+        return RXLine::getTrimEnd(coord, trimPoint);
+    }
+    void trimStartPoint(const RVector& p) {
+        return RXLine::trimStartPoint(p);
+    }
+    void trimEndPoint(const RVector& p) {
+        return RXLine::trimEndPoint(p);
+    }
+
+    RS::Side getSideOfPoint(const RVector& point) const {
+        return RXLine::getSideOfPoint(point);
+    }
+
+    virtual QList<RVector> getReferencePoints(
+        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+
+    virtual bool moveReferencePoint(const RVector& referencePoint,
+        const RVector& targetPoint);
+
+    virtual RShape* castToShape() {
+        return this;
+    }
+
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
+        Q_UNUSED(queryBox)
+
+        return QList<QSharedPointer<RShape> >() <<
+                QSharedPointer<RShape>(new RXLine(*this));
+    }
+
+    /*
     virtual RBox getBoundingBox() const;
 
     void setBasePoint(const RVector& v) {
@@ -78,9 +127,10 @@ public:
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
+    */
 
-protected:
-    virtual RLine getXLineShape() const;
+//protected:
+    //virtual RLine getXLineShape() const;
 };
 
 Q_DECLARE_METATYPE(RXLineData*)

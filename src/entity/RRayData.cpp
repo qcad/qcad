@@ -23,7 +23,8 @@ RRayData::RRayData() {
 }
 
 RRayData::RRayData(RDocument* document, const RRayData& data)
-    : RXLineData(document, data) {
+    : REntityData(document) {
+    *this = data;
     this->document = document;
     if (document!=NULL) {
         linetypeId = document->getLinetypeByLayerId();
@@ -31,20 +32,54 @@ RRayData::RRayData(RDocument* document, const RRayData& data)
 }
 
 RRayData::RRayData(const RLine& line) :
-    RXLineData(line) {
+    RRay(line) {
 }
 
 RRayData::RRayData(const RVector& basePoint, const RVector& dir) :
-    RXLineData(basePoint, dir) {
+    RRay(basePoint, dir) {
 }
 
-RLine RRayData::getXLineShape() const {
-    RLine ray = *this;
-    ray.setLength(1e6);
-    return ray;
+QList<RVector> RRayData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+    Q_UNUSED(hint)
+
+    QList<RVector> ret;
+    ret.append(basePoint);
+    ret.append(getSecondPoint());
+    return ret;
 }
 
 
-RVector RRayData::getVectorTo(const RVector& point, bool limited) const {
-    return getXLineShape().getVectorTo(point, limited);
+//RLine RRayData::getXLineShape() const {
+//    RLine ray = *this;
+//    //ray.setLength(1e6);
+//    return ray;
+//}
+
+
+//RVector RRayData::getVectorTo(const RVector& point, bool limited) const {
+//    //return getXLineShape().getVectorTo(point, limited);
+//    if (!limited) {
+//        return RRay::getVectorTo(point, false);
+//    }
+//    else {
+//        RVector p = RXLine::getClosestPointOnShape(point, false);
+//        if (fabs(RMath::getAngleDifference180(getDirection1(), getStartPoint().getAngleTo(p))) < 0.1) {
+//            return p-point;
+//        }
+//        return RVector::invalid;
+//    }
+//}
+
+bool RRayData::moveReferencePoint(const RVector& referencePoint,
+        const RVector& targetPoint) {
+    bool ret = false;
+    if (referencePoint.equalsFuzzy(basePoint)) {
+        basePoint = targetPoint;
+        ret = true;
+    }
+    if (referencePoint.equalsFuzzy(getSecondPoint())) {
+        setSecondPoint(targetPoint);
+        ret = true;
+    }
+    return ret;
 }

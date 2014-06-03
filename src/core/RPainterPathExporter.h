@@ -29,12 +29,12 @@
 class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:
     virtual void exportLineSegment(const RLine& line);
-    virtual void exportXLine(const RLine& line) {
-        Q_UNUSED(line)
+    virtual void exportXLine(const RXLine& xLine) {
+        Q_UNUSED(xLine)
     }
 
-    virtual void exportRay(const RLine& line) {
-        Q_UNUSED(line)
+    virtual void exportRay(const RRay& ray) {
+        Q_UNUSED(ray)
     }
 
     virtual void exportPoint(const RPoint& point) {

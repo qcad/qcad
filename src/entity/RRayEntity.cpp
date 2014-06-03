@@ -53,8 +53,8 @@ RRayEntity::~RRayEntity() {
 }
 
 void RRayEntity::setShape(const RLine& l) {
-    data.setStartPoint(l.getStartPoint());
-    data.setEndPoint(l.getEndPoint());
+    data.setBasePoint(l.getStartPoint());
+    data.setSecondPoint(l.getEndPoint());
 }
 
 void RRayEntity::init() {
@@ -87,27 +87,27 @@ bool RRayEntity::setProperty(RPropertyTypeId propertyTypeId,
 
     bool ret = REntity::setProperty(propertyTypeId, value);
 
-    ret = ret || RObject::setMember(data.startPoint.x, value, PropertyBasePointX == propertyTypeId);
-    ret = ret || RObject::setMember(data.startPoint.y, value, PropertyBasePointY == propertyTypeId);
-    ret = ret || RObject::setMember(data.startPoint.z, value, PropertyBasePointZ == propertyTypeId);
-    ret = ret || RObject::setMember(data.endPoint.x, value, PropertySecondPointX == propertyTypeId);
-    ret = ret || RObject::setMember(data.endPoint.y, value, PropertySecondPointY == propertyTypeId);
-    ret = ret || RObject::setMember(data.endPoint.z, value, PropertySecondPointZ == propertyTypeId);
+    ret = ret || RObject::setMember(data.basePoint.x, value, PropertyBasePointX == propertyTypeId);
+    ret = ret || RObject::setMember(data.basePoint.y, value, PropertyBasePointY == propertyTypeId);
+    ret = ret || RObject::setMember(data.basePoint.z, value, PropertyBasePointZ == propertyTypeId);
+    ret = ret || RObject::setMember(data.directionVector.x, value, PropertyDirectionX == propertyTypeId);
+    ret = ret || RObject::setMember(data.directionVector.y, value, PropertyDirectionY == propertyTypeId);
+    ret = ret || RObject::setMember(data.directionVector.z, value, PropertyDirectionZ == propertyTypeId);
 
-    if (propertyTypeId == PropertyDirectionX) {
-        RVector v = data.getDirectionVector();
+    if (propertyTypeId == PropertySecondPointX) {
+        RVector v = data.getSecondPoint();
         v.x = value.toDouble();
-        data.setDirectionVector(v);
+        data.setSecondPoint(v);
         ret = true;
-    } else if (propertyTypeId == PropertyDirectionY) {
-        RVector v = data.getDirectionVector();
+    } else if (propertyTypeId == PropertySecondPointY) {
+        RVector v = data.getSecondPoint();
         v.y = value.toDouble();
-        data.setDirectionVector(v);
+        data.setSecondPoint(v);
         ret = true;
-    } else if (propertyTypeId == PropertyDirectionZ) {
-        RVector v = data.getDirectionVector();
+    } else if (propertyTypeId == PropertySecondPointZ) {
+        RVector v = data.getSecondPoint();
         v.z = value.toDouble();
-        data.setDirectionVector(v);
+        data.setSecondPoint(v);
         ret = true;
     }
 
@@ -123,27 +123,27 @@ QPair<QVariant, RPropertyAttributes> RRayEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
     if (propertyTypeId == PropertyBasePointX) {
-        return qMakePair(QVariant(data.startPoint.x), RPropertyAttributes());
+        return qMakePair(QVariant(data.basePoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyBasePointY) {
-        return qMakePair(QVariant(data.startPoint.y), RPropertyAttributes());
+        return qMakePair(QVariant(data.basePoint.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyBasePointZ) {
-        return qMakePair(QVariant(data.startPoint.z), RPropertyAttributes());
-    }
-
-    else if (propertyTypeId == PropertySecondPointX) {
-        return qMakePair(QVariant(data.endPoint.x), RPropertyAttributes());
-    } else if (propertyTypeId == PropertySecondPointY) {
-        return qMakePair(QVariant(data.endPoint.y), RPropertyAttributes());
-    } else if (propertyTypeId == PropertySecondPointZ) {
-        return qMakePair(QVariant(data.endPoint.z), RPropertyAttributes());
+        return qMakePair(QVariant(data.basePoint.z), RPropertyAttributes());
     }
 
     else if (propertyTypeId == PropertyDirectionX) {
-        return qMakePair(QVariant(data.getDirectionVector().x), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.directionVector.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDirectionY) {
-        return qMakePair(QVariant(data.getDirectionVector().y), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.directionVector.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDirectionZ) {
-        return qMakePair(QVariant(data.getDirectionVector().z), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.directionVector.z), RPropertyAttributes());
+    }
+
+    else if (propertyTypeId == PropertySecondPointX) {
+        return qMakePair(QVariant(data.getSecondPoint().x), RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (propertyTypeId == PropertySecondPointY) {
+        return qMakePair(QVariant(data.getSecondPoint().y), RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (propertyTypeId == PropertySecondPointZ) {
+        return qMakePair(QVariant(data.getSecondPoint().z), RPropertyAttributes(RPropertyAttributes::Redundant));
     }
 
     if (propertyTypeId==PropertyAngle) {
@@ -165,5 +165,5 @@ void RRayEntity::print(QDebug dbg) const {
     dbg.nospace() << "RRayEntity(";
     REntity::print(dbg);
     dbg.nospace() << ", startPoint: " << getBasePoint() << ", endPoint: "
-            << getDirectionVector() << ")";
+            << getSecondPoint() << ")";
 }

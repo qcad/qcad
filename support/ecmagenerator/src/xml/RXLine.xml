@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RBox" />
   <class_decl name="RPolyline" />
-  <class name="RLine" xsi:noNamespaceSchemaLocation="../class.xsd"
+  <class name="RXLine" xsi:noNamespaceSchemaLocation="../class.xsd"
   isCopyable="true" hasShell="false" sharedPointerSupport="true"
   isQObject="false" hasStreamOperator="true" isAbstract="false"
   isScriptable="true">
@@ -12,36 +12,41 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
-        <arg type="RVector &amp;" typeName="RVector"
-        name="startPoint" isConst="true" />
-        <arg type="RVector &amp;" typeName="RVector"
-        name="endPoint" isConst="true" />
+        <arg type="RLine &amp;" typeName="RLine" name="line"
+        isConst="true" />
       </variant>
       <variant>
         <arg type="RVector &amp;" typeName="RVector"
-        name="startPoint" isConst="true" />
+        name="basePoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="directionVector" isConst="true" />
+      </variant>
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector"
+        name="basePoint" isConst="true" />
         <arg type="double" typeName="double" name="angle"
         isConst="false" />
         <arg type="double" typeName="double" name="distance"
         isConst="false" />
       </variant>
     </constructor>
+    <method name="getLineShape" cppName="getLineShape"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLine" isPureVirtual="false" />
+    </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RLine *" isPureVirtual="false" />
-    </method>
-    <method name="to2D" cppName="to2D" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="isValid" cppName="isValid" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
+      <variant returnType="RXLine *" isPureVirtual="false" />
     </method>
     <method name="getBoundingBox" cppName="getBoundingBox"
-    specifier="public" isStatic="false" isVirtual="true"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false" />
+    </method>
+    <method name="to2D" cppName="to2D" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="getEndPoints" cppName="getEndPoints"
     specifier="public" isStatic="false" isVirtual="true"
@@ -83,12 +88,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" true" isConst="false" />
       </variant>
     </method>
-    <method name="getStartPoint" cppName="getStartPoint"
-    specifier="public" isStatic="false" isVirtual="true"
+    <method name="getBasePoint" cppName="getBasePoint"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
-    <method name="setStartPoint" cppName="setStartPoint"
+    <method name="setBasePoint" cppName="setBasePoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -96,12 +101,25 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getEndPoint" cppName="getEndPoint"
-    specifier="public" isStatic="false" isVirtual="true"
+    <method name="getSecondPoint" cppName="getSecondPoint"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
-    <method name="setEndPoint" cppName="setEndPoint"
+    <method name="setSecondPoint" cppName="setSecondPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="vector"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDirectionVector" cppName="getDirectionVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setDirectionVector" cppName="setDirectionVector"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -118,16 +136,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
-    <method name="getAngle" cppName="getAngle" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
     <method name="setLength" cppName="setLength" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="double" typeName="double" name="l"
         isConst="false" />
       </variant>
+    </method>
+    <method name="getAngle" cppName="getAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
     </method>
     <method name="setAngle" cppName="setAngle" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -154,9 +172,46 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="clipToXY" cppName="clipToXY" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    <method name="getStartPoint" cppName="getStartPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getEndPoint" cppName="getEndPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="trimStartPoint" cppName="trimStartPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="trimEndPoint" cppName="trimEndPoint"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getTrimEnd" cppName="getTrimEnd"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RS::Ending" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="coord"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="trimPoint" isConst="true" />
+      </variant>
+    </method>
+    <method name="getClippedLine" cppName="getClippedLine"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RLine" isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="box"
         isConst="true" />
       </variant>
@@ -195,16 +250,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="flipHorizontal" cppName="flipHorizontal"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
-    <method name="flipVertical" cppName="flipVertical"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
     <method name="reverse" cppName="reverse" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
@@ -227,40 +272,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="transform" isConst="true" />
       </variant>
     </method>
-    <method name="getTrimEnd" cppName="getTrimEnd"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="RS::Ending" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="coord"
-        isConst="true" />
-        <arg type="RVector &amp;" typeName="RVector"
-        name="trimPoint" isConst="true" />
-      </variant>
-    </method>
-    <method name="trimStartPoint" cppName="trimStartPoint"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="p"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="trimEndPoint" cppName="trimEndPoint"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="p"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getDistanceFromStart"
-    cppName="getDistanceFromStart" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="p"
-        isConst="true" />
-      </variant>
-    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -268,9 +279,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <property name="startPoint" type="RVector"
-    cppGetter="getStartPoint" cppSetter="setStartPoint" />
-    <property name="endPoint" type="RVector"
-    cppGetter="getEndPoint" cppSetter="setEndPoint" />
+    <property name="basePoint" type="RVector"
+    cppGetter="getBasePoint" cppSetter="setBasePoint" />
+    <property name="directionVector" type="RVector"
+    cppGetter="getDirectionVector"
+    cppSetter="setDirectionVector" />
   </class>
 </unit>

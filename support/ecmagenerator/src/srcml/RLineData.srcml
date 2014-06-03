@@ -124,8 +124,6 @@ dir="./entity" filename="RLineData.h">
     <expr>*
     <name>this</name></expr>;</return>}</block>
   </function>
-  <comment type="line">//virtual RBox getBoundingBox()
-  const;</comment>
   <function>
     <type>
       <name>RVector</name>
@@ -501,10 +499,7 @@ dir="./entity" filename="RLineData.h">
         </call></expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
-  </function>
-  <comment type="line">// RLine getGeometry() {</comment>
-  <comment type="line">// return *this;</comment>
-  <comment type="line">// }</comment></public>}</block>;</class>
+  </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

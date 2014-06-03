@@ -31,11 +31,15 @@
             
                 #include "RProgressHandler.h"
             
+                #include "RRay.h"
+            
                 #include "RSpline.h"
             
                 #include "RTriangle.h"
             
                 #include "RVector.h"
+            
+                #include "RXLine.h"
             
             
         // includes for base ecma wrapper classes
@@ -3535,26 +3539,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLine */
+        ) /* type: RXLine */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RLine*
+                    RXLine*
                     ap0 =
                     qscriptvalue_cast<
-                    RLine*
+                    RXLine*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLine.",
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RXLine.",
                                context);                    
                     }
-                    RLine 
+                    RXLine 
                     a0 = 
                     *ap0;
                 
@@ -3602,26 +3606,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLine */
+        ) /* type: RRay */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RLine*
+                    RRay*
                     ap0 =
                     qscriptvalue_cast<
-                    RLine*
+                    RRay*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLine.",
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RRay.",
                                context);                    
                     }
-                    RLine 
+                    RRay 
                     a0 = 
                     *ap0;
                 

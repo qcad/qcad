@@ -39,6 +39,8 @@
             
                 #include "RVector.h"
             
+                #include "RXLine.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -205,7 +207,7 @@
     
     
       bool REcmaShellFileExporterAdapter::exportFile(
-                const QString & fileName, const QString & nameFilter, bool resetModified
+                const QString & fileName, const QString & nameFilter, bool setFileName
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportFile", engine);
@@ -232,7 +234,7 @@
                         //}
                         bool ret =
                         RFileExporterAdapter::exportFile(
-                            fileName, nameFilter, resetModified
+                            fileName, nameFilter, setFileName
                         );
 
                         // block recursion again:
@@ -279,7 +281,7 @@
     // type: bool, copyable: true
         << qScriptValueFromValue(engine, 
 
-        resetModified
+        setFileName
         )
       
                             )
@@ -568,6 +570,75 @@
                     _q_function.setData(QScriptValue(engine, prev));
 
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportTriangle", engine);
+
+                    
+                }
+            }
+        
+    
+    
+      void REcmaShellFileExporterAdapter::exportXLine(
+                const RXLine & arg1
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportXLine", engine);
+                QScriptValue _q_function = __qtscript_self.property("exportXLine");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::exportXLine";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RFileExporterAdapter::exportXLine(
+                            arg1
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportXLine", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: RXLine &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        
+            // const reference argument - make a new object:
+            new RXLine(arg1)
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportXLine", engine);
 
                     
                 }
@@ -4081,61 +4152,8 @@
             }
         
     
-      void REcmaShellFileExporterAdapter::exportXLine(
-                const RLine & line
-            ) {
-                QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportXLine", engine);
-                QScriptValue _q_function = __qtscript_self.property("exportXLine");
-
-
-
-                if (!_q_function.isFunction() || 
-                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
-                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
-                    
-                    /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
-                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
-                    ) {
-                    //QString cppSig = "RFileExporterAdapter::exportXLine";
-                    
-                        qFatal("RFileExporterAdapter::exportXLine is pure virtual.");
-                      
-                } else {
-                    // prevent recursion if script implementation calls base implementation
-                    // mark function as 'in call':
-                    quint32 prev = _q_function.data().toUInt32();
-                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    
-                            _q_function.call(__qtscript_self,
-                                QScriptValueList()
-                                
-
-
-
-    // type: RLine &, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        
-            // const reference argument - make a new object:
-            new RLine(line)
-        )
-      
-                            )
-                        
-                    ;
-                    _q_function.setData(QScriptValue(engine, prev));
-
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportXLine", engine);
-
-                    
-                }
-            }
-        
-    
       void REcmaShellFileExporterAdapter::exportRay(
-                const RLine & line
+                const RRay & ray
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportRay", engine);
@@ -4167,12 +4185,12 @@
 
 
 
-    // type: RLine &, copyable: true
+    // type: RRay &, copyable: true
         << qScriptValueFromValue(engine, 
 
         
             // const reference argument - make a new object:
-            new RLine(line)
+            new RRay(ray)
         )
       
                             )
