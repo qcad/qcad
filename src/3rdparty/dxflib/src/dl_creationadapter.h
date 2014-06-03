@@ -48,6 +48,9 @@ public:
     virtual void addTextStyle(const DL_StyleData&) {}
     virtual void addPoint(const DL_PointData&) {}
     virtual void addLine(const DL_LineData&) {}
+    virtual void addXLine(const DL_XLineData&) {}
+    virtual void addRay(const DL_RayData&) {}
+
     virtual void addArc(const DL_ArcData&) {}
     virtual void addCircle(const DL_CircleData&) {}
     virtual void addEllipse(const DL_EllipseData&) {}

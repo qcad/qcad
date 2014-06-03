@@ -89,6 +89,12 @@ public:
     /** Called for every line */
     virtual void addLine(const DL_LineData& data) = 0;
 
+    /** Called for every xline */
+    virtual void addXLine(const DL_XLineData& data) = 0;
+
+    /** Called for every ray */
+    virtual void addRay(const DL_RayData& data) = 0;
+
     /** Called for every arc */
     virtual void addArc(const DL_ArcData& data) = 0;
 

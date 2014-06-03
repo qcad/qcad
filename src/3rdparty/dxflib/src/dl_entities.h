@@ -231,6 +231,64 @@ struct DXFLIB_EXPORT DL_LineData {
     double z2;
 };
 
+/**
+ * XLine Data.
+ */
+struct DXFLIB_EXPORT DL_XLineData {
+    /**
+     * Constructor.
+     * Parameters: see member variables.
+     */
+    DL_XLineData(double bx, double by, double bz,
+                double dx, double dy, double dz) :
+        bx(bx), by(by), bz(bz),
+        dx(dx), dy(dy), dz(dz) {
+    }
+
+    /*! X base point. */
+    double bx;
+    /*! Y base point. */
+    double by;
+    /*! Z base point. */
+    double bz;
+
+    /*! X direction vector. */
+    double dx;
+    /*! Y direction vector. */
+    double dy;
+    /*! Z direction vector. */
+    double dz;
+};
+
+/**
+ * Ray Data.
+ */
+struct DXFLIB_EXPORT DL_RayData {
+    /**
+     * Constructor.
+     * Parameters: see member variables.
+     */
+    DL_RayData(double bx, double by, double bz,
+               double dx, double dy, double dz) :
+        bx(bx), by(by), bz(bz),
+        dx(dx), dy(dy), dz(dz) {
+    }
+
+    /*! X base point. */
+    double bx;
+    /*! Y base point. */
+    double by;
+    /*! Z base point. */
+    double bz;
+
+    /*! X direction vector. */
+    double dx;
+    /*! Y direction vector. */
+    double dy;
+    /*! Z direction vector. */
+    double dz;
+};
+
 
 
 /**

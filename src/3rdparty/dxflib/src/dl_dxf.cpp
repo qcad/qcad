@@ -331,6 +331,9 @@ bool DL_Dxf::stripWhiteSpace(char** s) {
 bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
                              int groupCode, const std::string& groupValue) {
 
+    //printf("%d\n", groupCode);
+    //printf("%s\n", groupValue.c_str());
+
     // Init values on first call
     if (firstCall) {
         settingValue[0] = '\0';
@@ -428,6 +431,14 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
 
         case DL_ENTITY_LINE:
             addLine(creationInterface);
+            break;
+
+        case DL_ENTITY_XLINE:
+            addXLine(creationInterface);
+            break;
+
+        case DL_ENTITY_RAY:
+            addRay(creationInterface);
             break;
 
         case DL_ENTITY_POLYLINE:
@@ -595,6 +606,10 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
             currentObjectType = DL_ENTITY_POINT;
         } else if (groupValue=="LINE") {
             currentObjectType = DL_ENTITY_LINE;
+        } else if (groupValue=="XLINE") {
+            currentObjectType = DL_ENTITY_XLINE;
+        } else if (groupValue=="RAY") {
+            currentObjectType = DL_ENTITY_RAY;
         } else if (groupValue=="POLYLINE") {
             currentObjectType = DL_ENTITY_POLYLINE;
         } else if (groupValue=="LWPOLYLINE") {
@@ -899,6 +914,34 @@ void DL_Dxf::addLine(DL_CreationInterface* creationInterface) {
                   getRealValue(31, 0.0));
 
     creationInterface->addLine(d);
+}
+
+/**
+ * Adds an xline entity that was read from the file via the creation interface.
+ */
+void DL_Dxf::addXLine(DL_CreationInterface* creationInterface) {
+    DL_XLineData d(getRealValue(10, 0.0),
+                   getRealValue(20, 0.0),
+                   getRealValue(30, 0.0),
+                   getRealValue(11, 0.0),
+                   getRealValue(21, 0.0),
+                   getRealValue(31, 0.0));
+
+    creationInterface->addXLine(d);
+}
+
+/**
+ * Adds a ray entity that was read from the file via the creation interface.
+ */
+void DL_Dxf::addRay(DL_CreationInterface* creationInterface) {
+    DL_RayData d(getRealValue(10, 0.0),
+                 getRealValue(20, 0.0),
+                 getRealValue(30, 0.0),
+                 getRealValue(11, 0.0),
+                 getRealValue(21, 0.0),
+                 getRealValue(31, 0.0));
+
+    creationInterface->addRay(d);
 }
 
 
