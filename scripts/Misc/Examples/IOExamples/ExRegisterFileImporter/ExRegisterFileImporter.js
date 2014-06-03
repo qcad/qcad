@@ -54,10 +54,12 @@ ExFileImporterFactory.prototype.instantiate = function(document, messageHandler,
 
 /**
  * File importer implementation.
- * This class is instantiated if a file of the registered type is begin imported.
+ * This class is instantiated if a file of the registered type is imported.
  */
 function ExFileImporter(document, messageHandler, progressHandler) {
     RFileImporterAdapter.call(this, document, messageHandler, progressHandler);
+
+    this.messageHandler = messageHandler;
 };
 
 ExFileImporter.prototype = new RFileImporterAdapter();
@@ -66,6 +68,34 @@ ExFileImporter.prototype.importFile = function(fileName, nameFilter) {
     var doc = this.getDocument();
 
     // the given file 'fileName' should be imported into doc here...
+    var fi = new QFileInfo(fileName);
+
+    var file = new QFile(fi.absoluteFilePath());
+    var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+    if (!file.open(flags)) {
+        return false;
+    }
+
+    this.startImport();
+
+    var ts = new QTextStream(file);
+    var line;
+
+    do {
+        line = ts.readLine();
+
+        if (!isNull(this.messageHandler)) {
+            this.messageHandler.handleUserMessage(qsTr("Read from file: '%1'").arg(line));
+        }
+
+        // use importObject to import an object read from the file:
+        //this.importObject(new RLineEntity(doc, new RLineData(new RVector(0,0), new RVector(100,100))));
+
+    } while (!ts.atEnd());
+
+    file.close();
+
+    this.endImport();
 
     return true;
 };

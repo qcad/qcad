@@ -61,7 +61,7 @@ public:
 
     virtual QString getCorrectedFileName(const QString& fileName, const QString& nameFilter);
 
-    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true);
+    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool setFileName = true);
 
     void writeVariables();
     void writeLinetype(const RLinetype& lt);
