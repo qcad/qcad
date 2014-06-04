@@ -588,6 +588,12 @@ function main() {
     initAddOns(addOns, splash);
     RDebug.stopTimer(0, "initializing add-ons");
 
+    // auto load scripts in AutoLoad folders for global script engine:
+    var files = RAutoLoadEcma.getAutoLoadFiles();
+    for (i=0; i<files.length; i++) {
+        include(files[i]);
+    }
+
     appWin.updateGuiActions();
     appWin.acceptDrops = true;
     appWin.dockNestingEnabled = true;

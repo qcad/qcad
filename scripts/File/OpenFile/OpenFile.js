@@ -67,7 +67,13 @@ OpenFile.prototype.beginEvent = function() {
     fileDialog.selectNameFilter(allFilter);
     fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
     fileDialog.fileMode = QFileDialog.ExistingFiles;
-    //fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
+
+    // global function qcadInitFileDialog may be registered to perform
+    // additional initialization
+    if (isFunction(qcadInitFileDialog)) {
+        qcadInitFileDialog(fileDialog);
+    }
+
     if (!fileDialog.exec()) {
         fileDialog.destroy();
         return;
