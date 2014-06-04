@@ -21,7 +21,7 @@
 #include "RXLine.h"
 
 /**
- * Creates a line object with invalid start and end points.
+ * Creates an xline object with invalid base point and direction.
  */
 RXLine::RXLine() :
     basePoint(RVector::invalid),
@@ -33,7 +33,7 @@ RXLine::RXLine(const RLine& line) :
 }
 
 /**
- * Creates a line object with the given start and end point.
+ * Creates an xline object with the given base point and direction.
  */
 RXLine::RXLine(const RVector& basePoint, const RVector& directionVector) :
     basePoint(basePoint),

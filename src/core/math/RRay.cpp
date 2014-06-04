@@ -21,7 +21,7 @@
 #include "RRay.h"
 
 /**
- * Creates a line object with invalid start and end points.
+ * Creates a ray object with invalid start and end points.
  */
 RRay::RRay() :
     RXLine() {
@@ -32,7 +32,7 @@ RRay::RRay(const RLine& line) :
 }
 
 /**
- * Creates a line object with the given start and end point.
+ * Creates a ray object with the given base point and direction.
  */
 RRay::RRay(const RVector& basePoint, const RVector& directionVector) :
     RXLine(basePoint, directionVector) {
