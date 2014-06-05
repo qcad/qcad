@@ -22,7 +22,6 @@
  * Marges multiple drawing files (DWG, DXF) into one.
  */
 
-include("scripts/library.js");
 include("scripts/Tools/arguments.js");
 
 function printHelp() {
@@ -32,16 +31,17 @@ function printHelp() {
     print();
     print("  -f, -force              Overwrite existing output file");
     print("  -h, -help               Display this help");
+    print("  -u UNIT, -unit=UNIT     Set output unit to UNIT (mm, inch, ...)");
     print("  -o FILE, -outfile=FILE  Set output file to FILE");
     print("                          default is same path and base name as input file");
     print();
     print("XML format:");
     print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-    print("<items>");
+    print("<merge xmlns=\"http://qcad.org/merge/elements/1.0/\" unit=\"Millimeter\">");
     print("    <item src=\"file1.dxf\">");
     print("        <insert x=\"10\" y=\"0\" angle=\"30\" flipx=\"false\" flipy=\"false\" />");
     print("    </item>");
-    print("</items>");
+    print("</merge>");
     print();
 }
 
@@ -103,6 +103,7 @@ function main() {
 
     // target document:
     var docDest = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
+    docDest.setUnit(handler.outputUnit);
     var diDest = new RDocumentInterface(docDest);
 
     for (var i=0; i<handler.items.length; i++) {
@@ -126,6 +127,12 @@ function main() {
             if (di.importFile(src) !== RDocumentInterface.IoErrorNoError) {
                qWarning("cannot import file: ", src);
             }
+
+            // input files without units are assumed to be in output unit:
+//            if (doc.getUnit()===RS.None) {
+//                qDebug("adjusting unit of unitless input file '%1' to '%2'.".arg(src).arg(RUnit.unitToName(handler.outputUnit)));
+//                doc.setUnit(handler.outputUnit);
+//            }
 
             var op = new RPasteOperation(doc);
             op.setOffset(new RVector(insert.x, insert.y));
@@ -154,6 +161,7 @@ function XmlHandler() {
     QXmlDefaultHandler.call(this);
     this.items = [];
     this.item = undefined;
+    this.outputUnit = RS.Millimeter;
 }
 
 XmlHandler.prototype = new QXmlDefaultHandler();
@@ -162,6 +170,10 @@ XmlHandler.prototype = new QXmlDefaultHandler();
  * Handle element (tag).
  */
 XmlHandler.prototype.startElement = function(namespaceURI, localName, qName, atts) {
+    if (localName==="merge") {
+        this.outputUnit = this.getUnitAttribute(atts, "unit", RS.Millimeter);
+    }
+
     if (localName==="item") {
         this.item = {};
         this.item.src = atts.value("src");
@@ -171,7 +183,7 @@ XmlHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     }
 
     if (localName==="insert") {
-        if (isNull(this.item)) {
+        if (this.item===undefined) {
             qWarning("insert element found outside of the scope of an item element");
             return false;
         }
@@ -203,6 +215,15 @@ XmlHandler.prototype.getBoolAttribute = function(atts, name, defaultValue) {
     }
     return str==="true" || str==="1";
 };
+
+XmlHandler.prototype.getUnitAttribute = function(atts, name, defaultValue) {
+    var str = atts.value(name).toLowerCase();
+    if (str.length===0) {
+        return defaultValue;
+    }
+    return RUnit.parseUnit(str);
+};
+
 
 if (typeof(including)=='undefined' || including===false) {
     main();
