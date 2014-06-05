@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <cmath>
+#include <typeinfo>
 
 //#include "MgcIntr2DElpElp.h"
 
