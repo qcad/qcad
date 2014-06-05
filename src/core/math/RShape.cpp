@@ -19,8 +19,6 @@
 #include <cmath>
 #include <typeinfo>
 
-//#include "MgcIntr2DElpElp.h"
-
 #include "RArc.h"
 #include "RCircle.h"
 #include "RDebug.h"
