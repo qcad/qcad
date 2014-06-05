@@ -1,0 +1,6 @@
+#!/bin/sh
+
+DIR=${0%/*}
+binary="$DIR/qcad"
+
+"$binary" -no-dock-icon -no-gui -allow-multiple-instances -autostart scripts/Tools/MergeDrawings/MergeDrawings.js "$0" "$@"
