@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 
+include("scripts/library.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
