@@ -27,6 +27,7 @@
 #include "RLine.h"
 #include "RMath.h"
 #include "RPolyline.h"
+#include "RRay.h"
 #include "RShape.h"
 #include "RSpline.h"
 #include "RXLine.h"
@@ -69,6 +70,19 @@ bool RShape::isOnShape(const RVector& point, bool limited, double tolerance) con
 }
 
 /**
+ * \return List of those points in pointList which are on this shape.
+ */
+QList<RVector> RShape::filterOnShape(const QList<RVector>& pointList, bool limited, double tolerance) const {
+    QList<RVector> ret;
+    for (int i=0; i<pointList.length(); i++) {
+        if (isOnShape(pointList[i], limited, tolerance)) {
+            ret.append(pointList[i]);
+        }
+    }
+    return ret;
+}
+
+/**
  * \return Shortest vector from any end point of this shape
  *      to the given point.
  */
@@ -105,7 +119,8 @@ RVector RShape::getPointAtPercent(double p) const {
 /**
  * \return True if this shape intersects with the given shape.
  */
-bool RShape::intersectsWith(const RShape& other, bool limited) const {
+bool RShape::
+intersectsWith(const RShape& other, bool limited) const {
     return !getIntersectionPoints(other, limited).isEmpty();
 }
 
@@ -124,7 +139,16 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
 
     QList<RVector> empty;
 
-    if (limited) {
+    bool gotInfiniteShape = false;
+    if (typeid(shape1) == typeid(RXLine) ||
+        typeid(shape2) == typeid(RXLine) ||
+        typeid(shape1) == typeid(RRay) ||
+        typeid(shape2) == typeid(RRay)) {
+
+        gotInfiniteShape = true;
+    }
+
+    if (limited && !gotInfiniteShape) {
         // 20120425: allow for a bit of error, e.g. for vertical line that
         // is tangent to ellipse / circle:
         RBox bb1 = shape1.getBoundingBox().growXY(1e-2);
@@ -147,214 +171,350 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
         }
     }
 
-    const RLine* line1 = dynamic_cast<const RLine*> (&shape1);
-    if (line1 != NULL) {
-        if (same) {
-            return empty;
-        }
-        const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
-        if (line2 != NULL) {
-            return getIntersectionPointsLL(*line1, *line2, limited);
-        }
-        const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
-        if (arc2 != NULL) {
-            return getIntersectionPointsLA(*line1, *arc2, limited);
-        }
-        const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
-        if (circle2 != NULL) {
-            return getIntersectionPointsLC(*line1, *circle2, limited);
-        }
-        const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
-        if (ellipse2 != NULL) {
-            return getIntersectionPointsLE(*line1, *ellipse2, limited);
-        }
-        const RTriangle* triangle2 = dynamic_cast<const RTriangle*> (&shape2);
-        if (triangle2 != NULL) {
-            return getIntersectionPointsLT(*line1, *triangle2, limited);
-        }
-        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
-        if (spline2 != NULL) {
-            return getIntersectionPointsLS(*line1, *spline2, limited);
-        }
-
-        // spline, polyline, ...:
-        const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
-        if (explodable2 != NULL) {
-            return getIntersectionPointsLX(*line1, *explodable2, limited);
-        }
-    }
-
-    const RXLine* xline1 = dynamic_cast<const RXLine*>(&shape1);
-    if (xline1 != NULL) {
-        if (same) {
-            return empty;
-        }
-        const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-        if (xline2 != NULL) {
-            return getIntersectionPointsLL(xline1->getLineShape(), xline2->getLineShape(), false);
-        }
-    }
-
-    const RArc* arc1 = dynamic_cast<const RArc*> (&shape1);
-    if (arc1 != NULL) {
-        if (same) {
-            return empty;
-        }
-        const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
-        if (line2 != NULL) {
-            return getIntersectionPointsLA(*line2, *arc1, limited);
-        }
-        const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
-        if (arc2 != NULL) {
-            return getIntersectionPointsAA(*arc1, *arc2, limited);
-        }
-        const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
-        if (circle2 != NULL) {
-            return getIntersectionPointsAC(*arc1, *circle2, limited);
-        }
-        const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
-        if (ellipse2 != NULL) {
-            return getIntersectionPointsAE(*arc1, *ellipse2, limited);
-        }
-        const RTriangle* triangle2 = dynamic_cast<const RTriangle*> (&shape2);
-        if (triangle2 != NULL) {
-            return getIntersectionPointsAT(*arc1, *triangle2, limited);
-        }
-        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
-        if (spline2 != NULL) {
-            return getIntersectionPointsAS(*arc1, *spline2, limited);
-        }
-
-        // polyline, ...:
-        const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
-        if (explodable2 != NULL) {
-            return getIntersectionPointsAX(*arc1, *explodable2, limited);
-        }
-    }
-
-    const RCircle* circle1 = dynamic_cast<const RCircle*> (&shape1);
-    if (circle1 != NULL) {
-        if (same) {
-            return empty;
-        }
-        const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
-        if (line2 != NULL) {
-            return getIntersectionPointsLC(*line2, *circle1, limited);
-        }
-        const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
-        if (arc2 != NULL) {
-            return getIntersectionPointsAC(*arc2, *circle1, limited);
-        }
-        const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
-        if (circle2 != NULL) {
-            return getIntersectionPointsCC(*circle1, *circle2);
-        }
-        const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
-        if (ellipse2 != NULL) {
-            return getIntersectionPointsCE(*circle1, *ellipse2);
-        }
-        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
-        if (spline2 != NULL) {
-            return getIntersectionPointsCS(*circle1, *spline2);
-        }
-
-        // spline, polyline, ...:
-        const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
-        if (explodable2 != NULL) {
-            return getIntersectionPointsCX(*circle1, *explodable2, limited);
-        }
-    }
-
-    const REllipse* ellipse1 = dynamic_cast<const REllipse*> (&shape1);
-    if (ellipse1 != NULL) {
-        if (same) {
-            return empty;
-        }
-        const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
-        if (line2 != NULL) {
-            return getIntersectionPointsLE(*line2, *ellipse1, limited);
-        }
-        const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
-        if (arc2 != NULL) {
-            return getIntersectionPointsAE(*arc2, *ellipse1, limited);
-        }
-        const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
-        if (circle2 != NULL) {
-            return getIntersectionPointsCE(*circle2, *ellipse1);
-        }
-        const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
-        if (ellipse2 != NULL) {
-            return getIntersectionPointsEE(*ellipse2, *ellipse1, limited);
-        }
-        const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
-        if (spline2 != NULL) {
-            return getIntersectionPointsES(*ellipse1, *spline2, limited);
-        }
-
-        // spline, polyline, ...:
-        const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
-        if (explodable2 != NULL) {
-            return getIntersectionPointsEX(*ellipse1, *explodable2, limited);
-        }
-    }
-
-    const RTriangle* triangle1 = dynamic_cast<const RTriangle*> (&shape1);
-    if (triangle1 != NULL) {
-        if (same) {
-            return empty;
-        }
-        const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
-        if (line2 != NULL) {
-            return getIntersectionPointsLT(*line2, *triangle1, limited);
-        }
-        const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
-        if (arc2 != NULL) {
-            return getIntersectionPointsAT(*arc2, *triangle1, limited);
-        }
-    }
-
-    const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
-    if (spline1 != NULL) {
-        const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
-        if (line2 != NULL) {
-            return getIntersectionPointsLS(*line2, *spline1, limited);
-        }
-        const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
-        if (arc2 != NULL) {
-            return getIntersectionPointsAS(*arc2, *spline1, limited);
-        }
-        const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
-        if (circle2 != NULL) {
-            return getIntersectionPointsCS(*circle2, *spline1, limited);
-        }
-        const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
-        if (ellipse2 != NULL) {
-            return getIntersectionPointsES(*ellipse2, *spline1, limited);
-        }
-    }
-
-    const RExplodable* explodable1 = RShape::castToExplodable(&shape1);
-    //dynamic_cast<const RExplodable*> (&shape1);
-    if (explodable1 != NULL) {
-        if (!same) {
+    {
+        const RLine* line1 = dynamic_cast<const RLine*> (&shape1);
+        if (line1 != NULL) {
+            if (same) {
+                return empty;
+            }
             const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
             if (line2 != NULL) {
-                return getIntersectionPointsLX(*line2, *explodable1, limited);
+                return getIntersectionPointsLL(*line1, *line2, limited);
             }
             const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
             if (arc2 != NULL) {
-                return getIntersectionPointsAX(*arc2, *explodable1, limited);
+                return getIntersectionPointsLA(*line1, *arc2, limited);
+            }
+            const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
+            if (circle2 != NULL) {
+                return getIntersectionPointsLC(*line1, *circle2, limited);
             }
             const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
             if (ellipse2 != NULL) {
-                return getIntersectionPointsEX(*ellipse2, *explodable1, limited);
+                return getIntersectionPointsLE(*line1, *ellipse2, limited);
+            }
+            const RTriangle* triangle2 = dynamic_cast<const RTriangle*> (&shape2);
+            if (triangle2 != NULL) {
+                return getIntersectionPointsLT(*line1, *triangle2, limited);
+            }
+            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+            if (spline2 != NULL) {
+                return getIntersectionPointsLS(*line1, *spline2, limited);
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLL(*line1, xline2->getLineShape(), limited, false);
+            }
+            const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
+            if (ray2 != NULL) {
+                QList<RVector> ret = getIntersectionPointsLL(*line1, ray2->getLineShape(), limited, false);
+                if (limited) ret = ray2->filterOnShape(ret, true);
+                return ret;
+            }
+
+            // spline, polyline, ...:
+            const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
+            if (explodable2 != NULL) {
+                return getIntersectionPointsLX(*line1, *explodable2, limited);
             }
         }
+    }
 
-        // spline, polyline, ...:
-        const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
-        if (explodable2 != NULL) {
-            return getIntersectionPointsXX(*explodable1, *explodable2, limited, same);
+    {
+        const RRay* ray1 = dynamic_cast<const RRay*>(&shape1);
+        if (ray1 != NULL) {
+            if (same) {
+                return empty;
+            }
+            RXLine xline1(ray1->getLineShape());
+            QList<RVector> ret = getIntersectionPoints(xline1, shape2, limited, same, force);
+            if (limited) ret = ray1->filterOnShape(ret, true);
+            return ret;
+        }
+    }
+
+    {
+        const RXLine* xline1 = dynamic_cast<const RXLine*>(&shape1);
+        if (xline1 != NULL) {
+            if (same) {
+                return empty;
+            }
+            RLine line1 = xline1->getLineShape();
+
+            const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
+            if (line2 != NULL) {
+                return getIntersectionPointsLL(line1, *line2, false, limited);
+            }
+            const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
+            if (arc2 != NULL) {
+                return getIntersectionPointsLA(line1, *arc2, false, limited);
+            }
+            const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
+            if (circle2 != NULL) {
+                return getIntersectionPointsLC(line1, *circle2, false);
+            }
+            const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
+            if (ellipse2 != NULL) {
+                return getIntersectionPointsLE(line1, *ellipse2, false, limited);
+            }
+            const RTriangle* triangle2 = dynamic_cast<const RTriangle*> (&shape2);
+            if (triangle2 != NULL) {
+                return getIntersectionPointsLT(line1, *triangle2, false, limited);
+            }
+            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+            if (spline2 != NULL) {
+                return getIntersectionPointsLS(line1, *spline2, false);
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLL(line1, xline2->getLineShape(), false);
+            }
+            const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
+            if (ray2 != NULL) {
+                QList<RVector> ret = getIntersectionPointsLL(line1, ray2->getLineShape(), false);
+                if (limited) ret = ray2->filterOnShape(ret, true);
+                return ret;
+            }
+
+            // spline, polyline, ...:
+            const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
+            if (explodable2 != NULL) {
+                return getIntersectionPointsLX(line1, *explodable2, false);
+            }
+        }
+    }
+
+    {
+        const RArc* arc1 = dynamic_cast<const RArc*> (&shape1);
+        if (arc1 != NULL) {
+            if (same) {
+                return empty;
+            }
+            const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
+            if (line2 != NULL) {
+                return getIntersectionPointsLA(*line2, *arc1, limited);
+            }
+            const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
+            if (arc2 != NULL) {
+                return getIntersectionPointsAA(*arc1, *arc2, limited);
+            }
+            const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
+            if (circle2 != NULL) {
+                return getIntersectionPointsAC(*arc1, *circle2, limited);
+            }
+            const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
+            if (ellipse2 != NULL) {
+                return getIntersectionPointsAE(*arc1, *ellipse2, limited);
+            }
+            const RTriangle* triangle2 = dynamic_cast<const RTriangle*> (&shape2);
+            if (triangle2 != NULL) {
+                return getIntersectionPointsAT(*arc1, *triangle2, limited);
+            }
+            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+            if (spline2 != NULL) {
+                return getIntersectionPointsAS(*arc1, *spline2, limited);
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLA(xline2->getLineShape(), *arc1, false, limited);
+            }
+            const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
+            if (ray2 != NULL) {
+                QList<RVector> ret = getIntersectionPointsLA(ray2->getLineShape(), *arc1, false, limited);
+                if (limited) ret = ray2->filterOnShape(ret, true);
+                return ret;
+            }
+
+            // polyline, ...:
+            const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
+            if (explodable2 != NULL) {
+                return getIntersectionPointsAX(*arc1, *explodable2, limited);
+            }
+        }
+    }
+
+    {
+        const RCircle* circle1 = dynamic_cast<const RCircle*> (&shape1);
+        if (circle1 != NULL) {
+            if (same) {
+                return empty;
+            }
+            const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
+            if (line2 != NULL) {
+                return getIntersectionPointsLC(*line2, *circle1, limited);
+            }
+            const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
+            if (arc2 != NULL) {
+                return getIntersectionPointsAC(*arc2, *circle1, limited);
+            }
+            const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
+            if (circle2 != NULL) {
+                return getIntersectionPointsCC(*circle1, *circle2);
+            }
+            const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
+            if (ellipse2 != NULL) {
+                return getIntersectionPointsCE(*circle1, *ellipse2);
+            }
+            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+            if (spline2 != NULL) {
+                return getIntersectionPointsCS(*circle1, *spline2);
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLC(xline2->getLineShape(), *circle1, false);
+            }
+            const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
+            if (ray2 != NULL) {
+                QList<RVector> ret = getIntersectionPointsLC(ray2->getLineShape(), *circle1, false);
+                if (limited) ret = ray2->filterOnShape(ret, true);
+                return ret;
+            }
+
+            // spline, polyline, ...:
+            const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
+            if (explodable2 != NULL) {
+                return getIntersectionPointsCX(*circle1, *explodable2, limited);
+            }
+        }
+    }
+
+    {
+        const REllipse* ellipse1 = dynamic_cast<const REllipse*> (&shape1);
+        if (ellipse1 != NULL) {
+            if (same) {
+                return empty;
+            }
+            const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
+            if (line2 != NULL) {
+                return getIntersectionPointsLE(*line2, *ellipse1, limited);
+            }
+            const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
+            if (arc2 != NULL) {
+                return getIntersectionPointsAE(*arc2, *ellipse1, limited);
+            }
+            const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
+            if (circle2 != NULL) {
+                return getIntersectionPointsCE(*circle2, *ellipse1);
+            }
+            const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
+            if (ellipse2 != NULL) {
+                return getIntersectionPointsEE(*ellipse2, *ellipse1, limited);
+            }
+            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+            if (spline2 != NULL) {
+                return getIntersectionPointsES(*ellipse1, *spline2, limited);
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLE(xline2->getLineShape(), *ellipse1, false, limited);
+            }
+            const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
+            if (ray2 != NULL) {
+                QList<RVector> ret = getIntersectionPointsLE(ray2->getLineShape(), *ellipse1, false, limited);
+                if (limited) ret = ray2->filterOnShape(ret, true);
+                return ret;
+            }
+
+            // spline, polyline, ...:
+            const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
+            if (explodable2 != NULL) {
+                return getIntersectionPointsEX(*ellipse1, *explodable2, limited);
+            }
+        }
+    }
+
+    {
+        const RTriangle* triangle1 = dynamic_cast<const RTriangle*> (&shape1);
+        if (triangle1 != NULL) {
+            if (same) {
+                return empty;
+            }
+            const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
+            if (line2 != NULL) {
+                return getIntersectionPointsLT(*line2, *triangle1, limited);
+            }
+            const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
+            if (arc2 != NULL) {
+                return getIntersectionPointsAT(*arc2, *triangle1, limited);
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLT(xline2->getLineShape(), *triangle1, false, limited);
+            }
+            const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
+            if (ray2 != NULL) {
+                QList<RVector> ret = getIntersectionPointsLT(ray2->getLineShape(), *triangle1, false, limited);
+                if (limited) ret = ray2->filterOnShape(ret, true);
+                return ret;
+            }
+        }
+    }
+
+    {
+        const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
+        if (spline1 != NULL) {
+            const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
+            if (line2 != NULL) {
+                return getIntersectionPointsLS(*line2, *spline1, limited);
+            }
+            const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
+            if (arc2 != NULL) {
+                return getIntersectionPointsAS(*arc2, *spline1, limited);
+            }
+            const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
+            if (circle2 != NULL) {
+                return getIntersectionPointsCS(*circle2, *spline1, limited);
+            }
+            const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
+            if (ellipse2 != NULL) {
+                return getIntersectionPointsES(*ellipse2, *spline1, limited);
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLS(xline2->getLineShape(), *spline1, false);
+            }
+            const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
+            if (ray2 != NULL) {
+                QList<RVector> ret = getIntersectionPointsLS(ray2->getLineShape(), *spline1, false);
+                if (limited) ret = ray2->filterOnShape(ret, true);
+                return ret;
+            }
+        }
+    }
+
+    {
+        const RExplodable* explodable1 = RShape::castToExplodable(&shape1);
+        if (explodable1 != NULL) {
+            if (!same) {
+                const RLine* line2 = dynamic_cast<const RLine*> (&shape2);
+                if (line2 != NULL) {
+                    return getIntersectionPointsLX(*line2, *explodable1, limited);
+                }
+                const RArc* arc2 = dynamic_cast<const RArc*> (&shape2);
+                if (arc2 != NULL) {
+                    return getIntersectionPointsAX(*arc2, *explodable1, limited);
+                }
+                const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
+                if (ellipse2 != NULL) {
+                    return getIntersectionPointsEX(*ellipse2, *explodable1, limited);
+                }
+                const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+                if (xline2 != NULL) {
+                    return getIntersectionPointsLX(xline2->getLineShape(), *explodable1, false);
+                }
+                const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
+                if (ray2 != NULL) {
+                    QList<RVector> ret = getIntersectionPointsLX(ray2->getLineShape(), *explodable1, false);
+                    if (limited) ret = ray2->filterOnShape(ret, true);
+                    return ret;
+                }
+            }
+
+            // spline, polyline, ...:
+            const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
+            if (explodable2 != NULL) {
+                return getIntersectionPointsXX(*explodable1, *explodable2, limited, same);
+            }
         }
     }
 
@@ -501,7 +661,7 @@ QList<RVector> RShape::getIntersectionPointsLC(const RLine& line1,
 }
 
 QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
-        const REllipse& ellipse2, bool limited) {
+        const REllipse& ellipse2, bool limited1, bool limited2) {
 
     QList<RVector> res;
 
@@ -564,12 +724,12 @@ QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
     }
 
     if (res1.isValid()) {
-        if (!limited || (line1.isOnShape(res1) && ellipse2.isOnShape(res1))) {
+        if (!limited1 || (line1.isOnShape(res1) && ellipse2.isOnShape(res1))) {
             res.append(res1);
         }
     }
     if (res2.isValid()) {
-        if (!limited || (line1.isOnShape(res2) && ellipse2.isOnShape(res2))) {
+        if (!limited2 || (line1.isOnShape(res2) && ellipse2.isOnShape(res2))) {
             res.append(res2);
         }
     }
@@ -578,7 +738,7 @@ QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
 }
 
 QList<RVector> RShape::getIntersectionPointsLT(const RLine& line1,
-        const RTriangle& triangle2, bool limited) {
+        const RTriangle& triangle2, bool limited1, bool limited2) {
 
     QList<RVector> res;
 
@@ -596,7 +756,8 @@ QList<RVector> RShape::getIntersectionPointsLT(const RLine& line1,
             / RVector::getDotProduct(normal, (line1.getEndPoint() - line1.getStartPoint()));
 
     // check if intersection point is on the line:
-    if (limited && (t < 0.0 || t > 1.0)) {
+    if (limited1 && (t < 0.0 || t > 1.0)) {
+        // not on line:
         return res;
     }
 
@@ -604,7 +765,7 @@ QList<RVector> RShape::getIntersectionPointsLT(const RLine& line1,
     RVector ip = line1.getStartPoint() + (line1.getEndPoint() - line1.getStartPoint()) * t;
 
     // check if intersection point is inside the triangle:
-    if (!limited || triangle2.isPointInTriangle(ip)) {
+    if (!limited2 || triangle2.isPointInTriangle(ip)) {
         res.push_back(ip);
     }
 

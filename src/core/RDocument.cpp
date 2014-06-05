@@ -789,7 +789,12 @@ QSet<REntity::Id> RDocument::queryInfiniteEntities() {
  *      given area.
  */
 QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) {
-    return spatialIndex.queryContained(box).keys().toSet();
+    QSet<REntity::Id> ret = spatialIndex.queryContained(box).keys().toSet();
+
+    // always exclude construction lines (XLine):
+    ret.subtract(queryInfiniteEntities());
+
+    return ret;
 }
 
 
@@ -934,7 +939,9 @@ QSet<REntity::Id> RDocument::queryContainedEntitiesXY(const RBox& box) {
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
     boxExpanded.c2.z = RMAXDOUBLE;
-    QSet<REntity::Id> candidates = spatialIndex.queryContained(boxExpanded).keys().toSet();
+    QSet<REntity::Id> candidates = queryContainedEntities(boxExpanded);
+
+    //spatialIndex.queryContained(boxExpanded).keys().toSet();
 
     // filter out entities that are not on the current block
     // or whoes entire bounding box is not inside this query box

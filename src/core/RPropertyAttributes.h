@@ -51,7 +51,7 @@ public:
         ReadOnly = 0x1,                  //!< Property is read only
         Invisible = 0x2,                 //!< Property is not displayed
         Angle = 0x4,                     //!< Property is an angle (shown in user preferred angle unit)
-        AffectsOtherProperties = 0x8,    //!< Property affects others, needs refrash on changing
+        AffectsOtherProperties = 0x8,    //!< Property affects others, needs refresh on changing
         IgnoreCase = 0x10,               //!< Property is not case sensitive
         AllowMixedValue = 0x20,          //!< Property can be mixed
         List = 0x40,                     //!< Property is a list (e.g. x values of polyline vertices)

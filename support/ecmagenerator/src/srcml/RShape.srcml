@@ -269,6 +269,54 @@ dir="./core/math" filename="RShape.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RVector</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>filterOnShape</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>pointList</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>limited</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>tolerance</name>=
+    <init>
+      <expr>
+        <name>RDEFAULT_TOLERANCE_1E_MIN4</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>RVector</name>
   </type>
   <name>getVectorFromEndpointTo</name>
@@ -1010,6 +1058,74 @@ dir="./core/math" filename="RShape.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <function>
+    <type>
+      <name>static</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>getIntersectionPointsLE</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RLine</name>&amp;</type>
+        <name>line1</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>REllipse</name>&amp;</type>
+        <name>ellipse2</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited</name>=
+      <init>
+        <expr>
+          <name>true</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>getIntersectionPointsLE</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>line1</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>ellipse2</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>limited</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>limited</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>static</name>
@@ -1039,16 +1155,88 @@ dir="./core/math" filename="RShape.h">
   </param>, 
   <param>
     <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited2</name>
+    </decl>
   </param>)</parameter_list>;</function_decl>
+  <function>
+    <type>
+      <name>static</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>getIntersectionPointsLT</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RLine</name>&amp;</type>
+        <name>line1</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RTriangle</name>&amp;</type>
+        <name>triangle2</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited</name>=
+      <init>
+        <expr>
+          <name>true</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>getIntersectionPointsLT</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>line1</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>triangle2</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>limited</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>limited</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>static</name>
@@ -1078,15 +1266,19 @@ dir="./core/math" filename="RShape.h">
   </param>, 
   <param>
     <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited2</name>
+    </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
