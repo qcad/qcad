@@ -31,7 +31,6 @@ function printHelp() {
     print();
     print("  -f, -force              Overwrite existing output file");
     print("  -h, -help               Display this help");
-    print("  -u UNIT, -unit=UNIT     Set output unit to UNIT (mm, inch, ...)");
     print("  -o FILE, -outfile=FILE  Set output file to FILE");
     print("                          default is same path and base name as input file");
     print();
