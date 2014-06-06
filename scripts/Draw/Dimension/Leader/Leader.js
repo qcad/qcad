@@ -45,7 +45,7 @@ Leader.prototype.beginEvent = function() {
     Dimension.prototype.beginEvent.call(this);
 
     this.setState(Leader.State.SettingFirstVertex);
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Leader.prototype.setState = function(state) {
@@ -78,7 +78,7 @@ Leader.prototype.setState = function(state) {
 
 Leader.prototype.showUiOptions = function(resume) {
     Draw.prototype.showUiOptions.call(this, resume);
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Leader.prototype.escapeEvent = function() {
@@ -99,7 +99,7 @@ Leader.prototype.escapeEvent = function() {
         }
 
         this.setState(Leader.State.SettingFirstVertex);
-        this.checkButtonStates();
+        this.updateButtonStates();
         break;
     }
 };
@@ -164,7 +164,7 @@ Leader.prototype.pickCoordinate = function(event, preview) {
     }
 
     if (!preview) {
-        this.checkButtonStates();
+        this.updateButtonStates();
     }
 };
 
@@ -233,7 +233,7 @@ Leader.prototype.slotUndo = function() {
         }
     }
 
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Leader.prototype.slotArrowHeadChanged = function(v) {
@@ -256,7 +256,7 @@ Leader.prototype.slotArrowHeadChanged = function(v) {
  * Updates the state (enabled / disabled) of the undo button
  * depending on the current progress.
  */
-Leader.prototype.checkButtonStates = function() {
+Leader.prototype.updateButtonStates = function() {
     if (isNull(this.leaderEntity)) {
         return;
     }

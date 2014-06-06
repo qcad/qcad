@@ -54,7 +54,7 @@ Line2P.prototype.beginEvent = function() {
     Line.prototype.beginEvent.call(this);
 
     this.setState(Line2P.State.SettingFirstPoint);
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Line2P.prototype.setState = function(state) {
@@ -94,7 +94,7 @@ Line2P.prototype.showUiOptions = function(resume) {
     var guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
     w.setDefaultAction(guiAction);
 
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Line2P.prototype.escapeEvent = function() {
@@ -105,7 +105,7 @@ Line2P.prototype.escapeEvent = function() {
 
     case Line2P.State.SettingNextPoint:
         this.setState(Line2P.State.SettingFirstPoint);
-        this.checkButtonStates();
+        this.updateButtonStates();
         break;
     }
 };
@@ -129,20 +129,23 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
         var op = this.getOperation(preview);
         if (preview) {
             this.updatePreview();
-            //di.previewOperation(op);
         }
         else {
             if (!isNull(op)) {
-                this.pointListIndex++;
+                if (!this.isRayOrXLine()) {
+                    this.pointListIndex++;
+                }
 
                 var doc = this.getDocument();
                 var trans = di.applyOperation(op);
                 var id = this.getLineEntityId(trans);
-                this.pointList.splice(this.pointListIndex, 0, this.point2);
-                this.entityIdList.splice(this.pointListIndex-1, 0, id);
 
-                di.setRelativeZero(this.point2);
-                this.point1 = this.point2;
+                if (!this.isRayOrXLine()) {
+                    this.pointList.splice(this.pointListIndex, 0, this.point2);
+                    this.entityIdList.splice(this.pointListIndex-1, 0, id);
+                    di.setRelativeZero(this.point2);
+                    this.point1 = this.point2;
+                }
 
 //                qDebug("this.pointList: ", this.pointList);
 //                qDebug("this.entityIdList: ", this.entityIdList);
@@ -153,7 +156,7 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
     }
 
     if (!preview) {
-        this.checkButtonStates();
+        this.updateButtonStates();
     }
 };
 
@@ -167,6 +170,10 @@ Line2P.prototype.getOperation = function(preview) {
 };
 
 Line2P.prototype.slotClose = function() {
+    if (this.isRayOrXLine()) {
+        return;
+    }
+
     if (this.pointList.length >= 3) {
         this.point2 = this.pointList[0];
         this.getDocumentInterface().applyOperation(this.getOperation(false));
@@ -174,10 +181,14 @@ Line2P.prototype.slotClose = function() {
         this.setState(Line2P.State.SettingFirstPoint);
     }
     
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Line2P.prototype.slotUndo = function() {
+    if (this.isRayOrXLine()) {
+        return;
+    }
+
     if (this.pointListIndex > 0) {
         var di = this.getDocumentInterface();
         var doc = this.getDocument();
@@ -198,10 +209,13 @@ Line2P.prototype.slotUndo = function() {
 //        qDebug("undone: this.entityIdList: ", this.entityIdList);
     }
 
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Line2P.prototype.slotRedo = function() {
+    if (this.isRayOrXLine()) {
+        return;
+    }
     if (this.pointListIndex < this.pointList.length-1) {
         var di = this.getDocumentInterface();
         var doc = this.getDocument();
@@ -223,31 +237,43 @@ Line2P.prototype.slotRedo = function() {
 //        qDebug("redone: this.entityIdList: ", this.entityIdList);
     }
 
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
-Line2P.prototype.checkButtonStates = function() {
+Line2P.prototype.updateButtonStates = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
 
     var w = optionsToolBar.findChild("Undo");
-    if (this.pointListIndex > 0) {
-        w.enabled = true;
-    } else {
-        w.enabled = false;
+    if (!isNull(w)) {
+        if (this.pointListIndex > 0 && !this.isRayOrXLine()) {
+            w.enabled = true;
+        } else {
+            w.enabled = false;
+        }
     }
 
     w = optionsToolBar.findChild("Redo");
-    if (this.pointListIndex >= 0 && this.pointListIndex < this.entityIdList.length) {
-        w.enabled = true;
-    } else {
-        w.enabled = false;
+    if (!isNull(w)) {
+        //qDebug("this.pointList: ", this.pointList);
+        //qDebug("this.pointListIndex: ", this.pointListIndex);
+        //qDebug("this.entityIdList.length: ", this.entityIdList.length);
+        if (this.pointListIndex >= 0 &&
+            this.pointListIndex < this.entityIdList.length &&
+            !this.isRayOrXLine()) {
+
+            w.enabled = true;
+        } else {
+            w.enabled = false;
+        }
     }
     
     w = optionsToolBar.findChild("Close");
-    if (this.pointList.length < 3) {
-        w.enabled = false;
-    } else {
-        w.enabled = true;
+    if (!isNull(w)) {
+        if (this.pointList.length > 2 && !this.isRayOrXLine()) {
+            w.enabled = true;
+        } else {
+            w.enabled = false;
+        }
     }
 };
 
@@ -297,4 +323,32 @@ Line2P.prototype.commandEvent = function(event) {
         event.accept();
         return;
     }
+};
+
+Line2P.prototype.isRayOrXLine = function() {
+    return this.lineType===Line.LineType.Ray || this.lineType===Line.LineType.XLine;
+};
+
+Line2P.prototype.slotTypeSegmentChanged = function(checked) {
+    Line.prototype.slotTypeSegmentChanged.call(this, checked);
+    this.resetUndoRedo();
+};
+
+Line2P.prototype.slotTypeRayChanged = function(checked) {
+    Line.prototype.slotTypeRayChanged.call(this, checked);
+    this.resetUndoRedo();
+};
+
+Line2P.prototype.slotTypeXLineChanged = function(checked) {
+    Line.prototype.slotTypeXLineChanged.call(this, checked);
+    this.resetUndoRedo();
+};
+
+Line2P.prototype.resetUndoRedo = function() {
+    if (this.pointList.length!==0) {
+        this.pointList = [this.pointList[this.pointList.length-1]];
+    }
+    this.pointListIndex = 0;
+    this.entityIdList = [];
+    this.updateButtonStates();
 };

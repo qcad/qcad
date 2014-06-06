@@ -6,32 +6,73 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>146</width>
+    <width>118</width>
     <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QComboBox" name="LineType">
-     <item>
-      <property name="text">
-       <string>Line</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Infinite Line</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Ray</string>
-      </property>
-     </item>
+    <widget class="QToolButton" name="TypeSegment">
+     <property name="toolTip">
+      <string>Line Segments</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Segment.svg</normaloff>Segment.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Type</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="TypeXLine">
+     <property name="toolTip">
+      <string>Infinite Line</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>XLine.svg</normaloff>XLine.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Type</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="TypeRay">
+     <property name="toolTip">
+      <string>Ray</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Ray.svg</normaloff>Ray.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Type</string>
+     </attribute>
     </widget>
    </item>
   </layout>
  </widget>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="Type"/>
+ </buttongroups>
 </ui>

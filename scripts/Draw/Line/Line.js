@@ -105,14 +105,14 @@ Line.prototype.getTitle = function() {
     return Line.getTitle();
 };
 
-Line.prototype.slotLineTypeChanged = function(value) {
-    var optionsToolBar = EAction.getOptionsToolBar();
-    var lineTypeCombo = optionsToolBar.findChild("LineType");
+//Line.prototype.slotLineTypeChanged = function(value) {
+//    var optionsToolBar = EAction.getOptionsToolBar();
+//    var lineTypeCombo = optionsToolBar.findChild("LineType");
 
-    this.lineType = lineTypeCombo.currentIndex;
+//    this.lineType = lineTypeCombo.currentIndex;
 
-    this.updatePreview(true);
-};
+//    this.updatePreview(true);
+//};
 
 Line.prototype.createLineEntity = function(doc, p1, p2) {
     switch (this.lineType) {
@@ -123,5 +123,26 @@ Line.prototype.createLineEntity = function(doc, p1, p2) {
         return new RXLineEntity(doc, new RXLineData(p1, p2.operator_subtract(p1)));
     case Line.LineType.Ray:
         return new RRayEntity(doc, new RRayData(p1, p2.operator_subtract(p1)));
+    }
+};
+
+Line.prototype.slotTypeSegmentChanged = function(checked) {
+    if (checked) {
+        this.lineType = Line.LineType.Line;
+        this.updatePreview(true);
+    }
+};
+
+Line.prototype.slotTypeRayChanged = function(checked) {
+    if (checked) {
+        this.lineType = Line.LineType.Ray;
+        this.updatePreview(true);
+    }
+};
+
+Line.prototype.slotTypeXLineChanged = function(checked) {
+    if (checked) {
+        this.lineType = Line.LineType.XLine;
+        this.updatePreview(true);
     }
 };
