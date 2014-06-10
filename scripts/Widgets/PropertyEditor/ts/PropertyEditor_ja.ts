@@ -67,7 +67,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+603"/>
+        <location line="+605"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -76,7 +76,7 @@
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-582"/>
+        <location line="-584"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -86,7 +86,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translation>自動計測を使用</translation>
     </message>

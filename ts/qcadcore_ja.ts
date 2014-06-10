@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+247"/>
+        <location filename="../src/core/RUnit.cpp" line="+268"/>
         <source>None</source>
         <translation>なし</translation>
     </message>

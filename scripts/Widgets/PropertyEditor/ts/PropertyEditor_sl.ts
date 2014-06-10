@@ -72,7 +72,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+584"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -113,12 +113,12 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-446"/>
+        <location line="-448"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>

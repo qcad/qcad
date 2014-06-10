@@ -329,7 +329,7 @@
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+299"/>
+        <location filename="../autostart.js" line="+302"/>
         <source>Loading add-on translations...</source>
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>
@@ -405,7 +405,7 @@
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished">Block Referenzen und Attribute</translation>
+        <translation>Block Referenzen und Attribute</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -571,6 +571,26 @@
         <location line="+0"/>
         <source>Line</source>
         <translation>Linie</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Infinite Lines</source>
+        <translation>Unendliche Linien</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Infinite Line</source>
+        <translation>Unendliche Linie</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rays</source>
+        <translation>Strahlen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ray</source>
+        <translation>Strahl</translation>
     </message>
     <message>
         <location line="+2"/>

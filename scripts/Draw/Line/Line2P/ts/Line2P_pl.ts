@@ -4,7 +4,7 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="+60"/>
+        <location filename="../Line2P.js" line="+69"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13,7 +13,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation type="unfinished">Pierwszy punkt</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Next point</source>
         <translatorcomment>--google--
 Wskaż następny punkt
@@ -40,10 +40,20 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
         <translation type="unfinished">Zamknij Sequence</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Cofnąć poprzedni segment</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Redo Segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Restrict length or angle</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Line2PInit.js" line="+2"/>

@@ -105,7 +105,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location line="+603"/>
+        <location line="+605"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -115,7 +115,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-582"/>
+        <location line="-584"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -203,7 +203,7 @@ Przyciąganie automatyczne</translatorcomment>
         <translation type="unfinished">Automatycznie</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Użyj automatycznego pomiaru</translation>

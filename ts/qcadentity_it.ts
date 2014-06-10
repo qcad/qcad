@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>REntity</name>
     <message>
@@ -98,6 +98,9 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+65"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="+71"/>
+        <location line="+3"/>
+        <location line="+4"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+69"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -105,6 +108,9 @@ Altezza Testo:</translatorcomment>
         <location filename="../src/entity/RSplineEntity.cpp" line="+64"/>
         <location line="+3"/>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+71"/>
+        <location line="+3"/>
+        <location line="+4"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: default.po--
@@ -172,6 +178,9 @@ Arco: Centro, Punto, Angoli
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="-6"/>
+        <location line="+3"/>
+        <location line="+4"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -179,6 +188,9 @@ Arco: Centro, Punto, Angoli
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="-6"/>
+        <location line="+3"/>
+        <location line="+4"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -224,6 +236,9 @@ Caricamento indirizzi delle librerie
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="-6"/>
+        <location line="+3"/>
+        <location line="+4"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -231,6 +246,9 @@ Caricamento indirizzi delle librerie
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="-6"/>
+        <location line="+3"/>
+        <location line="+4"/>
         <source>Z</source>
         <translatorcomment>--exact match--
 --file: src_shell_data_translations_ktoon_it.ts--
@@ -334,7 +352,9 @@ Salva Disegno con Nuovo Nome</translatorcomment>
         <location line="+1"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -913,6 +933,36 @@ Punto 4|Y</translatorcomment>
         <location line="+1"/>
         <source>Prompt</source>
         <translation>Prompt</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="-11"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Base Point</source>
+        <translation>Punto base</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Second Point</source>
+        <translation>Secondo punto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Direction Vector</source>
+        <translation>Direzione</translation>
     </message>
 </context>
 </TS>

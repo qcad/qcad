@@ -105,15 +105,6 @@ Line.prototype.getTitle = function() {
     return Line.getTitle();
 };
 
-//Line.prototype.slotLineTypeChanged = function(value) {
-//    var optionsToolBar = EAction.getOptionsToolBar();
-//    var lineTypeCombo = optionsToolBar.findChild("LineType");
-
-//    this.lineType = lineTypeCombo.currentIndex;
-
-//    this.updatePreview(true);
-//};
-
 Line.prototype.createLineEntity = function(doc, p1, p2) {
     switch (this.lineType) {
     default:
@@ -126,10 +117,14 @@ Line.prototype.createLineEntity = function(doc, p1, p2) {
     }
 };
 
+Line.prototype.typeChanged = function() {
+};
+
 Line.prototype.slotTypeSegmentChanged = function(checked) {
     if (checked) {
         this.lineType = Line.LineType.Line;
         this.updatePreview(true);
+        this.typeChanged();
     }
 };
 
@@ -137,6 +132,7 @@ Line.prototype.slotTypeRayChanged = function(checked) {
     if (checked) {
         this.lineType = Line.LineType.Ray;
         this.updatePreview(true);
+        this.typeChanged();
     }
 };
 
@@ -144,5 +140,10 @@ Line.prototype.slotTypeXLineChanged = function(checked) {
     if (checked) {
         this.lineType = Line.LineType.XLine;
         this.updatePreview(true);
+        this.typeChanged();
     }
+};
+
+Line.prototype.isRayOrXLine = function() {
+    return this.lineType===Line.LineType.Ray || this.lineType===Line.LineType.XLine;
 };

@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("RestrictAngleLength", "Restrict &Angle and Length"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("RestrictAngleLength", "Restrict &Angle or Length"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/RestrictAngleLength.js");
     action.setIcon(basePath + "/RestrictAngleLength.svg");

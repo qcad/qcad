@@ -150,7 +150,7 @@ Selecione Entidades singulares</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+320"/>
+        <location filename="../Viewport.js" line="+331"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: pt.po--

@@ -291,11 +291,10 @@ Line2P.prototype.getLineEntityId = function(trans) {
 /**
  * Allows commands to be entered in command line
  *
- * Note: this might be ambiguous, depending on the current locale:
- *    "Using the 'startsWith' function allows the user to enter only as many characters
- *    as needed to distinguish between commands
- *    In this case only the first character is needed. (But entering 'c', 'cl', 'clo', 'clos'
- *    or 'close' would all invoke the close command. Similarly with undo and redo)"
+ * "Using the 'startsWith' function allows the user to enter only as many characters
+ * as needed to distinguish between commands
+ * In this case only the first character is needed. (But entering 'c', 'cl', 'clo', 'clos'
+ * or 'close' would all invoke the close command. Similarly with undo and redo)"
  *
  */
 Line2P.prototype.commandEvent = function(event) {
@@ -305,46 +304,27 @@ Line2P.prototype.commandEvent = function(event) {
     cmd = cmd.toLowerCase();
     this.cmd = cmd;
 
-    str = qsTr("close");
-    if (str===cmd) {
+    str = "close";
+    if (str.startsWith(cmd)) {
         this.slotClose();
         event.accept();
         return;
     }
-    str = qsTr("undo");
-    if (str===cmd) {
+    str = "undo";
+    if (str.startsWith(cmd)) {
         this.slotUndo();
         event.accept();
         return;
     }
-    str = qsTr("redo");
-    if (str===cmd) {
+    str = "redo";
+    if (str.startsWith(cmd)) {
         this.slotRedo();
         event.accept();
         return;
     }
 };
 
-Line2P.prototype.isRayOrXLine = function() {
-    return this.lineType===Line.LineType.Ray || this.lineType===Line.LineType.XLine;
-};
-
-Line2P.prototype.slotTypeSegmentChanged = function(checked) {
-    Line.prototype.slotTypeSegmentChanged.call(this, checked);
-    this.resetUndoRedo();
-};
-
-Line2P.prototype.slotTypeRayChanged = function(checked) {
-    Line.prototype.slotTypeRayChanged.call(this, checked);
-    this.resetUndoRedo();
-};
-
-Line2P.prototype.slotTypeXLineChanged = function(checked) {
-    Line.prototype.slotTypeXLineChanged.call(this, checked);
-    this.resetUndoRedo();
-};
-
-Line2P.prototype.resetUndoRedo = function() {
+Line2P.prototype.typeChanged = function() {
     if (this.pointList.length!==0) {
         this.pointList = [this.pointList[this.pointList.length-1]];
     }

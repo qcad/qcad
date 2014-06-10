@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -66,7 +66,7 @@
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+603"/>
+        <location line="+605"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -103,7 +103,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-582"/>
+        <location line="-584"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -121,7 +121,7 @@
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -187,7 +187,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-885"/>
+        <location filename="../PropertyEditor.js" line="-887"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

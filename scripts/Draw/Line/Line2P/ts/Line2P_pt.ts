@@ -4,7 +4,7 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="+60"/>
+        <location filename="../Line2P.js" line="+69"/>
         <source>First point</source>
         <translatorcomment>--exact match--
 --file: Circle3P_pt.ts--
@@ -13,7 +13,7 @@ Especifique o primeiro ponto do polígono</translatorcomment>
         <translation>Primeiro ponto</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Next point</source>
         <translatorcomment>--google--
 Indique o próximo ponto
@@ -52,10 +52,20 @@ Não é possível fechar a seqüência de linhas: Ainda não há suficientes ent
         <translation>Fechar a seqüência</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desfazer segmento anterior</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Redo Segment</source>
+        <translation>Refaça segmento anterior</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Restrict length or angle</source>
+        <translation>Restringir comprimento ou ângulo</translation>
     </message>
 </context>
 </TS>
