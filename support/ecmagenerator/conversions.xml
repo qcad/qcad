@@ -48,6 +48,8 @@
 	<entry key="RTextRenderer::Target" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::Unit" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::VAlign" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::BooleanOperation" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::FillType" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="RLineweight::Lineweight" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLinetype::Id" value="toNumber()" testFunction="isNumber()" cast="int" />

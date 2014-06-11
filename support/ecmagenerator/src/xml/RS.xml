@@ -306,6 +306,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="WORLDVIEW" />
       <value name="INVALID" />
     </enum>
+    <enum name="BooleanOperation">
+      <value name="Intersection" />
+      <value name="Union" />
+      <value name="Difference" />
+      <value name="Xor" />
+    </enum>
+    <enum name="FillType">
+      <value name="EvenOdd" />
+      <value name="NonZero" />
+      <value name="Positive" />
+      <value name="Negative" />
+    </enum>
     <method name="compare" cppName="compare" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
