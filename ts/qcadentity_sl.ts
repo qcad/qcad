@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>REntity</name>
     <message>
@@ -406,7 +406,7 @@
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation type="unfinished"></translation>
+        <translation>Samodejni napis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -636,12 +636,12 @@
     <message>
         <location line="+4"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Besedilo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Preprosto besedilo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -651,12 +651,12 @@
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Višina besedila</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kot besedila</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -697,7 +697,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Bazna točka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -707,7 +707,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Sekundarna točka</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -717,7 +717,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation type="unfinished"></translation>
+        <translation>Smerni vektor</translation>
     </message>
 </context>
 </TS>
