@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
@@ -6,7 +5,7 @@
     <message>
         <location filename="../ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation>切换可见性</translation>
     </message>
 </context>
 </TS>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
@@ -6,12 +5,12 @@
     <message>
         <location filename="../CreateBlock.js" line="+47"/>
         <source>Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>参考点</translation>
     </message>
     <message>
         <location filename="../CreateBlockInit.js" line="+4"/>
         <source>&amp;Create Block from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>从选择内容创建块(&amp;C)</translation>
     </message>
 </context>
 </TS>
