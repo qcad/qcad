@@ -25,21 +25,70 @@
  * \param longFlag E.g. "-output"
  */
 function getArgument(args, shortFlag, longFlag) {
-    var i = args.indexOf(shortFlag);
-    if (i!==-1) {
-        if (i+1 < args.length) {
-            return args[i+1];
-        }
+//    var i = args.indexOf(shortFlag);
+//    if (i!==-1) {
+//        if (i+1 < args.length) {
+//            return args[i+1];
+//        }
+//    }
+
+//    for (var k=0; k<args.length; k++) {
+//        if (args[k].indexOf(longFlag+"=")===0) {
+//            var j=args[k].indexOf("=");
+//            return args[k].substr(j+1);
+//        }
+//    }
+
+//    return undefined;
+    var ret = getArguments(args, shortFlag, longFlag);
+    if (ret.length===0) {
+        return undefined;
+    }
+    return ret[0];
+}
+
+/**
+ * \return Array of all arguments after the given flags or an empty array.
+ *
+ * \param args Array of strings (program arguments)
+ * \param shortFlag E.g. "-o"
+ * \param longFlag E.g. "-output"
+ */
+function getArguments(args, shortFlag, longFlag) {
+    var start = 0;
+    var done = false;
+    var ret = [];
+    var i;
+
+    shortFlag = shortFlag.toLowerCase();
+    longFlag = longFlag.toLowerCase();
+    var argsLower = [];
+    for (i=0; i<args.length; i++) {
+        argsLower.push(args[i].toLowerCase());
     }
 
-    for (var k=0; k<args.length; k++) {
-        if (args[k].indexOf(longFlag+"=")===0) {
-            var j=args[k].indexOf("=");
-            return args[k].substr(j+1);
+    do {
+        done = true;
+        i = argsLower.indexOf(shortFlag, start);
+        if (i!==-1) {
+            if (i+1 < args.length) {
+                ret.push(args[i+1]);
+                start=i+2;
+                done = false;
+            }
         }
-    }
 
-    return undefined;
+        for (var k=start; k<args.length; k++) {
+            if (argsLower[k].indexOf(longFlag+"=")===0) {
+                var j=args[k].indexOf("=");
+                ret.push(args[k].substr(j+1));
+                start=k+1;
+                done = false;
+            }
+        }
+    } while (!done);
+
+    return ret;
 }
 
 function getIntArgument(args, shortFlag, longFlag, def) {
