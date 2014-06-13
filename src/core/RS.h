@@ -460,6 +460,12 @@ public:
         Negative
     };
 
+    enum Orientation {
+        Any,
+        CW,
+        CCW
+    };
+
 public:
     static bool compare(const QVariant& v1, const QVariant& v2);
     static bool compare(const QPair<QVariant, RPropertyAttributes>& p1,
@@ -527,6 +533,7 @@ Q_DECLARE_METATYPE(RS::VAlign)
 Q_DECLARE_METATYPE(RS::VAlign*)
 Q_DECLARE_METATYPE(RS::BooleanOperation)
 Q_DECLARE_METATYPE(RS::FillType)
+Q_DECLARE_METATYPE(RS::Orientation)
 Q_DECLARE_METATYPE(QList<RS::EntityType>)
 
 #endif

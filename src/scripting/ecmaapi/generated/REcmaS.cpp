@@ -1469,6 +1469,21 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Any",
+    QScriptValue(RS::Any),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CW",
+    QScriptValue(RS::CW),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CCW",
+    QScriptValue(RS::CCW),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RS::MessageType>(
@@ -1594,6 +1609,13 @@
         &engine,
         toScriptValueEnumFillType,
         fromScriptValueEnumFillType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::Orientation>(
+        &engine,
+        toScriptValueEnumOrientation,
+        fromScriptValueEnumOrientation,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -2440,5 +2462,15 @@
     
         {
             out = qvariant_cast<RS::FillType>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumOrientation(QScriptEngine* engine, const RS::Orientation& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumOrientation(const QScriptValue& value, RS::Orientation& out)
+    
+        {
+            out = qvariant_cast<RS::Orientation>(value.toVariant());
         }
         

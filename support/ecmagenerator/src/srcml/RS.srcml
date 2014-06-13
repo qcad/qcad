@@ -1148,6 +1148,18 @@ dir="./core" filename="RS.h">
   </expr>, 
   <expr>
     <name>Negative</name>
+  </expr>}</block>;</enum>
+  <enum>enum 
+  <name>Orientation</name>
+  <block>{ 
+  <expr>
+    <name>Any</name>
+  </expr>, 
+  <expr>
+    <name>CW</name>
+  </expr>, 
+  <expr>
+    <name>CCW</name>
   </expr>}</block>;</enum></public>
   <public>public: 
   <function_decl>
@@ -1649,6 +1661,11 @@ dir="./core" filename="RS.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>RS::FillType</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::Orientation</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

@@ -318,6 +318,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Positive" />
       <value name="Negative" />
     </enum>
+    <enum name="Orientation">
+      <value name="Any" />
+      <value name="CW" />
+      <value name="CCW" />
+    </enum>
     <method name="compare" cppName="compare" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
