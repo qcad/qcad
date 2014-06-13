@@ -32,6 +32,8 @@ function printHelp() {
     print();
     print("  -f, -force              Overwrite existing output file");
     print("  -h, -help               Display this help");
+    print("  -t TYPE, -type=TYPE     Set file type to TYPE ");
+    print("                          (e.g. R12...R27 or 2000...2013)");
     print("  -o FILE, -outfile=FILE  Set output file to FILE");
     print("                          default is same path and base name as input file");
     print();
@@ -92,6 +94,11 @@ function main() {
         return;
     }
 
+    var type = getArgument(args, "-t", "-type");
+    if (type===undefined) {
+        type = "";
+    }
+
     // parse XML into array:
     var file = new QFile(xmlFile);
 
@@ -147,7 +154,7 @@ function main() {
         }
     }
 
-    diDest.exportFile(outputFile);
+    diDest.exportFile(outputFile, type);
 
     print("Converting");
     print("  from: " + xmlFile);
