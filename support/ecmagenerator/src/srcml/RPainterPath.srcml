@@ -80,9 +80,7 @@ dir="./core" filename="RPainterPath.h">
   <name>AutoRegen</name>= 0x20</expr>, 
   <comment type="line">// arcs (regen on zoom change)</comment>
   <expr>
-  <name>AlwaysRegen</name>= 0x40</expr>
-  <comment type="line">// xlines (regen
-  always)</comment>}</block>;</enum>
+  <name>AlwaysRegen</name>= 0x40</expr>}</block>;</enum>
   <macro>
     <name>Q_DECLARE_FLAGS</name>
     <argument_list>(
@@ -570,6 +568,18 @@ dir="./core" filename="RPainterPath.h">
         </type>
       </decl>
     </param>)</parameter_list>;</constructor_decl>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>closeSubpath</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>QPainterPath::closeSubpath</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
   </function>
   <comment type="line">// bool contains(const QPointF&amp; point)
   const {</comment>

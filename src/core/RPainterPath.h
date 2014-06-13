@@ -53,7 +53,7 @@ public:
         FixedPenColor = 0x08,
         FixedBrushColor = 0x10,
         AutoRegen = 0x20,            // arcs (regen on zoom change)
-        AlwaysRegen = 0x40           // xlines (regen always)
+        AlwaysRegen = 0x40
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -94,6 +94,10 @@ public:
 
     void cubicTo(qreal ctrlPt1x, qreal ctrlPt1y, qreal ctrlPt2x, qreal ctrlPt2y, qreal endPtx, qreal endPty) {
         QPainterPath::cubicTo(ctrlPt1x, ctrlPt1y, ctrlPt2x, ctrlPt2y, endPtx, endPty);
+    }
+
+    void closeSubpath() {
+        QPainterPath::closeSubpath();
     }
 
 //    bool contains(const QPointF& point) const {

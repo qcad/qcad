@@ -60,6 +60,9 @@
         cubicTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        closeSubpath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         containsPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
