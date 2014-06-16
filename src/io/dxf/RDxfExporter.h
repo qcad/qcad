@@ -29,6 +29,8 @@
 #include "RDocument.h"
 #include "RDxfServices.h"
 #include "RFileExporter.h"
+#include "RRay.h"
+#include "RXLine.h"
 
 class RArcEntity;
 class RCircleEntity;
