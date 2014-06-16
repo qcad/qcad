@@ -25,6 +25,7 @@
 #include "RArc.h"
 #include "RExporter.h"
 #include "RPainterPath.h"
+#include "RXLine.h"
 
 class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:
