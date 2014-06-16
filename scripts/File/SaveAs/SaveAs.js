@@ -113,7 +113,7 @@ SaveAs.prototype.beginEvent = function() {
 
     // global function qcadInitFileDialog may be registered to perform
     // additional initialization
-    if (isFunction(qcadInitFileDialog)) {
+    if (typeof qcadInitFileDialog!="undefined" && isFunction(qcadInitFileDialog)) {
         qcadInitFileDialog(fileDialog);
     }
 
