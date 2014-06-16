@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>Leader</name>
     <message>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>Razveljavi zadnji segment</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Puščica</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

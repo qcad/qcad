@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -349,12 +349,12 @@
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Blokovne reference ter atributi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Blokovna referenca ali atribut</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -519,22 +519,22 @@
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation>Neskončne črte</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation>Neskončna črta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation>Poltraki</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Poltrak</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>QObject</name>
     <message>
@@ -292,27 +292,27 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation>Meje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Left</source>
-        <translation>Levo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Dno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Desno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Zgoraj</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>

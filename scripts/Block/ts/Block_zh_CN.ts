@@ -5,7 +5,7 @@
     <message>
         <location filename="../Block.js" line="+49"/>
         <source>&amp;Block</source>
-        <translation>方块</translation>
+        <translation>块(&amp;B)</translation>
     </message>
 </context>
 <context>
@@ -13,37 +13,37 @@
     <message>
         <location filename="../BlockDialog.js" line="+98"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"/>
+        <translation>前导或尾随空格。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation type="unfinished"/>
+        <translation>块名为空。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation type="unfinished"/>
+        <translation>块名无效。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Block already exists.</source>
-        <translation type="unfinished"/>
+        <translation>块名已经存在。</translation>
     </message>
     <message>
         <location filename="../BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation type="unfinished"/>
+        <translation>块数据</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Block name:</source>
-        <translation type="unfinished"/>
+        <translation>块名：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>block 1</source>
-        <translation type="unfinished"/>
+        <translation>块1</translation>
     </message>
 </context>
 </TS>

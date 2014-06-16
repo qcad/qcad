@@ -10,7 +10,7 @@
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
-        <translation type="unfinished"/>
+        <translation>删除选择的块</translation>
     </message>
 </context>
 </TS>

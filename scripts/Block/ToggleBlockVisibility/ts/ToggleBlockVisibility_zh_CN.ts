@@ -5,7 +5,7 @@
     <message>
         <location filename="../ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation>切换可见性</translation>
+        <translation>切换可见性(&amp;T)</translation>
     </message>
 </context>
 </TS>

@@ -20,7 +20,7 @@
     <message>
         <location line="+97"/>
         <source>Scale X:</source>
-        <translation>尺度 X：</translation>
+        <translation>缩放 X：</translation>
     </message>
     <message>
         <location line="+19"/>

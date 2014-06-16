@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
@@ -6,107 +5,107 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+268"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>空</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>英寸</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation>英尺</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation type="unfinished"></translation>
+        <translation>英里</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>毫米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>厘米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translation type="unfinished"></translation>
+        <translation>千米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation>微英寸</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished"></translation>
+        <translation>百万</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation>码</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation>埃</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nanometer</source>
-        <translation type="unfinished"></translation>
+        <translation>纳米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation>微米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>分米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation>十米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translation type="unfinished"></translation>
+        <translation>百米</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation>百万公里</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation>天体的</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation>光年</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation>秒差距</translation>
     </message>
 </context>
 <context>
@@ -114,97 +113,97 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+411"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>按图层</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>按块</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished"></translation>
+        <translation>红色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation type="unfinished"></translation>
+        <translation>绿色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>蓝色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>青色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>洋红色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>黄色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation type="unfinished"></translation>
+        <translation>暗红色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished"></translation>
+        <translation>深绿色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>藏青色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>深青绿</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>深洋红</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>暗黄</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>黑色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>灰色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>浅灰色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>白色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>其它...</translation>
     </message>
 </context>
 <context>
@@ -212,79 +211,79 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>块</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>缩放比例</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+48"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>类型</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Block ID</source>
-        <translation type="unfinished"></translation>
+        <translation>块ID</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>图层</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>线型</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished"></translation>
+        <translation>线宽</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>颜色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>描画顺序</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -292,32 +291,32 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>边界</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>底部</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>上部</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义</translation>
     </message>
 </context>
 <context>
@@ -325,7 +324,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+168"/>
         <source>Requires selection</source>
-        <translation type="unfinished"></translation>
+        <translation>需要选择</translation>
     </message>
 </context>
 <context>
@@ -333,32 +332,32 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名字</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>冻结的</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>锁定的</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>颜色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>线型</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished"></translation>
+        <translation>线宽</translation>
     </message>
 </context>
 <context>
@@ -366,107 +365,107 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>按图层</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>按块</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished"></translation>
+        <translation>连续的</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished"></translation>
+        <translation>点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dot (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>点（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dot (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>点（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash</source>
-        <translation type="unfinished"></translation>
+        <translation>破折号</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>破折号（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>破折号（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash Dot</source>
-        <translation type="unfinished"></translation>
+        <translation>点划线</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash Dot (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>点划线（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dash Dot (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>点划线（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished"></translation>
+        <translation>分割线</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Divide (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>分割线（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Divide (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>分割线（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>居中</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>居中（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>居中（大）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished"></translation>
+        <translation>边界</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Border (small)</source>
-        <translation type="unfinished"></translation>
+        <translation>边界（小）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Border (large)</source>
-        <translation type="unfinished"></translation>
+        <translation>边界（大）</translation>
     </message>
 </context>
 <context>
@@ -474,137 +473,137 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+34"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>按图层</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>按块</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>默认值</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.00mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.05mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.09mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.13mm(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.15mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.18mm(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.25(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.30mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.35mm(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.40mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.50mm(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.53mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.60mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.70mm(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.80mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.90mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>1.00mm(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.06mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>1.40mm(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.58mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>2.00mm(ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished"></translation>
+        <translation>2.11mm</translation>
     </message>
 </context>
 <context>
@@ -612,12 +611,12 @@
     <message>
         <location filename="../src/core/RObject.cpp" line="+35"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>处理</translation>
     </message>
 </context>
 </TS>
