@@ -106,6 +106,12 @@
     ;static  void fromScriptValueEnumAngleUnit(const QScriptValue& value, RS::AngleUnit& out)
     ;static  QScriptValue toScriptValueEnumKnownVariable(QScriptEngine* engine, const RS::KnownVariable& value)
     ;static  void fromScriptValueEnumKnownVariable(const QScriptValue& value, RS::KnownVariable& out)
+    ;static  QScriptValue toScriptValueEnumBooleanOperation(QScriptEngine* engine, const RS::BooleanOperation& value)
+    ;static  void fromScriptValueEnumBooleanOperation(const QScriptValue& value, RS::BooleanOperation& out)
+    ;static  QScriptValue toScriptValueEnumFillType(QScriptEngine* engine, const RS::FillType& value)
+    ;static  void fromScriptValueEnumFillType(const QScriptValue& value, RS::FillType& out)
+    ;static  QScriptValue toScriptValueEnumOrientation(QScriptEngine* engine, const RS::Orientation& value)
+    ;static  void fromScriptValueEnumOrientation(const QScriptValue& value, RS::Orientation& out)
     ;};
     #endif
     

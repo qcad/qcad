@@ -288,6 +288,36 @@ dir="./io/dxf" filename="RDxfImporter.h">
     <name>virtual</name>
     <name>void</name>
   </type>
+  <name>addXLine</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>DL_XLineData</name>&amp;</type>
+      <name>data</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>addRay</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>DL_RayData</name>&amp;</type>
+      <name>data</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
   <name>addArc</name>
   <parameter_list>(
   <param>

@@ -535,6 +535,22 @@ dir="./core" filename="RStorage.h">
   <name>querySelectedEntities</name>
   <parameter_list>()</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * \return A set of entity IDs of all
+  infinite entities (xlines). */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSet
+    <argument_list>&lt;
+    <argument>
+      <name>
+      <name>REntity</name>::
+      <name>Id</name></name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryInfiniteEntities</name>
+  <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
   <comment type="block">/** * \return A shared pointer to the
   object with the given \c objectId * or null pointer if the object
   is no available in this storage. */</comment>
@@ -2564,6 +2580,7 @@ dir="./core" filename="RStorage.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
@@ -2572,6 +2589,7 @@ dir="./core" filename="RStorage.h">
   </type>
   <name>getSelectionBox</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>

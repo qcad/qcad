@@ -455,6 +455,32 @@ dir="./core/math" filename="RPolyline.h">
       <name>RVector</name>&amp;</type>
       <name>point</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>borderIsInside</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>tolerance</name>=
+    <init>
+      <expr>
+        <name>
+        <name>RS</name>::
+        <name>PointTolerance</name></name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="line">// TODO:</comment>

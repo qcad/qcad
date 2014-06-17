@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>GridSettings</name>
     <message>
@@ -33,7 +33,7 @@
     <name>scrollArea</name>
     <message>
         <source>View 1</source>
-        <translation>Pogled 1</translation>
+        <translation type="vanished">Pogled 1</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
@@ -113,15 +113,15 @@
     </message>
     <message>
         <source>View 2</source>
-        <translation>Pogled 2</translation>
+        <translation type="vanished">Pogled 2</translation>
     </message>
     <message>
         <source>View 3</source>
-        <translation>Pogled 3</translation>
+        <translation type="vanished">Pogled 3</translation>
     </message>
     <message>
         <source>View 4</source>
-        <translation>Pogled 4</translation>
+        <translation type="vanished">Pogled 4</translation>
     </message>
 </context>
 </TS>

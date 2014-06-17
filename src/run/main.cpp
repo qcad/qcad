@@ -60,6 +60,7 @@
 #include "RPluginLoader.h"
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
+#include "RRayEntity.h"
 #include "RScriptHandlerEcma.h"
 #include "RScriptHandlerRegistry.h"
 #include "RSettings.h"
@@ -68,6 +69,7 @@
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
+#include "RXLineEntity.h"
 
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
@@ -212,6 +214,8 @@ int main(int argc, char *argv[]) {
     RPolylineEntity::init();
     RSolidEntity::init();
     RSplineEntity::init();
+    RXLineEntity::init();
+    RRayEntity::init();
 
     RTextBasedEntity::init();
     RTextEntity::init();

@@ -60,6 +60,9 @@
         cubicTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        closeSubpath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         containsPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -145,6 +148,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getAutoRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAlwaysRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAlwaysRegen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setFeatureSize

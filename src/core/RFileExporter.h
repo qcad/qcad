@@ -55,7 +55,7 @@ public:
      * Must be implemented by file exporters to export the document
      * into the given file.
      */
-    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true) = 0;
+    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool setFileName = true) = 0;
 };
 
 Q_DECLARE_METATYPE(RFileExporter*)

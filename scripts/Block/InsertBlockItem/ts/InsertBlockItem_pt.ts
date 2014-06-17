@@ -91,12 +91,12 @@ Utilize a camada atual</translatorcomment>
         <translation>Sobrescrever blocos</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+90"/>
+        <location filename="../InsertBlockItem.js" line="+82"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajustado nome do bloco inválido &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>

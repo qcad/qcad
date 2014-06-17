@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RestrictAngleLength</class>
+ <widget class="QWidget" name="RestrictAngleLength">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>539</width>
+    <height>46</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QCheckBox" name="RestrictAngle">
+     <property name="text">
+      <string>Angle:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Angle">
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Base:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="BaseAngle">
+     <property name="text">
+      <string notr="true">0</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="RestrictLength">
+     <property name="text">
+      <string>Distance:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Length">
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Base:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="BaseLength">
+     <property name="text">
+      <string notr="true">0</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>RestrictAngle</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Angle</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RestrictAngle</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RestrictAngle</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>BaseAngle</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RestrictLength</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Length</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RestrictLength</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_2</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RestrictLength</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>BaseLength</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

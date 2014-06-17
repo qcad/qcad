@@ -28,6 +28,7 @@ Makefile.Release
 *.pro.user
 .qmake.cache
 .qmake.stash
+*.xcodeproj
 
 # Mac:
 .DS_Store

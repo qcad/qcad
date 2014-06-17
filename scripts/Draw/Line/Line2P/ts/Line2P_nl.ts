@@ -4,12 +4,12 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="+60"/>
+        <location filename="../Line2P.js" line="+69"/>
         <source>First point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Next point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24,8 +24,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Undo Previous Segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Redo Segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Restrict length or angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

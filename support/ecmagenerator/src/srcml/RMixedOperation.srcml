@@ -50,8 +50,8 @@ dir="./operations" filename="RMixedOperation.h">
   <class_decl>class 
   <name>RObject</name>;</class_decl>
   <comment type="block">/** * Implementation of an operation that
-  adds, modifies and deletes entities. * * \ingroup operations *
-  \scriptable */</comment>
+  adds, modifies and deletes entities. * * \obsolete * \ingroup
+  operations * \scriptable */</comment>
   <class>class 
   <macro>
     <name>QCADOPERATIONS_EXPORT</name>

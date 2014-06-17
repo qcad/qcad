@@ -194,6 +194,11 @@ dir="./core" filename="RS.h">
   </expr>, 
   <comment type="block">/**&lt; Block reference */</comment>
   <expr>
+    <name>EntityBlockRefAttr</name>
+  </expr>, 
+  <comment type="block">/**&lt; Block reference with attributes
+  */</comment>
+  <expr>
     <name>EntityPoint</name>
   </expr>, 
   <comment type="block">/**&lt; Point */</comment>
@@ -201,6 +206,14 @@ dir="./core" filename="RS.h">
     <name>EntityLine</name>
   </expr>, 
   <comment type="block">/**&lt; Line */</comment>
+  <expr>
+    <name>EntityXLine</name>
+  </expr>, 
+  <comment type="block">/**&lt; XLine */</comment>
+  <expr>
+    <name>EntityRay</name>
+  </expr>, 
+  <comment type="block">/**&lt; Ray */</comment>
   <expr>
     <name>EntityPolyline</name>
   </expr>, 
@@ -1105,7 +1118,49 @@ dir="./core" filename="RS.h">
   <name>MaxKnownVariable</name>= 
   <name>WORLDVIEW</name></expr>, 
   <expr>
-  <name>INVALID</name>= -1</expr>}</block>;</enum></public>
+  <name>INVALID</name>= -1</expr>}</block>;</enum>
+  <enum>enum 
+  <name>BooleanOperation</name>
+  <block>{ 
+  <expr>
+    <name>Intersection</name>
+  </expr>, 
+  <expr>
+    <name>Union</name>
+  </expr>, 
+  <expr>
+    <name>Difference</name>
+  </expr>, 
+  <expr>
+    <name>Xor</name>
+  </expr>}</block>;</enum>
+  <enum>enum 
+  <name>FillType</name>
+  <block>{ 
+  <expr>
+    <name>EvenOdd</name>
+  </expr>, 
+  <expr>
+    <name>NonZero</name>
+  </expr>, 
+  <expr>
+    <name>Positive</name>
+  </expr>, 
+  <expr>
+    <name>Negative</name>
+  </expr>}</block>;</enum>
+  <enum>enum 
+  <name>Orientation</name>
+  <block>{ 
+  <expr>
+    <name>Any</name>
+  </expr>, 
+  <expr>
+    <name>CW</name>
+  </expr>, 
+  <expr>
+    <name>CCW</name>
+  </expr>}</block>;</enum></public>
   <public>public: 
   <function_decl>
   <type>
@@ -1157,7 +1212,7 @@ dir="./core" filename="RS.h">
       <type>
       <name>const</name>
       <name>QPair
-      <argument_list>&lt; 
+      <argument_list>&lt;
       <argument>
         <name>QVariant</name>
       </argument>, 
@@ -1596,6 +1651,21 @@ dir="./core" filename="RS.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>RS::VAlign*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::BooleanOperation</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::FillType</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::Orientation</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

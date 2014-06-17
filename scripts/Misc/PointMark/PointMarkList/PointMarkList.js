@@ -509,7 +509,7 @@ PointMarkList.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Show / Hide Point Mark List"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/PointMarkList.js");
-    action.setIcon(basePath + "/PointMarkList.svg");
+    action.setIcon(basePath + "/PointMarkList.png");
     action.setDefaultShortcut(new QKeySequence("g,t"));
     action.setDefaultCommands(["gt"]);
     action.setSortOrder(10000);

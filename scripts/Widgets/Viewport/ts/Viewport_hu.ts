@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+320"/>
+        <location filename="../Viewport.js" line="+331"/>
         <source>Grid</source>
         <translation type="unfinished"></translation>
     </message>

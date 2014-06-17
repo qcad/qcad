@@ -47,7 +47,7 @@ dir="./snap" filename="RRestrictVertical.h">
     <param>
       <decl>
         <type>
-        <name>RDocumentInterface</name>&amp;</type>
+        <name>RDocumentInterface</name>*</type>
         <name>documentInterface</name>
       </decl>
     </param>)</parameter_list>

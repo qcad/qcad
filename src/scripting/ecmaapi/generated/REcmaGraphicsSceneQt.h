@@ -95,6 +95,12 @@
         exportLineSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportXLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportRay
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportTriangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

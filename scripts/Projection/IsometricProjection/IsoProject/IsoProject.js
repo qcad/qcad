@@ -42,35 +42,42 @@ IsoProject.prototype.project = function(p) {
 
 IsoProject.prototype.slotTopChanged = function() {
     this.projection = RS.IsoTop;
+    this.clearCache();
     this.updatePreview(true);
 };
 
 IsoProject.prototype.slotBottomChanged = function() {
     this.projection = RS.IsoBottom;
+    this.clearCache();
     this.updatePreview(true);
 };
 
 IsoProject.prototype.slotLeftChanged = function() {
     this.projection = RS.IsoLeft;
+    this.clearCache();
     this.updatePreview(true);
 };
 
 IsoProject.prototype.slotLeftBackChanged = function() {
     this.projection = RS.IsoLeftBack;
+    this.clearCache();
     this.updatePreview(true);
 };
 
 IsoProject.prototype.slotRightChanged = function() {
     this.projection = RS.IsoRight;
+    this.clearCache();
     this.updatePreview(true);
 };
 
 IsoProject.prototype.slotRightBackChanged = function() {
     this.projection = RS.IsoRightBack;
+    this.clearCache();
     this.updatePreview(true);
 };
 
 IsoProject.prototype.slotTrueScaleChanged = function(v) {
     this.trueScale = v;
+    this.clearCache();
     this.updatePreview(true);
 };

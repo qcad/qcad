@@ -87,6 +87,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllLinetypes, "queryAllLinetypes");
             
+            REcmaHelper::registerFunction(&engine, proto, queryInfiniteEntities, "queryInfiniteEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, querySelectedEntities, "querySelectedEntities");
             
             REcmaHelper::registerFunction(&engine, proto, queryLayerEntities, "queryLayerEntities");
@@ -170,6 +172,8 @@
             REcmaHelper::registerFunction(&engine, proto, deleteObject, "deleteObject");
             
             REcmaHelper::registerFunction(&engine, proto, setUndoStatus, "setUndoStatus");
+            
+            REcmaHelper::registerFunction(&engine, proto, getKnownVariable, "getKnownVariable");
             
             REcmaHelper::registerFunction(&engine, proto, isInBackStorage, "isInBackStorage");
             
@@ -972,6 +976,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllLinetypes", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::queryInfiniteEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryInfiniteEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryInfiniteEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("queryInfiniteEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryInfiniteEntities();
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryInfiniteEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryInfiniteEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -3613,6 +3667,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::setUndoStatus", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::getKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getKnownVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getKnownVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("getKnownVariable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QVariant'
+    QVariant cppResult =
+        
+               self->getKnownVariable(a0);
+        // return type: QVariant
+                // QVariant:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getKnownVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getKnownVariable", context, engine);
             return result;
         }
          QScriptValue

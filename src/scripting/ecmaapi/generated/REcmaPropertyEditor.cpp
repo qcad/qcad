@@ -97,6 +97,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, checkType, "checkType");
+            
 
     // static properties:
     
@@ -1462,6 +1464,69 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyEditor::getTypeCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::checkType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::checkType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::checkType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::EntityType
+                    a1 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RPropertyEditor::
+       checkType(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.checkType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::checkType", context, engine);
             return result;
         }
          QScriptValue REcmaPropertyEditor::toString

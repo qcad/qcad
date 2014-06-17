@@ -59,6 +59,15 @@
         ;static  QScriptValue
         setTag
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypeId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLineweight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColor
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

@@ -191,38 +191,37 @@ void RLine::clipToXY(const RBox& box) {
     deltaX = (x2 - x1);
     deltaY = (y2 - y1);
 
-    /*
-     * left edge, right edge, bottom edge and top edge checking
-     */
+    // left edge, right edge, bottom edge and top edge checking
     double pPart[] = {-1 * deltaX, deltaX, -1 * deltaY, deltaY};
     double qPart[] = {x1 - xmin, xmax - x1, y1 - ymin, ymax - y1};
 
     bool accept = true;
 
-    for( int i = 0; i < 4; i ++ ) {
-        p = pPart[ i ];
-        q = qPart[ i ];
+    for (int i=0; i<4; i++) {
+        p = pPart[i];
+        q = qPart[i];
 
-        if (p == 0 && q < 0) {
+        if (p==0 && q<0) {
             accept = false;
             break;
         }
 
-        r = q / p;
+        r = q/p;
 
-        if (p < 0) {
-            u1 =qMax(u1, r);
+        if (p<0) {
+            u1=qMax(u1, r);
         }
 
-        if (p > 0) {
+        if (p>0) {
             u2 = qMin(u2, r);
         }
 
-        if (u1 > u2) {
+        if (u1>u2) {
             accept = false;
             break;
         }
     }
+
     if (accept) {
         if (u2 < 1) {
             x2 = x1 + u2 * deltaX;

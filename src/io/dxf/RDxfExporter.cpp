@@ -581,7 +581,7 @@ void RDxfExporter::writeEntity(const REntity& e) {
         return;
     }
 
-    qDebug() << "RDxfExporter::writeEntity: " << e;
+    //qDebug() << "RDxfExporter::writeEntity: " << e;
 
     attributes = getEntityAttributes(e);
 

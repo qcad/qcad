@@ -82,6 +82,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, cubicTo, "cubicTo");
             
+            REcmaHelper::registerFunction(&engine, proto, closeSubpath, "closeSubpath");
+            
             REcmaHelper::registerFunction(&engine, proto, containsPoint, "containsPoint");
             
             REcmaHelper::registerFunction(&engine, proto, addPath, "addPath");
@@ -139,6 +141,10 @@
             REcmaHelper::registerFunction(&engine, proto, setAutoRegen, "setAutoRegen");
             
             REcmaHelper::registerFunction(&engine, proto, getAutoRegen, "getAutoRegen");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAlwaysRegen, "setAlwaysRegen");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAlwaysRegen, "getAlwaysRegen");
             
             REcmaHelper::registerFunction(&engine, proto, setFeatureSize, "setFeatureSize");
             
@@ -225,6 +231,11 @@
 
     ctor.setProperty("AutoRegen",
     QScriptValue(RPainterPath::AutoRegen),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("AlwaysRegen",
+    QScriptValue(RPainterPath::AlwaysRegen),
     QScriptValue::ReadOnly);
 
 
@@ -1007,6 +1018,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::cubicTo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::closeSubpath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::closeSubpath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::closeSubpath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("closeSubpath", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->closeSubpath();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.closeSubpath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::closeSubpath", context, engine);
             return result;
         }
          QScriptValue
@@ -2766,6 +2821,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getAutoRegen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setAlwaysRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setAlwaysRegen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setAlwaysRegen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setAlwaysRegen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAlwaysRegen(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setAlwaysRegen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setAlwaysRegen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getAlwaysRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getAlwaysRegen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getAlwaysRegen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getAlwaysRegen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getAlwaysRegen();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getAlwaysRegen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getAlwaysRegen", context, engine);
             return result;
         }
          QScriptValue

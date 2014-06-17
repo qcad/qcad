@@ -114,6 +114,8 @@
 #include "REcmaFileExporterRegistry.h"
 #include "REcmaFileImporter.h"
 #include "REcmaFileImporterAdapter.h"
+#include "REcmaFileImporterFactory.h"
+#include "REcmaFileImporterFactoryAdapter.h"
 #include "REcmaFileImporterRegistry.h"
 #include "REcmaFileSystemModel.h"
 #include "REcmaFocusListener.h"
@@ -191,6 +193,9 @@
 #include "REcmaPropertyEvent.h"
 #include "REcmaPropertyListener.h"
 #include "REcmaPropertyTypeId.h"
+#include "REcmaRayData.h"
+#include "REcmaRayEntity.h"
+#include "REcmaRestrictAngleLength.h"
 #include "REcmaRestrictHorizontal.h"
 #include "REcmaRestrictVertical.h"
 #include "REcmaRestrictOrthogonal.h"
@@ -236,6 +241,7 @@
 #include "REcmaSharedPointerPointEntity.h"
 #include "REcmaSharedPointerPolyline.h"
 #include "REcmaSharedPointerPolylineEntity.h"
+#include "REcmaSharedPointerRayEntity.h"
 #include "REcmaSharedPointerShape.h"
 #include "REcmaSharedPointerSolidEntity.h"
 #include "REcmaSharedPointerSpline.h"
@@ -248,6 +254,7 @@
 #include "REcmaSharedPointerTriangle.h"
 #include "REcmaSharedPointerUcs.h"
 #include "REcmaSharedPointerView.h"
+#include "REcmaSharedPointerXLineEntity.h"
 #include "REcmaSnap.h"
 #include "REcmaSnapAuto.h"
 #include "REcmaSnapCenter.h"
@@ -302,6 +309,8 @@
 #include "REcmaViewListenerAdapter.h"
 #include "REcmaWebView.h"
 #include "REcmaWheelEvent.h"
+#include "REcmaXLineData.h"
+#include "REcmaXLineEntity.h"
 
 bool RScriptHandlerEcma::alwaysLoadScripts = false;
 bool RScriptHandlerEcma::translatorInstalled = false;
@@ -556,6 +565,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSnapReference::init(*engine);
 
     REcmaSnapRestriction::init(*engine);
+    REcmaRestrictAngleLength::init(*engine);
     REcmaRestrictHorizontal::init(*engine);
     REcmaRestrictVertical::init(*engine);
     REcmaRestrictOrthogonal::init(*engine);
@@ -617,6 +627,14 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaLineData::init(*engine);
     REcmaLineEntity::init(*engine);
     REcmaSharedPointerLineEntity::init(*engine);
+
+    REcmaXLineData::init(*engine);
+    REcmaXLineEntity::init(*engine);
+    REcmaSharedPointerXLineEntity::init(*engine);
+
+    REcmaRayData::init(*engine);
+    REcmaRayEntity::init(*engine);
+    REcmaSharedPointerRayEntity::init(*engine);
 
     REcmaCircleData::init(*engine);
     REcmaCircleEntity::init(*engine);
@@ -708,6 +726,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaFileImporter::init(*engine);
     REcmaFileImporterAdapter::init(*engine);
+    REcmaFileImporterFactory::init(*engine);
+    REcmaFileImporterFactoryAdapter::init(*engine);
     REcmaFileImporterRegistry::init(*engine);
 
     REcmaFileExporter::init(*engine);

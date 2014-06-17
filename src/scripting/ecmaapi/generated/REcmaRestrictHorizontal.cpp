@@ -114,6 +114,27 @@
             // generate constructor variants:
             
     if( context->argumentCount() ==
+        0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RRestrictHorizontal
+                    * cppResult =
+                    new
+                    RRestrictHorizontal
+                    ();
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    if( context->argumentCount() ==
         1
                 && (
                 
@@ -130,26 +151,23 @@
                         context->argument(
                         0
                         ).isNull()
-                ) /* type: RDocumentInterface */
+                ) /* type: RDocumentInterface * */
             
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    RDocumentInterface*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RDocumentInterface*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RRestrictHorizontal: Argument 0 is not of type RDocumentInterface*.",
-                               context);                    
+                    // argument is pointer
+                    RDocumentInterface * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocumentInterface >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RRestrictHorizontal: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
                     }
-                    RDocumentInterface& a0 = *ap0;
                 
     // end of arguments
 

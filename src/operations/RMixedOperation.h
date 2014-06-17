@@ -36,7 +36,8 @@ class RObject;
 
 /**
  * Implementation of an operation that adds, modifies and deletes entities.
- * 
+ *
+ * \obsolete
  * \ingroup operations
  * \scriptable
  */

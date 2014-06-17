@@ -6,11 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>114</width>
+    <width>243</width>
     <height>50</height>
    </rect>
   </property>
-  <layout class="QHBoxLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QToolButton" name="Close">
      <property name="sizePolicy">
@@ -29,6 +29,13 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QToolButton" name="Undo">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -42,6 +49,53 @@
      <property name="icon">
       <iconset>
        <normaloff>UndoSegment.svg</normaloff>UndoSegment.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Redo">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Redo Segment</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>RedoSegment.svg</normaloff>RedoSegment.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Restrict">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Restrict length or angle</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Snap/RestrictAngleLength/RestrictAngleLength.svg</normaloff>../../../Snap/RestrictAngleLength/RestrictAngleLength.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
      </property>
     </widget>
    </item>

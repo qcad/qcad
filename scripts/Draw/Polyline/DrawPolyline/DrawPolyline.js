@@ -48,7 +48,7 @@ DrawPolyline.prototype.beginEvent = function() {
     Polyline.prototype.beginEvent.call(this);
 
     this.setState(DrawPolyline.State.SettingFirstVertex);
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 DrawPolyline.prototype.initState = function() {
@@ -81,7 +81,7 @@ DrawPolyline.prototype.initState = function() {
 
 DrawPolyline.prototype.showUiOptions = function(resume) {
     Draw.prototype.showUiOptions.call(this, resume);
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 DrawPolyline.prototype.escapeEvent = function() {
@@ -102,7 +102,7 @@ DrawPolyline.prototype.escapeEvent = function() {
         }
 
         this.setState(DrawPolyline.State.SettingFirstVertex);
-        this.checkButtonStates();
+        this.updateButtonStates();
         break;
     }
 };
@@ -216,7 +216,7 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
     }
 
     if (!preview) {
-        this.checkButtonStates();
+        this.updateButtonStates();
     }
 };
 
@@ -291,7 +291,7 @@ DrawPolyline.prototype.slotClose = function() {
         }
     }
     
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 /**
@@ -313,7 +313,7 @@ DrawPolyline.prototype.slotUndo = function() {
         }
     }
 
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 /**
@@ -343,7 +343,7 @@ DrawPolyline.prototype.uncheckArcSegment = function() {
  * Updates the state (enabled / disabled) of the undo and the close buttons
  * depending on the current progress.
  */
-DrawPolyline.prototype.checkButtonStates = function() {
+DrawPolyline.prototype.updateButtonStates = function() {
     var w;
     
     if (this.state==DrawPolyline.State.SettingFirstVertex) {

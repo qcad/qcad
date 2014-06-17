@@ -55,6 +55,7 @@ public:
     virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false);
     virtual QSet<RView::Id> queryAllViews(bool undone = false);
     virtual QSet<RLinetype::Id> queryAllLinetypes();
+    virtual QSet<REntity::Id> queryInfiniteEntities();
     virtual QSet<REntity::Id> querySelectedEntities();
 
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false);
@@ -96,8 +97,8 @@ public:
 
     virtual bool hasSelection() const;
 
-    virtual RBox getBoundingBox(bool includeHiddenLayer = true);
-    virtual RBox getSelectionBox();
+    virtual RBox getBoundingBox(bool includeHiddenLayer = true) const;
+    virtual RBox getSelectionBox() const;
 
     virtual bool removeObject(QSharedPointer<RObject> object);
     virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true, bool keepHandles = false);
@@ -157,10 +158,11 @@ public:
     virtual double getLinetypeScale() const;
 
 protected:
-    RLineweight::Lineweight maxLineweight;
+    mutable RBox boundingBox;
+    mutable RLineweight::Lineweight maxLineweight;
+    mutable bool boundingBoxChanged;
+
     bool inTransaction;
-    bool boundingBoxChanged;
-    RBox boundingBox;
     QHash<RObject::Id, QSharedPointer<RObject> > objectMap;
     QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
     QMultiHash<RBlock::Id, QSharedPointer<REntity> > blockEntityMap;

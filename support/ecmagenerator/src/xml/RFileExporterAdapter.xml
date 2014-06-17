@@ -16,6 +16,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSpline" />
   <class_decl name="RTriangle" />
   <class_decl name="RVector" />
+  <class_decl name="RXLine" />
   <class name="RFileExporterAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="true" sharedPointerSupport="false" isQObject="false"
@@ -52,7 +53,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="fileName" isConst="true" />
         <arg type="QString &amp;" typeName="QString"
         name="nameFilter" isConst="true" />
-        <arg type="bool" typeName="bool" name="resetModified"
+        <arg type="bool" typeName="bool" name="setFileName"
         hasDefault="true" default=" true" isConst="false" />
       </variant>
     </method>
@@ -85,6 +86,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RTriangle &amp;" typeName="RTriangle" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportXLine" cppName="exportXLine"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RXLine &amp;" typeName="RXLine" name=""
         isConst="true" />
       </variant>
     </method>

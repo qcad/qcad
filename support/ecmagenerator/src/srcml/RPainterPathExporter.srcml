@@ -25,6 +25,9 @@ dir="./core" filename="RPainterPathExporter.h">
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RArc.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RExporter.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -60,6 +63,50 @@ dir="./core" filename="RPainterPathExporter.h">
       <name>virtual</name>
       <name>void</name>
     </type>
+    <name>exportXLine</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RXLine</name>&amp;</type>
+        <name>xLine</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>xLine</argument>)</argument_list>
+    </macro>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>exportRay</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RRay</name>&amp;</type>
+        <name>ray</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>ray</argument>)</argument_list>
+    </macro>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
     <name>exportPoint</name>
     <parameter_list>(
     <param>
@@ -70,7 +117,12 @@ dir="./core" filename="RPainterPathExporter.h">
         <name>point</name>
       </decl>
     </param>)</parameter_list>
-    <block>{}</block>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>point</argument>)</argument_list>
+    </macro>}</block>
   </function>
   <function>
     <type>
@@ -87,7 +139,12 @@ dir="./core" filename="RPainterPathExporter.h">
         <name>arc</name>
       </decl>
     </param>)</parameter_list>
-    <block>{}</block>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>arc</argument>)</argument_list>
+    </macro>}</block>
   </function>
   <function>
     <type>
@@ -104,7 +161,12 @@ dir="./core" filename="RPainterPathExporter.h">
         <name>triangle</name>
       </decl>
     </param>)</parameter_list>
-    <block>{}</block>
+    <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>triangle</argument>)</argument_list>
+    </macro>}</block>
   </function>
   <function_decl>
   <type>

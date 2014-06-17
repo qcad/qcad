@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 
+include("scripts/library.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
@@ -304,6 +305,8 @@ SvgImporter.prototype.setTransform = function(t) {
 };
 
 SvgImporter.prototype.importFile = function(fileName) {
+    qDebug("SvgImporter.prototype.importFile");
+
     if (isNull(this.getDocument())) {
         this.setDocument(EAction.getDocument());
     }
@@ -343,6 +346,11 @@ SvgImporter.prototype.importShape = function(shape) {
     shape.scale(new RVector(this.resolutionScale, this.resolutionScale));
 
     var entity = shapeToEntity(this.getDocument(), shape);
+
+    if (isNull(entity)) {
+        return;
+    }
+
     if (!isNull(this.style.stroke)) {
         entity.setColor(new RColor(this.style.stroke));
     }

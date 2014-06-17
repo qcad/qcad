@@ -26,7 +26,11 @@ RVector RRestrictOrthogonal::restrictSnap(const RVector& position, const RVector
     RVector retX;
     RVector retY;
 
-    RGraphicsView* view = documentInterface.getLastKnownViewWithFocus();
+    if (documentInterface==NULL) {
+        return ret;
+    }
+
+    RGraphicsView* view = documentInterface->getLastKnownViewWithFocus();
     if (view==NULL) {
         return ret;
     }

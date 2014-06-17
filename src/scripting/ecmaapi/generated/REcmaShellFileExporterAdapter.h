@@ -51,7 +51,7 @@
     
     
       bool exportFile(
-                const QString & fileName, const QString & nameFilter, bool resetModified
+                const QString & fileName, const QString & nameFilter, bool setFileName
         =  true
             );
         
@@ -77,6 +77,12 @@
     
       void exportTriangle(
                 const RTriangle & arg1
+            );
+        
+    
+    
+      void exportXLine(
+                const RXLine & arg1
             );
         
     
@@ -348,6 +354,11 @@
       void exportLine(
                 const RLine & line, double offset
         = RNANDOUBLE
+            );
+        
+    
+      void exportRay(
+                const RRay & ray
             );
         
     

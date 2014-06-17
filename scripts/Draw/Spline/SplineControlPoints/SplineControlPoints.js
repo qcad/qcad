@@ -45,7 +45,7 @@ SplineControlPoints.prototype.beginEvent = function() {
     Spline.prototype.beginEvent.call(this);
 
     this.setState(SplineControlPoints.State.SettingFirstPoint);
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 SplineControlPoints.prototype.setState = function(state) {
@@ -83,7 +83,7 @@ SplineControlPoints.prototype.setState = function(state) {
 
 SplineControlPoints.prototype.showUiOptions = function(resume) {
     Draw.prototype.showUiOptions.call(this, resume);
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 SplineControlPoints.prototype.escapeEvent = function() {
@@ -100,7 +100,7 @@ SplineControlPoints.prototype.escapeEvent = function() {
             di.applyOperation(op);
         }
         this.setState(SplineControlPoints.State.SettingFirstPoint);
-        this.checkButtonStates();
+        this.updateButtonStates();
         break;
     }
 };
@@ -136,7 +136,7 @@ SplineControlPoints.prototype.pickCoordinate = function(event, preview) {
     }
 
     if (!preview) {
-        this.checkButtonStates();
+        this.updateButtonStates();
     }
 };
 
@@ -228,11 +228,11 @@ SplineControlPoints.prototype.slotUndo = function() {
         //this.getDocumentInterface().previewOperation(this.getOperation(false));
     }
 
-    this.checkButtonStates();
+    this.updateButtonStates();
     this.updatePreview(true);
 };
 
-SplineControlPoints.prototype.checkButtonStates = function() {
+SplineControlPoints.prototype.updateButtonStates = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
     var w = optionsToolBar.findChild("Undo");
     if (!isNull(this.spline) && isFunction(this.spline.countControlPoints) && this.spline.countControlPoints() > 1) {

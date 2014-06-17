@@ -363,20 +363,24 @@ dir="./entity" filename="RLeaderData.h">
       <argument_list>(
       <argument>queryBox</argument>)</argument_list>
     </macro>
-    <return>return 
-    <expr>
-    <call>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QSharedPointer
+    <decl_stmt>
+    <decl>
+      <type>
+        <name>QList
         <argument_list>&lt;
         <argument>
-          <name>RShape</name>
+          <name>QSharedPointer
+          <argument_list>&lt;
+          <argument>
+            <name>RShape</name>
+          </argument>&gt;</argument_list></name>
         </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-      <argument_list>()</argument_list>
-    </call>&lt;&lt; 
+      </type>
+      <name>ret</name>
+    </decl>;</decl_stmt>
+    <expr_stmt>
+    <expr>
+    <name>ret</name>&lt;&lt; 
     <call>
       <name>QSharedPointer
       <argument_list>&lt;
@@ -395,30 +399,45 @@ dir="./entity" filename="RLeaderData.h">
           </argument>)</argument_list>
         </call></expr>
       </argument>)</argument_list>
-    </call>&lt;&lt; 
-    <call>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RShape</name>
-      </argument>&gt;</argument_list></name>
-      <argument_list>(
-      <argument>
-        <expr>new 
-        <call>
-          <name>RTriangle</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <call>
-                <name>getArrowShape</name>
-                <argument_list>()</argument_list>
-              </call>
-            </expr>
-          </argument>)</argument_list>
-        </call></expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
+    </call></expr>;</expr_stmt>
+    <if>if 
+    <condition>(
+    <expr>
+      <name>arrowHead</name>
+    </expr>)</condition>
+    <then>
+      <block>{ 
+      <expr_stmt>
+      <expr>
+      <name>ret</name>&lt;&lt; 
+      <call>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RShape</name>
+        </argument>&gt;</argument_list></name>
+        <argument_list>(
+        <argument>
+          <expr>new 
+          <call>
+            <name>RTriangle</name>
+            <argument_list>(
+            <argument>
+              <expr>
+                <call>
+                  <name>getArrowShape</name>
+                  <argument_list>()</argument_list>
+                </call>
+              </expr>
+            </argument>)</argument_list>
+          </call></expr>
+        </argument>)</argument_list>
+      </call></expr>;</expr_stmt>}</block>
+    </then></if>
+    <return>return 
+    <expr>
+      <name>ret</name>
+    </expr>;</return>}</block>
   </function>
   <function_decl>
   <type>

@@ -216,7 +216,9 @@ Information.prototype.addShape = function(op, shape, preview) {
     else {
         if (!isNull(op)) {
             var e = shapeToEntity(this.getDocument(), shape);
-            op.addObject(e);
+            if (!isNull(e)) {
+                op.addObject(e);
+            }
         }
     }
 };

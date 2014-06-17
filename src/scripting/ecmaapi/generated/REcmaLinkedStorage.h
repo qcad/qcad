@@ -73,6 +73,9 @@
         queryAllLinetypes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryInfiniteEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         querySelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -197,6 +200,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setUndoStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getKnownVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isInBackStorage

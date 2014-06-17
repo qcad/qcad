@@ -186,6 +186,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="parseUnit" cppName="parseUnit" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::Unit" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="str"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="unitToSymbol" cppName="unitToSymbol"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -233,6 +240,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
         hasDefault="true" default=" false" isConst="false" />
       </variant>
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+        <arg type="int" typeName="int" name="prec"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showLeadingZeroes"
+        hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="showTrailingZeroes"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+    </method>
+    <method name="doubleToStringDec" cppName="doubleToStringDec"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="double" typeName="double" name="value"
         isConst="false" />

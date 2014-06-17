@@ -18,6 +18,7 @@
  */
 
 include("../Line.js");
+include("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
 
 /**
  * \class Line2P
@@ -27,11 +28,19 @@ include("../Line.js");
 function Line2P(guiAction) {
     Line.call(this, guiAction);
 
+    // list of points drawn:
     this.pointList = [];
+    // index of point that was drawn last, used for tool undo / redo:
+    this.pointListIndex = -1;
+    // list of entities drawn:
+    this.entityIdList = [];
+
     this.point1 = undefined;
     this.point2 = undefined;
 
-    this.setUiOptions("Line2P.ui");
+    this.cmd = "";
+
+    this.setUiOptions(["../Line.ui", "Line2P.ui"]);
 }
 
 Line2P.prototype = new Line();
@@ -45,7 +54,7 @@ Line2P.prototype.beginEvent = function() {
     Line.prototype.beginEvent.call(this);
 
     this.setState(Line2P.State.SettingFirstPoint);
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Line2P.prototype.setState = function(state) {
@@ -62,6 +71,8 @@ Line2P.prototype.setState = function(state) {
         this.setLeftMouseTip(trFirstPoint);
         this.setRightMouseTip(EAction.trCancel);
         this.pointList = [];
+        this.pointListIndex = -1;
+        this.entityIdList = [];
         break;
 
     case Line2P.State.SettingNextPoint:
@@ -77,7 +88,13 @@ Line2P.prototype.setState = function(state) {
 
 Line2P.prototype.showUiOptions = function(resume) {
     Draw.prototype.showUiOptions.call(this, resume);
-    this.checkButtonStates();
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var w = optionsToolBar.findChild("Restrict");
+    var guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
+    w.setDefaultAction(guiAction);
+
+    this.updateButtonStates();
 };
 
 Line2P.prototype.escapeEvent = function() {
@@ -88,7 +105,7 @@ Line2P.prototype.escapeEvent = function() {
 
     case Line2P.State.SettingNextPoint:
         this.setState(Line2P.State.SettingFirstPoint);
-        this.checkButtonStates();
+        this.updateButtonStates();
         break;
     }
 };
@@ -100,7 +117,8 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
     case Line2P.State.SettingFirstPoint:
         if (!preview) {
             this.point1 = event.getModelPosition();
-            this.pointList.push(this.point1);
+            this.pointList.splice(0, 0, this.point1);
+            this.pointListIndex = 0;
             di.setRelativeZero(this.point1);
             this.setState(Line2P.State.SettingNextPoint);
         }
@@ -110,33 +128,52 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
         this.point2 = event.getModelPosition();
         var op = this.getOperation(preview);
         if (preview) {
-            di.previewOperation(op);
+            this.updatePreview();
         }
         else {
             if (!isNull(op)) {
-                di.applyOperation(op);
-                this.pointList.push(this.point2);
-                di.setRelativeZero(this.point2);
-                this.point1 = this.point2;
+                if (!this.isRayOrXLine()) {
+                    this.pointListIndex++;
+                }
+
+                var doc = this.getDocument();
+                var trans = di.applyOperation(op);
+                var id = this.getLineEntityId(trans);
+
+                if (!this.isRayOrXLine()) {
+                    this.pointList.splice(this.pointListIndex, 0, this.point2);
+                    this.entityIdList.splice(this.pointListIndex-1, 0, id);
+                    di.setRelativeZero(this.point2);
+                    this.point1 = this.point2;
+                }
+
+//                qDebug("this.pointList: ", this.pointList);
+//                qDebug("this.entityIdList: ", this.entityIdList);
+//                qDebug("this.pointListIndex: ", this.pointListIndex);
             }
         }
         break;
     }
 
     if (!preview) {
-        this.checkButtonStates();
+        this.updateButtonStates();
     }
 };
 
 Line2P.prototype.getOperation = function(preview) {
-    var line = new RLineEntity(
-        this.getDocument(),
-        new RLineData(this.point1, this.point2)
-    );
-    return new RAddObjectOperation(line);
+    if (!isVector(this.point1) || !isVector(this.point2)) {
+        return undefined;
+    }
+
+    var e = this.createLineEntity(this.getDocument(), this.point1, this.point2);
+    return new RAddObjectOperation(e);
 };
 
 Line2P.prototype.slotClose = function() {
+    if (this.isRayOrXLine()) {
+        return;
+    }
+
     if (this.pointList.length >= 3) {
         this.point2 = this.pointList[0];
         this.getDocumentInterface().applyOperation(this.getOperation(false));
@@ -144,35 +181,154 @@ Line2P.prototype.slotClose = function() {
         this.setState(Line2P.State.SettingFirstPoint);
     }
     
-    this.checkButtonStates();
+    this.updateButtonStates();
 };
 
 Line2P.prototype.slotUndo = function() {
-    if (this.pointList.length >= 2) {
-        this.pointList.pop();
-        this.getDocumentInterface().undo();
-        this.point1 = this.pointList[this.pointList.length - 1];
-        this.getDocumentInterface().clearPreview();
-        this.getDocumentInterface().previewOperation(this.getOperation(true));
+    if (this.isRayOrXLine()) {
+        return;
     }
 
-    this.checkButtonStates();
+    if (this.pointListIndex > 0) {
+        var di = this.getDocumentInterface();
+        var doc = this.getDocument();
+
+        this.pointListIndex--;
+        this.point1 = this.pointList[this.pointListIndex];
+        di.setRelativeZero(this.point1);
+
+        var id = this.entityIdList[this.pointListIndex];
+        var entity = doc.queryEntity(id);
+        di.applyOperation(new RDeleteObjectOperation(entity));
+
+        di.clearPreview();
+        di.previewOperation(this.getOperation(true));
+
+//        qDebug("undone: this.pointListIndex: ", this.pointListIndex);
+//        qDebug("undone: this.pointList: ", this.pointList);
+//        qDebug("undone: this.entityIdList: ", this.entityIdList);
+    }
+
+    this.updateButtonStates();
 };
 
-Line2P.prototype.checkButtonStates = function() {
-    var w;
-    
-    w = objectFromPath("MainWindow::Options::Undo");
-    if (this.pointList.length > 1) {
-        w.enabled = true;
-    } else {
-        w.enabled = false;
+Line2P.prototype.slotRedo = function() {
+    if (this.isRayOrXLine()) {
+        return;
+    }
+    if (this.pointListIndex < this.pointList.length-1) {
+        var di = this.getDocumentInterface();
+        var doc = this.getDocument();
+
+        this.pointListIndex++;
+        this.point1 = this.pointList[this.pointListIndex];
+        di.setRelativeZero(this.point1);
+
+        var e = this.createLineEntity(doc, this.pointList[this.pointListIndex-1], this.pointList[this.pointListIndex]);
+        var trans = di.applyOperation(new RAddObjectOperation(e));
+        var id = this.getLineEntityId(trans);
+        this.entityIdList[this.pointListIndex-1] = id;
+
+        di.clearPreview();
+        di.previewOperation(this.getOperation(true));
+
+//        qDebug("redone: this.pointListIndex: ", this.pointListIndex);
+//        qDebug("redone: this.pointList: ", this.pointList);
+//        qDebug("redone: this.entityIdList: ", this.entityIdList);
+    }
+
+    this.updateButtonStates();
+};
+
+Line2P.prototype.updateButtonStates = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    var w = optionsToolBar.findChild("Undo");
+    if (!isNull(w)) {
+        if (this.pointListIndex > 0 && !this.isRayOrXLine()) {
+            w.enabled = true;
+        } else {
+            w.enabled = false;
+        }
+    }
+
+    w = optionsToolBar.findChild("Redo");
+    if (!isNull(w)) {
+        //qDebug("this.pointList: ", this.pointList);
+        //qDebug("this.pointListIndex: ", this.pointListIndex);
+        //qDebug("this.entityIdList.length: ", this.entityIdList.length);
+        if (this.pointListIndex >= 0 &&
+            this.pointListIndex < this.entityIdList.length &&
+            !this.isRayOrXLine()) {
+
+            w.enabled = true;
+        } else {
+            w.enabled = false;
+        }
     }
     
-    w = objectFromPath("MainWindow::Options::Close");
-    if (this.pointList.length < 3) {
-        w.enabled = false;
-    } else {
-        w.enabled = true;
+    w = optionsToolBar.findChild("Close");
+    if (!isNull(w)) {
+        if (this.pointList.length > 2 && !this.isRayOrXLine()) {
+            w.enabled = true;
+        } else {
+            w.enabled = false;
+        }
     }
+};
+
+Line2P.prototype.getLineEntityId = function(trans) {
+    var objIds = trans.getAffectedObjects();
+    for (var i=0; i<objIds.length; i++) {
+        var objId = objIds[i];
+        var obj = this.getDocument().queryObjectDirect(objId);
+        if (isLineEntity(obj)) {
+            return obj.getId();
+        }
+    }
+};
+
+/**
+ * Allows commands to be entered in command line
+ *
+ * "Using the 'startsWith' function allows the user to enter only as many characters
+ * as needed to distinguish between commands
+ * In this case only the first character is needed. (But entering 'c', 'cl', 'clo', 'clos'
+ * or 'close' would all invoke the close command. Similarly with undo and redo)"
+ *
+ */
+Line2P.prototype.commandEvent = function(event) {
+    var str;
+
+    var cmd = event.getCommand();
+    cmd = cmd.toLowerCase();
+    this.cmd = cmd;
+
+    str = "close";
+    if (str.startsWith(cmd)) {
+        this.slotClose();
+        event.accept();
+        return;
+    }
+    str = "undo";
+    if (str.startsWith(cmd)) {
+        this.slotUndo();
+        event.accept();
+        return;
+    }
+    str = "redo";
+    if (str.startsWith(cmd)) {
+        this.slotRedo();
+        event.accept();
+        return;
+    }
+};
+
+Line2P.prototype.typeChanged = function() {
+    if (this.pointList.length!==0) {
+        this.pointList = [this.pointList[this.pointList.length-1]];
+    }
+    this.pointListIndex = 0;
+    this.entityIdList = [];
+    this.updateButtonStates();
 };

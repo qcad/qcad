@@ -173,6 +173,10 @@
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyLowerTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMeasuredValue",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyMeasuredValue),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyLinearFactor",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyLinearFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

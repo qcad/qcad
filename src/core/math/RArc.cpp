@@ -671,8 +671,8 @@ RPolyline RArc::approximateWithLines(double segmentLength) {
     RPolyline polyline;
 
     // avoid a segment length of 0:
-    if (segmentLength<1.0e-3) {
-        segmentLength = 1.0e-3;
+    if (segmentLength<1.0e-6) {
+        segmentLength = 1.0e-6;
     }
 
     double a1 = getStartAngle();

@@ -22,16 +22,32 @@
 
 #include "core_global.h"
 
+#include "RArc.h"
 #include "RExporter.h"
 #include "RPainterPath.h"
+#include "RRay.h"
+#include "RXLine.h"
 
 class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:
     virtual void exportLineSegment(const RLine& line);
+    virtual void exportXLine(const RXLine& xLine) {
+        Q_UNUSED(xLine)
+    }
 
-    virtual void exportPoint(const RPoint& point) {}
-    virtual void exportArcSegment(const RArc& arc) {}
-    virtual void exportTriangle(const RTriangle& triangle) {}
+    virtual void exportRay(const RRay& ray) {
+        Q_UNUSED(ray)
+    }
+
+    virtual void exportPoint(const RPoint& point) {
+        Q_UNUSED(point)
+    }
+    virtual void exportArcSegment(const RArc& arc) {
+        Q_UNUSED(arc)
+    }
+    virtual void exportTriangle(const RTriangle& triangle) {
+        Q_UNUSED(triangle)
+    }
 
     RPainterPath getPainterPath();
 

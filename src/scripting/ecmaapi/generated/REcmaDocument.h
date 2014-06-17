@@ -105,6 +105,9 @@
         queryContainedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryInfiniteEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryIntersectedEntitiesXY
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -334,6 +337,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLinetypeByLayerId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypeByBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLinetypeName

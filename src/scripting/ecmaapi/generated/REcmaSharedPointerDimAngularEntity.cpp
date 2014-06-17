@@ -185,6 +185,10 @@
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyLowerTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMeasuredValue",
+                qScriptValueFromValue(&engine, RDimAngularEntity::PropertyMeasuredValue),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyExtensionLine1StartX",
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyExtensionLine1StartX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

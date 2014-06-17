@@ -421,6 +421,8 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             var attributes = this.getPropertyAttributes(group, title);
             var propertyTypeId = attributes.getPropertyTypeId();
 
+            //qDebug("isMixed: ", attributes.isMixed());
+
             if (isNull(value)) {
                 // invalid value means no property found:
                 continue;
@@ -772,7 +774,9 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
                 controls[0].placeholderText = qsTr("Auto");
             }
             else if (attributes.isLabel()) {
-                WidgetFactory.initLineEdit(controls[0], false);
+                if (!attributes.isReadOnly()) {
+                    WidgetFactory.initLineEdit(controls[0], false);
+                }
             }
         }
     }

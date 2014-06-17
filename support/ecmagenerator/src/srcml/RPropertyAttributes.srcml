@@ -80,7 +80,7 @@ dir="./core" filename="RPropertyAttributes.h">
   <expr>
   <name>AffectsOtherProperties</name>= 0x8</expr>, 
   <comment type="line">//!&lt; Property affects others, needs
-  refrash on changing</comment>
+  refresh on changing</comment>
   <expr>
   <name>IgnoreCase</name>= 0x10</expr>, 
   <comment type="line">//!&lt; Property is not case

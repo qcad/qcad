@@ -78,11 +78,15 @@ dir="./core" filename="RExporter.h">
   <class_decl>class 
   <name>RProgressHandler</name>;</class_decl>
   <class_decl>class 
+  <name>RRay</name>;</class_decl>
+  <class_decl>class 
   <name>RSpline</name>;</class_decl>
   <class_decl>class 
   <name>RTriangle</name>;</class_decl>
   <class_decl>class 
   <name>RVector</name>;</class_decl>
+  <class_decl>class 
+  <name>RXLine</name>;</class_decl>
   <comment type="block">/** * Abstract base class for exporters. *
   * Exporters export documents into files, views, etc. * * \ingroup
   core * \scriptable */</comment>
@@ -962,6 +966,42 @@ dir="./core" filename="RExporter.h">
       <name>const</name>
       <name>RLine</name>&amp;</type>
       <name>line</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * Exports an infinite line. Used for
+  xlines (construction lines). */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>exportXLine</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RXLine</name>&amp;</type>
+      <name>xLine</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * Exports an infinite ray. Used for
+  rays. */</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>exportRay</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RRay</name>&amp;</type>
+      <name>ray</name>
     </decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>

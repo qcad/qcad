@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getFactorToM, "getFactorToM");
             
+            REcmaHelper::registerFunction(&engine, &ctor, parseUnit, "parseUnit");
+            
             REcmaHelper::registerFunction(&engine, &ctor, unitToSymbol, "unitToSymbol");
             
             REcmaHelper::registerFunction(&engine, &ctor, unitToName, "unitToName");
@@ -88,6 +90,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getLabel, "getLabel");
             
             REcmaHelper::registerFunction(&engine, &ctor, doubleToString, "doubleToString");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, doubleToStringDec, "doubleToStringDec");
             
 
     // static properties:
@@ -3400,6 +3404,56 @@
             return result;
         }
          QScriptValue
+        REcmaUnit::parseUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaUnit::parseUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaUnit::parseUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Unit'
+    RS::Unit cppResult =
+        RUnit::
+       parseUnit(a0);
+        // return type: RS::Unit
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.parseUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaUnit::parseUnit", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaUnit::unitToSymbol
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4224,6 +4278,198 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaUnit::doubleToString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaUnit::doubleToStringDec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaUnit::doubleToStringDec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaUnit::doubleToStringDec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RUnit::
+       doubleToStringDec(a0
+        ,
+    a1);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RUnit::
+       doubleToStringDec(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RUnit::
+       doubleToStringDec(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.doubleToStringDec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaUnit::doubleToStringDec", context, engine);
             return result;
         }
          QScriptValue REcmaUnit::toString

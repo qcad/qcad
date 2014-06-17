@@ -170,7 +170,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+934"/>
+        <location filename="../WidgetFactory.js" line="+944"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
@@ -240,7 +240,7 @@
         <translation>測定値</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+93"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
@@ -289,7 +289,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+299"/>
+        <location filename="../autostart.js" line="+302"/>
         <source>Loading add-on translations...</source>
         <translation>アドオンの翻訳をロード中...</translation>
     </message>
@@ -345,6 +345,16 @@
         <location line="+0"/>
         <source>Block Reference</source>
         <translation>ブロック参照</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References and Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference and Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -505,6 +515,26 @@
         <location line="+0"/>
         <source>Line</source>
         <translation>線分</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Infinite Lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Infinite Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rays</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ray</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

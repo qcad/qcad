@@ -162,6 +162,10 @@ HEADERS += \
     $$PWD/REcmaPropertyEvent.h \
     $$PWD/REcmaPropertyListener.h \
     $$PWD/REcmaPropertyTypeId.h \
+    $$PWD/REcmaRay.h \
+    $$PWD/REcmaRayData.h \
+    $$PWD/REcmaRayEntity.h \
+    $$PWD/REcmaRestrictAngleLength.h \
     $$PWD/REcmaRestrictHorizontal.h \
     $$PWD/REcmaRestrictOff.h \
     $$PWD/REcmaRestrictOrthogonal.h \
@@ -214,6 +218,8 @@ HEADERS += \
     $$PWD/REcmaSharedPointerPointEntity.h \
     $$PWD/REcmaSharedPointerPolyline.h \
     $$PWD/REcmaSharedPointerPolylineEntity.h \
+    $$PWD/REcmaSharedPointerRay.h \
+    $$PWD/REcmaSharedPointerRayEntity.h \
     $$PWD/REcmaSharedPointerShape.h \
     $$PWD/REcmaSharedPointerSolidEntity.h \
     $$PWD/REcmaSharedPointerSpline.h \
@@ -226,6 +232,8 @@ HEADERS += \
     $$PWD/REcmaSharedPointerTriangle.h \
     $$PWD/REcmaSharedPointerUcs.h \
     $$PWD/REcmaSharedPointerView.h \
+    $$PWD/REcmaSharedPointerXLine.h \
+    $$PWD/REcmaSharedPointerXLineEntity.h \
     $$PWD/REcmaShellActionAdapter.h \
     $$PWD/REcmaShellFileExporterAdapter.h \
     $$PWD/REcmaShellFileExporterFactoryAdapter.h \
@@ -237,6 +245,7 @@ HEADERS += \
     $$PWD/REcmaShellListView.h \
     $$PWD/REcmaShellListWidget.h \
     $$PWD/REcmaShellPropertyEditor.h \
+    $$PWD/REcmaShellRestrictAngleLength.h \
     $$PWD/REcmaShellRunner.h \
     $$PWD/REcmaShellSnap.h \
     $$PWD/REcmaShellSnapDistance.h \
@@ -300,7 +309,10 @@ HEADERS += \
     $$PWD/REcmaViewListener.h \
     $$PWD/REcmaViewListenerAdapter.h \
     $$PWD/REcmaWebView.h \
-    $$PWD/REcmaWheelEvent.h
+    $$PWD/REcmaWheelEvent.h \
+    $$PWD/REcmaXLine.h \
+    $$PWD/REcmaXLineData.h \
+    $$PWD/REcmaXLineEntity.h
 SOURCES += \
     $$PWD/REcmaAction.cpp \
     $$PWD/REcmaActionAdapter.cpp \
@@ -465,6 +477,10 @@ SOURCES += \
     $$PWD/REcmaPropertyEvent.cpp \
     $$PWD/REcmaPropertyListener.cpp \
     $$PWD/REcmaPropertyTypeId.cpp \
+    $$PWD/REcmaRay.cpp \
+    $$PWD/REcmaRayData.cpp \
+    $$PWD/REcmaRayEntity.cpp \
+    $$PWD/REcmaRestrictAngleLength.cpp \
     $$PWD/REcmaRestrictHorizontal.cpp \
     $$PWD/REcmaRestrictOff.cpp \
     $$PWD/REcmaRestrictOrthogonal.cpp \
@@ -517,6 +533,8 @@ SOURCES += \
     $$PWD/REcmaSharedPointerPointEntity.cpp \
     $$PWD/REcmaSharedPointerPolyline.cpp \
     $$PWD/REcmaSharedPointerPolylineEntity.cpp \
+    $$PWD/REcmaSharedPointerRay.cpp \
+    $$PWD/REcmaSharedPointerRayEntity.cpp \
     $$PWD/REcmaSharedPointerShape.cpp \
     $$PWD/REcmaSharedPointerSolidEntity.cpp \
     $$PWD/REcmaSharedPointerSpline.cpp \
@@ -529,6 +547,8 @@ SOURCES += \
     $$PWD/REcmaSharedPointerTriangle.cpp \
     $$PWD/REcmaSharedPointerUcs.cpp \
     $$PWD/REcmaSharedPointerView.cpp \
+    $$PWD/REcmaSharedPointerXLine.cpp \
+    $$PWD/REcmaSharedPointerXLineEntity.cpp \
     $$PWD/REcmaShellActionAdapter.cpp \
     $$PWD/REcmaShellFileExporterAdapter.cpp \
     $$PWD/REcmaShellFileExporterFactoryAdapter.cpp \
@@ -540,6 +560,7 @@ SOURCES += \
     $$PWD/REcmaShellListView.cpp \
     $$PWD/REcmaShellListWidget.cpp \
     $$PWD/REcmaShellPropertyEditor.cpp \
+    $$PWD/REcmaShellRestrictAngleLength.cpp \
     $$PWD/REcmaShellRunner.cpp \
     $$PWD/REcmaShellSnap.cpp \
     $$PWD/REcmaShellSnapDistance.cpp \
@@ -603,4 +624,7 @@ SOURCES += \
     $$PWD/REcmaViewListener.cpp \
     $$PWD/REcmaViewListenerAdapter.cpp \
     $$PWD/REcmaWebView.cpp \
-    $$PWD/REcmaWheelEvent.cpp
+    $$PWD/REcmaWheelEvent.cpp \
+    $$PWD/REcmaXLine.cpp \
+    $$PWD/REcmaXLineData.cpp \
+    $$PWD/REcmaXLineEntity.cpp

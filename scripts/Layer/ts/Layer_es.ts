@@ -48,7 +48,7 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Tipo de línea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+136"/>
+        <location filename="../LayerDialog.js" line="+135"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espacios iniciales o finales.</translation>
     </message>

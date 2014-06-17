@@ -209,7 +209,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getColor" cppName="getColor" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false" />
       <variant returnType="RColor" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"

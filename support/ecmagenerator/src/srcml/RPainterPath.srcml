@@ -77,7 +77,10 @@ dir="./core" filename="RPainterPath.h">
   <expr>
   <name>FixedBrushColor</name>= 0x10</expr>, 
   <expr>
-  <name>AutoRegen</name>= 0x20</expr>}</block>;</enum>
+  <name>AutoRegen</name>= 0x20</expr>, 
+  <comment type="line">// arcs (regen on zoom change)</comment>
+  <expr>
+  <name>AlwaysRegen</name>= 0x40</expr>}</block>;</enum>
   <macro>
     <name>Q_DECLARE_FLAGS</name>
     <argument_list>(
@@ -566,6 +569,18 @@ dir="./core" filename="RPainterPath.h">
       </decl>
     </param>)</parameter_list>;</constructor_decl>}</block>
   </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>closeSubpath</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>QPainterPath::closeSubpath</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
+  </function>
   <comment type="line">// bool contains(const QPointF&amp; point)
   const {</comment>
   <comment type="line">// return
@@ -986,6 +1001,27 @@ dir="./core" filename="RPainterPath.h">
     <name>bool</name>
   </type>
   <name>getAutoRegen</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setAlwaysRegen</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>getAlwaysRegen</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

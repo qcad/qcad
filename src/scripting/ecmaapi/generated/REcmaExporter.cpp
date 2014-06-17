@@ -31,11 +31,15 @@
             
                 #include "RProgressHandler.h"
             
+                #include "RRay.h"
+            
                 #include "RSpline.h"
             
                 #include "RTriangle.h"
             
                 #include "RVector.h"
+            
+                #include "RXLine.h"
             
             
         // includes for base ecma wrapper classes
@@ -166,6 +170,10 @@
             REcmaHelper::registerFunction(&engine, proto, exportLine, "exportLine");
             
             REcmaHelper::registerFunction(&engine, proto, exportLineSegment, "exportLineSegment");
+            
+            REcmaHelper::registerFunction(&engine, proto, exportXLine, "exportXLine");
+            
+            REcmaHelper::registerFunction(&engine, proto, exportRay, "exportRay");
             
             REcmaHelper::registerFunction(&engine, proto, exportPoint, "exportPoint");
             
@@ -3502,6 +3510,140 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportLineSegment", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::exportXLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportXLine", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportXLine";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportXLine", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RXLine */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RXLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RXLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RXLine.",
+                               context);                    
+                    }
+                    RXLine 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportXLine(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportXLine().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportXLine", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::exportRay
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportRay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportRay";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportRay", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RRay */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RRay*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RRay*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RRay.",
+                               context);                    
+                    }
+                    RRay 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportRay(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportRay().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportRay", context, engine);
             return result;
         }
          QScriptValue

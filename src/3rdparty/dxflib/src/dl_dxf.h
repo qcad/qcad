@@ -89,7 +89,9 @@ class DL_WriterA;
 #define DL_ENTITY_TRACE        120
 #define DL_ENTITY_SOLID        121
 #define DL_ENTITY_3DFACE       122
-#define DL_ENTITY_SEQEND       123
+#define DL_ENTITY_XLINE        123
+#define DL_ENTITY_RAY          124
+#define DL_ENTITY_SEQEND       125
 #define DL_XRECORD             200
 #define DL_DICTIONARY          210
 
@@ -142,6 +144,8 @@ public:
 
     void addPoint(DL_CreationInterface* creationInterface);
     void addLine(DL_CreationInterface* creationInterface);
+    void addXLine(DL_CreationInterface* creationInterface);
+    void addRay(DL_CreationInterface* creationInterface);
     
     void addPolyline(DL_CreationInterface* creationInterface);
     void addVertex(DL_CreationInterface* creationInterface);

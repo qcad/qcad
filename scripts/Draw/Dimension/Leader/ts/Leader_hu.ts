@@ -4,7 +4,7 @@
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../Leader.js" line="+59"/>
+        <location filename="../Leader.js" line="+60"/>
         <source>Arrow position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26,6 +26,16 @@
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Leader.ui" line="+23"/>
+        <source>Undo Last Segement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arrow head</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

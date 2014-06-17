@@ -78,8 +78,11 @@ public:
         EntityAttribute,    /**< Block attribute */
         EntityAttributeDefinition,     /**< Block attribute definition */
         EntityBlockRef,     /**< Block reference */
+        EntityBlockRefAttr, /**< Block reference with attributes */
         EntityPoint,        /**< Point */
         EntityLine,         /**< Line */
+        EntityXLine,        /**< XLine */
+        EntityRay,          /**< Ray */
         EntityPolyline,     /**< Polyline */
         EntityArc,          /**< Arc */
         EntityCircle,       /**< Circle */
@@ -443,10 +446,30 @@ public:
         INVALID = -1
     };
 
+    enum BooleanOperation {
+        Intersection,
+        Union,
+        Difference,
+        Xor
+    };
+
+    enum FillType {
+        EvenOdd,
+        NonZero,
+        Positive,
+        Negative
+    };
+
+    enum Orientation {
+        Any,
+        CW,
+        CCW
+    };
+
 public:
     static bool compare(const QVariant& v1, const QVariant& v2);
-    static bool compare(const QPair<QVariant, RPropertyAttributes>& p1, const QPair<
-            QVariant, RPropertyAttributes>& p2);
+    static bool compare(const QPair<QVariant, RPropertyAttributes>& p1,
+                        const QPair<QVariant, RPropertyAttributes>& p2);
     static int getCpuCores();
 
     static QString getHostId();
@@ -508,6 +531,9 @@ Q_DECLARE_METATYPE(RS::TextLineSpacingStyle*)
 Q_DECLARE_METATYPE(RS::Unit)
 Q_DECLARE_METATYPE(RS::VAlign)
 Q_DECLARE_METATYPE(RS::VAlign*)
+Q_DECLARE_METATYPE(RS::BooleanOperation)
+Q_DECLARE_METATYPE(RS::FillType)
+Q_DECLARE_METATYPE(RS::Orientation)
 Q_DECLARE_METATYPE(QList<RS::EntityType>)
 
 #endif

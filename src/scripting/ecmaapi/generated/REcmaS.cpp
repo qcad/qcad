@@ -144,6 +144,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityBlockRefAttr",
+    QScriptValue(RS::EntityBlockRefAttr),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityPoint",
     QScriptValue(RS::EntityPoint),
     QScriptValue::ReadOnly);
@@ -151,6 +156,16 @@
 
     ctor.setProperty("EntityLine",
     QScriptValue(RS::EntityLine),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EntityXLine",
+    QScriptValue(RS::EntityXLine),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EntityRay",
+    QScriptValue(RS::EntityRay),
     QScriptValue::ReadOnly);
 
 
@@ -1414,6 +1429,61 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Intersection",
+    QScriptValue(RS::Intersection),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Union",
+    QScriptValue(RS::Union),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Difference",
+    QScriptValue(RS::Difference),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Xor",
+    QScriptValue(RS::Xor),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EvenOdd",
+    QScriptValue(RS::EvenOdd),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("NonZero",
+    QScriptValue(RS::NonZero),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Positive",
+    QScriptValue(RS::Positive),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Negative",
+    QScriptValue(RS::Negative),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Any",
+    QScriptValue(RS::Any),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CW",
+    QScriptValue(RS::CW),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CCW",
+    QScriptValue(RS::CCW),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RS::MessageType>(
@@ -1525,6 +1595,27 @@
         &engine,
         toScriptValueEnumKnownVariable,
         fromScriptValueEnumKnownVariable,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::BooleanOperation>(
+        &engine,
+        toScriptValueEnumBooleanOperation,
+        fromScriptValueEnumBooleanOperation,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::FillType>(
+        &engine,
+        toScriptValueEnumFillType,
+        fromScriptValueEnumFillType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::Orientation>(
+        &engine,
+        toScriptValueEnumOrientation,
+        fromScriptValueEnumOrientation,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -2351,5 +2442,35 @@
     
         {
             out = qvariant_cast<RS::KnownVariable>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumBooleanOperation(QScriptEngine* engine, const RS::BooleanOperation& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumBooleanOperation(const QScriptValue& value, RS::BooleanOperation& out)
+    
+        {
+            out = qvariant_cast<RS::BooleanOperation>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumFillType(QScriptEngine* engine, const RS::FillType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumFillType(const QScriptValue& value, RS::FillType& out)
+    
+        {
+            out = qvariant_cast<RS::FillType>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumOrientation(QScriptEngine* engine, const RS::Orientation& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumOrientation(const QScriptValue& value, RS::Orientation& out)
+    
+        {
+            out = qvariant_cast<RS::Orientation>(value.toVariant());
         }
         

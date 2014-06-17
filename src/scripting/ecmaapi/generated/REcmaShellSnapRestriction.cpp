@@ -72,7 +72,7 @@
     // Constructors:
     
       REcmaShellSnapRestriction::REcmaShellSnapRestriction(
-                RDocumentInterface & documentInterface
+                RDocumentInterface * documentInterface
             ) : RSnapRestriction(
                 documentInterface
                 ) {

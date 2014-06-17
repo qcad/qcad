@@ -32,10 +32,18 @@ include("../Draw.js");
  */
 function Line(guiAction) {
     Draw.call(this, guiAction);
+
+    this.lineType = Line.LineType.Line;
 }
 
 Line.prototype = new Draw();
 Line.includeBasePath = includeBasePath;
+
+Line.LineType = {
+    Line : 0,
+    XLine : 1,
+    Ray : 2
+};
 
 Line.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
@@ -95,4 +103,47 @@ Line.getTitle = function() {
 
 Line.prototype.getTitle = function() {
     return Line.getTitle();
+};
+
+Line.prototype.createLineEntity = function(doc, p1, p2) {
+    switch (this.lineType) {
+    default:
+    case Line.LineType.Line:
+        return new RLineEntity(doc, new RLineData(p1, p2));
+    case Line.LineType.XLine:
+        return new RXLineEntity(doc, new RXLineData(p1, p2.operator_subtract(p1)));
+    case Line.LineType.Ray:
+        return new RRayEntity(doc, new RRayData(p1, p2.operator_subtract(p1)));
+    }
+};
+
+Line.prototype.typeChanged = function() {
+};
+
+Line.prototype.slotTypeSegmentChanged = function(checked) {
+    if (checked) {
+        this.lineType = Line.LineType.Line;
+        this.updatePreview(true);
+        this.typeChanged();
+    }
+};
+
+Line.prototype.slotTypeRayChanged = function(checked) {
+    if (checked) {
+        this.lineType = Line.LineType.Ray;
+        this.updatePreview(true);
+        this.typeChanged();
+    }
+};
+
+Line.prototype.slotTypeXLineChanged = function(checked) {
+    if (checked) {
+        this.lineType = Line.LineType.XLine;
+        this.updatePreview(true);
+        this.typeChanged();
+    }
+};
+
+Line.prototype.isRayOrXLine = function() {
+    return this.lineType===Line.LineType.Ray || this.lineType===Line.LineType.XLine;
 };

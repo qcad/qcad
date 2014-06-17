@@ -1,3 +1,4 @@
+#include <QDebug>
 #include "RAutoLoadEcma.h"
 
 QStringList RAutoLoadEcma::autoLoadFiles;

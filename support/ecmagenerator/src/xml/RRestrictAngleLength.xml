@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocumentInterface" />
+  <class name="RRestrictAngleLength"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RSnapRestriction" specifier="public" />
+    <enum name="AngleLengthMode">
+      <value name="None" />
+      <value name="Angle" />
+      <value name="Length" />
+      <value name="AngleLength" />
+    </enum>
+    <constructor>
+      <variant>
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        hasDefault="true" default=" NULL" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+        <arg type="double" typeName="double" name="baseAngle"
+        isConst="false" />
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+        <arg type="double" typeName="double" name="baseLength"
+        isConst="false" />
+        <arg type="double" typeName="double" name="length"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="restrictSnap" cppName="restrictSnap"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="relativeZero" isConst="true" />
+      </variant>
+    </method>
+    <method name="setBaseAngle" cppName="setBaseAngle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setAngle" cppName="setAngle" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setBaseLength" cppName="setBaseLength"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setLength" cppName="setLength" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setRestrictAngle" cppName="setRestrictAngle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setRestrictLength" cppName="setRestrictLength"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

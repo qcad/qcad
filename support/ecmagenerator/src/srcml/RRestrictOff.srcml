@@ -47,10 +47,14 @@ dir="./snap" filename="RRestrictOff.h">
     <parameter_list>(
     <param>
       <decl>
-        <type>
-        <name>RDocumentInterface</name>&amp;</type>
-        <name>documentInterface</name>
-      </decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>documentInterface</name>=
+      <init>
+        <expr>
+          <name>NULL</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <member_list>: 
     <call>

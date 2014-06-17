@@ -38,6 +38,8 @@ SOURCES = \
     RPointEntity.cpp \
     RPolylineData.cpp \
     RPolylineEntity.cpp \
+    RRayData.cpp \
+    RRayEntity.cpp \
     RSolidData.cpp \
     RSolidEntity.cpp \
     RSplineData.cpp \
@@ -46,7 +48,9 @@ SOURCES = \
     RTextBasedEntity.cpp \
     RTextData.cpp \
     RTextEntity.cpp \
-    RTextRenderer.cpp
+    RTextRenderer.cpp \
+    RXLineData.cpp \
+    RXLineEntity.cpp
 
 HEADERS = \
     RArcData.h \
@@ -87,6 +91,8 @@ HEADERS = \
     RPointEntity.h \
     RPolylineData.h \
     RPolylineEntity.h \
+    RRayData.h \
+    RRayEntity.h \
     RSolidData.h \
     RSolidEntity.h \
     RSplineData.h \
@@ -95,7 +101,9 @@ HEADERS = \
     RTextBasedEntity.h \
     RTextData.h \
     RTextEntity.h \
-    RTextRenderer.h
+    RTextRenderer.h \
+    RXLineData.h \
+    RXLineEntity.h
 
 TEMPLATE = lib
 CONFIG += plugin

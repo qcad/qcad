@@ -1,5 +1,6 @@
 include( ../../shared.pri )
 SOURCES = \
+    RRestrictAngleLength.cpp \
     RRestrictHorizontal.cpp \
     RRestrictVertical.cpp \
     RRestrictOrthogonal.cpp \
@@ -17,6 +18,7 @@ SOURCES = \
     RSnapPerpendicular.cpp \
     RSnapReference.cpp
 HEADERS = \
+    RRestrictAngleLength.h \
     RRestrictHorizontal.h \
     RRestrictVertical.h \
     RRestrictOrthogonal.h \

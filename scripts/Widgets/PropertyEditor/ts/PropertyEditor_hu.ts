@@ -52,7 +52,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+148"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
@@ -77,7 +77,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -92,9 +92,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

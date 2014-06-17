@@ -37,6 +37,8 @@
 #include "RPainterPathSource.h"
 #include "RPoint.h"
 #include "RPolyline.h"
+#include "RRay.h"
+#include "RXLine.h"
 
 class RGraphicsViewImage;
 
@@ -79,6 +81,8 @@ public:
 
     virtual void exportArcSegment(const RArc& arc);
     virtual void exportLineSegment(const RLine& line);
+    virtual void exportXLine(const RXLine& xLine);
+    virtual void exportRay(const RRay& ray);
     virtual void exportTriangle(const RTriangle& triangle);
     virtual void exportRectangle(const RVector& p1, const RVector& p2);
 

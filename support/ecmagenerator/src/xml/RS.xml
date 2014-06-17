@@ -20,8 +20,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntityAttribute" />
       <value name="EntityAttributeDefinition" />
       <value name="EntityBlockRef" />
+      <value name="EntityBlockRefAttr" />
       <value name="EntityPoint" />
       <value name="EntityLine" />
+      <value name="EntityXLine" />
+      <value name="EntityRay" />
       <value name="EntityPolyline" />
       <value name="EntityArc" />
       <value name="EntityCircle" />
@@ -302,6 +305,23 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="MaxKnownVariable" />
       <value name="WORLDVIEW" />
       <value name="INVALID" />
+    </enum>
+    <enum name="BooleanOperation">
+      <value name="Intersection" />
+      <value name="Union" />
+      <value name="Difference" />
+      <value name="Xor" />
+    </enum>
+    <enum name="FillType">
+      <value name="EvenOdd" />
+      <value name="NonZero" />
+      <value name="Positive" />
+      <value name="Negative" />
+    </enum>
+    <enum name="Orientation">
+      <value name="Any" />
+      <value name="CW" />
+      <value name="CCW" />
     </enum>
     <method name="compare" cppName="compare" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

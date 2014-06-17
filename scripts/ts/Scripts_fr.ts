@@ -196,7 +196,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+934"/>
+        <location filename="../WidgetFactory.js" line="+944"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
@@ -268,7 +268,7 @@
         <translation>Valeur mesurée</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+93"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
@@ -340,7 +340,7 @@
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+299"/>
+        <location filename="../autostart.js" line="+302"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>
@@ -418,6 +418,16 @@
 Choisissez la référence de bloc
 Modifier un bloc basé sur une référence de bloc choisie</translatorcomment>
         <translation>Référence de bloc</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References and Attributes</source>
+        <translation>Références de bloc et attributs</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference and Attributes</source>
+        <translation>Référence de bloc et attributs</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -606,6 +616,26 @@ Dessine des parallèles aux cercles, arcs et lignes existants
 Dessine des lignes
 Impossible de fermer la séquence de lignes : nombre d&apos;entités définies encore insuffisant.</translatorcomment>
         <translation>Lignes</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Infinite Lines</source>
+        <translation>Lignes infinies</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Infinite Line</source>
+        <translation>Ligne infinie</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rays</source>
+        <translation>Rayons</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ray</source>
+        <translation>Rayon</translation>
     </message>
     <message>
         <location line="+2"/>

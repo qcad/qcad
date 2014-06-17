@@ -157,6 +157,11 @@ public:
     virtual QSet<REntity::Id> querySelectedEntities() = 0;
 
     /**
+     * \return A set of entity IDs of all infinite entities (xlines).
+     */
+    virtual QSet<REntity::Id> queryInfiniteEntities() = 0;
+
+    /**
      * \return A shared pointer to the object with the given \c objectId
      *      or null pointer if the object is no available in this storage.
      */
@@ -454,9 +459,9 @@ public:
     /**
      * \return The bounding box around all visible entities.
      */
-    virtual RBox getBoundingBox(bool includeHiddenLayer = true) = 0;
+    virtual RBox getBoundingBox(bool includeHiddenLayer = true) const = 0;
 
-    virtual RBox getSelectionBox() = 0;
+    virtual RBox getSelectionBox() const = 0;
 
     virtual bool removeObject(QSharedPointer<RObject> object) = 0;
 

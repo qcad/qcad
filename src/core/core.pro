@@ -57,6 +57,7 @@ SOURCES += \
     RPropertyTypeId.cpp \
     RResourceList.cpp \
     RS.cpp \
+    RSPlatform.cpp \
     RScriptAction.cpp \
     RScriptHandler.cpp \
     RScriptHandlerRegistry.cpp \
@@ -84,11 +85,13 @@ SOURCES += \
     math/RMatrix.cpp \
     math/RPoint.cpp \
     math/RPolyline.cpp \
+    math/RRay.cpp \
     math/RShape.cpp \
     math/RSpline.cpp \
     math/RTextLabel.cpp \
     math/RTriangle.cpp \
-    math/RVector.cpp
+    math/RVector.cpp \
+    math/RXLine.cpp
 
 win32 {
     SOURCES += RLockedFile_win.cpp
@@ -220,12 +223,14 @@ HEADERS = \
     math/RMatrix.h \
     math/RPoint.h \
     math/RPolyline.h \
+    math/RRay.h \
     math/RShape.h \
     math/RSpline.h \
     math/RSplineProxy.h \
     math/RTextLabel.h \
     math/RTriangle.h \
-    math/RVector.h
+    math/RVector.h \
+    math/RXLine.h
 TEMPLATE = lib
 CONFIG += plugin
 NAME = qcadcore

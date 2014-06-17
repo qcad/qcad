@@ -37,6 +37,7 @@ class RProgressHandler;
 class RSpline;
 class RTriangle;
 class RVector;
+class RXLine;
 
 /**
  * \brief Base class for file exporters, including script file exporters. 
@@ -60,10 +61,10 @@ public:
         return fileName;
     }
 
-    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true) {
+    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool setFileName = true) {
         Q_UNUSED(fileName);
         Q_UNUSED(nameFilter);
-        Q_UNUSED(resetModified);
+        Q_UNUSED(setFileName);
         return false;
     }
 
@@ -71,6 +72,7 @@ public:
     virtual void exportArcSegment(const RArc&) {}
     virtual void exportLineSegment(const RLine&) {}
     virtual void exportTriangle(const RTriangle&) {}
+    virtual void exportXLine(const RXLine&) {}
 
     virtual double getPatternFactor() { return RFileExporter::getPatternFactor(); }
 };

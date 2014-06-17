@@ -206,6 +206,7 @@ static QScriptValue toScriptValue(QScriptEngine* engine, const QList<RGraphicsVi
 */
 static QScriptValue toScriptValue(QScriptEngine* engine, RGraphicsView* cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, RGraphicsScene* cppValue);
+static QScriptValue toScriptValue(QScriptEngine* engine, RSnapRestriction* cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, RShape* cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, QSharedPointer<RShape>& cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, QSharedPointer<RObject>& cppValue);
@@ -284,6 +285,17 @@ static QScriptValue tryCast(QScriptEngine* engine, QSharedPointer<REntityData>& 
 
 template<class T>
 static QScriptValue tryCast(QScriptEngine* engine, RGrid* cppValue) {
+    T* entity = dynamic_cast<T*>(cppValue);
+    if (entity!=NULL) {
+        return qScriptValueFromValue(engine, entity);
+    }
+    else {
+        return QScriptValue();
+    }
+}
+
+template<class T>
+static QScriptValue tryCast(QScriptEngine* engine, RSnapRestriction* cppValue) {
     T* entity = dynamic_cast<T*>(cppValue);
     if (entity!=NULL) {
         return qScriptValueFromValue(engine, entity);

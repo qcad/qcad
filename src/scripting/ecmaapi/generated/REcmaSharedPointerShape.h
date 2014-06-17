@@ -72,6 +72,9 @@
         isOnShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        filterOnShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVectorFromEndpointTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

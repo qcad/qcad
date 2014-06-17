@@ -29,6 +29,8 @@
 #include "RDocument.h"
 #include "RDxfServices.h"
 #include "RFileExporter.h"
+#include "RRay.h"
+#include "RXLine.h"
 
 class RArcEntity;
 class RCircleEntity;
@@ -61,7 +63,7 @@ public:
 
     virtual QString getCorrectedFileName(const QString& fileName, const QString& nameFilter);
 
-    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool resetModified = true);
+    virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool setFileName = true);
 
     void writeVariables();
     void writeLinetype(const RLinetype& lt);
@@ -101,6 +103,14 @@ public:
 
     virtual void exportLineSegment(const RLine& line) {
         Q_UNUSED(line)
+    }
+
+    virtual void exportXLine(const RXLine& xLine) {
+        Q_UNUSED(xLine)
+    }
+
+    virtual void exportRay(const RRay& ray) {
+        Q_UNUSED(ray)
     }
 
     virtual void exportTriangle(const RTriangle& triangle) {

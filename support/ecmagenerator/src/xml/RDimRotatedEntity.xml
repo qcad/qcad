@@ -155,6 +155,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyLowerTolerance" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyMeasuredValue" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyLinearFactor" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyAutoTextPos" type="RPropertyTypeId"

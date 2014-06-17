@@ -65,15 +65,7 @@ InsertBlockItem.prototype.beginEvent = function() {
     BlockInsert.prototype.beginEvent.call(this);
 
     var url = this.guiAction.data();
-    if (url.toString().toLowerCase().endsWith(".svg")) {
-        // SVG file
-        // TODO: register SVG importer as normal file importer known by document interface:
-        var svgImporter = new SvgImporter(this.docItem);
-        svgImporter.importFile(url.toLocalFile());
-    } else {
-        // CAD file (e.g. DXF)
-        this.diItem.importUrl(url, false);
-    }
+    this.diItem.importUrl(url, false);
 
     this.blockName = new QFileInfo(url.path()).completeBaseName();
 

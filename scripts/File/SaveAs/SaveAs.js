@@ -111,6 +111,12 @@ SaveAs.prototype.beginEvent = function() {
 
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
 
+    // global function qcadInitFileDialog may be registered to perform
+    // additional initialization
+    if (typeof qcadInitFileDialog!="undefined" && isFunction(qcadInitFileDialog)) {
+        qcadInitFileDialog(fileDialog);
+    }
+
     if (!fileDialog.exec()) {
         qDebug("save as: canceled");
         fileDialog.destroy();

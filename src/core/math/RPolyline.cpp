@@ -401,9 +401,14 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
  * Checks if the given point is inside this closed polygon. If this
  * polyline is not closed (\see setClosed), false is returned.
  */
-bool RPolyline::contains(const RVector& point) const {
-    if (!closed) {
+bool RPolyline::contains(const RVector& point, bool borderIsInside, double tolerance) const {
+    if (!isLogicallyClosed()) {
         return false;
+    }
+
+    // check if point is on polyline:
+    if (isOnShape(point, true, tolerance)) {
+        return borderIsInside;
     }
 
     QPainterPath pp = toPainterPath();

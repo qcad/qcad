@@ -196,7 +196,7 @@ Projection.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    return Transform.prototype.getOperation.call(this, preview, false);
+    return Transform.prototype.getOperation.call(this, preview, false, true);
 };
 
 Projection.prototype.preTransform = function(entity) {
@@ -253,9 +253,13 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
                 debugger;
             }
 
-            var e = shapeToEntity(this.getDocument(), s[n]);
+            var e = shapeToEntity(entity.getDocument(), s[n]);
+            if (isNull(e)) {
+                continue;
+            }
+
             e.copyAttributesFrom(entity);
-            e.move(this.targetPoint);
+            //e.move(this.targetPoint);
             op.addObject(e, false, forceNew);
         }
     }
@@ -499,15 +503,18 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
 
 Projection.prototype.slotRotateCCW = function() {
     this.rotation += 90;
+    this.clearCache();
     this.updatePreview(true);
 };
 
 Projection.prototype.slotRotateCW = function() {
     this.rotation -= 90;
+    this.clearCache();
     this.updatePreview(true);
 };
 
 Projection.prototype.slotSegmentLengthChanged = function(l) {
     this.segmentLength = l;
+    this.clearCache();
     this.updatePreview(true);
 };

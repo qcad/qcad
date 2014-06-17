@@ -4,7 +4,7 @@
 <context>
     <name>Line2PEx</name>
     <message>
-        <location filename="../Line2PEx.js" line="+89"/>
+        <location filename="../Line2PEx.js" line="+92"/>
         <source>First point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -42,7 +42,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+349"/>
+        <location line="+369"/>
         <source>close</source>
         <translation type="unfinished"></translation>
     </message>

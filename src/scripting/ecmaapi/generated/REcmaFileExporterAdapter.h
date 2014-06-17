@@ -65,6 +65,9 @@
         exportTriangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportXLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPatternFactor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

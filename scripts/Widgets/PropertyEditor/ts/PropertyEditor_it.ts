@@ -32,7 +32,7 @@
         <translation>Geometria</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+290"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-435"/>
+        <location line="-448"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -94,7 +94,7 @@ Nessuna selezione</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+148"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>
@@ -107,6 +107,11 @@ Nessuna selezione</translatorcomment>
         <location line="+31"/>
         <source>All</source>
         <translation>Tutto</translation>
+    </message>
+    <message>
+        <location line="+605"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
     </message>
     <message>
         <source>Add Custom Property</source>
@@ -134,12 +139,12 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="-448"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utilizzare la misurazione automatica</translation>
@@ -155,7 +160,8 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor delle proprietà</translation>

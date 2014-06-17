@@ -33,7 +33,7 @@ function LineAngle(guiAction) {
     this.referencePoint = undefined;
 
     if (!isNull(guiAction)) {
-        this.setUiOptions("LineAngle.ui");
+        this.setUiOptions(["../Line.ui", "LineAngle.ui"]);
     }
 }
 
@@ -65,6 +65,8 @@ LineAngle.prototype.setState = function(state) {
     this.setLeftMouseTip(qsTr("Specify position"));
     this.setRightMouseTip(EAction.trCancel);
     EAction.showSnapTools();
+
+    this.typeChanged();
 };
 
 LineAngle.prototype.coordinateEvent = function(event) {
@@ -97,24 +99,33 @@ LineAngle.prototype.getOperation = function(preview) {
     var p1;
     var p2;
 
-    switch(this.referencePoint) {
+    // for rays / xlines, always use start point as reference
+    // with length = 1.0:
+    var referencePoint = this.referencePoint;
+    var length = this.length;
+    if (this.isRayOrXLine()) {
+        referencePoint = LineAngle.ReferencePoint.Start;
+        length = 1.0;
+    }
+
+    switch (referencePoint) {
     case LineAngle.ReferencePoint.Start:
         p1 = this.pos;
         p2 = this.pos.operator_add(
-            RVector.createPolar(+this.length, this.angle)
+            RVector.createPolar(+length, this.angle)
         );
         break;
     case LineAngle.ReferencePoint.Middle:
         p1 = this.pos.operator_add(
-            RVector.createPolar(-this.length/2, this.angle)
+            RVector.createPolar(-length/2, this.angle)
         );
         p2 = this.pos.operator_add(
-            RVector.createPolar(+this.length/2, this.angle)
+            RVector.createPolar(+length/2, this.angle)
         );
         break;
     case LineAngle.ReferencePoint.End:
         p1 = this.pos.operator_add(
-            RVector.createPolar(-this.length, this.angle)
+            RVector.createPolar(-length, this.angle)
         );
         p2 = this.pos;
         break;
@@ -122,7 +133,8 @@ LineAngle.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var line = new RLineEntity(this.getDocument(), new RLineData(p1, p2));
+    var line = this.createLineEntity(this.getDocument(), p1, p2);
+    //var line = new RLineEntity(this.getDocument(), new RLineData(p1, p2));
     return new RAddObjectOperation(line);
 };
 
@@ -141,3 +153,14 @@ LineAngle.prototype.slotReferencePointChanged = function(value) {
     this.updatePreview(true);
 };
 
+LineAngle.prototype.typeChanged = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    var ws = ["LengthLabel", "Length", "ReferencePointLabel", "ReferencePoint"];
+    for (var i=0; i<ws.length; i++) {
+        var w = optionsToolBar.findChild(ws[i]);
+        if (!isNull(w)) {
+            w.enabled = !this.isRayOrXLine();
+        }
+    }
+}

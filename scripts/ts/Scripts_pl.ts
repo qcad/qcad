@@ -213,7 +213,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+934"/>
+        <location filename="../WidgetFactory.js" line="+944"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -314,7 +314,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="unfinished">Zmierzona wartość</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+93"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
@@ -383,7 +383,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+299"/>
+        <location filename="../autostart.js" line="+302"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -443,6 +443,16 @@ Dzielenie (÷)</translatorcomment>
         <source>Block Reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nazwa bloku</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References and Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference and Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -681,6 +691,26 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
 Aktywuj linię poleceń
 Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Linia</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Infinite Lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Infinite Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rays</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ray</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

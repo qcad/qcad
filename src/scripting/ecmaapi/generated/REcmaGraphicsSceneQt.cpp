@@ -102,6 +102,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportLineSegment, "exportLineSegment");
             
+            REcmaHelper::registerFunction(&engine, proto, exportXLine, "exportXLine");
+            
+            REcmaHelper::registerFunction(&engine, proto, exportRay, "exportRay");
+            
             REcmaHelper::registerFunction(&engine, proto, exportTriangle, "exportTriangle");
             
             REcmaHelper::registerFunction(&engine, proto, exportRectangle, "exportRectangle");
@@ -1506,6 +1510,140 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportLineSegment", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneQt::exportXLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::exportXLine", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::exportXLine";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneQt* self = 
+                        getSelf("exportXLine", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RXLine */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RXLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RXLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type RXLine.",
+                               context);                    
+                    }
+                    RXLine 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportXLine(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.exportXLine().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportXLine", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneQt::exportRay
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::exportRay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::exportRay";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneQt* self = 
+                        getSelf("exportRay", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RRay */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RRay*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RRay*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type RRay.",
+                               context);                    
+                    }
+                    RRay 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportRay(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.exportRay().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportRay", context, engine);
             return result;
         }
          QScriptValue

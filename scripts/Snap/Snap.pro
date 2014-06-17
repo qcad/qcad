@@ -20,6 +20,7 @@ SUBDIRS = \
     SnapReference \
     SnapXManual \
     SnapYManual \
+    RestrictAngleLength \
     RestrictOff \
     RestrictHorizontal \
     RestrictVertical \

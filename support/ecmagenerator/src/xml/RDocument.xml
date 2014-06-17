@@ -183,6 +183,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="queryInfiniteEntities"
+    cppName="queryInfiniteEntities" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryIntersectedEntitiesXY"
     cppName="queryIntersectedEntitiesXY" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -825,6 +831,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getLinetypeByLayerId"
     cppName="getLinetypeByLayerId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RLinetype::Id" isPureVirtual="false" />
+    </method>
+    <method name="getLinetypeByBlockId"
+    cppName="getLinetypeByBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RLinetype::Id" isPureVirtual="false" />
     </method>

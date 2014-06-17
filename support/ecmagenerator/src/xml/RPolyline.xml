@@ -187,6 +187,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
+        <arg type="bool" typeName="bool" name="borderIsInside"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
       </variant>
     </method>
     <method name="getStartPoint" cppName="getStartPoint"

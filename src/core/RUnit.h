@@ -86,6 +86,7 @@ public:
     static double convert(double value, RS::Unit source, RS::Unit dest);
     static RVector convert(const RVector& value, RS::Unit source, RS::Unit dest);
     static double getFactorToM(RS::Unit unit);
+    static RS::Unit parseUnit(const QString& str);
     static QString unitToSymbol(RS::Unit unit);
     static QString unitToName(RS::Unit unit, bool tr=true);
     static QString getLabel(double v, RDocument& document,
@@ -97,6 +98,13 @@ public:
         bool showLeadingZeroes=true, bool showTrailingZeroes=false);
     static QString doubleToString(double value, int prec,
         bool showLeadingZeroes=true, bool showTrailingZeroes=false);
+
+    // workaround: make the second version also accesible by scripts:
+    static QString doubleToStringDec(double value, int prec,
+        bool showLeadingZeroes=true, bool showTrailingZeroes=false) {
+
+        return doubleToString(value, prec, showLeadingZeroes, showTrailingZeroes);
+    }
 };
 
 Q_DECLARE_METATYPE(RUnit*)

@@ -192,7 +192,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+934"/>
+        <location filename="../WidgetFactory.js" line="+944"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -264,7 +264,7 @@
         <translation>Valore misurato</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+93"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>
@@ -336,7 +336,7 @@
         <translation type="obsolete">Post-inizializzazione...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+299"/>
+        <location filename="../autostart.js" line="+302"/>
         <source>Loading add-on translations...</source>
         <translation>Caricamento aggiuntivo traduzioni...</translation>
     </message>
@@ -414,6 +414,16 @@
 Scegliere il riferimento di blocco
 Modificare un blocco sulla base di un riferimento di blocco scelto</translatorcomment>
         <translation>Riferimento di blocco</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References and Attributes</source>
+        <translation>Riferimenti di blocco e attributi</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference and Attributes</source>
+        <translation>Riferimento di blocco e attributi</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -581,6 +591,26 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
         <location line="+0"/>
         <source>Line</source>
         <translation>Linea</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Infinite Lines</source>
+        <translation>Linee Infinite</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Infinite Line</source>
+        <translation>Linea infinita</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rays</source>
+        <translation>Raggi</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ray</source>
+        <translation>Raggio</translation>
     </message>
     <message>
         <location line="+2"/>

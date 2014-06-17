@@ -287,8 +287,10 @@ Divide.prototype.getOperation = function(preview) {
             isEllipseShape(shape2) || isSplineShape(shape2)) {
 
             e = shapeToEntity(this.entity.getDocument(), shape2);
-            e.copyAttributesFrom(this.entity.data());
-            op.addObject(e, false);
+            if (!isNull(e)) {
+                e.copyAttributesFrom(this.entity.data());
+                op.addObject(e, false);
+            }
         }
     }
     return op;

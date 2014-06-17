@@ -80,7 +80,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+148"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó
@@ -103,12 +103,17 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
+        <location line="+605"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
+    </message>
+    <message>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="-584"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
@@ -201,7 +206,7 @@ Salta automaticamente</translatorcomment>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Use medição automática</translation>
@@ -232,7 +237,8 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--

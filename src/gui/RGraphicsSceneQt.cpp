@@ -24,13 +24,10 @@
 #include "REntity.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"
-#include "RLine.h"
-#include "RPoint.h"
 #include "RSettings.h"
 #include "RSpline.h"
 #include "RTextLabel.h"
 #include "RPainterPathSource.h"
-#include "RPolyline.h"
 #include "RBlockReferenceEntity.h"
 
 
@@ -276,6 +273,54 @@ void RGraphicsSceneQt::exportLineSegment(const RLine& line) {
     }
 
     currentPainterPath.lineTo(line.endPoint);
+}
+
+void RGraphicsSceneQt::exportXLine(const RXLine& xLine) {
+    bool created = beginPath();
+
+    Q_ASSERT(currentPainterPath.isValid());
+
+    // find largest view box over all attached views:
+    RBox box;
+    QList<RGraphicsView*>::iterator it;
+    for (it=views.begin(); it!=views.end(); it++) {
+        RBox b = (*it)->getBox();
+        box.growToIncludeBox(b);
+    }
+
+    // trim line to view box:
+    RLine clippedLine = xLine.getClippedLine(box);
+    exportLineSegment(clippedLine);
+
+    currentPainterPath.setAlwaysRegen(true);
+
+    if (created) {
+        endPath();
+    }
+}
+
+void RGraphicsSceneQt::exportRay(const RRay& ray) {
+    bool created = beginPath();
+
+    Q_ASSERT(currentPainterPath.isValid());
+
+    // find largest view box over all attached views:
+    RBox box;
+    QList<RGraphicsView*>::iterator it;
+    for (it=views.begin(); it!=views.end(); it++) {
+        RBox b = (*it)->getBox();
+        box.growToIncludeBox(b);
+    }
+
+    // trim line to view box:
+    RLine clippedLine = ray.getClippedLine(box);
+    exportLineSegment(clippedLine);
+
+    currentPainterPath.setAlwaysRegen(true);
+
+    if (created) {
+        endPath();
+    }
 }
 
 void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {

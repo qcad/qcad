@@ -721,10 +721,15 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                     break;
                 }
             }
+            if (painterPaths[p].getAlwaysRegen()==true) {
+                regen = true;
+                break;
+            }
         }
 
         if (regen) {
-            // if at least one arc path is too detailed or not detailed enough, regen:
+            // if at least one arc path is too detailed or not detailed enough,
+            // or the path is an XLine or Ray, regen:
             sceneQt->exportEntity(id, true);
             painterPaths = sceneQt->getPainterPaths(id);
         }

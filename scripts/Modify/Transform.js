@@ -49,7 +49,7 @@ Transform.prototype.verifySelection = function() {
  * The callback function 'this.transform(entity, copy number)' is called for
  * every selected entity.
  */
-Transform.prototype.getOperation = function(preview, selectResult) {
+Transform.prototype.getOperation = function(preview, selectResult, cache) {
     if (isNull(this.copies)) {
         return undefined;
     }
@@ -57,21 +57,44 @@ Transform.prototype.getOperation = function(preview, selectResult) {
     if (isNull(selectResult)) {
         selectResult = true;
     }
+    if (isNull(cache)) {
+        cache = false;
+    }
 
-    var di = this.getDocumentInterface();
-    var document = this.getDocument();
+    var op, di, ids;
+
+    if (cache) {
+        if (!isNull(this.diTrans) && preview) {
+            op = new RPasteOperation(this.diTrans.getDocument());
+            op.setOffset(this.targetPoint)
+            return op;
+        }
+
+        this.diTrans = new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexNavel()));
+
+        //this.diTrans.getDocument().setUnit(this.getDocument().getUnit());
+        this.diTrans.applyOperation(new RCopyOperation(new RVector(0,0), this.getDocument()));
+        //this.diTrans.getDocument().setUnit(this.getDocument().getUnit());
+        di = this.diTrans;
+        ids = di.getDocument().queryAllEntities();
+    }
+    else {
+        di = this.getDocumentInterface();
+        ids = di.getDocument().querySelectedEntities();
+    }
+
+    var document = di.getDocument();
     var storage = document.getStorage();
-    var ids = document.querySelectedEntities();
     var i, k, id, entity, entityP;
     var num = this.copies;
     if (num===0) {
         num=1;
     }
 
-    var op = new RAddObjectsOperation();
+    op = new RAddObjectsOperation();
     for (k=1; k<=num; k++) {
         for (i=0; i<ids.length; i++) {
-            if (preview && op.getPreviewCounter()>RSettings.getPreviewEntities()) {
+            if (!cache && preview && op.getPreviewCounter()>RSettings.getPreviewEntities()) {
                 break;
             }
 
@@ -91,9 +114,19 @@ Transform.prototype.getOperation = function(preview, selectResult) {
                 }
             }
 
-            this.transform(entity, k, op, preview, this.copies>0);
+            if (cache) {
+                op.deleteObject(entity);
+                this.transform(entity, k, op, preview, true);
+            }
+            else {
+                this.transform(entity, k, op, preview, this.copies>0);
+            }
         }
         op.endCycle();
+    }
+
+    if (cache) {
+        di.applyOperation(op);
     }
 
     // deselect original entities, all copies are selected:
@@ -101,5 +134,16 @@ Transform.prototype.getOperation = function(preview, selectResult) {
         di.deselectEntities(ids);
     }
 
+    if (cache) {
+        op = new RPasteOperation(this.diTrans.getDocument());
+        op.setOffset(this.targetPoint);
+    }
+
     return op;
+};
+
+Transform.prototype.clearCache = function() {
+    // clear cache:
+    this.diTrans = undefined;
+    //Modify.prototype.updatePreview.call(this);
 };

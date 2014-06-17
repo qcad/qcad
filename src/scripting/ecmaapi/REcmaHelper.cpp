@@ -44,6 +44,11 @@
 #include "RPainterPath.h"
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
+#include "RRestrictAngleLength.h"
+#include "RRestrictOff.h"
+#include "RRestrictOrthogonal.h"
+#include "RRestrictHorizontal.h"
+#include "RRestrictVertical.h"
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
@@ -164,6 +169,23 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RGraphicsScene* c
     if (v!=NULL) {
         return qScriptValueFromValue(engine, v);
     }
+
+    return qScriptValueFromValue(engine, cppValue);
+}
+
+QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RSnapRestriction* cppValue) {
+    QScriptValue v;
+
+    v = tryCast<RRestrictOff>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRestrictAngleLength>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRestrictHorizontal>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRestrictVertical>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRestrictOrthogonal>(engine, cppValue);
+    if (v.isValid()) return v;
 
     return qScriptValueFromValue(engine, cppValue);
 }

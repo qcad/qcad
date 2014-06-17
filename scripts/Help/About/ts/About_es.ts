@@ -55,12 +55,13 @@
         <translation>Licencia:</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
+        <location line="+9"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+13"/>
         <source>Active</source>
         <translation>Activo</translation>
     </message>

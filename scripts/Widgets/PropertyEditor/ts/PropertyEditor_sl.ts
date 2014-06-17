@@ -52,7 +52,7 @@
         <translation>Dodatno</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+148"/>
         <source>Index</source>
         <translation>Indeks</translation>
     </message>
@@ -70,6 +70,11 @@
         <location line="+21"/>
         <source>Add custom property to selected objects</source>
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
+    </message>
+    <message>
+        <location line="+584"/>
+        <source>Widgets</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Left</source>
@@ -108,12 +113,12 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="-448"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>
@@ -128,7 +133,8 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Urejevalec lastnosti</translation>

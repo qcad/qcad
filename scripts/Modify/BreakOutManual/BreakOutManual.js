@@ -252,8 +252,10 @@ BreakOutManual.prototype.getOperation = function(preview) {
         op.deleteObject(this.entity);
         if (!isNull(newSegments[2])) {
             e = shapeToEntity(this.entity.getDocument(), newSegments[2]);
-            e.copyAttributesFrom(this.entity.data());
-            op.addObject(e, false);
+            if (!isNull(e)) {
+                e.copyAttributesFrom(this.entity.data());
+                op.addObject(e, false);
+            }
         }
     }
 
@@ -272,14 +274,18 @@ BreakOutManual.prototype.getOperation = function(preview) {
 
     if (!isNull(newSegments[0])) {
         e = shapeToEntity(this.entity.getDocument(), newSegments[0]);
-        e.copyAttributesFrom(this.entity.data());
-        op.addObject(e, false);
+        if (!isNull(e)) {
+            e.copyAttributesFrom(this.entity.data());
+            op.addObject(e, false);
+        }
     }
 
     if (!isNull(newSegments[1])) {
         e = shapeToEntity(this.entity.getDocument(), newSegments[1])
-        e.copyAttributesFrom(this.entity.data());
-        op.addObject(e, false);
+        if (!isNull(e)) {
+            e.copyAttributesFrom(this.entity.data());
+            op.addObject(e, false);
+        }
     }
 
     return op;

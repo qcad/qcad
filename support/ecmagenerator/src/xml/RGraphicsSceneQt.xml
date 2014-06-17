@@ -137,6 +137,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="exportXLine" cppName="exportXLine"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RXLine &amp;" typeName="RXLine" name="xLine"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="exportRay" cppName="exportRay" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RRay &amp;" typeName="RRay" name="ray"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="exportTriangle" cppName="exportTriangle"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

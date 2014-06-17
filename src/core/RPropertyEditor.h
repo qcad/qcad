@@ -70,6 +70,8 @@ public:
     QList<RS::EntityType> getTypes();
     int getTypeCount(RS::EntityType type);
 
+    static bool checkType(RS::EntityType type, RS::EntityType filter);
+
 protected:
     virtual void updateEditor(RObject& object, bool doUpdateGui,
             RDocument* document = NULL);

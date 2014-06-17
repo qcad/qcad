@@ -4266,8 +4266,8 @@
         
                self->getSnapRestriction();
         // return type: RSnapRestriction *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // RSnapRestriction:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 

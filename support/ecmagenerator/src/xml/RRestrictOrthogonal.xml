@@ -14,8 +14,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     </enum>
     <constructor>
       <variant>
-        <arg type="RDocumentInterface &amp;"
-        typeName="RDocumentInterface" name="documentInterface"
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
       </variant>
     </constructor>

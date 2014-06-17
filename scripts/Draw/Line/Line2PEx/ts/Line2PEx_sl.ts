@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>Line2PEx</name>
     <message>
-        <location filename="../Line2PEx.js" line="+89"/>
+        <location filename="../Line2PEx.js" line="+92"/>
         <source>First point</source>
         <translation>Prva točka</translation>
     </message>
@@ -50,7 +50,7 @@
         <translation>Konec</translation>
     </message>
     <message>
-        <location line="+349"/>
+        <location line="+369"/>
         <source>close</source>
         <translation>zapri</translation>
     </message>

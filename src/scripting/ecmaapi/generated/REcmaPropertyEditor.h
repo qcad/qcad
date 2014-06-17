@@ -77,6 +77,9 @@
         ;static  QScriptValue
         getTypeCount
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        checkType
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

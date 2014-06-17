@@ -240,6 +240,68 @@ dir="./core" filename="RBlock.h">
   </function>
   <function>
     <type>
+      <name>bool</name>
+    </type>
+    <name>isAnonymous</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>anonymous</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setAnonymous</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <if>if 
+    <condition>(
+    <expr>
+    <call>
+      <name>
+      <name>QString</name>::
+      <name>compare</name></name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>name</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>modelSpaceName</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>
+          <name>Qt</name>::
+          <name>CaseInsensitive</name></name>
+        </expr>
+      </argument>)</argument_list>
+    </call>!=0</expr>)</condition>
+    <then>
+      <block>{ 
+      <expr_stmt>
+      <expr>
+      <name>anonymous</name>= 
+      <name>on</name></expr>;</expr_stmt>}</block>
+    </then></if>}</block>
+  </function>
+  <function>
+    <type>
       <name>void</name>
     </type>
     <name>setOrigin</name>
@@ -402,6 +464,13 @@ dir="./core" filename="RBlock.h">
       <name>bool</name>
     </type>
     <name>frozen</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>anonymous</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

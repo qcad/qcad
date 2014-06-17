@@ -9,4 +9,5 @@ TRANSLATIONS = \
 	$${TSDIR}/$${NAME}_pl.ts \
 	$${TSDIR}/$${NAME}_pt.ts \
 	$${TSDIR}/$${NAME}_ru.ts \
-	$${TSDIR}/$${NAME}_sl.ts
+        $${TSDIR}/$${NAME}_sl.ts \
+        $${TSDIR}/$${NAME}_zh_CN.ts

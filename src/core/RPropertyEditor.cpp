@@ -193,6 +193,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
     if (entityTypeFilter==RS::EntityAll && !manual) {
         bool foundBlockRef = false;
         bool foundAttribute = false;
+        bool foundOther = false;
         for (it = entityIds.begin(); it != entityIds.end(); ++it) {
             QSharedPointer<REntity> entity = document->queryEntityDirect(*it);
             if (entity.isNull()) {
@@ -201,20 +202,26 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
 
             if (!foundBlockRef && entity->getType()==RS::EntityBlockRef) {
                 foundBlockRef = true;
-                if (foundAttribute) {
+                if (foundAttribute && foundOther) {
                     break;
                 }
             }
-            if (!foundAttribute && entity->getType()!=RS::EntityAttribute) {
+            if (!foundAttribute && entity->getType()==RS::EntityAttribute) {
                 foundAttribute = true;
-                if (foundBlockRef) {
+                if (foundBlockRef && foundOther) {
+                    break;
+                }
+            }
+            if (!foundOther && entity->getType()!=RS::EntityBlockRef && entity->getType()!=RS::EntityAttribute) {
+                foundOther = true;
+                if (foundBlockRef && foundAttribute) {
                     break;
                 }
             }
         }
 
-        if (foundBlockRef && foundAttribute) {
-            entityTypeFilter = RS::EntityBlockRef;
+        if (foundBlockRef && foundAttribute && !foundOther) {
+            entityTypeFilter = RS::EntityBlockRefAttr;
         }
     }
 
@@ -223,7 +230,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         if (entity.isNull()) {
             continue;
         }
-        if (entityTypeFilter!=RS::EntityAll && entity->getType()!=entityTypeFilter) {
+        if (entityTypeFilter!=RS::EntityAll && !checkType(entity->getType(), entityTypeFilter)) {
             continue;
         }
 
@@ -231,6 +238,11 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
     }
 
     // remove properties that are not shared by all selected entities:
+    RS::EntityType entityTypeFilterProp = entityTypeFilter;
+    if (entityTypeFilterProp==RS::EntityBlockRefAttr) {
+        // only block ref and attributes selected: show only block ref properties:
+        entityTypeFilterProp = RS::EntityBlockRef;
+    }
     for (it = entityIds.begin(); it != entityIds.end(); ++it) {
         QSharedPointer<REntity> entity = document->queryEntityDirect(*it);
         if (entity.isNull()) {
@@ -240,7 +252,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         QPair<QVariant, RPropertyAttributes> p = entity->getProperty(REntity::PropertyType);
         RS::EntityType type = (RS::EntityType)p.first.toInt();
 
-        if (entityTypeFilter==RS::EntityAll || entity->getType()==entityTypeFilter) {
+        if (entityTypeFilterProp==RS::EntityAll || entity->getType()==entityTypeFilterProp) {
             bool customOnly = false;
             QSet<RPropertyTypeId> propertyTypeIds;
             if (combinedTypes.contains(type)) {
@@ -271,6 +283,10 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         else {
             combinedTypes.insert(type, 1);
         }
+    }
+
+    if (combinedTypes.contains(RS::EntityBlockRef) && combinedTypes.contains(RS::EntityAttribute)) {
+        combinedTypes.insert(RS::EntityBlockRefAttr, combinedTypes[RS::EntityBlockRef] + combinedTypes[RS::EntityBlockRefAttr]);
     }
 
     updateGui(onlyChanges, entityTypeFilter);
@@ -419,4 +435,15 @@ int RPropertyEditor::getTypeCount(RS::EntityType type) {
     else {
         return -1;
     }
+}
+
+bool RPropertyEditor::checkType(RS::EntityType type, RS::EntityType filter) {
+    if (type==filter) {
+        return true;
+    }
+    if (filter==RS::EntityBlockRefAttr && (type==RS::EntityBlockRef || type==RS::EntityAttribute)) {
+        return true;
+    }
+
+    return false;
 }

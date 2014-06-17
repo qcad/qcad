@@ -598,6 +598,7 @@ dir="./core" filename="REntityData.h">
   </function>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>
     <name>RLinetype</name>::
     <name>Id</name></name>
@@ -642,6 +643,7 @@ dir="./core" filename="REntityData.h">
   </function>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>
     <name>RLineweight</name>::
     <name>Lineweight</name></name>
@@ -734,6 +736,7 @@ dir="./core" filename="REntityData.h">
   </function>
   <function>
     <type>
+      <name>virtual</name>
       <name>RColor</name>
     </type>
     <name>getColor</name>
@@ -747,6 +750,7 @@ dir="./core" filename="REntityData.h">
   </function>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>RColor</name>
   </type>
   <name>getColor</name>

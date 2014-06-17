@@ -101,6 +101,9 @@ public:
     virtual bool isOnShape(const RVector& point,
                            bool limited = true,
                            double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const;
+    virtual QList<RVector> filterOnShape(const QList<RVector>& pointList,
+        bool limited = true,
+        double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const;
     virtual RVector getVectorFromEndpointTo(const RVector& point) const;
 
     /**
@@ -168,9 +171,17 @@ public:
     static QList<RVector> getIntersectionPointsLC(const RLine& line1,
             const RCircle& circle2, bool limited = true);
     static QList<RVector> getIntersectionPointsLE(const RLine& line1,
-            const REllipse& ellipse2, bool limited = true);
+            const REllipse& ellipse2, bool limited = true) {
+        return getIntersectionPointsLE(line1, ellipse2, limited, limited);
+    }
+    static QList<RVector> getIntersectionPointsLE(const RLine& line1,
+            const REllipse& ellipse2, bool limited1, bool limited2);
     static QList<RVector> getIntersectionPointsLT(const RLine& line1,
-            const RTriangle& triangle2, bool limited = true);
+            const RTriangle& triangle2, bool limited = true) {
+        return getIntersectionPointsLT(line1, triangle2, limited, limited);
+    }
+    static QList<RVector> getIntersectionPointsLT(const RLine& line1,
+            const RTriangle& triangle2, bool limited1, bool limited2);
     static QList<RVector> getIntersectionPointsLS(const RLine& line1,
             const RSpline& spline2, bool limited = true);
     static QList<RVector> getIntersectionPointsLX(const RLine& line1,

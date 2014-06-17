@@ -52,7 +52,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+148"/>
         <source>Index</source>
         <translation></translation>
     </message>
@@ -67,11 +67,16 @@
         <translation></translation>
     </message>
     <message>
+        <location line="+605"/>
+        <source>Widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Add Custom Property</source>
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="-584"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -81,7 +86,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+121"/>
         <source>Use auto measurement</source>
         <translation>自動計測を使用</translation>
     </message>
@@ -96,7 +101,8 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+294"/>
+        <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>プロパティエディタ</translation>

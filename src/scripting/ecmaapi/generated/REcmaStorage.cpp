@@ -105,6 +105,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, querySelectedEntities, "querySelectedEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, queryInfiniteEntities, "queryInfiniteEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryObject, "queryObject");
             
             REcmaHelper::registerFunction(&engine, proto, queryObjectDirect, "queryObjectDirect");
@@ -1687,6 +1689,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::querySelectedEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryInfiniteEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryInfiniteEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryInfiniteEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryInfiniteEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryInfiniteEntities();
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryInfiniteEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryInfiniteEntities", context, engine);
             return result;
         }
          QScriptValue

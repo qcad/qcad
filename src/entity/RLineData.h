@@ -51,8 +51,6 @@ public:
         return *this;
     }
 
-    //virtual RBox getBoundingBox() const;
-
     RVector getStartPoint() const {
         return RLine::getStartPoint();
     }
@@ -101,10 +99,6 @@ public:
 
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RLine(*this));
-    }
-
-    RLine getGeometry() {
-        return *this;
     }
 };
 
