@@ -678,6 +678,8 @@ TextDialog.prototype.fixHtml = function(html) {
         else if (html[i]==='>') {
             cdata = true;
         }
+        // create nbsp from all spaces. QTextEdit will simplify white space
+        // to one single space otherwise.
         else if (cdata && (html[i]===' ' || html[i]==='\u00A0')) {
             htmlNbsp += '&nbsp;';
             continue;
@@ -877,7 +879,7 @@ TextDialog.prototype.textSymbol = function() {
     var textWidget = this.dialog.findChild("Text");
     var charsMap = this.getSpecialCharsMap();
     var keys = charsMap.getKeys();
-    for ( var i = 0; i < keys.length; ++i) {
+    for (var i = 0; i < keys.length; ++i) {
         var str = charsMap.get(keys[i])[0];
         var character = charsMap.get(keys[i])[1];
         action = menu.addAction(str + "\t" + character);
@@ -1001,9 +1003,10 @@ TextDialog.prototype.updateRichText = function(force) {
     if (this.getSourceDocument().modified || force===true) {
         var source = this.getSourceDocument().toPlainText();
         var richText = RTextBasedData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
-//        qDebug("HTML: \n\n", richText, "\n\n");
+        //richText = richText.replace("<html>", "<html xmlns='http://www.w3.org/1999/xhtml' xml:space='preserve'>");
+        //qDebug("HTML: \n\n", richText, "\n\n");
         this.textEdit.setHtml(richText);
-//        qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");
+        //qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");
         this.getSourceDocument().modified = false;
     }
 };
@@ -1031,6 +1034,7 @@ TextDialog.prototype.getSpecialCharsMap = function() {
         TextDialog.specialChars.put("omega", [ qsTr("Omega"), "\u03A9" ]);
         TextDialog.specialChars.put("squared", [ qsTr("Squared"), "\u00B2" ]);
         TextDialog.specialChars.put("cubed", [ qsTr("Cubed"), "\u00B3" ]);
+        TextDialog.specialChars.put("nbsp", [ qsTr("No-break space"), "&nbsp;" ]);
     }
     return TextDialog.specialChars;
 };

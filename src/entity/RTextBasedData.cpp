@@ -367,7 +367,7 @@ QFont RTextBasedData::getMainFont() const {
 QString RTextBasedData::getPlainText() const {
     QTextDocument td;
     td.setHtml(toRichText(text, getMainFont()));
-    return td.toPlainText();
+    return td.toPlainText().replace("&nbsp;", " ");
 }
 
 QString RTextBasedData::getRenderedText(bool escUnicode) const {
@@ -632,8 +632,8 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
 
             text = fragment.text();
 
-            qDebug() << "text frag:";
-            RDebug::hexDump(text);
+            //qDebug() << "text frag:";
+            //RDebug::hexDump(text);
             //qDebug() << "text fragment: " << text;
 //            qDebug() << "  weight: " << format.fontWeight();
 //            qDebug() << "  family: " << format.fontFamily();
@@ -648,9 +648,9 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             text.replace('{', "\\{");
             text.replace('}', "\\}");
             // spaces:
-            //text.replace(' ', "\\~");
-            // disabled: space key produces also non-breaking space:
-            text.replace(QChar(QChar::Nbsp), "\\~");
+            text.replace(' ', "\\~");
+            text.replace("&nbsp;", "\\~");
+            //text.replace(QChar(QChar::Nbsp), "\\~");
             // degree:
             text.replace(RTextRenderer::chDegree, RTextRenderer::escDegree);
             // plus minus:
@@ -682,8 +682,8 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
         ret += ";";
     }
 
-    qDebug() << "ret:";
-    RDebug::hexDump(ret);
+    //qDebug() << "ret:";
+    //RDebug::hexDump(ret);
 
     return ret;
 }

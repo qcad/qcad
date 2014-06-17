@@ -852,8 +852,8 @@ void RTextRenderer::render() {
                 textBlock += QChar(QChar::Nbsp);
             }
             if (target==RichText) {
-                //textBlock += "&nbsp;";
-                textBlock += QChar(QChar::Nbsp);
+                textBlock += "&nbsp;";
+                //textBlock += QChar(QChar::Nbsp);
             }
             continue;
         }
