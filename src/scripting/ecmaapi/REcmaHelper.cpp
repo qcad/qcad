@@ -44,6 +44,7 @@
 #include "RPainterPath.h"
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
+#include "RRayEntity.h"
 #include "RRestrictAngleLength.h"
 #include "RRestrictOff.h"
 #include "RRestrictOrthogonal.h"
@@ -52,6 +53,7 @@
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
+#include "RXLineEntity.h"
 
 #include "REcmaHelper.h"
 
@@ -197,6 +199,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RS
     if (v.isValid()) return v;
     v = tryCast<RLine>(engine, cppValue);
     if (v.isValid()) return v;
+    v = tryCast<RXLine>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRay>(engine, cppValue);
+    if (v.isValid()) return v;
     v = tryCast<RArc>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RCircle>(engine, cppValue);
@@ -217,6 +223,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RShape* cppValue)
     v = tryCast<RPoint>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RLine>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RXLine>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRay>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RArc>(engine, cppValue);
     if (v.isValid()) return v;
@@ -258,6 +268,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     QScriptValue v;
 
     v = tryCast<RLineEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RXLineEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRayEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RArcEntity>(engine, cppValue);
     if (v.isValid()) return v;
@@ -339,6 +353,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue
     if (v.isValid()) return v;
     v = tryCast<RLineEntity>(engine, cppValue);
     if (v.isValid()) return v;
+    v = tryCast<RXLineEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRayEntity>(engine, cppValue);
+    if (v.isValid()) return v;
     v = tryCast<RPointEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RPolylineEntity>(engine, cppValue);
@@ -387,6 +405,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     v = tryCast<RLeaderData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RLineData>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RXLineData>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RRayData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RPointData>(engine, cppValue);
     if (v.isValid()) return v;
@@ -491,6 +513,18 @@ void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValu
                 cppValue.append(p);
             }
 
+            else if (v.canConvert<RXLine>()) {
+                RXLine obj = v.value<RXLine>();
+                QSharedPointer<RXLine> p(obj.clone());
+                cppValue.append(p);
+            }
+
+            else if (v.canConvert<RRay>()) {
+                RRay obj = v.value<RRay>();
+                QSharedPointer<RRay> p(obj.clone());
+                cppValue.append(p);
+            }
+
             else if (v.canConvert<RPoint>()) {
                 RPoint obj = v.value<RPoint>();
                 QSharedPointer<RPoint> p(obj.clone());
@@ -545,6 +579,20 @@ QVariant REcmaHelper::toVariant(const QSharedPointer<RShape>& cppValue) {
     }
     {
         QSharedPointer<RLine> shape = cppValue.dynamicCast<RLine>();
+        if (!shape.isNull()) {
+            v.setValue(shape);
+            return v;
+        }
+    }
+    {
+        QSharedPointer<RXLine> shape = cppValue.dynamicCast<RXLine>();
+        if (!shape.isNull()) {
+            v.setValue(shape);
+            return v;
+        }
+    }
+    {
+        QSharedPointer<RRay> shape = cppValue.dynamicCast<RRay>();
         if (!shape.isNull()) {
             v.setValue(shape);
             return v;

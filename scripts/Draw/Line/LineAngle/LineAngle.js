@@ -163,4 +163,4 @@ LineAngle.prototype.typeChanged = function() {
             w.enabled = !this.isRayOrXLine();
         }
     }
-}
+};

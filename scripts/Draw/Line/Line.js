@@ -117,6 +117,37 @@ Line.prototype.createLineEntity = function(doc, p1, p2) {
     }
 };
 
+Line.prototype.initUiOptions = function(resume) {
+    Draw.prototype.initUiOptions.call(this, resume);
+
+    this.lineType = RSettings.getIntValue(this.settingsGroup + "/Type", 0);
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var wn = "";
+    switch (this.lineType) {
+    case Line.LineType.Line:
+        wn = "TypeSegment";
+        break;
+    case Line.LineType.XLine:
+        wn = "TypeXLine";
+        break;
+    case Line.LineType.Ray:
+        wn = "TypeRay";
+        break;
+    }
+
+    var w = optionsToolBar.findChild(wn);
+    if (!isNull(w)) {
+        w.checked = true;
+    }
+};
+
+Line.prototype.hideUiOptions = function(saveToSettings) {
+    Draw.prototype.hideUiOptions.call(this, saveToSettings);
+
+    RSettings.setValue(this.settingsGroup + "/Type", this.lineType);
+}
+
 Line.prototype.typeChanged = function() {
 };
 

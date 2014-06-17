@@ -27,7 +27,7 @@ include("../LineAngle/LineAngle.js");
 function LineHorizontal(guiAction) {
     LineAngle.call(this, guiAction);
 
-    this.setUiOptions("LineHorizontal.ui");
+    this.setUiOptions(["../Line.ui", "LineHorizontal.ui"]);
     this.angle = 0.0;
 }
 

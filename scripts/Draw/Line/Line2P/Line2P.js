@@ -86,8 +86,8 @@ Line2P.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
-Line2P.prototype.showUiOptions = function(resume) {
-    Draw.prototype.showUiOptions.call(this, resume);
+Line2P.prototype.showUiOptions = function(resume, restoreFromSettings) {
+    Draw.prototype.showUiOptions.call(this, resume, restoreFromSettings);
 
     var optionsToolBar = EAction.getOptionsToolBar();
     var w = optionsToolBar.findChild("Restrict");

@@ -349,6 +349,24 @@ function isLineEntity(obj) {
 }
 
 /**
+ * Checks if the given object is an xline entity.
+ *
+ * \return true if the given object is an xline entity (RXLineEntity).
+ */
+function isXLineEntity(obj) {
+    return isOfType(obj, RXLineEntity) || isOfType(obj, RXLineEntityPointer);
+}
+
+/**
+ * Checks if the given object is a ray entity.
+ *
+ * \return true if the given object is a ray entity (RRayEntity).
+ */
+function isRayEntity(obj) {
+    return isOfType(obj, RRayEntity) || isOfType(obj, RRayEntityPointer);
+}
+
+/**
  * Checks if the given object is a point entity.
  *
  * \return true if the given object is a point entity (RPointEntity).
@@ -543,12 +561,39 @@ function isEllipseArcShape(obj) {
 }
 
 /**
+ * Checks if the given object is a line based shape.
+ *
+ * \return true if the given object is a line based shape (RLine, RXline, RRay).
+ */
+function isLineBasedShape(obj) {
+    return isLineShape(obj) || isXLineShape(obj) || isRayShape(obj);
+}
+
+/**
  * Checks if the given object is a line shape.
  *
  * \return true if the given object is a line shape (RLine).
  */
 function isLineShape(obj) {
     return isOfType(obj, RLine) || isOfType(obj, RLinePointer);
+}
+
+/**
+ * Checks if the given object is an xline shape.
+ *
+ * \return true if the given object is an xline shape (RXLine).
+ */
+function isXLineShape(obj) {
+    return isOfType(obj, RXLine) || isOfType(obj, RXLinePointer);
+}
+
+/**
+ * Checks if the given object is a ray shape.
+ *
+ * \return true if the given object is a ray shape (RRay).
+ */
+function isRayShape(obj) {
+    return isOfType(obj, RRay) || isOfType(obj, RRayPointer);
 }
 
 /**

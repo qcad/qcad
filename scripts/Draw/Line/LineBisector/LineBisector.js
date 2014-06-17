@@ -34,7 +34,7 @@ function LineBisector(guiAction) {
     this.line2 = undefined;
     this.pos2 = undefined;
 
-    this.setUiOptions("LineBisector.ui");
+    this.setUiOptions(["../Line.ui", "LineBisector.ui"]);
 }
 
 LineBisector.prototype = new Line();
@@ -105,7 +105,9 @@ LineBisector.prototype.pick = function(event, preview) {
         return;
     }
 
-    if (!isLineEntity(entity)) {
+    var shape = entity.getClosestShape(pos);
+
+    if (!isLineBasedShape(shape)) {
         if (!preview) {
             EAction.warnNotLine();
         }
@@ -118,7 +120,7 @@ LineBisector.prototype.pick = function(event, preview) {
 
     switch (this.state) {
     case LineBisector.State.ChoosingLine1:
-        this.line1 = entity;
+        this.line1 = shape;
         this.pos1 = pos;
         if (!preview) {
             this.setState(LineBisector.State.ChoosingLine2);
@@ -126,7 +128,7 @@ LineBisector.prototype.pick = function(event, preview) {
         break;
 
     case LineBisector.State.ChoosingLine2:
-        this.line2 = entity;
+        this.line2 = shape;
         this.pos2 = pos;
         if (preview) {
             //di.previewOperation(op);
@@ -164,8 +166,8 @@ LineBisector.prototype.getOperation = function(preview) {
     var doc = this.getDocument();
     var ip = ips[0];
 
-    var angle1 = ip.getAngleTo(this.line1.getClosestPointOnEntity(this.pos1));
-    var angle2 = ip.getAngleTo(this.line2.getClosestPointOnEntity(this.pos2));
+    var angle1 = ip.getAngleTo(this.line1.getClosestPointOnShape(this.pos1));
+    var angle2 = ip.getAngleTo(this.line2.getClosestPointOnShape(this.pos2));
     var angleDiff = RMath.getAngleDifference(angle1, angle2);
     if (angleDiff>Math.PI) {
         angleDiff = angleDiff - 2*Math.PI;
@@ -179,10 +181,7 @@ LineBisector.prototype.getOperation = function(preview) {
         var vector = new RVector();
         vector.setPolar(this.length, angle);
 
-        var line = new RLineEntity(
-            doc,
-            new RLineData(ip, ip.operator_add(vector))
-        );
+        var line = this.createLineEntity(doc, ip, ip.operator_add(vector));
 
         op.addObject(line);
     }
@@ -210,3 +209,14 @@ LineBisector.prototype.slotNumberChanged = function(value) {
     this.update();
 };
 
+LineBisector.prototype.typeChanged = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    var ws = ["LengthLabel", "Length"];
+    for (var i=0; i<ws.length; i++) {
+        var w = optionsToolBar.findChild(ws[i]);
+        if (!isNull(w)) {
+            w.enabled = !this.isRayOrXLine();
+        }
+    }
+};

@@ -193,6 +193,7 @@
 #include "REcmaPropertyEvent.h"
 #include "REcmaPropertyListener.h"
 #include "REcmaPropertyTypeId.h"
+#include "REcmaRay.h"
 #include "REcmaRayData.h"
 #include "REcmaRayEntity.h"
 #include "REcmaRestrictAngleLength.h"
@@ -241,6 +242,7 @@
 #include "REcmaSharedPointerPointEntity.h"
 #include "REcmaSharedPointerPolyline.h"
 #include "REcmaSharedPointerPolylineEntity.h"
+#include "REcmaSharedPointerRay.h"
 #include "REcmaSharedPointerRayEntity.h"
 #include "REcmaSharedPointerShape.h"
 #include "REcmaSharedPointerSolidEntity.h"
@@ -254,6 +256,7 @@
 #include "REcmaSharedPointerTriangle.h"
 #include "REcmaSharedPointerUcs.h"
 #include "REcmaSharedPointerView.h"
+#include "REcmaSharedPointerXLine.h"
 #include "REcmaSharedPointerXLineEntity.h"
 #include "REcmaSnap.h"
 #include "REcmaSnapAuto.h"
@@ -309,6 +312,7 @@
 #include "REcmaViewListenerAdapter.h"
 #include "REcmaWebView.h"
 #include "REcmaWheelEvent.h"
+#include "REcmaXLine.h"
 #include "REcmaXLineData.h"
 #include "REcmaXLineEntity.h"
 
@@ -508,6 +512,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSharedPointerEllipse::init(*engine);
     REcmaLine::init(*engine);
     REcmaSharedPointerLine::init(*engine);
+    REcmaXLine::init(*engine);
+    REcmaSharedPointerXLine::init(*engine);
+    REcmaRay::init(*engine);
+    REcmaSharedPointerRay::init(*engine);
     REcmaPoint::init(*engine);
     REcmaSharedPointerPoint::init(*engine);
     REcmaPolyline::init(*engine);

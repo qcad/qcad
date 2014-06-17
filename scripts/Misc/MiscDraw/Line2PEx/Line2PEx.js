@@ -19,7 +19,7 @@
  * along with QCAD.
  */
 
-include("../Line.js");
+include("scripts/Draw/Line.js");
 
 /**
  * \class Line2PEx

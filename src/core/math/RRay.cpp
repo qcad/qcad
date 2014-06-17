@@ -52,7 +52,7 @@ RVector RRay::getVectorTo(const RVector& point, bool limited) const {
     else {
         RVector p = RXLine::getClosestPointOnShape(point, false);
         if (fabs(RMath::getAngleDifference180(getDirection1(), getStartPoint().getAngleTo(p))) < 0.1) {
-            return p-point;
+            return point-p;
         }
         return RVector::invalid;
     }

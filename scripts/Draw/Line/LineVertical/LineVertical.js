@@ -27,7 +27,7 @@ include("../LineAngle/LineAngle.js");
 function LineVertical(guiAction) {
     LineAngle.call(this, guiAction);
 
-    this.setUiOptions("../LineHorizontal/LineHorizontal.ui");
+    this.setUiOptions(["../Line.ui", "../LineHorizontal/LineHorizontal.ui"]);
     this.angle = Math.PI/2.0;
 }
 

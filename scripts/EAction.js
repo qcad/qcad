@@ -972,12 +972,12 @@ EAction.showSelectTools = function() {
  * Helper function to conveniently add the given action to a menu, toolbar and
  * CAD toolbar.
  * 
- * \param action RAction object. \param iface Interface to use to retrieve the
- * appropriate menu, toolbar and CAD toolbar panel. \param addToMenu True to
- * add this action to the appropriate menu. \param addToToolbar True to add this
- * action to the appropriate toolbar. \param addToCadToolbar True to add this
- * action to the appropriate CAD toolbar panel. \param addSeparator True to add
- * a separator before this action.
+ * \param action RAction object.
+ * \param iface Interface to use to retrieve the appropriate menu, toolbar and CAD toolbar panel.
+ * \param addToMenu True to add this action to the appropriate menu.
+ * \param addToToolbar True to add this action to the appropriate toolbar.
+ * \param addToCadToolbar True to add this action to the appropriate CAD toolbar panel.
+ * \param addSeparator True to add a separator before this action.
  */
 EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
         addToCadToolBar, addSeparator) {
