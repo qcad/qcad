@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("l,x"));
     action.setDefaultCommands(["linex", "lnx", "lix", "lx"]);
     action.setSortOrder(110);
-    EAction.addGuiActionTo(action, Line, true);
+    EAction.addGuiActionTo(action, MiscDraw, true, true);
 }
