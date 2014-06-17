@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.1" language="sl">
 <context>
     <name>PointDisplaySettings</name>
     <message>
@@ -20,10 +19,6 @@
         <translation>Splošno</translation>
     </message>
     <message>
-        <source>Size: </source>
-        <translation type="obsolete">Velikost:</translation>
-    </message>
-    <message>
         <location filename="../PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
         <translation>Način: </translation>
@@ -32,10 +27,6 @@
         <location line="+17"/>
         <source>Size (pixel):</source>
         <translation>Velikost (piksli):</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation type="obsolete">0</translation>
     </message>
 </context>
 </TS>

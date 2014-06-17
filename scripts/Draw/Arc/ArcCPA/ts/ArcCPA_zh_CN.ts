@@ -35,28 +35,28 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"/>
+        <translation>逆时针（正向）</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"/>
+        <translation>方向</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"/>
+        <translation>顺时针（反向）</translation>
     </message>
     <message>
         <location filename="../ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation type="unfinished"/>
+        <translation>中心、点、角度(&amp;C)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation type="unfinished"/>
+        <translation>按中心、弧上的点和角度画弧</translation>
     </message>
 </context>
 </TS>
