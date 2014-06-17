@@ -444,7 +444,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+607"/>
+        <location filename="../library.js" line="+652"/>
         <source>Entity</source>
         <translation>Entidade</translation>
     </message>

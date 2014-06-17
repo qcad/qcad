@@ -105,12 +105,12 @@
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+312"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+130"/>
         <source>Degree</source>
         <translation>角度</translation>
     </message>
@@ -178,6 +178,11 @@
         <location line="+1"/>
         <source>Cubed</source>
         <translation>立方</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No-break space</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>

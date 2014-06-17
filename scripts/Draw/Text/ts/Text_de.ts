@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>Dialog</name>
     <message>
@@ -87,7 +87,7 @@
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location line="+506"/>
+        <location line="+509"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -120,6 +120,11 @@
         <location line="+1"/>
         <source>Pi</source>
         <translation>Pi</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>No-break space</source>
+        <translation>Geschütztes Leerzeichen</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
@@ -268,7 +273,7 @@
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="-506"/>
+        <location filename="../TextDialog/TextDialog.js" line="-516"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -298,12 +303,12 @@
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+312"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+131"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>

@@ -152,14 +152,14 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">Znaki specjalne ...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+312"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
         <translation type="unfinished">Inne...</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+130"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -258,6 +258,11 @@ Pole narzucenia niepowtarzalności W3C XML Schema
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Cubed</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No-break space</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>

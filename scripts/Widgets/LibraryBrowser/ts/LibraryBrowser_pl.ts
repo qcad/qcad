@@ -86,7 +86,7 @@ Zastępcze widżety</translatorcomment>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1105"/>
+        <location line="+1107"/>
         <location filename="../LibraryBrowserInit.js" line="+18"/>
         <source>Library Browser</source>
         <translatorcomment>--exact match--
@@ -95,7 +95,7 @@ Przeglądarka bibliotek</translatorcomment>
         <translation type="unfinished">Przeglądarka bibliotek</translation>
     </message>
     <message>
-        <location line="-1097"/>
+        <location line="-1099"/>
         <source>Icon</source>
         <translatorcomment>--google--
 XX ikona wybrana wyłączona
@@ -119,7 +119,7 @@ Atrybuty filtru bieżącej dokumentacji (lista oddzielona przecinkami):</transla
         <translation type="unfinished">Wybierz folder źródłowy</translation>
     </message>
     <message>
-        <location line="+652"/>
+        <location line="+654"/>
         <source>Page %1 of %2</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--

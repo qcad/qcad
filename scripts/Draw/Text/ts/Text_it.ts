@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>Dialog</name>
     <message>
@@ -105,12 +105,12 @@
         <translation>&amp;Carattere speciale...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+312"/>
         <source>Others...</source>
         <translation>Altri...</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+130"/>
         <source>Degree</source>
         <translation>Gradi</translation>
     </message>
@@ -178,6 +178,11 @@
         <location line="+1"/>
         <source>Cubed</source>
         <translation>Cubico</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No-break space</source>
+        <translation>Spazio unificatore</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>Dialog</name>
     <message>
@@ -148,14 +148,14 @@ Co&amp;lar</translatorcomment>
         <translation>&amp;Caracteres especiais...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+312"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
         <translation>Outras...</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+130"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: SplineControlPoints_pt.ts--
@@ -255,6 +255,11 @@ identidade</translatorcomment>
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cubado</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No-break space</source>
+        <translation>Espaço rígido</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>

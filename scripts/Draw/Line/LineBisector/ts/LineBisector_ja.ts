@@ -14,7 +14,7 @@
         <translation>第２の線分</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+77"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>直線は交差しません。</translation>
     </message>

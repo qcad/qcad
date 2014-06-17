@@ -14,7 +14,7 @@
         <translation>Druga črta</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+77"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Črti se ne sekata.</translation>
     </message>

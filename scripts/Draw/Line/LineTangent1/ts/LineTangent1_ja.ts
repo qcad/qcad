@@ -4,7 +4,7 @@
 <context>
     <name>LineTangent1</name>
     <message>
-        <location filename="../LineTangent1.js" line="+62"/>
+        <location filename="../LineTangent1.js" line="+64"/>
         <source>Choose start point of tangent</source>
         <translation>接線の開始点を指定</translation>
     </message>

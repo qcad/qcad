@@ -18,7 +18,7 @@
         <translation>Disegna tangente (cerchio, cerchio)</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="+68"/>
+        <location filename="../LineTangent2.js" line="+70"/>
         <source>Choose first circle or arc</source>
         <translation>Scegli primo cerchio o arco</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>LineTangent2</name>
     <message>
-        <location filename="../LineTangent2.js" line="+68"/>
+        <location filename="../LineTangent2.js" line="+70"/>
         <source>Choose first circle or arc</source>
         <translation>第１の円または弧を選択</translation>
     </message>

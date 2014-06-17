@@ -105,12 +105,12 @@
         <translation>Posebni &amp;znaki...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+312"/>
         <source>Others...</source>
         <translation>Drugo...</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+130"/>
         <source>Degree</source>
         <translation>Stopinje</translation>
     </message>
@@ -178,6 +178,11 @@
         <location line="+1"/>
         <source>Cubed</source>
         <translation>Kvadratasto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No-break space</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>

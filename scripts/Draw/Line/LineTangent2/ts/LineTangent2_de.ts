@@ -18,7 +18,7 @@
         <translation>Tangente von Kreis zu Kreis zeichnen</translation>
     </message>
     <message>
-        <location filename="../LineTangent2.js" line="+68"/>
+        <location filename="../LineTangent2.js" line="+70"/>
         <source>Choose first circle or arc</source>
         <translation>Erster Kreis oder Bogen wählen</translation>
     </message>

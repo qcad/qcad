@@ -18,7 +18,7 @@
         <translation>Dibujar tangente (punto, círculo)</translation>
     </message>
     <message>
-        <location filename="../LineTangent1.js" line="+62"/>
+        <location filename="../LineTangent1.js" line="+64"/>
         <source>Choose start point of tangent</source>
         <translation>Elija el punto de inicio de la tangencia</translation>
     </message>

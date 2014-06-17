@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
     <name>InsertBlockItem</name>
     <message>
         <location filename="../InsertBlockItem.js" line="+82"/>
-        <source>Adjusted invalid block name to '%1'</source>
+        <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>将无效块的名称设为‘%1’</translation>
     </message>
     <message>
