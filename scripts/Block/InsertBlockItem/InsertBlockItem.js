@@ -90,6 +90,13 @@ InsertBlockItem.prototype.beginEvent = function() {
         EAction.handleUserMessage(qsTr("Adjusted invalid block name to '%1'").arg(this.blockName));
     }
 
+    if (this.docItem.hasBlock(this.blockName)) {
+        // 20140520:
+        // if the item contains a block with the same name as the file base name,
+        // insert without creating a new block:
+        this.blockName = undefined;
+    }
+
     // init block attribute inputs to options tool bar:
     // assign values to attributes:
     var first = true;

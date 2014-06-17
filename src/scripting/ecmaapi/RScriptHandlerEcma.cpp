@@ -444,6 +444,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     QScriptValue classQLineEdit = globalObject.property("QLineEdit");
     classQLineEdit.property("prototype").setProperty("validator",
             engine->newFunction(ecmaQLineEditValidator));
+
+    QScriptValue classQFile = globalObject.property("QFile");
+    classQFile.property("prototype").setProperty("close",
+            engine->newFunction(ecmaQFileClose));
 #endif
 
     QScriptValue classQt = globalObject.property("Qt");
@@ -1794,11 +1798,11 @@ QScriptValue RScriptHandlerEcma::ecmaQEventCast(QScriptContext* context, QScript
 
     QEvent* self = REcmaHelper::scriptValueTo<QEvent>(context->thisObject());
     if (self == NULL) {
-        return throwError("QEvent.castEvent: Object is NULL", context);
+        return throwError("QEvent.cast: Object is NULL", context);
     }
 
     if (context->argumentCount() != 0) {
-        return throwError("Wrong number/types of arguments for QSortFilterProxyModel.castToQAbstractItemModel.", context);
+        return throwError("Wrong number/types of arguments for QEvent.cast.", context);
     }
 
     {
@@ -1821,6 +1825,22 @@ QScriptValue RScriptHandlerEcma::ecmaQEventCast(QScriptContext* context, QScript
     }
 
     return context->thisObject();
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQFileClose(QScriptContext* context, QScriptEngine* engine) {
+    //QFile* self = REcmaHelper::scriptValueTo<QFile>(context->thisObject());
+    QFile* self = qscriptvalue_cast<QFile*>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QFile.close: Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 0) {
+        return throwError("Wrong number/types of arguments for QFile.close.", context);
+    }
+
+    self->close();
+
+    return engine->undefinedValue();
 }
 
 //QScriptValue RScriptHandlerEcma::ecmaBlockEvents(QScriptContext* context,

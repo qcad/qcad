@@ -110,15 +110,17 @@ function Rdf(resource) {
         return;
     }
 
-    var file = new QFile(this.fileName);
+    if (!RSettings.isQt(5)) {
+        var file = new QFile(this.fileName);
 
-    var xmlReader = new QXmlSimpleReader();
-    var source = new QXmlInputSource(file);
-    var handler = new RdfHandler(this);
-    xmlReader.setContentHandler(handler);
-    var ok = xmlReader.parse(source, false);
+        var xmlReader = new QXmlSimpleReader();
+        var source = new QXmlInputSource(file);
+        var handler = new RdfHandler(this);
+        xmlReader.setContentHandler(handler);
+        var ok = xmlReader.parse(source, false);
 
-    file.close();
+        file.close();
+    }
 }
 
 Rdf.xmlQuery = new QXmlQuery();
