@@ -27,7 +27,7 @@ include("../LineRelativeAngle/LineRelativeAngle.js");
 function LineOrthogonal(guiAction) {
     LineRelativeAngle.call(this, guiAction);
 
-    this.setUiOptions("LineOrthogonal.ui");
+    this.setUiOptions(["../Line.ui", "LineOrthogonal.ui"]);
 }
 
 LineOrthogonal.prototype = new LineRelativeAngle();

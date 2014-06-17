@@ -35,7 +35,7 @@ function LineRelativeAngle(guiAction) {
     this.referencePoint = undefined;
 
     if (!isNull(guiAction)) {
-        this.setUiOptions("LineRelativeAngle.ui");
+        this.setUiOptions(["../Line.ui", "LineRelativeAngle.ui"]);
     }
 }
 
@@ -82,6 +82,7 @@ LineRelativeAngle.prototype.setState = function(state) {
         break;
     }
 
+    this.typeChanged();
 };
 
 LineRelativeAngle.prototype.escapeEvent = function() {
@@ -116,7 +117,7 @@ LineRelativeAngle.prototype.pickEntity = function(event, preview) {
     case LineRelativeAngle.State.ChoosingEntity:
         if (isArcShape(shape) ||
             isCircleShape(shape) ||
-            isLineShape(shape)) {
+            isLineBasedShape(shape)) {
 
             this.entity = entity;
             this.shape = shape;
@@ -181,7 +182,7 @@ LineRelativeAngle.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
-    op.addObject(new RLineEntity(doc, new RLineData(line)));
+    op.addObject(this.createLineEntity(doc, line.getStartPoint(), line.getEndPoint()));
     return op;
 };
 
@@ -228,7 +229,7 @@ LineRelativeAngle.prototype.getLine = function() {
 LineRelativeAngle.prototype.getAbsoluteAngle = function() {
     var ret;
 
-    if (isLineShape(this.shape)) {
+    if (isLineBasedShape(this.shape)) {
         ret = this.shape.getAngle();
     }
     else if (isArcShape(this.shape) || isCircleShape(this.shape)) {
@@ -253,4 +254,16 @@ LineRelativeAngle.prototype.slotLengthChanged  = function(value) {
 LineRelativeAngle.prototype.slotReferencePointChanged = function(value) {
     this.referencePoint = value;
     this.updatePreview(true);
+};
+
+LineRelativeAngle.prototype.typeChanged = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    var ws = ["LengthLabel", "Length", "ReferencePointLabel", "ReferencePoint"];
+    for (var i=0; i<ws.length; i++) {
+        var w = optionsToolBar.findChild(ws[i]);
+        if (!isNull(w)) {
+            w.enabled = !this.isRayOrXLine();
+        }
+    }
 };

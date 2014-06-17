@@ -12,7 +12,7 @@
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="labelAngle">
+    <widget class="QLabel" name="WidthLabel">
      <property name="text">
       <string>&amp;Width:</string>
      </property>
@@ -29,7 +29,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="labelLength">
+    <widget class="QLabel" name="HeightLabel">
      <property name="text">
       <string>&amp;Height:</string>
      </property>
@@ -46,7 +46,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="labelReferencePoint">
+    <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
       <string>Reference Point:</string>
      </property>

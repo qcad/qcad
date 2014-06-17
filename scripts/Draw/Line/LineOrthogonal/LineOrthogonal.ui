@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>175</width>
+    <width>349</width>
     <height>46</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="LengthLabel">
      <property name="text">
       <string>Length:</string>
      </property>
@@ -32,7 +32,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="labelReferencePoint">
+    <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
       <string>&amp;Reference Point:</string>
      </property>

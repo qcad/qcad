@@ -12,7 +12,7 @@
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="labelLength">
+    <widget class="QLabel" name="LengthLabel">
      <property name="text">
       <string>&amp;Length:</string>
      </property>
@@ -29,7 +29,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="labelReferencePoint">
+    <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
       <string>&amp;Reference Point:</string>
      </property>
