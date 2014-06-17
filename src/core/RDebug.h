@@ -93,6 +93,8 @@ public:
         return stopTimer(0, msg);
     }
 
+    static void hexDump(const QString& str);
+
 private:
 #ifdef Q_OS_MAC
     static QMap<int, uint64_t> timerMac;

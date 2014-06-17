@@ -849,10 +849,11 @@ void RTextRenderer::render() {
         reg.setPattern(rxNonBreakingSpace);
         if (reg.exactMatch(formatting)) {
             if (target==PainterPaths) {
-                textBlock += QChar(Qt::Key_nobreakspace);
+                textBlock += QChar(QChar::Nbsp);
             }
             if (target==RichText) {
-                textBlock += "&nbsp;";
+                //textBlock += "&nbsp;";
+                textBlock += QChar(QChar::Nbsp);
             }
             continue;
         }

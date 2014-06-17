@@ -83,3 +83,10 @@ int RDebug::stopTimer(int id, const QString& msg) {
     qDebug() << "TIMER: " << t << "ms - " << msg;
     return t;
 }
+
+void RDebug::hexDump(const QString& str) {
+    QByteArray ba = str.toUtf8();
+    for (int i=0; i<ba.length(); i++) {
+        qDebug() << QString("0x%1 (%2)").arg((int)ba.at(i), 0, 16).arg(ba.at(i));
+    }
+}

@@ -632,6 +632,8 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
 
             text = fragment.text();
 
+            qDebug() << "text frag:";
+            RDebug::hexDump(text);
             //qDebug() << "text fragment: " << text;
 //            qDebug() << "  weight: " << format.fontWeight();
 //            qDebug() << "  family: " << format.fontFamily();
@@ -646,7 +648,9 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             text.replace('{', "\\{");
             text.replace('}', "\\}");
             // spaces:
-            text.replace(' ', "\\~");
+            //text.replace(' ', "\\~");
+            // disabled: space key produces also non-breaking space:
+            text.replace(QChar(QChar::Nbsp), "\\~");
             // degree:
             text.replace(RTextRenderer::chDegree, RTextRenderer::escDegree);
             // plus minus:
@@ -677,6 +681,9 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
     else if (fontVerticalAlignment==QTextCharFormat::AlignSubScript) {
         ret += ";";
     }
+
+    qDebug() << "ret:";
+    RDebug::hexDump(ret);
 
     return ret;
 }
@@ -719,6 +726,11 @@ QString RTextBasedData::toRichText(const QString& escapedText, const QFont& main
     ret += renderer.getRichText();
     ret += "</body>";
     ret += "</html>";
+
+//    QByteArray ba = ret.toUtf8();
+//    for (int i=0; i<ba.length(); i++) {
+//        qDebug() << "unicode: " << QString("0x%1 (%2)").arg((int)ba.at(i), 0, 16).arg(ba.at(i));
+//    }
 
     return ret;
 }
