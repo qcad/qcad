@@ -260,7 +260,7 @@ public:
     virtual RColor getCurrentColor();
 
     void setCurrentLineweight(RLineweight::Lineweight lw);
-    virtual RLineweight::Lineweight getCurrentLineweight();
+    virtual RLineweight::Lineweight getCurrentLineweight() const;
 
     void setCurrentLinetype(RLinetype lt);
     virtual RLinetype getCurrentLinetype() const;

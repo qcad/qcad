@@ -24,8 +24,8 @@
 
 RMemoryStorage::RMemoryStorage() :
     maxLineweight(RLineweight::Weight000), 
-    inTransaction(false), 
     boundingBoxChanged(true),
+    inTransaction(false), 
     unit(RS::None),
     linetypeScale(1.0) {
 
@@ -644,6 +644,8 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
  */
 void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     QSet<REntity::Id>* affectedEntities, bool onlyDescend) {
+
+    Q_UNUSED(onlyDescend)
 
 //    disabled:
 //    attributes can be selected individually to edit their attributes

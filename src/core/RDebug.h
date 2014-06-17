@@ -44,8 +44,8 @@
 #include <execinfo.h>
 #endif
 
-#ifndef RDEFAULT_QString
-#define RDEFAULT_QString QString()
+#ifndef RDEFAULT_QSTRING
+#define RDEFAULT_QSTRING QString()
 #endif
 
 /**
@@ -72,7 +72,7 @@
  */
 class QCADCORE_EXPORT RDebug {
 public:
-    static void printBacktrace(const QString& prefix = RDEFAULT_QString);
+    static void printBacktrace(const QString& prefix = RDEFAULT_QSTRING);
 
     /**
      * Starts a timer with the given ID.

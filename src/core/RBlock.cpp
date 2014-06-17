@@ -67,6 +67,8 @@ void RBlock::setName(const QString& n) {
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
 
+    Q_UNUSED(transaction)
+
     bool ret = false;
 
 //    // set attribute definition, internally a custom property:

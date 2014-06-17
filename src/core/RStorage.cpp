@@ -79,7 +79,7 @@ void RStorage::setCurrentLineweight(RLineweight::Lineweight lw) {
     currentLineweight = lw;
 }
 
-RLineweight::Lineweight RStorage::getCurrentLineweight() {
+RLineweight::Lineweight RStorage::getCurrentLineweight() const {
     return currentLineweight;
 }
 
